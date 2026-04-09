@@ -1,0 +1,24 @@
+---
+title: RANK-DEPENDENT CONTROL OF TUFT AND BEST4 CELL DEVELOPMENT IN THE INTESTINE
+title_zh: 肠道中簇状细胞和 BEST4 细胞发育的 RANK 依赖性调控
+authors: "Willms, R. J., McCabe, T., Jones, L. O., Schade, R., Foley, E. A."
+date: 2026-03-15
+pdf: "https://www.biorxiv.org/content/10.1101/2025.08.18.670967v2.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.5
+evidence: RANK 缺乏促进了肠道中促炎白细胞的积累
+tldr: 本研究利用斑马鱼模型，通过谱系轨迹分析揭示了TNFRSF11A/RANK信号通路在肠道上皮细胞特化中的关键作用。研究发现RANK缺失会导致免疫调节性簇细胞和BEST4细胞减少，增加促炎白细胞积累，并提升对霍乱弧菌等病原体的易感性。该成果阐明了RANK在调节肠道上皮多样性及黏膜免疫防御中的核心机制。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-001.webp\", \"caption\": \"\", \"page\": 7, \"index\": 1, \"width\": 2274, \"height\": 2725}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-002.webp\", \"caption\": \"\", \"page\": 9, \"index\": 2, \"width\": 2196, \"height\": 1049}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-003.webp\", \"caption\": \"\", \"page\": 11, \"index\": 3, \"width\": 2242, \"height\": 2212}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-004.webp\", \"caption\": \"\", \"page\": 13, \"index\": 4, \"width\": 2268, \"height\": 1249}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-005.webp\", \"caption\": \"\", \"page\": 14, \"index\": 5, \"width\": 1525, \"height\": 735}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-006.webp\", \"caption\": \"\", \"page\": 17, \"index\": 6, \"width\": 2259, \"height\": 1902}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-007.webp\", \"caption\": \"\", \"page\": 18, \"index\": 7, \"width\": 2264, \"height\": 927}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-008.webp\", \"caption\": \"\", \"page\": 20, \"index\": 8, \"width\": 2214, \"height\": 1801}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-009.webp\", \"caption\": \"\", \"page\": 30, \"index\": 9, \"width\": 779, \"height\": 749}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-010.webp\", \"caption\": \"\", \"page\": 30, \"index\": 10, \"width\": 940, \"height\": 462}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-011.webp\", \"caption\": \"\", \"page\": 31, \"index\": 11, \"width\": 1414, \"height\": 774}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-012.webp\", \"caption\": \"\", \"page\": 31, \"index\": 12, \"width\": 602, \"height\": 410}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-013.webp\", \"caption\": \"\", \"page\": 32, \"index\": 13, \"width\": 2374, \"height\": 709}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-014.webp\", \"caption\": \"\", \"page\": 32, \"index\": 14, \"width\": 2302, \"height\": 845}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-1101-2025-08-18-670967-v2/fig-015.webp\", \"caption\": \"\", \"page\": 33, \"index\": 15, \"width\": 1524, \"height\": 444}]"
+motivation: 旨在探究调控肠道特化上皮细胞发育及其在黏膜屏障和免疫反应中作用的分子通路。
+method: 利用斑马鱼模型进行谱系轨迹分析，并结合霍乱弧菌感染实验评估RANK信号对细胞分化和宿主防御的影响。
+result: RANK缺失显著减少了簇细胞和BEST4细胞的丰度，导致肠道促炎白细胞增加并削弱了对病原体定植的抵抗力。
+conclusion: 研究证明RANK信号通路是驱动肠道上皮细胞多样化和维持免疫调节功能的关键因素。
+---
+
+## 摘要
+特化的肠上皮细胞对于黏膜边界的屏障完整性和免疫反应至关重要，但控制其发育的通路尚未完全明确。在此，我们确定了 TNFRSF11A/RANK 在塑造斑马鱼肠上皮特化中的关键作用。通过谱系轨迹分析，我们鉴定了两种簇状细胞亚型，其中包括一种富集表达产生促炎白三烯所需基因的亚型。我们表明，RANK 缺失减少了免疫调节性簇状细胞和 BEST4 细胞的丰度，增加了杯状细胞的频率，并促进了肠道中促炎白细胞的积累。在功能上，我们证明了在感染流行性霍乱弧菌株后，BEST4 细胞数量会增加，且 RANK 缺失增强了鱼类对弧菌宿主定植的易感性，这表明该谱系参与了针对肠道病原体的宿主防御。总之，我们的研究结果表明 RANK 信号参与了肠上皮的多样化和免疫调节。
+
+## Abstract
+Specialist intestinal epithelial cells are critical for barrier integrity and immune responses at the mucosal boundary, yet the pathways that govern their development are incompletely defined. Here, we identify an essential role for TNFRSF11A/RANK in shaping intestinal epithelial specialization in zebrafish. Using lineage trajectory analysis, we identified two tuft cell subtypes, including a subtype enriched for expression of genes required to produce pro-inflammatory leukotrienes. We showed that RANK deficiency reduced the abundance of immune-regulatory tuft and BEST4 cells, increased goblet cell frequency, and promoted the accumulation of pro-inflammatory leukocytes in the gut. Functionally, we demonstrated that BEST4 cell numbers expand following infection with a pandemic strain of Vibrio cholerae, and that RANK deficiency enhances fish susceptibility to host colonization by Vibrio, implicating this lineage in host defenses against an enteric pathogen. Together, our findings implicate RANK signaling in intestinal epithelial diversification and immune regulation.

@@ -1,0 +1,77 @@
+---
+title: GM-CSF and M-CSF Driven Differentiation Differentially Regulates Chikungunya Virus Infection and Antiviral Responses in Human Monocyte-Derived Macrophages
+title_zh: GM-CSF 和 M-CSF 驱动的分化差异化调节人单核细胞源性巨噬细胞中的基孔肯雅病毒感染和抗病毒反应
+authors: "Veloz, J., Zyulina, V., Thannickal, S., Chebishev, E., Bernal-Rubio, D., Villanueva Guzman, M. D. M., Wu, C., Valencia, E., Novillo, D., Dhamapurkar, V., Espinar Barranco, L., Webb, L. G., Fenutria, R., Noval, M. G., Fernandez-Sesma, A."
+date: 2026-03-12
+pdf: "https://www.biorxiv.org/content/10.64898/2026.03.11.710213v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 8.5
+evidence: 巨噬细胞向促炎和抗炎表型分化
+tldr: 本研究探讨了GM-CSF和M-CSF诱导的巨噬细胞分化对基孔肯雅病毒（CHIKV）感染的影响。通过对比研究发现，GM-CSF分化的巨噬细胞高度易感且支持病毒复制，而M-CSF分化的细胞则表现出显著的抗病毒抗性。研究揭示了M-CSF通过增强dsRNA感应触发更强的干扰素响应，为理解CHIKV诱发的关节痛病理机制提供了新见解。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-03-11-710213-v1/fig-001.webp\", \"caption\": \"Figure 6: CHIKV selectively abrogates IFN⍺-induced ISG15 and MX1 expression in GM-M⏀ but not M-M⏀ Macrophages were treated with recombinant human IFN⍺ (1000 units/well) or vehicle control (distilled water) for 24 hours, after which cells were lysed in Trizol for RNA isolation. (A) ISG15 and (B) MX1 mRNA expression was evaluated via RT-qPCR analysis, where relative expression indicates fold expression of indicated gene expression levels normalized to RPS11 and respective vehicle control treatment via ΔΔCT method. Data represented as means ± SEM (n= 3 donors). To assess effect of CHIKV-mediated inhibition of IFN⍺-induced (C) ISG15 and (D) MX1 expression, GM-M⏀ (red bars) and M-M⏀ (blue bars) were infected with CHIKV 181/25 (MOI=1.0) for 6 hours followed by subsequent treatment with IFN⍺ (1000 units/well) for an additional 18 hours at 37°C. After 24 hours total incubation, macrophages were lysed in Trizol for RNA isolation and RT-qPCR analysis. Data is represented as relative gene expression of ISG15 and MX1 levels normalized to RPS11 and respective IFN⍺ alone treatment via ΔΔCT method. Data represented as means ± SEM (n= 3 donors). Statistical analysis was performed via one-way ANOVA with GeisserGreenhouse correction and Fisher’s LSD test. Black asterisks represent P-value statistical significance, where ns=non-significant, *=P<0.05, and **=P<0.01.\", \"page\": 21, \"index\": 1, \"width\": 511, \"height\": 652}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-03-11-710213-v1/fig-002.webp\", \"caption\": \"Figure 4: Cytokine and chemokine secretion in supernatant of primary human macrophages following CHIKV infection Monocyte-derived macrophages were differentiated with either GM-CSF (GM-M⏀, red bars) or M-CSF (M-M⏀, blue bars) for 6 days and infected with either mock, UV-inactivated CHIKV 181/25, or CHIKV 181/25 at a multiplicity of infection (MOI) of 1.0 for 6, 24, and 48 hours. Multiplex ELISA was performed to evaluate secretion of select cytokines and chemokines: (A) IFN⍺, (B) IP10/CXCL10, (C) RANTES/CCL5, (D) IL-10, (E) TNF⍺, and (F) IL-6. Non-detected (N.D.) indicates values below limit of detection as determined via Belysa analysis software. Data represented as means ± SEM where n=6 donors (mock and CHIKV conditions) or n=3 (UV-CHIKV condition). Statistical analysis was performed via two-way ANOVA with Geisser-Greenhouse correction and Fisher’s LSD test. Black asterisks represent P-value statistical significance, where ns=non-significant, *=P<0.05, and **=P<0.01.\", \"page\": 18, \"index\": 2, \"width\": 976, \"height\": 583}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-03-11-710213-v1/fig-003.webp\", \"caption\": \"Figure 1: Viral infectivity and replication of Chikungunya virus in primary human macrophages (A-B) Monocyte-derived macrophages were differentiated with either GM-CSF (GM-M⏀) or M-CSF (M-M⏀) for 6 days and infected with CHIKV 181/25 or CHIKV AF15661 at a multiplicity of infection (MOI) of 1.0 for 6, 24, and 48 hours. Intracellular viral replication is represented as “active replication”, which was determined by evaluating the ratio of E1 subgenomic viral RNA copies to nsP1 genomic viral RNA copies. (E1RNA:nsP1RNA =1 no replication; E1:nsP1>1 active replication) of viral RNA was determined by RTqPCR via standard curve of known concentrations of CHIKV in vitro transcribed (IVT). Data represented as means ± SEM (n= 4 donors). Statistical analysis was performed via two-way ANOVA with Geisser-Greenhouse correction and Fisher’s LSD test. (C) Quantification of E1 viral RNA copies (log scale) in GM-M⏀ (red bars) and M-M⏀ (blue bars) collected after incubation on ice (viral binding) or incubation for 2 hours at 37°C (viral entry). Data represented as means ± SEM (n= 4 donors). Statistical analysis was performed via two-way ANOVA with Geisser-Greenhouse correction and Fisher’s LSD test. (D-E) Mock or CHIKV 181/25 infected (MOI=1.0) GM-M⏀ and M-M⏀ were lysed at indicated timepoints for SDS-PAGE and immunoblotting. ”POS” indicates a positive control lane of primary HFF-1 human foreskin fibroblast cells infected with CHIKV 181/25 collected at 24 hpi. F) GM-M⏀ and MM⏀ were infected with CHIKV 181/25 (MOI=1.0) for 24 hours and fixed with 4% paraformaldehyde and permeabilized with 0.01% triton-x-100 before staining with antibodies against nsP4 (green), capsid (red), or DAPI (blue). Images are representative of one donor. Images were captured with the Agilent Cytation10 Confocal Imager. Scale bars = 100 µM. (G-H) Quantification of nsP4 positive and capsid positive macrophages detected via immunofluorescence, determined via automated counting of fluorescently positive objects. Percent infection was determined via the quotient of number of nsP4 positive or capsid positive cells divided by the number of DAPI positive cells. Data represented as means ± SEM (n= 3 donors). Statistical analysis was performed via Welch’s two-tailed T-test. Black asterisks represent P-values, where ns=non-significant, *=P<0.05, and **=P<,0.01, ***=P<0.001, ****=P<0.0001.\", \"page\": 8, \"index\": 3, \"width\": 644, \"height\": 756}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-03-11-710213-v1/fig-004.webp\", \"caption\": \"Figure 2: Evaluation of Cytoskeletal and Endocytic Inhibitors on CHIKV Infection in GM-Mϕ (A) Schematic representation of compounds targeting CHIKV entry and internalization mechanisms in macrophages. GM-Mϕ cultured on 96-wells plates were incubated with macrophage media containing compounds inhibiting phagocytosis: (B) cytochalasin D, macropinocytosis: (C) EIPA, clathrin: (D) pitstop2, dynamin: (E) dynasore, or endocytosis/viral fusion: (F) bafilomycin A1, (H) chloroquine, (G) ammonium chloride, or vehicle control: DMSO for 2 hours at 37°C. Cells were then infected with CHIKV 181/25 (MOI=1.0) for 1 hour 37°C, and re-supplemented with media containing compound for a total incubation time of 24 hours. CHIKV infection was evaluated via immunofluorescence by staining for expression of CHIKV capsid protein and total cell count was determined by DAPI staining. Percent infection was determined by determining number of infected cells over total cells. Cell viability was determined via MTT assay. Data for percent (%) infection and cell viability of compounds is represented as normalized to DMSO vehicle control. (I) IC50 and CC50 values and corresponding dose-response curve for viral infectivity and cell viability was determined via non-linear [inhibitor] vs normalized response – variable non-linear slope analysis. Data represented as means ± SEM. Antiviral and cell viability assays were performed in technical triplicate (n=3 donors).\", \"page\": 12, \"index\": 4, \"width\": 979, \"height\": 808}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-03-11-710213-v1/fig-005.webp\", \"caption\": \"Figure 5: Transcriptional activation of viral RNA sensing pathways in response to CHIKV infection in GM-M⏀ and MMO⏀ Monocyte-derived macrophages were differentiated with either GM-CSF (GM-M⏀, red bars) or M-CSF (M-M⏀, blue bars) for 6 days and with CHIKV 181/25 (MOI=1.0) for 6, 24, and 48 hours. RT-qPCR was performed to assess relative expression of the following genes: (A) TLR3, TLR7, TLR8, RIG-I, MDA5 (B) TRIF, MYD88, TRAF3, TRAF6, MAVS (C) IRF3, IRF7, RELA (D) IFN⍺, and IFNβ. Relative expression indicates fold expression of indicated gene expression levels normalized to RPS11 and respective mock treatment via ΔΔCT method. Data represented as means ± SEM (n= 3 donors). Statistical analysis was performed via two-way ANOVA with Geisser-Greenhouse correction and Fisher’s LSD test. Black asterisks represent P-value statistical significance, where ns=non-significant, *=P<0.05, **=P<0.01, ***=P<0.001, and ****=P<0.0001.\", \"page\": 20, \"index\": 5, \"width\": 694, \"height\": 843}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-03-11-710213-v1/fig-006.webp\", \"caption\": \"Figure 3: Expression of macrophage surface proteins in response to CHIKV infection in GM-M⏀ and M-MO⏀ GM-M⏀, M-M⏀, and undifferentiated monocytes were surface stained with a panel of antibodies assessing the expression of (A) lineage (CD11b and CD14), (B) M1 (CD80, CD86, and HLA-DR), and (C) M2 (CD163, CD206, and CD209) markers. Histograms are representative of one single donor, gated on Singlet+/LIVE-DEAD-Blue-. (D-K) Macrophages were infected with CHIKV 181/25 (MOI 1) or mock infected for 24 hours. Cells were stained with indicated markers. Quantification of each marker was determined by normalizing median fluorescence intensity (MFI) of live, CHIKV-infected cells over mock infected cells (n=8 donors). Data represented as means ± SEM and individual donor values. Statistical analysis was performed via one-way ANOVA with Geisser-Greenhouse correction and Fisher’s LSD test. Black asterisks represent P-values, where ns=non-significant, *=P<0.05, and **=P<0.01, ***=P<0.001, ****=P<0.0001.\", \"page\": 16, \"index\": 6, \"width\": 986, \"height\": 379}]"
+motivation: 旨在探究不同细胞因子驱动的巨噬细胞分化如何影响其对基孔肯雅病毒的易感性及免疫反应。
+method: 利用供体匹配的原代巨噬细胞，在GM-CSF或M-CSF诱导下进行分化，并对比其在CHIKV感染下的病毒复制和细胞因子表达。
+result: GM-CSF分化的巨噬细胞支持病毒高效复制，而M-CSF分化的细胞通过产生更高水平的IFN和IP10表现出对病毒的显著限制。
+conclusion: 巨噬细胞的分化状态是决定CHIKV易感性和抗病毒免疫的关键因素，其中dsRNA感应在驱动抗病毒反应中起主导作用。
+---
+
+## 摘要
+基孔肯雅病毒（CHIKV）是一种致关节炎的甲病毒，会导致感染者出现致残性关节疼痛。目前对 CHIKV 相关关节痛的驱动机制尚不完全清楚，但巨噬细胞被认为是病毒物质持续存在的潜在宿主以及免疫病理学的介质。粒细胞-巨噬细胞集落刺激因子（GM-CSF）和巨噬细胞集落刺激因子（M-CSF）是骨髓生长因子，分别使巨噬细胞偏向促炎和抗炎表型。在本研究中，我们探讨了通过 GM-CSF 和 M-CSF 驱动的巨噬细胞分化如何影响体外对 CHIKV 感染的易感性及其反应。利用供体匹配的原代巨噬细胞平行培养，我们发现 GM-CSF 分化的巨噬细胞对 CHIKV 和马雅罗病毒（MAYV）感染具有高度易感性，并支持强劲的病毒复制；而 M-CSF 分化的巨噬细胞则对 CHIKV 复制具有抗性，且检测不到病毒蛋白的表达。尽管存在这些差异，我们观察到无论分化状态如何，受 CHIKV 感染的巨噬细胞均呈现促炎性的 M1 型极化。有趣的是，我们在 M-CSF 分化的巨噬细胞中观察到更高水平的 IFN 和 IP10/CXCL10 产生，这表明 M-CSF 促进了限制 CHIKV 感染的抗病毒状态。用双链 RNA（聚肌胞苷酸；poly(I:C)）而非单链 RNA（瑞喹莫德，R848）刺激巨噬细胞，重现了由 CHIKV 感染诱导的抗病毒细胞因子和趋化因子反应。这些发现表明，在驱动巨噬细胞对 CHIKV 的抗病毒反应中，dsRNA 感知比 ssRNA 感知发挥着更显著的作用。总之，这些研究结果强调了巨噬细胞分化是人类 CHIKV 易感性和抗病毒免疫的关键决定因素，对于理解感染期间的炎症发病机制具有重要意义。
+
+## Abstract
+Chikungunya virus is an arthritogenic alphavirus causing debilitating joint pain in infected individuals. The mechanisms driving CHIKV-associated arthralgia is poorly understood, however, macrophages have been implicated as potential reservoirs of persistent viral material and mediators of immunopathology. Granulocyte Macrophage-Colony Stimulating Factor (GM-CSF) and Macrophage-Colony Stimulating Factor (M-CSF) are cytokines that serve as myeloid growth factors that bias macrophages toward pro-inflammatory and anti-inflammatory phenotypes, respectively. In this study, we examined how cytokine-driven macrophage differentiation via GM-CSF and M-CSF influences susceptibility to and responses against CHIKV infection in vitro. Using parallel donor-matched cultures of primary macrophages, we show that GM-CSF-differentiated macrophages are highly permissive to CHIKV and Mayaro virus (MAYV) infection and support robust viral replication, whereas M-CSF-differentiated macrophages are resistant to CHIKV replication and lack detectable levels of viral protein expression. Despite these differences, we observed pro-inflammatory, M1-skewing of CHIKV-infected macrophages, regardless of differentiation state. Interestingly, we observe higher production of IFN and IP10/CXCL10 in M-CSF differentiated macrophages, suggesting that M-CSF promotes an antiviral state that restricts CHIKV infection. Stimulation of macrophages with double-stranded RNA (polyinosinic:polycytidylic acid; poly(I:C)), but not with single-stranded RNA (resiquimod, R848), recapitulated the antiviral cytokine and chemokine response induced by CHIKV infection. These findings suggest that dsRNA sensing plays a more prominent role than ssRNA sensing in driving the macrophage antiviral response to CHIKV. Together, these findings highlight macrophage differentiation as a critical determinant of CHIKV susceptibility and antiviral immunity in humans, with implications for understanding inflammatory pathogenesis during infection.
+
+---
+
+## 论文详细总结（自动生成）
+
+这是一份关于论文《GM-CSF and M-CSF Driven Differentiation Differentially Regulates Chikungunya Virus Infection and Antiviral Responses in Human Monocyte-Derived Macrophages》的深度学术总结：
+
+### 1. 论文的核心问题与整体含义（研究动机和背景）
+*   **核心问题**：探讨不同细胞因子（GM-CSF 与 M-CSF）诱导的人单核细胞源性巨噬细胞（MDMs）分化状态，如何差异化地影响其对基孔肯雅病毒（CHIKV）的易感性、病毒复制能力以及随后的先天免疫反应。
+*   **背景**：CHIKV 是一种通过蚊媒传播的甲病毒，可引起严重的急性和慢性关节痛。巨噬细胞被认为是 CHIKV 感染的主要靶细胞和病毒持久存在的潜在宿主。由于组织微环境中的细胞因子（如 GM-CSF 和 M-CSF）会诱导巨噬细胞产生不同的表型（促炎 vs. 抗炎），理解这些分化状态对病毒感染的影响对于揭示 CHIKV 的致病机制至关重要。
+
+### 2. 论文提出的方法论
+*   **核心思想**：通过在体外模拟两种不同的巨噬细胞分化路径（GM-M$\phi$ 和 M-M$\phi$），对比研究它们在面对 CHIKV 挑战时的生物学行为差异。
+*   **关键技术细节**：
+    *   **细胞模型**：从健康供体外周血中分离 CD14+ 单核细胞，分别使用 GM-CSF 或 M-CSF 诱导分化 6 天。
+    *   **病毒感染**：使用 CHIKV 减毒株（181/25）和野生型株（AF15661），以及同属的马雅罗病毒（MAYV）进行感染实验。
+    *   **检测手段**：利用 RT-qPCR 定量病毒基因组和亚基因组 RNA；通过免疫印迹（Western Blot）和免疫荧光（IFA）检测病毒蛋白表达；使用多因子 ELISA 检测细胞因子分泌；利用流式细胞术分析细胞表面标记物。
+    *   **机制探索**：使用多种内吞抑制剂（如 Bafilomycin A1, Chloroquine 等）确定病毒进入路径，并使用 TLR 激动剂（Poly(I:C) 和 R848）模拟病毒 RNA 感知。
+
+### 3. 实验设计
+*   **实验场景**：体外原代细胞感染模型。
+*   **对比对象**：
+    *   **分化条件对比**：GM-CSF 诱导的巨噬细胞（通常关联促炎 M1 样） vs. M-CSF 诱导的巨噬细胞（通常关联抗炎 M2 样）。
+    *   **病毒株对比**：CHIKV 181/25 vs. CHIKV AF15661。
+    *   **刺激物对比**：活病毒 vs. UV 灭活病毒；dsRNA 模拟物 vs. ssRNA 模拟物。
+*   **Benchmark**：以未感染的 Mock 组作为基准，并使用 HFF-1 细胞作为病毒感染的阳性对照。
+
+### 4. 资源与算力
+*   **算力说明**：论文未提及高性能计算或 GPU 算力需求。该研究主要基于生物学实验（细胞培养、分子生物学检测、显微成像），不涉及大规模深度学习模型训练。
+
+### 5. 实验数量与充分性
+*   **实验规模**：研究使用了来自多名（通常 n=3 到 n=8）健康供体的原代细胞，这在原代细胞研究中具有较好的代表性，能够克服个体差异。
+*   **充分性**：实验设计涵盖了病毒生命周期的多个阶段（结合、进入、复制、蛋白合成、子代释放），并进行了药理学抑制实验和转录水平的通路分析。
+*   **客观性**：通过供体匹配（Donor-matched）的设计，排除了遗传背景差异对分化结果的影响，实验结果具有较高的客观性和说服力。
+
+### 6. 论文的主要结论与发现
+*   **易感性差异**：GM-M$\phi$ 对 CHIKV 高度易感，支持高效的病毒复制和蛋白表达；而 M-M$\phi$ 表现出显著的抗病毒抗性，几乎检测不到病毒蛋白。
+*   **进入机制**：CHIKV 在巨噬细胞中的进入依赖于低 pH 环境和动力蛋白（Dynamin），主要通过内吞作用进入。
+*   **免疫表型**：尽管初始状态不同，感染后的两类巨噬细胞均向促炎的 M1 表型极化（CD80/CD86 上调）。
+*   **抗病毒响应**：M-M$\phi$ 虽然感染率低，但能产生更高水平的 IFN-$\alpha$ 和 IP10。研究发现 M-M$\phi$ 具有更强的 dsRNA（而非 ssRNA）感知能力，这可能是其产生抗病毒状态的关键。
+*   **病毒逃逸**：在易感的 GM-M$\phi$ 中，CHIKV 能够显著抑制 IFN 诱导的抗病毒基因（如 ISG15, MX1）的表达。
+
+### 7. 优点
+*   **模型贴近临床**：使用人原代 MDMs 而非细胞系，更真实地模拟了人体内的感染环境。
+*   **机制深入**：不仅观察到了感染差异，还深入探讨了病毒进入路径、RNA 感知差异以及病毒对干扰素信号的拮抗作用。
+*   **多病毒验证**：通过 MAYV 的实验证明了这种分化介导的易感性差异在致关节炎甲病毒中具有普遍性。
+
+### 8. 不足与局限
+*   **体外局限性**：体外分化的巨噬细胞虽然能模拟极化，但无法完全还原关节组织微环境中复杂的细胞因子网络。
+*   **受体研究不足**：虽然观察到了进入差异，但未明确说明 GM-CSF 是否通过上调特定的 CHIKV 受体（如 Mxra8）来增加易感性。
+*   **慢性期模拟缺失**：研究主要集中在感染后的 48 小时内，未能模拟 CHIKV 长期持续感染的机制。
+
+（完）
