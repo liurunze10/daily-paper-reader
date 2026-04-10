@@ -1,0 +1,1063 @@
+Title: Atf3 Integrates Lipid and Cytoskeletal Remodeling to Drive Macrophage Fusion
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.01.715652v1.full.pdf
+
+Number of Pages: 54
+
+Markdown Content:
+> 1
+> Atf3 Integrates Lipid and Cytoskeletal Remodeling to Drive Macrophage Fusion 1
+> Andreia Correia 1# , Naziha Mroueh 2# , Esther Katharina Wollert 1, Dimitrije Stankovic 1, Gábor 2
+> Csordás 3, Christian Jüngst 4, Antonio García-Bernardo Tartiere 5,6 , Martim Dias Gomes 7,8 , Sandra 3
+> Iden 9,10 , Mirka Uhlirova 1*
+> 4
+> 1
+> Institute for Genetics, Faculty of Mathematics and Natural Sciences, Cologne Excellence Cluster for 5Aging and Aging-Associated Diseases (CECAD), Cologne, Germany 6
+> 2
+> Quantitative Systems Biology, Life & Medical Sciences (LIMES) Institute, University of Bonn, Bonn, 7Germany 8
+> 3
+> Institute of Genetics, HUN-REN Biological Research Centre, Szeged, Hungary 9
+> 4
+> University of Cologne, Faculty of Mathematics and Natural Sciences, Cologne Excellence Cluster for 10 Aging and Aging-Associated Diseases (CECAD), Cologne, Germany 11
+> 5
+> Departamento de Bioquímica y Biología Molecular, Instituto Universitario de Oncología (IUOPA), 12 Universidad de Oviedo, Oviedo, Spain 13
+> 6
+> Instituto de Investigación Sanitaria del Principado de Asturias (ISPA), Oviedo, Spain 14
+> 7
+> Institute for Biomedical Informatics, Faculty of Medicine and University Hospital Cologne, University of 15 Cologne, Cologne, Germany 16
+> 8
+> Center for Molecular Medicine Cologne (CMMC), Faculty of Medicine and University Hospital Cologne, 17 University of Cologne, Cologne, Germany 18
+> 9
+> Cell & Developmental Biology, Saarland University, Faculty of Medicine, and Center for Human & 19 Molecular Biology (ZHMB), Homburg, Germany 20
+> 10
+> Center for Gender-specific Biology & Medicine (CGBM), Saarland University, Faculty of Medicine, 21 Homburg/Saar, Germany 22
+> RUNNING TITLE:  Atf3 Drives IL-4 Macrophage Fusion 23
+> *
+> Corresponding author, email: mirka.uhlirova@uni-koeln.de 24
+> #
+> These authors contributed equally 25
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 2
+> ABSTRACT 26
+> Macrophages are highly plastic innate immune cells that can form multinucleated giant cells 27
+> (MGCs) under physiological and pathological conditions, such as osteoclasts and foreign body 28
+> giant cells. The mechanisms governing macrophage multinucleation remain incompletely 29
+> understood. Here, we identify activating transcription factor 3 (Atf3) as an essential regulator of 30
+> MGC formation via cell-cell fusion in response to persistent Interleukin 4 (IL-4) and STAT6 31
+> signaling, characteristic of the foreign body reaction.  Atf3 -deficient macrophages activate 32
+> STAT6-dependent transcriptional programs in response to IL-4, including fusion-associated 33
+> genes, yet fail to undergo multinucleation. This defect is associated with impaired actin 34
+> cytoskeleton remodeling, abnormal nuclear morphology, reduced lamin A/C expression, and 35
+> genome instability. Mechanistically, loss of  Atf3  derepresses the  Cholesterol-25-hydroxylase 36
+> (Ch25h ), elevating 25-hydroxycholesterol (25-HC), suppressing the mevalonate pathway, and 37
+> reducing cholesterol and isoprenoid biosynthesis essential for cytoskeletal dynamics. Deletion 38
+> of  Ch25h  in  Atf3 -deficient macrophages restores cholesterol levels and actin turnover, but not 39
+> lamin A/C or fusion. These findings establish Atf3 as a central transcriptional node integrating 40
+> lipid  metabolism  with  cytoskeletal  and  nucleoskeletal  remodeling  to  control  IL-4-driven 41
+> macrophage multinucleation. 42
+> 43
+> KEYWORDS:  actin  cytoskeleton/  Ch25h/  lamin  A/C/  mevalonate  pathway/  prenylation/ 44
+> multinucleated giant cells/ macrophages 45
+> 46
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 3
+> INTRODUCTION 47
+> Macrophages are versatile sentinels of the innate immune system, serving as professional 48
+> phagocytes, antigen-presenting cells and coordinators of tissue repair (Mass  et al , 2023; Park  et 49
+> al , 2022; Wynn & Vannella, 2016). A remarkable feature of macrophages is their ability to form 50
+> multinucleated giant cells (MGCs) under specific physiological and pathological conditions. 51
+> Osteoclasts represent the prototypical physiological MGCs that differentiate in response to the 52
+> receptor activator of NF-κB ligand (RANKL) to mediate bone remodeling and homeostasis 53
+> (Levaot  et al , 2015; Yasuda  et al , 1998). In contrast, pathological MGCs arise during chronic 54
+> inflammation associated with  granuloma formation in  infectious, autoinflammatory, and 55
+> allergic contexts. Prominent examples include Langhans cells in tuberculosis, MGCs found in 56
+> giant cell arteritis (GCA) and atherosclerosis, and foreign body giant cells (FBGCs) formed in 57
+> response to implanted biomaterials or tissue-damaging amyloid fibrils (Ahmadzadeh  et al ,58
+> 2022; Anderson  et al , 2008; Bodin  et al , 2010; Brooks  et al , 2019; Samokhin  et al , 2010). 59
+> Importantly, the differentiation of distinct MGC subtypes is dictated by the local inflammatory 60
+> milieu. For example, Langhans cells form in response to Toll-like receptor 2 (TLR2) and tumor 61
+> necrosis factor (TNF) whereas FBGCs are driven by a Th2-polarized environment rich in IL-4 and 62
+> IL-13, highlighting the existence of context-dependent transcriptional programs governing MGC 63
+> differentiation (Helming & Gordon, 2009; Herrtwich  et al , 2016; McInnes & Rennick, 1988; 64
+> McNally & Anderson, 1995; Puissegur  et al , 2007). 65
+> Macrophage multinucleation occurs via two primary mechanisms: cell-cell fusion of individual 66
+> macrophages,  and  acytokinetic  cell  division,  where  nuclear  division  proceeds  without 67
+> cytokinesis (Helming & Gordon, 2009; Herrtwich  et al. , 2016; Takegahara  et al , 2016). Both 68
+> processes  require  tight  coordination  of  transcriptional  reprograming,  cytoskeletal  and 69
+> membrane remodeling. The process of cell fusion is particularly complex, involving migration, 70
+> acquisition of a fusion-competent state, assembly of adhesive, force-generating podosomes, 71
+> and finally the formation of the fusion pore and plasma membrane merging (Dufrancais  et al ,72
+> 2021; Helming & Gordon, 2009). These steps critically depend on actin cytoskeleton dynamics, 73
+> as disrupting key regulators like WASP, Rac-1, Cdc42, Filamin A or the Arp2/3 complex, severely 74
+> impairs fusion efficiency (Arya  et al , 2021; DeFife  et al , 1997; Faust  et al , 2019; Gonzalo  et al ,75
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 4
+> 2010;  Jay  et  al , 2007;  Leung  et  al , 2010).  Concurrently,  membrane  lipid  composition, 76
+> particularly cholesterol content, provides another layer of regulation by modulating membrane 77
+> fluidity  and  protein  distribution,  thereby  affecting  the  organization  of  the  cytoskeleton 78
+> (Brukman  et al , 2019; Lee & Bensinger, 2022; Lösslein  et al , 2021). However, how macrophages 79
+> integrate extracellular signals with these intrinsic programs of lipid metabolism, cytoskeletal 80
+> rearrangement, and transcriptional control to drive multinucleation remains incompletely 81
+> understood. 82
+> The stress-responsive Activating transcription factor 3 (Atf3), a member of the ATF/CREB family, 83
+> has emerged as a key regulator of inflammatory and metabolic programs (Hu  et al , 2024; 84
+> Jadhav & Zhang, 2017; Rynes  et al , 2012). In macrophages, Atf3 attenuates pro-inflammatory 85
+> cytokine expression driven by Toll-like receptor (TLR) signaling (De Nardo  et al , 2014; Gilchrist 86
+> et al , 2006; Labzin  et al , 2015) while also suppressing the transcription of  Cholesterol-25-87
+> hydroxylase  (Ch25h ) (Gold  et al , 2012). Ch25h is an ER-resident enzyme that produces 25-88
+> hydroxycholesterol (25-HC) (Lund  et al , 1998), a potent oxysterol that restricts cholesterol and 89
+> isoprenoid synthesis via the mevalonate pathway and alters plasma membrane cholesterol 90
+> content (Griffiths & Wang, 2022). Furthermore, Atf3 promotes macrophage migration and 91
+> metabolic phenotypes associated with alternative activation, which are processes permissive 92
+> for MGC formation (Hu  et al. , 2024; Lösslein  et al. , 2021). The physiological importance of Atf3 93
+> is highlighted by the increased susceptibility of Atf3-deficient mice to septic shock and 94
+> atherosclerosis (De Nardo  et al. , 2014; Gilchrist  et al. , 2006; Gold  et al. , 2012). Intriguingly, 95
+> emerging evidence also links Atf3 to regulation of cytoarchitecture, including components of 96
+> the cytoskeleton and nucleoskeleton (Boespflug  et al , 2014; Donohoe  et al , 2018; Du  et al ,97
+> 2022; Sekyrova  et al , 2010). Together, these functions position Atf3 as a potential integrator of 98
+> the  inflammatory,  metabolic,  and  structural  remodeling  required  for  macrophage 99
+> multinucleation. 100
+> Here, we identify Atf3 as a central regulator of IL-4-driven macrophage fusion. We demonstrate 101
+> that  Atf3  deficiency leads to the derepression of  Ch25h , resulting in 25-HC accumulation and 102
+> suppression of the mevalonate pathway. These metabolic changes cause profound defects in 103
+> membrane and actin dynamics, leading to aberrant morphology and impaired multinucleation. 104
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 5
+> Remarkably, while restoring cholesterol and isoprenoid synthesis rescues cellular morphology, 105
+> it fails to rescue fusion, uncovering a distinct, Ch25h-independent role for Atf3 in maintaining 106
+> nuclear lamina integrity. Together, our findings establish Atf3 as a critical transcriptional hub 107
+> that  couples  inflammatory  signaling  with metabolic,  cytoskeletal,  and  nuclear  programs 108
+> essential for macrophage multinucleation. 109
+> 110
+> RESULTS 111
+> Atf3 is required for macrophage multinucleation downstream of IL-4 112
+> Macrophage multinucleation occurs physiologically in the bone, where osteoclasts form in 113
+> response to RANKL, and pathologically during chronic inflammation such as  Mycobacteria 114
+> infection or foreign body reactions driven by TLR2 and IL-4/IL-13 signaling, respectively. To 115
+> determine whether Atf3 is involved in this process, we assessed its expression in mouse bone 116
+> marrow-derived macrophages (BMDMs) exposed to different MGC-inducing stimuli, including 117
+> RANKL, TLR2 agonists and IL-4. In this study, multinucleation is defined as the presence of more 118
+> than  two  nuclei  within  a single  macrophage,  a criterion  used  throughout  to  define 119
+> multinucleated giant cells (MGCs). Atf3 mRNA and protein levels were significantly induced 120
+> after one day of IL-4 treatment but remained unchanged in response to RANKL or the synthetic 121
+> TLR2 agonists, FSL-1 and Pam3CSK4 (Fig. 1A, B). In  control  BMDM cultures, giant cells appeared 122
+> after one day of IL-4 treatment and increased in size and number over time (Fig. 1P-Q). 123
+> Strikingly, macrophages isolated from whole-body  Atf3  knockout ( Atf3 KO ) mice generated by 124
+> CRISPR/Cas9 (Fig. 1B, C) failed to multinucleate in response to IL-4 (Fig. 1D-O, Q). Increasing cell 125
+> density, IL-4 concentration, or both, or culturing cells on a fusogenic Permanox substrate 126
+> (Helming & Gordon, 2009), did not mitigate the multinucleation defect of  Atf3 KO  cells (Fig. 1r-u). 127
+> The absence of MGCs was also evident in IL-4-stimulated macrophages isolated from the 128
+> peritoneal cavity of  Atf3 -deficient mice (Fig. 1V-X), indicating that Atf3 is essential for IL-4-129
+> driven macrophage multinucleation. 130
+> Despite this defect,  Atf3 KO  BMDMs differentiated into multinucleated osteoclasts in response to 131
+> RANKL  in vitro , albeit they were smaller compared to the  control  (Fig. 1Y-AA).  Atf3 -deficient 132
+> BMDMs also formed MGCs when stimulated with FSL-1 or infected with a wild-type strain of 133
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 6
+> Mycobacterium tuberculosis  (Erdman-GFP) (Fig. 1BB-EE), demonstrating that the role Atf3 in 134
+> multinucleation is specific to IL-4 signaling rather than a general requirement for MGC 135
+> formation.  These  findings  identify  IL-4  as  a potent  inducer  of  Atf3  and  establish  Atf3 136
+> requirement for IL-4-mediated MGC formation but dispensable for RANKL- or TLR2-driven 137
+> multinucleation. 138
+> 139
+> Atf3 promotes macrophage cell-cell fusion in response to IL-4 140
+> Given the multinucleation defect of  Atf3 KO  BMDMs in response to IL-4, we examined whether 141
+> Atf3 is required for cell-cell fusion or acytokinetic division, the two principal mechanisms 142
+> generating MGCs (Fig. 2A). Time-lapse imaging revealed that both processes occurred in  control 143
+> BMDM cultures upon IL-4 stimulation (Fig. 2A, B and Supplementary Movie 1). To assess their 144
+> relative  contributions,  we  co-cultured  differentially  labeled  BMDMs  expressing  either 145
+> cytoplasmic tdTOMATO or nuclear H2B-EGFP (Fig. 2A). After three days of IL-4, most  control 146
+> MGCs (95%) were positive for both fluorescent markers (Fig. 2C, E, F), indicating that cell-cell 147
+> fusion is the dominant mechanisms underlying IL-4-induced multinucleation. GFP-positive 148
+> nuclei accounted for nearly 50% of the total nuclei in tdTOMATO-positive MGCs , suggesting 149
+> equal fusion competence of the two  control  populations (Fig. 2G). In contrast, fusion efficiency 150
+> was dramatically reduced when  control  BMDMs were co-cultured with  Atf3 KO  cells (Fig. 2D-F). 151
+> Atf3 KO  cells contributed less than 15% of nuclei to MGCs (Fig. 2G) and co-cultures of  Atf3 KO
+> 152
+> BMDMs alone failed to generate any MGCs (Fig. 2I). The proportion of binucleated cells was 153
+> also decreased in  Atf3 KO  cultures, and those that did form never expressed both fluorescent 154
+> markers (Fig. 2I, J) consistent with incomplete mitosis  rather than fusion. Together, these 155
+> results establish Atf3 as a key regulator of macrophage fusion  and reinforce the concept that 156
+> cell-cell fusion, rather than acytokinetic division, is the primary mechanism driving IL-4-157
+> mediated MGC formation. 158
+> 159
+> Atf3 acts a critical transcriptional coordinator of IL-4-driven macrophage program 160
+> To investigate the underlying cause of the multinucleation defect, we assessed whether  Atf3 KO
+> 161
+> BMDMs could sense and respond to IL-4. Our CRISPR/Cas9-generated homozygous  Atf3 KO  mice 162
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 7
+> are viable, fertile and phenotypically normal consistent with previous reports (Hartman  et al ,163
+> 2004). However, in line with the established anti-inflammatory function of Atf3 (Gilchrist  et al. ,164
+> 2006),  naive  Atf3 KO  macrophages  displayed  a heightened  basal  inflammatory  state, 165
+> characterized by elevated levels of phosphorylated STAT1 (p-STAT1) and increased expression 166
+> of NF-κB-dependent inflammatory genes, including  Il6  and  Isg15 , compared with  controls , as 167
+> shown by immunoblotting (Fig. 3A, B) and RT-qPCR (Fig. 3C). Despite this pro-inflammatory 168
+> priming, the IL-4 signaling remained functional in  Atf3 -deficient cells. Upon IL-4 stimulation, p-169
+> STAT1 levels decreased comparably in both genotypes. Importantly, levels of phosphorylated 170
+> STAT6 (p-STAT6), the essential transcription factor for IL-4-driven gene expression and fusion 171
+> (Moreno  et al , 2007), increased to a similar extent in both  control  and  Atf3 KO  macrophages (Fig. 172
+> 3D, E). These data demonstrate that while Atf3 is required to restrain basal inflammation, its 173
+> absence does not disrupt the primary IL-4 signaling, indicating that the observed fusion defect 174
+> occurs downstream, parallel to, or independent of STAT6. 175
+> Genome-wide RNA-sequencing on  control  and  Atf3 KO  BMDMs before and after 5 hours of IL-4 176
+> stimulation revealed that IL-4 altered the expression of 7,732 genes ( pAdj  < 0.05) in  control  cells 177
+> (Fig. 3F and Supplementary Dataset 1), of which 3,986 were regulated similarly in  Atf3 KO
+> 178
+> BMDMs (Fig. 3F-I). The 2,364 commonly upregulated genes were enriched for functional 179
+> categories  related  to  ribonucleoprotein  complex  assembly,  ribosome  biogenesis,  RNA 180
+> processing and translation (Fig. 3J and Supplementary Dataset 2). Consistent with STAT6 181
+> activation, this set included canonical targets such as  Arginase-1 (Arg-1) , Resistin-like alpha 182
+> (Retnla)  and  Chitinase-like protein 3 (Chil3) , as well as fusion-associated genes like  Cadherin 183
+> (Cdh1), CD44, CD36  and  Osteoclast-stimulatory transmembrane protein (Ocstamp)  (Fig. 3I). 184
+> Both genotypes shared 1,622 commonly downregulated genes that were enriched for functions 185
+> associated with autophagy, immune responses, and interferon signaling pathways (Fig. 3J and 186
+> Supplementary Dataset 2). These findings demonstrate that IL-4 is sufficient to shift  Atf3 KO
+> 187
+> BMDMs from a STAT1-driven pro-inflammatory profile to the canonical STAT6-mediated 188
+> transcriptional program, including the induction of known fusion-promoting genes. 189
+> Despite this overlap and a clear STAT6-regulated signature (Fig. 3H-J), IL-4-treated  Atf3 KO
+> 190
+> BMDMs showed 3,223 differentially expressed genes (DEGs) ( pAdj  < 0.05) compared with IL-4 191
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 8
+> stimulated  controls , comprising 1,974 upregulated and 1,249 downregulated transcripts (Fig. 192
+> 3K). The upregulated genes were overrepresented for nuclear-localized proteins involved in 193
+> chromatin organization, cell cycle regulation and DNA repair (Fig. 3L-N and Supplementary 194
+> Dataset 2). Downregulated genes encoded proteins at the cell cortex and plasma membrane, 195
+> including components of cell junctions, projections (e.g., lamellipodia and leading edges), and 196
+> membrane microdomains (Fig. 3L). Gene ontology analysis linked these changes to pathways 197
+> and processes associated with cell motility, receptor tyrosine kinase and small GTPase signaling, 198
+> and cholesterol metabolism (Fig. 3M, N and Supplementary Dataset 2). Collectively, these 199
+> results identify Atf3 as a critical transcriptional coordinator of IL-4-driven macrophage program 200
+> downstream of, or in parallel to STAT6, integrating cytoskeletal architecture, lipid metabolism 201
+> and genome integrity. While IL-4 effectively rewires the inflammatory state and activates a 202
+> robust STAT6-driven transcriptional program in  Atf3 KO  macrophages, dysregulation of Atf3-203
+> dependent modules likely represents the mechanistic basis for the persistent fusion defects. 204
+> Atf3 loss impairs cytoskeletal organization and dynamics in IL-4 stimulated macrophages 205
+> The  marked  transcriptional  downregulation  of  structural  and  regulatory  cytoskeletal 206
+> components in  Atf3 KO  macrophages (Fig. 3L-N and Supplementary Datasets 1, 2), together with 207
+> prior evidence of Atf3’s role in cytoarchitecture regulation (Boespflug  et al. , 2014; Donohoe  et 208
+> al. , 2018; Du  et al. , 2022; Sekyrova  et al. , 2010), prompted us to examine how loss of  Atf3 209
+> affects  cytoskeletal  organization  and  membrane  dynamics,  key  processes  for  efficient 210
+> macrophage fusion. 211
+> Following IL-4 stimulation, both  control  and  Atf3 KO  BMDMs initially adopted the characteristic 212
+> elongated morphology (Fig. 1F, G, L, M). Over time,  control  BMDMs rounded, extended 213
+> lamellipodia, and fused (Figs. 1H, I, and 4A), whereas  Atf3 KO  cells maintained their elongated 214
+> shape and formed multilayered  aggregates with intact intercellular boundaries (Figs. 1N, O, and 215
+> 4B). In  control  macrophages, IL-4 induced extensive membrane ruffling, lamellipodia and 216
+> filopodia formation, supported by a dense cortical actomyosin network (Fig. 4C, E, G-H, K and 217
+> Supplementary Movie 2). In  Atf3 KO  BMDMs, membranes were smoother with sparse filopodia 218
+> and  actomyosin  cables  concentrated  along  stellate  extensions  (Fig.  4D,  F,  I-L  and 219
+> Supplementary Movie 3). Biochemical fractionation showed a reduced F/G actin ratio in IL-4-220
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 9
+> stimulated  Atf3 KO  BMDMs relative to  control  cells (Fig. 4P and Supplementary Fig. 1A). These 221
+> changes were accompanied by alteration in actin regulators, including elevated levels of the 222
+> Wiskott–Aldrich syndrome protein (WASP), increased active (dephosphorylated) Cofilin, and 223
+> abnormal perinuclear accumulation of the actin-crosslinking protein Filamin A (FLNA) (Fig. 4M-224
+> O, Q-T and Supplementary Fig. 1B). 225
+> These results implicate Atf3 as a critical regulator of actin cytoskeleton organization and 226
+> turnover downstream of IL-4 signaling and suggest that defective cytoskeleton remodeling 227
+> underlies the fusion defects in  Atf3 KO  macrophages. 228
+> 229
+> Atf3 controls the mevalonate pathway required for protein prenylation and cholesterol 230
+> homeostasis 231
+> Actin regulators, such as WASP, Cofilin and FLNA are controlled by the Rho family GTPases 232
+> (RhoA, Rac1 and Cdc42) (Jaffe & Hall, 2005). The membrane localization and activity of these 233
+> GTPases require post-translational farnesylation or geranylgeranylation by prenyltransferases 234
+> (Hodge & Ridley, 2016). The required isoprenoids are synthesized via the mevalonate pathway 235
+> from farnesyl pyrophosphate (FPP), a common precursor for non-sterol isoprenoids and 236
+> cholesterol (Fig. 5A and Supplementary Fig. 1C). Inhibition of prenyltransferases, or the rate-237
+> limiting enzyme of the mevalonate pathway, HMG-CoA reductase (Hmgcr), disrupts Rho GTPase 238
+> membrane association and activity resulting in altered actin turnover and remodeling (Akula  et 239
+> al , 2019; Cordle  et al , 2005). 240
+> Atf3 KO  macrophages showed downregulation of genes associated with small GTPase regulation 241
+> and signaling (Fig. 3N and Supplementary Dataset 2), and specifically the mevalonate pathway, 242
+> including  Hmgcs1  and  Hmgcr , the cholesterol biosynthesis regulator, Sterol Regulatory Element 243
+> Binding Protein 2 ( Srebf2 ), and a Sterol O-acyltransferase 1 ( Soat1 ), which esterifies cholesterol 244
+> (Figs. 3N, 5B, Supplementary Fig. 1C and Supplementary Dataset 2). In contrast,  Ch25h , a known 245
+> direct Atf3 target gene encoding Cholesterol-25-hydroxylase (Gold  et al. , 2012), was strongly 246
+> upregulated in  Atf3 KO  BMDMs compared to  control  cells (Figs. 3K, 5B, 5C, and Supplementary 247
+> Dataset 1). Its oxysterol product, 25-hydroxycholesterol (25-HC), depletes accessible plasma 248
+> membrane cholesterol, promotes LXR-mediated efflux, suppresses Srebf2  activation, and 249
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 10
+> accelerates Hmgcr degradation (Fig. 5A and Supplementary Figure 1C). Consistent with these 250
+> molecular changes, total cholesterol and major cholesteryl esters (CE 16:0, CE 18:0 and CE26:1) 251
+> were significantly reduced in IL-4 stimulated  Atf3 KO  BMDMs compared to  controls  (Fig. 5D, E). 252
+> These findings identify Atf3 as a central regulator of the mevalonate pathway in IL-4-stimulated 253
+> macrophages, modulating isoprenoid and cholesterol biosynthesis essential for the cytoskeletal 254
+> and membrane remodeling underlying macrophage fusion. The strong upregulation of  Ch25h  in 255
+> Atf3 -deficient macrophages points to its oxysterol product, 25-HC, as a potential mediator of 256
+> these effects. 257
+> 258
+> Elevated 25-HC impairs MGC formation and phenocopies morphological changes caused by 259
+> Atf3 -deficiency 260
+> To determine whether elevated 25-HC can replicate the cytoskeletal and fusion defects of  Atf3 -261
+> deficient macrophages, we pre-treated control BMDMs with 25-HC for 24 hours prior to IL-4-262
+> stimulation. Remarkably, 25-HC induced elongated, stellate morphology and perinuclear FLNA 263
+> foci (Fig. 5F-J), closely resembling the phenotypes of  Atf3 KO  BMDMs following IL-4 stimulation 264
+> (Figs. 1O, 4I-L, 4T). Notably, 25-HC treatment suppressed MGC formation (Fig. 5F, H, K). 265
+> Moreover, similar morphological changes and reduced multinucleation were also observed 266
+> when  control  BMDMs were treated with inhibitors of geranylgeranylation (GGTI-2133) and 267
+> farnesylation (Lonafarnib) (Fig. 5A, 5L-U). 268
+> These results implicate the upregulation of Ch25h, and accumulation of 25-HC driven by Atf3 269
+> deficiency in the regulation of macrophage morphology, cytoskeletal remodeling and fusion 270
+> capacity. The similarity of phenotypes elicited by prenylation inhibitors further supports a 271
+> model in which 25-HC suppresses the mevalonate pathway, limiting isoprenoid availability and 272
+> thereby  impairing  Rho  GTPase-dependent  actin  remodeling  required  for  IL-4-induced 273
+> multinucleation. 274
+> 275
+> Blocking Ch25h in  Atf3 KO
+> BMDMs rescues cell morphology but not cell fusion 276
+> The strong phenotypic similarity between 25-HC-treated control macrophages and  Atf3 -277
+> deficient cells suggested that excess 25-HC is a major driver of the cytoskeletal abnormalities in 278
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 11
+> Atf3 KO  BMDMs. To directly test this hypothesis, we generated  Ch25h -deficient mice using 279
+> CRISPR/Cas9 (Fig. 6A). Homozygous  Ch25h KO  mice are born at the expected Mendelian ratio, 280
+> producing fertile adults without noticeable phenotypes. Unlike IL-4-stimulated  Atf3 KO  BMDMs, 281
+> which  had  reduced  cholesterol,  Ch25h KO  macrophages  maintained  cholesterol  levels 282
+> comparable to  controls  (Fig. 6B) despite a marked increase in Hmgcr protein (Fig. 6C, D). 283
+> Unexpectedly,  Ch25h KO  macrophages showed elevated  Atf3  protein levels in both basal and IL-4 284
+> stimulated conditions (Fig. 6C, E) and enhanced fusion capacity, forming more and larger MGCs 285
+> (Fig. 6F-J). These observations suggest a feedback loop between Atf3 and Ch25h, in which 25-286
+> HC limits fusion competency. 287
+> To  determine  whether  Ch25h  loss could  reverse  the  Atf3 KO  phenotypes,  we generated 288
+> Atf3 KO Ch25h KO  mice. Double knockout mice, like the single gene knockouts, were viable and 289
+> exhibited no noticeable defects (Supplementary Fig. 2A). In contrast to  Atf3 KO  BMDMs, 290
+> Atf3 KO Ch25h KO  macrophages showed increased  Hmgcs1  and  Hmgcr  mRNA and protein levels 291
+> compared to  controls  after IL-4 stimulation (Fig. 6C, d and Supplementary Fig. 2B, C). 292
+> Importantly, cholesterol  levels  in double knockouts were comparable to those in  controls  (Fig. 293
+> 6B), consistent with the phenotype observed in  Ch25h KO  cells. Morphologically,  Atf3 KO Ch25h KO
+> 294
+> BMDMs resembled  control  macrophages, rounding and spreading upon IL-4 stimulation (Fig. 295
+> 6K-O), and regaining membrane ruffling, though less prominent than in  Ch25h KO  or  control  cells 296
+> (Fig. 6P-S). This partial restoration of membrane dynamics coincided with reduced WASP levels 297
+> and improved actin turnover, as reflected by recovery of the F/G-actin ratio (Fig. 6T, U and 298
+> Supplementary Fig. 1D, E). Despite these improvements,  Atf3 KO Ch25h KO  BMDMs did not form 299
+> MGCs (Fig. 6V). 300
+> The observation that  Ch25h  loss enhanced MGC formation in fusion-competent cells, supports 301
+> a role for 25-HC as a potent modulator of cell-cell fusion, consistent with its established 302
+> function in viral-cell membrane fusion. These findings highlight the importance of Atf3-303
+> mediated  Ch25h  regulation for IL-4-driven cytoskeletal remodeling through control of the 304
+> mevalonate pathway, while also demonstrating that additional Atf3-dependent mechanisms, 305
+> beyond cholesterol and isoprenoid metabolism, are required for macrophage multinucleation. 306
+> 307
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 12
+> Atf3 regulation of nuclear lamina morphology and integrity is Ch25h independent 308
+> Although  actin  cytoskeleton  organization  and  membrane  dynamics  were  restored  in 309
+> Atf3 KO Ch25h KO  macrophages, these cells failed to fuse, suggesting that loss of  Atf3  affects other 310
+> structural systems essential for macrophage function. The cytoplasmic actin network is 311
+> mechanically and functionally coupled to the nucleoskeleton, which is primarily composed of 312
+> lamin  intermediate  filaments.  Lamins  provide  nuclear  structural  stability,  mediate 313
+> mechanotransduction,  and  regulate  chromatin  organization,  transcription,  and  genome 314
+> integrity (Goldman  et al , 2002; Gruenbaum & Foisner, 2015; Kalukula  et al , 2022; Miroshnikova 315
+> et al , 2017). Our previous work identified  Drosophila  Lamin C , the ortholog of mammalian 316
+> LMNA , as a direct transcriptional target of Atf3, establishing Atf3 as a positive regulator of 317
+> Lamin C  expression (Donohoe  et al. , 2018). Together with the observed enrichment of DNA 318
+> damage-associated genes in Atf3-deficient BMDMs (Fig. 3l-n), this prompted us to examine 319
+> macrophage nuclear structure and its properties. 320
+> Compared to the oval-shaped nuclei of  control  BMDMs (Fig. 7A-C),  Atf3 KO  nuclei displayed 321
+> pronounced morphological distortions, including deep nuclear envelope invaginations (Fig. 7D-322
+> G, I). Increased nuclear deformability was accompanied by a higher proportion of
+
+γH2A.X-323 
+
+> positive nuclei and micronuclei (Fig. 7D, H, J, K), indicative of compromised genome stability. 324
+> RT-qPCR and immunoblotting revealed significantly reduced  LMNA  mRNA (Fig. 7L) and lamin 325
+> A/C protein levels (Fig. 7M, N) in  Atf3 KO  macrophages relative to  control.  Importantly, lamin A/C 326
+> remain reduced in  Atf3 KO Ch25h KO  macrophages (Fig. 7M, N), demonstrating that this defect is 327
+> independent of Ch25h. 328
+> To determine the functional consequences, we assessed resilience of IL-4 stimulated  control 329
+> and  Atf3 KO  BMDM nuclei during macrophage migration through microfabricated channels of 330
+> varying  widths  (Fig.  7O).  Tracking  nuclear  movement  via  H2B-GFP  expression  showed 331
+> comparable transit rates of  control  and  Atf3 KO  nuclei through wide channels (w ≥ 3 μm) (Fig. 332
+> 7P). In narrow constrictions (w ≤ 2 μm), all  Atf3 KO  nuclei, but only around 56% of  control  nuclei, 333
+> completed passage within a 180-minute experimental window (Fig. 7Q). Despite increased 334
+> compliance,  Atf3 KO  nuclei were more fragile, rupturing and leaking H2B-GFP, whereas  controls 335
+> primarily  exhibited  confined  nuclear  blebbing  (Fig.  7R,  S,  Supplementary  Movies  4,  5). 336
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 13
+> Immunostaining  revealed  lamin  A/C  enrichment  at  unconstrained  nuclear  tips  in  both 337
+> genotypes, but overall levels were markedly reduced in protruding  Atf3 KO  nuclei (Fig. 7T-V). 338
+> To directly test whether nuclear lamina defects impair multinucleation, we examined BMDMs 339
+> from  Lmna G609G  knock-in mice, which carry the Hutchinson-Gilford progeria syndrome (HGPS) 340
+> mutation (Osorio  et al , 2011). Homozygous  Lmna G609G  mice accumulate the truncated prelamin 341
+> A variant progerin and exhibit reduced levels of mature lamin A/C. Notably, the  Lmna G609G
+> 342
+> BMDMs showed significantly impaired IL-4-induced MGC formation, producing smaller MGCs 343
+> compared to  controls  (Fig. 7W-BB). 344
+> These results together demonstrate that Atf3 is required for proper  LMNA  expression and 345
+> nuclear lamina integrity independently of  Ch25h . We propose that loss of  Atf3 , likely through its 346
+> effect on Lmna regulation, disrupts the nucleoskeleton, impairing mechanotransduction and 347
+> compromising genome stability. Together with cytoskeletal abnormalities and altered lipid 348
+> homeostasis, these defects contribute to the multinucleation failure observed in  Atf3 -deficient 349
+> macrophages (Fig. 7CC). 350
+> 351
+> DISCUSSION 352
+> Macrophage multinucleation is a striking cellular transformation observed both in physiological 353
+> tissue remodeling and chronic inflammatory responses (Anderson  et al. , 2008; Brooks  et al. ,354
+> 2019; Helming & Gordon, 2009; Milde  et al , 2015; Miron & Bosshardt, 2018; Pereira  et al ,355
+> 2018). Here, we identify Atf3 as a pivotal transcriptional regulator of IL-4-driven macrophage 356
+> multinucleation via cell-cell fusion, a process central to foreign body giant cell (FBGC) formation 357
+> (Kao  et al , 1995; McNally & Anderson, 1995). Our findings support a model in which Atf3 358
+> promotes fusion through two converging mechanisms: (1) Regulation of lipid metabolism via 359
+> repression of  Ch25h , thereby sustaining cholesterol homeostasis and actin remodeling, and (2) 360
+> Maintenance  of  nuclear  lamina  integrity,  ensuring  nuclear  resilience  and  effective 361
+> mechanotransduction (Fig. 7W). 362
+> 363
+> Atf3 as a context-specific regulator of IL-4-driven cell-cell fusion 364
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 14
+> The requirement for Atf3 in IL-4-induced multinucleation contrasts with its dispensability for 365
+> RANKL-driven  osteoclastogenesis  or  mycobacteria-induced  TLR2-mediated  Langhans  cell 366
+> formation. Its strong induction by IL-4, but not by RANKL or TLR2 agonists underscores its 367
+> specificity for the FBGC program. Mechanistic differences in the formation of distinct MGC 368
+> subtypes likely contribute to this selectivity. FBGCs and osteoclasts arise primarily via cell-cell 369
+> fusion (Faust  et al. , 2019; McNally & Anderson, 1995; Stewart  et al , 2024; Yagi  et al , 2005), 370
+> whereas Langhans cells form mainly via modified cell divisions and mitotic defects (Herrtwich  et 371
+> al. , 2016). This may explain why Atf3-deficient macrophages can still generate MGCs in 372
+> response to mycobacteria or bacterial lipoproteins. In a Th2-polarized environment favoring 373
+> FBGC formation, Atf3 functions as a transcriptional node linking IL-4 signaling to fusion-374
+> competent cellular programs. Interestingly, the reduced size of Atf3-deficient osteoclasts 375
+> suggests a modulatory role in the RANKL-induced MGC program, potentially in cooperation 376
+> with the closely related bZIP transcription factor Jdp2 (Maruyama  et al , 2012). 377
+> The occasional integration of  Atf3 -deficient macrophages into MGCs when co-cultured with 378
+> control cells indicates that their fusion defect is not absolute. Such residual activity aligns with 379
+> the model of heterogeneous “founder” and “follower” subpopulations described in myoblast 380
+> fusion (Kim  et al , 2015) and later recognized in osteoclasts (Hobolt-Pedersen  et al , 2014; Levaot 381
+> et al. , 2015; Yagi  et al. , 2005), and FBGCs (Faust  et al. , 2019). Founder cells initiate fusion and 382
+> undergo extensive cytoskeletal remodeling, implying that Atf3 may be essential for establishing 383
+> the actin- and adhesion-based architecture required for this role. 384
+> 385
+> Lipid-cytoskeleton coupling in fusion competence 386
+> Loss of Atf3 leads to pronounced cytoskeletal abnormalities despite IL-4-STAT-6-mediated 387
+> transcriptional priming and induction of canonical fusion-associated genes.  Atf3 -deficient 388
+> macrophages  exhibited  elongated  morphology,  reduced  membrane  ruffling,  defective 389
+> lamellipodia and impaired podosome formation, phenotypes reminiscent of disruptions in Rho 390
+> GTPase family members (RhoA/RhoB, Cdc42 and Rac1) or the Arp2/3 complex (Konigs  et al ,391
+> 2014; Qi & Yu, 2025; Rotty  et al , 2017; Wells  et al , 2004), all of which are essential for efficient 392
+> IL-4-induced fusion (Balabiyev  et al , 2020; Faust  et al. , 2019; Jay  et al. , 2007). Transcriptomic 393
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 15
+> analysis  revealed  downregulation  of  genes  encoding  plasma  membrane  and  cortical 394
+> components, along with altered actin turnover and misregulated activity of Cofilin and WASP. In 395
+> IL-4-stimulated  control  macrophages, both WASP and Filamin A were enriched in the nucleus, 396
+> consistent  with  their  reported  non-canonical  functions  in  transcriptional  regulation  and 397
+> chromatin remodeling (Wu  et al , 2006; Yuan  et al , 2022). In  Atf3 -deficient cells, WASP remained 398
+> cytoplasmic, and Filamin A accumulated in perinuclear foci. Since WASP nuclear entry depends 399
+> on Src family kinase-mediated phosphorylation downstream of Cdc42 (Looi  et al , 2014), 400
+> changes in WASP localization and levels despite reduced F-actin network suggest impaired Rho 401
+> GTPase activation. Given that both WASP and Filamin A are essential for podosome formation 402
+> and function (Faust  et al. , 2019; Guiet  et al , 2012; Song  et al , 2014), their misregulation likely 403
+> contributes to defective spreading and fusion observed in  Atf3  deficient cells. 404
+> We link these cytoskeletal defects to dysregulated lipid metabolism. Loss of  Atf3  leads to 405
+> elevated  Ch25h  expression and accumulation of its oxysterol product 25-hydroxycholesterol 406
+> (25-HC). 25-HC suppresses the mevalonate pathway, reducing cholesterol levels, altering 407
+> membrane composition, and decreasing isoprenoid  intermediates. This, in turn, impairs 408
+> prenylation of Rho GTPases, disrupting actin remodeling and weakening the coordination 409
+> between the plasma membrane and the actin cytoskeleton that is essential for spatially and 410
+> temporally controlled membrane dynamics during cell-cell fusion. The similarity between 411
+> phenotypes induced by  Atf3  deficiency, 25-HC treatment, and pharmacological inhibition of 412
+> prenylation, together with partial rescue of actin dynamics upon  Ch25h  deletion, highlights the 413
+> importance of integrated lipid-cytoskeletal regulation in IL-4-driven fusion. While  Ch25h  is best 414
+> known as an interferon-inducible regulator of cellular cholesterol content and inflammasome 415
+> activation (Adams  et al , 2004; Dang  et al , 2017; Park & Scott, 2010; Reboldi  et al , 2014), 25-HC 416
+> also inhibits virus-cell fusion by depleting an accessible pool of plasma membrane cholesterol 417
+> (Heisler  et al , 2023; Liu  et al , 2013; Wang  et al , 2020; Zang  et al , 2020). Our findings extend this 418
+> function of 25-HC to macrophage fusion. Notably,  Ch25h  expression is transiently induced in IL-419
+> 4-stimulated macrophages (Czimmerer  et al , 2018, our data - Supplementary Dataset 1) 420
+> suggesting a physiological role for 25-HC in fine-tuning immune-metabolic responses during 421
+> early  alternative  activation.  However,  sustained  25-HC  elevation,  as  in  Atf3  deficient 422
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 16
+> macrophages, shifts this balance toward fusion suppression, a mechanism paralleled by statins, 423
+> which act as competitive inhibitors of Hmgcr, thereby lowering cholesterol synthesis, but also 424
+> intermediate products of the mevalonate pathway, including isoprenoids. Statins, like 25-HC, 425
+> affect Rho GTPases-mediated signaling and actin network with impact on macrophage adhesion 426
+> and motility (Ako  et al , 2022; Akula  et al. , 2019; Healy  et al , 2020; Kuipers  et al , 2006). 427
+> 428
+> Ch25h-independent control of nuclear lamina integrity 429
+> Restoring cholesterol levels and actin dynamics in  Atf3 KO Ch25h KO  macrophages did not rescue 430
+> fusion, revealing a Ch25h-independent role for Atf3.  Atf3 -deficient macrophages showed 431
+> markedly reduced lamin A/C expression, nuclear deformation, increased fragility, and elevated 432
+> DNA damage. Given the mechanical coupling between cytoskeleton and nucleoskeleton, lamin 433
+> A/C depletion may impair force transmission during later stages of the fusion process, affecting 434
+> membrane apposition or fusion pore formation. Impaired multinucleation of  Lmna G609G  BMDMs 435
+> provides  independent  support  for  a requirement  of  intact  cyto-nucleosleketal 436
+> mechanotransduction. Although the  Lmna G609G  model involves progerin accumulation and 437
+> therefore does not phenocopy simple lamin A/C depletion, the observed fusion defect is 438
+> consistent with the notion that an intact nuclear lamina contributes to efficient macrophage 439
+> multinucleation. 440
+> The persistent reduction of  LMNA  mRNA and lamin A/C protein irrespective of Ch25h status is 441
+> compatible with direct transcriptional regulation by Atf3, in line with its control of the 442
+> Drosophila  ortholog (Donohoe  et al. , 2018). Nevertheless, we cannot exclude the contribution 443
+> of altered lamin post-translational processing, such as impaired farnesylation, in  Atf3 -deficient 444
+> cells. The DNA damage signature observed in  Atf3 KO  BMDMs further aligns with the genomic 445
+> instability  observed  in  Atf3 -deficient  mouse  embryonic  fibroblasts  (Wang  et  al , 2018), 446
+> supporting a broader role for Atf3 in maintaining genome integrity, although the underlying 447
+> mechanisms are likely context dependent. 448
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 17
+> Implications and future directions 449
+> Atf3 emerges as a central regulator of macrophage fusion competence in IL-4 dominated 450
+> environments, coupling lipid-cytoskeletal regulation via Ch25h repression with lamin A/C-451
+> dependent nuclear stability. This dual control ensures both membrane plasticity and nuclear 452
+> resilience required for giant cell formation. Disruption of either pathway impairs fusion while 453
+> combined loss, as observed in  Atf3  deficiency, blocks it entirely. Our findings have direct 454
+> relevance  for  conditions  involving  macrophage  multinucleation,  including  foreign  body 455
+> reactions and atherosclerosis, where Atf3 has been implicated (De Nardo  et al. , 2014; Gold  et 456
+> al. , 2012; and this study), as well as osteoclastogenesis, or granulomatous inflammation, in 457
+> which coordination of mechanotransduction and lipid metabolism may occur independently of 458
+> Atf3. The inhibitory effect of sustained 25-HC parallels that of statins, widely used cholesterol 459
+> lowering drugs, raising the possibility that pharmacological or endogenous suppression of the 460
+> mevalonate pathway converges on shared mechanism limiting giant cell formation. These 461
+> suggests that statin therapy may alter FBGC responses or osteoclastogenesis, with implications 462
+> for biomaterial integration and bone homeostasis. Similarly, defects in lamin A/C, as seen in 463
+> laminopathies or during natural aging (McClintock  et al , 2007; Scaffidi & Misteli, 2006) may 464
+> compromise  nuclear  mechanics  in  other  fusion-dependent  contexts,  including  muscle 465
+> regeneration to placental development. Modulating Atf3 or its downstream effectors may 466
+> therefore represent a strategy to fine-tune multinucleated giant cell formation in therapeutic 467
+> settings. 468
+> 469
+> METHODS 470
+> Generation, breeding and genotyping of mutant and transgenic mouse strains 471
+> Animals were housed in specific-pathogen-free (SPF) conditions in the  in  vivo Research Facility 472
+> (ivRF) of the  CECAD  Research Center and monitored by routine testing of sentinel mice. Mice 473
+> had  ad  libitum  access  to  drinking  water  and  normal  chow  diet  (R/M-H-V1554,  ssniff 474
+> Spezialdiäten GmbH) containing 55.1% carbohydrates, 19.3% proteins, and 3.3% fat (9% 475
+> calories from fat). Mouse breeding and handling were conducted in accordance with the ivRF 476
+> guidelines, and under approval of the Animals Ethics Committee of North Rhine-Westphalia, 477
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 18
+> Germany (AZ 84-02.04.2016.A318). The  Atf3 KO  (Atf3 -/-) and  Ch25h KO  (Ch25h -/-) full body knock-478
+> out mouse strains were generated using the CRISPR/Cas9 technique in the transgenic core unit 479
+> of the ivRF by implanting the one-cell stage fertilized oocytes injected with Cas9-sgRNA mixture 480
+> to pseudo-pregnant C57BL/6N mice. To generate  Atf3 KO  strain, two guide RNAs targeting exon 2 481
+> and exon 4 of the mouse Atf3 locus (Chr1:191170296-191183333 bp, - strand), respectively, 482
+> were used to generate a deletion of 5933 bp, including the bZIP domain. Full body loss of 483
+> function  Ch25h KO  mice were generated by targeting the single exon of the  Ch25h  gene (Chr19: 484
+> 34451183-34452548 bp, - strand)  with two guide RNAs causing a 49 bp deletion, which led to a 485
+> frame shift in the coding sequence and a premature stop codon. Of note, the 49 bp deletion 486
+> also affects the first intron of the long noncoding RNA  Gm26902  coded on the opposite strand. 487
+> The intronic deletion should not affect  Gm26902  expression nor processing.  Atf3 KO  and  Ch25h KO
+> 488
+> lines were backcrossed to the C57BL/6 genetic background for several generations before 489
+> carrying out experiments. Heterozygous  Atf3 +/- and  Ch25h +/- animals were further intercrossed 490
+> to generate  Atf3 KO Ch25h KO  (Atf3 -/- and  Ch25h -/-) mice.  Lifeact-EGP , Rosa26, mTmG-TdTOMATO 491
+> and  H2B-EGFP  mice were kindly provided by Prof. Dr. Carien Niessen (CECAD,  University of 492
+> Cologne), Dr. Claudia Dafinger (CECAD, University of Cologne), and Prof. Dr. Sandra Iden 493
+> (Faculty of Medicine & ZHMB, Saarland University), respectively. The three lines were crossed 494
+> to  Atf3 KO  and  Ch25h KO  mutant lines . A Lmna G609G  knock-in mouse strain (Osorio  et al. , 2011) was 495
+> housed at University of Oviedo animal facility and monitored by routine testing of sentinel 496
+> mice. Mice were caged separately by sex in cages with solid floors, sawdust and nests. Mice had 497
+> ad libitum  access to drinking water and normal chow diet (SAFE® A40, SAFE) containing 60.4% 498
+> carbohydrates, 15.2% proteins, and 3.2% fat. Three times a week, mice were given moistened 499
+> ground pellets of food to facilitate the feeding of progeroid mice. All components of the cages, 500
+> including food, had been autoclaved previously. Mouse breeding and handling were conducted 501
+> in accordance with the guidelines of the Committee for Animal Experimentation of the 502
+> Universidad de Oviedo, and under the approval of the Regional Ethics Committee for Animal 503
+> Experimentation (PROAE 02/2023)  For all experiments, homozygous  Lmna G609G  8-12-week-old 504
+> mice were used, and compared to age-matched, gender-matched control mice when possible. 505
+> The sequence of targeting gRNAs and genotyping primers are listed in Supplementary Table 1. 506
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 19
+> 507
+> Isolation, handling and treatment of bone marrow-derived macrophages (BMDMs) 508
+> Bone  marrow  cells  were  isolated  as  previously  described  (Trouplin  et  al , 2013)  and 509
+> differentiated for 6 days in DMEM 1x + GlutaMax-I medium (Gibco #31966-021) supplemented 510
+> with 10% fetal Bovine Serum (FBS) Superior (Biochrom #S0615), 1% penicillin/streptomycin 511
+> (10,000 U/mL) (Thermo Scientific #15140-122), 1% HEPES (1 M) (Thermo Scientific #15630106) 512
+> and  50  ng/mL  recombinant  mouse  Macrophage  Colony-Stimulating  Factor  (rm  M-CSF, 513
+> ImmunoTools #12343117). On day 6, differentiated BMDMs were seeded at a density of 0.75 x 514
+> 10 5 cell/well in 8-well glass chamber slides (Idibi #80827) or Permanox slides (Thermo Scientific 515
+> #177445) for confocal microscopy; 1 x 10 5 BMDMs in 35 mm dishes for spinning disk live 516
+> imaging; 1 x 10 6 cells/well in 6-well plates for RNA and protein analyses. After cells adhered, 517
+> BMDMs were treated with medium containing only rm M-CSF (25 ng/mL) (unstimulated, unst.) 518
+> or in combination with recombinant murine IL-4 (Peprotech #214-14) at a concentration of 25 519
+> ng/mL for 3 days, unless indicated otherwise. For fusion assays, 3.75 x 10 4 cell/well of BMDMs 520
+> expressing  Rosa26, mTmG-TdTOMATO  were mixed with  3.75 x 10 4 cell/well of cells expressing 521
+> H2B-EGFP  in 8-well glass chamber slides. Osteoclasts were differentiated from BMDMs in 522
+> medium containing 25 ng/mL rm M-CSF and 50 ng/ml RANKL (Peprotech #315-11) for 9 days. 523
+> The medium was exchanged every 3 days. TRAP staining of osteoclasts was performed using 524
+> Acid  Phosphatase,  Leukocyte  (TRAP)  Kit  (Sigma-Aldrich  #387A). For the  TLR2-stimulated 525
+> multinucleation assays, FSL-1 (Invivogen #tlrl-fsl) and Pam3CSK4 (Invivogen #tlrl-pms) were 526
+> used  at  a concentration  of  100  ng/mL,  together  with  rm  M-CSF  (25  ng/mL). For  the 527
+> Mycobacterium  tuberculosis  infection  assay,  BMDMs  were  seeded  in  medium  without 528
+> antibiotics and supplemented with rm M-CSF (25 ng/mL). Infection was performed at a 529
+> multiplicity of infection equal 1 for the Erdman strain (ATCC 35801). Treatment of BMDMs with 530
+> 25-HC (2.5 ng/mL) (Sigma #H1015), Lonafarnib (5 μM and 10 μM) (Sigma Aldrich #SML1457) 531
+> and GGTI-2133 (5 μM and 10 μM) (Sigma Aldrich #G5294) was carried out in rm M-CSF (25 532
+> ng/mL) supplemented medium for 24 hours before treatment with IL-4 (25 ng/mL) for 3 days. 533
+> 534
+> Isolation, handling and treatment of peritoneal macrophages (PMs) 535
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 20
+> Peritoneal Macrophages (PMs) were isolated from the peritoneal cavity of 8-10-week-old mice 536
+> according to a previously described protocol (Herb  et al , 2019) using paramagnetic CD11b 537
+> MicroBeads (MiltenyiBiotec #130-049-601). After isolation, PMs were seeded at 1.5 x 10 5
+> 538
+> cells/well in 8-well glass chamber slides or Permanox slides and stimulated with IL-4 (25 ng/mL) 539
+> for 6 days. 540
+> 541
+> Immunostaining 542
+> Cells were washed three times in PBS and fixed in 4% paraformaldehyde (PFA) in PBS for 25 min 543
+> at RT. Following fixation, cells were washed three times in PBS, permeabilized in PBS containing 544
+> 0.5% Triton X-100 (PBS-T) for 10 min and incubated in a blocking buffer (3% BSA in PBS) for 20 545
+> min at RT. Primary antibodies were diluted in DAKO-background reducing solution (Agilent 546
+> #S3022) and incubated with cells overnight at 4°C. The following primary antibodies were used: 547
+> anti-GFP  (goat,  1:500; Abcam  #ab6673, RRID:AB_305643),  anti-CD11b  (rat,  1:200;  DSHB 548
+> #M1/70.15.11.5.2, RRID:AB_2234066), anti-Phospho-Myosin Light Chain 2 (Ser19) (rabbit, 549
+> 1:200; Cell Signaling Technology #3671, RRID:AB_330248), anti-WASP (mouse; 1:200; Santa 550
+> Cruz #sc-13139, RRID:AB_628445), anti-Filamin A (rabbit, 1:200; Bethyl-Biomol #A301-135A), 551
+> anti-lamin A/C (mouse, 1:250, Cell Signaling Technology #4777, RRID:AB_10545756). Cells were 552
+> washed three times in blocking buffer and incubated for 1 hour with corresponding secondary 553
+> antibodies  (1:500):  Cy3  AP  Anti-Mouse  IgG  (Jackson  ImmunoResearch  #715-165-151; 554
+> RRID:AB_2315777), Cy5 AP Anti-Mouse IgG Cy3 AP (Jackson ImmunoResearch #715-175-151; 555
+> RRID:AB_2340820), Cy3 AP Anti-Rabbit IgG (Jackson ImmunoResearch Labs #711-165-152, 556
+> RRID:AB_2307443),  Cy5  AP  Anti-Rabbit  IgG  (Jackson  ImmunoResearch  #711-175-152; 557
+> RRID:AB_2340607),  Cy2 AP Anti-Goat  IgG  (Jackson  ImmunoResearch  Labs  #705-225-147, 558
+> RRID:AB_2307341),  Cy3  AP  Anti-Rat  IgG  (Jackson  ImmunoResearch  Labs  #712-165-150, 559
+> RRID:AB_2340666),  Cy5 AP Anti-Goat  IgG  (Jackson  ImmunoResearch  Labs  #712-175-153, 560
+> RRID:AB_2340672), 4’,6-Diamidino-2-phenylindol Dihydrochloride (DAPI) (1 μg/mL, Carl Roth 561
+> GmbH #6335) and Alexa Fluor 488 or 546 Phalloidin (1:1000, Thermo Scientific #A12379, 562
+> #A22283). After staining, cells were washed three times in PBS then briefly in dH 2O before 563
+> mounted in Mowiol-DABCO solution. See Supplementary Table 1 for details on antibodies. 564
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 21
+> Image acquisition and processing 565
+> Bright-field images were acquired using an Olympus CKX41 microscope equipped with a DP72 566
+> camera and CellSens 1.1 software. Bright-field time-lapse live images were acquired using a JuLI 567
+> Smart fluorescent image analyzer with a 10x objective or an EVOS FL Auto 2 microscope 568
+> (Thermo Scientific ) equipped with a Plan S-Apo 20x (NA 0.75) objective. Time-lapse live imaging 569
+> of fluorescently labeled cells was performed using either an UltraView VoX spinning disk 570
+> confocal microscope (Perkin Elmer) equipped with Plan-Fluor 20x (NA 0.75 Oil), Plan-Fluor 40x 571
+> (NA 1.3 Oil), and Plan-Apo Tirf 60x (NA 1.49 Oil) objectives, or a Zeiss LSM980 Airyscan 2 572
+> equipped with a Plan-Apo 63x (NA 1.4 Oil DIC) objective. Confocal images of fixed samples were 573
+> acquired at room temperature using an Olympus FV1000 confocal microscope equipped with 574
+> 40x UPlan FL (NA 1.30) and 60x UPlanApo (NA 1.35) objectives and a Leica SP8 confocal system 575
+> equipped with PL Apo 63x (NA 1.20 water) and HC PL APO 93X (NA 1.30 GLYC) objectives. 576
+> Acquired z-stacks were deconvoluted using Huygens Software (Scientific Volume Imaging, SVI). 577
+> Transversal sections, z-stacks and time-lapse images were generated and processed using 578
+> ImageJ (RRID:SCR_002285). Panel assembly and brightness/contrast adjustments were done 579
+> using Adobe Photoshop CC (Adobe Systems Inc., RRID:SCR_014199). To calculate the Fusion 580
+> Index (FI), the total number of nuclei within MGCs was divided by the total number of nuclei 581
+> per image. The FI is expressed in %. Cell “roundness” (roundness = 4A/(π*Major Axis^2)) and 582
+> nuclear “circularity” (circularity = 4π(area/perimeter^2)) were calculated in ImageJ. Images 583
+> used for quantification of fluorescence intensity were acquired using the same settings. WASP 584
+> fluorescence intensity was calculated using the function “Integrated density” in ImageJ on 585
+> single cells. 586
+> 587
+> Electron microscopy 588
+> Cells were seeded on Permanox chamber slides. After two PBS washes, cells were fixed with 589
+> 2.5% EM-grade glutaraldehyde for 2 hours, washed in phosphate buffer (pH 7.2), and post-fixed 590
+> with 2% osmium tetroxide in phosphate buffer for 30 - 60 minutes at RT in the dark. Cells were 591
+> then washed in phosphate buffer, followed by dH₂O washes. Gradual dehydration was 592
+> performed on ice using an ethanol series (30%, 50%, 70%, 90%, 96%, 5 minutes each), followed 593
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 22
+> by two 10-minute washes in 100% ethanol and two in 100% acetone at RT. The slides were 594
+> incubated overnight at 4°C in an acetone (1:1) mixture. Acetone was evaporated under a hood 595
+> for 1.5 hours, then replaced with fresh araldite. After 4 hours, araldite was partially removed, 596
+> and fresh araldite was added to fill half the well, followed by polymerization at 65°C. After 24 597
+> hours, polymerized cell blocks were separated from the slides. Semi-thin (1 μm) sections were 598
+> stained with toluidine blue, and thin (70–80 nm) sections were stained with 2% uranyl acetate 599
+> and lead citrate. Thin sections were imaged with a Zeiss EM 109 transmission electron 600
+> microscope at 80 kV. 601
+> 602
+> Microchannels 603
+> PDMS microchannels inserted in Petri dishes were purchased from 4D Cell (#MC011, #MC019). 604
+> The dishes were coated with fibronectin (25 μg/mL) according to manufacturer’s instructions 605
+> and incubated with pre-warmed medium containing rm M-CSF (25 ng/mL) for 15 minutes at 606
+> 37°C, prior to cell seeding. Differentiated BMDMs were seeded in high confluency (4 x 10 4 cells/ 607
+> access port) and allowed to adhere for at least 1 hour (37°C, 5% CO 2). Four hours prior to live 608
+> imaging, medium with IL-4 (25 ng/mL) was added. For immunostaining, microchannels were 609
+> washed in PBS and BMDMs were fixed by adding 4% PFA solution to each access port for 30 610
+> minutes. PDMS was carefully removed from the dishes, and the immunostaining protocol was 611
+> applied on the surface in contact with the cells. For imaging of the fixed and stained BMDMs, 612
+> PDMS microchannels were placed on 35 mm imaging dishes (Ibidi #81156). 613
+> 614
+> RNA isolation and quantitative reverse transcription PCR (RT-qPCR) 615
+> BMDMs were washed twice with PBS, collected in 800 μL of TRI reagent (Sigma-Aldrich, 616
+> #T9424) containing β-mercaptoethanol (10 μL/mL), and snap-frozen in liquid nitrogen. After 617
+> adding 200 μL of chloroform, samples were vigorously mixed and centrifuged for 15 minutes at 618
+> 12,000 × g (4°C), and the upper phase was collected. An equal volume of isopropanol was 619
+> added; samples were vortexed for 5 seconds and transferred to a ReliaPrep™ Minicolumn. The 620
+> next steps of RNA isolation followed the protocol of the ReliaPrep TM  RNA Cell Miniprep System 621
+> Kit (Promega #z6011), including DNAse I treatment (Promega #Z358A) to minimize genomic 622
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 23
+> DNA contamination. cDNA was synthesized from 1 to 2 μg of RNA using oligo (dT) primers and 623
+> the reverse transcriptase. The RT-qPCR was performed in technical triplicates with at least 624
+> three independent biological replicates per genotype with GoTaq polymerase mix (Promega 625
+> #A6002) in a CFX96 real time PCR system (Biorad), based on SYBR Green dye or probe 626
+> detection. All primers were designed to anneal at 62°C. See Supplementary Table 1 for primer 627
+> sequences. 628
+> Expression values were normalized to the levels of the housekeeping  gene  Gapdh , and fold-629
+> changes in gene expression were calculated using the ΔΔC T method (Livak & Schmittgen, 2001). 630
+> For  Atf3  levels, GoTaq probe qPCR master mix was used with pre-designed probe,  Atf3 -FAM 631
+> (IDT). Data were normalized to the levels of the housekeeping  Gapdh -HEX probe present in the 632
+> same reaction, using the above-mentioned method. Statistical significance of gene expression 633
+> changes was determined using Student’s t-test assuming unequal variance (Mann-Whitney test) 634
+> or one-way ANOVA with Holm-Šídák’s or Tukey’s correction for multiple comparisons as 635
+> specified in the corresponding Figure legend. 636
+> 637
+> Differential gene expression and analysis 638
+> Total RNA was isolated as described above with four biological replicates per experimental 639
+> group. For RNA sequencing, 2 μg of RNA were used for library preparation (Illumina TruSeq 640
+> Stranded total RNA Ribo-Zero). Pair-end sequencing (100 bp) was performed using the Illumina 641
+> HiSeq 2000 platform. Pseudoalignment of reads to the total  Mus musculus  cDNA sequences 642
+> (GRCm39_107) was done by kallisto v0.46.1 (Bray  et al , 2016) (RRID:SCR_016582). Differential 643
+> gene expression was determined using  DESeq2  v1.34.0 (Love  et al , 2014) (RRID:SCR_015687). 644
+> Heat maps comparing expression levels of selected genes between samples were constructed 645
+> from DESeq2 normalized counts and log 2FC values using R-studio. Gene Ontology term 646
+> enrichment analysis was performed using  ShinyGO  v0.82 (Ge  et al , 2020) using a custom 647
+> background gene list containing all genes detected by the RNA-seq analysis. Fisher’s exact test 648
+> with false discovery rate (FDR) correction was used. 649
+> 650
+> Preparation of samples for western blotting 651
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 24
+> PBS-washed cells were scraped and immediately lysed in RIPA lysis buffer (50 mM HCl pH 8, 150 652
+> mM NaCl, 1% NP-40, 0.5% sodium deoxycholate, 0.1% SDS, protease and phosphatase 653
+> inhibitors). All samples were cleared of debris and DNA by centrifugation (18,000 x g at 4°C for 654
+> 10 min). Protein concentration was determined by Bradford assay (Roth GmbH K015.1) 655
+> according to manufacturer’s instructions. Samples were denatured by boiling in Laemmli buffer 656
+> containing 10%
+
+β-mercaptoethanol for 5 minutes at 95°C. After resolving on 10% or 12% SDS-657 
+
+> PAGE, proteins were transferred onto a nitrocellulose membrane, followed by one hour 658
+> blocking at RT in Tris Buffered Saline buffer containing 0.1% Tween and 3% BSA. Candidate 659
+> proteins were detected by immunoblotting with primary antibodies overnight at 4°C. The 660
+> following  primary  antibodies  were  used:  anti-ATP5a  [15H4C4]  (mouse,  1:1000;  Abcam 661
+> #ab14748,  RRID:AB_301447),  anti-ATF3  (rabbit,  1:500,  Novus  #NBP1-85816, 662
+> RRID:AB_11014863), anti-actin (rabbit, 1:1000, Sigma-Aldrich #A2066, RRID:AB_476693), anti-663
+> STAT6 (rabbit, 1:1000, Cell Signaling Technology #5397, RRID:AB_11220421), anti-phospho-664
+> STAT6 (Tyr641) (D8S9Y) (rabbit, 1:1000, Cell Signaling Technology #56554, RRID:AB_2799514), 665
+> anti-STAT1 (rabbit, 1:1000; Cell Signaling Technology #9172, RRID:AB_2198300), anti-phospho-666
+> STAT1 (Tyr701) (58D6) (rabbit, 1:1000, Cell Signaling Technology #9167, RRID:AB_561284), anti-667
+> WASP (mouse; 1:500; Santa Cruz #sc-13139, RRID:AB_628445), anti-lamin A/C (mouse, 1:1000, 668
+> Cell  Signaling  Technology  #4777,  RRID:AB_10545756),  anti-Phospho-Cofilin  (Ser3)  (77G2) 669
+> (rabbit, 1:1000; Cell Signaling Technology #3313, RRID:AB_2080597), anti-Cofilin (D3F9) (rabbit, 670
+> 1:1000; Cell Signaling Technology #5175, RRID:AB_10622000), anti-HMGCR (mouse, 1:500, 671
+> Atlas Antibodies #AMAb90619, RRID:AB_2665607), anti-HMGCS1 (mouse, 1:500; Novus #NBP2-672
+> 36554,  RRID:AB_3295882 ).  Following  five  washes  (TBS,  0.1%  Tween),  membranes  were 673
+> incubated with corresponding secondary HRP-conjugated antibodies (1:5000) at RT for 2 hours. 674
+> The  following  secondary  antibodies  were  used:  HRP  AP  Anti-Mouse  IgG  (Jackson 675
+> ImmunoResearch Labs #715-035-150, RRID:AB_2340770), HRP AP Anti-Rabbit IgG (Jackson 676
+> ImmunoResearch Labs #711-035-152, RRID:AB_10015282). After several washes in TBS, 0.1% 677
+> Tween, chemiluminescent signal was developed with ECL Western blotting substrate (Promega 678
+> W1015) and captured using ImageQuant LAS4000 reader (GE Healthcare, RRID: SCR_014246). 679
+> See Supplementary Table 1 for details on antibodies. 680
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 25
+> 681
+> Quantification of protein signals in immunoblot analysis 682
+> Signal intensities were quantified using the Gel Analyzer tool in ImageJ (https://fiji.sc/) (RRID: 683
+> SCR_003070). The intensity of the protein of interest was normalized to the intensity of the 684
+> respective loading control band for each biological replicate. Phosphorylated protein levels are 685
+> presented as relative expression in relation to the sum of normalized total and phosphorylated 686
+> band intensities. Statistical significance for changes in protein levels was determined using an 687
+> unpaired Student’s t-test or one-way ANOVA followed by Tukey’s multiple comparisons test. 688
+> 689
+> G- and F-actin fractionation and quantification 690
+> The F- to G-actin ratio was determined as previously described (Le  et al , 2016). Cells were 691
+> harvested in cytoskeleton-stabilizing lysis buffer (50 mM PIPES pH 6.9, 50 mM NaCl, 5 mM 692
+> MgCl₂, 5 mM EGTA, 0.2 mM dithiothreitol, 0.1% NP-40, 0.1% Tween-20, 5% glycerol, 1 mM ATP, 693
+> and protease inhibitors). After ultracentrifugation at 55,000 rpm (TLA-55 rotor) for 1 hour at 694
+> 4°C, the supernatant was collected as the G-actin fraction. The pellet was solubilized in actin-695
+> depolymerizing buffer (50 mM PIPES pH 6.9, 5 mM MgCl₂, 10 mM CaCl₂, 5 μM cytochalasin D), 696
+> sonicated  for  5 minutes,  and  used  as  the  F-actin  fraction.  Protein  concentration  was 697
+> determined by the Bradford assay (Roth GmbH, K015.1) according to the manufacturer’s 698
+> instructions. Concentrations were normalized between samples from the same actin fraction. 699
+> Lysates were then processed for western blotting as described above. Equal loading was 700
+> verified by Ponceau staining of the membrane. F/G actin levels are represented as a ratio of F-701
+> actin under G-actin levels. Statistical significance was determined using ordinary one-way 702
+> ANOVA with a post hoc Tukey’s multiple comparison test. 703
+> 704
+> Lipid measurements in BMDMs 705
+> BMDMs (15 x 10 6 cells) stimulated with IL-4 (25 ng/mL) for 24 hours were washed with ice-cold 706
+> PBS and collected for measurement of selected lipid species. Total cellular cholesterol was 707
+> determined using Liquid Chromatography/Mass Spectrometry, while Glycerophospholipids 708
+> (GPLs) and Cholesterol Esters (CE) were measured by Shotgun lipidomics at the CECAD 709
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 26
+> Lipidomics/Metabolomics Core Facility. Levels were normalized to protein content. Statistical 710
+> significance was determined using ordinary one-way ANOVA with Holm-Šídák’s multiple 711
+> comparison test. 712
+> 713
+> Quantification and statistical analysis 714
+> All statistical analyses were performed in Graphpad Prism version 10, as defined throughout 715
+> the text, materials and methods and Figure legends. 716 717
+> FUNDING 718
+> This work was funded under Germany's Excellence Strategy – CECAD, EXC 2030 – 390661388 719
+> from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation). DFG grants 720
+> UH 243/8-1 - Projektnummer: 573567388 to M.U. and SPP2493 ID79/7-1 - Projektnummer 721
+> 564825595 to S.I. Funding for instrumentation: Zeiss LSM980 Airyscan 2 (DFG-INST 216/1068-722
+> 1FUGG); Leica SP8 confocal system (DFG-INST 2016/742-1 FUGB). The  Lmna G609G  mice housing 723
+> was funded by the Ministerio de Ciencia, Innovación y Universidades (Spain) (PID2023-724
+> 148089OB-I00). 725 726
+> ACKNOWLEDGEMENTS 727
+> We thank Manolis Pasparakis, Carien Niessen, Claudia Dafinger, and their labs for advice, 728
+> sharing antibodies, mouse strains and reagents. We thank Jan Rybniker and Jessica Graeb for 729
+> advice and help with conducting  Mycobacterium  infection experiments, Michael Schramm for 730
+> help with isolation of peritoneal macrophages, Ferdinand Grawe for electron microscopy, and 731
+> Susanne Brodesser from the CECAD Lipidomics/Metabolomic Facility for lipid measurements. 732
+> We thank Maria Asif for help with BMDM isolation and culturing. We are grateful to Katja 733
+> Brückner, Katrin Kierdorf, Hisham Bazzi for technical advice, project discussions, critical reading 734
+> and comments on the manuscript, Bianca Collins, Agnieszka Sokol, Nils Teuscher, Maria 735
+> Serradas, Je Cuan Choo, Susane Kolek, and Jose Luis Rodriguez Garcia for excellent technical 736
+> assistance. We thank the CECAD  in vivo  research facility for generation and care of the  Atf3 KO
+> 737
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 27
+> and  Ch25h KO  mice and José M. P. Freije  for sharing the tissues from  Lmna G609G  mouse line. We 738
+> are grateful to the CECAD Imaging facility for helping with setting up various imaging 739
+> techniques. 740
+> 741
+> AUTHORS CONTRIBUTIONS 742
+> A.C. and M.U. originated the initial idea. A.C., M.U. and N.M. jointly formulated the concept. 743
+> A.C., C.J., E.K.W., M.D.G, M.U., and N.M. carried out the investigation. A.C., D.S., E.K.W., G.C., 744
+> M.U., N.M. and S.I. performed formal analyses. A.G.T provided tissues from  Lmna G609G  mice and 745
+> the respective controls. A.C., N.M. wrote the initial draft. M.U. wrote the manuscript and 746
+> generated the visualizations therein. E.K.W., G.C., S.I. and M.U. edited the manuscript. M.U. 747
+> provided supervision, project administration, and funding. 748
+> 749
+> CONFLICT OF INTEREST DISCLOSURE 750
+> The authors declare no competing interests. 751
+> 752
+> DATA AVAILABILITY 753
+> Original data and any additional information required to reanalyze the data reported in this 754
+> paper will be shared by MU upon request. The datasets produced in this study are available in 755
+> the following databases: 756
+> RNA-Seq data: Gene Expression Omnibus (RRID:SCR 007303) (Edgar et al., 2002) GSE240477 757
+> (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240477). 758
+> 759
+> REFERENCES 760 Adams CM, Reitz J, De Brabander JK, Feramisco JD, Li L, Brown MS, Goldstein JL (2004) Cholesterol and 761 25-hydroxycholesterol inhibit activation of SREBPs by different mechanisms, both involving SCAP and 762 Insigs.  J Biol Chem  279: 52772-52780 763
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 28 Ahmadzadeh K, Vanoppen M, Rose CD, Matthys P, Wouters CH (2022) Multinucleated Giant Cells: 764 Current Insights in Phenotype, Biological Activities, and Mechanism of Formation.  Frontiers in Cell and 765
+> Developmental Biology  10 766 Ako S, Teper Y, Ye L, Sinnett-Smith J, Hines OJ, Rozengurt E, Eibl G (2022) Statins Inhibit Inflammatory 767 Cytokine Production by Macrophages and Acinar-to-Ductal Metaplasia of Pancreatic Cells.  Gastro Hep 768
+> Adv  1: 640-651 769 Akula MK, Ibrahim MX, Ivarsson EG, Khan OM, Kumar IT, Erlandsson M, Karlsson C, Xu X, Brisslert M, 770 Brakebusch C  et al  (2019) Protein prenylation restrains innate immunity by inhibiting Rac1 effector 771 interactions.  Nature Communications  10: 3975 772 Anderson JM, Rodriguez A, Chang DT (2008) Foreign body reaction to biomaterials.  Semin Immunol  20: 773 86-100 774 Arya RK, Goswami R, Rahaman SO (2021) Mechanotransduction via a TRPV4-Rac1 signaling axis plays a 775 role in multinucleated giant cell formation.  J Biol Chem  296: 100129 776 Balabiyev A, Podolnikova NP, Mursalimov A, Lowry D, Newbern JM, Roberson RW, Ugarova TP (2020) 777 Transition of podosomes into zipper-like structures in macrophage-derived multinucleated giant cells. 778
+> Mol Biol Cell  31: 2002-2020 779 Bodin K, Ellmerich S, Kahan MC, Tennent GA, Loesch A, Gilbertson JA, Hutchinson WL, Mangione PP, 780 Gallimore JR, Millar DJ  et al  (2010) Antibodies to human serum amyloid P component eliminate visceral 781 amyloid deposits.  Nature  468: 93-97 782 Boespflug ND, Kumar S, McAlees JW, Phelan JD, Grimes HL, Hoebe K, Hai T, Filippi MD, Karp CL (2014) 783 ATF3 is a novel regulator of mouse neutrophil migration.  Blood  123: 2084-2093 784 Bray NL, Pimentel H, Melsted P, Pachter L (2016) Near-optimal probabilistic RNA-seq quantification.  Nat 785
+> Biotechnol  34: 525-527 786 Brooks PJ, Glogauer M, McCulloch CA (2019) An Overview of the Derivation and Function of 787 Multinucleated Giant Cells and Their Role in Pathologic Processes.  Am J Pathol  189: 1145-1158 788 Brukman NG, Uygur B, Podbilewicz B, Chernomordik LV (2019) How cells fuse.  The Journal of cell biology 789 218: 1436-1451 790 Cordle A, Koenigsknecht-Talboo J, Wilkinson B, Limpert A, Landreth G (2005) Mechanisms of statin-791 mediated inhibition of small G-protein function.  J Biol Chem  280: 34202-34209 792 Czimmerer Z, Daniel B, Horvath A, Ruckerl D, Nagy G, Kiss M, Peloquin M, Budai MM, Cuaranta-Monroy 793 I, Simandi Z  et al  (2018) The Transcription Factor STAT6 Mediates Direct Repression of Inflammatory 794 Enhancers and Limits Activation of Alternatively Polarized Macrophages.  Immunity  48: 75-90 e76 795 Dang EV, McDonald JG, Russell DW, Cyster JG (2017) Oxysterol Restraint of Cholesterol Synthesis 796 Prevents AIM2 Inflammasome Activation.  Cell  171: 1057-1071.e1011 797
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 29 De Nardo D, Labzin LI, Kono H, Seki R, Schmidt SV, Beyer M, Xu D, Zimmer S, Lahrmann C, Schildberg FA 798
+> et al  (2014) High-density lipoprotein mediates anti-inflammatory reprogramming of macrophages via 799 the transcriptional regulator ATF3.  Nat Immunol  15: 152-160 800 DeFife KM, Jenney CR, McNally AK, Colton E, Anderson JM (1997) Interleukin-13 induces human 801 monocyte/macrophage fusion and macrophage mannose receptor expression.  J Immunol  158: 3385-802 3390 803 Donohoe CD, Csordas G, Correia A, Jindra M, Klein C, Habermann B, Uhlirova M (2018) Atf3 links loss of 804 epithelial polarity to defects in cell differentiation and cytoarchitecture.  PLoS Genet  14: e1007241 805 Du Y, Ma Z, Zheng J, Huang S, Yang X, Song Y, Dong D, Shi L, Xu D (2022) ATF3 Positively Regulates 806 Antibacterial Immunity by Modulating Macrophage Killing and Migration Functions.  Front Immunol  13: 807 839502 808 Dufrancais O, Mascarau R, Poincloux R, Maridonneau-Parini I, Raynaud-Messina B, Verollet C (2021) 809 Cellular and molecular actors of myeloid cell fusion: podosomes and tunneling nanotubes call the tune. 810
+> Cell Mol Life Sci  78: 6087-6104 811 Faust JJ, Balabiyev A, Heddleston JM, Podolnikova NP, Baluch DP, Chew TL, Ugarova TP (2019) An actin-812 based protrusion originating from a podosome-enriched region initiates macrophage fusion.  Mol Biol 813
+> Cell  30: 2254-2267 814 Ge SX, Jung D, Yao R (2020) ShinyGO: a graphical gene-set enrichment tool for animals and plants. 815
+> Bioinformatics  36: 2628-2629 816 Gilchrist M, Thorsson V, Li B, Rust AG, Korb M, Roach JC, Kennedy K, Hai T, Bolouri H, Aderem A (2006) 817 Systems biology approaches identify ATF3 as a negative regulator of Toll-like receptor 4.  Nature  441: 818 173-178 819 Gold ES, Ramsey SA, Sartain MJ, Selinummi J, Podolsky I, Rodriguez DJ, Moritz RL, Aderem A (2012) ATF3 820 protects against atherosclerosis by suppressing 25-hydroxycholesterol-induced lipid body formation.  J821
+> Exp Med  209: 807-817 822 Goldman RD, Gruenbaum Y, Moir RD, Shumaker DK, Spann TP (2002) Nuclear lamins: building blocks of 823 nuclear architecture.  Genes Dev  16: 533-547 824 Gonzalo P, Guadamillas MC, Hernández-Riquer MV, Pollán A, Grande-García A, Bartolomé RA, Vasanji A, 825 Ambrogio C, Chiarle R, Teixidó J  et al  (2010) MT1-MMP is required for myeloid cell fusion via regulation 826 of Rac1 signaling.  Dev Cell  18: 77-89 827 Griffiths WJ, Wang Y (2022) Cholesterol metabolism: from lipidomics to immunology.  J Lipid Res  63: 828 100165 829 Gruenbaum Y, Foisner R (2015) Lamins: nuclear intermediate filament proteins with fundamental 830 functions in nuclear mechanics and genome regulation.  Annu Rev Biochem  84: 131-164 831
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 30 Guiet R, Vérollet C, Lamsoul I, Cougoule C, Poincloux R, Labrousse A, Calderwood DA, Glogauer M, Lutz 832 PG, Maridonneau-Parini I (2012) Macrophage mesenchymal migration requires podosome stabilization 833 by filamin A.  J Biol Chem  287: 13051-13062 834 Hartman MG, Lu D, Kim ML, Kociba GJ, Shukri T, Buteau J, Wang X, Frankel WL, Guttridge D, Prentki M  et 835
+> al  (2004) Role for activating transcription factor 3 in stress-induced beta-cell apoptosis.  Mol Cell Biol  24: 836 5721-5732 837 Healy A, Berus JM, Christensen JL, Lee C, Mantsounga C, Dong W, Watts JP, Jr., Assali M, Ceneri N, Nilson 838 R et al  (2020) Statins Disrupt Macrophage Rac1 Regulation Leading to Increased Atherosclerotic Plaque 839 Calcification.  Arterioscler Thromb Vasc Biol  40: 714-732 840 Heisler DB, Johnson KA, Ma DH, Ohlson MB, Zhang L, Tran M, Corley CD, Abrams ME, McDonald JG, 841 Schoggins JW  et al  (2023) A concerted mechanism involving ACAT and SREBPs by which oxysterols 842 deplete accessible cholesterol to restrict microbial infection.  eLife  12: e83534 843 Helming L, Gordon S (2009) Molecular mediators of macrophage fusion.  Trends Cell Biol  19: 514-522 844 Herb M, Farid A, Gluschko A, Kronke M, Schramm M (2019) Highly Efficient Transfection of Primary 845 Macrophages with In Vitro Transcribed mRNA.  J Vis Exp 846 Herrtwich L, Nanda I, Evangelou K, Nikolova T, Horn V, Sagar, Erny D, Stefanowski J, Rogell L, Klein C  et al 847 (2016) DNA Damage Signaling Instructs Polyploid Macrophage Fate in Granulomas.  Cell  167: 1264-1280 848 e1218 849 Hobolt-Pedersen AS, Delaisse JM, Soe K (2014) Osteoclast fusion is based on heterogeneity between 850 fusion partners.  Calcif Tissue Int  95: 73-82 851 Hodge RG, Ridley AJ (2016) Regulating Rho GTPases and their regulators.  Nat Rev Mol Cell Biol  17: 496-852 510 853 Hu S, Li R, Gong D, Hu P, Xu J, Ai Y, Zhao X, Hu C, Xu M, Liu C  et al  (2024) Atf3-mediated metabolic 854 reprogramming in hepatic macrophage orchestrates metabolic dysfunction-associated steatohepatitis. 855
+> Sci Adv  10: eado3141 856 Jadhav K, Zhang Y (2017) Activating transcription factor 3 in immune response and metabolic regulation. 857
+> Liver Res  1: 96-102 858 Jaffe AB, Hall A (2005) Rho GTPases: biochemistry and biology.  Annu Rev Cell Dev Biol  21: 247-269 859 Jay SM, Skokos E, Laiwalla F, Krady MM, Kyriakides TR (2007) Foreign body giant cell formation is 860 preceded by lamellipodia formation and can be attenuated by inhibition of Rac1 activation.  Am J Pathol 861 171: 632-640 862 Kalukula Y, Stephens AD, Lammerding J, Gabriele S (2022) Mechanics and functional consequences of 863 nuclear deformations.  Nat Rev Mol Cell Biol  23: 583-602 864 Kao WJ, McNally AK, Hiltner A, Anderson JM (1995) Role for interleukin-4 in foreign-body giant cell 865 formation on a poly(etherurethane urea) in vivo.  J Biomed Mater Res  29: 1267-1275 866
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 31 Kim JH, Ren Y, Ng WP, Li S, Son S, Kee YS, Zhang S, Zhang G, Fletcher DA, Robinson DN  et al  (2015) 867 Mechanical tension drives cell membrane fusion.  Dev Cell  32: 561-573 868 Konigs V, Jennings R, Vogl T, Horsthemke M, Bachg AC, Xu Y, Grobe K, Brakebusch C, Schwab A, Bahler M 869
+> et al  (2014) Mouse macrophages completely lacking Rho subfamily GTPases (RhoA, RhoB, and RhoC) 870 have severe lamellipodial retraction defects, but robust chemotactic navigation and altered motility.  J871
+> Biol Chem  289: 30772-30784 872 Kuipers HF, Rappert AA, Mommaas AM, van Haastert ES, van der Valk P, Boddeke HW, Biber KP, van den 873 Elsen PJ (2006) Simvastatin affects cell motility and actin cytoskeleton distribution of microglia.  Glia  53: 874 115-123 875 Labzin LI, Schmidt SV, Masters SL, Beyer M, Krebs W, Klee K, Stahl R, Lutjohann D, Schultze JL, Latz E  et al 876 (2015) ATF3 Is a Key Regulator of Macrophage IFN Responses.  J Immunol  195: 4446-4455 877 Le HQ, Ghatak S, Yeung CY, Tellkamp F, Günschmann C, Dieterich C, Yeroslaviz A, Habermann B, Pombo 878 A, Niessen CM  et al  (2016) Mechanical regulation of transcription controls Polycomb-mediated gene 879 silencing during lineage commitment.  Nat Cell Biol  18: 864-875 880 Lee MS, Bensinger SJ (2022) Reprogramming cholesterol metabolism in macrophages and its role in host 881 defense against cholesterol-dependent cytolysins.  Cell Mol Immunol  19: 327-336 882 Leung R, Wang Y, Cuddy K, Sun C, Magalhaes J, Grynpas M, Glogauer M (2010) Filamin A regulates 883 monocyte migration through Rho small GTPases during osteoclastogenesis.  J Bone Miner Res  25: 1077-884 1091 885 Levaot N, Ottolenghi A, Mann M, Guterman-Ram G, Kam Z, Geiger B (2015) Osteoclast fusion is initiated 886 by a small subset of RANKL-stimulated monocyte progenitors, which can fuse to RANKL-unstimulated 887 progenitors.  Bone  79: 21-28 888 Liu S-Y, Aliyari R, Chikere K, Li G, Marsden MD, Smith JK, Pernet O, Guo H, Nusbaum R, Zack JA  et al 889 (2013) Interferon-inducible cholesterol-25-hydroxylase broadly inhibits viral entry by production of 25-890 hydroxycholesterol.  Immunity  38: 92-105 891 Livak KJ, Schmittgen TD (2001) Analysis of relative gene expression data using real-time quantitative PCR 892 and the 2(-Delta Delta C(T)) Method.  Methods  25: 402-408 893 Looi CY, Sasahara Y, Watanabe Y, Satoh M, Hakozaki I, Uchiyama M, Wong WF, Du W, Uchiyama T, 894 Kumaki S  et al  (2014) The open conformation of WASP regulates its nuclear localization and gene 895 transcription in myeloid cells.  Int Immunol  26: 341-352 896 Lösslein AK, Lohrmann F, Scheuermann L, Gharun K, Neuber J, Kolter J, Forde AJ, Kleimeyer C, Poh YY, 897 Mack M  et al  (2021) Monocyte progenitors give rise to multinucleated giant cells.  Nature 898
+> Communications  12: 2027 899 Love MI, Huber W, Anders S (2014) Moderated estimation of fold change and dispersion for RNA-seq 900 data with DESeq2.  Genome Biol  15: 550 901
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 32 Lund EG, Kerr TA, Sakai J, Li WP, Russell DW (1998) cDNA cloning of mouse and human cholesterol 25-902 hydroxylases, polytopic membrane proteins that synthesize a potent oxysterol regulator of lipid 903 metabolism.  J Biol Chem  273: 34316-34327 904 Maruyama K, Fukasaka M, Vandenbon A, Saitoh T, Kawasaki T, Kondo T, Yokoyama KK, Kidoya H, 905 Takakura N, Standley D  et al  (2012) The transcription factor Jdp2 controls bone homeostasis and 906 antibacterial immunity by regulating osteoclast and neutrophil differentiation.  Immunity  37: 1024-1036 907 Mass E, Nimmerjahn F, Kierdorf K, Schlitzer A (2023) Tissue-specific macrophages: how they develop and 908 choreograph tissue biology.  Nat Rev Immunol  23: 563-579 909 McClintock D, Ratner D, Lokuge M, Owens DM, Gordon LB, Collins FS, Djabali K (2007) The mutant form 910 of lamin A that causes Hutchinson-Gilford progeria is a biomarker of cellular aging in human skin.  PLoS 911
+> One  2: e1269 912 McInnes A, Rennick DM (1988) Interleukin 4 induces cultured monocytes/macrophages to form giant 913 multinucleated cells.  J Exp Med  167: 598-611 914 McNally AK, Anderson JM (1995) Interleukin-4 induces foreign body giant cells from human 915 monocytes/macrophages. Differential lymphokine regulation of macrophage fusion leads to 916 morphological variants of multinucleated giant cells.  Am J Pathol  147: 1487-1499 917 Milde R, Ritter J, Tennent GA, Loesch A, Martinez FO, Gordon S, Pepys MB, Verschoor A, Helming L 918 (2015) Multinucleated Giant Cells Are Specialized for Complement-Mediated Phagocytosis and Large 919 Target Destruction.  Cell Rep  13: 1937-1948 920 Miron RJ, Bosshardt DD (2018) Multinucleated Giant Cells: Good Guys or Bad Guys?  Tissue Eng Part B 921
+> Rev  24: 53-65 922 Miroshnikova YA, Nava MM, Wickstrom SA (2017) Emerging roles of mechanical forces in chromatin 923 regulation.  J Cell Sci  130: 2243-2250 924 Moreno JL, Mikhailenko I, Tondravi MM, Keegan AD (2007) IL-4 promotes the formation of 925 multinucleated giant cells from macrophage precursors by a STAT6-dependent, homotypic mechanism: 926 contribution of E-cadherin.  J Leukoc Biol  82: 1542-1553 927 Osorio FG, Navarro CL, Cadinanos J, Lopez-Mejia IC, Quiros PM, Bartoli C, Rivera J, Tazi J, Guzman G, 928 Varela I  et al  (2011) Splicing-directed therapy in a new mouse model of human accelerated aging.  Sci 929
+> Transl Med  3: 106ra107 930 Park K, Scott AL (2010) Cholesterol 25-hydroxylase production by dendritic cells and macrophages is 931 regulated by type I interferons.  J Leukoc Biol  88: 1081-1087 932 Park MD, Silvin A, Ginhoux F, Merad M (2022) Macrophages in health and disease.  Cell  185: 4259-4279 933 Pereira M, Petretto E, Gordon S, Bassett JHD, Williams GR, Behmoaras J (2018) Common signalling 934 pathways in macrophage and osteoclast multinucleation.  J Cell Sci  131 935
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 33 Puissegur MP, Lay G, Gilleron M, Botella L, Nigou J, Marrakchi H, Mari B, Duteyrat JL, Guerardel Y, 936 Kremer L  et al  (2007) Mycobacterial lipomannan induces granuloma macrophage fusion via a TLR2-937 dependent, ADAM9- and beta1 integrin-mediated pathway.  J Immunol  178: 3161-3169 938 Qi Y, Yu CH (2025) PI(3,4,5)P3-mediated Cdc42 activation regulates macrophage podosome assembly. 939
+> Cell Mol Life Sci  82: 127 940 Reboldi A, Dang EV, McDonald JG, Liang G, Russell DW, Cyster JG (2014) 25-Hydroxycholesterol 941 suppresses interleukin-1–driven inflammation downstream of type I interferon.  Science  345: 679-684 942 Rotty JD, Brighton HE, Craig SL, Asokan SB, Cheng N, Ting JP, Bear JE (2017) Arp2/3 Complex Is Required 943 for Macrophage Integrin Functions but Is Dispensable for FcR Phagocytosis and In Vivo Motility.  Dev Cell 944 42: 498-513 e496 945 Rynes J, Donohoe CD, Frommolt P, Brodesser S, Jindra M, Uhlirova M (2012) Activating transcription 946 factor 3 regulates immune and metabolic homeostasis.  Mol Cell Biol  32: 3949-3962 947 Samokhin AO, Wilson S, Nho B, Lizame ML, Musenden OE, Brömme D (2010) Cholate-containing high-fat 948 diet induces the formation of multinucleated giant cells in atherosclerotic plaques of apolipoprotein E-/-949 mice.  Arterioscler Thromb Vasc Biol  30: 1166-1173 950 Scaffidi P, Misteli T (2006) Lamin A-dependent nuclear defects in human aging.  Science  312: 1059-1063 951 Sekyrova P, Bohmann D, Jindra M, Uhlirova M (2010) Interaction between Drosophila bZIP proteins Atf3 952 and Jun prevents replacement of epithelial cells during metamorphosis.  Development  137: 141-150 953 Song RL, Liu XZ, Zhu JQ, Zhang JM, Gao Q, Zhao HY, Sheng AZ, Yuan Y, Gu JH, Zou H  et al  (2014) New 954 roles of filopodia and podosomes in the differentiation and fusion process of osteoclasts.  Genet Mol Res 955 13: 4776-4787 956 Stewart CL, Hook AL, Zelzer M, Marlow M, Piccinini AM (2024) Cellular and microenvironmental cues 957 that promote macrophage fusion and foreign body response.  Front Immunol  15: 1411872 958 Takegahara N, Kim H, Mizuno H, Sakaue-Sawano A, Miyawaki A, Tomura M, Kanagawa O, Ishii M, Choi Y 959 (2016) Involvement of Receptor Activator of Nuclear Factor-kappaB Ligand (RANKL)-induced Incomplete 960 Cytokinesis in the Polyploidization of Osteoclasts.  J Biol Chem  291: 3439-3454 961 Trouplin V, Boucherit N, Gorvel L, Conti F, Mottola G, Ghigo E (2013) Bone marrow-derived macrophage 962 production.  J Vis Exp : e50966 963 Wang S, Li W, Hui H, Tiwari SK, Zhang Q, Croker BA, Rawlings S, Smith D, Carlin AF, Rana TM (2020) 964 Cholesterol 25-Hydroxylase inhibits SARS-CoV-2 and other coronaviruses by depleting membrane 965 cholesterol.  Embo j  39: e106057 966 Wang Z, He Y, Deng W, Lang L, Yang H, Jin B, Kolhe R, Ding HF, Zhang J, Hai T  et al  (2018) Atf3 deficiency 967 promotes genome instability and spontaneous tumorigenesis in mice.  Oncogene  37: 18-27 968 Wells CM, Walmsley M, Ooi S, Tybulewicz V, Ridley AJ (2004) Rac1-deficient macrophages exhibit 969 defects in cell spreading and membrane ruffling but not migration.  J Cell Sci  117: 1259-1268 970
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 34 Wu X, Yoo Y, Okuhama NN, Tucker PW, Liu G, Guan JL (2006) Regulation of RNA-polymerase-II-971 dependent transcription by N-WASP and its nuclear-binding partners.  Nat Cell Biol  8: 756-763 972 Wynn TA, Vannella KM (2016) Macrophages in Tissue Repair, Regeneration, and Fibrosis.  Immunity  44: 973 450-462 974 Yagi M, Miyamoto T, Sawatani Y, Iwamoto K, Hosogane N, Fujita N, Morita K, Ninomiya K, Suzuki T, 975 Miyamoto K  et al  (2005) DC-STAMP is essential for cell-cell fusion in osteoclasts and foreign body giant 976 cells.  J Exp Med  202: 345-351 977 Yasuda H, Shima N, Nakagawa N, Yamaguchi K, Kinosaki M, Mochizuki S-i, Tomoyasu A, Yano K, Goto M, 978 Murakami A  et al  (1998) Osteoclast differentiation factor is a ligand for 979 osteoprotegerin/osteoclastogenesis-inhibitory factor and is identical to TRANCE/RANKL.  Proceedings of 980
+> the National Academy of Sciences  95: 3597-3602 981 Yuan B, Zhou X, Suzuki K, Ramos-Mandujano G, Wang M, Tehseen M, Cortés-Medina LV, Moresco JJ, 982 Dunn S, Hernandez-Benitez R  et al  (2022) Wiskott-Aldrich syndrome protein forms nuclear condensates 983 and regulates alternative splicing.  Nature Communications  13: 3646 984 Zang R, Case JB, Yutuc E, Ma X, Shen S, Gomez Castro MF, Liu Z, Zeng Q, Zhao H, Son J  et al  (2020) 985 Cholesterol 25-hydroxylase suppresses SARS-CoV-2 replication by blocking membrane fusion. 986
+> Proceedings of the National Academy of Sciences  117: 32105-32113 987 988
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 35
+> 989
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 36 
+
+> Figure 1. Atf3 is required for macrophage multinucleation downstream of IL-4. 990
+> (A)  Atf3  mRNA expression in  control (ctrl)  BMDMs upon one day of RANKL, FSL-1, Pam3CSK4 and IL-4 991 stimulation (+), relative to unstimulated (-)  control  cells. 992
+> (B)  Western blot analysis revealed induction of Atf3 protein upon IL-4 stimulation. Atf3 protein is 993 undetectable in BMDMs isolated from  Atf3 KO
+> mice relative to  control  macrophages. ATP5α was used as a 994 loading control. 995
+> (C)  Schematic representation of  Atf3  locus targeted by two sgRNAs to generate a deletion of 5933 bp, 996 including the bZIP domain. Boxes represent the four exons (E1-E4), which are interspaced by introns. 997 The start codon (ATG) is in the second exon. Grey areas of E1 and E4 represent 5´- and 3’-UTR 998 sequences. 999
+> (D-O)  Representative bright field (D, F, H, J, L, N) and confocal (E, G, I, K, M, O) micrographs of  control  (D-1000 I) and  Atf3 KO
+> (J-O) BMDMs unstimulated (D, E, J, K) and stimulated with IL-4 for one day (F, G, L, M) and 1001 three days (H, I, N, O). Arrows indicate cellular elongation observed in both  control  and  Atf3 KO
+> cells after 1002 one day of IL-4 stimulation (F, G, L, M). While  Atf3 KO
+> remain elongated (N, O),  control  cells round up and 1003 MGCs (arrowheads) are readily observed in 3-day IL-4 treated culture (H, I). 1004
+> (P)  Number of nuclei per MGC increases in  control  BMDM cultures over time, following IL-4 stimulation. 1005
+> (Q)  Plot showing fusion index (fused nuclei/total number of nuclei in %) in  control  and  Atf3 KO
+> cells, at 1006 one and three days of IL-4 stimulation.  Control  cells form MGCs after one day of IL-4 treatment, and 1007 their number increases with time, while  Atf3 KO
+> BMDMs do not multinucleate. 1008
+> (R-U)  Representative bright field and confocal images of BMDMs seeded at higher density and 1009 concentration of IL-4 for three days (R, T) or on fusogenic plastic (Permanox) (S, U). While  control  cells 1010 form MGCs (R, S),  Atf3 KO
+> do not multinucleate in either of the conditions (T, U). 1011
+> (V-X)  Representative confocal micrographs of peritoneal macrophages stimulated with IL-4 for three 1012 days (V, W) and quantification of the fusion index (X) show lack of MGCs in  Atf3 KO
+> culture (W) compared 1013 to  control  (V). 1014
+> (Y-EE)  Representative bright field and confocal micrographs show MGCs in  control  and  Atf3 KO
+> BMDM 1015 cultures stimulated with RANKL for nine days (Y, Z), FSL-1 for seven days (BB, DD) or infected with 1016
+> Mycobacterium tuberculosis  (Erdman-GFP, cyan) for seven days (CC, EE). RANKL-stimulated  control  and 1017
+> Atf3 KO
+> BMDMs form multinucleated osteoclasts that are positive for TRAP staining (Y, Z).  Atf3 KO
+> 1018 osteoclasts are smaller in size compared to the  control  (AA). 1019 Data information: Data represent means ± s.d.; **p<0.01, ***p<0.001, ****p<0.0001, n.s. = non-1020 significant. Statistical significance was determined using Mann-Whitney test. Each dot represents 1021
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 37 average value for one mouse (A, Q, X, n ≥ 4) or individual cells from three independent experiments (P, 1022 AA). Confocal micrographs are z-projections of multiple confocal sections. Phalloidin labels F-actin; DAPI 1023 labels nuclei. Scale bars: 100 μm (D, F, H, J, L, N, R, T, Y, Z) and 20 μm (E, G, I, K, M, O, S-W, BB-EE). 1024
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 38 
+
+> 1025
+> Figure 2. Atf3 is indispensable for IL-4-induced macrophage fusion. 1026
+> (A)  Schematic representation of the IL-4 stimulation protocol to generate MGCs (a). Cells expressing 1027 nuclear H2B-EGFP (yellow) were mixed with cells expressing membrane-targeted mTmG-TdTOMATO 1028 (cyan). Both acytokinetic cell division (b) and cell-cell fusion (c) drive multinucleation. 1029
+> (B)  Bright field single frames from time-lapse live imaging of  control  BMDMs stimulated with IL-4 for 1030 three days. Both cell-cell fusion (asterisks) and incomplete cytokinesis (rectangle) drive multinucleation. 1031
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 39
+> (C-G)  Representative confocal micrographs (C, D) and quantifications (E-G) of MGCs formed in co-culture 1032 of mTmG-TdTOMATO-expressing  control  cells with  control  (C) or  Atf3 KO
+> (d) cells expressing nuclear H2B-1033 EGFP stimulated with IL-4 for three days. Co-culture of  Atf3 KO
+> with  control  cells significantly decreases 1034 fusion index (E). The percentage of MGCs that express both nuclear H2B-GFP and membrane-targeted 1035 mTmG-TdTOMATO is significantly decreased in  ctrl x Atf3 KO
+> co-cultures compared to  ctrl x ctrl  ones (F). 1036 While  ctrl x ctrl  mixed cultures display TdTOMATO-positive MGCs that enclose 50% H2B-EGFP-positive 1037 nuclei in average, the contribution of H2B-GFP-positive  Atf3 KO
+> nuclei is below 10%. Plot depicts the 1038 contribution of each tagged population to MGCs, as a percentage of GFP-positive nuclei per MGC (G). 1039
+> (H-J)  Representative confocal micrographs of  control  (H) and  Atf3 KO
+> (I) co-cultures in which BMDMs 1040 expressing nuclear H2B-EGFP were mixed with ones expressing membrane-targeted mTmG-TdTOMATO 1041 from the same genotype and stimulated for three days with IL-4. Compared to mTmG-TdTOMATO-1042 positive MGCs containing H2B-EGFP-positive nuclei in  control  co-cultures (H),  Atf3 KO
+> BMDMs can only 1043 binucleate and express either H2B-GFP or mTmG-TdTOMATO only (asterisk) compared to single 1044 (asterisk) and mixed color (arrowdead) binucleated cells in  control  co-cultures (H).  The percentage of 1045 binucleated cells in  Atf3 KO
+> cultures is significantly decreased compared to  control  cultures stimulated 1046 with IL-4 for three days (J). 1047 Data information: Data represent means ± s.d.; *p<0.05, ****p<0.0001. Statistical significance was 1048 determined using Mann-Whitney test (E-G, n ≥ 3; J, n = 9). Each dot represents average value for one 1049 mouse. Confocal micrographs are z-projections of multiple confocal sections. Phalloidin labels F-actin, 1050
+
+αTubulin labels microtubules, DAPI labels nuclei. Scale bars: 100 μm (B) and 20 μm (C, D, H, I). 1051 1052 1053 
+
+> Supplementary Movie 1. IL-4-induced multinucleation of control BMDMs involves both acytokinetic 1054
+> division and cell-cell fusion. 1055 Bright field time-lapse live imaging of  ctrl  BMDMs stimulated with IL-4 for three days shows incomplete 1056 cytokinesis (rectangle) and cell-cell fusion (asterisks). See Figure 2B for video stills. 1057
+> 1058
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 40
+> 1059
+> Figure 3. Atf3 deficient BMDMs activate STAT6-mediated transcription as well as unique gene 1060
+> expression signature in response to IL-4. 1061
+> (A, B)  Representative western blot (A) and quantification (B) showing phosphorylated (pSTAT1) and total 1062 STAT1 protein in  control  and  Atf3 KO
+> BMDMs in the unstimulated state (unst.) and one day after IL-4 1063 stimulation (+IL-4). The higher pSTAT1 levels in unstimulated  Atf3 KO
+> cells decrease upon IL-4 stimulation 1064 to levels observed in IL-4 treated  control  BMDMs. ATP5α was used as a loading control. 1065
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 41
+> (C)  RT-qPCR shows increased expression of  Il6  and  Isg15  transcripts in unstimulated  Atf3 KO
+> BMDMs 1066 compared to  control . Data are Log 10  fold changes in expression relative to  control  (
+
+ΔΔ Ct method). Levels 1067 of  Gapdh  transcripts were used for normalization. 1068 
+
+> (D, E)  Representative western blot and quantification showing that both  ctrl  and  Atf3 KO
+> BMDMs activate 1069 STAT6 (pSTAT6) in response to IL-4. ATP5α was used as a loading control. 1070
+> (F, G)  Volcano plots depict significantly regulated genes ( pAdj  < 0.05) in  control  (ctrl ) (F) and  Atf3 KO
+> (G) 1071 BMDMs stimulated with IL-4 for 5h, compared to the unstimulated state, as detected by RNA 1072 sequencing. The total number of downregulated and upregulated genes is indicated in gray for each 1073 plot. Dark blue/red colors highlight genes regulated ≥ 2-fold. M2 genes, such as  Arginase-1 (Arg-1) ,1074
+> Resistin-like alpha (Retnla)  and cell-cell fusogens, such as  Cadherin (Cdh1), Osteoclast stimulatory 1075
+> transmembrane protein (OC-STAMP)  and  CD36 , are among the most upregulated genes in response to 1076 IL-4 in both genotypes. 1077
+> (H)  Venn diagram shows overlap of upregulated (red) and downregulated (blue) genes in  control  and 1078
+> Atf3 KO
+> BMDMs upon 5h of IL-4 stimulation in comparison to unstimulated state. 1079
+> (I)  Expression of IL-4-regulated genes, including M2-like and fusion-promoting genes, is induced upon 5h 1080 of IL-4 stimulation in comparison to unstimulated cells, in both  control  and  Atf3 KO
+> BMDMs. The heatmap 1081 represents the Z-scores of normalized RNA-seq counts, scaled by rows. 1082
+> (J)  Gene ontology (GO) “Biological processes” enrichment plot of the 3986 genes that are significantly 1083 regulated ( pAdj  < 0.05) in the same direction (1622 downregulated, blue, and 1622 upregulated red) in 1084 IL-4 stimulated  control  and  Atf3 KO
+> cells, represented in H. The Fold enrichment for each GO term is color-1085 coded and the number of genes indicated. 1086
+> (K)  Volcano plot depicts significantly regulated genes ( pAdj  < 0.05) in  Atf3 KO
+> BMDMs compared to 1087
+> controls , both stimulated with IL-4 for 5h, as determined by RNA sequencing. The total number of 1088 downregulated and upregulated genes is indicated in gray with dark blue and red colors highlighting 1089 genes regulated ≥ 2-fold. 1090
+> (L-N)  Cellular component (L), Biological process (M) and Reactome (N) GO term enrichment analysis of 1091 differentially regulated genes ( pAdj  < 0.05) in  Atf3 KO
+> BMDMs compared to control cells after 5 hours of 1092 IL-4 stimulation. The GO terms derived from 1249 significantly downregulated, and 1974 upregulated 1093 genes are represented to the left (blue) and to the right (red) of the Y axis, respectively. The Fold 1094 enrichment for each GO term is color-coded and the number of genes is indicated. 1095 Data information: Data represent means ± s.d.; *p<0.05, **p<0.01, ****p<0.0001, n.s. = non-significant 1096 (B, C, E). Statistical significance was determined using ordinary one-way ANOVA with Tukey’s multiple 1097
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 42 comparison test (B, n = 5) or unpaired t-test assuming unequal variance (Mann-Whitney test) (C, n ≥ 6; 1098 E, n = 5). Each dot represents average value for one mouse. 1099
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 43 1100  Figure 4. Atf3 loss affects cytoskeletal responses of macrophages to IL-4. 1101 
+
+> (A-B)  Representative confocal micrographs  of IL-4 stimulated BMDMs stained against the membrane-1102 localized integrin CD11b show numerous DAPI-stained nuclei within a single  control  BMDM (A-A’’). In 1103 contrast,  Atf3 KO
+> BMDMs form multilayered aggregates, with mononuclear cells clearly separated by cell 1104 membranes (B-B’’). White arrowheads indicate the positions of the cross-sections. 1105
+> (C-D)  3D confocal projection of z-stack images of  control  (C) BMDMs stained for F-actin (Phal) after three 1106 days of IL-4 stimulation shows prominent ruffling (R), while  Atf3 KO
+> BMDMs display scarce thin filopodia 1107 (Fl, arrow). White arrowheads indicate the positions of the cross-sections, which are presented below 1108 (C’, D’). 1109
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 44
+> (E-F)  Electron microscopy images highlight long filopodia in  control  BMDMs treated with IL-4 for three 1110 days (e), compared to the shorter projections in  Atf3 KO
+> cells (F). 1111
+> (G-J)  Compared to the rich cortical actomyosin network in  control  cells, visualized by staining for F-actin 1112 (Phal) (G, H, corresponding intensity heatmaps G’, H’) and phospho-Myosin (S19), actomyosin cables in 1113
+> Atf3 KO
+> BMDMs (I, J) are concentrated beneath the plasma membrane and extend along the branches. 1114
+> (K-L)  Confocal micrographs of BMDMs expressing Lifeact-EGFP reveal actin-rich podosome rings (K, 1115 asterisks), lamellipodia (K, arrowhead) and filopodia (K, arrow) in  control  cells while these structures are 1116 notably reduced in  Atf3 KO
+> BMDMs (l). 1117
+> (M-O)  Representative confocal micrographs (M, N) and quantification (O) of IL-4 stimulated BMDMs 1118 showing increased WASP fluorescence intensity in  Atf3 KO
+> macrophages (N) compared with  control  cells 1119 (M). In contrast to the primarily nuclear signal in  control  BMDMs,  Atf3 KO
+> BMDMs display WASP signal in 1120 both nucleus and cytoplasm. 1121
+> (P)  Representative western blot of IL-4 treated cells shows marked decrease of F-actin in  Atf3 KO
+> BMDMs 1122 compared to  control .1123
+> (Q-R)  Representative western blots of WASP, phospho-Cofilin (p-Cofilin) and total Cofilin protein levels 1124 (Q) and quantification (R) in IL-4-stimulated BMDMs of the indicated genotypes. ATP5α was used as a 1125 loading control. 1126
+> (S-T)  Representative confocal micrographs reveal differential localization and enrichment of Filamin A 1127 (FLNA) in the nucleus (arrow, N) of  control  (S, S’) cells and in perinuclear foci (PN) of  Atf3 KO
+> (T, T’) 1128 BMDMs stimulated by IL-4. 1129 Data information: Data represent means ± s.d.; **p<0.01, ****p<0.0001 (O, R). Statistical significance 1130 was determined using Mann-Whitney test. Each dot represents individual cell from three independent 1131 experiments (O, n = 3) or individual animal (R, n = 8 left, n = 15 right) Micrographs are z-projections of 1132 multiple confocal sections. DAPI labels nuclei. Scale bars: 10 μm (A-D, G-L, S, T), 50 μm (M, N), and 0.5 1133 μm (E, F). 1134 1135 1136
+> Supplementary Movie 2. Actin cytoskeleton dynamics in IL-4-stimulated  control  BMDMs. 1137 Live-cell time-lapse confocal microscopy of IL-4-stimulated  ctrl  BMDMs expressing Lifeact-EGFP shows 1138 dynamic  rearrangement  of  the  actin  cytoskeleton,  including  podosome  (asterisks),  lamellipodia 1139 (arrowhead), and filopodia (arrow) formation, as well as membrane ruffling. Scale bar: 10 μm. See Figure 1140 4K for video stills. 1141
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 45
+> Supplementary Movie 3. Actin cytoskeleton dynamics in IL-4-stimulated  Atf3 KO
+> BMDMs. 1142 Live-cell time-lapse confocal microscopy of IL-4-stimulated  Atf3 KO
+> BMDMs expressing Lifeact-EGFP 1143 reveals  an  elongated,  stellate  morphology,  with  reduced  actin  cytoskeleton  dynamics,  limited 1144 membrane ruffling and diminished podosome formation. Scale bar: 10 μm. See Figure 4L for video stills. 1145 1146
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 46 1147 
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 47 
+
+> Figure 5. 25-HC-mediated inhibition of the mevalonate pathway and protein prenylation recapitulates 1148
+> the phenotypes of Atf3 loss. 1149
+> (A)  Schematic representation of cholesterol and isoprenoid metabolism in the cell, highlighting the 1150 mevalonate  pathway.  The  ER-resident  enzyme  Cholesterol-25-hydroxylase  (Ch25h)  generates  the 1151 oxysterol 25-Hydroxycholesterol (25-HC). 25-HC causes sequestration of a free cholesterol pool from the 1152 plasma membrane (a). 25-HC regulates cholesterol biosynthesis by suppressing the rate-limiting enzyme 1153 of the mevalonate pathway Hmgcr (b) and by binding the Insulin-induced gene (INSIG) and forming a 1154 complex that retains Sreb2-Scap inactive in the ER (c). In addition, 25-HC binds LXR-RXR transcription 1155 factor dimers to initiate expression of genes involved in the absorption, degradation, transportation, 1156 and excretion of cholesterol (d). Besides  de novo  synthesis of cholesterol, the mevalonate pathway also 1157 generates  isoprenoids.  Isoprenoid  intermediates,  farnesyl  pyrophosphate  and  geranylgeranyl 1158 pyrophosphate, are used for prenylation of various proteins. Compounds inhibiting the mevalonate 1159 pathway (25-HC, Statins) and protein prenylation (GGTI-2133, Lonafarnib) are depicted. The model was 1160 generated using BioRender.com. 1161
+> (B)  Heatmap shows differential expression of selected genes associated with cholesterol biosynthesis in 1162
+> control  and  Atf3 KO
+> BMDMs stimulated with IL-4 for 5h. The heatmap represents the Z-scores of 1163 normalized RNA-seq counts, scaled by rows. 1164
+> (C)  RT-qPCR shows upregulation of  Ch25h  expression in IL-4 stimulated  Atf3 KO
+> BMDMs compared to 1165
+> control .1166
+> (D, E)  Total cholesterol levels, quantified by LC-MS/MS (D), and the three main classes of cholesterol 1167 ester species, CE 16:0, CE 18:0 and CE 26:1 (E), are significantly decreased in IL-4 stimulated  Atf3 KO
+> 1168 BMDMs compared to  control . Each dot represents one mouse. Measurements from independent 1169 experiments were pooled and normalized to average per experiment. 1170
+> (F-K)  Representative confocal micrographs (F-I) and quantifications (J, K) showing 3-day IL-4-stimulated 1171
+> control  BMDMs pre-treated with EtOH (vehicle, veh.) (F, G) or 25-HC (6.2 nM) (H, I) for 24h. In contrast 1172 to MGC formation (F, K) and nuclear localization of Filamin A (G’) in vehicle treated cells, cells exposed 1173 to 25-HC remain mononucleated (H, K), elongate (H, J) and Filamin forms perinuclear foci (I’). 1174
+> (L-U)  Representative micrographs (L-Q) and quantifications of cell fusion (R, S) and cell roundness (T, U) 1175 of  control  BMDMs pre-treated for 24 with DMSO (vehicle, veh.) (L, O), 5 μM (M, P), or 10 μM (N, Q) of an 1176 inhibitor of geranylgeranylation, GGTI-2133 (M, N), or farnesylation, Lonafarnib (P, Q), prior to IL-4 1177 stimulation. Treatment  with GTI-2133 and Lonafarnib reduces MGC formation (R, S) and cells are more 1178 elongated (T, U) compared to vehicle treated BMDMs. 1179
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 48 Data information: Data represent means ± s.d.; *p<0.05, **p<0.01, ***p<0.001, ****p<0.0001, n.s. = 1180 non-significant. Statistical significance was determined using unpaired t-test assuming unequal variance 1181 (Welch’s test) (C-E) and Mann-Whitney test (J, K, R-U). Each dot represents average value of one mouse 1182 (C-E, K, R, S, n ≥ 5) or single cells from 3 independent experiments (J, T, U). Micrographs are z-1183 projections of multiple confocal sections. Phalloidin labels F-actin; DAPI labels nuclei. Scale bars: 20 μm. 1184
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 49
+> 1185
+> Figure 6. Loss of Ch25h rescues cell morphology and F-actin levels in Atf3 deficient BMDMs. 1186
+> (A)  Schematic representation of the  Ch25h  locus targeted by two sgRNAs to generate a 49 bp deletion 1187 resulting in a frameshift and the introduction of a premature STOP codon. Box represents a single exon 1 1188 (E1) with a start codon (ATG) and 3’UTR sequence (grey). 1189
+> (B)  Decreased  total  cholesterol  levels  in  Atf3 KO
+> BMDMs  are  normalized  to  control  levels  upon 1190 simultaneous loss of Ch25h. Loss of Ch25h alone does not alter cholesterol levels. Measurements from 1191 independent experiments were pooled and normalized to the mean per experiment. 1192
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 50
+> (C-E)  Representative western blots (C) and quantification (D, E) show elevated Hmgcr protein in IL-4 1193 stimulated  Ch25h KO
+> and  Atf3 KO
+> Ch25h KO
+> BMDMs while reduced in  Atf3 KO
+> cells (D). Atf3 protein is 1194 increased in 1-day IL-4 stimulated  Ch25h KO
+> BMDMs relative to  control  (E) . ATP5α was used as a loading 1195 control. Each genotype is represented by three BMDM samples prepared from independent animals. 1196
+> (F-J)  Representative confocal (F, H) and bright-field (G, I) micrographs of MGCs and quantification of 1197 fusion index (fused nuclei/total nr of nuclei in %) (J) showing enhanced multinucleation in  Ch25h KO
+> 1198 BMDMs cultures compared to  control  at one and three days of IL-4 stimulation. 1199
+> (K-O)  Compared to large MGCs formed in  control  (K) and  Ch25h KO
+> (l) BMDM cultures stimulated for 1200 three days with IL-4, MGCs are absent in  Atf3 KO
+> (M) and  Atf3 KO
+> Ch25h KO
+> (N) samples. In contrast to 1201 elongated  Atf3 KO
+> cells (M, O),  Atf3 KO
+> Ch25h KO
+> (N, O) display round morphology like  control  cells (K, O). 1202
+> (P-S)  Representative images of Phalloidin-stained (Phal) BMDMs show rich F-actin ruffles in IL-4-1203 stimulated  control  (P),  Ch25h KO
+> (Q) and  Atf3 KO
+> Ch25h KO
+> (S) cells contrasting with sparse ruffles in  Atf3 KO
+> 1204 (R) BMDMs. 1205
+> (T)  Quantification of WASP protein levels by western blot in 1-day IL-4-stimulated BMDMs shows a 1206 significant increase in  Atf3 KO
+> cells but not in  Atf3 KO
+> Ch25h KO
+> cells compared to  control . See Supplementary 1207 Fig. 2D for a representative western blot. 1208
+> (U)  Quantification of F/G-actin ratio from western blots reveals restored F-actin levels in IL-4-stimulated 1209
+> Atf3 KO
+> Ch25h KO
+> BMDMs contrasting with the decrease observed in  Atf3 KO
+> cells. See Supplementary Fig. 2E 1210 for a representative western blot. 1211
+> (V)  Neither  Atf3 KO
+> nor  Atf3 KO
+> Ch25h KO
+> BMDMs form MGCs in contrast to the enhanced multinucleation 1212 observed in  Ch25h KO
+> BMDMs compared to  control . The plot shows fusion index (fused nuclei/total nr of 1213 nuclei in %) in BMDMs stimulated with IL-4 for three days. 1214 Data information: Data represent means ± s.d.; *p<0.05, **p<0.01, ***p<0.001, ****p<0.0001, n.s. = 1215 non-significant. Statistical significance was determined using ordinary one-way ANOVA with Holm-1216 Šídák’s multiple comparison test (B, D, O, T-V) or unpaired t-test assuming unequal variance (Welch’s 1217 test) (E). The dots represent value from individual animals (B, n ≥ 5; D, n ≥ 5; T, n ≥ 8; V, n = 7), except 1218 (O), where single cells from 3 independent experiments are depicted, and (J) showing technical 1219 replicates from one of the three independent experiments. Micrographs are z-projections of multiple 1220 confocal sections. Phalloidin labels F-actin; DAPI labels nuclei. Scale bars: 200 μm (G, I), 50 μm (F, H), 20 1221 μm (K-N), 5 μm (P-S). 1222
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 51 1223
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 52 
+
+> Figure 7. Atf3 controls nuclear morphology and genome integrity of BMDMs independent of Ch25h. 1224
+> (A-H)  Representative confocal (A, B, D, E) and electron microscopy (C, F, G, H) micrographs of IL-4 1225 stimulated BMDMs highlight differences in nuclear morphology between  control  (A-C) and  Atf3 KO
+> cells 1226 (D-H), including the presence of micronuclei (MN) (D, H) and nuclear envelope invagination containing 1227 cytoplasm in  Atf3 KO
+> cells (G, G’). Nuclear lamina is visualized by immunostaining against lamin A/C (A, B, 1228 D, E). 1229
+> (I)  Plot depicting the reduced nuclear circularity of  Atf3 KO
+> BMDMs compared to  control  after IL-4 1230 stimulation. Nuclear circularity is defined by the formula 4π(area/perimeter 2
+> ), in which a value of 1.0 1231 indicates a perfect circle. 1232
+> (J)  Percentage of nuclei positive for the DNA damage marker
+
+γH2A.X is increased in  Atf3 KO 
+
+> BMDM 1233 cultures compared to  control .1234
+> (K)  Percentage of cells containing micronuclei, an extra-nuclear DNA enclosed in lamin A/C-positive 1235 membrane, is increased in  Atf3 KO
+> BMDM cultures compared to  control .1236
+> (L)  RT-qPCR shows marked downregulation of  Lmna  expression in IL-4 stimulated  Atf3 KO
+> BMDMs 1237 compared to  control  that is not rescued by simultaneous loss of  Ch25h .1238
+> (M, N)  Quantification (m) and representative western blot (n) show significant reduction of lamin A/C 1239 protein in IL-4-stimulated  Atf3 KO
+> and  Atf3 KO
+> Ch25h KO
+> BMDMs relative to  control . ATP5α was used as a 1240 loading control. 1241
+> (O)  Schematic  representation  of  4D-cell  microchannels  used  in  migration  experiments,  with 1242 constrictions of variable lengths (L = 5, 15 μm) and widths (w = 1.5 - 5.0 μm). 1243
+> (P, Q)  The plots display the time (in minutes) required for BMDM nuclei of the depicted genotype to 1244 fully traverse constrictions of 3 μm (P) and 1.5-2 μm (Q) in width.  Atf3 KO
+> BMDM nuclei show a higher 1245 passage rate through the narrower 1.5-2 μm (Q) constrictions compared to  control .1246
+> (R, S)  Sequential images of  control  (R) and  Atf3 KO
+> (S) cells expressing H2B-GFP as they pass through 1.5-2 1247 μm constrictions. Nucleo-cytoplasmic GFP leakage is observed in  Atf3 KO
+> nuclei over time. 1248
+> (T-V)  Representative confocal micrographs display lamin A/C distribution in fixed  control  (T, T’) and 1249
+> Atf3 KO
+> (U, U’) BMDM nuclei traversing through 3 μm microchannel constrictions. Plot of LMNA/C 1250 intensity across the nucleus (V), as shown in T’ and U’. NM= nuclear membrane. Data points represent 1251 quantification of lamin A/C fluorescence intensity from z-stacks. 1252
+> (W-BB)  Representative confocal micrographs of unstimulated and IL-4 stimulated  control  (W, Y) and 1253
+> Lmna G608G
+> (X, Z) BMDMs and quantifications (AA, BB) show that  Lmna G608G
+> BMDMs form significantly 1254 smaller and fewer MGCs following IL-4 stimulation. 1255
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 53
+> (CC)  Model summarizing the dual checkpoint role of Atf3 in IL-4/STAT6-mediated MGC formation. a) 1256 Lipid metabolic control:  Atf3 represses Ch25h to limit production of 25-hydroxycholesterol (25-HC), 1257 thereby sustaining mevalonate pathway activity, cholesterol availability, and isoprenoid biosynthesis 1258 required for protein prenylation including Rho GTPase acting on key actin regulators governing actin 1259 cytoskeleton remodeling (WASP, Cofilin, FLNA) and nuclear localization of WASP. b) Nuclear structural 1260 integrity: Independently of Ch25h, Atf3 maintains lamin A/C expression, preserving nuclear morphology, 1261 mechanical resilience, and genome stability. Loss of Atf3 disrupts both pathways, impairing membrane 1262 ruffling, actin dynamics, and nuclear stability, resulting in complete failure of IL-4–driven cell-cell fusion. 1263 The model was generated using BioRender.com. 1264 Data information: Data represent means ± s.d.; *p<0.05, **p<0.01, ***p<0.001, ****p<0.0001, n.s. = 1265 non-significant. Statistical significance was determined using Mann-Whitney (I-K, P, Q) or Welch’s (AA, 1266 BB) test assuming unequal variance, or ordinary one-way ANOVA with Tukey’s multiple comparison test 1267 (L, M). The dots represent average value from individual animals (I-M, BB, n ≥ 3), except (P, Q, AA), 1268 where cells/nuclei from 3 independent experiments are depicted. At least 300 nuclei were counted per 1269 individual animal (I-K). Micrographs are z-projections of multiple confocal sections (A, B, D, E, T, U, W-Z, 1270 CC, DD). Phalloidin labels F-actin; DAPI labels nuclei. Scale bars: 100 μm (Y, Z), 50 μm (W, X, CC, DD), 10 1271 μm (A, B, D, E, R-U), 2.5 μm (C, F, G, H) and 500 nm (G’). 1272 1273 1274
+> Supplementary Movie 4. Nucleus of IL-4-stimulated  control  BMDMs traversing through constriction. 1275 Live-cell time-lapse confocal microscopy of IL-4-stimulated  control  cells expressing H2B-GFP as they pass 1276 through 1.5-2 μm constrictions. Scale bar: 10 μm. See Figure 7R for video stills. 1277 1278 1279
+> Supplementary Movie 5. Nucleus of IL-4-stimulated  Atf3 KO
+> BMDMs traversing through constriction. 1280 Live-cell time-lapse confocal microscopy of IL-4-stimulated  control  cells expressing H2B-GFP as they pass 1281 through 1.5-2 μm constrictions with nucleo-cytoplasmic GFP leakage being observed over time. Scale 1282 bar: 10 μm. See Figure 7S for video stills. 1283 1284
+> Supplementary Dataset 1.  RNA-seq results (differential gene expression of unstimulated and 5-hour IL-1285 4-stimulated control and Atf3-deficient bone marrow derived macrophages). 1286
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint 54 1287
+> Supplementary Dataset 2.  RNA-seq results (GO term enrichment analysis of unstimulated and 5-hour IL-1288 4-stimulated control and Atf3-deficient bone marrow derived macrophages). 1289 1290
+
+.CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 3, 2026. ;https://doi.org/10.64898/2026.04.01.715652 doi: bioRxiv preprint

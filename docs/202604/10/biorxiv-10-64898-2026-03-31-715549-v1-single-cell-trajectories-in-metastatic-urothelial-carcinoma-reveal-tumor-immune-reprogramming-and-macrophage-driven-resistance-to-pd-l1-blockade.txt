@@ -1,0 +1,2146 @@
+Title: 27868014
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.03.31.715549v1.full.pdf
+
+Number of Pages: 31
+
+Markdown Content:
+Single -cell trajectories in metastatic urothelial carcinoma reveal tumor –immune reprogramming and 1
+
+macrophage -driven resistance to PD -(L)1 blockade 2
+
+3
+
+Ronan Flippot 1,2 ,3 *, Amélie Roehrig 4*, Julien Vibert 3,5 ,6 *, Nicolas Stransky 7, Luc Cabel 8, Kevin Mulder 3, 9,4
+
+Benjamin Besse 1, 6, Claudio Nicotra 3,5 , Maud Ngo Camus 3,5 , Christophe Massard 3,5 , Etienne 5
+
+Rouleau 3,10,11 , Gerome Jules -Clement 3,12 , Alicia Tran -Dien 3,12 , Lambros Tselikas 13, Constance 6
+
+Thibault 14,1 5, Mostefa Bennamoun 8, Gromoslaw A. Smolen 7, Mukund Varma 7, Ruth Kulicke 7, Jean -Yves 7
+
+Scoazec 10,11 , Céline Vallot 4, Maud Kamal 3, Agathe Peltier 3, Eric Letouzé 4#, Yohann Loriot 1, 3,5, 6#
+
+8
+
+9
+
+1. Department of Cancer Medicine, Gustave Roussy, Villejuif, France 10 
+
+2. Im munomonitoring laboratory, INSERM U1363 , Paris Saclay University, France 11 
+
+3. IHU PRISM - National PRecISion Medicine Center in Oncology, Gustave Roussy Cancer Campus ,12 
+
+Villejuif, France 13 
+
+4. One Biosciences, Paris, France 14 
+
+5. Drug Development Department, Gustave Roussy, France 15 
+
+6. Université Paris -Saclay, Gustave Roussy, Inserm U981, Villejuif, France 16 
+
+7. Celsius Therapeutics, Cambridge, MA, USA 17 
+
+8. Department of Medical Oncology, Institut Curie Paris, Université Versailles Saint -Quentin, 18 
+
+Université Paris -Saclay, Saint -Cloud, France 19 
+
+9. INSERM UMR1015, Gustave Roussy Cancer Campus, 94805 Villejuif, France 20 
+
+10. Medical Biology and Pathology Department, Gustave Roussy, Villejuif, France 21 
+
+11. AMMICa US3655/US23, Gustave Roussy, Villejuif, France 22 
+
+12. Bioinformatics Core Facility, Gustave Roussy, Université Paris -Saclay, CNRS UMS 3655, Inserm 23 
+
+US23, Villejuif, France 24 
+
+13. Radiology department, Gustave Roussy, France 25 
+
+14. Department of Medical Oncology, Hôpital Européen Georges Pompidou, APHP, Paris, France 26 
+
+15. SIRIC CARPEM, U970 27 
+
+28 
+
+* Equal contributions 29  
+
+> #
+
+Equal contributions 30 
+
+31 
+
+32 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Keywords. Metastatic urothelial carcinoma; immune checkpoint inhibitors; single -nuclei RNA -33 
+
+sequencing; sequential biopsies 34 
+
+Figures. Main: 6, Supplemental: 7 35 
+
+Tables . Main: 0, Supplemental: 1 36 
+
+Word count (Main) . 3505 37 
+
+38 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint Abstract. 39 
+
+Immune checkpoint inhibitors (ICI) improve d outcomes in metastatic urothelial carcinoma (mUC), but 40 
+
+primary and acquired resistance remain poorly understood. We performed single -nuclei RNA 41 
+
+sequencing on sequential metastatic biopsies from ICI -treated mUC patients. Tumor cells showed 42 
+
+transcriptomic heterogeneity within individual lesions , basal cells being associated with increas ed43 
+
+immune infiltration and response. Myeloid and lymphoid compartments exhibited features of immune 44 
+
+dysfunction in non -responders . Longitudinal analyses revea led convergent adaptive resistance 45 
+
+mechanisms , dominated by polarization toward pro -tumoral macrophage states, but also including 46 
+
+downregulation of the antigen presentation machinery in tumor cells , increased checkpoint expression 47 
+
+with loss of cytotoxicity in T cells. Individual trajectories point to distinct evolutionary routes under ICI 48 
+
+pressure. Across pivotal ICI trials, bulk expression of the M2 -like macrophage marker HES1 predicted 49 
+
+ICI resistance . Our study provides the first single -cell longitudinal atlas of ICI -treated mUC , revealing 50 
+
+macrophage reprogramming as a dominant driver of resistance, establishing a framework for 51 
+
+individualized immunotherapy strategies. 52 
+
+53 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+# Introduction 54 
+
+Metastatic urothelial carcinoma (mUC) remains a lethal disease despi te rec ent therapeutic advances 1.55 
+
+Immune checkpoint inhibitors (ICI s) targeting PD -L(1) have improved survival across treatment 56 
+
+settings, yet only a minority of patients derive durable benefit 2–6. Most individuals experience primary 57 
+
+resistance, an d among init ial responders, acquired resistance is almost universal. While PD -L1 58 
+
+immunohistochemistry and common genomic alterations offer limited predictive value in metastatic 59 
+
+setting, the biological determinants that shape sensitivity or resistance to I CIs in mUC remain largely 60 
+
+undefined. 61 
+
+Several studies in localized muscle -invasive bladder cancer (MIBC) have suggested the importance of 62 
+
+pre -existing immune contexture, including T and B cell infiltration, tertiary lymphoid structures and 63 
+
+inflammatory tran scriptional programs 7–13 . However, these analyses mostly relied on bulk 64 
+
+transcriptomics or immunohistochemistry from primary tumors, which may not reflect the biology of 65 
+
+metastatic lesions. Bulk -based analyses also obscure the cellular heterogeneity of both tumor and 66 
+
+immune compartments, preventing refined characterization of antitumor versus protumoral states. 67 
+
+Single -cell technologies have begun to r eveal the complexity of urothel ial carcinoma, including luminal -68 
+
+basal p lasticity and diverse myeloid cell states, but these studies remains cross -sectional and do not 69 
+
+capture the dynamic rewiring induced by ICIs. 70 
+
+Understa nd ing how the tumor and its microenvironment evolve over time during immunotherap y is 71 
+
+critical to unravel resistance mechanisms. In solid tumors, emerging evidence indicates that ICI 72 
+
+resistance may arise through multiple non -mutually -exclusive processes, including antigen 73 
+
+presentation defects (HLA or B2 -microglobulin loss), impaired IF N signaling, T cell exhaustion and 74 
+
+expansion of immunosuppressive myeloid populations. However, whether these mechanisms operate 75 
+
+in metastatic urothelial carcinoma, how they evolve under selective pressure, and how they combine 76 
+
+within individual patients r emain unknown. No study to date has mapped, at the single -cell level the 77 
+
+longitudinal trajectories of tumor, lymphoid and myeloid compartment s in mUC during PD -L(1) 78 
+
+blockad e. 79 
+
+To ad dress this gap, we conducted an in -depth, single -cell analysis of metastat ic tumor biopsies in the 80 
+
+MATCH -R biological trial (NCT02517892) which prospectively collected sequential metastatic samples 81 
+
+at baseline, during therapy and at progression in patients treated with anti -PD -(L)1 monotherapy .82 
+
+Using single -nuclei RNA sequencing s supported by whole -exome sequencing and bulk transcriptomics, 83 
+
+we generated a dataset of more than 220,000 high -quality cells mapped across 55 biopsies. This design 84 
+
+provides a unique opportunity to dissect both pre -treatment determinants of response and a daptive 85 
+
+resistance mechanisms emerging under immune pressure. 86 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Our study reveals that mUC lesions display extensive intratumoral tran scriptomic heterogeneity, 87 
+
+includ ing co -occurrence of basal , luminal and neuroendocrine -like programs within individual samp les. 88 
+
+We identify tumor -intrinsic and microenvironmental fe atures associated with ICI respo nse, including 89 
+
+the proportion of basal tumor cells and distinct CD4/CD8 T -cell states. Importantly, we uncover the 90 
+
+central role of macrophage reprogramming with enric hment of HES1+ M2 -like immunosuppressive 91 
+
+states predicting both primary resistance and subsequent progression. Longitudinal analyses show 92 
+
+convergent adaptive programs across patients such as downregulation of antigen -presentation 93 
+
+machinery and IFN signalin g in tumor cells, increased immune checkpoint expression and exhaustion 94 
+
+in T cells and dominant polarization toward protumoral macrophage subsets. These mechanisms 95 
+
+combine in patient -specific patterns, defining distinct evolutionary routes to resistance. 96 
+
+Altogether, our work delivers the first longitudinal single -cell atlas of metastatic urothelial carcinoma 97 
+
+under PD -(L)1 blockade , establishes macrophage polarization as a major driver of resistance, and 98 
+
+provides a framework for individualized and dynamically adapted immunotherapeutic strategies. 99 
+
+100 
+
+101 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+# Results 102 
+
+Single -nuclei profiling of metastatic urothelial carcinoma unveils extensive t umor and 103 
+
+microenvironmental heterogeneity 104 
+
+A total of 32 patients with metastatic urothelial carcinoma were included in the MATCH -R trial and 105 
+
+treated with single -agent PD -1 or PD -L1 inhibitor in the metastatic setting. Median age was 71 (IQR 61 -106 
+
+77), and mos t (66%) had bladder cancer as a primary tumor. Patients were treated either in the first 107 
+
+line metastatic setting (28%), second -line (50%), or third -line and more (22%). Most common 108 
+
+metastatic sites at immune checkpoint inhibitor initiation were lymph nodes (65%), lung (38%), bone 109 
+
+(31%), liver (28%), peritoneal or retroperitoneal soft tissue (28%) ( Supplementary Table S1 ). Overall, 110 
+
+seven (22%) patients achieved objective response (OR), which translated to prolonged benefit to ICI: 111 
+
+with a median follow -up of 26.4 months (95% confidence interval [CI] 16.0 -35.4), median progression -112 
+
+free survival was 24.7 months (95%CI 17.8 -31.0) in patients who achieved OR versus 1.4 months (95%CI 113 
+
+1.0 -1.6) in those who did not, and median overall survival not reached versus 4.2 months (95%CI 2.5 -114 
+
+6.2) ( Figure 1a ). 115 
+
+To allow for longitudinal assessment of the tumor and its microenvironment on therapy, we performed 116 
+
+single -nuclei RNA sequencing in matched sequential biopsies at baseline, 3 months after ICI initiation 117 
+
+(for patients who achieved disease control), and at disease progression. Biopsies at baseline were 118 
+
+performed in 31 patients (97%), including lung (23%), lymph node (19%), soft tissue (19%), liver (13%) 119 
+
+or bone (9%) metastases. Seventeen patients (53%) had a biopsy at disea se progression, while five 120 
+
+(16%) had an interval biopsy on -therapy. Overall, 55 samples were collected. After quality controls 121 
+
+(Supplementary Figure S1 ), we obtained single -nuclei transcriptomes from 226,627 cells, with a 122 
+
+median number of 4,573 cells per s ample, and a median gene coverage of 2,549 ( Figure 1b -c). 123 
+
+Main immune cell populations were annotated based on the expression of marker genes (see 124 
+
+Methods), and tumor cells based on gene expression and virtual copy number profiles ( Figure 1d, 125 
+
+Supplementar y Figure S2 -3). Tumor cells were the most abundant cell type (mean 59.2% across 126 
+
+samples, range 0.2% -98.7%), followed by fibroblasts (mean 11.8%, range 0.1% -68.7%), T cells (mean 127 
+
+8.0%, range 0% -65.6%), macrophages (mean 7.9%, range 0.2% -34.9%), endothelial cells (mean 6.3%, 128 
+
+range 0.1% -22.8%) and B cells (mean 2.9%, range 0% -37.7%). Though, a high heterogeneity in immune 129 
+
+cell abundance and tumor microenvironment composition was seen across samples and timepoints 130 
+
+(Figure 1e -f). In particular, biopsies sampled in lymph nodes displayed higher B cell abundance 131 
+
+compared to other locations. We also observed an increased abundance of T cells in on -therapy 132 
+
+samples ( Figure 1f ). 133 
+
+134 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Intratumoral coexistence of basal and luminal programs shapes immune infiltration and ICI 135 
+
+sensitivity 136 
+
+To explore tumor cell differentiation states, we assessed molecular signatures established from bulk 137 
+
+RNA sequencing data 8,14 in our sing le -nuclei dataset. We used a pseudobulk approach to classify 138 
+
+samples into the consensus MIBC subgroups based on the aggregated single -nuclei transcriptome of 139 
+
+their tumor cells. We obtained a high concordance between classifications derived from single -nucl ei 140 
+
+and matched bulk RNA -seq data ( Supplementary Figure S4 ). Yet, individual samples displayed a high 141 
+
+heterogeneity regarding tumor cell states, with the coexistence of cells with basal and luminal 142 
+
+differentiation ( Figure 2a,b, Supplementary Figure S5 ). Pri ncipal component analysis revealed two 143 
+
+main components significantly associated with the basal, luminal and neuroendocrine differentiation 144 
+
+signatures 14 (Figure 2a ). Principal component 1 (PC1) was associated with neuroendocrine 145 
+
+diff erentiation (cor = 0.87, P < 2.2E –16), whereas PC2 was positively correlated with the luminal 146 
+
+signature and anticorrelated with the basal signature (cor = -0.37, P < 2.2E –16), indicating a continuum 147 
+
+between luminal and basal phenotypes. 148 
+
+We then explored wh ether tumor cell states were associated with specific genomic alterations. We 149 
+
+generated whole exome sequencing (WES) data in 32 samples with matched single -cell RNA -seq data. 150 
+
+Sixteen potential driver genes were mutated in ≥3 cases including TP53 (N=26), KMT2D (N=18), TSC1 ,151 
+
+ERBB3 (N=6 each), KDM6A (N=5), ARID1A , ERBB2 , FGFR3 , HRAS , RB1 (N=3 each) ( Supplementary 152 
+
+Figure S6a ). We assessed the ability to detect driver alterations in snRNA -seq data, and reached a 74% 153 
+
+detection rate for single -nucleotide variant s and 83% for oncogene amplifications ( Supplementary 154 
+
+Figure S6a,b ). Among putative driver mutations, KDM6A was the only one associated with increased 155 
+
+PC2 mean ( P = 0.004) and lower basal cell content (pval = 0.01, Supplementary Figure S6c ). At the 156 
+
+intra -tu moral level, we found two genes, ELF3 (pval = 1E -05) and KDM6A (pval = 0.01), which mutations 157 
+
+were associated with higher cell -wise PC2 values ( Supplementary Figure S6d ). 158 
+
+The relationship between the tumor microenvironment composition and tumor cell state s is displayed 159 
+
+in Figure 2c . Tumors classified as basal/squamous using the pseudobulk classification had increased 160 
+
+immune infiltration ( Figure 2c -d cor=0.46, pval=4E -04), but did not display a significantly different 161 
+
+microenvironment composition regarding the main immune cell populations. Despite evidence of 162 
+
+higher immune infiltration, the pseudobulk consensus MIBC subgroups did not predict therapy 163 
+
+outcome; however, the proportion of basal tumor cells at baseline appeared a significant predictor of 164 
+
+response to ICI (pval = 0.01, Figure 2e ). 165 
+
+166 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Tumor cells undergo convergent adaptive resistance via loss of antigen presentation and IFN –167 
+
+JAK/STAT signaling 168 
+
+To understand adaptive mechanisms of resistance to ICI related to tumor cells, we assessed gene 169 
+
+expression ch anges between baseline and disease progression. Although no gene was significantly 170 
+
+deregulated between pre - and post -treatment in the whole cohort after multiple testing correction, 171 
+
+several genes previously associated with immunotherapy response ( Supplemen tary Table S2 ) were 172 
+
+significantly down -regulated in post -treatment in individual patients with longitudinal data. We found 173 
+
+that genes involved in antigen presentation, including HLA -A, HLA -B, HLA -C, or B2M were significantly 174 
+
+downregulated in tumor cells at progression in 10 /16 patients ( Figure 2f ). Alterations in the JAK/STAT 175 
+
+signaling pathway also appeared prominent, with a significant repression of IFNGR1 , JAK1 or STAT1 176 
+
+observed in 11 /16 patients with matched samples. In patients who also had tissue sampl ing during ICI 177 
+
+in the context of controlled disease, we observed transient upregulation of HLA -A/B/C , B2M , IFNGR1 ,178 
+
+and STAT1 (Figure 2f ), suggestive of an immune -responsive contexture. 179 
+
+180 
+
+CD4/CD8 T -cell balance and exhaustion states define response and resistance trajectories 181 
+
+T lymphocytes represented the predominant immune component of the tumor microenvironment in 182 
+
+our cohort, with a total of 16,453 cells across the 55 samples ( mean = 300 per sample). Following 183 
+
+Harmony integration, we identified seven m ajor infiltrating T cell subpopulations: CD4 regulatory cells, 184 
+
+CD4 follicular helper cells (naïve, effector, exhausted), and CD8 cytotoxic cells (naïve, effector, 185 
+
+exhausted) ( Figure 3a ). 186 
+
+The abundance of overall CD8 infiltration was associated with high C D8 effector and CD8 exhausted 187 
+
+cell infiltration; both enriched in non -responders ( Figure 3b ). A higher proportion of CD8 T cells among 188 
+
+total T cells was associated with poor treatment response (pval = 0.0032, Figure 3c ), and a lower 189 
+
+CD4/CD8 ratio was assoc iated with shorter progression -free survival (pval = 0.024) (Figure 3d ). At the 190 
+
+single -gene level, elevated expression of PDCD1 and GZMA was linked to shorter progression -free 191 
+
+survival ( Figure 3e ), suggesting that the CD8 infiltrate in poor responders is e nriched for terminally 192 
+
+differentiated, exhausted T cells. In contrast, higher overall CD4 T cell infiltration was associated with 193 
+
+improved clinical outcomes. 194 
+
+Longitudinal analysis revealed heterogeneous changes in the T cell transcriptome during therapy. F ive 195 
+
+patients (31%) with sequential T cell single -nuclei data displayed upregulation of at least one immune 196 
+
+checkpoint at progression, including PDCD1 , CTLA4 , HAVCR2 , LAG3 and TIGIT (Figure 3f ). 197 
+
+198 
+
+199 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Protumoral HES1+ macrophages predict poor response and domin ate the evolution of resistance 200 
+
+A total of 12,208 myeloid cells were identified across the 55 samples ( mean = 222 per sample). 201 
+
+Following Harmony integration, we used the MoMac -VERSE data set comprising a compendium of 202 
+
+myeloid cells from multiple single -cel l datasets to annotate five macrophage and two monocyte 203 
+
+subsets within our clusters of myeloid cells ( Figure 4a )15 .204 
+
+Primary resistance to ICI was associated with higher abundance of pro -tumoral M2 macrophages ( P =205 
+
+0.016, GLMM), and in particular HES1 macrophages ( P = 0.0010, GLMM, Figure 4b ). A high abundance 206 
+
+of HES1 macrophages also predicted shorter PFS ( P = 0.016, log -rank test, Figure 4c ). Accordingly, 207 
+
+immunosuppressive genes involved in the M2 polarization like CD163 or MS4A4A were upregulated in 208 
+
+the macrophages of patients who did not respond to ICI ( Figure 4d ). 209 
+
+In addition, most patients (81%) displayed evidence of a shift towards M2 -like macrophage polarization 210 
+
+at progression, consisting in increased HES1 macrophage abundance ( Figure 5a ), upregulation of M2 -211 
+
+genes such as CD163 and VSIG4 , and downregulatio n of M1 genes such as CLEC5A and HLA -DRA (Figure 212 
+
+5b). This remodeling is illustrated by the UMAPs in Figure 5 c showing the trajectory of myeloid cells 213 
+
+between pre - and post -treatment samples in two patients. Altogether, these data indicated that pro -214 
+
+tumora l macrophages are both implicated in the initial ICI response and in the development of 215 
+
+resistance upon treatment. 216 
+
+Bulk HES1 expression stratifies benefit from PD -L1 blockade across independent clinical trials 217 
+
+Considering that HES1 macrophages were associa ted with primary and secondary resistance to ICI in 218 
+
+our cohort, we evaluated bulk expression of HES1 across publicly available datasets from clinical trials 219 
+
+in patients with urothelial cancers, and assessed its impact on outcomes to ICI. Across four trials of 220 
+
+atezolizumab in patients with localised or metastatic urothelial cancers, HES1 expression was 221 
+
+significantly increased across stages (metastatic vs. localised) and line of therapy (sec ond -line vs. first -222 
+
+line metastatic setting) (Supplementary Figure S7 ). Pooled overall survival analysis of phase 3 trials 223 
+
+evaluating atezolizumab vs. chemotherapy in metastatic urothelial carcinoma showed that only 224 
+
+patients with low HES1 expression derived benefit to atezolizumab versus chemotherapy with an 225 
+
+overall survival rate of 48.5% vs. 38.4% at 12 months, and 34.4% vs. 20.8 % at 24 months, respectively 226 
+
+(HR 0.72 , 95% conf idence interval [CI] 0.54 -0.96 ). Conversely, patients with high expression of HES1 227 
+
+did not derive benefit to at ez olizumab vs. chemotherapy (HR 0.97 , 95% CI 0.84 - 1.12 ) (Figure 5d ).228 
+
+229 
+
+230 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Patient -specific combinations of tumor and immune adaptations reveal individualized resistance 231 
+
+pathways 232 
+
+To recapitulate our findings using more easily accessible assays, we used bulk RNA sequencing to 233 
+
+specifically explore genes associated with outcomes through single -nuclei sequencing. We found that 234 
+
+candidate genes expression using bulk RNA sequencing was highly driven by the abundance of the 235 
+
+tumor microenvironment without discrimination of pro - or antitumor immune feature s236 
+
+(Supplementary Figure S8 ). Thus, single -nuclei sequencing uniquely allowed the identification of 237 
+
+immune features associated with sensitivity to ICI thanks to the depiction of tumor and immune cell 238 
+
+subpopulations transcriptomes. Individual patient assessm ent show specific tumor trajectories 239 
+
+involving one or multiple mechanisms of resistance related to tumor or immune cells ( Figure 6). 240 
+
+241 
+
+242 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+# Discussion 243 
+
+Using longitudinal single -nuclei sequencing of metastatic biopsies, this study delineates dynamic 244 
+
+tumor -immune trajectories underlying response and resistance to PD -(L)1 blockade in metastatic 245 
+
+urothelial carcinoma. By resolving cell -state -specific programs across tumor, lymphoid, and myeloid 246 
+
+compartments, we identify macrophage -driven tumo r-immune reprogramming as a dominant and 247 
+
+convergent mechanism of both primary and acquired resistance to immune checkpoint inhibition. 248 
+
+A major strength of this work lies in its focus on metastatic lesions sample d longitudinally, a setting in 249 
+
+which resistance to immune checkpoint i nhibitors ultimately emerges and therapeutic decisions are 250 
+
+made. While previous studies have largely relied on bulk transcriptomics or primary tumor samples, 251 
+
+our approach captures the evolving cellular ecosystems of metastatic disease at single -cell resolu tion, 252 
+
+revealing resistance mechanisms that are both dynamic and patient specific. 253 
+
+First, we observed that tumor cell plasticity modulates , but does not dominate, resistance trajectories. 254 
+
+At the tumor cell level, we found extensive intratumoral heterogeneit y, with basal and luminal 255 
+
+differentiation states coexisting within individual metastatic lesions. This plasticity challenge s the 256 
+
+predictive value of molecular subtyping derived from bulk analyses and suggests that tumor cell state 257 
+
+composition, rather than subtype assignment, more accurately reflects immunotherapy sensitivity. 258 
+
+Indeed, the impact of tumor transcriptome on outcomes for patients treated with ICI has been 259 
+
+controversial in studies using bulk transcriptome datasets. In localized trials evaluating PD -(L)1 260 
+
+inhibition as neoadjuvant therapy, the PURE01 trial showed that patients with basal phenotypes had 261 
+
+highest response rates, a finding that was not confirmed in the ABACUS trial 9. In the metastatic setting, 262 
+
+the atlas published by Loriot et al. showed that bulk transcriptome was not indicative of immune 263 
+
+infiltration 16 . Our study showed that a higher proportion of basal -like tumor ce lls was associated with 264 
+
+increased immune infiltration and impro ved response to PD -(L)1 8,13 . Longitudinal analyses further 265 
+
+reveal adaptive tumor -intrinsic mechanisms at progression, includ ing downregulation of antigen 266 
+
+presentation machinery and interferon signaling pathways. These changes likely contribute to immune 267 
+
+escape in a subset of patients, echoing resistance mechanisms described across multiple cancer types. 268 
+
+However, the heterogenei ty and incomplete penetrance of these alterations suggest tha t tumor -269 
+
+intrinsic reprogramming alone is not enough to explain resistance in most patients. 270 
+
+Lymphocyte infiltration has been usually positively associated with outcomes, with B and T cell lineages 271 
+
+repeatedly associated with improved response to ICI 7,9,10 . Though, it has been shown that many 272 
+
+patients with hig h lymphocyte infiltration may not derive benefit from ICI. In the study from Robertson 273 
+
+et al. based on localized tumors treated with ICI, patients who were non -responders despite high 274 
+
+lymphocyte infiltration harbored high checkpoint expression 9. In the lymphoid compartment, we 275 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+found that resistance to PD -(L)1 blockade is characterized not by abs ence of immune inf iltration, but 276 
+
+the predominance of dysfunctional immune states. Our work confirms that high checkpoint expression 277 
+
+on CD8 lymphocytes is reflective of an exhausted immune infiltrate, which is both a primary and 278 
+
+adaptive mechanisms of resistance to ICI. In c ontrast, greater CD4 T cell abundance correlated with 279 
+
+improves outcomes supporting a model in which coordinated helper T cell responses are required f or280 
+
+durable antitumor response. O verall CD4 infiltration was associated with better outcomes, although 281 
+
+individual CD4 cell subpopulations were not strong predictors of ICI activity in our dataset. The 282 
+
+important role of CD4 in response to ICI has been suggested by Goubet et al. 7, who found that T 283 
+
+fo llicular helpers were predictors of benefit in localized ICI -treated patients, and that CD4 T cells had 284 
+
+highest binding potential to pembrolizumab. B cells, and notably antibody -secreting cells, has also 285 
+
+been recently proposed as important mediators of imm une response 7. Though, B cell infiltration in our 286 
+
+study was mostly restricted to patients with lymph node metastases, a metastatic location usually 287 
+
+associated with better outcomes on ICI 17 . However, given the physiological abundance of B cells in 288 
+
+lymph nodes , broader conclusions about B cell subtyping in this metastatic setting is not currently 289 
+
+possibl e. Small biopsy fragments in our metastatic study may have also limited the detection of tertiary 290 
+
+lymphoid structures, key actors of the coordination of the immune response and host of B and T 291 
+
+follicular helper interactions 7,18 , hence impacting our ability to fully capture B cell and CD4 subtype 292 
+
+influence on ICI response. Longitudi nal upregulation of inhibitory receptors on T cells at progression 293 
+
+further underscores immune exhaustion a s an adaptive resistance mechanism. However, as with 294 
+
+tumor -intrinsic changes, these lymphoid alterations were variable across patients and frequently 295 
+
+coexisted with other resistance programs, indicatin g that T cell dysfunction is part of a broader, 296 
+
+multidi mensional resistance landscape. 297 
+
+In contrast to the heterogeneous contributions of tumor and lymphoid compartments, myeloid cell 298 
+
+trajectories revealed a strikingly consistent pattern. Both primary resistance and disease progression 299 
+
+were characterized by en richment of protumoral macrophage states, particularly a HES1 expressing 300 
+
+macrophage population associated with immunosuppressive gene expression and worst clinical 301 
+
+outcomes. Evidence of protumoral polarization, notably through HES1 and TREM2 subpopulations 302 
+
+abundance, drove primary and secondary resistance to ICI, while M2 -like and M1 -like genes expression 303 
+
+had opposite trajectories from treatment -start to treatment -resistance. This convergence suggests 304 
+
+that macrophage reprogramming represents a dominant resi stance axis. So far, very limited evidence 305 
+
+was available to suggest a leading role for tumor infiltrating macrophages in urothelial cancers. Data 306 
+
+from the IMvigor210 trial corroborated that M1 -like macrophage signatures could be associated with 307 
+
+improved ou tcomes in patients treated with atezolizumab. A broader bulk RNA sequencing dataset in 308 
+
+metastatic patients treated with atezolizumab associated a “myeloid” signature with immune -309 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+responsive tumors, but also with higher expression of immune checkpoints 10 . This divergence from our 310 
+
+findings may stem from the absence of clear pro - or anti -tumoral feature set in the “myeloid” signature 311 
+
+explored in this study, as well as the fact that most samples stemmed from primary tumors that may 312 
+
+not reflect metastatic s tates. This limited granularity may also explain that the “myeloid” signature in 313 
+
+this trial harbored conflicting predictive ability depending on tumor subtypes, demonstrating the 314 
+
+importance of accurate single -cell state determination. Together, these data position macrophage -315 
+
+driven immunosuppression as a central determinant of ICI failure. 316 
+
+Our findings have important implications for biomarker development. Bulk transcriptomic signatures 317 
+
+largely reflect overall immune abundance and fail to discriminate protu moral from antitumoral 318 
+
+immune states, limiting their predictive utility. In contrast, single -cell resolved macrophages states, 319 
+
+such as HES1 expressing populations capture functionally relevant resistance programs and may 320 
+
+inform patient stratification for i mmunotherapy. Therapeutically, our results provide a strong rationale 321 
+
+for targeting macrophage -driven immunosuppression in combination with PD -(L)1 inhibitors. 322 
+
+Strategies aimed at reprogramming tumor -associated macrophages or disrupting protumoral myeloid 323 
+
+signaling pathways could restore immune sensitivity in both primary and acquired resistance settings. 324 
+
+This study has limitations inherent to its design. The cohort size is modest, reflecting the technical and 325 
+
+logistical challenges of longitudinal metastati c biopsies and sampling of small core biopsies may 326 
+
+underrepresent spatial immune structures such as tertiary lymphoid structures. Limited tumor 327 
+
+material availability could also explain the low number of dendritic cells in our samples, although those 328 
+
+have b een previously reported to be present in immune -responsive tumor subtypes 10 . Assessment of 329 
+
+the greater stromal architecture may also be hampered by the small sampling size. This could also 330 
+
+explain why cancer associated fibroblasts did not emerge as a potential predictor of outcomes in our 331 
+
+study, while those have been previously associated with stromal, immune -resistant tumors 10,19 .332 
+
+Nevertheless, the depth of longitudinal sampling and the consistency of macrophage -driven resistance 333 
+
+across patients and external datasets mitigate these limitations. Future studies integrating spatial 334 
+
+transcri ptomics, functional perturbation models and prospective clinical validation will be required to 335 
+
+fully elucidate the regulatory network governing macrophage reprogramming and to translate these 336 
+
+insights inti therapeutic appro aches. 337 
+
+In conclusion, longitudin al single -cell profiling of metastatic urothelial carcinoma reveals that 338 
+
+resistance to PD -(L)1 bl ockade converges on macrophage driven tumor -immune reprogramming. 339 
+
+While tumor cell plasticity and T cell exhaustion contribute to resistance in selected contexts, 340 
+
+protumoral macrophage polarization emerges as a dominant and recurrent mechanism underlying 341 
+
+both primary and acquired immune checkpoint inhibitor failure. These data support the development 342 
+
+of macrophage -targeted combination strategies in metastatic urothelial carcinoma. 343 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+# Material and methods 344 
+
+Single -nuclei RNA sequencing 345 
+
+Cryopreserved cells were thawed and nucleus permeabiliz ation was performed following 346 
+
+recommendations from 10X Genomics. Single ‐nucleus 5’ gene expression libraries were generated 347 
+
+using 10X Genomics single cell gene expression 5’ v1.1 kit, following the protocol provided by the 348 
+
+manufacturer. A total of 10,000 n uclei per sample were loaded in each lane of the Chromium Single 349 
+
+Cell Controller, unless fewer nuclei were recovered after dissociation, in which case they were all 350 
+
+loaded. Libraries were sequenced on a NovaSeq 6000 to a target depth of 150 million reads ( Paired -351 
+
+end, 28bp Read 1, 90bp Read 2), and topped -up accordingly in order to reach sequencing saturation 352 
+
+for each library. 353 
+
+354 
+
+Single -nuclei RNA -seq processing 355 
+
+We used a custom workflow to process raw FASTQ files. The UMI counts matrices were generated 356 
+
+using STAR 20 align ment and count (STARsolo) with the human genome reference (GrCh38/hg38) and 357 
+
+10x barcode whitelists. We used CellBender 21 to remove counts from ambient RNA molecules and 358 
+
+random barcode swapping with recommended settings. We used DoubletCollection 22 to detect 359 
+
+doublet cells with doubletCells , cxds, bcds , hybrid, scDblFinder, Scrublet, DoubletDetection and 360 
+
+DoubletFinder algorithms. Each cell detected as doublet by ≥3 methods was removed. We retained 361 
+
+only high -quality cells (>500 genes detected and <10% o f mitochondrial RNA reads). The samples were 362 
+
+aggregated into one matrix and the cohort matrix was normalized using monocle3 23 normalization 363 
+
+method by size factor. We then performed dimensionality reduction using principal component 364 
+
+analysis (PCA) (producing 20 principal compon ents) and UMAP ( Uniform Manifold Approximation and 365 
+
+Projection) on the first 20 principal components. Last, we applied PhenoGraph clustering (with Leiden 366 
+
+algorithm) with a resolution of 0.3 on the 20 PCA components. 367 
+
+368 
+
+Annotation of broad cell types 369 
+
+We annota ted cells by projecting the expression of established marker genes on the PhenoGraph 370 
+
+clusters obtained during the previous step. Each cluster was assigned to the cell type with highest 371 
+
+marker expression, and doublets were removed. This annotation step enab led to identify potential 372 
+
+bladder tumor cells as well as cells from the tumor microenvironment (TME: fibroblasts, T cells, 373 
+
+macrophages, endothelial cells, B cells, neutrophils) and from the host tissue of the metastasis biopsy 374 
+
+(lung, liver, adrenal). We ra n infercnvpy 24  to compute a CNV score per cell, taking TME populations as 375 
+
+reference cells. We then checked that  all epithelial cells displayed higher CNV scores compared to the 376 
+
+reference cells and labeled these as “tumor cells”. To refine the annotation of TME populations, we 377 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+performed a second run of dimensionality reduction and clustering exclusively on the TME c ells 378 
+
+(n=77,014) Using established marker genes, we could annotate finer populations such as vascular cells, 379 
+
+smooth muscle cells, plasma cells, skeletal myocytes, dendritic cells or mast cells. 380 
+
+381 
+
+Detailed annotation of T cells 382 
+
+To annotate in -depth the func tional subsets of T cells, we used the Seurat package 25  to process the 383 
+
+corresponding datasets as follows: log -normalization (NormalizeData), identification of the most 384 
+
+variable genes (FindVariableFeatures with vst), scaling (ScaleData), dimensionality reduction with PCA 385 
+
+(RunPCA with 30 components), identificati on of transcriptomic clusters (FindNeighbors and 386 
+
+FindClusters with a resolution of 0.5 for T cells and 1 for myeloid cells) and UMAP visualization 387 
+
+(runUMAP). We used the harmony 26  package  (RunHarmony with default parameters) to integrate cells 388 
+
+across multiple biopsy sites.  We then used the  UCell  27  package to compute cell -level scores associated 389 
+
+to CD4 T cell markers ( CD4 , IL7R , FOXP3 , IKZF2 , CXCR3 , CCR6 , IL2RA , LEF1 ) and CD8 T cell markers 390 
+
+(CD8A , CD8B , GZMB , PRF1 , KLRD1 , NKG7 , IFNG , CCL4 , EOMES ). T cell Seurat clusters  were annotated 391 
+
+as CD4/CD8 based on their average UCell scores, and  cells clusters with high expression of NK cell 392 
+
+markers ( NCAM1 , KLRF1 , KLRC1 , KLRD1  and  FCGR3A ) were labeled “NK cells”. We then isolated CD4 393 
+
+and CD8 T cells and computed UCell scores per c ell using five CD4 -related signatures (naïve, effector, 394 
+
+exhausted, cytotoxic, regulatory) and three CD8 -related signatures (naïve, effector, exhausted) 395 
+
+extracted from a published pan -cancer T cell atlas 28 . We kept genes with sufficient  expression in the 396 
+
+dataset (at least 1 count in 1% cells) and removed genes overlapping multiple signatures. UCell scores 397 
+
+were scaled between 0 and 1 for each signature. Cells with all scores lower than 0.1 were labeled 398 
+
+“Unknown”, while remaining cells were  labeled according to the state with the highest UCell score. 399 
+
+400 
+
+Detailed annotation of myeloid cells 401 
+
+We annotated myeloid cells into the functional subsets identified in the MoMacVerse meta -analysis 402 
+
+> 15
+
+. After integrating and clustering myeloid cells from all samples using th e same approach as for T 403 
+
+cells, we used Seurat FindAllMarkers function to identify markers of each myeloid subset defined in 404 
+
+the MoMacVerse data set. For each subset, we used as markers the 50 genes with the highest fold -405 
+
+change compared to other subsets, w ithin significant genes (p -value < 0.05 and fold -change > 1.5). We 406 
+
+kept genes with sufficient expression in our data set (at least 1 count in 1% of cells) and removed genes 407 
+
+overlapping mutliple signatures. Signatures comprising ≤5 genes were discarded. UCe ll scores were 408 
+
+scaled between 0 and 1 for each signature. Cells with all scores lower than 0.1 were labeled 409 
+
+"Unknown", while other cells were labeled according to the myeloid subset with the highest UCell 410 
+
+score. Functionally similar subsets of myeloid cell s were merged, leading to a final annotation into five 411 
+
+macrophage subsets (HES1, TREM2, C1Q, IL4I1 and others) and two monocyte subsets (ISG and others). 412 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Bladder cancer cell states 413 
+
+To explore the heterogeneity of bladder cancer cells, we conducted a PCA a nalysis with the Seurat 414 
+
+package (20 components) on 103 genes previously associated with urothelial, basal and 415 
+
+neuroendocrine differentiation signatures in bladder cancer 29 . Projected tumor cells on the two first 416 
+
+components revealed a clear separation of neuroendocrine cells but a gradient between the most 417 
+
+basal and luminal differentiation. We then computed the log -normalized mean expression of each set 418 
+
+of marker genes in each cell. The proportion of basal cells in each sample was estimated as the 419 
+
+proportion of cells with a log -normalized expression of the basal signature ≥ 0.1. We applied 420 
+
+consensusMIBC 29 on pseudo -bulk RNA profiles generated by pooling tumor cell profiles to predict the 421 
+
+molecular class of each sample and we compared the results to consensu sMIBC annotations based on 422 
+
+matched bulk RNA -seq data. 423 
+
+424 
+
+Association with clinical response 425 
+
+To identify predictors of ICI response, we compared cell type proportions and expression of individual 426 
+
+genes between baseline samples of responders and non -responders. We used quasi -binomial 427 
+
+generalized linear mixed models (GLMM function from the lme4 30 R package with logit link, using the 428 
+
+biopsy site as random effect) to compare the abundance of immune cell subse ts (or cells positive for a 429 
+
+given functional signature) between responders and non -responders. To evaluate the expression of 430 
+
+individual genes within cell types of interest (e.g. PDCD1 in T cells), we computed pseudobulk 431 
+
+expression levels and we used limma 31 package to identify differentially expressed genes between 432 
+
+responders and non -responders. We used log -rank tests ( survival 32 R package) to compare the 433 
+
+progression -free survival (PFS) and overall survival (OS) between patients with low/high scores for each 434 
+
+feature, split by the median. 435 
+
+436 
+
+Longitudinal evolution upon treatment 437 
+
+To identify longitudinal gene expression changes in each cell type, we performed differential 438 
+
+expression analyses between pre - and post -treatment samples using S eurat FindMarkers with 439 
+
+‘test.use=MAST’ and ‘latent.var=patient’. For genes of interest, e.g. genes known to be associated with 440 
+
+ICI response, and genes significantly deregulated between pre - and post -treatment samples, we 441 
+
+generated visualizations showing th e proportion of cells expressing each gene and the mean 442 
+
+expression level in matched pre/post pairs. 443 
+
+444 
+
+445 
+
+446 
+
+447 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Mutation analyses 448 
+
+To investigate mutation detection at the single -cell level, we ran the scReadCounts 33 tool on the 449 
+
+scRNA -seq BAM alignment files of 32 bladder tumors with paired bulk whole exo me sequencing (WES) 450 
+
+data. To identify somatic mutations from WES data, reads were aligned to the human genome build 451 
+
+hg38/GRCh38.p7 using the Burrows -Wheeler Aligner (BWA) tool 34 (v0.7.17 -r1188). Duplicated reads 452 
+
+were removed usi ng Sambamba 35 . Soma tic single nucleotide variants (SNVs) and small 453 
+
+insertions/deletions (indels) were detected using MuTect2 36 tool (2.0, --454 
+
+max_alt_alleles_in_normal_count=2; --max_alt_allele_in_normal_fraction=0.04) and annotated using 455 
+
+Ensembl’s Variant Effect Predictor 37 (VEP, rele ase 101). We next screened identified somatic mutations 456 
+
+in snRNA -seq data. For each sample, scReadCounts computed the number of reference (REF) or 457 
+
+alternate/mutated (ALT) reads for each somatic coding SNV detected in matched WES data. Cells were 458 
+
+considered mutated for a position if they displayed >= 1 mutated (ALT) read for the position. Mutated 459 
+
+(ALT) and reference (REF) reads were aggregated by cell population (Tumor or TME), and mutations 460 
+
+were labeled as follows: “Detected” if they displayed >= 3 mutated (ALT) reads in the tumor 461 
+
+population, “Not detected” if they displayed < 3 mutated (ALT) reads and >= 10 total reads in the tumor 462 
+
+population, “Not covered” if they displayed < 10 total reads in the tumor population. 463 
+
+464 
+
+Gene Expression Analysis and Survival C orrelation 465 
+
+Bulk RNA -sequencing and clinical data were obtained from the European Genome -phenome Archive 466 
+
+(EGA) for four clinical trials evaluating atezolizumab in bladder cancer (EGAS50000000497). Gene 467 
+
+expression data were provided as log -transformed transc ripts per million (logTPM) values. HES1 468 
+
+expression was analyzed across all studies using the Kruskal -Wallis test to assess inter -study 469 
+
+distribution differences. For survival analysis, the optimal cutpoint for HES1 expression was 470 
+
+determined using the maxima lly selected rank statistics method (surv_cutpoint function from the 471 
+
+survminer 38 R package) in the atezolizumab treatment arm of metastatic patients. Patients were 472 
+
+classified as HES1 -high or HES1 -low based on this cutpoint. Overall survival (OS) was estimated using 473 
+
+the Kaplan -Meier method, and differences between groups were assessed using the log -rank test. To 474 
+
+assess outcomes according to HES1 in the metastatic setting, data from the two randomised phase 3 475 
+
+studies IMVigor130 and IMVigor211 were combined, excl uding patients treated with the 476 
+
+atezolizumab -chemotherapy combination arm to focus on monotherapy comparisons (atezolizumab 477 
+
+vs. chemotherapy alone). Cox proportional hazards regression was performed within each HES1 478 
+
+expression subgroup to evaluate the trea tment effect (atezolizumab vs. control) and to test for 479 
+
+treatment -biomarker interaction. Median follow -up was calculated using the reverse Kaplan -Meier 480 
+
+method. All statistical analyses were performed using R version 4.2.0 with the survival, survminer, 481 
+
+dply r, and ggplot2 packages. A two -sided p -value < 0.05 was considered statistically significant .482 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+References. 483 
+
+1. Bray, F. et al. Global cancer statistics 2022: GLOBOCAN estimates of in cidence and mortality 484 
+
+worldwide for 36 cancers in 185 countries. CA Cancer J Clin 74 , 229 –263 (2024). 485 
+
+2. van der Heijden, M. S. et al. Nivolumab plus Gemcitabine –Cisplatin in Advanced Urothelial 486 
+
+Carcinoma. New England Journal of Medicine 389 , 1778 –1789 (2023). 487 
+
+3. Powles, T. et al. Avelumab Maintenance Therapy for Advanced or Metastatic Urothelial 488 
+
+Carcinoma. N Engl J Med 383 , 1218 –1230 (2020). 489 
+
+4. Bellmunt, J. et al. Pembrolizumab as Second -Line Therapy for Advanced Urothelial Carcinoma. 490 
+
+New England Journa l of Medicine 376 , 1015 –1026 (2017). 491 
+
+5. Balar, A. V. et al. Efficacy and safety of pembrolizumab in metastatic urothelial carcinoma: 492 
+
+results from KEYNOTE -045 and KEYNOTE -052 after up to 5 years of follow -up ☆. Annals of 493 
+
+Oncology 34 , 289 –299 (2023). 494 
+
+6. Powle s Thomas et al. Enfortumab Vedotin and Pembrolizumab in Untreated Advanced Urothelial 495 
+
+Cancer. New England Journal of Medicine 390 , 875 –888 (2024). 496 
+
+7. Goubet, A. -G. et al. Escherichia coli -Specific CXCL13 -Producing TFH Are Associated with Clinical 497 
+
+Efficacy of Neoadjuvant PD -1 Blockade against Muscle -Invasive Bladder Cancer. Cancer Discov 498 
+
+12 , 2280 –2307 (2022). 499 
+
+8. Kamoun, A. et al. A Consensus Molecular Classification of Muscle -invasive Bladder Cancer. 500 
+
+European Urology 77 , 420 –433 (2020). 501 
+
+9. Robertson, A. G. et al. Expression -based subtypes define pathologic response to neoadjuvant 502 
+
+immune -checkpoint inhibitors in muscle -invasive bladder cancer. Nat Commun 14 , 2126 (2023). 503 
+
+10. Hamidi, H. et al. Molecular heterogeneity in urothelial carcinoma and determinants of clinical 504 
+
+benefit to PD -L1 blockade. Cancer Cell 42 , 2098 -2112.e4 (2024). 505 
+
+11. Gao, J. et al. Neoadjuvant PD -L1 plus CTLA -4 blockade in patients with cisplatin -ineligible 506 
+
+operable high -risk urothelial carcinoma. Nat Med 26 , 1845 –1851 (2020). 507 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+12. van Dijk, N. et al. Preoperative ipilimumab plus nivolumab in locoregionally advanced urothelial 508 
+
+cancer: the NABUCCO trial. Nat Med 26 , 1839 –1844 (2020). 509 
+
+13. Necchi, A. et al. Impact of Molecular Sub typing and Immune Infiltration on Pathological 510 
+
+Response and Outcome Following Neoadjuvant Pembrolizumab in Muscle -invasive Bladder 511 
+
+Cancer. Eur Urol 77 , 701 –710 (2020). 512 
+
+14. Biton, A. et al. Independent component analysis uncovers the landscape of the bladde r tumor 513 
+
+transcriptome and reveals insights into luminal and basal subtypes. Cell Rep 9, 1235 –1245 514 
+
+(2014). 515 
+
+15. Mulder, K. et al. Cross -tissue single -cell landscape of human monocytes and macrophages in 516 
+
+health and disease. Immunity 54 , 1883 -1900.e5 (2021). 517 
+
+16. Loriot, Y. et al. The genomic and transcriptomic landscape of metastastic urothelial cancer. Nat 518 
+
+Commun 15 , 8603 (2024). 519 
+
+17. Bellmunt, J. et al. Avelumab first -line maintenance (1LM) for advanced urothelial carcinoma 520 
+
+(aUC): Long -term outcomes from JAVEL IN Bladder 100 in patients (pts) with low tumor burden. 521 
+
+JCO 42 , 4566 –4566 (2024). 522 
+
+18. Flippot, R. et al. B cells and the coordination of immune checkpoint inhibitor response in patients 523 
+
+with solid tumors. J Immunother Cancer 12 , e008636 (2024). 524 
+
+19. Chen, Z . et al. Single -cell RNA sequencing highlights the role of inflammatory cancer -associated 525 
+
+fibroblasts in bladder urothelial carcinoma.  Nat Commun  11 , 5077 (2020). 526 
+
+20. Dobin, A. et al. STAR: ultrafast universal RNA -seq aligner.  Bioinformatics  29 , 15 –21  (2013). 527 
+
+21. Fleming, S. J. et al. Unsupervised removal of systematic background noise from droplet -based 528 
+
+single -cell experiments using CellBender. Nat Methods 20 , 1323 –1335 (2023). 529 
+
+22. Xi, N. M. & Li, J. J. Protocol for executing and benchmarking eight com putational doublet -530 
+
+detection methods in single -cell RNA sequencing data analysis. STAR Protoc 2, 100699 (2021). 531 
+
+23. Trapnell, C. et al. The dynamics and regulators of cell fate decisions are revealed by 532 
+
+pseudotemporal ordering of single cells. Nat Biotechn ol 32 , 381 –386 (2014). 533 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+24. infercnvpy: Scanpy plugin to infer copy number variation (CNV) from single -cell transcriptomics 534 
+
+data. Project name not set https://infercnvpy.readthedocs.io/en/latest/index.html. 535 
+
+25. Hao, Y. et al. Integrated analysis of multimod al single -cell data. Cell 184 , 3573 -3587.e29 (2021). 536 
+
+26. Korsunsky, I. et al. Fast, sensitive and accurate integration of single -cell data with Harmony. Nat 537 
+
+Methods 16 , 1289 –1296 (2019). 538 
+
+27. Andreatta, M. & Carmona, S. J. UCell: Robust and scalable single -cell gene signature scoring. 539 
+
+Computational and Structural Biotechnology Journal 19 , 3796 –3798 (2021). 540 
+
+28. Chu, Y. et al. Pan -cancer T cell atlas links a cellular stress response state to immunotherapy 541 
+
+resistance. Nat Med 29 , 1550 –1562 (2023). 542 
+
+29. Kamoun, A . et al. A Consensus Molecular Classification of Muscle -invasive Bladder Cancer. Eur 543 
+
+Urol 77 , 420 –433 (2020). 544 
+
+30. Bates, D., Mächler, M., Bolker, B. & Walker, S. Fitting Linear Mixed -Effects Models Using lme4. 545 
+
+Journal of Statistical Software 67 , 1 –48 (2015 ). 546 
+
+31. Ritchie, M. E. et al. limma powers differential expression analyses for RNA -sequencing and 547 
+
+microarray studies. Nucleic Acids Res 43 , e47 (2015). 548 
+
+32. Therneau, T. A package for survival analysis in R. 549 
+
+33. Prashant, N. M. et al.  SCReadCounts : estimation of cell -level SNVs expression from scRNA -seq 550 
+
+data.  BMC Genomics  22 , 689 (2021). 551 
+
+34. Li, H. & Durbin, R. Fast and accurate short read alignment with Burrows -Wheeler transform. 552 
+
+Bioinformatics 25 , 1754 –1760 (2009). 553 
+
+35. Tarasov, A., Vilella, A. J. , Cuppen, E., Nijman, I. J. & Prins, P. Sambamba: fast processing of NGS 554 
+
+alignment formats. Bioinformatics 31 , 2032 –2034 (2015). 555 
+
+36. Cibulskis, K. et al. Sensitive detection of somatic point mutations in impure and heterogeneous 556 
+
+cancer samples. Nat Biotech nol 31 , 213 –219 (2013). 557 
+
+37. McLaren, W. et al. The Ensembl Variant Effect Predictor. Genome Biol 17 , 122 (2016). 558 
+
+38. KASSAMBARA, A. kassambara/survminer. (2025). 559 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Acknowledgements. 560 
+
+This work, as part of IHU PRISM National PRecISion Medicine Center in Oncology, received state 561 
+
+funding managed by the French National Research Agency under the France 2030 program (grant no. 562 
+
+ANR -23 -IAHU -0002) .563 
+
+Ronan Flippot was funded by the ARC foundation for cancer research and the BMS foundation. 564 
+
+565 
+
+566 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Ta ble legends. 567 
+
+Supplementary Table S1. Baseline characteristics of the population. 568 
+
+Supplementary Table S2. Candidate genes involved in immunotherapy. 569 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint Figure Legends. 570 
+
+Figure 1.  Single -nucleus RNA -seq analysis of 32 patients of the MATCH -R trial.  a.  Swimmer p lot 571 
+
+depicting individual patient outcomes and biopsy timepoints.  b.  Description of the single -cell MATCH -572 
+
+R cohort.  c.  Uniform manifold approximation and projection (UMAP) of all cells from the MATCH -R573 
+
+cohort (n=226,627 with doublet removal), colored  by patient of origin, biopsy site location and 574 
+
+treatment timing.  d.  UMAP of cell type annotations, segregated into Tumor and Non -tumor 575 
+
+populations.  e.  Overview of cell type abundance across samples.  f.  Abundance of tumor 576 
+
+microenvironment (TME) cell popula tions grouped by biopsyte site location (left) and treatment timing 577 
+
+(right). 578 
+
+579 
+
+Figure 2.  Tumor cell heterogeneity correlates with immune infiltration and ICI response.  a.  Principal 580 
+
+component analysis (PCA) of tumor cells (n=144,038), and projection of mean  log -normalized 581 
+
+expression of urothelial (luminal), basal and neuroendocrine signatures (Biton et al. 2014).  b.  Score 582 
+
+distribution of the two first principal components across tumor cells, grouping samples by 583 
+
+pseudobulk tumor classification (consensusMIBC).  c.  TME cell type composition according to 584 
+
+pseudobulk tumor classification (only samples with ≥ 50 tumor cells were kept).  d.  Correlation 585 
+
+between the proportion of basal -like tumor cells and TME abundance across samples.  e.  Proportion 586 
+
+of basal tumor cells  in baseline tumors from Responder (CR, PR) and Non -responder (PD, SD) 587 
+
+patients.  f.  Longitudinal evolution of the expression of antigen presentation and IFN/JAK/STAT 588 
+
+pathway genes by tumor cells along treatment time points.  Samples from the same patient are 589 
+
+linked. The color of the link indicates ICI response. 590 
+
+591 
+
+Figure 3.  T-cell landscape in metastatic bladder cancer and association with ICI response.  a.  UMAP 592 
+
+of T cell and NK cell subpopulations.  b.  UMAP comparison of cell density in baseline tumors  of 593 
+
+Responder (PR, CR) and Non -responder (PD, SD) patients.  c. The proportion of CD4 and CD8 T cells 594 
+
+are associated with ICI response.  d.  Patients with a higher CD4/CD8 ratio exhibit longer progression -595 
+
+free survival (PFS) after ICI treatment.  e.  Higher  PDC D1  and  GZMA  expression in T cells are associated 596 
+
+with shorter PFS after ICI response. High/low expression groups were defined based on median 597 
+
+expression across samples.  f.  Longitudinal evolution of the expression of immune checkpoint 598 
+
+molecules by T cells during treatment. For each gene, the average log -normalized expression is 599 
+
+shown across multiple timepoints (pre -treatment, on -treatment and post -treatment). 600 
+
+601 
+
+Figure 4.  HES1  macrophages predict poor ICI response in mUC.  a.  UMAP of MoMacVerse 602 
+
+subpopulations in macrophages and monocytes (n=12,208).  b.  Distribution of macrophage/monocyte 603 
+
+subpopulation abundance in baseline tumors from Responder (PR, CR) and Non -responder (PD, SD) 604 
+
+patients.  c.  Patients with a higher proportion of HES1 macrophages in myeloid cells at baseline 605 
+
+exhibit shorter progression -free survival (PFS) after ICI treatment.  d.  Baseline pseudobulk expression 606 
+
+of  CD163  and  MS4A4A  in myeloid cells associates with poo r ICI response. 607 
+
+608 
+
+Figure 5.  Evidence of protumoral macrophage switch at ICI progression and validation of  HES1 609 
+
+clinical impact in the IMVigor trials  a.  Evolution the proportion of HES1 macrophages in the myeloid 610 
+
+cells of patients with longitudinal samplilng . b.  Longitudinal evolution of the expression of M1 and 611 
+
+M2 markers by myeloid cells along treatment time points.  Samples from the same patient are linked. 612 
+
+The color of the link indicates ICI response.  c.  Examples  of  myeloid cell dynamics in two patients with 613 
+
+samples pre - and post -ICI treatment. Cells are projected on the UMAPs of myeloid cells and colored 614 
+
+from left to right by timing, myeloid cell type, and expression of three markers associated with M2 615 
+
+polarization.  d. Pooled overall survival analysis of patients with metastatic urothelial carcinoma 616 
+
+treated with atezolizumab vs. chemotherapy in the IMVigor 130 and IMVigor211 trials, depending on 617 
+
+baseline HES1 expression by bulk RNA sequencing 618 
+
+619 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Figure 6.  Overview of in dividual patient trajectories involving tumor and immune cell 620 
+
+reprogramming after immune checkpoint inhibition.  Each column corresponds to one patient with 621 
+
+longitudinal sampling, and each line to a gene, grouped by cell type of interest. The heatmap 622 
+
+indica tes with a color code whether each gene is significantly up - (red) or down -regulated (blue) in 623 
+
+the post -treatment sample compared to the pre -treatment sample.  Absence of differential 624 
+
+expression is shown in grey. 625 
+
+626 
+
+Supplementary Figure S1. Description of quality control metrics per sample (from top to bottom: 627 
+
+number of cells in sample, total counts/cell in sample, gene coverage/cell in sample, mitochondrial 628 
+
+RNA percentage/cell in sample). Red full lines highlight median values across the cohort for each 629 
+
+me tric. 630 
+
+631 
+
+Supplementary Figure S2. Annotations of subpopulations in TME cells (top) and expression of 632 
+
+correpsonding markers (bottom). 633 
+
+634 
+
+Supplementary Figure S3. UMAP of Copy Number Variation (CNV ) scores generated by inferCNVpy 635 
+
+projected in tumor cells and TME cells. 636 
+
+637 
+
+Supplementary Figure S4. Consensus classification (Kamoun et al. 2020) of samples according to 638 
+
+pseudobulk single -nuclei sequencing and bulk transcriptome (N=30). 639 
+
+640 
+
+Supplementary Figure S5. Heterogeneity of single -nuclei tumor cell transcriptome by sample. Samples 641 
+
+are ordered by mean expression difference between basal (n=143 genes) and urothelial (luminal, 642 
+
+n=194 genes) differentiation signatures. 643 
+
+644 
+
+Supplementary Figure S6.  Single -nuclei detection of driver alterations.  a.  Single -cell detection of 645 
+
+driver mutations identified by whole exome sequencing.  b.  Single -cell detection of high -level 646 
+
+amplifications identified by whole exome sequencing.  c.  KDM6A -mutated samples display significantly 647 
+
+lower basal cell content and higher PC2 values.  d.  Cells in whi ch  ELF3  and  KDM6A  mutations were 648 
+
+detected display significantly higher PC2 values. 649 
+
+Supplementary Figure S7.  Expression of HES1 across pivotal trials of atezolizumab in urothelial cancers 650 
+
+across stages and lines of therapy. 651 
+
+Supplementary Figure S8.  (Top)  Bulk RNA sequencing of the MATCH -R baseline cohort displaying 652 
+
+inferred MCP -Counter scored immune cell types and (bottom) expression of immune -related genes 653 
+
+according to response to therapy 654 
+
+655 
+
+656 
+
+657 
+
+658 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint
+
+Tables. 659 
+
+Supplementary Table S1. Baseline characteristics of the population 660 
+
+Study population 
+
+N=32 (%) 
+
+Age 
+
+median, years (IQR)  71 (61 -77) 
+
+Sex 
+
+Male  24 (75) 
+
+Primary tumor 
+
+Bladder 
+
+Upper Tract 
+
+Urethra 
+
+Multifocal 
+
+21 (66) 
+
+9 (28) 
+
+1 (3) 
+
+1 (3) 
+
+Metastatic sites 
+
+Lymph Nodes 
+
+Lung 
+
+Bone 
+
+Liver 
+
+Soft tissue 
+
+Adrenal 
+
+21 (65) 
+
+12 (38) 
+
+9 (28) 
+
+9 (28) 
+
+10 (31) 
+
+3 (9) 
+
+Line of therapy 
+
+1
+
+2
+
+3+ 
+
+9 (28) 
+
+16 (50) 
+
+7 (22) 
+
+Immune checkpoint inhibitor 
+
+Pembrolizumab 
+
+Durvalumab 
+
+Avelumab 
+
+30 (94) 
+
+1 (3) 
+
+1 (3) 
+
+661 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 2, 2026. ;https://doi.org/10.64898/2026.03.31.715549 doi: bioRxiv preprint % cell type
+
+UMAPs of 226,627 cells across 55 samples 
+
+colored by patient  colored by biopsy site  colored by timing 
+
+# a b
+
+# c
+
+# dUMAP 2 
+
+UMAP 1 
+
+Cell populations 
+
+B cells 
+
+Plasma cells 
+
+T cells 
+
+NK cells 
+
+Myeloid cells 
+
+Neutrophils 
+
+Mast cells 
+
+Dendritic cells (lymphoid) 
+
+Endothelial (lymphatic) 
+
+Endothelial (vascular) 
+
+Fibroblasts 
+
+Skeletal myocytes 
+
+Smooth muscle 
+
+Unknown 
+
+Tumor cells 
+
+Host tissue 
+
+Biopsy location    
+
+> 5
+> 11
+> 899
+> 12
+> 2
+> 8
+
+% TME 
+
+(n=224,503 cells) 
+
+% cells in TME 
+
+(n=74,890 cells) 
+
+> 31
+> 5
+> 19
+
+Time point 
+
+# f
+
+Biopsy site 
+
+Adrenal 
+
+Bladder 
+
+Bone 
+
+Liver 
+
+LN 
+
+Lung 
+
+Muscle 
+
+Soft tissue 
+
+Spleen 
+
+Biopsy timing 
+
+Pre -treatment 
+
+On -therapy 
+
+Post -treatment 
+
+# e
+
+> UMAP 2
+
+UMAP 1 
+
+Samples  (n=55) 
+
+All cells 
+
+(n=226,627 cells) 
+
+Tumor Non -tumor 
+
+32  patients 
+
+55  tumors 
+
+• 17 longitudinal 
+
+• 14 baseline -only 
+
+• 1 progression -only 
+
+226,627  cells  2,549  genes/cell 
+
+4,573  cells/sample 
+
+Nb samples a
+
+# c
+
+# e
+
+# f HLA -A HLA -B HLA -C
+
+IFNGR1  JAK1  STAT1 
+
+Non resp. 
+
+(n=24) 
+
+Resp. 
+
+(n=7) 
+
+> PC
+> 1
+> PC
+> 2
+
+PC 1 cell -level scores 
+
+PC 2 cell -level scores 
+
+Pseudobulk consensusMIBC classification 
+
+Urothelial (luminal)  Basal/ 
+
+squamous 
+
+NE -like b
+
+B2M 
+
+Urothelial (luminal) 
+
+gene signature 
+
+Basal/squamous 
+
+gene signature 
+
+Neuroendocrine (NE)  – like 
+
+gene signature 
+
+OK  AR 
+
+> PC 2
+
+PC 1 
+
+> PC 2
+
+PC 1 
+
+> PC 2
+
+PC 1 
+
+View by patient 
+
+n=144,038 
+
+Neuro -
+
+endocrine 
+
+Urothelial 
+
+Basal 
+
+Pre  On  Post  Pre  On  Post  Pre  On  Post  Pre  On  Post 
+
+Pre  On  Post  Pre  On  Post  Pre  On  Post 
+
+ICI response 
+
+Non responder 
+
+Responder 
+
+% expressing cells 
+
+0 25  50  75  100 
+
+Average expression 
+
+0 1 2 3
+
+# d
+
+> Mean expression in tumor cells
+
+% TME in 
+
+sample 
+
+% TME 
+
+pulations 
+
+Urothelial  n=42  Basal  n=7  NE  n=1 
+
+Baseline tumors 
+
+> PC 2
+
+PC 1 
+
+B cells 
+
+Plasma cells 
+
+T cells 
+
+NK cells 
+
+Myeloid cells 
+
+Neutrophils 
+
+Mast cells 
+
+Dendritic cells (lymphoid) 
+
+Endothelial (lymphatic) 
+
+Endothelial (vascular) 
+
+Fibroblasts 
+
+Skeletal myocytes 
+
+Smooth muscle 
+
+Host tissue 
+
+TME 
+
+Non -TME cells 
+
+Cell populations 
+
+Signature expression 
+
++-
+
+Pearson’s r = 0.46 
+
+(P = 0.0004) 
+
+Wilcoxon  P = 0.01 T/NK cell subpopulations 
+
+Harmony integration 
+
+(n=16,453 cells) 
+
+Figure 3. T -cell  landscape  in  metastatic  bladder  cancer and association  with  ICI  response . a. UMAP of T  cell  and 
+
+NK  cell  subpopulations . b.  UMAP  comparison  of  cell  density  in  baseline  tumors  of  Responder  (PR, CR) and Non -
+
+responder  (PD, SD) patients.  c. The proportion of CD4 and CD8 T  cells  are  associated  with  ICI  response . d.  Patients  with 
+
+a higher  CD4/CD8 ratio  exhibit  longer progression -free  survival  (PFS)  after  ICI  treatment . e.  Higher  PDCD1  and  GZMA 
+
+expression in T  cells  are  associated  with  shorter  PFS  after  ICI  response . High/ low  expression groups  were  defined  based 
+
+on  median  expression  across  samples . f.  Longitudinal  evolution  of the expression of immune checkpoint  molecules  by T 
+
+cells  during  treatment . For  each  gene , the  average  log -normalized  expression  is  shown  across  multiple  timepoints  (pre -
+
+treatment , on -treatment  and post -treatment ). 
+
+# a
+
+# f PDCD 
+
+H1 
+
+LAG3  TIGIT CTLA4  HACVR2 
+
+Pre  On  Post 
+
+ICI response 
+
+> Non responder
+> Responder
+
+% expressing cells     
+
+> 025 50 75 100
+
+Average expression    
+
+> 0123
+
+Pre  On  Post  Pre  On  Post  Pre  On  Post  Pre  On  Post 
+
+> Mean expression in T cells
+> CD4 Th naive
+> CD4 Th effector
+> CD4 Th exhausted
+> CD4 Treg
+> CD4 cytotoxic
+> CD8 cytotoxic naive
+> CD8 cytotoxic effector
+> CD8 cytotoxic exhausted
+> NK cells
+
+Responders  (Pre -treatment) 
+
+(n=2,738) 
+
+Non responders  (Pre -treatment) 
+
+(n=6,917) 
+
+> UMAP 2
+
+UMAP 1 
+
+> UMAP 2
+
+UMAP 1 
+
+# b
+
+> Density
+> UMAP 2
+
+UMAP 1 
+
+> % CD4 in T cells
+> % CD8 in T cells
+
+NR  R
+
+P = 0.020 
+
+NR  R
+
+P = 0.0032 
+
+# c
+
+ICI response  ICI response 
+
+Treatment stage 
+
+PDCD1  expression 
+
+(P = 0.029) 
+
+HIGH 
+
+LOW 
+
+HIGH 
+
+LOW 
+
+GZMA  expression 
+
+(P = 0.00042) 
+
+# d eProgression -free survival 
+
+> Progression -free survival
+> Progression -free survival
+
+Months Months Months 
+
+CD4/CD8 ratio 
+
+(P = 0.024) 
+
+HIGH 
+
+LOW c
+
+# b
+
+HES1 macrophages 
+
+(P = 0.016) 
+
+HIGH % 
+
+LOW % 
+
+Months 
+
+> PFS
+
+Figure 4.  HES1  macrophages  predict  poor  ICI  response  in  mUC . a.  UMAP  of  MoMacVerse  subpopulations  in 
+
+macrophages and monocytes (n=12,208).  b.  Distribution of macrophage/monocyte  subpopulation  abundance  in  baseline 
+
+tumors  from  Responder  (PR, CR) and Non -responder  (PD, SD) patients.  c.  Patients  with  a higher  proportion of HES1 
+
+macrophages in  myeloid  cells  at  baseline  exhibit  shorter  progression -free  survival  (PFS)  after  ICI  treatment . d.  Baseline 
+
+pseudobulk  expression of  CD163  and  MS4A4A  in  myeloid  cells  associates  with  poor  ICI  response .
+
+# a
+
+> Macrophages
+> C1Q macro.
+> HES1 macro.
+> IL4I1 macro.
+> TREM2 macro.
+> Other macro.
+> Monocytes
+> ISG mono.
+> Other mono.
+
+Macrophage/monocyte subpopulations 
+
+> Harmony integration
+> (n=12,208 cells)
+
+# d
+
+P=0.016 P = 0.0010 
+
+> % of all myeloid cells
+
+Non responders  (n=21) Responders  (n=7) 
+
+P = 0.016 
+
+0
+
+25 
+
+75 
+
+100 
+
+50 
+
+> UMAP 2
+> UMAP 1
+
+CD163  expression 
+
+(P = 0.017)  MS4A4A  expression 
+
+(P = 0.015) 
+
+Non resp.  Resp.  Non resp.  Resp. 
+
+0
+
+0.5 
+
+1.5 
+
+1.0 
+
+2.0 
+
+0
+
+1.0 
+
+3.0 
+
+2.0 
+
+> Pseudobulk expression % of HES1 macrophages
+> in myeloid cells
+
+M2 markers  M1 markers 
+
+CD163 
+
+(P = 0.0077) 
+
+VSIG4 
+
+(P=0.0011) 
+
+> Pseudo -bulk expression
+> in myeloid cells
+
+Pre  On  Post 
+
+ICI response 
+
+> Non responder
+> Responder
+
+% expressing cells     
+
+> 025 50 75 100
+
+Average expression    
+
+> 0123
+
+Pre  On  Post  Pre  On  Post  Pre  On  Post Pre  Post 
+
+Patient 
+
+MR -463 
+
+Patient 
+
+MR -479 
+
+Time point 
+
+Pre 
+
+Post 
+
+Pre 
+
+Post 
+
+Time point 
+
+Pre 
+
+Post 
+
+Myeloid cell type 
+
+Pre 
+
+Post 
+
+Myeloid cell type 
+
+Pre 
+
+Post 
+
+CD163  expression 
+
+Pre 
+
+Post 
+
+CD163  expression 
+
+Pre 
+
+Post 
+
+VSIG4  expression 
+
+Pre 
+
+Post 
+
+VSIG4  expression 
+
+Pre 
+
+Post 
+
+MARCO  expression 
+
+# d
+
+Pre 
+
+Post 
+
+MARCO  expression 
+
+Wilcoxon  P = 0.074 
+
+> 0
+> 25
+> 75
+> 50
+
+# a
+
+CLEC5A 
+
+(P = 0.017) 
+
+HLA -DRA 
+
+(P = 0.0023) 
+
+> Pseudo -bulk expression
+> in myeloid cells
+> C1Q macro.
+> HES1 macro.
+> IL4I1 macro.
+> TREM2 macro.
+> Other macro.
+> ISG mono.
+> Other mono.
+
+Myeloid cell type  Gene expression 
+
+low  high 
+
+> Pre -treatment
+> Post -treatment
+
+Time point 
+
+# c
+
+# bFigure 6.  Overview  of  individual  patient  trajectories  involving  tumor  and immune  cell  reprogramming  after  immune checkpoint 
+
+inhibition . Each  column  corresponds to one patient  with  longitudinal  sampling , and  each  line to a  gene , grouped  by  cell  type of  interest .
+
+The  heatmap  indicates  with  a color  code  whether  each  gene  is  significantly  up - (red ) or down -regulated  (blue ) in the post -treatment 
+
+sample  compared  to the  pre -treatment  sample . Absence of  differential  expression  is  shown  in  grey .
+
+> Myeloid  T cells Tumor cells
+
+Treatment response 
+
+> PD /PR /SD
+
+Patient 
+
+# LogFC  post  vs  pre 
+
+Biological  function            
+
+> Antigen presentation by macrophages
+> Antigen presentation by tumor cells
+> Checkpoint
+> Cytotoxicity
+> Exhaustion
+> Homing / Activation
+> IFN JAK STAT signaling
+> Immunosuppressive M2
+> Interferon signaling
+> Pro -inflammatory M1
+> Tcell activation
+
+# Expression changes in post -
+
+# vs.  pre -treatment  samples 
+
+# no  significant  change 
+
+# post  vs  pre

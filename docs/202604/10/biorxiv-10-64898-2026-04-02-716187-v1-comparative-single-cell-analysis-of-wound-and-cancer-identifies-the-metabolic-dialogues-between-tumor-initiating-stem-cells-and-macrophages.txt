@@ -1,0 +1,1942 @@
+Title: 51279153
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.02.716187v1.full.pdf
+
+Number of Pages: 34
+
+Markdown Content:
+1
+
+# Comparative single cell analysis of wound and cancer 1
+
+# identifies the metabolic dialogues between tumor initiating 2
+
+# stem cells and macrophages 3
+
+4
+
+Weijie Guo 1,3 , Daniel Leon 1,3 , Benjamin Nicholson 1, Jianwen Que 2, Yuxuan Miao 1, 4 *
+
+5
+
+6
+
+7
+
+1. Ben May Department of Cancer Research, The University of Chicago, Chicago, IL, 8
+
+USA 9
+
+2. Columbia Center for Human Development and Division of Digestive and Liver 10 
+
+Disease, Department of Medicine, Vagelos College of Physicians and Surgeons, 11 
+
+Columbia University Irving Medical Center, New York, NY, USA 12 
+
+3. These authors contribute to this work equally. 13 
+
+4. Lead contact 14 
+
+15 
+
+* Correspondence: miaoy@uchicago.edu. 16 
+
+17 
+
+18 
+
+19 
+
+20 
+
+21 
+
+22 
+
+23 
+
+24 
+
+25 
+
+26 
+
+27 
+
+28 
+
+29 
+
+30 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+2
+
+# Abstract 1
+
+Macrophages are pivotal mediators of wound healing, yet the cellular programs they 2
+
+employ can be hijacked by cancers to drive tumorigenesis. Although similar macrophage 3
+
+programs support both physiological tissue regeneration and pathological cell growth, the 4
+
+molecular and functional difference between wound-associated macrophages (WAMs) 5
+
+and tumor-associated macrophages (TAMs) remain poorly defined. Here, we perform 6
+
+comparative single-cell RNA sequencing to delineate the dynamic cell states of 7
+
+macrophages during skin wound healing and the progression of cutaneous squamous 8
+
+cell carcinoma. Our analyses reveal that aberrantly regulated lipid metabolism is a distinct 9
+
+feature of TAMs. Critically, our genetic manipulations allow us to identify SOX2 High tumor-10 
+
+initiating stem cells as key orchestrators that modulate the lipid metabolism of TAMs and 11 
+
+shape their cell states. These findings suggest that disrupting the metabolic crosstalk 12 
+
+between tumor-initiating stem cells and TAMs represents a promising strategy to 13 
+
+normalize myeloid cell function and enhance cancer immunotherapy efficacy. 14 
+
+15 
+
+16 
+
+17 
+
+18 
+
+19 
+
+20 
+
+21 
+
+22 
+
+23 
+
+24 
+
+25 
+
+26 
+
+27 
+
+28 
+
+29 
+
+30 
+
+31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+3
+
+# Introduction 1
+
+Macrophages are highly plastic myeloid cells that can rapidly shift their phenotypes 2
+
+and cell states in response to diverse environmental cues (Locati et al., 2020; Wynn et 3
+
+al., 2013). Stimulation by pathogen- or damage-associated molecular patterns drives 4
+
+macrophages toward pro-inflammatory states, whereas exposure to immune-modulatory 5
+
+ligands promotes alternative activation and regulatory functions (Biswas and Mantovani, 6
+
+2010; Mosser and Edwards, 2008; Murray et al., 2014). Their versatility and plasticity 7
+
+enable macrophages to play central roles in facilitating tissue repair (Vannella and Wynn, 8
+
+2017; Wynn and Vannella, 2016). Immediately following injury, tissue-resident and 9
+
+monocyte-derived macrophages adopt pro-inflammatory functional states to control 10 
+
+infection and clear cellular debris (Wynn and Vannella, 2016). As repair progresses to the 11 
+
+healing phase, macrophages promptly transition to pro-healing states to suppress 12 
+
+inflammation and induce angiogenesis (Shook et al., 2016; Shook et al., 2018). Given 13 
+
+that stem cells are the principal mediators of tissue regeneration, a critical function of 14 
+
+wound-associated macrophages (WAMs) during wound repair is to support stem cell self-15 
+
+renewal and differentiation, creating a niche that enables stem cells to efficiently restore 16 
+
+tissue integrity (Shook et al., 2016; Shook et al., 2018). 17 
+
+18 
+
+Although many macrophage functions are essential for normal tissue repair, these 19 
+
+programs are frequently co-opted by tumor-associated macrophages (TAMs) to promote 20 
+
+tumorigenesis. As one of the most abundant immune cell populations in the tumor 21 
+
+microenvironment (TME), TAMs drive cancer cell proliferation, enhance angiogenesis, 22 
+
+and most importantly, establish an immunosuppressive milieu (Biswas and Mantovani, 23 
+
+2010). Indeed, similar myeloid cell responses underpin the conceptualization of cancer 24 
+
+as “a wound that never heals” (Hu et al., 2023). Supporting this notion, recent 25 
+
+spatiotemporal transcriptomic mapping of macrophage states during wound healing has 26 
+
+highlighted processes such as antigen presentation and interferon responses are similarly 27 
+
+activated in WAMs and TAMs (Hu et al., 2023). Notably, both WAMs and TAMs are 28 
+
+thought to adopt the alternative activation (or M2-like) state, facilitating direct interactions 29 
+
+with stem cells. It is increasingly evident that many solid tumors are initiated and 30 
+
+maintained by a subset of tumor-initiating stem cells (tSCs) characterized by robust 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+4
+
+stemness signatures, akin to those responsible for normal tissue maintenance and repair 1
+
+(Ricci-Vitiani et al., 2007; Singh et al., 2004). These tSCs activate unique molecular 2
+
+programs to drive tumorigenesis and therapy resistance. In particular, they can survive 3
+
+robust immunotherapy treatments which otherwise effectively eradicates differentiated 4
+
+cancer cells (Miao et al., 2019; Oshimori et al., 2015). Similar to normal tissue 5
+
+regenerations, close interactions with the microenvironment are essential for tSCs to gain 6
+
+extrinsic protections during tumorigenesis (Guo et al., 2017; Lu et al., 2014; Taniguchi et 7
+
+al., 2020). Imaging analyses in skin squamous cell carcinomas (SCCs) have revealed 8
+
+that a subset of FcεRI+ macrophages cluster near tSCs (Casanova-Acebes et al., 2021), 9
+
+and these TAMs can produce signaling molecules—such as Wnt and TGFβ ligands—that 10 
+
+activate corresponding pathways in tSCs (Oshimori et al., 2015; Taniguchi et al., 2020). 11 
+
+Deciphering the reciprocal interactions between stem cells and macrophages is crucial 12 
+
+for preventing cancer progression. 13 
+
+14 
+
+While previous research has largely focused on pathways that are similarly activated 15 
+
+in macrophages during wound healing and tumorigenesis, the precise degree of similarity 16 
+
+in cell states between WAMs and TAMs—along with any molecular features uniquely 17 
+
+activated in either group—has not been comprehensively assessed. A fundamental 18 
+
+difference between wound healing and cancer is that, whereas regeneration can conclude 19 
+
+with resolution of inflammation and restoration of tissue architecture, these processes 20 
+
+persist in cancers (Ge and Fuchs, 2018; Ge et al., 2017). Consequently, macrophages in 21 
+
+tumors are chronically reeducated by constant cytokine signaling and reprogrammed by 22 
+
+aberrant metabolic cues within the TME, endowing them with additional properties 23 
+
+(Casanova-Acebes et al., 2021; Franklin et al., 2014; Hegde et al., 2025). Identifying the 24 
+
+unique features of WAMs and TAMs and elucidating the respective mechanisms shaping 25 
+
+their distinct cell states, may hold the key for developing strategies that normalize 26 
+
+macrophage function in the TME as a novel approach to cancer immunotherapy. 27 
+
+28 
+
+In this study, we employed a partial-thickness wounding model to characterize the 29 
+
+molecular features of macrophages that promote wound repair (Ge et al., 2017). This 30 
+
+unconventional skin injury model removes only the superficial epidermis and upper hair 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+5
+
+follicle (Luan et al., 2024). In contrast to classical full-thickness wounds which are repaired 1
+
+by collective migration and proliferation of epidermal keratinocytes within a migrating 2
+
+tongue, in partial-thickness wounds, individual hair follicle stem cells (HFSCs) migrate 3
+
+into the wound bed (Luan et al., 2024). Our previous work demonstrated that, unlike full-4
+
+thickness punch biopsy wounds where a migrating tongue shields underlying stem cells, 5
+
+partial-thickness wounds expose activated HFSCs directly to inflammatory insults, yet 6
+
+these stem cells can still be repurposed from hair regeneration to epidermis regeneration 7
+
+(Gonzales et al., 2021). This study suggests that stem cell survival requires temporary 8
+
+niche protection, potentially provided by macrophages with anti-inflammatory functions. 9
+
+In parallel, we investigated tumor-promoting macrophages in a chemically induced, 10 
+
+autochthonous mouse model of cutaneous SCC, generated by sequential treatment with 11 
+
+7,12-dimethylbenz[a]anthracene (DMBA) and phorbol ester 12-O-tetradecanoylphorbol 12 
+
+13-acetate (TPA) (Nassar et al., 2015; Quintanilla et al., 1986). This cancer model 13 
+
+enables the development of spontaneous SCCs with heterogeneous cell populations and 14 
+
+hierarchical developmental trajectory, better recapitulating human epithelial cancers than 15 
+
+transplanted models (Guo W, 2025). Importantly, SCCs in this system arise from mutated 16 
+
+keratinocytes(Lapouge et al., 2011)—the same epithelial stem cells driving the wound 17 
+
+repair—thus allowing direct comparison of macrophage signatures driving physiological 18 
+
+versus pathological growth of the same tissue (Huang et al., 2017). 19 
+
+20 
+
+Using these refined models, we performed comparative single-cell analysis of 21 
+
+dynamic macrophage states during skin wound healing and cutaneous malignant 22 
+
+progression. Through transcriptome comparisons of WAMs and TAMs, we further 23 
+
+characterized changes in macrophage heterogeneity and cell states in response to 24 
+
+immunotherapy, with and without perturbation of critical pathways in tSCs. This analysis 25 
+
+identified a pivotal role for a subset of SOX2 High tSCs in sculpting the unique phenotypes 26 
+
+of a subset of TAMs, enabling these specialized TAMs to persist through immunotherapy 27 
+
+and reciprocally protect tSCs. 28 
+
+29 
+
+Results 30 
+
+31 
+
+Global overview of the immune landscape in wound and cancer 32 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+6
+
+1
+
+To compare the molecular features of immune responses elicited during 2
+
+physiological tissue regeneration (e.g., wound healing) and pathological cell growth (e.g., 3
+
+cancer), we subjected immune cells from different stages of partial-thickness skin wounds, 4
+
+as well as various phases of skin squamous cell carcinoma (SCC) progression to single-5
+
+cell RNA sequencing (scRNA-seq) (Fig. 1a). Specifically, we used fluorescence-activated 6
+
+cell sorting (FACS) to isolate CD45 + immune cells from Day 2 (inflammatory stage) and 7
+
+Day 4 (healing stage) wounds in mice, and from mice bearing skin papilloma (benign) or 8
+
+carcinoma (malignant) (two replicates per group; two pooled mice or tumors per replicate) 9
+
+(Fig. 1a). These timepoints were chosen based on previous studies characterizing the 10 
+
+kinetics of partial thickness wound healing (Ge et al., 2017; Gonzales et al., 2021; Luan 11 
+
+et al., 2024). Staging of SCCs was determined by their distinct appearance, necrotic 12 
+
+states, tumor size, and histology. To profile transcriptomic similarities and differences 13 
+
+among immune populations under these conditions, we employed a split-pool 14 
+
+combinatorial barcoding-based scRNA-seq approach (Rosenberg et al., 2018). This 15 
+
+method allows for the fixation, labeling, pooling, and simultaneous sequencing of cells 16 
+
+from various conditions and time points, thereby minimizing batch effects (Rosenberg et 17 
+
+al., 2018). 18 
+
+19 
+
+Following sequencing and quality control, we selected 18,456 immune cells for 20 
+
+further analysis (3,781 cells from D2 WD, 1,492 cells from D4 WD, 6,601 cells from 21 
+
+papilloma, and 6,582 from SCCs). Based on transcriptional profiles, we first examined 22 
+
+major immune cell types and global changes in the immune landscape during wound 23 
+
+healing and tumorigenesis. In total, we identified 17 distinct clusters when combining 24 
+
+immune cells from both wounds and cancers (Fig. 1b). Among these clusters, we 25 
+
+detected 10 clusters in the myeloid cell compartment and 7 clusters of lymphocytes (Fig. 26 
+
+1b). A global comparison of immune landscapes in wounds and cancers revealed key 27 
+
+differences and similarities in the composition of these compartments. As expected, 28 
+
+lymphocyte infiltration is the major difference between cancer and wound, and both T 29 
+
+cells and B cells are mostly enriched in tumor samples (Fig. 1, c and d, Fig. S1a). A 30 
+
+particularly notable T cell population that influxes into the tumor is the Foxp3 + regulatory 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+7
+
+T (Treg) cells (Fig. S1b). Although Treg cells have been shown to also play a key roles in 1
+
+wound repair, the presence of Treg in tumor samples drastically overshadows the 2
+
+wounded tissue, counteracting the anti-tumor functions of CD8 + T cells (Fig. S1b). In 3
+
+contrast, myeloid cells dominated the CD45 + immune cells in both wounds and cancers, 4
+
+accounting for more than 90% of the immune population in wounds and over 60% in 5
+
+cancers (Fig. 1, c and d). While the presence of neutrophils is comparable between wound 6
+
+and cancer (Fig. S1c), the dendritic cells are mostly present in cancer tissue (Fig. S1d). 7
+
+Overall, our data provided an important resource for the field to better understand the 8
+
+immune responses in both physiological tissue regeneration and pathological cell growth. 9
+
+10 
+
+Given the critical roles of macrophages in both wound healing and cancer 11 
+
+progression, in this study, we specifically focused on comprehensive comparison of the 12 
+
+molecular signatures of these myeloid cells when they were driving wound repair and 13 
+
+tumorigenesis. From our scRNA-seq data, we identified 7 major cell clusters of 14 
+
+macrophages (Fig. 2a). Each cluster is enriched with markers (Fig. 2b) which can define 15 
+
+the unique molecular features and distinct cell states. For example, the cells in cluster 0 16 
+
+(C0) are M1-like, being mostly enriched with proinflammatory genes, such as genes 17 
+
+involved in antigen presentation and providing co-stimulatory signals (Fig. 2c), whereas 18 
+
+the cells in cluster 1 (C1) were mostly enriched with signature genes that are known to 19 
+
+define M2-like macrophages, such as Mrc1 (genes encoding CD206), Arg1 and Cd68 20 
+
+(Fig. 2c). Compared to these two clusters, most macrophages found in the wound or 21 
+
+cancer are in a “hybrid” cell state, being simultaneously enriched with both M1 and M2-22 
+
+like signatures (Fig. 2c). This dataset allowed us to identify the unique cell states that are 23 
+
+associated with either wound healing or cancer progression. 24 
+
+25 
+
+Respective molecular features of macrophages during wound repair and 26 
+
+tumorigenesis. 27 
+
+We first focused on the dynamic cell states of macrophages during different stages 28 
+
+of wound repair. Among all the macrophage clusters identified from our single cell 29 
+
+analysis, we found four major clusters (C0, C1, C2, and C3) populating the wounded skin 30 
+
+(Fig. 3a). We next sought to gain an in depth understanding into the molecular features 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+8
+
+of each major WAM subpopulations. To achieve this goal, we performed pseudo-bulk 1
+
+analysis of each cluster, followed by differential gene expression analysis of each cluster. 2
+
+Based on previous phenotype characterizations, it was established that distinct 3
+
+macrophage functional states drive different stages of wound healing. But the previous 4
+
+research has assumed an over-simplified paradigm. For example, the pro-inflammatory 5
+
+macrophages are thought to be the first responders being recruited immediately upon 6
+
+wounding to clear the dead cells or microbes (Mosser and Edwards, 2008; Wynn and 7
+
+Vannella, 2016). When the wound healing progress to the regenerative phase after the 8
+
+stem cells have migrated into the wound bed, these proinflammatory macrophages are 9
+
+converted into anti-inflammatory macrophages to promote re-epithelization and tissue 10 
+
+remodeling (Mosser and Edwards, 2008; Wynn and Vannella, 2016). Consistent with this 11 
+
+paradigm, our analysis confirmed that the cluster 0 (C0) WAMs which are mainly enriched 12 
+
+with pro-inflammatory gene signatures were mostly found in Day 2 post-wounding, and 13 
+
+by Day 4, majority of these pro-inflammatory macrophages were eliminated from the 14 
+
+wounded tissue (Fig. 3, a and b). Even with a few C0 cells remaining in the wounded skin 15 
+
+by Day 4, these cells turned off their pro-inflammatory programs (Fig. 3c). Unlike the 16 
+
+pattern of proinflammatory macrophages which was consistent with previously reported, 17 
+
+to our surprise, the emergence of pro-healing macrophages was fairly early. Although the 18 
+
+hair follicle stem cells won’t migrate into the damaged epidermis until Day3 (Ge et al., 19 
+
+2017; Gonzales et al., 2021; Luan et al., 2024), as early as Day 2 post-wounding, more 20 
+
+than 60% of WAMs were already in the cell states which are enriched with genes involved 21 
+
+in immune suppression, lipid metabolism, and tissue regeneration (Fig. 3, c to e). Another 22 
+
+interesting finding from this analysis was that, in contrast to the pro-inflammatory 23 
+
+macrophages that had limited heterogeneity (mainly in C0 cluster), we found three distinct 24 
+
+clusters of macrophages harboring the potential of promoting tissue regeneration and 25 
+
+suppressing inflammation (Fig. 3, a and b). Importantly, each of these three clusters 26 
+
+activated a different set of genes that could contribute to different aspects of tissue 27 
+
+regeneration. For instance, among all the macrophages, the C1 cells were defined as 28 
+
+their highest level of Arg1 (Fig. 2c) and Ptges (Fig. 3e), while the cells in C2 expressed 29 
+
+highest level of Tgfβ1 (Fig. 2c) and Il10 (Fig. 3c). Both C1 and C2 macrophages also 30 
+
+blunted the production of pro-inflammatory chemokines when the wound healing 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+9
+
+progressed from Day 2 to Day 4 (Fig. 3c). Similarly, C1 WAMs were the major population 1
+
+expressing Ereg and Pf4 , and C2 WAMs expressed Chil3 (Fig. 3e). With these 2
+
+coordinated actions, different subsets of WAMs functioned synergistically to dampen 3
+
+down the inflammation and promote stem cell-mediated re-epithelization and 4
+
+differentiation. Interestingly, compared to the proinflammatory C0 WAMs, another distinct 5
+
+molecular feature of WAMs in both C1 and C2 is their enrichment of genes involved in 6
+
+lipid metabolism, such as Spp1, Lpl, Cd36, Fabp5, and Apoe (Fig. 3d). These genes were 7
+
+particularly high in C1 WAMs, and these genes were already upregulated on Day 2 post-8
+
+wounding (Fig. 3e). These findings suggested that the elevated lipid metabolism is a 9
+
+unique requirement for macrophage to promote tissue growth. 10 
+
+11 
+
+Next, we sought to investigate the evolving features of TAMs when DMBA-induced 12 
+
+skin tumors progress from benign (papilloma or papi) to malignant stage (SCC). Four 13 
+
+distinct clusters (C0, C4, C5, and C6) of macrophages were identified in the tumors (Fig. 14 
+
+4a). When we closely examined the representation of these clusters in different stages of 15 
+
+tumorigenesis, we first found that the benign tumors are mostly enriched with C0 TAMs 16 
+
+that activate strong antigen-presentation abilities (Fig. 4, a and b) and the C6 TAMs that 17 
+
+express high level of interferon stimulated genes (Fig. 4, a and c). When the cancer 18 
+
+progressed from benign to malignant stage, these anti-tumor TAMs were significantly 19 
+
+reduced (Fig. 4a). In each cluster, the expression level of genes encoding the antigen 20 
+
+presenting machinery (Fig. 4b) and providing interferon responsive potential (e.g. Ifngr1 )21 
+
+were significant reduced (Fig. 4c), while the genes that can repress the interferon 22 
+
+response (e.g. Ptpn7 ) increased (Fig. 4c). This was consistent with the established idea 23 
+
+that the host immunity can still control the benign tumors, whereas the establishment of 24 
+
+the immune suppression by the remodeling of the TME was the prerequisite of the 25 
+
+malignant progression. In parallel with the contraction and functional remodeling of the 26 
+
+anti-tumor macrophage compartments, several new macrophage cell states (C4 and C5) 27 
+
+emerged at the malignant SCC stage (Fig. 4a). Most genes that were uniquely activated 28 
+
+in these two new cell states of TAMs during the SCC stage were involved in suppressing 29 
+
+anti-tumor immunity (e.g. Cd274, Mmp12 ), escalating pathological inflammation (e.g. Il1a, 30 
+
+C1qa ), and promoting cell growth (e.g. Pdgf ) (Fig. 4, d and e). Among all the molecular 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+10 
+
+features acquired by the C4 and C5 clusters of pro-tumor TAMs newly emerged during 1
+
+malignant progression, the enrichment of lipid metabolism-related genes, such as ApoE 2
+
+and Cd36 , were particularly interesting (Fig. 4f), especially in C5 TAMs. The similar 3
+
+activation of lipid metabolism related genes in both WAMs and TAMs further highlighted 4
+
+the important roles of these pathways and processes for macrophages to promote 5
+
+regeneration and growth. Taken together, our results provide a comprehensive and 6
+
+dynamic overview of the evolving molecular features of TAMs during the malignant 7
+
+progression. 8
+
+9
+
+Comprehensive comparison of macrophage signatures in wound and cancer 10 
+
+Based on the insights gained from analyzing WAMs and TAMs separately, we next 11 
+
+sought to compare their molecular features. To this end, we first computationally overlaid 12 
+
+the clusters of WAMs and TAMs. Interestingly, although macrophages play similar roles 13 
+
+in promoting cell growth and share many key functions during both wound repair and 14 
+
+tumorigenesis, we found that the C0 cluster was the only cell state that was shared 15 
+
+between skin wounds and skin cancers (Fig. 5, a and b). Consistent with previous 16 
+
+reports(Hu et al., 2023), the antigen presentation and co-stimulation signature were 17 
+
+indeed similarly activated in C0 cluster in both wound and cancer. (Fig. 3b and Fig. 4b). 18 
+
+However, most other cell stats of WAMs and TAMs were highly distinct (Fig. 5a and 5b). 19 
+
+As shown in Figure 5A and 5B, the C1, C2 and C3 were found mainly in wounded skin, 20 
+
+while C4, C5, and C6 represented the cell states of macrophage in cancer. RNA velocity 21 
+
+indicated the developmental trajectory of these macrophage clusters, showing that cell 22 
+
+states identified in WAMs appear to be more intermediate on the trajectory, since these 23 
+
+clusters can differentiate towards the C4 and C5 states found in TAMs (Fig. 5c). 24 
+
+25 
+
+We next focused on the specific programs that can distinguish the WAMs and TAMs. 26 
+
+To this end, we performed pseudo-bulk differential gene expression analysis. We 27 
+
+specially focused on comparing the M2-like C1 and C2 clusters found in the wound with 28 
+
+the similar anti-inflammatory C4 and C5 clusters that emerged when cancer progressed 29 
+
+to carcinoma. We first found that both WAMs and TAMs displayed distinct inflammation-30 
+
+regulatory profiles. The complement-related genes, such as C1qa, C1qb and C1qc, were 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+11 
+
+particularly upregulated in TAMs, whereas many chemokines (e.g. Cxcl1, Cxcl3, Ccl2, 1
+
+and Ccl9 ) and cytokines (e.g. Tnf, Il1a ), were expressed at higher level in WAMs (Fig. 2
+
+5d). Secondly, it was also intriguing that majority of TAMs emerged during the SCC stage 3
+
+were enriched with the antioxidant and express higher level of immune evasive genes 4
+
+(Fig. 5, e and f). This finding suggests that unique molecular adaptations were necessary 5
+
+for TAM establishment within the tumor microenvironment. To our surprise, although the 6
+
+anti-inflammatory macrophages in both wound and cancer were enriched with lipid 7
+
+metabolism signatures (Fig. 3d and Fig. 4f), additional regulatory mechanism appeared 8
+
+to be only activated in TAMs to further reprogram their lipid metabolism (Fig. 5, g and h). 9
+
+Specifically, although genes, such as Trem2, ApoE, Lpl, and Cd36, were upregulated in 10 
+
+both C1/C2 of WAMs and C4/C5 of TAMs, additional receptors (e.g. Lrp8, Gpr55 ), new 11 
+
+transcription factor (e.g. Pparg ), as well as new enzymes (e.g. Acss1, Acss2 ) were further 12 
+
+upregulated in TAMs (Fig. 5h). This key finding suggested that the aberrant lipid 13 
+
+metabolism was a defining feature that distinguished the functional cell states of 14 
+
+macrophages during pathological growth after transformation from the physiological 15 
+
+regeneration during wound repair. This finding inspired us to further explore the 16 
+
+underlying mechanisms that are uniquely activated in cancer that induce the aberrant 17 
+
+regulation specifically in TAMs. 18 
+
+19 
+
+SOX2 High tSCs shaped the metabolic states of TAMs. 20 
+
+Given the shared roles of macrophages in promoting rapid cell proliferation, 21 
+
+establishing immune suppression, and facilitating tissue remodeling in both wound 22 
+
+healing and cancer, it was striking to observe extensive distinctions in the macrophage 23 
+
+cell states in wound and cancer. To dissect the underlying basis that shaped the aberrant 24 
+
+cell states of TAMs, we focused on the factors and mechanisms that were uniquely 25 
+
+activated in cancers. The specific expression of FcεR1 (Fig. 2c) in TAM subpopulations 26 
+
+that are enriched with lipid metabolism related genes was particularly intriguing. Recent 27 
+
+investigations have shed light into this question. FcεR1 + TAMs are predominantly located 28 
+
+at the tumor-stroma interface (Taniguchi et al., 2020), where they interact with TGFβ-29 
+
+responding tSCs. These tSCs recruit TAMs via IL33 secretion(Taniguchi et al., 2020), and 30 
+
+in turn, these FcεR1+ macrophages provide reciprocal regulation by producing ligands 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+12 
+
+such as TGFβ.(Raghavan et al., 2019) While normal epithelial stem cells modulate 1
+
+immune cells to facilitate wound repair, tSCs exploit this interaction via additional 2
+
+oncogene-driven mechanisms to drive tumorigenesis. Many such new processes are now 3
+
+known to be mediated transcription factors, such as SOX2 (Boumahdi et al., 2014). SOX2 4
+
+plays key roles in embryonic stem cells, especially in facilitating their stemness programs 5
+
+(Boumahdi et al., 2014). Interestingly, this key transcription factor is silenced in many 6
+
+adult tissue cells but becomes reactivated in transformed cancer cells (Bass et al., 2009; 7
+
+Vanner et al., 2014). Since SOX2 is a key driver that can distinguish the activity of normal 8
+
+skin stem cells and tSCs (Boumahdi et al., 2014), and because SOX2 is known to induce 9
+
+a unique lipid profile in cancer cells (Shen et al., 2021; Shen et al., 2025; Wang et al., 10 
+
+2025), we specifically focused on exploring its potential role in endowing the stem cell-11 
+
+like cancer cells to modulate macrophage cell states through regulating their lipid 12 
+
+metabolism. 13 
+
+14 
+
+To test this hypothesis, we developed two complementary genetic models. Since 15 
+
+Sox2 is silenced in normal skin epithelial stem cells, we first sought to ectopically express 16 
+
+Sox2 in skin epithelium and then examine how this genetic manipulation of normal 17 
+
+epithelium impacts the cell states of WAMs in the wounds. For this purpose, we generated 18 
+
+Sox2 conditional overexpression (cOE) mice ( K14CreER; R26-LSL-Sox2-IRES-GFP )19 
+
+(Fig. 6a). Upon tamoxifen injection, we can activate Sox2 in basal skin epithelium where 20 
+
+epidermal stem cells and hair follicle stem cells are located (Fig. 6a). In parallel, we also 21 
+
+generated the Sox2 conditional knockout (cKO) mice ( K14CreER; Sox2 flox/flox ) (Fig. 6b). 22 
+
+We again employed DMBA/TPA treatment to induce autochthonous skin SCCs on both 23 
+
+Cre negative control and Sox2 cKO mice, so we can profile the molecular changes in 24 
+
+macrophages when Sox2 is ablated in tSCs in a more physiologically relevant TME (Fig. 25 
+
+6b). Following tamoxifen treatment to induce either Sox2 activation in normal SCs or Sox2 26 
+
+ablation in tSCs, we isolated total CD45 + immune cells from either the wounds or from 27 
+
+the SCCs, and subjected these cells to scRNA-seq (Fig. 6, a and b). In total, we again 28 
+
+identified six major clusters of macrophages in both skin wounds and skin SCCs (Fig. 6c). 29 
+
+Importantly, the cluster 2 (C2) contained the lipid laden macrophages that were enriched 30 
+
+with the genes involved in lipid metabolism, such as Spp1, Lpl and Cd36 (Fig. 6d). 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+13 
+
+1
+
+With this new dataset after various genetic manipulations, we first compared the 2
+
+macrophage landscape in control and Sox2 cOE wounds to determine how ectopic 3
+
+activation of Sox2 in skin epithelium impact macrophages. In the control wounds, as 4
+
+observed before, multiple cluster of WAMs with distinct molecular features co-exist to 5
+
+drive different processes of wound repair (Fig. 6e). However, when the Sox2 is ectopically 6
+
+expressed in skin epithelium, at the same time point post wounding, most macrophages 7
+
+clusters shrink whereas we only observed significant expansion of C2 WAMs that are 8
+
+enriched with lipid metabolism genes (Fig. 6e). Interestingly, the RNA Velocity analysis 9
+
+shows that the developmental trajectories of macrophage cell states are distinct between 10 
+
+control and Sox2 cOE wounds (Fig. 6f). In contrast to the WAMs in control wounds, the 11 
+
+other macrophage cell states differentiate towards the C2 WAMs in Sox2 cOE wounds 12 
+
+(Fig. 6f). When we compared the expression pattern of specific genes in the C2 cluster 13 
+
+between control and Sox2 cOE wounds, we find that most lipid metabolism-related genes, 14 
+
+such as Spp1 and Cd36 , are upregulated in C2 WAMs in the Sox2 cOE wounds (Fig. 6g). 15 
+
+In consistent with the critical immune suppression and pro-tumor roles of this cluster cells, 16 
+
+we also observed upregulation of genes involved in immune suppression, such as Il10 17 
+
+and Arg1 , and pathological inflammation, such as Ptgs2 and Il1a (Fig. 6h) in Sox2 cOE 18 
+
+wounds. Taken together, these analysis allows us to confirm that, even without the 19 
+
+oncogenic transformation and chronic inflammation exposure, when the epithelial stem 20 
+
+cells start to express Sox2 , the gene signatures of their surrounding WAMs start to 21 
+
+resemble the lipid laden macrophage-like TAMs. 22 
+
+23 
+
+We next focused on the molecular changes in macrophages when Sox2 is 24 
+
+specifically ablated in K14 + basal epithelium in cancers. We have found that, after losing 25 
+
+Sox2 in cancer cells, majority of these lipid metabolism-related genes were ablated (Fig. 26 
+
+7, a and b) in the C2 TAMs. Instead, the same cluster of pro-tumor TAMs started to up-27 
+
+regulate genes known for mediating anti-tumor functions, such as Nlrp3 (Han et al., 2021; 28 
+
+Jing et al., 2023; Zhivaki and Kagan, 2021) and Nos2 (Sun et al., 2021; Weiss et al., 2010) 29 
+
+(Fig. 7b), leading to significantly increase of T cells (Fig. 7c). These key results further 30 
+
+confirmed our speculation that when the macrophages are recruited by tSCs (Taniguchi 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+14 
+
+et al., 2020), these SOX2 High tSCs can also shape the cell states of macrophages, 1
+
+especially allowing these macrophages to acquire lipid laden macrophage-like phenotype 2
+
+that can distinguish the TAMs from WAMs. 3
+
+4
+
+Metabolic crosstalk with tSCs was essential for TAMs to persist during 5
+
+immunotherapy treatment. 6
+
+To further determine the importance of the SOX2 High tSCs for modulating and 7
+
+maintaining the lipid laden TAMs, we treated both control and Sox2 cKO mice bearing 8
+
+DMBA/TPA-induced spontaneous SCCs with anti-PDL1 + CD40 agonist immunotherapy. 9
+
+Recent study has shown that this combination of immunotherapy can induce robust anti-10 
+
+tumor immune response in cancers harboring high mutation burdens, such as skin SCC 11 
+
+(Benguigui et al., 2024; Gungabeesoon et al., 2023). However, while the T cell activities 12 
+
+can be reinvigorated to induce rapid tumor clearance, many treated tumors eventually 13 
+
+grow back (Guo W, 2025). Our previous work demonstrated that the rapid tumor relapse 14 
+
+is driven by the SOX2-mediated and stem cell-specific immune modulation, as the tumor 15 
+
+relapse can be blocked when Sox2 is ablated (Guo W, 2025). Here, we explored whether 16 
+
+this effect of SOX2 was partially due to the loss of these lipid-laden macrophages. Single 17 
+
+cell RNA-seq analysis first showed that, in the immunotherapy treated control tumors, 18 
+
+many pro-tumor macrophages, especially the subset of CD163 + pro-tumor TAMs (shown 19 
+
+in cluster 4 or C4), were replaced by pro-inflammatory macrophages with strong T cell 20 
+
+priming activities (Fig. 7d). In contrast, most of the pro-tumor TAMs that were enriched 21 
+
+with lipid metabolism-related genes, such as Spp1, Lpl, and Cd36 , (shown in cluster 2 or 22 
+
+C2) can persist (Fig. 7d). However, when the Sox2 is ablated in the skin SCC epithelial 23 
+
+cells, after immunotherapy treatment, these macrophages cannot persist in the TME 24 
+
+anymore (Fig. 7d). Collectively, our study identifies SOX2 High tSCs as an unexpected 25 
+
+regulatory cell population that emerges in cancer. These cells orchestrate the unique 26 
+
+development and functional maintenance of immune-suppressive, lipid-laden TAMs, 27 
+
+distinguishing them from the macrophages typically enriched in wound environments. 28 
+
+29 
+
+30 
+
+31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+15 
+
+# Discussion 1
+
+Macrophages play critical roles in both physiological tissue regeneration and 2
+
+malignant cell growth. While many studies highlighted important similarities between 3
+
+macrophages infiltrating wounded and cancerous tissue, the key distinctions and 4
+
+underlying regulatory mechanisms shaping the differences between these macrophages 5
+
+are still unexplored. In this study, by performing comparative single cell analysis of 6
+
+macrophages in skin cancers and skin wounds, we unveiled that the aberrant lipid 7
+
+metabolism is a previously unrecognized molecular feature of TAMs that might explain 8
+
+the unresolvable myeloid cell dysfunctions specifically found in cancers. Macrophages 9
+
+enriched for genes involved in lipid metabolism—commonly referred to as lipid-laden 10 
+
+macrophages—have recently been identified as the predominant TAM population 11 
+
+responsible for pro-tumor and immune suppressive functions (Governa et al., 2024; 12 
+
+Kloosterman et al., 2024). In particular, as verified from our single cell analysis, these 13 
+
+subsets of macrophage are the major subpopulation expressing many important TAM-14 
+
+associated markers, such as ARG1, SPP1, and TREM2 (Marelli et al., 2022). Thus, 15 
+
+compared to many other macrophage subpopulations that have pro-regeneration 16 
+
+functions in both injury repair and tumorigenesis, this subset of special TAMs might 17 
+
+represent a special therapeutic target for normalizing the TME. Indeed, recent studies 18 
+
+using TREM2 or SPP1 blocking antibodies has shown promising effects in treating 19 
+
+several types of cancers in preclinical models (Kartal et al., 2025; Katzenelenbogen et al., 20 
+
+2020; Molgora et al., 2020; Sun et al., 2023). Thus, our study provided important 21 
+
+explanations for these therapeutic effects of new treatments. 22 
+
+23 
+
+A particularly surprising finding from this study is that the development of these 24 
+
+special macrophages appears to rely on a special subset of SOX2 high tumor initiating 25 
+
+epithelial stem cells. Importantly, we have found that when we ectopically activated Sox2 26 
+
+expression in skin epithelium wound repair, most macrophage subpopulations are 27 
+
+induced to differentiate towards macrophage cluster that are enriched in lipid metabolism 28 
+
+and this cluster of cells also further upregulate their lipid metabolism, acquiring the gene 29 
+
+signatures resembling the lipid laden TAMs. On the other hand, when we genetically 30 
+
+ablated Sox2 in cancer, these macrophages reduced their lipid metabolism, leaving them 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+16 
+
+susceptible to the immunotherapy-induced reprogramming. It is still unclear how these 1
+
+SOX2 high tSCs modulate macrophages. Furthermore, the identity of the specific lipids or 2
+
+fatty acids produced by these tSCs to mediate this metabolic crosstalk represents a 3
+
+critical area for future investigation. Although these important questions are out of the 4
+
+scope and cannot be addressed in the current study, this study indeed unveiled an 5
+
+important strategy to design novel immunotherapies. Recent studies have demonstrated 6
+
+that these SOX2 high tSCs are the culprit of cancer relapse since they can survive from 7
+
+robust anti-tumor immune response. This study demonstrated that these tSCs may 8
+
+achieve this feature by modulating the differentiation of macrophages into lipid-laden 9
+
+macrophages, so they can form a special niche and provide reciprocal protections for 10 
+
+these tSCs. Future investigation should focus on dissecting the molecular mechanisms 11 
+
+employed by these SOX2 high tSCs to modulate macrophages. These future studies will 12 
+
+uncover novel strategies to disrupt the tSC-macrophage communications, thereby 13 
+
+removing this critical niche protection and sensitizing tSCs to T cell-mediated attack. 14 
+
+15 
+
+Taken together, this comprehensive comparative analysis provides an important 16 
+
+resource for understanding the developmental trajectory and molecular features of tumor-17 
+
+associated macrophages. Moreover, it uncovers a key orchestrator that shapes the 18 
+
+heterogeneity and functional states of TAMs. 19 
+
+20 
+
+# Materials and methods 21 
+
+Mice and ethics 22 
+
+K14CreER mice were generated by Dr. Elaine Fuchs lab and backcrossed to C57/BL6J 23 
+
+background for ten generations(Naik and Fuchs, 2022). Wild-type C57BL/6J, and 24 
+
+Sox2 flox/flox (B6.Sox2 tm1.1Lan /J), were obtained from The Jackson Laboratory. LSL-Sox 225 
+
+mice were described before (Liu et al., 2013). To induce Sox2 overexpression or 26 
+
+conditional knockout, a daily i.p. injection of 2 mg tamoxifen for three consecutive days 27 
+
+was performed. 28 
+
+All mice were maintained in an Association for Assessment and Accreditation of 29 
+
+Laboratory Animal Care (AAALAC)-an accredited animal facility. Procedures were 30 
+
+performed using IACUC-approved protocols. All mice were maintained and bred under 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+17 
+
+specific-pathogen free conditions at the University of Chicago. All the procedures are in 1
+
+accordance with the Guide of the Care and Use of Laboratory Animals. 2
+
+3
+
+Tumor formation and treatment 4
+
+A previously established two-stage chemical carcinogenesis protocol was used to induce 5
+
+skin SCC formation. The shaved dorsal skin of various mouse lines was topically treated 6
+
+with 200 μL of 200 nM DMBA once a week for 4 weeks to initiate tumorigenesis. Four 7
+
+weeks later, tumor promotion was induced by weekly (twice a week) applications of 200 8
+
+μL of 35 μM TPA for 20 weeks. 9
+
+For immunotherapy treatment, tumor bearing mice were treated with a combination of 10 
+
+anti-PD-L1 blocking antibody (Clone 10F.9G2, 100 μg/mouse, BioXCell) and anti-CD40 11 
+
+agonist antibody (Clone FGK4.5, 100 μg/mouse, BioXCell) intraperitoneal for a total of 2 12 
+
+doses every other day. Tumors were collected 2 days after the last treatment for 13 
+
+downstream experiments. 14 
+
+15 
+
+Partial thickness wound 16 
+
+The partial thickness wounding was performed following previously established protocols 17 
+
+(Ge et al., 2017). Briefly, mice were shaved in second telogen (postnatal day P60). The 18 
+
+remaining hair was removed using depilatory cream, and a Dremel drill head was used 19 
+
+to gently scrape the back skin of anesthetized mice. To standardize the wound depth, the 20 
+
+number of touches performed with the Dremel drill was pre-determined by inspecting the 21 
+
+wounded skin for the first signs of erythema and pinpoint bleeding. This method removes 22 
+
+the epidermis and upper HF, including most infundibulum and isthmus cells, but leaves 23 
+
+the HF bulge intact. 24 
+
+25 
+
+Cell sorting and flow cytometry 26 
+
+To sort immune cells from wounded skin, the wounds were collected at the selected time 27 
+
+points and then placed in cold PBS for 15 minutes to remove the scab. The remainder of 28 
+
+the wounded tissue was minced in digestion media [RPMI-1640 (GIBCO) with HEPES 29 
+
+(25 mM, Corning), MEM non-essential amino acids (1:100, Thermo Fisher), solidum 30 
+
+pyruvate (1 mM, Corning), penicillin (100 U/ml), streptomycin (100 μg /ml), gentamicin 31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+18 
+
+(20 μg/ml, Thermo Fisher), β-mercaptoethanol (55 μM, GIBCO)]. The minced tissue was 1
+
+digested with Liberase (25 μg/ml) (Roche) for 120 minutes at 37 °C with an adapted 2
+
+protocol (Luan et al., 2024). Single-cell suspensions were obtained, and cells were 3
+
+stained using an antibody cocktail prepared at predetermined concentrations in a staining 4
+
+buffer (PBS with 5% FBS, 5mM EDTA 25 mM HEPES). 5
+
+To sort immune cells from DMBA/TPA induced tumors, the tumors were dissected at 6
+
+designated time points, minced and digested with Liberase (25 μg/ml) (Roche) in RPMI-7
+
+1640 (GIBCO) for 60 minutes at 37 °C. Digested tissues were then passed through a 70 8
+
+μm cell strainer, subjected to ACK lysis for 1 minute to lyse the red blood cells and 9
+
+resuspended in PBS. Single cells suspension was incubated with Fc Block TruStain FcX 10 
+
+(Clone 93, Biolegend) in PBS with 5% normal rat serum and 5% normal mouse serum, 11 
+
+and then stained with a cocktail Ab at predetermined concentration in staining buffer (PBS 12 
+
+with 5% FBS and 25 mM HEPES). DAPI was used to exclude dead cells. The sorting was 13 
+
+performed on BD Symphony S6 Cell Sorter. 14 
+
+15 
+
+Single cell cDNA synthesis and sequencing library preparation 16 
+
+Tumors were collected 1 day after last dose of immunotherapy and total CD45 positive 17 
+
+immune cells were sorted. Immediately after sorting, the sorted immune cells were fixed 18 
+
+with Evercode Cell Fixation v2 (Parse Biosciences). the fixed cells were prepared using 19 
+
+Evercode WT v2 kit (Parse Biosciences) according to manufacturer’s instructions. Input 20 
+
+cell numbers and volumes were calculated using 21 
+
+WT_100K_Sample_Loading_Table_V1.3.0 (Parse Biosciences). All the samples were 22 
+
+processed together with Evercode WT v2 kit (Parse Biosciences) and 8 sub-libraries were 23 
+
+generated. The quality of sub-libraries was checked by the Agilent Tape Station system 24 
+
+(Agilent) and sequenced by Illumina NovaSeqX. 25 
+
+26 
+
+Single-cell RNA-seq analysis 27 
+
+The raw FASTQ files were processed by spipe.v1.1.1(Parse Biosciences) using mm10 28 
+
+as a reference. Count matrices were imported to Seurat (v.4.3.0).(Hao et al., 2021) Cells 29 
+
+with <50 detected genes or >10000 detected genes or > 7.5% mitochondrial genes were 30 
+
+filtered-out from the dataset. We then used the standard Seurat pipeline by running 31 
+
+NormalizeData(), FindVariableFeatures(selection.method =”vst”, nfeatures =4000), and 32 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+19 
+
+ScaleData(). For the first round of clustering, Principal component analysis (PCA) was 1
+
+performed and the top 50 PCs with a resolution = 0.6 were applied. RunUMAP(dim=1:40, 2
+
+n.neighbours =30) was used to visualize the data. Cell types were annotated using 3
+
+SingleR (V1.7.1)(Aran et al., 2019) package with ImmGen data as reference. Neutrophils 4
+
+were subset, and standard pipeline was applied to neutrophil population by running 5
+
+FindVariableFeatures(selection.method =”vst”, nfeatures =4000), and ScaleData(). For 6
+
+clustering the neutrophils, Principal component analysis (PCA) was re-performed and the 7
+
+top 40 PCs with a resolution = 0.2 were applied. For visualization, RunUMAP(dim=1:50, 8
+
+n.neighbours =30) was used. 9
+
+For RNA velocity analysis, spliced and unspliced count matrices were first obtained from 10 
+
+spipe output and exported as h5ad files for subsequent input of scVelo. Velocity analysis 11 
+
+was then performed with scVelo (0.2.5)(Bergen et al., 2020) using the default stochastic 12 
+
+model and velocity vectors were projected into the UMAP generated from previous Seurat 13 
+
+pipeline. 14 
+
+For pesudobulk analysis, cells were randomly grouped into 3 pseudo replicates. Gene 15 
+
+counts were summarized and DESeq2 R package (v1.30.0)(Love et al., 2014) in R (v4.1.1) 16 
+
+was used for differential gene analysis. 17 
+
+18 
+
+Data and Software Availability 19 
+
+Raw and analyzed data is available at NCBI and the accession number for the single cell 20 
+
+RNA sequencing reported in this paper are NCBI GEO: GSE278435, 21 
+
+Acknowledgments 22 
+
+We thank C. Ciszewski at the Human Disease & Immune Discovery Core Facility at the UChicago 23 
+
+for conducting FACS sorting; P. Faber (Genomics Core at the UChicago) for sequencing and raw 24 
+
+data processing, Animal Resources Center at UChicago This study was supported by Y.M.’s 25 
+
+Start-up fund and seed grants from The University of Chicago, grants to Y. M. from NIH 26 
+
+(R00CA237859, R01CA285786 and R35GM150610), V Foundation, American Association for 27 
+
+Cancer Research, and The Cancer Research Foundation. 28 
+
+Author Contributions: Y.M., W.G. and D.L. conceptualized the study, designed the experiments, 29 
+
+interpreted the data, and wrote the manuscript. W.G. and D.L. performed most experiments and 30 
+
+analyzed data with the assistance from B.N. J.Q. provided LSL-Sox2 mice. 31 
+
+Disclosures: The authors declare no competing interests. 32 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+20 
+
+# Figure Legend 1
+
+2
+
+Figure 1 Global immune landscape in skin wound and cancer. 3
+
+a. Schematic of experimental procedures for inducing partial thickness wound and 4
+
+spontaneous skin SCCs for analyzing the immune landscape changes. 5
+
+b. UMAP showing the immune cell types identified by scRNA-seq. 6
+
+c. UMAP showing the representation of each major immune population identified in 7
+
+different stages of wound repair and skin cancer progression. 8
+
+d. Stacked bar chart showing the changes in the composition of immune landscape. 9
+
+10 
+
+11 
+
+Figure 2 Global molecular features of macrophages during wound repair and 12 
+
+cancer progression. 13 
+
+a. UMAP showing the major cell states of macrophage identified by scRNA-seq. 14 
+
+b. Heatmap showing the markers enriched in each identified macrophage cluster. 15 
+
+c. Bubble heatmap showing the expression pattern of markers that are associated with 16 
+
+either pro-inflammatory (M1-like) or anti-inflammatory (M2-like) in each identified 17 
+
+macrophage cluster. 18 
+
+19 
+
+20 
+
+21 
+
+Figure 3 Dynamic molecular features of macrophages during wound repair. 22 
+
+a. UMAP showing the dynamic changes of each major macrophage subpopulation 23 
+
+during different stages of wound repair. 24 
+
+b. UMAP showing the expression pattern of pro-inflammatory ( H2-Ab1 or Cd86 ) or anti-25 
+
+inflammatory ( Il10 or Arg1 ) genes in major macrophage subpopulations present in 26 
+
+different stages of wound repair. 27 
+
+c to e. Bubble heatmap showing the transcripts of genes encoding important factors 28 
+
+promoting ( c) inflammation, ( d) lipid metabolism, and ( e) various functional states of 29 
+
+macrophages during different stages of wound repair. 30 
+
+31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+21 
+
+1
+
+Figure 4 Evolving molecular features of macrophages during cancer progression. 2
+
+a. UMAP showing the evolving changes of each major macrophage subpopulation 3
+
+during different stages of skin cancer progression. 4
+
+b. UMAP showing the expression pattern of pro-inflammatory ( H2-Ab1 or Cd86 ) or anti-5
+
+inflammatory ( Il10 or Cd274 ) genes in major macrophage subpopulations present in 6
+
+different stages of skin cancer progression. 7
+
+c to f. Bubble heatmap showing the transcripts of genes encoding important factors 8
+
+promoting (c) interferon response, (d) inflammation, (e) various functions of 9
+
+macrophages, and (f) lipid metabolism during different stages of skin cancer 10 
+
+progression. 11 
+
+12 
+
+13 
+
+Figure 5. Comparative analysis of molecular signatures of macrophages in wound 14 
+
+and cancer. 15 
+
+a. UMAP showing the overlaid macrophage subpopulation found in wound and cancer. 16 
+
+b. Stacked bar chart comparing the changes in the composition of macrophage 17 
+
+population in wound and cancer. 18 
+
+c. RNA velocity analysis of potential developmental trajectory and relationship among 19 
+
+various macrophage clusters identified in wound and in cancers. 20 
+
+d. Bubble heatmap showing the transcripts of inflammatory genes in the major 21 
+
+macrophage clusters that are distinctively present in wound (C2, C3, and C4) and 22 
+
+cancer (C4, C5 and C6). 23 
+
+e and f. UMAP showing the expression pattern of ( e) anti-oxidant ( Gss or Gclm ) or ( f)24 
+
+immune suppression ( Tgfβ1, Cd274, Mmp13, or Il10 ) genes in major macrophage 25 
+
+subpopulations present in different stages of wound healing or skin cancer 26 
+
+progression. 27 
+
+g. Chord diagram showing the up-regulated lipid metabolism related pathways in the 28 
+
+macrophages found skin SCC compared to macrophage found in skin wounds. 29 
+
+h. Bubble heatmap showing the transcripts of genes encoding important factors 30 
+
+promoting lipid metabolism during different stages of wound healing and skin SCC 31 
+
+progression. 32 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+22 
+
+Figure 6. Ectopic activation of Sox2 in skin epithelium during wound repair induces 1
+
+WAMs to acquire TAM-like signatures 2
+
+a and b. Schematics showing the model for ( a) ectopic activation of Sox2 in normal skin 3
+
+epithelium during wound repair or ( b) genetic ablation of Sox2 in tSCs in spontaneous 4
+
+skin SCCs before the anti-PDL1 + CD40 agonist immunotherapy treatment. 5
+
+c. UMAP showing the composition of macrophage subpopulations in skin SCC. 6
+
+d. UMAP showing expression of various lipid metabolism related genes specifically in 7
+
+the cluster 2 in TAMs. 8
+
+e. UMAP showing the expansion of C2 WAM, but shrinkage of other macrophage 9
+
+subpopulation when Sox2 is ectopically activated in normal skin epithelium during 10 
+
+wound repair. 11 
+
+f. RNA velocity analysis showing the developmental trajectory of other macrophage 12 
+
+clusters towards the C2 WAMs when Sox2 is ectopically activated in normal skin 13 
+
+epithelium during wound repair. 14 
+
+g and h. UMAP showing the upregulation of genes involved in ( g) lipid metabolism and 15 
+
+(h) immune suppression in C2 WAMs when Sox2 is ectopically activated in normal 16 
+
+skin epithelium during wound repair. 17 
+
+18 
+
+19 
+
+Figure 7. Genetic ablation of Sox2 in tSCs blunt the lipid metabolism and 20 
+
+maintenance of TAMs. 21 
+
+a. Chord diagram showing the reduced enrichment of lipid metabolism related pathways 22 
+
+in the macrophages found skin SCC after depletion Sox2 in epithelial cancer cells, 23 
+
+compared to macrophage found in control tumors. 24 
+
+b. UMAP showing the expression of various lipid metabolism related genes specifically 25 
+
+in the cluster 2 in TAMs with and without depleting Sox2 in epithelial cancer cells. 26 
+
+c. UMAP showing the increased infiltration of CD3 + T cells in skin SCCs with or without 27 
+
+depleting Sox2 .28 
+
+d. UMAP showing the composition of macrophage subpopulations in skin SCC with and 29 
+
+without depleting Sox2 .30 
+
+31 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+23 
+
+# Reference 1
+
+Aran, D., A.P. Looney, L. Liu, E. Wu, V. Fong, A. Hsu, S. Chak, R.P. Naikawadi, P.J. 2
+
+Wolters, A.R. Abate, A.J. Butte, and M. Bhattacharya. 2019. Reference-based 3
+
+analysis of lung single-cell sequencing reveals a transitional profibrotic 4
+
+macrophage. Nat Immunol 20:163-172. 5
+
+Bass, A.J., H. Watanabe, C.H. Mermel, S. Yu, S. Perner, R.G. Verhaak, S.Y. Kim, L. 6
+
+Wardwell, P. Tamayo, I. Gat-Viks, A.H. Ramos, M.S. Woo, B.A. Weir, G. Getz, R. 7
+
+Beroukhim, M. O'Kelly, A. Dutt, O. Rozenblatt-Rosen, P. Dziunycz, J. Komisarof, 8
+
+L.R. Chirieac, C.J. Lafargue, V. Scheble, T. Wilbertz, C. Ma, S. Rao, H. 9
+
+Nakagawa, D.B. Stairs, L. Lin, T.J. Giordano, P. Wagner, J.D. Minna, A.F. 10 
+
+Gazdar, C.Q. Zhu, M.S. Brose, I. Cecconello, U. Ribeiro, Jr., S.K. Marie, O. Dahl, 11 
+
+R.A. Shivdasani, M.S. Tsao, M.A. Rubin, K.K. Wong, A. Regev, W.C. Hahn, D.G. 12 
+
+Beer, A.K. Rustgi, and M. Meyerson. 2009. SOX2 is an amplified lineage-survival 13 
+
+oncogene in lung and esophageal squamous cell carcinomas. Nat Genet 14 
+
+41:1238-1242. 15 
+
+Benguigui, M., T.J. Cooper, P. Kalkar, S. Schif-Zuck, R. Halaban, A. Bacchiocchi, I. 16 
+
+Kamer, A. Deo, B. Manobla, R. Menachem, J. Haj-Shomaly, A. Vorontsova, Z. 17 
+
+Raviv, C. Buxbaum, P. Christopoulos, J. Bar, M. Lotem, M. Sznol, A. Ariel, S.S. 18 
+
+Shen-Orr, and Y. Shaked. 2024. Interferon-stimulated neutrophils as a predictor 19 
+
+of immunotherapy response. Cancer Cell 42:253-265 e212. 20 
+
+Bergen, V., M. Lange, S. Peidli, F.A. Wolf, and F.J. Theis. 2020. Generalizing RNA 21 
+
+velocity to transient cell states through dynamical modeling. Nat Biotechnol 22 
+
+38:1408-1414. 23 
+
+Biswas, S.K., and A. Mantovani. 2010. Macrophage plasticity and interaction with 24 
+
+lymphocyte subsets: cancer as a paradigm. Nat Immunol 11:889-896. 25 
+
+Boumahdi, S., G. Driessens, G. Lapouge, S. Rorive, D. Nassar, M. Le Mercier, B. 26 
+
+Delatte, A. Caauwe, S. Lenglez, E. Nkusi, S. Brohee, I. Salmon, C. Dubois, V. 27 
+
+del Marmol, F. Fuks, B. Beck, and C. Blanpain. 2014. SOX2 controls tumour 28 
+
+initiation and cancer stem-cell functions in squamous-cell carcinoma. Nature 29 
+
+511:246-250. 30 
+
+Casanova-Acebes, M., E. Dalla, A.M. Leader, J. LeBerichel, J. Nikolic, B.M. Morales, M. 31 
+
+Brown, C. Chang, L. Troncoso, S.T. Chen, A. Sastre-Perona, M.D. Park, A. 32 
+
+Tabachnikova, M. Dhainaut, P. Hamon, B. Maier, C.M. Sawai, E. Agullo-Pascual, 33 
+
+M. Schober, B.D. Brown, B. Reizis, T. Marron, E. Kenigsberg, C. Moussion, P. 34 
+
+Benaroch, J.A. Aguirre-Ghiso, and M. Merad. 2021. Tissue-resident 35 
+
+macrophages provide a pro-tumorigenic niche to early NSCLC cells. Nature 36 
+
+595:578-584. 37 
+
+Franklin, R.A., W. Liao, A. Sarkar, M.V. Kim, M.R. Bivona, K. Liu, E.G. Pamer, and M.O. 38 
+
+Li. 2014. The cellular and molecular origin of tumor-associated macrophages. 39 
+
+Science 344:921-925. 40 
+
+Ge, Y., and E. Fuchs. 2018. Stretching the limits: from homeostasis to stem cell 41 
+
+plasticity in wound healing and cancer. Nat Rev Genet 19:311-325. 42 
+
+Ge, Y., N.C. Gomez, R.C. Adam, M. Nikolova, H. Yang, A. Verma, C.P. Lu, L. Polak, S. 43 
+
+Yuan, O. Elemento, and E. Fuchs. 2017. Stem Cell Lineage Infidelity Drives 44 
+
+Wound Repair and Cancer. Cell 169:636-650 e614. 45 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+24 
+
+Gonzales, K.A.U., L. Polak, I. Matos, M.T. Tierney, A. Gola, E. Wong, N.R. Infarinato, 1
+
+M. Nikolova, S. Luo, S. Liu, J.S.S. Novak, K. Lay, H.A. Pasolli, and E. Fuchs. 2
+
+2021. Stem cells expand potency and alter tissue fitness by accumulating diverse 3
+
+epigenetic memories. Science 374:eabh2444. 4
+
+Governa, V., K.G. de Oliveira, A. Bang-Rudenstam, S. Offer, M. Cerezo-Magana, J. Li, 5
+
+S. Beyer, M.C. Johansson, A.S. Mansson, C. Edvardsson, F. Durmo, E. 6
+
+Gustafsson, A. Boukredine, P. Jeannot, K. Schmidt, E. Gezelius, J.A. Menard, R. 7
+
+Garza, J. Jakobsson, T. de Neergaard, P.C. Sundgren, A.M. Tiihonen, H. 8
+
+Haapasalo, K.J. Rautajoki, P. Nordenfelt, A. Darabi, K. Forsberg-Nilsson, A. 9
+
+Pietras, H. Talbot, J. Bengzon, and M. Belting. 2024. Protumoral lipid droplet-10 
+
+loaded macrophages are enriched in human glioblastoma and can be 11 
+
+therapeutically targeted. Sci Transl Med 16:eadk1168. 12 
+
+Gungabeesoon, J., N.A. Gort-Freitas, M. Kiss, E. Bolli, M. Messemaker, M. Siwicki, M. 13 
+
+Hicham, R. Bill, P. Koch, C. Cianciaruso, F. Duval, C. Pfirschke, M. Mazzola, S. 14 
+
+Peters, K. Homicsko, C. Garris, R. Weissleder, A.M. Klein, and M.J. Pittet. 2023. 15 
+
+A neutrophil response linked to tumor control in immunotherapy. Cell 186:1448-16 
+
+1464 e1420. 17 
+
+Guo W, L.J., Huang X, Leon D, Good J, Nicholson B, Owusu-Ofori A, Izumchenko E, 18 
+
+Rosenberg A, Agrawal N, Bertacchi B, Bolotin D, Gunzer M, Ballesteros I, 19 
+
+Hidalgo A, Miao Y. . 2025. Tumor-Initiating Stem Cells Fine-tune the Plasticity of 20 
+
+Neutrophils to Sculpt a Protective Niche. . bioRxiv 2025.04.04.647324 21 
+
+Guo, X., Y. Zhao, H. Yan, Y. Yang, S. Shen, X. Dai, X. Ji, F. Ji, X.G. Gong, L. Li, X. Bai, 22 
+
+X.H. Feng, T. Liang, J. Ji, L. Chen, H. Wang, and B. Zhao. 2017. Single tumor-23 
+
+initiating cells evade immune clearance by recruiting type II macrophages. Genes 24 
+
+Dev 31:247-259. 25 
+
+Han, C., V. Godfrey, Z. Liu, Y. Han, L. Liu, H. Peng, R.R. Weichselbaum, H. Zaki, and 26 
+
+Y.X. Fu. 2021. The AIM2 and NLRP3 inflammasomes trigger IL-1-mediated 27 
+
+antitumor effects during radiation. Sci Immunol 6: 28 
+
+Hao, Y., S. Hao, E. Andersen-Nissen, W.M. Mauck, 3rd, S. Zheng, A. Butler, M.J. Lee, 29 
+
+A.J. Wilk, C. Darby, M. Zager, P. Hoffman, M. Stoeckius, E. Papalexi, E.P. 30 
+
+Mimitou, J. Jain, A. Srivastava, T. Stuart, L.M. Fleming, B. Yeung, A.J. Rogers, 31 
+
+J.M. McElrath, C.A. Blish, R. Gottardo, P. Smibert, and R. Satija. 2021. 32 
+
+Integrated analysis of multimodal single-cell data. Cell 184:3573-3587 e3529. 33 
+
+Hegde, S., B. Giotti, B.Y. Soong, L. Halasz, J. Le Berichel, M.M. Schaefer, B. 34 
+
+Kloeckner, R. Mattiuz, M.D. Park, A. Magen, A. Marks, M. Belabed, P. Hamon, T. 35 
+
+Chin, L. Troncoso, J.J. Lee, K. Fan, D. Ahimovic, M.J. Bale, K. Nie, G. Chung, D. 36 
+
+D'Souza, K. Angeliadis, S. Kim-Schulze, R.M. Flores, A.J. Kaufman, F. Ginhoux, 37 
+
+J.D. Buenrostro, S.Z. Josefowicz, A.M. Tsankov, T.U. Marron, S. Ma, B.D. 38 
+
+Brown, and M. Merad. 2025. Myeloid progenitor dysregulation fuels 39 
+
+immunosuppressive macrophages in tumours. Nature 40 
+
+Hu, K.H., N.F. Kuhn, T. Courau, J. Tsui, B. Samad, P. Ha, J.R. Kratz, A.J. Combes, and 41 
+
+M.F. Krummel. 2023. Transcriptional space-time mapping identifies concerted 42 
+
+immune and stromal cell patterns and gene programs in wound healing and 43 
+
+cancer. Cell Stem Cell 30:885-903 e810. 44 
+
+Huang, P.Y., E. Kandyba, A. Jabouille, J. Sjolund, A. Kumar, K. Halliwill, M. McCreery, 45 
+
+R. DelRosario, H.C. Kang, C.E. Wong, J. Seibler, V. Beuger, M. Pellegrino, A. 46 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+25 
+
+Sciambi, D.J. Eastburn, and A. Balmain. 2017. Lgr6 is a stem cell marker in 1
+
+mouse skin squamous cell carcinoma. Nat Genet 49:1624-1632. 2
+
+Jing, L., Y. An, T. Cai, J. Xiang, B. Li, J. Guo, X. Ma, L. Wei, Y. Tian, X. Cheng, X. 3
+
+Chen, Z. Liu, J. Feng, F. Yang, X. Yan, and H. Duan. 2023. A subpopulation of 4
+
+CD146(+) macrophages enhances antitumor immunity by activating the NLRP3 5
+
+inflammasome. Cell Mol Immunol 20:908-923. 6
+
+Kartal, B., C.S. Garris, H.S. Kim, R.H. Kohler, J. Carrothers, E.A. Halabi, Y. Iwamoto, 7
+
+A.G. Goubet, Y. Xie, P. Wirapati, M.J. Pittet, and R. Weissleder. 2025. Targeted 8
+
+SPP1 Inhibition of Tumor-Associated Myeloid Cells Effectively Decreases Tumor 9
+
+Sizes. Adv Sci (Weinh) 12:e2410360. 10 
+
+Katzenelenbogen, Y., F. Sheban, A. Yalin, I. Yofe, D. Svetlichnyy, D.A. Jaitin, C. 11 
+
+Bornstein, A. Moshe, H. Keren-Shaul, M. Cohen, S.Y. Wang, B. Li, E. David, 12 
+
+T.M. Salame, A. Weiner, and I. Amit. 2020. Coupled scRNA-Seq and Intracellular 13 
+
+Protein Activity Reveal an Immunosuppressive Role of TREM2 in Cancer. Cell 14 
+
+182:872-885 e819. 15 
+
+Kloosterman, D.J., J. Erbani, M. Boon, M. Farber, S.M. Handgraaf, M. Ando-Kuri, E. 16 
+
+Sanchez-Lopez, B. Fontein, M. Mertz, M. Nieuwland, N.Q. Liu, G. Forn-Cuni, 17 
+
+N.N. van der Wel, A.E. Grootemaat, L. Reinalda, S.I. van Kasteren, E. de Wit, B. 18 
+
+Ruffell, E. Snaar-Jagalska, K. Petrecca, D. Brandsma, A. Kros, M. Giera, and L. 19 
+
+Akkari. 2024. Macrophage-mediated myelin recycling fuels brain cancer 20 
+
+malignancy. Cell 187:5336-5356 e5330. 21 
+
+Lapouge, G., K.K. Youssef, B. Vokaer, Y. Achouri, C. Michaux, P.A. Sotiropoulou, and 22 
+
+C. Blanpain. 2011. Identifying the cellular origin of squamous skin tumors. Proc 23 
+
+Natl Acad Sci U S A 108:7431-7436. 24 
+
+Liu, K., M. Jiang, Y. Lu, H. Chen, J. Sun, S. Wu, W.Y. Ku, H. Nakagawa, Y. Kita, S. 25 
+
+Natsugoe, J.H. Peters, A. Rustgi, M.W. Onaitis, A. Kiernan, X. Chen, and J. Que. 26 
+
+2013. Sox2 cooperates with inflammation-mediated Stat3 activation in the 27 
+
+malignant transformation of foregut basal progenitor cells. Cell Stem Cell 12:304-28 
+
+315. 29 
+
+Locati, M., G. Curtale, and A. Mantovani. 2020. Diversity, Mechanisms, and 30 
+
+Significance of Macrophage Plasticity. Annu Rev Pathol 15:123-147. 31 
+
+Love, M.I., W. Huber, and S. Anders. 2014. Moderated estimation of fold change and 32 
+
+dispersion for RNA-seq data with DESeq2. Genome Biol 15:550. 33 
+
+Lu, H., K.R. Clauser, W.L. Tam, J. Frose, X. Ye, E.N. Eaton, F. Reinhardt, V.S. 34 
+
+Donnenberg, R. Bhargava, S.A. Carr, and R.A. Weinberg. 2014. A breast cancer 35 
+
+stem cell niche supported by juxtacrine signalling from monocytes and 36 
+
+macrophages. Nat Cell Biol 16:1105-1117. 37 
+
+Luan, J., C. Truong, A. Vuchkovska, W. Guo, J. Good, B. Liu, A. Gang, N. Infarinato, K. 38 
+
+Stewart, L. Polak, H.A. Pasolli, E. Andretta, A.Y. Rudensky, E. Fuchs, and Y. 39 
+
+Miao. 2024. CD80 on skin stem cells promotes local expansion of regulatory T 40 
+
+cells upon injury to orchestrate repair within an inflammatory environment. 41 
+
+Immunity 42 
+
+Marelli, G., N. Morina, F. Portale, M. Pandini, M. Iovino, G. Di Conza, P.C. Ho, and D. 43 
+
+Di Mitri. 2022. Lipid-loaded macrophages as new therapeutic target in cancer. J44 
+
+Immunother Cancer 10: 45 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+26 
+
+Miao, Y., H. Yang, J. Levorse, S. Yuan, L. Polak, M. Sribour, B. Singh, M.D. 1
+
+Rosenblum, and E. Fuchs. 2019. Adaptive Immune Resistance Emerges from 2
+
+Tumor-Initiating Stem Cells. Cell 177:1172-1186 e1114. 3
+
+Molgora, M., E. Esaulova, W. Vermi, J. Hou, Y. Chen, J. Luo, S. Brioschi, M. Bugatti, 4
+
+A.S. Omodei, B. Ricci, C. Fronick, S.K. Panda, Y. Takeuchi, M.M. Gubin, R. 5
+
+Faccio, M. Cella, S. Gilfillan, E.R. Unanue, M.N. Artyomov, R.D. Schreiber, and 6
+
+M. Colonna. 2020. TREM2 Modulation Remodels the Tumor Myeloid Landscape 7
+
+Enhancing Anti-PD-1 Immunotherapy. Cell 182:886-900 e817. 8
+
+Mosser, D.M., and J.P. Edwards. 2008. Exploring the full spectrum of macrophage 9
+
+activation. Nat Rev Immunol 8:958-969. 10 
+
+Murray, P.J., J.E. Allen, S.K. Biswas, E.A. Fisher, D.W. Gilroy, S. Goerdt, S. Gordon, 11 
+
+J.A. Hamilton, L.B. Ivashkiv, T. Lawrence, M. Locati, A. Mantovani, F.O. 12 
+
+Martinez, J.L. Mege, D.M. Mosser, G. Natoli, J.P. Saeij, J.L. Schultze, K.A. 13 
+
+Shirey, A. Sica, J. Suttles, I. Udalova, J.A. van Ginderachter, S.N. Vogel, and 14 
+
+T.A. Wynn. 2014. Macrophage activation and polarization: nomenclature and 15 
+
+experimental guidelines. Immunity 41:14-20. 16 
+
+Naik, S., and E. Fuchs. 2022. Inflammatory memory and tissue adaptation in sickness 17 
+
+and in health. Nature 607:249-255. 18 
+
+Nassar, D., M. Latil, B. Boeckx, D. Lambrechts, and C. Blanpain. 2015. Genomic 19 
+
+landscape of carcinogen-induced and genetically induced mouse skin squamous 20 
+
+cell carcinoma. Nat Med 21:946-954. 21 
+
+Oshimori, N., D. Oristian, and E. Fuchs. 2015. TGF-beta promotes heterogeneity and 22 
+
+drug resistance in squamous cell carcinoma. Cell 160:963-976. 23 
+
+Quintanilla, M., K. Brown, M. Ramsden, and A. Balmain. 1986. Carcinogen-specific 24 
+
+mutation and amplification of Ha-ras during mouse skin carcinogenesis. Nature 25 
+
+322:78-80. 26 
+
+Raghavan, S., P. Mehta, Y. Xie, Y.L. Lei, and G. Mehta. 2019. Ovarian cancer stem 27 
+
+cells and macrophages reciprocally interact through the WNT pathway to 28 
+
+promote pro-tumoral and malignant phenotypes in 3D engineered 29 
+
+microenvironments. J Immunother Cancer 7:190. 30 
+
+Ricci-Vitiani, L., D.G. Lombardi, E. Pilozzi, M. Biffoni, M. Todaro, C. Peschle, and R. De 31 
+
+Maria. 2007. Identification and expansion of human colon-cancer-initiating cells. 32 
+
+Nature 445:111-115. 33 
+
+Rosenberg, A.B., C.M. Roco, R.A. Muscat, A. Kuchina, P. Sample, Z. Yao, L.T. 34 
+
+Graybuck, D.J. Peeler, S. Mukherjee, W. Chen, S.H. Pun, D.L. Sellers, B. Tasic, 35 
+
+and G. Seelig. 2018. Single-cell profiling of the developing mouse brain and 36 
+
+spinal cord with split-pool barcoding. Science 360:176-182. 37 
+
+Shen, C., J.H. Chen, H.R. Oh, and J.H. Park. 2021. Transcription factor SOX2 38 
+
+contributes to nonalcoholic fatty liver disease development by regulating the 39 
+
+expression of the fatty acid transporter CD36. FEBS Lett 595:2493-2503. 40 
+
+Shen, C., H.R. Oh, Y.R. Park, S. Oh, and J.H. Park. 2025. Soluble DPP4 promotes 41 
+
+hepatocyte lipid accumulation via SOX2-SCD1 signaling and counteracts DPP4 42 
+
+inhibition. Biochem Biophys Res Commun 756:151521. 43 
+
+Shook, B., E. Xiao, Y. Kumamoto, A. Iwasaki, and V. Horsley. 2016. CD301b+ 44 
+
+Macrophages Are Essential for Effective Skin Wound Healing. J Invest Dermatol 45 
+
+136:1885-1891. 46 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+27 
+
+Shook, B.A., R.R. Wasko, G.C. Rivera-Gonzalez, E. Salazar-Gatzimas, F. Lopez-1
+
+Giraldez, B.C. Dash, A.R. Munoz-Rojas, K.D. Aultman, R.K. Zwick, V. Lei, J.L. 2
+
+Arbiser, K. Miller-Jensen, D.A. Clark, H.C. Hsia, and V. Horsley. 2018. 3
+
+Myofibroblast proliferation and heterogeneity are supported by macrophages 4
+
+during skin repair. Science 362: 5
+
+Singh, S.K., C. Hawkins, I.D. Clarke, J.A. Squire, J. Bayani, T. Hide, R.M. Henkelman, 6
+
+M.D. Cusimano, and P.B. Dirks. 2004. Identification of human brain tumour 7
+
+initiating cells. Nature 432:396-401. 8
+
+Sun, L., T. Kees, A.S. Almeida, B. Liu, X.Y. He, D. Ng, X. Han, D.L. Spector, I.A. 9
+
+McNeish, P. Gimotty, S. Adams, and M. Egeblad. 2021. Activating a collaborative 10 
+
+innate-adaptive immune response to control metastasis. Cancer Cell 39:1361-11 
+
+1374 e1369. 12 
+
+Sun, R., R. Han, C. McCornack, S. Khan, G.T. Tabor, Y. Chen, J. Hou, H. Jiang, K.M. 13 
+
+Schoch, D.D. Mao, R. Cleary, A. Yang, Q. Liu, J. Luo, A. Petti, T.M. Miller, J.D. 14 
+
+Ulrich, D.M. Holtzman, and A.H. Kim. 2023. TREM2 inhibition triggers antitumor 15 
+
+cell activity of myeloid cells in glioblastoma. Sci Adv 9:eade3559. 16 
+
+Taniguchi, S., A. Elhance, A. Van Duzer, S. Kumar, J.J. Leitenberger, and N. Oshimori. 17 
+
+2020. Tumor-initiating cells establish an IL-33-TGF-beta niche signaling loop to 18 
+
+promote cancer progression. Science 369: 19 
+
+Vannella, K.M., and T.A. Wynn. 2017. Mechanisms of Organ Injury and Repair by 20 
+
+Macrophages. Annu Rev Physiol 79:593-617. 21 
+
+Vanner, R.J., M. Remke, M. Gallo, H.J. Selvadurai, F. Coutinho, L. Lee, M. Kushida, R. 22 
+
+Head, S. Morrissy, X. Zhu, T. Aviv, V. Voisin, I.D. Clarke, Y. Li, A.J. Mungall, R.A. 23 
+
+Moore, Y. Ma, S.J. Jones, M.A. Marra, D. Malkin, P.A. Northcott, M. Kool, S.M. 24 
+
+Pfister, G. Bader, K. Hochedlinger, A. Korshunov, M.D. Taylor, and P.B. Dirks. 25 
+
+2014. Quiescent sox2(+) cells drive hierarchical growth and relapse in sonic 26 
+
+hedgehog subgroup medulloblastoma. Cancer Cell 26:33-47. 27 
+
+Wang, Z., R. Dai, L. Kang, H. Yang, Z. Chen, J. He, L. Shu, Y. Zhong, Y. Zhang, Z. 28 
+
+Hua, Y. Huang, Y. Jiang, J. Li, L. Xu, F. Lan, S.H. Lin, and J. Wong. 2025. SOX2 29 
+
+drives esophageal squamous carcinoma by reprogramming lipid metabolism and 30 
+
+histone acetylation landscape. Nat Commun 16:8190. 31 
+
+Weiss, J.M., L.A. Ridnour, T. Back, S.P. Hussain, P. He, A.E. Maciag, L.K. Keefer, W.J. 32 
+
+Murphy, C.C. Harris, D.A. Wink, and R.H. Wiltrout. 2010. Macrophage-dependent 33 
+
+nitric oxide expression regulates tumor cell detachment and metastasis after IL-34 
+
+2/anti-CD40 immunotherapy. J Exp Med 207:2455-2467. 35 
+
+Wynn, T.A., A. Chawla, and J.W. Pollard. 2013. Macrophage biology in development, 36 
+
+homeostasis and disease. Nature 496:445-455. 37 
+
+Wynn, T.A., and K.M. Vannella. 2016. Macrophages in Tissue Repair, Regeneration, 38 
+
+and Fibrosis. Immunity 44:450-462. 39 
+
+Zhivaki, D., and J.C. Kagan. 2021. NLRP3 inflammasomes that induce antitumor 40 
+
+immunity. Trends Immunol 42:575-589. 41 
+
+42 
+
+43 
+
+44 
+
+45 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
+
+.CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 6, 2026. ;https://doi.org/10.64898/2026.04.02.716187 doi: bioRxiv preprint
