@@ -6,52 +6,58 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-04-10
-- 运行时间：2026-04-10 20:06:45 UTC
+- 最新运行日期：2026-04-11
+- 运行时间：2026-04-11 20:15:03 UTC
 - 运行状态：成功
-- 本次总论文数：10
-- 精读区：4
-- 速读区：6
+- 本次总论文数：12
+- 精读区：2
+- 速读区：10
 
 ### 今日简报（AI）
-今日精选10篇前沿文献，深度解析巨噬细胞在肿瘤代谢、肾纤维化及免疫耐药中的核心调控机制。
-重点揭示了肿瘤干细胞与巨噬细胞间的代谢对话，以及sPRR信号轴通过AT1R/Yap/Taz通路驱动肾脏纤维化的新路径。
-建议关注单细胞测序在解析复杂组织微环境及饮食代谢干预（如色氨酸代谢）中的临床转化潜力。
-- 详情：[/202604/10/README](/202604/10/README)
+今日聚焦12篇免疫与修复前沿，深度剖析巨噬细胞在肾脏纤维化及神经再生中的核心调控作用。
+重点关注sPRR通过AT1R/Yap/Taz轴诱导肾损伤，以及SARM1驱动巨噬细胞表型转换以促进神经修复的突破性发现。
+建议读者留意饮食代谢物（如色氨酸）与免疫信号轴在多器官损伤防治中的潜在应用价值。
+- 详情：[/202604/11/README](/202604/11/README)
 
 ### 精读区论文标签
-1. [Comparative single cell analysis of wound and cancer identifies the metabolic dialogues between tumor initiating stem cells and macrophages](/202604/10/biorxiv-10-64898-2026-04-02-716187-v1-comparative-single-cell-analysis-of-wound-and-cancer-identifies-the-metabolic-dialogues-between-tumor-initiating-stem-cells-and-macrophages)  
-   标签：评分：8.0/10、query:ros-mp
-   evidence：巨噬细胞程序和代谢对话的比较分析
-2. [sPRR signaling in macrophages via the AT1R/Yap/Taz axis to induce renal fibrosis](/202604/10/biorxiv-10-64898-2026-04-03-716436-v1-sprr-signaling-in-macrophages-via-the-at1ryaptaz-axis-to-induce-renal-fibrosis)  
-   标签：评分：8.0/10、query:ros-mp
-   evidence：sPRR依赖性替代巨噬细胞激活和M1/M2标志物
-3. [Effects of a single-session high-frequency repetitive magnetic stimulation on the autophagy marker LC3 and on LPS-induced inflammation in THP-1-derived macrophages](/202604/10/biorxiv-10-64898-2026-04-07-716903-v1-effects-of-a-single-session-high-frequency-repetitive-magnetic-stimulation-on-the-autophagy-marker-lc3-and-on-lps-induced-inflammation-in-thp-1-derived-macrophages)  
-   标签：评分：8.0/10、query:ros-mp
-   evidence：磁刺激调节巨噬细胞的炎症和氧化应激
-4. [SARM1 is required for macrophage immunophenotype switching that is essential for nerve repair](/202604/10/biorxiv-10-64898-2026-04-07-716973-v1-sarm1-is-required-for-macrophage-immunophenotype-switching-that-is-essential-for-nerve-repair)  
-   标签：评分：8.0/10、query:ros-mp
+1. [sPRR signaling in macrophages via the AT1R/Yap/Taz axis to induce renal fibrosis](/202604/11/biorxiv-10-64898-2026-04-03-716436-v1-sprr-signaling-in-macrophages-via-the-at1ryaptaz-axis-to-induce-renal-fibrosis)  
+   标签：评分：8.5/10、query:ros-mp
+   evidence：sPRR依赖性巨噬细胞替代激活及M1/M2标志物
+2. [SARM1 is required for macrophage immunophenotype switching that is essential for nerve repair](/202604/11/biorxiv-10-64898-2026-04-07-716973-v1-sarm1-is-required-for-macrophage-immunophenotype-switching-that-is-essential-for-nerve-repair)  
+   标签：评分：8.5/10、query:ros-mp
    evidence：SARM1是巨噬细胞免疫表型转换所必需的
 
 ### 速读区论文标签
-1. [Single-cell trajectories in metastatic urothelial carcinoma reveal tumor-immune reprogramming and macrophage-driven resistance to PD-(L)1 blockade](/202604/10/biorxiv-10-64898-2026-03-31-715549-v1-single-cell-trajectories-in-metastatic-urothelial-carcinoma-reveal-tumor-immune-reprogramming-and-macrophage-driven-resistance-to-pd-l1-blockade)  
-   标签：评分：7.5/10、query:ros-mp
-   evidence：向促肿瘤巨噬细胞状态极化
-2. [Dietary tryptophan mitigates lung ischemia-reperfusion injury via microbiota-derived indole-3-propionate and aryl hydrocarbon receptor signaling](/202604/10/biorxiv-10-64898-2026-04-02-714281-v1-dietary-tryptophan-mitigates-lung-ischemia-reperfusion-injury-via-microbiota-derived-indole-3-propionate-and-aryl-hydrocarbon-receptor-signaling)  
-   标签：评分：7.5/10、query:ros-mp
+1. [Neutrophil Fc gamma RI expression as a determinant of oxidative responses in human blood](/202604/11/biorxiv-10-1101-2025-10-01-679808-v2-neutrophil-fc-gamma-ri-expression-as-a-determinant-of-oxidative-responses-in-human-blood)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：Fc受体上调和活性氧（ROS）产生
+2. [Metabolic Drivers of Disease Activity and Complications in Crohns Disease: A Retrospective Cross-Sectional Study](/202604/11/biorxiv-10-64898-2026-04-01-715942-v1-metabolic-drivers-of-disease-activity-and-complications-in-crohns-disease-a-retrospective-cross-sectional-study)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：关于克罗恩病患者临床结果和疾病活动度的研究
+3. [Dietary tryptophan mitigates lung ischemia-reperfusion injury via microbiota-derived indole-3-propionate and aryl hydrocarbon receptor signaling](/202604/11/biorxiv-10-64898-2026-04-02-714281-v1-dietary-tryptophan-mitigates-lung-ischemia-reperfusion-injury-via-microbiota-derived-indole-3-propionate-and-aryl-hydrocarbon-receptor-signaling)  
+   标签：评分：7.0/10、query:ros-mp
    evidence：重编程肺泡巨噬细胞炎症反应
-3. [Neutrophil Fc gamma RI expression as a determinant of oxidative responses in human blood](/202604/10/biorxiv-10-1101-2025-10-01-679808-v2-neutrophil-fc-gamma-ri-expression-as-a-determinant-of-oxidative-responses-in-human-blood)  
+4. [Comparative single cell analysis of wound and cancer identifies the metabolic dialogues between tumor initiating stem cells and macrophages](/202604/11/biorxiv-10-64898-2026-04-02-716187-v1-comparative-single-cell-analysis-of-wound-and-cancer-identifies-the-metabolic-dialogues-between-tumor-initiating-stem-cells-and-macrophages)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：Fc gamma RI 上调和活性氧 (ROS) 生成
-4. [Atf3 Integrates Lipid and Cytoskeletal Remodeling to Drive Macrophage Fusion](/202604/10/biorxiv-10-64898-2026-04-01-715652-v1-atf3-integrates-lipid-and-cytoskeletal-remodeling-to-drive-macrophage-fusion)  
+   evidence：描绘伤口愈合和癌症过程中巨噬细胞的动态细胞状态
+5. [Effects of a single-session high-frequency repetitive magnetic stimulation on the autophagy marker LC3 and on LPS-induced inflammation in THP-1-derived macrophages](/202604/11/biorxiv-10-64898-2026-04-07-716903-v1-effects-of-a-single-session-high-frequency-repetitive-magnetic-stimulation-on-the-autophagy-marker-lc3-and-on-lps-induced-inflammation-in-thp-1-derived-macrophages)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：Atf3 调节巨噬细胞可塑性和融合
-5. [Metabolic Drivers of Disease Activity and Complications in Crohns Disease: A Retrospective Cross-Sectional Study](/202604/10/biorxiv-10-64898-2026-04-01-715942-v1-metabolic-drivers-of-disease-activity-and-complications-in-crohns-disease-a-retrospective-cross-sectional-study)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：关于克罗恩病疾病活动度和并发症的回顾性研究
-6. [A Rapidly Excretable, ROS-Scavenging Ionizable Lipid Decouples mRNA Delivery Potency from Toxicity](/202604/10/biorxiv-10-64898-2026-04-07-716828-v1-a-rapidly-excretable-ros-scavenging-ionizable-lipid-decouples-mrna-delivery-potency-from-toxicity)  
+   evidence：调节THP-1衍生巨噬细胞的氧化应激和炎症
+6. [A PTM Regulatory Enzyme Co expression Code Defines Microglial Functional Heterogeneity in Cerebral Ischemia Reperfusion Injury](/202604/11/biorxiv-10-64898-2026-04-07-716960-v1-a-ptm-regulatory-enzyme-co-expression-code-defines-microglial-functional-heterogeneity-in-cerebral-ischemia-reperfusion-injury)  
    标签：评分：6.5/10、query:ros-mp
-   evidence：清除ROS的可电离脂质抑制氧化应激
+   evidence：控制小胶质细胞表型转变的分子机制
+7. [Attomolar fecal cytokine profiling reveals gut immune dynamics and disease states](/202604/11/biorxiv-10-64898-2026-03-31-714463-v2-attomolar-fecal-cytokine-profiling-reveals-gut-immune-dynamics-and-disease-states)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：超灵敏粪便细胞因子分析用于追踪肠道免疫动态
+8. [Colonic metabolomic and transcriptomic alterations in a mouse model of metabolic syndrome](/202604/11/biorxiv-10-64898-2026-04-02-716131-v1-colonic-metabolomic-and-transcriptomic-alterations-in-a-mouse-model-of-metabolic-syndrome)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：代谢综合征中的结肠微环境和转录组改变
+9. [Longitudinal Single-Cell RNA-seq Profiling of Lung Cell Phenotypes, Signaling, and Cross-talk During Fibrosis Resolution](/202604/11/biorxiv-10-64898-2026-04-06-716772-v1-longitudinal-single-cell-rna-seq-profiling-of-lung-cell-phenotypes-signaling-and-cross-talk-during-fibrosis-resolution)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：炎症消退期间巨噬细胞表型和信号传导的纵向分析
+10. [A Rapidly Excretable, ROS-Scavenging Ionizable Lipid Decouples mRNA Delivery Potency from Toxicity](/202604/11/biorxiv-10-64898-2026-04-07-716828-v1-a-rapidly-excretable-ros-scavenging-ionizable-lipid-decouples-mrna-delivery-potency-from-toxicity)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：硫部分作为内在的活性氧清除剂来抑制氧化应激
 
 
 <div class="dpr-home-promo-card">
