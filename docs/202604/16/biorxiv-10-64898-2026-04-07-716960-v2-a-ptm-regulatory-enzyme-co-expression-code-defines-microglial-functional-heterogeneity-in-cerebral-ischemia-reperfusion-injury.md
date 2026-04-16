@@ -1,0 +1,30 @@
+---
+title: A PTM Regulatory Enzyme Co expression Code Defines Microglial Functional Heterogeneity in Cerebral Ischemia Reperfusion Injury
+title_zh: 翻译后修饰调节酶共表达密码定义了脑缺血再灌注损伤中小胶质细胞的功能异质性
+authors: "Li, Y., Li, H., Zhang, M."
+date: 2026-04-12
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.07.716960v2.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 控制小胶质细胞表型转变的分子机制
+tldr: 本研究旨在探讨脑缺血再灌注损伤（CIRI）中，翻译后修饰（PTM）调节酶如何定义小胶质细胞的功能异质性。通过分析多套单细胞转录组数据并利用非负矩阵分解（NMF）方法，研究者识别出代谢应激、促炎和修复三种PTM酶共表达模块。这些模块展现了独特的时空动态变化和性别差异，为理解中风后神经炎症的分子机制提供了“PTM酶密码”框架，并指出了潜在的阶段性治疗靶点。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-001.webp\", \"caption\": \"\", \"page\": 14, \"index\": 1, \"width\": 10752, \"height\": 9984}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-002.webp\", \"caption\": \"\", \"page\": 15, \"index\": 2, \"width\": 4608, \"height\": 3840}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-003.webp\", \"caption\": \"\", \"page\": 16, \"index\": 3, \"width\": 6144, \"height\": 4608}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-004.webp\", \"caption\": \"\", \"page\": 17, \"index\": 4, \"width\": 6144, \"height\": 5376}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-005.webp\", \"caption\": \"\", \"page\": 18, \"index\": 5, \"width\": 6144, \"height\": 4608}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-006.webp\", \"caption\": \"\", \"page\": 19, \"index\": 6, \"width\": 4608, \"height\": 6144}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-007.webp\", \"caption\": \"\", \"page\": 20, \"index\": 7, \"width\": 7680, \"height\": 6144}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-008.webp\", \"caption\": \"\", \"page\": 21, \"index\": 8, \"width\": 1920, \"height\": 2304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-009.webp\", \"caption\": \"\", \"page\": 22, \"index\": 9, \"width\": 6144, \"height\": 3840}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-010.webp\", \"caption\": \"\", \"page\": 23, \"index\": 10, \"width\": 4608, \"height\": 3072}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-011.webp\", \"caption\": \"\", \"page\": 24, \"index\": 11, \"width\": 3840, \"height\": 3072}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-07-716960-v2/fig-012.webp\", \"caption\": \"\", \"page\": 25, \"index\": 12, \"width\": 8304, \"height\": 6187}]"
+motivation: 旨在揭示翻译后修饰（PTM）调节酶的共表达模式如何驱动脑缺血再灌注损伤中小胶质细胞的功能状态转变。
+method: 整合多套单细胞转录组数据集，利用非负矩阵分解（NMF）识别PTM酶共表达模块，并结合伪时间分析和独立验证评估其时空动态。
+result: 鉴定出代谢应激（M1）、促炎（M2）和修复（M3）三个具有显著时空演变特征和性别差异的PTM酶共表达模块。
+conclusion: PTM酶共表达模块定义了小胶质细胞在CIRI中的异质性状态，验证了“PTM酶密码”假设并为中风治疗提供了新靶点。
+---
+
+## 摘要
+背景：脑缺血再灌注损伤（CIRI）是急性缺血性卒中血管再通治疗后预后不良的主要决定因素。小胶质细胞的功能异质性是神经炎症的基础，但控制小胶质细胞表型转变的分子机制尚不完全清楚。代谢物驱动的翻译后修饰（PTMs）已成为小胶质细胞代谢和炎症的关键调节因子，但PTM调节酶是否形成定义小胶质细胞状态的共表达模块尚不清楚。方法：我们分析了来自五个GEO研究（GSE174574、GSE227651、GSE245386、GSE267240、GSE319237）的单细胞RNA测序数据集，涵盖了tMCAO再灌注和永久性缺血模型。通过双重过滤（P2ry12/Tmem119/Cx3cr1+，Cd68/Adgre1/Ly6c-）纯化小胶质细胞。利用非负矩阵分解（NMF）识别PTM酶共表达模块。通过跨时间点（假手术组、1天、3天、7天）的模块投影和拟时序分析评估时空动态。在另一个tMCAO数据集（GSE245386）中进行了独立验证。在混合性别的永久性缺血数据集（GSE267240）中探讨了性别差异。结果：识别出三个稳健的PTM酶共表达模块：代谢应激相关模块（M1）、促炎相关模块（M2）和修复相关模块（M3）。M1富集于三羧酸（TCA）循环酶，M2富集于炎症通路（白细胞激活、趋化作用），M3富集于血管发育和翻译。模块比例和评分显示出动态转变：再灌注后M1减少，M2在第1-3天达到峰值，M3在第7天略有增加。在GSE245386中的独立验证显示出高度的模块保守性（余弦相似度 = 0.874）。在永久性缺血中观察到模块分布的性别差异（χ2 = 14.98, p = 0.00056）。结论：PTM酶共表达模块描绘了CIRI中小胶质细胞的代谢、促炎和修复状态，并具有独特的时空动态。这一转录框架支持了“PTM酶密码”假设，并为卒中治疗提供了阶段特异性的靶点。
+
+## Abstract
+BackgroundCerebral ischemia-reperfusion injury (CIRI) is a major determinant of poor outcome after recanalization therapy in acute ischemic stroke. Microglial functional heterogeneity underpins neuroinflammation, yet the molecular mechanisms governing microglial phenotypic transitions remain incompletely understood. Metabolite-driven post-translational modifications (PTMs) have emerged as key regulators of microglial metabolism and inflammation, but whether PTM regulatory enzymes form co-expression modules that define microglial states is unknown.
+
+MethodsWe analyzed single-cell RNA-seq datasets from five GEO studies (GSE174574, GSE227651, GSE245386, GSE267240, GSE319237) covering tMCAO reperfusion and permanent ischemia models. Microglia were purified using double filtration (P2ry12/Tmem119/Cx3cr1+, Cd68/Adgre1/Ly6c-). PTM enzyme co-expression modules were identified by non-negative matrix factorization (NMF). Spatiotemporal dynamics were assessed by module projection across timepoints (Sham, 1d, 3d, 7d) and pseudotime analysis. Independent validation was performed in an additional tMCAO dataset (GSE245386). Sex differences were explored in a mixed-sex permanent ischemia dataset (GSE267240).
+
+ResultsThree robust PTM enzyme co-expression modules were identified: Metabolic stress-associated (M1), Pro-inflammatory-associated (M2), and Reparative-associated (M3). M1 was enriched in TCA cycle enzymes, M2 in inflammatory pathways (leukocyte activation, chemotaxis), and M3 in vascular development and translation. Module proportions and scores showed dynamic transitions: M1 decreased after reperfusion, M2 peaked at day 1-3, and M3 slightly increased at day 7. Independent validation in GSE245386 yielded high module conservation (cosine similarity = 0.874). Sex-specific differences in module distribution were observed in permanent ischemia ({chi}2 = 14.98, p = 0.00056).
+
+ConclusionsPTM enzyme co-expression modules delineate metabolic, pro-inflammatory, and reparative microglial states in CIRI with distinct spatiotemporal dynamics. This transcriptional framework supports the "PTM enzyme code" hypothesis and provides stage-specific targets for stroke therapy.
