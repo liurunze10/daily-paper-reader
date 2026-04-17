@@ -6,64 +6,67 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-04-16
-- 运行时间：2026-04-16 20:36:39 UTC
+- 最新运行日期：2026-04-17
+- 运行时间：2026-04-17 20:36:04 UTC
 - 运行状态：成功
-- 本次总论文数：14
-- 精读区：3
+- 本次总论文数：15
+- 精读区：4
 - 速读区：11
 
 ### 今日简报（AI）
-今日聚焦巨噬细胞极化与代谢重塑，深度解析其在神经修复与肾盂肾炎中的核心机制。
-重点发现SARM1是神经修复中免疫表型转换的关键，而乳酸代谢则驱动了特定巨噬细胞的极化。
-建议关注免疫代谢干预在组织修复中的潜力，并留意AI影像建模与低毒性mRNA递送技术的跨界进展。
-- 详情：[/202604/16/README](/202604/16/README)
+今日聚焦 15 篇前沿文献，深度揭示了巨噬细胞在神经修复与炎症调控中的关键“开关”作用。
+重点关注 SARM1 驱动的免疫表型转换研究，以及高频磁刺激通过调节自噬标志物 LC3 抑制炎症的新发现。
+建议深入探索 FABP4 等代谢分子如何重塑免疫微环境，以此寻找干预脂肪性肝炎或免疫抑制的新路径。
+- 详情：[/202604/17/README](/202604/17/README)
 
 ### 精读区论文标签
-1. [SARM1 is required for macrophage immunophenotype switching that is essential for nerve repair](/202604/16/biorxiv-10-64898-2026-04-07-716973-v1-sarm1-is-required-for-macrophage-immunophenotype-switching-that-is-essential-for-nerve-repair)  
+1. [SARM1 is required for macrophage immunophenotype switching that is essential for nerve repair](/202604/17/biorxiv-10-64898-2026-04-07-716973-v1-sarm1-is-required-for-macrophage-immunophenotype-switching-that-is-essential-for-nerve-repair)  
+   标签：评分：9.0/10、query:ros-mp
+   evidence：巨噬细胞免疫表型转换和调节功能
+2. [Effects of a single-session high-frequency repetitive magnetic stimulation on the autophagy marker LC3 and on LPS-induced inflammation in THP-1-derived macrophages](/202604/17/biorxiv-10-64898-2026-04-07-716903-v1-effects-of-a-single-session-high-frequency-repetitive-magnetic-stimulation-on-the-autophagy-marker-lc3-and-on-lps-induced-inflammation-in-thp-1-derived-macrophages)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：SARM1 是巨噬细胞免疫表型转换和功能可塑性所必需的
-2. [Lactate-dependent metabolic rewiring is associated with CD163+ macrophage polarization in human pyelonephritis](/202604/16/biorxiv-10-64898-2026-04-09-717269-v1-lactate-dependent-metabolic-rewiring-is-associated-with-cd163-macrophage-polarization-in-human-pyelonephritis)  
+   evidence：LPS 诱导的巨噬细胞炎症和氧化应激
+3. [Lactate-dependent metabolic rewiring is associated with CD163+ macrophage polarization in human pyelonephritis](/202604/17/biorxiv-10-64898-2026-04-09-717269-v1-lactate-dependent-metabolic-rewiring-is-associated-with-cd163-macrophage-polarization-in-human-pyelonephritis)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：乳酸依赖性代谢重构与CD163+巨噬细胞极化
-3. [M-CSF drives alveolar macrophage plasticity during development and cytomegalovirus infection](/202604/16/biorxiv-10-64898-2026-04-11-717936-v1-m-csf-drives-alveolar-macrophage-plasticity-during-development-and-cytomegalovirus-infection)  
+   evidence：乳酸依赖性代谢重连与CD163+巨噬细胞极化
+4. [Serum albumin-fused interleukin-10 prevents neuroinflammation by promoting immunoregulation in the secondary lymphoid organs and limiting immune cell infiltration in the spinal cord](/202604/17/biorxiv-10-64898-2026-04-10-717764-v1-serum-albumin-fused-interleukin-10-prevents-neuroinflammation-by-promoting-immunoregulation-in-the-secondary-lymphoid-organs-and-limiting-immune-cell-infiltration-in-the-spinal-cord)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：控制肺泡巨噬细胞表型可塑性的调节机制
+   evidence：白细胞介素-10促进M2型巨噬细胞极化以预防神经炎症
 
 ### 速读区论文标签
-1. [Representation geometry shapes task performance in vision-language modeling for CT enterography](/202604/16/2604.13021v1-representation-geometry-shapes-task-performance-in-vision-language-modeling-for-ct-enterography)  
+1. [FABP4 Couples Lipid Metabolism to PD-L1 Stabilization in Immunosuppressive Macrophages](/202604/17/biorxiv-10-64898-2026-04-09-717546-v1-fabp4-couples-lipid-metabolism-to-pd-l1-stabilization-in-immunosuppressive-macrophages)  
+   标签：评分：7.5/10、query:ros-mp
+   evidence：鉴定出一种独特的免疫抑制巨噬细胞亚群及其表型的代谢调节机制
+2. [Representation geometry shapes task performance in vision-language modeling for CT enterography](/202604/17/2604.13021v1-representation-geometry-shapes-task-performance-in-vision-language-modeling-for-ct-enterography)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：用于炎症性肠病评估的 CT 肠道造影视觉语言建模
-2. [A Rapidly Excretable, ROS-Scavenging Ionizable Lipid Decouples mRNA Delivery Potency from Toxicity](/202604/16/biorxiv-10-64898-2026-04-07-716828-v1-a-rapidly-excretable-ros-scavenging-ionizable-lipid-decouples-mrna-delivery-potency-from-toxicity)  
+   evidence：炎症性肠病（IBD）CT小肠造影的视觉语言建模
+3. [Cardiolipin deficiency disrupts electron transport chain and drives steatohepatitis](/202604/17/biorxiv-10-1101-2024-10-10-617517-v4-cardiolipin-deficiency-disrupts-electron-transport-chain-and-drives-steatohepatitis)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：具有活性氧清除能力的电离脂质可抑制氧化应激
-3. [Effects of a single-session high-frequency repetitive magnetic stimulation on the autophagy marker LC3 and on LPS-induced inflammation in THP-1-derived macrophages](/202604/16/biorxiv-10-64898-2026-04-07-716903-v1-effects-of-a-single-session-high-frequency-repetitive-magnetic-stimulation-on-the-autophagy-marker-lc3-and-on-lps-induced-inflammation-in-thp-1-derived-macrophages)  
+   evidence：线粒体电子传递效率低下促进氧化应激
+4. [Myeloid HDAC7 drives liver inflammation and systemic glucose dysregulation during diet-induced obesity](/202604/17/biorxiv-10-64898-2025-12-04-691405-v2-myeloid-hdac7-drives-liver-inflammation-and-systemic-glucose-dysregulation-during-diet-induced-obesity)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：磁刺激调节巨噬细胞信号传导和氧化应激
-4. [A PTM Regulatory Enzyme Co expression Code Defines Microglial Functional Heterogeneity in Cerebral Ischemia Reperfusion Injury](/202604/16/biorxiv-10-64898-2026-04-07-716960-v2-a-ptm-regulatory-enzyme-co-expression-code-defines-microglial-functional-heterogeneity-in-cerebral-ischemia-reperfusion-injury)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：控制小胶质细胞表型转变的分子机制
-5. [FABP4 Couples Lipid Metabolism to PD-L1 Stabilization in Immunosuppressive Macrophages](/202604/16/biorxiv-10-64898-2026-04-09-717546-v1-fabp4-couples-lipid-metabolism-to-pd-l1-stabilization-in-immunosuppressive-macrophages)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：脂质信号驱动免疫抑制性巨噬细胞亚群
-6. [Serum albumin-fused interleukin-10 prevents neuroinflammation by promoting immunoregulation in the secondary lymphoid organs and limiting immune cell infiltration in the spinal cord](/202604/16/biorxiv-10-64898-2026-04-10-717764-v1-serum-albumin-fused-interleukin-10-prevents-neuroinflammation-by-promoting-immunoregulation-in-the-secondary-lymphoid-organs-and-limiting-immune-cell-infiltration-in-the-spinal-cord)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：IL-10 促进 M2 巨噬细胞极化并抑制促炎细胞因子
-7. [Myeloid HDAC7 drives liver inflammation and systemic glucose dysregulation during diet-induced obesity](/202604/16/biorxiv-10-64898-2025-12-04-691405-v2-myeloid-hdac7-drives-liver-inflammation-and-systemic-glucose-dysregulation-during-diet-induced-obesity)  
-   标签：评分：6.0/10、query:ros-mp
    evidence：HDAC7促进巨噬细胞中炎症介质的产生
-8. [A PTM Regulatory Enzyme Co expression Code Defines Microglial Functional Heterogeneity in Cerebral Ischemia Reperfusion Injury](/202604/16/biorxiv-10-64898-2026-04-07-716960-v1-a-ptm-regulatory-enzyme-co-expression-code-defines-microglial-functional-heterogeneity-in-cerebral-ischemia-reperfusion-injury)  
+5. [A Rapidly Excretable, ROS-Scavenging Ionizable Lipid Decouples mRNA Delivery Potency from Toxicity](/202604/17/biorxiv-10-64898-2026-04-07-716828-v1-a-rapidly-excretable-ros-scavenging-ionizable-lipid-decouples-mrna-delivery-potency-from-toxicity)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：可电离脂质作为内在活性氧清除剂以抑制氧化应激
+6. [M-CSF drives alveolar macrophage plasticity during development and cytomegalovirus infection](/202604/17/biorxiv-10-64898-2026-04-11-717936-v1-m-csf-drives-alveolar-macrophage-plasticity-during-development-and-cytomegalovirus-infection)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：调节肺泡巨噬细胞表型可塑性的机制
+7. [Myeloid-Driven Inflammation in Prodromal Parkinson's Disease](/202604/17/biorxiv-10-1101-2025-05-16-654530-v2-myeloid-driven-inflammation-in-prodromal-parkinsons-disease)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：代谢物驱动的翻译后修饰调节小胶质细胞表型转变和神经炎症
-9. [Immune Checkpoint Therapy Drives Maturation of a Cellular Neighborhood Nucleated by T Cell-APC Triads Enabling Spatially Compartmentalized Tumor Immunity](/202604/16/biorxiv-10-64898-2026-04-08-716779-v1-immune-checkpoint-therapy-drives-maturation-of-a-cellular-neighborhood-nucleated-by-t-cell-apc-triads-enabling-spatially-compartmentalized-tumor-immunity)  
+   evidence：肠道引发的炎症中具有增强信号特征的小胶质细胞样巨噬细胞
+8. [A mycobacterial ligand coordinates multi-receptor signaling to reprogram macrophage lipid metabolism](/202604/17/biorxiv-10-64898-2026-02-18-706227-v4-a-mycobacterial-ligand-coordinates-multi-receptor-signaling-to-reprogram-macrophage-lipid-metabolism)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：肿瘤免疫中IFN-gamma激活的巨噬细胞的成熟
-10. [An optimized three-laser 27-color spectral flow cytometry panel for multi-organ profiling in mice](/202604/16/biorxiv-10-64898-2026-04-09-717400-v1-an-optimized-three-laser-27-color-spectral-flow-cytometry-panel-for-multi-organ-profiling-in-mice)  
+   evidence：重编程巨噬细胞脂质代谢和功能表型
+9. [A PTM Regulatory Enzyme Co expression Code Defines Microglial Functional Heterogeneity in Cerebral Ischemia Reperfusion Injury](/202604/17/biorxiv-10-64898-2026-04-07-716960-v1-a-ptm-regulatory-enzyme-co-expression-code-defines-microglial-functional-heterogeneity-in-cerebral-ischemia-reperfusion-injury)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：用于同时检测巨噬细胞亚群的流式细胞术方案
-11. [Inflammasome activation drives gasdermin-independent plasma membrane rupture by clustering ninjurin-1 in macrophages](/202604/16/biorxiv-10-64898-2026-04-10-717393-v1-inflammasome-activation-drives-gasdermin-independent-plasma-membrane-rupture-by-clustering-ninjurin-1-in-macrophages)  
+   evidence：小胶质细胞表型转变和功能异质性
+10. [A PTM Regulatory Enzyme Co expression Code Defines Microglial Functional Heterogeneity in Cerebral Ischemia Reperfusion Injury](/202604/17/biorxiv-10-64898-2026-04-07-716960-v2-a-ptm-regulatory-enzyme-co-expression-code-defines-microglial-functional-heterogeneity-in-cerebral-ischemia-reperfusion-injury)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：巨噬细胞中的炎症小体激活和坏死性细胞死亡
+   evidence：小胶质细胞表型转变和功能异质性
+11. [An optimized three-laser 27-color spectral flow cytometry panel for multi-organ profiling in mice](/202604/17/biorxiv-10-64898-2026-04-09-717400-v1-an-optimized-three-laser-27-color-spectral-flow-cytometry-panel-for-multi-organ-profiling-in-mice)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：同时分析包括巨噬细胞在内的多种小鼠细胞类型
 
 
 <div class="dpr-home-promo-card">
