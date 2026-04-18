@@ -1,0 +1,3414 @@
+Title: Immune Checkpoint Therapy Drives Maturation of a Cellular Neighborhood Nucleated by T Cell-APC Triads Enabling Spatially Compartmentalized Tumor Immunity
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.08.716779v1.full.pdf
+
+Number of Pages: 61
+
+Markdown Content:
+1
+
+Immune Checkpoint Therapy Drives Maturation of a Cellular Neighborhood Nucleated by 1
+
+T Cell-APC Triads Enabling Spatially Compartmentalized Tumor Immunity 2
+
+3
+
+Ruan F. Vieira Medrano *1,2 , Vladimir Sukhov* 1 , Kevin Hoffer-Hawlik 3,4 , Bar Rozenman 3 , Cora 4
+
+D. Arthur 1,2 , Fei Han 1,5 , Bassem Ben Cheikh 6,7 , Hussein Sultan 1,2 , Yoshiko Takeuchi 1,2 , Samuel 5
+
+Ameh 1,2 , Derek J. Theisen 1,2 , Yuang Song 1,2 , Heather N. Kohlmiller 1 , J. Michael White 1 , Alexey 6
+
+Sergushichev 1 , Bernd H. Zinselmeyer 1 , Patrick Leinert Jr 8 , Wm. Patrick Leinert Sr 8 , Kathleen C.F. 7
+
+Sheehan 1,2 , Garry Nolan 9 , Elham Azizi 3,4,10,11,12 , Maxim N. Artyomov 1 , and Robert D. 8
+
+Schreiber 1,2,13,14 
+
+9
+
+* These authors contributed equally 10 
+
+11 
+
+Affiliations 12  
+
+> 1
+
+Department of Pathology and Immunology, Washington University School of Medicine, 2 The 13 
+
+Andrew M. and Jane M. Bursky Center for Human Immunology and Immunotherapy, Washington 14 
+
+University School of Medicine, 3 Department of Biomedical Engineering, Columbia University, 15 
+
+New York, 4 Irving Institute for Cancer Dynamics, Columbia University, 5 Department of 16 
+
+Pathology, RWJ Barnabas Health/Cooperman Barnabas Medical Center, 6 Akoya Biosciences, 17  
+
+> 7
+
+Tixomics, 8 Leinco Technologies Inc, 9 Department of Pathology, 9 Stanford University School of 18 
+
+Medicine, 10 Data Science Institute, Columbia University, 11 Herbert Irving Comprehensive Cancer 19 
+
+Center, Columbia University, 12 Department of Computer Science, Columbia University, 13 The 20 
+
+Parker Institute for Cancer Immunotherapy, San Francisco, CA, USA, 14 e-mail: 21 
+
+rdschreiber@wustl.edu 22 
+
+23 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+2
+
+Summary 24 
+
+Spatially organized immune hubs of T cells and antigen-presenting cells (APCs) have been linked 25 
+
+to immune checkpoint therapy (ICT) efficacy, yet the mechanisms underlying their function 26 
+
+remain unclear. Using CODEX multiplex imaging, we longitudinally characterized the dynamic 27 
+
+evolution of intratumoral cellular neighborhoods (CN) defined by “triad” interactions of CD4 ⁺ and 28 
+
+CD8 ⁺ T cells with two distinct myeloid APC populations: cDC1s and IFN γ–activated 29 
+
+macrophages. We termed this CN the immunity-promoting CN (IP-CN) and tracked its progressive 30 
+
+development during tumor rejection induced by α-CTLA-4/ α-PD-1 therapy. A coordinated IFN γ31 
+
+and TNF α signaling signature accompanied the IP-CN assembly. Over time, the IP-CN underwent 32 
+
+functional maturation, forming specialized sub-neighborhoods that compartmentalized 33 
+
+proliferating T cells at the tumor periphery versus cytotoxic T effector cells interacting with tumor 34 
+
+cell targets. Our findings reveal a spatiotemporal mechanism by which the IP-CN sustains and 35 
+
+amplifies cytotoxic T cell responses, demonstrating how T cell–APC neighborhoods orchestrate 36 
+
+tumor immunity. 37 
+
+38 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+3
+
+INTRODUCTION 39 
+
+Advancements in our understanding of the mechanisms employed by the immune system 40 
+
+to control tumor outgrowth have led to groundbreaking discoveries in cancer immunotherapy 1, 2, 3, 
+
+41  
+
+> 4, 5
+
+. This progress is particularly underscored by the clinical success of Immune-Checkpoint Cancer 42 
+
+Therapy (ICT) targeting the Cytotoxic T-lymphocyte Associated Antigen-4 (CTLA-4) and 43 
+
+Programmed Death-1 (PD-1) immune checkpoint pathways, which have revolutionized cancer 44 
+
+treatment, sometimes providing durable responses in patients with different types of cancer 6, 7, 8 .45 
+
+However, a significant fraction of tumor-bearing individuals fail to respond to therapy 9 and thus, 46 
+
+a deeper understanding of the mechanisms underlying successful cancer immunotherapy is 47 
+
+critically needed. 48 
+
+Previous work in our lab has shed light on this issue by defining mechanisms of successful 49 
+
+tumor rejection 10, 11, 12 . We demonstrated that optimal immune responses to developing and 50 
+
+established tumors required that (a) tumor cells express antigens for both CD4 + and CD8 + T cells; 51 
+
+(b) the host was able to induce tumor-specific CD4 + and CD8 + T cells; and (c) both requirements 52 
+
+were met even in tumors that lacked the expression of MHC-II proteins 13 . Furthermore, using 53 
+
+CyTOF and scRNAseq analysis of tumor-infiltrating CD45 + cells, we showed that successful ICT 54 
+
+induced a profound remodeling of the lymphoid compartment, which was marked by CD4 + and 55 
+
+CD8 + T cell activation and proliferative responses 14 . This work also revealed that the 56 
+
+myeloid/macrophage compartment also concomitantly underwent major remodeling such that 57 
+
+intratumoral CX3CR1 + macrophages expanded during tumor progression, but rapidly disappeared 58 
+
+following ICT, whereas IFN γ-induced iNOS + macrophages increased during tumor rejection 14 .59 
+
+Recent studies highlight the critical role of immune cell spatial organization in determining 60 
+
+outcomes following immunotherapy 15, 16, 17, 18 . Most notably, tertiary lymphoid structures (TLS) 61 
+
+are well-established niches for cellular crosstalk associated with a favorable prognosis 19, 20, 21 .62 
+
+Analogous to TLS, additional forms of immune neighborhoods composed of T cells and antigen-63 
+
+presenting cells (APCs) have also been reported 22, 23 . However, our understanding of how these 64 
+
+structures are formed and change over time remains limited. Importantly, most of our current 65 
+
+insights derive from spatial analyses performed at single time points or under conditions that result 66 
+
+in only partial therapeutic responses. As a result, the spatiotemporal mechanisms governing the 67 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+4
+
+functional role of these T cell-APC hubs during successful immunotherapy remain largely 68 
+
+undefined. 69 
+
+To address this deficiency, we applied a longitudinal spatial-proteomic approach herein to 70 
+
+investigate the changes, over time, that occur in immune cell organization induced by ICT in a 71 
+
+fully responsive mouse tumor model. Mice bearing syngeneic orthotopic T3 tumors were treated 72 
+
+with control monoclonal antibodies (mAb) or the dual ICT combination of α-CTLA-4 and α-PD-73 
+
+1 (herein referred to as α-CTLA-4/ α-PD-1). Tumors were harvested at multiple time points and 74 
+
+subjected to CODEX multiplex imaging 24, 25 , allowing us to profile, at single-cell resolution, 75 
+
+surface and intracellular proteins in fresh-frozen tissue sections. We found that T3 tumors are 76 
+
+organized into seven distinct cellular neighborhoods (CNs) and that α-CTLA-4/ α-PD-1 promotes 77 
+
+dramatic changes in their trajectories. Specifically, tumor rejection was orchestrated through the 78 
+
+assembly, expansion, and maturation of an immunity-promoting CN (IP-CN) composed of CD4 ⁺79 
+
+and CD8 ⁺ T cells forming three-cell clusters (triads) with cDC1s or IFN γ–activated macrophages. 80 
+
+We observed that these triads form early in the α-CTLA-4/ α-PD-1-induced rejection process and 81 
+
+increase in frequency as the IP-CN expands, indicating that continuous T cell/APC engagement is 82 
+
+an important feature nucleating the response. We also observed that the IP-CN supports the 83 
+
+intratumoral induction of T cell proliferation and effector function. But over time, these functions 84 
+
+become spatially compartmentalized into specialized sub-neighborhoods, with proliferating T cells 85 
+
+enriched with triad-forming APCs at the tumor tissue periphery as cytotoxic T cells progressively 86 
+
+move inward, targeting cancer cells at the tumor boundary CN. Overall, this study provides a 87 
+
+spatiotemporal mechanism for the central role that the IP-CN has in organizing tumor immunity. 88 
+
+Our findings establish maturation of immune neighborhoods and functional compartmentalization 89 
+
+as novel principles underlying successful ICT. 90 
+
+91 
+
+RESULTS 92 
+
+Spatial Proteomic Profiling to Monitor Successful Immune Checkpoint Therapy in T3 93 
+
+Tumors 94 
+
+For this study, we utilized our well-characterized T3 MCA sarcoma line, which grows 95 
+
+progressively when injected orthotopically into syngeneic wild-type mice but is uniformly rejected 96 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+5
+
+with consistent kinetics upon treatment with α-CTLA-4/ α-PD-1 10, 13 in a manner requiring tumor 97 
+
+neoantigen-specific CD4 + and CD8 + T cells (herein recapitulated in Figure S1A ). We focused our 98 
+
+study on the effects induced by α-CTLA-4/ α-PD-1 because we had previously established that this 99 
+
+treatment induced stronger anti-tumor responses than single-agent therapy 14, 26 and thus would 100 
+
+provide a better model for successful antitumor responses. 101 
+
+To map the spatiotemporal dynamics of the T cell antitumor response, we harvested T3 tumors at 102 
+
+days (d) 7, 9, 10, 11 and 13 post-transplant, which were timepoints known to correspond to critical 103 
+
+functional changes that we had previously reported 14 . Tumors were fresh-frozen, cut into 8 μm104 
+
+sections encompassing the entire tumor-immune interface, and subsequently transferred onto 105 
+
+coverslips for staining (Figure 1A) with a panel of 32 bar-coded CODEX Abs (Figure 1B) . In 106 
+
+total, our dataset was derived from 49 tumors (individually displayed in Figure S2 ). Detection of 107 
+
+tumor cells was achieved using a mAb specific for CD140a [platelet-derived growth factor 108 
+
+receptor-α (PDGF-α)] that was highly expressed by T3 tumor cells (Figure S1B) . The expected 109 
+
+antigen staining patterns for all antibodies are displayed in Figures S3A and S3B .110 
+
+DAPI + cells were segmented, enabling us to obtain xy coordinates and single-cell protein marker 111 
+
+intensity of 15,112,591 cells (Figures S1C and S1D ). With this dataset, we visualized the 112 
+
+longitudinal progression of CD140a + tumor cells under control and ICT conditions ( Figure S1E) 113 
+
+and quantified their frequency over time to identify the earliest time point showing a decline in T3 114 
+
+tumor cell frequency following α-CTLA-4/ α-PD-1 treatment (Figure 1C) . Samples from this 115 
+
+initial time point were used to develop an analytical pipeline to assess spatial changes driving 116 
+
+antitumor response. This analysis showed that the frequency of CD140a + tumor cells remained 117 
+
+stable on d7 and d9 post-transplant in both treatment groups but underwent a significant decrease 118 
+
+on d10 where the percentage of tumor cells dropped from 34.8% in the control group to 17.9% in 119 
+
+the α-CTLA-4/ α-PD-1 group. By d13, the frequency of CD140a + cells expanded in control mAb-120 
+
+treated mice to 42.9% but decreased to 4.3% in the α-CTLA-4/ α-PD-1 group. This result indicated 121 
+
+that ICT induces the rapid elimination of T3 tumors and highlights d10 as a critical time point 122 
+
+marking the onset of therapeutic rejection under the treatment conditions employed. 123 
+
+In d10 tumors from control Ab-treated mice, CD4 + , CD8 + , and Foxp3 + T cells were found 124 
+
+predominantly at the outer region of the tumor tissue. In contrast, α-CTLA-4/ α-PD-1 induced 125 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+6
+
+pronounced intratumoral infiltration of CD4 + and CD8 + T cells (Figure 1D) . The myeloid 126 
+
+compartment was also impacted by α-CTLA-4/ α-PD-1. F4/80 + CX3CR1 + macrophages were 127 
+
+plentiful in tumors from control mice, but were reduced in numbers and localized to limited regions 128 
+
+in the tumor after α-CTLA-4/ α-PD-1 (Figure 1E) . Conversely, whereas iNOS + F4/80 +
+
+129 
+
+macrophages were only seen at the tumor border in control Ab-treated mice, they were broadly 130 
+
+distributed in tumors from α-CTLA-4/ α-PD-1 (Figure 1F) .131 
+
+To confirm these morphological findings, we compared the results generated using 132 
+
+immunocompetent wild-type mice to those obtained using syngeneic immunodeficient Rag2 -/-
+
+133 
+
+mice, which lack T cells, B cells and NKT cells and thus fail to control tumor growth in vivo . As 134 
+
+anticipated, α-CTLA-4/ α-PD-1 did not induce T3 tumor rejection in Rag2 -/- mice (Figure S4A). 135 
+
+CODEX imaging of T3 tumors from Rag2 -/- mice revealed the absence of an ongoing anti-tumor 136 
+
+response as evidenced by the absence of iNOS + and CD38 + macrophages, suggesting a failure to 137 
+
+elicit an in vivo IFN γ signature in the TME (Figure S4B) . Additionally, T3 tumor cells 138 
+
+transplanted into Rag2 -/- mice grew more rapidly than those in wild-type mice, and the frequency 139 
+
+of CD140a + cells was not affected by α-CTLA-4/ α-PD-1 in this immunodeficient background 140 
+
+(Figure S4C), confirming the critical role of T cells in the tumor rejection process following α-141 
+
+CTLA-4/ α-PD-1. 142 
+
+To profile our d10 dataset, we developed a hierarchical cell clustering approach that combines 143 
+
+ANN classifiers, z-score normalization, and K-means over-clustering (Figure S5A). This method 144 
+
+allowed the identification of 13 cell types, whose normalized protein expression values are 145 
+
+displayed in Figure 1G . Dimensionality reduction via t-SNE confirmed the distinct identity of 146 
+
+each immune cell populations (Figure S5B and S5C), which included: (i) 4 clusters of lymphoid 147 
+
+cells: [CD3 + CD4 + T cells; CD3 + CD8 + T cells; NK cells (CD3 neg NKP46 + ); and T regulatory cells 148 
+
+(T-regs) (CD3 + CD4 + FOXP3 + )]; (ii) conventional type 1 dendritic cells (cDC1), expressing 149 
+
+MHCII + , CD11C + , CD103 + , which in a separate experiment also co-stained for the XCR1 surface 150 
+
+marker 27 thus validating their identity (Figure S5D); (iii) neutrophils (expressing 151 
+
+CD11B + LY6G + ); and (iv) 4 populations of macrophage cells (identified as positive for CD64, 152 
+
+CD11B, CD11C, F4/80 and SIRP-alpha), that consisted of CD206 + macrophages; CX3CR1 +
+
+153 
+
+macrophages; and two distinct IFN γ polarized macrophage population: one that expressed iNOS 154 
+
+and CD38 [denoted iNOS + macrophages (CD38 + iNOS + )] and a second that expressed CD38 but 155 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+7
+
+lacked iNOS expression [denoted IFN γ activated macrophages) (CD38 + iNOS neg )]. We previously 156 
+
+showed that cytokines within the tumor microenvironment (TME) shape monocyte differentiation 157 
+
+trajectories in T3 tumors 14 . These monocytes follow divergent differentiation trajectories, giving 158 
+
+rise to either CX3CR1 ⁺ or iNOS ⁺ macrophages. Intermediate phenotypic states along this 159 
+
+continuum include CD38 ⁺iNOS ⁻, and CD206 ⁺ macrophages. CD38 expression marks a160 
+
+macrophage phenotype driven by IFN γ, alone, while iNOS expression requires not only 161 
+
+macrophage responses to IFN-J but also responses driven by the NF-κB signaling pathway 14 such 162 
+
+as those induced by Tumor necrosis factor-alpha (TNF-D .163 
+
+We also assessed changes in cellular composition at d10 following α-CTLA-4/ α-PD-1 (Figure 164 
+
+1H) . Whereas the frequency of dead tumor cells in mice treated with control Ab was 1.4%, this 165 
+
+frequency increased to 14.8% following α-CTLA-4/ α-PD-1. Concomitantly, the proportion of 166 
+
+CD4 + T cells at this time point increased from 3% in control to 5% with α-CTLA-4/ α-PD-1. We 167 
+
+also observed that the percentage of T-regs was markedly reduced by 50% (from 0.6% in control 168 
+
+to 0.28% after α-CTLA-4/ α-PD-1). The latter change was attributable to the known Treg-depleting 169 
+
+activity of the α-CTLA-4 mAb (Clone 9D9) used in the α-CTLA-4/ α-PD-1 mixture 28 . CD8 + T170 
+
+cells did not change significantly at d10 nor were differences detected in NK cells, cDC1, or 171 
+
+endothelial cells. For other myeloid cells, we observed an expected increase in iNOS +
+
+172 
+
+macrophages [from 2.1% (control) to 4.9% ( α-CTLA-4/ α-PD-1)]), a decrease in CX3CR1 +
+
+173 
+
+macrophages [from 6.6% (control) to 3.3% ( α-CTLA-4/ α-PD-1)], and an increase in neutrophils 174 
+
+[0.8% (control) to 9.7% ( α-CTLA-4/ α-PD-1)]. These results recapitulate the remodeling of the 175 
+
+lymphoid and myeloid populations that we had previously observed for α-CTLA-4/ α-PD-1-176 
+
+treated, T3 tumor-bearing mice 14 and demonstrate the suitability of our spatial proteomic profiling 177 
+
+system for high-dimensional imaging of T3 tumors. 178 
+
+α-CTLA-4/ α-PD-1 Induces Co-Localization of CD4 + and CD8 + T Cells with Myeloid APCs 179 
+
+in Day 10 Tumors 180 
+
+To define how α-CTLA-4/ α-PD-1 alters spatial organization at the onset of tumor rejection, we 181 
+
+characterized cell–cell co-localization at d10 using a permutation-based interaction analysis 182 
+
+previously used by others 29, 30 (Figure 2A) . In tumors from mice treated with control mAb, only 183 
+
+a minimal amount of co-localization was observed between CD4 + and CD8 + T cells. In contrast, 184 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+8
+
+following α-CTLA-4/ α-PD-1, strong co-localization of CD4 + and CD8 + T cells (red box 1) was 185 
+
+observed, and also between CD4 + T cells with cDC1 cells (red box 2) (Figure 2B) . We also 186 
+
+observed that IFN γ-activated macrophages co-localized with CD4 + T cells post-α-CTLA-4/ α-PD-187 
+
+1 (red box 3) (Figure 2B) . In the absence of α-CTLA-4/ α-PD-1, Tregs co-localized with both 188 
+
+CD4 + and CD8 + T cells (red box 4) and with cDC1 cells (red box 5) (Figure 2B) . D-CTLA-4/ α-189 
+
+PD-1 reduced this co-localization, at least in part, because of DCTLA4-induced depletion of 190 
+
+activated Tregs 28 .191 
+
+This analysis identified CD4 + T cells, CD8 + T cells, cDC1 and IFN γ-activated macrophages as 192 
+
+immune cells whose co-localization in the tumor are positively impacted by α-CTLA-4/ α-PD-1 193 
+
+treatment on d10. Given the recently established role of three-cell clusters (triads), in which CD4 ⁺194 
+
+T cells co-engage with CD8 ⁺ T cells and APCs to present both CD8 ⁺ and CD4 ⁺ tumor antigens and 195 
+
+effectively license CD8 ⁺ T cell cytotoxicity 31 , we further investigated how the cellular partnership 196 
+
+of cDC1 and IFN γ-activated macrophages changed following α-CTLA-4/ α-PD-1 (Figure 2C). We 197 
+
+initially assessed the frequency by which cDC1 formed either two-cell clusters (dyads) with Tregs, 198 
+
+CD4 ⁺ or CD8 ⁺ T cells, or triads consisting of an individual cDC1 interacting with both a CD4 ⁺ and 199 
+
+a CD8 ⁺ T cell. Treg-cDC1 dyads were found in tumors derived from either control mAb or α-200 
+
+CTLA-4/ α-PD-1 mice, and did not show significant differences between the mAb conditions used 201 
+
+(Figure 2D, p=0.4 ). In contrast, following α-CTLA-4/ α-PD-1, cDC1 were more frequently 202 
+
+observed in dyads with CD8 + T cells ( Figure 2E , p=0.002 ) or CD4 + T cells (Figure 2F , p=0.004 )203 
+
+compared to control. α-CTLA-4/ α-PD-1 also induced a highly significant increase in the frequency 204 
+
+of cDC1-CD4-CD8 triads (Figure 2G, p=0.0002 ). Representative images of these cellular 205 
+
+interactions are presented in Figure 2H. 206 
+
+We then performed the same analysis focused on IFN γ-activated macrophages. Here, the 207 
+
+frequency of dyads between IFN γ-activated macrophages and CD8 + T cells did not change with 208 
+
+or without α-CTLA-4/ α-PD-1 ( Figure 2I , p=0.88 ). However, we observed a significant increase 209 
+
+in the frequency of dyads containing CD4 + T cells following α-CTLA-4/ α-PD-1 ( Figure 2J, 210 
+
+p=0.03 ). Similarly, triads between IFN γ-activated macrophages and both CD4 + and CD8 + T cells 211 
+
+increased after α-CTLA-4/ α-PD-1 ( Figure 2K, p=0.0006 ). Images of the cellular interactions are 212 
+
+presented in Figure 2L . The detection of these immune triads suggests that α-CTLA-4/ α-PD-1 213 
+
+promotes coordinated multicellular interactions between T cells with two professional APCs in the 214 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+9
+
+tumor: cDC1s and IFN γ-activated macrophages. Even though cDC1s have a known superior 215 
+
+ability to prime naïve T cells in the lymph node, our results also support a potential role for IFN γ-216 
+
+activated macrophages in the tumor for supporting the effector phase of the anti-tumor response 217 
+
+through interactions with CD4 + and CD8 + T cells. 218 
+
+Neighborhood Mapping Reveals Coordinated Redistribution of Immune Cells Leading to 219 
+
+the Formation of Seven Cellular Neighborhoods (CNs) in T3 Tumors 220 
+
+We reasoned that pairwise cell-cell interactions represented only the first step in defining the 221 
+
+spatial considerations by which anti-tumor immune responses are organized. To gain a more 222 
+
+comprehensive view of higher-order tissue organization, we proceeded to identify multicellular 223 
+
+networks within the tumor tissue, often referred to as "Cellular Neighborhoods" (CNs) 18 . In 224 
+
+particular, we were interested in assessing whether α-CTLA-4/ α-PD-1 was associated with a 225 
+
+neighborhood formed by increased interactions between T cells, cDC1, and IFN γ-activated 226 
+
+macrophages. To achieve this, we employed a 'Sliding Window Mapping’ 18 strategy to identify 227 
+
+prominent CNs 18 (Figure 3A) .228 
+
+With this approach, we identified seven distinct CNs in T3 tumors from both control and α-CTLA-229 
+
+4/ α-PD-1 mice (Figure 3B) . The detailed cellular composition of each CN is shown in Figure 230 
+
+S6A . CN1 comprises the “Tumor Boundary” and consists of 47.7% CD140a + tumor cells and a 231 
+
+mixture of immune cells that includes macrophages and T cells (red color in Figure 3C ). CN2 is 232 
+
+composed of 90% CD140a + tumor cells and thus was named "Tumor Bulk" (blue color in Figure 233 
+
+3C ). CN3 consisted mostly of neutrophils (70%) and dead cells (16%) and was named 234 
+
+“Neutrophil-rich” (light magenta color in Figure 3C ). CN4 represents the neighborhood with the 235 
+
+highest concentration of CX3CR1 + macrophages (47% of this CN composition) and was named 236 
+
+"CX3CR1 + macrophage-rich" (dark gray in Figure 3C ). CN5 denotes the "Dead Cell Center" (dark 237 
+
+purple in Figure 3C ) since it contained 72% dead cells and resides in the inner region of CN3. 238 
+
+CN6 displayed the highest enrichment of CD4 + and CD8 + T cells compared to the other CNs (i.e., 239 
+
+CD4 + and CD8 + T cells comprise 17% and 8.4% of CN6, respectively). Importantly, CN6 also 240 
+
+contained a mixture of NK cells (2.9%), endothelial cells (17%), and different populations of 241 
+
+myeloid cells, such as cDC1 (2%), CD206 + macrophages (18%), and IFN γ-activated macrophages 242 
+
+(4%). CN6 was labeled as "Immunity-Promoting” (hereafter IP-CN6) because it was comprised of 243 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+10 
+
+key, spatially organized antitumor lymphoid populations that colocalized with different types of 244 
+
+myeloid APCs. Lastly, CN7 was labeled “iNOS + macrophage-rich" as it contains 55% of 245 
+
+iNOS + CD38 neg and 6.5% of iNOS neg CD38 + macrophages (yellow color in Figure 3C ). 246 
+
+As shown in Figure 3D , α-CTLA-4/ α-PD-1 induced significant changes in the frequencies of all 247 
+
+seven CNs. Specifically, the frequencies of CN1 (tumor boundary), CN2 (tumor bulk) and CN4 248 
+
+(CX3CR1 + macrophage-rich) were reduced in tumors from α-CTLA-4/ α-PD-1 mice. In contrast, 249 
+
+α-CTLA-4/ α-PD-1 induced an increase in IP-CN6. We also noted increases in neutrophil-rich 250 
+
+(CN3), dead cell center (CN5), and iNOS + macrophage-rich (CN7) CNs. Collectively, these 251 
+
+changes suggest that α-CTLA-4/ α-PD-1 remodels immune cell networks such that they might 252 
+
+potentially favor tumor elimination. 253 
+
+While this analysis identified changes in tissue organization, it did not address how α-CTLA-4/ α-254 
+
+PD-1 affects the distribution of individual cell types within the CNs. To investigate this, we 255 
+
+quantified the percentage of each cell type across CNs in tumors from control and α-CTLA-4/ α-256 
+
+PD-1-treated mice at d10 (Figure 3E) . In control mAb-treated mice, 75% of CD140a + tumor cells 257 
+
+were localized within the tumor bulk (CN2), with the remaining 35% found at the tumor boundary 258 
+
+(CN1). This distribution pattern remained unaltered upon α-CTLA-4/ α-PD-1, since the majority 259 
+
+of tumor cells continued to occupy CN2 and CN1. However, α-CTLA-4/ α-PD-1 induced a marked 260 
+
+shift in the distribution of immune cells. In tumors from control mAb-treated mice, approximately 261 
+
+35% of T cells were present at the tumor boundary (CN1) and similarly at IP-CN6. The remaining 262 
+
+CD4 + and CD8 + T cells were distributed between the tumor bulk CN2 (12%) and at the CX3CR1 +
+
+263 
+
+macrophage-rich region CN4 (~13%) (Figure 3E) . In contrast, tumors from α-CTLA-4/ α-PD-1 264 
+
+mice exhibited a striking accumulation of CD4 + T cells (65%) and CD8 + T cells (68%) within IP-265 
+
+CN6. Notably, while the overall frequency of CD8 + T cells in the tumor remained unchanged at 266 
+
+d10, their redistribution into IP-CN6 increased almost 2-fold to 68%. Additionally, the Tregs that 267 
+
+were not depleted by α-CTLA-4/ α-PD-1 remained localized in IP-CN6, although they represented 268 
+
+only 1% of the IP-CN6 cellular population (Figure 3E) . NK cells clustered in IP-CN6 and CN3. 269 
+
+We used a similar approach to define the distribution of the different myeloid cell populations. In 270 
+
+tumors from control mAb-treated mice, CD38 + iNOS neg and CD206 + macrophages accumulated at 271 
+
+the tumor boundary (CN1) (27%) and in IP-CN6 (34%) but showed a sharp increased 272 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+11 
+
+accumulation into IP-CN6 after α-CTLA-4/ α-PD-1 (48%) (Figure 3F) . In contrast, CX3CR1 +
+
+273 
+
+macrophages displayed a distinct distribution pattern. In tumors from control mice, 45% of 274 
+
+CX3CR1 + macrophages were located in CN4 and at the CN1 tumor boundary (30%) (Figure 3F) .275 
+
+After α-CTLA-4/ α-PD-1, most of the CX3CR1 + macrophages became undetectable in CN4 276 
+
+(0.9%), and the few that remained were mostly found in the tumor bulk CN2 (63%). iNOS +
+
+277 
+
+macrophages increased in CN7 from 49% to 68% after α-CTLA-4/ α-PD-1 (Figure 3F) .278 
+
+In addition, we noted an alteration in the distribution of neutrophils and dead cells. In tumors from 279 
+
+control mice, both cell types were found dispersed across all seven CN but mostly accumulating 280 
+
+in IP-CN6, with 25% of neutrophils and 37% of dead cells located in this CN (Figure S6B). 281 
+
+Following α-CTLA-4/ α-PD-1, the concentration of these cell types decreased in IP-CN6 and 282 
+
+increased in their respective CNs. Specifically, 77% of the neutrophils localized in CN3, while 283 
+
+55% of dead cells were found in the dead cell center CN5 (Figure S6B) . This indicates that while 284 
+
+there is a substantial increase in the frequency of neutrophils and dead cells after α-CTLA-4/ α-PD-285 
+
+1, their location is restricted to specific areas of the tumor tissue and does not impact the 286 
+
+composition of IP-CN6. 287 
+
+The accumulation of T cells and myeloid cells within IP-CN6 after α-CTLA-4/ α-PD-1 suggests 288 
+
+that this CN serves as a preferential site for immune interactions. To confirm this, we assessed the 289 
+
+proportion of cDC1s and IFN γ-activated macrophages forming triads with CD4 ⁺ and CD8 ⁺ T cells 290 
+
+(previously identified in Figures 2G and 2K , respectively) across the seven CNs (Figure 3G). In 291 
+
+tumors from control mice, 56% of cDC1 and 39% of IFN γ-activated macrophage triad-forming 292 
+
+cells were in IP-CN6, and the remainder was shared between the tumor boundary CN1, tumor bulk 293 
+
+CN2, and CX3CR1 + macrophage-rich CN4. However, following α-CTLA-4/ α-PD-1, we observed 294 
+
+a very pronounced accumulation of triad-associated cDC1s (90%) and IFN γ-activated 295 
+
+macrophages (56%) specifically within IP-CN6. This spatial enrichment of immune triads supports 296 
+
+the role of IP-CN6 as a site for productive interactions between T cells and myeloid APCs. 297 
+
+Overall, these findings show a profound reorganization of the T3 TME, mediated by a coordinated 298 
+
+redistribution of multiple immune cell types. α-CTLA-4/ α-PD-1 thus induces a focused response 299 
+
+from CD4 + and CD8 + T cells that, together with cDC1, CD206 + macrophages, and IFN γ-activated 300 
+
+macrophages, drive the formation of IP-CN6. 301 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+12 
+
+TNF α and IFN γ Signaling are Putative Communication Pathways Between T cells and 302 
+
+Myeloid APCs within IP-CN6 303 
+
+While CODEX enables spatial proteomic profiling, it does not allow unbiased discovery of the 304 
+
+molecular pathways underlying the formation and function of IP-CN6. To address this limitation, 305 
+
+we generated paired scRNA-seq data from immune and tumor cells isolated from T3 tumors 306 
+
+harvested on d10 ( Figure S7A and S7B ), and integrated this data with our d10 CODEX dataset 307 
+
+using ARCADIA (ARchetype-based Clustering and Alignment with Dual Integrative 308 
+
+Autoencoders) 32 (Figure 4A) . ARCADIA is a generative framework for integrating weakly linked 309 
+
+single-cell data modalities without requiring feature-level correspondence or paired cell barcodes, 310 
+
+thus enabling spatially informed analysis of transcriptional programs. 32 . Specifically, it establishes 311 
+
+cross-modal correspondence by first identifying modality-specific archetypes that define distinct 312 
+
+cellular states and then aligning them across modalities based on cell-type distribution 32 (Figure 313 
+
+S7C and S7D ). This alignment yields an entangled embedding that preserves cell type 314 
+
+composition as well as spatial neighborhood structure, effectively transferring spatial context from 315 
+
+CODEX to cells profiled with scRNA-seq and enabling CN-specific differential gene expression 316 
+
+(DEG) analysis. 317 
+
+When applied to our d10 scRNA and spatial protein data, ARCADIA demonstrated consistent 318 
+
+archetype representations across modalities (Figure S7E) and accurate representation of cell types 319 
+
+in the shared embedding (Figure 4B and 4C) . Importantly, ARCADIA-enabled inference of CN 320 
+
+labels for scRNA-seq cells recapitulated CN composition observed in CODEX data ( Figure S8A ), 321 
+
+including CN1, CN2, CN4, and IP-CN6, as evidenced by clustering according to CN identity in 322 
+
+the integrated embedding (Figure 4D) . Since ARCADIA relies on shared cell-type representation 323 
+
+across modalities for archetype alignment, downstream analyses were restricted to CNs with 324 
+
+sufficient cellular representation, excluding neutrophils and dead cells. 325 
+
+We next performed Gene Set Enrichment Analysis (GSEA) on CD8 ⁺ T cells assigned to IP-CN6 326 
+
+to identify molecular programs enriched within this neighborhood. Following α-CTLA-4/ α-PD-1. 327 
+
+treatment, CD8 ⁺ T cells exhibited significant enhancement of TNF α expression as well as its 328 
+
+downstream NF-κB signaling pathways ( Figure S8B ), accompanied by increased expression of 329 
+
+key target genes, including A20 (Tnfaip3) , Junb , and Irf1 . This signature was also observed in 330 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+13 
+
+CN1, CN2 and CN4, indicating broadly enhanced effector activation across multiple 331 
+
+neighborhoods (Figure 4E) . In contrast, GSEA of CD4 ⁺ T cells revealed significant enrichment 332 
+
+of the IFN γ response pathway after α-CTLA-4/ α-PD-1 (Figure S8C) , consistent with a Th1 333 
+
+phenotype. This was particularly pronounced within IP-CN6 and was characterized by increased 334 
+
+expression of IFN γ, Tbx21 (T-bet), Stat4 , Irf8 , and Ccl5 (Figure 4F) . These findings suggest that 335 
+
+CD4 ⁺ T cells within IP-CN6 adopt a helper phenotype that supports CD8 ⁺ T cell effector function. 336 
+
+Consistent with this inflammatory milieu, cDC1s exhibited enrichment of TNF α signaling 337 
+
+components and increased expression of inflammatory and antigen-presentation genes, including 338 
+
+Il-1b (Interleukin-1 beta) , B94 (Tnfaip2) and Cd86 , indicative of enhanced maturation and co-339 
+
+stimulatory capacity ( Figure 4G) . Similarly, macrophages within IP-CN6 displayed enrichment 340 
+
+of type I and type II IFN response pathways as reflected by increased expression of Cd40 , Irf1 ,341 
+
+Isg15, and Isg20 (Figure 4H) .342 
+
+To further validate these intercellular communication pathways, we performed ContactTracing-343 
+
+based ligand–receptor analysis 33 , which revealed extensive remodeling of signaling networks 344 
+
+following α-CTLA-4/ α-PD-1 treatment (Fig. S9A and S9b; Table S3, summarized in Fig. 4I– 345 
+
+J) . This analysis predicted TNF α signaling from CD8 ⁺ T cells to both cDC1s (Fig. 4I) and 346 
+
+macrophages (Fig 4J) , which were shown to express TNFR1 (Tnfrsf1a). Similarly, increased 347 
+
+levels of IFN γ were predicted to affect both cDC1s and macrophages via signaling through 348 
+
+functional IFN γ receptors (Ifngr1/Ifngr2). Changes in chemotactic signatures were also observed, 349 
+
+as shown by an increase in CCL3 and CCL4 expression by CD8 ⁺ T cells, together with CCL5 350 
+
+derived from both CD4 ⁺ and CD8 ⁺ T cells, which can recruit myeloid cells via CCR5 (Fig. 4I-J) .351 
+
+Conversely, macrophage-derived CXCL10 and CCL6 were found to communicate with CD4 ⁺ and 352 
+
+CD8 ⁺ T cells, suggesting that multiple chemotactic pathways promote interactions between 353 
+
+lymphoid and myeloid populations (Fig. 4J). Consistent with enhanced T cell activation, the 354 
+
+CD86:CD28 co-stimulatory pathway from cDC1s to T cells was significantly increased (Fig. 4I). 355 
+
+Additional pathways associated with APC activation and expansion were also enriched, including 356 
+
+Flt3Lg (Fms-related tyrosine kinase 3 ligand) derived from T cells, which is known to promote 357 
+
+cDC1 differentiation and survival 34 (Fig. 4I) . Notably, the CD40L: CD40 costimulatory axis 358 
+
+between CD4 ⁺ T cells and macrophages was enhanced (Fig. 4J) , which is a well-established 359 
+
+pathway for CD4 + T cells to trigger robust macrophage activation 35 . Communication between cell-360 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+14 
+
+contact molecules, such as Icam1 (intercellular adhesion molecule-1) and its receptor Lfa1 361 
+
+(leukocyte function-associated antigen-1), were also positively impacted, supporting improved 362 
+
+cell-to-cell interactions. Lastly, communication between the inhibitory checkpoint molecule 363 
+
+TIGIT (T cell immunoreceptor with Ig and ITIM domains) and its receptor CD155 was reduced 364 
+
+(Fig. 4I) . Although this analysis cannot distinguish signaling occurring specifically within triad 365 
+
+versus dyad interactions, the spatially informed transcriptional programs inferred by ARCADIA 366 
+
+highlight plausible pathways that are likely to contribute to the assembly and function of IP-CN6 367 
+
+during α-CTLA-4/ α-PD-1 therapy. 368 
+
+Longitudinal Analysis Reveals Cellular Dynamics Driving the Expansion of the Immunity-369 
+
+Promoting CN6 During Tumor Rejection 370 
+
+Thus far, our analysis revealed the spatial and molecular changes that occur at d10, a time point at 371 
+
+which the α-CTLA-4/ α-PD-1-induced rejection process was just beginning. To understand the 372 
+
+longitudinal evolution of the seven CNs, in particular IP-CN6, we applied our hierarchical analysis 373 
+
+pipeline (Figure S5A) to a dataset encompassing tumors harvested on d7, d9, d10, d11, and d13 374 
+
+post-tumor transplant. 375 
+
+This longitudinal analysis revealed the dynamics of CD4 + and CD8 + T cells (Figure 5A) . In tumors 376 
+
+from control mAb-treated mice CD4 + T cells accumulated until d9, reaching 3.6% of total cell 377 
+
+composition, but then steadily declined thereafter to 1.1% on d13 (Figure 5B) . In contrast, tumors 378 
+
+from α-CTLA-4/ α-PD-1 mice displayed the opposite CD4 + T cell trajectory. Specifically, α-379 
+
+CTLA-4/ α-PD-1 induced an increase in CD4 + T cells over control that first became detectable at 380 
+
+d10 and continued to rise through d13 to 6.2%. This dynamic coincided with the elimination of 381 
+
+CD140a + tumor cells (Figure 1C) . Intriguingly, the increase in CD4 + T cells following α-CTLA-382 
+
+4/ α-PD-1 preceded a significant rise in CD8 + T cells, which was detected on d11. CD8 + T cells 383 
+
+remained below 2% until d11 but then surged in tumors from α-CTLA-4/ α-PD-1-treated mice, 384 
+
+peaking at 7.5% on d13, eventually surpassing the frequency of CD4 + T cells (Figure 5C) . NK 385 
+
+cell frequency did not change significantly at any time point (Figure S10A), while, as expected, 386 
+
+Treg frequency remained significantly higher in tumors from control mice compared to mice 387 
+
+receiving α-CTLA-4/ α-PD-1 (Figure S10B) .388 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+15 
+
+This longitudinal analysis also revealed changes in the myeloid compartment (Figure 5D) .389 
+
+CX3CR1 + macrophages were first detected on d10 in mice treated with control Ab and became the 390 
+
+major immune cell population by d13, reaching 5.4% of total cells (Figure 5E ). In contrast, 391 
+
+following α-CTLA-4/ α-PD-1, CX3CR1 + macrophages became nearly undetectable while iNOS +
+
+392 
+
+macrophages and IFN γ activated macrophages (CD38 + iNOS neg ) increased to 6.1% each (Figure 393 
+
+5F and 5G, respectively ). By d13, CD206 + macrophages represented 3.2% in tumors from control 394 
+
+mice and 4.9% in α-CTLA-4/ α-PD-1-treated mice (Figure 5H) . cDC1 frequency remained 395 
+
+unchanged until d13, when it dropped in tumors from control mice while increasing in tumors 396 
+
+from α-CTLA-4/ α-PD-1 mice (p=0.04) (Figure 5I) . Lastly, we noted that in rejecting tumors, both 397 
+
+dead cells and neutrophils had a transitory dynamic (Figure S10C) . Neutrophils were only 398 
+
+significantly increased on d10 (p=0.0008), a day after dead cells increased, and lost significance 399 
+
+thereafter by d13 (p=0.4) (Figure S10D) . Dead cells significantly increased on d9 (p=0.0008), 400 
+
+reaching 11.6%, but then fell to only 3.1% by d13, losing significance (p=0.2) (Figure S10E) .401 
+
+To analyze how these cellular dynamics impacted the T3 tumor tissue architecture temporally, we 402 
+
+pooled the data from all time points and applied the sliding window mapping method to identify 403 
+
+the CNs. The same seven CNs identified on d10 were consistently observed across different stages 404 
+
+of tumor growth or regression, although at differing relative magnitudes, indicating that these 405 
+
+structures are quasi-stable but are dynamically influenced during the organization and destruction 406 
+
+of T3 tumors (Figure S10F) . In tumors growing progressively in control mAb-treated mice, the 407 
+
+tumor boundary (CN1) and tumor bulk (CN2) became the largest CNs by d13 (Figure 5J) . IP-408 
+
+CN6 initially emerged as the second-largest neighborhood, but its frequency then declined over 409 
+
+time. Other CNs showed only minimal changes and also decreased over time. In contrast, tumors 410 
+
+from α-CTLA-4/ α-PD-1 mice showed a marked longitudinal reduction in tumor boundary (CN1) 411 
+
+and tumor bulk (CN2) due to the destruction of tumor cells. In contrast, IP-CN6 steadily expanded 412 
+
+from d10 on, eventually becoming the largest CN in rejecting tumors by d13 (Figure 5J) . The 413 
+
+iNOS + macrophage-rich CN7 developed as the second largest CN post α-CTLA-4/ α-PD-1, 414 
+
+followed by the neutrophil-rich CN3 region. The longitudinal evolution of the 7 CNs is presented 415 
+
+in Figure 5K .416 
+
+Given the role of IP-CN6 as a site for immune interactions, we next analyzed the longitudinal 417 
+
+dynamics of immune triads involving T cells with cDC1s or IFN γ–activated macrophages 418 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+16 
+
+(Figures 5L and 5M, respectively ). In tumors from control Ab-treated mice, the frequency of 419 
+
+triads nucleated by both types of APCs declined over time and became undetectable by d13. 420 
+
+However, tumors from α-CTLA-4/ α-PD-1-treated mice showed a progressive increase in three-421 
+
+cell cluster interactions, starting at d10 and peaking at d13. This increase was more pronounced 422 
+
+for triads involving IFN γ–activated macrophages, likely reflecting their higher abundance in the 423 
+
+T3 TME compared to cDC1s. Nevertheless, the timing and evolution of these clusters between 424 
+
+APCs and T cells coincided with the amplification of the anti-tumor immune response. 425 
+
+These results highlight the emergence of two distinct TMEs by d13: one associated with 426 
+
+progressive tumor growth and the other associated with effective immune-mediated tumor 427 
+
+rejection (Figure 5N). In mice treated with control mAb, the cellular components of IP-CN6 428 
+
+declined over time, including the aforementioned triads, while CX3CR1 ⁺ macrophages and tumor 429 
+
+cells expanded, driving the growth of CN4 and CN2, respectively (Figure 5N) . In contrast, α-430 
+
+CTLA-4/ α-PD-1 led to a rapid expansion of CD4 ⁺ and CD8 ⁺ T cells, while sustaining the number 431 
+
+of triads with cDC1 and IFN γ–activated macrophages, resulting in the continued expansion of the 432 
+
+IP-CN6. 433 
+
+Granzyme B ⁺ and Ki67 ⁺ T Cells Form Distinct Sub-Neighborhoods (IP-SNs) Within 434 
+
+Immunity-Promoting CN6 435 
+
+Our findings thus far suggested that IP-CN6 plays a pivotal role in shaping the α-CTLA-4/ α-PD-436 
+
+1-induced immunological landscape of rejecting T3 tumors. To better d efine the role of IP-CN6 in 437 
+
+the T cell-dependent anti-tumor response, we clustered CD4 + and CD8 + T cells as Ki67 + (as a 438 
+
+marker for T cell proliferation) versus GZMB + (as a marker for cytotoxicity) (Figure 6A) and 439 
+
+calculated their distribution among the seven CNs at the d10 time point (Figure 6B and 6C) . In 440 
+
+control mice, Ki67 + and GZMB + T cell populations were distributed in similar proportions at the 441 
+
+tumor boundary (CN1) and within IP-CN6. However, in α-CTLA-4/ α-PD-1-treated mice, both 442 
+
+Ki67 + and GZMB + CD4 + and CD8 + T cells sharply increased in frequency in IP-CN6 (Figure 6B 443 
+
+and C) . This observation indicates that IP-CN6 is the preferential neighborhood where T-cell 444 
+
+expansion and effector functions are facilitated in T3 tumors. 445 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+17 
+
+However, upon more detailed inspection, we detected differential spatial patterns between Ki67 +
+
+446 
+
+and GZMB + CD3 + T cells between control mAb versus α-CTLA-4/ α-PD-1 mice (Figures 6D and 447 
+
+6E) . In tumors from control mAb-treated mice, both populations were intermixed and resided at 448 
+
+the outer region (periphery) of the tumor tissue. In contrast, following α-CTLA-4/ α-PD-1, Ki67 +
+
+449 
+
+T cells remained concentrated at the tumor periphery while GZMB + T cells infiltrated into the 450 
+
+tumor core. 451 
+
+This observation suggests a more granular spatial organization within IP-CN6. To investigate this, 452 
+
+we re-annotated both CD4 + and CD8 + T cells as either double-negative or single-positive for Ki67 453 
+
+or GZMB, performed sliding window mapping analysis exclusively within IP-CN6, and identified 454 
+
+structures that we termed immunity-promoting sub-neighborhoods (IP-SNs) (Figure 6F) . This 455 
+
+analysis revealed that IP-CN6 is comprised of 4 distinct IP-SNs (Figure 6G) . IP-SN1 contained 456 
+
+CD206 + macrophages but did not show a significant change in tumors from control versus α-457 
+
+CTLA-4/ α-PD-1 mice (Figure 6H) . IP-SN2 was composed of GZMB + CD4 + T cells, 458 
+
+GZMB + CD8 + T cells, NK cells, and IFN γ-activated macrophages (Figure 6H), but also did not 459 
+
+significantly change following α-CTLA-4/ α-PD-1 versus control mAb therapy. However, IP-SN3 460 
+
+contained a significant enrichment of proliferating T cells, IFN γ-activated macrophages and cDC1 461 
+
+following α-CTLA-4/ α-PD-1 compared to control Ab. IP-SN4 showed significant α-CTLA-4/ α-462 
+
+PD-1-induced increases in cytotoxic GZMB + T cells and endothelial cells compared to control 463 
+
+(Figure 6H). 464 
+
+Inspection of d10 tumors from α-CTLA-4/ α-PD-1 mice reveals the differences in cellular 465 
+
+composition surrounding Ki67 + versus GZMB + T cells. Ki67 + T cells were predominantly found 466 
+
+at the periphery of the tumor, were in proximity to IFN γ-activated macrophages and were observed 467 
+
+interacting with cDC1s (as indicated by the white arrows). (Figure 6I) . The co-localization 468 
+
+between cDC1 and Ki67 + T cells was additionally evidenced by an increased proximity score from 469 
+
+0.15 (control) to 0.3 ( α-CTLA-4/ α-PD-1) (Figure 6K and 6L ). In contrast, GZMB + T cells were 470 
+
+found infiltrating the tumor core and forming an intratumoral niche with IFN γ-activated 471 
+
+macrophages, NKP46 + NK cells, and CD31 + endothelial cells. (Figure 6J). Overall, these findings 472 
+
+support our hypothesis that IP-CN6 constitutes a specialized microenvironment for myeloid APC 473 
+
+and T cells that facilitates the acquisition of proliferative versus cytotoxic functions following α-474 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+18 
+
+CTLA-4/ α-PD-1. However, the spatial compartmentalization and formation of sub-neighborhoods 475 
+
+suggest that the induction of these functions during tumor rejection follows distinct dynamics. 476 
+
+Temporal Remodeling of IP-CN6 Drives the Spatial Compartmentalization Between 477 
+
+Cytotoxic and Proliferative Functions During α-CTLA-4/ α-PD-1 478 
+
+To resolve the question of how the kinetics of compartmentalization of Ki67 + T versus GZMB +
+
+479 
+
+cells evolved over time, we analyzed the dynamics of cytotoxicity and proliferation of CD4 + and 480 
+
+CD8 + T cells within IP-CN6. In tumors from control mice, T cells gradually lost expression of 481 
+
+Ki67 and GZMB after d9 (Figure 7A and 7B) . However, after α-CTLA-4/ α-PD-1, a surge in 482 
+
+Ki67 + CD4 + and CD8 + T cells was observed on d10, followed by an increase in GZMB expression 483 
+
+on d11 and d13 (Figure 7A and 7B) . This indicates that T cells first undergo a proliferative burst 484 
+
+before expressing increased cytotoxic activity on d11, leading to complete tumor elimination by 485 
+
+d13. 486 
+
+To further understand the dynamics of induction of effector function, we analyzed the expression 487 
+
+levels of PD-1, LAG-3, and TIM-3 on CD4 + and CD8 + T cells to define their activation versus 488 
+
+exhaustion states (Figure S11A) . No significant differences in single expression of PD-1 were 489 
+
+observed on either CD8 + and CD4 + T cells between tumors from control mAb and α-CTLA-4/ α-490 
+
+PD-1 mice (Figure S11B and S11C , respectively ). However, after d10, we noted a statistically 491 
+
+significant increase in terminally exhausted CD8 + T cells (PD1 + LAG3 + and PD-1 + LAG-3 + TIM-492 
+
+3+ ) in tumors from control mAb-treated mice, but not in tumors from α-CTLA-4/ α-PD-1-treated 493 
+
+mice (Figure S11D and S11F , respectively ). We did not see significant changes in terminal 494 
+
+exhaustion markers in CD4 + T cells in tumors from either control mAb or α-CTLA-4/ α-PD-1-495 
+
+treated mice (Figure S11E and S11G) . These results indicate that the continuous increase in T 496 
+
+cell effector function seen in IP-CN6 following α-CTLA-4/ α-PD-1 therapy is accompanied by 497 
+
+reduced cellular exhaustion. The differences observed between CD8 + and CD4 + tumor-associated 498 
+
+T cells were most likely attributable to the fact that in T3 tumors, 40% of CD8 + T cells recognize 499 
+
+the MHC-I-restricted neoantigens mLama4 and mAlg8, while only 6% of CD4 + T cells recognize 500 
+
+the major MHC-II neoantigen, mItgb1 10, 13 .501 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+19 
+
+Longitudinal analysis of Ki67 + and GZMB + T cells suggested that their distinct spatial localization 502 
+
+had not occurred at d7 and d9, but became detectable at d10, (at a time when tumor cell killing 503 
+
+first became obvious) and then was maintained on d11 and d13 (Figure 7C) . To assess when 504 
+
+GZMB ⁺ and Ki67 ⁺ T cells are found in different regions of the tumor tissue, we first calculated the 505 
+
+full distance distributions of effector and proliferating T cell populations to bulk tumor cells over 506 
+
+time (Figure 7D). We then summarized the fractions of Ki67 + or GZMB + T cells located within a 507 
+
+mid-distribution reference point, of close range from tumor cells (below 350 μm) or distant from 508 
+
+tumor cells (above 350 μm) (Figure 7E). On d9, approximately 80% of Ki67 + or GZMB + CD8 + T509 
+
+cells in tumors from either control mAb or α-CTLA-4/ α-PD-1 mice were located within 350 μm of 510 
+
+tumor cells. However, on d10, while GZMB + cells remained in proximity to tumor cells, 50% of 511 
+
+Ki67 + T cells in tumors from α-CTLA-4/ α-PD-1 mice were found at the tumor periphery at a 512 
+
+distance greater than 350 μm from tumor cells (Figure 7E) . This spatial compartmentalization 513 
+
+continued on d11, with 70% of Ki67 + cells accumulating further away from bulk tumor cells, 514 
+
+whereas 60% of GZMB + cells remained within 350 μm of their targets. It was only on d13, when 515 
+
+tumor cell elimination was nearly complete, that GZMB + T cells dispersed and were found at 516 
+
+distances greater than 350 μm away from their tumor target cells (Figure 7E) .517 
+
+For the second approach, we employed the sliding window mapping method exclusively within 518 
+
+IP-CN6 at individual time points after α-CTLA-4/ α-PD-1 (Figure S12A) . This allowed us to 519 
+
+identify IP-SNs on specific days but not shared across all time points. On d7 and d9, the IP-CN6 520 
+
+contained two IP-SNs where both Ki67 + and GZMB + T cells co-localized into the same cluster 521 
+
+(Figure S12B and S12C , respectively ). However, d11 and d13 after α-CTLA-4/ α-PD-1, two IP-522 
+
+SNs evolved, showing selective spatial segregation of Ki67 + versus GZMB + T cells (Figure S12D 523 
+
+and S12E, respectively ). To better define this observation, we quantified the spatial correlation 524 
+
+between the location of proliferating versus effector T cells within the IP-SNs after α-CTLA-4/ α-525 
+
+PD-1 over time. In this context, a high spatial correlation indicates that these cell types are located 526 
+
+near one another (i.e., within the same IP-SNs), while a low or negative correlation suggests they 527 
+
+are distributed across distinct IP-SNs and spatially distant. Consistent with our observations, Ki67 ⁺528 
+
+and GZMB ⁺ T cells exhibited strong spatial overlaps early after treatment, which sharply declined 529 
+
+after d10 and reached a minimum by d13 (Figure 7F) . This dynamic was evidenced by the 530 
+
+proportions of T cells co-enriched within the same IP-SNs of IP-CN6: on d7, where approximately 531 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+20 
+
+66% of Ki67 ⁺ and GZMB ⁺ T cells were found within the same IP-SNs, increasing to 77% by d9, 532 
+
+and then rapidly declining after d10 (Figure 7G) . These findings demonstrate a dynamic transition 533 
+
+from overlapping proliferative and cytotoxic compartments to spatially segregated functional 534 
+
+niches. 535 
+
+To determine how myeloid populations contribute to this spatial compartmentalization, we 536 
+
+examined the spatial relationships between cDC1s, IFN γ–activated macrophages with Ki67 ⁺ and 537 
+
+GZMB ⁺ T cells (Figure 7H) . On d9, both myeloid APCs were spatially associated with 538 
+
+proliferating and cytotoxic T cells. However, after d10, this spatial association was only 539 
+
+maintained for Ki67 ⁺ T cells, while the correlation with GZMB ⁺ T cells declined. To further define 540 
+
+this association, we characterized the T cell phenotype in the vicinity of cDC1 and IFN γ–activated 541 
+
+macrophages engaged in triad interactions (previously identified in 5L and 5M ). In control tumors, 542 
+
+cDC1 triads were primarily associated with non-proliferating, non-cytotoxic T cells as shown on 543 
+
+d10 ( Figure 7I) . Later timepoints were not analyzed, as triad-forming cDC1s were no longer 544 
+
+detected beyond this stage. Following α-CTLA-4/ α-PD-1, however, cDC1 triads became 545 
+
+preferentially associated with Ki67 ⁺ T cells, particularly on d10 and d11 ( Figure 7I) . IFN γ–546 
+
+activated macrophage triads followed a similar pattern. In tumors from control mice, they were 547 
+
+predominantly associated with double-negative cells, but after α-CTLA-4/ α-PD-1, the proportion 548 
+
+of Ki67 ⁺ T cells within these triads increased markedly, especially on d10 and d11, and exceeded 549 
+
+the frequency of GZMB ⁺ T cells ( Figure 7J) . These findings suggest that cDC1s and IFN γ–550 
+
+activated macrophages within IP-CN6 establish a specialized sub-neighborhood that supports 551 
+
+intratumoral T cell proliferation. 552 
+
+Taken together, these results reveal a dynamic maturation process within IP-CN6 that underlies 553 
+
+effective tumor rejection. Early after T cell infiltration (d7–d9), proliferating and cytotoxic T cells 554 
+
+co-localize within shared sub-neighborhoods. As tumor elimination begins, these populations 555 
+
+become spatially segregated, with proliferating T cells remaining in APC-triad-rich niches at the 556 
+
+tumor periphery, while CD8 ⁺ T cells target residual neoplastic cells and maintain cytotoxic activity 557 
+
+in the proximity of tumor cells. This spatial and functional compartmentalization was not observed 558 
+
+in progressively growing tumors, indicating that the emergence of APC-supported proliferative 559 
+
+niches and organized effector activity is a defining feature of successful ICT. 560 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+21 
+
+The Maturation of the Immunity-Promoting CN6 Reshapes Tissue Organization and the 561 
+
+Communication Rules Between CNs 562 
+
+Whereas the previous findings revealed internal T-cell spatial dynamics occurring during the 563 
+
+maturation of the IP-CN6, it remained unclear how the increase of the IP-CN6 impacts tissue 564 
+
+organization and how it interacts with the remaining CNs, particularly with the tumor boundary 565 
+
+and tumor bulk CNs, which are enriched for tumor cells. To answer this question, we first sought 566 
+
+to define the communication rules between the seven CNs and tested the hypothesis that CN 567 
+
+interactions were more likely to happen in regions where their cellular members are physically 568 
+
+closer to the interfaces between adjacent CNs (Figure 8A) . These interfaces are thought to be sites 569 
+
+where molecules produced by one CN can signal to another CN, thus enabling inter-CN 570 
+
+communication 36 . To identify cells at the interfaces of adjacent CNs rather than their own CN, we 571 
+
+used a 20-nearest-neighbor analysis to identify cells with at least 30% of their neighbors belonging 572 
+
+to an adjacent CN as interface cells. We then used a permutation test to shuffle the interface cells 573 
+
+and generated a communication network model, where each node represents a CN, and arrows 574 
+
+represent statistically enriched adjacent at CN interfaces. Importantly, these interactions reflect 575 
+
+spatial opportunities for communication, rather than measured ligand–receptor engagement 576 
+
+(Figure 8A) .577 
+
+In tumors from control mice (Figure 8B) , tumor bulk CN2 cells exclusively communicated with 578 
+
+tumor boundary CN1 cells, positioning the boundary CN as a node connecting both the CX3CR1 +
+
+579 
+
+macrophage-rich CN4 and IP-CN6. On d7, the CX3CR1 + macrophage-rich CN4 was a minor 580 
+
+component, but by d13, it became the primary node interacting with the tumor boundary CN1, 581 
+
+while communication with IP-CN6 diminished concomitantly. Following α-CTLA-4/ α-PD-1 582 
+
+(Figure 8C) , the order of interactions between tumor bulk CN2 and boundary CN1 remained 583 
+
+unchanged. However, as IP-CN6 expanded from d7 to d13, it assumed a central role, becoming 584 
+
+the strongest communication node with the tumor boundary CN1 while also communicating with 585 
+
+nearby myeloid CNs, including the iNOS + macrophages-rich CN7 and Neutrophil-rich CN3. 586 
+
+Notably, the latter two CNs were not shown to be communicating with the tumor boundary, 587 
+
+especially in tumors from control mAb-treated mice, which were characterized as having a small 588 
+
+node size, reflecting the low frequency of these CNs. 589 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+22 
+
+These findings suggest preferential communication patterns between different CNs but do not 590 
+
+identify which CN proximity relationships were most affected by α-CTLA-4/ α-PD-1. We therefore 591 
+
+analyzed the collective behavior of the cell types comprising each CN. Cells were labeled 592 
+
+according to their respective CNs, 20-nearest-neighbor analysis was performed across multiple 593 
+
+time points (individually represented in Figure S13) and a statistical analysis of all CN nearest-594 
+
+neighbor interactions across all time points (summarized in Figure S14) . In tumors from mice 595 
+
+treated with control mAb, the top three interactions were (highlighted in the green box at the 596 
+
+bottom of the heatmap): iNOS + macrophages-rich CN7 and CX3CR1 + macrophage-rich CN4, (ii) 597 
+
+tumor boundary CN1 and CX3CR1 + macrophage-rich CN4, and (iii) IP-CN6 and CX3CR1 +
+
+598 
+
+macrophage-rich CN4. In contrast, the top three interactions following α-CTLA-4/ α-PD-1 were 599 
+
+(highlighted in purple box at the top of the heatmap): (i) IP-CN6 interacting with tumor boundary 600 
+
+(CN1), (ii) IP-CN6 interacting with the iNOS + macrophages-rich CN7, and (iii) IP-CN6 interacting 601 
+
+with CX3CR1 + macrophage-rich CN4. 602 
+
+Collectively, these results define the communication rules governing inter-CN interactions and 603 
+
+reveal a spatial hierarchy that emerges during tumor rejection. In control mAb-treated tumors, the 604 
+
+tumor boundary CN1 was progressively associated with the CX3CR1 ⁺ macrophage–rich CN4, 605 
+
+which competed with IP-CN6 for connection to the tumor boundary. In contrast, following α-606 
+
+CTLA-4/ α-PD-1 therapy, IP-CN6 became the dominant communication node in the tissue, 607 
+
+preferentially interacting with the tumor boundary CN1 rather than the tumor bulk CN2, while also 608 
+
+maintaining connections with myeloid CN4 and the iNOS ⁺ macrophage–rich CN7. 609 
+
+To determine whether this IP-CN6 preferential communication with CN1 resulted in localized 610 
+
+effector function, we performed nearest-neighbor analysis on tumor cells located at CN1 versus 611 
+
+CN2 and quantified the frequency of GZMB ⁺ CD8 ⁺ T cells in their proximity over time (Figure 612 
+
+8D) . This analysis revealed a significant increase in the frequency of cytotoxic CD8 ⁺ T cells only 613 
+
+after α-CTLA-4/ α-PD-1 and specifically in proximity to the tumor cells at the tumor boundary 614 
+
+CN1, with no corresponding increase in the tumor bulk CN2. These findings suggest a sequential 615 
+
+mechanism of tumor rejection in which effector CD8 ⁺ T cells from IP-CN6 preferentially target 616 
+
+the tumor boundary CN1, where they can progressively eliminate layers of tumor cells as the IP-617 
+
+CN6 expands during α-CTLA-4/ α-PD-1 therapy and reorganizes the TME. 618 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+23 
+
+DISCUSSION 619 
+
+In this study, we applied longitudinal spatial proteomic profiling to define the immune dynamics 620 
+
+underlying tumor rejection following dual α-CTLA-4/ α-PD-1 immunotherapy. By preserving 621 
+
+tissue architecture, this approach extends our prior CyTOF and scRNA-seq analyses of 622 
+
+disaggregated tumors 14 . Using the T3 tumor model with well-defined rejection kinetics, we 623 
+
+analyzed multiple cohorts across different time points, enabling comprehensive characterization 624 
+
+of the rejection process and the development of a spatiotemporal mechanistic model for the 625 
+
+evolving role of an intratumoral CN composed of CD4 ⁺ and CD8 ⁺ T cells engaging in triad 626 
+
+interactions with cDC1s or IFN γ–activated macrophages (Figure 8E) . In this model, progressively 627 
+
+growing tumors have T cells that are scarce, poorly infiltrate tumor tissue, and rarely engage 628 
+
+cDC1s or IFN γ–activated macrophages, resulting in minimal formation of APC-CD4-CD8 cellular 629 
+
+triads. Following α-CTLA-4/ α-PD-1 therapy, however, the TME undergoes coordinated 630 
+
+reorganization, enabling the dynamic evolution of IP-CN6, which progresses through three 631 
+
+functionally distinct phases. During the formation phase , CD4 ⁺ T cells first increase in frequency 632 
+
+and spatially redistribute, enabling co-localization with CD8 ⁺ T cells and APCs and initiating 633 
+
+assembly of IP-CN6. At this stage, T cells exhibit a burst of proliferation followed by early strong 634 
+
+induction of TNF α and IFN γ, consistent with reciprocal activation of cDC1s and macrophages. 635 
+
+During the expansion phase , CD8 ⁺ T cells markedly increase and surpass CD4 ⁺ T cells in 636 
+
+frequency, coinciding with a peak in T cell cytotoxicity and substantial tumor cell elimination. 637 
+
+This step is accompanied by continued T cell and APC engagement and an increase in triad 638 
+
+frequency. Finally, during the maturation phase , spatial compartmentalization becomes evident: 639 
+
+Ki67 ⁺ proliferating T cells localize preferentially near triad-forming APCs—often at the tumor 640 
+
+periphery—while GZMB ⁺ cytotoxic T cells move inward from the tumor boundary CN1 and target 641 
+
+remaining tumor cells. Concomitantly, this transition is associated with a reorganization of inter-642 
+
+neighborhood interactions, establishing IP-CN6 as a dominant structural and functional hub within 643 
+
+the tissue. 644 
+
+Our findings extend the prevailing model of tumor rejection, from the previous model involving a 645 
+
+simple, quantitative increase in cytotoxic activity to a complex process in which the IP-CN6 646 
+
+functions as a lymphoid-like organ that dynamically organizes antitumor immunity. Moreover, our 647 
+
+findings provide critical temporal resolution to our understanding of the role of multicellular 648 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+24 
+
+neighborhoods and directly demonstrate how immune organization changes over time, 649 
+
+determining tumor fate. Our study is among the first to apply spatial proteomic analysis across the 650 
+
+entire span of the antitumor immune response, from initiation to complete elimination. In contrast, 651 
+
+prior studies have largely relied on single-time-point analyses, providing static snapshots that 652 
+
+cannot resolve when key cellular events take place 15, 37 . Together, our findings establish maturation 653 
+
+of immune neighborhoods and functional compartmentalization as novel principles underlying 654 
+
+successful ICT. 655 
+
+Mechanistically, our results indicate that the efficacy of α-CTLA-4/ α-PD-1 relies on coordinated 656 
+
+crosstalk between T cells and diverse APCs. The formation of two distinct triad types, prior to the 657 
+
+expansion of CD8 ⁺ T cells, indicates that immune triads may be involved with the rapid 658 
+
+proliferation and increase in cytotoxicity observed from d11 to d13. We hypothesize that initial 659 
+
+tumor cell killing generates antigen release that is captured by APCs, enabling further CD8 ⁺ T cell 660 
+
+expansion. This model aligns with established roles of cDC1s in cross-presentation and MHC-II– 661 
+
+dependent CD4 ⁺ T cell help³ ⁸. Triads function by promoting physical proximity of T cells and 662 
+
+APCs, facilitating chemokine and/or cytokine production and their biologic activities 31 . TNF α663 
+
+signaling via TNFR1 has been shown to induce cDC-1 maturation, as well as to enhance co-664 
+
+stimulatory activity³ ⁹,⁴⁰ . TNF α has also been shown to enable cDC1s licensing of CD8 + T cell 665 
+
+cytotoxicity³ ⁹. In addition, IFN γ-dependent modulation/activation of myeloid cell function is well 666 
+
+known 38 . IFN γ-polarized macrophages have been shown to directly kill certain tumor cells, 667 
+
+enhance T cell cytotoxicity by functioning as APCs and secreting pro-inflammatory cytokines ⁴¹, ⁴². 668 
+
+These mechanisms would provide a positive feedback loop in which activated T cells and myeloid 669 
+
+APCs reinforce each other's functions to sustain a productive immune response. 670 
+
+However, not all macrophage subsets contribute positively. CX3CR1 ⁺ macrophages in tumors 671 
+
+from control mAb-treated mice represent immature myeloid populations with limited co-672 
+
+stimulatory and antigen-presenting capacity, as shown by others 39, 40, 41 . Similarly, CD206 ⁺673 
+
+macrophages are often considered to express immunosuppressive functional activities 42 . Yet, 674 
+
+emerging evidence indicates that CD206 ⁺ macrophages can efficiently capture antigens and 675 
+
+stimulate antigen-specific CD8 ⁺ T cells 43 . This would be consistent with our observation that 676 
+
+CD206 ⁺ macrophages are present in IP-CN6 and may support T cell activity, though their function 677 
+
+remains unclear in our model. 678 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+25 
+
+While organized networks of T cells and APCs have been previously described in other mouse 679 
+
+models, their temporal evolution has not been demonstrated. In the Kras/Trp53 (KP) lung 680 
+
+adenocarcinoma model, T and B cells form organized structures in response to immunogenic 681 
+
+epitopes, yet these tumors remain refractory to ICT 22 . Similarly, Hickey et al. observed in a model 682 
+
+of adoptive T cell therapy that organized CD8 ⁺ T cell zones drove upregulation of PDL1 on 683 
+
+macrophages, reduced tumor proliferation, but ultimately failed to eliminate tumors 44 . By contrast, 684 
+
+we observed that following α-CTLA-4/ α-PD-1, IP-CN6 drives rapid and complete tumor rejection, 685 
+
+without enforced antigen expression or requiring B cells, as we previously showed that T3 tumors 686 
+
+do not elicit a B cell response 14 .687 
+
+Analogous to these observations, in human cancers, Chen et al. identified “immunity hubs” 688 
+
+enriched in stem-like CD8 ⁺ T cells and activated DCs in lung cancer, correlating with responses 689 
+
+to anti-PD-1 23 . However, their analyses were limited to pre-treatment samples, leaving unknown 690 
+
+the temporal trajectory of these structures. Shiao et al. identified an 'immune district' in breast 691 
+
+cancer patients that expanded in response to pembrolizumab and radiation therapy, characterized 692 
+
+by effector T cells, B cells, and MHCII + macrophages 17 . Yet, the single-arm design makes it 693 
+
+difficult to differentiate anti-PD-1’s specific effect. 694 
+
+In conclusion, this study reveals a spatiotemporal mechanism that shows how a neighborhood of 695 
+
+T cells and myeloid APCs emerges, expands, and functionally evolves in response to α-CTLA-696 
+
+4/ α-PD-1. Our longitudinal CODEX dataset highlights the power of spatial proteomics to identify 697 
+
+dynamic immune organization and provides a valuable resource to obtain mechanistic insights. 698 
+
+The current study will thus provide a critical dataset to compare the effects of mono-ICT to dual 699 
+
+ICT, and between ICT and cancer vaccine therapy. Future spatial transcriptomic analyses will 700 
+
+also resolve how the two distinct triad configurations contribute to CD8 ⁺ T cell programming and 701 
+
+will aim to generate a multi-omics approach to refine our observations. A particularly important 702 
+
+focus of our future research is to explore whether neighborhoods similar to IP-CN6 arise in 703 
+
+additional tumor models across diverse mouse strains, including those in which MHC-II is 704 
+
+expressed directly by the tumor cell and whether such structures can be induced by other 705 
+
+immunotherapies 12, 45, 46 . Defining which tumor contexts and therapeutic strategies elicit these 706 
+
+immune architectures will be critical for developing the next generation of cancer 707 
+
+immunotherapies. 708 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+26 
+
+Acknowledgments 709 
+
+We thank Yury Goltsev for providing technical and scientific assistance. This work was supported 710 
+
+by grants to R.D.S. from the National Cancer Institute of the US National Institutes of Health 711 
+
+(R01CA190700), the Parker Institute for Cancer Immunotherapy, and a Stand Up to Cancer-712 
+
+Lustgarten Foundation Pancreatic Cancer Foundation Convergence Dream Team Translational 713 
+
+Research Grant. Stand Up to Cancer is a program of the Entertainment Industry Foundation 714 
+
+administered by the American Association for Cancer Research. The IML is supported by the 715 
+
+Andrew M. and Jane N. Bursky Center for Human Immunology and Immunotherapy Programs 716 
+
+and the Alvin J. Siteman Comprehensive Cancer Center. The latter is supported by a National 717 
+
+Cancer Institute of the National Institutes of Health Cancer Center support grant (P30CA91842). 718 
+
+Author contributions 719 
+
+R.F.V.M. and R.D.S. conceived and designed the experiments, interpreted the results, and wrote 720 
+
+the manuscript. R.F.V.M. developed the Ab panel, performed the experiments, collected and 721 
+
+analyzed the data. R.D.S. oversaw all aspects of the study. M.N.A. oversaw the bioinformatics 722 
+
+analysis and interpreted the results. V.S. performed bioinformatics analysis and interpreted the 723 
+
+results. K.H-H and B.R performed ARCADIA and ContactTracing analysis and discussed the data. 724 
+
+F.H. assisted with experiments and ab panel development. B.B.C. developed the singer imaging 725 
+
+processing software and provided technical assistance. H.S. performed the neutrophil depletion 726 
+
+experiment. H.S and Y.S. helped with the scRNA-seq experiment. A.S. provided advice on 727 
+
+analytical aspects of the project. B.H.Z. provided critical imaging assistance. D.A., S.A., D.J.T., 728 
+
+and Y.T assisted with sample collection and provided technical assistance. K.C.F.S. provided 729 
+
+critical review of the manuscript. M.W., and H.K. managed the lab and oversaw the mouse colony. 730 
+
+P.L.jr, and P.Lsr. provided the CODEX instrument and custom-made CODEX antibodies. G.N. 731 
+
+provided methodology and analysis assistance. E.A. supervised ARCADIA and ContactTracing 732 
+
+analysis, provided analysis assistance, and discussed the data. All authors contributed to the final 733 
+
+development of the manuscript and agreed with the results and conclusions. 734 
+
+Declaration of Interests 735 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+27 
+
+R.D.S. is a cofounder, scientific advisory board member, stockholder, and royalty recipient of 736 
+
+AsherBio and is a scientific advisory board member for A2 Biotherapeutics, Neuvogen Inc., and 737 
+
+Revity Inc. P.L.Jr is President of Commercial Operations at Leinco Technologies. P.L.Sr is the 738 
+
+founder, CEO, and shareholder of Leinco Technologies. B.B.C. completed all contributions to this 739 
+
+manuscript while employed by Akoya Biosciences and has had no involvement in the project since 740 
+
+founding Tixomics. Tixomics had no role in the design, analysis, or conclusions presented in this 741 
+
+manuscript. G.N. is co-founder of IonPath Inc and Akoya Biosciences, Inc.; inventor on patent 742 
+
+US9909167; and is a Scientific Advisory Board member for Akoya Biosciences, Inc. 743 
+
+744 
+
+745 
+
+746 
+
+747 
+
+748 
+
+749 
+
+750 
+
+751 
+
+752 
+
+753 
+
+754 
+
+755 
+
+756 
+
+757 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+28 
+
+METHODS 758 
+
+Mice 759 
+
+Six-week-old wild-type 129S6 male mice were purchased from Taconic Farms. Rag2 −/− male 760 
+
+129S6 mice were bred in our specific-pathogen-free facility. Experiments were done on 8-week-761 
+
+old males. All studies were performed in accordance with procedures by AAALAC accredited 762 
+
+Animal Studies Committee of Washington University in St. Louis. 763 
+
+Tumor transplantation 764 
+
+In this study, we used the T3 MCA-induced sarcoma line, derived from a male 129S6 mouse which 765 
+
+was previously characterized in 10 . Tumor cell aliquots were kept in frozen stocks and cultured in 766 
+
+vitro with RPMI media (Hyclone) supplemented with 10% FCS (Hyclone). For tumor inoculation, 767 
+
+T3 tumor cells were resuspended at 1.0 x10 7 cells per mL in endotoxin-free PBS and then 1.5 x 768 
+
+10 6 cells were injected subcutaneously into the flanks of mice (150 μl). Viability was assessed with 769 
+
+AOPI before injection and tumor cells with >90% viability were injected into mice. Tumors were 770 
+
+measured every 3 days by caliper measurements and calculated as the average of two perpendicular 771 
+
+diameters. 772 
+
+Immune checkpoint therapy (ICT) 773 
+
+T3 tumor-bearing mice were injected intraperitoneally with the combination of 200 μg of α-CTLA-774 
+
+4 (9D9) and 200 μg α-PD-1 (RMP1-14), or 200 μg of rat IgG2a isotype control mAb as control, 775 
+
+on days +6, +9, +12 post-tumor transplant. Endotoxin-free antibodies were diluted in PBS before 776 
+
+injection to a total volume of 0.5 mL per mouse. 777 
+
+Tumor harvest for flow cytometry 778 
+
+On day +10 post-tumor transplant, established T3 tumors were excised from mice, chopped, and 779 
+
+treated with 1 mg/ml type 1A collagenase (Sigma) in HBSS (Hyclone) for 1 hour at 37 °C as 780 
+
+previously described 14 . For conventional flow cytometry staining, single cell suspensions of 781 
+
+digested tumors were stained for 5 minutes at room temperature with 500 ng of FC block (anti-782 
+
+CD16/32) in 100 μL of staining buffer (PBS with 2% FCS) and then stained with surface antibodies 783 
+
+for 30 minutes at 4 °C as described in STAR methods for antibodies concentration. Flow cytometry 784 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+29 
+
+was performed on the LSR Fortessa X-20 (BD Biosciences) and analyzed with the FlowJo 785 
+
+software (Treestar). 786 
+
+Fresh frozen tumors 787 
+
+On days +7, +9, +10, +11, and +13 post-tumor transplant, established T3 tumors were excised 788 
+
+from mice, placed on a labeled standard Tissue-Tek Cryomold (25mm x 20mm x 5mm, Sakura 789 
+
+cat# 4557), and covered with Tissue-Tek O.C.T. compound (Sakura cat#4583) for 1-2 minute at 790 
+
+room temperature to acclimate the sample before being transferred to the top of a cold metal block 791 
+
+inside a bucket filled with enough liquid nitrogen to make contact with the middle/bottom part of 792 
+
+the metal block. After that, the bucket was kept closed, and samples were left on top of the metal 793 
+
+block for about 5 minutes to snap-freeze. Frozen samples were then rapidly wrapped with a pre-794 
+
+labeled aluminum foil, transferred to a foam cooler filled with dry ice, and stored at –80 °C freezer. 795 
+
+Poly-lysine coverslip preparation 796 
+
+Coverslips were prepared according to the CODEX user’s manual. Briefly, glass cover coverslips 797 
+
+(thickness 1 ½, 22 x 22 mm, Corning Cat #2850-22) were placed at the bottom of a glass beaker 798 
+
+(0.5 L), dispersed by rotating the beaker, and covered with 20 mL of poly-lysine solution at RT for 799 
+
+a minimum of 12 hours. After incubation, the poly-lysine solution was removed from the beaker, 800 
+
+and the coverslips were washed with doublely distilled water (ddH 2 0) for a total of 7 washes (1 801 
+
+minute each). After this, coverslips were placed on top of a sheet of kimwipes, dispersed to avoid 802 
+
+overlapping and left to dry before being transferred to a petri dish for storage 803 
+
+Tissue cryosectioning 804 
+
+Tissue cryosectioning was done in a Leica Cryostat (CM 1860) at -20 °C. Briefly, frozen tissue 805 
+
+blocks were transferred from the -80 °C freezer, left inside the Cryostat for 30 minutes to acclimate, 806 
+
+and then cut into 8 μm thick sections. Sections were maneuvered on top of the coverslip and kept 807 
+
+flat. The tissue was attached to the coverslip, transferred to a pre-labeled box, and stored at -80 °C. 808 
+
+Alternatively, tissue sections were also transferred to Superfrost Plus Gold Microscope Slides (25 809 
+
+x 75 x1.0mm, Fisher Brand, Cat #15-188-48) to perform immunofluorescence staining. 810 
+
+CODEX staining 811 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+30 
+
+CODEX staining was done according to the user’s manual for fresh frozen tissue sections. 812 
+
+Coverslips kept at -80 °C freezer were transferred in a 50 mL Falcon tube filled with fresh drierite 813 
+
+absorbents (Fisher Scientific, cat #23-116582) into a 50 mL glass beaker containing 10 mL of 814 
+
+acetone (Sigma, cat # 472301-4L) and incubated for 10min at room temp. After that, tissue was 815 
+
+removed from acetone, left to dry for 2 min and then transferred into a 6-well TC plate dish 816 
+
+containing Hydration Buffer (~5 mL/well). Coverslips were incubated for 2 min, transferred to 817 
+
+another well containing Hydration Buffer (~5 mL/well) for another 2 min, and then placed for 10 818 
+
+min in a new well-containing 5mL of pre-staining fixing solution which was 1 part 16% PFA 819 
+
+(Electron Microscopy Sciences, Cat # 15710-S) in 9 parts of Hydration buffer at 1:10 (v/v). Next, 820 
+
+the coverslips were washed two times with Hydration buffer and transferred to a new well 821 
+
+containing Staining buffer to equilibrate for 30 min. During this time, the CODEX blocking buffer 822 
+
+solution was prepared by mixing Staining Buffer (190 μL), N Blocker (5 μL), G blocker (5 μL), J 823 
+
+Blocker (5 uL), S blocker (5 μL) and then by removing the total antibody volume (sum of each 824 
+
+antibody volume) from the 210 μL CODEX blocking buffer final volume. CODEX antibodies are 825 
+
+added according to the STAR methods dilution factor to make the 210 μL antibody cocktail 826 
+
+solution, which was enough to stain 2 coverslips with 100 μL each using the Omni-Stainer™ C12 827 
+
+(Parhelia Biosciences cat # 40101). For this step, 100 μL of Staining solution was placed on top of 828 
+
+each support tile and the tissue coverslip was carefully placed facing the support tile to create a 829 
+
+capillarity chamber with 50 μm thin spacers. The support tile was then transferred to the built-in 830 
+
+wet chamber and 100 μL of the Antibody cocktail solution was dispensed at the top edge of the 831 
+
+coverslip to instantly wash out the staining solution by the laminar flow and form a capillary layer 832 
+
+in which the sample was incubated overnight at 4°C. Coverslips were then removed from the 833 
+
+support tile, washed two times in a 6-well plate containing staining buffer (5 ml), and fixed for 10 834 
+
+min with post-staining fixing solution (5 mL of 1 part 16% PFA in 9 parts of Storage buffer at 1:10 835 
+
+(v/v)). Coverslips were then quickly washed three times in 5 ml of 1x PBS, fixed with 5mL of cold 836 
+
+Methanol (Honeywell cat#67-56-1) for 5 min while the 6-well plate sat on ice and then washed 837 
+
+again three times in 5 mL of 1x PBS (Hyclone, cat# SH30028.03) before 20 min incubation with 838 
+
+200 μL (for each coverslip) of freshly made Final Fixative solution which is 1mL of 1X PBS and 839 
+
+20 μL of Fixative reagent (Akoya). Samples were washed subsequently three times in 5 mL of 1x 840 
+
+PBS and stored for up to two weeks in 5 mL of storage buffer at 4°C. 841 
+
+Reporter plate preparation 842 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+31 
+
+Reporter stock solution was made according to the CODEX user’s manual for 15 cycles which is 843 
+
+3660 mL of Nuclease-free water (Invitrogen™, cat # AM9930), 450 μL of 10X CODEX Buffer, 844 
+
+375 μL of Assay Reagent, and 15 μL of Nuclear Stain. After mixing, the reporter stock solution 845 
+
+was transferred to labeled amber tubes, and 5 μL of each reporter dye corresponding to each 846 
+
+imaging cycle was added to complete the final volume of 245 μL of the Reporter Master Mix and 847 
+
+then transferred to 96-well plates. 848 
+
+Generation of custom-conjugated CODEX DNA-conjugated antibodies 849 
+
+All Ab clones used for custom-conjugation came from commercially validated vendors and had 850 
+
+their specificities confirmed by us through standard immunofluorescence staining before 851 
+
+conjugation. If available, we conjugated the same ab clones previously used for flow cytometry or 852 
+
+mass cytometry analyses 14 . Additionally, monoclonal Abs recommended for fresh 853 
+
+immunofluorescence were used preferentially over polyclonal Abs (for details on clones and 854 
+
+manufacturers, see Table S1) . To ensure high yields of conjugated antibodies, with no detectable 855 
+
+free antibody or free barcode, all custom conjugations were performed by Leinco Technologies 856 
+
+and carried out with 100 μg of carrier-free antibody using the custom-conjugation kit (Akoya 857 
+
+Biosciences, Cat# PCSP0200). For optimal staining, we chose to conjugate antibodies targeting 858 
+
+high-abundance proteins to Alexa 488-labeled DNA oligonucleotides. Antibodies targeting low-859 
+
+abundance proteins or nuclear markers were preferentially conjugated to DNA oligonucleotides 860 
+
+labeled with ATTO550 or Alexa647. Custom and commercially available clones were validated by 861 
+
+staining mouse spleen or tumor tissue. CD140a (PDGFR-α) was used as a marker for T3 tumor 862 
+
+cells. PDGFR-α is highly expressed by T3 tumor cells with a 200.296 FPKM expression level 863 
+
+(based on cDNA-Cap-seq data) 7 . Tumor cell staining with CD140a mAb was confirmed using 864 
+
+OFP-expressing T3 tumor cells and observing a high degree of colocalization (Figure S1B) . Non-865 
+
+malignant PDGFR-αlow stromal cells were rare and showed discordant morphology and marker 866 
+
+context. For the other markers in the CODEX Ab panel, cell morphology and co-staining patterns 867 
+
+were compared with the literature and confirmed. The expected antigen co-staining patterns can 868 
+
+be observed using control and α-CTLA-4/ α-PD-1-treated samples (Figure S3 A and B ). 869 
+
+CODEX multiplex imaging 870 
+
+Imaging was done using a DMi8 Leica fluorescent microscope configured with three fluorescent 871 
+
+channels (Alexa-488, ATTO 550, Cy5) and equipped with a 20x/0.80 air immersion apochromatic 872 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+32 
+
+corrected objective with high numerical aperture and high resolution. Automated image 873 
+
+acquisition, hybridization, and stripping of the fluorescent oligonucleotides were performed using 874 
+
+a CODEX instrument (currently rebranded as Phenocycler®) and the CODEX Instrument 875 
+
+Manager Software (Akoya Biosciences, version 1.30.0.12), which are commercialized by Akoya 876 
+
+Biosciences (currently acquired by Quanterix). Imaging cycles were typically set to 17. The 877 
+
+specific order of reporters, along with their corresponding exposure times, can be found in detail 878 
+
+within Table S2 . Additionally, we followed the recommendations described in Black et al 25 for the 879 
+
+optimal order of markers, particularly considering nuclear markers like Foxp3 and other low-880 
+
+expressing markers. Notably, these markers were preferentially imaged during the initial cycles of 881 
+
+the process. To prepare for a CODEX run, bottle 1 of the CODEX instrument was filled with 1x 882 
+
+CODEX buffer with ddH20, bottle 2 was filled with DMSO and bottle 3 was filled with ddH20. 883 
+
+To start, the antibody-stained coverslip was removed from the storage buffer, transferred to an 884 
+
+acrylic stage insert, and mounted with a gasket (Qintay) to safely allow for liquid exchange on top 885 
+
+of the coverslips without leaking. The Leica microscope was manually programmed using the LAS 886 
+
+X software (Leica Microsystems, version 3.7.1.21655) and set to a 15 μm Z-stack with a Z step 887 
+
+size of 1.50 and Z slices of 5. The DAPI channel was used for AutoFocus with a precision level 888 
+
+one below 100% accuracy and a capture range of 40 μm. Images were subjected to shading 889 
+
+correction by following the instructions on the Linked Shading wizard. Imaged region width and 890 
+
+height varied according to the sample size and ranged from 5.4mm to 6.0mm, respectively. Tile 891 
+
+overlap was 10%. XY resolution was 324.8 nm/px and Z Pitch 1.499 μm/z. Project settings for 892 
+
+imaging collection were: TIFF, uncompressed, and 16-bit. 893 
+
+Transfer data and image processing 894 
+
+Following image acquisition, raw TIFF images were processed through the standard data transfer 895 
+
+protocol using the CODEX Instrument software to organize TIFF files into specific folders based 896 
+
+on imaging cycles and regions and rename them according to the format Region_Tile_Z-897 
+
+Plane_Channel.tif. These organized files were subsequently processed using Singer software 898 
+
+(Version 1.1.0) from Akoya Biosciences. Singer software performs cycle alignment to compensate 899 
+
+for spatial drifts occurring between imaging cycles by referencing the DAPI nuclear stain channel. 900 
+
+Additionally, it stitches image tiles together while eliminating overlaps, conducts background 901 
+
+subtraction utilizing blank imaging cycles without fluorescent oligonucleotides, and applies 902 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+33 
+
+Extended Depth of Field (EDoF) processing to merge multiple focal planes into a single, focused 903 
+
+image. The software generates a pyramidal qpTIFF image by stacking and compressing all Z-904 
+
+plane, channel, and cycle TIFFs, significantly reducing the file size for subsequent analysis. 905 
+
+Processing was carried out using default configuration parameters, with the following functions 906 
+
+activated: Extended Depth of Field (EDoF), shading correction, distortion correction, tile 907 
+
+normalization, cycle alignment, stitching, and background subtraction. Intermediate TIFF files 908 
+
+were saved post-stitching under high-quality performance settings. Additionally, the stitched TIFF 909 
+
+images produced by Singer were converted into 16-bit pyramidal OME-TIFF images using the 910 
+
+pyvips Python package. 911 
+
+Cell segmentation 912 
+
+For cell segmentation, we used the QuPath software (version 0.3.2) with deep-learning-based 913 
+
+StarDist extension (version 0.3.2) 47 . The StarDist model was retrained using the TissueNet dataset. 914 
+
+The segmentation was applied to the DAPI nuclear stain. A probability (detection) threshold of 0.5 915 
+
+was used. Nuclei expansion was implemented with a 5.0-pixel increment, and a cell constraint 916 
+
+scale of 1.5 was utilized to approximate the detection of all cells. Intensity and shape features for 917 
+
+detected cells were also measured by using the QuPath software. As a result, for all images, tab-918 
+
+separated value (tsv) files were generated. The tsv files were subsequently employed for 919 
+
+downstream analysis. 920 
+
+Hierarchical cell clustering, cluster validation and annotation 921 
+
+Whereas CODEX can support the quantitative analysis of multiple markers in intact tissue 922 
+
+samples 18, 24, 48 , its use suffers from technical difficulties, such as signal overlap that can occur 923 
+
+between nearby cells, thereby interfering with proper cell-type identification 49 . To overcome these 924 
+
+limitations, we developed a hierarchical cell clustering method that leverages ANN classifiers and 925 
+
+z-score normalization together with an over-clustering step using K-means. These normalization 926 
+
+techniques and unsupervised clustering algorithms have been shown by others to be most effective 927 
+
+in mitigating noise-induced clustering artifacts 50 and are considered as best practices for CODEX 928 
+
+analysis. After segmentation, tsv files of each sample were individually imported into QuPath and 929 
+
+used to identify single-stained CD140a + tumor cells and cleaved caspase 3 + before performing 930 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+34 
+
+unsupervised cell clustering. To train the classifiers, the train object classifier found on the object 931 
+
+classification tab was used to manually select at least 100 different negative and positive CD140a +
+
+932 
+
+cells. QuPath’s implementation of the OpenCV multi-layer perceptron was used as a classifier 933 
+
+while whole-cell protein intensity values were used as features. These same steps were also used 934 
+
+to train the classifiers for cleaved caspase 3 + cells. After this, tsv-files were exported and subjected 935 
+
+to R and Python scripts, where all cells that were negative for CD140a and cleaved caspase 3 from 936 
+
+both control and α-CTLA-4/ α-PD1 samples were pooled together, and each marker intensity was 937 
+
+subjected to Z-score normalization. As shown in Hickey et al 50 , this normalization method reduces 938 
+
+clustering artifacts associated with low signal or high background. Importantly, to circumvent 939 
+
+batch effects and run-to-run variations, we normalized across pooled runs only after marker-level 940 
+
+QC and z-score normalization, and we verified consistent staining patterns across days and 941 
+
+conditions. After this, the normalized dataset was subjected to two rounds of K-means clustering 942 
+
+based on the expression of lineage-defining markers but excluding phenotypic markers (Ki67, 943 
+
+GZM-B, ICOS, PD-1, Lag-3, TIM-3, PD-L1). This strategy was chosen because of the published 944 
+
+recommendations, indicating that phenotype annotations should be avoided at the clustering step 945 
+
+and that over-clustering enhances the separation of cell types often confounded by noise into 946 
+
+distinct clusters. The Lloyd algorithm was used for k-means clustering with k=60 for both rounds 947 
+
+of clustering, of which the known immune cell types were identified, annotated and merged using 948 
+
+average cluster profiles. The second round of clustering was performed only with the clusters that 949 
+
+we couldn’t properly annotate in the first round, given the low expression or mixed signal 950 
+
+intensities of mutually exclusive lineage-defining markers. This produced another 44 clusters, of 951 
+
+which the known cell types were combined with the first round of clustering, resulting in the final 952 
+
+annotation of 13 known cell types, plus a population of unidentified immune cells and a population 953 
+
+negative for all immune lineage-defining markers labeled as other. These 13 cell types were then 954 
+
+visually verified by overlaying the cells of each cluster onto the stitched images in QuPath. 955 
+
+T-distributed stochastic neighbor embedding (tSNE) dimension reduction 956 
+
+To visually confirm the distinct identity of the immune cell populations, 100,000 immune cells 957 
+
+were sampled across both groups and subjected to tSNE dimension reduction 51 , where the high-958 
+
+dimensional expression profiles of the cells were transformed into a two-dimensional space 51 .959 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+35 
+
+Cellular neighborhood (CN) analysis 960 
+
+To identify CNs in T3 tumors, we applied the “Sliding Window Mapping Method” developed by 961 
+
+the Nolan Lab 20 , which uses a custom k-nearest neighbor approach available via GitHub 962 
+
+(github.com/nolanlab/NeighborhoodCoordination). We set the window size to 20 neighbors, 963 
+
+consistent with parameters from the original study. Each window was represented as a vector 964 
+
+containing the frequency of 13 defined cell types. Following window generation, CNs were 965 
+
+identified using the MiniBatchKMeans clustering algorithm (scikit-learn v1.2.1), with the number 966 
+
+of clusters (K) set to 20 and neighborhood size to 7. This configuration was chosen based on prior 967 
+
+CODEX studies to balance resolution and biological interpretability. Higher values of K tended to 968 
+
+split known CNs without revealing new biological patterns, while smaller values merged distinct 969 
+
+tumor, boundary, and immune compartments. Similarly, increasing the neighborhood size beyond 970 
+
+7 did not yield novel CNs but instead divided cell types into redundant or overly similar groups. 971 
+
+We then calculated the log2 fold change (log2 FC) of cell-type enrichment within each 972 
+
+neighborhood relative to the tissue background. The log2-transformed fold change values were 973 
+
+then visualized as a heatmap using the sns.clustermap function from Python's Seaborn library 52 .974 
+
+We report full parameterization and code to allow replication. 975 
+
+Immunity-promoting sub-neighborhood (IP-SN) analysis and spatial correlation 976 
+
+We also applied the “Sliding Window Mapping Method” specifically to the cells encompassing 977 
+
+the immunity neighborhood. For this analysis, CD4 + and CD8 + T cells were further annotated 978 
+
+based on their z-scaled expression values for GZMB and Ki67. This refined data was later used 979 
+
+for sub-neighborhood analysis within the IP-CN6. The resulting heatmaps for each time point 980 
+
+were used for correlation analysis. The expression column profiles of GZMB + T cells and Ki67 +
+
+981 
+
+T-cells were utilized to measure the Pearson correlation between them. 982 
+
+To quantify co-localization of GZMB ⁺ and KI67 ⁺ T cells within the IP-CN6, we examined the IP-983 
+
+SNs heatmap for each time point and annotated IP-SNs that were simultaneously enriched for both 984 
+
+populations. For each cell type, we then calculated the percentage residing in these co-enriched 985 
+
+IP-SNs. Analogously, we identified IP-SNs co-enriched for cDC1 with GZMB ⁺ T cells and for 986 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+36 
+
+cDC-1 with KI67 ⁺ T cells. For cDC1, the percentage residing in each set of co-enriched IP-SNs 987 
+
+was computed relative to the total cDC1 count across all IP-SNs using the same approach. 988 
+
+GZMB + and Ki67 + distance calculations 989 
+
+We performed a spatial distance analysis between GZMB ⁺ CD8 ⁺ T cells and Ki67 ⁺ CD8 ⁺ T cells 990 
+
+relative to tumor bulk cells to determine the average shortest distance between T cells and tumor 991 
+
+cells. We present full distance distributions (Figure 7D) and summarize fractions above/below 992 
+
+350 μm as a mid-distribution reference chosen at d10 when Ki67 ⁺ CD8 ⁺ T cell split approximately 993 
+
+50:50 (Figure 7E) . Conclusions do not rely on a single cutoff, as the distributions separate over 994 
+
+time. This analysis was conducted using the spatial_distance function from the scimap Python 995 
+
+package. 996 
+
+Triads frequency analysis and T cell phenotype within triads 997 
+
+To quantify the frequency of cDC1 or IFN γ–activated macrophages participating in two-cell 998 
+
+(dyads) and three-cell (triads) clusters involving APCs, CD4 ⁺ T cells, and CD8 ⁺ T cells, we defined 999 
+
+a fixed 10 μm radius centered on the centroid of each APC’s segmentation mask. This radius served 1000 
+
+as a proxy for potential synaptic engagement, in line with previous spatial analyses. However, it 1001 
+
+is important to emphasize that this approach does not confirm direct membrane–membrane 1002 
+
+contact. Additionally, given the use of 8 μm tissue sections and EDoF technology, spatial 1003 
+
+projections may include vertically offset cells, potentially leading to overestimation of physical 1004 
+
+interactions within the 10 μm threshold. To specifically identify triadic clusters, we first identified 1005 
+
+all neighbors within the fixed radius using the frNN function from the dbscan R package. We then 1006 
+
+classified these clusters as dyads if they contained two cells (one query APC and one T cell) or as 1007 
+
+triads if they comprised among neighbors CD4 and CD8 T cells with exclusion of regulatory T 1008 
+
+cells. Alternatively, we further stratified these triads by T cell phenotype within each triad. By 1009 
+
+extracting high-resolution phenotype data for all neighbors within defined triads, we quantified the 1010 
+
+proportions of T cells that were GZMB + , Ki67 + , or double negative (GZMB ⁻Ki67 ⁻) over time. 1011 
+
+Proximity density score 1012 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+37 
+
+To quantify the frequency of interactions between specific cell types, we calculated Proximity 1013 
+
+Density. This metric assesses the likelihood of interaction between two cell types relative to their 1014 
+
+abundance within the tissue. Specifically, Proximity Density reflects the ratio of observed 1015 
+
+interactions between two cell types to the expected number of interactions based on their respective 1016 
+
+population sizes. We utilized the scimap Python package available at 53 to compute Proximity 1017 
+
+Density scores for the following cell type pairs: cDC1 cells and Ki67 + T cells. 1018 
+
+Permutation test 1019 
+
+To identify significant co-localizing or avoidance behaviors between different cell types, we 1020 
+
+utilized the spatial interaction function from the scimap Python package. We conducted 1021 
+
+permutation tests of single-cell interactions following the methodology previously described 29, 30 .1022 
+
+In our analysis, cells located within a 6-pixel radius (6 μm) were considered to be co-localizing. 1023 
+
+Significant co-localizing or avoidance behaviors were defined by a P-value threshold of less than 1024 
+
+0.01. Briefly, we defined a co-localization zone with a 6 μm radius extending from the nucleus of 1025 
+
+any one cell to the outermost edge of an adjacent cell. Cells within this radius were considered to 1026 
+
+be co-localizing. Then, to identify non-random patterns of co-localization, we performed 1,000 1027 
+
+permutations of the cell labels while fixing their x and y coordinates, allowing us to differentiate 1028 
+
+between co-localization and avoidance behaviors. Significant co-localization among different cell 1029 
+
+types was defined as having a p-value of less than 0.01 1030 
+
+Longitudinal proximity between CNs 1031 
+
+To analyze the collective longitudinal actions of the cell types comprising each CN, we labeled 1032 
+
+cells according to their respective CNs and performed a 20-nearest-neighbor analysis on each cell 1033 
+
+across multiple time points. This approach quantified how the spatial proximity between CNs 1034 
+
+changed longitudinally. To assess the significance of the inter-CN interactions, we used a t-test 1035 
+
+followed by Benjamini-Hochberg adjustment for multiple hypothesis testing for each CN-to-CN 1036 
+
+interaction pair. 1037 
+
+Network of communication between CNs 1038 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+38 
+
+To characterize the tissue assembly rules governing CN communications, we first identified the 1039 
+
+cells that were located at the interfaces between adjacent CNs. To do this, we identified 20 nearest 1040 
+
+neighbors for each cell, and cells with at least 30% of their neighbors belonging to an adjacent CN 1041 
+
+were defined as “interface cells”. We then performed the permutation test by using the 1042 
+
+spatial_interaction function from the scimap Python package to assess the significance and level 1043 
+
+of interaction between different CN interfaces. This allowed us to build a network of interactions 1044 
+
+between the different CN-interfaces. The results were represented as a network plot, where the 1045 
+
+node sizes represent CN frequency in the tissue at a particular time point, and connection arrows 1046 
+
+between nodes indicate the strength of interaction between interfaces, ranging from weak (light 1047 
+
+gray) to strong (black). 1048 
+
+Sorting of scRNA-seq samples 1049 
+
+For sorting of tumor cells and intratumoral immune populations from d10 T3 tumors, single-cell 1050 
+
+suspensions were generated from enzymatically digested tumors. CD45 ⁺ immune cells were first 1051 
+
+enriched using CD45 magnetic microbeads (Miltenyi Biotec, cat. no. 130-052-301). Enriched 1052 
+
+CD45 ⁺ cells were incubated with Fc block (anti-CD16/32; 500 ng) for 5 minutes at room 1053 
+
+temperature, followed by staining with an antibody cocktail containing anti-CD45, anti-CD4, anti-1054 
+
+CD8, anti-XCR1, anti-CD11c, and anti–MHC class II antibodies (BioLegend; 1:200 dilution) in 1055 
+
+100 μL staining buffer (PBS supplemented with 2% FCS) for 30 minutes at 4 °C. In parallel, the 1056 
+
+CD45 ⁻ fraction from the same single-cell suspension was stained with anti-CD140 antibody to 1057 
+
+isolate T3 tumor cells. Cell sorting was performed on a BD FACSAria II (BD Biosciences). The 1058 
+
+purity of all sorted populations used for single-cell RNA sequencing exceeded 96%, as assessed 1059 
+
+by post-sort analysis. 1060 
+
+All sequencing samples were then exported and combined for further single-cell analyses in 1061 
+
+Seurat 54 and scanpy 55 . To visualize cells from multiple collection batches, we selected for the top 1062 
+
+8,000 highly variable genes (HVGs) using the ‘sc.pp.highly_variable_genes’ method with 1063 
+
+‘seurat_v3’ option and correcting for collection batch, and we performed PCA on logarithmized, 1064 
+
+normalized expression and UMAP dimension reduction using the top 30 principal components and 1065 
+
+neighborhood size of 10. The integrated object was also subset to tumor and immune cells, based 1066 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+39 
+
+on collection batch annotations (i.e., CD45 status prior to sequencing), to create the dataset for cell 1067 
+
+type annotation and additional downstream single-cell analyses. 1068 
+
+Annotation of scRNA-seq cells 1069 
+
+Major immune cell types were first identified by manual annotation of differential gene expression 1070 
+
+between clusters in the immune cell subset based on known markers and signatures 14 . We initially 1071 
+
+performed clustering using the Phenograph method implemented in scanpy 56 with k=300 and 1072 
+
+resolution=1.0 and annotated cell type groups based on major lineages (macrophage, CD8 + and 1073 
+
+CD4 + T cell, Treg, natural killer, dendritic cell, neutrophil) and cell cycle status. We then subset 1074 
+
+the object to macrophages and re-performed Phenograph clustering with k=200 and resolution=1.0 1075 
+
+and annotated macrophage subtypes based on known markers and signatures 14 . After functional 1076 
+
+annotating macrophages and T cells, we selected cells with high-confidence and relevant immune 1077 
+
+subtyping for further analysis. 1078 
+
+Differential gene expression and gene set enrichment methods 1079 
+
+To identify differentially expressed genes (DEGs), we performed standard T-tests on 1080 
+
+logarithmized, normalized expression for each gene marker and Benjamini-Hochberg P-value 1081 
+
+correction, implemented in scanpy as the ‘sc.tl.rank_genes_groups’ method. Vlad to fill out gene 1082 
+
+set enrichment details. 1083 
+
+ARCADIA overview 1084 
+
+ARCADIA is a dual variational autoencoder (VAE) framework that integrates scRNA-seq data 1085 
+
+with spatial proteomics data 32 . ARCADIA first identifies and matches archetypes between 1086 
+
+modalities, defined as common extreme phenotypic states, rather than relying on feature-level 1087 
+
+linkage for integration. It then specifically establishes "anchors", which are high-confidence cell 1088 
+
+state archetypes that guide the alignment of all cells between modalities. 1089 
+
+First, we denote N cells and G genes in scRNA-seq data ( XRNA ) and M cells and P protein features 1090 
+
+for CODEX data ( XProtein ). We describe z RNA and z Protein as low-dimensional latent representations 1091 
+
+for each data modality, and ARCADIA entangles these latent spaces using a multi-objective 1092 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+40 
+
+function that ensures gross- and fine-grained details are matched properly across modalities. The 1093 
+
+generative process for gene expression counts X ng RNA is modeled by a zero-inflated negative 1094 
+
+binomial distribution, ZINB( μng , θg, πng ), where mean expression μ, gene dispersion θ, and dropout 1095 
+
+probability π are parameterized by neural networks. Simultaneously, protein expression X mp Protein 
+
+1096 
+
+is modeled by a Gaussian distribution N(μmp , σ²p ), where mean expression μ and variance σ² are 1097 
+
+parameterized by separate neural networks. 1098 
+
+To learn entangled latent representations, the framework optimizes a joint objective function that 1099 
+
+combines reconstruction loss (Evidence Lower Bound or ELBO) with geometric alignment 1100 
+
+constraints, incorporating known biological states and extracted anchors. The total loss function is 1101 
+
+defined as L total = Σ (λ0 * L ELBO + λ1 * L struct ) + λ2 * L anchors + λ3 * L cross-modal , evaluated for both 1102 
+
+scRNA-seq and CODEX and where hyperparameters λ0 , λ1 , λ2 , and λ3 are positive weights 1103 
+
+controlling the relative contribution of each objective component as implemented in the original 1104 
+
+study 32 . We minimize this total loss using stochastic gradient descent to optimize for the encoder 1105 
+
+and decoder parameters. Additional mathematical details are available in 32 .1106 
+
+The objective function consists of four key components. First, Reconstruction Fidelity (L_ELBO) 1107 
+
+uses the Evidence Lower Bound to ensure accurate reconstruction of the original features for each 1108 
+
+modality. Second, Structure Preservation (L_struct) maintains the internal structure of major cell 1109 
+
+types within each modality, ensuring that distinct cell types and major patterns remain separated. 1110 
+
+Third, Cross-Modal Alignment (L_cross-modal) uses Maximum Mean Discrepancy (MMD) to 1111 
+
+align the global distributions and major patterns of cell types across the two modalities. Finally, 1112 
+
+Anchor Alignment (L_anchors) penalizes latent distances between biologically matched archetype 1113 
+
+anchors. This term is responsible for retaining subtle intra-cell type patterns, particularly those 1114 
+
+driven by the spatial environment that cause phenotypic differentiation within cells of the same 1115 
+
+type. 1116 
+
+scRNA-seq and CODEX data preprocessing for ARCADIA integration 1117 
+
+We applied ARCADIA to integrate scRNA-seq and CODEX data from day 10 T3 tumors 1118 
+
+harvested from α-CTLA-4/ α-PD-1 and control mice, and we focused our analysis on immune cell 1119 
+
+states. To avoid biases from the relative number of cells recovered in each assay, we integrated the 1120 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+41 
+
+entire scRNA-seq dataset with one representative day 10 control and one representative d10 α-1121 
+
+CTLA-4/ α-PD-1-treated CODEX sample. The RNA count and protein expression values for each 1122 
+
+dataset were normalized and pre-processed for ARCADIA input as described previously 32 .1123 
+
+Specifically, we selected 2,000 HVGs and logarithmized and normalized scRNA-seq prior to 1124 
+
+archetype matching (scRNA-seq remained as count data for dual VAE training); for CODEX data, 1125 
+
+we retained all protein markers and normalized data using median absolute deviation and z-1126 
+
+scoring. In addition to cell-intrinsic protein expression, we incorporate spatial protein expression 1127 
+
+features for each CODEX cell by averaging neighborhood expression from the 20-nearest 1128 
+
+neighborhood graph (the default setting). We used CN assignments computed as described above 1129 
+
+for the α-CTLA-4/ α-PD-1-treated and control CODEX sample. Cell annotations were harmonized 1130 
+
+between scRNA-seq and CODEX datasets for d10 samples, and only immune cell subtypes present 1131 
+
+in both datasets were aligned. 1132 
+
+Archetype alignment and integration by dual VAE training 1133 
+
+We defined archetypes for each data modality using Principal Convex Hull Analysis (PCHA) on 1134 
+
+the preprocessed feature spaces. To account for phenotypic extremes due to α-CTLA-4/ α-PD-1 1135 
+
+treatment effects, we computed k archetypes for each α-CTLA-4/ α-PD-1-treated or control sample 1136 
+
+(optimal k chosen between 7 and 13 based on cross-modal matching quality), merged archetypes 1137 
+
+across samples within each modality, and then aligned archetypes across modalities using the 1138 
+
+Hungarian algorithm on cell-type composition profiles. Anchors to guide ARCADIA integration 1139 
+
+were defined as high-confidence cells with dominant archetype weights in the top 5% of each 1140 
+
+archetype's distribution. 1141 
+
+We trained the dual VAE architecture for 500 epochs using the AdamW optimizer with a learning 1142 
+
+rate of 1e-3 and a batch size of 1,024. Both VAEs were instantiated with latent dimensionality of 1143 
+
+60 and 3 hidden layers for the encoder and decoder neural networks; the RNA VAE used 1,024 1144 
+
+nodes per hidden layer while the protein VAE used 512 to account for lower dimensionality. The 1145 
+
+model optimized the previously described objective function incorporating modality-specific 1146 
+
+reconstruction, within-modality cell type clustering, anchor matching, and cross-modal cell type 1147 
+
+alignment losses. By default, the relative contribution of each objective component (each λi scalar) 1148 
+
+is automatically tuned so each loss term scales proportionally. Other hyperparameter values were 1149 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+42 
+
+chosen based on clustering and integration metric performance 32 . In optimizing the joint objective 1150 
+
+function, each modality’s latent space becomes entangled ( Figure S7C ) which aligns immune cell 1151 
+
+states from both datasets into a unified coordinate system – the ARCADIA entangled latent space 1152 
+
+– which could then be used to predict spatial niche demographics for scRNA-seq cells ( Figure 1153 
+
+S7D). When visualizing cells from both modalities in ARCADIA space, CODEX cells are 1154 
+
+subsampled to 30% to better match scRNA-seq cell counts. 1155 
+
+Analysis of spatially dependent differential gene expression 1156 
+
+Using the entangled latent space, which reflects phenotypic similarities and variation based on 1157 
+
+shared archetypes, we predicted CN labels for each scRNA-seq cell informed by its 10 nearest-1158 
+
+neighboring CODEX cells. Subsequently, we performed differentially expressed gene (DEG) 1159 
+
+analysis between α-CTLA-4/ α-PD-1-treated and control cells, for each cell type within different 1160 
+
+CNs. To focus our analysis, we only examined DEG patterns from cell types assigned to CN6 with 1161 
+
+adequate representation, for example, CD8 + and CD4 + T cells in CN1, CN2, CN4 and CN6. DEGs 1162 
+
+were identified using one-versus-all T-tests on logarithmized, normalized expression and 1163 
+
+Benjamini-Hochberg P-value correction, with predicted CN labels as the testing groups. The 1164 
+
+resulting DEGs were individually interpreted (analysis of top 100 statistically significant up- or 1165 
+
+down-regulated genes based on log-fold-change) and analyzed via gene set enrichment (GSEA). 1166 
+
+Specifically, GSEA was performed using the fgsea R package 57 on ICT vs control DEGs for cells 1167 
+
+within CN6 cells or using cells from all CNs. In the main and supplemental figures, CD8 and CD4 1168 
+
+T cell marker gene expression patterns across predicted CNs are depicted in using dotplots, where 1169 
+
+dot size is the mean expression of α-CTLA-4/ α-PD-1-treated cells within a CN and sizes are scaled 1170 
+
+for each marker across CN groups. 1171 
+
+Treatment-dependent cellular interaction inference from scRNA-seq using ContactTracing 1172 
+
+ContactTracing identifies conditionally-dependent cell-cell interactions and captures cell type-1173 
+
+specific responses to ligand-receptor-mediated interactions 33 . We applied ContactTracing on 1174 
+
+scRNA-seq from immune cells from d10 α-CTLA-4/ α-PD-1 and control samples, using α-CTLA-1175 
+
+4/ α-PD-1 treatment as the experimental condition parameter. For cell annotations, we used major 1176 
+
+cell type labels for all immune cell populations except macrophages, for which we used functional 1177 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+43 
+
+cell type labels based on hierarchical clustering and annotation. Other than feature selection, which 1178 
+
+was not performed to keep the analysis unbiased and transcriptome-wide, we used default 1179 
+
+parameters and cutoffs as originally implemented. For cell-cell interaction Circos plot 1180 
+
+visualizations, cell type-specific ligands and receptors were ordered by diffusion components 1181 
+
+computer on differential expression as in the default implementation. To ensure high confidence 1182 
+
+in inferred interactions, we only studied interactions with differential ligand expression FDR<0.01, 1183 
+
+ligand expression in >5% of each donor cell type, ligand effects involving more than one 1184 
+
+differentially expressed gene, thus highlighting significant interactions with meaningful 1185 
+
+downstream transcriptional effects across immune cell types. To further focus our investigations, 1186 
+
+we visualized networks of T cell-APC triad-specific interactions invigorated or abrogated by α-1187 
+
+CTLA-4/ α-PD-1 (positive or negative ligand log-fold-change). 1188 
+
+Statistical analyses 1189 
+
+A P value of < 0.05 was considered statistically significant. All statistical testing methods are 1190 
+
+described in figure legends. 1191 
+
+1192 
+
+1193 
+
+1194 
+
+1195 
+
+1196 
+
+1197 
+
+1198 
+
+1199 
+
+1200 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+44 
+
+MAIN FIGURE LEGENDS 1201 
+
+Figure 1. Spatial Proteomic Profiling to Monitor Successful Immune Checkpoint Therapy in 1202 
+
+T3 Tumors (A) Schematic representation of the study experiment workflow. ( B) CODEX 1203 
+
+antibody panel. (C) Longitudinal frequency of CD140a + cells in T3 tumors from control mice 1204 
+
+[n=3(d7), n=4(d9), n=6(d10), n=5(d11), n=3(d13)] and α-CTLA-4/ αPD-1 mice [n=3(d7), n=4(d9), 1205 
+
+n=5(d10), n=5(d11), n=4(d13)]. ***p=0.0002, ANOVA (with mixed-effects analysis) (D) D10 1206 
+
+representative CODEX image with a four-color overlay showing CD140a + , CD4 + , CD8 + and 1207 
+
+FOXP3 + cells. ( E) D10 representative CODEX image with a three-color overlay for CD140a + ,1208 
+
+F4/80 + and CX3CR1 + cells. ( F) D10 representative CODEX image with a three-color overlay for 1209 
+
+CD140a + , F4/80 + and iNOS + cells. Scale bar as indicated. (G) Heatmap displaying normalized 1210 
+
+protein expression in each cell type. ( H) Bar graph showing the cellular composition of T3 tumors 1211 
+
+harvested on d10. *p<0,05, Multiple unpaired t-test 1212 
+
+Figure 2. α-CTLA-4/ α-PD-1 Induces Co-Localization of CD4 + and CD8 + T Cells with Myeloid 1213 
+
+APCs on Day 10. (A) Computational method used to identify non-random co-localizing cell pairs. 1214 
+
+A co-localization zone was defined as a 6 μm radius from the nucleus of a cell to the edge of a 1215 
+
+neighboring cell. Cells within this zone were considered co-localizing. To assess non-random co-1216 
+
+localization, 1,000 label permutations were performed while keeping cell positions fixed. 1217 
+
+Significant co-localization was defined by a p-value < 0.01. (B) Heat map depicting significant 1218 
+
+cell-cell colocalization (red) or avoidance (blue) in control Ab (upper cell) or α-CTLA-4/ α-PD-1 1219 
+
+(lower cell). *p<0.05, adjusted p-value (Benjamini-Hochberg correction) after permutation test. 1220 
+
+(C) Schematic representation of the analysis used to quantify the frequency of triads between CD4 +
+
+1221 
+
+and CD8 + T cells with myeloid APCs. ( D) Frequency of dyads between Tregs and cDC1. (E) 1222 
+
+Frequency of dyads between CD8 + T cells and cDC1. (F) Frequency of dyads between CD4 + T1223 
+
+cells and cDC1. ( G) Frequency of triads between CD4 + T cells, CD8 + T cells and cDC1. (H) Four 1224 
+
+color overlay CODEX images displaying the cell interactions between CD4 + T cells, CD8 + T cells, 1225 
+
+Tregs (FOXP-3 + ) and cDC1 (CD103 + ) from control and α-CTLA-4/ αPD-1 mice. (I) Frequency of 1226 
+
+dyads between CD8 + T cells and IFN γ-activated macrophages. (J) Frequency of dyads between 1227 
+
+CD4 + T cells and IFN γ-activated macrophages. (K) Frequency of triads between CD4 + T cells, 1228 
+
+CD8 + T cells and IFN γ-activated macrophages. (L) Five color overlay CODEX images displaying 1229 
+
+the cell interactions between CD4 + T cells, CD8 + T cells and IFN γ-activated macrophages 1230 
+
+(CD11B + CD38 + MHC-II + ). ns= non-significant.*p=0.0496,**p=0.0021,***p=0.0002, Unpaired t-1231 
+
+test. From B to K, n=5 for control and n=5 for α-CTLA-4/ αPD-1. 1232 
+
+Figure 3. Neighborhood Mapping Reveals Coordinated Redistribution of Immune Cells 1233 
+
+Leading to the Formation of Seven Cellular Neighborhoods (CNs) in T3 Tumors. (A) 1234 
+
+Schematic representation of the Neighborhood Window Mapping method in T3 tumors harvested 1235 
+
+on d10. This method works iteratively by forming a capture window around each cell, profiling its 1236 
+
+nearest neighbors, and using the cellular composition of each window to identify the different CNs. 1237 
+
+(B) Heat map showing the identification of seven distinct CNs in T3 tumors and their respective 1238 
+
+frequencies (enrichment score) within each CN (pooled data from both groups). n=5 control and 1239 
+
+n=5 α-CTLA-4/ αPD-1. (C) Representative dot plots depicting the seven CNs and their 1240 
+
+corresponding colors. ( D) Frequency of CNs in d10 T3 tumors from control Ab versus α-CTLA-1241 
+
+4/ αPD-1 mice. ***p < 0.001, T-test. (E) Percentage of Tumor cells, CD4 + and CD8 + T cells, Tregs, 1242 
+
+NK cells, and cDC1 distributed across the CNs in d10 T3 tumors. (F) Percentage of CX3CR1 +
+
+1243 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+45 
+
+macrophages, iNOS + macrophages, IFN γ activated macrophages, and CD206 + macrophages 1244 
+
+distributed across CNs in d10 T3 tumors. (G) Percentage of cDC1 and IFN γ activated macrophage 1245 
+
+triad cells distributed across the CNs in d10 T3 tumors. From D to G, n=5 for control and n=5 for 1246 
+
+α-CTLA-4/ αPD-1. 1247 
+
+Figure 4. TNF α and IFN γ Signaling are Putative Communication Pathways Between T cells 1248 
+
+and Myeloid APCs within IP-CN6. (A) Overview of ARCADIA framework for integrating 1249 
+
+scRNA-seq and CODEX data, including input and output information. (B,C) ARCADIA 1250 
+
+integrated latent embedding colored by immune cell type (B) and modality and treatment condition 1251 
+
+(C). (D) UMAP of cells colored by known (ground truth) CNs in CODEX profiled cells. (E-H) 1252 
+
+Differentially expressed genes (DEGs) between α-CTLA-4/ α-PD-1 and control conditions for 1253 
+
+CD8 + T (E) , CD4 + T (F) , cDC1 (G) , and macrophage (H) cells across CNs. Dot size corresponds 1254 
+
+to mean expression of each marker for α-CTLA-4/ α-PD-1-treated cells within a CN, and sizes are 1255 
+
+scaled for each marker across CN groups. Log 2 fold change and significance for each dot represent 1256 
+
+differential expression comparisons for each marker between α-CTLA-4/ α-PD-1-treated and 1257 
+
+control cells within a CN (I) Schematic figure summarizing cell-cell communication pathways 1258 
+
+between CD4 + T cells, CD8 + T cells and cDC1 from ARCADIA and ContactTracing analyses. (J) 1259 
+
+Schematic figure summarizing cell-cell communication pathways between CD4 + T cells, CD8 + T1260 
+
+cells and macrophages from ARCADIA and ContactTracing analyses. Detailed circus plots are 1261 
+
+depicted in Figure S9 and statistical analysis in Table S3 .1262 
+
+Figure 5. Longitudinal Analysis Reveals Cellular Dynamics Driving the Expansion of the 1263 
+
+Immunity-Promoting CN6 During Tumor Rejection. (A) Longitudinal three-color CODEX 1264 
+
+images of CD140a + , CD4 +, and CD8 + cells of T3 tumors harvested in multiple time points from 1265 
+
+control Ab and α-CTLA-4/ α-PD-1 mice. (B) Longitudinal frequency of CD4 + T cells. **p=0.0079, 1266 
+
+****p<0.0001, ANOVA (with mixed-effects analysis). (C) Longitudinal frequency of CD8 + T1267 
+
+cells.***p<0.0001, ANOVA (with mixed-effects analysis). (D) Longitudinal three-color CODEX 1268 
+
+images of CD140a + , iNOS +, and CX3CR1 + cells of T3 tumors harvested at multiple time points 1269 
+
+from control Ab and α-CTLA-4/ α-PD-1 mice. (E) Longitudinal frequency of CX3CR1 +
+
+1270 
+
+macrophages. **p=0.0014, ***p<0.0001, ANOVA (with mixed-effects analysis). (F) Longitudinal 1271 
+
+frequency of iNOS + macrophages. ***p<0.0001, ANOVA (with mixed-effects analysis). 1272 
+
+(G) Longitudinal frequency of IFN γ-activated macs. **p=0.0012, ANOVA (with mixed-effects 1273 
+
+analysis). (H) Longitudinal frequency of CD206 + macrophages. **p=0.0019, ANOVA (with 1274 
+
+mixed-effects analysis). (I) Longitudinal frequency of cDC1. *p<0.05, ANOVA (with mixed-1275 
+
+effects analysis). (J) Longitudinal frequency analysis of the seven CNs in T3 tumors from control 1276 
+
+Ab and α-CTLA-4/ αPD-1 mice. (K) Representative dot plots depicting the seven CNs and their 1277 
+
+corresponding colors in the longitudinal dataset. (L) Longitudinal frequency of triads between 1278 
+
+CD4 + T cells, CD8 + T cells and cDC1. (M) Longitudinal frequency of triads between CD4 + T cells, 1279 
+
+CD8 + T cells and IFN γ-activated macrophages. (N) Representative high magnification CODEX 1280 
+
+image of a T3 tumor harvested on d13. Scale bar is 50 μm. From B to M, mean in Control represents 1281 
+
+[n=3(d7), n=4(d9), n=6(d10), n=5(d11), n=3(d13)] and in α-CTLA-4/ αPD-1 [n=3(d7), n=4(d9), 1282 
+
+n=5(d10), n=5(d11), n=4(d13)]. 1283 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+46 
+
+Figure 6. Granzyme B ⁺ and Ki67 ⁺ T Cells Form Distinct Sub-Neighborhoods (IP-SNs) Within 1284 
+
+Immunity-Promoting CN6 (A) Representative contour plot showing GZMB + versus Ki67 + T1285 
+
+cells. (B) Frequency of GZMB + and Ki67 + CD4 + T cells across the seven CNs in d10 T3 tumors 1286 
+
+from control (n=5) and α-CTLA-4/ αPD-1 (n=5) mice. ( C) Frequency of GZMB + and Ki67 + CD8 +
+
+1287 
+
+T cells across the seven CNs in d10 T3 tumors from control (n=5) and α-CTLA-4/ αPD-1 (n=5) 1288 
+
+mice. (D) Four-color overlay CODEX image displaying the location of CD140a + , T cells (CD3 + ), 1289 
+
+GZMB +, and Ki67 + cells in T3 tumors harvested on d10. Scale bar as indicated. (E) Dot plot 1290 
+
+showing the location of tumor cells, GZMB + T cells, and Ki67 + T cells in a T3 tumor harvested on 1291 
+
+d10. (F) Computational method used to identify the immunity-promoting sub-neighborhoods (IP-1292 
+
+SNs). (G) Heat map showing the identification of the IP-SNs and their respective frequencies 1293 
+
+(enrichment score) within each IP-SN (pooled data from both groups). (H) Frequency of the four 1294 
+
+IP-SNs in T3 tumors from control (n=5) and α-CTLA-4/ αPD-1 (n=5) treated mice. *p < 0.05, 1295 
+
+Multiple unpaired T-test. ( I) Green box showing a five-color CODEX image showing interactions 1296 
+
+between Ki67 + T cells and cDC1(CD103 + ) (highlighted in white arrows with colored outlines) with 1297 
+
+a sequential increase in magnification. Scale bar goes from 50 μm, 20 μm and 5 μm (left to right). 1298 
+
+(J) Orange -box showing six-color overlay CODEX image with a sequential increase in 1299 
+
+magnification for the cells in the vicinity of GZMB + T cells. Scale bar goes from 50 μm, 20 μm and 1300 
+
+5μm (left to right). (K) Proximity density analysis between Ki67 + T cells and cDC1. *p<0.05, T-1301 
+
+test. (L) Contour plot showing the distribution of Ki67 + T cells (red) and cDC1 (blue) in a T3 1302 
+
+tumor harvested on d10. 1303 
+
+Figure 7. Temporal Remodeling of IP-CN6 Drives the Spatial Compartmentalization 1304 
+
+Between Cytotoxic and Proliferative Functions During α-CTLA-4/ α-PD-1. (A) Longitudinal 1305 
+
+frequency of GZMB + and Ki67 + CD8 + T cells in the IP-CN6. *p<0.05, **p=0.0094. ANOVA (with 1306 
+
+mixed-effects analysis) (B) Longitudinal frequency of GZMB + and Ki67 + CD4 + T cells in the IP-1307 
+
+CN6. *p<0.05, **p=0.0099. ANOVA (with mixed-effects analysis). From A to B, mean in Control 1308 
+
+represents [n=3(d7), n=4(d9), n=6(d10), n=5(d11), n=3(d13)] and in α-CTLA-4/ αPD-1 [n=3(d7), 1309 
+
+n=4(d9), n=5(d10), n=5(d11), n=4(d13)]. (C) Longitudinal three-color CODEX images showing 1310 
+
+the distinct location of GZMB + and Ki67 + cells in T3 tumors from α-CTLA-4/ α-PD-1 mice. (D) 1311 
+
+Violin plots depicting the distance of GZMB + or Ki67 + CD8 T cells to tumor bulk cells over 1312 
+
+multiple time points. (E) Percentage of GZMB + or Ki67 + CD8 + T cells above or below 350 μm to 1313 
+
+tumor bulk cells. (F) Spatial correlation between the location of Ki67 + and GZMB + T cells inside 1314 
+
+the IP-CN6 over multiple time points. A high spatial correlation indicates that these cell types are 1315 
+
+located near one another (i.e., within the same IP-SNs), while a low or negative correlation 1316 
+
+suggests they are distributed across distinct IP-SNs and spatially distant. (G) % of GZMB + or 1317 
+
+Ki67 + CD8 T cells enriched within the same IP-SNs over time. (H) Spatial correlation between the 1318 
+
+location of cDC1 and IFN γ-activated with respect to Ki67 + or GZMB + T cells inside the IP-CN6 1319 
+
+over multiple time points. (I) T cell phenotype in the vicinity of cDC1 triads. n.c= not calculated 1320 
+
+*p<0.05, Tukey's multiple comparisons test (J) T cell phenotype in the vicinity of IFN γ-activated 1321 
+
+triads. *p<0.05, Tukey's multiple comparisons test 1322 
+
+Figure 8. The Maturation of the Immunity-Promoting CN6 Reshapes Tissue Organization 1323 
+
+and the Communication Rules Between CNs. (A) Computational method utilized to identify 1324 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+47 
+
+cells at the interface of CNs and build a network of communication between CNs . Node size 1325 
+
+reflects CN frequency in the tissue, and connection lines indicate connection strength, ranging 1326 
+
+from weak (light gray) to strong (black) . (B) Network of communication between the CNs in T3 1327 
+
+tumor from control Ab mice. (C) Network of communication between the CNs in T3 tumor from 1328 
+
+α-CTLA-4/ α-PD-1 mice. (D) Frequency of GZM-B + CD8 T cells to tumor cells at CN1 and CN2. 1329 
+
+(E) Proposed spatiotemporal mechanism for the maturation of IP-CN6 during α-CTLA-4/ α-PD-1. 1330 
+
+SUPPLEMENTAL FIGURE LEGENDS 1331 
+
+Figure S1. Developing a Longitudinal CODEX Dataset to Spatially Profile the Tumor 1332 
+
+Rejection Induced by α-CTLA-4/ α-PD-1, related to Figure 1. (A) T3 tumor growth curves in 1333 
+
+mice treated with control Ab or α-CTLA-4/ α-PD-1. (B) Immunofluorescence co-staining of 1334 
+
+T3OFP2 + tumor with CD140a Ab. (C) Image processing and cell segmentation pipeline used to 1335 
+
+identify the 15,112,591 cells in our CODEX dataset. (D) Number of cells per sample in control 1336 
+
+and α-CTLA-4/ α-PD-1 conditions at each time point for the immune-competent cohort. (E) 1337 
+
+Longitudinal visualization of CD140a + cells. 1338 
+
+Figure S2. Visual Display of the 49 Tumor Sections Encompassed in the Longitudinal 1339 
+
+CODEX Dataset, related to Figure 1. (A) Two-color CODEX image of T3 tumor sections 1340 
+
+harvested from syngeneic immune-competent background. (B) Two-color CODEX images of T3 1341 
+
+tumor sections harvested from Rag2 -/- immunodeficient mice. 1342 
+
+Figure S3. Representative Antigen Co-Staining Patterns in control (Figure S3A) and α-1343 
+
+CTLA-4/ α-PD1 (Figure S3B) Samples Stained with 32-plex CODEX Antibody Panel . Related 1344 
+
+to Figure 1. 1345 
+
+Figure S4. α-CTLA4/ α-PD-1 Efficacy is Abrogated in T3 tumors Inoculated in Rag2 -/- mice. 1346 
+
+(A) T3 tumor growth curves in WT versus Rag2 -/- mice treated with Control AB or α-CTLA4/ α-1347 
+
+PD-1. (B) Three-color overlay CODEX image displaying CD140a + , F4/80 + , iNOS + and CD38 +
+
+1348 
+
+cells on d10 tumors. (C) Frequency of CD140a + cells on d10. **p=0.0020, ***p<0.0001, One-1349 
+
+way Anova. Rag control n= 3, Rag α-CTLA4/ α-PD-1 n=4. 1350 
+
+Figure S5. Hierarchical Cell Clustering Identifies 13 Distinct Cell Types in T3 Tumors, 1351 
+
+Related to Figure 1. (A) Bioinformatic pipeline used for cell type identification. (B) tSNE plot of 1352 
+
+the intratumoral immune populations. (C) tSNE plot of infiltrating cells displaying individual 1353 
+
+marker protein expression. (D). Five-color CODEX image showing co-staining of CD103 + cells 1354 
+
+with XCR1, CD11C and MHC-II antibodies. Yellow arrows point to cells with an overlay for these 1355 
+
+markers. 1356 
+
+Figure S6. Cellular Neighborhoods (CNs) Composition and Distribution Analysis, related to 1357 
+
+Figure 3 . (A) Cellular composition of each of the seven CNs identified in Figure 3B . (B) 1358 
+
+Percentage of Neutrophils and Dead cells distributed across the seven cellular neighborhoods in 1359 
+
+d10 T3 tumors from control Ab (n=5) or α-CTLA-4/ α-PD-1 (n=5) mice. 1360 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+48 
+
+Figure S7. ARCADIA framework to integrate immune cells from scRNA-seq and CODEX 1361 
+
+datasets (A) UMAP of immune cell scRNA from T3 harvested on d10, colored by cell type 1362 
+
+annotation (outset) and treatment condition (inset). (B) Heatmap displaying normalized RNA 1363 
+
+expression of relevant markers across cell types. (C) Schematic of ARCADIA archetype alignment 1364 
+
+steps, modified from 32 . Archetypes represent cell types/states in both modalities, and are convex 1365 
+
+combinations of extreme points on polytopes based on RNA expression (scRNA-seq) or self and 1366 
+
+neighborhood protein expression (CODEX). Within matched archetypes, latent factor distributions 1367 
+
+are constrained using a cross-modal matching loss function to yield an entangled representation 1368 
+
+preserving cell type geometry and concordance across modalities. (D) Data integration and trained 1369 
+
+dual VAEs allow for investigations into spatial dependencies of cell phenotypes, including the 1370 
+
+effect of cellular neighbors on expression. (E) Matched archetype weights for anchors (high 1371 
+
+confidence archetypes) and non-anchors in scRNA-seq (top) and CODEX data (below). 1372 
+
+Figure S8. Cell neighborhood inference and treatment-related signaling pathway results 1373 
+
+from ARCADIA. (A) Interfered cellular neighborhood (CN) composition following integration 1374 
+
+of scRNA-seq and CODEX immune cells, for control (top) and α-CTLA-4/ α-PD-1 -treated 1375 
+
+(bottom) samples. (B) Gene Set Enrichment Analysis (GSEA) on CD8 ⁺ T cells. (C) GSEA on 1376 
+
+CD4 ⁺ T cells. (D) GSEA on cDC1. (E) GSEA on macrophages. 1377 
+
+Figure S9 Cell-cell interaction inference using ContactTracing reveals profound remodeling 1378 
+
+of cell communication pathways following α-CTLA-4/ α-PD-1. (A) Receptor-ligand interactions 1379 
+
+between CD4, CD8 T cells and cDC1 upregulated (left) or downregulated (right) by α-CTLA-4/ α-1380 
+
+PD-1. (B) Predicted pathways identified between CD4, CD8 T cells and IFN γ-activated 1381 
+
+macrophages upregulated (left) or downregulated (right) by α-CTLA-4/ α-PD-1. For both circos 1382 
+
+plots, ligand genes are in black font, and receptor genes are in grey font; ribbon color corresponds 1383 
+
+to cell type-specific ligand log-fold-change ( α-CTLA-4/ α-PD-1 compared to control, LFC>0 is 1384 
+
+red and LFC<0 is blue), and ribbon thickness corresponds to cell type-specific receptor expression. 1385 
+
+Ribbons are only shown if cell type-specific receptor expression is above 5%, ligand FDR<0.001, 1386 
+
+and |LFC|>0.10. Full receptor-ligand statistics from ContactTracing output are available in Table 1387 
+
+S3 .1388 
+
+Figure S10. Longitudinal Analysis Reveals Cellular Dynamics Driving the Expansion of the 1389 
+
+Immunity-Promoting CN6 During Tumor Rejection, related to Figure 5. (A) Longitudinal 1390 
+
+frequency of NK cells. (B) Longitudinal frequency of T-regs. **0.0004, ANOVA (with mixed-1391 
+
+effects analysis). Mean in Control represents [n=3(d7), n=4(d9), n=6(d10), n=5(d11), n=3(d13)] 1392 
+
+and in α-CTLA-4/ αPD-1 [n=3(d7), n=4(d9), n=5(d10), n=5(d11), n=4(d13) (C) Longitudinal 1393 
+
+three-color CODEX images of CD140a + , LY6-G +, and cleaved caspase-3 + cells of T3 tumors 1394 
+
+harvested at multiple time points. (D) Longitudinal frequency of neutrophils. **p=0.0014, 1395 
+
+ANOVA (with mixed-effects analysis). (E) Longitudinal frequency of dead cells. *p<0.05, 1396 
+
+p=0.0037. ANOVA (with mixed-effects analysis) (F) Heat map showing the identification of seven 1397 
+
+distinct CNs in the pooled dataset of T3 tumors harvested at multiple time points. 1398 
+
+Figure S11. The Expansion of the Immunity-Promoting CN6 Following α-CTLA-4/ α-PD-1 is 1399 
+
+Accompanied by Reduced Cellular Exhaustion, related to Figure 7. (A) Codex images 1400 
+
+showing the co-staining patterns of PD1, LAG3 and TIM3 on CD3 + cells. (B) Longitudinal 1401 
+
+frequency of PD-1 + CD8 + T cells inside the IP-CN6. (C) Longitudinal frequency of PD-1 + CD4+ 1402 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+49 
+
+T cells inside the IP-CN6. (D) Longitudinal frequency of PD-1 + LAG-3 + CD8 + T cells inside the 1403 
+
+IP-CN6. **p=0.0002, ANOVA (with mixed-effects analysis). ( E) Longitudinal frequency of PD-1404 
+
+1+ LAG-3 + CD4 + T cells inside the IP-CN6. (F) Longitudinal frequency of PD-1 + LAG-3 + TIM-3 +
+
+1405 
+
+CD8 + T cells inside the IP-CN6. **p=0.0038, ANOVA (with mixed-effects analysis). (G) 1406 
+
+Longitudinal frequency of PD-1 + LAG-3 + TIM-3 + CD4 + T cells inside the IP-CN6. Mean in Control 1407 
+
+represents [n=3(d7), n=4(d9), n=6(d10), n=5(d11), n=3(d13)] and in α-CTLA-4/ αPD-1 [n=3(d7), 1408 
+
+n=4(d9), n=5(d10), n=5(d11), n=4(d13) 1409 
+
+Figure S12. Granzyme-B + and Ki67 + Have Distinct Spatial Dynamics During the Expansion 1410 
+
+of the IP-CN6, related to Figure 7. (A) Computational method used to identify the immunity-1411 
+
+promoting sub-neighborhoods (IP-SNs) on each individual time point. (B) Heatmap showing the 1412 
+
+IP-SNs in T3 tumors harvested on d7. (C) Heatmap showing IP-SNs in T3 tumors harvested on 1413 
+
+d9. (D) Heatmap showing the IP-SNs in T3 tumors harvested on d11. (E) Heatmap showing the 1414 
+
+IP-SNs in T3 tumors harvested on d13. 1415 
+
+Figure S13. The Maturation of the Immunity-Promoting CN6 Reshapes Tissue Organization 1416 
+
+and the Communication Rules Between CNs, related to Figure 8. (A) Computational method 1417 
+
+utilized to assess the proximity between CNs over multiple time points. (B) Tumor bulk CN2 1418 
+
+longitudinal nearest neighbor composition. (C) Tumor boundary CN1 longitudinal nearest 1419 
+
+neighbor composition. (D) CX3CR1 + macrophage-rich CN4 longitudinal nearest neighbor 1420 
+
+composition . (E) IP-CN6 longitudinal nearest neighbor composition. (F) iNOS + macrophage-rich 1421 
+
+CN7 longitudinal nearest neighbor composition. (G) Neutrophil-rich CN3 longitudinal nearest 1422 
+
+neighbor composition. (H) Dead cell center CN5 longitudinal nearest neighbor composition. 1423 
+
+Control [n=3(d7), n=4(d9), n=6(d10), n=5(d11), n=3(d13)] and α-CTLA-4/ αPD-1 [n=3(d7), 1424 
+
+n=4(d9), n=5(d10), n=5(d11), n=4(d13)]. 1425 
+
+Figure S14. The Maturation of the Immunity-Promoting CN6 Reshapes Tissue Organization 1426 
+
+and the Communication Rules Between CNs, related to Figure 8. Heatmap showing the CNs 1427 
+
+with the most affected interactions after α-CTLA4/ α-PD-1 across all time points. The top three 1428 
+
+changes with α-CTLA4/ α-PD-1 were highlighted in the purple box at the top of the heatmap. The 1429 
+
+top three interactions in control Ab were highlighted in the green box at the bottom of the heatmap. 1430 
+
+Two-sample t-test with Benjamini-Hochberg p-value adjustment for multiple comparisons. 1431 
+
+1432 
+
+1433 
+
+1434 
+
+1435 
+
+1436 
+
+1437 
+
+1438 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+50 
+
+REFERENCES 1439 
+
+1. Schreiber, R.D., Old, L.J. & Smyth, M.J. Cancer immunoediting: integrating immunity's 1440 
+
+roles in cancer suppression and promotion. Science 331 , 1565-1570 (2011). 1441 
+
+2. Shankaran, V. et al. IFNgamma and lymphocytes prevent primary tumour development and 1442 
+
+shape tumour immunogenicity. Nature 410 , 1107-1111 (2001). 1443 
+
+3. Spranger, S. & Gajewski, T.F. Mechanisms of Tumor Cell–Intrinsic Immune Evasion. 1444 
+
+https://doi.org/10.1146/annurev-cancerbio-030617-050606 (2018). 1445 
+
+4. Mantovani, A. et al. Macrophages as tools and targets in cancer therapy. Nature Reviews 1446 
+
+Drug Discovery 2022 21:11 21 (2022). 1447 
+
+5. Dunn, G.P., Bruce, A.T., Ikeda, H., Old, L.J. & Schreiber, R.D. Cancer immunoediting: 1448 
+
+from immunosurveillance to tumor escape. Nature Immunology 3, 991-998 (2002). 1449 
+
+6. Sharma, P. & Allison, J.P. Immune checkpoint targeting in cancer therapy: toward 1450 
+
+combination strategies with curative potential. Cell 161 , 205-214 (2015). 1451 
+
+7. Matsushita, H. et al. Cancer exome analysis reveals a T-cell-dependent mechanism of 1452 
+
+cancer immunoediting. Nature 482 , 400-404 (2012). 1453 
+
+8. Sharma, P. et al. Immune checkpoint therapy—current perspectives and future directions. 1454 
+
+Cell 186 (2023). 1455 
+
+9. Bagchi, S., Yuan, R. & Engleman, E.G. Immune Checkpoint Inhibitors for the Treatment 1456 
+
+of Cancer: Clinical Impact and Mechanisms of Response and Resistance. 1457 
+
+https://doi.org/10.1146/annurev-pathol-042020-042741 (2021). 1458 
+
+10. Gubin, M.M. et al. Checkpoint blockade cancer immunotherapy targets tumour-specific 1459 
+
+mutant antigens. Nature 515 , 577-581 (2014). 1460 
+
+11. Meng, W. et al. Improvement of Tumor Neoantigen Detection by High-Field Asymmetric 1461 
+
+Waveform Ion Mobility Mass Spectrometry. Cancer Immunology Research 12 , 988-1006 1462 
+
+(2024). 1463 
+
+12. Sultan, H. et al. Neoantigen-specific cytotoxic Tr1 CD4 T cells suppress cancer 1464 
+
+immunotherapy. Nature 632 , 182-191 (2024). 1465 
+
+13. Alspach, E. et al. MHC-II neoantigens shape tumour immunity and response to 1466 
+
+immunotherapy. Nature 574 , 696-701 (2019). 1467 
+
+14. Gubin, M.M. et al. High-Dimensional Analysis Delineates Myeloid and Lymphoid 1468 
+
+Compartment Remodeling during Successful Immune-Checkpoint Cancer Therapy. Cell 1469 
+
+175 , 1014-1030.e1019 (2018). 1470 
+
+15. Phillips, D. et al. Immune cell topography predicts response to PD-1 blockade in cutaneous 1471 
+
+T cell lymphoma. Nature Communications 12 (2021). 1472 
+
+16. Pelka, K. et al. Spatially organized multicellular immune hubs in human colorectal cancer. 1473 
+
+Cell 184 , 4734-4752.e4720 (2021). 1474 
+
+1475 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+51 
+
+17. Shiao, S.L. et al. Single-cell and spatial profiling identify three response trajectories to 1476 
+
+pembrolizumab and radiation therapy in triple negative breast cancer. Cancer Cell 42 , 70-1477 
+
+84.e78 (2024). 1478 
+
+18. Schürch, C.M. et al. Coordinated Cellular Neighborhoods Orchestrate Antitumoral 1479 
+
+Immunity at the Colorectal Cancer Invasive Front. Cell 182 , 1341-1359.e1319 (2020). 1480 
+
+19. Cabrita, R. et al. Tertiary lymphoid structures improve immunotherapy and survival in 1481 
+
+melanoma. Nature 577 , 561-565 (2020). 1482 
+
+20. Helmink, B.A. et al. B cells and tertiary lymphoid structures promote immunotherapy 1483 
+
+response. Nature 577 , 549-555 (2020). 1484 
+
+21. Shu, D.H. et al. Immunotherapy response induces divergent tertiary lymphoid structure 1485 
+
+morphologies in hepatocellular carcinoma. Nature Immunology 25 , 2110-2123 (2024). 1486 
+
+22. Gaglia, G. et al. Lymphocyte networks are dynamic cellular communities in the 1487 
+
+immunoregulatory landscape of lung adenocarcinoma. Cancer Cell 41 , 871-886.e810 1488 
+
+(2023). 1489 
+
+23. Chen, J.H. et al. Human lung cancer harbors spatially organized stem-immunity hubs 1490 
+
+associated with response to immunotherapy. Nature Immunology 25 , 644-658 (2024). 1491 
+
+24. Goltsev, Y. et al. Deep Profiling of Mouse Splenic Architecture with CODEX Multiplexed 1492 
+
+Imaging. Cell 174 , 968-981.e915 (2018). 1493 
+
+25. Black, S. et al. CODEX multiplexed tissue imaging with DNA-conjugated antibodies. 1494 
+
+Nature Protocols 16 , 3802-3835 (2021). 1495 
+
+26. Wu, K. et al. The efficacy and safety of combination of PD-1 and CTLA-4 inhibitors: a 1496 
+
+meta-analysis. Experimental Hematology & Oncology 8 (2019). 1497 
+
+27. Dorner, B.G. et al. Selective Expression of the Chemokine Receptor XCR1 on Cross-1498 
+
+presenting Dendritic Cells Determines Cooperation with CD8+ T Cells. Immunity 31 , 823-1499 
+
+833 (2009). 1500 
+
+28. Selby, M.J. et al. Anti-CTLA-4 antibodies of IgG2a isotype enhance antitumor activity 1501 
+
+through reduction of intratumoral regulatory T cells. Cancer Immunol Res 1, 32-42 (2013). 1502 
+
+29. Karimi, E. et al. Single-cell spatial immune landscapes of primary and metastatic brain 1503 
+
+tumours. Nature 614 , 555-563 (2023). 1504 
+
+30. Sorin, M. et al. Single-cell spatial landscapes of the lung tumour immune 1505 
+
+microenvironment. Nature 614 , 548-554 (2023). 1506 
+
+31. Espinosa-Carrasco, G. et al. Intratumoral immune triads are required for immunotherapy-1507 
+
+mediated elimination of solid tumors. Cancer Cell 42 , 1202-1216.e1208 (2024). 1508 
+
+32. Rozenman, B., Hoffer-Hawlik, K., Djedjos, N. & Azizi, E. ARCADIA Reveals Spatially 1509 
+
+Dependent Transcriptional Programs through Integration of scRNA-seq and Spatial 1510 
+
+Proteomics. openRxiv; 2025. 1511 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+52 
+
+33. Li, J. et al. Non-cell-autonomous cancer progression from chromosomal instability. Nature 1512 
+
+620 , 1080-1088 (2023). 1513 
+
+34. Cueto, F.J. & Sancho, D. The Flt3L/Flt3 Axis in Dendritic Cell Biology and Cancer 1514 
+
+Immunotherapy. Cancers ; 2021. p. 1525. 1515 
+
+35. Suttles, J. & Stout, R.D. Macrophage CD40 signaling: A pivotal regulator of disease 1516 
+
+protection and pathogenesis. Seminars in Immunology 21 , 257-264 (2009). 1517 
+
+36. Bhate, S.S., Barlow, G.L., Schürch, C.M. & Nolan, G.P. Tissue schematics map the 1518 
+
+specialization of immune tissue motifs and their appropriation by tumors. Cell Systems 13 ,1519 
+
+109-130.e106 (2022). 1520 
+
+37. Berry, S. et al. Analysis of multispectral imaging with the AstroPath platform informs 1521 
+
+efficacy of PD-1 blockade. Science 372 , eaba2609 (2021). 1522 
+
+38. Alspach, E., Lussier, D.M. & Schreiber, R.D. Interferon γ and Its Important Roles in 1523 
+
+Promoting and Inhibiting Spontaneous and Therapeutic Cancer Immunity. Cold Spring 1524 
+
+Harbor Perspectives in Biology 11 , a028480 (2019). 1525 
+
+39. Guldner, I.H. et al. CNS-Native Myeloid Cells Drive Immune Suppression in the Brain 1526 
+
+Metastatic Niche through Cxcl10. Cell 183 , 1234-1248.e1225 (2020). 1527 
+
+40. Xiang, X. et al. Blocking CX3CR1+ Tumor-Associated Macrophages Enhances the 1528 
+
+Efficacy of Anti-PD1 Therapy in Hepatocellular Carcinoma. Cancer Immunology Research 1529 
+
+12 , 1603-1620 (2024). 1530 
+
+41. Zheng, J. et al. Chemokine receptor CX3CR1 contributes to macrophage survival in tumor 1531 
+
+metastasis. Molecular Cancer 12 , 141 (2013). 1532 
+
+42. Biswas, S.K. & Mantovani, A. Macrophage plasticity and interaction with lymphocyte 1533 
+
+subsets: cancer as a paradigm. Nature Immunology 11 , 889-896 (2010). 1534 
+
+43. Ray, A. et al. Targeting CD206+ macrophages disrupts the establishment of a key antitumor 1535 
+
+immune axis. Journal of Experimental Medicine 222 (2025). 1536 
+
+44. Hickey, J.W. et al. T cell-mediated curation and restructuring of tumor tissue coordinates 1537 
+
+an effective immune response. Cell Reports 42 , 113494 (2023). 1538 
+
+45. Cimen Bozkus, C. et al. Immune Checkpoint Blockade Enhances Shared Neoantigen-1539 
+
+Induced T-cell Immunity Directed against Mutated Calreticulin in Myeloproliferative 1540 
+
+Neoplasms. Cancer Discovery 9, 1192-1207 (2019). 1541 
+
+46. Hu, Z. et al. Personal neoantigen vaccines induce persistent memory T cell responses and 1542 
+
+epitope spreading in patients with melanoma. Nature Medicine 27 , 515-525 (2021). 1543 
+
+47. Bankhead, P. et al. QuPath: Open source software for digital pathology image analysis. 1544 
+
+Scientific Reports 7 (2017). 1545 
+
+48. Ruf, B. et al. Tumor-associated macrophages trigger MAIT cell dysfunction at the HCC 1546 
+
+invasive margin. Cell 186 (2023). 1547 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+53 
+
+49. Greenwald, N.F. et al. Whole-cell segmentation of tissue images with human-level 1548 
+
+performance using large-scale data annotation and deep learning. Nature Biotechnology 1549 
+
+40 , 555-565 (2021). 1550 
+
+50. Hickey, J.W., Tan, Y., Nolan, G.P. & Goltsev, Y. Frontiers | Strategies for Accurate Cell 1551 
+
+Type Identification in CODEX Multiplexed Imaging Data. Frontiers in Immunology 12 1552 
+
+(2021). 1553 
+
+51. Van der Maaten, L. & Hinton, G. Visualizing data using t-SNE. Journal of machine 1554 
+
+learning research 9 (2008). 1555 
+
+52. Waskom, M. seaborn: statistical data visualization. Journal of Open Source Software 6,1556 
+
+3021 (2021). 1557 
+
+53. Nirmal, A.J. & Sorger, P.K. SCIMAP: A Python Toolkit for Integrated Spatial Analysis of 1558 
+
+Multiplexed Imaging Data. Journal of Open Source Software 9, 6604 (2024). 1559 
+
+1560 
+
+54. Hao, Y. et al. Dictionary learning for integrative, multimodal and scalable single-cell 1561 
+
+analysis. Nature Biotechnology 42 , 293-304 (2024). 1562 
+
+55. Wolf, F.A., Angerer, P. & Theis, F.J. SCANPY: large-scale single-cell gene expression data 1563 
+
+analysis. Genome Biology 19 (2018). 1564 
+
+56. Levine, H., Jacob et al. Data-Driven Phenotypic Dissection of AML Reveals Progenitor-1565 
+
+like Cells that Correlate with Prognosis. Cell 162 , 184-197 (2015). 1566 
+
+57. Korotkevich, G. et al. Fast gene set enrichment analysis. openRxiv; 2016. 1567 
+
+1568 
+
+1569 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 12, 2026. ;https://doi.org/10.64898/2026.04.08.716779 doi: bioRxiv preprint

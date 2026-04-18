@@ -1,0 +1,1638 @@
+Title: An Endocytic Checkpoint Controls Macrophage PD-1 Function and Immunotherapy Fate
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.14.718292v1.full.pdf
+
+Number of Pages: 66
+
+Markdown Content:
+1 | P a g e 
+
+MANUSCRIPT TEXT 1
+
+2
+
+# An Endocytic Checkpoint Controls Macrophage PD-1 3
+
+# Function and Immunotherapy Fate 4
+
+5
+
+AUTHORS: Madhubanti Mullick 1, Ella McLaren 1, Suchismita Roy 1, Brandon Biagas 1, Mahitha 6
+
+Shree Anandachar 1,2 , Vanessa Castillo 1,2 , Samuel Williams 1,3 , Celia R. Espinoza 1, Courtney 7
+
+Tindle 1,3 , Gajanan D. Katkar 1, Patricia A. Thistlethwaite 4, Saptarshi Sinha 1 and Pradipta 8
+
+Ghosh 1,3,5 *9
+
+10 
+
+AFFILIATIONS: 11 
+
+> 1
+
+Department of Cellular and Molecular Medicine, University of California San Diego. 12 2Biomedical Sciences Graduate Program, School of Medicine, University of California San 13 
+
+Diego, La Jolla, CA, USA. 14 3UC San Diego HUMANOID™ Center of Research Excellence, San Diego, CA, USA. 15 4Division of Cardiothoracic Surgery, University of California, 9300 Campus Point Drive, La Jolla, 16 
+
+San Diego, CA 92037-7892, USA. 17 5Department of Medicine, University of California San Diego. 18 
+
+19 
+
+20 
+
+21 
+
+22 
+
+23 
+
+24 
+
+25 
+
+26 
+
+27 
+
+28 
+
+29 
+
+30 
+
+31 
+
+32 
+
+33 
+
+34 
+
+35 
+
+36 
+
+37 
+
+38 
+
+39 
+
+*Correspondence to :40 
+
+41 
+
+Pradipta Ghosh, M.D.; Professor, Departments of Medicine, and Cellular and Molecular 42 
+
+Medicine, University of California San Diego; 9500 Gilman Drive (MC 0651), George E. Palade 43 
+
+Building, Rm 232A, 239; La Jolla, CA 92093. Phone: 858-822-7633: Fax: 858-822-7636: 44 
+
+Email: prghosh@ucsd.edu 45 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 2 | P a g e
+
+SUMMARY (150 WORDS) 1
+
+Responses to PD1 blockade span durable tumor control to hyperprogressive disease (HPD), yet 2
+
+innate immune mechanisms governing these extremes remain undefined. Here we integrate a 3
+
+macrophage systems atlas (>12,500 transcriptomes) with single-cell profiles from >1,000 anti– 4
+
+PD1 treated patients, to identify CCDC88A (GIV ) as a macrophage-intrinsic determinant of 5
+
+durable response versus HPD. GIV loss increases PD1 surface retention, suppresses 6
+
+phagocytosis, and accelerates tumor growth across murine models, human macrophages, and 7
+
+patient-derived organoids. Myeloid-specific GIV deletion converts PD1 blockade from tumor-8
+
+restraining to tumor-accelerating by reprogramming macrophages toward HPD-like states. 9
+
+Mechanistically, GIV engages a conserved TIR-like [TILL] motif within the PD1 cytoplasmic tail to 10 
+
+drive dynamin-dependent endocytosis, coupling innate immune signaling logic to checkpoint 11 
+
+receptor trafficking. Pharmacologic disruption of this axis phenocopies GIV loss, revealing an 12 
+
+endocytic vulnerability that undermines checkpoint efficacy and triggers accelerated growth at 13 
+
+relapse. These findings define PD1 routing, rather than ligand-binding, as a macrophage-encoded 14 
+
+checkpoint governing antitumor immunity. 15 
+
+16 
+
+Keywords : Immune Checkpoint Blockade; Tumor-associated macrophages; PD1 Endocytosis; 17 
+
+Girdin; Psychotropic Drug Interference; Phagocytosis; Organoids; Lung Cancer; Breast Cancer. 18 
+
+19 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+3 | P a g e 
+
+GRAPHIC ABSTRACT 1
+
+2
+
+3
+
+In brief 4
+
+Mullick et al. show that PD1 trafficking in tumor associated macrophages (TAMs), controlled by 5
+
+the endocytic adaptor GIV/Girdin, determines the durability of immunotherapy. Disrupting this 6
+
+pathway traps PD1 at the surface, converts checkpoint blockade into hyperprogressive disease, 7
+
+and abolishes therapeutic benefit, revealing PD1 routing as a macrophage-encoded checkpoint 8
+
+of immunotherapy outcome. 9
+
+10 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+4 | P a g e 
+
+Highlights 1
+
+ GIV defines macrophage states that stratify durable response vs hyperprogressive 2
+
+disease 3
+
+ GIV limits surface checkpoint accumulation by facilitating PD1 endocytosis 4
+
+ Loss of GIV traps PD1 at the membrane and drives hyperprogressive disease 5
+
+ Endocytic blockade phenocopies GIV loss and abolishes checkpoint efficacy 6
+
+ Psychotropic drugs disrupt PD1 trafficking and accelerate tumor growth 7
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 5 | P a g e
+
+INTRODUCTION 1
+
+Immune checkpoint inhibitors ( ICI s) have reshaped cancer therapy, delivering durable tumor 2
+
+regression in a subset of patients across diverse malignancies 1. Yet clinical responses remain 3
+
+strikingly heterogeneous. While some patients achieve long-term durable remission, others fail to 4
+
+respond or, more alarmingly, develop secondary resistance and progress despite treatment. 5
+
+When progression is accompanied by accelerated tumor growth after ICI exposure, the 6
+
+phenomenon is termed hyperprogressive disease ( HPD )--a paradoxical acceleration of tumor 7
+
+growth rate following therapy 2. HPD occurs in ~6% to 43% of patients 3 and is defined by a 50% 4
+
+8
+
+to >2-fold 5 increase in tumor growth rate after treatment relative to baseline. It occurs more 9
+
+frequent when treated with single-agent checkpoint blockade and is associated with high 10 
+
+metastatic burden and poor prognosis 4. Despite its clinical impact, the biological mechanisms and 11 
+
+actionable biomarkers that distinguish durable benefit from accelerated progression remain poorly 12 
+
+defined 6-8 (Figure 1A ). 13 
+
+Programmed cell death protein 1 ( PD1; CD279 ) is a central inhibitory immune checkpoint 14 
+
+that regulates T cell function 9,10,11,12 and maintains immune homeostasis in various physiological 15 
+
+states, including infection and autoimmunity 13,14 . Engagement of PD1 by its ligands PD-L1 16 
+
+(CD274) and PD-L2 (CD273) enforces peripheral tolerance and also suppresses anti-tumor 17 
+
+immunity 15,16 . Therapeutic antibodies targeting the PD1–PD-L1 axis have revolutionized 18 
+
+oncology 17,18,19 . However, as with other ICIs, only a fraction of patients derive durable benefit, and 19 
+
+clinical outcomes have largely plateaued despite combination strategies. This has fueled renewed 20 
+
+interest in understanding how PD1 transmits inhibitory signals at the molecular level, beyond 21 
+
+ligand binding alone. 22 
+
+Although PD1 blockade was originally framed as a T cell–centric intervention 20-24 , this 23 
+
+paradigm cannot fully explain resistance, relapse, or HPD 25 . PD1 is also expressed in innate 24 
+
+immune cells 26-30 , including tumor-associated macrophages ( TAMs ), which are increasingly 25 
+
+recognized as upstream determinants of tumor progression and immunotherapy fate 31-36 and 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 6 | P a g e
+
+potential drivers of HPD 37 . PD1 expression on TAMs inversely correlates with proinflammatory 1
+
+polarization and phagocytic capacity 26,38 . Furthermore, genetic studies 39 have implicated myeloid-2
+
+PD1, rather than T cell PD1, as a critical regulator of anti-tumor immunity. 3
+
+Emerging clinical and experimental evidence from T cell studies indicates that PD1 4
+
+endocytosis, rather than surface blockade per se , is required to unleash cytolytic immune 5
+
+activity 40 . Bivalent antibodies that promote receptor clustering and internalization (e.g., nivolumab) 6
+
+outperform monovalent antibodies (e.g., pembrolizumab) or PD-L1 targeting antibodies 40-43 . While 7
+
+this paradigm has been explored in T cells, the role of PD1 trafficking in macrophages, particularly 8
+
+its surface retention and endocytic control, remains largely unexplored. This is despite the known 9
+
+ability of endocytic inhibitors to enhance phagocytosis and antibody-dependent cellular 10 
+
+cytotoxicity (ADCC) 44 for immunoglobulin (IgG)1-based biologics. 11 
+
+Here, we reframe durable response and the emergence of secondary resistance 12 
+
+presenting as HPD as biological extremes to interrogate the full spectrum of TAM programs that 13 
+
+govern immunotherapy outcome. By integrating systems immunology, single-cell tumor profiling, 14 
+
+and functional models, we identify CCDC88A (GIV/Girdin) as a macrophage-intrinsic endocytic 15 
+
+adaptor that controls PD1 surface availability. Our findings establish PD1 trafficking—not ligand 16 
+
+engagement alone—as a macrophage-encoded checkpoint that determines therapeutic success 17 
+
+or failure. Moreover, we reveal a clinically relevant vulnerability: commonly used drugs that inhibit 18 
+
+endocytosis may impose a biphasic risk by transiently enhancing checkpoint engagement while 19 
+
+ultimately undermining durability through sustained retention of PD1 on the macrophage surface. 20 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 7 | P a g e
+
+RESULTS 1
+
+Identification of macrophage states associated with extremes of checkpoint response. 2
+
+We sought to define TAM programs that govern response to PD-1 blockade. Rather than 3
+
+contrasting average responders with non-responders, we hypothesized that the mechanistic logic 4
+
+of immunotherapy fate would be most discernible at clinical extremes. We therefore deployed a 5
+
+two-step, outcome-extreme discovery strategy ( Figure 1B-I ) designed to resolve macrophage 6
+
+states that actively enable durable benefit versus those that drive therapeutic failure. 7
+
+In Step 1, we overlaid our machine-learning–derived macrophage continuum model—the 8
+
+Signatures of Macrophage Reactivity and Tolerance (SMaRT) 45 , constructed from >12,500 9
+
+transcriptomes—onto single-cell tumor datasets from the CPI1000+ cohort (>1,000 anti–PD-1– 10 
+
+treated patients) 46 . The SMaRT model organizes macrophage behavior along the full continuum 11 
+
+between the extremes of reactivity and tolerance 47 . This cross-scale alignment enabled outcome-12 
+
+anchored mapping of macrophage states rather than lineage abundance. Intersection analyses 13 
+
+revealed discrete gene programs enriched within responder versus non-responder TAM clusters, 14 
+
+defining responder-associated (rTAM) and non-responder (nrTAM) signatures ( Figure 1B ; Figure 15 
+
+S1A ; Data S1 ). 16 
+
+Pathway enrichment analyses demonstrated that rTAMs programs are enriched for innate 17 
+
+immune and pathogen-sensing programs, including TLR and NOD-like receptor signaling, as well 18 
+
+as interferon-mediated antiviral responses and heterotrimeric G protein–related molecular 19 
+
+functions ( Figure 1C ; Figure S1B–C ). In contrast, nrTAMs were dominated by ribosomal 20 
+
+biogenesis, translational control, and RNA-binding functions, consistent with metabolically active 21 
+
+but immunologically inert macrophages ( Figure S1D–F ). Clinically, high rTAM expression robustly 22 
+
+predicted improved overall and progression-free survival following PD1 blockade, whereas nrTAM 23 
+
+enrichment predicted poor outcomes ( Figure 1D–G ), validating the outcome relevance of this 24 
+
+systems framework. 25 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 8 | P a g e
+
+In Step 2, we refined these programs using an experimental extreme-phenotype model. 1
+
+We leveraged a study 48 that transcriptionally profiled macrophage education in vitro using 2
+
+conditioned media from non-small cell lung cancer (NSCLC) cell lines that display either durable 3
+
+response–like (DR-like) or HPD–like growth in mice ( Figure 1H ). Unsupervised clustering of rTAM 4
+
+genes across these polarized conditions resolved discrete modules segregating DR-associated 5
+
+from HPD-associated macrophage states ( Figure 1I ). By intentionally leveraging phenotypic 6
+
+extremes—clinical and experimental—this strategy amplifies biological signal over noise, 7
+
+enabling resolution of macrophage decision circuits that would be obscured in intermediate states. 8
+
+Together, this outcome-extreme systems approach defines a macrophage effector axis 9
+
+that tracks immunotherapy fate and establishes a conceptual and analytical framework to uncover 10 
+
+macrophage-encoded checkpoints governing response durability versus hyperprogression. 11 
+
+12 
+
+CCDC88A (GIV) couples the responder macrophage state to PD1 surface control 13 
+
+Among rTAM genes, CCDC88A (encoding GIV ; Gα-interacting vesicle-associated protein, also 14 
+
+known as Girdin) emerged as the sole candidate that simultaneously (i) tracks with durable clinical 15 
+
+response in patients, (ii) integrates signals downstream of innate immune receptors, including 16 
+
+multiple TLRs (including TLR4 49 ) and NOD-like receptors (i.e., NOD2 50 ), and (iii) directly 17 
+
+modulates heterotrimeric Gα protein signaling 51-56 . As the prototypical non-receptor Guanine 18 
+
+nucleotide Exchange Modulator (GEM 51 ), GIV links diverse receptor classes to G protein 19 
+
+signaling 57 —unlike canonical GPCR-restricted signaling 49,58,59 —and is highly expressed in 20 
+
+macrophages 49 , where it is a key determinant of polarization within the SMaRT framework 60 .21 
+
+These properties nominate GIV as a putative mechanistic bridge between macrophage state, 22 
+
+innate immune signaling, and PD1 pathway outcomes. 23 
+
+To test this hypothesis in vivo , we used mice with myeloid-specific deletion of 24 
+
+CCDC88A 49,61 (see Methods ) to create a syngeneic LL/2 lung cancer model ( Figure 2A ). Loss of 25 
+
+GIV resulted in significantly increased tumor burden, reflected by elevated tumor volume and 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 9 | P a g e
+
+weight at harvest ( Figure 2A ). Tumors from GIV-KO mice exhibited altered distribution of PD1-1
+
+positive immune cells, restricted to tumor periphery ( Figure 2B ). Critically, a macrophage-intrinsic 2
+
+increase in PD1 surface expression on CD11b ⁺F4/80 ⁺ TAMs was observed by flow cytometry 3
+
+(Figure 2C ). Overall immune cell composition within the tumor microenvironment was unchanged 4
+
+(Figure S2B–C ), demonstrating that GIV specifically regulates PD1 in myeloid cells. 5
+
+To establish robustness and cross-species reproducibility, we validated this phenotype 6
+
+across three independent macrophage model systems: (i) GIV-depleted RAW 264.7 murine 7
+
+macrophages (~85–90% knockdown; Figure 2E ); (ii) thioglycolate-elicited primary peritoneal 8
+
+macrophages from myeloid-specific GIV knockout mice (~85–90% depletion; Figure 2F ); and (iii) 9
+
+human THP1 macrophages with CRISPR-mediated GIV loss (>90% depletion; Figure 2G ). 10 
+
+Across all systems, GIV depletion consistently increased macrophage surface PD1, as assessed 11 
+
+by flow cytometry, immunoblotting, and immunofluorescence ( Figure 2D–G ), demonstrating a 12 
+
+conserved and macrophage-intrinsic role for GIV in restraining PD1 surface accumulation. 13 
+
+Together, these data establish GIV as an essential regulator of surface PD1 levels on 14 
+
+macrophages across in vivo , primary, and immortalized cell-line models. By linking responder 15 
+
+macrophage state to a concrete receptor-localization phenotype, GIV emerges as a decisive 16 
+
+rTAM-intrinsic determinant of antitumor immunity and sets the stage for mechanistic dissection of 17 
+
+how PD1 trafficking governs immunotherapy response. 18 
+
+19 
+
+Macrophage GIV licenses phagocytosis and tumor clearance in human organoid models 20 
+
+Because macrophage PD1 functions as a “don’t-eat-me” checkpoint 26 , its accumulation on the 21 
+
+cell surface is predicted to suppress phagocytosis. Consistent with this, loss of GIV impaired 22 
+
+macrophage phagocytic function: GIV-deficient primary peritoneal macrophages showed 23 
+
+markedly reduced tumor cell uptake in vitro (Figure 2H ; Figure S3A–C ). Similarly, GIV-deficient 24 
+
+macrophages (F4/80 ⁺) engulfed fewer fluorescently (CFSE)-labeled tumor cells in vivo (Figure 25 
+
+2I ). 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 10 | P a g e
+
+We next asked whether this defect translates into impaired clearance of patient-derived 1
+
+tumors in a human-relevant system. To address this, we established a human macrophage–tumor 2
+
+organoid co-culture assay in which CFSE-labeled patient-derived lung adenocarcinoma (LUAD) 3
+
+organoids (PDOs) were incubated with WT and GIV-KO THP1-derived macrophages ( Figure 3A ). 4
+
+PDOs were rigorously benchmarked against matched donor tissue to confirm preservation of 5
+
+tumor identity, architecture, and lineage markers (TTF1 62,63 , CK7) 64 (Figure S3D–F ). To preserve 6
+
+continuity with other functional readouts and prioritize genetic interpretability over patient-specific 7
+
+immune heterogeneity, we used THP1 macrophages rather than donor-matched immune cells. 8
+
+GIV loss resulted in significantly increased residual tumoroid burden after 4 h of co-culture, 9
+
+reflected by right-shifted size-distribution histograms and increased residual tumoroid area 10 
+
+(Figure 3C–E ). By contrast, adjacent normal lung organoids were cleared equivalently by WT and 11 
+
+GIV-KO macrophages, with no significant difference in residual organoid area ( Figure 3E ). 12 
+
+Because PDO generation efficiency, histopathologic integrity, and marker expression were 13 
+
+indistinguishable across co-culture conditions ( Figure S3D–F ), the observed differences in tumor 14 
+
+clearance are attributable to macrophage genotype rather than tumor-intrinsic variability. 15 
+
+These findings were in keeping with high-resolution time-lapse imaging in reductionist 2D 16 
+
+assays, where CFSE-labeled MDA-MB-231 breast cancer cells were incubated with WT and GIV-17 
+
+KO THP1-derived macrophages on fibronectin-coated plates ( Figure S3A ). WT macrophages 18 
+
+underwent rapid tumor cell engulfment, often completing phagocytosis after a single productive 19 
+
+encounter, whereas tumor cells survived multiple failed interactions with GIV-deficient 20 
+
+macrophages ( Figure S3B-C ). 21 
+
+Together, findings across three orthogonal systems — reductionist 2D assays, in vivo 22 
+
+phagocytosis, and human tumor organoid co-culture systems — establish GIV as a macrophage-23 
+
+intrinsic checkpoint for tumor clearance. The restriction of this phenotype to malignant, but not 24 
+
+normal, organoids underscores that GIV-dependent macrophage function is context-aware and 25 
+
+tumor-specific, positioning GIV as a functional executor of TAM-mediated antitumor immunity. 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 11 | P a g e
+
+1
+
+Myeloid GIV favors PD1 blockade–induced durable response; its loss unleashes hyper 2
+
+progression 3
+
+We next asked whether loss of macrophage GIV alters the therapeutic trajectory of PD1 blockade 4
+
+in vivo . We treated tumor-bearing WT and myeloid-specific GIV-KO mice with anti–PD1 in a 5
+
+syngeneic LL/2 lung cancer model (Figure 4A ). At the end of treatment (week 3), both genotypes 6
+
+appeared to respond: anti–PD1 slowed tumor growth and reduced tumor burden relative to 7
+
+untreated controls ( Figure 4B-C ; AUC analyses in Figure S4A–B ), despite the higher baseline 8
+
+tumor burden in GIV-KO mice ( Figure 4B-C ). Thus, initial tumor shrinkage alone suggested 9
+
+‘success’ in both genotypes. 10 
+
+Because early response is a poor surrogate for durable benefit 65 — a meaningful and the 11 
+
+most desirable immunotherapy clinical trial endpoint 66,67 — we explicitly separated initial sensitivity 12 
+
+from long-term outcome. In an early-response paradigm with harvest at day 15 ( Figure 4D ;13 
+
+Figure S4C ), WT and GIV-KO mice showed comparable early responses, with similar reductions 14 
+
+in tumor volume and weight ( Figure 4F–I ; Figure S4D ). These data establish that macrophage 15 
+
+GIV and GIV-dependent surface control of PD1 expression are dispensable for the initial response 16 
+
+to PD1 blockade. 17 
+
+Despite similar early responses, tumor architecture and macrophage organization 18 
+
+diverged sharply. WT tumors displayed deep macrophage penetration into the tumor core, 19 
+
+whereas GIV-KO tumors showed peripheral macrophage confinement, a spatial pattern 20 
+
+associated with ineffective clearance ( Figure 4E ). This divergence predicted radically different 21 
+
+fates. After treatment cessation ( Figure 4J ), WT mice maintained durable tumor control, marked 22 
+
+by liquefied tumor beds encased in fibrotic capsules—hallmarks of immune-mediated clearance 23 
+
+(Figure 4K ). In stark contrast, GIV-KO mice underwent rapid tumor rebound, developing large, 24 
+
+solid tumors consistent with hyperprogressive disease ( Figure 4K ). Relapse analyses confirmed 25 
+
+significantly increased tumor volume and weight in GIV-KO mice ( Figure 4L ), with a ~2-3-fold 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 12 | P a g e
+
+accelerated tumor growth rate ( Figure 4M ) and histopathology revealing high tumor cellularity 1
+
+and persistent malignant glandular architecture ( Figure 4N ). Notably, in WT mice achieving 2
+
+durable response, tumor beds became liquefied and exudative ( Figure 4K ). This phenotype 3
+
+precluded accurate caliper-based volume measurements and rendered post-harvest weight an 4
+
+unreliable surrogate for viable tumor burden ( Figure 4L, 4N )5
+
+Taken together, these results identify myeloid GIV as a gatekeeper of PD1 blockade 6
+
+durability. Dispensable for initial response, but essential for sustained tumor control, GIV prevents 7
+
+the emergence of secondary resistance and accelerated progression at relapse; its loss converts 8
+
+PD1 blockade from a tumor-restraining therapy into a tumor-accelerating liability by disabling 9
+
+macrophage PD1 regulation and phagocytic clearance. 10 
+
+11 
+
+GIV preserves immune and endocytic transcriptional programs that forecast durable PD1 12 
+
+blockade 13 
+
+We next asked whether GIV shapes tumor and macrophage transcriptional programs associated 14 
+
+with durable response to PD1 blockade. Using the syngeneic LL/2 model, we profiled both whole 15 
+
+tumors and magnetically enriched F4/80 ⁺ TAMs from WT and GIV-KO mice following anti–PD1 16 
+
+therapy ( Figure 5A–B ). Loss of myeloid GIV induced broad transcriptional rewiring of the tumor 17 
+
+microenvironment ( Figure 5C ). Genes enriched in WT tumors mapped to innate immune, Fc 18 
+
+receptor, and inflammatory signaling pathways, whereas these programs were selectively lost in 19 
+
+GIV-KO tumors ( Figure 5D ). Importantly, WT-enriched tumor gene signatures robustly predicted 20 
+
+improved overall and progression-free survival in patients treated with PD1/PD-L1 ( Figure 5E ), 21 
+
+but not CTLA-4 ( Figure S5 )–targeting ICIs, establishing pathway specificity for GIV-dependent 22 
+
+programs. 23 
+
+In silico deconvolution of bulk tumor transcriptomes revealed a selective depletion of 24 
+
+effector macrophage and NK cell gene signatures in GIV-KO tumors ( Figure 5F ), consistent with 25 
+
+impaired immune function despite otherwise preserved immune cell abundance in the tumor 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 13 | P a g e
+
+microenvironment (Figure 2D ; Figure S2B–C ). Focusing on macrophage-intrinsic effects, 1
+
+transcriptomic profiling of F4/80 ⁺ TAMs uncovered extensive reprogramming upon GIV loss 2
+
+(Figure 5G ). Cross-cohort and cross-species benchmarking using a rigorous panel of multiple 3
+
+human-relevant gene signatures of ICI-response revealed that WT TAMs were enriched for 4
+
+reactive responder-associated TAM states, whereas GIV-KO TAMs shifted toward tolerant, non-5
+
+responder–associated TAM programs (Figure 5H ). Strikingly, among the most selectively 6
+
+depleted programs in GIV-KO TAMs were endocytosis and clathrin-mediated trafficking pathways 7
+
+(Figure 5I–J ), implicating loss of receptor trafficking capacity as a core feature of GIV deficiency. 8
+
+These insights into macrophage-intrinsic transcriptional state suggest that GIV-proficient 9
+
+cells retain intact innate immune signaling and endocytic competence—programs that selectively 10 
+
+predict durable response to PD1/PD-L1 blockade 40,68,69 . In contrast, GIV loss dismantles these 11 
+
+pathways, uncoupling checkpoint inhibition from sustained antitumor immunity. Importantly, this 12 
+
+state-level reprogramming is consistent with GIV’s established function as a dynamin-binding 13 
+
+scaffold 51 and gatekeeper of selective clathrin-mediated endocytosis (CME) of receptors 69-73 .14 
+
+Together, these findings nominate GIV as a macrophage-intrinsic molecular checkpoint that links 15 
+
+transcriptional state to clinical ICI outcome—driving response when present and resistance when 16 
+
+absent. 17 
+
+18 
+
+GIV is an endocytic adaptor that routes PD1 and determines immunotherapy durability 19 
+
+We hypothesized that GIV may dictate the divergent outcomes of PD1 blockade by physically 20 
+
+coupling to and controlling CME of PD1. Co-immunoprecipitation studies ( Figure 6A ) and in situ 21 
+
+proximity ligation assays (PLA 74 ; Figure 6B ) independently confirmed that endogenous full-length 22 
+
+PD1 and GIV proteins formed complexes in THP1-derived macrophages. Inhibiting dynamin-23 
+
+dependent endocytosis with the highly specific, low-toxicity inhibitor DynGo4a 75 further increased 24 
+
+PD1•GIV complexes ( Figure 6B ; Figure S6A–B ), consistent with accumulation at the plasma 25 
+
+membrane and arrested clathrin-mediated endocytic intermediates. Orthogonal validation in a 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 14 | P a g e
+
+heterologous system showed enhanced peripheral PD1 retention selectively in GIV-KO—but not 1
+
+WT—HeLa cells ( Figure S6C ), establishing a direct, GIV-dependent effect on PD1 surface 2
+
+residence. 3
+
+Functionally, blocking endocytosis unmasked a strict requirement for GIV in PD1 surface 4
+
+control. In WT macrophages, DynGo4a or the clinically used inhibitor prochlorperazine ( PCZ )5
+
+modestly increased surface PD1 ( Figure 6C–D ). In contrast, these perturbations produced no 6
+
+additional effect beyond the already exaggerated PD1 surface accumulation in GIV-KO 7
+
+macrophages—i.e., pharmacologic inhibition phenocopied genetic GIV loss ( Figure 6C–D ). 8
+
+Immunogold electron microscopy localized PD1 and GIV to sites of plasma membrane 9
+
+invagination following acute dynamin inhibition, placing the complex at the endocytic interface 10 
+
+(Figure 6E ). 11 
+
+We then tested therapeutic consequences in vivo . Anti–PD1 restrained tumor growth and 12 
+
+improved survival in WT mice but failed in GIV-KO mice ( Figure 6F ). PCZ alone worsened 13 
+
+outcomes in WT mice ( Figure 6G ), erasing genotype-dependent differences and phenocopying 14 
+
+GIV loss ( Figure 2A ). Strikingly, concurrent PCZ administration abrogated anti–PD1 efficacy in 15 
+
+WT mice, driving trajectories indistinguishable from GIV-KO animals ( Figure 6H ), demonstrating 16 
+
+that sustained endocytic blockade nullifies PD1 therapy. Aggressive tumor growth in these PCZ-17 
+
+treated cohorts precluded longer term analyses of relapse/durability of response because all mice 18 
+
+reached IACUC mandated endpoints for euthanasia. 19 
+
+Because transient trafficking perturbations (with drugs like PCZ) may differ from sustained 20 
+
+inhibition (genetic deletion of GIV), we tested a priming strategy, administering a single dose of 21 
+
+PCZ 24 h before the initiation of anti–PD1 ( Figure 6I ), guided by studies documenting a short 22 
+
+plasma half-life and longer tumor accumulation 76 . Brief PCZ priming enhanced anti–PD1 efficacy 23 
+
+in WT mice, reducing tumor growth and AUC relative to anti–PD1 alone ( Figure 6J ). By contrast, 24 
+
+the same regimen failed in GIV-KO mice ( Figure 6K ), consistent with compounding an intrinsic 25 
+
+endocytic defect. 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 15 | P a g e
+
+These findings demonstrate that GIV facilitates CME of PD1 away from the macrophage 1
+
+surface to sustain antitumor immunity. Disrupting this trafficking—genetically or 2
+
+pharmacologically—traps PD1 at the surface, compromises macrophage phagocytic function, 3
+
+and converts PD1 blockade from durable therapy into failure. Thus, the duration and context of 4
+
+endocytic interference dictate PD1 efficacy, placing receptor routing at the core of immunotherapy 5
+
+durability. Notably, because PCZ is routinely used as an anti-emetic agent in cancer care and 6
+
+proposed as an adjuvant with ADCC-mediated antibodies 77,44,78,79 these findings carry immediate 7
+
+translational caution and relevance. 8
+
+9
+
+A conserved TILL motif couples GIV to PD1 to control receptor trafficking 10 
+
+We next asked how GIV physically engages PD1 to control receptor routing. Domain mapping 11 
+
+revealed that GIV’s C-terminus and the PD1 cytoplasmic tail each harbor a short, conserved TIR-12 
+
+like loop (TILL) motif ( Figure 7A–B ), originally described in cytokine receptors 80 and shared with 13 
+
+TIR-containing innate immune receptors 49 . Because TILL-motifs mediate homotypic 14 
+
+interactions 49 , this convergence in sequence suggested that PD1 co-opts an evolutionarily 15 
+
+conserved innate-immune interaction logic, i.e., a putative TILL-motif to engage GIV. 16 
+
+Biochemical reconstitution confirmed this mechanism of direct coupling. Recombinant 17 
+
+His–GIV C-terminus bound the GST–PD1 tail, but not GST alone, and mutation of key residues 18 
+
+within GIV’s TILL motif disrupted PD1 binding ( Figure 7C ). Reciprocal mutagenesis of the PD1 19 
+
+tail similarly impaired GIV association, including substitutions that mirror recurrent somatic 20 
+
+mutations in human cancers (COSMIC) clustering within a membrane-proximal cytosolic patch 21 
+
+encompassing the TILL region ( Figure 7D–E ; Figure S7A–B ). These data define a bilateral 22 
+
+TILL•TILL interface as the molecular determinant of specific GIV•PD1 coupling. 23 
+
+To test the functional sufficiency of this mode of coupling, we used cell-permeable 24 
+
+synthetic peptides (CPPs) encoding the TILL-motif (TILL-sequence fused to the C-terminus of 25 
+
+the Antennapedia-CPP 81 , to acutely perturb this interaction (Figure 7F ). These peptides, 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 16 | P a g e
+
+representing the minimal required GIV-TILL segment, were predicted to bind PD1. If the TILL motif 1
+
+is necessary, but not sufficient, the peptide would competitively ‘displace’ endogenous GIV in WT 2
+
+cells and inhibit PD1 endocytosis, functioning as a dominant negative perturbagen. If it is required 3
+
+and sufficient, it would facilitate PD1 endocytosis in GIV-KO cells by ‘rescuing’ the genetic defect. 4
+
+Compared to scrambled (SCR) control peptides, acute TILL-CPP treatment did not change 5
+
+surface PD1 in WT macrophages but reduced surface PD1 abundance in GIV-KO cells ( Figure 6
+
+7G ). Thus, the TILL motif alone is sufficient to engage PD1 and restore endocytic routing in the 7
+
+absence of full-length GIV. Structure-guided homology modeling further supported these findings, 8
+
+revealing a complementary bilateral TILL•TILL interface and highlighting key residues that 9
+
+destabilize this interaction when mutated in cancer ( Figure 8A ). 10 
+
+These data define a conserved TILL-mediated interaction that couples PD1 to GIV and 11 
+
+enables receptor endocytosis and supports a working model for how endocytic control of surface 12 
+
+PD1 by GIV represents a central determinant of immunotherapy success ( Figure 8B ). Disruption 13 
+
+of this interface, either by genetic deletion, pharmacologic manipulation, mutation or competitive 14 
+
+inhibition, traps PD1 at the cell surface. These mechanistic insights link innate immune signaling 15 
+
+logic, cancer-associated PD1 mutations, and the durability of immunotherapy responses ( Figure 16 
+
+8C-E ). Pharmacoepidemiologic analyses (Figure 8F ) mirror our mechanistic findings: 17 
+
+concomitant use of such agents during PD1 blockade are associated with worse survival ( Figure 18 
+
+8G ) but reduced immune-related adverse events ( Figure 8H ). Together, our findings provide 19 
+
+mechanistic explanations for antibody 40 - and drug-dependent 82 variability in clinical outcomes. 20 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 17 | P a g e
+
+DISCUSSION 1
+
+This study identifies PD1 endocytosis, not ligand blockade alone, as a macrophage-intrinsic 2
+
+immune checkpoint that determines immunotherapy durability. We show that the endocytic 3
+
+adaptor GIV/Girdin binds PD1 through a conserved TIR-like loop (TILL) interaction, enabling 4
+
+clathrin-mediated internalization that limits surface PD1 on TAMs. This routing preserves 5
+
+macrophage phagocytosis and safeguards durable responses to PD1 blockade. Genetic or 6
+
+pharmacologic disruption of this pathway traps PD1 at the plasma membrane, collapses 7
+
+macrophage effector function, accelerates tumor growth, and converts checkpoint therapy into 8
+
+hyperprogressive disease. Thus, macrophage endocytic routing represents a tractable axis for 9
+
+improving the durability of cancer immunotherapy. 10 
+
+11 
+
+TAM states dictate immunotherapy fate 12 
+
+By integrating a macrophage systems model with single-cell tumor transcriptomes, we define TAM 13 
+
+subtypes that stratify durable response versus secondary resistance with accelerated tumor 14 
+
+growth at relapse. These states are governed by process-level wiring—innate sensing, endocytic 15 
+
+competence, and phagocytic capacity, rather than lineage abundance. GIV serves as a nodal 16 
+
+regulator coupling these programs, providing a unifying explanation for TAM heterogeneity. This 17 
+
+framework reconciles prior context-dependent observations, including the evolving biology of 18 
+
+TREM2 ⁺ macrophages and their context-specific role in tumors. 19 
+
+20 
+
+A TIR-like loop embeds PD1 in innate immune logic 21 
+
+We identified a previously unrecognized TIR-like loop (TILL) motif within the PD1 cytoplasmic tail, 22 
+
+revealing that PD1 co-opts conserved innate immune interaction logic. PD1 engages GIV through 23 
+
+a TILL•TILL interface analogous to TLR–adaptor signaling, reframing PD1 as embedded within 24 
+
+innate immune architecture rather than a purely adaptive checkpoint. Our findings suggest that 25 
+
+GIV-mediated PD1 endocytosis may represent a physiological brake-release mechanism, 26 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 18 | P a g e
+
+allowing macrophages to recalibrate between tolerance and inflammation in response to 1
+
+contextual cues. In cancer, failure of this routing mechanism locks macrophages into a tolerant, 2
+
+non-phagocytic state, undermining antitumor immunity. 3
+
+Because GIV binds both TLR4 and PD1 via the same motif, these interactions are likely 4
+
+mutually exclusive, positioning GIV as a molecular switch that integrates innate activation with 5
+
+checkpoint resolution. Moreover, spatial proximity of the TILL motif to PD1 K233 (K235 in mice) 6
+
+further suggests crosstalk between GIV binding and receptor stability that is dictated by dynamic 7
+
+ubiquitination at that site 83,84 .8
+
+Somatic mutations within the PD1 cytoplasmic tail—particularly those clustering near the 9
+
+TILL region—may be acquired or functionally redeployed in macrophages through tumor material 10 
+
+uptake, nanotubes 85 or cell fusion 86 , generating “tumor-educated” macrophages with altered 11 
+
+checkpoint trafficking. Our findings suggest that such mutations could phenocopy GIV loss by 12 
+
+stabilizing PD1 at the macrophage surface, thereby promoting immune tolerance and contributing 13 
+
+to tumor progression and immunotherapy resistance. 14 
+
+This mechanistic convergence suggests a model in which GIV occupancy integrates 15 
+
+innate activation signals with checkpoint receptor fate, coordinating inflammatory tone, receptor 16 
+
+turnover, and immune effector function. Disruption of this coordination—genetically or 17 
+
+pharmacologically—uncouples innate sensing from checkpoint resolution. 18 
+
+19 
+
+GIV as an endocytic adaptor for PD1 20 
+
+Our findings establish GIV as a bona fide endocytic adaptor for PD1. GIV directly binds dynamin 21 
+
+and is known to selectively gate clathrin-mediated endocytosis of defined cargoes—promoting 22 
+
+uptake of receptors such as transferrin and E-cadherin while restraining EGFR and β-integrin. 23 
+
+Engagement of PD1 by GIV drives PD1 internalization, and notably, the short TIR-like loop (TILL) 24 
+
+motif alone is sufficient to confer this endocytic control, independent of GIV’s other signaling 25 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 19 | P a g e
+
+modules. This sufficiency was unexpected given GIV’s large, multimodular architecture and its 1
+
+broad roles in cytoskeletal and signaling networks 51-56,87 .2
+
+Mechanistically, GIV may facilitate PD1 endocytosis through two non-exclusive 3
+
+mechanisms. First, the GIV-binding region in PD1 cytosolic tail contains a membrane-proximal 4
+
+hydrophobic patch that may serve as an electrostatic–hydrophobic “Velcro,” stabilizing PD1 at the 5
+
+plasma membrane ( Figure 8B-C ), analogous to mechanisms described for PD-L1 88,89 (Figure 6
+
+S7C ). Such patches anchor proteins via a two-pronged mechanism: hydrophobic interactions with 7
+
+lipid tails and electrostatic attraction to anionic membrane lipids (e.g., PIP2, phosphatidylserine) 8
+
+> 90
+
+. This dual-site mechanism enables precise control over where and when proteins bind to 9
+
+membranes, thereby affecting signal-coordinated processes like endocytosis 90 . GIV binding likely 10 
+
+disrupts this stabilization, licensing PD1 for endocytic uptake. Second, because GIV oligomerizes 11 
+
+through its coiled-coil domain 91 , GIV•PD1 engagement may promote receptor clustering, a well-12 
+
+recognized prerequisite for efficient tumor cell internalization, which in turn promotes tumor 13 
+
+immunity 40 . Together, these observations integrate biochemical, structural, and functional data 14 
+
+into a coherent model in which GIV couples PD1 to the endocytic machinery to control checkpoint 15 
+
+receptor fate. 16 
+
+17 
+
+Endocytic inhibition as a double-edged sword in cancer care 18 
+
+Our findings reveal a critical paradox in cancer care: Endocytic inhibition can both enhance and 19 
+
+undermine anti-tumor immunity, depending on the context. Endocytic inhibitors have been widely 20 
+
+explored as adjuvants to improve the efficacy of IgG1-based biologics (e.g., cetuximab, 21 
+
+trastuzumab, avelumab) by prolonging receptor–antibody engagement and enhancing ADCC 44 .22 
+
+Our data demonstrate that the same strategy is deleterious in the context of PD1 blockade, where 23 
+
+sustained inhibition of endocytosis traps PD1 at the macrophage surface and converts 24 
+
+immunotherapy into hyperprogressive disease. 25 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 20 | P a g e
+
+This distinction has immediate clinical relevance. Psychotropic and antiemetic drugs that 1
+
+impair dynamin-dependent endocytosis are widely prescribed in oncology, often without 2
+
+consideration of immunotherapy interactions. In light of our mechanistic findings, 3
+
+pharmacoepidemiologic evidence warrants caution: concomitant use of such agents during PD-1 4
+
+blockade may blunt the development of durable antitumor immunity and worsen survival. 5
+
+Together, these observations establish endocytic inhibition as a double-edged sword, 6
+
+underscoring the need for temporal precision and pathway awareness when deploying such 7
+
+agents alongside IgG1-based biologics vs immunotherapy. 8
+
+9
+
+Limitations 10 
+
+This study opens several mechanistic avenues that extend beyond the scope of the present work. 11 
+
+GIV is a multimodular scaffold, and we focused on its endocytic adaptor function; how its 12 
+
+additional domains couple PD1 to tyrosine kinase pathways or heterotrimeric G protein signaling 13 
+
+remains to be defined. Notably, GIV potently suppresses the cAMP–PKA axis 51,59,92 , an emerging 14 
+
+driver of protumorigenic TAM states 93-95 , raising the possibility that PD1 trafficking intersects with 15 
+
+metabolic and transcriptional checkpoints downstream of cAMP signaling. We did not resolve how 16 
+
+GIV dynamically partitions between innate immune receptors (e.g., TLR4, NOD2) and PD1, or 17 
+
+how crosstalk between these pathways are temporally coordinated during immune activation. The 18 
+
+proximity of the GIV-binding site to PD1 K233 (K235 in mice) highlights an unexplored interface 19 
+
+between endocytic routing and ubiquitin-mediated control of receptor stability 83,84 . Whether GIV 20 
+
+biases PD1 toward degradation versus recycling remains an open question. Because PD1 and 21 
+
+PD-L1 are co-expressed in myeloid cells, the possibility of cis interactions 96,97 at the plasma 22 
+
+membrane—and GIV’s role in such signaling—remains unexplored. Finally, as GIV is also 23 
+
+expressed in T cells 98 , its endocytic functions may extend to PD1 positioning in adaptive immunity. 24 
+
+25 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+21 | P a g e 
+
+Despite these gaps, this work reframes PD1 trafficking as a macrophage-encoded 1
+
+determinant of immunotherapy durability, providing mechanistic resolution to long-standing 2
+
+clinical paradoxes and defining actionable principles for improving the safety and durability of 3
+
+cancer immunotherapy. By linking PD-1 routing to GIV, we position endocytic control as a nexus 4
+
+that integrates signaling, metabolism, and receptor fate, highlighting endocytic control as a rich, 5
+
+tractable frontier for reshaping immunotherapy responses. 6
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 22 | P a g e
+
+Resource Availability Lead Contact 
+
+Further information and requests for resources and reagents should be directed to and will be fulfilled by the lead contact, Pradipta Ghosh, prghosh@ucsd.edu. 
+
+Materials Availability 
+
+All materials are available from the lead contact with a completed Materials Transfer Agreement and patented technology agreement following the guidelines of the University of California, San Diego. 
+
+Data and Code Availability 
+
+All transcriptomic datasets generated in this work has been deposited at NCBI GEO [GSE314811 and GSE314813 ; see KRT ; accessible to reviewers (GSE314811 code: mhwdmwoevhepvkf, GSE314813 code: ojadwccefludrav) and will be made public at the time of publication]. All code used to compute composite score, AUC and generate the plots is publicly available on GitHub at: https://github.com/sinha7290/Mullick_et_al. The repository includes the BoNE framework scripts and the Jupyter notebook used to reproduce key figure panels. The data underlying all the figures and tables are available in the article and its online supplemental materials. Any additional information required for reanalysing the data reported in this work paper is available from the Lead Contact upon request. 
+
+Acknowledgments 
+
+This work was supported by the National Institutes of Health (NIH) (grant# R01-AI141630, R01-CA238042 and R01-AI55696 to P.G.). M.M. was supported by a UC San Diego Agilent Center of Excellence Postdoctoral Fellowship. G.D.K. received support from the American Association of Immunologists Intersect Fellowship Program for Computational Scientists and Immunologists. Both G.D.K and M.S.A were also supported in part by the American Heart Association (24CDA1268506 and 25PRE1357971, respectively). S.S. was supported by the AAI Intersect Fellowship Program. P.A.T was supported by NIH-NHLBI R01169861. Data in this manuscript were 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 23 | P a g e
+
+generated at the UC San Diego Institute of Genomic Medicine using an Illumina NovaSeq 6000, funded by NIH SIG grant S10-OD026929. The authors acknowledge instrumentation resources at the UC San Diego Agilent Center of Excellence in Cellular Intelligence. The authors would like to thank the University of California, San Diego - Cellular and Molecular Medicine Electron Microscopy Core (UCSD-CMM-EM Core, RRID:SCR_022039) for TEM sample preparation and microscope access. The content is solely the authors’ responsibility and does not necessarily represent the official views of the AHA or the NIH. 
+
+Author contributions 
+
+M.M and P. G conceptualized the project. S.S. and P. G conceptualized and performed all transcriptomic and systems-level analyses. S.S supervised all biostatistical approaches. E.M., S.R., B.B., V.C., M.S.A., and C.R.E., contributed to data curation and formal analysis. V.C. maintained and genotyped Ccdc88a fl/fl LysM Cre/- mice and C.R.E conducted tumor tissue transcriptomic analyses. M.M., E.M. and B.B. conducted all animal studies, imaging experiments, and quantitative image analyses. C.R.E. and S.R performed site-directed mutagenesis of all constructs used in this work. S.R. and M.S.A conducted all biochemical and molecular interaction studies. P.A.T. procured surgically resected lung tissues, which served as the source material for organoid derivation and benchmarking by C.T. and S.W. M.M. and P.G. prepared the Figures for data visualization. PG wrote the original draft. M.M., E.M., S.R., C.R.E., G.D.K., S.S., and P.G. reviewed and edited the manuscript. P.G. supervised the study and secured funding. All authors approved the final version of the manuscript. 
+
+Declaration of interests 
+
+The authors declare no competing interests. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+24 | P a g e 
+
+FIGURE LEGENDS: Figure 1 : Systems anchoring of macrophage states to extremes of immunotherapy response. 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 25 | P a g e 
+
+(A) Schematic depicting the clinical spectrum of outcomes to immune checkpoint inhibitor (ICI) therapy, ranging from durable response to hyperprogressive disease (HPD). % reflects estimated frequencies across solid tumors 99-101 . Macrophage effector capacity (“best eaters” vs “non-eaters”) is highlighted as a candidate determinant investigated in this study. (B-I ) Integrative 2-step computational framework to identify tumor-associated macrophage (TAM) programs linked to immunotherapy outcomes. 
+
+Step 1: Anchoring macrophage states to patient outcomes (B-G ). A machine learning-derived model of macrophage continuum process—Signatures of Macrophage Reactivity and Tolerance (SMaRT) 45 —was integrated with single-cell TAM profiles from anti–PD-1–treated patient tumors. A Venn diagram (B) shows overlap between SMaRT, derived from >12,500 transcriptomes (n = 771 human, 1,651 murine), and single-cell TAM clusters (n=363,315 TAMs or macrophage-like cells) from the CPI1000+ anti–PD1 cohort (n = 1,008 patients) 46 . Overlapping genes define responder-associated (rTAM; 24 genes) and non-responder-associated (nrTAM; 13 genes) signatures. Full gene lists are provided in Data S1 . KEGG pathway enrichment (C) of rTAM genes, highlighting innate immune and pattern-recognition receptor signaling pathways (red). See also Figure S1A-F for additional GO and gene-level analyses. Kaplan–Meier analyses ( D-G ) demonstrating prognostic performance of rTAM (D, E) and non-responder TAM (nrTAM; F, G) signatures for overall and progression-free survival in anti–PD1–treated patients (high versus low expression) across 9 different cancers. 
+
+Step 2 (H-I ): Refinement toward phenotypic extremes ( H-I ). Experimental workflow (H) to refine rTAM signatures using bone marrow–derived macrophages exposed to conditioned media from NSCLC cell lines exhibiting DR-like or HPD-like growth in vivo 48 . Heatmap (I) shows unsupervised clustering of rTAM genes based on z-normalized expression pattern across five NSCLC models identifies subsets associated with durable response versus hyperprogression. Full gene lists are provided in Data S2 .
+
+Statistics : Survival analyses used log-rank tests. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+26 | P a g e 
+
+Figure 2: CCDC88A deletion increases PD1 on macrophage surface and impairs tumor phagocytosis. 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 27 | P a g e 
+
+(A) In vivo syngeneic lung cancer model. Schematic (top) of experimental design using WT and myeloid-specific 
+
+CCDC88A (GIV)–deficient (GIV-KO) mice subcutaneously implanted with Lewis lung carcinoma (LL/2) cells. Representative tumors (bottom-left ) and quantification of tumor volume (bottom-middle ; mm 3) and weight (bottom-middle ; g) at harvest are shown. 
+
+(B) Immunohistochemical (IHC) staining of PD1 in FFPE tumor sections from WT and GIV-KO mice (left), with quantification of percent PD1–positive area (right). 
+
+(C) Flow cytometric analysis of surface PD1 on tumor-infiltrating macrophages from enzymatically digested tumors. Representative contour plots (left) and quantification of PD1 mean fluorescence intensity (MFI) are shown (right). Gating strategy is provided in Figure S2A .
+
+(D) Flow cytometric histograms (left) and quantification (right) of surface PD1 on PMA-differentiated THP1 macrophages following GIV depletion. See Figure S2B-C for other immune cell profiles. 
+
+(E–G) PD1 expression across macrophage model systems. Immunoblotting (top) and immunofluorescence staining (bottom) of RAW 264.7 murine macrophages (E), thioglycolate-elicited primary peritoneal macrophages 
+
+(H) In vitro phagocytosis assay. Schematic of the pHrodo-based phagocytosis assay (left) and time-course quantification of LL/2 lung tumor cell uptake by murine peritoneal macrophages (right). See also Figure S3A-C 
+
+for similar studies using human MDA-MB-231 breast tumor lines and THP1-derived macrophages. 
+
+(I) In vivo phagocytosis assay. Experimental schematic depicting uptake of CFSE-labeled LL/2 cells following intraperitoneal injection (left) and quantification of phagocytosed tumor cells within F4/80 ⁺ macrophages (right). 
+
+Statistics: Data are shown as mean ± SEM (n = 3–5 biological replicates). Statistical significance was assessed using unpaired t test and Tukey’s multiple comparison test (for in vitro phagocytosis assay) as indicated. p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+28 | P a g e 
+
+Figure 3: Macrophage GIV ( CCDC88A ) governs tumor organoid clearance in a human co-culture model 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 29 | P a g e 
+
+(A) Schematic of a human co-culture assay in which patient-derived lung tumor organoids (PDOs) are incubated with CFSE-labeled, PMA-differentiated THP1 macrophages that are either WT or GIV-deficient. PDOs were established from lung adenocarcinoma specimens, benchmarked against matched donor tissue (see Figure S3D–F ), and co-cultured with macrophages at a 1:1 ratio for 4 h. Patient demographics are provided in Table 1 .
+
+(B) Representative confocal images and 3D reconstructions of PDOs following 4 h co-culture with THP1 macrophages. Top, lung adenocarcinoma (LUAD) PDOs, shows as merged fluorescent channels and with pseudocolored overlays highlighting tumor boundaries and macrophage positioning; bottom, adjacent normal lung PDOs. Scale bar = 100 μm. 
+
+(C-E) Quantification of residual organoid area after 4 h co-culture with WT versus GIV-KO THP1 macrophages, shown as size-distribution histograms of tumoroid area (C), whisker plots of residual LUAD PDO area (D), and whisker plots of residual adjacent normal lung organoid area (E). 
+
+Statistics: Data are shown as mean ± SEM (n = 2 biological, and 2 technical replicates). Statistical significance was assessed using unpaired t test. p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+30 | P a g e 
+
+Figure 4: Myeloid GIV loss converts PD1 blockade into accelerated tumor growth in vivo .
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 31 | P a g e 
+
+(A) Experimental schematic of anti–PD1 administration in a syngeneic ectopic LL/2 lung tumor model using WT and myeloid-specific CCDC88A (GIV)–deficient (LysM-Cre) mice. 
+
+(B, C) Tumor growth kinetics following anti–PD1 therapy in WT (B) and GIV-KO (C) mice compared with untreated controls, revealing tumor control in both WT and GIV-KO mice. Area-under-the-curve (AUC) analyses are shown in Figure S4A–B .
+
+(D) Schematic of the early-response paradigm with tumor harvest at day 15 after therapy initiation (See Figure S4C for tumor images). 
+
+(E) Immunofluorescence of FFPE tumor sections showing macrophage infiltration patterns (CD68, green; CD163, red; DAPI, blue). WT tumors show macrophage accumulation within the tumor core, whereas GIV-KO tumors exhibit peripheral enrichment. 
+
+(F, G) Early tumor response in WT mice, assessed by longitudinal tumor volume measurements and AUC (F) and confirmed by reduced tumor weight at harvest (G). 
+
+(H, I) Parallel analyses in GIV-KO mice demonstrate similar early therapeutic benefit, confirmed by volume measurements and AUC (H) and tumor weight (I). 
+
+(J) Experimental timeline to assess relapse versus durable response after cessation of anti–PD1 therapy. 
+
+(K) Representative post-treatment tumors at relapse. WT tumors exhibit liquefied tumor beds with prominent fibrous encapsulation, whereas GIV-KO tumors retain solid tumor architecture. 
+
+(L) Quantification of tumor burden at relapse. Tumor volume (left) reflects measurable solid tumor mass only, whereas tumor weight (right) includes fibrous capsule and exudative material. 
+
+(M) Tumor growth rates before (Pre-Rx) and after (Post-Rx) anti-PD1 therapy. 
+
+(N) Representative H&E-stained tumor sections corresponding to samples in (K), illustrating liquefied, acellular tumor beds in WT mice versus densely cellular tumors in GIV-KO mice. 
+
+Statistics: Data are mean ± SEM (n = 3–10 biological replicates). Statistical significance was determined by Tukey’s multiple comparisons test (tumor growth represented as Area under a curve (AUC)), Bonferroni’s multiple comparisons for tumor growth and response to anti-PD1 therapy, unpaired t test for AUC and harvested tumor weights, volumes and growth rates, as indicated. p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+32 | P a g e 
+
+Figure 5: Myeloid GIV preserves innate immune signaling and endocytic programs that predict durable response to PD1 blockade 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 33 | P a g e 
+
+(A-B) Experimental and analytical workflow. (A) Schematic of a syngeneic ectopic LL/2 lung tumor model treated with anti–PD1 in WT and GIV-KO mice. (B) Tumors were enzymatically dissociated, F4/80 ⁺ TAMs were magnetically enriched, and both whole tumors and TAMs were subjected to RNA sequencing. 
+
+(C) Volcano plot of differentially expressed genes in whole tumors (WT vs. GIV-KO; Adj p-value ≤ 0.05, |logFC| ≥1), highlighting broad transcriptional rewiring upon myeloid GIV loss. Full gene lists are provided in Data S3 .
+
+(D) KEGG pathway enrichment of genes upregulated in WT tumors, revealing preservation of innate immune, Fc receptor, and inflammatory signaling programs. 
+
+(E) Kaplan–Meier analyses showing that WT-enriched tumor gene signatures predict improved overall and progression-free survival in patients treated with the class of ICI therapeutics, across 9 different cancers, targeting the PD1•PDL1 axis, i.e., anti–PD1 (left) or anti–PD-L1 (right) ICI (see Figure S5 for anti–CTLA-4). 
+
+(F) In silico deconvolution of bulk tumor transcriptomes showing shifts in immune cell composition, with selective loss of effector macrophage and NK cell signatures in GIV-KO tumors. See Figure 2D and Figure S2B-C for experimentally determined immune cell profiles. 
+
+(G) Volcano plot of differentially expressed genes in F4/80 ⁺ TAMs (WT vs. GIV-KO), identifying macrophage-intrinsic transcriptional reprogramming. Full gene lists are provided in Data S4 .
+
+(H) Dot plots comparing enrichment of immune and macrophage state signatures in TAMs versus whole tumors; dot size reflects classification accuracy (AUC) and color denotes directionality (red, upregulated; blue, downregulated). List of genes in each signature is provided in Data S5 .
+
+(I) Dot plots, as in H, comparing endocytosis related gene signatures. 
+
+(J) Violin plots compare composite scores for endocytic and clathrin-mediated trafficking gene signatures in F4/80 ⁺ TAMs from WT v GIV-KO tumors. 
+
+Statistics : Differential expression used adjusted p-value, calculated using Benjamini-Hochberg correction. Survival analyses used log-rank tests. Statistical significance for signature comparisons was calculated using Welch’s t-test and annotated using standard codes (*p ≤ 0.05; **p ≤ 0.01; ***p ≤ 0.001). p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+34 | P a g e 
+
+Figure 6: GIV-dependent PD1 endocytic routing determines durability of anti–PD1 immunotherapy 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 35 | P a g e 
+
+(A) Co-immunoprecipitation of endogenous PD1 with GIV in THP1 macrophages from WT and GIV-KO cells. Immunoblots show GIV and PD1 in input lysates and immune complexes. 
+
+(B) In situ proximity ligation assay (PLA) detecting endogenous GIV•PD1 interactions. Schematic (left), representative confocal images (right), and quantification (middle) show reduced GIV•PD1 proximity upon inhibition of dynamin-dependent endocytosis (DynGo4a). 
+
+(C, D) Confocal imaging and quantification of surface PD1 in WT versus GIV-KO THP1 macrophages following inhibition of endocytosis with DynGo4a (C) or the prescription drug prochlorperazine (PCZ) (D), revealing exaggerated PD1 surface retention in the absence of GIV. See Figure S6A-B for additional fields and controls. 
+
+(E) Immunogold electron microscopy (IEM) demonstrating nanoscale co-localization of GIV (18 nm gold) and PD1 (12 nm gold) at sites of PM invagination following acute dynamin inhibition. See Figure S6C for orthogonal immunofluorescence-based localization studies in HeLa cells. 
+
+(F–H) In vivo therapeutic responses. Tumor growth and Kaplan–Meier survival analyses in WT and myeloid-specific GIV-KO mice treated with anti–PD1 alone (F), PCZ alone (G), or anti–PD1 plus PCZ (administered concurrently; H). 
+
+(I) Experimental schematic for PCZ priming followed by anti–PD1 therapy. 
+
+(J, K) Tumor growth kinetics and AUC quantification show that PCZ priming enhances anti–PD1 efficacy in WT mice (J) but fails—and exacerbates tumor growth—in GIV-KO mice (K). 
+
+Statistics: Data are mean ± SEM (n = 3–10 biological replicates). Statistical significance was assessed by one-way ANOVA with Bonferroni correction for PLA quantification, Bonferroni multiple comparisons test for tumor growth response to treatment, unpaired t-test for AUC, and Log-rank (Mantel-Cox) test for Kaplan–Meier survival analyses. p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+36 | P a g e 
+
+Figure 7. A conserved TILL motif enables GIV–PD1 coupling to control receptor trafficking 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 37 | P a g e 
+
+(A, B) Domain architecture of human GIV and PD1, highlighting the C-terminal region of GIV and the cytoplasmic tail of PD1. Sequence alignment (A, lower) identifies a conserved short linear TIR-like loop (TILL) motif shared between GIV, TIR-containing Toll-like receptors (TLRs), and the PD1 cytoplasmic tail, positioning this motif as a candidate interaction interface. Lys(K233), a hotspot for ubiquitination and receptor stabilization 83,84 is highlighted. Red ( ○) denotes mutant proteins tested in this study, whereas blue ( ○) indicate mutations that failed expression and were excluded from analysis. ITIM, Immunoreceptor Tyrosine-based Inhibitory Motif; ITSM, Immunoreceptor Tyrosine-based Switch Motif. 
+
+(C) GST pulldown assays using recombinant His–GIV C-terminus (CT) demonstrate direct binding to the GST-PD1 tail but not GST alone. Immunoblots (left) and quantification (right) show the impact of mutation of key residues within the GIV’s TILL motif on PD1 binding. GST proteins are visualized by Ponceau S staining. 
+
+(D, E) GST pulldown assays testing PD1 tail mutants. Immunoblots (left) and quantification (right) show the impact of mutation of key residues within the PD1’s TILL motif, including residues frequently mutated in cancer (COSMIC; see Figure S7A-B ) on GIV binding. 
+
+(F) Schematic of cell-permeable TILL peptides (TILL-CPP) or scrambled control (SCR-CPP) used to competitively perturb GIV–PD1 coupling and assess effects on PD1 endocytic routing. 
+
+(G-H) Flow cytometry histograms (G) and bar plots (H) compare the abundance of surface PD1 upon treatment with TILL-CPP in GIV-KO and WT cells compared to controls (SCR-CPP-treated baseline). 
+
+Statistics: Data are mean ± SEM (n = 3–5 biological replicates). Statistical significance was assessed by Bonferroni’s multiple comparisons test and unpaired t-test, as appropriate. p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+38 | P a g e 
+
+Figure 8 . Working model for how GIV-dependent PD1 positioning in TAMs governs immunotherapy durability. 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 39 | P a g e 
+
+(A) A homology model of bilateral TILL•TILL binding between the PD1 cytoplasmic tail and the GIV C-terminus (see Methods ) that is experimentally validated highlighting a conserved PD1•GIV interaction interface. 
+
+(B) In WT TAMs, GIV binds to PD1, couples PD1 to clathrin-mediated endocytosis, limiting surface PD1 accumulation, preserving phagocytic function, and supporting durable responses to PD1 blockade. 
+
+(C) In GIV-deficient TAMs, PD1 is retained at the plasma membrane, suppressing macrophage effector function and driving hyperprogressive disease following PD1 therapy. 
+
+(D–E) Genetic loss of GIV or sustained pharmacologic inhibition of endocytosis phenocopies GIV-KO, whereas transient endocytic modulation enhances PD1 blockade efficacy in GIV-proficient settings. 
+
+(F–H) Reanalysis of pharmacoepidemiologic evidence across multiple cancer types 82 (F) link concomitant use of endocytosis-inhibiting psychotropic drugs with higher death rates (G) with a concomitant lower incidence of irAEs (Immune-Related Adverse Events; H) in patients receiving anti–PD1/PD-L1 therapy. 
+
+Statistics: Statistical significance of overall survival hazards ratios were assessed using univariable Cox regression and p values were calculated using Fisher’s exact test. p-values < 0.05 were considered significant. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+40 | P a g e 
+
+STAR* METHODS 
+
+KEY RESOURCES TABLE 
+
+REAGENT or RESOURCEௗ SOURCEௗ IDENTIFIERௗ Biological Samples and Cell Linesௗௗ 
+
+RAW 264.7 ATCC TIB-71 shControl RAW 264.7 Swanson et al. 2019 49 
+
+shGIV RAW 264.7 Swanson et al. 2019 49 
+
+HeLa parental ATCC ATCC® CCL-2 HeLa GIV KO (CRISPR Cas9) 
+
+Lab generated 102,103 n/a Lewis Lung Carcinoma ATCC THP-1 human monocyte ATCC TIB-202 
+
+LysMcre mice (B6.129P2-Lyz2 tm1(cre)lfo /j) 
+
+The Jackson Laboratory 004781 Girdin flox mice Asai et al. 2012 104 N/A 
+
+Ccdc88a fl/fl LysM Cre/- mice Swanson et al. 2019 49 
+
+Plasmids and constructs 
+
+His GIVCT WT Swanson et al. 2019 49 N/A His GIVCT-KA Swanson et al. 2019 49 N/A His GIVCT-EFL Swanson et al. 2019 49 N/A His GIVCT-PG Swanson et al. 2019 49 N/A GST-EMPTY vector N/A PD1-GFP (mouse) Peled M. et al. 2018 105 N/A GST-PD1-CT (mouse) Peled M. et al. 2018 105 N/A GST-PD1-V223A This study Amino acid # per mouse REFSEQ: accession NM_008798.3 
+
+GST-PD1-F230A This study Amino acid # per mouse REFSEQ: accession NM_008798.3 
+
+GST-PD1-R233Q This study Amino acid # per mouse REFSEQ: accession NM_008798.3 
+
+GST-PD1-R233L This study Amino acid # per mouse REFSEQ: accession NM_008798.3 
+
+GST-PD1-P237Q This study Amino acid # per mouse REFSEQ: accession NM_008798.3 
+
+GST-PD1-P237L This study Amino acid # per mouse REFSEQ: accession NM_008798.3 
+
+pET-28b-GIV-CT- WT (a.a. 1660-1870) Garcia-Marcos et al 2009 58 
+
+Referred to as His-GIV-CT (aa 1660-1870) pGEX-4T-GIV-CT-WT (a.a. 1623-1870) Garcia-Marcos et al 2009 58 
+
+Referred to as GST-GIV-CT (aa 1660-1870) pCEFL-GST-GIV-CT (1660-1870) Bhandari et al 2015 106 
+
+Referred to as pCEFL GST-GIV-CT for mammalian expression (aa 1660-1870) CMV14-p3X FLAG-GIV WT (full length) Garcia-Marcos et al 2009 58 
+
+N/A 
+
+Chemicals and Reagentsௗௗ 
+
+TRIzol™ Reagent Life Technologies Cat#15596018 Quick-RNA MiniPrep Kit Zymo Research Cat#R2052 qScript™ cDNA SuperMix QuantaBio Cat#101414 PowerUp™ SYBR™ Green Master Mix Applied Biosciences Cat#A25741 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+41 | P a g e 
+
+Applied Biosystems StepOnePlus Real Time PCR System Spectral Calibration Kit (96 well) Thermo Fisher Scientific Cat#4371435 Direct-zol RNA Miniprep Kit Zymo Research Cat#R1051 Zinc Formalin Fixative Sigma-Aldrich Cat#Z2902 Phorbol 12-myristate 13-acetate Millipore Sigma Cat#P1585 pHrodo Red succinimidyl ester (pHrodo-SE) Invitrogen Cat# P36600 CFSE dye Invitrogen Cat#C1157 CellTracker Deep Red Dye Invitrogen Cat#C34565 CellTracker TM CM-Dil Dye Invitrogen Cat#C7001 RPMI 1640 media with L-glutamine Cytiva Cat#SH30027.FS RPMI 1640 media, no phenol red Gibco Cat#11-835-055 DMEM/High glucose with L-glutamine; without sodium pyruvate Cytiva Cat#SH30022.FS Fetal Bovine Serum Sigma-Aldrich Cat#F8067-500ML Penicillin Streptomycin 100X Solution Cytiva Cat#SV30010 Trypsin-EDTA (0.25%), phenol red Fisher Scientific Cat#25-200-114 Dulbecco’s Phosphate Buffered Saline (DPBS), 1X, without calcium, magnesium Cytiva Cat#16750-076 Matrigel Corning Cat#354234 Prochlorperazine dimaleate salt Selleck Chemicals Cat#S4631 Mayer’s hematoxylin BioGenex Cat#HK1005K-GP Two-component DAB brown BioGenex Cat#HK542XAKE-GPE Collagenase I GIBCO Cat#17100-017 DNase I Zymo Research Cat#E1011-A Human TruStain FcX™ BioLegend Cat#422302 Poly-L-lysine coated slides Fisher Scientific Cat#63410-02 3% hydrogen peroxide Fisher Scientific Cat#S25359 Dyngo4a Abcam Cat#AB120689 Duolink® In Situ Detection Reagents Red Sigma-Aldrich Cat#DUO92008-30RXN Duolink® In Situ PLA® Probe Anti-Rabbit PLUS,Affinity purified Donkey anti-Rabbit IgG (H+L) Sigma-Aldrich Cat#DUO92002-30RXN Duolink® In Situ PLA® Probe Anti-Mouse MINUS,Affinity purified Sigma-Aldrich Cat#DUO92004-30RXN 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+42 | P a g e 
+
+Donkey anti-Mouse IgG (H+L) Fluid Thioglycollate Medium BD Difco Cat#225650 2% paraformaldehyde Electron Microscopy Services Cat#15700 0.2% gluteraldehyde Electron Microscopy Services Cat#16200 0.1% Probumin® BSA Millipore Sigma Cat#820452 2% gelatin Sigma-Aldrich Cat# ES-006-B 12 nm Colloidal Gold Jackson Immuno research lab Cat#115-205-068 18 nm Colloidal Gold Jackson Immuno research lab Cat#115-215-068 4% uranyl acetate Polysciences Cat#21447-25 2% methylcellulose Sigma Aldrich Cat#9004-67-5 Tyr Phosphatase inhibitor cocktail Sigma-Aldrich P5726 Ser/Thr phosphatase inhibitor cocktail Sigma-Aldrich P0044 (replaced with P2850 later) Protease inhibitor cocktail Roche Diagnostics Cat#5056489001 Glutathione Sepharose beads Sigma-Aldrich Cat#17-0756-04 Antibodies Anti-polyhistidine antibody (monoclonal) Sigma-Aldrich Cat#H1029-.2ML 16% Paraformaldehyde Electron Microscopy Sciences Cat#15710 ProLong Glass Antifade Mountant Thermo Fisher Scientific Cat#P36984 Pierce™ Protein G Agarose Thermo Fisher Scientific Cat# 20398 Limonene Mounting Medium Abcam Cat#ab104141 2.5% Normal Goat Serum Vector Laboratories Cat#S-1012-50 2.5% Normal Horse Serum Vector Laboratories Cat#S-2012-50 IPTG Zymo Research Cat# I1001-25 
+
+Antibodies 
+
+InVivoMab anti-mouse PD1 (CD279, monoclonal) (Clone: RMP1-14) Bio X Cell Cat#BE0146 PD1 Antibody (polyclonal) Proteintech Cat#18106-1-AP PD1 Antibody (monoclonal) Invitrogen Cat#MA5-15780 Recombinant Mouse B7-H1 (PD-L1, CD274)-Fc Chimera (carrier-free) BioLegend Cat#758208 Anti-NCAM1 (CD56) antibody (monoclonal) Abcam Cat#ab220360 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint
+
+43 | P a g e 
+
+Anti-CD68 antibody (monoclonal) Abcam Cat#ab201340 CD3e antibody (monoclonal) eBioscience, Invitrogen Cat#14-0031-82 Anti-CD163 antibody (monoclonal) Abcam Cat#ab182422 Anti-Girdin, coiled-coil region antibody (polyclonal) Millipore Sigma Cat#ABT80 CK7antibody (monoclonal) (OVT12/30) Invitrogen Cat#MA1-06316 Immpress™ HRP Anti-Rabbit IgG Polymer Detection Kit, Peroxidase Vector Laboratories Cat#MP-7401-50 Immpress™ HRP Anti-Mouse IgG Polymer Detection Kit, Peroxidase Vector Laboratories Cat#MP-7402-50 Goat anti Rabbit IgG (H+L) Secondary Antibody, Alexa Fluor 647 Invitrogen Cat#A-21245 Goat anti-Syrian Hamster IgG (H+L) Cross-Absorbed Secondary Antibody, Alexa Fluor 488 Invitrogen Cat#A-21110 F(ab’)2-Goat anti-Rabbit IgG (H+L) Cross-Absorbed Secondary Antibody, Alexa Fluor 594 Invitrogen Cat#A-11072 Zombie UV™ Fixable Viability Kit BioLegend Cat#423108 PerCP anti- mouse/human CD11b antibody (monoclonal) BioLegend Cat#101230 FITC anti-mouse F4/80 antibody (monoclonal) BioLegend Cat#123108 APC anti-mouse CD279 (PD1) antibody (monoclonal) BioLegend Cat#135210 CoraLite Plus 488-conjugated CD68 antibody (polyclonal) Proteintech Cat#CL488-2574 PE/Cyanine7 anti-mouse CD163 antibody (monoclonal) BioLegend Cat#155320 APC/Cyanine7 anti-mouse CD49b (pan-NK cells) antibody (monoclonal) BioLegend Cat#108920 FITC anti-mouse CD3 antibody (monoclonal) BioLegend Cat#100204 PerCP anti-mouse CD4 antibody (monoclonal) BioLegend Cat#100432 APC anti-mouse CD8a antibody (monoclonal) BioLegend Cat#100712 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 44 | P a g e
+
+PerCP/Cyanine5.5 anti-mouse CD45 antibody (monoclonal) BioLegend Cat#103132 FITC anti-mouse Ly-6C antibody BioLegend Cat#128006 APC anti-mouse Ly-6G antibody (monoclonal) BioLegend Cat#127614 
+
+Deposited data 
+
+Transcriptomic dataset, syngeneic whole tumors 
+
+This paper NCBI GEO: GSE314811 Transcriptomic dataset, F4/80 magnetic sorted Tumor Associated Macrophages (TAMs) 
+
+This paper NCBI GEO: GSE314813 
+
+Softwareௗ 
+
+ImageJ National Institute of Health https://imagej.net/Welcome QuPath v0.6.0 Open Source https://qupath.github.io/ Gen5 Agilent https://www.agilent.com/en/product/cell-analysis/cell-imaging-microscopy/cell-imaging-microscopy-software/biotek-gen5-software-for-imaging-microscopy-1623226 Prism 9 GraphPad https://www.graphpad.com/scientific-software/prism/ Molsoft Molsoft, LLC https://www.molsoft.com/index.html LAS-X Leica www.leica -microsystems.com/products/microscope-software/p/leica-las-x-ls SnapGene GSL Biotech LLC https://www.snapgene.com/ Illustrator Adobe https://www.adobe.com/products/illustrator.html ImageStudio Lite LI-COR https://www.licor.com/bio/image-studio-lite/ ClueGO Cytoscape https://academic.oup.com/bioinformatics/article/25/8/1091/324247 Python3 Python https://www.python.org matplotlib Matplotlib https://matplotlib.org/ Seaborn 0.12 Seaborn https://seaborn.pydata.org Photoshop Adobe https://www.adobe.com/products/photoshop.html 
+
+DETAILED EXPERIMENTAL METHODS 
+
+Cell culture 
+
+Thioglycolate-elicited murine peritoneal macrophages (TGPMs) were isolated from 8-12-wk-old C57BL/6 mice by peritoneal lavage with 10 ml of ice-cold RPMI (Roswell Park Memorial Institute Medium) per mouse, 4 days after intraperitoneal injection of 2.5 ml of aged, sterile 3% thioglycolate broth (BD Difco, NJ, USA) and cultured as described previously 107 . Cells were passed through a 70 μm filter to remove tissue debris, counted, centrifuged, and resuspended in RPMI-1640 containing 10 % FBS and 1% penicillin/streptomycin. Cultures were maintained at 37°C in a humidified 5% CO 2 incubator. Cells were plated at the required density, and the medium was replaced after 4 hours to remove non adherent cells. Cells were allowed to equilibrate overnight before various stimulations and/or treatments, as indicated in the figure legends. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 45 | P a g e
+
+Lewis lung carcinoma (LL/2), HeLa, THP-1 monocytes, and RAW264.7 cells were obtained from American Type Culture Collection (ATCC). RAW264.7 and THP-1 cells were maintained in RPMI media, while LL/2 and HeLa cells were maintained in DMEM (Dulbecco's Modified Eagle Medium); all supplemented with 10% FBS and 1% penicillin/Streptomycin. All macrophages were grown in serum that was heat inactivated (at 56°C for 30 minutes). 
+
+Collection of human lung specimens for organoid isolation 
+
+Adult lung organoids—from both lung adenocarcinomas and adjacent normal tissues--were generated, as outlined previously 108 , from fresh surgical resections, prospectively collected by a cardiothoracic surgeon. Prior to collection of the lung specimens, each tissue was sent to a gross anatomy room where a pathologist cataloged the area of focus, and the extra specimens were routed to the research laboratory in Tissue-2-Go (HUMANOID TM 
+
+Cat# HUM202403) for cell isolation. Deidentified lung tissues obtained during surgical resection, which were deemed excess by clinical pathologists, were collected using an approved human research protocol (IRB#101590; PI: Patricia Thistlewaite). Isolation and biobanking of organoids from this lung tissue were carried out using an approved human research protocol (IRB# 190105; PI: Ghosh) that covers human subject research at the UC San Diego HUMANOID Centre of Research Excellence (CoRE). For all de-identified human subjects’ information, including age, gender, and previous history of the disease, was collected from the chart following the rules of HIPAA and described in Table 1 .
+
+Isolation and culture of human whole lung-derived organoids 
+
+A previously published protocol 109,110 was modified 108 to isolate lung organoids from three human subjects. Briefly, normal human lung specimens were washed with PBS containing 4× penicillin-streptomycin and minced using surgical scissors. The resulting tissue fragments were resuspended in 2 ml of wash buffer (Advanced DMEM/F-12, 10 mM HEPES, 1× Glutamax, 1× penicillin-streptomycin) containing 2 mg/ml Collagenase Type I (Thermo Fisher, MA, USA) and incubated at 37°C for approximately 1 hr. During incubation, the tissue was mechanically dissociated every 10 minutes using a 1 ml micropipette and monitored under a light microscope. Once 80–100% of the cells were released from connective tissue, digestion was halted by adding 10 ml of wash buffer supplemented with 2% fetal bovine serum. The suspension was then passed through a 100 μm cell strainer and centrifuged at 200 rcf. Residual erythrocytes were lysed using 2 ml of red blood cell lysis buffer (Invitrogen, MA, USA) at room temperature for 5 min, followed by the addition of 10 ml of wash buffer and another centrifugation step at 200 rcf. The resulting cell pellets were resuspended in cold Matrigel (Corning,NY, USA) and seeded in 25 μl droplets on a 12-well tissue culture plate. The plate was inverted and incubated at 37°C for 10 min to allow complete polymerization of the Matrigel before the addition of 1 ml Lungbrew (HUMANOID TM cat# HUM2020-250) per well. Organoids were maintained in a humidified incubator at 37°C/5% CO 2, with a complete media change performed every 3 days. After 7 and 10 days, when the desired confluency was reached, organoids were harvested using PBS with 0.5 mM EDTA and centrifuged at 200 rcf for 5 minutes. They were then dissociated in 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 46 | P a g e
+
+1 ml of TrypLE Select (Gibco, USA) per well at 37°C for 4–5 minutes, followed by mechanical shearing. Wash buffer was added at a 1:5 ratio (TrypLE to wash buffer), and the cell suspension was centrifuged, resuspended in Matrigel, and re-seeded at a 1:5 split ratio. Lung organoids were biobanked, and passages 3–10 were used for experiments. Subculturing was performed every 7–10 days. 
+
+Mice 
+
+Girdin floxed mice were a generous gift from Dr. Masahide Takahashi (Nagoya University, Japan) and were developed as previously described 9. LysMcre mice (B6.129P2-Lyz2tm1(cre)lfo/j) were obtained from the Jackson Laboratory. Girdin floxed x LysMcre mice were generated previously in our laboratory as described 49 
+
+and were maintained as homozygous floxed (fl/fl) with heterozygous expression of LysM. Primers used for genotyping are listed in Key Resource Table (KRT) .All mouse studies were approved by the University of California, San Diego Institutional Animal Care and Use Committee (IACUC). Mice were housed in the UC San Diego animal facility under a 12-hour light/dark cycle (30–70% humidity, room temperature maintained at 68–75 °F) with ad libitum access to standard chow and water. 
+
+Sex as a biological variable 
+
+Sex was not considered as a biological variable in this study. Both male and female mice were used. 
+
+Establishment of syngeneic ectopic tumor model in mice and drug treatment 
+
+Mice were injected subcutaneously on the right hindlimb flank with 0.5 x 10 6 Lewis lung cancer cells suspended in 0.1 ml of sterile phosphate buffered saline (PBS) supplemented with 20% Matrigel. Drug treatments started when tumors reached approximately 50 mm 3 and mice were sacrificed at a maximum tumor volume of 2000 mm³, which was considered the study endpoint. Mice were weighed prior to the start of drug treatment, and tumor dimensions were measured every alternate day using a digital caliper (Vernier, Silverline Digital) for a total of three weeks. Tumor volume in each mouse was calculated using the formula: Tumor Volume = ( length x width 2)/2 
+
+Drug Treatment Regimens: 
+
+ Anti-PD1 mAb monotherapy : Upon reaching palpable tumor volume, mice received anti-PD1 monoclonal antibody (InVivo mAb, BioXcell) at a concentration of 1 mg/ml in sterile PBS. A volume of 0.1 ml was administered intraperitoneally per mouse, every 3 days, for a total of three doses, as described previously 111 .
+
+ PCZ monotherapy : The dynamin inhibitor prochlorperazine dimaleate (PCZ; Sigma-Aldrich, St Louis, MO) 44 was weighed and dissolved in 1 ml of Dimethyl Sulfoxide (DMSO) (Sigma-Aldrich). A working stock 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 47 | P a g e
+
+solution of PCZ (1 mg/ml) was prepared using PBS in the biological safety cabinet prior to injection. Mice in the PCZ and PCZ+ anti-PD1 mAb groups received PCZ at a final concentration of 0.8 mg/kg. 
+
+ PCZ- primed PD1 therapy : Upon palpable tumor volumes were achieved, animals were injected intraperitoneally with PCZ (0.8–1 mg/kg). Twenty-four hours later, anti-PD1 mAb treatment was initiated and administered every three days for a total of three doses over three weeks. All treatments were administered via intraperitoneal injection in a total volume not exceeding 120 μl. Tumor growth inhibition was assessed by comparing tumor volumes between groups using two-way ANOVA in GraphPad Prism (Dotmatics Inc., Boston, MA). 
+
+Tissue histology 
+
+Histological processing of excised tumors was performed at the Histology Core Facility of the La Jolla Institute for Immunology, La Jolla, California. Tissues were initially fixed in zinc formalin for 24 hours, followed by transfer to 70% ethanol and storage at room temperature until sectioning. Samples were then sectioned for hematoxylin and eosin (H&E) staining, and adjacent unstained sections were processed for immunohistochemical (IHC) staining using markers of interest. Stained sections were scanned and imaged using a Leica light microscope (Leica Microsystems, Wetzlar, Germany), and the resulting images were analyzed using ImageJ/Fiji software (NIH, Bethesda, MD) 112 .
+
+Immunohistochemical and immunofluorescent staining of tumor tissue sections 
+
+Harvested tumor specimens were fixed in zinc paraformaldehyde, followed by transfer to 70% ethanol for preparation of formalin-fixed, paraffin-embedded (FFPE) tissue blocks. Sections of 4 μm thickness were cut and mounted onto poly-L-lysine–coated glass slides, followed by deparaffinization and rehydration. Heat-induced epitope retrieval was performed using sodium citrate buffer (pH 6.0) or Tris-EDTA buffer (pH 9.0), depending on the target immune marker, in a pressure cooker. Sections were then treated with 3% hydrogen peroxide for 10 minutes to quench endogenous peroxidase activity and incubated overnight at 4°C with primary antibodies in a humidified chamber 113 . The following primary antibodies were used for immunohistochemistry (IHC): 
+
+ PD1, rabbit polyclonal (1:100 dilution) 
+
+ CD3, Armenian Hamster monoclonal (anti-mouse, 1:50 dilution) 
+
+ CD163, rabbit polyclonal (1:150 dilution) 
+
+ CD56, rabbit polyclonal (1:50 dilution) Signal detection was carried out using a streptavidin–biotin complex and 3,3′-diaminobenzidine (DAB) as the chromogen, followed by hematoxylin counterstaining. Images were acquired using a Leica light microscope (Leica Microsystems, Wetzlar, Germany) and analyzed using Fiji/ImageJ software (NIH, Bethesda, USA). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 48 | P a g e
+
+Immunofluorescence Staining: 
+
+For immunofluorescence double staining, additional FFPE sections were processed similarly with antigen retrieval. The following primary antibodies were used: 
+
+ CD3, Armenian Hamster monoclonal (anti-mouse, 1:50 dilution) 
+
+ CD68, mouse monoclonal (1:150 dilution) 
+
+ CD163, rabbit polyclonal (1:150 dilution) 
+
+ CD56, rabbit polyclonal (1:50 dilution) Secondary antibodies included donkey anti-Goat IgG (H+L) conjugated to Alexa Fluor 488 and Alexa Fluor 594 (1:500 dilution), and nuclei were counterstained with DAPI (1:1000 dilution). Fluorescent images were acquired on a Stellaris 5 Confocal Microscope (Leica Microsystems) and analyzed using QuPath (v0.1.2), with further processing in Fiji/ImageJ. 
+
+Sample collection and assessment of immune cell populations by flow cytometry 
+
+Tumors were harvested and weighed; a small portion was fixed in formalin for histological analysis. The remaining tissue was finely minced, homogenized, and digested at 37 °C for 25 minutes in digestion media consisting of RPMI (serum-free) supplemented with 28 U/ml Collagenase I and 10 mg/ml DNase I, as previously 114 .The resulting cell suspension was passed through a 100 μm strainer, and the strainer was washed with 5–10 ml of complete RPMI medium (containing 10% heat-inactivated FBS, 100 U/ml penicillin, 100 μg/ml streptomycin, and non-essential amino acids). The suspension was then filtered through a 70 μm strainer to obtain a final single-cell preparation. These steps were done as described previously 115 .Mouse Fc receptors were blocked using TruStain FcX (BioLegend, San Diego, CA) at a 1:500 dilution in PBS (GIBCO) with 1% BSA for 15 minutes. Surface staining was performed using combinations of fluorescently labeled monoclonal antibodies (listed in the Key Resources Table), diluted in PBS containing 1% BSA, and incubated for 30 minutes to 1 hour on ice in the dark. Cells were then washed once with PBS containing 1% BSA to remove unbound antibodies and resuspended in 1 ml of the same buffer for flow cytometric analysis. Flow cytometry was performed on a NovoCyte Quanteon (Agilent Technologies, Santa Clara, CA), and data were analyzed using NovoExpress (Agilent) and FlowJo software. Gating for positive and negative populations was established using Fluorescence Minus One (FMO) controls, and PD1 gating was guided by appropriate isotype controls. Gating strategies for immune cell populations were based on established protocols and are outlined below: 
+
+ Tumor-Associated Macrophages (TAMs): Zombie-negative, CD11b ⁺, F4/80 ⁺, PD1 ⁺
+
+ Inflammatory TAM Subset: Zombie-negative, CD11b ⁺, CD68 ⁺, PD1 ⁺
+
+ Tolerant TAM Subset: Zombie-negative, CD11b ⁺, CD163 ⁺, PD1 ⁺
+
+ Natural Killer (NK) Cells: Zombie-negative, CD49b ⁺, CD3 ⁻, CD56 ⁺
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 49 | P a g e
+
+ T Cells: Zombie-negative, CD3 ⁺, CD4 ⁺, CD8 ⁺
+
+ Neutrophils: Zombie-negative, CD45 ⁺, Ly6C low ⁺, Ly6G high ⁺
+
+Immunohistochemical and immunofluorescent staining of tumor tissue sections 
+
+Tumor specimens were fixed in zinc paraformaldehyde, followed by fixation in 70% ethanol to prepare formaldehyde-fixed paraffin-embedded (FFPE) tissue blocks. Sections (4 μm thick) were cut and mounted onto poly-L-lysine–coated glass slides, then deparaffinized and rehydrated. Heat-induced epitope retrieval was performed in a pressure cooker using sodium citrate buffer (pH 6.0) or Tris-EDTA buffer (pH 9.0), depending on the immune cell marker being stained. Endogenous peroxidase activity was quenched with 3% hydrogen peroxide for 10 minutes. Slides were then incubated overnight at 4°C in a humidified chamber with primary antibodies, including rabbit polyclonal anti-PD1 (1:100) (used only for immunohistochemical staining), mouse monoclonal anti-CD68 (1:150), Armenian Hamster monoclonal anti-CD3 (1:50), rabbit polyclonal anti-CD163 (1:150), and rabbit polyclonal anti-CD56 (1:50) (used for both immunohistochemical and immunofluorescent staining). Immunohistochemical staining was visualized using a streptavidin–biotin detection system with 3,3′-diaminobenzidine (DAB) as the chromogen and hematoxylin as the counterstain. Images were captured using a Leica light microscope and quantified using Fiji/ImageJ software (NIH, Bethesda, MD, USA). For immunofluorescence, double staining was performed on unstained FFPE tissue sections following antigen retrieval. Post-primary antibody incubation corresponding secondary antibodies—donkey anti-goat IgG (H+L) conjugated to Alexa Fluor 488 or Alexa Fluor 594 (1:500)—were used along with DAPI nuclear counterstain (1:1000). Fluorescent images were acquired on a Stellaris 5 confocal microscope (Leica Microsystems), processed using QuPath (version 0.1.2), and further analyzed with Fiji/ImageJ software (NIH, Bethesda, MD, USA). 
+
+In vivo phagocytosis assay 
+
+Eight- to ten-week-old mice were injected intraperitoneally with 3 mL of 3% (w/v) thioglycolate medium. Four days later, 5 × 10⁶ CFSE-labeled LL/2 tumor cells, resuspended in 200 μL of sterile PBS, were administered intraperitoneally. Peritoneal cells were harvested by lavage with ice-cold RPMI medium at 4-, 6-, 12-, and 24-hours post-injection. Phagocytosis of tumor cells was quantified by flow cytometry 116 . The phagocytic percentage was calculated by gating for CFSE ⁺ LL/2 tumor cells within the F4/80 ⁺ macrophage population, as done previously 117 .Additionally, harvested cells were fixed in 4% paraformaldehyde and visualized by confocal microscopy using the Stellaris 5 Confocal Microscope (Leica Microsystems). The phagocytic index was determined by counting the number of CFSE ⁺ tumor cells internalized per 100 macrophages. 
+
+In vitro treatment with dynamin inhibitor 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 50 | P a g e
+
+For signaling and fluorescence-based analyses, thioglycolate-elicited peritoneal macrophages (TGPMs) and PMA-differentiated THP1 cells were plated at a density of 1 × 10⁶ cells per well on coverslips in 12-well plates. Cells were treated with either 30 μM DynGo4a (a dynamin inhibitor; Abcam, Cambridge, UK) or DMSO (vehicle control) for 30 minutes. Following treatment, cells were washed with ice-cold PBS and stimulated with recombinant mouse B7-H1 (soluble PD-L1/CD274; BioLegend, San Diego, CA) at a concentration of 10 ng/mL for 5 and 10 minutes. Treated cells were then processed for downstream in vitro assays. 
+
+In vitro phagocytosis assay 
+
+There are three key steps: 
+
+ Labeling of Cancer Cells with pHrodo-SE: As described by Nam et al., 2019 LL/2 cancer cells were washed once with sterile PBS to remove serum residues and resuspended at a concentration of 1 × 10⁷ cells in 50 mL PBS. pHrodo-SE dye was added to a final concentration of 120 ng/ml 118 , and the suspension was incubated on a rotator (15 rpm) at room temperature for 30 minutes. After labeling, cells were washed twice with sterile PBS to eliminate unbound dye and resuspended in serum-free, phenol red-free RPMI medium. 
+
+ Quantitative assessment of phagocytosis : Labeled LL/2 tumor cells (targets) were co-cultured with thioglycollate-elicited peritoneal macrophages (TGPMs, effectors) at a 1:1 target-to-effector ratio. Fluorescence from internalized pHrodo-labeled targets—indicative of phagocytosis in the acidic lysosomal environment—was measured using a fluorescence plate reader (Spark 20M, Tecan) at excitation/emission wavelengths of 505/525 nm as shown previously 119 .
+
+ Live imaging of phagocytosis: For microscopy-based live imaging, 1.8 × 10⁴ PMA-differentiated THP1 macrophages were stained with CM-DiI dye (Invitrogen) and seeded onto fibronectin-coated (10 μg/mL, 45 min at 37 °C) 96-well black clear-bottom microplates and incubated overnight. The following day, patient-derived lung organoid cells were fluorescently labeled with CFSE dye and added at a seeding density of 0.3 × 10⁴ cells per well. Phagocytosis was monitored by time-lapse imaging every 30 minutes for 6 hours using a BioTek Cytation 10 BioSpa and Confocal Imaging Reader (Agilent Technologies). 
+
+Organoid-macrophage co-culture studies 
+
+PMA-differentiated THP1 macrophages were fluorescently labeled using CFSE dye. Lung organoids were generated by embedding mixed cells in Matrigel at a seeding density of 2.5 × 10⁴ cells per well and cultured for 7 days. To assess interactions and phagocytic activity, CFSE-labeled THP1 macrophages were added to the mature lung tumor organoids at a 1:1 ratio (2.5 × 10⁴ cells per well) in 8-well chamber slides and co-cultured for 4 hours. Following co-culture, cells were fixed with 4% paraformaldehyde (PFA) for 30 minutes at room temperature, quenched with 30 mM glycine for 5 minutes, and blocked with PBS containing 1% BSA for 2 hours. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 51 | P a g e
+
+Organoids were stained with an anti-CK7 primary antibody (1:200 dilution) and incubated overnight at 4 °C. After washing with PBS, samples were incubated with Alexa Fluor 594-conjugated secondary antibody (1:500 dilution) and counterstained with DAPI (1:1000 dilution). Coverslips were mounted using ProLong Glass antifade reagent. Confocal images were acquired using a Stellaris 5 Confocal Microscope (Leica Microsystems). Z-stacks were captured with 1 μm intervals between slices across the relevant channels. For each condition, three representative fields were randomly selected for imaging. Maximum intensity projection images were generated by overlaying z-slices, and all image processing was performed using FIJI (ImageJ) software. 
+
+Duolink™ proximity ligation assays (PLA) 
+
+In situ interactions between endogenous GIV and PD1 were detected using the Duolink™ Proximity Ligation Assay kit (Olink Biosciences), following the manufacturer’s protocol with previously optimized modifications 53 .Briefly, PMA-differentiated THP1 cells were cultured and fixed with 4% paraformaldehyde, then permeabilized with 0.1% Tween-20 on ice for 30 minutes. After blocking with Duolink blocking solution for 1 hour at room temperature, cells were incubated with primary antibodies overnight at 4 °C. Following two washes with 5% BSA in PBS, cells were incubated with PLA probes for 1 hour at 37 °C. Ligation and amplification steps were performed to generate PLA signals. Confocal images were acquired using a Stellaris 5 Confocal Microscope (Leica Microsystems). For high-throughput quantification of interactions across experimental conditions, images were also analyzed using QuPath (version 0.1.2). 
+
+Confocal immunofluorescence 
+
+Cells were plated on coverslips and incubated overnight to reach approximately 80% confluency. Following treatment, cells were fixed in 4% paraformaldehyde in PBS for 30 minutes at room temperature, quenched with 0.1 M glycine for 5 minutes, and then blocked and permeabilized with PBS containing 1% BSA for 30 minutes at room temperature. Primary antibodies were diluted in blocking buffer and incubated overnight at 4 °C. The following dilutions were used: anti-GIV (1:500) and anti-PD1 (1:500). After primary antibody incubation, cells were washed three times (5 minutes each) with PBS containing 1% BSA and 0.1% Triton X-100. Fluorescently labeled secondary antibodies, Alexa Fluor 488 and Alexa Fluor 594, were used at 1:500 dilution, and nuclei were counterstained with DAPI at 1:1000 dilution. Coverslips were mounted using ProLong™ Glass Antifade Reagent (Thermo Fisher Scientific). Images were acquired using a Stellaris 5 Confocal Microscope (Leica Microsystems). 
+
+Immunogold electron microscopy (IEM) 
+
+Murine TGPMs were plated in 10 cm dishes at a concentration of 10 7 cells per dish. The following day, TGPMs were treated with 10 μM dynamin inhibitor, DynGo4a (Abcam, MA, USA) for 30min. Post treatment, cells were 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 52 | P a g e
+
+fixed with 2% paraformaldehyde and 0.2% glutaraldehyde (15700 and #16200 respectively, Electron Microscopy Services, Hatfield, PA, USA) for one hour at 4°C. The fixative was replaced with ice-cold 4% paraformaldehyde with 0.1% Probumin® BSA in PBS. Cells were gently scraped using a soft Teflon scraper (07-200-366, Thermo Fisher), collected, and processed for sectioning. 
+
+Epoxy resin embedding : Cells were fixed with 2.5% glutaraldehyde in 0.1M sodium cacodylate buffer pH7.4 for 5 minutes at room temperature and for 2 hours on ice, then pelleted in 10% gelatin. After washing with 0.1 M cacodylate buffer, the pellets are postfixed in 1% OsO4 in 0.1 M cacodylate buffer for 1 hr on ice. The cells were stained all at once with 2% uranyl acetate for 1 hr on ice, following which they were dehydrated in graded series of ethanol (50-100%) while remaining on ice. The cells were then subjected to 1 wash with 100% ethanol and 2 washes with acetone (10 min each) and embedded with Durcupan. Sections were cut at 60 nm on a Leica UCT ultramicrotome and picked up on 300 mesh copper grids. Grids were then incubated for 1 hour at room temperature with primary antibodies diluted in 1% BSA in PBS: anti-PD1 mouse monoclonal antibody (1:10; Invitrogen, Cat. no. MA5-15780) and anti-GIV rabbit polyclonal antibody (1:10; Millipore, Cat. no. ABT80). For immunogold labeling, grids were incubated for 1 hour at room temperature with secondary antibodies diluted 1:1 in 1% BSA in PBS: Goat Anti-Mouse IgG conjugated to 12 nm colloidal gold (Jackson ImmunoResearch, Cat. no. 115-205-068) and Goat Anti-Rabbit IgG conjugated to 18 nm colloidal gold (Jackson ImmunoResearch, Cat. no. 115-215-068). Sections were post-stained with 2% uranyl acetate for 5 minutes and Sato's lead stain for 1 minute. Images were acquired using a JEM-1400Plus transmission electron microscope (JEOL USA Inc., Peabody, MA), operated at 80KeV and equipped with a bottom-mounted 4kx4k camera Gatan One View. 
+
+Constructs and cloning 
+
+Mouse full-length PD1-GFP and GST-PD1 (accession NM_008798.3) cytoplasmic domain constructs were generously provided by Dr. Adam Mor (Columbia University Medical Center). All the PD1 cytoplasmic tail (PD1 CT) mutants used in this work were created using this construct as template 105 . Mutant design was guided either by structure and/or alignment of sequences or inspired by somatic mutations in human cancers listed on the Catalog for Somatic Mutations in Cancer (COSMIC database: https://cancer.sanger.ac.uk). PD1 CT mutants were created using the Quik-change® Site-Directed Mutagenesis Kit (Stratagene,CA, USA) following the manufacturer’s protocol. His-tagged GIV-CT and GIV-CT TIR domain mutants used in this study were previously developed and validated in our laboratory 49 .
+
+Immunoblotting 
+
+Cell lysates were prepared by resuspending cells in HEPES lysis buffer [20 mM HEPES (pH 7.2), 5 mM magnesium acetate, 125 mM potassium acetate, 0.4% Triton X-100, 1 mM DTT], supplemented with 500 μM sodium orthovanadate, phosphatase inhibitors (Sigma), and protease inhibitors (Roche, California, USA). Lysates were passed through a 28G needle on ice, then cleared by centrifugation at 10,000 × g for 10 minutes. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 53 | P a g e
+
+For immunoblotting, proteins were separated by SDS-PAGE and transferred to PVDF membranes. Membranes were blocked with 5% nonfat milk in PBS, incubated with primary antibodies, and subsequently probed with fluorescent secondary antibodies. Detection and quantification were performed using the LI-COR Odyssey imaging system with dual-color infrared imaging. All images were processed using Fiji/ImageJ (NIH, Bethesda, USA) and assembled for presentation using Adobe Photoshop and Illustrator (Adobe, San Jose, CA, USA). 
+
+Co-immunoprecipitation (Co-IP) 
+
+Cells were lysed in cell lysis buffer [20 mM HEPES (pH 7.2), 5 mM magnesium acetate, 125 mM potassium acetate, 0.4% Triton X-100, 1 mM DTT, 0.5 mM sodium orthovanadate, protein tyrosine phosphatase (PTP) inhibitor cocktail, serine/threonine phosphatase inhibitor cocktail, and protease inhibitor cocktail]. Lysates were sheared by passage through a 28G needle and cleared by centrifugation at 10,000 × g for 10 minutes. Cleared supernatants were incubated 4 h at 4 °C with either mouse anti-PD1 antibody or mouse IgG (control). Protein G agarose beads were then added and incubated for 1 hour at 4 °C to capture immune complexes. Beads were washed with the same phosphate wash buffer described above and eluted by boiling in Laemmli buffer. 
+
+Protein expression and purification 
+
+His-tagged and GST-tagged recombinant proteins were expressed in E. coli strain BL21 and purified as previously described 120 . Bacterial cultures were induced with 1 mM isopropylβ-D-1-thio-galactopyranoside (IPTG) either overnight at 25°C. Bacterial culture (1l) were pelleted after induction and resuspended in 20 ml GST-lysis buffer (25 mM Tris·HCl, pH 7.5, 20 mM NaCl, 1 mM Ethylenediaminetetraacetic acid (EDTA), 20% [v/v] glycerol, 1% [v/v] Triton X-100, 2 × protease inhibitor mixture [Complete EDTA-free; Roche Diagnostics]) or in 20 ml His-lysis buffer (50 mM NaH 2PO 4 [pH 7.4], 300 mM NaCl, 10 mM imidazole, 1% [vol/vol] Triton X-100, 2 × protease inhibitor mixture [Complete EDTA-free; Roche Diagnostics]) for GST or His-fused proteins, respectively. Bacterial lysates were sonicated (three cycles, with pulses lasting 30 s/cycle, and with 2 min interval between cycles to prevent heating), centrifuged at 12,000× g for 20 min at 4°C. Supernatant (solubilized proteins) were affinity purified on glutathione-Sepharose 4B beads (GE Healthcare, IL, Chicago) or HisPur Cobalt Resin (Pierce), dialyzed overnight against PBS, and stored at −80°C. 
+
+GST pulldown assays 
+
+Recombinant GST-tagged proteins—including GST alone (control), GST-PD1 wild-type, and GST-PD1 mutants—were expressed in E. coli strain BL21 (DE3) and purified as previously described 58 . Bacterial cultures were induced with 1 mM IPTG and incubated overnight at 25 °C. Cells were pelleted and resuspended in GST lysis buffer [25 mM Tris-HCl (pH 7.5), 20 mM NaCl, 1 mM EDTA, 20% (v/v) glycerol, 1% (v/v) Triton X-100, and 2× protease inhibitor cocktail], then briefly sonicated (30-second pulses on/off for 5 minutes). Lysates were clarified by centrifugation at 13,000 rpm for 45 minutes. Protein concentrations were determined using BSA standards, and aliquots were stored at –80 °C. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 54 | P a g e
+
+Equimolar concentrations of GST-tagged proteins were immobilized onto glutathione-Sepharose beads by incubation in binding buffer [50 mM Tris-HCl (pH 7.4), 100 mM NaCl, 0.4% (v/v) Nonidet P-40, 10 mM MgCl ₂,5 mM EDTA, 2 mM DTT, and protease inhibitors] for 1 hour at 4 °C or overnight with gentle tumbling. After washing, beads were incubated with equimolar amounts of purified His-tagged wild-type or mutant GIV-CT proteins (resuspended in the same buffer) for 4 hours at 4 °C. Ten percent of the His-tagged input was retained as control. Following incubation, beads were washed four times with phosphate wash buffer [4.3 mM Na ₂HPO ₄,1.4 mM KH ₂PO ₄ (pH 7.4), 137 mM NaCl, 2.7 mM KCl, 0.1% (v/v) Tween-20, 10 mM MgCl ₂, 5 mM EDTA, 2 mM DTT, 0.5 mM sodium orthovanadate], then eluted twice in Laemmli buffer [5% SDS, 156 mM Tris base, 25% glycerol, 0.025% bromophenol blue, 25% β-mercaptoethanol] by boiling at 95 °C for 5 minutes. Eluates were pooled, resolved by 10% SDS-PAGE, and transferred to PVDF membranes. Membranes were stained with Ponceau S to confirm transfer efficiency and equimolar loading of GST-tagged proteins, then blocked in PBS containing 5% non-fat milk. Immunoblotting was performed using mouse anti-His antibody (Sigma; 1:1000 dilution) and a custom rabbit polyclonal anti-GIV-CT antibody (1:1000 dilution; epitope: C-terminal 18 amino acids of human GIV, validated previously 121 ). Detection and quantification were carried out using a LI-COR Odyssey imaging system with dual-color infrared detection. Final figures were assembled using Adobe Photoshop and Illustrator (Adobe, San Jose, CA, USA). 
+
+Alignment of Toll-interleukin-1 receptor (TIR) domain sequences 
+
+Amino acid sequences of the TIR-domain containing proteins were retrieved from the Ensembl Genome Browser (www.ensembl.org) and aligned using the Clustal Omega Multiple Sequence Alignment tool (https://www.ebi.ac.uk/Tools/msa/clustalo/). The resulting alignments were visualized using the BoxShade Server (https://embnet.vital-it.ch/software/BOX_form.html). 
+
+Homology modeling of GIV•PD1 interaction via TIR-like BB-loop (TILL) sequences 
+
+In the absence of resolved structures of the cytoplasmic tail of PD1 and GIV’s C-terminus, we built homology models of the GIV(TILL)•PD1(TILL) complex using as template a previously published 49,122 model of GIV’s TILL motif bound to TLR4’s BB loop via a homotypic interface. Homology modeling was performed in ICM (Internal Coordinate Mechanics) software and the details of how the original GIV•TLR4(TIR) model was rigorously vetted and experimentally validated can be found in 49 . Briefly, the GIV-TILL and PD1-TILL peptides were built ab initio ,tethered to the respective Pro-Gly positions, and its conformations were extensively sampled (> 108 steps) by biased probability Monte Carlo (BPMC) sampling in internal coordinates, with the TLR4 TIR domain represented as a set of energy potentials precalculated on a 0.5 Å 3D grid and including Van der Waals potential, electrostatic potential, hydrogen bonding potential, and surface energy. Following such grid-based docking, the peptide poses were merged with full-atom models of the TLR4 TIR domain, and further sampling was conducted for the peptide and surrounding side chains of the TLR4 residues. Co-complexed GIV-TILL and PD1-TILL peptide-only models are displayed here. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 55 | P a g e
+
+Software and statistical analysis 
+
+All images were processed using ImageJ software, QuPath, Gen5, LAS X, or iStudio (LiCOR, Lincoln, NE, USA) software and assembled into figure panels with Photoshop and Illustrator (Adobe Creative Cloud). All data are presented as mean ± standard error of the mean (SEM) from replicate experiments. Statistical analyses were performed using GraphPad Prism software (version 9.0). Comparisons between two groups were conducted using either Student’s t-test (parametric) or the Mann–Whitney U-test (non-parametric). For comparisons involving more than two groups, one-way or two-way analysis of variance (ANOVA) followed by Tukey’s post hoc test was used. A p-value of < 0.05 was considered statistically significant. 
+
+DETAILED COMPUTATIONAL METHODS 
+
+RNA Sequencing and Data Processing. 
+
+RNA sequencing libraries were generated at the UCSD IGM Genomic Center using the Illumina TruSeq Stranded Total RNA Library Prep Gold with TruSeq Unique Dual Indexes (Illumina, San Diego, CA). Samples were processed following the manufacturer’s instructions, except for modifying the RNA shear time to five minutes. The resulting libraries were multiplexed and sequenced with 100 base pairs (bp) Paired-End (PE100) to a depth of approximately 40 million reads per sample on an Illumina NovaSeq 6000. Samples were demultiplexed using bcl2fastq v2.20 Conversion Software (Illumina, San Diego, CA). Raw FASTQ files were trimmed, filtered, and mapped to the human genome for downstream quantification analyses. Low-quality sequences were trimmed or removed with Trimmomatic. STAR (version 2.6.0a) was used to align reads on the reference genome ( Mus musculus genome build GRCm38.94). The resulting transcriptome-aligned sequences were used for expression quantification by using RSEM (version 1.3.3) with “–forward-prob 0” option. TPM scores for each sample were used through the RSEM tables (RSEM gene. results tables). We used log2(TPM) if TPM >1, else TPM - 1 values for each sample as the final gene expression value for downstream expression analyses. Datasets are uploaded to NCBI GEO for both whole tumors (GSE314811) and TAM (GSE314813) datasets. Access codes to datasets are provided in “ Cover Letter ” and the datasets will be publicly released at the time of publication. 
+
+Differential Expression Analysis 
+
+Differential gene expression analysis was performed using raw count data processed through DESeq2 123 . Genes with an absolute log2 fold change ≥ 1 and an adjusted p-value ≤ 0.05 (Benjamini-Hochberg method) were considered differentially expressed genes (DEGs). Pathway enrichment analysis of DEG lists was conducted using the ShinyGO 124 database and its integrated algorithms. Volcano plots representing differentially expressed genes were created using the matplotlib package. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 56 | P a g e
+
+StepMiner analysis 
+
+StepMiner is an algorithm designed to detect stepwise transitions in time-series gene expression data 125 . It fits step functions to expression profiles by identifying the sharpest changes in signal, corresponding to gene expression switching events. The algorithm evaluates all possible step positions and calculates the average expression on either side of each step to define constant segments. An adaptive regression approach is then used to select the step position that minimizes the sum of squared errors between the observed and fitted data. The selected step is used as the StepMiner threshold . This threshold is used to convert gene expression values into Boolean values. A noise margin of 2-fold change is applied around the threshold to determine intermediate values, and these values are ignored during Boolean analysis. Finally, a regression test statistic is computed to assess the significance of the identified step transition as follows: 
+
+𝐹 𝑠𝑡𝑎𝑡 = ∑ (𝑋 ప
+
+෡ − 𝑋 ത) ଶ௡௜ୀଵ (𝑚 − 1) ⁄∑ (𝑋 ௜ − 𝑋 ప
+
+෡ ) ଶ௡௜ୀଵ (𝑛 − 𝑚) ⁄
+
+Where 𝑋 ௜ for 𝑖 = 1 to 𝑛 are the values, 𝑋 ప
+
+෡ for 𝑖 = 1 to 𝑛 are fitted values. m is the degrees of freedom used for the adaptive regression analysis. 𝑋 ത is the average of all the values: 𝑋 ത = ଵ௡ ∗ ∑ 𝑋 ௝௡௝ୀଵ . For a step position at k, the fitted values 𝑋 ௟
+
+෡ are computed by using ଵ௞ ∗ ∑ 𝑋 ௝௡௝ୀଵ for 𝑖 = 1 to 𝑘 and ଵ(௡ି௞ ) ∗ ∑ 𝑋 ௝௡௝ୀ௞ାଵ for 𝑖 = 𝑘 + 1 to 𝑛 .
+
+Composite gene signature analysis using Boolean Network Explorer (BoNE) 
+
+Boolean network explorer (BoNE) 126 provides an integrated platform for the construction, visualization and querying of a gene expression signature underlying a disease or a biological process in three steps: First, the expression levels of all genes in these datasets were converted to binary values (high or low) using the StepMiner algorithm. Second, Gene expression values were normalized according to a modified Z-score approach centered around StepMiner threshold (formula = (expr - SThr)/3*stddev). Third, the normalized expression values for every gene were added together to create the final composite score for the gene signature 127 . As a modified Z-score, the composite score of any gene signature typically ranges from negative to positive values, reflecting the dynamic range of each gene in the signature. These composite scores represent the overall activity or state of biological pathways associated with the genes and, hence, can identify differences between control and query groups within any given dataset. However, composite scores can neither be directly compared between various gene signatures on a dataset (because they are not normalized according to the number of genes in each signature), nor can the same signature be compared across datasets (which are individually normalized according to intra-dataset sample distribution or have other inherent differences). The samples were ordered based on the final signature score. 
+
+Measurement of classification strength or prediction accuracy :
+
+To evaluate classification strength and prediction accuracy, Receiver Operating Characteristic (ROC) curves were generated for each gene. These curves assess the performance of a binary classifier, e.g., high vs. low 
+
+StepMiner 125 normalized gene expression levels, across varying discrimination thresholds. ROC curves plot the 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 57 | P a g e
+
+True Positive Rate (TPR) against the False Positive Rate (FPR) at multiple threshold levels. The Area Under the Curve (AUC) quantifies the classifier's ability to correctly distinguish between the various types of samples, in this instance, WT vs KO tumors (GSE314811) or TAMs (GSE314813). ROC-AUC values were computed using the Python Scikit-learn package. 
+
+Expression Heatmap 
+
+Z-score–normalized expression values of selected genes were visualized as a heatmap across samples within each dataset. Unsupervised clustering was performed to identify gene expression clusters using the Seaborn package (version 0.10.1). 
+
+Bulk RNAseq Deconvolution 
+
+In silico deconvolution of bulk RNA-seq (tumor) data was performed using the Granulator R package 128 to estimate immune cell compositions. Cell-type abundance estimates were normalized using the immune cell signature matrix developed by Monaco et al 129 .
+
+Survival Analysis 
+
+Kaplan–Meier survival analysis and log-rank tests for statistical significance were performed using KM-plotter (https://kmplot.com/analysis/) 130 . Briefly, datasets from immunotherapy treated patients with different tumor types including lung, melanoma, bladder cancer, head and neck, esophageal adenocarcinoma, hepatocellular cancer and glioblastoma were analyzed using the "Immunotherapy" subsystem 131 . The KM Plotter uses a default algorithm to automatically select the best cutoff value for separating samples into high and low expression groups when generating Kaplan-Meier survival plots. This automated selection is based on finding the cutoff that yields the most statistically significant separation between the groups, as determined by a Cox regression analysis 132 .
+
+Statistical Tests 
+
+Optimal gene expression cut-off values were determined using the StepMiner algorithm within each individual dataset 125 . Gene signatures were used to classify sample categories, and multi-class classification performance was evaluated using ROC-AUC (receiver operating characteristic area under the curve) values. Violin and dot plots were generated using Seaborn (Python, version 0.12). Statistical comparisons were performed using Welch’s two-sample t-test (unpaired, unequal variance and sample size) via the scipy.stats.ttest_ind function in Python (version 0.19.0; equal_var=False). Multiple hypothesis correction was applied using the Benjamini-Hochberg method (fdr_bh) via statsmodels.stats.multitest.multipletests. Differential expression analysis was conducted using DESeq2 in R (version 1.16.1). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 58 | P a g e
+
+SUPPLEMENTAL INFORMATION INDEX Supplemental Figures and Legends (Figure S1-S7) 
+
+Figure S1: Functional annotation of responder and non-responder TAM gene programs, related to Figure 1. Figure S2: Immune cell composition and spatial organization in the tumor microenvironment, related to Figure 2. Figure S3: GIV levels dictate macrophage phagocytic efficacy and enable functional validation in patient-derived organoids, related to Figure 3. Figure S4: Quantitative analysis of early tumor response to anti–PD1 therapy in vivo , related to Figure 4. Figure S5: GIV-dependent tumor transcriptome does not predict clinical benefit from anti–CTLA-4 therapy, related to Figure 5. Figure S6: GIV functions as an endocytic adaptor for PD1, related to Figure 6. Figure S7: Somatic mutation landscape of PD1 in human cancers and structural impact on a regulatory surface patch affecting receptor positioning and function, related to Figure 7. 
+
+Supplemental Tables (Table S1) 
+
+Table S1: Characteristics of patients enrolled into this study for obtaining lung tissues to serve as source of stem cells to generate lung organoids, related to Figure 3. 
+
+Supplemental Data (Data S1-S5) 
+
+Data S1: Integration of SMaRT model with patient-derived signatures of ICI response, related to Figure 1. Data S2: List of rTAM and nrTAM genes, related to Figure 1. Data S3: Differentially expressed genes (DEGs) between WT and GIV-KO, whole tumors, related to Figure 5. Data S4: Differentially expressed genes (DEGs) between WT and GIV-KO, F4/80+TAMs, related to Figure 5. Data S5: Gene signatures of ICI-related immune responses and endocytic functions, related to Figure 5. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 59 | P a g e
+
+REFERENCE CITED 
+
+1. Boussiotis, V.A. (2016). Molecular and Biochemical Aspects of the PD-1 Checkpoint Pathway. N Engl J Med 375 , 1767-1778. 10.1056/NEJMra1514296. 2. Caramella, C., Ferrara, R., and Besse, B. (2021). Clarification of Definitions of Hyperprogressive Disease During Immunotherapy-Reply. JAMA Oncol 7, 137. 10.1001/jamaoncol.2020.5591. 3. Park, H.J., Kim, K.W., Won, S.E., Yoon, S., Chae, Y.K., Tirumani, S.H., and Ramaiya, N.H. (2021). Definition, Incidence, and Challenges for Assessment of Hyperprogressive Disease During Cancer Treatment With Immune Checkpoint Inhibitors: A Systematic Review and Meta-analysis. JAMA Netw Open 4, e211136. 10.1001/jamanetworkopen.2021.1136. 4. Ferrara, R., Mezquita, L., Texier, M., Lahmar, J., Audigier-Valette, C., Tessonnier, L., Mazieres, J., Zalcman, G., Brosseau, S., Le Moulec, S., et al. (2018). Hyperprogressive Disease in Patients With Advanced Non-Small Cell Lung Cancer Treated With PD-1/PD-L1 Inhibitors or With Single-Agent Chemotherapy. JAMA Oncol 4, 1543-1552. 10.1001/jamaoncol.2018.3676. 5. Champiat, S., Dercle, L., Ammari, S., Massard, C., Hollebecque, A., Postel-Vinay, S., Chaput, N., Eggermont, A., Marabelle, A., and Soria, J.-C. (2017). Hyperprogressive disease is a new pattern of progression in cancer patients treated by anti-PD-1/PD-L1. Clinical Cancer Research 23 , 1920-1928. 6. Havel, J.J., Chowell, D., and Chan, T.A. (2019). The evolving landscape of biomarkers for checkpoint inhibitor immunotherapy. Nat Rev Cancer 19 , 133-150. 10.1038/s41568-019-0116-x. 7. Topalian, S.L., Taube, J.M., Anders, R.A., and Pardoll, D.M. (2016). Mechanism-driven biomarkers to guide immune checkpoint blockade in cancer therapy. Nat Rev Cancer 16 , 275-287. 10.1038/nrc.2016.36. 8. Yoo, S.K., Fitzgerald, C.W., Cho, B.A., Fitzgerald, B.G., Han, C., Koh, E.S., Pandey, A., Sfreddo, H., Crowley, F., Korostin, M.R., et al. (2025). Prediction of checkpoint inhibitor immunotherapy efficacy for cancer using routine blood tests and clinical data. Nat Med 31 , 869-880. 10.1038/s41591-024-03398-5. 9. Hor, J.L., Schrom, E.C., Wong-Rolle, A., Vistain, L., Shang, W., Dong, Q., Zhao, C., Jin, C., and Germain, R.N. (2026). Inhibitory PD-1 axis maintains high-avidity stem-like CD8(+) T cells. Nature 649 ,194-204. 10.1038/s41586-025-09440-x. 10. Jackson, M., and Parkes, E.E. (2025). Redefining PD1 as a guardian of stem-like T cells. Nature Reviews Immunology 25 , 3-3. 11. Weiss, S.A., Huang, A.Y., Fung, M.E., Martinez, D., Chen, A.C.Y., LaSalle, T.J., Miller, B.C., Scharer, C.D., Hegde, M., Nguyen, T.H., et al. (2024). Epigenetic tuning of PD-1 expression improves exhausted T cell function and viral control. Nat Immunol 25 , 1871-1883. 10.1038/s41590-024-01961-3. 12. Freeman, G.J., Long, A.J., Iwai, Y., Bourque, K., Chernova, T., Nishimura, H., Fitz, L.J., Malenkovich, N., Okazaki, T., Byrne, M.C., et al. (2000). Engagement of the PD-1 immunoinhibitory receptor by a novel B7 family member leads to negative regulation of lymphocyte activation. J Exp Med 192 , 1027-1034. 10.1084/jem.192.7.1027. 13. Sharpe, A.H., and Pauken, K.E. (2018). The diverse functions of the PD1 inhibitory pathway. Nat Rev Immunol 18 , 153-167. 10.1038/nri.2017.108. 14. Chamoto, K., Yaguchi, T., Tajima, M., and Honjo, T. (2023). Insights from a 30-year journey: function, regulation and therapeutic modulation of PD1. Nat Rev Immunol 23 , 682-695. 10.1038/s41577-023-00867-9. 15. Curiel, T.J., Wei, S., Dong, H., Alvarez, X., Cheng, P., Mottram, P., Krzysiek, R., Knutson, K.L., Daniel, B., Zimmermann, M.C., et al. (2003). Blockade of B7-H1 improves myeloid dendritic cell-mediated antitumor immunity. Nat Med 9, 562-567. 10.1038/nm863. 16. Dong, H., Strome, S.E., Salomao, D.R., Tamura, H., Hirano, F., Flies, D.B., Roche, P.C., Lu, J., Zhu, G., Tamada, K., et al. (2002). Tumor-associated B7-H1 promotes T-cell apoptosis: a potential mechanism of immune evasion. Nat Med 8, 793-800. 10.1038/nm730. 17. Brahmer, J.R., Tykodi, S.S., Chow, L.Q., Hwu, W.J., Topalian, S.L., Hwu, P., Drake, C.G., Camacho, L.H., Kauh, J., Odunsi, K., et al. (2012). Safety and activity of anti-PD-L1 antibody in patients with advanced cancer. N Engl J Med 366 , 2455-2465. 10.1056/NEJMoa1200694. 18. Garon, E.B., Rizvi, N.A., Hui, R., Leighl, N., Balmanoukian, A.S., Eder, J.P., Patnaik, A., Aggarwal, C., Gubens, M., Horn, L., et al. (2015). Pembrolizumab for the treatment of non-small-cell lung cancer. N Engl J Med 372 , 2018-2028. 10.1056/NEJMoa1501824. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 60 | P a g e
+
+19. Ansell, S.M., Lesokhin, A.M., Borrello, I., Halwani, A., Scott, E.C., Gutierrez, M., Schuster, S.J., Millenson, M.M., Cattry, D., Freeman, G.J., et al. (2015). PD-1 blockade with nivolumab in relapsed or refractory Hodgkin's lymphoma. N Engl J Med 372 , 311-319. 10.1056/NEJMoa1411087. 20. Wherry, E.J. (2011). T cell exhaustion. Nat Immunol 12 , 492-499. 10.1038/ni.2035. 21. McLane, L.M., Abdel-Hakeem, M.S., and Wherry, E.J. (2019). CD8 T Cell Exhaustion During Chronic Viral Infection and Cancer. Annu Rev Immunol 37 , 457-495. 10.1146/annurev-immunol-041015-055318. 22. Paley, M.A., Kroy, D.C., Odorizzi, P.M., Johnnidis, J.B., Dolfi, D.V., Barnett, B.E., Bikoff, E.K., Robertson, E.J., Lauer, G.M., Reiner, S.L., and Wherry, E.J. (2012). Progenitor and terminal subsets of CD8+ T cells cooperate to contain chronic viral infection. Science 338 , 1220-1225. 10.1126/science.1229620. 23. Im, S.J., Hashimoto, M., Gerner, M.Y., Lee, J., Kissick, H.T., Burger, M.C., Shan, Q., Hale, J.S., Lee, J., and Nasti, T.H. (2016). Defining CD8+ T cells that provide the proliferative burst after PD-1 therapy. Nature 537 , 417-421. 24. Blackburn, S.D., Shin, H., Haining, W.N., Zou, T., Workman, C.J., Polley, A., Betts, M.R., Freeman, G.J., Vignali, D.A., and Wherry, E.J. (2009). Coregulation of CD8+ T cell exhaustion by multiple inhibitory receptors during chronic viral infection. Nat Immunol 10 , 29-37. 10.1038/ni.1679. 25. Wei, Z., and Zhang, Y. (2022). Immune Cells in Hyperprogressive Disease under Immune Checkpoint-Based Immunotherapy. Cells 11 . 10.3390/cells11111758. 26. Gordon, S.R., Maute, R.L., Dulken, B.W., Hutter, G., George, B.M., McCracken, M.N., Gupta, R., Tsai, J.M., Sinha, R., Corey, D., et al. (2017). PD-1 expression by tumour-associated macrophages inhibits phagocytosis and tumour immunity. Nature 545 , 495-499. 10.1038/nature22396. 27. Huang, X., Venet, F., Wang, Y.L., Lepape, A., Yuan, Z., Chen, Y., Swan, R., Kherouf, H., Monneret, G., Chung, C.S., and Ayala, A. (2009). PD-1 expression by macrophages plays a pathologic role in altering microbial clearance and the innate inflammatory response to sepsis. Proc Natl Acad Sci U S A 106 ,6303-6308. 10.1073/pnas.0809422106. 28. Yu, Y., Tsang, J.C., Wang, C., Clare, S., Wang, J., Chen, X., Brandt, C., Kane, L., Campos, L.S., and Lu, L. (2016). Single-cell RNA-seq identifies a PD-1hi ILC progenitor and defines its development pathway. Nature 539 , 102-106. 29. Shen, L., Gao, Y., Liu, Y., Zhang, B., Liu, Q., Wu, J., Fan, L., Ou, Q., Zhang, W., and Shao, L. (2016). PD-1/PD-L pathway inhibits M.tb-specific CD4(+) T-cell functions and phagocytosis of macrophages in active tuberculosis. Sci Rep 6, 38362. 10.1038/srep38362. 30. Pesce, S., Greppi, M., Tabellini, G., Rampinelli, F., Parolini, S., Olive, D., Moretta, L., Moretta, A., and Marcenaro, E. (2017). Identification of a subset of human natural killer cells expressing high levels of programmed death 1: A phenotypic and functional characterization. J Allergy Clin Immunol 139 , 335-346 e333. 10.1016/j.jaci.2016.04.025. 31. Peranzoni, E., Lemoine, J., Vimeux, L., Feuillet, V., Barrin, S., Kantari-Mimoun, C., Bercovici, N., Guerin, M., Biton, J., Ouakrim, H., et al. (2018). Macrophages impede CD8 T cells from reaching tumor cells and limit the efficacy of anti-PD-1 treatment. Proc Natl Acad Sci U S A 115 , E4041-E4050. 10.1073/pnas.1720948115. 32. Gabrilovich, D.I., Ostrand-Rosenberg, S., and Bronte, V. (2012). Coordinated regulation of myeloid cells by tumours. Nat Rev Immunol 12 , 253-268. 10.1038/nri3175. 33. Hegde, S., Giotti, B., Soong, B.Y., Halasz, L., Le Berichel, J., Schaefer, M.M., Kloeckner, B., Mattiuz, R., Park, M.D., Magen, A., et al. (2025). Myeloid progenitor dysregulation fuels immunosuppressive macrophages in tumours. Nature 646 , 1214-1222. 10.1038/s41586-025-09493-y. 34. LaMarche, N.M., Hegde, S., Park, M.D., Maier, B.B., Troncoso, L., Le Berichel, J., Hamon, P., Belabed, M., Mattiuz, R., Hennequin, C., et al. (2024). An IL-4 signalling axis in bone marrow drives pro-tumorigenic myelopoiesis. Nature 625 , 166-174. 10.1038/s41586-023-06797-9. 35. Park, M.D., Reyes-Torres, I., LeBerichel, J., Hamon, P., LaMarche, N.M., Hegde, S., Belabed, M., Troncoso, L., Grout, J.A., Magen, A., et al. (2023). TREM2 macrophages drive NK cell paucity and dysfunction in lung cancer. Nat Immunol 24 , 792-801. 10.1038/s41590-023-01475-4. 36. Casanova-Acebes, M., Dalla, E., Leader, A.M., LeBerichel, J., Nikolic, J., Morales, B.M., Brown, M., Chang, C., Troncoso, L., Chen, S.T., et al. (2021). Tissue-resident macrophages provide a pro-tumorigenic niche to early NSCLC cells. Nature 595 , 578-584. 10.1038/s41586-021-03651-8. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 61 | P a g e
+
+37. Gong, C., Zhang, W., Sun, Y., Shou, J., Jiang, Z., Liu, T., Wang, S., Liu, J., Sun, Y., and Zhou, A. (2023). Exploration of the immunogenetic landscape of hyperprogressive disease after combined immunotherapy in cancer patients. iScience 26 , 106720. 10.1016/j.isci.2023.106720. 38. Qorraj, M., Bruns, H., Bottcher, M., Weigand, L., Saul, D., Mackensen, A., Jitschin, R., and Mougiakakos, D. (2017). The PD-1/PD-L1 axis contributes to immune metabolic dysfunctions of monocytes in chronic lymphocytic leukemia. Leukemia 31 , 470-478. 10.1038/leu.2016.214. 39. Strauss, L., Mahmoud, M.A.A., Weaver, J.D., Tijaro-Ovalle, N.M., Christofides, A., Wang, Q., Pal, R., Yuan, M., Asara, J., Patsoukis, N., and Boussiotis, V.A. (2020). Targeted deletion of PD-1 in myeloid cells induces antitumor immunity. Sci Immunol 5. 10.1126/sciimmunol.aay1863. 40. Ben Saad, E., Oroya, A., Anto, N.P., Bachais, M., and Rudd, C.E. (2024). PD-1 endocytosis unleashes the cytolytic potential of checkpoint blockade in tumor immunity. Cell Rep 43 , 114907. 10.1016/j.celrep.2024.114907. 41. Duan, J., Cui, L., Zhao, X., Bai, H., Cai, S., Wang, G., Zhao, Z., Zhao, J., Chen, S., Song, J., et al. (2020). Use of Immunotherapy With Programmed Cell Death 1 vs Programmed Cell Death Ligand 1 Inhibitors in Patients With Cancer: A Systematic Review and Meta-analysis. JAMA Oncol 6, 375-384. 10.1001/jamaoncol.2019.5367. 42. De Sousa Linhares, A., Battin, C., Jutz, S., Leitner, J., Hafner, C., Tobias, J., Wiedermann, U., Kundi, M., Zlabinger, G.J., and Grabmeier-Pfistershammer, K. (2019). Therapeutic PD-L1 antibodies are more effective than PD-1 antibodies in blocking PD-1/PD-L1 signaling. Scientific reports 9, 11472. 43. Banna, G.L., Cantale, O., Bersanelli, M., Del Re, M., Friedlaender, A., Cortellini, A., and Addeo, A. (2020). Are anti-PD1 and anti-PD-L1 alike? The non-small-cell lung cancer paradigm. Oncol Rev 14 ,490. 10.4081/oncol.2020.490. 44. Chew, H.Y., De Lima, P.O., Gonzalez Cruz, J.L., Banushi, B., Echejoh, G., Hu, L., Joseph, S.R., Lum, B., Rae, J., O'Donnell, J.S., et al. (2020). Endocytosis Inhibition in Humans to Improve Responses to ADCC-Mediating Antibodies. Cell 180 , 895-914 e827. 10.1016/j.cell.2020.02.019. 45. Ghosh, P., Sinha, S., Katkar, G.D., Vo, D., Taheri, S., Dang, D., Das, S., and Sahoo, D. (2023). Machine learning identifies signatures of macrophage reactivity and tolerance that predict disease outcomes. EBioMedicine 94 .46. Coulton, A., Murai, J., Qian, D., Thakkar, K., Lewis, C.E., and Litchfield, K. (2024). Using a pan-cancer atlas to investigate tumour associated macrophages as regulators of immunotherapy response. Nature communications 15 , 5665. 47. Katkar, G., and Ghosh, P. (2023). Macrophage states: there's a method in the madness. Trends Immunol 44 , 954-964. 10.1016/j.it.2023.10.006. 48. Indino, S., Borzi, C., Moscheni, C., Sartori, P., De Cecco, L., Bernardo, G., Le Noci, V., Arnaboldi, F., Triulzi, T., and Sozzi, G. (2022). The educational program of macrophages toward a hyperprogressive disease-related phenotype is orchestrated by tumor-derived extracellular vesicles. International Journal of Molecular Sciences 23 , 15802. 49. Swanson, L., Katkar, G.D., Tam, J., Pranadinata, R.F., Chareddy, Y., Coates, J., Anandachar, M.S., Castillo, V., Olson, J., Nizet, V., et al. (2020). TLR4 signaling and macrophage inflammatory responses are dampened by GIV/Girdin. Proc Natl Acad Sci U S A 117 , 26895-26906. 10.1073/pnas.2011667117. 50. Katkar, G.D., Anandachar, M.S., Ibeawuchi, S.R., McLaren, E., Estanol, M., Carpio-Perkins, K., Hsu, S.T., Espinoza, C.R., Coates, J., Malhotra, Y.S., et al. (2025). Distinct Colitis-Associated Macrophages Drive NOD2-Dependent Bacterial Sensing and Gut Homeostasis. J Clin Invest. . https://doi.org/10.1172/JCI190851. 51. Ghosh, P., Rangamani, P., and Kufareva, I. (2017). The GAPs, GEFs, GDIs and...now, GEMs: New kids on the heterotrimeric G protein signaling block. Cell Cycle 16 , 607-612. 10.1080/15384101.2017.1282584. 52. Kalogriopoulos, N.A., Rees, S.D., Ngo, T., Kopcho, N.J., Ilatovskiy, A.V., Sun, N., Komives, E.A., Chang, G., Ghosh, P., and Kufareva, I. (2019). Structural basis for GPCR-independent activation of heterotrimeric Gi proteins. Proc Natl Acad Sci U S A 116 , 16394-16403. 10.1073/pnas.1906658116. 53. Gupta, V., Bhandari, D., Leyme, A., Aznar, N., Midde, K.K., Lo, I.C., Ear, J., Niesman, I., Lopez-Sanchez, I., Blanco-Canosa, J.B., et al. (2016). GIV/Girdin activates Galphai and inhibits Galphas via the same motif. Proc Natl Acad Sci U S A 113 , E5721-5730. 10.1073/pnas.1609502113. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 62 | P a g e
+
+54. Garcia-Marcos, M., Ghosh, P., and Farquhar, M.G. (2009). GIV is a nonreceptor GEF for Gαi with a unique motif that regulates Akt signaling. Proceedings of the National Academy of Sciences 106 , 3178-3183. 55. Kalogriopoulos, N.A., Lopez-Sanchez, I., Lin, C., Ngo, T., Midde, K.K., Roy, S., Aznar, N., Murray, F., Garcia-Marcos, M., and Kufareva, I. (2020). Receptor tyrosine kinases activate heterotrimeric G proteins via phosphorylation within the interdomain cleft of Gαi. Proceedings of the National Academy of Sciences 117 , 28763-28774. 56. Aznar, N., Kalogriopoulos, N., Midde, K.K., and Ghosh, P. (2016). Heterotrimeric G protein signaling via GIV/Girdin: Breaking the rules of engagement, space, and time. Bioessays 38 , 379-393. 10.1002/bies.201500133. 57. Ghosh, P., and Mullick, M. (2021). Building unconventional G protein-coupled receptors, one block at a time. Trends in pharmacological sciences 42 , 514-517. 58. Garcia-Marcos, M., Ghosh, P., and Farquhar, M.G. (2009). GIV is a nonreceptor GEF for G alpha i with a unique motif that regulates Akt signaling. Proc Natl Acad Sci U S A 106 , 3178-3183. 10.1073/pnas.0900294106. 59. Gupta, V., Bhandari, D., Leyme, A., Aznar, N., Midde, K.K., Lo, I.C., Ear, J., Niesman, I., López-Sánchez, I., Blanco-Canosa, J.B., et al. (2016). GIV/Girdin activates Gαi and inhibits Gαs via the same motif. Proc Natl Acad Sci U S A 113 , E5721-5730. 10.1073/pnas.1609502113. 60. Ghosh, P., Sinha, S., Katkar, G.D., Vo, D., Taheri, S., Dang, D., Das, S., and Sahoo, D. (2023). Machine learning identifies signatures of macrophage reactivity and tolerance that predict disease outcomes. EBioMedicine 94 , 104719. 10.1016/j.ebiom.2023.104719. 61. Katkar, G.D., Anandachar, M.S., Ibeawuchi, S.C., McLaren, E.G., Estanol, M.L., Carpio-Perkins, K., Hsu, S.T., Espinoza, C.R., Coates, J.E., Malhotra, Y.S., et al. (2025). Distinct colitis-associated macrophages drive NOD2-dependent bacterial sensing and gut homeostasis. J Clin Invest 135 .10.1172/JCI190851. 62. Sakaeda, M., Sato, H., Ishii, J., Miyata, C., Kamma, H., Shishido-Hara, Y., Shimoyamada, H., Fujiwara, M., Endo, T., and Tanaka, R. (2013). Neural lineage-specific homeoprotein BRN2 is directly involved in TTF1 expression in small-cell lung cancer. Laboratory investigation 93 , 408-421. 63. Yatabe, Y., Mitsudomi, T., and Takahashi, T. (2002). TTF-1 expression in pulmonary adenocarcinomas. Am J Surg Pathol 26 , 767-773. 10.1097/00000478-200206000-00010. 64. Yatabe, Y., Dacic, S., Borczuk, A.C., Warth, A., Russell, P.A., Lantuejoul, S., Beasley, M.B., Thunnissen, E., Pelosi, G., Rekhtman, N., et al. (2019). Best Practices Recommendations for Diagnostic Immunohistochemistry in Lung Cancer. J Thorac Oncol 14 , 377-407. 10.1016/j.jtho.2018.12.005. 65. Lodde, G.C., Zhao, F., Herbst, R., Terheyden, P., Utikal, J., Pfohler, C., Ulrich, J., Kreuter, A., Mohr, P., Gutzmer, R., et al. (2024). Early versus late response to PD-1-based immunotherapy in metastatic melanoma. Eur J Cancer 210 , 114295. 10.1016/j.ejca.2024.114295. 66. Kaufman, H.L., Andtbacka, R.H., Collichio, F.A., Wolf, M., Zhao, Z., Shilkrut, M., Puzanov, I., and Ross, M. (2017). Durable response rate as an endpoint in cancer immunotherapy: insights from oncolytic virus clinical trials. Journal for immunotherapy of cancer 5, 72. 67. Villacampa, G., Morgado, P.C., Navarro, V., Viaplana, C., and Dienstmann, R. (2023). Comprehensive evaluation of surrogate endpoints to predict overall survival in trials with PD1/PD-L1 immune checkpoint inhibitors plus chemotherapy. Cancer Treatment Reviews 116 .68. Pauken, K.E., Torchia, J.A., Chaudhri, A., Sharpe, A.H., and Freeman, G.J. (2021). Emerging concepts in PD-1 checkpoint biology. Semin Immunol 52 , 101480. 10.1016/j.smim.2021.101480. 69. Patsoukis, N., Wang, Q., Strauss, L., and Boussiotis, V.A. (2020). Revisiting the PD-1 pathway. Sci Adv 
+
+6. 10.1126/sciadv.abd2712. 70. Ichimiya, H., Maeda, K., Enomoto, A., Weng, L., Takahashi, M., and Murohara, T. (2015). Girdin/GIV regulates transendothelial permeability by controlling VE-cadherin trafficking through the small GTPase, R-Ras. Biochemical and biophysical research communications 461 , 260-267. 71. Ghosh, P., Beas, A.O., Bornheimer, S.J., Garcia-Marcos, M., Forry, E.P., Johannson, C., Ear, J., Jung, B.H., Cabrera, B., Carethers, J.M., and Farquhar, M.G. (2010). A Galphai-GIV molecular complex binds epidermal growth factor receptor and determines whether cells migrate or proliferate. Mol Biol Cell 21 ,2338-2354. 10.1091/mbc.e10-01-0028. 72. Duranti, C., Iorio, J., Bagni, G., Chioccioli Altadonna, G., Fillion, T., Lulli, M., D'Alessandro, F.N., Montalbano, A., Lastraioli, E., Fanelli, D., et al. (2024). Integrins regulate hERG1 dynamics by girdin-
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 63 | P a g e
+
+dependent Galphai3: signaling and modeling in cancer cells. Life Sci Alliance 7.10.26508/lsa.202302135. 73. Simpson, F., Martin, S., Evans, T.M., Kerr, M., James, D.E., Parton, R.G., Teasdale, R.D., and Wicking, C. (2005). A novel hook-related protein family and the characterization of hook-related protein 1. Traffic 
+
+6, 442-458. 10.1111/j.1600-0854.2005.00289.x. 74. Lopez-Sanchez, I., Ma, G.S., Pedram, S., Kalogriopoulos, N., and Ghosh, P. (2015). GIV/girdin binds exocyst subunit-Exo70 and regulates exocytosis of GLUT4 storage vesicles. Biochem Biophys Res Commun 468 , 287-293. 10.1016/j.bbrc.2015.10.111. 75. McCluskey, A., Daniel, J.A., Hadzic, G., Chau, N., Clayton, E.L., Mariana, A., Whiting, A., Gorgani, N.N., Lloyd, J., Quan, A., et al. (2013). Building a better dynasore: the dyngo compounds potently inhibit dynamin and endocytosis. Traffic 14 , 1272-1289. 10.1111/tra.12119. 76. Sad, K., Parashar, P., Tripathi, P., Hungyo, H., Sistla, R., Soni, R., and Tandon, V. (2021). Prochlorperazine enhances radiosensitivity of non-small cell lung carcinoma by stabilizing GDP-bound mutant KRAS conformation. Free Radic Biol Med 177 , 299-312. 10.1016/j.freeradbiomed.2021.11.001. 77. Zeng, H., Yu, J., Wang, H., Shen, M., Zou, X., Zhang, Z., and Liu, L. (2025). Cancer ATF4-mediated CD58 endocytosis impairs anti-tumor immunity and immunotherapy. J Transl Med 23 , 225. 10.1186/s12967-025-06245-4. 78. Subasic, C.N., Simpson, F., Minchin, R.F., and Kaminskas, L.M. (2024). A PEGylated liposomal formulation of prochlorperazine that limits brain exposure but retains dynamin II activity: a potential adjuvant therapy for cancer patients receiving chemotherapeutic mAbs. Nanomedicine: Nanotechnology, Biology and Medicine 56 , 102733. 79. Subasic, C.N., Butcher, N.J., Simpson, F., Minchin, R.F., and Kaminskas, L.M. (2023). Dose-Dependent Effect of Phenothiazines as Dynamin II Inhibitors on the Uptake of PEGylated Liposomes by Endocytic Cells and In Vivo Pharmacokinetics of PEGylated Liposomal Doxorubicin in Rats. Molecular Pharmaceutics 20 , 4468-4477. 80. Maitra, A., Shen, F., Hanel, W., Mossman, K., Tocker, J., Swart, D., and Gaffen, S.L. (2007). Distinct functional motifs within the IL-17 receptor regulate signal transduction and target gene expression. Proceedings of the National Academy of Sciences 104 , 7506-7511. 81. Jones, S.W., Christison, R., Bundell, K., Voyce, C.J., Brockbank, S.M., Newham, P., and Lindsay, M.A. (2005). Characterisation of cell-penetrating peptide-mediated peptide delivery. Br J Pharmacol 145 ,1093-1102. 10.1038/sj.bjp.0706279. 82. Kostine, M., Mauric, E., Tison, A., Barnetche, T., Barre, A., Nikolski, M., Rouxel, L., Dutriaux, C., Dousset, L., and Prey, S. (2021). Baseline co-medications may alter the anti-tumoural effect of checkpoint inhibitors as well as the risk of immune-related adverse events. European Journal of Cancer 
+
+157 , 474-484. 83. Shi, J., Zhang, Z., Chen, H.Y., Yao, Y., Ke, S., Yu, K., Shi, J., Xiao, X., He, C., Xiang, B., et al. (2025). Targeting the TRIM21-PD-1 axis potentiates immune checkpoint blockade and CAR-T cell therapy. Mol Ther 33 , 1073-1090. 10.1016/j.ymthe.2025.01.047. 84. Meng, X., Liu, X., Guo, X., Jiang, S., Chen, T., Hu, Z., Liu, H., Bai, Y., Xue, M., Hu, R., et al. (2018). FBXO38 mediates PD-1 ubiquitination and regulates anti-tumour immunity of T cells. Nature 564 , 130-135. 10.1038/s41586-018-0756-0. 85. Hanna, S.J., McCoy-Simandle, K., Leung, E., Genna, A., Condeelis, J., and Cox, D. (2019). Tunneling nanotubes, a novel mode of tumor cell-macrophage communication in tumor cell invasion. J Cell Sci 
+
+132 . 10.1242/jcs.223321. 86. Li, M., Basile, J.R., Mallya, S., and Lin, Y.L. (2023). The impact and outcomes of cancer-macrophage fusion. BMC Cancer 23 , 497. 10.1186/s12885-023-10961-9. 87. Lo, I.-C., Gupta, V., Midde, K.K., Taupin, V., Lopez-Sanchez, I., Kufareva, I., Abagyan, R., Randazzo, P.A., Farquhar, M.G., and Ghosh, P. (2015). Activation of Gαi at the Golgi by GIV/Girdin imposes finiteness in Arf1 signaling. Developmental cell 33 , 189-203. 88. Wen, M., Cao, Y., Wu, B., Xiao, T., Cao, R., Wang, Q., Liu, X., Xue, H., Yu, Y., and Lin, J. (2021). PD-L1 degradation is regulated by electrostatic membrane association of its cytoplasmic domain. Nature Communications 12 , 5106. 89. Wang, S., Zhang, Y., Wang, Y., Yang, Y., Zhao, S., Sheng, T., Zhang, Y., Gu, Z., Wang, J., and Yu, J. (2023). An in situ dual-anchoring strategy for enhanced immobilization of PD-L1 to treat autoimmune diseases. Nat Commun 14 , 6953. 10.1038/s41467-023-42725-1. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 64 | P a g e
+
+90. Clarke, R.J. (2023). Electrostatic switch mechanisms of membrane protein trafficking and regulation. Biophys Rev 15 , 1967-1985. 10.1007/s12551-023-01166-2. 91. Enomoto, A., Murakami, H., Asai, N., Morone, N., Watanabe, T., Kawai, K., Murakumo, Y., Usukura, J., Kaibuchi, K., and Takahashi, M. (2005). Akt/PKB regulates actin organization and cell motility via Girdin/APE. Dev Cell 9, 389-402. 10.1016/j.devcel.2005.08.001. 92. Getz, M., Swanson, L., Sahoo, D., Ghosh, P., and Rangamani, P. (2019). A predictive computational model reveals that GIV/girdin serves as a tunable valve for EGFR-stimulated cyclic AMP signals. Mol Biol Cell 30 , 1621-1633. 10.1091/mbc.E18-10-0630. 93. Na, Y.R., Kwon, J.W., Chung, H., Song, J., Jung, D., Quan, H., Kim, D., Kim, J.-S., Ju, Y.W., and Han, W. (2020). Protein kinase A catalytic subunit is a molecular switch that promotes the pro-tumoral function of macrophages. Cell Reports 31 .94. Kerneur, C., Cano, C.E., and Olive, D. (2022). Major pathways involved in macrophage polarization in cancer. Front Immunol 13 , 1026954. 10.3389/fimmu.2022.1026954. 95. Negreiros-Lima, G.L., Lima, K.M., Moreira, I.Z., Jardim, B.L.O., Vago, J.P., Galvão, I., Teixeira, L.C.R., Pinho, V., Teixeira, M.M., and Sugimoto, M.A. (2020). Cyclic AMP regulates key features of macrophages via PKA: recruitment, reprogramming and efferocytosis. Cells 9, 128. 96. Zhao, Y., Harrison, D.L., Song, Y., Ji, J., Huang, J., and Hui, E. (2018). Antigen-Presenting Cell-Intrinsic PD-1 Neutralizes PD-L1 in cis to Attenuate PD-1 Signaling in T Cells. Cell Rep 24 , 379-390 e376. 10.1016/j.celrep.2018.06.054. 97. Fehervari, Z. (2019). Controlling PD-L1 in cis. Nature Immunology 20 , 665-665. 98. Maskalenko, N., Nath, S., Ramakrishnan, A., Anikeeva, N., Sykulev, Y., and Poenie, M. (2020). The DISC1–Girdin complex–a missing link in signaling to the T cell cytoskeleton. Journal of cell science 
+
+133 , jcs242875. 99. Kanjanapan, Y., Guduguntla, G., Varikara, A.K., Szajer, J., Yip, D., Cockburn, J., and Fadia, M. (2023). Hyperprogressive Disease (HPD) in Solid Tumours Receiving Immune Checkpoint Inhibitors in a Real-World Setting. Technology in Cancer Research & Treatment 22 , 15330338231209129. 100. Zhao, Z., Bian, J., Zhang, J., Zhang, T., and Lu, X. (2022). Hyperprogressive disease in patients suffering from solid malignancies treated by immune checkpoint inhibitors: A systematic review and meta-analysis. Front Oncol 12 , 843707. 10.3389/fonc.2022.843707. 101. Petralia, F., Ma, W., Yaron, T.M., Caruso, F.P., Tignor, N., Wang, J.M., Charytonowicz, D., Johnson, J.L., Huntsman, E.M., Marino, G.B., et al. (2024). Pan-cancer proteogenomics characterization of tumor immunity. Cell 187 , 1255-1277 e1227. 10.1016/j.cell.2024.01.027. 102. Abd El-Hafeez, A.A., Sun, N., Chakraborty, A., Ear, J., Roy, S., Chamarthi, P., Rajapakse, N., Das, S., Luker, K.E., Hazra, T.K., et al. (2023). Regulation of DNA damage response by trimeric G-proteins. iScience 26 , 105973. 10.1016/j.isci.2023.105973. 103. Qiao, L., Sinha, S., Abd El-Hafeez, A.A., Lo, I.C., Midde, K.K., Ngo, T., Aznar, N., Lopez-Sanchez, I., Gupta, V., Farquhar, M.G., et al. (2023). A circuit for secretion-coupled cellular autonomy in multicellular eukaryotic cells. Mol Syst Biol 19 , e11127. 10.15252/msb.202211127. 104. Asai, M., Asai, N., Murata, A., Yokota, H., Ohmori, K., Mii, S., Enomoto, A., Murakumo, Y., and Takahashi, M. (2012). Similar phenotypes of Girdin germ-line and conditional knockout mice indicate a crucial role for Girdin in the nestin lineage. Biochem Biophys Res Commun 426 , 533-538. 10.1016/j.bbrc.2012.08.122. 105. Peled, M., Tocheva, A.S., Sandigursky, S., Nayak, S., Philips, E.A., Nichols, K.E., Strazza, M., Azoulay-Alfaguter, I., Askenazi, M., Neel, B.G., et al. (2018). Affinity purification mass spectrometry analysis of PD-1 uncovers SAP as a new checkpoint inhibitor. Proc Natl Acad Sci U S A 115 , E468-E477. 10.1073/pnas.1710437115. 106. Bhandari, D., Lopez-Sanchez, I., To, A., Lo, I.C., Aznar, N., Leyme, A., Gupta, V., Niesman, I., Maddox, A.L., Garcia-Marcos, M., et al. (2015). Cyclin-dependent kinase 5 activates guanine nucleotide exchange factor GIV/Girdin to orchestrate migration-proliferation dichotomy. Proc Natl Acad Sci U S A 
+
+112 , E4874-4883. 10.1073/pnas.1514157112. 107. Pavlou, S., Wang, L., Xu, H., and Chen, M. (2017). Higher phagocytic activity of thioglycollate-elicited peritoneal macrophages is related to metabolic status of the cells. J Inflamm (Lond) 14 , 4. 10.1186/s12950-017-0151-x. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 65 | P a g e
+
+108. Tindle, C., Fuller, M., Fonseca, A., Taheri, S., Ibeawuchi, S.-R., Beutler, N., Katkar, G.D., Claire, A., Castillo, V., and Hernandez, M. (2021). Adult stem cell-derived complete lung organoid models emulate lung disease in COVID-19. Elife 10 , e66417. 109. Sachs, N., Papaspyropoulos, A., Zomer-van Ommen, D.D., Heo, I., Bottinger, L., Klay, D., Weeber, F., Huelsz-Prince, G., Iakobachvili, N., Amatngalim, G.D., et al. (2019). Long-term expanding human airway organoids for disease modeling. EMBO J 38 . 10.15252/embj.2018100300. 110. Zhou, J., Li, C., Sachs, N., Chiu, M.C., Wong, B.H., Chu, H., Poon, V.K., Wang, D., Zhao, X., Wen, L., et al. (2018). Differentiated human airway organoids to assess infectivity of emerging influenza virus. Proc Natl Acad Sci U S A 115 , 6822-6827. 10.1073/pnas.1806308115. 111. Qu, Y., Wen, J., Thomas, G., Yang, W., Prior, W., He, W., Sundar, P., Wang, X., Potluri, S., and Salek-Ardakani, S. (2020). Baseline Frequency of Inflammatory Cxcl9-Expressing Tumor-Associated Macrophages Predicts Response to Avelumab Treatment. Cell Rep 32 , 107873. 10.1016/j.celrep.2020.107873. 112. Schindelin, J., Arganda-Carreras, I., Frise, E., Kaynig, V., Longair, M., Pietzsch, T., Preibisch, S., Rueden, C., Saalfeld, S., Schmid, B., et al. (2012). Fiji: an open-source platform for biological-image analysis. Nat Methods 9, 676-682. 10.1038/nmeth.2019. 113. Reynoso, S., Castillo, V., Katkar, G.D., Lopez-Sanchez, I., Taheri, S., Espinoza, C., Rohena, C., Sahoo, D., Gagneux, P., and Ghosh, P. (2021). GIV/Girdin, a non-receptor modulator for Galphai/s, regulates spatiotemporal signaling during sperm capacitation and is required for male fertility. Elife 10 .10.7554/eLife.69160. 114. Capasso, A., Lang, J., Pitts, T.M., Jordan, K.R., Lieu, C.H., Davis, S.L., Diamond, J.R., Kopetz, S., Barbee, J., Peterson, J., et al. (2019). Characterization of immune responses to anti-PD-1 mono and combination immunotherapy in hematopoietic humanized mice implanted with tumor xenografts. J Immunother Cancer 7, 37. 10.1186/s40425-019-0518-z. 115. Cassetta, L., Noy, R., Swierczak, A., Sugano, G., Smith, H., Wiechmann, L., and Pollard, J.W. (2016). Isolation of Mouse and Human Tumor-Associated Macrophages. Adv Exp Med Biol 899 , 211-229. 10.1007/978-3-319-26666-4_12. 116. Majeti, R., Chao, M.P., Alizadeh, A.A., Pang, W.W., Jaiswal, S., Gibbs, K.D., Jr., van Rooijen, N., and Weissman, I.L. (2009). CD47 is an adverse prognostic factor and therapeutic antibody target on human acute myeloid leukemia stem cells. Cell 138 , 286-299. 10.1016/j.cell.2009.05.045. 117. Chao, M.P., Alizadeh, A.A., Tang, C., Myklebust, J.H., Varghese, B., Gill, S., Jan, M., Cha, A.C., Chan, C.K., Tan, B.T., et al. (2010). Anti-CD47 antibody synergizes with rituximab to promote phagocytosis and eradicate non-Hodgkin lymphoma. Cell 142 , 699-713. 10.1016/j.cell.2010.07.044. 118. Nam, G.H., Hong, Y., Choi, Y., Kim, G.B., Kim, Y.K., Yang, Y., and Kim, I.S. (2019). An optimized protocol to determine the engulfment of cancer cells by phagocytes using flow cytometry and fluorescence microscopy. J Immunol Methods 470 , 27-32. 10.1016/j.jim.2019.04.007. 119. Wu, S., Romero-Ramirez, L., and Mey, J. (2021). Retinoic acid increases phagocytosis of myelin by macrophages. J Cell Physiol 236 , 3929-3945. 10.1002/jcp.30137. 120. Aznar, N., Midde, K.K., Dunkel, Y., Lopez-Sanchez, I., Pavlova, Y., Marivin, A., Barbazán, J., Murray, F., Nitsche, U., Janssen, K.P., et al. (2015). Daple is a novel non-receptor GEF required for trimeric G protein activation in Wnt signaling. Elife 4, e07091. 10.7554/eLife.07091. 121. Ear, J., Abd El-Hafeez, A.A., Roy, S., Ngo, T., Rajapakse, N., Choi, J., Khandelwal, S., Ghassemian, M., McCaffrey, L., Kufareva, I., et al. (2021). A long isoform of GIV/Girdin contains a PDZ-binding module that regulates localization and G-protein binding. J Biol Chem 296 , 100493. 10.1016/j.jbc.2021.100493. 122. Abagyan, R., and Totrov, M. (1994). Biased probability Monte Carlo conformational searches and electrostatic calculations for peptides and proteins. J Mol Biol 235 , 983-1002. 10.1006/jmbi.1994.1052. 123. Love, M.I., Huber, W., and Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15 , 550. 10.1186/s13059-014-0550-8. 124. Ge, S.X., Jung, D., and Yao, R. (2020). ShinyGO: a graphical gene-set enrichment tool for animals and plants. Bioinformatics 36 , 2628-2629. 10.1093/bioinformatics/btz931. 125. Sahoo, D., Dill, D.L., Tibshirani, R., and Plevritis, S.K. (2007). Extracting binary signals from microarray time-course data. Nucleic Acids Res 35 , 3705-3712. 10.1093/nar/gkm284. 126. Sahoo, D., Swanson, L., Sayed, I.M., Katkar, G.D., Ibeawuchi, S.R., Mittal, Y., Pranadinata, R.F., Tindle, C., Fuller, M., Stec, D.L., et al. (2021). Artificial intelligence guided discovery of a barrier-protective therapy in inflammatory bowel disease. Nat Commun 12 , 4246. 10.1038/s41467-021-24470-5. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718292 doi: bioRxiv preprint 66 | P a g e
+
+127. Sinha, S., and Ghosh, P. (2025). COMPASS: A Web-Based COMPosite Activity Scoring System to Navigate Health and Disease Through Deterministic Digital Biomarkers. 128. Avila Cobos, F., Alquicira-Hernandez, J., Powell, J.E., Mestdagh, P., and De Preter, K. (2020). Benchmarking of cell type deconvolution pipelines for transcriptomics data. Nat Commun 11 , 5650. 10.1038/s41467-020-19015-1. 129. Monaco, G., Lee, B., Xu, W., Mustafah, S., Hwang, Y.Y., Carré, C., Burdin, N., Visan, L., Ceccarelli, M., Poidinger, M., et al. (2019). RNA-Seq Signatures Normalized by mRNA Abundance Allow Absolute Deconvolution of Human Immune Cell Types. Cell Rep 26 , 1627-1640.e1627. 10.1016/j.celrep.2019.01.041. 130. Gyorffy, B. (2024). Transcriptome-level discovery of survival-associated biomarkers and therapy targets in non-small-cell lung cancer. Br J Pharmacol 181 , 362-374. 10.1111/bph.16257. 131. Kovacs, S.A., Fekete, J.T., and Gyorffy, B. (2023). Predictive biomarkers of immunotherapy response with pharmacological applications in solid tumors. Acta Pharmacol Sin 44 , 1879-1889. 10.1038/s41401-023-01079-6. 132. Lanczky, A., and Gyorffy, B. (2021). Web-Based Survival Analysis Tool Tailored for Medical Research (KMplot): Development and Implementation. J Med Internet Res 23 , e27633. 10.2196/27633.

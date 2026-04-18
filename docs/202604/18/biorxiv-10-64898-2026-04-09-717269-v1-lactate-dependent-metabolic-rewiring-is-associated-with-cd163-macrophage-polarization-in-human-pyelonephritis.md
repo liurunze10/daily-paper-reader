@@ -1,0 +1,24 @@
+---
+title: Lactate-dependent metabolic rewiring is associated with CD163+ macrophage polarization in human pyelonephritis
+title_zh: 乳酸依赖性代谢重构与人类肾盂肾炎中 CD163+ 巨噬细胞极化相关
+authors: "Borgards, L., Voss, H. L., Tautges, S., Siebels, B., Krisp, C., Siemes, D., Spangenberg, P., Bottek, J., Scharfenberg, S., Schmitz, J., Schwarz, L., Rehme, C., Hadaschik, B., Braesen, J. H., Roesch, A., Schlueter, H., Jorch, S., von Vietinghoff, S., Wagenlehner, F., Shevchuk, O., Engel, D. R."
+date: 2026-04-13
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.09.717269v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 8.5
+evidence: 乳酸依赖性代谢重编程与CD163+巨噬细胞极化相关
+tldr: 本研究揭示了乳酸在慢性肾盂肾炎巨噬细胞极化中的关键作用。通过对人类肾组织进行蛋白质组学分析，研究发现患者体内乳酸水平显著升高，并伴随CD163+免疫调节型巨噬细胞的积累。实验证实乳酸通过诱导蛋白质乳酸化促使巨噬细胞向CD163+表型转变，并重塑了涉及吞噬作用和干扰素反应的免疫信号通路，为理解慢性感染中的免疫功能障碍提供了代谢视角。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-09-717269-v1/fig-001.webp\", \"caption\": \"Figure 2. CD163⁺ macrophages represent a phenotypically distinct immune cell population enriched in PN. 463 (A) Volcano plot depicting the log2(fold change) and -log10(q-value) of proteins in PN vs. control as assessed by 464 LC-MS/MS-based analysis of human kidney sections as indicated in Figure 1. Markers of innate immune and renal 465 tubular cells are indicated in cyan and purple, respectively. (B, C) Representative images (B) and quantification (C) 466 of the immunohistochemistry staining of CD163 in kidney tissue specimens. (D, E) Kidney tissue from PN patients 467 (n=11) was analysed by multiplex fluorescence microscopy. (D) Representative images of CD68 (green), CD163 468 (magenta), and DAPI (grey). Scale bar represents 20 µm. E) Phenotypical analysis of multiplex microscopy data. 469 Tukey box plots depict the percentage of CD68+ CD163– and CD68+ CD163+ macrophages positive for polarization 470 markers. *p-value<0.05, **p-value<0.01, ***p-value<0.001, ****p-value<0.0001 471 472\", \"page\": 11, \"index\": 1, \"width\": 939, \"height\": 387}]"
+motivation: 旨在探究慢性肾盂肾炎中巨噬细胞功能重编程的代谢调控机制及其对免疫失调的影响。
+method: 结合人类肾脏组织蛋白质组学分析、临床样本检测以及小鼠骨髓源性巨噬细胞的体外乳酸诱导实验进行综合研究。
+result: 发现患者体内乳酸水平升高与CD163+巨噬细胞积累密切相关，且乳酸能通过蛋白质乳酸化诱导巨噬细胞表型重塑。
+conclusion: 乳酸是驱动巨噬细胞代谢重构和CD163+极化的关键因子，为研究慢性肾盂肾炎中乳酸化依赖的免疫功能障碍奠定了基础。
+---
+
+## 摘要
+慢性肾盂肾炎的特征是肾脏持续的细菌感染以及促进疾病进展的免疫反应失调。巨噬细胞是泌尿道抗细菌免疫的核心调节因子。然而，它们在慢性感染中功能重编程的潜在机制仍不清楚。在此，我们确定乳酸是人类肾盂肾炎中巨噬细胞极化的关键代谢决定因素。人类肾脏组织的蛋白质组学分析揭示了广泛的代谢重构，包括糖酵解相关酶的上调。与此一致，肾盂肾炎患者尿液和血浆中的乳酸水平显著升高。同时，我们在受感染的肾脏中观察到 CD163+ 巨噬细胞的显著积累，这代表了一个具有免疫调节功能的独特巨噬细胞亚群。基于相关性的网络分析揭示了 CD163 与乳酸脱氢酶 A 之间的强相关性，支持了乳酸代谢与巨噬细胞极化之间的功能联系。从机制上讲，将小鼠骨髓来源的巨噬细胞暴露于乳酸会诱导细胞内蛋白质乳酸化，并促进其向 CD163 表型极化，从而定义了一种不同于经典激活范式的代谢印记巨噬细胞状态。蛋白质组学分析表明，巨噬细胞蛋白质表达在响应乳酸时发生了广泛重构，其中吞噬作用、Toll 样受体信号传导和干扰素反应的介质发生了显著变化。总之，这些发现确定了乳酸是巨噬细胞重编程的强效代谢驱动因子，并为研究慢性肾盂肾炎中乳酸化依赖性免疫功能障碍奠定了基础。
+
+## Abstract
+Chronic pyelonephritis is characterized by persistent bacterial infection of the kidney and a dysregulated immune response that promotes disease progression. Macrophages are central regulators of antibacterial immunity in the urinary tract. However, the mechanisms underlying their functional reprogramming in chronic infection remain poorly understood. Here, we identify lactate as a key metabolic determinant of macrophage polarization in human pyelonephritis. Proteomic analysis of human kidney tissue revealed extensive metabolic remodelling, including upregulation of enzymes involved in glycolysis. Consistent with this, lactate levels were significantly elevated in urine and plasma of pyelonephritis patients. Concomitantly, we observed a pronounced accumulation of CD163 macrophages in infected kidneys, representing a distinct macrophage subset with immunomodulatory function. Correlation-based network analysis revealed a strong association between CD163 and lactate dehydrogenase A, supporting a functional association between lactate metabolism and macrophage polarization. Mechanistically, exposure of murine bone marrow-derived macrophages to lactate induced intracellular protein lactylation and promoted polarization toward a CD163 phenotype, defining a metabolically imprinted macrophage state distinct from classical activation paradigms. Proteomic profiling demonstrated extensive remodelling of macrophage protein expression in response to lactate with significant alteration of mediators of phagocytosis, Toll-like receptor signalling, and interferon response. Together, these findings identify lactate as a potent metabolic driver of macrophage reprogramming and establish a foundation for investigating lactylation-dependent immune dysfunction in chronic pyelonephritis.
