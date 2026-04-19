@@ -1,0 +1,24 @@
+---
+title: A mycobacterial ligand coordinates multi-receptor signaling to reprogram macrophage lipid metabolism
+title_zh: 一种分枝杆菌配体通过协调多受体信号传导重编程巨噬细胞脂质代谢
+authors: "Nag, D., Radeny, J., Cui, J., Vehra, O., Yu, Y., Nigou, J., Bell, S. L., Gennaro, M. L."
+date: 2026-04-17
+pdf: "https://www.biorxiv.org/content/10.64898/2026.02.18.706227v4.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 重塑巨噬细胞表型和功能状态
+tldr: 本研究揭示了结核分枝杆菌配体ManLAM如何通过协同激活TLR2和Dectin-2受体，重编程巨噬细胞脂质代谢并诱导泡沫细胞形成。研究发现ManLAM的不同结构部分分别被这两个受体识别，通过mTORC1-PPARγ通路驱动脂滴积累，其代谢改变与真实感染情况高度一致，为理解复杂微生物配体如何组织多受体信号提供了新见解。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-001.webp\", \"caption\": \"\", \"page\": 27, \"index\": 1, \"width\": 2432, \"height\": 2819}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-002.webp\", \"caption\": \"\", \"page\": 28, \"index\": 2, \"width\": 2433, \"height\": 3052}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-003.webp\", \"caption\": \"\", \"page\": 29, \"index\": 3, \"width\": 2432, \"height\": 3627}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-004.webp\", \"caption\": \"\", \"page\": 30, \"index\": 4, \"width\": 4039, \"height\": 3957}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-005.webp\", \"caption\": \"\", \"page\": 31, \"index\": 5, \"width\": 2989, \"height\": 3634}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-006.webp\", \"caption\": \"\", \"page\": 32, \"index\": 6, \"width\": 1763, \"height\": 1585}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-007.webp\", \"caption\": \"\", \"page\": 33, \"index\": 7, \"width\": 1306, \"height\": 1409}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-008.webp\", \"caption\": \"\", \"page\": 34, \"index\": 8, \"width\": 2495, \"height\": 2397}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-009.webp\", \"caption\": \"\", \"page\": 35, \"index\": 9, \"width\": 2513, \"height\": 1566}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-010.webp\", \"caption\": \"\", \"page\": 36, \"index\": 10, \"width\": 962, \"height\": 1254}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-011.webp\", \"caption\": \"\", \"page\": 37, \"index\": 11, \"width\": 1783, \"height\": 1429}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-02-18-706227-v4/fig-012.webp\", \"caption\": \"\", \"page\": 38, \"index\": 12, \"width\": 3056, \"height\": 1589}]"
+motivation: 旨在探究先天免疫受体如何整合复杂微生物配体信号，以驱动结核病特征性的巨噬细胞脂质代谢重构。
+method: 通过分析分枝杆菌脂聚糖ManLAM与巨噬细胞受体TLR2和Dectin-2的相互作用及其下游代谢通路进行研究。
+result: ManLAM通过双受体协同作用激活mTORC1-PPARγ轴，诱导中性脂质积累并增强NF-κB介导的炎症信号。
+conclusion: ManLAM是驱动泡沫细胞形成的关键分枝杆菌因子，证明了微生物配体结构能协调多受体信号以重编程宿主代谢。
+---
+
+## 摘要
+先天免疫受体如何整合来自复杂微生物配体的信号仍不清楚。在本文中，我们展示了单一微生物组分可以编码两个模式识别受体的协调结合，从而重编程巨噬细胞脂质代谢并驱动泡沫细胞形成，而泡沫细胞是坏死性结核病灶的标志。这些富含脂质的巨噬细胞的特征是胞质内富含中性脂质的脂滴积累。分枝杆菌脂聚糖——甘露糖修饰的脂阿拉伯甘露聚糖（ManLAM）通过联合激活 Toll 样受体 2 (TLR2) 和 Dectin-2 驱动巨噬细胞脂滴积累，其中不同的结构部分选择性地介导各受体的识别。双受体结合诱导脂质代谢重编程并增强 NF-κB 介导的炎症信号传导，而脂质积累通过 mTORC1-PPARγ 依赖性途径进行，该途径在很大程度上独立于 NF-κB 的激活。ManLAM 诱导的脂质代谢变化在中心脂质组成和对 mTORC1-PPARγ 轴的依赖性方面，都与结核分枝杆菌感染期间引起的变化密切相关。这些发现确定了 ManLAM 是泡沫细胞相关脂质代谢的主要分枝杆菌驱动因子，并表明复杂微生物配体的结构可以组织多受体信号传导。
+
+## Abstract
+How innate immune receptors integrate signals from complex microbial ligands remains poorly understood. Here, we show that a single microbial component can encode coordinated engagement of two pattern-recognition receptors to reprogram macrophage lipid metabolism and drive foam cell formation, a hallmark of necrotizing tuberculosis lesions. These lipid-laden macrophages are defined by the accumulation of cytosolic lipid droplets enriched in neutral lipids. The mycobacterial lipoglycan mannose-capped lipoarabinomannan (ManLAM) drives macrophage lipid droplet accumulation through combined activation of Toll-like receptor 2 (TLR2) and Dectin-2, with distinct structural moieties selectively mediating recognition by each receptor. Dual receptor engagement induces lipid metabolic reprogramming and enhances NF-kB-mediated inflammatory signaling, with lipid accumulation proceeding through an mTORC1-PPAR{gamma}-dependent pathway that is largely independent of NF-kB activation. ManLAM-induced lipid metabolic changes closely mirror those elicited during Mycobacterium tuberculosis infection, both in neutral lipid composition and in dependence on the mTORC1-PPAR{gamma} axis. These findings identify ManLAM as a major mycobacterial driver of foam cell-associated lipid metabolism and suggest that the architecture of complex microbial ligands can organize multi-receptor signaling.
