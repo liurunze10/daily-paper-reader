@@ -1,0 +1,1606 @@
+Title: Integrated bioinformatics and single-cell analysis identifies vascular aging-related hub genes and immune drivers in atherosclerosis.
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.14.718580v1.full.pdf
+
+Number of Pages: 39
+
+Markdown Content:
+# Integrated bioinformatics and single-cell analysis identifies vascular aging-related hub genes and immune drivers in atherosclerosis. 
+
+Xiaofeng Chen 1, Kunlin Zhou 1, Weichun Wang 1, and Jingying Wu 1*
+
+> 1
+
+Department of Cardiology, Second Affiliated Hospital of Fujian Medical University, Quanzhou, Fujian Province, 362000, China. * Corresponding author: E-mail: wjingying868@163.com (JYW) 
+
+1 Abstract 
+
+2 Atherosclerosis (AS) is a chronic inflammatory disease closely linked to vascular senescence, yet the 
+
+3 specific molecular mechanisms connecting aging processes to AS pathogenesis remain incompletely 
+
+4 understood. This study integrated transcriptomic data from GEO datasets (GSE100927 and GSE43292) to 
+
+5 identify vascular aging-related differentially expressed genes (VARDEGs). Following batch effect 
+
+6 correction, 28 VARDEGs were screened and subjected to functional enrichment, protein-protein interaction 
+
+7 (PPI) network analysis, and immune infiltration assessment. Seven hub genes ( MMP9, APOE, TNF, ICAM1, 
+
+8 PPARG, CYBA, and NCF2 ) were identified and experimentally validated via qRT-PCR, confirming their 
+
+9 significant upregulation in AS samples. Receiver operating characteristic (ROC) analysis demonstrated high 
+
+10 diagnostic accuracy for six of these genes (AUC > 0.7), with TNF exhibiting superior performance. Immune 
+
+11 infiltration analysis revealed profound alterations in 28 immune cell types, particularly monocytes and T 
+
+12 cells, which correlated strongly with hub gene expression. Furthermore, single-cell RNA sequencing 
+
+13 analysis (GSE184073) localized the expression of core genes predominantly to monocytes and T cells, 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+2
+
+14 highlighting TNF overexpression in T cells as a potential critical driver. Finally, molecular docking 
+
+15 simulations suggested that curcumin exhibits strong binding affinity to these hub genes, particularly PPARG ,
+
+16 providing a mechanistic basis for its therapeutic potential. Collectively, this study elucidates the landscape 
+
+17 of vascular aging-related genes in AS, identifies novel diagnostic biomarkers, and proposes potential 
+
+18 therapeutic targets involving immune modulation and natural compounds. 
+
+19 Keywords: atherosclerosis, vascular aging, immune infiltration, cell senescence, RNA-sequencing, 
+
+20 single-cell RNA sequencing. 
+
+21 Introduction 
+
+22 Atherosclerosis, a chronic cardiovascular disease, is the leading cause of death in humans and is the 
+
+23 underlying cause of peripheral vascular disease, coronary heart disease, and stroke [1]. Its pathogenesis is 
+
+24 complex and involves multiple cell types, including endothelial cells (ECs), vascular smooth muscle cells 
+
+25 (VSMCs), adventitia fibroblasts, macrophages, and other immune cells [2, 3]. The key factors for the 
+
+26 development of atherosclerosis include endothelial dysfunction, leukocyte adhesion, macrophage foam 
+
+27 formation, and changes in the VSMC phenotype [4, 5]. Atherosclerosis is driven by both traditional and 
+
+28 non-traditional risk factors [6]. Hypertension, diabetes, smoking, and hypercholesterolemia, which lead to 
+
+29 the dysfunction of Ecs and VSMCs, have been identified as the traditional risk factors for atherosclerosis 
+
+30 [7, 8]. Meanwhile, the nontraditional risk factors, including C-reactive protein, oxidative stress, and 
+
+31 inflammation, accelerate arteriosclerosis [9]. Despite aggressive control of the risk factors for 
+
+32 atherosclerosis, many people still die from its acute complications. The incidence and mortality rates of 
+
+33 atherosclerosis increase significantly with age. Several studies have demonstrated the important role of 
+
+34 vascular aging in the development of atherosclerosis [10, 11]. 
+
+35 Although various epidemiological and clinical studies have demonstrated an intimate connection 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+3
+
+36 between vascular aging and atherosclerosis, the underlying mechanisms should be thoroughly examined. 
+
+37 Vascular aging is a specific type of aging that involves the senescence of various cells in the arteries. 
+
+38 Atherosclerosis is a chronic inflammatory disease in which cellular senescence occurs in atherosclerotic 
+
+39 plaques [12]. Senescent cells secrete inflammatory cytokines and chemokines through the senescence-
+
+40 associated secretory phenotype (SASP), which induces local and systemic inflammatory responses, immune 
+
+41 system activation, tissue damage, fibrosis, apoptosis, and dysfunction [13]. The SASP of senescent cells has 
+
+42 several proatherogenic effects that may involve vascular remodeling, plaque formation, and rupture [2, 12]. 
+
+43 These events lead to vascular aging and accelerate the development of atherosclerosis via a series of 
+
+44 structural and functional changes. Therefore, focusing on the role of vascular aging in the pathogenesis of 
+
+45 atherosclerosis is crucial for delaying atherosclerosis. However, the potential role of vascular aging in the 
+
+46 diagnosis, prognosis, and treatment of atherosclerosis remains unclear. 
+
+47 In this study, we integrated an atherosclerosis dataset from the Gene Expression Omnibus (GEO) and 
+
+48 vascular aging-related genes (VARGs) obtained from GeneCards to identify reliable vascular aging-related 
+
+49 differentially expressed genes (VARDEGs) in atherosclerosis. Through rigorous bioinformatics analysis, 
+
+50 we identified 28 VARDEGs and constructed a protein–protein interaction (PPI) network to screen for key 
+
+51 hub genes. We further validated the expression of seven hub genes ( MMP9, APOE, TNF, ICAM1, PPARG, 
+
+52 CYBA, and NCF2 ) via qRT-PCR and evaluated their diagnostic potential using receiver operating 
+
+53 characteristic (ROC) curve analysis. Moreover, we employed immune infiltration analysis and single-cell 
+
+54 RNA sequencing (scRNA-seq) to dissect the relationship between these hub genes and the immune 
+
+55 microenvironment, revealing a strong association with monocyte and T cell dynamics. Finally, molecular 
+
+56 docking simulations were performed to explore the therapeutic potential of curcumin in targeting these 
+
+57 aging-related hubs. Our findings provide novel insights into the molecular crosstalk between vascular aging 
+
+58 and atherosclerosis, identifying potential biomarkers for early diagnosis and new targets for therapeutic 
+
+59 intervention. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+4
+
+60 Materials and methods 
+
+61 Animals 
+
+62 Male apoE −/− mice (6-weeks-old) were purchased from Gempharmatech Co., Ltd (Jiangsu, China). The 
+
+63 protocols of animal experiments were performed following the National Institutes of Health Laboratory 
+
+64 Animal Care and Use Guidelines and approved by the Animal Ethics Committee at Fujian Medical 
+
+65 University. ApoE −/− mice were randomized into the following two groups: Control, AS. ApoE −/− mice were 
+
+66 fed a high-fat diet containing 0.15% cholesterol and 21% fat for 12 weeks to establish the animal model of 
+
+67 atherosclerosis. ApoE −/− mice fed a standard chow diet served as the control. 
+
+68 Total RNA extraction and quantitative reverse transcription polymerase 
+
+69 chain reaction (qRT-PCR) 
+
+70 Total RNA was extracted from mouse tissues using TRIzol reagent (Sangon Biotech, China). cDNA 
+
+71 was synthesized using the High-Capacity cDNA Reverse Transcription Kit (TIANGEN Biotech, China). 
+
+72 qRT-PCR was performed on a StepOne Plus system (Applied Biosystems) using SuperReal PreMix Plus 
+
+73 (SYBR Green) (TIANGEN). Gene expression levels were normalized to GAPDH using the (2– ΔΔCt) 
+
+74 method. The primer sequences were as follows: GAPDH (B661304, Sangon Biotech, Shanghai, China); 
+
+75 MMP9, 5′-CAGACCAAGGGTACAGCCTG -3′ (forward) and 5′-ATACAGCGGGTACATGAGCG -3′ 
+
+76 (reverse); APOE, 5′-AAGATGAAGGCTCTGTGGGC -3′ (forward) and 5′-
+
+77 AATCCCAGAAGCGGTTCAGG -3′ (reverse); TNF, 5′-ATGTCTCAGCCTCTTCTCATTC-3′ (forward) 
+
+78 and 5′-GCTTGTCACTCGAATTTTGAGA -3′ (reverse); ICAM1, 5′-TAATGTCTCCGAGGCCAGGA -3′ 
+
+79 (forward) and 5′-CGAGCTTCAGAGGCAGGAAA -3′ (reverse); PPARG, 5′-
+
+80 AAGCCGTGCAAGAGATCACA -3′ (forward) and 5′-TGGTCATGAATCCTTGGCCC -3′ (reverse); 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+5
+
+81 CYBA, 5′-ACCATCAAGCAGCCACCTAC -3′ (forward) and 5′-TCAAGCAGGAGCCACTGAAG -3′ 
+
+82 (reverse); and NCF, 5′-CAGCCCTTTCTGTCCCTCAG -3′ (forward) and 5′-
+
+83 CGCATGCCTTTAATCCCAGC -3′ (reverse). 
+
+84 Downloaded data 
+
+85 We used the R package GEOquery [14] from the GEO database [15] 
+
+86 (https://www.ncbi.nlm.nih.gov/geo/) to download the atherosclerosis datasets GSE100927 [16] and 
+
+87 GSE43292 [17]. The samples of datasets GSE100927 and GSE43292 were all from Homo sapiens , and 
+
+88 the tissue source was the artery (Table 1). The chip platform of the dataset GSE100927 was GPL17077, 
+
+89 which included 69 atherosclerosis and 35 control samples. The chip platform of the dataset GSE43292 
+
+90 was GPL6244, which contained 32 atherosclerosis and 32 control samples. All atherosclerosis and control 
+
+91 samples were included in this study. The GeneCards database [18] (https://www.genecards.org/) is a 
+
+92 collection of VARGs and provides comprehensive information on human genes. We used the term 
+
+93 “Vascular Aging” as a search keyword and only kept “Protein Coding” VARGs, and a total of 69 VARGs 
+
+94 were obtained (S1 Table). 
+
+95 The R package sva [19] was used to debatch GSE100927 and GSE43292 to obtain the combined 
+
+96 GEO datasets. The combined dataset included 101 atherosclerotic and 67 control datasets. Finally, the R 
+
+97 package limma [20] was used to standardize the combined GEO datasets, annotate the probes, and 
+
+98 normalize them. The expression matrices before and after removing the batch effect were subjected to a 
+
+99 principal component analysis (PCA) [21] to verify the effect of removing the batch effect. 
+
+100 Table 1 GEO microarray chip information 
+
+GSE100927 GSE43292 
+
+Platform GPL17077 GPL6244 
+
+Species Homo sapiens Homo sapiens 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+6
+
+Tissue Artery Artery 
+
+Samples in AS group 69 32 
+
+Samples in Control group 35 32 
+
+Reference PMID: 29500419 PMID: 23660665 
+
+101 GEO ，Gene Expression Omnibus ；AS ，atherosclerosis. 
+
+102 DEGs related to atherosclerosis related vascular aging 
+
+103 Based on the sample grouping of the combined GEO datasets, the samples were divided into the 
+
+104 atherosclerosis and control groups. Differential analysis of genes between the atherosclerosis and control 
+
+105 groups was performed using the R package limma, setting | logFC | > 0.25 and adj. P < 0.05 for the DEG 
+
+106 threshold. DEGs with logFC > 0.25 and adj. P < 0.05 were considered upregulated, whereas those with 
+
+107 logFC < −0.25 and adj. P < 0.05 were downregulated. The P-value correction method was Benjamini– 
+
+108 Hochberg (BH). The results of the difference analysis were plotted as volcano plots using the R package 
+
+109 ggplot2. To obtain VARDEGs, all DEGs with |logFC| > 0.25 and adj. P < 0.05 in the integrated GEO dataset 
+
+110 were drawn Venn diagram with VARGs. Furthermore, heat maps were drawn using the R package pheatmap 
+
+111 and the R package Rcircos map chromosomal location [22]. 
+
+112 Gene ontology (GO) and Kyoto Encyclopedia of Genes and Genomes 
+
+113 (KEGG) pathway enrichment analysis 
+
+114 GO analysis [23] is commonly used for large-scale functional enrichment studies, including biological 
+
+115 processes (BP), cell components (CC), and molecular functions (MF). KEGG [24] is a widely used database 
+
+116 storing information on genomes, biological pathways, diseases, and drugs. We used the R package 
+
+117 clusterProfiler [25] to perform GO and KEGG pathway enrichment analyses of VARDEGs. The item 
+
+118 screening criteria were adj. P < 0.05 and false discovery rate (FDR) (q value) < 0.25 were considered 
+
+119 significant. The P-value correction method was BH. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+7
+
+120 Gene set enrichment analysis (GSEA) 
+
+121 GSEA [26] was used to evaluate the distribution trend of genes in a predefined gene set in a gene table 
+
+122 ranked by correlation with the phenotype and thus determine their contribution to the phenotype. In this 
+
+123 study, genes from the combined GEO datasets were first ranked by logFC values, and the R package 
+
+124 clusterProfiler was used to perform GSEA on all genes in the integrated GEO datasets (combined datasets). 
+
+125 Regarding the parameters used in the GSEA, the number of seeds and computations was 2020 and 1000, 
+
+126 respectively. The minimum and maximum number of genes contained in each gene set was 10 and 500, 
+
+127 respectively. The Molecular Signatures Database [27] (https://www.gsea-msigdb.org/gsea/msigdb) was 
+
+128 used to access c2 gene sets. Cp. All. V2022.1. Hs. Symbols. GMT [All Canonical Pathways] (3050) was 
+
+129 used for GSEA. Significance in the screening criteria for GSEA was set at adj. P < 0.05 and FDR (q value) 
+
+130 < 0.25. The P-value correction method was BH. 
+
+131 PPI network and hub gene screening 
+
+132 The PPI network is composed of proteins interacting with each other and participating in biological 
+
+133 signaling, gene expression regulation, all aspects of life processes, such as energy and substance 
+
+134 metabolism, and cell cycle regulation. A systematic analysis of the interaction of proteins in biological 
+
+135 systems is crucial for understanding the working principle of proteins in biological systems, the reaction 
+
+136 mechanism of biological signals, energy and substance metabolism under special physiological conditions, 
+
+137 such as diseases, and the functional relationship between proteins. The STRING database [28] 
+
+138 (https://string-db.org/) was searched to determine interactions between known and predicted proteins. In 
+
+139 this study, the STRING database was used based on VARDEGs, with a minimum interaction coefficient of 
+
+140 >0.700 (minimum required interaction score: high confidence, 0.700) used as the standard to construct the 
+
+141 PPI network related to VARDEGs. The closely connected local regions in the PPI network may represent 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+8
+
+142 molecular complexes with specific biological functions. Genes that interacted with other genes in the PPI 
+
+143 network were selected for subsequent analyses. Five algorithms in the CytoHubba software [29] were 
+
+144 applied as follows: maximal clique centrality (MCC), degree, maximum neighborhood component (MNC), 
+
+145 edge percolated component (EPC), and closeness [30]. In the PPI network, the VARDEG scores were 
+
+146 calculated, and then the TOP10 VARDEGs were selected according to the scores. Finally, the genes 
+
+147 obtained by the five different algorithms were interfaced, and a Venn diagram was drawn for analysis. The 
+
+148 intersecting genes in the algorithms were vascular age-related hub genes. 
+
+149 Construction of regulatory network 
+
+150 Transcription factors (TFs) control gene expression by interacting with hub genes at the post-
+
+151 transcriptional stage. The ChIPBase database [31] (http://rna.sysu.edu.cn/chipbase/) was searched to 
+
+152 retrieve TFs, and only TFs with the sum of “number of samples found (upstream)” and “Number of samples 
+
+153 found (downstream)” > 6 were retained. The regulatory effects of TFs on hub genes were analyzed, and the 
+
+154 mRNA–TF regulatory network was visualized using the Cytoscape software. 
+
+155 Additionally, miRNAs play important regulatory roles in biological development and evolution. They 
+
+156 regulate various target genes, and the same target gene can be regulated by multiple miRNAs. To analyze 
+
+157 the hub genes and the relationship between miRNA, through the StarBase v2.0 database [32], only miRNAs 
+
+158 with “pancancerNum > 6” were retained, and the mRNA–miRNA regulatory network was visualized using 
+
+159 the Cytoscape software. 
+
+160 Differential expression verification and ROC curve analysis 
+
+161 To further explore the expression differences of hub genes between atherosclerotic and control samples 
+
+162 in the combined GEO datasets, a group comparison map was drawn based on the expression levels of hub 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+9
+
+163 genes. Next, the R package pROC was used to plot the ROC curve of the hub genes and calculate the area 
+
+164 under the curve (AUC). We evaluated the diagnostic effect of hub gene expression on atherosclerosis 
+
+165 occurrence. The AUC of the ROC curves were generally between 0.5 and 1. The closer the AUC is to 1, the 
+
+166 better the diagnostic performance. AUC values of 0.5–0.7, 0.7–0.9, and >0.9 were considered low, 
+
+167 moderate, and high, respectively. 
+
+168 Immune infiltration analysis 
+
+169 Single-sample gene set enrichment analysis (ssGSEA) [33] quantifies the relative abundance of each 
+
+170 immune cell infiltrate. First, each infiltrating immune cell type was labeled, including activated CD8+ T 
+
+171 cells, activated dendritic cells, gamma delta T cells, and natural killer cells. Human immune cells have 
+
+172 various subtypes, such as regulatory T cells. Subsequently, enrichment scores calculated using the ssGSEA 
+
+173 were used to represent the relative abundance of each immune cell infiltrate in each sample, resulting in an 
+
+174 immune cell infiltration matrix for the combined GEO datasets. Subsequently, the R package ggplot2 was 
+
+175 used to draw group comparison maps to show the expression differences in immune cells between the 
+
+176 control and atherosclerosis groups of the combined GEO datasets. Immune cells with significant differences 
+
+177 between the two groups were screened for subsequent analyses. The correlation between immune cells was 
+
+178 calculated using the Spearman algorithm, and the R package pheatmap was used to draw a correlation 
+
+179 heatmap to show the correlation analysis results of the immune cells themselves. The correlation between 
+
+180 hub genes and immune cells was calculated based on the Spearman algorithm, and the correlation bubble 
+
+181 plot was drawn using the R package ggplot2. 
+
+182 Single-cell RNA sequencing (scRNA-seq) analysis 
+
+183 The raw single-cell RNA-seq data from the GSE184073 dataset were downloaded and processed for 
+
+184 subsequent analysis. Quality control and data preprocessing were performed using the Seurat R package 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+10 
+
+185 (v4.1.0). Low-quality cells were filtered out based on the following criteria: cells with fewer than 200 or 
+
+186 more than 7500 detected genes, as well as cells with a mitochondrial content exceeding 20%. Read counts 
+
+187 were normalized per cell using a scale factor of 10,000 and log-transformed. The data were then scaled 
+
+188 using the ScaleData function in Seurat to regress out potential confounding sources of variation. The top 
+
+189 2,000 highly variable genes were selected for dimensionality reduction via principal component analysis 
+
+190 (PCA). The top 30 principal components were used for cell clustering and visualization. Cell clusters were 
+
+191 identified using the FindNeighbors and FindClusters functions (resolution = 0.05) in Seurat. Cell type 
+
+192 annotation was performed by combining marker gene expression analysis via the FindAllMarkers function 
+
+193 and automated cell type labeling using the SingleR package. Finally, the expression of hub geens across cell 
+
+194 clusters and between sample groups was visualized using the FeaturePlot and DotPlot functions in Seurat. 
+
+195 Molecular docking 
+
+196 The binding affinity and interaction mode between the candidate drug and the target were analyzed 
+
+197 using AutodockVina 1.2.2. The molecular structures were obtained from the PubChem compound database 
+
+198 (https://pubchem.ncbi.nlm.nih.gov/). The three-dimensional coordinates of hub genes ( MMP9, APOE, TNF, 
+
+199 ICAM1, PPARG, CYBA, and NCF2 ) were downloaded from the PDB 
+
+200 (http://www.rcsb.org/pdb/home/home.do). For the docking analysis, all protein and molecular files were 
+
+201 converted to the PDBQT format, all water molecules were excluded, and polar hydrogen atoms were added. 
+
+202 The grid box was centered on covering the structure domain of each protein and accommodating free 
+
+203 molecular movement. The molecular docking study was conducted through Autodock Vina 1.2.2 
+
+204 (http://autodock.scripps.edu/). 
+
+205 Statistical analysis 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+11 
+
+206 All data processing and analyses in this study were based on the R software (version 4.3.0). Regarding 
+
+207 the comparison of continuous variables between the two groups, normally distributed variables were 
+
+208 compared using the independent Student’s t-test, whereas differences in non-normally distributed variables 
+
+209 were analyzed using the Mann–Whitney U test (Wilcoxon rank-sum test). The Kruskal–Wallis test was used 
+
+210 to compare three or more groups. Spearman’s correlation analysis was performed to calculate the correlation 
+
+211 coefficients between the different molecules. All two-sided P < 0.05 were considered significant. 
+
+212 Results 
+
+213 Technology roadmap 
+
+214 S1 Fig. presents a flowchart of the comprehensive analysis of VARDEGs. We used the online GEO 
+
+215 microarray expression profiling datasets GSE100927 and GSE43292 for research. Differentially expressed 
+
+216 VARGs were analyzed using correlation analysis, GO enrichment analysis, KEGG pathway enrichment 
+
+217 analysis, GSEA, and PPI network analysis. Bioinformatics analysis was performed to identify hub genes. 
+
+218 Transcription factor-hub gene regulatory networks, miRNA-hub gene regulatory networks, and immune cell 
+
+219 infiltration analyses were performed. We then determined the diagnostic significance of hub genes using 
+
+220 ROC curve analysis. 
+
+221 Merging of atherosclerosis datasets 
+
+222 First, the R package sva was used to perform batch-effect removal on the atherosclerosis datasets 
+
+223 GSE100927 and GSE43292 to obtain the combined GEO datasets. Subsequently, distribution boxplots (S2 
+
+224 Fig. A, B) were used to compare the expression values of the datasets before and after removing the batch 
+
+225 effect. Second, a PCA plot (S2 Fig. C, D) was used to compare the distribution of low-dimensional features 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+12 
+
+226 before and after batch effect removal. The results of the distribution boxplot and PCA plot show that the 
+
+227 batch effect of the samples in the atherosclerosis dataset was eliminated after batch removal. 
+
+228 DEGs related to atherosclerosis-related vascular senescence 
+
+229 Data from the combined GEO datasets were divided into the atherosclerosis and control groups. To 
+
+230 analyze the differences in gene expression values between the two groups in the combined GEO datasets, 
+
+231 the R package limma was used for differential analysis of the combined GEO datasets to obtain DEGs 
+
+232 between the two datasets. The results were as follows: integrated GEO dataset (combined datasets) a total 
+
+233 of 3559 met the | logFC | > 0.25 and adj. P < 0.05 threshold of DEGs. Under the threshold, up expressed 
+
+234 genes (logFC > 0.25 and adj., P < 0.05), a total of 1818 down expressed genes (logFC < −0.25 and adj. P <
+
+235 0.05), a total of 1741, according to the variance analysis results of the data set map volcano (Fig. 1A). 
+
+236 For VARDEGs meeting the threshold | logFC | > 0.25 and adj. P < 0.05, a Venn diagram was plotted 
+
+237 to demonstrate the intersection between DEGs and VARGs (Fig. 1B). A total of 28 VARDEGs were 
+
+238 identified (S2 Table). According to the intersection results, the logFC-ranked TOP10 upregulated and 
+
+239 TOP10 downregulated VARDEGs between different sample groups in the datasets were analyzed, and the 
+
+240 R package pheatmap was used to draw a heatmap to display the analysis results (Fig. 1C). Finally, the 
+
+241 locations of the 28 VARDEGs on the human chromosomes were analyzed using the R package Rcircos to 
+
+242 construct a chromosome localization map (Fig. 1D). Chromosome mapping showed that more VARDEGs 
+
+243 were located in chromosomes 1 and 2 as follows: ZMPSTE24 , NCF2 , CHI3L1 , and NLRP3 were located in 
+
+244 chromosome 1, and APOB, DPP4 , PDE1A , and MYO1B were located in chromosome 2. 
+
+245 Fig. 1 Differential gene expression analysis A. Volcano plot of differentially expressed genes in 
+
+246 atherosclerosis and control samples in the combined GEO datasets. B. DEGs and VARGs Venn diagrams 
+
+247 in the combined GEO datasets. C. Heat map of VARDEGs associated with vascular aging in in the combined 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+13 
+
+248 datasets. D. Chromosomal mapping of VARDEGs. In the heat map grouping, green represents the control 
+
+249 sample, and purple indicates the atherosclerosis sample. In the heat map, red represents a high expression, 
+
+250 and blue indicates a low expression. DEGs, differentially expressed genes; VARDEGs, vascular age-related 
+
+251 differentially expressed genes. 
+
+252 GO and KEGG enrichment analyses 
+
+253 Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway analyses were 
+
+254 used to further explore the relationships between BP, CC, MF, and biological pathway (KEGG) of 28 
+
+255 VARDEGs and atherosclerosis. The 28 VARDEGs were used for GO and KEGG pathway enrichment 
+
+256 analyses. The results showed that 28 VARDEGs were mainly enriched in muscle cell proliferation 
+
+257 (including smooth muscles) and regulation, as well as EC proliferation (BP) and its regulation (S5 Table); 
+
+258 NADPH oxidase complex, endocytic vesicle, membrane microdomain, membrane raft, neuronal cell 
+
+259 body(CC); Superoxide-generating NAD(P)H oxidase activity, oxidoreductase activity, acting on NAD(P)H, 
+
+260 oxygen as acceptor, 3′,5′-cyclic-GMP phosphodiesterase activity, 3′,5′-cyclic-AMP phosphodiesterase 
+
+261 activity and oxidoreductase activity, acting on NAD(P)H and other molecular functions (MF). It was also 
+
+262 enriched in lipid and atherosclerosis, fluid shear stress, atherosclerosis, the AGE–RAGE signaling pathway 
+
+263 in diabetic complications, leukocyte transendothelial migration, and the osteoclast differentiation pathway 
+
+264 (KEGG). The results of the GO and KEGG pathway enrichment analyses are shown in the bar diagram (Fig. 
+
+265 2A) and bubble diagram (Fig. 2B). 
+
+266 Meanwhile, the network diagram of BP, CC, MF, and biological pathway (KEGG) was drawn 
+
+267 according to the GO and pathway (KEGG) enrichment analyses (Fig. 2C–F). The lines show the 
+
+268 corresponding molecules and annotations of the corresponding entries. The larger the nodes, the more 
+
+269 molecules the entries contain. More genes were enriched in the regulation of SMC proliferation, SMC 
+
+270 proliferation, muscle cell proliferation (BP), and lipids and atherosclerosis (KEGG). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+14 
+
+271 Fig. 2 GO and KEGG enrichment analysis for VARDEGs. A, B. Results of the GO and KEGG pathway 
+
+272 enrichment analyses of VARDEGs. Bar graph (A) and bubble plot (B) show the BP, CC, MF, and biological 
+
+273 pathway (KEGG). GO terms and KEGG terms are shown on the ordinate. C–F. Results of the GO and 
+
+274 pathway (KEGG) enrichment analyses of the VARDEG network diagram showing BP (C), CC (D), MF €, 
+
+275 and KEGG (F). Green nodes represent items, purple nodes indicate molecules, and the lines represent the 
+
+276 relationship between the items and molecules. VARDEGs, vascular aging-related differentially expressed 
+
+277 genes; GO, gene ontology; KEGG, Kyoto Encyclopedia of Genes and Genomes; BP, biological process; 
+
+278 CC, cellular component; MF, molecular function. The bubble size in the bubble plot represents the number 
+
+279 of genes, and the color of the bubble represents the size of the adj. P-value, the redder the color, the smaller 
+
+280 the adj. P-value, and the bluer the color, the larger the adj. P-value. The screening criteria for the GO and 
+
+281 pathway (KEGG) enrichment analyses were significance at adj. P < 0.05 and FDR (q value) < 0.25. The 
+
+282 Benjamini–Hochberg method was used for correcting P-values. 
+
+283 GSEA for atherosclerosis 
+
+284 GSEA was performed to investigate the expression of all genes in the combined GEO datasets, the 
+
+285 biological processes involved, and the link between the cellular components affected and molecular 
+
+286 functions (Fig. 3A). All genes in the combined GEO datasets were significantly enriched in the IL12 
+
+287 2pathway (Fig. 3B), Pi3kci pathway (Fig. 3C), Nfkb pathway (Fig. 3D), JAK–STAT signaling pathway 
+
+288 (Fig. 3E), and other biologically relevant functions and signaling pathways (S6 Table). 
+
+289 Fig. 3 GSEA for combined datasets. A. GSEA 4 biological function bubble plot of integrated GEO 
+
+290 datasets. B–E. GSEA showed that all genes were significantly enriched in the IL12 2pathway (B), Pi3kci 
+
+291 Pathway (C), Nfkb pathway (D), and JAK–STAT signaling pathway €. In the bubble plot, the size and color 
+
+292 of the bubble represents the number of enriched genes and size of the NES value, respectively. The redder 
+
+293 the color, the greater the NES value, and the bluer the color, the smaller the NES value. The screening 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+15 
+
+294 criteria for the GSEA were significance at adj. P < 0.05 and FDR (q value) < 0.25. The Benjamini–Hochberg 
+
+295 method was used for correcting P-values. GSEA, gene set enrichment analysis, NES, normalized 
+
+296 enrichment score. 
+
+297 Construction of a PPI network and screening of hub genes 
+
+298 A PPI network of 28 VARDEGs was constructed using the STRING database (Fig. 4A). The results of 
+
+299 the PPI network showed that 18 VARDEGs were related: APOB, APOE, FTO, PPARG, MMP9, ICAM1, 
+
+300 TNF, BMP2, CDKN2A, DNMT1, CYBA, NOX4, NCF2, MFGE8, KDR, NLRP3, PDE1A, and PDE1C .
+
+301 Subsequently, the five algorithms of the CytoHubba plug-in of the Cytoscape software were used to 
+
+302 calculate the scores of 18 VARDEGs, which were ranked according to the scores. The five algorithms were 
+
+303 MCC, degree, MNC, EPC, and closeness. Then, the TOP10 VARDEGs from the five algorithms were used 
+
+304 to draw PPI networks: MCC (Fig. 4B), degree (Fig. 4C), MNC (Fig. 4D), EPC (Fig. 4E), and closeness (Fig. 
+
+305 4F). The color of the circles from red to yellow represents the scores from high to low. Finally, the 
+
+306 intersection of the genes of the five algorithms was measured, and a Venn diagram (Fig. 4G) was drawn for 
+
+307 analysis. The intersecting genes from these algorithms were identified as hub genes: MMP9 , APOE , TNF ,
+
+308 ICAM1 , PPARG , CYBA , and NCF2 .
+
+309 Fig. 4 PPI network and hub gene analysis. A. PPI network of VARDEGs calculated from the STRING 
+
+310 database. B–F. Top 10 VARDEGs PPI network calculated by five algorithms of the CytoHubba plug-in, 
+
+311 including MCC (B), MNC (C), Degree (D), EPC (E), and closeness (F). G. Venn diagram of the top 10 
+
+312 VARDEGs calculated by five algorithms of the CytoHubba plugin. PPI, protein–protein interaction; 
+
+313 VARDEGs, vascular aging-related differentially expressed genes; MCC, maximal clique centrality; MNC, 
+
+314 maximum neighborhood component; EPC, edge percolated component. 
+
+315 Construction of regulatory networks 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+16 
+
+316 TFs that bind to hub genes were obtained from the ChIPBase database, and the mRNA-TF regulatory 
+
+317 network was constructed and visualized using the Cytoscape software (Fig. 5A). Among them, six were hub 
+
+318 genes and 42 were TFs (S3 Table). 
+
+319 Then, miRNAs related to hub genes were obtained from the TarBase database, and the mRNA-miRNA 
+
+320 regulatory network was constructed and visualized using the Cytoscape software (Fig. 5B). Among them, 
+
+321 there were 3 Hub Genes and 30 miRNAs, and the specific information is shown in S4 Table. 
+
+322 Fig. 5 Regulatory network of hub genes. A. mRNA–TF regulatory network of hub genes. B. mRNA– 
+
+323 miRNA regulatory network of hub genes. MRNAs are shown in yellow, transcription factors in blue, and 
+
+324 miRNAs in red. TF: transcription factor. C-I. Validation of hub genes by qRT-PCR. ** P <0.01, *** P
+
+325 <0.001,**** P < 0.0001 (n =6 for each group). 
+
+326 Validation of the 7 hub genes using qRT-PCR. 
+
+327 To confirm the 7 hub genes identified using the aforementioned analyses and to determine the 
+
+328 variations of expression at the mRNA level, qRT-PCR were performed (Fig. 5C–I). The results revealed 
+
+329 that the 7 hub genes were significantly upregulated in AS group when compared with the control group 
+
+330 (P<0.01), which was concordant with the results obtained from the bioinformatics analysis. 
+
+331 Differential expression verification and ROC curve analysis 
+
+332 To explore the expression differences of hub genes in the Combined GEO Datasets, the group 
+
+333 comparison figure (Fig. 6A) shows the differential analysis results of the expression levels of seven hub 
+
+334 genes ( MMP9 , APOE , TNF , ICAM1 , PPARG , CYBA , and NCF2 ) in atherosclerosis and control samples in 
+
+335 the combined GEO datasets. The differential results showed that the expression levels of seven hub genes 
+
+336 in atherosclerosis and control samples of the combined GEO datasets were highly significant ( P < 0.001). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+17 
+
+337 Next, we used the R package pROC to draw ROC curves based on the expression of hub genes in the 
+
+338 combined GEO datasets (Fig. 6B–H). The ROC curve showed that the expression levels of the six hub genes 
+
+339 (MMP9 , APOE , TNF , PPARG , CYBA , and NCF2 ) in atherosclerotic samples showed a certain accuracy 
+
+340 with different groups (0.7 < AUC < 0.9). The expression level of the hub gene ICAM1 in atherosclerosis 
+
+341 samples showed a low accuracy among different groups (0.5 < AUC < 0.7). 
+
+342 Fig. 6 Differential expression validation and ROC curve analysis. A. Group comparison plots of hub 
+
+343 genes in atherosclerosis and control samples from combined GEO datasets. B–I. ROC curves of hub genes 
+
+344 (hub genes) APOE (B), CYBA (C), ICAM1 (D), MMP9 (E), NCF2 (F), PPARG (G), and TNF (H) in 
+
+345 integrated GEO datasets. Group comparison plots show the control samples in yellow and atherosclerosis 
+
+346 samples in purple. When AUC was 0.7–0.9, it had some accuracy, and when AUC was 0.5–0.7, it had low 
+
+347 accuracy. *** indicates high significance at P < 0.001. AS, atherosclerosis; ROC, receiver operating 
+
+348 characteristic; AUC, area under the curve; TPR, true positive rate; FPR, false positive rate. 
+
+349 Immune infiltration analysis of atherosclerosis 
+
+350 The expression matrices of the combined datasets were used to calculate the immune infiltration 
+
+351 abundance of 28 immune cells using the ssGSEA algorithm. First, differences in the expression of 
+
+352 infiltrating immune cells in different groups are shown by group comparison plots. The group comparison 
+
+353 diagram (Fig. 7A) showed that all the 28 immune cells were statistically significant ( P < 0.05), namely 
+
+354 activated B cell, activated CD4+ T cell, activated CD8+ T cell, activated dendritic cell, CD56bright natural 
+
+355 killer cell, CD56dim natural killer cell, central memory CD4+ T cell, central memory CD8+ T cell, effector 
+
+356 memory CD4+ T cell, effector memory CD8+ T cell, eosinophil, gamma-delta T cell, immature B cell, 
+
+357 immature dendritic cell, macrophage, mast cell, myeloid-derived suppressor cell (MDSC), memory B cell, 
+
+358 monocyte, natural killer cell, natural killer T cell, neutrophil, plasmacytoid dendritic cell, regulatory T cell, 
+
+359 T follicular helper cell, type 1 T helper cell, type 17 T helper cell, and type 2 T helper cell. A correlation 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+18 
+
+360 heatmap was used to show the correlation results of 28 immune cell infiltration abundances in the immune 
+
+361 infiltration analysis of the combined GEO datasets (Fig. 7B). Most immune cells had strong positive 
+
+362 correlations, and immune cell macrophages and MDSC had the most significant positive correlation (r = 
+
+363 0.967, P < 0.05). Finally, the correlation between hub genes and abundance of immune cell infiltration is 
+
+364 demonstrated using a correlation bubble plot (Fig. 7C). Most immune cells showed a strong positive 
+
+365 correlation, and the gene NCF2 and immune cell-activated dendritic cells had the strongest significant 
+
+366 positive correlation (r = 0.945, P < 0.05). 
+
+367 Fig. 7 Immune infiltration analysis by ssGSEA algorithm. A. Group comparison plots of immune cells 
+
+368 in atherosclerosis and control samples from the combined GEO datasets. B. Heat map of immune cell 
+
+369 infiltration abundance in the integrated GEO datasets (combined datasets). C. Bubble plot of the correlation 
+
+370 between hub genes and immune cell infiltration abundance in the integrated GEO datasets (combined 
+
+371 datasets). ssGSEA, single-sample gene-set enrichment analysis. Group comparison plots show control 
+
+372 samples in green and atherosclerosis samples in purple. The absolute values of correlation coefficients (r 
+
+373 value) <0.3, 0.3–0.5, 0.5-0.8, and >0.8 indicate no, weak, moderate, and correlations, respectively. In the 
+
+374 correlation heat map, red indicates a positive correlation, and blue represents a negative correlation. The 
+
+375 depth of the color represents the strength of the correlation. AS, atherosclerosis. * represents P < 0.05, 
+
+376 indicating statistical significance; *** represents P < 0.001, indicating a high statistical significance. 
+
+377 Single-cell validation of hub genes expression and immune infiltration 
+
+378 analysis 
+
+379 Next, we analyzed the single-cell RNA sequencing dataset of coronary artery disease (GSE184073). 
+
+380 Cell subpopulations were annotated into four major types—NK cells, T cells, B cells, and monocytes— 
+
+381 based on canonical marker genes and automated annotation using SingleR(Fig. 8A-B). Among these, T cells 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+19 
+
+382 constituted the largest proportion, followed by monocytes, suggesting that these two cell types may play 
+
+383 pivotal roles in the pathogenesis of atherosclerosis(Fig. 8C). Projection of the six core genes onto the single-
+
+384 cell data revealed their predominant expression in monocytes and T cells(Fig. 8E). Notably, our previous 
+
+385 analyses identified TNF as exhibiting the highest ROC performance, with significant upregulation observed 
+
+386 specifically in T cells. This finding implies that elevated TNF expression within monocytes (and potentially 
+
+387 T cells) may serve as a critical driver of disease progression. These results are consistent with our immune 
+
+388 infiltration analysis. 
+
+389 Fig. 8 Single-cell transcriptomic landscape of the atherosclerotic immune microenvironment 
+
+390 (GSE184073). A. UMAP visualization of eight unsupervised cell clusters. B. Cell type annotation into four 
+
+391 major lineages (T cells, Monocytes, B cells, NK cells) based on marker genes and SingleR. C. Proportional 
+
+392 composition of cell types, highlighting the dominance of T cells and Monocytes. D. Distinct metabolic 
+
+393 pathway activity scores across the four annotated cell populations. E. Projection of the six hub genes, 
+
+394 revealing their predominant expression in Monocytes and T cells, with TNF specifically upregulated in T 
+
+395 cells. 
+
+396 Validation of curcumin-VARDEGs interaction by molecular docking 
+
+397 Curcumin has been demonstrated to possess anti-atherosclerotic properties[34], primarily attributed to 
+
+398 its anti-inflammatory effects; however, the precise mechanisms underlying these effects remain 
+
+399 inadequately understood. In this study, the authors explored the interaction between curcumin and six key 
+
+400 genes —MMP9 , APOE , TNF , PPARG , CYBA , and NCF2 —utilizing molecular docking analysis(Fig. 9). The 
+
+401 findings revealed that curcumin exhibited significant binding affinity with all six target genes, with binding 
+
+402 energies consistently below -5 kcal/mol. Notably, the binding affinity with PPARG was the most 
+
+403 pronounced. This molecular docking analysis substantiates the interaction between curcumin and these hub 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+20 
+
+404 genes at a molecular level, suggesting that curcumin may exert its anti-atherosclerotic effects by mitigating 
+
+405 aging processes. 
+
+406 Fig. 9 Molecular docking analysis illustrating the binding interactions and affinities between 
+
+407 curcumin and the six hub genes ( MMP9, APOE, TNF, PPARG, CYBA, and NCF2 ). 
+
+408 Discussion 
+
+409 Atherosclerosis is the leading cause of cardiovascular death worldwide [35]. Atherosclerotic plaque 
+
+410 rupture leading to thrombosis may lead to life-threatening clinical complications including myocardial 
+
+411 infarction, stroke, and sudden death [36]. However, the mechanisms underlying atherosclerosis remain 
+
+412 unclear. Vascular aging is a key factor in the development and progression of atherosclerosis. Vascular 
+
+413 remodeling related to vascular aging can lead to patients with high sensitivity to cardiovascular risk factors 
+
+414 (such as hyperlipidemia, hypertension, diabetes, and smoking) who are more susceptible to atherosclerosis 
+
+415 [37]. 
+
+416 Upon exposure to cardiovascular risk factors, senescent cells accumulate in the arteries and release 
+
+417 excessive inflammatory factors through the SASP, which may activate the senescence pathway and further 
+
+418 senesce neighboring cells [38]. Inflammation is an important biological marker, and its activation can lead 
+
+419 to high platelet reactivity, leading to blood platelet coagulation potential, increased blood adhesion, and 
+
+420 thrombosis [39]. These events lead to vascular aging and accelerate the development of arteriosclerosis via 
+
+421 a series of structural and functional changes. Vascular aging and arteriosclerosis interact in a vicious circle, 
+
+422 which jointly promotes the occurrence and development of vascular-related diseases, such as coronary heart 
+
+423 disease, hypertension, cerebrovascular disease, and chronic kidney disease[38, 40]. The impairment of 
+
+424 endothelial function or barrier integrity caused by vascular aging can accelerate the deposition of LDL in 
+
+425 the intimal layer, potentially triggering platelet aggregation and thrombosis [2]. The vascular inflammatory 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+21 
+
+426 response affects the recruitment and adhesion of inflammatory cells and promotes the formation of 
+
+427 atherosclerotic plaques [39, 41]. Thus, many forms of vascular aging are involved in the development and 
+
+428 progression of arteriosclerosis. However, the specific mechanisms remain unclear, and further studies are 
+
+429 needed to broaden our knowledge of vascular aging in the pathogenesis of arteriosclerosis. 
+
+430 To the best of our knowledge, we identified 28 potential vascular age-related genes in arteriosclerosis 
+
+431 for the first time using bioinformatics analysis. We further identified seven hub genes associated with 
+
+432 arteriosclerosis, including MMP9 , APOE , TNF , ICAM1 , PPARG , CYBA , and NCF2 , using PPI network and 
+
+433 key module analyses. The roles of these genes in arteriosclerosis have been studied extensively. For 
+
+434 example, MMP9 is involved in plaque formation by degrading the extracellular matrix to weaken arterial 
+
+435 walls, leading to cardiovascular remodeling [42]. APOE participates in the transformation and metabolism 
+
+436 of lipoproteins, and APOE knockout mice are the most common models of atherosclerosis. TNF and ICAM1 
+
+437 are genes that regulate inflammatory cytokines and participate in the chronic inflammatory process of 
+
+438 arteries, playing an important role in vascular aging and arteriosclerosis, which further indicates that 
+
+439 inflammation may be a same mechanism of vascular aging and arteriosclerosis[43, 44]. PPARG is a gene 
+
+440 related to lipid metabolism[45]. PPARG increases insulin sensitivity, promotes lipogenesis, and plays an 
+
+441 anti-inflammatory and anti-atherosclerotic role[46]. Both CYBA and NCF2 genes are involved in the 
+
+442 metabolism of NAPDH oxidase. NADPH oxidase is the main source of reactive oxygen species (ROS), and 
+
+443 oxidative stress is a risk factor for atherosclerosis[47, 48]. However, the roles of these vascular senescence-
+
+444 related genes in the regulation of atherosclerosis have not been fully explored [1]. 
+
+445 GO analysis showed that 28 VARDEGs were enriched in muscle cell proliferation (including smooth 
+
+446 muscles) and its regulation as well as EC muscle cell proliferation and its regulation (BP). They were also 
+
+447 enriched in lipids, atherosclerosis, fluid shear stress, the AGE–RAGE signaling pathway in diabetic 
+
+448 complications, leukocyte transendothelial migration, and the osteoclast differentiation pathway (KEGG). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+22 
+
+449 Atherosclerosis involves the pathological activation of various cell types, including immune cells (e.g., 
+
+450 macrophages and T cells), SMCs, and ECs [49]. Increasing evidence has suggested that the transition of 
+
+451 SMCs to other cell types, known as phenotypic switching, plays an important role in the development and 
+
+452 complications of atherosclerosis [50]. All genes in the combined GEO datasets were significantly enriched 
+
+453 in the IL12 [51], Pi3kci [52], Nfkb [53] and JAK–STAT signaling pathways [54], which are related to cell 
+
+454 senescence and vascular aging. Inflammation is a key driver of atherosclerosis, and the upstream source of 
+
+455 inflammatory factors might be cellular senescence [39]. Cell senescence promotes the occurrence and 
+
+456 development of atherosclerosis by secreting proinflammatory cytokines (including IL-12, etc.) through the 
+
+457 SASP [38]. The JAK–STAT pathway is an important signaling pathway that regulates the initiation and 
+
+458 progression of atherosclerosis, and JAK–STAT activation has been observed in atherosclerotic lesions [55]. 
+
+459 Further studies have reported that inhibition of the JAK–STAT signaling pathway can attenuate cell 
+
+460 senescence and the SASP [56]. Therefore, treatments targeting the JAK–STAT signaling pathway may 
+
+461 alleviate atherosclerosis by delaying cell senescence. 
+
+462 Next, we constructed the mRNA–TF and mRNA–miRNA regulatory networks of hub genes using the 
+
+463 ChIPBase and TarBase databases, respectively. The ROC curve showed that the expression levels of the six 
+
+464 hub genes ( MMP9 , APOE , TNF , PPARG , CYBA and NCF2 ) in atherosclerotic samples were accurate in 
+
+465 different groups (0.7 < AUC < 0.9). Furthermore, through the analysis of the immune infiltration sclerosis 
+
+466 of arterial congestion appearance, the hub genes and immune cells may have a strong positive correlation, 
+
+467 prompting the hub genes to release proinflammatory cytokines, further influencing the process of vascular 
+
+468 aging and hardening of the arteries. More immune cells may mean more pro-inflammatory cytokines. This 
+
+469 observation was further refined by single-cell RNA sequencing (scRNA-seq) analysis of coronary artery 
+
+470 disease samples (GSE184073), which revealed that the hub genes are predominantly expressed in 
+
+471 monocytes and T cells. Specifically, T cells constituted the largest cell subpopulation, followed by 
+
+472 monocytes, suggesting their dominant role in the pathogenic landscape of AS. A phenomenon in which 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+23 
+
+473 higher levels of inflammatory cytokines in tissues lead to a low-grade, sterile and chronic inflammatory 
+
+474 state, defined as immunosenescence or inflamm-aging[57]. In addition to aging, other factors that contribute 
+
+475 to inflammation include genetic predisposition, obesity, oxidative stress, changes in intestinal barrier 
+
+476 permeability, chronic infections, and immune cell defects[58]. Conversely, interventions that reduce 
+
+477 inflammatory markers, such as dietary restriction and exercise, can increase longevity[59, 60]. Therefore, 
+
+478 promoting the resolution of inflammation is a potential treatment for alleviating cell aging and organ aging. 
+
+479 However, it is still unclear which specific immune cell type plays a decisive role in vascular aging and 
+
+480 atherosclerosis. 
+
+481 Identifying effective therapeutic strategies targeting these hub genes is of paramount importance. Our 
+
+482 molecular docking analysis explored the interaction between curcumin, a natural polyphenol with known 
+
+483 anti-inflammatory and anti-atherosclerotic properties, and the six high-performing hub genes. The results 
+
+484 demonstrated strong binding affinities (binding energy < -5 kcal/mol) between curcumin and all target genes, 
+
+485 with the most pronounced interaction observed with PPARG . PPARG is a nuclear receptor that regulates 
+
+486 lipid metabolism and inflammation; its activation is generally considered protective in AS. The strong 
+
+487 binding of curcumin to PPARG suggests that curcumin may exert its therapeutic effects partly by 
+
+488 modulating PPARG activity, thereby improving lipid profiles and suppressing inflammation. Furthermore, 
+
+489 the predicted interactions with TNF and NCF2 imply that curcumin could also directly inhibit pro-
+
+490 inflammatory signaling and oxidative stress. These computational findings provide a molecular basis for 
+
+491 future experimental studies to validate curcumin as a targeted therapy for vascular aging-related 
+
+492 atherosclerosis. 
+
+493 Despite these promising findings, several limitations must be acknowledged. First, while we validated 
+
+494 the hub genes using qRT-PCR, the sample size for experimental validation was relatively small. Larger 
+
+495 clinical cohorts are needed to confirm the diagnostic utility of these genes. Second, the bioinformatics 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+24 
+
+496 analysis relied on publicly available bulk RNA-seq and microarray data, which may mask cell-type-specific 
+
+497 nuances that only scRNA-seq can fully resolve; although we incorporated scRNA-seq data for validation, 
+
+498 further dedicated single-cell studies on vascular tissues would be beneficial. Third, the molecular docking 
+
+499 results are theoretical predictions; in vitro and in vivo experiments are required to verify the actual binding 
+
+500 and functional effects of curcumin on these targets. Finally, the precise mechanistic link between vascular 
+
+501 senescence markers and the specific immune subsets (e.g., specific T cell subtypes like Th1 or Th17) 
+
+502 warrants deeper investigation using spatial transcriptomics to map these interactions within the plaque 
+
+503 architecture. 
+
+504 In conclusion, this study systematically identified a set of vascular aging-related hub genes that are 
+
+505 critically involved in the pathogenesis of atherosclerosis. We highlighted the pivotal roles of monocytes and 
+
+506 T cells, particularly through TNF -mediated inflammation, as key drivers of the disease. The high diagnostic 
+
+507 accuracy of these genes offers potential for clinical application, while the predicted interaction with 
+
+508 curcumin opens new avenues for therapeutic intervention. By bridging the gap between vascular aging, 
+
+509 immune dysregulation, and potential natural therapeutics, our work provides a comprehensive framework 
+
+510 for understanding and treating atherosclerosis. Future research should focus on translating these 
+
+511 bioinformatics discoveries into clinical biomarkers and targeted therapies to mitigate the burden of this 
+
+512 pervasive cardiovascular disease. 
+
+513 Conflict of Interest 
+
+514 The authors declare that the research was conducted in the absence of any commercial or financial 
+
+515 relationships that could be construed as a potential conflict of interest. 
+
+516 Acknowledgments 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+25 
+
+517 The authors would like to thank all staff who made it possible to perform this study. 
+
+518 Funding 
+
+519 This work was supported by the following fundings: Natural Science Foundation of Fujian Province 
+
+520 (2020J01224, 2022J01779), Quanzhou Science and Technology Program (2023N055S, 2023N057S), and 
+
+521 the Second Affiliated Hospital of Fujian Medical University Doctoral Nursery Project (BS202324). The 
+
+522 authors appreciate the valuable comments from reviewers. 
+
+523 Author Contributions 
+
+524 X.F.C., K.L.Z. and J.Y.W. conceived and designed research; X.F.C., K.L.Z. and W.C.W collected data 
+
+525 and conducted research; X.F.C., W.C.W.and J.Y.W. analyzed and interpreted data; X.F.C., K.L.Z., and 
+
+526 J.Y.W. wrote the initial paper; X.F.C and J.Y.W. revised the paper; All authors read and approved the final 
+
+527 manuscript. 
+
+528 Data Availability Statement 
+
+529 The original contributions presented in the study are included in the article/Supplementary Material, 
+
+530 further inquiries can be directed to the corresponding author. 
+
+531 Supporting information 
+
+532 S1 Fig. Flowchart of the comprehensive analysis of VARDEGs. AS, atherosclerosis; GSEA, gene set 
+
+533 enrichment analysis; DEGs, differentially expressed genes; VARGs, vascular aging-related genes; GO, 
+
+534 gene ontology; KEGG, Kyoto Encyclopedia of Genes and Genomes; VARDEGs, vascular aging-related 
+
+535 differentially expressed genes; PPI, protein–protein interaction; ROC, receiver operating characteristic; 
+
+536 TF, transcription factor; ssGSEA, single-sample gene-set enrichment analysis. 
+
+537 S2 Fig. Batch effect removal of GSE100927 and GSE43292. A. Box plot of combined GEO dataset 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+26 
+
+538 distribution before batch removal. B. Post-batch integrated GEO datasets (combined datasets) distribution 
+
+539 boxplots. C. PCA plot of integrated GEO datasets (combined datasets) before debatching. D. PCA plot of 
+
+540 integrated GEO datasets (combined datasets) after debatching. The atherosclerosis datasets GSE100927 
+
+541 and GSE43292 are presented in green and yellow, respectively. GEO, Gene Expression Omnibus; PCA, 
+
+542 principal component analysis; AS, atherosclerosis. 
+
+543 S1 Table. The list of 69 protein-coding vascular aging-related genes (VARGs) obtained from the 
+
+544 GeneCards database. 
+
+545 S2 Table. The list of 28 vascular aging-related differentially expressed genes (VARDEGs) identified 
+
+546 in the combined GEO datasets. 
+
+547 S3 Table. The list of 42 transcription factors (TFs) regulating the 6 hub genes identified through the 
+
+548 ChIPBase database. 
+
+549 S4 Table. The list of 30 microRNAs (miRNAs) associated with the 3 hub genes obtained from the 
+
+550 TarBase database. 
+
+551 S5 Table. Detailed results of Gene Ontology (GO) and KEGG pathway enrichment analysis for the 
+
+552 28 VARDEGs. 
+
+553 S6 Table. Detailed results of Gene Set Enrichment Analysis (GSEA) for the combined GEO 
+
+554 datasets. 
+
+555 References 
+
+556 1. Ma X, Zhang T, Luo Z, Li X, Lin M, Li R, et al. Functional nano-vector boost anti-atherosclerosis efficacy of berberine in 
+
+557 Apoe ((-/-)) mice. Acta Pharm Sin B. 2020;10(9):1769-83. Epub 20200408. doi: 10.1016/j.apsb.2020.03.005. PubMed PMID: 
+
+558 33088695; PubMed Central PMCID: PMCPMC7564017. 
+
+559 2. Bu LL, Yuan HH, Xie LL, Guo MH, Liao DF, Zheng XL. New Dawn for Atherosclerosis: Vascular Endothelial Cell 
+
+560 Senescence and Death. Int J Mol Sci. 2023;24(20). Epub 20231013. doi: 10.3390/ijms242015160. PubMed PMID: 37894840; 
+
+561 PubMed Central PMCID: PMCPMC10606899. 
+
+562 3. Gimbrone MA, Jr., Garcia-Cardena G. Endothelial Cell Dysfunction and the Pathobiology of Atherosclerosis. Circul Res. 
+
+563 2016;118(4):620-36. doi: 10.1161/CIRCRESAHA.115.306301. PubMed PMID: 26892962; PubMed Central PMCID: 
+
+564 PMCPMC4762052. 
+
+565 4. Zhang C, Chen X, Wang JK, Li Y, Cui SJ, Wang Z, et al. Phenotypic Switching of Atherosclerotic Smooth Muscle Cells is 
+
+566 Regulated by Activated PARP1-Dependent TET1 Expression. #N/A. 2021;28(7):716-29. Epub 20200925. doi: 10.5551/jat.55343. 
+
+567 PubMed PMID: 32981917; PubMed Central PMCID: PMCPMC8265424. 
+
+568 5. Roth Flach RJ, Skoura A, Matevossian A, Danai LV, Zheng W, Cortes C, et al. Endothelial protein kinase MAP4K4 promotes 
+
+569 vascular inflammation and atherosclerosis. Nat Commun. 2015;6:8995. Epub 20151221. doi: 10.1038/ncomms9995. PubMed 
+
+570 PMID: 26688060; PubMed Central PMCID: PMCPMC4703891. 
+
+571 6. Kong P, Cui ZY, Huang XF, Zhang DD, Guo RJ, Han M. Inflammation and atherosclerosis: signaling pathways and 
+
+572 therapeutic intervention. Signal Transduct Target Ther. 2022;7(1):131. Epub 20220422. doi: 10.1038/s41392-022-00955-7. 
+
+573 PubMed PMID: 35459215; PubMed Central PMCID: PMCPMC9033871. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+27 
+
+574 7. Dai H, Younis A, Kong JD, Bragazzi NL, Wu J. Trends and Regional Variation in Prevalence of Cardiovascular Risk Factors 
+
+575 and Association With Socioeconomic Status in Canada, 2005-2016. JAMA Netw Open. 2021;4(8):e2121443. Epub 20210802. doi: 
+
+576 10.1001/jamanetworkopen.2021.21443. PubMed PMID: 34410395; PubMed Central PMCID: PMCPMC8377569. 
+
+577 8. Xu Z, Han Y, Liu J, Jiang F, Hu H, Wang Y, et al. MiR-135b-5p and MiR-499a-3p Promote Cell Proliferation and Migration 
+
+578 in Atherosclerosis by Directly Targeting MEF2C. Sci Rep. 2015;5:12276. Epub 20150717. doi: 10.1038/srep12276. PubMed 
+
+579 PMID: 26184978; PubMed Central PMCID: PMCPMC4505325. 
+
+580 9. Wolf D, Ley K. Immunity and Inflammation in Atherosclerosis. Circul Res. 2019;124(2):315-27. doi: 
+
+581 10.1161/CIRCRESAHA.118.313591. PubMed PMID: 30653442; PubMed Central PMCID: PMCPMC6342482. 
+
+582 10. Ungvari Z, Tarantini S, Donato AJ, Galvan V, Csiszar A. Mechanisms of Vascular Aging. Circul Res. 2018;123(7):849-67. 
+
+583 doi: 10.1161/CIRCRESAHA.118.311378. PubMed PMID: 30355080; PubMed Central PMCID: PMCPMC6248882. 
+
+584 11. Ungvari Z, Tarantini S, Sorond F, Merkely B, Csiszar A. Mechanisms of Vascular Aging, A Geroscience Perspective: JACC 
+
+585 Focus Seminar. J Am Coll Cardiol. 2020;75(8):931-41. doi: 10.1016/j.jacc.2019.11.061. PubMed PMID: 32130929; PubMed 
+
+586 Central PMCID: PMCPMC8559983. 
+
+587 12. Sun Y, Wang X, Liu T, Zhu X, Pan X. The multifaceted role of the SASP in atherosclerosis: from mechanisms to therapeutic 
+
+588 opportunities. Cell Biosci. 2022;12(1):74. Epub 20220531. doi: 10.1186/s13578-022-00815-5. PubMed PMID: 35642067; 
+
+589 PubMed Central PMCID: PMCPMC9153125. 
+
+590 13. Gorgoulis V, Adams PD, Alimonti A, Bennett DC, Bischof O, Bishop C, et al. Cellular Senescence: Defining a Path Forward. 
+
+591 Cell. 2019;179(4):813-27. Epub 2019/11/02. doi: 10.1016/j.cell.2019.10.005. PubMed PMID: 31675495. 
+
+592 14. Davis S, Meltzer PS. GEOquery: a bridge between the Gene Expression Omnibus (GEO) and BioConductor. Bioinformatics. 
+
+593 2007;23(14):1846-7. Epub 20070512. doi: 10.1093/bioinformatics/btm254. PubMed PMID: 17496320. 
+
+594 15. Barrett T, Wilhite SE, Ledoux P, Evangelista C, Kim IF, Tomashevsky M, et al. NCBI GEO: archive for functional genomics 
+
+595 data sets--update. Nucleic Acids Res. 2013;41(Database issue):D991-5. Epub 20121127. doi: 10.1093/nar/gks1193. PubMed 
+
+596 PMID: 23193258; PubMed Central PMCID: PMCPMC3531084. 
+
+597 16. Steenman M, Espitia O, Maurel B, Guyomarch B, Heymann MF, Pistorius MA, et al. Identification of genomic differences 
+
+598 among peripheral arterial beds in atherosclerotic and healthy arteries. Sci Rep. 2018;8(1):3940. Epub 20180302. doi: 
+
+599 10.1038/s41598-018-22292-y. PubMed PMID: 29500419; PubMed Central PMCID: PMCPMC5834518. 
+
+600 17. Ayari H, Bricca G. Identification of two genes potentially associated in iron-heme homeostasis in human carotid plaque using 
+
+601 microarray analysis. J Biosci (Bangalore). 2013;38(2):311-5. doi: 10.1007/s12038-013-9310-2. PubMed PMID: 23660665. 
+
+602 18. Stelzer G, Rosen N, Plaschkes I, Zimmerman S, Twik M, Fishilevich S, et al. The GeneCards Suite: From Gene Data Mining 
+
+603 to Disease Genome Sequence Analyses. Curr Protoc Bioinformatics. 2016;54:1 30 1-1 3. Epub 20160620. doi: 10.1002/cpbi.5. 
+
+604 PubMed PMID: 27322403. 
+
+605 19. Leek JT, Johnson WE, Parker HS, Jaffe AE, Storey JD. The sva package for removing batch effects and other unwanted 
+
+606 variation in high-throughput experiments. Bioinformatics. 2012;28(6):882-3. Epub 20120117. doi: 10.1093/bioinformatics/bts034. 
+
+607 PubMed PMID: 22257669; PubMed Central PMCID: PMCPMC3307112. 
+
+608 20. Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W, et al. limma powers differential expression analyses for RNA-
+
+609 sequencing and microarray studies. Nucleic Acids Res. 2015;43(7):e47. Epub 20150120. doi: 10.1093/nar/gkv007. PubMed PMID: 
+
+610 25605792; PubMed Central PMCID: PMCPMC4402510. 
+
+611 21. Ben Salem K, Ben Abdelaziz A. Principal Component Analysis (PCA). Tunis Med. 2021;99(4):383-9. PubMed PMID: 
+
+612 35244921; PubMed Central PMCID: PMCPMC8734479. 
+
+613 22. Zhang H, Meltzer P, Davis S. RCircos: an R package for Circos 2D track plots. BMC Bioinformatics. 2013;14:244. Epub 
+
+614 20130810. doi: 10.1186/1471-2105-14-244. PubMed PMID: 23937229; PubMed Central PMCID: PMCPMC3765848. 
+
+615 23. Mi H, Muruganujan A, Ebert D, Huang X, Thomas PD. PANTHER version 14: more genomes, a new PANTHER GO-slim 
+
+616 and improvements in enrichment analysis tools. Nucleic Acids Res. 2019;47(D1):D419-D26. doi: 10.1093/nar/gky1038. PubMed 
+
+617 PMID: 30407594; PubMed Central PMCID: PMCPMC6323939. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+28 
+
+618 24. Kanehisa M, Goto S. KEGG: kyoto encyclopedia of genes and genomes. Nucleic Acids Res. 2000;28(1):27-30. doi: 
+
+619 10.1093/nar/28.1.27. PubMed PMID: 10592173; PubMed Central PMCID: PMCPMC102409. 
+
+620 25. Yu G, Wang LG, Han Y, He QY. clusterProfiler: an R package for comparing biological themes among gene clusters. #N/A. 
+
+621 2012;16(5):284-7. Epub 20120328. doi: 10.1089/omi.2011.0118. PubMed PMID: 22455463; PubMed Central PMCID: 
+
+622 PMCPMC3339379. 
+
+623 26. Subramanian A, Tamayo P, Mootha VK, Mukherjee S, Ebert BL, Gillette MA, et al. Gene set enrichment analysis: a 
+
+624 knowledge-based approach for interpreting genome-wide expression profiles. Proc Natl Acad Sci U S A. 2005;102(43):15545-50. 
+
+625 Epub 20050930. doi: 10.1073/pnas.0506580102. PubMed PMID: 16199517; PubMed Central PMCID: PMCPMC1239896. 
+
+626 27. Liberzon A, Subramanian A, Pinchback R, Thorvaldsdottir H, Tamayo P, Mesirov JP. Molecular signatures database 
+
+627 (MSigDB) 3.0. Bioinformatics. 2011;27(12):1739-40. Epub 20110505. doi: 10.1093/bioinformatics/btr260. PubMed PMID: 
+
+628 21546393; PubMed Central PMCID: PMCPMC3106198. 
+
+629 28. Szklarczyk D, Gable AL, Lyon D, Junge A, Wyder S, Huerta-Cepas J, et al. STRING v11: protein-protein association 
+
+630 networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Res. 
+
+631 2019;47(D1):D607-D13. doi: 10.1093/nar/gky1131. PubMed PMID: 30476243; PubMed Central PMCID: PMCPMC6323986. 
+
+632 29. Shannon P, Markiel A, Ozier O, Baliga NS, Wang JT, Ramage D, et al. Cytoscape: a software environment for integrated 
+
+633 models of biomolecular interaction networks. Genome Res. 2003;13(11):2498-504. doi: 10.1101/gr.1239303. PubMed PMID: 
+
+634 14597658; PubMed Central PMCID: PMCPMC403769. 
+
+635 30. Yang X, Li Y, Lv R, Qian H, Chen X, Yang CF. Study on the Multitarget Mechanism and Key Active Ingredients of Herba 
+
+636 Siegesbeckiae and Volatile Oil against Rheumatoid Arthritis Based on Network Pharmacology. Evid Based Complement Alternat 
+
+637 Med. 2019;2019:8957245. Epub 20191126. doi: 10.1155/2019/8957245. PubMed PMID: 31885670; PubMed Central PMCID: 
+
+638 PMCPMC6899322. 
+
+639 31. Zhou KR, Liu S, Sun WJ, Zheng LL, Zhou H, Yang JH, et al. ChIPBase v2.0: decoding transcriptional regulatory networks 
+
+640 of non-coding RNAs and protein-coding genes from ChIP-seq data. Nucleic Acids Res. 2017;45(D1):D43-D50. Epub 20161023. 
+
+641 doi: 10.1093/nar/gkw965. PubMed PMID: 27924033; PubMed Central PMCID: PMCPMC5210649. 
+
+642 32. Li JH, Liu S, Zhou H, Qu LH, Yang JH. starBase v2.0: decoding miRNA-ceRNA, miRNA-ncRNA and protein-RNA 
+
+643 interaction networks from large-scale CLIP-Seq data. Nucleic Acids Res. 2014;42(Database issue):D92-7. Epub 20131201. doi: 
+
+644 10.1093/nar/gkt1248. PubMed PMID: 24297251; PubMed Central PMCID: PMCPMC3964941. 
+
+645 33. Xiao B, Liu L, Li A, Xiang C, Wang P, Li H, et al. Identification and Verification of Immune-Related Gene Prognostic 
+
+646 Signature Based on ssGSEA for Osteosarcoma. Front Oncol. 2020;10:607622. Epub 20201215. doi: 10.3389/fonc.2020.607622. 
+
+647 PubMed PMID: 33384961; PubMed Central PMCID: PMCPMC7771722. 
+
+648 34. Yadav R, Mishra S, Chaturvedi R, Pandey A. Therapeutic potential of curcumin in cardiovascular disease: Targeting 
+
+649 atherosclerosis pathophysiology. Biomed Pharmacother. 2025;190:118412. Epub 20250804. doi: 10.1016/j.biopha.2025.118412. 
+
+650 PubMed PMID: 40763486. 
+
+651 35. Zhang W, Lv Z, Zhang Y, Gopinath SCB, Yuan Y, Huang D, et al. Targeted Diagnosis, Therapeutic Monitoring, and 
+
+652 Assessment of Atherosclerosis Based on Mesoporous Silica Nanoparticles Coated with cRGD-Platelets. Oxid Med Cell Longev. 
+
+653 2022;2022:6006601. Epub 20220929. doi: 10.1155/2022/6006601. PubMed PMID: 36211824; PubMed Central PMCID: 
+
+654 PMCPMC9537012. 
+
+655 36. Zhang F, Xia X, Chai R, Xu R, Xu Q, Liu M, et al. Inhibition of USP14 suppresses the formation of foam cell by promoting 
+
+656 CD36 degradation. J Cell Mol Med. 2020;24(6):3292-302. Epub 20200122. doi: 10.1111/jcmm.15002. PubMed PMID: 31970862; 
+
+657 PubMed Central PMCID: PMCPMC7131911. 
+
+658 37. Jiang ZM, Wu T, Xue YT, Li Y, Li GH, Huang K, et al. Decoding the Mechanism of Shixiao Powder in Treating Coronary 
+
+659 Heart Disease Based on Network Pharmacology and Molecular Docking. Evid Based Complement Alternat Med. 
+
+660 2022;2022:3756668. Epub 20220706. doi: 10.1155/2022/3756668. PubMed PMID: 35845584; PubMed Central PMCID: 
+
+661 PMCPMC9279019. 
+
+662 38. Ma S, Xie X, Yuan R, Xin Q, Miao Y, Leng SX, et al. Vascular Aging and Atherosclerosis: A Perspective on Aging. Aging 
+
+663 Dis. 2024. Epub 20240306. doi: 10.14336/AD.2024.0201-1. PubMed PMID: 38502584. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+29 
+
+664 39. Liberale L, Badimon L, Montecucco F, Luscher TF, Libby P, Camici GG. Inflammation, Aging, and Cardiovascular Disease: 
+
+665 JACC Review Topic of the Week. J Am Coll Cardiol. 2022;79(8):837-47. doi: 10.1016/j.jacc.2021.12.017. PubMed PMID: 
+
+666 35210039; PubMed Central PMCID: PMCPMC8881676. 
+
+667 40. Laina A, Stellos K, Stamatelopoulos K. Vascular ageing: Underlying mechanisms and clinical implications. Exp Gerontol. 
+
+668 2018;109:16-30. Epub 2017/06/19. doi: 10.1016/j.exger.2017.06.007. PubMed PMID: 28624356. 
+
+669 41. Stojanovic SD, Fiedler J, Bauersachs J, Thum T, Sedding DG. Senescence-induced inflammation: an important player and key 
+
+670 therapeutic target in atherosclerosis. Eur Heart J. 2020;41(31):2983-96. doi: 10.1093/eurheartj/ehz919. PubMed PMID: 31898722; 
+
+671 PubMed Central PMCID: PMCPMC7453834. 
+
+672 42. Liu B, Su L, Loo SJ, Gao Y, Khin E, Kong X, et al. Matrix metallopeptidase 9 contributes to the beginning of plaque and is a 
+
+673 potential biomarker for the early identification of atherosclerosis in asymptomatic patients with diabetes. Front Endocrinol 
+
+674 (Lausanne). 2024;15:1369369. Epub 20240410. doi: 10.3389/fendo.2024.1369369. PubMed PMID: 38660518; PubMed Central 
+
+675 PMCID: PMCPMC11039961. 
+
+676 43. Michaud M, Balardy L, Moulis G, Gaudin C, Peyrot C, Vellas B, et al. Proinflammatory cytokines, aging, and age-related 
+
+677 diseases. J Am Med Dir Assoc. 2013;14(12):877-82. Epub 20130620. doi: 10.1016/j.jamda.2013.05.009. PubMed PMID: 
+
+678 23792036. 
+
+679 44. Guo S, Mao X, Liu J. Multi-faceted roles of C1q/TNF-related proteins family in atherosclerosis. Front Immunol. 
+
+680 2023;14:1253433. Epub 20231013. doi: 10.3389/fimmu.2023.1253433. PubMed PMID: 37901246; PubMed Central PMCID: 
+
+681 PMCPMC10611500. 
+
+682 45. Wang H, Tian Q, Zhang R, Du Q, Hu J, Gao T, et al. Nobiletin alleviates atherosclerosis by inhibiting lipid uptake via the 
+
+683 PPARG/CD36 pathway. Lipids Health Dis. 2024;23(1):76. Epub 20240311. doi: 10.1186/s12944-024-02049-5. PubMed PMID: 
+
+684 38468335; PubMed Central PMCID: PMCPMC10926578. 
+
+685 46. Zhang Z, Chen Y, Fu X, Chen L, Wang J, Zheng Q, et al. Identification of PPARG as key gene to link coronary atherosclerosis 
+
+686 disease and rheumatoid arthritis via microarray data analysis. PLoS One. 2024;19(4):e0300022. Epub 20240404. doi: 
+
+687 10.1371/journal.pone.0300022. PubMed PMID: 38573982; PubMed Central PMCID: PMCPMC10994321. 
+
+688 47. Balcerzyk-Matic A, Nowak T, Mizia-Stec K, Iwanicka J, Iwanicki T, Banka P, et al. Polymorphic Variants of AGT, ABCA1, 
+
+689 and CYBA Genes Influence the Survival of Patients with Coronary Artery Disease: A Prospective Cohort Study. Genes (Basel). 
+
+690 2022;13(11). Epub 20221118. doi: 10.3390/genes13112148. PubMed PMID: 36421822; PubMed Central PMCID: 
+
+691 PMCPMC9690336. 
+
+692 48. Huo TM, Wang ZW. Comprehensive Analysis to Identify Key Genes Involved in Advanced Atherosclerosis. Dis Markers. 
+
+693 2021;2021:4026604. Epub 20211210. doi: 10.1155/2021/4026604. PubMed PMID: 34925641; PubMed Central PMCID: 
+
+694 PMCPMC8683248. 
+
+695 49. Libby P, Buring JE, Badimon L, Hansson GK, Deanfield J, Bittencourt MS, et al. Atherosclerosis. Nat Rev Dis Primers. 
+
+696 2019;5(1):56. Epub 20190816. doi: 10.1038/s41572-019-0106-z. PubMed PMID: 31420554. 
+
+697 50. Pan H, Ho SE, Xue C, Cui J, Johanson QS, Sachs N, et al. Atherosclerosis Is a Smooth Muscle Cell-Driven Tumor-Like 
+
+698 Disease. Circulation. 2024;149(24):1885-98. Epub 20240430. doi: 10.1161/CIRCULATIONAHA.123.067587. PubMed PMID: 
+
+699 38686559; PubMed Central PMCID: PMCPMC11164647. 
+
+700 51. Henein MY, Vancheri S, Longo G, Vancheri F. The Role of Inflammation in Cardiovascular Disease. Int J Mol Sci. 
+
+701 2022;23(21). Epub 20221026. doi: 10.3390/ijms232112906. PubMed PMID: 36361701; PubMed Central PMCID: 
+
+702 PMCPMC9658900. 
+
+703 52. Ajay AK, Zhu LJ, Zhao L, Liu Q, Ding Y, Chang YC, et al. Local vascular Klotho mediates diabetes-induced atherosclerosis 
+
+704 via ERK1/2 and PI3-kinase-dependent signaling pathways. Atherosclerosis. 2024;396:118531. Epub 20240703. doi: 
+
+705 10.1016/j.atherosclerosis.2024.118531. PubMed PMID: 38996716. 
+
+706 53. Kong X, Chen H, Li D, Ma L. Effects of imbalance of lipid metabolism through NF-KB pathway on atherosclerosis and 
+
+707 vascular aging in rats. Cell Mol Biol (Noisy-le-grand). 2022;67(5):144-50. Epub 20220204. doi: 10.14715/cmb/2021.67.5.20. 
+
+708 PubMed PMID: 35818259. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+30 
+
+709 54. Fu X, Sun Z, Long Q, Tan W, Ding H, Liu X, et al. Glycosides from Buyang Huanwu Decoction inhibit atherosclerotic 
+
+710 inflammation via JAK/STAT signaling pathway. Phytomedicine. 2022;105:154385. Epub 20220808. doi: 
+
+711 10.1016/j.phymed.2022.154385. PubMed PMID: 35987015. 
+
+712 55. Hao L, Ren M, Rong B, Xie F, Lin MJ, Zhao YC, et al. TWEAK/Fn14 mediates atrial-derived HL-1 myocytes hypertrophy 
+
+713 via JAK2/STAT3 signalling pathway. J Cell Mol Med. 2018;22(9):4344-53. Epub 20180704. doi: 10.1111/jcmm.13724. PubMed 
+
+714 PMID: 29971943; PubMed Central PMCID: PMCPMC6111870. 
+
+715 56. Chen M, Xiao L, Dai G, Lu P, Zhang Y, Li Y, et al. Inhibition of JAK-STAT Signaling Pathway Alleviates Age-Related 
+
+716 Phenotypes in Tendon Stem/Progenitor Cells. Front Cell Dev Biol. 2021;9:650250. Epub 20210329. doi: 
+
+717 10.3389/fcell.2021.650250. PubMed PMID: 33855026; PubMed Central PMCID: PMCPMC8039155. 
+
+718 57. Franceschi C, Bonafe M, Valensin S, Olivieri F, De Luca M, Ottaviani E, et al. Inflamm-aging. An evolutionary perspective 
+
+719 on immunosenescence. Ann N Y Acad Sci. 2000;908:244-54. doi: 10.1111/j.1749-6632.2000.tb06651.x. PubMed PMID: 
+
+720 10911963. 
+
+721 58. Rodier F, Coppe JP, Patil CK, Hoeijmakers WA, Munoz DP, Raza SR, et al. Persistent DNA damage signalling triggers 
+
+722 senescence-associated inflammatory cytokine secretion. Nat Cell Biol. 2009;11(8):973-9. Epub 20090713. doi: 10.1038/ncb1909. 
+
+723 PubMed PMID: 19597488; PubMed Central PMCID: PMCPMC2743561. 
+
+724 59. Barzilai N, Huffman DM, Muzumdar RH, Bartke A. The critical role of metabolic pathways in aging. Diabetes. 
+
+725 2012;61(6):1315-22. doi: 10.2337/db11-1300. PubMed PMID: 22618766; PubMed Central PMCID: PMCPMC3357299. 
+
+726 60. Fontana L. Neuroendocrine factors in the regulation of inflammation: excessive adiposity and calorie restriction. Exp Gerontol. 
+
+727 2009;44(1-2):41-5. Epub 20080412. doi: 10.1016/j.exger.2008.04.005. PubMed PMID: 18502597; PubMed Central PMCID: 
+
+728 PMCPMC2652518. 
+
+729 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 17, 2026. ;https://doi.org/10.64898/2026.04.14.718580 doi: bioRxiv preprint

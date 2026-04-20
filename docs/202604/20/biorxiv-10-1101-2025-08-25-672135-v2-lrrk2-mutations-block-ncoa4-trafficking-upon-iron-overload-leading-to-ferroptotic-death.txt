@@ -1,0 +1,681 @@
+Title: 86983521
+
+URL Source: https://www.biorxiv.org/content/10.1101/2025.08.25.672135v2.full.pdf
+
+Number of Pages: 36
+
+Markdown Content:
+1
+
+LRRK2 mutations block NCOA4 trafficking upon iron overload leading to 1
+
+ferroptotic death 2
+
+3Andres Goldman 1, 5 0000-0002-0322-139X, Mai Nguyen 1, 5 , Joel Lanoix 2, 5 0000-0001-7073-49298, Chongyang Li 2 0000-0001-6842-4406, Ahmed Fahmy 3, 5 0000-0003-0444-383X, Yong 5Zhong Xu 4,5 0000-0002-9201-0446, Erwin Schurr 4, 5 0000-0002-2640-536X, Pierre Thibault 2, 5 
+
+6
+
+0000-0001-5993-0331, Michel Desjardins 3, 5 0000-0002-5684-5980, and Heidi M. McBride 1, 5,* 
+
+7
+
+0000-0003-4666-2280 89 1Montreal Neurological Institute, McGill University 3801 University Ave, Montreal, Quebec 10 2Institute for Research in Immunology and Cancer (IRIC), Université de Montréal, Montréal, 11 Québec, Canada; Department of Chemistry, Université de Montréal, Montréal, Québec, Canada. 12 3Département de pathologie et biologie cellulaire, Université de Montréal, Montréal, Québec, 13 Canada 14 4Program in Infectious Diseases and Immunity in Global Health, The Research Institute of the 15 McGill University Health Centre; Montreal, QC, Canada and Departments of Human Genetics 16 and Medicine, Faculty of Medicine and Health Science, McGill University, Montreal, Quebec, 17 Canada 18 5 Aligning Science Across Parkinson’s (ASAP) Collaborative Research Network, Chevy Chase, 19 MD 20815, USA 20 21 *to whom correspondence be addressed. 22 23 24 
+
+Abstract: 25 
+
+Altered iron homeostasis has long been implicated in Parkinson's Disease (PD), although the 26 mechanisms have not been clear. Given the critical role of PD-related activating mutations in 27 LRRK2 (leucine-rich repeat protein kinase 2) within membrane trafficking pathways we 28 examined the impact of a homozygous mutant LRRK2G2019S on iron homeostasis within the 29 RAW macrophage cell line with high iron capacity. Proteomics analysis revealed a dysregulation 30 of iron-related proteins in steady state with highly elevated levels of ferritin light chain and a 31 reduction of ferritin heavy chain. LRRK2G2019S mutant cells showed efficient ferritinophagy 32 upon iron chelation, but upon iron overload there was a near complete block in the degradation 33 of the ferritinophagy adaptor NCOA4. These conditions lead to an accumulation of 34 phosphorylated Rab8 at the plasma membrane, which is selectively inhibited by LRRK type II 35 kinase inhibitors. Iron overload then leads to increased oxidative stress and ferroptotic cell death. 36 These data implicate LRRK2 as a key regulator of iron homeostasis and point to the need for an 37 increased focus on the mechanisms of iron dysregulation in PD. 38 39 
+
+Introduction: 40 
+
+Age-related neurodegenerative diseases are an increasing burden on the global 41 population. Detailing the precise mechanisms responsible pathology in these complex diseases 42 has been challenging. Hallmark features of Parkinson’s Disease (PD) are motor symptoms, 43 namely tremor and rigidity, and selective death of neuromelanin-containing dopamine neurons in 44 the substantia nigra pars compacta (SNpc) and locus coeruleus . About 5-15% of PD is familial 45 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+2and current estimates recognize over 50 causal variants and 100 risk alleles (Lim et al., 2024). 46 These highlight contributions of mitochondria and lysosomal function, the spreading of prion-47 like synuclein filaments, innate and adaptive immune pathways, and more (Cannon and 48 Gruenheid, 2022; Johnson et al., 2019; Tansey et al., 2022). In the remaining ~90% of sporadic 49 PD, it is unclear what the underlying causes may be, although environmental factors like heavy 50 metals or pesticides (Aravindan et al., 2024), and various types of infection (Cannon and 51 Gruenheid, 2022) are under intense investigation. 52 An early candidate cause of selective vulnerability of dopamine neurons in PD was their 53 high dependence on iron metabolism required for synthesis of dopamine and production of 54 neuromelanin, which captures and stores excess iron (Jenner, 1989; Sulzer et al., 2000). PD 55 patients show dramatic losses of pigmented neuromelanin, which is a hallmark feature in 56 autopsied brain. The loss of neuromelanin results in higher levels of free iron, which is being 57 explored as a biomarker in early-stage PD patients by high-resolution MRI quantitative 58 susceptibility mapping (Guan et al., 2024). The mechanisms by which iron may be mishandled in 59 the SNpc are understudied, and causality to PD pathology is not clearly established. However, 60 there is increasing speculation that in PD increased iron toxicity may cause ferroptotic cell death, 61 making iron the Achilles’ heel of dopaminergic neurons (Jenner, 1989; Masaldan et al., 2019; 62 Riederer et al., 2023). To test these ideas clinically, a series of trials were initiated employing 63 iron chelators in PD patients, with mixed results (Devos et al., 2025). New formulations and 64 approaches are still under investigation, highlighting the importance of a better understanding of 65 the impact of iron on PD pathology. 66 A common risk factor for inherited PD are variants in the LRRK2 gene which encodes a 67 large kinase with a complex array of domains including armadillo repeat, ankyrin, WD40, ROC-68 COR (Ras of complex proteins [ROC] and C-terminal of ROC [COR]) GTPase domains, 69 leucine-rich repeat, and a kinase domain (Alessi and Pfeffer, 2024). The penetrance of PD in 70 carriers of LRRK2 pathogenic variants is typically ~50% at age 70, rising to 75% at 80 years, 71 implicating additional genetic and / or environmental factors in disease progression (Mata et al., 72 2023). LRRK2 variants have been the subject of intense research efforts which have 73 demonstrated an involvement in cellular functions that range from subcellular protein trafficking 74 (Singh and Muqit, 2020), lysosomal repair/function (Bentley-DeSousa et al., 2025), cytoskeletal 75 dynamics (Leschziner and Reck-Peterson, 2021), ciliogenesis and centrosome cohesion (Jaimon 76 et al., 2025; Li et al., 2024; Lin et al., 2025; Madero-Perez et al., 2018), mitochondrial function 77 (Buck and Sanders, 2025), synaptic transmission (Kuhlmann & Milnerwood 2020), and immune 78 responses (Peter and Strober, 2023). Despite much progress, the molecular basis of LRRK2 79 pathogenicity remains unclear. 80 All pathogenic LRRK2 variants, within and outside of LRRK2’s kinase domain, increase 81 its serine-threonine kinase activity, including the most common pathogenic substitution 82 p.G2019S (LRRK2 G2019S ) (Mata et al., 2023). In addition to autophosphorylation, LRRK2 83 substrates include numerous Rab GTPases that regulate vesicular transport; these are 84 hyperphosphorylated in cells from LRRK2 PD patients and models (Alessi and Pfeffer, 2024; 85 Steger et al., 2016). The downstream impact of each phosphorylated Rab on membrane transport 86 and signaling pathways appears highly dependent on the cell type and context, and the field has 87 not reached consensus on which of the many implicated LRRK2 variant phenotypes are the 88 driver of disease. However, Rab hyperphosphorylation is observed in other genetic forms of PD 89 (e,g., VPS35 (Kadgien et al., 2021; Mir et al., 2018), and idiopathic PD brains (Di Maio et al., 90 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+32018). Thus, there is a breadth of evidence associating LRRK2 kinase gain-of-function with PD 91 pathogenesis. 92 In the context of iron handling, previous work reported context-specific changes in iron 93 homeostasis in cells carrying the LRRK2 G2019S mutation in HEK293T cells and iPSC-derived 94 microglia (Mamais et al., 2025; Mamais et al., 2021). It was initially shown that the 95 phosphorylation of Rab8, a key LRRK2 substrate, reduced its interaction with its GTP exchange 96 factor Rabin8, which in turn led to the lysosomal degradation of the transferrin receptor. They 97 observed the accumulation of ferritin and free iron in microglia of LRRK2 G2019S mice following 98 injections with LPS, although the mechanisms underlying these changes in vivo were not 99 established (Mamais et al., 2021). While iron phenotypes have not been observed consistently 100 within LRRK2 G2019S mutant cells, single-cell RNA sequencing experiments did report a cell-101 specific loss in ferritin heavy chain mRNA within LRRK2 G2019S mice, specifically in astrocytes, 102 microglia, and oligodendrocytes (Khan et al., 2024). 103 Given evidence supporting a contributing role of dysregulated iron homeostasis in PD, 104 we explored the impact of LRRK2 mutations on iron transport and handling in a cultured 105 macrophage model. The data provide evidence that RAW macrophages carrying the 106 LRRK2 G2019S mutation have altered iron homeostasis in steady state conditions, which lead to an 107 inability to handle iron overload resulting in oxidative stress and ferroptotic cell death. We 108 observed a block in the normal iron-induced expansion of lysosomes and in the microautophagy 109 driven degradation of the ferritin autophagy receptor NCOA4. Interestingly, iron overload 110 conditions in LRRK2 G2019S cells leads to high levels of of the LRRK2 substrate p-Rab8 111 accumulating on the plasma membrane. This phosphorylation is resistant to the type I LRRK2 112 kinase inhibitor MLi-2, but remains sensitive to both the pan-specific type II kinase inhibitor 113 rebastinib and the newly developed LRRK selective type II kinase inhibitors RN277 and RN341 114 (Raig et al., 2025). Iron overload conditions are not common in healthy physiology but are a 115 significant factor in PD brains. Should this aspect of LRRK2 mutant function be relevant to the 116 death of dopaminergic neurons, our results would suggest the use of MLi-2 may not be effective 117 in this context, where LRRK2 selective type II kinase inhibitors would be active in iron related 118 pathologies linked to LRRK2. 119 
+
+120 
+
+Results: 121 
+
+LRRK2 G2019S RAW macrophages have altered iron homeostasis 122 
+
+Macrophages ingest aged red blood cells and have a unique capacity to handle high levels 123 of iron (Winn et al., 2020). Therefore, we considered macrophages, given the high levels of 124 LRRK2 expression (Gardet et al., 2010), as a good model system to interrogate the impact of 125 pathogenic homozygous LRRK2 mutations on iron handling. To this end we generated a 126 CRISPR-knock-in RAW264.7 macrophage cell line carrying the LRRK2 G2019S mutation 127 (Supplemental Fig 1A ). To confirm the increased in LRRK2 kinase activity in this line we 128 probed cell extracts with two phospho-specific antibodies ( Figure 1A ). LRRK2 129 autophosphorylation was increased, as seen with an antibody recognizing LRRK2 pS1292 . A 130 second antibody recognizing phosphorylated Rab8 T72 (with some lower specificity for p-Rab10 131 and p-Rab35) (Lis et al., 2018), further confirmed an increased kinase activity in the CRISPR-132 edited LRRK2 G2019S macrophages, with no change in total Rab8 levels across the genotypes 133 (Fig1A ). Both phosphorylation events were reversed upon treatment with the type I LRRK2 134 kinase inhibitor MLi-2 ( Figure 1A, quantification in 1B ). These data confirm the successful 135 generation of the gain-of-function variant. We then performed unbiased whole cell proteomics 136 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+4and found significant changes in many proteins important for iron homeostasis ( Figure 1C,D) .137 Protein quantification by western blot validated downregulation of the transferrin receptor (TfR) 138 responsible for iron uptake, downregulation of the ferritin heavy chain (FTH), and upregulation 139 of ferritin light chain (FTL), both critical for iron storage ( Figure 1E, quantified in Supp 140 
+
+Figure 1B ). Iron is found inside the cell in its reactive ferrous (Fe 2+ ) or mineralized ferric (Fe 3+ )141 state. Fe 2+ is the form required by the cell to forge iron sulfur clusters and heme groups, while 142 excess free ferrous iron can catalyze the generation of free radical species through the Fenton 143 reaction (Galy et al., 2024). This makes Fe 2+ essential, yet potentially toxic, for the cell. Excess 144 Fe 2+ is rapidly captured by cytosolic ferritin where iron is harmlessly stored in the mineralized 145 ferric Fe 3+ state (Chasteen and Harrison, 1999; Melman and Bou-Abdallah, 2020). FTH and FTL 146 together form cage-like complexes that can hold up to ~4500 atoms of Fe 3+ . FTH has enzymatic 147 ferroxidase activity required to oxidize Fe 2+ into Fe 3+ for safe storage (Melman and Bou-148 Abdallah, 2020). We quantified the iron content and composition and found that LRRK2 G2019S 149 macrophages have reduced total iron content, marked by a selective loss of mineralized iron 150 Fe 3+ , and 2-fold increase in Fe 2+ content, compared to WT control ( Figure 1 F). This result was 151 validated using the fluorescent FerroOrange probe, which reported a similar 2-fold increase of 152 labile Fe 2+ in LRRK2 G2019S macrophages (Niwa et al., 2014) ( Supp Figure 1C,D ). 153 The iron quantification revealed a cellular reduction in total iron, yet we observed excess 154 FTL and reduced TfR which canonically suggests a translational response to iron overload 155 through the iron-response elements (IRE) within their mRNA (Galy et al., 2024; Rouault, 2006). 156 We therefore tested a series of additional iron-related proteins regulated by either the iron-sulfur 157 cluster binding iron responsive protein 1 (IRP1), or the Fe2+ regulated iron response protein 2 158 (IRP2). LRRK2 G2019S expression did not elicit any changes in the levels of HERC2/FBXL5/IRP2 159 axis ( Supp Figure 1E ), indicating IRP2 is not activated. In addition, we found the levels of other 160 proteins harboring IREs such as DMT1 or ferroportin were unaffected in LRRK2 G2019S 161 macrophages ( Supp Figure 1E ), implying the IRP1/2 axis is not involved in the upregulation of 162 FTL or downregulation of TfR. This indicates that the changes in FTL and FTH levels are not 163 through canonical iron response element mechanisms. 164 We further tested the enzymatic activity of the iron-sulfur containing IRP1 (also called 165 Aconitase 1 or ACO1) which is often used as a proxy to monitor any deficits in iron-sulfur 166 cluster assemblies (Beinert and Kennedy, 1993). As expected, given the evidence that the 167 translational regulation by IRP1 was unaltered, LRRK2 G2019S macrophages did not show any 168 change in ACO1 activity (Supp Figure 1F ). This further indicates that the delivery of ferrous 169 Fe 2+ iron to mitochondria for the biogenesis of iron-sulfur complexes remained intact. Therefore, 170 LRRK2 G2019S leads to a significant reduction in total cellular iron ( Figure 1F ), primarily due to 171 the loss of stored ferric Fe 3+ , and an increase in ferrous Fe 2+ , without an impairment of functional 172 delivery of Fe 2+ to mitochondria or the modulation of iron related protein synthesis pathways 173 (Supp Figs. 1E,F ). 174 FTH is critical for the lysosomal degradation of ferritin complexes through an autophagic 175 process termed ferritinophagy (Dowdle et al., 2014; Kuno et al., 2022; Mancias et al., 2015; 176 Mancias et al., 2014; Ohshima et al., 2022; Zhao et al., 2024). Given the absence of FTH 177 expression, we considered this could cause a block in complex turnover, resulting in the 178 observed increases in FTL levels. To monitor the turnover of FTL we generated WT and 179 LRRK2 G2019S macrophages stably expressing N-terminal cherry tagged FTL to visualize its 180 cellular distribution (Ohshima et al., 2022). In untreated WT cells the cherry-FTL signal is 181 primarily distributed within lysotracker green positive lysosomes, with some cytosolic signal 182 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+5(Fig 1G, quantified in H ). In contrast, LRRK2 G2019S macrophages show a highly diffuse, 183 cytosolic cherry-FTL signal and faint lysosomal localization ( Fig 1G third row ). This 184 observation is consistent with impaired or inefficient lysosomal targeting of FTL in steady state 185 conditions. 186 To determine whether LRRK2 G2019S macrophages were capable of induced ferritin 187 degradation, we activated ferritinophagy using the iron chelator desferoxamine (DFO) to remove 188 iron from the cytoplasm ( Figure 1G-I ). Ferritinophagy is regulated by the action of nuclear 189 receptor coactivator 4 (NCOA4), the adaptor protein that binds and delivers ferritin cages into 190 the autophagosome (Dowdle et al., 2014; Kuno et al., 2022; Mancias et al., 2014; Ohshima et al., 191 2022; Zhao et al., 2024) . NCOA4 is an iron and iron sulfur cluster binding protein (Kuno et al., 192 2022; Zhao et al., 2024). Therefore iron levels modulate NCOA4-ferritin interactions allowing 193 the fine tuning of ferritin turnover where NCOA4 bound to ferritin promotes liquid-liquid phase 194 separated condensates (LLPS) that are selectively degraded through autophagy (Ohshima et al., 195 2022). Looking first at FTL, DFO treatment increased in the appearance of FTL in lysosomes in 196 WT and LRRK2 G2019S macrophages, consistent with functional ferritinophagy ( Figure 1G 197 
+
+second and fourth rows, quantification in H ). By western blot we confirmed that iron 198 chelation led to increased clearance of FTL in WT and LRRK2 G2019S macrophages ( Figure 1I ). 199 With longer exposure the degradative products of FTL were visible in DFO treated LRRK2 G2019S 200 macrophages ( Figure 1I black arrow). The ferritinophagy adaptor NCOA4 was also highly 201 elevated in LRRK2 mutant cells at steady state ( Figure 1I ), and we observed that iron chelation 202 led to clearance of NCOA4 in LRRK2 G2019S macrophages, consistent with functional 203 ferritinophagy. 204 
+
+LRRK2 G2019S show defects in NCOA4 turnover upon iron overload 205 
+
+The inverse of iron chelation is the response to iron overload, which requires NCOA4 to 206 segregate away from ferritin cages, resulting in a diffuse cytosolic distribution of ferritin that 207 stably mineralizes and stores excess iron as Fe 3+ (Galy et al., 2024). In high iron conditions 208 NCOA4 binds iron sulfur clusters, which promotes binding of the ubiquitin E3 ligase HERC2 to 209 drive NCOA4 degradation through the proteasome (Zhao et al., 2024). In a second degradation 210 pathway, ferric Fe 3+ bound NCOA4 can drive assembly into phase-condensed foci that become 211 internalized into lysosomes through a microautophagy pathway (Kuno et al., 2022). At later time 212 points of iron overload NCOA4 can also carry low levels of ferritin into the lysosomes through 213 microautophagy to maintain pools of labile iron (Kuno et al., 2022). The precise regulation of 214 these distinct mechanisms remains under intense investigation. In our experiments with ferrous 215 ammonium sulfate (FAS) to induce iron overload, we observe the expected diffuse cytosolic 216 staining of FTL in WT cells ( Supp Figure 2A,B ). In LRRK2 G2019S macrophages, FTL is already 217 diffuse in untreated cells, which remains the case upon iron overload, with the addition of a few 218 bright foci resembling phase-condensed foci ( Supp Figure 2A,B ). 219 A critical distinction emerged between the genotypes when imaging cherry-NCOA4. In 220 WT untreated cells cherry-NCOA4 is seen primarily within lysosomes ( Figure 2A ), but in 221 LRRK2 G2019S macrophages cherry-NCOA4 had limited lysosomal co-localization and appeared 222 in bright cytosolic foci ( Figure 2A, number and size of foci quantified in 2B,C ). In WT cells 223 treated with FAS NCOA4 appeared in bright cytosolic foci and within lysosomes, which became 224 enlarged ( seen upon FAS treatment in Fig 2A and Supp Figure 2C, quantified in Supp 225 
+
+2D,E ). In contrast, LRRK2 G2019S macrophages showed NCOA4 accumulating in larger bright 226 cytosolic (non-lysosomal) foci, suggesting very little internalization into lysosomes in high iron. 227 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+6Quantification of foci size showed that LRRK2 G2019S macrophages had fewer NCOA4 foci with a 228 significant increase in their size relative to WT cells ( Figure 2B,C ). 229 Time-lapse imaging of NCOA4 foci revealed their entry into enlarged lysosomes in FAS 230 treated WT cells ( Figure 2D, Supp Video 1 ), as previously described (Ohshima et al., 2022). 231 Conversely, in LRRK2 G2019S cells NCOA4 foci did not associate with lysosomes and were thus 232 seemingly unable to undergo microautophagy ( Figure 2D, Supp Video 2 ). To biochemically 233 confirm bright cytosolic foci reflected the formation of phase-separated condensates, we 234 examined the amount of NCOA4 within Triton-X insoluble fractionations (Ohshima et al., 235 2022). Consistently, total insoluble NCOA4 levels were increased in LRRK2 G2019S macrophages 236 (Figure 2E ). Addition of bafilomycin to block degradation in lysosomes led to accumulation of 237 NCOA4 in WT cells in both untreated and iron loaded / FAS conditions ( Figure 2E ). NCOA4 238 also accumulated in bafilomycin exposed LRRK2 G2019S cells, however, in bafilomycin the FAS / 239 iron overload failed to increase NCOA4 levels further, indicating a block in lysosomal flux 240 (Figure 2E ). 241 To examine the expected LRRK2 kinase-dependency of the NCOA4 phenotype, we 242 employed the LRRK2 inhibitor MLi-2 (Fell et al., 2015). MLi-2 reversed the accumulation of 243 NCOA4 in steady-state conditions in both genotypes, indicating that NCOA4 levels are coupled 244 to LRRK2 kinase activity ( Figure 2F ). Upon iron overload in wild type cells we observe an 245 accumulation of NCOA4 that is again reversed upon MLi-2 treatment. Suprisingly, the increased 246 levels of NCOA4 seen in LRRK2 G2019S cells was resistant to LRRK2 kinase inhibition, while 247 LRRK2 autophosphorylation was efficiently lost, demonstrating target engagement ( Figure 2F ). 248 Moreover, MLi-2 treatment did not rescue the alterations in ferritin proteins in untreated cells, 249 nor did it rescue the lysosomal morphology linked to iron overload ( Supp Figure 2F-H ). This 250 finding indicates that the block in NCOA4 degradation induced by iron overload within 251 LRRK2 G2019S cells is resistant to MLi-2. 252 253 
+
+LRRK G2019S impact on iron metabolism reveals differential sensitivities to type I and type II kinase 254 
+
+inhibitors. 255 
+
+Given the unexpected resistance of the NCOA4 phenotypes to MLi-2 in LRRK2 G2019S 256 cells upon iron overload / FAS conditions ( Figure 2F ), we explored the cellular localization of 257 phosphorylated Rab signal in these conditions. In both wild type and LRRK2 G2019S the pRab8 258 was barely detected with immunofluorescence at steady state ( Figure 3A ). Iron overload / FAS 259 did not change this pattern in WT or LRRK2 KO cells. However, in ~30% of LRRK2 G2019S cells 260 FAS induced a pronounced upregulation and accumulation of pRab8 signal on plasma membrane 261 ruffles, and coincided with cells showing significant blebbing ( Figure 3A, insets in B, 262 
+
+quantification in C ). Western blots confirmed the pRab8 signal was specific to LRRK2 G2019S 263 cells, and enhanced upon iron overload ( Supplemental Figure 3A,B ). To confirm the specificity 264 of the p-Rab8 immunofluorescent signal we validated using siRNA approaches. Silencing Rab8 265 led to a near complete loss of the plasma membrane signal, with partial effect upon silencing 266 Rab10 ( Supp Figure 3C-E ). We further observed p-Rab8 signal consistent with the previously 267 described recruitment of Rab8 to the centrioles in mitotic cells (Madero-Perez et al., 2018) 268 (Supp Figure 3F ). Lastly, a strong lysosomal p-RAB8 signal using this antibody was seen in 269 cells treated with LLOME, where it has been established that LRRK2-mediated Rab8 270 phosphorylation leads to Rab8 recruitment to damaged lysosomes ( Supp Figure 3G ) (Herbst et 271 al., 2020; Mamais et al., 2021). These data confirm that the pRab8 antibody shows specificity to 272 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+7Rab8 in immunofluorescent experiments showing recruitment to the plasma membrane in iron 273 loaded LRRK2 G2019S cells. 274 A similar recruitment of Rab8 to plasma membrane ruffles was previously observed upon 275 activation of Toll-like receptors (Luo et al., 2018; Tong et al., 2021; Wall et al., 2017). There, it 276 was established that TLR-activation of Rab8 recruits its effector PI3K g, to generate a signaling 277 platform required to activate AKT/mTOR. We therefore examined AKT phosphorylation at S473 278 as a functional readout of pRab8 recruitment to the cell surface over a time course of FAS 279 treatment. We observed AKT phosphorylation in WT cells, upon FAS / iron overload at 8 hours 280 which was much more pronounced in LRRK2 G2019S macrophages ( Supplementary Figure 281 
+
+3H,quantified in I ). This supports the idea that plasma membrane associated pRab8 is activating 282 established Rab8 function. 283 We next tested whether the pRab8 signal seen upon iron overload in LRRK2 G2019S cells 284 was sensitive to MLi-2. As with NCOA4, the pRab8 signal was also resistant to MLi-2 treatment 285 in LRRK2 G2019S cells exposed to high iron, while the autophosphorylation of LRRK2 was 286 blocked by the drug ( Figure 3C,D ). Wild type cells show very little pRab8 upon iron loading, 287 which also appears to be insensitive to MLi2, while autophosphorylation of LRRK2 is inhibited 288 (Figure 3C ). The insensitity to MLi-2 was inconsistent with the overwhelming evidence that the 289 phenotypes of the LRRK2 mutations are due to hyperactivity of the kinase domain. MLi-2 is a 290 type I kinase inhibitor, a class that binds to the active site and stabilizes the active-like, or closed 291 conformation of the kinase. Type II inhibitors, in contrast, stabilize the inactive, open 292 conformation of the kinase. Recent cryo-EM structures of LRRK2 bound to type I and type II 293 inhibitors have highlighted the conformations adopted by LRRK2 when bound to either type of 294 inhibitor (Sanz Murillo et al., 2023; Tasegian et al., 2021; Zhu et al., 2024). We therefore 295 considered whether iron overload may somehow impact the conformation of LRRK2, and tested 296 a broad spectrum type II kinase inhibitor shown previously to efficiently block LRRK2 kinase 297 activity called rebastinib (Tasegian et al., 2021). Unlike MLi-2, treatment of both wild type and 298 LRRK2 G2019S cells with rebastinib efficiently blocked the phosphorylation of Rab8 in both the 299 presence or absence of iron overload as seen by western blot ( Figure 3E, quantified in 300 
+
+Supplemental Figure 3J ), and by immunofluorescence ( Figure 3F, quantified in G ). As 301 rebastinib has broad specificity, with effects on ~30% of the kinome, we turned to the newly 302 developed LRRK-selective type II kinase inhibitors RN277 and RN341 (Raig et al., 2025). As 303 with rebastinib, 8 hour treatment with either of the two new drugs efficiently reversed the plasma 304 membrane pRab8 signal ( Figure 3H, quantified in I ), and as seen by western blot ( Figure 305 
+
+3J,K ). These data confirm the kinase dependence of Rab8 phosphorylation at the plasma 306 membrane in LRRK2 G2019S cells upon treatment with FAS and highlights a cellular condition 307 where we observe differential efficacy between type I and type II LRRK2 kinase inhibitors. 308 309 
+
+LRRK2 G2019S cells are hypersensitive to iron induced oxidation and ferroptotic cell death. 310 
+
+In order to interrogate the global cellular consequences of LRRK2 G2019S mutation in 311 conditions of iron overload we returned to our initial proteomics approach. We obtained the total 312 proteome from three biological replicates of wild type and LRRK2 G2019S cells in untreated 313 conditions, and following 24 hours of FAS treatment ( Supplemental Table 2 ). While FAS 314 treatment induced many expected changes in wild type cells, including reduced transferrin 315 receptor, increased ferritins, there were many more robust changes in FAS treated LRRK2 G2019S 316 cells relative to their wild type counerparts ( Supplemental Table 2, Volcano Plot in Figure 317 
+
+4A ). GO analysis highlighted three functional groups that included changes in oxidative stress 318 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+8related genes, in lysosomal proteins, and cytoskeletal signatures ( Figure 4B ). For example, 319 proteomics identified a 10 Log2 fold increase in Heme Oxygenase 1 (HMOX1) in LRRK2 G2019S 320 
+
+cells treated with FAS compared to wild type cells, which we validated by western blot 321 comparing to both wild type and LRRK2KO cells ( Supplementary Figure 4A ). This is a well 322 studied transcriptional target of NRF2 and part of the canonical oxidative stress response. 323 Consistent with this, we also observed the nuclear translocation of NRF2 specifically in 324 LRRK2 G2019S FAS treated cells ( Supplementary Figure 4B,C ), and a block in cellular 325 proliferation ( Supplementary Figure 4D ). These data indicate a significant increase in oxidative 326 stress within mutant cells in the context of iron overload. 327 We were surprised to identify a reduction in Monoamine Oxidase A (MAOA) in 328 LRRK2 G2019S cells, which we validated by western blot ( Supplementary Figure 4A ). However, 329 while specific to the LRRK2 G2019S , the loss of MAOA was seen in both untreated and iron 330 overloaded LRRK2 G2019S macrophages, indicating that, while it is a very interesting observation, 331 the loss of MAOA is unrelated to the iron phenotypes under investigation here. An outer 332 membrane enzyme primarily studied in neurons where it acts to degrade monoamine 333 neurotransmitters like serotonin, dopamine and epinephrine (Naoi et al., 2025), its induced 334 expression in tumor associated macrophages has recently been shown to promote 335 immunosuppression that promotes tumour progression (Ma et al., 2024; Wang et al., 2021). We 336 also checked the specificity of another candidate, the RNA binding protein IGF2BP3 (insulin-337 like growth factor 2 mRNA binding protein 3), which has been shown to regulate the mRNA 338 stability of both iron/stress related targets including HMOX1 (Lv et al., 2025), STEAP3 (Liang 339 et al., 2026), SLC7A11 (Yang et al., 2026) and FTH (Xu et al., 2022). In this case, the IGF2BP3 340 levels were highly upregulated in both LRRK2 G2019S and the LRRK2KO lines, irrespective of 341 iron overload ( Supplementary Figure 4A ). 342 The second global signature showed a specific downregulation of a series of lysosomal 343 hydrolases including lysozymes and granzymes, with other lysosomal enzymes appearing to 344 increase in LRRK2 G2019S iron treated cells ( Figure 4B ). To test the hydrolytic activity within 345 lysosomes in these conditions we employed a proteolytic sensor BSA-DQ Red that is internalized 346 into endolysosomes and becomes fluorescent upon cleavage by lysosomal hydrolyases (Marwaha 347 and Sharma, 2017). In steady state there was little difference in lysosomal hydrolytic activity in 348 LRRK2 G2019S macrophages, relative to WT ( Figure 4C ). Upon iron overload we observe a ~50% 349 decrease in activity in control cells, as observed previously (Fernandez et al., 2016). This 350 decrease was exacerbated in LRRK2 G2019S macrophages showing an ~90% reduction in 351 hydrolytic capacity reported by the probe ( Figure 4C ). This was not due to a lack of 352 acidification, as demonstrated by lysotracker probes that showed increased signal upon iron 353 overload in both genotypes ( Figure 4D ). 354 Together with the observation that the lysosomes within LRRK2 G2019S cells do not 355 expand like they do in wild type cells upon iron overload, and that there is a block in NCOA4 356 microautophagy ( Figure 2 ), the data indicate that the lysosomes within LRRK2 G2019S iron loaded 357 cells are dysfunctional. Very recent work has suggested that lysosomes in LRRK2 G2019S cells can 358 accumulate ferrous iron, which could promote lipid oxidation (Mamais et al., 2025). We 359 therefore employed the C11-Bodipy probe where the wavelength shifts to green upon the 360 oxidation of this lipid probe and observed an increased peroxidation of the probe within both 361 internal membranes and at the plasma membrane ( Figure 4E, quantified in F ). Upon costaining 362 with lysotracker deep red we further report the oxidized lipids localizing to lysosomal 363 membranes ( Figure 4G ). Iron-induced peroxidation of lipids is known to be a driver of 364 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+9ferroptotic cell death. This can be detected upon uptake of SYTOX green, a dye added to the 365 media which enters cells upon rupture of the cell surface. Indeed, we observe ~50% of 366 LRRK2 G2019S cells positive for SYTOX green following 48 hours of FAS treatment, while wild 367 type cells remained viable ( Figure 4G ). 368 369 
+
+Discussion 370 
+
+The literature describing pathogenic LRRK2 mutations in PD overwhelmingly supports a 371 model where a host of different mutations across the protein all result in a gain-of-function 372 kinase activity that has focused clinical trials on LRRK2 kinase inhibitors. Previous studies have 373 identified iron mishandling in LRRK2 mutant cells, and MRI approaches identify iron 374 accumulation as a biomarker in patient carriers of the mutation (Fernandez et al., 2022; Jia et al., 375 2023; Khan et al., 2024; Mamais et al., 2025; Mamais et al., 2021; Martinez et al., 2023; Nazish 376 et al., 2023; Oun et al., 2022). This work supports previous studies and further highlights 377 dysregulated iron metabolism as a potential pathway of interest in LRRK2-related PD. 378 Our data indicate a primary dysfunction in lysosomal dynamics and function in iron 379 loaded LRRK2 G2019S cells where they do not undergo lysosomal enlargement and begin to lose 380 hydrolytic activity. These organelles cannot promote the degradation of NCOA4, which then 381 accumulates in the cytosol within detergent-insoluble foci. The accumulation of peroxidated 382 C11-Bodipy within lysosomes is consistent with a recent preprint reporting that LRRK2 G2019S 383 cells accumulate Fe2+ within lysosomes that can results in lipid oxidation (Mamais et al., 2025). 384 Our data do not resolve the earliest mechansisms to explain why the kinase-active LRRK2 385 prevents the dynamic changes within lysosomes that are triggered by iron overload. However, 386 our experiments revelealed that the increased LRRK2 G2019S -dependent phosphorylation of Rab8 387 seen in iron overload was reversed only with a type II inhibitor, and was resistant to the type I 388 inhibitor MLi-2 even though the inhibitor engaged LRRK2 G2019S , as indicated by the loss of the 389 pS1292 autophosphorylation mark. These results suggest that iron treatment alters the 390 conformational landscape of LRRK2 G2019S differently, which could reflect LRRK2 as an iron 391 binding protein, or that a new protein interaction occurs in high iron that alters the conformation 392 of the kinase domain. One study identified the NCOA4 ubiquitin ligase HERC2 as a LRRK2 393 binding protein (Imai et al., 2015), although no follow-up studies have confirmed this. One 394 possibility is that LRRK2 could interfere with HERC2s capacity to degrade NCOA4. 395 In addition to this unusual feature of LRRK2 in iron loaded cells, the appearance of p-396 Rab8 at the plasma membrane was unexpected given the localization of LRRK2 has been 397 documented primarily at Golgi and lysosomes, particularly upon lysosomal damage. It is 398 possible that this reflects LRRK2 recruitment to the plasma membrane damage following the 399 increase in oxidized lipids, perhaps in an effort to repair the membrane given that established 400 function of LRRK2 (Bentley-DeSousa et al., 2025). This would suggest that the cell surface 401 pRab8 reflects a downstream consequence of altered lysosomal response to iron overload. Future 402 experiments will focus on the potential function of LRRK2 at the cell surface and whether this 403 localization could explain the differential sensitivity to the type I and type II kinase inhibitors. 404 Lastly, our experiments are limited to a cultured macrophage RAW cell line. It is 405 important to note that the impact of LRRK2 G2019S mutations on steady state iron homeostasis 406 appears to be highly cell and context specific. It was our proteomics analysis that initially 407 identified the loss of FTH and increased FTL within LRRK2 G2019S RAW macrophages. However 408 scRNAseq experiments from LRRK2 G2019S mice showed that most cell types had no alteration in 409 iron related genes, with the noted exception of microglia, some astrocyte cell types and 410 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+10 oligodendrocytes, with neurons showing no change (Khan et al., 2024). Functional experiments 411 examining iron homeostasis in LRRK2 heterozygous mutant iPSC derived lines have also seen 412 changes in ferrous iron accumulation in lysosomes(Mamais et al., 2025), and in mice showing an 413 induction of iron dysregulation in microglia upon LPS treatment (Mamais et al., 2021). In this 414 context our work adds some critical new insight into the consequence of the kinase active 415 LRRK2 on the processes of ferritinophagy, and degradation of NCOA4, highlighting an 416 unexpected localization of p-Rab8 to the plasma membrane. Future work will resolve the 417 underlying mechanisms and context specific actions of LRRK2 in iron metabolism. For now we 418 expand the experimental foundation for further exploration of LRRK2s impact in conditions of 419 iron overload. Given the historical focus on iron toxicity within the substantia nigra pars 420 
+
+compacta and locus cerulean of PD patients, this may be an important physiological niche where 421 LRRK2 mutations may play pathological roles. With the ongoing clinical trials focused on 422 LRRK2 kinase inhibitors it will be important to monitor their efficacy with biomarkers linked to 423 iron metabolism, perhaps including quantitative susceptibility mapping MRI (Guan et al., 2024; 424 Martinez et al., 2023). 425 426 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+11 427 
+
+Materials and Methods 428 
+
+429 
+
+Cell culture and reagents 430 
+
+RAW264.7 cells WT (Cat# TIB-71, RRID:CVCL_0493), RAW264.7 LRRK2-G2019S (RRID: 431 CVCL_F1ZX), RAW264.7 mCherry-FTL (RRID:CVCL_F2A0), RAW264.7 mCherry-NCOA4 432 (RRID:CVCL_F2A2), RAW264.7 TMEM192-HA (RRID:CVCL_F2A4) and RAW264.7 433 LRRK2-KO (RRID: CVCL_F1ZZ) were cultured in DMEM containing high glucose, GLUTA-434 PLUS and sodium pyruvate (Wisent 319-027-CL) supplemented with 10% heat inactivated fetal 435 bovine serum (Wisent 098159) and antibiotics (Gibco 15-140-122). Cells were cultured at 37°C 436 and 5% CO2 in a humidified incubator and regularly tested for mycoplasma. 437 438 Bafilomycin A1 (B1793), Ammonium iron (II) sulfate hexahydrate (FAS) (09719), 439 Deferroxamine mesylate salt (DFO) (D9533) and LLOME (L7393) were purchased from 440 Millipore-Sigma, MLi-2 was purchased from Abcam (ab254528). Rebastinib was purchased 441 from MedChemExpress (HY-13024), while Rn277 and Rn341 were kindly provided by Samara 442 Reck-Peterson and Andres Leschziner (Weill Cornell Medicine, NY). 443 444 
+
+LRRK2 G2019S proteomics analysis 445 
+
+Samples were reconstituted in 50 mM ammonium bicarbonate with 10 mM TCEP [Tris(2-446 carboxyethyl) phosphine hydrochloride (T2556, Thermo Fisher Scientific), and vortexed for 1 h 447 at 37°C. Chloroacetamide (C0267, Sigma-Aldrich) was added for alkylation to a final 448 concentration of 55 mM. Samples were vortexed for another hour at 37°C. One microgram of 449 trypsin was added, and digestion was performed for 8 h at 37°C. Samples were dried down and 450 solubilized in 5% ACN-4% formic acid (FA). The samples were loaded on a 1.5 μl pre-column 451 (Optimize Technologies, Oregon City, OR). For each run, 1μg of peptides were separated on an 452 home-made reversed-phase column (150-μm i.d. by 200 mm) with a 116-min gradient from 10 to 453 30% ACN-0.2% FA and a 600-nl/min flow rate on a Easy nLC-1200 connected to a Exploris 480 454 (Thermo Fisher Scientific, RRID:SCR_022215) with the FAIMS interface. Each proteome was 455 analyzed with 4 separate LC-MS/MS runs acquired with a different set of compensation voltages 456 (CV) and a different m/z range: run1 was performed with the CV set-44V-54V-64V-74V from 457 m/z 350 to 453, run 2 was performed wdith the CV set -40V-48V-56V-64V-72V-80V from m/z 458 451 to 542, run 3 was performed with the CV set -40V-48V-56V-64V-72V-80V from m/z 540 to 459 661, run 4 was performed with the CV set -35V-46V-57V from m/z 659 to 890. Each full MS 460 spectrum acquired at a resolution of 120,000 was followed by tandem-MS (MS-MS) spectra 461 acquisition on the most abundant multiply charged precursor ions for 3s. Tandem-MS 462 experiments were performed using higher energy collision dissociation (HCD) at a collision 463 energy of 34% with an AGC of 50% a resolution of 15,000 and a injection time of 28ms. The 464 data were processed using PEAKS X Pro (Bioinformatics Solutions, 465 https://www.bioinfor.com/peaks-xpro/, RRID:SCR_022841) and a Uniprot mouse database 466 (16977 entries) with trypsin as digestion mode. Mass tolerances on precursor and fragment ions 467 were 10 ppm and 0.01 Da, respectively. Fixed modification was carbamidomethyl (C). Variable 468 selected posttranslational modifications were acetylation (N-ter), oxidation (M), deamidation 469 (NQ), phosphorylation (STY). 470 471 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+12 
+
+Cell lysates, SDS-PAGE and immunoblotting 472 
+
+Cells were collected by scraping, washed twice with cold PBS buffer and resuspended in X1 473 PBS containing protease inhibitors (Roche 04693132001) and phosphatase inhibitors (Roche 474 04906837001). Total protein content was quantified by Bradford assay (Bio-Rad 5000006) equal 475 quantities of samples were lysed in Laemmli buffer (10% (vol/vol) glycerol, 2% (wt/vol) SDS, 476 0.005% (wt/vol) bromophenol blue, 60 mMTris-HCl pH 6.8 and 10% (vol/vol) b-477 mercaptoethanol), and heated 5 minutes at 95 °C prior loading into an SDS-PAGE. Proteins were 478 size separated and transferred to nitrocellulose membranes (Bio-Rad 1620097), blocked for one 479 hour in blocking solution (PBS-tween 0.5% (vol/vol) (PBS-T) containing 5% (w/v) skim milk). 480 After blocking, the membranes were incubated overnight (ON) with primary antibody solution 481 (1:1000 dilution of the antibodies in PBS-T unless otherwise specified). After primary antibody 482 incubation, membranes were washed five times for 10 minutes in PBS-T and incubated for one 483 hour with HRP conjugated secondary antibodies, Sheep anti-mouse (Cytiva, NA931, 484 RRID:AB_772210) and donkey anti-rabbit (Cytiva, NA934, RRID:AB_772206) in blocking 485 solution (1:5000). Finally, membranes were washed and developed using INTAS ChemoCam 486 (INTAS Science Imaging GmbH) using Western-Lightning PLUS-ECL (Revvity 487 NEL105001EA). Antibodies used in Western blots are as follows: 488 
+
+Rabbit Antibodies: 489 
+
+FTL (Proteintech 10727-1-AP, RRID:AB_2278673), 490 FTH (Cell Signaling 4393,RRID:AB_11217441), 491 LRRK2 (Abcam, ab133474, RRID:AB_2713963 or Abcam 133518, RRID:AB_2938806), 492 GAPDH (Santa Cruz, sc-25778,RRID:AB_10167668), 493 IRP2 (Proteintech, 29976-1-AP, RRID:AB_3086201), 494 p-LRRK2 s1292 (Abcam, ab203181, RRID:AB_2921223), 495 NCOA4 (Bethyl, A302-271A, RRID:AB_1850158), 496 TOMM40 (Proteintech, 18409-1-AP, RRID:AB_2303725), 497 Ferroportin (Alomone labs, AIT-001, RRID:AB_2340981), 498 p-Rab8A (1:250) (Abcam, ab230260, RRID:AB_2814988), 499 Rab8A (1:250) (Cell Signaling, cs-6975, RRID:AB_10827742), 500 AKT (Cell Signaling, cs-9272, RRID:AB_329827), 501 pAKT S473 (Cell Signaling, cs-4060, RRID:AB_2315049), 502 HMOX1 (Proteintech 10701-1-AP, RRID:AB_2122782), 503 MAOA (Proteintech 10539-1-AP, RRID:AB_2137251) ,504 
+
+Igf2bp3 (Proteintech 10539-1-AP, RRID:AB_2137251), 505 
+
+Mouse Antibodies: 506 
+
+TfR (Invitrogen 136800, RRID:AB_2533029), 507 HERC2 (BD Bioscience, 612366, RRID:AB_399728), 508 FBXL5 (Santa Cruz, sc-390102), 509 DMT1 (SLC-11A2) (Santa Cruz, sc-166884, RRID:AB_10610255), 510 beta-actin (Santa Cruz, sc-8432, RRID:AB_626630), 511 PCNA ((Thermo Fisher Scientific Cat# 13-3900, RRID:AB_2533016), 512 vinculin (Sigma, V4505, RRID:AB_477617) 513 alpha-tubulin (Santa Cruz, sc-23948, RRID:AB_628410). 514 515 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+13 
+
+Iron quantification 516 
+
+Fe 2+ , Fe 3+ and total iron content was quantified using colorimetric Iron assay kit from Abcam 517 (ab83366) according to manufacturer instructions. Briefly, 2.5 x10 6 cells were seeded in 6 well 518 plate and treated with 100 μM FAS for 16 hrs. Each sample was lysed in 120 μl of assay buffer, 519 ad 50 μl were separated into two wells for quantification of Fe 2+ and Fe 3+ content. The rest of the 520 sample was kept for protein concentration estimation. Iron content was obtained by measuring 521 the Abs593 nm and the values were interpolated into the standard curve and then normalized to 522 protein concentration. 523 524 
+
+Aconitase activity assay 525 
+
+Aconitase activity was quantified using Abcam’s colorimetric Aconitase activity assay kit 526 (ab83459), according to manufacturer’s instructions. Briefly, 2.5 x10 6 cells were harvested, 527 washed with PBS and resuspended in Assay Buffer. Insoluble materials were cleared by 528 centrifuging samples at 800g, the resulting fraction was further centrifuged at 20.000 g for 15 529 minutes and the supernatant was utilized to quantify cytoplasmic aconitase activity. Aconitase 530 activity was measured colorimetrical by measuring absorbance 450 nm, and the enzymatic 531 activity calculated based on the standard curve and normalized to protein concentration. 532 533 
+
+Generation of CRIPSR KI/KO and stable cell lines 534 
+
+LRRK2 G2019S cell lines 535 
+
+The gRNA for generation of homozygous LRRK2 G2019S was designed using TrueDesign 536 Genome editor and synthesized by Thermo Fisher (sequence 537 U*U*G*CGAAGAUUGCGGACUAC + modified scaffold). The LRRK2 G2019S HDR 538 template used was 5'- G*T*A*AACTTGTTCTCCTACCTGGGGTGC 539 CCTCTGATGTCTTTATTCCCATCCTGCAGCAGTACTGTGCGATCGAGTAGTCCGC 540 AATCTTCGCAATGATGGCAGCATTGGGATACAGGGTAAAAAGCAGCACATTGT 541 GGGGCTTCAGGTCACGGTAAATAATCATGGCTGAGTGG*A*G*A-3'. Raw cells 542 were scraped, washed with PBS and electroporated with Cas9 protein and donor HDR 543 templates using Neon transfection system (MPK5000, Thermo Fisher) according to the 544 manufacturer's instructions. After electroporation, cells were plated and cultured for 4 days. 545 Afterwards, single cells were seeded in 96 wells and genomic DNA was isolated from single 546 clones. The gRNA target region was amplified by PCR using AmpliTaq Gold 360 master mix 547 (4398881, Thermo Fisher). PCR amplicons were sequenced using standard Sanger 548 sequencing (Supp Fig 1A). 549 
+
+550 
+
+Crispr KO of LRRK2 551 
+
+To disrupt the LRRK2 loci, gRNAs were designed using the webtool CHOP CHOP 552 (https://chopchop.cbu.uib.no), and exons 1 and 7 of mouse LRRK2 gene were targeted. sgRNA 553 exon1 GTGTTCACCTACTCGGACCGCGG and sgRNA exon 7 554 TGTCCGGTGCTACAATCTTGTGG were purchased from Synthego. Transfection was 555 performed according to manufacturer’s instructions. Briefly, ribonucleoparticles (RNPs) were 556 assembled by incubating gRNAs with Cas9 enzyme, followed by reverse transfection using 557 lipofectamine RNAi max transfection reagent (Invitrogen, 13778150) diluted in Optimem (Gibco 558 31985070). Approximately 75,000 cells were seeded in a 24 well together RNPs-transfection 559 solution. 24 hours post transfection, single cells were seeded in 96 wells and several colonies 560 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+14 were monitored for the expression of LRRK2, one clone (D) was isolated with a two base pair 561 deletion ed in exon1 detected by Sanger sequencing. 562 
+
+563 
+
+Stable cell lines 564 
+
+Stable cells lines expressing mCherry-FTL and mCherry-NCOA4 were generated using 565 retroviral transduction system and stably integrated into the genome. Using Gateway system 566 (11791019, Thermo Fisher), cDNAs of FTL (subcloned from Addgene #100153), NCOA4 567 (DNASU HsCD00043681) https://dnasu.org/DNASU/Home.do, were cloned into a pBABE-568 puro-mCherrry-GTW, which was engineered by cloning mCherry2 (Addgene # 54563) into 569 pBABEpuro-gateway (Addgene # 51070). For the generation of the retroviral particles, HEK293 570 phoenix cells (ATCC, CRL-3213, RRID:CVCL_H716) were transfected with the different 571 constructs using jetPrime transfection reagent (Polyplus 101000027). Media of the cells was 572 collected 48 hours post-transfection, 0.45 μm filtered and transduced into the macrophages. After 573 24 hours of viral transduction, media was changed and cells selected with 10 μg/ml puromycin 574 until the appearance of resistant colonies. Stable cell lines were used as polyclones. 575 576 Macrophage cells stably expressing TMEM192-HA (Addgene # 102930) were generated using 577 lentivirus. Lentiviral particles were generated in HEK293T cells using the Lenti-X packaging 578 (Takara 631275) according to manufacturer instructions. After 36 hours media was collected, 579 0.45 μm filtered and added to the RAW macrophages. 24 hours post-transduction cells were 580 selected in 10 μg /ml puromycin until the appearance of resistant colonies. TMEM192-HA 581 expression was confirmed by western blot, and polyclonal cell lines were used in this study. 582 583 
+
+Immunofluorescence and live imaging conditions 584 
+
+Cells were seeded in 13 mm sterile glass coverslips (Thermo Scientific 174950), fixed with 6% 585 PFA for 20 min at 37 °C, washed three times with PBS, and permeabilized with 0.1% Triton X-586 100 in PBS for 20 minutes. After permeabilization, cells were blocked for 30 min at room 587 temperature in PBS 5% BSA and probed overnight 4 °C with primary antibodies. After 588 incubation with secondary antibody, slides were washed three additional times with PBS, stained 589 with DAPI (Invitrogen, D1306), washed with double distilled water. Finally, coverslips were 590 mounted on slides using fluorescent mounting media (Dako, S302380-2) prior to imaging. 591 Antibodies used in immunofluorescence are as follows: 592 
+
+Rabbit Antibodies: 593 
+
+LAMP1 (Abcam ab208943, RRID:AB_2923327), 594 p-RAB8 (Abcam, ab230260, RRID:AB_2814988) 595 NRF2 (Cell Signaling 12721, RRID:AB_2715528) 596 
+
+Mouse antibodies: 597 
+
+HA (Sigma H9658, RRID:AB_260092) 598 
+
+Rat antibodies: 599 
+
+LAMP1 (DSHB ab528127, RRID: AB_528127). 600 601 For pRAB8 staining, after PFA fixation, cells were permeabilized with ice cold methanol for 20 602 minutes at -20 0C before blocking. After washing primary antibodies, cells were incubated with 603 the appropriate secondary antibodies (1:3000), donkey anti rabbit coupled to Alexa 488 604 (Invitrogen, A11006, RRID:AB_2534114), coupled to Alexa 647 (Invitrogen, 21244, 605 RRID:AB_2535812), donkey anti rat coupled to Alexa 488 (Invitrogen, A11070, 606 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+15 RRID:AB_2534074), coupled to Alexa 647 (Invitrogen, 21247, RRID:AB_141778) or donkey 607 and mouse coupled to Alexa 488 (Invitrogen, A11029, RRID:AB_2534088). 608 For live imaging approximately 100,000 cells were seeded in glass bottom imaging plates 609 (Cellvis D35C4-20-1.5-N) and stained using normal growing media supplemented with 20 mM 610 HEPES for pH stabilization. For FerroOrange staining cells were incubated for 1 hour in 1 μM 611 FerroOrange (Dojindo F374), in complete media prior to imaging. For labeling late endosomes 612 and lysosomes, cells were incubated in 100 nM LysoTracker Green (Thermo Fisher Scientific, 613 L7526), LysoTrackerRed (Thermo Fisher Scientific, L7528) or LysoTracker far red (Thermo 614 Fisher Scientific, L12492) for 30 minutes prior to imaging. To quantify proteolytic activity 615 control or treated cells were incubated for 1 hour with 10 μg/mL BSA DQ red (Thermo Fisher 616 Scientific, D12051) combined with 100 nM LysoTracker Green. For the assessment of lipid 617 peroxidation cells were incubated for 1 hour with 1μM Bodipy TM 581/591 C11 (Thermo Fisher 618 Scientific, D3861). For time lapse microscopy, a rate of 1 frame every 2 seconds was acquired. 619 After staining with different dyes and then imaged under controlled temperature and humidity 620 conditions. Cell death was assessed by staining the cells with 1 μM SYTOX Green (Thermo 621 Fisher Scientific, S34860). Immunofluorescence and live imaging experiment were acquired 622 using an Olympus IX83 inverted microscope (RRID:SCR_020344 ) with Yokogawa spinning 623 disk confocal microscope (RRID:SCR_020907 ) using an UPLANSAPO ×100/1.40 NA oil 624 objective an Andor iXon Ultra EMCCD camera (RRID:SCR_023166). All the samples were 625 measured under same acquisition and laser intensity conditions. 626 
+
+Quantification of FTL subcellular distribution 627 
+
+Distribution of cherry-FTL was classified into four categories: 1) cytosolic where most of FTL 628 signal was homogenously distributed across the cellular cytoplasm: 2) lysosomal , where the 629 brightest signal inside the cell colocalize with Lamp1 or lysotracker positive structures, 3) 630 
+
+cytosolic and lysosomal , where FTL signal is largely diffuse and dim structures positive for 631 Lamp1 or lysotracker could be detected, and 4) cytosolic with condensates , were FTL 632 distribution was largely diffuse and cytoplasmic but accumulation of bright Lamp1 or lysotracker 633 negative structures were detected. 634 635 
+
+Biochemical fractionation of Triton X-100 soluble and insoluble fractions 636 
+
+To fractionate triton soluble from insoluble fraction biochemically, cells were first resuspended 637 in PBS, protein concentration was estimated, equal amounts of different samples were 638 centrifuged at 600 g for 5 minutes, and cell pellets were resuspended in triton lysis buffer ( 50 639 mM HEPES pH7.4, 150 mM NaCl, 1%, triton X-100, 1 mM EDTA) supplemented with protease 640 and phosphatase inhibitors (referenced in cell lysate section). Cell lysates were vortexed 641 thoroughly and incubated for 10 minutes on ice followed by centrifugation at 20,000 x g, 4 °C 642 for 20 minutes. Supernatant was transferred to a fresh tube and diluted in Laemmli buffer to 643 generate 1X triton soluble fraction, while the remaining triton insoluble pellet was resuspended 644 in 1X Laemmli sample buffer to the same final volume of the soluble fraction. Samples were 645 then analyzed by SDS-PAGE. 646 647 
+
+Quantification of condensate number and size with image analysis 648 
+
+We used FIJI (http://fiji.sc, RRID:SCR_002285) to quantify the number and area of extra-649 lysosomal condensates. Images of fixed cells expressing either mCherry-NCOA4, mCherry-FTL 650 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+16 or mCherry-FTH and Lamp1 lysosomal marker were acquired using the same laser and exposure 651 conditions and analyzed with the following workflow. This is a cell-based analysis, so first step 652 single cells were selected with a ROI, while the rest of the field was excluded from the analysis. 653 Next, the Lamp1 channel was selected, background subtracted and binarized by automatic 654 thresholding using Otsu method, to obtain a lysosomal mask. Using this lysosomal mask, particle 655 analysis was performed and the ROIs obtained were overlayed with the channel of interest 656 (mCherry- NCOA4, mCherry-FTL or mCherry-FTH), and all the pixels inside this ROIs 657 (lysosomes) were deleted. Finally, the resulting image of the channel of interest was again 658 background subtracted and binarized by automatic thresholding to obtain a mask which was then 659 particle analyzed to quantify the number and size of extra-lysosomal structures. 660 661 
+
+Quantification of FerroOrange and Bodipy c11 integrated fluorescence intensity 662 
+
+FerroOrange or Bodip1 c11 fluorescence intensity were quantified using live cells using confocal 663 microscopy and quantified by image analysis using FIJI, several cells per field were selected and 664 their integrated fluorescence intensity was measured. The experiment was repeated 4 times 665 666 
+
+Quantification of lysosomal size and number with image analysis 667 
+
+We used FIJI to analyze and quantified the number and size of lysosomes in single planes. It is 668 important to note that RAW macrophages are not flat cells, thus this number only represents the 669 single plane information and not the total cellular volume. For the analysis of lysosomes in 670 LRRK2 G2019S macrophages we used cells expressing TMEM192-HA due to its high levels of 671 expression and clear distribution in the lysosomal membrane allowing better edge detection. 672 Briefly, images were acquired under the same laser power and time exposure conditions and 673 afterwards analyzed with the following workflow. First step, single cells were selected with a 674 ROI while the rest of the field was excluded from the analysis. Next, HA/LTG channel was 675 selected, background subtracted and binarized by automatic Otsu thresholding to obtain a 676 lysosomal mask. Using this lysosomal mask, particle analysis was performed, and the average 677 number and size of lysosomes was recorded per each studied cell. 678 679 
+
+Quantification of lysosomal proteolytic activity by flow cytometry 680 
+
+Cells were seeded and treated with 100 μM FAS for 48 hrs or left untreated for control. To 681 quantify lysosomal proteolytic activity cells were stained with 10 μg/ml of DQ-BSA red and 100 682 nM LysoTracker Green for 1 hour, under the same conditions described in live imaging section. 683 After staining, cells were collected and transferred to a fresh tube in a suspension of 1x10 6 cells/ 684 ml. For acquisition, single cell suspensions were acquired on an Attune NxT 685 (RRID:SCR_019590, Thermo Fisher). CS&T performance tracking was done prior to cell 686 acquisition by manufacturer's recommendation. PMT voltages were determined by Daily CS&T 687 performance tracking. Compensation controls were also acquired. 50 000 events were acquired 688 per sample. Finally, median DQ-BSA red fluorescence and median LysoTracker Green 689 fluorescence from three different repetitions is shown. 690 691 
+
+Quantification of pRAB8 and NRF2 subcellular distribution 692 
+
+Quantification of pRAB8 and NRF2 distribution was performed qualitatively. Briefly, control or 693 FAS treated cells were stained with endogenous antibodies, and signals from the channel 694 corresponding to the studied protein were equally thresholded among all the cell lines and 695 treatments. The number of cells displaying bright detectable pRAB8 signal at the plasma 696 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+17 membrane or NRF2 signal at the nucleus were counted as positive and the total number of cells 697 assessed by DAPI nuclear staining was used to estimate the percentage of positive stained cells. 698 Experiments were repeated at least three times with a minimum of 30 cells per condition. 699 700 
+
+Growth curves 701 
+
+To assess growth, on day 0, 150.000 cells were seeded in 12 well plates, and on day 1 cells were 702 either left untreated for control or incubated with 100 μM FAS, quadruplicates measurements 703 were performed in each condition, and cell number was followed for the period of 72 hours. 704 705 
+
+Statistical analysis 706 
+
+All experiments were performed independently at least three times and quantifications and/or 707 representative images are provided. For each condition a minimum of 30 cells were analyzed in 708 all biological replicates. One-way ANOVA statistical analysis was performed using the 709 GraphPad Prism software (http://www.graphpad.com/, version 8.4.3, RRID:SCR_002798). 710 Experiments with more than two samples included the multiple comparison analysis. The 711 arithmetic mean with standard deviation of at least three independent experiments are depicted. 712 In addition, the values of all individual cells and the mean of each experiment are shown for the 713 quantifications of size and number of condensates as well as lysosomes. No statistical method 714 was used to predetermine the sample size. The experiments were not randomized; the 715 investigators were not blinded to allocation during experiments and outcome assessment .716 
+
+717 
+
+Acknowledgements 718 
+
+We thank Rodolfo Zunino and all members of lab for their help throughout the study. We thank 719 the Desjardins ASAP team and Austen Milnerwood (McGill) for critical comments on the 720 manuscript. We are grateful to Dr. Shawn M Ferguson (Yale) for sharing insightful datasets and 721 discussions during the course of the study. Drs. Samara Reck-Peterson and Andres Leschiziner 722 (Weill-Cornell) provided significant insight and discussion on the use of their new Type II kinase 723 inhibitors for which we are profoundly grateful. 724 725 
+
+Funding 726 
+
+Aligning Science Across Parkinson’s (MD, HMM) 727 The study is funded by the joint efforts of Aligning Science Across Parkinson’s (ASAP-025171) 728 initiative (to MD, HMM) and the Canadian Institutes of Health Research Project Grant 165999 729 (HMM). MJFF administers the grant on behalf of ASAP and itself. For the purpose of open 730 access, the author has applied a CC BY public copyright license to all Author Accepted 731 Manuscripts arising from this submission. 732 733 
+
+Author contributions 734 
+
+Conceptualization: AG, MD, HMM 735 Methodology: AG, MN, RZ, JL, AF, YZX, ES, PT, CT, AM 736 Investigation: AG, MN, JL 737 Visualization: AG, HMM 738 Funding acquisition: HMM 739 Project administration: HMM 740 Supervision: HMM 741 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+18 Writing – original draft: AG, HMM 742 Writing – review & editing: AG, MN, MD, HMM 743 744 Competing interests: Authors declare that they have no competing interests 745 746 
+
+Data and materials availability: 747 
+
+The data, protocols (uploaded to protocols.io), and key lab materials used and generated in this 748 study are listed in a Key Resource Table alongside their persistent identifiers at 749 https://doi.org/10.5281/zenodo.19374070. Proteomics Data are available via ProteomeXchange 750 with identifier PXD071594. No code was generated in this study. 751 An earlier version of this manuscript was posted to BioRxiv at 752 
+
+doi: https://doi.org/10.1101/2025.08.25.672135. 753 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+19 
+
+References 754 
+
+755 
+
+Alessi, D.R., and S.R. Pfeffer. 2024. Leucine-Rich Repeat Kinases. Annu Rev Biochem . 93:261-756 287. 757 Aravindan, A., M.E. Newell, and R.U. Halden. 2024. Literature review and meta-analysis of 758 environmental toxins associated with increased risk of Parkinson's disease. Sci Total 759 
+
+Environ . 931:172838. 760 Beinert, H., and M.C. Kennedy. 1993. Aconitase, a two-faced protein: enzyme and iron 761 regulatory factor. FASEB J . 7:1442-1449. 762 Bentley-DeSousa, A., D. Clegg, and S.M. Ferguson. 2025. LRRK2, lysosome damage, and 763 Parkinson's disease. Curr Opin Cell Biol . 93:102482. 764 Buck, S.A., and L.H. Sanders. 2025. LRRK2-mediated mitochondrial dysfunction in Parkinson's 765 disease. Biochem J . 482:721-739. 766 Cannon, T., and S. Gruenheid. 2022. Microbes and Parkinson's disease: from associations to 767 mechanisms. Trends in microbiology . 30:749-760. 768 Chasteen, N.D., and P.M. Harrison. 1999. Mineralization in ferritin: an efficient means of iron 769 storage. J Struct Biol . 126:182-194. 770 Devos, D., O. Rascol, W.G. Meissner, A. Foubert-Samier, S. Lewis, C. Tranchant, M. Anheim, 771 D. Maltete, P. Remy, K. Eggert, H. Pape, C. Geny, P. Couratier, C. Carroll, R. Sheridan, 772 D. Burn, N. Pavese, J. Raw, D. Berg, O. Suchowersky, L.V. Kalia, A. Evans, S. Drapier, 773 T. Danaila, A. Schnitzler, J.C. Corvol, G. Defer, N.T. Temin, C. Fradette, F. Tricta, C. 774 Moreau, and g. a Parkinson's disease study. 2025. Therapeutic modalities of deferiprone 775 in Parkinson's disease: SKY and EMBARK studies. J Parkinsons Dis . 15:72-86. 776 Di Maio, R., E.K. Hoffman, E.M. Rocha, M.T. Keeney, L.H. Sanders, B.R. De Miranda, A. 777 Zharikov, A. Van Laar, A.F. Stepan, T.A. Lanz, J.K. Kofler, E.A. Burton, D.R. Alessi, 778 T.G. Hastings, and J.T. Greenamyre. 2018. LRRK2 activation in idiopathic Parkinson's 779 disease. Sci Transl Med . 10. 780 Dowdle, W.E., B. Nyfeler, J. Nagel, R.A. Elling, S. Liu, E. Triantafellow, S. Menon, Z. Wang, 781 A. Honda, G. Pardee, J. Cantwell, C. Luu, I. Cornella-Taracido, E. Harrington, P. Fekkes, 782 H. Lei, Q. Fang, M.E. Digan, D. Burdick, A.F. Powers, S.B. Helliwell, S. D'Aquin, J. 783 Bastien, H. Wang, D. Wiederschain, J. Kuerth, P. Bergman, D. Schwalb, J. Thomas, S. 784 Ugwonali, F. Harbinski, J. Tallarico, C.J. Wilson, V.E. Myer, J.A. Porter, D.E. Bussiere, 785 P.M. Finan, M.A. Labow, X. Mao, L.G. Hamann, B.D. Manning, R.A. Valdez, T. 786 Nicholson, M. Schirle, M.S. Knapp, E.P. Keaney, and L.O. Murphy. 2014. Selective 787 VPS34 inhibitor blocks autophagy and uncovers a role for NCOA4 in ferritin degradation 788 and iron homeostasis in vivo. Nat Cell Biol . 16:1069-1079. 789 Fell, M.J., C. Mirescu, K. Basu, B. Cheewatrakoolpong, D.E. DeMong, J.M. Ellis, L.A. Hyde, Y. 790 Lin, C.G. Markgraf, H. Mei, M. Miller, F.M. Poulet, J.D. Scott, M.D. Smith, Z. Yin, X. 791 Zhou, E.M. Parker, M.E. Kennedy, and J.A. Morrow. 2015. MLi-2, a Potent, Selective, 792 and Centrally Active Compound for Exploring the Therapeutic Potential and Safety of 793 LRRK2 Kinase Inhibition. J Pharmacol Exp Ther . 355:397-409. 794 Fernandez, B., E. Fdez, P. Gomez-Suaga, F. Gil, I. Molina-Villalba, I. Ferrer, S. Patel, G.C. 795 Churchill, and S. Hilfiker. 2016. Iron overload causes endolysosomal deficits modulated 796 by NAADP-regulated 2-pore channels and RAB7A. Autophagy . 12:1487-1506. 797 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+20 Fernandez, B., P. Olmedo, F. Gil, E. Fdez, Y. Naaldijk, P. Rivero-Rios, F. Bracher, C. Grimm, 798 G.C. Churchill, and S. Hilfiker. 2022. Iron-induced cytotoxicity mediated by 799 endolysosomal TRPML1 channels is reverted by TFEB. Cell death & disease . 13:1047. 800 Galy, B., M. Conrad, and M. Muckenthaler. 2024. Mechanisms controlling cellular and systemic 801 iron homeostasis. Nat Rev Mol Cell Biol . 25:133-155. 802 Gardet, A., Y. Benita, C. Li, B.E. Sands, I. Ballester, C. Stevens, J.R. Korzenik, J.D. Rioux, M.J. 803 Daly, R.J. Xavier, and D.K. Podolsky. 2010. LRRK2 is involved in the IFN-gamma 804 response and host response to pathogens. J Immunol . 185:5577-5585. 805 Guan, X., M. Lancione, S. Ayton, P. Dusek, C. Langkammer, and M. Zhang. 2024. 806 Neuroimaging of Parkinson's disease by quantitative susceptibility mapping. 807 
+
+Neuroimage . 289:120547. 808 Herbst, S., P. Campbell, J. Harvey, E.M. Bernard, V. Papayannopoulos, N.W. Wood, H.R. 809 Morris, and M.G. Gutierrez. 2020. LRRK2 activation controls the repair of damaged 810 endomembranes in macrophages. EMBO J . 39:e104494. 811 Imai, Y., Y. Kobayashi, T. Inoshita, H. Meng, T. Arano, K. Uemura, T. Asano, K. Yoshimi, C.L. 812 Zhang, G. Matsumoto, T. Ohtsuka, R. Kageyama, H. Kiyonari, G. Shioi, N. Nukina, N. 813 Hattori, and R. Takahashi. 2015. The Parkinson's Disease-Associated Protein Kinase 814 LRRK2 Modulates Notch Signaling through the Endosomal Pathway. PLoS Genet .815 11:e1005503. 816 Jaimon, E., Y.E. Lin, F. Tonelli, O. Antico, D.R. Alessi, and S.R. Pfeffer. 2025. Restoration of 817 striatal neuroprotective pathways by kinase inhibitor treatment of Parkinson's disease-818 linked LRRK2-mutant mice. Sci Signal . 18:eads5761. 819 Jenner, P. 1989. Clues to the mechanism underlying dopamine cell death in Parkinson's disease. 820 
+
+J Neurol Neurosurg Psychiatry . Suppl:22-28. 821 Jia, R., Y. Liu, K. Shuai, C. Zhou, L. Chen, L. Zhu, and X.M. Wu. 2023. The Relationship 822 between Iron and LRRK2 in a 6-OHDA-Induced Parkinson's Disease Model. Int J Mol 823 
+
+Sci . 24. 824 Johnson, M.E., B. Stecher, V. Labrie, L. Brundin, and P. Brundin. 2019. Triggers, Facilitators, 825 and Aggravators: Redefining Parkinson's Disease Pathogenesis. Trends Neurosci . 42:4-826 13. 827 Kadgien, C.A., A. Kamesh, and A.J. Milnerwood. 2021. Endosomal traffic and glutamate 828 synapse activity are increased in VPS35 D620N mutant knock-in mouse neurons, and 829 resistant to LRRK2 kinase inhibition. Mol Brain . 14:143. 830 Khan, S.S., E. Jaimon, Y.E. Lin, J. Nikoloff, F. Tonelli, D.R. Alessi, and S.R. Pfeffer. 2024. Loss 831 of primary cilia and dopaminergic neuroprotection in pathogenic LRRK2-driven and 832 idiopathic Parkinson's disease. Proc Natl Acad Sci U S A . 121:e2402206121. 833 Kuno, S., H. Fujita, Y.K. Tanaka, Y. Ogra, and K. Iwai. 2022. Iron-induced NCOA4 834 condensation regulates ferritin fate and iron homeostasis. EMBO Rep . 23:e54278. 835 Leschziner, A.E., and S.L. Reck-Peterson. 2021. Structural Biology of LRRK2 and its 836 Interaction with Microtubules. Movement disorders : official journal of the Movement 837 
+
+Disorder Society . 36:2494-2504. 838 Li, X., H. Zhu, B.T. Huang, X. Li, H. Kim, H. Tan, Y. Zhang, I. Choi, J. Peng, P. Xu, J. Sun, and 839 Z. Yue. 2024. RAB12-LRRK2 complex suppresses primary ciliogenesis and regulates 840 centrosome homeostasis in astrocytes. Nat Commun . 15:8434. 841 Liang, Y.L., C.R. Zhong, J.Y. Wu, Z.J. Lin, Z. Lin, T.J. Yi, Z.P. Chen, H.L. Jin, J.D. Yu, Z.Y. 842 Lin, Y.L. Wan, and G.L. Li. 2026. USP10 promotes cell proliferation and gemcitabine 843 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+21 resistance in pancreatic cancer by the regulation of IGF2BP3-STEAP3. Oncogene .844 45:383-397. 845 Lim, S.Y., A.H. Tan, A. Ahmad-Annuar, N.U. Okubadejo, K. Lohmann, H.R. Morris, T.S. Toh, 846 Y.W. Tay, L.M. Lange, S. Bandres-Ciga, I. Mata, J.N. Foo, E. Sammler, J.C.E. Ooi, A.J. 847 Noyce, N. Bahr, W. Luo, R. Ojha, A.B. Singleton, C. Blauwendraat, and C. Klein. 2024. 848 Uncovering the genetic basis of Parkinson's disease globally: from discoveries to the 849 clinic. Lancet Neurol . 23:1267-1280. 850 Lin, Y.E., E. Jaimon, F. Tonelli, and S.R. Pfeffer. 2025. Pathogenic LRRK2 mutations cause loss 851 of primary cilia and Neurturin in striatal parvalbumin interneurons. Life Sci Alliance . 8. 852 Lis, P., S. Burel, M. Steger, M. Mann, F. Brown, F. Diez, F. Tonelli, J.L. Holton, P.W. Ho, S.L. 853 Ho, M.Y. Chou, N.K. Polinski, T.N. Martinez, P. Davies, and D.R. Alessi. 2018. 854 Development of phospho-specific Rab protein antibodies to monitor in vivo activity of 855 the LRRK2 Parkinson's disease kinase. Biochem J . 475:1-22. 856 Luo, L., A.A. Wall, S.J. Tong, Y. Hung, Z. Xiao, A.A. Tarique, P.D. Sly, E. Fantino, M.P. 857 Marzolo, and J.L. Stow. 2018. TLR Crosstalk Activates LRP1 to Recruit Rab8a and 858 PI3Kgamma for Suppression of Inflammatory Responses. Cell reports . 24:3033-3044. 859 Lv, L., M. Hu, J. Li, R. Guo, M. He, P. Zhou, Y. Lei, M. Chen, Z. Liu, and S. Zhou. 2025. 860 Methyltransferase-like 3 mediates m6A modification of heme oxygenase 1 mRNA to 861 induce ferroptosis of renal tubular epithelial cells in acute kidney injury. Free Radic Biol 862 
+
+Med . 229:168-182. 863 Ma, Y., H. Chen, H. Li, Z. Zhao, Q. An, and C. Shi. 2024. Targeting monoamine oxidase A: a 864 strategy for inhibiting tumor growth with both immune checkpoint inhibitors and immune 865 modulators. Cancer Immunol Immunother . 73:48. 866 Madero-Perez, J., E. Fdez, B. Fernandez, A.J. Lara Ordonez, M. Blanca Ramirez, P. Gomez-867 Suaga, D. Waschbusch, E. Lobbestael, V. Baekelandt, A.C. Nairn, J. Ruiz-Martinez, A. 868 Aiastui, A. Lopez de Munain, P. Lis, T. Comptdaer, J.M. Taymans, M.C. Chartier-Harlin, 869 A. Beilina, A. Gonnelli, M.R. Cookson, E. Greggio, and S. Hilfiker. 2018. Parkinson 870 disease-associated mutations in LRRK2 cause centrosomal defects via Rab8a 871 phosphorylation. Mol Neurodegener . 13:3. 872 Mamais, A., R.D. Batchelor, A. Chairmandurai, N. Subrahmanian, N. Maio, C.D. Vulpe, and 873 M.J. LaVoie. 2025. Parkinson’s disease LRRK2 mutations dysregulate iron homeostasis 874 and promote oxidative stress and ferroptosis in human neurons and astrocytes. 875 
+
+bioRxiv :2025.2009.2026.678370. 876 Mamais, A., J.H. Kluss, L. Bonet-Ponce, N. Landeck, R.G. Langston, N. Smith, A. Beilina, A. 877 Kaganovich, M.C. Ghosh, L. Pellegrini, R. Kumaran, I. Papazoglou, G.R. Heaton, R. 878 Bandopadhyay, N. Maio, C. Kim, M.J. LaVoie, D.C. Gershlick, and M.R. Cookson. 879 2021. Mutations in LRRK2 linked to Parkinson disease sequester Rab8a to damaged 880 lysosomes and regulate transferrin-mediated iron uptake in microglia. PLoS Biol .881 19:e3001480. 882 Mancias, J.D., L. Pontano Vaites, S. Nissim, D.E. Biancur, A.J. Kim, X. Wang, Y. Liu, W. 883 Goessling, A.C. Kimmelman, and J.W. Harper. 2015. Ferritinophagy via NCOA4 is 884 required for erythropoiesis and is regulated by iron dependent HERC2-mediated 885 proteolysis. Elife . 4. 886 Mancias, J.D., X. Wang, S.P. Gygi, J.W. Harper, and A.C. Kimmelman. 2014. Quantitative 887 proteomics identifies NCOA4 as the cargo receptor mediating ferritinophagy. Nature .888 509:105-109. 889 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+22 Martinez, M., M. Ariz, I. Alvarez, G. Castellanos, M. Aguilar, J. Hernandez-Vara, N. Caballol, 890 A. Garrido, A. Bayes, D. Vilas, M.J. Marti, C. Catalonian Neuroimaging Parkinson's 891 disease, P. Pastor, C.O. de Solorzano, and M.A. Pastor. 2023. Brainstem neuromelanin 892 and iron MRI reveals a precise signature for idiopathic and LRRK2 Parkinson's disease. 893 
+
+NPJ Parkinsons Dis . 9:62. 894 Marwaha, R., and M. Sharma. 2017. DQ-Red BSA Trafficking Assay in Cultured Cells to Assess 895 Cargo Delivery to Lysosomes. Bio Protoc . 7. 896 Masaldan, S., A.I. Bush, D. Devos, A.S. Rolland, and C. Moreau. 2019. Striking while the iron is 897 hot: Iron metabolism and ferroptosis in neurodegeneration. Free Radic Biol Med .898 133:221-233. 899 Mata, I., P. Salles, M. Cornejo-Olivas, P. Saffie, O.A. Ross, X. Reed, and S. Bandres-Ciga. 2023. 900 LRRK2: Genetic mechanisms vs genetic subtypes. Handb Clin Neurol . 193:133-154. 901 Melman, A., and F. Bou-Abdallah. 2020. Iron mineralization and core dissociation in 902 mammalian homopolymeric H-ferritin: Current understanding and future perspectives. 903 
+
+Biochim Biophys Acta Gen Subj . 1864:129700. 904 Mir, R., F. Tonelli, P. Lis, T. Macartney, N.K. Polinski, T.N. Martinez, M.Y. Chou, A.J.M. 905 Howden, T. Konig, C. Hotzy, I. Milenkovic, T. Brucke, A. Zimprich, E. Sammler, and 906 D.R. Alessi. 2018. The Parkinson's disease VPS35[D620N] mutation enhances LRRK2-907 mediated Rab protein phosphorylation in mouse and human. Biochem J . 475:1861-1883. 908 Naoi, M., W. Maruyama, M. Shamoto-Nagai, and P. Riederer. 2025. Type A monoamine 909 oxidase; its unique role in mood, behavior and neurodegeneration. J Neural Transm 910 
+
+(Vienna) . 132:387-406. 911 Nazish, I., A. Mamais, A. Mallach, C. Bettencourt, A. Kaganovich, T. Warner, J. Hardy, P.A. 912 Lewis, J. Pocock, M.R. Cookson, and R. Bandopadhyay. 2023. Differential LRRK2 913 Signalling and Gene Expression in WT-LRRK2 and G2019S-LRRK2 Mouse Microglia 914 Treated with Zymosan and MLi2. Cells . 13. 915 Niwa, M., T. Hirayama, K. Okuda, and H. Nagasawa. 2014. A new class of high-contrast Fe(II) 916 selective fluorescent probes based on spirocyclized scaffolds for visualization of 917 intracellular labile iron delivered by transferrin. Org Biomol Chem . 12:6590-6597. 918 Ohshima, T., H. Yamamoto, Y. Sakamaki, C. Saito, and N. Mizushima. 2022. NCOA4 drives 919 ferritin phase separation to facilitate macroferritinophagy and microferritinophagy. J Cell 920 
+
+Biol . 221. 921 Oun, A., A. Soliman, M. Trombetta-Lima, A. Tzepapadaki, D. Tsagkari, A. Kortholt, and A.M. 922 Dolga. 2022. LRRK2 protects immune cells against erastin-induced ferroptosis. 923 
+
+Neurobiol Dis . 175:105917. 924 Peter, I., and W. Strober. 2023. Immunological Features of LRRK2 Function and Its Role in the 925 Gut-Brain Axis Governing Parkinson's Disease. J Parkinsons Dis . 13:279-296. 926 Raig, N.D., K.J. Surridge, M. Sanz-Murillo, V. Dederer, A. Kramer, M.P. Schwalm, N.M. Lattal, 927 L. Elson, D. Chatterjee, S. Mathea, T. Hanke, A.E. Leschziner, S.L. Reck-Peterson, and 928 S. Knapp. 2025. Type II kinase inhibitors that target Parkinson's disease-associated 929 LRRK2. Sci Adv . 11:eadt2050. 930 Riederer, P., T. Nagatsu, M.B.H. Youdim, M. Wulf, J.M. Dijkstra, and J. Sian-Huelsmann. 2023. 931 Lewy bodies, iron, inflammation and neuromelanin: pathological aspects underlying 932 Parkinson's disease. J Neural Transm (Vienna) . 130:627-646. 933 Rouault, T.A. 2006. The role of iron regulatory proteins in mammalian iron homeostasis and 934 disease. Nature chemical biology . 2:406-414. 935 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+23 Sanz Murillo, M., A. Villagran Suarez, V. Dederer, D. Chatterjee, J. Alegrio Louro, S. Knapp, S. 936 Mathea, and A.E. Leschziner. 2023. Inhibition of Parkinson's disease-related LRRK2 by 937 type I and type II kinase inhibitors: Activity and structures. Sci Adv . 9:eadk6191. 938 Singh, P.K., and M.M.K. Muqit. 2020. Parkinson's: A Disease of Aberrant Vesicle Trafficking. 939 
+
+Annu Rev Cell Dev Biol . 36:237-264. 940 Steger, M., F. Tonelli, G. Ito, P. Davies, M. Trost, M. Vetter, S. Wachter, E. Lorentzen, G. 941 Duddy, S. Wilson, M.A. Baptista, B.K. Fiske, M.J. Fell, J.A. Morrow, A.D. Reith, D.R. 942 Alessi, and M. Mann. 2016. Phosphoproteomics reveals that Parkinson's disease kinase 943 LRRK2 regulates a subset of Rab GTPases. Elife . 5. 944 Sulzer, D., J. Bogulavsky, K.E. Larsen, G. Behr, E. Karatekin, M.H. Kleinman, N. Turro, D. 945 Krantz, R.H. Edwards, L.A. Greene, and L. Zecca. 2000. Neuromelanin biosynthesis is 946 driven by excess cytosolic catecholamines not accumulated by synaptic vesicles. Proc 947 
+
+Natl Acad Sci U S A . 97:11869-11874. 948 Tansey, M.G., R.L. Wallings, M.C. Houser, M.K. Herrick, C.E. Keating, and V. Joers. 2022. 949 Inflammation and immune dysfunction in Parkinson disease. Nature reviews. 950 
+
+Immunology . 22:657-673. 951 Tasegian, A., F. Singh, I.G. Ganley, A.D. Reith, and D.R. Alessi. 2021. Impact of Type II 952 LRRK2 inhibitors on signaling and mitophagy. Biochem J . 478:3555-3573. 953 Tong, S.J., A.A. Wall, Y. Hung, L. Luo, and J.L. Stow. 2021. Guanine nucleotide exchange 954 factors activate Rab8a for Toll-like receptor signalling. Small GTPases . 12:27-43. 955 Wall, A.A., L. Luo, Y. Hung, S.J. Tong, N.D. Condon, A. Blumenthal, M.J. Sweet, and J.L. 956 Stow. 2017. Small GTPase Rab8a-recruited Phosphatidylinositol 3-Kinase gamma 957 Regulates Signaling and Cytokine Outputs from Endosomal Toll-like Receptors. J Biol 958 
+
+Chem . 292:4411-4422. 959 Wang, Y.C., X. Wang, J. Yu, F. Ma, Z. Li, Y. Zhou, S. Zeng, X. Ma, Y.R. Li, A. Neal, J. Huang, 960 A. To, N. Clarke, S. Memarzadeh, M. Pellegrini, and L. Yang. 2021. Targeting 961 monoamine oxidase A-regulated tumor-associated macrophage polarization for cancer 962 immunotherapy. Nat Commun . 12:3530. 963 Winn, N.C., K.M. Volk, and A.H. Hasty. 2020. Regulation of tissue iron homeostasis: the 964 macrophage "ferrostat". JCI Insight . 5. 965 Xu, X., J. Cui, H. Wang, L. Ma, X. Zhang, W. Guo, X. Xue, Y. Wang, S. Qiu, X. Tian, Y. Miao, 966 M. Wu, Y. Yu, Y. Xu, J. Wang, and Y. Qiao. 2022. IGF2BP3 is an essential N(6)-967 methyladenosine biotarget for suppressing ferroptosis in lung adenocarcinoma cells. 968 
+
+Mater Today Bio . 17:100503. 969 Yang, Y., H. Ye, S. Qin, M. Lin, Y. Liu, and X. Li. 2026. M6A reader IGF2BP3 stabili1zes 970 SLC7A11 to antagonize ferroptosis and promote gastric tumorigenesis. Cell Signal .971 139:112295. 972 Zhao, H., Y. Lu, J. Zhang, Z. Sun, C. Cheng, Y. Liu, L. Wu, M. Zhang, W. He, S. Hao, and K. 973 Li. 2024. NCOA4 requires a [3Fe-4S] to sense and maintain the iron homeostasis. J Biol 974 
+
+Chem . 300:105612. 975 Zhu, H., P. Hixson, W. Ma, and J. Sun. 2024. Pharmacology of LRRK2 with type I and II kinase 976 inhibitors revealed by cryo-EM. Cell Discov . 10:10. 977 978 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+24 
+
+Figure Legends 979 
+
+980 
+
+Figure 1: LRRK2 G2019S RAW macrophages show changes in iron homeostasis 981 
+
+A- Western blot analysis on whole cell lysates of pRAB8 T72 and pLRRK2 S1292 in WT and 982 LRRK2 G2019S macrophages control or treated with 1μM MLi-2 for 16 hours. Vinculin serves as 983 loading control. B- Densitometry analysis of pRab:Rab8 and pLRRK2:LRRK2 ratios from WT 984 or LRRK2 G2019S macrophages control or treated with 1μM MLi-2 . Band intensities of three 985 separate experiment and standard deviation (SD) are shown. C-Volcano plot showing 986 differentially expressed proteins in LRRK2 G2019S compared to WT macrophages. On the x axis 987 fold change (FC) and in the y axis -log base 10 of the adjusted statistical significance (p.adj) are 988 plotted. Dashed lines represent the cut-offs for analysis, proteins with a fold change larger than -989 /+ 1-fold and p.adj greater than 1.3 (p<0.05) were considered as differentially expressed. Red 990 dots depict some of the differentially expressed proteins important for iron metabolism. D – Heat 991 map and table depicting the fold change and the role of the main iron related proteins 992 differentially expressed in LRRK2 G2019S macrophages. FC= fold change. Data found in 993 Supplementary Table 1. E- Western blot analysis on whole cell lysates of iron markers in WT 994 and LRRK2 G2019S macrophages. GAPDH serves as loading control. F- Levels of ferric (Fe 3+ ) and 995 ferrous (Fe 2+ ) iron in WT and LRRK2 G2019S macrophages. Iron is quantified as μmoles of iron 996 per mg of protein. Prior to iron quantification, cells were fed overnight with 100 μM ferrous 997 ammonium sulfate (FAS). The means of three separate experiment are shown. G- Representative 998 images of cherry-FTL distribution in WT and LRRK2 G2019S macrophages control or treated with 999 DFO 250 μM for 24 hours. Lysosomes were stained with 100nM lysotracker green. Scale bar 4 1000 μm, inset 1μm. H- Qualitative classification of cherry-FTL distribution shown in G. The means 1001 of three separate experiment are shown. I- Western blot analysis of NCOA4, FTL and FTH and 1002 TfR levels on whole cell lysates of WT and LRRK2 G2019S macrophages, control or treated for 24 1003 hours with 250 μM DFO. PCNA serves as loading control. Black arrow indicates proteolytic 1004 cleavage product of FTL. 1005 
+
+1006 
+
+Supplementary Figure 1: LRRK2 G2019S RAW macrophages show changes in iron homeostasis 1007 
+
+A- Confirmation by Sanger sequencing of LRRK2 G2019S knock in generation in Raw 1008 macrophages. B- Densitometry analysis of FTH, FTL and TfR levels in WT and LRRK2 G2019S 1009 macrophages. Band intensities of three separate experiment and standard deviation (SD) are 1010 shown. C- Representative images of WT and LRRK2 G2019S macrophages stained with 1011 Fe 2+ sensor FerroOrange. Fluorescence intensity of the images was color coded using FIJIs 1012 thermal LUT. Scale bar 5 μm. D- Quantification of FerroOrange fluorescence intensity of data 1013 shown in B. The means and single values of three separate experiment and standard deviation 1014 (SD) are shown. T-test statistical analysis is shown. E- Western blot analysis on whole cell 1015 lysates of IRP2 FBXL5 HERC2, ferroportin (FPT) and DMT1 in WT and LRRK2 G2019S 1016 macrophages. GAPDH serves as loading control. F- Quantification of Aconitase activity in WT 1017 and LRRK2 G2019S RAW macrophages, expressed as activity units per mg of protein. The means 1018 of three separate experiment and standard deviation (SD) are shown. T-test statistical analysis is 1019 shown. G - Densitometry analysis of FTL, TfR and NCOA4 levels in WT and LRRK2 G2019S 1020 macrophages control or treated for 24 hours with 250 μM DFO. Band intensities of three 1021 separate experiment and standard deviation (SD) are shown. . 1022 1023 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+25 
+
+Figure 2: LRRK2 G2019S show defects in NCOA4 turnover upon iron overload 1024 
+
+A- Representative images of cherry-NCOA4 distribution in WT and LRRK2 G2019S macrophages 1025 control or treated for 16 hours with FAS 100 μM. Lysosomes were stained with anti LAMP1 1026 antibody. Scale bar 4 μm, inset 1μm. B- Quantification of the average size of cytoplasmic 1027 cherry-NCOA4 condensates calculated as μm 2 per cell of data shown in A. The means and single 1028 values of three separate experiment and standard deviation (SD) are shown. Multiple 1029 comparison one-way ANOVA statistical analysis. C-Quantification of average number of 1030 cytoplasmic cherry-NCOA4 condensates per cell of data shown in A. The means and single 1031 values of three separate experiment and standard deviation (SD) are shown. Multiple 1032 comparison one-way ANOVA statistical analysis. D- Representative time-lapse sequences of 1033 cherry-NCOA4 condensates in WT and LRRK2 G2019S macrophages treated for 48 hours with 1034 FAS 100 μM. Lysosomes were stained with Lysotracker green. Time-lapse experiments were 1035 acquired for 5 minutes, capturing both channels every 2 seconds. Scale bar 4 μm, inset 1μm. E-1036 Western blot analysis of triton x-100 soluble and triton x-100 insoluble NCOA4 levels in WT 1037 and LRRK2 G2019S RAW macrophages control or treated with 25 nM bafilomycin for 3 hours. F-1038 Western blot analysis of NCOA4 on whole cell extracts of WT and LRRK2 G2019S macrophages 1039 treated for 16 hours with FAS 100 μM and then treated with 1 μM MLi-2 for 8 hours in the 1040 absence of iron. Phosphorylation levels of LRRK2 on S1292 is used as positive control, actin 1041 serves as loading control. 1042 1043 
+
+Supplementary Figure 2:LRRK2 G2019S show defects in NCOA4 turnover upon iron overload 1044 
+
+A- Representative images of cherry-FTL distribution in WT and LRRK2 G2019S macrophages 1045 control or treated for 16 hours with FAS 100 μM. Lysosomes were stained with lysotracker 1046 green. Scale bar 4 μm, inset 1μm. B- Qualitative classification of cherry-FTL distribution of data 1047 shown in A. The means of three separate experiment are shown with at least 30 cells per 1048 condition. C- Representative images of lysosomal morphology of WT and LRRK2 G2019S 1049 macrophages control or treated for 24 or 48 hours with FAS 100 μM. Cells expressing 1050 TMEM192-HA in their lysosomal surface were stained with anti HA antibody. Scale bar 4 μm. 1051 
+
+D- Quantification of average number of lysosomes per cell of the experiment shown in C. The 1052 means and single values of three separate experiment are shown. Multiple comparison one-way 1053 ANOVA statistical analysis. E- Quantification of the average lysosomal size per cell of data 1054 shown in C. The means and single values of three separate experiment are shown. Multiple 1055 comparison one-way ANOVA statistical analysis. F- Western blot analysis of FTH and NCOA4 1056 levels on whole cell extracts of WT and LRRK2 G2019S macrophages control or treated for 4, 8 or 1057 24 hours with 1 μM MLi-2. Phosphorylation levels of LRRK2 on S1292 were used as positive 1058 control, PCNA serves as loading control. G- Densitometry analysis of NCOA4 kinetics changes 1059 in LRRK2 G2019S treated with MLi-2. Band intensities of three separate experiment and 1060 standard deviation (SD) are shown. H- Representative images of lysosome morphology of WT 1061 and LRRK2 G2019S macrophages treated for 48 hours with FAS 100 μM and then incubated for 8 1062 hours with 1 μM MLi-2 in the presence of iron. Lysosomes were stained with anti LAMP1 1063 antibody. Scale bar 5 μm. 1064 
+
+1065 
+
+Figure 3: LRRK G2019S impact on iron metabolism reveals differential sensitivies to type I and type II 1066 
+
+kinase inhibitors. 1067 
+
+A-Representative images of endogenous pRab8A distribution in WT, LRRK2 G2019S and LRRK2 1068 KO macrophages control of treated for 24 hours with FAS 250 μM. Lysosomes were stained 1069 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+26 with anti LAMP1 antibody. Scale bar 10 μm, inset 5 μm. B- Quantification of the percentage of 1070 cells showing positive pRAB8 signal at plasma membrane. The means and standard deviation of 1071 three separate experiments are shown. Multiple comparison one-way ANOVA statistical 1072 analysis. C- Western blot analysis of p-Rab8 in WT and LRRK2 G2019S macrophages control or 1073 treated with 1μM MLi-2 for two hours and then left untreated or exposed to FAS 250 μM in the 1074 presence of the inhibitor . Phosphorylation levels of LRRK2 on S1292 were used as positive 1075 control and actin serves as loading control. D- Densitometry quantification of data shown in C. 1076 Band intensities of three separate experiment and standard deviation (SD) are shown. E-1077 Western blot analysis of p-Rab8 in WT and LRRK2 G2019S macrophages control or treated with 1078 1μM rebastinib for two hours and then left untreated or exposed to FAS 250 μM in the presence 1079 of the inhibitor . PCNA serves as loading control. F- Representative images of endogenous 1080 pRab8A distribution in LRRK2 G2019S macrophages pre-treated for 2hours with 1μM rebastinib or 1081 with 1μM MLi-2 and treated for 24 hours with FAS 250 μM in the presence of the inhibitor. 1082 DNA is stained with DAPI. Scale bar 10 μm. G- Quantification of the percentage of cells 1083 showing positive pRab8 signal at plasma membrane from the experiment shown in F. The means 1084 of three separate experiments are shown. Multiple comparison one-way ANOVA statistical 1085 analysis. H- Representative images of endogenous pRab8A distribution in LRRK2 G2019S 1086 macrophages pre-treated for 2hours with 5μM Rn277 or 5μM Rn341and treated for 24 hours 1087 with FAS 250 μM in the presence of the inhibitor. DNA is stained with DAPI. Scale bar 10 μm. 1088 
+
+I- Quantification of the percentage of cells showing positive pRab8 signal at plasma membrane 1089 from the experiment shown in H. The means of three separate experiments are shown. Multiple 1090 comparison one-way ANOVA statistical analysis. J- Western blot analysis of p-Rab8 in WT 1091 and LRRK2 G2019S macrophages control and FAS treated. LRRK2 G2019S macrophages were also 1092 treated with 5μM Rn277 and 5μM Rn341 for two hours and then left untreated or exposed to 1093 FAS 250 μM in the presence of the inhibitor. PCNA serves as loading control. K- Densitometry 1094 quantification of data shown in J. Band intensities of three separate experiment and standard 1095 deviation (SD) are shown. 1096 1097 
+
+Supplementary Figure 3: LRRK G2019S impact on iron metabolism reveals differential sensitivies to 1098 
+
+type I and type II kinase inhibitors. 1099 
+
+A-Western blot analysis of p-Rab8 in WT, LRRK2 G2019S and LRRK2 KO macrophages control 1100 or treated with FAS 250 μM for 16 hours. Tubulin serves as loading control. B- Densitometry 1101 quantification of data shown in A. Band intensities of three separate experiment and standard 1102 deviation (SD) are shown. C- Western blot analysis of Rab8 or Rab10 levels in LRRK2 G2019S 1103 
+
+treated with non-targeting (NT), Rab8 (R8) or Rab10 (R10) siRNA. Vinculin serves as loading 1104 control. D-Representative images of endogenous pRab8A distribution in LRRK2 G2019S 1105 macrophages treated for 72 hours with NT, Rab8 or Rab10 siRNA and treated for 24 hours with 1106 FAS 250 μM. DNA is stained with DAPI. Scale bar 10 μm. E- Quantification of the percentage 1107 of cells showing positive pRab8 signal at plasma membrane of data shown in D. The means of 1108 three separate experiments are shown. Multiple comparison one-way ANOVA statistical 1109 analysis. F- Representative images of endogenous pRab8A distribution in mitotic WT 1110 macrophages. Nuclei are stained with DAPI. Scale bar 5 μm. G- Representative images of 1111 endogenous pRAB8A distribution in WT macrophages control of treated for 3 hours with 1112 LLOME 1 mM. Lysosomes were stained with anti LAMP1 antibody. Scale bar 5 μm. H-Western 1113 blot analysis of p-AKT S473 in WT, LRRK2 G2019S and LRRK2 ARM macrophages control or 1114 treated with 250 or 500 μM FAS for 24 hours. Vinculin serves as loading control. I-1115 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+27 Densitometry quantification of data shown in H. Band intensities of three separate experiment 1116 and standard deviation (SD) are shown. J- Densitometry quantification of Western blot analysis 1117 of WT and LRRK2 G2019S macrophages control or treated with 1μM rebastinib for two hours and 1118 then left untreated or exposed to FAS 250 μM for 16 hours in the presence of the inhibitor. 1119 Band intensities of three separate experiment and standard deviation (SD) are shown. 1120 1121 
+
+Figure 4: LRRK2 G2019S cells are hypersensitive to iron induced oxidation and ferroptotic cell death. 1122 
+
+A-Volcano plot showing differentially expressed proteins in LRRK2 G2019S compared to WT 1123 macrophages treated for 16 hours with 100 μM FAS. On the x axis fold change (FC) and in the y 1124 axis -log base 10 of the adjusted statistical significance (p.adj) are plotted. Dashed lines represent 1125 the cut-offs for analysis, proteins with a fold change larger than -/+ 2.5-fold and p.adj greater 1126 than 1.3 (p<0.05) were considered as differentially expressed. In red highlighted some of the 1127 confirmed hits shown in supplementary figure 4A. B – Heat maps depicting the fold change of 1128 proteins associated with oxidative stress, lysosomal function and cytoskeleton that are 1129 differentially expressed in iron treated LRRK2 G2019S macrophages. FC= fold change. Raw data 1130 found in Supplementary Table 2. C-Flow cytometric measurement of median BSA-DQ red 1131 fluorescence intensity in WT and LRRK2 G2019S macrophages control or treated for 48 hours with 1132 FAS 100 μM. The median of three separate experiment is shown. Multiple comparison one-way 1133 ANOVA statistical analysis. D- Flow cytometric measurement of median LTG fluorescence 1134 intensity in WT and LRRK2 G2019S macrophages control or treated for 48 hours with FAS 100 1135 μM. The median of three separate experiment is shown. Multiple comparison one-way ANOVA 1136 statistical analysis. E- Representatice images of WT and LRRK2 G2019S macropghages treated 1137 for 24 hours with 250 μM FAS and incubated with 1μM C11-bodipy for the detection of 1138 peroxidated lipids. Scale bar 10 μm. F- Quantification of integrated fluorescence intensity of 1139 peroxidated C11-Bodipy. The means and single values of three separate experiment and standard 1140 deviation (SD) are shown. T-test statistical analysis is shown. G- Representative images of 1141 LRRK2 G2019S macropghages treated for 24 hours with 250 μM FAS and incubated with 1μM 1142 C11-bodipy for the detection of peroxidated lipids. Lysosomes were stained with lysotracker 1143 deep red (100 nM). Scale bar 10 μm, inset 1μm. H- Representative images of WT and LRRK2 1144 G2019S macropghages treated for 48 hours with 500 μM FAS and incubated with Sytox green to 1145 identify death cells. DIC images were used for total cell quantifiaction .Scale bar 100 μm. I-1146 Quantification of data shown in H. Data shown as percentage of sytox green positive cells. The 1147 mean of three separate experiment is shown. Multiple comparison one-way ANOVA statistical 1148 analysis. 1149 
+
+1150 
+
+Supplementary Figure 4: LRRK2 G2019S cells are hypersensitive to iron induced oxidation and 1151 
+
+ferroptotic cell death. 1152 
+
+A- Confirmative western blot analysis of selected differentially expressed proteins in iron treated 1153 LRRK2G2019S macrophages compared to WT cells exposed to the same conditions. HMOX-1 1154 (hemeoxidase-1). MAOA (monoamino oxidase), FPT (ferroportin). B- Representative images of 1155 endogenous NRF2 distribution in WT, LRRK2 G2019S and LRRK ARM macrophages for 48 hours 1156 with FAS 100 μM. Cell nuclei were stained with DAPI, lysosomes were stained with anti 1157 LAMP1 antibody. Scale bar 10 μm. C- Quantification of the percentage of cells showing 1158 nuclear NRF2 translocation. The means and single values of three separate experiment are 1159 shown. T-test statistical analysis is shown. D- Growth curve of WT, LRRK2 G2019S and LRRK2 1160 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+28  
+
+> KO
+
+macrophages. Cell count was followed for 3 days in the presence or absence of 100 μM FAS. 1161 Each point shows the average and standard deviation of 4 measurement. 1162 
+
+1163 
+
+Supplementary Data File 1: 1164 
+
+Raw sequencing data covering LRRK2G2019S mutation in RAW macrophage 1165 1166 
+
+Supplementary Data File 2: 1167 
+
+Raw sequencing data covering LRRK2KO mutation in RAW macrophage 1168 1169 
+
+Supplementary Table 1: 1170 
+
+Proteomics dataset from LRRK2G2019S and wild type RAW macrophages. 1171 1172 
+
+Supplementary Table 2: 1173 
+
+Proteomics dataset from LRRK2G2019S and wild type RAW macrophages FAS treated 1174 macrophages. 1175 1176 
+
+Supplementary Video 1: 1177 
+
+Time-lapse imaging of NCOA4-Cherry foci seen within phase-separated foci entering an 1178 enlarged lysosome labeled with Lysotracker Green in wild type cells after 48 hours of 100uM 1179 FAS treatment. 1180 1181 
+
+Supplementary Video 2: 1182 
+
+Time-lapse imaging of NCOA4-Cherry enlarged foci that do not become internalized within 1183 lysosomes labeled with Lysotracker Green in LRRK2 G2019S cells after 48 hours of 100uM FAS 1184 treatment. 1185 1186 1187 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
+
+# A CD FEG H I250-100-35-20-70-20-20-
+
+LRRK2 
+
+WT G2019S 
+
+C DFO C DFO 
+
+15-PCNA TfR FTH FTL NCOA4 FTL Long 
+
+# FIGURE 1 cherry-FTL cherry-FTL Lysotracker Lysotracker Merge 
+
+> CTRL DFO CTRL DFO
+> WT G2019S
+
+Iron dependent dioxygenase Iron storage and buffering Iron storage and buffering Non-transferrin bound iron uptake Fe-S cluster assembly in mitochondria Metal budffering and detoxification Mitochondria iron sensing Mitochondrial serine/iron transporter Cytosolic Fe-S cluster assembly Regulator of cyosolic Fe-S biogenesis Uptake of iron bound to transferrin Putative reducer of ferric into ferrous iron 
+
+FC 
+
+250-
+
+WT FTL FTH TfR LRRK2 GAPDH 25-25-100-35-G2019S 
+
+# BpLRRK2S1292 
+
+pRab8T72 Rab8 LRRK2 Vinculin WT G2019S C MLi 
+
+25-25-250-250-100-    
+
+> WT GS GS+MLi-2 0123pRab8/Rab8 NORMALIZED INTENSITY WT GS GS+MLi-2 02468pLRRK2/LRRK2 NORMALIZED INTENSITY
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint SUPPLEMENTARY FIG1 A BCDEF G
+
+FPT DMT1 50-50-
+
+HERC2 FBXL5 IRP2 LRRK2 GAPDH WT 35-250-250-100-70-G2019S WT G2019S FerroOrange 
+
+GGG>>TCG 2019G>>S WT G2019S 0246810 FTL NORMALIZED INTENSITY WT G2019S 0.0 0.5 1.0 1.5 TfR NORMALIZED INTENSITY WT G2019S 0.0 0.5 1.0 1.5 FTH NORMALIZED INTENSITY WT CTRL WT DFO GS CTRL GS DFO 0510 15 NCOA4 NORMALIZED INTENSITY WT CTRL WT DFO GS CTRL GS DFO 0123TfR NORMALIZED INTENSITY WT CTRL WT DFO GS CTRL GS DFO 0246810 FTL NORMALIZED INTENSITY 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint FIGURE2 A BCDE WT 
+
+cherry-NCOA4 cherry-NCOA4 Merge CTRL FAS CTRL FAS 
+
+> G2019S
+
+LAMP1 LAMP1 
+
+# F
+
+WT GS WT GS WT GS WT GS 
+
+CTRL BAF CTRL CTRL BAF FAS 
+
+NCOA4 Tx-100 insoluble Tx-100 soluble Tx-100 soluble NCOA4 GAPDH TOMM40 
+
+35-40-70-70- Tx-100 insoluble 
+
+cherry-NCOA4 
+
+> G2019S  WT
+
+LTG 
+
+0" 
+
+0" 38" 74" 180" 
+
+62" 120" 
+
+> FAS 48 hrs
+
+300" 
+
+## Inset - Time series 
+
+G2019S CTRL FAS NT MLi NT MLi WT CTRL FAS NT MLi NT MLi 
+
+40-250-250-70- NCOA4 LRRK2 Actin pLRRK2 S1292 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint SUPPLEMENTARY FIG 2 A BC EFD
+
+> WT G2019S
+
+Control FAS 24 hrs FAS 48 hrs 
+
+TMEM192-HA 
+
+> WT
+
+FAS 48 hrs FAS 48 hrs MLi-2 8 hrs G2019S 
+
+LAMP1 
+
+# G
+
+NCOA4 FTH G2019S WT LRRK2 pLRRK2 S1292 PCNA 70-250-250-35-20-0 4 8 24 0 4 8 24 hrs MLi-2 
+
+# H
+
+Merge cherry-FTL cherry-FTL WT G2019S CTRL FAS CTRL FAS Lysotracker Lysotracker 
+
+> WT CTRL GS CTRL GS MLi-2 4 hrs GS MLi-2 8 hrs GS MLi-2 24 hrs
+
+0123NCOA4 NORMALIZED INTENSITY 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint A BFIGURE 3 H
+
+25-
+
+LRRK2 pRab8T72 Rab8 Actin pLRRK2S1292 G2019S CTRL FAS C MLi C MLi WT CTRL FAS C MLi C MLi 
+
+25-250-250-40-
+
+# DC EG
+
+250-
+
+LRRK2 pRab8T72 Rab8 PCNA G2019S CTRL FAS C REB C REB WT CTRL FAS C REB C REB 
+
+25-25-34-
+
+## FAS REB +FAS MLi-2 +FAS pRAB8 DAPI IRN341+FAS 
+
+pRAB8 DAPI FAS RN341+FAS 
+
+# FJ K
+
+pRab8 LAMP1 Insets LRRK2 G2019S FAS 
+
+Merge 
+
+> G2019S LRRK2 KO  WT
+
+pRab8 LAMP1 pRab8 LAMP1 CONTROL FAS 
+
+250-250-
+
+pRab8T72 LRRK2 Rab8 Vinculin G2019S RN 341 RN 277 WT FAS+ C FAS C FAS 
+
+34-25-25-
+
+pLRRK2S1292 
+
+> CONTROL MLi-2 FAS FAS+MLi2 CONTROL MLi-2 FAS FAS+MLi2
+
+012345pRab8/Rab8 NORMALIZED INTENSITY 
+
+WT G2019S 
+
+WT G2019S 
+
+> CTRL FAS CTRL FAS Rn277+FAS Rn341+FAS
+
+01234pRab8/Rab8 NORMALIZED INTENSITY 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint A CD ESUPPLEMENTARY FIG 3 G2019S + FAS 
+
+NTsi Rab8si Rab10si pRab8 DAPI 
+
+NT R8 R10 G2019S Rab8 siRNA Rab10 Vinculin 
+
+25-25-100-
+
+pRab8 
+
+# WT 
+
+> LLOME  CTRL
+
+Merge LAMP1 pRab8 LAMP1 
+
+# WT pRab8 DAPI Merge 
+
+0 250 500 0 250 500 0 250 500 WT GS LKO 70-70-100-250-Vinculin LRRK2 AKT uM FAS pAKT S473 
+
+# FG HB
+
+250- LRRK2 Tubulin pRab8T72 Rab8 WT GS LKO C FAS C FAS C FAS 
+
+25-25-50-
+
+# I J
+
+WT G2019S 
+
+> CTRL REB FAS REB+FAS CTRL REB FAS REB+FAS
+
+012345pRab8/Rab8 NORMALIZED INTENSITY CTRL FAS 250 FAS 500 CTRL FAS 250 FAS 500 CTRL FAS 250 FAS 500 0510 15 pAKTS473/AKT NORMALIZED INTENSITY 
+
+WT G2019S LKO 
+
+> WT CTRL WT FAS250 GS CTRL GS FAS250 LKO CTRL LKO FAS250
+
+02468pRab8/Rab8 NORMALIZED INTENSITY 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint A BCFIGURE 4 
+
+# DE FH I
+
+LRRK2 G2019S vs WT FAS 24 hs 
+
+# G
+
+> G2019S
+
+Merge FAS 24 hrs INSET 
+
+c11-Bodipy total c11-Bodipy peroxidated Lysotracker 
+
+> G2019S  WT
+
+Control FAS 48 hrs 
+
+## FAS 24 hrs 
+
+> WT G2019S
+
+c11-Bodipy total c11-Bodipy peroxidated Merge 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint SUPPLEMENTARY FIGURE 4 
+
+# A BC
+
+> D
+
+PCNA LRRK2 FPT TfR Igf2bp3 MAOA HMOX1 
+
+40-250-70-100-70-70-35-
+
+WT GS LKO C FAS C FAS C FAS 
+
+# D
+
+> WT
+
+## DAPI Merge 
+
+> G2019S
+
+## NRF2 LAMP1 
+
+# FAS 48 hrs .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted April 17, 2026. ;https://doi.org/10.1101/2025.08.25.672135 doi: bioRxiv preprint
