@@ -1,0 +1,4356 @@
+Title: 53774289
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.12.717781v1.full.pdf
+
+Number of Pages: 82
+
+Markdown Content:
+Cell fusion reprograms tumor cells and promotes R UNX 1-mediated invasion and dissemination 
+
+in colorectal cancer 
+
+Ashley N. Anderson 1,2, Konstantin Queitsch 3, Nicole R. Giske 1, Jocelyn A. Jones 2, Amara Pang 1,
+
+Amanda Zucker 1,2, Ge Huang 2, Cody C. Rounds 2, Brady Jin Smith 2, John R. Swain 1, Abigail G. 
+
+Moore 1, Divya Ravi 1,2, Isis Diaz Monarrez 2, Sandhya Govindarajan 2, William S. Greer 2, Peter H. 
+
+Tran 1, Kai Tao 4, Lui z Bertassoni 4, 8,9,10 , V. Liana Tsikitis 5,9 , Brian Brinkerhoff 6,9 , Charles D. Lopez 5,9 ,
+
+Cristiane Miranda Franca 8,9 ,10 , Jared M. Fischer 2, 9, Guanming Wu 4,9 , Young Hwan Chang 2,9,
+
+Andrew C. Adey 2, 9, Summer L. Gibbs 2,9,# , and Melissa H. Wong 1, 9,10, #
+
+Affiliations: 
+
+> 1
+
+Department of Cell, Developmental and Cancer Biology, Oregon Health & Science University 
+
+(OHSU); Portland, OR, USA 97201 
+
+> 2
+
+Department of Biomedical Engineering, OHSU; Portland, OR, USA 97201 
+
+> 3
+
+Department of Molecular and Medical Genetics, OHSU; Portland, OR, USA 97239 
+
+> 4
+
+Division of Oncologic Sciences , OHSU; Portland, OR, USA 97201 
+
+> 5
+
+Department of Surgery , OHSU; Portland, OR, USA 972 39 
+
+> 6
+
+Department of Pathology, OHSU; Portland, OR, USA 97239 
+
+> 7
+
+Department of Medicine, Division of Hematology Oncology, OHSU; Portland, OR, USA 97239 
+
+> 8
+
+Department of Oral Rehabilitation and Integrative Bioscience , School of Dentistry , OHSU; 
+
+Portland, OR, USA 972 01 
+
+> 9
+
+Knight Cancer Institute, OHSU, Portland, OR, USA 97201 
+
+> 10
+
+Knight Cancer Precision Biofabrication Hub, OHSU; Portland, OR, USA 97201 
+
+> #
+
+Corresponding Author s: Melissa H. Wong,  wongme@ohsu.edu 
+
+Summer L. Gibbs,  gibbss@ohsu.edu 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Summary 
+
+Metastasis remains the primary cause of cancer -related morbidity and mortality , despite 
+
+significant advances in targeted therapies . Although metastatic dissemination requires tumor cells 
+
+to escape the primary lesion and colonize distant organs, t he mechanism s by which primary tumor 
+
+cells gain metastatic competence remain poorly understood . Increasing evidence demonstrates 
+
+that fusion of tumor (i.e., neoplastic) and immune (e.g., macrophages) cells generate a distinct 
+
+population of tumor -immune hybrid cell s with enhanced functional ability to migrate and 
+
+disseminate into peripheral blood. Herein, our study investigates tumor -macrophage hybrid cell s, 
+
+an underexplored population of disseminated tumor cells, and their inherent heterogeneity and 
+
+acquisition of molecular mechanisms underlying their dissemination as metastatic effectors in 
+
+colorectal cancer (CRC) . Through hybrid cell phenotyping utilizing integrative single -cell RNA 
+
+sequencing (scRNA -seq) , cyclic immunofluorescence (cyCIF) and functional assays with an in 
+
+vitro model of CRC hybrid cells , we identify Runt -related transcription factor 1 ( Runx1) as a central 
+
+regulator of hybrid cell motility and invasion. Runx1 depletion in hybrid cells suppressed functional 
+
+protease expression , chemotactic activity and extracellular matrix (ECM) invasion. Furthermore, 
+
+pharmacologic inhibition of RUNX1 in an in vivo model reduced hybrid tumor growth and 
+
+dissemination into peripheral blood, key attributes of metastatic spread of disease . In patients 
+
+with CRC, RUNX1 + hybrid cells were identified in both primary tumor and peripheral blood , where 
+
+circulati ng hybrid cells (CHCs) exhibited enrich ed migratory and epithelial -to -mesenchymal 
+
+transition (EMT ) phenotypes . Taken together, t hese findings reveal a mechanistic role for RUNX1 
+
+in driving invasive behavior of tumor -immune hybrids and highlight disseminated CHCs as a n
+
+under -recognized contributor to metastatic spread and a promising noninvasive biomarker for 
+
+tumor progression .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Keywords 
+
+metastasis, metastatic cascade, colorectal cancer, cell fusion, tumor -immune hybrid cell, cyclic 
+
+immunofluorescence, single cell -RNA sequencing, circulating hybrid cells, circulating tumor cells ,
+
+cell migration 
+
+Introduction 
+
+Metastatic progression is a primary cause of cancer -related mortality, where disseminated 
+
+tumor cells establish lesions at distant sites .1 Up to 25 % of colorectal cancer (CRC) patients are 
+
+diagnosed with metastatic disease at initial diagnosis , while an additional 20 -30% of patients with 
+
+early -stage CRC harbor undetectable micro -metastatic disease that results in recurrence after 
+
+frontline therap y.2,3 Metastatic disease arises through coordinated intrinsic genetic and epigenetic 
+
+alterations , together with extrinsic microenvironmental cues , that reprogram tumor cell states to 
+
+enabl e invasion, dissemination, and colonization of distant organs. 4,5 Clonal selection and 
+
+expansion during this evolutionary process generate profound intratumoral heterogeneity, 
+
+con straining durable therapeutic response s. Despite these advances , the molecular circuits that 
+
+govern acquisition of metastatic competence and associated treatment resistance remain 
+
+incompletely defined .
+
+An emerging mechanism by which tumor cells acquire metastatic competence is fusion 
+
+with immune cells, giving rise to tumor -immune hybrid cells (hybrid cells /hybrids ).6-20 These hybrid 
+
+cells integrate genotypic and phenotypic programs from both parent al lineages, coupling immune 
+
+cell -derived migratory and immune -evasive properties with tumor cell -intrinsic proliferative and 
+
+tumor -initiating capabilities .21,22 Beyond additive trait inheritance , h ybrid cells adopt expanded 
+
+cellular identities, including cancer stem cell -like states , indicating that fusion drives profound 
+
+cellular rep ro gra mming. 8,9,12,23 -44 As a result , tumor -immune hybrid cells have an enhanced 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+capacity to traverse the metastatic cascade and constitute a biologically distinct and understudied 
+
+class of disseminated tumor cells with the potential to redefine paradigms of metastatic evolution .
+
+Tumor -immune h ybrid cells are detect able in murine cancer models and in patients across 
+
+a broad spectrum of solid malignancies, where they are found in primary tumor s, peripheral blood, 
+
+and metasta tic lesions .45,46 Notably , circulating hybrid cells (CHCs) are markedly more abundant 
+
+in peripheral blood than conventionally defined circulating tumor cells (CTCs), which lack immune 
+
+protein expression , with multiple studies reporting CHC numbers up to two orders of magnitude 
+
+higher than CTCs .45,47 Widely used CTC detection platforms, including FDA -approved CellSearch, 
+
+rely on negative selection for CD45 to exclude hematopoietic cells 48 . Consequently , hybrid cells 
+
+that retain immune markers such as CD45 are systematically eliminated , rendering this abundant 
+
+and biologically consequential cell population largely invisible to standard CTC workflows and 
+
+underrepresented in clinical literature. 
+
+Clinically, CHC abundance correlate s with disease burden and overall survival in 
+
+pancreatic, gastrointestinal, uveal melanoma, and head and neck cancers , underscoring their 
+
+potential as a noninvasive biomarker of disease progression .20,46,47,49 -52 Despite their prevalence 
+
+and prognostic relevance , the genomic landscape , phenotypic diversity , and molecular programs 
+
+that confer metastatic competence to hybrid cells remain largely undefined . Addressing this 
+
+knowledge gap is critical to understanding the role of hybrid cell s in tumor dissemination ,
+
+therapeutic resistance , and disease recurrence. As the pre dominant tumor -derived cell population 
+
+in circulation , defining the molecular drivers of hybrid cell behavior has substantial implications 
+
+for improving early cancer detection and for developing strategies to intercept or limit metastatic 
+
+disease .
+
+In this study , we sought to define the transcriptomic, epigenetic , and functional 
+
+heterogeneity of tumor -immune hybrid cells i n CRC and to identify molecular mechanisms that 
+
+govern their disseminat ion . We quantified hybrid cell phenotypes using single -cell RNA 
+
+sequencing (scRNA -seq) analyses of publ ic CRC datasets alongside newly generated datasets 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+from fluorescence -activated cell sorting (FACS )-isolated hybrid cells from patient -matched 
+
+primary CRC tumors and peripheral blood. To validate transcript ional programs at the protein 
+
+level , we employed highly multiplexed whole -slide cyclic immunofluorescence (cyCIF) in matched 
+
+primary tumor and peripheral blood specimens. 
+
+Our analyses reveal that hybrid cell states evolve dynamically across the metastatic 
+
+cascade . T umor -resident hybrid cell s are enriched for migratory and invasive programs , whereas 
+
+CHCs preferentially express immune -related and immune -evasive transcriptional signatures .
+
+Leveraging an in vitro CRC -macrophage cell fusion model , we demonstrate that hybrid cells 
+
+acquire heightened transcriptional plasticity, a defining feature of metastasis .53 Notably , hybrid 
+
+cell s exhibit gene expression profiles that are distinct from both parental tumor cells and 
+
+macrophages , as well as from tumor -macrophag e cell doublets , confirming their unique cellular 
+
+identity . Single cell -derived hybrid clones spanned a continuum from tumor -like to macrophage -
+
+like states at the transcriptomic , proteomic, and functional level s.
+
+Among these states, hybrid cell clones with enhanced migratory and invasive capacity 
+
+exhibited increased Runt -related transcription factor (Runx1 ) expression at both the trans cript and 
+
+protein levels, accompanied by elevated chromatin accessibility at the Runx1 locus. Genetic 
+
+depletion of Runx1 suppressed protease expression and significantly impaired hybrid cell 
+
+migrat ion and extracellular matrix invasi on. Consistently, pharmacologic inhibition of RUNX1 in 
+
+a xenograft model of hybrid cell -derived tumors reduce d tumor growth and dissemination in vivo .
+
+Importantly , RUNX 1+ tumor -immune hybrid cells we re detect ed in human CRC primary tumor s
+
+and peripheral blood , where they were associated with epithelial -to -mesenchymal transition 
+
+(EMT ) signatures and increase d prevalence with advanc ing disease stage. Collectively , t hese 
+
+findings identify RUNX1 as a central regulator of hybrid cell dissemination in CRC and highlight 
+
+its potential as a therapeutic target to constrain metastatic progression. By defining the molecular 
+
+drivers of hybrid cell invasive ness and resolving their functional heterogeneity, this work reveals 
+
+a previously underrecognized and clinically relevant disseminated tumor cell population that 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+bridges tumor and immune identities, thereby reshap ing current paradigms of metastatic 
+
+evolution. 
+
+Results 
+
+Tumor -macrophage hybrid ce lls reprogram transcriptional states to enable dissemination 
+
+and immune adaptation during metastatic progression in CRC 
+
+Using our previously established analytical workflow, 54 we interrogated a publicly available 
+
+scRNA -seq dataset of human CRC 55 to resolve the diversity and transcriptomic states of tumor -
+
+macrophage hybrid cells within primary tumors and lymph node metastases . We identified tumor -
+
+macrophage hybrid cells based on co -expression of monocyte/macrophage markers ( CD68, 
+
+CD14 , CD163 and/or CD11b ; see Table 1 for gene names ) together with epithelial cell markers 
+
+ECAD , EpCAM , or pan -cytokeratin (defined as keratins 2 -5, 7 -8, 14 -16, and 19 ); across a recently 
+
+published dataset compris ed of 189 samples from 63 patients (Figure 1A). 56 Following stringent 
+
+doublet discrimination and exclusion , we identified 5,592 tumor -macrophage hybrid cells ,
+
+approximately 2% of all sequenced cells , distributed across both primary tumor and lymph node 
+
+specimen s (Figure 1B and Supplemental Figure 1) .
+
+Differential gene expression (DEG) analyses revealed that hybrid cells exhibited elevated 
+
+express ion of genes associated with immune function and cellular migration , including SPI1 ,
+
+PLAUR , GRN , AIF1 and TYROBP , relative to all other sequenced cell population s (Figure 1C). 
+
+Notably, AIF1 and TYROBP were also upregulated in hybrid cells identified in uveal melanoma 
+
+primary tumors 54 , suggesting the existence of a conserved transcriptional program across tumor 
+
+types. Consistent with these findings , global transcriptional profil ing and UMAP visualization 
+
+demonstrated that CRC hybrid cells more closely resembled macrophages tha n epithelial cells, 
+
+while retaining distinct epithelial features (Figure 1B ,C ). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Gene set enrichment analysis (GSEA) using the Gene Ontology biological pathway 
+
+annotat ions 57 revealed significant enrichment of immune -related , chemota ctic, and inflammatory 
+
+pathways in hybrid cells (Figure 1 D), consistent with pr ior observations in hybrid cells from uveal 
+
+melanoma and prostate cancer .54,58,59 To further substantiate hybrid cell identity beyond marker -
+
+based classification , we directly compared hybrid cells , intestinal epithelial cells , and 
+
+monocyte/classical dendritic cell (McDC) populations. Relative to epithelial cells , hybrid cells 
+
+expressed elevated levels of immune -related genes including CD163, CD45, FPR1, CD64, 
+
+FCGR3A, PLEK , and complement components ( C1QA -C). Conversely , compared to the McDC 
+
+population, hybrid cells upregulated epithelial and colorectal -enriched genes ( KRT8, KRT10, 
+
+KRT19, KRT18, EpCAM , TFF3, LGALS4, ARG2 ), supporting a bona fide dual tumor -macrophage 
+
+identity (full DEG lists in Supplemental File 1). 
+
+A unique feature of this publicly available dataset was the inclusion of seven matched 
+
+primary tumor and lymph node samples, enabl ing evaluat ion of hybrid cell transcriptional states 
+
+across the metastatic cascade . Within this subset , we identified 784 hybrid cells (0.85% of 
+
+sequenced cells) , comprising 700 tumor -resident hybrids (TrHCs) and 84 lymph node -resident 
+
+hybrids. DEG analysis revealed that TrHCs preferentially upregulated CXCL 2, CXCL3, CXCL8 
+
+and IL1B , chemokines implicated in neutrophil recruitment, inflammatory signaling, and pro -
+
+metastatic niche formation (Figure 1E). 60,61 In contrast , lymph node -resident hybrids exhibited 
+
+increased expression of IFI44L , an interferon -stimulated gene 62 and LTB , a gene enriched in 
+
+lymph oid tissues. 63 Notably, we identified a subset of TrHCs whose transcriptional profiles closely 
+
+resembled those of lymph node -resident hybrids (Figure 1E , leftmost cluster ). These cells 
+
+expressed SOX4 , a transcription factor associated with stemness , and CD55 , an immune -evasive 
+
+marker enriched in cancer stem cell populations 64 , suggesting that stem -like hybrid cells within 
+
+the primary tumor may be primed for dissemination. 
+
+Consistent with these observations, GSEA reveal ed divergence across hybrid cell states: 
+
+tumor -resident hybrids were enriched for pathways related to vasculature development, 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+chemotaxis and cell migrat ion, wh ereas lymph node -resident hybrids preferentially activated 
+
+immune signaling and stem cell -associated pathways (Figure 1F). Collectively , these findings 
+
+indicate that tumor -macrophage hybrid cells dynamically reprogram their transcriptional states 
+
+during metastatic progression, with primary tumor -resident hybrids poised to facilitate 
+
+dissemination through immune microenvironmental and vasculature remodeling, and lymph 
+
+node -resident hybrids adopting phenotypes associated with immune adaptation and metastatic 
+
+persistence. 
+
+Tumor -macrophage cell fusion generates hybrid clones with heterogenous phenotypic 
+
+states and metastatic properties 
+
+To interrogate the impact of tumor -macrophage fusion on cell phenotype and metastatic 
+
+potential, w e leveraged our previously established in vitro model of spontaneous fusion between 
+
+the MC38 -H2B -RFP CRC cell line and primary bone marrow -derived macrophages from β -actin -
+
+GFP C57BL/6 mice (Supplemental Figure 2A) .21,49 After four days of co -culture, double -positive 
+
+GFP +/RFP + hybrid cells were FACS -isolated , expanded in vitro , then FACS -isolated into single 
+
+cell clones (Figure 2A) . Twelve hybri d clones were selected for downstream evaluation based on 
+
+differences in morphology and GFP/RFP expression levels (Figu re 2B and Supplemental Figure 
+
+2). Gene expression analysis using qRT -PCR revealed substantial heterogeneity in the 
+
+expression of epithelial, immune , and EMT -associated genes across hybrid cell clones (Figure 
+
+2C). Macrophage -associated genes ( CD45 , C D68, C sf 1r, Ccl3 ) varied widely, whereas most 
+
+clones retained elevated epithelial gene expression (EpCAM and Ecad ) despite their absence in 
+
+the parental tumor cells .65 Hierarchical clustering delineated a continuum of hybrid phenotypes, 
+
+spanning macrophage -like clones (e.g. , Hybrid (H) 4, H8, H11 and H12 ) and tumor -like clones 
+
+(e.g ., H1, H7, H9, H10 , Figure 2C). 
+
+Functional assays mirrored the transcriptional diversity observed across clones . When 
+
+comparing hybrid clones , we noted marked heterogeneity in proliferation and chemotactic 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+responses (Figure 2D and E, Supplemental Figure 2D, 2 F, p-values vs . parent tumor cells: H11 
+
+p <0.0001 , H4 p = 0.00 02, H3 p = 0.0012 , H7 p = 0.3 74 ). Specifically, macrophage -like clones 
+
+(H11 , H4 ) displayed enhanced invasive and migrat ory capacities relative to the tumor -like hybrid 
+
+clones (H3, H7) and the parental tumor MC38 cells . Notably, H11 demonstrated significantly 
+
+greater matrix degradation and ECM invasion , both in depth and cell number , when compared 
+
+with H3, H7, and the parental tumor cell s (Figure 2F , H11 p = 0.0112 , H4 p = 0.9806 , H3 p =
+
+0.0359 , H7 p = 0.0012 ), and showed more directional migration toward s vasculature than tumor 
+
+cell s (Figure 2 G, p = 0.013 ). Consistent with their invasive properties, protease expression directly 
+
+correlated with increased ECM invasion across all hybrid clones , reinforcing a mechanistic link 
+
+between transcriptional programs and invasive behavior (Figure 2 H). 
+
+In vivo, we compared H11 , the most macrophage -like clone , to the parental tumor MC38 
+
+line and the tumor -like H7 clone. H11 demonstrated heightened tumorigenic potential in C57Bl/6 
+
+mice , forming more rapidly growing tumors than both MC38 and H7 (Figure 2 I, H11 vs MC38 and 
+
+H7 p <0.05 day s 12 -40, * p <0.05, ** p <0.01 , *** p <0.001 , **** p <0.0001 ). Collectively , these 
+
+data establish that tumor -macrophage fusion generates hybrid subpopulations with diverse gene 
+
+expression programs, functional invasive capacities, and tumorigenic potential , highlight ing hybrid 
+
+cell s as active effectors of metastatic progression .
+
+Tumor -macrophage cell fusion induces distinct transcriptomic and epigenetic landscapes 
+
+underlying hybrid cell heterogeneity 
+
+To define transcriptomic and epigenetic landscape s of tumor -macrophage hybrid cells at 
+
+single -cell resolution, we performed scRNA -seq and single -cell ATAC -seq ( assay for transposase 
+
+accessible chromatin sequencing ) on four populations : 1) nascent hybrid cells (FACS -isolated 
+
+after 4 days of co -culture ), 2) established hybrid cells (maintained in culture through repeated 
+
+purity FACS -isolation and passag ing ), 3) parent al MC38 tumor cells, and 4) the parental 
+
+macrophage s (Figure 3A). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+A critical initial stud y distinguished bona fide hybrid cells from macrophage -tumor 
+
+doublets , which can arise as artifacts in droplet -based library platforms . To address this, we 
+
+employed the ICELL8 platform system (Takara ), enabling multiple rounds of single cell dispensing 
+
+into individual nanowell s with imaging after each round to visually confirm wells containing single 
+
+cells or artificial doublets (tumor + macrophage) . Following Smart -Seq -based scRNA -seq with 
+
+nanowell -specific barcoding , UMAP analysis demonstrated that fusion -derived hybrid s formed 
+
+distinct cluster s, clearly separable from parental cells and artificially generated doublets (Figure 
+
+3B), validating the integrity of our single cell ~omics pipeline and confirm ing that hybrid cell 
+
+signature s are not artifacts of unresolved doublets. 
+
+High -throughput scRNA -seq using the 10X Genomics platform confirmed that hybrid 
+
+populations were transcriptionally distinct from both the parent al lineages (Figure 3C). Within the 
+
+hybrid cell populations , nascent hybrid cells (hybrid -M) ex hibited more immune -like transcriptional 
+
+programs, align ing closely with macrophages , whereas established hybrid s (hybrid -T) adopted a
+
+more tumor -like gene expression signature (Figure 3D). This shift likely reflects select ion for 
+
+proliferative hybrid clones during extended culture but may also represent biologically distinct 
+
+subpopulations with clinical relevance . Notably , clonal heterogeneity persisted within established 
+
+hybrids: for example, the H11 clone retained strong macrophage -like gene expression and 
+
+functional traits , supporting a continuum of phenotypes spanning immune -like to tumor -like states. 
+
+GSEA of GO biological processes revealed that both hybrid -M and hybrid -T populations 
+
+were enriched for pathways involved in cell motility . Hybrid -M cells additionally activated programs 
+
+involved in phagocytosis , antigen processing and presentation, and development, whereas the 
+
+hybrid -T cells were enriched for pathways related to proliferation, differentiation and 
+
+developmental processes (Figure 3E, F). Collectively, these data underscore the dynamic and 
+
+evolving nature of hybrid cell states, which occupy a phenotypic spectrum bridging immune and 
+
+tumor identities . This flexibility likely underpins their migratory, immune -evasive, and metastatic 
+
+potential , positioning them as important mediators of cancer progression .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Parallel scATAC -seq analyses of the same populations revealed chromatin accessibility 
+
+landsc apes that mirrored transcriptomic states . Both hybrid -M and hybrid -T populations displayed 
+
+epigenetic profiles distinct from parent al tumor and macrophage cells, with hybrid -M clustering 
+
+closer to macrophages and hybrid -T clustering closer to tumor cells (Figure 3G). Track plot 
+
+analyses of key loci , including CD45 (Ptprc ) and Ecad ( Cdh1 ), demonstrated coordinated 
+
+chromatin accessibility changes at promoters, transcription start sites, and enhancers, consistent 
+
+with transcriptional reprogramming (Figure 3 I-J; Supplemental Figure 3). 
+
+Motif enrichment analysis revealed population -specific regulatory signatures. Hybrid -M
+
+cells were enrich ed for E26 -transformation -specific ( ETS ) family transcription factor s ( Spi1 ( Sfpi1 )
+
+and Spib ), and Runx family transcription factors (Runx1 and Runx3 ), key regulators of immune 
+
+function and cancer progression .66,67 In contrast, hybrid -T cells exhibited enrich ment for Sp 1-6
+
+and AP -1 family motifs ( Fos , Fosb, Fosl1, Jund, and Junb ), central to tumor cell proliferation, 
+
+invasion and metastasis (Figure 3H). 68,69 Integration of scRNA -seq data confirmed that differential 
+
+chromatin accessibility corresponded to transcriptional activity, and that hybrid cells gained not 
+
+only elevated transcription factor expression but also an expanded repertoire of accessible target 
+
+sites (Figure 3I -J and Supplemental Figure 3), establishing a distinct regulatory landscape 
+
+diverge nt from either parental lineage following cell fusion . Collectively, these finding s reveal that 
+
+tumor -macrophage fusion induce profound transcriptomic and epigenetic heterogeneity, 
+
+generating hybrid cell states that span a continuum between immune -like and tumor -like 
+
+identities, with distinct regulatory programs that likely underpin thei r metastatic competence. 
+
+Runx1 drives hybrid cell migratory and invasive phenotypes 
+
+To identify key regulators underlying hybrid cell heterogeneity and invasive capacity, w e
+
+performed an integrated analysis of transcriptom es , pathway enrichment, and chromatin 
+
+accessibility. Across all modalities, RUNX1 consistently emerged as a top candidate, implicating 
+
+its role as a central regulator of macrophage -like traits and metastatic potential in hybrid cells. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Reactome pathway analysis 70 revealed multiple RUNX1 -associated pathways among the top 10 
+
+upregulated gene sets in hybrid cells (Figure 4A). Key upregulated genes within these pathways, 
+
+including Runx1, Thbs1, Spi1, Grn, and Pf4 , were markedly elevated in hybrid -M cells relative to 
+
+hybrid -T cells, with Thbs1 upregulated across both hybrid populations (Figure 4B, Supplemental 
+
+Figure 3). Concordantly, chromatin accessibility at the Runx1 , Spi1 , Thbs1 , and Pf4 loci was 
+
+similarly increased in hybrid -M cells, indicating transcriptional activation of RUNX1 -regulated 
+
+programs (Figure 4C –D, Supplemental Figure 3). Gi ven the established role of RUNX1 in EMT 
+
+and CRC invasion, 71 -73 these findings suggest that acquisition of R UNX 1 following cell fusion 
+
+contributes to hybrid cell migration and invasion. 
+
+Analyses of single -cell hybrid clones further supported this hypothesis. M acrophage -like 
+
+hybrid clones (H11 and H4) exhibited significantly higher R UNX 1 expression at both the mRNA 
+
+(H11 p = 0.0001 ; H4 p = 0.0168 ) and protein levels (both p < 0.0001) relative to tumor -like clones 
+
+(H3 p = 0.2101, H 7 p >0.999 ) and the parental MC38 cells (Figure 4 E, F; Supplemental Figure 
+
+3C ). Functional assays demonstrated that increased RUNX1 expression directly correlated with 
+
+enhanced invasive capacity, confirming its role as a phenotype determinant of hybrid cell 
+
+aggressiveness. 
+
+To assess clinical relevance, we interrogated RUNX1 expression in hybrid cells from 
+
+human CRC primary tumors and lymph nodes identified in Figure 1, a previously published 
+
+dataset .56 Consistent with our in vitro model, human hybrid cells exhibited elevated RUNX1 
+
+expression and upregulation of associated pathway members THBS1, SPI1 , and GRN (Figure 
+
+4G, Supplemental Figure 3). Together, these data establish RUNX1 as a central regulator of the 
+
+invasive and immune -like features of tumor -macrophage hybrid cells and provide a mechanistic 
+
+rational e for investigating RUNX1 modulation as a strategy to limit hybrid cell -mediated migratory 
+
+and invasive contribution to metastatic progression .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Depletion of Runx1 impairs hybrid cell migratio n, invasion , and dissemination 
+
+To directly assess the functional contribution of Runx1 to hybrid cell behavior, w e
+
+generated knockdown cell lines of the macrophage -like hybrid clone H11, the tumor -like hybrid 
+
+clone H7, and the parental MC38 tumor line using two independent lentiviral shRNA constructs 
+
+targeting Runx1 . Knockdown efficiency was confirmed at both the transcript and protein levels 
+
+across all lines (Figure 5 A–E, MC38 p <0.0001 , H11 p <0.0001, H7 p <0.0001 ). Subsequent 
+
+functional analyses were performed using the shRNA construct (shRNA -1) that achieved the most 
+
+consistent suppression across all three cell lines. 
+
+In transwell chemotaxis assays, Runx1 depletion profoundly impaired the migratory 
+
+capacity of the highly invasive H11 hybrid cells , while exerting no measurable effect on the 
+
+migration of the less invasive H7 hybrid or the MC38 tumor parent (Figure 5F). Notably, Runx1 
+
+knockdown did not alter proliferation in any of the cell lines, indicating that its effects in H11 cells 
+
+are selective for migrat ory behavior rather than general cell fitness (Figure 5G). 
+
+Consistent with these finding s, ECM invasion assay s revealed that Runx1 depletion in 
+
+H11 cells resulted in a marked reduction in both the number of invading cells and invasion depth 
+
+(Figure 5H –I, H11 NT vs shRNA p = 0.0005 ), whereas invasion by MC38 cells was unaffected ( p
+
+>0.9999 ). Loss of invasive capacity in H11 hybrids was accompanied by significant 
+
+downregulation of invasion -associated proteases implicated in matrix degradation (Figure 5J) ,
+
+providing a mechanistic link between RUNX1 activity and hybrid cell invasiveness. 
+
+RUNX1 inhibition in vivo using Ro5 -3335, a RUNX1 -CBFβ interaction inhibitor that 
+
+represses RUNX1/CBFB -dependent transactivation , resulted in both decreased H11 tumor size 
+
+(Figure 5K, p = 0.0 3) as well as a decreased number of H11 hybrid cells detected in circulation 
+
+(Figure 5L, p = 0.04 , Supplemental Figure 4 ). Collectively , t hese data establish Runx1 as a 
+
+context -dependent but essential regulator of migration and invasion in macrophage -like hybrid 
+
+cells and implicate RUNX1 -driven programs as key effectors of hybrid cell -mediated tumor 
+
+progression. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+RUNX 1+ hybrid cells in matched CRC primary tumor s and peripheral blood are associated 
+
+with EMT phenotypes and disease progression 
+
+Having established R UNX 1 as a central driver of hybrid cell invasivenes s, we next 
+
+evaluated the presence and phenotypic states of RUNX1 + hybrid cells in human CRC primary 
+
+tumor s and peripheral blood . We further examined whether RUNX1 and its downstream pathway 
+
+components (SPI1 , THBS1 or LGALS3 ) were associated with discrete hybrid phenotypic 
+
+programs, including EMT, stem -like, proliferative, dormant, and immune -evasive states. To this 
+
+end, w e applied highly multiplexed cyCIF to patient matched primary tumor and peripheral blood 
+
+specimens from 16 CRC patient s (Table 2) , profiling 34 markers to resolve hybrid cell identity and 
+
+signaling states in situ (Table 3).
+
+Across all patient peripheral blood samples, CHCs were significantly more abundant than 
+
+conventionally defined CTCs at every disease stage , consistent with prior studies 46,74 (Figure 6A ,
+
+stage 1 CHC vs CTC p <0.0001 , stage 2 CHC vs CTC p <0.0001 , stage 3 CHC vs CTC p
+
+<0.0001 ). CHC abundance increased with disease progression , although this relationship was 
+
+partially confounded by treatment status at the time of sample collection . Unsupervised 
+
+phenotypic clustering of CHCs and CTCs revealed substantial heterogeneity within the CHC 
+
+population, resolving multiple distinct cell states based on marker expression (Figure 6B -C, E and 
+
+Supplemental Figure 5 ). Notably, RUNX1 + hybrid cells were identified in primary tumors and 
+
+peripheral blood (Figure 6D). S even phenotypic clusters (clusters 0, 3, 4, 6, 7, 9 and 1 3) were 
+
+characterized by high expression of RUNX1 and/ or downstream effectors SPI1 and THBS1 
+
+(Figure 6 E-F), defining a recurr ent RUNX1 -activated hybrid cell state. Five of the se RUNX1 +
+
+clusters (clusters 0, 3, 6 , 7 and 12 ) additionally co -expressed vimentin (VIM), a canonical EMT 
+
+marker , and were composed predominantly of CHCs and not CTCs ( which were enriched in 
+
+cluster 4). Th ese findings suggest that RUNX1 + hybrid cells in human CRC preferentially adopt 
+
+EMT -like phenotype s, mirroring the invasive programs observed in murine in vitro fusion -derived 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+hybrids. Consistent with a role in disease progression, expression of RUNX1 pathway 
+
+components ( SPI1 and THBS1 ) within CHCs increased with advancing CRC stage (Figure 6 G,
+
+SPI1 stage1v2 p = 0.03 , SPI1 stage1v3 p = 0.03, THBS1 stage1v2 p = 0. 05, THBS1 stage1v3 p
+
+= 0.05 ). Together, these data identify RUNX1 + hybrid cells as a transcriptionally and 
+
+phenotypically distinct subpo pulation enriched in the circulation of CRC patients, particularly at 
+
+later disease stages. Collectively, the abundance, EMT -associated features and progressive 
+
+enrichment of key metastatic pathways underscore that RUNX1 + hybrid cells may have potential 
+
+clinical rele van ce as biomarker s of metastatic competence and disease progression, and 
+
+implicate this hybrid cell state as a promising target for disease monitoring and therapeutic 
+
+intervention in CRC .
+
+Patient -derived tumor -immune hybrid cells exhibit functionally distinct immune -like states 
+
+and conserved RUNX1 -driven transcriptional programs in primary tumor s and circulation 
+
+To define the transcriptional heterogeneity of patient -derived tumor -immune hybrid cells, 
+
+we performed scRNA -seq on FACS -isolated hybrid cells (ECAD ⁺/EpCAM ⁺/CD45 ⁺) from matched 
+
+primary CRC tumor (tumor -resident hybrid cells , TrHC s) and peripheral blood samples (CHCs) 
+
+(Supplemental Figure 6) . Given the rarity of hybrid cells in clinical specimens, we employed the 
+
+SMART -Seq platform (Takara Bio), which enables the generati on of full -length transcriptomes 
+
+from picogram -scale RNA inputs . For each patient, control populations of tumor cells 
+
+(ECAD ⁺/EpCAM ⁺) and immune cells (CD45 + PBMCs) were also profiled (n = 16 cells per 
+
+population, per patient) . Importantly, panCK was not used as a hybrid selection marker in this 
+
+assay because its cytoplasmic localization necessitates fixation and permeabilization for FACS, 
+
+which can degrade RNA and limit transcriptomic profiling .
+
+Unsupervised clustering revealed multiple transcriptional ly distinct CHC states (CHC1 -3) ,
+
+each represent ed across all three patients analyzed (Figure 7A -C). Both TrHC s and CHCs 
+
+(notably the CHC1, CHC2, CHC3 clusters ) exhibited transcriptional similarity to CD45 + immune 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+populations , clustering more closely with immune cell populations than with EpCAM + tumor 
+
+control s, with only a minor fraction of CHCs (CHC light pink cluster) aligning with epithelial tumor 
+
+clusters. These data suggest that the majority of hybrid cells adopt immune -like transcriptional 
+
+programs during dissemination , or that immune -associated states are selectively permissive for 
+
+circulation . Analysis of hybrid cells in circulation ( CHCs ) compared to primary tumor hybrids 
+
+(TrHCs ) using d ifferential gene expression and pathway enrichment analysis revealed that CHCs 
+
+were enriched for chemotaxis, developmental programs, and ECM remodeling relative to TrHCs 
+
+(Supplemental Figure 7A-B), highlighting both shared and context -dependent transcriptional 
+
+features . Importantly, each hybrid subpopulation , both TrHCs and CHCs, were transcriptionally 
+
+distinct from both tumor and immune controls (Figure 7D). Pathway analysis of the three distinct 
+
+CHC clusters (CHC1 -3) revealed functional specialization: CHC1 cells were enriched for 
+
+macrophage -associated phagocytic , migra tory, and cytokine response programs ; CHC2 cells for 
+
+B-cell activation pathways ; and CHC3 cells for T -cell activation and adhesion processes (Figure 
+
+7E). These findings indicate that CHCs occupy discrete immune -like functional states. 
+
+In a subset of patients with sufficient hybrid cell yield, we additionally performed high -
+
+throughput 10X Genomics -based scRNA -seq on pooled non -hybrid primary tumor or peripheral 
+
+blood spiked with an enrichment of hybrid cells (ECAD ⁺/EpCAM ⁺/CD45 ⁺) to capture the broad er 
+
+cellular landscape (Supplemental Figure 7 D). Although these samples were enriched for TrHC s
+
+or CHCs, we expected them to also contain a mixture of immune, epithelial, stromal, and CRC 
+
+tumor cells , particularly in tumor -derived biopsies . Because these cells were not sorted into 
+
+uniquely barcoded wells , as in the SMART -Seq, surface marker -based annotation was not 
+
+feasible. To overcome this limitation, we generated hybrid gene expression modules from the 
+
+SMART -Seq CHC clusters and applied them to the 10X dataset s to identify hybrid cells (Figure 
+
+7F). Additional cell types were annotated using established epithelial, immune, stromal, and 
+
+macrophage gene modules (Figure 7 G). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+This integrative approach revealed multiple hybrid -enriched clusters within the 10X 
+
+datasets, including a macrophage -like hybrid population and additional clusters aligned with B 
+
+cell - and T cell -associated transcriptional programs (Figure 7 F,G ). Aneuploidy inference (Figure 
+
+7H) and tumor -specific gene expression scoring (Supplemental Figure 7 E-F) demonstrated that 
+
+macrophage -like hybrid cells exhibited elevated aneuploidy and higher expression of tumor -
+
+specific genes , whereas B cell - and T cell -like hybrid populations showed substantially lower 
+
+aneuploidy rates , supporting distinct evolutionary origins or selective pressures among hybrid 
+
+states. Importantly, the hybrid cells sequenced did not show an increase in doublet prediction 
+
+scoring compared to the rest of the sequenced cells (Supplemental Figure 7G) , which align with 
+
+our earlier findings detailed in Figure 1 and Figure 3 .
+
+Across both scRNA -seq platforms, RUNX1 and its downstream effectors ( SPI1, THBS1, 
+
+GRN , LGALS3 ) were significantly enriched in both CHCs and TrHC s relative to parental tumor 
+
+control cells (Figure 7I and Supplemental Figure 7C). These RUNX1 -associated transcriptional 
+
+programs overlapped with pathways identified in vitro , including migration, chemotaxis, and 
+
+immune activation. Notably , RUNX1 and downstream associated genes were most high ly 
+
+expressed in CHC1 cluster , the macrophage -like hybrid population with elevated aneuploidy 
+
+prediction and higher tumor gene expression module scoring , implicating RUNX1 -driven 
+
+regulatory networks as conserved determinants of invasive hybrid phenotypes. Collectively, these 
+
+findings demonstrate transcriptional convergence between patient -derived and experimentally 
+
+ge nerated tumor -immune hybrid cells and establish RUNX1 -centered programs as central 
+
+regulators of hybrid cell invasiveness and metastatic competence in CRC. 
+
+Discussion 
+
+Fusion -derived hybrid cells have been proposed as a source of tumor plasticity, yet 
+
+whether they represent a uniform population or functionally distinct states remains unknown . Here 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+we show that tumor -macrophage hybrid cells comprise heterogenous and specialized cell states, 
+
+with distinct subpopulations enriched for programs associated with metastatic progression. By 
+
+integrating single cell transcript omics and epigenomic profiling with functional interrogation of in 
+
+vitro -derived hybrids and patient -matched primary tumor hybrids and peripheral blood CHCs , we 
+
+uncover hybrid cell subpopulations enriched for migratory, immune -evasive, and stem -like 
+
+programs that align with key steps of th e metastatic cascade. These data reveal a previously 
+
+underappreciated cellular mechanism of tumor cell dissemination from the primary tumor , in which 
+
+fusion -derived hybrid cells bridge tumor and immune phenotypes to promote invasion and spread .
+
+A central finding of this work is the identification of RUNX1, a transcription factor classically 
+
+associated with hematopoiesis and leukemogenesis, as a critical regulator of hybrid cell 
+
+invasiveness and a potential driver of metastatic progression in CRC. RUNX1 express ion was 
+
+selectively enriched in macrophage -like hybrid cell subpopulation s and was functionally required 
+
+for migration, ECM degradation , and invasive behavior . Genetic d epletion of Runx 1 in invasive 
+
+hybrid cells (hybrid -M) markedly impaired chemotaxis and invasion, while downregulating 
+
+protease activity , implicating RUNX1 as a nonredundant regulator of hybrid cell motility. Moreover ,
+
+pharmacological inhibition of R UNX 1 significantly suppressed tumor growth and dissemination in 
+
+vivo , underscoring its therapeutic relevance. These findings are consistent with prior studies 
+
+implicating RUNX1 in CRC progression, EMT, angiogenesis, and immune modulation. 75 -80 
+
+Previous work has shown that RUNX1 promote s metastasis through activation of Wnt/β -catenin 
+
+signaling, induction of PTGS2 (COX2) expression, facilitation of vessel co -option, and modulation 
+
+of tumor -stromal crosstalk 73,81 via TGF -β and THBS1 signaling ,82 with validation in both in vitro 
+
+and in vivo CRC models. 71 Our data extend these observation s by positioning RUNX1 within a 
+
+specific cellular context , tumor -macrophage hybrid cells , where its activation appears to 
+
+preferentially endow hybrid cells with enhanced invasive and metastatic capacity. Together, these 
+
+findings suggest that RUNX1 is selectively induced in macrophage -like hybrid cells in response 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+to microenvironmental cues , conferring a unique convergence of immune adaptability and tumor 
+
+aggressiveness. 
+
+Across both in vitro -derived hybrid s and patient -derived specimens , hybrid cells occupied 
+
+a phenotypic continuum between macrophage -like and tumor -like states and exhibited 
+
+pronounced transcriptional plasticity . RUNX1 and its downstream effectors (SPI1 and THBS1 ),
+
+along with pathways involved in migrat ion, ECM re modeling, and immune signaling , w ere 
+
+consistently enriched in m acrophage -like hybrid states , which displayed the highest invasive 
+
+potential in both functional assays and GSEA. Single -cell profiling using both scRNA -sequencing 
+
+and cyCIF identified RUNX 1+ hybrid cells as a transcriptionally and phenotypically distinct 
+
+subpopulation present in both primary tumors and circulation. Notably, RUNX1 + hybrid cells we re 
+
+enriched for EMT, stemness, and immune modulat ory programs, indicating that RUNX1 -
+
+associated transcriptional states are conserved features of invasive hybrid cell s across disease 
+
+compartments .
+
+Importantly, m ultiple transcriptionally distinct hybrid cell clusters were identified across 
+
+patients, many of which were enriched for RUNX1 or its downstream effectors . The prevalence 
+
+of RUNX1 +, SPI1 + and THBS1 + hybrid cells increa se d with advanc ing CRC stage , highlight ing 
+
+RUNX1 as a multifaceted driver of metastati c progression that integrates EMT, migration, 
+
+angiogenesis , and tumor -immune hybrid cell dissemination in cancer and establish es tumor -
+
+immune hybrid cells as active effectors of CRC metastasis rather than passive byproducts of 
+
+tumor evolution .
+
+Beyond mechanistic insights, our findings have important translational implications. The 
+
+consistent detection of RUNX1 + hybrid cells in circulation , and their increasing prevalence with 
+
+disease stage, suggests that these cells may serve as a noninvasive biomarker of metastatic risk. 
+
+Moreover, the f unctional r equirement for RUNX1 i n hybrid cell invasion identifies this pathway as 
+
+a candidate therapeutic target . Encouraging pharmacologic inhibition of RUNX1 using Ro5 -3335 
+
+has demonstrated efficacy in leukemia , PDAC, and glioblastoma ,83 -85 supporting the feasibility of 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+targeting this pathway in other solid tumors. Consistent with this, we show that pharmacologic 
+
+inhibition of RUNX1 using Ro5 -3335 in H11 subcutaneous murine xenografts led to reduced 
+
+tumor growth and a substantial decrease in the number of hybrid cells detected in circulation, 
+
+supporting a role for RUNX1 in promoting hybrid cell dissemination in vivo . While further studies 
+
+are needed to define the precise mechanisms underlying these effects, these data support 
+
+RUNX1 as a promising therapeutic target in hybrid -cell associated metastasis. 
+
+Several study limitations should be considered. Hybrid cells in this study were identified 
+
+by their co -expression of epithelial tumor and immune cell markers , which may underestimate the 
+
+full spectrum of fusion -derived hybrids, particularly those that undergo phenotype switching or 
+
+marker los s over time. 86 More sophisticated lineage -tracing approaches, including MADM -
+
+CloneSeq 87,88 or fusion reporter systems like Cre -Lox fate mapping 89 using in vivo systems would 
+
+improve specificity and temporal resolution of hybrid cell identification. Additionally, while RUNX1 
+
+was necessary for hybrid cell invasion, it s sufficien cy alone in driv ing macrophage -like hybrid 
+
+phenotype s remains unclear . Future investigation s should explore how RUNX1 integrates with 
+
+other transcriptional regulators to control immune evasion , stemness, and survival in circulation, 
+
+and how tumor microenvironment al cues shape RUNX1 activation. Finally, although we analyzed 
+
+patient -matched tumor and peripheral blood samples, larger clinical cohorts will be required to 
+
+fully assess interpatient heterogeneity and determine whether RUNX1 + CHCs reliably predict 
+
+metastatic potential or correlate with clinical outcomes. 
+
+In summary, t his study provides comprehensive single cell and functional dissection of 
+
+tumor -immune hybrid cell s in CRC and identifies RUNX1 as a pivotal regulator of hybrid cell 
+
+invasion and metastatic competence . To our knowledge, t his is the first analysis of scRNA -seq 
+
+datasets of hybrid cells from patient -matched tumor and peripheral blood samples , providing a 
+
+valuable foundation for exploration of hybrid cell biology across the metastatic cascade. By 
+
+distinguishing bona fide fusion -derived hybrid cells from technical artifacts /doublets and linking 
+
+their transcription programs to functional behavior, our work defines distinct hybrid cell states that 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+align with met astatic progression . Beyond this technical advance, we establish tumor -immune 
+
+fusion as a previously underappreciated driver of metastasis and position RUNX1 as a promising 
+
+target for therapeutic intervention and biomarker of CRC progression .
+
+Data Availability 
+
+Code used for analysis is available at  https://github.com/KoDeQuestion/CRCHybridCollab .
+
+Acknowledgments 
+
+We thank the Advanced Light Microscopy, Histopathology, and Flow Cytometry Cores at Oregon 
+
+Health and Science University (OHSU) for technical support . We are grateful to our clinical 
+
+collaborators at OHSU for assistance with patient specimen acquisition and to the patients who 
+
+generously donated sample s for this study . We also thank QiTissue for their support with cyCIF 
+
+image registration and processing . We acknowledge Kathryn Fowler, Abigial Gillingham, Hannah 
+
+Farley, Ethan Lu, and Ashvin Nair for their technical assistance with antibody validation and 
+
+PBMC slide preparation. We further thank the Knight Biostatistics Shared Resource , Dr. Byung 
+
+Park and Yun Yu, for their guidance and support with the statistical analys es. Figures were 
+
+created using Bio Render and Affinity Design 2. 
+
+Funding 
+
+This research was supported by the National Institutes of Health/National Cancer Institute :
+
+P30CA069533 (M.H.W.) , R44CA250861 and R01CA253860 (M.H.W., S.L.G), R01CA253860 
+
+(M.H.W., Y.H.C.), F31CA271676 (A.N.A) , R33CA269015 (A.C.A) ; National Institutes of 
+
+Health/National Institute of General Medical Sciences : T32GM141938 (A.N.A. , A.P., A.Z. ),
+
+T32GM142619 (K.Q.) and the Kuni Foundation (M.H.W., S.L.G.) .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Author Contributions 
+
+Conceptualization, A.N.A., K.Q., A. C. A., S.L.G., M.H.W. 
+
+Methodology, A.N.A., K.Q.,  L. E. B.,  C.M.F., J.M.F.,  G.W.,  Y.H.C.,  A. C. A., S.L.G., M.H.W., 
+
+Formal analysis, A.N.A., K.Q.,  N.G.,  J. A. J., C. C. R.,  A.G .M., D.R.,  S.G., I.D.M.,  G.W., C.M.F., 
+
+J. M. F. , A. C. A, S.L.G, M.H.W 
+
+Data curation, A.N.A., K.Q., N.G., J.A.J, A.P., A.Z ., G.H ., B.J.S., J. R. S., A. G. M., D. R., W.G., 
+
+P. H. T., C.M.F., J. M. F. 
+
+Writing – original draft preparation, A.N.A., K.Q., S.L.G., M.H.W. 
+
+Writing – reviewing and editing, all authors. 
+
+Resources, K.T.,  G.W., L. E. B.,  V.L.T., B.B., C.D.L.,  C.M.F., J. M. F.,  Y.H.C.,  A. C. A., S.L.G., 
+
+M.H.W. 
+
+Supervision and project administration, A. N. A., S.L.G., M.H.W. 
+
+Funding acquisition, A.N.A., K.Q., Y.H.C., A. C. A., S.L.G., M.H.W. 
+
+Conflict of Interest 
+
+A.C.A. is an author of one or more patents that pertain to technologies leveraged to produce 
+
+associated data and is an advisor to 10x Genomics. This potential conflict is managed by the 
+
+office of research integrity at OHSU. 
+
+All other author s declare no competing interests. 
+
+Abbreviations 
+
+2D  Two -dimensional 
+
+3D  Three -dimensional 
+
+Ab -oligo  Antibody -oligonucleotide 
+
+AF555  Alexa Fluor 555 
+
+AF647  Alexa Fluor 647 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+AF750  Alexa Fluor 750 
+
+ANOVA  Analysis of variance 
+
+ATAC -seq  Assay for transposase -accessible chromatin sequencing 
+
+BCA  Bicinchoninic acid 
+
+BME  Beta -mercaptoethanol 
+
+BSA  Bovine serum albumin 
+
+cDNA  Complementary DNA 
+
+CHC  Circulating hybrid cell 
+
+CO2  Carbon dioxide 
+
+COX2  Cyclooxygenase 2 
+
+CRC  Colorectal cancer 
+
+CTC  Circulating tumor cell 
+
+cyCIF  Cyclic immunofluorescence 
+
+DAPI  4′,6 -diamidino -2-phenylindole 
+
+DEG  Differentially expressed gene 
+
+DIW  Deionized water 
+
+DMEM  Dulbecco’s modified Eagle medium 
+
+DNA  Deoxyribonucleic acid 
+
+DS  Docking strand 
+
+DTT  Dithiothreitol 
+
+ECM  Extracellular matrix 
+
+EDTA  Ethylenediaminetetraacetic acid 
+
+EGM  Endothelial growth medium 
+
+EMT  Epithelial -to -mesenchymal transition 
+
+FACS  Fluorescence -activated cell sorting 
+
+FBS  Fetal bovine serum 
+
+Fc  Fragment crystallizable 
+
+FDA  Food and Drug Administration 
+
+FDR  False discovery rate 
+
+FFPE  Formalin -fixed paraffin -embedded 
+
+FFT  Fast Fourier transform 
+
+GLMM  Generalized linear mixed model 
+
+GO  Gene Ontology 
+
+GO -BP  Gene Ontology Biological Process 
+
+GSEA  Gene set enrichment analysis 
+
+HEPES  4-(2 -hydroxyethyl) -1-piperazineethanesulfonic acid 
+
+HRP  Horseradish peroxidase 
+
+HUVEC  Human umbilical vein endothelial cell 
+
+IACUC  Institutional animal care and use committee 
+
+IDT  Integrated DNA Technologies 
+
+IF  Immunofluorescence 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+IS  Imaging strand 
+
+LN  Lymph node 
+
+LSI  Latent semantic indexing 
+
+M-CSF  Macrophage colony -stimulating factor 
+
+McDC  Monocyte/classical dendritic cell 
+
+MOI  Multiplicity of infection 
+
+MSI  Microsatellite instability 
+
+MSS  Microsatellite stable 
+
+NaOH  Sodium hydroxide 
+
+NEAA  Non -essential amino acids 
+
+nt  Nucleotide 
+
+OCT  Optimal cutting temperature 
+
+OHSU  Oregon Health & Science University 
+
+PBS  Phosphate -buffered saline 
+
+PBMC  Peripheral blood mononuclear cell 
+
+PCA  Principal component analysis 
+
+PCL  Photocleavable linker 
+
+PDAC  Pancreatic ductal adenocarcinoma 
+
+PDL  Poly -D-lysine 
+
+PDMS  Polydimethylsiloxane 
+
+PFA  Paraformaldehyde 
+
+PMSF  Phenylmethylsulfonyl fluoride 
+
+qRT -PCR  Quantitative reverse transcription polymerase chain reaction 
+
+RNA  Ribonucleic acid 
+
+RNase  Ribonuclease 
+
+RFP  Red fluorescent protein 
+
+RIPA  Radioimmunoprecipitation assay 
+
+RPM  Revolutions per minute 
+
+scATAC -seq  Single -cell assay for transposase -accessible chromatin sequencing 
+
+scRNA -seq  Single -cell RNA sequencing 
+
+SD  Standard deviation 
+
+SEM  Standard error of the mean 
+
+shRNA  Short hairpin RNA 
+
+SMART -Seq  Switching mechanism at 5′ end of RNA template sequencing 
+
+TBST  Tris -buffered saline with Tween 20 
+
+TIFF  Tagged image file format 
+
+Tn5  Transposase 5 
+
+Tris -HCl  Tris(hydroxymethyl)aminomethane hydrochloride 
+
+t-SNE  T-distributed stochastic neighbor embedding 
+
+UMAP  Uniform manifold approximation and projection 
+
+UV  Ultraviolet 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Methods 
+
+Tumor -macrophage hybrid cell identification and analysis in publicly available scRNA -
+
+seq uencing 
+
+Single -Cell Data Preprocessing 
+
+scRNA -seq data of primary and metastatic CRC patient samples were obtained from a publicly 
+
+available dataset .55 Count matrices were imported using Read10X_h5() and converted into Seurat 
+
+v5 objects with default thresholds (min. 3 cells per gene, min. 200 features per cell). 90,91 Metadata 
+
+files containing cell -level annotations (e.g., sample origin, patient ID, and original cell type) were 
+
+matched to barcode identifiers and integrated using AddMetaData(). The epithelial and non -
+
+epithelial objects were merged using merge() to generate a combined dataset . Quality control 
+
+was assessed by visualizing metrics such as gene count (nFeature_RNA), transcript count 
+
+(nCount_RNA), and mitochondrial gene percentage (percent.mt) using VlnPlot() . The merged 
+
+object was then normalized (NormalizeDa ta()), variable features were identified 
+
+(FindVariableFeatures()), data were scaled (ScaleData()), and dimensionality reduction was 
+
+performed via principal component analysis (PCA). Nearest -neighbor graphs and clusters were 
+
+generated using FindNeighbors() and FindClusters() (resolution = 2.0), and a UMAP embedding 
+
+was computed with RunUMAP() (dims = 1:30). 
+
+Hybrid Cell Classification 
+
+Hybrid tumor -immune cells were defined based on co -expression of epithelial and immune 
+
+markers within the RNA assay. Epithelial identity was assigned to cells expressing EpCAM , CDH1 
+
+(E -cadherin), and pan -cytokeratin (including KRT2 –5, KRT7 –8, KRT14 –16, KRT19 ), consistent 
+
+with AE1/AE3 immunoreactivity. Immune identity was assigned based on expression of canonical 
+
+markers including PTPRC (CD45 ), and macrophage markers CD14, CD68, CD163 , and ITGAM .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Cells expressing at least one epithelial marker and one macrophage marker were classified as 
+
+hybrids using WhichCells(). Subsets of hybrids enriched for macrophage lineage markers were 
+
+annotated as “tumor -macrophage hybrids.” Hybrid classifications were stored in the metadata 
+
+under hybridcells and counts per cell type and patient were tabulated using table(). 
+
+Doublet Detection and Filtering 
+
+To evaluate doublet scores for hybrid cell populations and remove potential doublets , cells were 
+
+scored using the scds package with three methods: cxds(), bcds(), and the cxds_bcds_hybrid() 
+
+model based on prior work. 58,92,93 Hybrid scores were assigned to metadata ( cxds -bcds -score, 
+
+cxdsscore, bcdsscore) and visualized using violin plots (VlnPlot()). Cells with cxds -bcds -score ≥ 
+
+0.5 were removed from downstream analyses . Additional doublet scores were calculated using 
+
+scDblFinder (Supplemental Figure 1) based on our prior work in uveal melanoma. 54 Seurat object 
+
+filtering and visualization steps ensured consistency across doublet detection methods. The 
+
+updated Seurat object excluding high -scor ing doublets was used for all downstream hybrid 
+
+analyses. 
+
+Differential Expression and Pathway Analysis 
+
+Differentially expressed genes (DEGs) were identified using Seurat’s FindMarkers() function with 
+
+a minimum detection threshold of 25% (min.pct = 0.25). Comparisons were made between hybrid 
+
+cells and other cell types (epithelial, macrophage -like), as well a s between hybrid cells from tumor 
+
+and lymph node (LN) sites. Top up - and down -regulated genes were visualized using heatmaps 
+
+(DoHeatmap()) and dot plots (DotPlot()), with log ₂ fold changes used to rank genes. For pathway 
+
+analysis, gene set enrichment analysis (GSEA) was performed using the clusterProfiler package 94 
+
+(gseGO()) with the Gene Ontology Biological Process (GO -BP) database. Gene symbols were 
+
+converted to Ensembl IDs via org.Hs.eg.db::mapIds(), and redundant gene entries were collapsed 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+by retaining those with the highest absolute log fold change. GSEA plots and enrichment maps 
+
+were generated using dotplot() and emapplot() from the enrichplot package. 
+
+Hybrid Cell Subsetting and Clinical Correlation 
+
+Clinical metadata including sex, age, tumor stage, MSI/MSS status, and mutational status (e.g., 
+
+KRAS, BRAF, TP53, APC) were integrated into the object and stored in new metadata columns. 
+
+Hybrid cell counts were assessed for all available clinical metadata and provided in Supplemental 
+
+Figure 1. Hybrid cell a nalyses were restricted to matched tumor and lymph node patient samples 
+
+(n = 7) where applicable using subset() by patient.ID in Seurat. RUNX1 pathway activity was 
+
+examined by comparing expression of key regulators ( RUNX1, SPI1, THBS1, LGALS3, PF4, 
+
+GRN ) in hybrid vs. epithelial or macrophage populations and across cancer stage . Group 
+
+comparisons were performed using two -sample t -tests and plotted using VlnPlot() .
+
+Generation of in -vitro derived fusion hybrids and single cell clones 
+
+MC38 -H2B -RFP colorectal cancer cells were co -cultured with bone marrow -derived 
+
+macrophages isolated from β -actin -GFP C57BL/6 mice to generate spontaneous hybrid cells as 
+
+previously described. 86 Briefly, bone marrow cells were harvested from femurs and tibias of a β -
+
+actin -GFP C57BL/6 female mouse and were cultured in high glucose DMEM supplemented with 
+
+15% FBS, 1% Penicillin/Streptomycin , and 25 ng/mL recombinant M-CSF to promote 
+
+macrophage differentiation over 4 days. After differentiation, cells were plated at a 2:1 ratio with 
+
+MC38 cells and co -cultured for 4 days in high glucose DMEM supplemented with 10% FBS, 1% 
+
+NEAA, 1% HEPES, 1% Penicillin/Streptomycin , and 5 ng/mL recombinant M -CSF. Double -
+
+positive GFP+/RFP+ cells were isolated via FACS using a BD influx and processed either 
+
+immediately for scRNA and scATAC sequencing as described in more detail below (freshly 
+
+fused/nascent ; hybrid -M) or expanded through serial passaging and purity sorting for GFP+/RFP+ 
+
+cells (hybrid -T). To generate single cell clones, sorted single hybrid cells were deposited into 96 -
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+well plates (H1 -H12) and wells with single cells were annotated 30 minutes after FACS sorting 
+
+and cell growth was assessed twice weekly until single cell colonies reached 70% confluence and 
+
+were further expanded and frozen down for future studies. Tumor cell controls (RFP+) and 
+
+macrophages (GFP+) were also sorted at the same time using the same methods and processed 
+
+for scRNA and scATAC studies described below. After sorting, hybrid cells and MC38 tumor cells 
+
+were grown in high glucose DMEM media supplemented with 10% FBS, 1% NEAA, 1% HEPES, 
+
+and 1% Penicillin/Streptomycin. This cell culture growth media was used for all experiments 
+
+unless otherwise noted in the individual experimental methods below. All experiments were 
+
+completed for cell lines between passage s 8-15. 
+
+Phenotypic evaluation of hybrid single cell clones 
+
+qRT -PCR 
+
+Total RNA was extracted using the RNeasy Plus Mini Kit (Qiagen). RNA integrity was assessed 
+
+with a Nanodrop . cDNA was synthesized using the High -capacity cDNA synthesis kit (Applied 
+
+Biosystems). qRT -PCR was performed with SYBR Green PCR Master Mix and primer sets from 
+
+Table 4 on a CFX Opus 384 (Bio -Rad). Relative gene expression was calculated using the ΔΔCt 
+
+method, using GAPDH as the internal reference gene. Results are mean ± SEM from triplicate 
+
+analyses averaged from three independent biological replicates . Heatmaps and hierarchical 
+
+clustering were generated using the pheatmap package in R. 
+
+Proliferation 
+
+To assess cell proliferation, cells were plated in 96 -well plates at equal density and monitored 
+
+over a 72 -hour period using the IncuCyte® Live -Cell Analysis System (Sartorius). Phase contrast 
+
+images were acquired every hour in each well using a 10× object ive. Proliferation rates were 
+
+quantified using the percentage of phase object confluence over time to calculate doubling time 
+
+(graphed as “1/doubling time ”) using IncuCyte’s integrated image analysis software. All 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+experiments were conducted in triplicate, with biological replicates, and data were normalized to 
+
+initial confluence at time zero. 
+
+Chemotaxis 
+
+Cells were seeded at equal density in the upper chambers of IncuCyte® ClearView 96 -well 
+
+Chemotaxis Plates (Sartorius) in serum -free growth media. The lower wells contained growth 
+
+media supplemented with 10% fetal bovine serum (FBS) as a chemoattractant. The plate was 
+
+imaged every hour for 60 hours using the IncuCyte® Live -Cell Analysis System with a 10× 
+
+objective, capturing phase contrast images of cells migrating through the memb rane to the 
+
+underside of the upper chamber. Cell migration was quantified usin g IncuCyte’s integrated 
+
+chemotaxis analysis module, measuring cell count in the lower focal plane over time, normalized 
+
+to the initial top value count. Each condition was run in at least triplicate wells per experiment, 
+
+with 2 or more biological replicates for both the hybrid single cell phenotyping studies (Figure 2) 
+
+and Runx1 shRNA studies (Figure 5) .
+
+ECM c ollagen invasion on -a-chip 
+
+To establish the invasion on -a-chip, we used a n identTx3 microfluidic device (Mattek ). The 
+
+device contains a central channel (1.30 mm in width and 0.25 mm in height) separated by pillars 
+
+from two adjacent parallel channels (0.5 mm in width and 0.25 mm in height). To improve 
+
+collagen adherence, the central chamber of the devices was coated with 1 mg/mL of poly -D-
+
+lysine (PDL) (Gibco ) for 3 hours at 37 °C , then washed with ultrapure water and allowed to dry 
+
+overnight inside the biosafety cabinet. Next, we prepare d collagen hydrogel by mixing 833 μL of 
+
+acid -solubilized type I collagen from rat tail (3 mg/mL, Gibco) with 100 μ L of 10x PBS, 20 μ L of 
+
+1 M NaOH, and 47 μ L of growth media without serum to achieve a working pH of 7. 2 to 7. 4.
+
+Subsequently, 10 μL of collagen was pipetted into the central channel carefully to avoid 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+bubbles . Devices were maintained in the incubator at 37 C for 45 min utes to allow collagen 
+
+fibrillogenesis , then the lateral channels were filled with media to prevent collagen dehydration. 
+
+On the next day, cells (MC38 tumor, H11, H4, H3 or H7) in serum -free growth media were 
+
+seeded in one of the lateral channels of the device while on the other channel, growth media 
+
+with 10 % FBS was placed to act as a chemoattractant for the cells. The devices were then 
+
+placed in the incubator to allow cells migration into the collagen gel. Three images spanning 
+
+across each channel were acquired every 24 hours for three days using a Nikon spinning disk 
+
+live -cell imaging system with z -stack to assess cell migr ation in x,y and z planes using a 10x 
+
+objective. After 72 hours, the cells were fixed and stained with DAPI and imaged using the same 
+
+microscope and imaging parameters . The number of invading cells were quantified by manual 
+
+annotation in a blinded observer using Zen Blue software (Carl Zeiss Microscopy) . Data 
+
+presented are the total cell counts from 2 biological replicates and 2 technical replicates , n=4 
+
+per cell line. 
+
+Vasculature invasion on -a-chip 
+
+Fabrication of the microfluidic device 
+
+A CAD program (Autodesk Fusion 360 v.2606.1.36) was used to design a mold composed of 
+
+two reservoirs connected by a central channel and a chamber as published .95 We then used a 
+
+three -dimensional (3D) printer (CADworks3D μMicrofluidic printer , Profluidics 285D ) and resin 
+
+(Master Mold resin, CADworks) to print the positive molds. Printed micromolds were cleaned in 
+
+methanol in three rinses of 2 min utes each under agitation, subsequently were cast with PDMS 
+
+(Polydimethylsiloxane - Sylgard 184, Dow -Corning), and left to cure overnight at 80°C, as 
+
+previously described .95,96 Next , PDMS was removed from the resin mold, and two reservoirs were 
+
+prepared using a 5 -mm biopsy punch for media , 1-mm biopsy punches for the collagen loading 
+
+ports and 2.5 mm punch on top of the central chamber where collagen will be placed . Molds were 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+cleaned with ethanol and immediately plasma bonded to a glass coverslip. Assembled devices 
+
+were autoclaved, then treated with 1% (w/v) glutaraldehyde (Sigma -Aldrich) for 15 min utes , rinsed 
+
+three times with distilled water (DIW), and left overnight in DIW to remove any trace of 
+
+glutaraldehyde. To mold cylindrical channels, sterile 160 μm diameter acupuncture needles were 
+
+immersed in a 0.1% bovine serum albumin (BSA) solution for at least 30 min utes and then 
+
+inserted into the central channel of the devices ~2 00 μm above the glass coverslip surface. Rat 
+
+tail collagen type I (3.0 mg/m L, Gibco ) was prepared according to published protocol. 95 Briefly, a 
+
+stock solution of collagen type I (collagen I, rat tail Gibco, 3 mg/m L) was prepared on ice by mixing 
+
+833 μ L of collagen with 100 μ L of 10x PBS, 20 μ L of 1 M NaOH, and 47 μ L of EGM to reach a 
+
+working pH of 7.2 -7.4 . The final solution w as immediately pipetted into the middle chamber of the 
+
+device and allowed to polymerize at 37° C.95 To prevent collagen dehydration, after 1 hour, the 
+
+main reservoirs and the top of the collagen hydrogel were filled with EGM, then devices were 
+
+returned for incubation overnight. On the following day, the needles were carefully removed with 
+
+a pair of tweezers, and the cell medium (EGM) was replaced by fresh medium. Subsequently, the 
+
+devices had their reservoirs filled with fresh EGM and were placed in the incubator at 37°C and 
+
+5% CO 2 overnight before cell seeding. 
+
+Cell culture 
+
+Human umbilical vein endothelial cells (H UVECs expressing green fluorescent protein (GFP -
+
+HUVECs , Lonza, Basel, Switzerland) were cultured in a supplemented media (EGM -2 with bullet 
+
+kit, Lonza). Human bone marrow mesenchymal stem cells ( hMSCs , RoosterBio, MD) were 
+
+cultured in α –minimum essential medium (Gibco) with 10% FBS and 1% penicillin/streptomycin. 
+
+Cell media was changed every other day, and cells were passaged when reaching a confluency 
+
+of 80 -90%. HUVECs at passages 4 -6 and hMSCs at passages 2 -4 were used for all the 
+
+experiments. All cells were maintained in a humidified incubator (5% CO 2 and 37°C). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Cell seeding 
+
+For seeding, GFP -HUVECs and hMSCs were detached using Tr ypLE (Gibco, FisherSci entific ),
+
+counted, and mixed at a 4:1 ratio according to previous publications 95 in a cell density of 6 x10 6
+
+cells/m L. Subsequently, the cell medium was removed from the reservoirs, and 25 μ L of the cell 
+
+suspension was added into one reservoir. The devices were flipped upside down, placed in the 
+
+incubator for 5 min utes , seeded again, and left upside down in the incubator for another 5 min utes .
+
+Until the entire extension of the collagen channel had cells attached, we repeated the seeding, 
+
+flipping the chip as needed. Next, the devices were placed in the incubator for 30 min utes under 
+
+sta tic conditions. Afterward, the devices were transferred to the two -dimensional (2D) rocker 
+
+(BenchRocker) inside the incubator as published .95,96 After 24 hours , vasculature was formed and 
+
+4 x10 5 hybrid cells or unfused parent cells were seeded on the central reservoir of the devices, 
+
+on top of the collagen so that cells were 800 μm away from the vascular channel. The devices 
+
+were maintained in a humidified incubator (5% CO 2 and 37°C) for 24 hours and fixed with 4% 
+
+PFA (v/v) in PBS for 30 min utes .
+
+Cell staining and imaging 
+
+Cells were permeabilized with 0.1% (w/v) Triton X -100 for 10 min utes and blocked with 1.5% (w/v) 
+
+BSA for 1 hour under agitation. After washing with PBS, samples were incubated with one of the 
+
+following primary antibodies (anti -PECAM -1, rabbit anti -human, cat. no. AB32457, Abcam, 1:100; 
+
+or anti -NG -2, mouse anti -human, cat. no. 14 -6504 -82, Invitrogen, 1:200) overnight at 4°C. 
+
+Samples were washed with PBS and incubated with secondary antibody (goat anti -mouse Alexa 
+
+Fluor 555, Invitrogen, 1:250; goat anti -rabbit Alexa Fl uor 647, Invitrogen, 1:250) overnight at 4°C 
+
+under agitation. This was followed by rinsing in 0.1% PBS, staining of the nuclei using NucBlue 
+
+[Fixed Cell ReadyProbes, 4′,6 -diamidino -2-phenylindole (DAPI), ThermoFisher ], and staining of 
+
+actin with ActinGreen 488 (ReadyProbes, ThermoFisher ) for 1 hour at 37°C under agitation. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Samples were imaged using a confocal microscope (Zeiss, LSM 880, Germany) with a 10× 
+
+objective (numerical aperture, 0.45; Zeiss, Plan Apochromat). The depth of imaging was 100 to 
+
+400 μm, split in at least 100 z-stacks. z-stacks were converted into TIFF files or 3D images using 
+
+Zen Blue software (Carl Zeiss Microscopy) or Imaris software (version 9.1, Bitplane, Oxford 
+
+Instruments, Zurich, Switzerland). The number of migrating cells were counted using Imaris. 
+
+Protease activity 
+
+Protease Probe Synthesis and Labeling 
+
+Protease target probes (ACE2, CATB, MMP14, MTP, PLASM, USP15 ) were synthesized at >98% 
+
+purity with N -terminal acetylation and C -terminal amidation (GenScript). Probes were conjugated 
+
+to the fluorescent reporter BDP FL NHS ester (Lumiprobe, Cat. #41420) and aliquoted for single -
+
+use storage. Immediately prior to each assay, aliquots were thawed on ice and protected from 
+
+light. 
+
+Probe  Sequences: ( “/” marks cleavage site) 
+
+ACE2:  Ac -N-GEPEP/FAGAGK -CO -NH2 
+
+CATB:  Ac -N-DGLAG/GAGGK -CO -NH2 
+
+MMP14:  Ac -N-DGDPAG/LRGAGK -CO -NH2 
+
+MTP:  Ac -N-DGDGM/ARTLK -CO -NH2 
+
+PLASM:  Ac -N-DGDPSLR/SVSGK -CO -NH2 
+
+USP15:  Ac -N-DGDLRGG/MPGSGK -CO -NH2 
+
+Protease Reaction Setup 
+
+Reactions were performed in 96 -well V -bottom plates. Each well contained 2 μL of 50 mM CaCl ₂,
+
+4 μL of peptide working stock, and 4 μL of lysate, for a final reaction volume of 10 μL per well. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+The final probe concentration was 200 μg/mL with 10 mM CaCl ₂. Plates were sealed, wrapped in 
+
+foil, and incubated on an orbital shaker at room temperature for 60 min utes .
+
+Sample Preparation and Gel Electrophoresis 
+
+Following incubation, 2 μL of 60% sucrose was added to each well. Samples (10 μL) were loaded 
+
+into 20% acrylamide TBE gels , each in triplicate, and electrophoresed at 300 V for 60 min utes 
+
+under inverted polarity. Gels were rinsed with deionized water prior to imaging. 
+
+Imaging and Quantification 
+
+Fluorescent signal was captured on an iBright 1000FL imaging system (ThermoFisher Scientific) 
+
+using the following settings: 1X digital zoom, 1.5X optical zoom, and focus level 370. Images were 
+
+acquired at exposure times of 20, 50, and 100 ms. Band intensit ies were quantified using iBright 
+
+Analysis Software (ThermoFisher Scientific). 
+
+In vivo tumor models 
+
+All animal procedures were conducted in accordance with protocols approved by the Oregon 
+
+Health & Science University (OHSU) Institutional Animal Care and Use Committee (IACUC). Mice 
+
+were maintained in a specific pathogen -free facility under a 12 -hour light/dark cycle with 
+
+unrestricted access to standard rodent chow (5001, PMI Nutrition International, Richmond, IN) 
+
+and water. E xperimental cohorts included adult mice aged 8 to 12 weeks, with balanced 
+
+representation of both sexes, and littermate controls were used where applicable. MC38, H11, 
+
+and H7 cells were injected into C57 BL/6 mice subcutaneously at a dose of 50,000 cells diluted 
+
+1:1 in sterile PBS/ Matrigel. Tumor volume using calipers and body weight were measured twice 
+
+weekly until tumor endpoint (reaching a maximum tumor size of 1200mm 3). At that time, mice 
+
+were euthanized, and tumors were harvested for FFPE and OCT embedding .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+RUNX1 Inhibition 
+
+For RUNX1 inhibition studies, mice bearing H11 tumors were randomized to treatment once 
+
+tumors reached approximately 300 mm³. Mice were treated with the RUNX1 inhibitor Ro5 -3335 
+
+(5 mg/kg) or vehicle control via intraperitoneal injection every 3 days for a total of three doses. 
+
+Tumor growth was monitored as described above, and circulating hybrid cells were assessed at 
+
+endpoint via immunofluorescent staining of isolated PBMCs adhered to slides as detailed below. 
+
+Sample Preparation, Staining, Imaging and Quantification 
+
+PBMCs were isolated via Ficoll density centrifugation, adhered to poly -D-lysine –coated glass 
+
+slides, and fixed in 4% paraformaldehyde (PFA) prior to staining as previously described. 97 PBMC 
+
+cell slides and FFPE tumor sections were washed 3x5 minutes with PBS and incubated in 
+
+blocking buffer (2.5M CaCl 2, 1% TritionX -100, 1% BSA in PBS) for 30 minutes at room 
+
+temperature. Primary antibodies targeting GFP (GFP -1020, Aves Labs) and RFP (5f8, 
+
+ChromoTek) were applied at a 1:500 dilution in blocking buffer overnight at 4°C. The next day, 
+
+secondary fluorescent antibodies Donkey Anti -Chicken Alexa Fluor 488 (Jackson 
+
+ImmunoResearch , 703 -546 -155) and Donkey Anti -Rat Cy3 (Jackson ImmunoResearch, 712 -165 -
+
+153) were applied at a 1:500 dilution, incubated for 45 minutes at room temperature, and 
+
+counterstained with DAPI. Whole slides were imaged using an AxioScan.Z1 digital slide scanner 
+
+(Zeiss) equipped with a Colibri 7 light engine. Exposure times were adjusted per fluorophore and 
+
+antibody to optimize signal detection and avoid saturation and were determined using negative 
+
+staining controls for each round . Imaging was performed using a 20 x Plan -Apochromat 0.8 NA 
+
+objective and stitched using Zen Blue software ( Carl Zeiss Microscopy ). GFP + cells were 
+
+quantified in QuPath 98 (Version 0.6.0 -rc5). Cells were segmented using the InstanSeg extension, 
+
+and thresholds for GFP positivity were determined from a paired secondary antibody -only control 
+
+section for each animal. All GFP + cells were manually reviewed to exclude artifact signal. Data 
+
+are reported as GFP + cells per 50,000 nuclei. For the FFPE tumor sections, fluorescence reporter 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+signal was quantified using FIJI (Version 2.16/1.54p). Acquisition settings were held constant 
+
+across all samples. Thresholds for GFP and RFP channels were established using A431 tumors 
+
+lacking both GFP and RFP reporter expression and applied uniformly to all samples. Reporter 
+
+signal was quantified as area fraction above threshold within manually defined tissue masks. 
+
+In vivo tumor growth experiments were performed in biological triplicate. Cohort sizes varied due 
+
+to differences in tumor engraftment rates across cell lines . Data shown represent the largest 
+
+experimental cohort with a balanced male -to -female ratio and are representative of findings 
+
+observed across independent experiments. RUNX1 inhibitor studies were performed in biological 
+
+duplicate. RUNX1 inhibitor tumor growth studies were performed in biological duplicate with n=10 
+
+mice per treatment group with a balanced male -to -female ratio (5M/5F). Analysis of CHCs after 
+
+treatment with RUNX1 inhibitor was limited by compromised peripheral blood samples (n=5 per 
+
+treatment group). 
+
+Runx1 shRNA studies 
+
+Cell culture 
+
+MC38 -RFP tumor cells and two MC38xY01 -derived hybrid clones (Clone 7 and Clone 11) were 
+
+cultured in high glucose DMEM medium supplemented with 10% FBS, 1% NEAA, 1% HEPES 
+
+and 1% penicillin -streptomycin. Neomycin (G418, Sigma Aldrich) titration was performed prior to 
+
+transduction to determine the minimum concentration required to eliminate non -transduced cells. 
+
+Cells were seeded in 24 -well plates and treated with a dilution series of neomycin (G418). At 
+
+1000 μg/mL, all cells were killed within 4 days. MC38 tumor cells showed slightly higher sensitivity 
+
+and were also maintained under the same neo mycin concentration for consistency. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Lentiviral transduction 
+
+Lentiviral shRNA particles targeting RUNX1 (TRCN0000084810 and TRCN0000084812) and a 
+
+non -targeting control (TRCN0000072229) (Sigma Aldrich) were used at calculated multiplicities 
+
+of infection (MOIs) based on viral titers and cell counts (Table 5). Cells were seeded into 24 -well 
+
+plates at densities to reach target densities for MOI calculation the following day. Immediately 
+
+prior to trans duction , media was replaced with fresh growth medium containing 8 μg/mL polybrene 
+
+(hexadimethrine bromide), except for one control well that received polybrene -free medium to 
+
+monitor potential toxicity. The appropriate amount of viral supernatant was added directly to each 
+
+well based on calculated MOI of 20 viral particles per cell and placed back into the incubator 
+
+overnight. The next day, viral -containing media were aspirated and replaced with fresh growth 
+
+medium for 24 hou rs before starting selection with neomycin (G418) containing media. 
+
+Transduced cells were selected by growing in media containing 100 0 μg/mL neomycin. Brightfield 
+
+images were captured at each media change to document cell viability and morphology. Due to 
+
+insufficient knockdown efficiency observed in preliminary experiments, a second transduction was 
+
+performed using the same procedure . This repeat transduction was carried out after the first round 
+
+of selection and expansion. Cells were re -seeded at appropriate densities, and transduction was 
+
+repeated as des cribed above. Selection with 10 00 μg/mL neomycin was re -applied and cells were 
+
+maintained under selection for 72 hours before downstream analyses including q RT -PCR, 
+
+western blot, chemotaxis, proliferation, ECM invasion, and protease activity as previously 
+
+described. 
+
+Western Blots 
+
+Cells were harvested for western blot analysis using trypLE (Gibco, FisherSci) to detach adherent 
+
+cells. After pelleting cells were washed once with 1X PBS, pelleted and were then either flash -
+
+frozen in liquid nitrogen or immediately lysed. Cell lysis was performed using RIPA buffer 
+
+(ThermoFisher Scientific, 89900) supplemented with 1 mM PMSF and one protease inhibitor mini -
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+tablet (per 7 mL buffer) and phosphatase inhibitor cocktail 2 (Sigma -Aldrich). Lysis buffer was 
+
+added at 60 μL per 1×10⁶ cells. Samples were incubated on ice for 20 minutes to allow 
+
+solubilization. Samples were sheared to reduce viscosity via vigorous vortex. Lysates were 
+
+centrifuged at 15,000 × g for 10 minutes at 4°C, and supernatants were transferred to new t ubes. 
+
+Protein concentration was normalized using a BCA assay. Lysates were mixed with 3× GS loading 
+
+buffer (6% SDS, 150 mM Tris pH 8.0, 30% glycerol , 0.1% bromophenol blue) containing 1× final 
+
+concentration of β -mercaptoethanol (BME) and heated at 95°C for 5 minutes. Samples were 
+
+loaded into Criterion TGX gels (Bio -Rad) and electrophoresed at 130 –150 V for ~1 hour in 1× 
+
+running buffer. Proteins were transferred to PVDF membranes (activated in ethanol) using the 
+
+Bio -Rad Trans -Blot Turbo system according to manufacturer -specified settings based on protein 
+
+molecular weight. Membranes were blocked for 5 minutes at room temperature in EveryBlot 
+
+blocking buf fer (Bio -Rad, 12010020). Blots were incubated overnight with primary antibodies at 
+
+4°C (R UNX1 (19555 -1-AP, ProteinTech) 1: 10 00 ; ACTIN (2066, Sigma) 1: 100) in TBST, followed 
+
+by 3 x 5-minute TBST washes. Secondary antibody ( goat anti rabbit HRP 1:2000 ) was applied for 
+
+1–2 hours at room temperature, followed by additional TBST washes (1 -2 hours). Signal detection 
+
+was performed using SuperSignal West Pico PLUS or Femto chemiluminescent substrates 
+
+(ThermoFisher Scientific ), and membranes were imaged using an iBright FL digital imaging 
+
+system (ThermoFisher Scientific ). Bands were quantified using iBr ight analysis software 
+
+(ThermoFisher Scientific ).
+
+Immunofluorescent staining and imaging 
+
+Cells were grown on ibidi chamber slides and fixed using 4% PFA for 15 min ute s at room 
+
+temperature once desired confluency was reached (~70% confluent) . After fixation, cells were 
+
+washed 3x5 min ute s with PBS and incubated in blocking buffer (2.5M CaCl 2, 1% TritionX -100, 
+
+1% BSA in PBS) for 30 min ute s at room temperature . Primary antibod y targeting RUNX1 (RUNX1 
+
+PA5 -19638, 1:800 ) w as applied diluted in blocking buffer overnight at 4 °C. The next day, 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+secondary fluorescent antibody was applied at 1:500 dilution and incubated for 1 hour at room 
+
+temperature and counterstained with DAPI . Cells were imaged using an inverted e pifluorescence 
+
+microscope (Axio Observer, Zeiss) at various magnification s (10x, NA 0. 45 ; 20x, NA 0.8, 40x NA 
+
+1. 3). All images shown are representative of three or more images collected per cell line, per 
+
+condition , in biological triplicate. Quantification of fluorescent intensity was analyzed using Zen 
+
+Blue software (Carl Zeiss Microscopy) .
+
+cyCIF CRC patient matched tumor and peripheral blood 
+
+Antibody Generation 
+
+Antibod ies were prepared using barcoding technologies as previously described. 99 -102 In brief, 
+
+each antibody was site -specifically conjugated to a 28 -nucleotide (nt) single -stranded DNA 
+
+docking strand (DS) using the SiteClick ™ Antibody Azido Modification Kit (ThermoFisher 
+
+Scientific), which targets the Fc region. For marker detection, 26 nt complementary imaging 
+
+strands (IS) labeled with fluorophores and photocleavable linkers (PCLs) at both the 5′ and 3′ 
+
+termini were hybridize d to the docking strands. All oligonucleotides were synthesized by 
+
+Integrated DNA Technologies (IDT, Coralville, I A). A complete list of antibodies is provided in 
+
+Table 3.
+
+Staining Protocol & Signal Removal 
+
+cyCIF was performed on formalin -fixed paraffin -embedded (FFPE) tumor tissue sections and 
+
+corresponding peripheral blood mononuclear cells (PBMCs) from patient -matched specimens, as 
+
+previously described and detailed in Table 2 .45,99 -102 FFPE tumor sections (5 μm) were first 
+
+deparaffinized with xylene and rehydrated through a graded ethanol series. Antigen retrieval was 
+
+conducted by incubation in citrate buffer (pH 6.0) for 30 minutes at 100°C, followed by rinsing in 
+
+heated deionized wate r and a 10 -minute incubation in Tris -HCl buffer (pH 8.0) at 100°C. Slides 
+
+were then cooled to room temperature and washed in PBS. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+PBMCs were isolated via Ficoll density centrifugation, adhered to poly -D-lysine –coated glass 
+
+slides, and fixed in 4% paraformaldehyde (PFA) prior to cyCIF staining. Cells were rehydrated in 
+
+3x5 min ute PBS washes. Tumor and PBMC slides were blocked for 30 minutes at room 
+
+temperature in PBS containing 2% bovine serum albumin (BSA), 0.5% dextran sulfate, and 
+
+0.5 mg/mL sheared salmon sperm DNA. Ab -oligo conjugates targeting specific biomarkers (Table 
+
+3) were diluted in blocking buffer and applied to the tissue and blood samples in a single -step 
+
+staining protocol (separated into two rounds of primary antibody incubation (after R0 and after 
+
+R5) as the volume of 34 antibodies left very little blocking buffer added to dilute to intended 
+
+concentrations ). Following overnight incubation at 4 °C , unbound Ab -oligos were removed by 
+
+washing 3x5 minute s using 2X saline -sodium citrate buffer ( SSC ), and samples were post -fixed 
+
+with 2% PFA for 10 minutes. Samples were then incubated with imaging strands (IS) specific to 
+
+the DNA docking sequences on the antibodies for 45 minutes , washed 3x5 minutes in 2x SSC 
+
+and counterstained with DAPI for 10 minutes . Coverslips were mounted using fluoromount -G
+
+(ThermoFisher Scientific ). Three to four ISs were applied per imaging round, each labeled with a 
+
+distinct fluorophore , DAPI (Zeiss 96 HE), Alexa Fluor 488 (Zeiss 38 HE), AF555 (Zeiss 43 HE), 
+
+AF647 (Zeiss 50), a nd AF750 (Chroma 49007 ET Cy7) .
+
+Image Acquisition 
+
+Whole slides were imaged using an AxioScan.Z1 digital slide scanner (Zeiss) equipped with a 
+
+Colibri 7 light engine. Exposure times were adjusted per fluorophore and antibody to optimize 
+
+signal detection and avoid saturation and were determined using negative staining controls for 
+
+each round . Imaging was performed using a 20 x Plan -Apochromat 0.8 NA objective and stitched 
+
+using Zen Blue software ( Carl Zeiss Microscopy ). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Fluorescent Signal Removal 
+
+After each round of imaging, fluorescence signals were removed by UV treatment for 15 minutes 
+
+to enable additional rounds of staining. The cycle of IS hybridization, imaging, and UV -based 
+
+fluorophore cleavage was repeated until all desired markers were imaged. Round 0 (R0) images 
+
+were acquired following DAPI staining and prior to antibody application to assess background 
+
+autofluorescence using the 488 channel . Two tumor sections from different tumor regions and 
+
+one peripheral blood specimen (~1.5 mL) were analyzed per patient. 
+
+Image a nalysis 
+
+For Ab -oligo validation, Zen Bl ue software (Carl Zeiss Microscopy ) was used for image 
+
+visualization. 
+
+For cyclic immunofluorescence, images from cyclic staining rounds were registered using 
+
+ASHLAR feature -based image registration. 103 Cells were segmented using QiTissue default 
+
+segmentation parameters for PBMC slides and using MESMER segmentation for tumor 
+
+tissues. 104 The edges of the tissue sections and wells were excluded from analysis as well as 
+
+areas with imaging artifacts (e.g., out of focus, bubbles). Using QiTissue, cells with high 
+
+autofluorescence were removed from analysis based on the whole cell average fluorescence from 
+
+the round 0 background channel. Hybrids were defined as co -expressing CD45 and at least one 
+
+of the epithelial markers : panCK, ECAD, or EpCAM . Positive expression was defined in QiTissue 
+
+as a whole cell intensity average value above the positiv e staining threshold that was determined 
+
+by normalizing to an unstained control for each patient . Average cell intensity values were 
+
+extracted for each antigen in the phenotyping panel for each identified hybrid cell and circulating 
+
+tumor cell .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Extracted average cell intensity features for all cells, including CHCs and CTCs, were compiled 
+
+into a unified feature table and normalized per marker using UniFORM feature -level normalization 
+
+method. 105 UniFORM aligns marker intensity distributions across samples via FFT -based cross -
+
+correlation while preserving distribution shapes and positive population proportions – effectively 
+
+addressing the right -skewed, heterogeneous nature of multiplexed imaging da ta. Following 
+
+normalization, CHCs and CTCs were isolated and merged into a combined dataset and then the 
+
+normalized CHC/CTC dataset was subjected to Leiden clustering to identify distinct 
+
+subpopulations. Differential biomarker expression was assessed acros s clusters and visualized 
+
+using heatmaps. Expression levels of key markers (e.g., RUNX1, SPI1, THBS1) were visualized, 
+
+stratified by tumor stage and cell type. Expression differences by stage were evaluated using two -
+
+tailed t -tests comparing expression lev els between stages (1 vs. 2, 2 vs. 3, and 1 vs. 3). 
+
+Single cell omics in -vitro derived hybrid cells & CRC patient hybrid scRNA sequencing 
+
+Flow cytometry 
+
+All FACS used in these studies was performed on a BD Influx. 
+
+For in vitro derived hybrid cells GFP and RFP fluorescence was used to isolate double positive 
+
+hybrid cells. Cells were also stained for viability using DAPI. Tumor cell controls (RFP+) and 
+
+macrophages (GFP+) were also sorted at the same time using the same methods and processed 
+
+for scRNA and scATAC studies described below. 
+
+For patient samples, PBMCs were isolated using Ficoll -Paque density gradient centrifugation as 
+
+previously described. 20,45 Briefly, peripheral blood samples were collected from patients using 
+
+heparinized vacutainer tubes (BD Biosciences, Franklin Lakes, NJ, USA) and diluted at a 1:2 ratio 
+
+with phosphate -buffered saline (PBS; 1.37 M NaCl, 27 mM KCl, 0.1 M Na ₂HPO ₄, 18 mM KH ₂PO ₄,
+
+pH 7.4). 12 mL of Ficoll was underlaid beneath the diluted blood and centrifuged at 800 × g for 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+20 minutes at room temperature with no brake. The PBMC layer was collected, washed, and 
+
+resuspended in PBS. Cells were then seeded onto poly -D-lysine –coated slides (1 mg/mL; 
+
+Millipore, Burlington, MA, USA; Fisher Scientific, Waltham, MA, USA) and incubated at 37°C for 
+
+15 minutes to promote adherence. Adherent cells were fixed with 4% paraformaldehyde (PFA) 
+
+for 5 minutes, permeabilized with 0.5% Triton X -100 (Fisher Scientific, BP151 -100) for 10 minutes, 
+
+and post -fixed with 4% PFA for an additional 10 minute s. 
+
+Patient tumor tissue obtained immediately after surgical removal was digested into single cell 
+
+suspension by finely mincing , followed by enzymatic digestion with Liberase -TH (5 mg/mL in 
+
+sterile ultrapure H2O) for 30 -60 min utes on a stir plate at 300 RPM and 37 °C, then filtered using 
+
+100 μM cell strainer, pelleted and washed. PBMCs and tumor cells were stained with antibodies 
+
+targeting EpCAM , ECAD, CD45, and DAPI as previously described. 21 Briefly, cells were washed 
+
+and resuspended in FACS buffer [phosphate -buffered saline (PBS), 1.0 mM EDTA, and 5% fetal 
+
+bovine serum (FBS)]. Cells were incubated in FACS buffer containing Fc Receptor Binding 
+
+Inhibitor (5 μL 5” per 1x10 6 cells; eBioscience) for 20 min utes on ice. Cells were then incubated in 
+
+FACS buffer for 30 min utes on ice with CD45 -AF488 (1:100; ThermoFisher Scientific), ECAD -
+
+AF647 (1:100), EpCAM -AF555 (1:100). DAPI was used to assess cell viability. Single color 
+
+controls used for gating in cluded EpCAM /Ecad expressing epithelial cell line, and donor PBMCs 
+
+stained with only CD45 -AF488 (1:100). Cells were defined as tumor hybrid cells or circulating 
+
+hybrid cells by ( EpCAM + and/or ECAD+ and CD45+). Tumor cells ( EpCAM + and/or ECAD+ and 
+
+CD45−) and immune cells ( EpCAM - and ECAD - and CD45+) were also sorted into 16 wells of 
+
+the 96 well plate containing cell lysis buffer (0.2% TritonX diluted in sterile, ultrapure H 2O and 
+
+RNase inhibitor (Takara Bio). Immediately after single cell sorting, plates were sealed, spun down 
+
+and rapidly frozen and stored at -80 °C until further processing for Smart -seq described below. In 
+
+vitro studies data reflect analyses from n=2 hybrid fusion, sorting and downstream 10X 
+
+sequencing experiments. For patient samples (Table 2), n=3 patients with CRC (2 tumor samples, 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+3 PBMC samples) were processed for Smart -Seq plate based single cell sequencing, and if 
+
+substantial hybrid cells obtained, also pooled with tumor cells or PBMCs for 10X genomics 
+
+sequencing studies described in detail below. 
+
+Nuclei Isolation for 10x and s3 Libraries 
+
+After flow sorting, the nuclei were spun down (5 minutes, 500xg, 4 °C) to remove the media 
+
+supernatant and resuspended it in 1 mL of NIB -Hepes buffer. The cell suspension were then 
+
+incubated for 5 minutes on ice; and subsequently spun down (5 minutes, 500xg, 4°C). The pellet 
+
+was resuspended in 1 mL NIB -Hepes, spun again, and resuspended in 1 mL once more before 
+
+quantification. 
+
+10x Genomics scRNA 
+
+For the scRNA libraries , isolated nuclei were diluted in 10x Genomics 20x Nuclei Buffer to the 
+
+desirable targeted cell recovery. The 10x Genomics Single Cell 3’ Gene Expression Kit was then 
+
+used according to the published protocol. 
+
+SmartSeq scRNA 
+
+For these patient libraries, the nuclei were frozen down in a 96 -well plate in lysis buffer as 
+
+previously described in FACS section above . The published protocol from Takara’s SMART -Seq 
+
+mRNA Single Cell LP User Manual was followed starting from Step V, First -Strand cDNA 
+
+Synthesis. The libraries were indexed using the Unique Dual Index Kits, pooled, cleaned, and 
+
+quantified as described below. 
+
+ScaleBio Tagmentation for scATAC 
+
+To generate these scATAC libraries the s3 -ATAC protocol on the iCell8 was leveraged .106 The 
+
+iCell8 instrument was put through standard instrument start up including tip cleaning, stream 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+checks, wash priming, and prechilled the block. Next, the source plate set up was assigned to 
+
+(Cells – PCR Mix1 – Index 1 (i7 TruSeq) – PCR Mix2 – Index 2 (i5 Nextera) and read in the 
+
+barcode of the nanochip. 
+
+The 100 μM iCell8 TruSeq Primer source plates were prepared. After removing the seal from 
+
+nanochip and vacuum sealing it into position, the iCell8 first dispensed the i7 and then i5 primers 
+
+into the chip. Following each dispense the chip was blotted, sealed, and centrifuged (3 minutes, 
+
+maximum RFC, 4°C) b efore the next step. During the centrifugation the iCell8 tips were cleaned 
+
+twice. 
+
+The quantified, isolated nuclei were prepared to get them to the appropriate concentration for 
+
+tagmentation. A master mix of the following (2.67 μL NIB -H, 3 μL 4.3478x TAPs -TD (1M TAPs, 
+
+5M KOAc, 1M MgOAc, 1M D -glucosamine, 6.1% DMF, in H 2O), 0.1 μL pluronic) was made . This 
+
+master mix was dispensed into a 96 -well plate with a multichannel, and to this 5 μL of 500 μM 
+
+Scale SBS12/A14 TN5 on the Bravo was stamped in . Next 6,000 nuclei were manually pipetted 
+
+in 4.23 μL NIB -H to the respective wells. We proceeded to tagment at 55°C for 15 minutes. After 
+
+tagmentation the samples were allowed to cool on ice, be fore they were pooled, spun down (5 
+
+minutes, 500xg, 4°C, with 180° turn) and resuspended in 1 mL TMG Buffer (1.25 mL 4x TAPS 
+
+Premix, 1.5 mL 50% glycerol, 2.2 mL H 2O, 50 μL 10% pluronic F -127) to cushion the nuclei and 
+
+aid in recovery. These TMG washes were repeated three more times, with the final resuspension 
+
+being in 120 μL iCell8 Loading Buffer (44 μL 4 .3478x TAPs -TD, 50 μL TN5 Dialysis Buffer (10 
+
+mM Hepes 7.2, 20 mM NaCl, 0.02% TritonX, 2.5% glycerol, 0.2mM DTT), 0.1% 10% pluronic f -
+
+127, 401 μL H 2O). Nuclei were quantified, with a typical recovery at approximately 50% post -
+
+tagmentation, and diluted to get 358 nuclei/μL. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Now the tagmented nuclei were read to load to the iCell8 chip. Approximately 35 μL of nuclei were 
+
+dispensed into each well of the source plate, with 100 μL of cell loading buffer in the control wells. 
+
+After using the iCell8 to dispense the cells into the chip, it was spun down (10 minutes, maximum 
+
+RFC, 4°C) while 3 additional tip cleans were run on the iCell8. The chip was incubated at 53.7°C 
+
+for 15 minutes. After adding 100 μL of PCR master mix (188.4 μL 5x hi GC Buffer, 18.84 μL 
+
+dNTPs, 14.58 μL Kapa HiFi Polymerase (non -hot start), 316.5 μL H 2O) to the source plate wells, 
+
+150 nL was dispensed into each well of the iCell8 chip. Again, the chip was spun down (10 
+
+minutes, maximum RFC, 4°C) while 3 tip cleans were run concurrently. Following this, 12 cycles 
+
+of sciATAC -P PCR were run with the sample s on the iCell8 chip. The library was collected utilizing 
+
+the iCell8 Collection Kit (Cat. No. 640212) and clean with a standard double sided -SPRI bead 
+
+protocol prior to quantification. 
+
+Artificial Doublet Experiment 
+
+To generate and assess artificial doublet cell transcriptomes for comparison with hybrid fusions, 
+
+the Takara's SMART -Seq Pro application on the ICell8 single -cell system was used (Takara Cat. 
+
+No. 640257). The experimental design leveraged the previously established distinct fluorescent 
+
+markers: macrophages expressed GFP, tumors expressed RFP, and hybrid cells co -expressed 
+
+both fluorophores. The SMART -Seq Pro manual was followed closely, with several key 
+
+modifications. The ICell8 system dispenses cells according to a Poisson distribution, which can 
+
+result in imperfect single -cell loading. To increase throughput, the standard protocol involves two 
+
+consecutive cell dispenses, each f ollowed by imaging to identify w ells containing single cells. 
+
+These wells are then selected for downstream reagent addition. In our modified approach, two 
+
+separate 384 -well source plates were used . For source plate preparation, in vitro -derived hybrid 
+
+cells, cultured MC38 tumor cells, and first -passage macrophages were isolated via flow cytometry 
+
+as previously described. Cells were stained with DAPI (10 μg/mL) in 2 mL of media on ice and 
+
+quantified. Two 384 -well source plates were prepar ed: one containing macrophages and hybrids, 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+and the second containing MC38 cells (loaded into wells A1 to D2). During the first dispense, 
+
+macrophages were loaded into ¾ of the chip and hybrid cells were loaded into the remaining ¼. 
+
+After imaging, the "Emptywells" filter file was manually edited in the Experiments Folder, changing 
+
+all 0s to 1s for wells that received macrophages. Further, all hybrid cell wells were set to 1 to 
+
+prevent further dispensing into those wells. Next, the second source plate was swapped in 
+
+containing MC38 tumor cells for the second dispense. These cells were only dispensed into the 
+
+¾ of the chip that had previously received macrophages, creating artificial doublets. A second 
+
+round of imaging followed, and the chip was frozen afterward. To identify cell types in each well, 
+
+the CELLSELECT's training feature was used to classify wells based on DAPI, GFP, and RFP 
+
+signals. While high -confidence calls (confidence score ≥ 0.80) were accepted, wells with lower 
+
+scores were manually reviewed and annotated using predefined criteria due to variability in 
+
+fluorescence intensity. All subsequent steps —including first -strand cDNA synthesis, cDNA 
+
+amplification, tagmentation, indexing, and library purification —were performed according to the 
+
+Takara SMART -Seq Pro manual. Libraries were quantified and sequenced as described in 
+
+subsequent sections. 
+
+Scan 1  Scan 2  Annotation 
+
+DAPI 0  GFP 0  DAPI 0  RFP 0  Removed 
+
+DAPI 1  GFP 0  DAPI 0  RFP 0  Macrophage 
+
+DAPI 0  GFP 1  DAPI 0  RFP 0  Macrophage 
+
+DAPI 1  GFP 1  DAPI 0  RFP 0  Macrophage 
+
+DAPI 0  GFP 0  DAPI 1  RFP 1  Tumor 
+
+DAPI 0  GFP 0  DAPI 0  RFP 1  Tumor 
+
+DAPI 0  GFP 0  DAPI 1  RFP 0  Tumor 
+
+DAPI 0  GFP 0  DAPI 2  RFP 0  Tumor Doublet 
+
+DAPI 0  GFP 0  DAPI 2  RFP 1  Tumor Doublet 
+
+DAPI 0  GFP 0  DAPI 2  RFP 2  Tumor Doublet 
+
+DAPI 1  GFP 0  DAPI 1  RFP 1  Mac -Tum 
+
+Doublet 
+
+DAPI 1  GFP 0  DAPI 0  RFP 1  Mac -Tum 
+
+Doublet 
+
+DAPI 1  GFP 0  DAPI 1  RFP 0  Macrophage 
+
+DAPI 1  GFP 0  DAPI 2  RFP 0  Mac -Tum 
+
+Doublet 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+DAPI 1  GFP 0  DAPI 2  RFP 1  Mac -Tum 
+
+Doublet 
+
+DAPI 1  GFP 0  DAPI 2  RFP 2  Removed 
+
+DAPI 0  GFP 1  DAPI 1  RFP 1  Mac -Tum 
+
+Doublet 
+
+DAPI 0  GFP 1  DAPI 0  RFP 1  Removed 
+
+DAPI 0  GFP 1  DAPI 1  RFP 0  Mac -Tum 
+
+Doublet 
+
+DAPI 0  GFP 1  DAPI 2  RFP 0  Removed 
+
+DAPI 0  GFP 1  DAPI 2  RFP 1  Removed 
+
+DAPI 0  GFP 1  DAPI 2  RFP 2  Removed 
+
+DAPI 1  GFP 1  DAPI 1  RFP 1  Removed 
+
+DAPI 1  GFP 1  DAPI 0  RFP 1  Removed 
+
+DAPI 1  GFP 1  DAPI 1  RFP 0  Macrophage 
+
+DAPI 1  GFP 1  DAPI 2  RFP 0  Mac -Tum 
+
+Doublet 
+
+DAPI 1  GFP 1  DAPI 2  RFP 1  Mac -Tum 
+
+Doublet 
+
+DAPI 1  GFP 1  DAPI 2  RFP 2  Mac -Tum 
+
+Doublet 
+
+Library Quantification 
+
+All libraries were benchmarked using the Qubit dsDNA High Sensitivity assay (ThermoFisher 
+
+Q32851). Concentrated libraries we re diluted down to approximately 2 ng/μL. Subsequently, the 
+
+molarity of the DNA was confirmed via the Agilent Tapestation 4150 D500 tape (Agilent 5067 -
+
+5592). 
+
+Library Sequencing Parameters 
+
+All library preparations were sequenced using standard chemistry and following standard 
+
+protocols on the Illumina NextSeq2000 for 650pm standard flow cells and 488pm for X -LEAP flow 
+
+cells. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+The in vitro 10x scRNA library was sequenced as paired -end with 28 cycles for read 1, 90 cycles 
+
+for read 2, 10 cycles for index 1, and 10 cycles for index 2 utilizing a P2 -200 X -LEAP flow cell 
+
+(Illumina Inc. 20100986). 
+
+The Artificial Doublet library was sequenced as paired -end with 75 cycles for read 1, 75 cycles 
+
+for read 2, 8 cycles for index 1, and 8 cycles for index 2 utilizing P2 -200 (Illumina Inc. 20046812). 
+
+The 10x scRNA patient sample libraries were sequenced as paired -end with 28 cycles for read 1, 
+
+90 cycles for read 2, 10 cycles for index 1, and 10 cycles for index 2 utilizing P2 -100 ((Illumina 
+
+Inc. 20046811). 
+
+The SmartSeq scRNA patient libraries were sequenced as paired -end with 100 cycles for read 1, 
+
+100 cycles for read 2, 10 cycles for index 1, and 10 cycles for index 2 utilizing P2 -200 and P3 -
+
+200 X -LEAP flow cells (Illumina Inc. 20100989). 
+
+ScaleBio tagmented scATAC libraries were sequenced as paired -end with 85 cycles for read 1, 
+
+125 cycles for read 2, 10 cycles for index 1, and 10 cycles for index 2. 
+
+Computational Analysis scRNA & scATAC 
+
+Primary Sequence Data Processing for 10x Genomics scRNA Libraries 
+
+Raw sequence files were processed using CellRanger 107 count and aligned to either GRCh38 or 
+
+MM10 to generate matrix, features, and barcodes files for downstream processing in Seurat. 
+
+Primary Sequence Data Processing for SmartSeq scRNA Libraries 
+
+Sequence reads were demultiplexed using unidex (https://github.com/adeylab/unidex) which 
+
+matches index barcodes to a whitelist. STAR ( https://github.com/alexdobin/STAR.git) was utilized 
+
+to align demultiplexed fastq files to GRCh38. Scitools rmdup ( https://github.com/adeylab/scitools )
+
+was utilized to remove duplicate reads. The subread (https://github.com/ShiLab -
+
+Bioinformatics/subread.git) module was utilized to perform annotations against GRCh38, and the 
+
+subsequent feature counts were converted to a count m atrix using a custom perl script (available 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+through github repository under data availability). This matrix was suitable for downstream 
+
+analysis in Seurat. 
+
+Analysis of scRNA Data 
+
+Matrices were read into Seurat and used to generate Seurat objects. 90,91 The data was 
+
+normalized, variable features were determined and scaled, and dimensions were reduced via 
+
+PCR using default parameters. Native functions for finding nearest neighbors, clustering and 
+
+UMAP projection were employed using standard parameters. 
+
+After metadata annotation, like experiments were merged into combined Seurat objects, and re -
+
+run through prior functions. Elbow plots were utilized to determine reasonable cut -offs for PCA 
+
+dimensions, typically 10. Expression of various genes of interest w ere visualized across clusters 
+
+using feature plot functions and GO term enrichment analysis was conducted using clusterprofiler 
+
+package .94 
+
+Primary Sequence Data Processing for scATAC Library 
+
+Unidex mode iCell8_scale24 was employed for demultiplexing based on the two 10 bp indices, 
+
+matched to respective index files. Additionally, the first 8bp of read 2 served as the tagmentation 
+
+index for the ScaleBio indexed Tn5. These 8 bp of Tn5 index were trimmed together with the next 
+
+20 bp of mosaic end sequence. The demultiplexed reads were then aligned to the human 
+
+reference genome hg38 using bwa -mem (v0.7.15 -r1140), processed with scitools rmdup, and 
+
+then filtered down to cell barcodes reaching a minim um unique read count. 
+
+Analysis of scATAC Data 
+
+Aligned, duplicate -filtered bam files were imported into ArchR to generate an arrow file, with 
+
+sample names added via a separate text file, and compiled into an ArchR project. 108 Annotations 
+
+were subsequently imported from a CSV and added as a meta data column in the ArchR project. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Iterative LSI, UMAP projections, TSNE projections were performed using default parameters. 
+
+Track plots were generated for genes of interest and genes in associated pathways. MACS2 was 
+
+employed for peak calling and identifying marker peaks, which were used for peak enrichment 
+
+analysis in a pair -wise fashion. 
+
+Statistical Analysis 
+
+All statistical analyses were performed using GraphPad Prism (version 10.6.0) or R (version 
+
+4.3.2) . Statistical tests were selected based on data distribution, sample size, and experimental 
+
+design as follows: one -way ANOVA with Dunnett’s post hoc test was used for multiple group 
+
+comparisons with a shared control (tumor vs. each hybrid cell line) in normally distributed datasets 
+
+(Fig ure 2D, 2F, 4E). Unpaired two -tailed Student’s t -tests were used for comparisons between two 
+
+groups in normally distributed data (Fig ure 2G; 5I). Tukey’s multiple comparisons was used for in 
+
+vivo tumor growth analysis (Figure 2I) and a mixed -effects model with uncorrected Fisher’s LSD 
+
+was used to compare in vivo tumor growth size increase during RUNX1 inhibitor treatment (Figure 
+
+5K). For non -normally distributed data, a Kruskal -Wallis test followed by pairwise Wilcoxon rank -
+
+sum tests was used for group comparisons (tumor vs. each hybrid cell line), with Benjamini -
+
+Hochberg false discovery rate (FDR) correction applied for multiple testi ng (Fig ure 4F; 5E ; 6G). 
+
+A Mann -Whitney test was used to compare the number of H11 cells in circulation after RUNX1 
+
+treatment (Figure 5L). A two -way ANOVA with a generalized linear mi xed model (GLMM) with a 
+
+beta distribution was employed for proportional data (Fig ure 6A). Pairwise Wilcoxon rank -sum 
+
+tests were performed for selected nonparametric comparisons, with Cliff’s delta used to quantify 
+
+effect sizes (Fig ure 7I). Results are reported as mean ± standard deviation (SD). All violin plots, 
+
+UMAPs, and dot plots were generated using the ggplot2 and Seurat packages in R. Statistical 
+
+significance was defined as p < 0.05. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint References
+
+1. Mani, K., Deng, D., Lin, C., Wang, M., Hsu, M.L., and Zaorsky, N.G. 
+
+(2024). Causes of death among people living with metastatic cancer. 
+
+Nature Communications 15 , 1519. 10.1038/s41467 -024 -45307 -x. 
+
+2. Qiu, M., Hu, J., Yang, D., Cosgrove, D.P., and Xu, R. (2015). Pattern of 
+
+distant metastases in colorectal cancer: a SEER based study. 
+
+Oncotarget 6, 38658 -38666. 10.18632/oncotarget.6130. 
+
+3. Siegel, R.L., Giaquinto, A.N., and Jemal, A. (2024). Cancer statistics, 
+
+2024. CA Cancer J Clin 74 , 12 -49. 10.3322/caac.21820. 
+
+4. Welch, D.R., and Hurst, D.R. (2019). Defining the Hallmarks of 
+
+Metastasis. Cancer Res 79 , 3011 -3027. 10.1158/0008 -5472.Can -19 -
+
+0458. 
+
+5. Gerstberger, S., Jiang, Q., and Ganesh, K. (2023). Metastasis. Cell 186 ,
+
+1564 -1579. 10.1016/j.cell.2023.03.003. 
+
+6. Peng, X.C., Zhang, M., Meng, Y.Y., Liang, Y.F., Wang, Y.Y., Liu, X.Q., Cai, 
+
+W.Q., Zhou, Y., Wang, X.W., Ma, Z.W., et al. (2021). Cell ‑cell fusion as an 
+
+important mechanism of tumor metastasis (Review). Oncol Rep 46 .
+
+10.3892/or.2021.8096. 
+
+7. Wang, H.F., Xiang, W., Xue, B.Z., Wang, Y.H., Yi, D.Y., Jiang, X.B., Zhao, 
+
+H.Y., and Fu, P. (2021). Cell fusion in cancer hallmarks: Current research 
+
+status and future indications. Oncol Lett 22 , 530. 
+
+10.3892/ol.2021.12791. 
+
+8. Brown, K.E., and Fisher, A.G. (2021). Reprogramming lineage identity 
+
+through cell -cell fusion. Curr Opin Genet Dev 70 , 15 -23. 
+
+10.1016/j.gde.2021.04.004. 
+
+9. Hass, R., von der Ohe, J., and Dittmar, T. (2021). Cancer Cell Fusion and 
+
+Post -Hybrid Selection Process (PHSP). Cancers (Basel) 13 .
+
+10.3390/cancers13184636. 
+
+10. Sieler, M., Weiler, J., and Dittmar, T. (2021). Cell -Cell Fusion and the 
+
+Roads to Novel Properties of Tumor Hybrid Cells. Cells 10 .
+
+10.3390/cells10061465. 
+
+11. Rizvi, A.Z., Swain, J.R., Davies, P.S., Bailey, A.S., Decker, A.D., 
+
+Willenbring, H., Grompe, M., Fleming, W.H., and Wong, M.H. (2006). 
+
+Bone marrow -derived cells fuse with normal and transformed intestinal 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+stem cells. Proceedings of the National Academy of Sciences 103 ,
+
+6321 -6325. 10.1073/pnas.0508593103. 
+
+12. Aguirre, L.A., Montalbán -Hernández, K., Avendaño -Ortiz, J., Marín, E., 
+
+Lozano, R., Toledano, V., Sánchez -Maroto, L., Terrón, V., Valentín, J., 
+
+Pulido, E., et al. (2020). Tumor stem cells fuse with monocytes to form 
+
+highly invasive tumor -hybrid cells. Onco immunology 9, 1773204. 
+
+10.1080/2162402x.2020.1773204. 
+
+13. Barreto, S.G., Gardi, N., and Dutt, S. (2021). Birth of a solid organ 
+
+cancer -the cell fusion hypothesis presented with pancreatic cancer as a 
+
+model: a narrative review. Chin Clin Oncol 10 , 45. 10.21037/cco -21 -69. 
+
+14. Berndt, B., Zänker, K.S., and Dittmar, T. (2013). Cell fusion is a potent 
+
+inducer of aneuploidy and drug resistance in tumor cell/ normal cell 
+
+hybrids. Critical Reviews in Oncogenesis 18 , 97 -113. 
+
+10.1615/CritRevOncog.v18.i1 -2.60. 
+
+15. Brito, A., Merle, C., Lagarde, P., Faustin, B., Devin, A., Lartigue, L., and 
+
+Chibon, F. (2021). Cell fusion enhances energy metabolism of 
+
+mesenchymal tumor hybrid cells to sustain their proliferation and 
+
+invasion. BMC Cancer 21 , 863. 10.1186/s12885 -021 -08561 -6. 
+
+16. Carloni, V., Mazzocca, A., Mello, T., Galli, A., and Capaccioli, S. (2013). 
+
+Cell fusion promotes chemoresistance in metastatic colon carcinoma. 
+
+Oncogene 32 , 2649 -2660. 10.1038/onc.2012.268. 
+
+17. Clawson, G.A., Matters, G.L., Xin, P., Imamura -Kawasawa, Y., Du, Z., 
+
+Thiboutot, D.M., Helm, K.F., Neves, R.I., and Abraham, T. (2015). 
+
+Macrophage -tumor cell fusions from peripheral blood of melanoma 
+
+patients. PLoS One 10 , e0134320. 10.1371/journal.pone.0134320. 
+
+18. Clawson, G.A., Matters, G.L., Xin, P., McGovern, C., Wafula, E., 
+
+dePamphilis, C., Meckley, M., Wong, J., Stewart, L., D'Jamoos, C., et al. 
+
+(2017). "Stealth dissemination" of macrophage -tumor cell fusions 
+
+cultured from blood of patients with pancreatic duc tal 
+
+adenocarcinoma. PLoS One 12 , e0184451. 
+
+10.1371/journal.pone.0184451. 
+
+19. Cozzo, A.J., Coleman, M.F., and Hursting, S.D. (2023). You complete me: 
+
+tumor cell -myeloid cell nuclear fusion as a facilitator of organ -specific 
+
+metastasis. Front Oncol 13 , 1191332. 10.3389/fonc.2023.1191332. 
+
+20. Parappilly, M.S., Chin, Y., Whalen, R.M., Anderson, A.N., Robinson, T.S., 
+
+Strgar, L., Sutton, T.L., Conley, P., Klocke, C., Gibbs, S.L., et al. (2022). 
+
+Circulating Neoplastic -Immune Hybrid Cells Predict Metastatic 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Progression in Uveal Melanoma. Cancers (Basel) 14 .
+
+10.3390/cancers14194617. 
+
+21. Gast, C.E., Silk, A.D., Zarour, L., Riegler, L., Burkhart, J.G., Gustafson, 
+
+K.T., Parappilly, M.S., Roh -Johnson, M., Goodman, J.R., Olson, B., et al. 
+
+(2018). Cell fusion potentiates tumor heterogeneity and reveals 
+
+circulating hybrid cells that correlate w ith stage and survival. Sci Adv 4,
+
+eaat7828. 10.1126/sciadv.aat7828. 
+
+22. Zhang, L.N., Huang, Y.H., and Zhao, L. (2019). Fusion of macrophages 
+
+promotes breast cancer cell proliferation, migration and invasion 
+
+through activating epithelial -mesenchymal transition and Wnt/ β-
+
+catenin signaling pathway.  Arch Biochem Biophys  676 , 108137. 
+
+10.1016/j.abb.2019.108137. 
+
+23.  Dörnen, J., Myklebost, O., and Dittmar, T. (2020).  Cell Fusion of 
+
+Mesenchymal Stem/Stromal Cells and Breast Cancer Cells Leads to the 
+
+Formation of Hybrid Cells Exhibiting Diverse and Individual (Stem Cell) 
+
+Characteristics. Int J Mol Sci 21 . 10.3390/ijms21249636. 
+
+24. Merle, C., Lagarde, P., Lartigue, L., and Chibon, F. (2021). Acquisition of 
+
+cancer stem cell capacities after spontaneous cell fusion. BMC Cancer 
+
+21 , 241. 10.1186/s12885 -021 -07979 -2. 
+
+25. Chen, Y.C., Gonzalez, M.E., Burman, B., Zhao, X., Anwar, T., Tran, M., 
+
+Medhora, N., Hiziroglu, A.B., Lee, W., Cheng, Y.H., et al. (2019). 
+
+Mesenchymal Stem/Stromal Cell Engulfment Reveals Metastatic 
+
+Advantage in Breast Cancer. Cell Rep 27 , 3916 -3926.e3915. 
+
+10.1016/j.celrep.2019.05.084. 
+
+26. Cowan, C.A., Atienza, J., Melton, D.A., and Eggan, K. (2005). Nuclear 
+
+reprogramming of somatic cells after fusion with human embryonic 
+
+stem cells. Science 309 , 1369 -1373. 10.1126/science.1116447. 
+
+27. Ding, J., Jin, W., Chen, C., Shao, Z., and Wu, J. (2012). Tumor associated 
+
+macrophage × cancer cell hybrids may acquire cancer stem cell 
+
+properties in breast cancer.  PLoS One  7, e41942. 
+
+10.1371/journal.pone.0041942. 
+
+28.  Dittmar, T., Schwitalla, S., Seidel, J., Haverkampf, S., Reith, G., Meyer -
+
+Staeckling, S., Brandt, B.H., Niggemann, B., and Zänker, K.S. (2011). 
+
+Characterization of hybrid cells derived from spontaneous fusion events 
+
+between breast epithelial cells exhibiting stem -like characteristics and 
+
+breast cancer cells. Clinical and Experimental Metastasis 28 , 75 -90. 
+
+10.1007/s10585 -010 -9359 -3. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+29. Fan, H., and Lu, S. (2014). Fusion of human bone hemopoietic stem cell 
+
+with esophageal carcinoma cells didn't generate esophageal cancer 
+
+stem cell. Neoplasma 61 , 540 -545. 10.4149/neo_2014_066. 
+
+30. Gauck, D., Keil, S., Niggemann, B., Zänker, K.S., and Dittmar, T. (2017). 
+
+Hybrid clone cells derived from human breast epithelial cells and 
+
+human breast cancer cells exhibit properties of cancer stem/initiating 
+
+cells. BMC Cancer 17 , 515. 10.1186/s12885 -017 -3509 -9. 
+
+31. Hass, R., Ohe, J.V.D., and Ungefroren, H. (2019). Potential role of 
+
+msc/cancer cell fusion and emt for breast cancer stem cell formation. 
+
+Cancers 11 , 1432. 10.3390/cancers11101432. 
+
+32. He, X., Li, B., Shao, Y., Zhao, N., Hsu, Y., Zhang, Z., and Zhu, L. (2015). 
+
+Cell fusion between gastric epithelial cells and mesenchymal stem 
+
+cells results in epithelial -to -mesenchymal transition and malignant 
+
+transformation. BMC Cancer 15 , 24. 10.1186/s12885 -015 -1027 -1. 
+
+33. Islam, M.Q., Meirelles Lda, S., Nardi, N.B., Magnusson, P., and Islam, K. 
+
+(2006). Polyethylene glycol -mediated fusion between primary mouse 
+
+mesenchymal stem cells and mouse fibroblasts generates hybrid cells 
+
+with increased proliferation and altered differ entiation.  Stem Cells Dev 
+
+15 , 905 -919. 10.1089/scd.2006.15.905. 
+
+34.  Melzer, C., Von Der Ohe, J., and Hass, R. (2018).  Enhanced metastatic 
+
+capacity of breast cancer cells after interaction and hybrid formation 
+
+with mesenchymal stroma/stem cells (MSC). Cell Communication and 
+
+Signaling 16 , 2. 10.1186/s12964 -018 -0215 -4. 
+
+35. Melzer, C., von der Ohe, J., and Hass, R. (2018). In Vitro Fusion of 
+
+Normal and Neoplastic Breast Epithelial Cells with Human 
+
+Mesenchymal Stroma/Stem Cells Partially Involves Tumor Necrosis 
+
+Factor Receptor Signaling.  Stem Cells  36 , 977 -989. 10.1002/stem.2819. 
+
+36.  Melzer, C., Von Der Ohe, J., and Hass, R. (2019).  Involvement of actin 
+
+cytoskeletal components in breast cancer cell fusion with human 
+
+mesenchymal stroma/stem -like cells. International Journal of Molecular 
+
+Sciences 20 , 876. 10.3390/ijms20040876. 
+
+37. Melzer, C., von der Ohe, J., and Hass, R. (2019). In vivo cell fusion 
+
+between mesenchymal stroma/stem -like cells and breast cancer cells. 
+
+Cancers 11 , 185. 10.3390/cancers11020185. 
+
+38. Ramakrishnan, M., Mathur, S.R., and Mukhopadhyay, A. (2013). Fusion -
+
+derived epithelial cancer cells express hematopoietic markers and 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+contribute to stem cell and migratory phenotype in ovarian carcinoma. 
+
+Cancer Res 73 , 5360 -5370. 10.1158/0008 -5472.Can -13 -0896. 
+
+39. Rappa, G., Mercapide, J., and Lorico, A. (2012). Spontaneous formation 
+
+of tumorigenic hybrids between breast cancer and multipotent stromal 
+
+cells is a source of tumor heterogeneity. The American journal of 
+
+pathology 180 , 2504 -2515. 10.1016/j.ajpath.2012.02.020. 
+
+40. Sottile, F., Aulicino, F., Theka, I., and Cosma, M.P. (2016). Mesenchymal 
+
+stem cells generate distinct functional hybrids in vitro via cell fusion or 
+
+entosis. Sci Rep 6, 36863. 10.1038/srep36863. 
+
+41. Wang, R., Chen, S., Li, C., Ng, K.T.P., Kong, C.W., Cheng, J., Cheng, S.H., 
+
+Li, R.A., Lo, C.M., Man, K., and Sun, D. (2016). Fusion with stem cell 
+
+makes the hepatocellular carcinoma cells similar to liver tumor -
+
+initiating cells. BMC Cancer 16 , 56. 10.1186/s12885 -016 -2094 -7. 
+
+42. Wang, R., Sun, X., Wang, C.Y., Hu, P., Chu, C.Y., Liu, S., Zhau, H.E., and 
+
+Chung, L.W. (2012). Spontaneous cancer -stromal cell fusion as a 
+
+mechanism of prostate cancer androgen -independent progression. 
+
+PLoS One 7, e42653. 10.1371/journal.pone.0042653. 
+
+43. Zhang, L.N., Kong, C.F., Zhao, D., Cong, X.L., Wang, S.S., Ma, L., and 
+
+Huang, Y.H. (2019). Fusion with mesenchymal stem cells differentially 
+
+affects tumorigenic and metastatic abilities of lung cancer cells. Journal 
+
+of Cellular Physiology 234 , 3570 -3582. 10.1002/jcp.27011. 
+
+44. Zhang, L.N., Zhang, D.D., Yang, L., Gu, Y.X., Zuo, Q.P., Wang, H.Y., Xu, J., 
+
+and Liu, D.X. (2021). Roles of cell fusion between mesenchymal 
+
+stromal/stem cells and malignant cells in tumor growth and metastasis. 
+
+Febs j 288 , 1447 -1456. 10.1111/febs.15483. 
+
+45. Dietz, M.S., Sutton, T.L., Walker, B.S., Gast, C.E., Zarour, L., Sengupta, 
+
+S.K., Swain, J.R., Eng, J., Parappilly, M., Limbach, K., et al. (2021). 
+
+Relevance of circulating hybrid cells as a non -invasive biomarker for 
+
+myriad solid tumors. Scientific Report s 11 . 10.1038/s41598 -021 -93053 -
+
+7. 
+
+46. Manjunath, Y., Porciani, D., Mitchem, J.B., Suvilesh, K.N., Avella, D.M., 
+
+Kimchi, E.T., Staveley -O'Carroll, K.F., Burke, D.H., Li, G., and Kaifi, J.T. 
+
+(2020). Tumor -Cell -Macrophage Fusion Cells as Liquid Biomarkers and 
+
+Tumor Enhancers in Cancer. Int J Mol Sci 21 . 10.3390/ijms21051872. 
+
+47. Henn, T.E., Anderson, A.N., Hollett, Y.R., Sutton, T.L., Walker, B.S., 
+
+Swain, J.R., Sauer, D.A., Clayburgh, D.R., and Wong, M.H. (2021). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Circulating hybrid cells predict presence of occult nodal metastases in 
+
+oral cavity carcinoma. Head & Neck. 10.1002/hed.26692. 
+
+48. Cristofanilli, M., Budd, G.T., Ellis, M.J., Stopeck, A., Matera, J., Miller, 
+
+M.C., Reuben, J.M., Doyle, G.V., Allard, W.J., Terstappen, L.W., and 
+
+Hayes, D.F. (2004). Circulating tumor cells, disease progression, and 
+
+survival in metastatic breast cancer. N Engl J Med 351 , 781 -791. 
+
+10.1056/NEJMoa040766. 
+
+49. Dietz, M.S., Sutton, T.L., Walker, B.S., Gast, C.E., Zarour, L., Sengupta, 
+
+S.K., Swain, J.R., Eng, J., Parappilly, M., Limbach, K., et al. (2021). 
+
+Relevance of circulating hybrid cells as a non -invasive biomarker for 
+
+myriad solid tumors. Scientific Report s 11 . 10.1038/s41598 -021 -93053 -
+
+7. 
+
+50. Sutton, T.L., Walker, B.S., and Wong, M.H. (2019). Circulating Hybrid 
+
+Cells Join the Fray of Circulating Cellular Biomarkers. Cellular and 
+
+Molecular Gastroenterology and Hepatology 8, 595 -607. 
+
+10.1016/j.jcmgh.2019.07.002. 
+
+51. Walker, B.S., Sutton, T.L., Zarour, L., Hunter, J.G., Wood, S.G., Tsikitis, L., 
+
+Herzig, D.O., Lopez, C.D., Chen, E.Y., Mayo, S.C., and Wong, M.H. (2021). 
+
+Circulating Hybrid Cells: A Novel Liquid Biomarker of Treatment 
+
+Response in Gastrointestinal Cancers. Annals of Surgical Oncology. 
+
+52. Zhang, Y., Wang, F., Ning, N., Chen, Q., Yang, Z., Guo, Y., Xu, D., Zhang, 
+
+D., Zhan, T., and Cui, W. (2015). Patterns of circulating tumor cells 
+
+identified by CEP8, CK and CD45 in pancreatic cancer. Int J Cancer 136 ,
+
+1228 -1233. 10.1002/ijc.29070. 
+
+53. Ganesh, K., Basnet, H., Kaygusuz, Y., Laughney, A.M., He, L., Sharma, 
+
+R., O’Rourke, K.P., Reuter, V.P., Huang, Y. -H., Turkekul, M., et al. (2020). 
+
+L1CAM defines the regenerative origin of metastasis -initiating cells in 
+
+colorectal cancer. Nature Cancer 1, 28 -45. 10.1038/s43018 -019 -0006 -
+
+x. 
+
+54. Anderson, A.N., Conley, P., Klocke, C.D., Sengupta, S.K., Pang, A., 
+
+Farley, H.C., Gillingham, A.R., Dawson, A.D., Fan, Y., Jones, J.A., et al. 
+
+(2024). Detection of neoplastic -immune hybrid cells with metastatic 
+
+properties in uveal melanoma. Biomarker Rese arch 12 , 67. 
+
+10.1186/s40364 -024 -00609 -6. 
+
+55. Joanito, I., Wirapati, P., Zhao, N., Nawaz, Z., Yeo, G., Lee, F., Eng, C.L.P., 
+
+Macalinao, D.C., Kahraman, M., Srinivasan, H., et al. (2022). Single -cell 
+
+and bulk transcriptome sequencing identifies two epithelial tumor cell 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+states and refines the consensus molecular classification of colorectal 
+
+cancer. Nature Genetics 54 , 963 -975. 10.1038/s41588 -022 -01100 -4. 
+
+56. Joanito, I., Wirapati, P., Zhao, N., Nawaz, Z., Yeo, G., Lee, F., Eng, C.L.P., 
+
+Macalinao, D.C., Kahraman, M., Srinivasan, H., et al. (2022). Single -cell 
+
+and bulk transcriptome sequencing identifies two epithelial tumor cell 
+
+states and refines the consensu s molecular classification of colorectal 
+
+cancer. Nature Genetics 54 , 963 -975. 10.1038/s41588 -022 -01100 -4. 
+
+57. Ashburner, M., Ball, C.A., Blake, J.A., Botstein, D., Butler, H., Cherry, 
+
+J.M., Davis, A.P., Dolinski, K., Dwight, S.S., Eppig, J.T., et al. (2000). Gene 
+
+ontology: tool for the unification of biology. The Gene Ontology 
+
+Consortium. Nat Genet 25 , 25 -29. 10.1038/75556. 
+
+58. Ali, A.M., and Raza, A. (2024). scRNAseq and High -Throughput Spatial 
+
+Analysis of Tumor and Normal Microenvironment in Solid Tumors Reveal 
+
+a Possible Origin of Circulating Tumor Hybrid Cells. Cancers (Basel) 16 .
+
+10.3390/cancers16071444. 
+
+59. Ye, X., Huang, X., Fu, X., Zhang, X., Lin, R., Zhang, W., Zhang, J., and Lu, 
+
+Y. (2023). Myeloid -like tumor hybrid cells in bone marrow promote 
+
+progression of prostate cancer bone metastasis. J Hematol Oncol 16 ,
+
+46. 10.1186/s13045 -023 -01442 -4. 
+
+60. Zhou, C., Gao, Y., Ding, P., Wu, T., and Ji, G. (2023). The role of CXCL 
+
+family members in different diseases. Cell Death Discovery 9, 212. 
+
+10.1038/s41420 -023 -01524 -9. 
+
+61. Garlanda, C., and Mantovani, A. (2021). Interleukin -1 in tumor 
+
+progression, therapy, and prevention. Cancer Cell 39 , 1023 -1027. 
+
+10.1016/j.ccell.2021.04.011. 
+
+62. Rupa, D., Chuang, H.W., Hu, C.E., Su, W.M., Wu, S.R., Lee, H.S., and 
+
+Yuan, T.C. (2024). ACSL4 upregulates IFI44 and IFI44L expression and 
+
+promotes the proliferation and invasiveness of head and neck 
+
+squamous cell carcinoma cells. Cancer Sci 115 , 3026 -3040. 
+
+10.1111/cas.16236. 
+
+63. Koroleva, E.P., Fu, Y.X., and Tumanov, A.V. (2018). Lymphotoxin in 
+
+physiology of lymphoid tissues - Implication for antiviral defense. 
+
+Cytokine 101 , 39 -47. 10.1016/j.cyto.2016.08.018. 
+
+64. Bharti, R., Dey, G., Lin, F., Lathia, J., and Reizes, O. (2022). CD55 in 
+
+cancer: Complementing functions in a non -canonical manner.  Cancer 
+
+Lett  551 , 215935. 10.1016/j.canlet.2022.215935. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+65.  Schrörs, B., Hos, B.J., Yildiz, I.G., Löwer, M., Lang, F., Holtsträter, C., 
+
+Becker, J., Vormehr, M., Sahin, U., Ossendorp, F., and Diken, M. (2023). 
+
+MC38 colorectal tumor cell lines from two different sources display 
+
+substantial differences in transcriptome, mutanome and neoantigen 
+
+expression. Front Immunol 14 , 1102282. 10.3389/fimmu.2023.1102282. 
+
+66. Ito, Y., Bae, S. -C., and Chuang, L.S.H. (2015). The RUNX family: 
+
+developmental regulators in cancer. Nature Reviews Cancer 15 , 81 -95. 
+
+10.1038/nrc3877. 
+
+67. Huang, J., Chen, W., Jie, Z., and Jiang, M. (2022). Comprehensive 
+
+Analysis of Immune Implications and Prognostic Value of SPI1 in Gastric 
+
+Cancer. Frontiers in Oncology Volume 12 - 2022 .
+
+10.3389/fonc.2022.820568. 
+
+68. Safe, S. (2023). Specificity Proteins (Sp) and Cancer. Int J Mol Sci 24 .
+
+10.3390/ijms24065164. 
+
+69. Milde -Langosch, K. (2005). The Fos family of transcription factors and 
+
+their role in tumourigenesis. European Journal of Cancer 41 , 2449 -2461. 
+
+https://doi.org/10.1016/j.ejca.2005.08.008 .
+
+70. Gillespie, M., Jassal, B., Stephan, R., Milacic, M., Rothfels, K., Senff -
+
+Ribeiro, A., Griss, J., Sevilla, C., Matthews, L., Gong, C., et al. (2022). The 
+
+reactome pathway knowledgebase 2022. Nucleic Acids Res 50 , D687 -
+
+d692. 10.1093/nar/gkab1028. 
+
+71.  Li, Q., Lai, Q., He, C., Fang, Y., Yan, Q., Zhang, Y., Wang, X., Gu, C., Wang, 
+
+Y., Ye, L., et al.  (2019). RUNX1 promotes tumour metastasis by 
+
+activating the Wnt/ β-catenin signalling pathway and EMT in colorectal 
+
+cancer. Journal of Experimental & Clinical Cancer Research 38 .
+
+10.1186/s13046 -019 -1330 -9. 
+
+72. Lu, C., Yang, Z., Yu, D., Lin, J., and Cai, W. (2020). RUNX1 regulates TGF -
+
+β induced migration and EMT in colorectal cancer. Pathology - Research 
+
+and Practice 216 , 153142. 10.1016/j.prp.2020.153142. 
+
+73. Zheng, W., Guo, Y., Kahar, A., Bai, J., Zhu, Q., Huang, X., Li, Y., Xu, B., Jia, 
+
+X., Wu, G., et al. (2024). RUNX1 -induced upregulation of PTGS2 
+
+enhances cell growth, migration and invasion in colorectal cancer cells. 
+
+Scientific Reports 14 , 11670. 10.1038/s41598 -024 -60296 -z. 
+
+74. Dietz, M.S., Clawson, G.A., Helmink, B.A., and Clawson, J.W. (2020). 
+
+Circulating hybrid cells: A novel biomarker to monitor solid tumors. Mol 
+
+Cancer Res 18 , 409 -420. 10.1158/1541 -7786.MCR -19 -1092. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+75. Chen, Y., He, Y., and Liu, S. (2023). RUNX1 -Regulated Signaling 
+
+Pathways in Ovarian Cancer. Biomedicines 11 , 2357. 
+
+76. Hong, D., Fritz, A.J., Gordon, J.A., Tye, C.E., Boyd, J.R., Tracy, K.M., 
+
+Frietze, S.E., Carr, F.E., Nickerson, J.A., Wijnen, A.J., et al. (2019). 
+
+RUNX1 ‑dependent mechanisms in biological control and dysregulation 
+
+in cancer. Journal of Cellular Physiology 234 , 8597 -8609. 
+
+10.1002/jcp.27841. 
+
+77. Lie -A-Ling, M., Marinopoulou, E., Li, Y., Patel, R., Stefanska, M., Bonifer, 
+
+C., Miller, C., Kouskoff, V., and Lacaud, G. (2014). RUNX1 positively 
+
+regulates a cell adhesion and migration program in murine hemogenic 
+
+endothelium prior to blood emergence. Bl ood 124 , e11 -e20. 
+
+10.1182/blood -2014 -04 -572958. 
+
+78. Mercado -Matos, J., Matthew -Onabanjo, A.N., and Shaw, L.M. (2017). 
+
+RUNX1 and breast cancer. Oncotarget 8, 36934 -36935. 
+
+10.18632/oncotarget.17249. 
+
+79. Planagumà, J., Díaz -Fuertes, M., Gil -Moreno, A., Abal, M., Monge, M., 
+
+García, A., Baró, T., Thomson, T.M., Xercavins, J., Alameda, F., and 
+
+Reventós, J. (2004). A differential gene expression profile reveals 
+
+overexpression of RUNX1/AML1 in invasive endomet rioid carcinoma. 
+
+Cancer Res 64 , 8846 -8853. 10.1158/0008 -5472.Can -04 -2066. 
+
+80. Sangpairoj, K., Vivithanaporn, P., Apisawetakan, S., Chongthammakun, 
+
+S., Sobhon, P., and Chaithirayanon, K. (2017). RUNX1 Regulates 
+
+Migration, Invasion, and Angiogenesis via p38 MAPK Pathway in Human 
+
+Glioblastoma. Cellular and Molecular Neurobiology 37 , 1243 -1255. 
+
+10.1007/s10571 -016 -0456 -y. 
+
+81. Guo, X., Zhang, H., He, C., Qin, K., Lai, Q., Fang, Y., Chen, Q., Li, W., 
+
+Wang, Y., Wang, X., et al. (2024). RUNX1 promotes angiogenesis in 
+
+colorectal cancer by regulating the crosstalk between tumor cells and 
+
+tumor associated macrophages. Biomarker Resea rch 12 , 29. 
+
+10.1186/s40364 -024 -00573 -1. 
+
+82. Rada, M., Kapelanski -Lamoureux, A., Petrillo, S., Tabariès, S., Siegel, P., 
+
+Reynolds, A.R., Lazaris, A., and Metrakos, P. (2021). Runt related 
+
+transcription factor -1 plays a central role in vessel co -option of 
+
+colorectal cancer liver metastases. Communica tions Biology 4, 950. 
+
+10.1038/s42003 -021 -02481 -8. 
+
+83. Cunningham, L., Finckbeiner, S., Hyde, R.K., Southall, N., Marugan, J., 
+
+Yedavalli, V.R., Dehdashti, S.J., Reinhold, W.C., Alemu, L., Zhao, L., et al. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+(2012). Identification of benzodiazepine Ro5 -3335 as an inhibitor of CBF 
+
+leukemia through quantitative high throughput screen against RUNX1 -
+
+CBF β interaction. Proc Natl Acad Sci U S A 109 , 14592 -14597. 
+
+10.1073/pnas.1200037109. 
+
+84. She, C., Wu, C., Guo, W., Xie, Y., Li, S., Liu, W., Xu, C., Li, H., Cao, P., 
+
+Yang, Y., et al. (2023). Combination of RUNX1 inhibitor and gemcitabine 
+
+mitigates chemo -resistance in pancreatic ductal adenocarcinoma by 
+
+modulating BiP/PERK/eIF2 α-axis -mediated endoplasmic reticulum 
+
+stress. J Exp Clin Cancer Res 42 , 238. 10.1186/s13046 -023 -02814 -x. 
+
+85. Santamarina -Ojeda, P., Tejedor, J.R., Pérez, R.F., López, V., Roberti, A., 
+
+Mangas, C., Fernández, A.F., and Fraga, M.F. (2023). Multi -omic 
+
+integration of DNA methylation and gene expression data reveals 
+
+molecular vulnerabilities in glioblastoma. Mol Oncol 17 , 1726 -1743. 
+
+10.1002/1878 -0261.13479. 
+
+86. Gast, C.E., Silk, A.D., Zarour, L., Riegler, L., Burkhart, J.G., Gustafson, 
+
+K.T., Parappilly, M.S., Roh -Johnson, M., Goodman, J.R., Olson, B., et al. 
+
+(2018). Cell fusion potentiates tumor heterogeneity and reveals 
+
+circulating hybrid cells that correlate w ith stage and survival. Sci Adv 4,
+
+eaat7828. 10.1126/sciadv.aat7828. 
+
+87. Cheung, G., Pauler, F.M., Koppensteiner, P., and Hippenmeyer, S. (2024). 
+
+Protocol for mapping cell lineage and cell -type identity of clonally -
+
+related cells in situ using MADM -CloneSeq. STAR Protoc 5, 103168. 
+
+10.1016/j.xpro.2024.103168. 
+
+88. Short, S., García -Tejera, R., Schumacher, L.J., and Coutu, D.L. (2025). 
+
+Next generation lineage tracing and its applications to unravel 
+
+development. npj Systems Biology and Applications 11 , 60. 
+
+10.1038/s41540 -025 -00542 -w. 
+
+89. Lee, S.E., Rudd, B.D., and Smith, N.L. (2022). Fate -mapping mice: new 
+
+tools and technology for immune discovery. Trends Immunol 43 , 195 -
+
+209. 10.1016/j.it.2022.01.004. 
+
+90. Hao, Y., Stuart, T., Kowalski, M.H., Choudhary, S., Hoffman, P., Hartman, 
+
+A., Srivastava, A., Molla, G., Madad, S., Fernandez -Granda, C., and 
+
+Satija, R. (2024). Dictionary learning for integrative, multimodal and 
+
+scalable single -cell analysis. Nat Biotech nol 42 , 293 -304. 
+
+10.1038/s41587 -023 -01767 -y. 
+
+91. Hao, Y., Hao, S., Andersen -Nissen, E., Mauck, W.M., 3rd, Zheng, S., 
+
+Butler, A., Lee, M.J., Wilk, A.J., Darby, C., Zager, M., et al. (2021). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Integrated analysis of multimodal single -cell data. Cell 184 , 3573 -
+
+3587.e3529. 10.1016/j.cell.2021.04.048. 
+
+92. Bais, A.S., and Kostka, D. (2019). scds: computational annotation of 
+
+doublets in single -cell RNA sequencing data. Bioinformatics 36 , 1150 -
+
+1158. 10.1093/bioinformatics/btz698. 
+
+93. Xi, N.M., and Li, J.J. (2021). Benchmarking Computational Doublet -
+
+Detection Methods for Single -Cell RNA Sequencing Data. Cell Syst 12 ,
+
+176 -194.e176. 10.1016/j.cels.2020.11.008. 
+
+94. Yu, G., Wang, L.G., Han, Y., and He, Q.Y. (2012). clusterProfiler: an R 
+
+package for comparing biological themes among gene clusters. Omics 
+
+16 , 284 -287. 10.1089/omi.2011.0118. 
+
+95. Franca, C.M., Lima Verde, M.E., Silva -Sousa, A.C., Mansoorifar, A., 
+
+Athirasala, A., Subbiah, R., Tahayeri, A., Sousa, M., Fraga, M.A., 
+
+Visalakshan, R.M., et al. (2025). Perivascular cells function as key 
+
+mediators of mechanical and structural changes in v ascular capillaries. 
+
+Science Advances 11 , eadp3789. doi:10.1126/sciadv.adp3789. 
+
+96. Polacheck, W.J., Kutys, M.L., Tefft, J.B., and Chen, C.S. (2019). 
+
+Microfabricated blood vessels for modeling the vascular transport 
+
+barrier. Nature Protocols 14 , 1425 -1454. 10.1038/s41596 -019 -0144 -8. 
+
+97. Whalen, R.M., Anderson, A.N., Jones, J.A., Sims, Z., Chang, Y.H., 
+
+Nederlof, M.A., Wong, M.H., and Gibbs, S.L. (2024). Ultra high content 
+
+analyses of circulating and tumor associated hybrid cells reveal 
+
+phenotypic heterogeneity. Sci Rep 14 , 7350. 10.1038/s41598 -024 -
+
+57381 -8. 
+
+98. Bankhead, P., Loughrey, M.B., Fernández, J.A., Dombrowski, Y., McArt, 
+
+D.G., Dunne, P.D., McQuaid, S., Gray, R.T., Murray, L.J., Coleman, H.G., 
+
+et al. (2017). QuPath: Open source software for digital pathology image 
+
+analysis. Scientific Reports 7, 16878. 10.1038/s41598 -017 -17204 -5. 
+
+99. McMahon, N., Jones, J., Eng, J., Kwon, S., Chang, Y.H., Thibault, G., 
+
+Chin, K., Nederlof, M., Gray, J., and Gibbs, S.L. (2019). Signal removal 
+
+methods for highly multiplexed immunofluorescent staining using 
+
+antibody conjugated oligonucleotides. Proc SPIE Int Soc Opt Eng 10881 .
+
+10.1117/12.2510573. 
+
+100. McMahon, N.P., Jones, J.A., Kwon, S., Chin, K., Nederlof, M.A., Gray, 
+
+J.W., and Gibbs, S.L. (2020). Oligonucleotide conjugated antibodies 
+
+permit highly multiplexed immunofluorescence for future use in clinical 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+histopathology. Journal of Biomedical Optics 25 , 1. 
+
+10.1117/1.jbo.25.5.056004. 
+
+101. Jones, J.A., McMahon, N.P., Zheng, T., Eng, J., Chin, K., Kwon, S., 
+
+Nederlof, M.A., Gray, J.W., and Gibbs, S.L. (2021). Oligonucleotide 
+
+conjugated antibody strategies for cyclic immunostaining. Sci Rep 11 ,
+
+23844. 10.1038/s41598 -021 -03135 -9. 
+
+102. McMahon, N.P., Jones, J.A., Anderson, A.N., Dietz, M.S., Wong, M.H., 
+
+and Gibbs, S.L. (2023). Flexible Cyclic Immunofluorescence (cyCIF) 
+
+Using Oligonucleotide Barcoded Antibodies. Cancers (Basel) 15 .
+
+10.3390/cancers15030827. 
+
+103. Muhlich, J.L., Chen, Y. -A., Yapp, C., Russell, D., Santagata, S., and 
+
+Sorger, P.K. (2022). Stitching and registering highly multiplexed whole -
+
+slide images of tissues and tumors using ASHLAR. Bioinformatics 38 ,
+
+4613 -4621. 10.1093/bioinformatics/btac544. 
+
+104. Greenwald, N.F., Miller, G., Moen, E., Kong, A., Kagel, A., Dougherty, T., 
+
+Fullaway, C.C., McIntosh, B.J., Leow, K.X., Schwartz, M.S., et al. (2022). 
+
+Whole -cell segmentation of tissue images with human -level 
+
+performance using large -scale data annotation a nd deep learning. 
+
+Nature Biotechnology 40 , 555 -565. 10.1038/s41587 -021 -01094 -0. 
+
+105. Wang, K., Ait -Ahmad, K., Kupp, S., Sims, Z., Cramer, E., Sayar, Z., Yu, J., 
+
+Wong, M.H., Mills, G.B., Eksi, S.E., and Chang, Y.H. (2025). Toward 
+
+universal immunofluorescence normalization for multiplex tissue 
+
+imaging with UniFORM. Cell Rep Methods 5, 101172. 
+
+10.1016/j.crmeth.2025.101172. 
+
+106. O'Connell, B.L., Nichols, R.V., Pokholok, D., Thomas, J., Acharya, S.N., 
+
+Nishida, A., Thornton, C.A., Co, M., Fields, A.J., Steemers, F.J., and Adey, 
+
+A.C. (2023). Atlas -scale single -cell chromatin accessibility using 
+
+nanowell -based combinatorial indexing. Genome Res 33 , 208 -217. 
+
+10.1101/gr.276655.122. 
+
+107. Zheng, G.X.Y., Terry, J.M., Belgrader, P., Ryvkin, P., Bent, Z.W., Wilson, R., 
+
+Ziraldo, S.B., Wheeler, T.D., McDermott, G.P., Zhu, J., et al. (2017). 
+
+Massively parallel digital transcriptional profiling of single cells. Nature 
+
+Communications 8, 14049. 10.1038/ncomms14049. 
+
+108. Granja, J.M., Corces, M.R., Pierce, S.E., Bagdatli, S.T., Choudhry, H., 
+
+Chang, H.Y., and Greenleaf, W.J. (2021). ArchR is a scalable software 
+
+package for integrative single -cell chromatin accessibility analysis. 
+
+Nature Genetics 53 , 403 -411. 10.1038/s41588 -021 -00790 -6. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Other Tumor−MΦ Hybrids BEndothelial Entericglial Epithelial Fibroblast Mast McDC Neutrophils pDC PlasmaB T_NK 0.4 0.5 0.6 0.7 0.4 0.5 0.6 0.7 import into cell regulation of defense response positive regulation of immune response response to bacterium positive regulation of response to external stimulus 
+
+response to molecule of 
+
+bacterial origin protein−DNA complex organization chromatin organization inflammatory response taxis chemotaxis RNA splicing, via transesterification reactions mRNA splicing, via spliceosome antigen processing and presentation mRNA processing ribonucleoprotein complex biogenesis RNA splicing Activated Suppressed protein−RNA complex organization protein−RNA complex assembly 
+
+GeneRatio E Tumor Hybrids -log(p_value) Expression 
+
+LN Hybrids 
+
+A BCDF Tumor Hybrids Lymph Node Hybrids 
+
+-5 0 5 10 15 
+
+Granulocyte Migration Granulocyte Chemotaxis Regulation of Phagocytosis Regulation of Leukocyte Degranulation Regulation of Leukocyte Chemotaxis Negative Regulation of Immune Effector Process Positive Regulation of Vasculature Development Regulation of Cell Population Proliferation Positive Regulation of Gene Expression Positive Regulation of RNA Metabolic Process Positive Regulation of Cytokine Production Positive Regulation of Immune System Process Lymphocyte Activation Response to Virus Regulation of Stem Cell Population Maintenance umap_1 umap_2 umap_1 umap_2 
+
+p.adjust 5.0e−06 1.0e−05 1.5e−05 Count 50 70 90 110 
+
+> Genes
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 1: Tumor –macrophage hybrid cells upregulate immune evasive, migratory, and 
+
+stem -like gene programs during colorectal cancer metastatic progression. A) UMAP 
+
+depicting annotated cell type clusters of 373,058 cells from scRNA -sequencing of CRC tumors 
+
+(n=63 patients). 55 B) UMAP depicting h ybrid cells (red) identified by co -expression of macrophage 
+
+markers (CD45, CD163, or CD14) and one more epithelial markers (EPCAM, ECAD, panCK 
+
+(KRT2 –5, KRT7 –8, KRT14 –16, KRT19) . C) Differential gene expression analysis of all identified 
+
+hybrid cells vs all other sequenced cells. D) Gene set enrichment analysis (GSEA) Gene Ontology 
+
+(GO) biological processes of hybrid cells using differential gene expression output. E) Differential 
+
+gene expression analysis of tumor hybrid cells vs lymph node hybrid cells identified in patient 
+
+matched tumor and lymph node specimens (n=7 patients). F) GSEA GO -biological processes of 
+
+tumor hybrid cells vs lymph node hybrid cells using differentially expressed gene output .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint MΦ H11 H8 H12 H4 H2 H6 H3 H5 H9 HP H1 H10 Tumor H7 Epcam Egfr Cd45 Cd68 Csf1r Ccl3 Cxcr4 Tgfb Zeb1 0510 Epithelial  Immune  EMT
+
+C D EFGBA
+
+Tumor MΦ H11 H4 H3 H7 0.00 0.02 0.04 0.06 0.08 1/Doubling Time (hrs) Proliferation ns 
+
+Tumor H11 H4 H3 H7 010 20 30 40 50 ECM Invasion # Invading Cells ECM Invasion # Invading Cells ns 0 20 40 60 0.0 0.5 1.0 1.5 Time (hrs) Chemotaxis normalized cell count bottom well -ΔΔCT (relative to tumor) Tumor H11 H4 H7 H3 
+
+HP 
+
+MΦ 
+
+TUMOR H1 H2 H3 H4 
+
+H5 H6 H7 H8 
+
+H9 H10 H11 H12 
+
+Tumor Tumor H11 H7 H4 H3 
+
+Tumor H11 0510 15 20 25 
+
+*** ** ** *** ** **** ** ** **** *** 
+
+Tumor RFP GFP DAPI RFP GFP DAPI RFP DAPI GFP DAPI H11 
+
+IH
+
+-2 -1 0 1 2H7 H3 H4 H11 HP TUMOR Z-score signal ACE CAT MMP MTP PLASM USP 
+
+0 10 20 30 40 
+
+0500 1000 1500 
+
+Time (days) 
+
+> Tumor Volume (mm 3)
+
+MC38 H11 H7 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 2: Colorectal cancer hybrid cell clones exhibit phenotypic and functional 
+
+heterogeneity . A) Schematic of experimental design. B) Images of parental MC38 -RFP tumor 
+
+cells, parental Actin -GFP bone marrow derived macrophages (MΦ) , MC38x MΦ hybrid parent 
+
+(HP) cells, and single cell clones (H1 -H12) generated from MC38xMΦ HP cell population. (scale 
+
+bar = 50μM) C) Hierarchical clustering of macrophage , epithelial, and EMT gene expression from 
+
+hybrid single cell clones and parental tumor and MΦ (n=3 biological replicates, each with 3 
+
+technical replicates, averaged). D) Proliferation of hybrid single cell clones (n=3 biological 
+
+replicates, each with 3 technical replicates, averaged; data for all hybrid single cell clones in 
+
+Supplemental Figure 2). E) Trans -well chemotaxis of hybrid single cell clones and MC38 tumor 
+
+parent (n=3 biological replicates, each with 3 technical replicates, averaged; data for all hybrid 
+
+single cell clones in supplemental figure 2). F) Hybrid cell invasion into collagen extracellular 
+
+matrix (ECM) (imaging shown represents one section o f whole well imaging from one of n=2 
+
+biological replicates, each with 4 technical replicates, scale bar = 100μm) and quantification of 
+
+hybrid cell invasion in ECM represented as total number o f invading cells after 72hrs. G) Invasion 
+
+of MC38 tumor cells and H11 cells through collagen matrix toward vasculature , where pink 
+
+arrowheads label migrating cells (imaging shown represents one of n=2 biological replicates, each 
+
+with 4 technical replicates, scale bar = 200μm) and quantification of the number of invading cells. 
+
+H) Protease activity in hybrid single cell clones and MC38 tumor parent (data shown represent 
+
+one of n=2 biological replicates, each with 3 technical replicates ). I) H11, H7 and MC38 in vivo 
+
+murine tumor volume (n= 27 MC38 (16 M, 11 F) , n=15 H11 (10 M, 6 F) and n= 8 H7 (4 M, 4 F) )
+
+data shown represent one of n=3 biological replicate s) (p = **** <0.0001, *** <0.001, **<0.01, 
+
+*<0.05) 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Hybrid Tumor-MΦ Doublet Tumor Hybrid-M Hybrid-T 
+
+BA CD E FGHGm5294 Rfx1 Atf5 Cebpb Cebpd Dbp Runx1 Runx3 Rfx2 Rfx8 
+
+2 4 6
+
+> −log10(P−adj) Transcription Factor (Motif)
+> mlog10Padj 3.5 4.0 4.5 5.0 mlog10Padj 3.5 4.0 4.5 5.0
+
+Hybrid−M vs. MΦ Ehf Elf5 Gm4881 Elf3 Spib Spic Elf1 Bcl11a Bcl11b Sfpi1 
+
+0 250 500 750 1000 1250 
+
+> −log10(P−adj) Transcription Factor (Motif)  mlog10Padj 300 500 700 900 1100 mlog10Padj 300 500 700 900 1100
+
+Hybrid−M vs. Tumor Smad1 Tcfap2d Sp5 Sp6 Klf7 Sp4 Wt1 Sp3 Sp1 Sp2 
+
+0 50 100 150 
+
+> −log10(P−adj) Transcription Factor (Motif)  mlog10Padj 90 100 110 120 130 mlog10Padj 90 100 110 120 130
+
+Hybrid−T vs. Tumor Batf3 Nfe2 Fosl1 Junb Bach2 Fosb Jund Bach1 Smarcc1 Fos 
+
+0 200 400 600 800 −log10(P−adj) Transcription Factor (Motif)  mlog10Padj 200 300 400 500 600 700 mlog10Padj 200 300 400 500 600 700 Hybrid−T vs. MΦ 
+
+umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 0 30 Positive Regulation of Endocytosis Regulation of Phagocytosis Positive Regulation of Phagocytosis Regulation of Mononuclear Cell Migration Antigen Processing and Presentation Positive Regulation of Leukocyte Migration Positive Regulation of Mononuclear Cell Migration Positive Regulation of TNF Family Cytokine Production Granulocyte Chemotaxis Regulation of Leukocyte Chemotaxis Granulocyte Migration -log(p_val) 
+
+HI J
+
+0 40 Tube Development Circulatory System Development Cell Motility Neurogenesis Tube Morphogenesis Animal Organ Morphogenesis Generation of Neurons Vasculature Development Regulation of Cell Population Proliferation Multicellular Organismal Development Regulation of Cell Differentiation -log(p_val) MΦ MΦ Tumor Hybrid-T Hybrid-M 
+
+MΦ Tumor Hybrid-T Hybrid-M MΦ Tumor Hybrid-T Hybrid-M Ptprc    
+
+> Hybrid −M
+> Hybrid −T
+> Macrophage
+> Tumor Genes 138150000 138175000 138200000 138225000 Coverage (Norm. ATAC Signal Range (0 −0.47) by ReadsInTSS) chr1:138125304 −138225305
+
+chr1:138125304-138225305 
+
+Ptprc 
+
+> Coverage
+> Norm. ATAC Signal Range (0-0.47)
+
+Genes Tumor e MΦ eHybrid-T Hybrid-M 1110028F18Rik Cdh1    
+
+> Hybrid −MHybrid −T
+> Macrophage
+> Tumor Genes 106575000 106600000 106625000 106650000 Coverage (Norm. ATAC Signal Range (0 −0.58) by ReadsInTSS) chr8:106553349 −106653350
+
+chr8:106553349-106653350 
+
+Cdh1 1110028F18Rik 
+
+> Coverage
+> Norm. ATAC Signal Range (0-0.58)
+
+Genes Tumor e MΦ eHybrid-T Hybrid-M 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 3: Multi -omic profiling reveals transcriptional and epigenetic heterogeneity of CRC 
+
+hybrid cell lines. A) Schematic of experimental design. B) UMAP of scRNA -sequencing using 
+
+Takara iCell8 for annotation of tumor -macrophage doublets, hybrid cells and tumor and 
+
+macrophage cells (MΦ) . C) UMAP of scRNA sequencing of “ nascent ” hybrids (hybrid -M), 
+
+“established” hybrids (hybrid -T), MΦ , and MC38 tumor cells (data shown represent one of n=2 
+
+biological replicate sequencing experiments) . D) Top 10 differentially expressed genes (DEGs) in 
+
+hybrid -M and hybrid -T cells . E,F) GSEA GO -biological processes for hybrid -M and hybrid -T cells .
+
+G UMAP of scATAC -seq of “ nascent ” hybrids (hybrid -M), “established” hybrids (hybrid -T), MΦ ,
+
+and MC38 tumor cells. H) scATAC -seq motif enrichment analysis for hybrid -M vs MΦ , hybrid -M
+
+vs tumor, hybrid -T vs MΦ , and hybrid -T vs tumor. I) scATAC -seq track plots for Cd45 (Ptprc) and 
+
+J) Eca d (Cdh1) in hybrid -M, hybrid -T, tumor and MΦ cells. Additional scATAC -seq track plots 
+
+included in Supplemental Figure 3. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint 0 2 4Elastic fibre formation Extracellular matrix organization NR1H3 & NR1H2 regulate gene expression linked to cholesterol transport and efflux Molecules associated with elastic fibres NR1H2 and NR1H3-mediated signaling RUNX1 regulates genes involved in megakaryocyte differentiation and platelet function Signaling by Nuclear Receptors Signaling by PDGF Regulation of MITF-M-dependent genes involved in extracellular matrix, focal adhesion and EMT Transcriptional regulation by RUNX1 -log(p_val)
+> −5 0510
+
+umap_2 
+
+> 01234
+> Runx1
+> 012345
+> Thbs1
+> 0123
+> Spi1
+> 0246
+> Pf4
+> 012345
+> Lgals3
+> 01234
+> Grn
+> BA C
+> D
+> EF
+> G
+> v
+> Tumor
+> e MΦ  e
+> Hybrid-T Hybrid-M
+> chr16:92776073-92876074  chr2:118061875-118161876
+> Runx1 Gm13986 Thbs1
+
+Coverage Norm. ATAC Signal Range (0-0.68) Coverage Norm. ATAC Signal Range (0-1.08) Genes  Genes Tumor e MΦ  eHybrid-T Hybrid-M 
+
+> RUNX1
+> Non-Hybrid  Hybrid  Non-Hybrid  Hybrid  Non-Hybrid  Hybrid  Non-Hybrid  Hybrid  Non-Hybrid  Hybrid  Non-Hybrid  Hybrid
+> SPI1  THBS1  LGALS3  GRN  PF4
+> 020000 40000 60000 80000
+
+Mean Fluorescent Intensity (per cell) RUNX1 
+
+> Tumor  H11  H4  H3  H7
+> D
+> Hybrid-T Hybrid-M Tumor MΦ Tumor MΦ Tumor MΦ Tumor MΦ Tumor MΦ Tumor MΦ Hybrid-T Hybrid-M Hybrid-T Hybrid-M Hybrid-T Hybrid-M Hybrid-T Hybrid-M Hybrid-T Hybrid-M
+> Tumor  H11  H4  H3  H7 Tumor  H11  H4  H3  H7 0246
+
+Relative Gene Expression 
+
+> Runx1
+> **
+> **** ****
+> *RUNX1 DAPI umap_1
+
+umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 4: RUNX1 expression is elevated in invasive hybrid cell clones and associates with 
+
+migratory and proteolytic programs. A) Reactome pathway analysis using DEGs for all hybrid 
+
+cell (hybrid -T and hybrid -M) vs tumor cells (MC38) and macrophages (MΦ) . B) Expression of key 
+
+RUNX1 pathway associated genes contributing to Reactome analysis ( Runx1, Thbs1, Spi1, Grn, 
+
+Pf4, Lgals3) , overlaid onto the UMAP. C,D) scATAC -seq track plots for Runx1 and Thbs1 in 
+
+hybrid -M, hybrid -T, tumor and MΦ cells. E) qRT -PCR Runx1 gene expression in hybrid single cell 
+
+clones H11, H4, H3, H7 relative to MC38 tumor cells (data shown represent n=3 biological 
+
+replicates, each with 3 technical replicates averaged). F) Immunofluorescent staining of RUNX1 
+
+in hybrid single cell clones H11, H4, H3, H7 and MC38 tumor cells (scale bar = 50μm) and 
+
+quantified as the mean fluorescent intensity per cell (images shown represent one area of whole 
+
+well imaging from n=2 biological replicates) . G) Gene expression of RUNX1, THBS1, SPI1, GRN, 
+
+PF4, and LGALS3 in human hybrid cells compared to all other cells from scRNA sequencing 
+
+studies presented in Figure 1. All other R UNX 1 pathway gene plots included in Supplemental 
+
+Figure 3. (p = **** <0.0001, **<0.01, *<0.05) 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+NT KD1 KD2 NT KD1 KD2 NT KD1 KD2 NT KD1 KD2 NT KD1 KD2 NT KD1 KD2 Tumor H11 H7 Tumor H11 H7 Non-Target shRNA Runx1  shRNA-1 Tumor H11 H7 Tumor H11 H7 Tumor H11 H7 Tumor H11 RUNX1 
+
+Runx1 
+
+ACTIN RUNX1 
+
+A B CDHGEFI JK L
+
+010 20 30 40 Number of Invading Cells  *** * ***** **** **** Tumor H11 
+
+0200 400 600 800 Mean Fluorescent Intensity (per cell) 0 24 48 72 
+
+010 20 30 40 Time Elapsed (hrs) Chemotaxis normalized cell count bottom well H11 Non-Target shRNA H11 Runx1 shRNA-1 H7 Non-Target shRNA H7 Runx1 shRNA-1 Tumor Non-Target shRNA Tumor Runx1 shRNA-1 0 24 48 72 010 20 30 40 Time Elapsed (hrs) Phase Confluence (%) H11 Non-Target shRNA H11 Runx1 shRNA-1 H7 Non-Target shRNA H7 Runx1 shRNA-1 Tumor Non-Target shRNA Tumor Runx1 shRNA-1 
+
+-2 -1 0 1 2 3Tumor 
+
+Runx1 
+
+shRNA-1 Tumor NT shRNA H11 Runx1 
+
+shRNA-1 H11 NT shRNA 
+
+Runx1 shRNA-1 Non-Target shRNA Z-score signal ACE CAT MMP MTP PLASM USP 
+
+0.0 0.5 1.0 1.5 RUNX1 Protein (Normalized to NT) 
+
+> Gene Expression
+
+NT shRNA 
+
+Runx1 
+
+shRNA-1 RUNX1 -1 DAPI RFP DAPI GFP DAPI 
+
+Runx1 
+
+shRNA-2 NT shRNA 
+
+Runx1 
+
+shRNA-1 NT shRNA 
+
+Runx1 
+
+shRNA-1 NT shRNA 
+
+Runx1 
+
+shRNA-1 NT shRNA 
+
+Runx1 
+
+shRNA-1 NT shRNA 
+
+Runx1 
+
+shRNA-1 
+
+0.0 0.5 1.0 
+
+0 2 4 60200 400 600 800 1000 Treatment Time (days) 
+
+> Tumor Size Increase
+> (mm 3) (Sx-S0)
+
+Vehicle Control RUNX1 Inhibitor (Ro5-3335) (Ro5-3335) 
+
+Vehicle Control RUNX1 Inhibitor 020 40 60 80 Number of CHCs (per 50k nuclei) 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 5: RUNX1 depletion impairs colorectal cancer hybrid cell invasion and limits tumor 
+
+progression in vivo . A) qRT -PCR analysis of Runx1 expression in MC38 tumor cells and hybrid 
+
+cell lines H11 and H7 using two independent shRNA constructs and non -target (NT) control (data 
+
+shown are an average of n=3 within -plate replicates and are representative of n=2 biological 
+
+replicates each with n=2 technical replicates) . B) Western blot of RUNX1 protein levels in 
+
+knockdown (KD) samples across tumor, H11, and H7 cell lines, with ACTIN used as a loading 
+
+control. C) Quantification of RUNX1 protein levels from western blot (B), each cell line normalized 
+
+to each NT control after normalizing to ACTIN loading control (data shown representative of n=2 
+
+biological replicates each with n=2 technical replicates) D) Representative immunofluorescence 
+
+images of RUNX1 staining in MC38 , H11 , and H7 NT -shRNA and Runx1 shRNA -1 cells (scale 
+
+bar = 50μm). E) Quantification of mean fluorescent intensity of RUNX1 per cell. Runx1 shRNA -1
+
+groups compared to non -target controls . F) Trans -well chemotaxis assay of MC38 tumor, H11 
+
+and H7 NT -shRNA and Runx1 shRNA -1 cells. G) Proliferation assay of MC38 tumor, H11 and H7 
+
+NT -shRNA and Runx1 shRNA -1 cells. H) Representative images from extracellular matrix (ECM) 
+
+invasion assay for MC38 tumor and H11 NT -shRNA and Runx1 shRNA -1 cells (scale bar = 
+
+100 μm). I) Quantification of ECM -invading cells from (H) (data shown are representative of n=2 
+
+biological replicates each with n= 2 technical replicates) . J) Z -score normalized protease activity 
+
+in MC38 tumor and H11 NT -shRNA and Runx1 shRNA -1 cells (data shown are representative of 
+
+n=2 biological replicates, each with n=3 technical replicates) . K) in -vivo tumor growth of H11 with 
+
+vehicle (n=10, 5M/5F) or Runx1 inhibitor (Ro5 -3335) (n=10, 5M/5F) treatment (data shown are 
+
+representative of n=2 biological replicates) L) The number of circulating hybrid cells (CHCs) 
+
+(normalized to 50,000 nuclei) identified in the peripheral blood of mice bearing H11 tumors in 
+
+RUNX1 treated (n=5) and vehicle (n=5) control groups. (p = **** <0.0001 , *** <0.001, **<0.01, 
+
+*<0.05) 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint 012345678910 11 12 13 14 15 16 17 CHC CTC 3Mb8946k2m47m804f8a703
+> 2.0 1.5 1.0 0.5 0.0 0.5 1.0 1.5 2.0 Expression CHC/CTC CHC CTC 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 1 2 3 4 5 6 7 8 9 10  11  12 13 14 RUNX1 0.75 0.50 0.25 0.00 0.25 0.50 0.75 1.00 1.25 THBS1 0.75 0.50 0.25 0.00 0.25 0.50 0.75 1.00 1.25 LGALS3 0.4 0.2 0.0 0.2 0.4 0.6 0.8 SPI1 0.75 0.50 0.25 0.00 0.25 0.50 0.75 1.00 1.25 DAPI CD45 EpCAM ECAD panCK VIM TrHC  DAPI  CD45
+> panCK ECAD EpCAM THBS1 SPI1 RUNX1
+> CHC  DAPI  CD45 panCK ECAD EpCAM THBS1 SPI1 RUNX1 CHC  CTC  CHC  CTC  CHC  CTC Stage 1  Stage 2  Stage 3
+> BA CE FD
+
+#CHCs or CTCs/50K cells 
+
+> ****
+> ****
+> ****
+> 0500 1000 1500 2000
+> umap_1
+
+umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 RUNX1 THBS1 SPI1 CD31 FOXP3 B2M TGFB CD68 SOX9 CD44 p16 ERK CDX2 L1CAM CD74 p27 LYVE1 VIM CD8 CD20 CDX1 CD4 NF p38 
+
+> ⍺SMA KI67 S100 LGALS3 1 2 3Stage 45678910 11 12
+
+Expression Level RUNX1 1 2 3Stage 678910 SPI1 1 2 3Stage 678910 THBS1 
+
+> G
+> ** * *
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 6: Cyclic immunofluorescence identifies RUNX1 ⁺ tumor resident and circulating 
+
+hybrid cells associated with colorectal cancer progression . A) Quantification of circulating 
+
+hybrid cells (CHCs) and circulating tumor cells (CTCs) per 50,000 nucleated cells in peripheral 
+
+blood across CRC stages 1, 2, and 3. B) UMAP plot of cyclic immunofluorescence (cyCIF) data 
+
+colored by phenotypically defined c lusters. C) UMAP plot from (B) labeled by CHC versus CTC 
+
+identity. D) Representative cycIF image of a whole -slide CRC primary tumor showing RUNX1+ 
+
+tumor hybrid cells (TrHC) and Runx1+ CHC (hybrid cells identified as DAPI+, CD45+, EpCAM+ 
+
+or ECAD+ or panCK+) including Runx1 downstream pathway members SPI1 and THBS1. (scale 
+
+bars; tumor inset = 50μm, TrHC individual images = 10μm, peripheral blood = 20μm, CHC 
+
+individual images = 10μm). E) Heatmap of 34 phenotypic markers measured by cyCIF across 
+
+individual CHCs and CTCs, clustered by expression patterns. F) UMAP feature plots showing 
+
+normalized average fluorescent intensity levels of RUNX1, SPI1, THBS1, and LGALS3 across all 
+
+single cells. G) Violin plot s of RUNX1, SPI1, and THBS1 expression in CHCs grouped by CRC 
+
+disease stage ( p = * < 0.05). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint CRC176 CRC177 CRC179 Immune CHC CHC1 CHC2 CHC3 Tumor TrHC B cells CAF Matrix CD14 Monocytes CD16 Monocytes CD4 T cells CD8 T cells Endothelial Epithelial M2c Macrophages Naive B cells Naive T cells NK cells Plasma cells Regulatory T cells TAMs *** ** * *** *
+> 012345CAF CHC1 CHC2 CHC3 Epithelial Immune Myeloid TrHC
+> Expression Level
+> RUNX1  ****
+> 012345CAF CHC1 CHC2 CHC3 Epithelial Immune Myeloid TrHC Expression Level
+> THBS1
+> * ***
+> * *** ***
+> 012CAF CHC1 CHC2 CHC3 Epithelial Immune Myeloid TrHC Expression Level
+> SPI1
+> ** ***** * *** *
+> 0123CAF CHC1 CHC2 CHC3 Epithelial Immune Myeloid TrHC
+> Expression Level
+> GRN
+> 0123CAF CHC1 CHC2 CHC3 Epithelial Immune Myeloid TrHC Expression Level
+> PF4
+> ** *** *** *** *** **  *
+> 012345CAF CHC1 CHC2 CHC3 Epithelial Immune Myeloid TrHC Expression Level
+> LGALS3 aneuploid diploid FHIP2A ITM2A IFITM1 C4orf19 CAMSAP3 GGT6 S100A14 PHGR1 SH3PXD2B C1QA C1QC FPR3 PLAU CYP1B1 CLEC12B ZNF467 LINC00937 SIRPB2 LOC105377113 LOC124902418 KLRG1 TRGC2 TARP LINC01857 MACROD2 LOC107985563 CD1C FCRLA
+> Immune CHC1 CHC2 CHC3 Tumor TrHC Percent Expressed 025 50 75 Average Expression −1 012CHC1 CHC2 CHC3 Multi No Signature TrHC A BCD
+> umap_1
+
+umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 umap_1 umap_2 0 15  30 Positive Regulation of Response to External Stimulus CHC1  CHC2 Positive Regulation of Cytokine Production Myeloid Leukocyte Activation Phagocytosis Taxis Antigen Processing and Presentation B Cell Activation B Cell Receptor Signaling Pathway Immun e Response Regulating Cell Surface Receptor Signaling Pathway B Cell Differentiation T Cell Receptor Signaling Pathway T Cell Activation Regulation of Cell Activation Positive Regulation of Cell-Cell Adhesion Regulation of T Cell Activation -log(p-val) of Exogenous Peptide 
+
+> EF GHI
+> CHC3
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint Figure 7: Single -cell RNA sequencing reveals functionally distinct tumor -immune hybrid 
+
+cell populations with conserved RUNX1 transcriptional programs in tumor -macrophage 
+
+hybrids . A) UMAP projection of SMART -Seq data showing clustering of tumor -resident hybrid 
+
+cells (T rHCs, EpCAM ⁺/ECAD ⁺/CD45 ⁺), circulating hybrid cells (CHCs, EpCAM ⁺/ECAD ⁺/CD45 ⁺), 
+
+tumor cells (EpCAM ⁺/ECAD ⁺), and immune cells (CD45 ⁺) from patient -matched colorectal tumor 
+
+and peripheral blood samples (n = 3 patients; n=3 PBMC samples, n=2 tumor samples). B) UMAP 
+
+colored by CHC subclusters (CHC1 –3) with distinct transcriptional states. C) UMAP colored by 
+
+patient ID. D) Dot plot showing the top five differentially expres sed genes defining each major cell 
+
+type. E) Gene set enrichment analysis of gene ontology - biological processes highlighting 
+
+functional differences among CHC1 –3 clusters. F) UMAP of 10X Genomics data enriched for 
+
+tumor -resident hybrids and circulating hybrid cells, colored by hybrid signature scores derived 
+
+from SMART -seq CHC cluster modules. G) UMAP of the 10X Genomics dataset annotated by 
+
+major cell types, showing distribution of hybrid -enriched populations. H) Aneuploidy prediction in 
+
+10X Genomics datas et distinguishing diploid versus aneuploid populations. I) Violin plots of 
+
+RUNX1 genes identified in tumor -macrophage murine hybrids (RUNX1, THBS1, SPI1, GRN, PF4, 
+
+LGALS3 ). (p = *** <0.001, **<0.01, *<0.05) 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Table 1: List of genes used throughout manuscript with gene symbol and full name 
+
+Gene ID  Gene Name 
+
+AIF1  Allograft inflammatory factor 1 
+
+AP-1  Activator protein 1 
+
+APC  Adenomatous polyposis coli 
+
+ARG2  Arginase 2 
+
+BRAF  B-Raf proto-oncogene 
+
+CD11b  Cluster of differentiation 11b 
+
+CD14  Cluster of differentiation 14 
+
+CD45  Cluster of differentiation 45 
+
+CD55  Cluster of differentiation 55 
+
+CD64  Cluster of differentiation 64 
+
+CD68  Cluster of differentiation 68 
+
+CDH1  Cadherin 1 (E-cadherin) 
+
+CK  Cytokeratin 
+
+CSF1R  Colony-stimulating factor 1 receptor 
+
+CXCL2  C-X-C motif chemokine ligand 2 
+
+CXCL3  C-X-C motif chemokine ligand 3 
+
+CXCL8  C-X-C motif chemokine ligand 8 
+
+ECAD/CDH1  E-cadherin 
+
+EpCAM  Epithelial cell adhesion molecule 
+
+ETS  E26 transformation-specific 
+
+FPR1  Formyl peptide receptor 1 
+
+FCGR3A  Fc gamma receptor IIIA 
+
+GAPDH  Glyceraldehyde-3-phosphate dehydrogenase 
+
+GRN  Granulin 
+
+IFI44L  Interferon-induced protein 44-like 
+
+ITGAM  Integrin subunit alpha M 
+
+KRAS  Kirsten rat sarcoma viral oncogene homolog 
+
+KRT  Keratin 
+
+LGALS3  Galectin 3 
+
+LGALS4  Galectin 4 
+
+LTB  Lymphotoxin beta 
+
+PECAM-1  Platelet endothelial cell adhesion molecule 1 
+
+PF4  Platelet factor 4 
+
+PLAUR  Plasminogen activator, urokinase receptor 
+
+PLEK  Pleckstrin 
+
+PTGS2  Prostaglandin-endoperoxide synthase 2 
+
+PTPRC  Protein tyrosine phosphatase receptor type C 
+
+RUNX1  Runt-related transcription factor 1 
+
+SOX4  SRY-box transcription factor 4 
+
+SPI1  Spi-1 proto-oncogene 
+
+TGF-β Transforming growth factor beta 
+
+THBS1  Thrombospondin 1 
+
+TP53  Tumor protein p53 
+
+TYROBP  TYRO protein tyrosine kinase binding protein 
+
+VIM  Vimentin 
+
+Wnt  Wingless/Integrated 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Table 2: Demographic information for cyclic & scRNA -seq patients 
+
+Patient ID  Sex  Age  Stage 
+
+Treatment Prior to Collection 
+
+Recurrence/ Progression/ Metastasis 
+
+Assays 
+
+CRC 94  M 68  T3 N0  Yes  No  cyCIF 
+
+CRC 95  F 58  T1 N1  No  No  cyCIF 
+
+CRC 96  F 60  N/A  No  No  cyCIF 
+
+CRC 97  M 65  T3 N0  Yes  Yes  cyCIF 
+
+CRC 98  F 75  T3 N0  No  Yes  cyCIF 
+
+CRC 99  F 73  T1 NX  No  Yes  cyCIF 
+
+CRC100  F 52  T3 N0  Yes  Yes  cyCIF 
+
+CRC 101  F 69  T4 N2A M1A  Yes  Yes  cyCIF 
+
+CRC 102  M 53  T2 N1A  No  No  cyCIF 
+
+CRC 103  M 36  T4b N0  No  Yes  cyCIF 
+
+CRC 104  M 68  T3 N1a  Yes  Yes  cyCIF 
+
+CRC 105  M 78  T2 N0  Yes  Yes  cyCIF 
+
+CRC 106  F 53  T3 N1c  No  No  cyCIF 
+
+CRC 107  F 40  T3 N1c  No  No  cyCIF 
+
+CRC176  F 78  T2 N0  No  No  cyCIF, scRNA-seq 
+
+CRC177  M 38  T2 N1b  No  No  cyCIF, scRNA-seq 
+
+CRC178  M 63  T3 N0  No  No  cyCIF 
+
+CRC179  F 70  T4a N1a  No  No  cyCIF, scRNA-seq 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Table 3: Ab -oligo antibodies for cyCIF 
+
+Biomarker  Antibody Clone 
+
+Vendor  Catalog #  Species 
+
+αSMA  EPR5368  Abcam  ab220795  Rb 
+
+B2M  D8P1H  Cell Signaling  12851  Rb 
+
+CD20  L26  Abcam  ab9475  Ms 
+
+CD31  EPR3094  Abcam  ab207090  Rb 
+
+CD4  EPR6855  Abcam  ab181724  Rb 
+
+CD44  EPR1013Y  Abcam  ab216647  Rb 
+
+CD45  HI30  BioLegend  304002  Ms 
+
+CD47  polyclonal  Invitrogen  PA5-80435  Ms 
+
+CD68  D4B9C  Cell Signaling  76437S  Rb 
+
+CD74  VIC-Y1  eBioscience  14-0747-82  Ms 
+
+CD8  C8/144B  Thermo Fisher  MA5-13473  Ms 
+
+CDX1  EPR4819(2)  Abcam  ab248164  Rb 
+
+CDX2  EPR2764Y  Abcam  ab220799  Rb 
+
+ECAD  EP700Y  Abcam  ab201499  Rb 
+
+EpCAM  VU1D9  Cell Signaling  46403SF  Ms 
+
+ERK1/2  137F5  Cell Signaling  68303  Rb 
+
+FOXP3  236A/E7  Thermo Fisher  50-112-9542  Ms 
+
+Ki-67  pAb  Abcam  ab15580  Rb 
+
+L1CAM  UJ127.11  MilliporeSigma  L4543  Ms 
+
+LGALS3  EP2775Y  Abcam  ab197544  Rb 
+
+LYVE1  polyclonal  Abcam  ab14917  Rb 
+
+Neurofilament (NFT)  polyclonal  MilliporeSigma  AB5539  Chk 
+
+p16 (CDKN2A)  4844R  Novus Biologicals  NBP3-14223  Rb 
+
+p27  KIP1 [Y236]  Abcam  ab206927  Rb 
+
+p38 (MAPK)  Y122  Abcam  ab227995  Rb 
+
+panCK  AE1/AE3  Santa Cruz  sc81714  Ms 
+
+RUNX1  D33G6  Cell Signaling  4336BF  Rb 
+
+S100  EP1576Y  Abcam  ab215989  Rb 
+
+SOX9  D8G8H  Cell Signaling  74021  Rb 
+
+SPI1  9G7  Cell Signaling  2258  Rb 
+
+TEAD4  polyclonal  Invitrogen  PA5-21977  Rb 
+
+TGF-β polyclonal  R&D Systems  AB-100-NA  Rb 
+
+THBS1  EPR22927-54  Abcam  ab267397  Rb 
+
+Vimentin (VIM)  D21H3  Cell Signaling  5751BF  Rb 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 15, 2026. ;https://doi.org/10.64898/2026.04.12.717781 doi: bioRxiv preprint
+
+Table 4: Primer sets for qRT -PCR 
+
+Target  Sequence (Forward)  Sequence (Reverse) 
+
+Runx1  AACCCTCAGCCTCAGAGTCA  CAATGGATCCCAGGTATTGG 
+
+Egfr  GGCGTTGGAGGAAAAGAAAG  TTCCCAAGGACCACTTCACA 
+
+Epcam  ACCGCCGGAGTCCGAAGAAC  CGCCTCTTGAAGCGCAGTCT 
+
+Cd45  CCTGCAGACACAGCCTTTCCT  CCCAGAGTGGATGGTGTAAGAGTT 
+
+Csf1r  GCAGTACCACCATCCACTTGTA  GTGAGACACTGTCCTTCAGTGC 
+
+Ccl3  CCAAGTCTTCTCAGCGCCAT  CAAAGGCTGCTGGTTTCAAAA 
+
+Cxcr4  CGTCAGCCAGGGGGACATCA  GATGACGATGCCGGGCAGGA 
+
+Tgf-ϐ ACAGTACAGCAAGGTCCT  TTGCGACCCACGTAGTAG 
+
+Zeb1  GTTCTGCCAACAGTTGGTTT  GCTCAAGACTGTAGTTGATG 
+
+Table 5: Runx1 lentiviral constructs 
+
+Target  TRC ID  shRNA Sequence (5′–3′)  Viral Titer (vp/mL) 
+
+RUNX1 (clone 1) 
+
+TRCN0000 084812 
+
+CCGGCGTCACAGTGGATGTTATCATCTCG AGATGATAACATCCACTGTGACGTTTTTG 
+
+1.8 × 10⁷ 
+
+RUNX1 (clone 2) 
+
+TRCN0000 084810 
+
+CCGGCGGACAGTCTATGAGAGTTTACTCG AGTAAACTCTCATAGACTGTCCGTTTTTG 
+
+2.0 × 10⁷ 
+
+Non-Targeting Control 
+
+TRCN0000 072229 
+
+CCGGCAACAAGATGAAGAGCACCAACTC GAGTTGGTGCTCTTCATCTTGTTGTTTTT 
+
+1.6 × 10⁷

@@ -1,0 +1,24 @@
+---
+title: An Endocytic Checkpoint Controls Macrophage PD-1 Function and Immunotherapy Fate
+title_zh: 一个内吞检查点控制巨噬细胞 PD-1 功能和免疫治疗命运
+authors: "Mullick, M., McLaren, E., Roy, S., Biagas, B., Anandachar, M. S., Castillo, V., Williams, S., Espinoza, C. R., Tindle, C., Katkar, G. D., Thistlethwaite, P. A., Sinha, S., Ghosh, P."
+date: 2026-04-17
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.14.718292v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 通过 GIV/CCDC88A 将巨噬细胞重编程为特定的功能状态
+tldr: 本研究通过整合巨噬细胞系统图谱与千余名患者的单细胞数据，发现CCDC88A（GIV）是决定PD-1抑制剂疗效的关键因子。研究揭示了GIV通过与PD-1胞内段结合驱动其内吞，从而维持巨噬细胞的吞噬功能。GIV缺失会导致PD-1在细胞表面滞留，使免疫治疗从抑癌转为促癌（HPD），证明了PD-1的胞内运输路径而非配体结合才是调控抗肿瘤免疫的核心机制。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-001.webp\", \"caption\": \"Figure 8. Working model for how GIV-dependent PD1 positioning in TAMs governs immunotherapy durability.\", \"page\": 38, \"index\": 1, \"width\": 1106, \"height\": 1362}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-002.webp\", \"caption\": \"Figure 2: CCDC88A deletion increases PD1 on macrophage surface and impairs tumor phagocytosis.\", \"page\": 26, \"index\": 2, \"width\": 1118, \"height\": 1408}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-003.webp\", \"caption\": \"Figure 4: Myeloid GIV loss converts PD1 blockade into accelerated tumor growth in vivo.\", \"page\": 30, \"index\": 3, \"width\": 1036, \"height\": 1401}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-004.webp\", \"caption\": \"Figure 6: GIV-dependent PD1 endocytic routing determines durability of anti–PD1 immunotherapy\", \"page\": 34, \"index\": 4, \"width\": 972, \"height\": 1410}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-005.webp\", \"caption\": \"Figure 3: Macrophage GIV (CCDC88A) governs tumor organoid clearance in a human co-culture model\", \"page\": 28, \"index\": 5, \"width\": 1125, \"height\": 1389}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-006.webp\", \"caption\": \"Figure 7. A conserved TILL motif enables GIV–PD1 coupling to control receptor trafficking\", \"page\": 36, \"index\": 6, \"width\": 1066, \"height\": 1401}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-007.webp\", \"caption\": \"Figure 5: Myeloid GIV preserves innate immune signaling and endocytic programs that predict durable response to PD1 blockade\", \"page\": 32, \"index\": 7, \"width\": 968, \"height\": 1364}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718292-v1/fig-008.webp\", \"caption\": \"Figure 1: Systems anchoring of macrophage states to extremes of immunotherapy response.\", \"page\": 24, \"index\": 8, \"width\": 1056, \"height\": 1342}]"
+motivation: 旨在探究导致PD-1阻断疗法在不同患者中产生持久疗效或超进展疾病（HPD）差异的先天免疫机制。
+method: "整合了超过12,500个转录组的巨噬细胞图谱与1,000多名患者的单细胞谱系，并结合小鼠模型和类器官进行验证。"
+result: 发现GIV蛋白通过TILL基序驱动PD-1的内吞，其缺失会导致PD-1表面滞留并抑制巨噬细胞吞噬，进而诱发肿瘤超进展。
+conclusion: 研究定义了PD-1的胞内运输路径是巨噬细胞调控抗肿瘤免疫的关键检查点，为克服免疫治疗耐药提供了新靶点。
+---
+
+## 摘要
+对 PD1 阻断治疗的反应涵盖了从持久的肿瘤控制到超进展性疾病 (HPD)，然而控制这些极端情况的先天免疫机制仍不明确。在此，我们将巨噬细胞系统图谱（>12,500 个转录组）与来自 1,000 多名接受抗 PD1 治疗患者的单细胞图谱相结合，确定 CCDC88A (GIV) 是决定持久反应与 HPD 的巨噬细胞内在因素。GIV 缺失会增加 PD1 的表面保留，抑制吞噬作用，并在小鼠模型、人类巨噬细胞和患者来源的类器官中加速肿瘤生长。髓系特异性 GIV 缺失通过将巨噬细胞重编程为类 HPD 状态，使 PD1 阻断从抑制肿瘤转变为加速肿瘤。从机制上讲，GIV 与 PD1 胞质尾部内保守的 TIR 样 [TILL] 基序结合，驱动动力蛋白依赖性内吞作用，将先天免疫信号逻辑与检查点受体转运耦合起来。药理学破坏该轴会模拟 GIV 缺失的表型，揭示了一个破坏检查点效力并在复发时触发加速生长的内吞脆弱性。这些发现将 PD1 的路径选择而非配体结合，定义为控制抗肿瘤免疫的巨噬细胞编码检查点。
+
+## Abstract
+Responses to PD1 blockade span durable tumor control to hyperprogressive disease (HPD), yet innate immune mechanisms governing these extremes remain undefined. Here we integrate a macrophage systems atlas (>12,500 transcriptomes) with single-cell profiles from >1,000 anti PD1 treated patients, to identify CCDC88A (GIV) as a macrophage-intrinsic determinant of durable response versus HPD. GIV loss increases PD1 surface retention, suppresses phagocytosis, and accelerates tumor growth across murine models, human macrophages, and patient-derived organoids. Myeloid-specific GIV deletion converts PD1 blockade from tumor-restraining to tumor-accelerating by reprogramming macrophages toward HPD-like states. Mechanistically, GIV engages a conserved TIR-like [TILL] motif within the PD1 cytoplasmic tail to drive dynamin-dependent endocytosis, coupling innate immune signaling logic to checkpoint receptor trafficking. Pharmacologic disruption of this axis phenocopies GIV loss, revealing an endocytic vulnerability that undermines checkpoint efficacy and triggers accelerated growth at relapse. These findings define PD1 routing, rather than ligand-binding, as a macrophage-encoded checkpoint governing antitumor immunity.
