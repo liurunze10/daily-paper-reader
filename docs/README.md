@@ -6,52 +6,55 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-04-22
-- 运行时间：2026-04-22 20:05:05 UTC
+- 最新运行日期：2026-04-23
+- 运行时间：2026-04-23 20:49:26 UTC
 - 运行状态：成功
-- 本次总论文数：10
+- 本次总论文数：11
 - 精读区：2
-- 速读区：8
+- 速读区：9
 
 ### 今日简报（AI）
-今日精选10篇前沿进展，深度解析了巨噬细胞在神经炎症、胃癌转移及代谢重构中的关键调控机制。
-重点关注白蛋白融合IL-10对神经炎症的系统性抑制，以及TIM3+ M2巨噬细胞如何通过削弱T细胞免疫促进胃癌恶化。
-建议深入了解巨噬细胞内吞检查点与脂代谢重编程在提升免疫治疗疗效中的潜在价值。
-- 详情：[/202604/22/README](/202604/22/README)
+今日聚焦11项前沿进展，重点攻克AI医学影像分割与胃癌免疫逃逸机制。
+核心突破包括两阶段深度学习框架实现10种消化器官精准分割，以及TIM3+巨噬细胞通过抑制T细胞免疫驱动胃癌转移。
+建议关注AI在复杂解剖结构识别中的应用，并探索针对肿瘤微环境的免疫治疗新靶点。
+- 详情：[/202604/23/README](/202604/23/README)
 
 ### 精读区论文标签
-1. [Serum albumin-fused interleukin-10 prevents neuroinflammation by promoting immunoregulation in the secondary lymphoid organs and limiting immune cell infiltration in the spinal cord](/202604/22/biorxiv-10-64898-2026-04-10-717764-v1-serum-albumin-fused-interleukin-10-prevents-neuroinflammation-by-promoting-immunoregulation-in-the-secondary-lymphoid-organs-and-limiting-immune-cell-infiltration-in-the-spinal-cord)  
+1. [A Two-Stage Deep Learning Framework for Segmentation of Ten Gastrointestinal Organs from Coronal MR Enterography](/202604/23/2604.17118v1-a-two-stage-deep-learning-framework-for-segmentation-of-ten-gastrointestinal-organs-from-coronal-mr-enterography)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：IL-10促进M2型巨噬细胞极化并减少抗原呈递
-2. [TIM3+ Tumor Associated M2 Macrophages Impair Antitumor T Cell Immunity and Promote Gastric Cancer Progression and Peritoneal Metastasis](/202604/22/biorxiv-10-64898-2026-04-15-716939-v1-tim3-tumor-associated-m2-macrophages-impair-antitumor-t-cell-immunity-and-promote-gastric-cancer-progression-and-peritoneal-metastasis)  
+   evidence：用于IBD患者胃肠器官分割的深度学习框架。
+2. [TIM3+ Tumor Associated M2 Macrophages Impair Antitumor T Cell Immunity and Promote Gastric Cancer Progression and Peritoneal Metastasis](/202604/23/biorxiv-10-64898-2026-04-15-716939-v1-tim3-tumor-associated-m2-macrophages-impair-antitumor-t-cell-immunity-and-promote-gastric-cancer-progression-and-peritoneal-metastasis)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：TIM3+ 肿瘤相关M2巨噬细胞与免疫抑制
+   evidence：直接研究TIM3+ M2型巨噬细胞极化及其在肿瘤进展和免疫中的作用。
 
 ### 速读区论文标签
-1. [M-CSF drives alveolar macrophage plasticity during development and cytomegalovirus infection](/202604/22/biorxiv-10-64898-2026-04-11-717936-v1-m-csf-drives-alveolar-macrophage-plasticity-during-development-and-cytomegalovirus-infection)  
-   标签：评分：7.5/10、query:ros-mp
-   evidence：调节巨噬细胞表型可塑性的机制
-2. [A mycobacterial ligand coordinates multi-receptor signaling to reprogram macrophage lipid metabolism](/202604/22/biorxiv-10-64898-2026-02-18-706227-v4-a-mycobacterial-ligand-coordinates-multi-receptor-signaling-to-reprogram-macrophage-lipid-metabolism)  
+1. [LRRK2 mutations block NCOA4 trafficking upon iron overload leading to ferroptotic death](/202604/23/biorxiv-10-1101-2025-08-25-672135-v2-lrrk2-mutations-block-ncoa4-trafficking-upon-iron-overload-leading-to-ferroptotic-death)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：重编程巨噬细胞脂质代谢和表型
-3. [An Endocytic Checkpoint Controls Macrophage PD-1 Function and Immunotherapy Fate](/202604/22/biorxiv-10-64898-2026-04-14-718292-v1-an-endocytic-checkpoint-controls-macrophage-pd-1-function-and-immunotherapy-fate)  
+   evidence：RAW巨噬细胞系中的铁稳态和铁死亡
+2. [A mycobacterial ligand coordinates multi-receptor signaling to reprogram macrophage lipid metabolism](/202604/23/biorxiv-10-64898-2026-02-18-706227-v4-a-mycobacterial-ligand-coordinates-multi-receptor-signaling-to-reprogram-macrophage-lipid-metabolism)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：通过 GIV/CCDC88A 将巨噬细胞重编程为特定的功能状态
-4. [Splenic MARCO+ marginal zone macrophages regulate rapid production of MCP-1 and KC but are dispensable for alloantibody generation in response to stored RBCs in a murine model.](/202604/22/biorxiv-10-1101-2025-02-11-637644-v2-splenic-marco-marginal-zone-macrophages-regulate-rapid-production-of-mcp-1-and-kc-but-are-dispensable-for-alloantibody-generation-in-response-to-stored-rbcs-in-a-murine-model)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：边缘区巨噬细胞调节细胞因子产生
-5. [Representation geometry shapes task performance in vision-language modeling for CT enterography](/202604/22/2604.13021v1-representation-geometry-shapes-task-performance-in-vision-language-modeling-for-ct-enterography)  
+   evidence：描述了通过受体信号传导重编程巨噬细胞脂质代谢和泡沫细胞形成。
+3. [Discovery of Selective Nrf2 Activators from Natural Products: AComputational Screening Approach to Minimize Off-Target Effects on PXR and CYP2D6](/202604/23/biorxiv-10-64898-2026-04-12-718057-v1-discovery-of-selective-nrf2-activators-from-natural-products-acomputational-screening-approach-to-minimize-off-target-effects-on-pxr-and-cyp2d6)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：Nrf2是细胞氧化应激抗氧化反应的核心调节因子。
+4. [An Endocytic Checkpoint Controls Macrophage PD-1 Function and Immunotherapy Fate](/202604/23/biorxiv-10-64898-2026-04-14-718292-v1-an-endocytic-checkpoint-controls-macrophage-pd-1-function-and-immunotherapy-fate)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：将巨噬细胞重编程为特定的功能状态
+5. [Integrated bioinformatics and single-cell analysis identifies vascular aging-related hub genes and immune drivers in atherosclerosis.](/202604/23/biorxiv-10-64898-2026-04-14-718580-v1-integrated-bioinformatics-and-single-cell-analysis-identifies-vascular-aging-related-hub-genes-and-immune-drivers-in-atherosclerosis)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：对与ROS产生相关的免疫驱动因素和核心基因（如CYBA和NCF2）进行单细胞分析。
+6. [Crosstalk Between Calcium Dynamics and ROS Levels in U87 Glioblastoma Cells Exposed to Extremely Low Frequency Pulsed Electromagnetic Fields](/202604/23/biorxiv-10-64898-2026-04-15-718611-v1-crosstalk-between-calcium-dynamics-and-ros-levels-in-u87-glioblastoma-cells-exposed-to-extremely-low-frequency-pulsed-electromagnetic-fields)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：监测细胞中的活性氧 (ROS) 水平。
+7. [Splenic MARCO+ marginal zone macrophages regulate rapid production of MCP-1 and KC but are dispensable for alloantibody generation in response to stored RBCs in a murine model.](/202604/23/biorxiv-10-1101-2025-02-11-637644-v2-splenic-marco-marginal-zone-macrophages-regulate-rapid-production-of-mcp-1-and-kc-but-are-dispensable-for-alloantibody-generation-in-response-to-stored-rbcs-in-a-murine-model)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：用于评估炎症性肠病(IBD)的CT小肠成像
-6. [Cell fusion reprograms tumor cells and promotes RUNX1-mediated invasion and dissemination in colorectal cancer](/202604/22/biorxiv-10-64898-2026-04-12-717781-v1-cell-fusion-reprograms-tumor-cells-and-promotes-runx1-mediated-invasion-and-dissemination-in-colorectal-cancer)  
+   evidence：边缘区巨噬细胞与炎性细胞因子产生
+8. [Gut-derived metabolic reprogramming drives immune aging and tissue degeneration](/202604/23/biorxiv-10-64898-2026-04-14-718497-v1-gut-derived-metabolic-reprogramming-drives-immune-aging-and-tissue-degeneration)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：肿瘤-巨噬细胞杂交细胞与功能重编程
-7. [An in vitro platform with self-sustaining trans-epithelial oxygen gradient to model intestinal barrier function modulation](/202604/22/biorxiv-10-64898-2026-04-13-718107-v1-an-in-vitro-platform-with-self-sustaining-trans-epithelial-oxygen-gradient-to-model-intestinal-barrier-function-modulation)  
+   evidence：肠道代谢重编程与慢性炎症轴。
+9. [Inducible nitric oxide synthase (iNOS) regulates skin eschar lesions, bacterial persistence, and inflammatory resolution in mouse models of scrub typhus](/202604/23/biorxiv-10-64898-2026-04-15-718641-v1-inducible-nitric-oxide-synthase-inos-regulates-skin-eschar-lesions-bacterial-persistence-and-inflammatory-resolution-in-mouse-models-of-scrub-typhus)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：在生理氧梯度下模拟肠道屏障功能的体外平台
-8. [Inducible nitric oxide synthase (iNOS) regulates skin eschar lesions, bacterial persistence, and inflammatory resolution in mouse models of scrub typhus](/202604/22/biorxiv-10-64898-2026-04-15-718641-v1-inducible-nitric-oxide-synthase-inos-regulates-skin-eschar-lesions-bacterial-persistence-and-inflammatory-resolution-in-mouse-models-of-scrub-typhus)  
-   标签：评分：6.0/10、query:ros-mp
-   evidence：iNOS调节炎症消退和巨噬细胞效应功能
+   evidence：iNOS作为骨髓源性巨噬细胞中的抗菌效应因子
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,24 @@
+---
+title: Integrated bioinformatics and single-cell analysis identifies vascular aging-related hub genes and immune drivers in atherosclerosis.
+title_zh: 整合生物信息学与单细胞分析识别动脉粥样硬化中血管衰老相关的核心基因及免疫驱动因子
+authors: "Wu, J., Chen, X., Zhou, K., Wang, W."
+date: 2026-04-17
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.14.718580v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 对与ROS产生相关的免疫驱动因素和核心基因（如CYBA和NCF2）进行单细胞分析。
+tldr: 本研究探讨了血管衰老与动脉粥样硬化（AS）之间的分子联系。通过整合GEO转录组数据和单细胞测序分析，筛选出28个血管衰老相关差异基因，并确定了MMP9、TNF等7个核心枢纽基因。研究通过qRT-PCR验证了基因表达，并揭示了单核细胞和T细胞在免疫浸润中的关键作用。此外，分子对接发现姜黄素具有潜在治疗价值。该研究为AS的诊断和免疫调节治疗提供了新生物标志物和理论依据。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-001.webp\", \"caption\": \"\", \"page\": 31, \"index\": 1, \"width\": 892, \"height\": 542}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-002.webp\", \"caption\": \"\", \"page\": 32, \"index\": 2, \"width\": 892, \"height\": 860}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-003.webp\", \"caption\": \"\", \"page\": 33, \"index\": 3, \"width\": 892, \"height\": 958}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-004.webp\", \"caption\": \"\", \"page\": 34, \"index\": 4, \"width\": 892, \"height\": 743}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-005.webp\", \"caption\": \"\", \"page\": 35, \"index\": 5, \"width\": 892, \"height\": 1096}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-006.webp\", \"caption\": \"\", \"page\": 36, \"index\": 6, \"width\": 892, \"height\": 809}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-007.webp\", \"caption\": \"\", \"page\": 37, \"index\": 7, \"width\": 892, \"height\": 881}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-008.webp\", \"caption\": \"\", \"page\": 38, \"index\": 8, \"width\": 892, \"height\": 674}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-14-718580-v1/fig-009.webp\", \"caption\": \"\", \"page\": 39, \"index\": 9, \"width\": 892, \"height\": 835}]"
+motivation: 旨在阐明血管衰老在动脉粥样硬化发病机制中的具体分子机制及免疫驱动因素。
+method: 整合多平台转录组数据与单细胞测序，结合PPI网络、免疫浸润分析、qRT-PCR实验验证及分子对接模拟。
+result: 鉴定了7个具有高诊断价值的核心基因（如TNF、PPARG），并发现其主要在单核细胞和T细胞中表达。
+conclusion: 揭示了血管衰老相关基因在AS中的表达图谱，为疾病诊断和天然化合物（如姜黄素）的靶向治疗提供了新方向。
+---
+
+## 摘要
+动脉粥样硬化（AS）是一种与血管衰老密切相关的慢性炎症性疾病，然而，将衰老过程与 AS 发病机制联系起来的具体分子机制尚不完全清楚。本研究整合了来自 GEO 数据库（GSE100927 和 GSE43292）的转录组数据，以识别血管衰老相关的差异表达基因（VARDEGs）。在进行批次效应校正后，筛选出 28 个 VARDEGs，并进行了功能富集、蛋白质-蛋白质相互作用（PPI）网络分析以及免疫浸润评估。识别出 7 个核心基因（MMP9、APOE、TNF、ICAM1、PPARG、CYBA 和 NCF2），并通过 qRT-PCR 进行了实验验证，证实了它们在 AS 样本中的显著上调。受试者工作特征（ROC）分析显示，其中 6 个基因具有较高的诊断准确性（AUC > 0.7），其中 TNF 表现最为优异。免疫浸润分析揭示了 28 种免疫细胞类型的显著变化，特别是单核细胞和 T 细胞，它们与核心基因的表达具有强相关性。此外，单细胞 RNA 测序分析（GSE184073）将核心基因的表达主要定位于单核细胞和 T 细胞，强调了 T 细胞中 TNF 的过表达可能是一个关键的驱动因素。最后，分子对接模拟表明姜黄素对这些核心基因（特别是 PPARG）表现出较强的结合亲和力，为其治疗潜力提供了机制依据。总之，本研究阐明了 AS 中血管衰老相关基因的图谱，识别了新型诊断生物标志物，并提出了涉及免疫调节和天然化合物的潜在治疗靶点。
+
+## Abstract
+Atherosclerosis (AS) is a chronic inflammatory disease closely linked to vascular senescence, yet the specific molecular mechanisms connecting aging processes to AS pathogenesis remain incompletely understood. This study integrated transcriptomic data from GEO datasets (GSE100927 and GSE43292) to identify vascular aging-related differentially expressed genes (VARDEGs). Following batch effect correction, 28 VARDEGs were screened and subjected to functional enrichment, protein-protein interaction (PPI) network analysis, and immune infiltration assessment. Seven hub genes (MMP9, APOE, TNF, ICAM1, PPARG, CYBA, and NCF2) were identified and experimentally validated via qRT-PCR, confirming their significant upregulation in AS samples. Receiver operating characteristic (ROC) analysis demonstrated high diagnostic accuracy for six of these genes (AUC > 0.7), with TNF exhibiting superior performance. Immune infiltration analysis revealed profound alterations in 28 immune cell types, particularly monocytes and T cells, which correlated strongly with hub gene expression. Furthermore, single-cell RNA sequencing analysis (GSE184073) localized the expression of core genes predominantly to monocytes and T cells, highlighting TNF overexpression in T cells as a potential critical driver. Finally, molecular docking simulations suggested that curcumin exhibits strong binding affinity to these hub genes, particularly PPARG, providing a mechanistic basis for its therapeutic potential. Collectively, this study elucidates the landscape of vascular aging-related genes in AS, identifies novel diagnostic biomarkers, and proposes potential therapeutic targets involving immune modulation and natural compounds.
