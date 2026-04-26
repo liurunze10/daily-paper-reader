@@ -1,0 +1,1532 @@
+Title: Transcriptional regulators predicted to drive macrophage dysregulation during impaired wound healing in diabetic mice
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.21.719960v1.full.pdf
+
+Number of Pages: 22
+
+Markdown Content:
+# Transcriptional regulators predicted to drive macrophage dysregulation during impaired wound healing in diabetic mice 
+
+Brandon Lukas 1*, Jingbo Pang 2*, Yang Dai 1,3 **, Timothy J. Koh 2** 
+
+> 1
+
+Department of Biomedical Engineering, University of Illinois Chicago, Chicago, IL 60612 
+
+> 2
+
+Center for Wound Healing and Tissue Regeneration, Department of Kinesiology and Nutrition, University of Illinois Chicago, Chicago, IL 60612 
+
+> 3
+
+Center for Bioinformatics and Quantitative Biology, University of Illinois Chicago, Chicago, IL 60612 
+
+> *
+
+These two authors contributed equally to this work 
+
+> **
+
+Correspondence to Dr. Timothy J. Koh, Department of Kinesiology and Nutrition, University of Illinois Chicago, 1919 W Taylor Street, Chicago, IL 60612; tjkoh@uic.edu or Dr. Yang Dai, Department of Biomedical Engineering, University of Illinois Chicago, 835S Wolcott Avenue, Chicago, IL 60612; yangdai@uic.edu 
+
+Abstract. Dysregulation of Mo/M φ activity is known to contribute to impaired healing in diabetes; however, the mechanisms underlying this dysregulation are not well understood. In this study, we used a variety of bioinformatics approaches along with our time series scRNA-seq data on wound Mo/M φ from non-diabetic and diabetic mice to identify transcriptional regulators (TRs) that drive Mo/M φ state transitions during normal and impaired healing. First, we used the Lamian framework and our newly developed Pseudotime Graph Diffusion method to show that state transitions from early stage phenotypes to later stage reparative and antigen presenting phenotypes characteristic of normally healing wounds are impaired and that transitions to inflammatory, foam cell-like, and Lyve-1 + Mφ phenotypes are enhanced during impaired healing of diabetic mice. Using our BITFAM model, we identified a broad range of TRs predicted to be preferentially active in each cell state and using CellOracle, we performed in silico perturbation to identify groups of TRs predicted to drive cell state transitions along multiple trajectories (e.g. CEBPA, IRF8), whereas other TRs were predicted to drive cell state transition towards reparative phenotypes (e.g. NR1H3, NR3C1) or towards an antigen-presenting phenotype (e.g. IRF4, OGT). Selected findings were validated using existing experimental data, confirming the usefulness of this approach. In conclusion, we identified TRs that likely drive Mo/M φ state transitions towards desirable and undesirable phenotypes for wound healing. These findings provide insight into novel targets for altering Mo/M φ phenotypes to promote healing of diabetic wounds. 
+
+> 1
+
+Running title: Macrophage regulators during diabetic wound healing 2
+
+1 Introduction 3
+
+Chronic wounds associated with diabetes are an escalating problem around the world [ 1]. People 4
+
+suffering from diabetes incur a 25% lifetime risk of developing chronic wounds, and associated risk 5
+
+of amputation, decreased quality of life, high morbidity and mortality [ 2 –4 ]. Effective wound healing 6
+
+requires coordinated responses of different cell types during overlapping phases of inflammation, 7
+
+proliferation and remodeling [ 5, 6] and chronic wounds are known to exhibit defects in each phase of 8
+
+1
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+healing, resulting in a persistent inflammatory state [ 7 , 8]. Monocytes and macrophages (Mo/M φ)9
+
+play essential roles in wound healing [ 9, 10], and dysregulation of Mo/M φ activity contributes to 10 
+
+impaired healing in diabetes [ 11, 12]. However, the mechanisms underlying this dysregulation are 11 
+
+not well understood. 12 
+
+Over the course of wound healing, Mo/M φ adopt a wide spectrum of functional phenotypes 13 
+
+that is best characterized by the resolution afforded by single cell RNA-seq (scRNA-seq) [ 13 – 16 ]. 14 
+
+Transcription factors (TFs) and other transcriptional regulators (TRs), including TF modifiers and 15 
+
+epigenetic regulators, play critical roles in regulating gene expression involved in specifying this 16 
+
+spectrum of Mo/M φ phenotypes [ 17– 20]. We recently reported that, over the course of normal wound 17 
+
+healing, wound Mo/M φ cluster into early-stage Mo/M φ, late-stage M φ and antigen presenting 18 
+
+cells [ 16 ] and that each cluster showed differential chromatin accessibility and differential TR 19 
+
+activity predicted by our BITFAM model [ 21, 22 ]. Network analysis revealed highly connected TR 20 
+
+communities that cooperate to regulate wound Mo/M φ phenotypes. Importantly, we validated a 21 
+
+pro-inflammatory role for NR4A1 during wound healing, showing that Nr4a1 knockout mice exhibit 22 
+
+decreased inflammatory gene expression in early-stage wound Mo/M φ, along with delayed wound 23 
+
+re-epithelialization and impaired granulation tissue formation. Although a number of reports have 24 
+
+characterized dysregulation of wound Mo/M φ phenotypes during impaired diabetic wound healing, 25 
+
+the role of altered TR activity in such dysregulation has not been elucidated. 26 
+
+In the present study, we used the Lamian framework [ 23] and our newly developed Pseudotime 27 
+
+Graph Diffusion method on our time-series scRNA-seq data from skin wound cells of non-diabetic 28 
+
+and diabetic mice to show that wound Mo/M φ exhibit altered state transitions from early to later 29 
+
+stage phenotypes in diabetic versus non-diabetic mice, including impaired transitions to reparative 30 
+
+and antigen-presenting phenotypes and enhanced transitions to inflammatory, foam cell-like, and 31 
+
+Lyve-1 + phenotypes. Using our BITFAM model [ 21 , 22], we identified a broad range of TRs that 32 
+
+are predicted to be preferentially active in each cell state, and those that are dynamically active 33 
+
+over specific ranges of pseudotime. Using CellOracle [ 24], we performed in silico TR perturbation 34 
+
+to predict which TRs drive the various cell state transitions in non-diabetic and diabetic wounds. 35 
+
+Finally, we validated selected findings using existing experimental data, confirming the usefulness of 36 
+
+this approach to identify TRs that drive state transitions in diabetic wounds. 37 
+
+2 Methods and Materials 38 
+
+Animals. C57BL6/J (Non-diabetic, ND) and BKS.Cg-Dock7 m +/+ Lepr db /J (a model of type 2 39 
+
+diabetes, DB) were purchased from the Jackson Laboratory (Bar Harbor, ME) and housed for at 40 
+
+least two weeks before experiments. All animal procedures were approved by the Animal Care and 41 
+
+Use Committee of the University of Illinois Chicago. 42 
+
+Wound model. Adult male mice (age 10-12 weeks) were subjected to excisional skin wounding 43 
+
+with an 8 mm biopsy punch as described [ 16 , 25 ]. Skin wounds were collected using a 12 mm 44 
+
+biopsy punch, then dissociated by mechanical and enzymatic digestion into single cell suspension as 45 
+
+previously described [16, 25]. 46 
+
+scRNA-seq. Wound cells were pooled from 4 wounds of male ND or DB mice each on day 3, 6, 47 
+
+and 10 post-injury. Sorted live CD11b +CD45 +Ly6G − cells were processed for scRNA-seq using 48 
+
+the 10x Chromium Next GEM Single Cell 3’ Reagent Kits (10X Genomics, San Francisco, CA, 49 
+
+USA). Libraries were sequenced on HiSeq Sequencing Systems (Illumina, San Diego, CA, USA) 50 
+
+with paired-end reads aiming for 100,000 reads/cell [25]. 51 
+
+2
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+After demultiplexing, cells with > 10% mitochondrial gene expression, unique features/gene ex-52 
+
+pression < 500 and > 10,000, or < 1,000 UMI counts were omitted and final 6,109 cells (ND-D3: 53 
+
+961, ND-D6: 1,121, ND-D10: 1,214, DB-D3: 1,334, DB-D6: 894, and DB-D10: 585) were included 54 
+
+for downstream analysis [ 25]. scRNA-seq data used in this study are available in Gene Expression 55 
+
+Omnibus series record GSE203244 and GSE302547. 56 
+
+scRNA-seq data processing. Raw count matrices were processed using Seurat v5 [ 26] with default 57 
+
+parameters unless otherwise noted. Expression data were log-normalized, and the top 2,000 highly 58 
+
+variable genes (HVGs) were selected. UMAP embeddings were computed from the first 30 principal 59 
+
+components. Cluster-specific marker genes were identified using a one-versus-rest framework, and 60 
+
+gene set enrichment analysis (GSEA) was performed against the MSigDB Hallmark collection using 61 
+
+GSEApy [ 27 ] with preranked analysis (1,000 permutations), ranking genes by sign(log 2 fold change) 62 
+
+× − log 10 (adjusted P-value). 63 
+
+Trajectory inference and pseudotime analysis. Lamian [ 23] was used for trajectory inference 64 
+
+and differential pseudotime analysis. Cells were clustered in PCA space via k-means ( k = 12, selected 65 
+
+by elbow method), and a minimum spanning tree was constructed over cluster centroids, rooted 66 
+
+at day 3 cells. Branch robustness was assessed by permutation (1,000 permutations). Pseudotime-67 
+
+dependent gene expression was identified using Lamian 's time-dependent expression (TDE) test, 68 
+
+applied branch-wise to the top 5,000 HVGs per branch. Significant genes (FDR < 0.05) were 69 
+
+classified as early, middle, or late based on peak expression timing (top 1%, middle, or bottom 70 
+
+1% of branch pseudotime, respectively) and subjected to pathway enrichment against the MSigDB 71 
+
+Hallmark collection. 72 
+
+Enhanced trajectory visualization. Low-dimensional embeddings such as UMAP may not 73 
+
+faithfully preserve trajectory structures supported in higher-dimensional PCA space. To address 74 
+
+this issue, we applied Pseudotime Graph Diffusion (PGD) [ 28], a method we developed that smooths 75 
+
+cell-level embeddings along a pseudotime graph via Markovian diffusion. Seurat PCA embeddings 76 
+
+were diffused along the Lamian-inferred pseudotime graph ( α = 0.6, with self-loops) and subsequently 77 
+
+projected to UMAP for improved trajectory visualization. 78 
+
+Transcriptional regulator activity inference. TR activities were inferred using BITFAM [ 22 ], a 79 
+
+Bayesian factor analysis model that incorporates a gene regulatory network (GRN) as prior knowledge. 80 
+
+The GRN used in this study was derived from ChIP-Atlas [ 29] TR–target gene associations ( ±581 
+
+kb; experiments annotated as “dendritic”, “macrophage”, or “monocyte”; downloaded May 14, 82 
+
+2025). Target genes of Zbtb46 were manually added given its established role in dendritic cell 83 
+
+differentiation [ 30 ]. The GRN was pruned to exclude TRs detected in fewer than 100 cells (-3 TRs) 84 
+
+or with fewer than 10 target genes (-6 TRs) among the top 2,000 HVGs. BITFAM was run four 85 
+
+times for robustness; nominal P-values from one-versus-rest comparisons were combined across runs 86 
+
+using a signed Stouffer Z -score method with Benjamini–Hochberg FDR correction. Per-cell TR 87 
+
+activity was summarized as the median across runs. 88 
+
+In silico transcriptional regulator perturbation. CellOracle [ 24] was used to simulate TR 89 
+
+knockout (expression set to zero) and overexpression (expression set to the safe-range upper bound, 90 
+
+calculated as the observed maximum plus the full expression range (max + (max − min)) of 91 
+
+single-cell expression values for each gene). Perturbation scores, computed as the inner product of 92 
+
+simulated perturbation vectors with pseudotime-derived developmental vectors, were summarized per 93 
+
+branch by separately summing positive (promoting transitions) and negative (inhibiting transitions) 94 
+
+scores. Markov random walk simulations (500 steps) were additionally performed to quantify 95 
+
+perturbation-induced changes in cluster occupancy, reported as percent change relative to initial 96 
+
+3
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+cbaPseudotime 
+
+> Early Late
+
+Clustering and trajectory inference Pseudotime Graph Diffusion 
+
+> 6,109 cell s
+
+Cell sorting and scRNA-seq Mo/M Φ skin wound healing dataset Non-diabetic/diabetic      
+
+> Day 3 Day 6 Day 10 Day 0 Injury
+> APC-like Mo/M ΦEarly-stage Mo/M Φ
+> Late-stage Mo/M Φ
+> Lamian Counts
+> 1 10 100 1,000 Cebpa KO Step 10 Step 100 Step 500 Start Step 0
+> Enhanced trajectory visualization Accumulation Markov simulation Depletion
+
+TR activity inference (BITFAM) In silico TR perturbations (CellOracle)   
+
+> Cebpa KO + 200 other TR perturbations Mo/M ΦChIP-Atlas– informed GRN prior
+
+Y W Z φ+×=
+
+edCebpa KO    
+
+> Transitions inhibited Transitions promoted Perturbation effect on cell state transitions PS
+> -1 01
+> Pseudotime vector Simulated vector Inhibits Promotes Top TRs per cluster
+
+Figure 1. Experimental design and bioinformatics analysis workflow . a. Schematic representation of experimental design. Non-diabetic and diabetic mice were injured, monocyte/macrophage populations were isolated from the wound on days 3, 6, and 10 post-injury and subjected to scRNA-seq using the 10x Chromium platform. b. Clustering and trajectory inference was performed to identify cell states and model state transitions using the Lamian framework [ 23 ]. c. Our new pseudotime graph diffusion (PGD) method was applied to enhance the inferred trajectory visualization. d. Activity of transcriptional regulators was inferred using a Bayesian inference model (BITFAM [ 22 ]) integrating a custom monocyte/macrophage ChIP-Atlas–informed prior network. e. Systematic in silico TR perturbations for 98 TRs were performed with CellOracle [ 24 ], including both knockout (KO) and overexpression simulations, to predict consequences on cell state transitions through perturbation score (PS) analyses and Markov simulations. Illustration from NIAID NIH BIOART Source bioart.niaid.nih.gov/bioart/372. 
+
+walker counts 97 
+
+3 Results 98 
+
+Mo/M φ cell states are altered in diabetic wounds 99 
+
+We recently reported that networks of TR guide wound Mo/M φ through state transitions from 100 
+
+pro-inflammatory to pro-healing phenotypes as normal healing progresses in ND mice [ 16 ]. In the 101 
+
+present study, we used the Lamian computational framework [ 23] to identify dysregulation of state 102 
+
+transitions of wound Mo/M φ in DB mice (Fig. 1). We also developed and applied Pseudotime Graph 103 
+
+Diffusion (PGD), a post hoc technique that enhances the visualization of pseudotemporal trajectory 104 
+
+structure in low-dimensional representations through graph-based diffusion without altering the 105 
+
+underlying data, facilitating downstream analyses. Next, we used our BITFAM model to predict 106 
+
+TR activity that may contribute to dysregulation of state transitions [ 21, 22]. Finally, we used 107 
+
+CellOracle to identify the impact of in silico perturbation of TR expression and validated the 108 
+
+predicted effects of TR knockout using prior data from our laboratory and others [24]. 109 
+
+First, clustering of pooled scRNA-seq data from live CD45 +CD11b +Ly6G − cells isolated from 110 
+
+4
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint *** *** *** 0.11 0.22 0.06 0.21 0.15 *** *** *** ***0.10 *** *** ** *0.06 0.05 0.19 *0.09 0.23 0.11 0.17 ** 0.09 0.15 0.18 0.28 0.24 0.23 *** ** ** *0.05 0.08 0.09 *** *** ** **** *** *** **0.10 0.19 *** *** *** *** *** *Unfolded Protein Response TNF-alpha Signaling via NF-kB Peroxisome Interferon Gamma Response Interferon Alpha Response Inflammatory Response Hypoxia G2-M Checkpoint Coagulation Apoptosis Adipogenesis 12 5 3 6 2 9 11 10 1 7 4 8Normalized enrichment score   
+
+> -2 026,109 02,000 4,000 6,000
+
+Dataset Count 301 599 834 549 289 504 61 498 454 836 957 227 0500 1,000 12 5 3 6 2 9 11 10 1 7 4 80.0 0.2 0.4 0.6 0.8 1.0 Dataset Proportion 0.0 0.2 0.4 0.6 0.8 1.0 12 5 3 6 2 9 11 10 1 7 4 8C4b Chp2 Fcna Ccl8 Lyve1 Saa3 Enpp1 Cela1 Arhgap19 Tmem8 Chil3 Sell Pi16 Gm9733 Ctsk Mmp12 Gpnmb Atp6v0d2 Lpl Cxcl3 S100a8 Nos2 Serpinb2 Ptges Lrr1 Nusap1 Pimreg Pbk Hist1h3c Gm48065 Nr4a3 Nr4a2 Mir155hg Olr1 Mx1 Ifit1 Ifi208 Ifit2 Ifit3 Plcb1 Cd177 Id3 Gm17056 Dmkn Rcan1 Egr1 Bnip3 Mt2 Egln3 Ddr1 Ffar2 H2-Oa Cd7 Klrd1 Cxcl10 Oasl1 Ifi205 Slfn4 Rsad2 
+
+12 5 3 6 2 9 11 10 1 7 4 8Percent expressing 25% 50% 75% Average expression scaled   
+
+> -2 02
+
+12 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 174812 536 2911 10 1748UMAP 2UMAP 1UMAP 2UMAP 1Non-diabetic Diabetic D3 D6 D10 aFigure 2. Monocyte/macrophage cell states are dysregulated in wounds of diabetic mice in all phases of healing . a. 
+
+UMAP visualization of cells colored by sample, days 3 (D3), 6 (D6) and 10 (D10) post-injury for non-diabetic (ND) and diabetic (DB) mice. b. UMAP visualization of cells colored by cluster (clusters 1-12). c. Cell counts (top) and proportions of each sample (bottom) that contribute to each cluster. d. Dot plot visualization of top 5 differentially expressed genes ranked by average log2FC per cluster in one-vs-rest analysis (note that the full list of differentially expressed genes can be found in Supplementary Data S1). 
+
+e. Heatmap visualization of normalized enrichment scores of selected MSigDB Hallmark 2020 terms from gene set enrichment analysis (GSEA). Shown are scores with P < 0.05; values denote FDR Q-values (* Q < 0.05, ** Q < 0.01, *** Q < 0.001). 
+
+ND and DB skin wounds on days 3, 6 and 10 post-injury identified 12 clusters of cells (Fig. 2a,b; 111 
+
+cluster numbers arbitrarily assigned). Clusters 12, 5, and 3 were populated preferentially by cells 112 
+
+from ND wounds (Fig. 2c): cluster 12, populated primarily by ND day 3 cells, expressed an 113 
+
+interferon activation signature ( e.g. Rsad2, Slfn4, Ifi205 ; Fig. 2d shows the top 5 marker genes, 114 
+
+see Supplementary Data S1 for the full set of differentially expressed genes). Cluster 5, populated 115 
+
+primarily by ND day 6 and 10 cells, expressed an antigen presenting cell (APC) signature ( e.g. 116 
+
+Cd209a, Ciita, MHCII genes). Cluster 3, populated primarily by ND day 10 cells, expressed a mixed 117 
+
+reparative signature ( e.g. Arg1, Vegfa, Chil3 ). In contrast, clusters 4, 7, 1 and 8 were populated 118 
+
+5
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint preferentially by cells from DB wounds (Fig. 2c): Clusters 4 and 7, composed primarily by DB days 119 
+
+3 and 6 cells, expressed mixed complement-associated ( e.g. C1qa,b,c, Mrc1, Il1b ) and inflammatory 120 
+
+(e.g. Cxcl2, Tnfaip, Ptgs2 ) phenotypes, respectively. Cluster 1, populated preferentially by DB day 121 
+
+6 and 10 cells, expressed a lipid handling, foam cell-like phenotype ( e.g. Lpl, Lipa, Cd36 ). Cluster 122 
+
+8, populated primarily by DB day 6 and 10 cells, expressed a Lyve-1 M φ signature ( e.g. Lyve1, 123 
+
+Folr2, Cd163 ). 124 
+
+Gene set enrichment analysis confirmed characterization of the cluster phenotypes discussed above 125 
+
+and provided additional insight (Fig. 2e; see Supplementary Data S2 for full analysis, including lead 126 
+
+genes for each pathway). Clusters 12, 6 and 2, all populated primarily with day 3 cells from both ND 127 
+
+and DB mice, showed preferential activity of interferon and tumor necrosis factor (TNF)/nuclear 128 
+
+factor (NF)-κB pathways, although these were only trends in clusters 6 and 2. Cluster 1, populated 129 
+
+primarily with DB day 3 and 6 cells, showed preferential activity of the adipogenesis pathway. 130 
+
+Clusters 4 and 7, populated primarily with DB cells from all time points showed preferentially 131 
+
+reduced activity of the apoptosis pathway, consistent with our previous observation that reduced 132 
+
+apoptosis of DB wound Mo/M φ contributes to their persistence in wounds of diabetic mice [ 31 ]. 133 
+
+Clusters 4 and 10, also populated primarily with DB cells from all time points, showed trends of 134 
+
+preferential activity of the peroxisome pathway, perhaps indicating an adaptive response to oxidative 135 
+
+stress. Finally, clusters 1, 4 and 7, again populated primarily with DB cells from all time points, 136 
+
+showed preferentially low activity of interferon, TNF, inflammatory and hypoxia pathways consistent 137 
+
+with previous finds of dysregulation of inflammatory pathways in human DB wound Mo/M φ [32 ]. 138 
+
+Pseudotime analysis reveals inhibited/altered Mo/M φ cell state transitions in diabetic 139 
+
+wounds 140 
+
+Next, we used Lamian [ 23 ] to infer a pseudotemporal trajectory followed by PGD to enhance its 141 
+
+visualization. Two trajectories were identified with high confidence (Fig. 3a,b): the first branch 142 
+
+started in cluster 12, then transitioned through clusters 6 and 7, and terminated in cluster 5 (branch 143 
+
+1: 12-6-7-5). The second branch started in cluster 12, and transitioned through clusters 6 and 9 144 
+
+before terminating in clusters 3 and 10 (branch 2: 12-6-9-3-10). A lower confidence branch connected 145 
+
+cluster 12 to clusters 6, 9 and 3 and then to clusters 4 and 8 (branch 3: 12-6-9-3-4-8). 146 
+
+Each branch showed dynamic expression of genes with subsets showing preferential expression 147 
+
+during early, middle and late pseudotimes (Fig. 3c,d,e see Supplementary Data S3 for full list of 148 
+
+dynamically expressed genes along each branch). Gene set enrichment analysis showed preferential 149 
+
+enrichment of the interferon α and γ pathways at early pseudotimes for all trajectory branches (Fig 150 
+
+S1). Branch 1 showed 1,659 dynamically expressed genes (FDR < 0.05), with a relatively rapid 151 
+
+switch from early to late phenotypes over pseudotime, and preferential enrichment of the IL2/STAT5 152 
+
+pathway at late pseudotimes, perhaps indicating the importance of STAT5 in state transitions or 153 
+
+functions of APC phenotype cells in wounds [ 33, 34]. Branch 2 showed 1,063 dynamically expressed 154 
+
+genes, with a more gradual switch from early to late phenotypes. Branch 2 showed preferential 155 
+
+enrichment of epithelial-mesenchymal transition and angiogenesis at intermediate pseudotimes, 156 
+
+reflecting the reparative phenotype of cells that populated these pseudotimes, but no pathways were 157 
+
+significantly enriched at late pseudotimes, perhaps reflecting the mixed phenotype of the DB cells 158 
+
+that populated late pseudotimes. Finally, branch 3, identified with less confidence, showed 1,704 159 
+
+dynamically expressed genes with a large number of these expressed at late pseudotimes. Branch 3 160 
+
+showed preferential enrichment of adipogenesis, fatty acid metabolism, and xenobiotic metabolism 161 
+
+pathways at late pseudotimes, highlighting the altered metabolism of the DB cells that populated 162 
+
+late pseudotimes of this branch. 163 
+
+6                      
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 55555555555555555666666666666666667777777777777777712 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 33333333333333333666666666666666669999999999999999910 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 333333333333333336666666666666666699999999999999999444444444444444448888888888888888812 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 55555555555555555666666666666666667777777777777777712 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 33333333333333333666666666666666669999999999999999910 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 3333333333333333366666666666666666999999999999999994444444444444444488888888888888888
+
+branch 1: 12,6,7,5 branch 2: 12,6,9,3,10 branch 3: 12,6,9,3,4,8 branch 1: 12,6,7,5 branch 2: 12,6,9,3,10 branch 3: 12,6,9,3,4,8 0 1,000 2,000 0 1,000 2,000 0 1,000 2,000 0 1,000 2,000 0 1,000 2,000 0 1,000 2,000 0.0 0.5 1.0 0.0 0.5 1.0 0.0 0.5 1.0 0.0 0.5 1.0 0.0 0.5 1.0 0.0 0.5 1.0 Non-diabetic Diabetic Pseudotime Count-scaled density Non-diabetic D3 Non-diabetic D6 Non-diabetic D10 Diabetic D3 Diabetic D6 Diabetic D10 12 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Pseudotime 
+
+> Early Late Middle UMAP 2UMAP 1
+
+12 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8
+
+Detection rate 
+
+> 0% 50% 100% UMAP 2UMAP 1
+
+fa b cdebranch 3: 12,6,9,3,4,8 1,704 TDE genes 
+
+> Pseudotime
+
+branch 2: 12,6,9,3,10 1,063 TDE genes 
+
+> Pseudotime
+
+branch 1: 12,6,7,5 1,659 TDE genes 
+
+> Pseudotime
+> Peak expression Early Middle Late Scaled expression -2 02
+
+Figure 3. Trajectory inference suggests delayed or altered cell state transitions in diabetic wound monocytes/-macrophages . Trajectory inference performed using the Lamian framework followed by enhanced trajectory visualization via PGD smoothing. a. UMAP visualization of cells colored by cluster with cluster-based pseudotemporal branches. Branch lines colored by detection rate from bootstrap resampling; dark lines represent trajectories detected with high confidence. Lighter lines represent trajectories detected with lower confidence. b. UMAP visualization of cells colored by pseudotime; low pseudotime values correspond to early wound cell states, higher pseudotimes correspond to different cell differentiation trajectories. c. Density of non-diabetic and diabetic cells along pseudotime of branch 1: 12,6,7,5 and branch 2: 12,6,9,3,10. Dashed lines indicate median pseudotime of clusters along branches. d. Heatmap visualization of temporally differentially expressed (TDE) genes along pseudotime for branch 1: 12,6,7,5. e. Heatmap visualization of TDE genes along pseudotime for branch 2: 12,6,9,3,10. f. Heatmap visualization of TDE genes along pseudotime for branch 3: 12,6,9,3,4,8. 
+
+When comparing the density of Mo/M φ cells along the trajectory branch 1 (ending in cluster 164 
+
+5), Mo/M φ from ND wounds were concentrated in the early and late portions of the trajectory 165 
+
+with a terminus in cluster 5, which had an APC phenotype, whereas cells from DB wounds were 166 
+
+concentrated in the middle of the trajectory (Fig. 3f). These results may reflect both a reduced 167 
+
+number of cells with the early inflammatory phenotype and an incomplete transition to the APC 168 
+
+phenotype in DB wounds, with cells “stuck” in cluster 7, which exhibited a mixed inflammatory 169 
+
+phenotype. When comparing the density of Mo/M φ cells along the trajectory branch 2 (ending in 170 
+
+clusters 3 and 10), Mo/M φ from ND wounds were concentrated in early and middle portions of the 171 
+
+7
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint trajectory, with an apparent terminus in cluster 3, which had a reparative phenotype, whereas cells 172 
+
+from DB wounds were concentrated at shifted pseudotimes, indicating altered transitions in DB 173 
+
+wounds (Fig. 3f). Interestingly, cluster 10 appeared to be a terminus of trajectory branch 2, but 174 
+
+was populated primarily by day 3 cells from DB wounds, and had a mixed inflammatory/reparative 175 
+
+phenotype, expressing high levels of Nos2, Tnf and Arg1 (Fig. S1). This may reflect dysregulation 176 
+
+of early wound Mo/M φ in DB mice, with impaired inflammatory function, as has been found in 177 
+
+human diabetic foot ulcers [ 32]. Branch 3 also showed dysregulation of DB wound Mo/M φ at both 178 
+
+early and late pseudotimes, with increased transitions to cluster 8 in DB day 6 and 10 cells, which 179 
+
+expressed high levels of Il1b, Mrc1 and Igf1 along with Lyve-1 M φ markers (Fig. 3f, S2); cells 180 
+
+with this phenotype were rare in ND wounds. In short, this analysis indicates dysregulation of DB 181 
+
+wound throughout the time course analyzed. 182 
+
+TRs show differential inferred activity between Mo/M φ cell states 183 
+
+Next, we used our BITFAM model to infer the activity of TRs that potentially drive the observed 184 
+
+dysregulation in Mo/M φ cell states in diabetic wounds. Distinct groups of TRs showed differential 185 
+
+inferred activity in different Mo/M φ clusters (Fig. 4a, Supplementary Data S4). Interestingly, levels 186 
+
+of inferred TR activity generally did not correlate well with levels of mRNA expression (Fig. 4b, 187 
+
+Supplementary Data S5). These findings corroborate those our previous study [ 21], that mRNA 188 
+
+expression is necessary but not sufficient for high inferred TR activity predicted by BITFAM. 189 
+
+Cluster 12, which expressed an early-stage interferon activation signature, showed preferential inferred 190 
+
+activity of IRF9 and BRD3, which both promote the transcription of inflammatory cytokines, and 191 
+
+promote the type I interferon response [ 35, 36] (Figure 4a-d). Cluster 3, which expressed a late-192 
+
+stage reparative signature, showed preferential inferred activity of HES1 and ZMYND11. HES1 193 
+
+is a transcriptional repressor that downregulates the expression of inflammatory genes [ 37] and 194 
+
+ZMYND11 is a lesser known TF that may negatively regulate the NFkB pathway [ 38]; thus, both 195 
+
+may contribute to the transition of pro-inflammatory to reparative M φ phenotypes. Cluster 5, which 196 
+
+expressed an APC-like signature, showed preferential inferred activity of ZBTB46 and STAT5B. 197 
+
+Interestingly, ZBTB46 is not thought to be expressed in Mo/M φ, but is important for maintaining 198 
+
+a dendritic cell identity [ 39 ]; Zbtb46 was highly expressed only in cluster 5 cells. STAT5B may 199 
+
+promote a tolerogenic state of dendritic cells, leading to enhanced T regulatory cell activity [34]. 200 
+
+Cluster 10, which expressed a mixed signature, exhibited preferential inferred activity of NFE2L2 and 201 
+
+PHF10 (Fig. 4a, S3). NFE2L2, or nuclear factor erythroid 2–related factor 2, is a master regulator 202 
+
+for protection against oxidative stress, but also can downregulate pro-inflammatory cytokines [ 40 , 41 ]. 203 
+
+PHF10 may be important in the development of myeloid progenitors in bone marrow [ 42 ] and is 204 
+
+part of a chromatin remodeling complex that is important for activation of inflammatory genes [ 43 ]. 205 
+
+Cluster 1, which expressed a lipid handling, foam cell-like phenotype, showed preferential inferred 206 
+
+activity of NR1H3 and EZH2. NR1H3 encodes Liver X Receptor alpha, which is important for 207 
+
+lipid metabolism and inflammatory gene regulation [ 44]. EZH2 is an epigenetic regulator that can 208 
+
+repress either pro- or anti-inflammatory genes through histone methylation [ 45]. Clusters 4, 7, 8, 209 
+
+which expressed mixed inflammatory phenotypes, showed preferential inferred activity of BRD2 210 
+
+and NR3C1. BRD2, like its cousin BRD3, plays a key role in chromatin remodeling and promotes 211 
+
+expression of inflammatory genes [ 46] and NR3C1 encodes the glucocorticoid receptor, which is 212 
+
+a potent suppressor of inflammatory gene expression [ 47]. Thus, in these clusters, inferred TR 213 
+
+activity predicts mixed and perhaps conflicting pro- and anti-inflammatory functions in DB wound 214 
+
+Mo/M φ throughout the time course examined. Finally, we identified TR with preferential inferred 215 
+
+activity during early, middle and late pseudotimes (Fig. 4e-g, Supplementary Data S6), highlighting 216 
+
+additional potential regulators of Mo/M φ cell state transitions in wounds. 217 
+
+8
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+Scaled activity -2 02Pseudo-time Late Middle Early Peak activity Early Middle Late Scaled expression 
+
+-2 0212 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Early-stage Late-stage APC-like Brd3 Hes1 Zbtb46 Irf9 Zmynd11 Stat5b 
+
+UMAP 1UMAP 2Scaled activity 
+
+-2 0212 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Early-stage Late-stage APC-like BRD3 HES1 ZBTB46 IRF9 ZMYND11 STAT5B 
+
+UMAP 1UMAP 2Sample Non-diabetic D3 Non-diabetic D6 Non-diabetic D10 Diabetic D3 Diabetic D6 Diabetic D10 Scaled activity -2 0 2Scaled expression -2 0 2
+
+bdace f g
+
+TR activity TR expression 12 5 3 6 2 9 11 10 1 7 4 8
+
+Brd3 Irf9 Ikzf1 Elf1 Kmt2a Zbtb46 Stat5b Irf5 Irf8 Hdac3 Hes1 Zmynd11 Nelfa Jund Mafb Stat3 Brd9 Cebpd Stat2 Kmt2d Batf Runx3 Rad21 E2f4 Gabpa Creb1 Ep300 Nfe2l2 Phf10 Sumo2 Nr1h3 Ezh2 Myc Smc1a Brd2 Klf4 Maff Nr3c1 Spi1 Med1 Relb 12 5 3 6 2 9 11 10 1 7 4 8BRD3 IRF9 IKZF1 ELF1 KMT2A ZBTB46 STAT5B IRF5 IRF8 HDAC3 HES1 ZMYND11 NELFA JUND MAFB STAT3 BRD9 CEBPD STAT2 KMT2D BATF RUNX3 RAD21 E2F4 GABPA CREB1 EP300 NFE2L2 PHF10 SUMO2 NR1H3 EZH2 MYC SMC1A BRD2 KLF4 MAFF NR3C1 SPI1 MED1 RELB branch 1: 12,6,7,5 93 TDA TRs branch 2: 12,6,9,3,10 92 TDA TRs branch 3: 12,6,9,3,4,8 93 TDA TRs Figure 4. Inferred activity patterns of transcriptional regulators (TRs) differ across wound monocyte/macrophage cell states. a. Heatmap visualization of scaled inferred activity of top 5 differentially active TRs per cluster ranked by average log2FC (note that the full list of differentially active TRs can be found in Supplementary Data S3). b. Heatmap visualization of scaled expression for respective TR encoding genes. c. UMAP visualization of scaled activity of representative differentially active TRs for early-stage, late-stage and APC-like phenotype monocytes/macrophages. d. UMAP visualization of scaled expression for respective TR encoding genes. 
+
+In silico TR knockout predicts impact on Mo/M φ state transitions 218 
+
+CellOracle was used to predict how knockout of TRs in the gene regulatory network generated for 219 
+
+the BITFAM analysis affects Mo/M φ state transitions (Fig. 5). First, we calculated perturbation 220 
+
+scores (PS) for knockouts of each TR, then summed the negative or positive PS along each trajectory 221 
+
+branch [ 24]. Negative PS scores reflect inhibition of state transitions and positive PS scores reflect 222 
+
+enhancement of state transitions along each branch. Figure 5a shows a plot of the negative PS sum 223 
+
+9
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint 12 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Irf4 KO Kdm1a KO UMAP 2Cebpa KO Nr1h3 KO UMAP 1Perturbation score (PS) 
+
+-1 0 112 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Irf4 KO Kdm1a KO UMAP 2Cebpa KO Nr1h3 KO UMAP 1asinh (Δ count 50 )
+
+-4 -2 0 2 4cdba eCebpa Irf4 Kdm1a 
+
+Nfatc2 Nfkb1 Nr1h3 
+
+Rad21 Stat5b Zbtb46 
+
+025 50 75 branch 2: 12,6,9,3,10: negative PS sum 0 25 50 75 branch 1: 12,6,7,5: negative PS sum Brd9 
+
+Cebpa 
+
+Egr2 
+
+Irf4 Kdm1a 
+
+Mafb Ncor2 
+
+Nr1h3 
+
+Ogt 
+
+025 50 75 100 branch 2: 12,6,9,3,10: positive PS sum 0 25 50 75 100 branch 1: 12,6,7,5: positive PS sum 12 5362911 10 1748
+
+> Fos Srebf1 Nr1h2 Junb Jun Elf4 Fosl2 Runx3 Runx1 Vdr Cxxc1 Socs1 Kdm6b Bcl6 Ctcf
+> Cebpa
+> Brd9 Pparg Nelfa Brd3 Stat1
+> Irf4
+> Stat5b Hcfc1 Irf1 Hes1 Brd4 Setd1a Hif1a Atf4 Gabpa Cebpb Nfatc2 Rxra Ppargc1b Ogt Batf Adnp Irf3 Creb1 Fli1 Mafb Rela
+> Nr1h3
+> E2f4 Myc Brd2 Srf Smarcb1 Trp53 Ncor2 Stat5a Irf9 Stat2 Ezh2 Usf2 Zbtb46 Ncor1 Cdk9 Med1
+> Kdm1a
+> Lmo2 Trim33 Mapk3 Rad21 Ep300 Stat6 Elf1 Zmynd11 Smarca4 Hdac3 Arid1a Smc1a Atf3 Stat3 Ikzf1 Jund Egr1 Kmt2d Bhlhe40 Maff Nr4a1 Klf4 Nfe2l2 Rel Egr2 Sumo2 Irf5 Cebpd Batf3 Nelfe Phf10 Nr3c1 Spi1 Relb Nfkb1 Kmt2a Irf8
+
+Percent change cluster counts -400% 0% 400% Figure 5. Predicted impact of in silico knockout (KO) of transcriptional regulators (TRs) on altered monocyte/-macrophage cell state transitions. a. Scatter plot summarizing predicted relative impact of KO of each of 98 TRs on inhibition of cell state transitions (summed negative perturbation scores (PS)) along branch 1: 12,6,7,5 and branch 2: 12,6,9,3,10. b. Scatter plot summarizing predicted relative impact of KO of each of 98 TRs on promotion of cell state transitions (summed positive PS) along branch 1: 12,6,7,5 and branch 2: 12,6,9,3,10. c. UMAP visualizations of PS along each trajectory branch for representative TR KOs. Red indicates negative PS (inhibition of state transition), green indicates positive PS (promotion of state transition). 
+
+d. Heatmap visualization showing predicted impact of KO of each of 98 TR on percent change in cluster counts between initial and final states of Markov random walk simulations. Red indicates increase in cell count, blue indicates decrease in cell count. e. 
+
+UMAP visualization of cell density changes of Markov random walk simulations for representative TR KOs. 
+
+for each TR along branch 1 versus 2, which highlights the predicted impact of TR knockouts that 224 
+
+inhibit state transitions along both branches (e.g. Cebpa, Irf8; Supplementary Video 1), those that 225 
+
+have stronger inhibition along branch 1 than branch 2 (e.g. Irf4, Ogt; Supplementary Video 2), 226 
+
+those that have stronger inhibition along branch 2 than branch 1 (e.g. Nr1h3, Nr3c1 ), and those 227 
+
+that have little influence on either branch (e.g. Kdm1a, Cdk9; Supplementary Video 3). Figure 5b 228 
+
+shows a plot of the positive PS sum for TRs along branch 1 versus 2, which highlights the impact 229 
+
+of TR knockouts that strongly promote state transitions along both branches (e.g. Flk1, Ncor2 ), 230 
+
+those that have stronger positive influence along branch 1 than branch 2 (e.g. Cebpb, Atf4 ), those 231 
+
+10 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint that have stronger influence along branch 2 than branch 1 (e.g. Ogt, Cebpa ), and those that have 232 
+
+little influence on either branch (e.g. Kdm1a, Cdk9 ). Comparing branches 2 and 3, knockout of 233 
+
+Cebpa, Irf8 again induced strong inhibition along both branches, whereas knockout of Fli1 and 234 
+
+Nfatc2 induced stronger inhibition along branch 3 than branch 2, and knockout of Bhlhe40 and 235 
+
+Nfkb1 induced stronger inhibition along branch 2 than branch 3 (Fig. S4). 236 
+
+We note that knockout of many TRs were predicted to inhibit state transitions along portions of each 237 
+
+branch, but promote state transitions along other portions. For example, knockout of Cebpa showed 238 
+
+inhibition of state transitions from early stage through intermediate stages along each trajectory 239 
+
+branch, but promoted state transitions within clusters 1 and 10 which were termini of branches 2 240 
+
+and 3 (Fig. 5c). In contrast, other TRs showed uniform inhibition or promotion of state transitions 241 
+
+along specific trajectory branches. For example, knockout of Irf4 showed uniform inhibition of 242 
+
+state transitions along trajectory branch 1 (Fig. 5c, Supplementary Video 2). For experimental 243 
+
+validation, in a separate study, we showed that knockout of Irf4 in monocytes using Csf1r Cre Irf4 fl/fl 244 
+
+mice reduced differentiation of Mo into cells with the APC phenotype (i.e. along trajectory branch 245 
+
+1 in the current study) [25], consistent with the CellOracle in silico TR knockout prediction. 246 
+
+Next, we performed Markov random walk simulations for each perturbation. These simulations 247 
+
+predicted that knockout of selected TRs would result in accumulation of cells in specific clusters 248 
+
+(Fig. 5d,e; Supplementary Data S7). For example, individual knockouts of a number of TRs 249 
+
+including Cebpa, Pparg, Ctcf or Nelfa each predicted robust accumulation of cells in the early-stage 250 
+
+inflammatory cluster 12 with reductions in other clusters, indicating that knockout of these TRs 251 
+
+may result in impaired cell state transitions of early wound Mo/M φ to later stage phenotypes. 252 
+
+In addition, individual knockouts of Irf8 or Kmt2a predicted robust accumulation of cells in the 253 
+
+intermediate cluster 6, indicating that these TRs may be required to transit through this cell state 254 
+
+to later stage phenotypes. In contrast, individual knockouts of another set of TRs resulted in 255 
+
+accumulation of cells in cluster 5, including Mafb , Rela and Fli1 indicating that these TRs may 256 
+
+inhibit cell state transition of Mo into the APC phenotype or may promote differentiation into other 257 
+
+phenotypes. Interestingly, individual knockout of a group of TRs including Spi1, Relb, Nfkb1, Cebpd 258 
+
+and Irf5 resulted in accumulation of cells into the reparative late-stage cluster 3, which provides 259 
+
+insight into targets for inducing this phenotype to promote tissue repair. In contrast, knockout 260 
+
+of Zmynd11 , Ncor2 , Nfatc2 , Irf3 and Adnp induced accumulation of cells in the lipid handling, 261 
+
+foam cell-like phenotype cluster 1, populated primarily by late-stage DB cells. Finally, individual 262 
+
+knockout of a large group of TRs, including Fos, Jun, JunB, Srebp1, Nr1h2, Elf4, Fosl2 and Irf1 263 
+
+resulted in accumulation of cells in cluster 8, containing Lyve-1 + mixed phenotype cells, another 264 
+
+phenotype expressed by late-stage DB cells. 265 
+
+Mo/M φ TRs that have been studied in the context of skin wound healing include MAFB, which 266 
+
+appears to promote a reparative M φ phenotype; experimental knockout of Mafb in Mo/M φ using 267 
+
+LysM Cre Mafb fl/fl mice led to reduced expression of Arg1 , Il10 , Ccl2 and Ccl12 in IL4/IL13 stimulated 268 
+
+bone-marrow derived M φ compared to control cells [ 48]. Additionally, Mafb has been shown to be 269 
+
+essential for differentiation of human Mo into M φ, whereas Irf4 is essential for Mo differentiation to 270 
+
+into Mo-DC [ 49]. The current Markov random walk analysis (Fig. 5d) predicted that Mafb knockout 271 
+
+would result in increased accumulation of cells in cluster 5 (i.e. the APC or Mo-DC phenotype; 272 
+
+Supplementary Video 4), whereas Irf4 knockout promotes accumulation of cells in cluster 3 (i.e. 273 
+
+the reparative phenotype), suggesting that these TRs promote alternative state transitions from 274 
+
+early to late wound stage phenotypes. In addition, macrophage-specific knockout of Pparg resulted 275 
+
+in prolonged wound inflammation and impaired healing [ 50 ]. The Markov random walk analysis 276 
+
+predicted that Pparg knockout would result in accumulation of pro-inflammatory cluster 12 cells, 277 
+
+11 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+cdba e12 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Irf4 overexpression Kdm1a overexpression UMAP 2Cebpa overexpression Nr1h3 overexpression UMAP 1Perturbation score (PS) 
+
+-1 0 112 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 812 5362911 10 174 8Irf4 overexpression Kdm1a overexpression UMAP 2Cebpa overexpression Nr1h3 overexpression UMAP 1asinh (Δ count 50 )
+
+-4 -2 0 2 4 Atf4 
+
+Cebpa 
+
+Cebpb Irf4 
+
+Irf5 Junb 
+
+Kdm1a Nr1h3 
+
+Rela 
+
+030 60 90 branch 2: 12,6,9,3,10: negative PS sum 0 30 60 90 branch 1: 12,6,7,5: negative PS sum Brd9 
+
+Cebpa Irf4 Kdm1a Nr1h3 
+
+Nr3c1 Rela Smc1a Usf2 
+
+025 50 75 100 branch 2: 12,6,9,3,10: positive PS sum 0 25 50 75 100 branch 1: 12,6,7,5: positive PS sum 12 5362911 10 1748
+
+> Nfatc2
+> Cebpa
+> Rela Ncor1 Phf10 Mafb Irf8 Rxra Adnp Fli1 Nr3c1 Rad21 Ogt Ppargc1b Mapk3 Hcfc1 Lmo2 Brd4 Atf4 Cebpb Fosl2 Stat2 Irf9 Stat1 Zmynd11 Hif1a Jun Maff Rel Vdr Irf1 Egr2 Nfkb1 Bhlhe40 Nfe2l2 Nr4a1 Runx3 Junb Fos Klf4 Cxxc1 Brd2 Runx1 Bcl6 Kdm6b Ctcf Jund Egr1 Socs1 Smc1a Irf5 Kmt2d Pparg Myc Setd1a Srebf1 Smarca4 Ncor2 Creb1 Relb Smarcb1 Stat5a Ezh2 Hdac3 Arid1a Trim33 Cdk9
+> Kdm1a
+> Med1 Stat5b Trp53 Nelfe Nr1h2 Gabpa Ep300 Hes1 E2f4 Sumo2 Elf4 Irf3 Nelfa Ikzf1 Spi1 Cebpd Batf3 Srf
+> Nr1h3 Irf4
+> Zbtb46 Kmt2a Stat6 Elf1 Brd3 Batf Usf2 Brd9 Atf3 Stat3
+
+Percent change cluster counts -400% 0% 400% Figure 6. Predicted impact of in silico overexpression (OE) of transcriptional regulators (TRs) on altered monocyte/macrophage cell state transitions. a. Scatter plot summarizing predicted relative impact of OE of each of 98 TRs on inhibition of cell state transitions (summed negative perturbation scores (PS)) along branch 1: 12,6,7,5 and branch 2: 12,6,9,3,10. 
+
+b. Scatter plot summarizing predicted relative impact of OE of each of 98 TRs on promotion of cell state transitions (summed positive PS) along branch 1: 12,6,7,5 and branch 2: 12,6,9,3,10. c. UMAP visualizations of PS along each trajectory branch for representative TR OEs. Red indicates negative PS (inhibition of state transition), green indicates positive PS (promotion of state transition). d. Heatmap visualization showing predicted impact of OE of each of 98 TR on percent change in cluster counts between initial and final states of Markov random walk simulations. Red indicates increase in cell count, blue indicates decrease in cell count. e. UMAP visualization of cell density changes of Markov random walk simulations for representative TR OEs. 
+
+consistent with the experimental results. 278 
+
+In silico TR overexpression predicts impact on Mo/M φ state transitions 279 
+
+CellOracle was used also to simulate how TR overexpression may affect Mo/M φ state transitions 280 
+
+(Fig. 6). In overexpression simulations, the expression of the gene encoding the TR is universally 281 
+
+set to an upper limit derived from the observed single-cell expression range of that gene. In general, 282 
+
+overexpression of TRs was predicted to induce inverse effects compared to TR knockout on Mo/M φ283 
+
+state transitions. For TR knockouts predicted to inhibit state transitions along both trajectory 284 
+
+12 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint branches, overexpression was predicted to promote state transitions, albeit to different degrees (Fig. 285 
+
+6a; e.g. Cebpa, Irf8 ). For knockouts predicted to have stronger influence along branch 1 than 286 
+
+branch 2 (e.g. Irf4, Ogt ), and those that have stronger influence along branch 2 than branch 1 287 
+
+(e.g. Nr1h3, Nr3c1 ), overexpression of these TRs promoted state transitions along these branches. 288 
+
+Conversely, for TR knockouts predicted to promote state transitions along both trajectory branches, 289 
+
+overexpression was predicted to inhibit these state transitions (Fig. 6b; e.g. Flk1, Ncor2 ). For 290 
+
+knockouts predicted to have stronger influence on branch 1 than on branch 2 (e.g. Cebpb, Atf4 ), 291 
+
+and those predicted to have stronger influence on branch 2 than on branch 1 (e.g. Ogt, Cebpa ), 292 
+
+overexpression of these TRs inhibited state transitions along these branches. 293 
+
+Markov random walk simulations predicted that overexpression of selected TRs would result in 294 
+
+accumulation of cells in specific clusters (Fig. 6c; Supplementary Data S8). Overexpression of 295 
+
+members of the Interferon-Stimulated Gene Factor 3 complex ( Stat1, Stat2 and Irf9 ), along with 296 
+
+Nfkb1 , Cebpb, Fosl2 , all increased cells in early pro-inflammatory cluster 12. Overexpression of Irf4 ,297 
+
+Zbtb46 and Brd9 increased cells with an APC phenotype in cluster 5, and overexpression of Trim33, 298 
+
+Zmynd11 and Jun produced modest increases in cells with a reparative phenotype in cluster 3. 299 
+
+Finally, overexpression of Irf5 , Ctcf and Atf4 produced an increase in cells with a lipid handling, 300 
+
+foam cell-like phenotype, and overexpression of a large selection of TRs (e.g. Cebpa , Nfatc2, Rela ,301 
+
+Irf8 , Mafb ) each resulted in an increase in cells in the Lyve-1 phenotype cluster 8. 302 
+
+4 Discussion 303 
+
+Although dysregulation of Mo/M φ activity is known to contribute to impaired healing in diabetes 304 
+
+[11 , 12 ], the mechanisms underlying this dysregulation are not well understood. In the present 305 
+
+study, we used the Lamian computational framework [ 23] and our newly developed Pseudotime 306 
+
+Graph Diffusion method on our scRNA-seq data to comprehensively identify alterations in Mo/M φ307 
+
+phenotypes over the course of healing, and show that state transitions from early stage inflammatory 308 
+
+phenotypes to later stage reparative and APC phenotypes are impaired and that transitions to 309 
+
+inflammatory, foam cell-like, and Lyve-1 + phenotypes are enhanced in wounds of diabetic mice. Using 310 
+
+our BITFAM model [ 21, 22], we also identified a broad range of TRs predicted to be preferentially 311 
+
+active in each cell state. We used CellOracle [ 24] to perform in silico TR perturbation to predict 312 
+
+which TRs drive cell state transitions in non-diabetic and diabetic wounds; certain TRs were 313 
+
+predicted to drive cell state transitions along multiple trajectories (e.g. CEBPA, IRF8), whereas 314 
+
+other TRs were predicted to drive cell state transition towards reparative phenotypes (e.g. NR1H3, 315 
+
+NR3C1) and or towards an antigen-presenting phenotype (e.g. IRF4, OGT). Finally, we validated 316 
+
+selected findings using existing experimental data, confirming the usefulness of this approach for 317 
+
+identifying TRs that drive state transitions in both non-diabetic and diabetic wounds. 318 
+
+Other groups have recently published findings on the heterogeneity of wound Mo/M φ in both 319 
+
+diabetic mice and humans. Using the streptozotocin model of type 1 diabetes and scRNA-seq [ 51 ], 320 
+
+six Mo/M φ subsets and two dendritic cell subsets were observed in skin swounds, with varying 321 
+
+contributions of ND and DB cells to each cluster over the time points observed (one to seven days 322 
+
+post-five mm excisional wounding). Although a list of TFs that were expressed in each cluster 323 
+
+was provided, TF activity was not assessed, and findings from the present study indicate that 324 
+
+TF expression levels do not correlate well with predicted TF activity. Another study profiled 325 
+
+human wound cells during normal skin wound healing (one to 30 days post four mm excisional 326 
+
+wounding) [ 52], and found that, similar to what occurs in rodent models, Mo/M φ progress from 327 
+
+pro-inflammatory to pro-resolution phenotypes as healing progresses; however the role of TFs in this 328 
+
+switch was not a focus of the study. Another study profiled wound cells from human diabetic foot 329 
+
+13 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+ulcers and found that Mo/M φ classified as “M1” were underrepresented and those classified as “M2” 330 
+
+were overrepresented in wounds that did not heal compared to those that healed [ 32], highlighting 331 
+
+dysregulation of Mo/M φ in non-healing wounds. This study was limited by the oversimplified and 332 
+
+biased categorization of wound Mo/M φ, and the role of TFs in driving these phenotypes was not 333 
+
+investigated. Our study adds to the published literature by comprehensively assessing the TRs that 334 
+
+drive the heterogeneous phenotypes of wound Mo/M φ in both ND and DB wounds. 335 
+
+A number of recent studies have demonstrated that epigenetic gene regulation via histone modifica-336 
+
+tions, DNA modifications, and microRNA can influence macrophage state transitions during wound 337 
+
+healing [ 12 , 53]. Because epigenetic regulators are included in the ChIP-Atlas database, these were 338 
+
+present in both our BITFAM and CellOracle analyses, and our findings highlight the importance 339 
+
+of these regulators in Mo/M φ state transitions during wound healing. For example, the histone 340 
+
+methylase KMT2A, or MLL1, adds methyl groups to histone H3 at K4, thereby promoting chromatin 341 
+
+opening and subsequent gene expression. We found that KMT2A was predicted to be highly active 342 
+
+in the early-stage pro-inflammatory cluster 12 and to a lesser extent in intermediate-stage clusters 6 343 
+
+and 7, and that in silico knockout of Kmt2a was predicted to reduce cells in cluster 12, as well as 344 
+
+terminal clusters 3 and 5, and increase cells in cluster 6 and to a lesser extent cluster 1, the latter 345 
+
+expressing the DB-associated lipid handling phenotype that was less inflammatory than cluster 346 
+
+12. Consistent with these findings, Mo/M φ specific Mll1 knockout mice exhibited reduced wound 347 
+
+macrophage inflammatory cytokine production and delayed wound healing [54]. 348 
+
+Additional epigenetic regulators predicted to be important in specifying Mo/M φ states, which 349 
+
+have been less well-studied during wound healing, include Bromodomain-containing protein (BRD) 350 
+
+proteins, which are epigenetic readers considered to be master regulators of gene expression, O-351 
+
+GlcNAc transferase (OGT), which adds O-GlcNAc to TFs and other proteins, generally suppressing 352 
+
+pro-inflammatory responses, and Zinc Finger MYND-Type Containing 11 (ZMYND11), which acts 353 
+
+as a transcriptional corepressor of inflammatory genes that are marked with the histone modification 354 
+
+H3.3K36me3. These results highlight the wide variety of factors that contribute to specifying wound 355 
+
+Mo/M φ, many of which have not been studied in the context of impaired wound healing with 356 
+
+diabetes. 357 
+
+A limitation of our study is that, although our results provide unbiased and comprehensive insight 358 
+
+into the regulation of Mo/M φ cell states in normal and impaired wound healing, how the TRs 359 
+
+identified as being important in specifying Mo/M φ cell states are themselves regulated awaits 360 
+
+further study. Another limitation of our study includes inability to differentiate between resident 361 
+
+and infiltrating cells that contribute to the wound Mo/M φ pool. The question of whether resident 362 
+
+and infiltrating Mo/M φ exhibit different phenotypes in ND and DB wounds, and whether different 363 
+
+regulatory mechanisms are involved in cells from different sources will be a topic of future study. 364 
+
+Other limitations of this study relate to the computational analyses. First, our trajectory inference 365 
+
+relied on a single method (Lamian), which constructs a minimum spanning tree across both ND 366 
+
+and DB cells jointly. This tree-based topology assumes linear progression from an initial cluster 367 
+
+to a limited number of terminal clusters, precluding more complex dynamics such as phenotypic 368 
+
+reversion or cyclical state transitions. Moreover, although every cluster contains cells from both 369 
+
+conditions, the joint construction may suggest transitions that do not occur within either single 370 
+
+condition. The trajectory modeled here therefore represents possible, but not exhaustive, cell state 371 
+
+transitions agnostic to condition. In addition, our CellOracle perturbation analyses lack formal 372 
+
+statistical testing; perturbation scores should be interpreted as computational predictions that 373 
+
+prioritize candidates for experimental validation rather than as statistically confirmed effects. 374 
+
+In conclusion, we identified TRs that likely promote or inhibit Mo/M φ state transitions towards 375 
+
+14 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+desirable and undesirable phenotypes in ND and DB wounds. These findings provide insight into 376 
+
+novel targets for altering Mo/M φ phenotypes to promote healing of DB wounds. 377 
+
+Acknowledgements 378 
+
+This study was supported by the NIGMS through grant R35GM136228 to TJK, and the NIDDK 379 
+
+Diabetic Complications Consortium through grants DK076169 and DK115255 to YD and TJK. 380 
+
+Author Contributions 381 
+
+BL and JP contributed equally to this work. BL developed bioinformatics framework, implemented 382 
+
+workflow, analyzed data, and wrote manuscript. JP performed experiments, analyzed data, and 383 
+
+wrote manuscript. YD designed study, developed bioinformatics framework, analyzed data, and 384 
+
+wrote manuscript. TJK designed study, analyzed data, and wrote manuscript. 385 
+
+Conflict of Interest 386 
+
+The authors have no conflicts of interest to declare. 387 
+
+15 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+References 388 
+
+[1] S. Chatterjee, K. Khunti, and M. J. Davies. Type 2 diabetes. Lancet , 389(10085):2239–2251, 389 
+
+2017. doi: 10.1016/S0140-6736(17)30058-2. URL https://www.ncbi.nlm.nih.gov/pubmed/ 390 
+
+28190580 . PMID: 28190580. 391 
+
+[2] O. Hoffstad, N. Mitra, J. Walsh, and D. J. Margolis. Diabetes, lower-extremity amputation, 392 
+
+and death. Diabetes Care , 38(10):1852–7, 2015. doi: 10.2337/dc15-0536. URL https://www. 393 
+
+ncbi.nlm.nih.gov/pubmed/26203063 . PMID: 26203063. 394 
+
+[3] W. J. Jeffcoate and K. G. Harding. Diabetic foot ulcers. Lancet , 361(9368):1545–51, 2003. doi: 395 
+
+S0140-6736(03)13169-8[pii]10.1016/S0140-6736(03)13169-8. URL http://www.ncbi.nlm.nih. 396 
+
+gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Citation&list_uids=12737879 .397 
+
+PMID: 12737879. 398 
+
+[4] S. D. Ramsey, K. Newton, D. Blough, D. K. McCulloch, N. Sandhu, G. E. Reiber, and E. H. 399 
+
+Wagner. Incidence, outcomes, and cost of foot ulcers in patients with diabetes. Diabetes Care , 22 400 
+
+(3):382–7, 1999. URL http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve& 401 
+
+db=PubMed&dopt=Citation&list_uids=10097914 . PMID: 10097914. 402 
+
+[5] A. J. Singer and R. A. Clark. Cutaneous wound healing. N Engl J Med , 341(10): 403 
+
+738–46, 1999. URL http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db= 404 
+
+PubMed&dopt=Citation&list_uids=10471461 . PMID: 10471461. 405 
+
+[6] T. J. Koh and L. A. DiPietro. Inflammation and wound healing: the role of the macrophage. 406 
+
+Expert Rev Mol Med , 13:e23, 2011. doi: 10.1017/S1462399411001943. URL https://www.ncbi. 407 
+
+nlm.nih.gov/pubmed/21740602 . PMID: 21740602. 408 
+
+[7] R. Blakytny and E. Jude. The molecular biology of chronic wounds and delayed heal-409 
+
+ing in diabetes. Diabet Med , 23(6):594–608, 2006. doi: DME1773[pii]10.1111/j.1464-5491. 410 
+
+2006.01773.x. URL http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db= 411 
+
+PubMed&dopt=Citation&list_uids=16759300 . PMID: 16759300. 412 
+
+[8] V. Falanga. Wound healing and its impairment in the diabetic foot. Lancet , 366(9498):1736–43, 413 
+
+2005. doi: 10.1016/S0140-6736(05)67700-8. URL https://www.ncbi.nlm.nih.gov/pubmed/ 414 
+
+16291068 . PMID: 16291068. 415 
+
+[9] L. A. DiPietro, T. A. Wilgus, and T. J. Koh. Macrophages in Healing Wounds: Paradoxes and 416 
+
+Paradigms. Int J Mol Sci , 22(2), 2021. doi: 10.3390/ijms22020950. URL https://www.ncbi. 417 
+
+nlm.nih.gov/pubmed/33477945 . PMID: 33477945. 418 
+
+[10] T. A. Wynn and K. M. Vannella. Macrophages in Tissue Repair, Regeneration, and Fibrosis. 419 
+
+Immunity , 44(3):450–62, 2016. doi: 10.1016/j.immuni.2016.02.015. URL https://www.ncbi. 420 
+
+nlm.nih.gov/pubmed/26982353 . PMID: 26982353. 421 
+
+[11] P. K. Barman and T. J. Koh. Macrophage Dysregulation and Impaired Skin Wound Healing 422 
+
+in Diabetes. Front Cell Dev Biol , 8:528, 2020. doi: 10.3389/fcell.2020.00528. URL https: 423 
+
+//www.ncbi.nlm.nih.gov/pubmed/32671072 . PMID: 32671072. 424 
+
+[12] S. J. Wolf, W. J. Melvin, and K. Gallagher. Macrophage-mediated inflammation in diabetic 425 
+
+wound repair. Semin Cell Dev Biol , 119:111–118, 2021. doi: 10.1016/j.semcdb.2021.06.013. 426 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/34183242 . PMID: 34183242. 427 
+
+16 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+[13] R. Vu, S. Jin, P. Sun, D. Haensel, Q. H. Nguyen, M. Dragan, K. Kessenbrock, Q. Nie, and 428 
+
+X. Dai. Wound healing in aged skin exhibits systems-level alterations in cellular composition 429 
+
+and cell-cell communication. Cell Rep , 40(5):111155, 2022. doi: 10.1016/j.celrep.2022.111155. 430 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/35926463 . PMID: 35926463. 431 
+
+[14] K. H. Hu, N. F. Kuhn, T. Courau, J. Tsui, B. Samad, P. Ha, J. R. Kratz, A. J. Combes, and 432 
+
+M. F. Krummel. Transcriptional space-time mapping identifies concerted immune and stromal 433 
+
+cell patterns and gene programs in wound healing and cancer. Cell Stem Cell , 30(6):885–903 434 
+
+e10, 2023. doi: 10.1016/j.stem.2023.05.001. URL https://www.ncbi.nlm.nih.gov/pubmed/ 435 
+
+37267918 . PMID: 37267918. 436 
+
+[15] K. J. Mould, N. D. Jackson, P. M. Henson, M. Seibold, and W. J. Janssen. Single cell RNA 437 
+
+sequencing identifies unique inflammatory airspace macrophage subsets. JCI Insight , 4(5), 2019. 438 
+
+doi: 10.1172/jci.insight.126556. URL https://www.ncbi.nlm.nih.gov/pubmed/30721157 .439 
+
+PMID: 30721157. 440 
+
+[16] J. Pang, M. Maienschein-Cline, and T. J. Koh. Monocyte/Macrophage Heterogeneity during Skin 441 
+
+Wound Healing in Mice. J Immunol , 209(10):1999–2011, 2022. doi: 10.4049/jimmunol.2200365. 442 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/36426946 . PMID: 36426946. 443 
+
+[17] T. Lawrence and G. Natoli. Transcriptional regulation of macrophage polarization: enabling 444 
+
+diversity with identity. Nat Rev Immunol , 11(11):750–61, 2011. doi: 10.1038/nri3088. URL 445 
+
+https://www.ncbi.nlm.nih.gov/pubmed/22025054 . PMID: 22025054. 446 
+
+[18] D. A. Hume. The Many Alternative Faces of Macrophage Activation. Front Immunol , 6:370, 2015. 447 
+
+doi: 10.3389/fimmu.2015.00370. URL https://www.ncbi.nlm.nih.gov/pubmed/26257737 .448 
+
+PMID: 26257737. 449 
+
+[19] C. Porta, E. Riboldi, A. Ippolito, and A. Sica. Molecular and epigenetic basis of macrophage 450 
+
+polarized activation. Semin Immunol , 27(4):237–48, 2015. doi: 10.1016/j.smim.2015.10.003. 451 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/26561250 . PMID: 26561250. 452 
+
+[20] D. Tugal, X. Liao, and M. K. Jain. Transcriptional control of macrophage polarization. 453 
+
+Arterioscler Thromb Vasc Biol , 33(6):1135–44, 2013. doi: 10.1161/ATVBAHA.113.301453. 454 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/23640482 . PMID: 23640482. 455 
+
+[21] M. Zandigohar, J. Pang, A. Rodrigues, R. E. Roberts, Y. Dai, and T. J. Koh. Transcription 456 
+
+Factor Activity Regulating Macrophage Heterogeneity during Skin Wound Healing. J Immunol ,457 
+
+213(4):506–518, 2024. doi: 10.4049/jimmunol.2400172. URL https://www.ncbi.nlm.nih. 458 
+
+gov/pubmed/38940624 . PMID: 38940624. 459 
+
+[22] S. Gao, Y. Dai, and J. Rehman. A Bayesian inference transcription factor activity model for 460 
+
+the analysis of single-cell transcriptomes. Genome Res , 2021. doi: 10.1101/gr.265595.120. URL 461 
+
+https://www.ncbi.nlm.nih.gov/pubmed/34193535 . PMID: 34193535. 462 
+
+[23] W. Hou, Z. Ji, Z. Chen, E. J. Wherry, S. C. Hicks, and H. Ji. A statistical framework for 463 
+
+differential pseudotime analysis with multiple single-cell RNA-seq samples. Nat Commun ,464 
+
+14(1):7286, 2023. doi: 10.1038/s41467-023-42841-y. URL https://www.ncbi.nlm.nih.gov/ 465 
+
+pubmed/37949861 . PMID: 37949861. 466 
+
+[24] K. Kamimoto, B. Stringa, C. M. Hoffmann, K. Jindal, L. Solnica-Krezel, and S. A. Morris. 467 
+
+Dissecting cell identity via network inference and in silico gene perturbation. Nature , 614 468 
+
+17 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+(7949):742–751, 2023. doi: 10.1038/s41586-022-05688-9. URL https://www.ncbi.nlm.nih. 469 
+
+gov/pubmed/36755098 . PMID: 36755098. 470 
+
+[25] J. Pang, B. Lukas, R. Roberts, M. Maienschein-Cline, Y. Dai, and T. J. Koh. A Novel 471 
+
+Monocyte-derived Antigen Presenting Cell-T regulatory Cell Axis Contributes to Skin Wound 472 
+
+healing and is Impaired in Diabetic Mice. bioRxiv , 2026. doi: 10.64898/2026.03.04.709590. 473 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/41847034 . PMID: 41847034. 474 
+
+[26] Y. Hao, T. Stuart, M. H. Kowalski, S. Choudhary, P. Hoffman, A. Hartman, A. Srivastava, 475 
+
+G. Molla, S. Madad, C. Fernandez-Granda, and R. Satija. Dictionary learning for integrative, 476 
+
+multimodal and scalable single-cell analysis. Nat Biotechnol , 42(2):293–304, 2024. doi: 10. 477 
+
+1038/s41587-023-01767-y. URL https://www.ncbi.nlm.nih.gov/pubmed/37231261 . PMID: 478 
+
+37231261. 479 
+
+[27] Z. Fang, X. Liu, and G. Peltz. GSEApy: a comprehensive package for performing gene set 480 
+
+enrichment analysis in Python. Bioinformatics , 39(1), 2023. doi: 10.1093/bioinformatics/ 481 
+
+btac757. URL https://pubmed.ncbi.nlm.nih.gov/36426870/ . PMID: 36426870. 482 
+
+[28] B. Lukas, J. Pang, T.J. Koh, and Y. Dai. Pseudotime graph diffusion for post hoc visualization 483 
+
+of inferred single-cell trajectories. bioRxiv. bioRxiv , 2026. doi: 10.64898/2026.01.27.702126. 484 
+
+URL https://pubmed.ncbi.nlm.nih.gov/41659685/ . PMID: 41659685. 485 
+
+[29] Z. Zou, T. Ohta, and S. Oki. ChIP-Atlas 3.0: a data-mining suite to explore chromosome 486 
+
+architecture together with large-scale regulome data. Nucleic Acids Res , 52(W1):W45–W53, 487 
+
+2024. doi: 10.1093/nar/gkae358. URL https://www.ncbi.nlm.nih.gov/pubmed/38749504 .488 
+
+PMID: 38749504. 489 
+
+[30] M. M. Meredith, K. Liu, G. Darrasse-Jeze, A. O. Kamphorst, H. A. Schreiber, P. Guermonprez, 490 
+
+J. Idoyaga, C. Cheong, K. H. Yao, R. E. Niec, and M. C. Nussenzweig. Expression of the zinc 491 
+
+finger transcription factor zDC (Zbtb46, Btbd4) defines the classical dendritic cell lineage. J492 
+
+Exp Med , 209(6):1153–65, 2012. doi: 10.1084/jem.20112675. URL https://www.ncbi.nlm. 493 
+
+nih.gov/pubmed/22615130 . PMID: 22615130. 494 
+
+[31] J. Pang, M. Maienschein-Cline, and T.J. Koh. Reduced apoptosis of monocytes and macrophages 495 
+
+is associated with their persistence in wounds of diabetic mice. Cytokine , 142:155516, 2021. doi: 496 
+
+10.1016/j.cyto.2021.155516. URL https://pubmed.ncbi.nlm.nih.gov/33810946/ . PMID: 497 
+
+33810946. 498 
+
+[32] G. Theocharidis, B. E. Thomas, D. Sarkar, H. L. Mumme, W. J. R. Pilcher, B. Dwivedi, 499 
+
+T. Sandoval-Schaefer, R. F. Sirbulescu, A. Kafanas, I. Mezghani, P. Wang, A. Lobao, I. S. 500 
+
+Vlachos, B. Dash, H. C. Hsia, V. Horsley, S. S. Bhasin, A. Veves, and M. Bhasin. Single 501 
+
+cell transcriptomic landscape of diabetic foot ulcers. Nat Commun , 13(1):181, 2022. doi: 10. 502 
+
+1038/s41467-021-27801-8. URL https://www.ncbi.nlm.nih.gov/pubmed/35013299 . PMID: 503 
+
+35013299. 504 
+
+[33] B. D. Bell, M. Kitajima, R. P. Larson, T. A. Stoklasek, K. Dang, K. Sakamoto, K. U. Wagner, 505 
+
+D. H. Kaplan, B. Reizis, L. Hennighausen, and S. F. Ziegler. The transcription factor STAT5 is 506 
+
+critical in dendritic cells for the development of TH2 but not TH1 responses. Nat Immunol , 14(4): 507 
+
+364–71, 2013. doi: 10.1038/ni.2541. URL https://www.ncbi.nlm.nih.gov/pubmed/23435120 .508 
+
+PMID: 23435120. 509 
+
+18 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+[34] E. Zerif, A. Maalem, S. Gaudreau, C. Guindi, M. Ramzan, S. Veroneau, D. Gris, J. Stankova, 510 
+
+M. Rola-Pleszczynski, W. Mourad, G. Dupuis, and A. Amrani. Constitutively active Stat5b 511 
+
+signaling confers tolerogenic functions to dendritic cells of NOD mice and halts diabetes 512 
+
+progression. J Autoimmun , 76:63–74, 2017. doi: 10.1016/j.jaut.2016.09.001. URL https: 513 
+
+//www.ncbi.nlm.nih.gov/pubmed/27634616 . PMID: 27634616. 514 
+
+[35] I. Rauch, M. Muller, and T. Decker. The regulation of inflammation by interferons and their 515 
+
+STATs. JAKSTAT , 2(1):e23820, 2013. doi: 10.4161/jkst.23820. URL https://www.ncbi.nlm. 516 
+
+nih.gov/pubmed/24058799 . PMID: 24058799. 517 
+
+[36] W. Ren, C. Wang, Q. Wang, D. Zhao, K. Zhao, D. Sun, X. Liu, C. Han, J. Hou, X. Li, 518 
+
+Q. Zhang, X. Cao, and N. Li. Bromodomain protein Brd3 promotes Ifnb1 transcription via 519 
+
+enhancing IRF3/p300 complex formation and recruitment to Ifnb1 promoter in macrophages. 520 
+
+Sci Rep , 7:39986, 2017. doi: 10.1038/srep39986. URL https://www.ncbi.nlm.nih.gov/ 521 
+
+pubmed/28045112 . PMID: 28045112. 522 
+
+[37] F. Ning, X. Li, L. Yu, B. Zhang, Y. Zhao, Y. Liu, B. Zhao, Y. Shang, and X. Hu. Hes1 523 
+
+attenuates type I IFN responses via VEGF-C and WDFY1. J Exp Med , 216(6):1396–1410, 524 
+
+2019. doi: 10.1084/jem.20180861. URL https://www.ncbi.nlm.nih.gov/pubmed/31015298 .525 
+
+PMID: 31015298. 526 
+
+[38] Q. Hu, Y. Zhao, Z. Wang, Y. Hou, D. Bi, J. Sun, and X. Peng. Chicken gga-miR-19a Targets 527 
+
+ZMYND11 and Plays an Important Role in Host Defense against Mycoplasma gallisepticum 528 
+
+(HS Strain) Infection. Front Cell Infect Microbiol , 6:102, 2016. URL https://pubmed.ncbi. 529 
+
+nlm.nih.gov/27683641/ . PMID: 27683641. 530 
+
+[39] A. T. Satpathy, W. Kc, J. C. Albring, B. T. Edelson, N. M. Kretzer, D. Bhattacharya, T. L. 531 
+
+Murphy, and K. M. Murphy. Zbtb46 expression distinguishes classical dendritic cells and 532 
+
+their committed progenitors from other immune lineages. J Exp Med , 209(6):1135–52, 2012. 533 
+
+doi: 10.1084/jem.20120030. URL https://www.ncbi.nlm.nih.gov/pubmed/22615127 . PMID: 534 
+
+22615127. 535 
+
+[40] S. Vomund, A. Schafer, M. J. Parnham, B. Brune, and A. von Knethen. Nrf2, the Master 536 
+
+Regulator of Anti-Oxidative Responses. Int J Mol Sci , 18(12), 2017. doi: 10.3390/ijms18122772. 537 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/29261130 . PMID: 29261130. 538 
+
+[41] E. H. Kobayashi, T. Suzuki, R. Funayama, T. Nagashima, M. Hayashi, H. Sekine, N. Tanaka, 539 
+
+T. Moriguchi, H. Motohashi, K. Nakayama, and M. Yamamoto. Nrf2 suppresses macrophage 540 
+
+inflammatory response by blocking proinflammatory cytokine transcription. Nat Commun ,541 
+
+7:11624, 2016. doi: 10.1038/ncomms11624. URL https://www.ncbi.nlm.nih.gov/pubmed/ 542 
+
+27211851 . PMID: 27211851. 543 
+
+[42] A. Andrades, P. Peinado, J. C. Alvarez-Perez, J. Sanjuan-Hidalgo, D. J. Garcia, A. M. 544 
+
+Arenas, A. M. Matia-Gonzalez, and P. P. Medina. SWI/SNF complexes in hematological 545 
+
+malignancies: biological implications and therapeutic opportunities. Mol Cancer , 22(1):39, 2023. 546 
+
+doi: 10.1186/s12943-023-01736-8. URL https://www.ncbi.nlm.nih.gov/pubmed/36810086 .547 
+
+PMID: 36810086. 548 
+
+[43] A. O. Chugunov, N. A. Potapova, N. S. Klimenko, V. V. Tatarskiy, S. G. Georgieva, and 549 
+
+N. V. Soshnikova. Conserved Structure and Evolution of DPF Domain of PHF10-The Specific 550 
+
+Subunit of PBAF Chromatin Remodeling Complex. Int J Mol Sci , 22(20), 2021. doi: 10.3390/ 551 
+
+ijms222011134. URL https://www.ncbi.nlm.nih.gov/pubmed/34681795 . PMID: 34681795. 552 
+
+19 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+[44] N. A-González and A. Castrillo. Liver X receptors as regulators of macrophage inflammatory 553 
+
+and metabolic pathways. Biochim Biophys Acta , 1812(8):982–94, 2011. doi: 10.1016/j.bbadis. 554 
+
+2010.12.015. URL https://pubmed.ncbi.nlm.nih.gov/21193033/ . PMID: 21193033. 555 
+
+[45] S. Moraitis and C. Piperi. Multi-Faceted Role of Histone Methyltransferase Enhancer of Zeste 556 
+
+2 (EZH2) in Neuroinflammation and Emerging Targeting Options. Biology (Basel) , 14(7), 2025. 557 
+
+doi: 10.3390/biology14070749. URL https://pubmed.ncbi.nlm.nih.gov/40723311/ . PMID: 558 
+
+40723311. 559 
+
+[46] A. C. Belkina, B. S. Nikolajczyk, and G. V. Denis. BET protein function is required for 560 
+
+inflammation: Brd2 genetic disruption and BET inhibitor JQ1 impair mouse macrophage 561 
+
+inflammatory responses. J Immunol , 190(7):3670–8, 2013. doi: 10.4049/jimmunol.1202838. 562 
+
+URL https://www.ncbi.nlm.nih.gov/pubmed/23420887 . PMID: 23420887. 563 
+
+[47] L. Escoter-Torres, F. Greulich, F. Quagliarini, M. Wierer, and N. H. Uhlenhaut. Anti-564 
+
+inflammatory functions of the glucocorticoid receptor require DNA binding. Nucleic Acids Res ,565 
+
+48(15):8393–8407, 2020. doi: 10.1093/nar/gkaa565. URL https://www.ncbi.nlm.nih.gov/ 566 
+
+pubmed/32619221 . PMID: 32619221. 567 
+
+[48] Y. Inoue, C. W. Liao, Y. Tsunakawa, I. L. Tsai, S. Takahashi, and M. Hamada. Macrophage-568 
+
+Specific, Mafb-Deficient Mice Showed Delayed Skin Wound Healing. Int J Mol Sci , 23(16), 569 
+
+2022. doi: 10.3390/ijms23169346. URL https://www.ncbi.nlm.nih.gov/pubmed/36012611 .570 
+
+PMID: 36012611. 571 
+
+[49] C. Goudot, A. Coillard, A. C. Villani, P. Gueguen, A. Cros, S. Sarkizova, T. L. Tang-Huau, 572 
+
+M. Bohec, S. Baulande, N. Hacohen, S. Amigorena, and E. Segura. Aryl Hydrocarbon Receptor 573 
+
+Controls Monocyte Differentiation into Dendritic Cells versus Macrophages. Immunity , 47(3): 574 
+
+582–596 e6, 2017. doi: 10.1016/j.immuni.2017.08.016. URL https://www.ncbi.nlm.nih.gov/ 575 
+
+pubmed/28930664 . PMID: 28930664. 576 
+
+[50] R.E. Mirza, M.M. Fang, M.L. Novak, N. Urao, A. Sui, W.J. Ennis, and T.J. Koh. Macrophage 577 
+
+PPARgamma and impaired wound healing in type 2 diabetes. J Pathol , 236(4):433–44, 2015. doi: 578 
+
+10.1002/path.4548. URL https://pubmed.ncbi.nlm.nih.gov/25875529/ . PMID: 25875529. 579 
+
+[51] J. Ma, R. Song, C. Liu, G. Cao, G. Zhang, Z. Wu, H. Zhang, R. Sun, A. Chen, Y. Wang, 580 
+
+and S. Yin. Single-cell RNA-Seq analysis of diabetic wound macrophages in STZ-induced 581 
+
+mice. J Cell Commun Signal , 17(1):103–120, 2023. doi: 10.1007/s12079-022-00707-w. URL 582 
+
+https://www.ncbi.nlm.nih.gov/pubmed/36445632 . PMID: 36445632. 583 
+
+[52] Z. Liu, X. Bian, L. Luo, A. K. Bjorklund, L. Li, L. Zhang, Y. Chen, L. Guo, J. Gao, C. Cao, 584 
+
+J. Wang, W. He, Y. Xiao, L. Zhu, K. Annusver, N. H. Gopee, D. Basurto-Lozada, D. Horsfall, 585 
+
+C. L. Bennett, M. Kasper, M. Haniffa, P. Sommar, D. Li, and N. X. Landen. Spatiotemporal 586 
+
+single-cell roadmap of human skin wound healing. Cell Stem Cell , 32(3):479–498 e8, 2025. 587 
+
+doi: 10.1016/j.stem.2024.11.013. URL https://www.ncbi.nlm.nih.gov/pubmed/39729995 .588 
+
+PMID: 39729995. 589 
+
+[53] J. Xiao, M. Chen, Y. Zhang, and J. Tao. Epigenetic regulation of inflammation dynamics during 590 
+
+wound healing: a subtle yet profound shift in histone modifications. Curr Opin Immunol , 96: 591 
+
+102635, 2025. doi: 10.1016/j.coi.2025.102635. URL https://www.ncbi.nlm.nih.gov/pubmed/ 592 
+
+40768878 . PMID: 40768878. 593 
+
+20 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+[54] A. S. Kimball, A. Joshi, W. F. th Carson, A. E. Boniakowski, M. Schaller, R. Allen, J. Bermick, 594 
+
+F. M. Davis, P. K. Henke, C. F. Burant, S. L. Kunkel, and K. A. Gallagher. The Histone 595 
+
+Methyltransferase MLL1 Directs Macrophage-Mediated Inflammation in Wound Healing and Is 596 
+
+Altered in a Murine Model of Obesity and Type 2 Diabetes. Diabetes , 66(9):2459–2471, 2017. 597 
+
+doi: 10.2337/db17-0194. URL https://www.ncbi.nlm.nih.gov/pubmed/28663191 . PMID: 598 
+
+28663191. 599 
+
+21 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 24, 2026. ;https://doi.org/10.64898/2026.04.21.719960 doi: bioRxiv preprint
+
+SUPPLEMENTARY INFORMATION 600 
+
+Supplementary Figure 1. Pathway enrichment analysis of temporally dynamic genes 601 
+
+across pseudotime branches. 602 
+
+Supplementary Figure 2. Feature plots of canonical marker genes across monocyte/-603 
+
+macrophage clusters. 604 
+
+Supplementary Figure 3. Feature plots of marker transcriptional regulators with 605 
+
+differentially inferred activity. 606 
+
+Supplementary Figure 4. CellOracle perturbation analysis of transcriptional regulators 607 
+
+across pseudotime branches. 608 
+
+Supplementary Data 1. Cluster-based differential gene expression analysis. Results of 609 
+
+differential expression testing across monocyte/macrophage clusters. 610 
+
+Supplementary Data 2. Cluster-based gene set enrichment analysis (GSEA). 611 
+
+Supplementary Data 3. Temporally dynamic genes along pseudotime branches. 612 
+
+Supplementary Data 4. Cluster-based differential transcriptional regulator (TR) 613 
+
+activity. 614 
+
+Supplementary Data 5. Cluster-level pseudobulk transcriptional regulator (TR) ex-615 
+
+pression. 616 
+
+Supplementary Data 6. Temporally dynamic transcriptional regulators (TRs) along 617 
+
+pseudotime branches. 618 
+
+Supplementary Data 7. Markov chain transition changes under transcriptional regulator 619 
+
+(TR) knockout. 620 
+
+Supplementary Data 8. Markov chain transition changes under transcriptional regulator 621 
+
+(TR) overexpression. 622 
+
+Supplementary Video 1. Simulated particle flow along pseudotime and simulated Cebpa 623 
+
+knockout vector fields. 624 
+
+Supplementary Video 2. Simulated particle flow along pseudotime and simulated Irf4 625 
+
+knockout vector fields. 626 
+
+Supplementary Video 3. Simulated particle flow along pseudotime and simulated 627 
+
+Kdm1a knockout vector fields. 628 
+
+Supplementary Video 4. Simulated particle flow along pseudotime and simulated Mafb 629 
+
+knockout vector fields. 630 
+
+22

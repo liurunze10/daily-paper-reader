@@ -6,55 +6,67 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-04-23
-- 运行时间：2026-04-23 20:49:26 UTC
+- 最新运行日期：2026-04-26
+- 运行时间：2026-04-26 20:09:13 UTC
 - 运行状态：成功
-- 本次总论文数：11
-- 精读区：2
+- 本次总论文数：15
+- 精读区：6
 - 速读区：9
 
 ### 今日简报（AI）
-今日聚焦11项前沿进展，重点攻克AI医学影像分割与胃癌免疫逃逸机制。
-核心突破包括两阶段深度学习框架实现10种消化器官精准分割，以及TIM3+巨噬细胞通过抑制T细胞免疫驱动胃癌转移。
-建议关注AI在复杂解剖结构识别中的应用，并探索针对肿瘤微环境的免疫治疗新靶点。
-- 详情：[/202604/23/README](/202604/23/README)
+今日聚焦炎症性肠病（IBD）前沿，深度解读了从粪便生物标志物到转录组治疗靶点的15项最新研究。
+核心突破在于发现粪便角蛋白7可有效指示儿科IBD活动期，并锁定了溃疡性结肠炎的多个新型治疗靶点。
+建议关注非侵入性检测技术在肠道疾病监测中的应用，以及免疫微环境对慢性炎症的影响。
+- 详情：[/202604/26/README](/202604/26/README)
 
 ### 精读区论文标签
-1. [A Two-Stage Deep Learning Framework for Segmentation of Ten Gastrointestinal Organs from Coronal MR Enterography](/202604/23/2604.17118v1-a-two-stage-deep-learning-framework-for-segmentation-of-ten-gastrointestinal-organs-from-coronal-mr-enterography)  
+1. [Keratin 7 protein presence in stool is indicative of active pediatric-onset inflammatory bowel disease](/202604/26/biorxiv-10-64898-2026-04-21-719629-v1-keratin-7-protein-presence-in-stool-is-indicative-of-active-pediatric-onset-inflammatory-bowel-disease)  
+   标签：评分：9.0/10、query:ros-mp
+   evidence：粪便中的角蛋白7蛋白作为儿科炎症性肠病的生物标志物
+2. [Large-scale transcriptomic meta-analysis identifies novel therapeutic targets for ulcerative colitis](/202604/26/biorxiv-10-64898-2026-04-22-719865-v1-large-scale-transcriptomic-meta-analysis-identifies-novel-therapeutic-targets-for-ulcerative-colitis)  
+   标签：评分：9.0/10、query:ros-mp
+   evidence：转录组元分析确定了溃疡性结肠炎的新治疗靶点和炎症特征
+3. [A Two-Stage Deep Learning Framework for Segmentation of Ten Gastrointestinal Organs from Coronal MR Enterography](/202604/26/2604.17118v1-a-two-stage-deep-learning-framework-for-segmentation-of-ten-gastrointestinal-organs-from-coronal-mr-enterography)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：用于IBD患者胃肠器官分割的深度学习框架。
-2. [TIM3+ Tumor Associated M2 Macrophages Impair Antitumor T Cell Immunity and Promote Gastric Cancer Progression and Peritoneal Metastasis](/202604/23/biorxiv-10-64898-2026-04-15-716939-v1-tim3-tumor-associated-m2-macrophages-impair-antitumor-t-cell-immunity-and-promote-gastric-cancer-progression-and-peritoneal-metastasis)  
+   evidence：用于分割胃肠器官以诊断炎症性肠病的深度学习框架
+4. [Epithelial Glutamate Retention Protects against Colitis](/202604/26/biorxiv-10-64898-2026-04-18-718419-v1-epithelial-glutamate-retention-protects-against-colitis)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：直接研究TIM3+ M2型巨噬细胞极化及其在肿瘤进展和免疫中的作用。
+   evidence：炎症性肠病(IBD)与胱氨酸/谷氨酸逆向转运蛋白xCT
+5. [Lysine specific demethylase 1 (LSD1) regulates host alpha-ketoglutarate levels to modulate lipid peroxidation during Mycobacterium tuberculosis infection](/202604/26/biorxiv-10-64898-2026-04-20-719577-v1-lysine-specific-demethylase-1-lsd1-regulates-host-alpha-ketoglutarate-levels-to-modulate-lipid-peroxidation-during-mycobacterium-tuberculosis-infection)  
+   标签：评分：8.0/10、query:ros-mp
+   evidence：LSD1调节巨噬细胞代谢和氧化应激以调节发病机制
+6. [It's Not Rewarding for Mitochondria: Dopamine-Induced Mitochondrial Dysfunction Activates cGAS-STING to Drive IL-6 Secretion in Macrophages](/202604/26/biorxiv-10-64898-2026-04-23-719926-v1-its-not-rewarding-for-mitochondria-dopamine-induced-mitochondrial-dysfunction-activates-cgas-sting-to-drive-il-6-secretion-in-macrophages)  
+   标签：评分：8.0/10、query:ros-mp
+   evidence：多巴胺诱导的线粒体应激驱动巨噬细胞炎症细胞因子分泌
 
 ### 速读区论文标签
-1. [LRRK2 mutations block NCOA4 trafficking upon iron overload leading to ferroptotic death](/202604/23/biorxiv-10-1101-2025-08-25-672135-v2-lrrk2-mutations-block-ncoa4-trafficking-upon-iron-overload-leading-to-ferroptotic-death)  
+1. [Lupus Immune Complexes Drive Distinct Pro-Inflammatory Monocyte and Macrophage Populations Independent of Type I Interferon](/202604/26/biorxiv-10-64898-2026-01-21-700902-v2-lupus-immune-complexes-drive-distinct-pro-inflammatory-monocyte-and-macrophage-populations-independent-of-type-i-interferon)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：RAW巨噬细胞系中的铁稳态和铁死亡
-2. [A mycobacterial ligand coordinates multi-receptor signaling to reprogram macrophage lipid metabolism](/202604/23/biorxiv-10-64898-2026-02-18-706227-v4-a-mycobacterial-ligand-coordinates-multi-receptor-signaling-to-reprogram-macrophage-lipid-metabolism)  
+   evidence：促炎巨噬细胞群体及其转录组变化
+2. [NETWORK-BASED FUNCTIONAL FRAGILITY REVEALS SYSTEM-LEVEL REORGANIZATION OF THE GUT MICROBIOME IN INFLAMMATORY BOWEL DISEASE](/202604/26/biorxiv-10-64898-2026-04-16-719113-v1-network-based-functional-fragility-reveals-system-level-reorganization-of-the-gut-microbiome-in-inflammatory-bowel-disease)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：描述了通过受体信号传导重编程巨噬细胞脂质代谢和泡沫细胞形成。
-3. [Discovery of Selective Nrf2 Activators from Natural Products: AComputational Screening Approach to Minimize Off-Target Effects on PXR and CYP2D6](/202604/23/biorxiv-10-64898-2026-04-12-718057-v1-discovery-of-selective-nrf2-activators-from-natural-products-acomputational-screening-approach-to-minimize-off-target-effects-on-pxr-and-cyp2d6)  
+   evidence：炎症性肠病中肠道微生物组的系统级重组
+3. [Interaction between TREM2-Macrophages and Cutibacterium acnes Drives Altered Lipid Metabolism in Chronic Apical Periodontitis](/202604/26/biorxiv-10-64898-2026-04-19-719526-v1-interaction-between-trem2-macrophages-and-cutibacterium-acnes-drives-altered-lipid-metabolism-in-chronic-apical-periodontitis)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：Nrf2是细胞氧化应激抗氧化反应的核心调节因子。
-4. [An Endocytic Checkpoint Controls Macrophage PD-1 Function and Immunotherapy Fate](/202604/23/biorxiv-10-64898-2026-04-14-718292-v1-an-endocytic-checkpoint-controls-macrophage-pd-1-function-and-immunotherapy-fate)  
+   evidence：细菌在TREM2巨噬细胞中的胞内持久存在驱动炎症反应
+4. [Dietary emulsifiers and host inflammation synergistically drive genomic evolution of Crohn disease-associated E. coli toward enhanced pathogenicity](/202604/26/biorxiv-10-64898-2026-04-20-719593-v1-dietary-emulsifiers-and-host-inflammation-synergistically-drive-genomic-evolution-of-crohn-disease-associated-e-coli-toward-enhanced-pathogenicity)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：将巨噬细胞重编程为特定的功能状态
-5. [Integrated bioinformatics and single-cell analysis identifies vascular aging-related hub genes and immune drivers in atherosclerosis.](/202604/23/biorxiv-10-64898-2026-04-14-718580-v1-integrated-bioinformatics-and-single-cell-analysis-identifies-vascular-aging-related-hub-genes-and-immune-drivers-in-atherosclerosis)  
+   evidence：克罗恩病发病机制中的饮食因素和宿主炎症
+5. [Epithelial NCAPD3 expression protects against stress-induced intestinal injury in mice](/202604/26/biorxiv-10-64898-2026-04-21-719792-v1-epithelial-ncapd3-expression-protects-against-stress-induced-intestinal-injury-in-mice)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：对与ROS产生相关的免疫驱动因素和核心基因（如CYBA和NCF2）进行单细胞分析。
-6. [Crosstalk Between Calcium Dynamics and ROS Levels in U87 Glioblastoma Cells Exposed to Extremely Low Frequency Pulsed Electromagnetic Fields](/202604/23/biorxiv-10-64898-2026-04-15-718611-v1-crosstalk-between-calcium-dynamics-and-ros-levels-in-u87-glioblastoma-cells-exposed-to-extremely-low-frequency-pulsed-electromagnetic-fields)  
+   evidence：溃疡性结肠炎和应激诱导的肠损伤中的NCAPD3表达
+6. [Transcriptional regulators predicted to drive macrophage dysregulation during impaired wound healing in diabetic mice](/202604/26/biorxiv-10-64898-2026-04-21-719960-v1-transcriptional-regulators-predicted-to-drive-macrophage-dysregulation-during-impaired-wound-healing-in-diabetic-mice)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：监测细胞中的活性氧 (ROS) 水平。
-7. [Splenic MARCO+ marginal zone macrophages regulate rapid production of MCP-1 and KC but are dispensable for alloantibody generation in response to stored RBCs in a murine model.](/202604/23/biorxiv-10-1101-2025-02-11-637644-v2-splenic-marco-marginal-zone-macrophages-regulate-rapid-production-of-mcp-1-and-kc-but-are-dispensable-for-alloantibody-generation-in-response-to-stored-rbcs-in-a-murine-model)  
+   evidence：驱动巨噬细胞状态转换和极化的转录调节因子
+7. [Targeting redox imbalance through Nrf2 activation in the inflamed coeliac duodenum.](/202604/26/biorxiv-10-64898-2026-04-22-720101-v1-targeting-redox-imbalance-through-nrf2-activation-in-the-inflamed-coeliac-duodenum)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：针对慢性胃肠道炎症疾病中的氧化还原失衡和Nrf2
+8. [Cardiac oxidative stress monitoring enabled by hierarchical mechanical adaptation](/202604/26/biorxiv-10-64898-2026-04-15-718718-v1-cardiac-oxidative-stress-monitoring-enabled-by-hierarchical-mechanical-adaptation)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：边缘区巨噬细胞与炎性细胞因子产生
-8. [Gut-derived metabolic reprogramming drives immune aging and tissue degeneration](/202604/23/biorxiv-10-64898-2026-04-14-718497-v1-gut-derived-metabolic-reprogramming-drives-immune-aging-and-tissue-degeneration)  
+   evidence：监测心脏损伤中的活性氧 (ROS) 爆发
+9. [Myeloid Cell States in Influenza-Associated Pulmonary Aspergillosis Are Shaped by Iron Overload and Metabolic Reprogramming](/202604/26/biorxiv-10-64898-2026-04-22-720189-v1-myeloid-cell-states-in-influenza-associated-pulmonary-aspergillosis-are-shaped-by-iron-overload-and-metabolic-reprogramming)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：肠道代谢重编程与慢性炎症轴。
-9. [Inducible nitric oxide synthase (iNOS) regulates skin eschar lesions, bacterial persistence, and inflammatory resolution in mouse models of scrub typhus](/202604/23/biorxiv-10-64898-2026-04-15-718641-v1-inducible-nitric-oxide-synthase-inos-regulates-skin-eschar-lesions-bacterial-persistence-and-inflammatory-resolution-in-mouse-models-of-scrub-typhus)  
-   标签：评分：6.0/10、query:ros-mp
-   evidence：iNOS作为骨髓源性巨噬细胞中的抗菌效应因子
+   evidence：肺部炎症中的髓系细胞状态和代谢重编程
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,27 @@
+---
+title: Epithelial NCAPD3 expression protects against stress-induced intestinal injury in mice
+title_zh: 上皮 NCAPD3 表达保护小鼠免受应激诱导的肠道损伤
+authors: "Johnston, I., Johnson, E. E., Khan, A., Longworth, M. S., McDonald, C."
+date: 2026-04-21
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.21.719792v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 溃疡性结肠炎和应激诱导的肠损伤中的NCAPD3表达
+tldr: 本研究探讨了染色体缩合蛋白亚基NCAPD3在肠道健康中的作用。针对溃疡性结肠炎患者肠上皮中NCAPD3表达下降的现象，研究者构建了肠上皮特异性诱导型敲降小鼠模型。实验发现，虽然NCAPD3缺失在短期内不引发自发性结肠炎，但在DSS诱导或沙门氏菌感染压力下，敲降小鼠表现出更严重的肠道损伤、炎症反应及屏障功能障碍。该研究证实了NCAPD3在维持肠上皮屏障韧性和抗微生物防御中的关键保护作用，为IBD发病机制提供了新视角。
+source: biorxiv
+selection_source: fresh_fetch
+motivation: 鉴于NCAPD3在溃疡性结肠炎患者中表达降低且全局敲除会导致胚胎致死，研究者旨在探究肠上皮NCAPD3缺失是否直接驱动肠道屏障功能障碍。
+method: 利用多西环素诱导的shRNA技术构建了肠上皮特异性NCAPD3敲降小鼠模型，并对其在基础状态及化学（DSS）或微生物（沙门氏菌）应激下的表现进行评估。
+result: NCAPD3敲降小鼠在受到应激挑战时，表现出更严重的体重减轻、组织病理损伤、细胞因子异常及肠道通透性显著增加。
+conclusion: NCAPD3是维持肠上皮屏障完整性和粘膜宿主防御的关键调节因子，其表达对于抵御环境应激诱导的肠道损伤至关重要。
+---
+
+## 摘要
+肠道上皮细胞在黏膜屏障完整性和宿主-微生物相互作用中发挥核心作用。遗传学研究表明，上皮功能障碍是炎症性肠病（IBD）发病机制的关键因素。非 SMC 缩合蛋白 II 复合物亚基 D3（NCAPD3）对于染色质的组织和稳定性至关重要。体外研究表明，NCAPD3 还能促进抗微生物防御和自噬反应。溃疡性结肠炎患者肠道上皮细胞中的 NCAPD3 表达降低；然而，目前尚不清楚 NCAPD3 表达缺失是导致肠道屏障功能障碍的原因，还是疾病相关炎症的结果。为了在体内研究这种关系，需要采用组织特异性方法，因为 NCAPD3 的全局性组成型敲除会导致胚胎致死。因此，研究人员培育了一种转基因小鼠系（NCAPD3KD 小鼠），其在表达绒毛蛋白（villin）的细胞中受多西环素诱导表达针对 NCAPD3 的短发夹 RNA，从而能够研究肠道上皮中 NCAPD3 的功能。使用 9-叔丁基多西环素处理 NCAPD3KD 小鼠导致 EpCAM 肠道细胞中 NCAPD3 蛋白减少约 75%。短期上皮 NCAPD3 敲低不会诱发自发性结肠炎，但与血清淀粉样蛋白 A 增加以及肠道通透性增加的趋势相关。在葡聚糖硫酸钠（DSS）或鼠伤寒沙门氏菌 ΔAroA 攻击下，NCAPD3KD 小鼠表现出体重减轻加剧、疾病活动度更高、组织病理学损伤增加、结肠细胞因子和趋化因子异常以及肠道通透性显著增加。这些结果表明，在化学或微生物应激下，肠道上皮中的 NCAPD3 表达对于维持最佳屏障和抗微生物防御是必需的。这些发现支持了先前的体外观察结果，并证实了 NCAPD3 是肠道上皮屏障功能和黏膜宿主防御的调节因子。
+
+作者总结：NCAPD3 是一种多功能蛋白，在染色质组织、基因组稳定性、线粒体功能和抗微生物防御中具有明确作用。NCAPD3 失调与炎症性肠病（IBD）和头小畸形等人类疾病有关；然而，由于其在细胞分裂中的重要作用，此前一直缺乏关于 NCAPD3 缺失是否在体内驱动这些病理过程的研究。本研究利用一种在肠道上皮细胞中选择性降低 NCAPD3 表达的新型转基因小鼠模型，证实了 NCAPD3 是哺乳动物肠道的上皮调节因子，能在应激期间增强上皮屏障的韧性和抗微生物防御。尽管 NCAPD3 在短期基础稳态中并非必不可少，但在上皮损伤和肠道感染期间，其功能变得至关重要。因此，NCAPD3 表达降低可能通过削弱屏障完整性、放大炎症级联反应和损害抗微生物防御，从而降低炎症性疾病的发病阈值。这些发现将 NCAPD3 定位为 IBD 易感性的潜在调节因子，并强调了染色质组织作为肠道上皮调节中一个重要且此前被低估的层面。
+
+## Abstract
+Intestinal epithelial cells are central players in mucosal barrier integrity and host-microbe interactions. Genetic studies have revealed that epithelial dysfunction is a key contributor to the pathogenesis of inflammatory bowel disease. Non-SMC condensin II complex subunit D3 (NCAPD3) is essential for chromatin organization and stability. NCAPD3 also promotes antimicrobial defense and autophagy responses in vitro. NCAPD3 expression is decreased in intestinal epithelial cells from patients with ulcerative colitis; however, it is not known whether loss of NCAPD3 expression drives intestinal barrier dysfunction or is a result of disease-associated inflammation. To investigate this relationship in vivo, a tissue-specific approach was required, as global constitutive knockout of NCAPD3 is embryonic lethal. Therefore, a transgenic mouse line with doxycycline-inducible expression of a short hairpin RNA targeting NCAPD3 restricted to villin-expressing cells was generated (NCAPD3KD mice) to enable the study of NCAPD3 function in the intestinal epithelium. Treatment of NCAPD3KD mice with 9-tert-butyl doxycycline resulted in [~]75% reduction of NCAPD3 protein in EpCAM intestinal cells. Short-term epithelial NCAPD3 knockdown did not induce spontaneous colitis but was associated with increased serum amyloid A and a trend towards increased intestinal permeability. Upon dextran sodium sulfate or Salmonella enterica serovar Typhimurium {Delta}AroA challenge, NCAPD3KD mice exhibited exacerbated weight loss, higher disease activity, increased histopathological damage, abnormal colonic cytokines and chemokines, and significantly increased intestinal permeability. These results indicate that NCAPD3 expression in the intestinal epithelium is required for optimal barrier maintenance and antimicrobial defense under chemical or microbial stress. These findings support prior in vitro observations and solidify NCAPD3 as a regulator of intestinal epithelial barrier function and mucosal host defense.
+
+Author SummaryNCAPD3 is a multifunctional protein with established roles in chromatin organization, genome stability, mitochondrial function, and antimicrobial defense. Dysregulated NCAPD3 is implicated in human diseases, such as inflammatory bowel disease (IBD) and microcephaly; however, due to its essential role in cellular division, determination of whether NCAPD3 loss drives these pathologies in vivo has been lacking. Using a new transgenic mouse model that selectively reduces NCAPD3 expression in intestinal epithelial cells, our study establishes NCAPD3 as an epithelial regulator of the mammalian intestine that enhances epithelial barrier resilience and antimicrobial defense during stress. Although dispensable for short-term basal homeostasis, NCAPD3 function becomes critical during epithelial injury and enteric infection. Reduced NCAPD3 expression may therefore lower the threshold for inflammatory disease by weakening barrier integrity, amplifying inflammatory cascades, and impairing antimicrobial defenses. These findings position NCAPD3 as a potential modulator of IBD susceptibility and highlight chromatin organization as an important, previously underappreciated layer of intestinal epithelial regulation.
