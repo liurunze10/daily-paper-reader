@@ -1,0 +1,2439 @@
+Title: CD47 Blockade Reprograms the Monocyte-Macrophage Axis to Promote Inflammation Resolution in Atherosclerosis
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.24.720546v1.full.pdf
+
+Number of Pages: 54
+
+Markdown Content:
+1
+
+Title 1
+
+CD47 Blockade Reprograms the Monocyte -Macrophage Axis to Promote Inflammation 2
+
+Resolution in Atherosclerosis 3
+
+Running Title 4
+
+Reprogramming Plaque Immunity via CD47 5
+
+Authors 6
+
+Murat Kirtay 1,2 , Mikael Ispirjan 1,2 , Benjamin Bonnard 1,2 , Anna -Lena Bruggner 1, Lena 7
+
+Boe hringer 1, Moritz Miessler 1,2 , Norbert Frey 1,2 , Nicholas J. Leeper 3,4 , Kai -Uwe Jarr 1,2 8
+
+Affiliations 9
+
+> 1
+
+Department  of Cardiology, Angiology, and Pneumology, Heidelberg University Hospital .10 
+
+> 2
+
+German Center for Cardiovascular Research, Berlin, Germany (DZHK partner site 11 
+
+Heidelberg/Mannheim).  3Department of Surgery, Division of Vascular Surgery, Stanford 12 
+
+University School of Medicine, Stanford, CA, USA . 4Department of  Medicine , Division of 13 
+
+Cardiov ascular  Medicine , Stanford University School of Medicine, Stanford, CA, USA .14 
+
+Corresponding Author 15 
+
+Dr.  Ka i-Uwe Jarr , Department of Cardiology, Angiology, and Pneumology, Heidelberg 16 
+
+University Hospital,  Im Neuenheimer Fel d 410, 69120 Heidelberg, Germany 17 
+
+E-mail:  kai -uwe.jarr@med.uni -heidelberg.de ; Phone:  +49 6221 56 32247 18 
+
+Content  Type:  Original R esearch  Article. 19 
+
+Keywords:  Atherosclerosis  – CD47  – Immunotherapy  – Efferocytosis .20 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+2
+
+Abstract 1
+
+Atherosclerosis is a chronic inflammatory disease and  a leading cause of  cardiovascular 2
+
+mortality  worldwide. Disease progression is closely linked to defective efferocytosis,  the 3
+
+impaired clearance  of apoptotic cells , which drives necrotic core expansion  and 4
+
+perpetuates arterial  inflammation.  Targeting the CD47 -SIRPα  innate immune checkpoint ,5
+
+a dominant “don’t -eat -me” signal, limits atherosclerosis in preclinical models and 6
+
+retrospective human  studies.  However, how  pro -efferocytic intervention  reshape s the 7
+
+immune landscape of  established  atherosclerotic lesions  remains  incompletely 8
+
+understood. 9
+
+Here, using single -cell transcriptomics, monocyte fate mapping, and functional analyses 10 
+
+across complementary preventive and interventive murine  atherosclerosis model s, we 11 
+
+demonstrate that  CD47  blockade fundamentally  reprograms  the myeloid landscape of 12 
+
+established lesions. Anti -CD47  therapy  selectively  suppresses inflammatory Ly6C hi 13 
+
+monocyte recruitment and reduces  local  macrophage proliferation without  altering  overall 14 
+
+plaque macrophage burden , indicating a qualitative rather th an  quantitative remodeling 15 
+
+of the infiltrate . Concurrently , therapy enriches  macrophage  subsets bearing pro -16 
+
+efferocytic  and macrophage survival -associated transcriptional programs, restoring 17 
+
+defective  apoptotic cell clearance in situ.  Cross -species integration with  an independent 18 
+
+human coronary artery single -cell dataset identifies a conserved T REM 2hi  macrophage 19 
+
+population that  natively harbors  the efferocytosis machinery reactivated by therapy in 20 
+
+mice. 21 
+
+Together, these findings  demonstrate  that innate immune checkpoint inhibition  by CD47 22 
+
+blo ckade  drives  a coordinated reprogramming of monocyte –macrophage dynamics ,23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+3
+
+simultaneously suppress ing  inflammatory influx and enrich ing  efferocytic capacity . This 1
+
+dual mechanism advances our understanding of how  pro -efferocytic therapies resolve 2
+
+vascular  inflammation in atherosclerosis. 3
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint 4
+
+Introduction 1
+
+Atherosclerosis is a lipoprotein -driven chronic inflammatory disease. While lipid -2
+
+lowering  therapies , such as statins  and  PCSK9 inhibitors 1, ha ve  improved clinical 3
+
+outcomes, residual cardiovascular  risk  remains, largely driven  by  unresolved arterial 4
+
+inflammation 2,3 . Although  atherosclerotic plaques harbor a  highly  complex immune 5
+
+microenvironment  involving both adaptive (e.g.,  T and B  cells ) and innate  immune 6
+
+populations 4-6, plaque -associated  macrophages  occupy a central position in  driving 7
+
+disease progression 7. Originating  primarily from  functionally distinct  circulating monocyte 8
+
+subsets  (such as  pro -inflammatory Ly6C hi  and patrolling Ly6C lo  monocytes )8-10 , these 9
+
+cells govern plaque composition.  Beyond  aberrant lipid uptake and processing, plaque 10 
+
+macrophages exhibit impaired clearance of apoptotic cells, a process termed 11 
+
+efferocytosis 11 -15 . Defective efferocytosis drives necrotic core  expansion,  destabilizes 12 
+
+plaques,  and  perpetuates local  inflammation 11,16,17 . Therefore , restoring innate immune 13 
+
+homeostasis and macrophage function  represent s a prime  therapeutic  target. 14 
+
+A key driver of this impaired clearance is the  upregulation of Cluster of 15 
+
+Differentiation 47 (CD47), a “don’t -eat -me” signal  that interacts with  Signal -Regulatory 16 
+
+Protein alpha (SIRPα) on myeloid cells  to inhibit phagocytosis 18 -20 . Targeting  this innate 17 
+
+immune checkpoint has emerged as a promising strategy: anti -CD47 antibodies 18 
+
+reactivate efferocytosis , reduce lesion burden , and  have been associated  with reduced 19 
+
+vascular inflammation in both  preclinical  and retrospective human stud ies 20 -25 . Notably, 20 
+
+while landmark clinical trials like  CANTOS  (targeting IL -1β via canakinumab ) validated 21 
+
+the inflammatory hypothesis of atherosclerosis, they also highlighted the infectious  risks 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+5
+
+of broad immunosuppression 26 . This underscores the urgent need for therapies that do 1
+
+not merely suppress inflammation but actively induce resolution and tissue repair. 2
+
+While  the CD47 -SIRPα axis represents the only pro -efferocytic strategy  to have 3
+
+transitioned to clinical testing  in  atherosclerotic  cardiovascular  disease 27 , a critical 4
+
+knowledge gap remains . Despite evidence that CD47 blockade enhances efferocytosis, 5
+
+it is unknown whether this therapy  solely augment s immediate phagocytic activity or 6
+
+whether  it fundamentally reprogram s the  underlying  inflammatory monocyte –7
+
+macrophage axis . The precise mechanisms by which this checkpoint blockade alters the 8
+
+local  immune landscape remain undefined. 9
+
+Here, we combine single -cell transcriptomics with functional analyses in murine 10 
+
+atherosclerosis and cross -species validation in human coronary plaques to define how 11 
+
+pro -efferocytic therapy remodels the innate immune compartment. We demonstrate that 12 
+
+CD47 blockade reshapes the immune landscape toward a pro -resolution state by 13 
+
+modulating the monocyte -macrophage  axis , reactivating a conserved efferocytosis -14 
+
+competent macrophage program, and altering inflammatory recruitment and local 15 
+
+proliferation.  Furthermore , we identify a homologous macrophage population in human 16 
+
+plaques that  share s this machinery, supporting the translational relevance of macrophage 17 
+
+reprogramming as a therapeutic mechanism of anti -CD47 therapy. Together, these 18 
+
+findings  advance our mechanistic understanding of pro -efferocytic therapy and  provide  a19 
+
+translational  framework  to  inform  the clinical  development  of  pro -efferocytic treatments. 20 
+
+21 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+6
+
+Methods 1
+
+Data Availability 2
+
+Extensive methods , including statistical analysis and  the  Major Resources Table , are 3
+
+included in the Supplemental Material. All raw data and analytical methods are available 4
+
+from the corresponding author  upon  reasonable  request. Sequencing data have been 5
+
+deposited at the  public  Gene Expression Omnibus under accession number  GSE319762 .6
+
+Mouse Studies 7
+
+All mice were housed in a pathogen -free animal facility and maintained on a 12 -h8
+
+light:dark cycle at 22 °C with free access to food and water. Mice were acclimatized for 9
+
+1–2 weeks before experiments. Experiments were performed with  6- to  8-week -old male 10 
+
+and female  Ldlr -/- mice (B6.129S7 -Ldl rtm1Her /J,  strain #:002207),  unless  indicated 11 
+
+otherwise.  For  the preventive and interventive therapy model, both male and female mice 12 
+
+were included in functional, histological, and flow cytomet ric analyses. Single -cell RNA -13 
+
+sequencing  was performed exclusively in male mice to minimize transcriptional variance 14 
+
+attributable to sex as a confounding variable in this single -library -per -group design . A total 15 
+
+of  90  mice were used for the present study.  The animals were assigned to experimental 16 
+
+groups by complete randomization  and all analyses were blinded  whenever possible 17 
+
+through numerical coding of  sample identification . For earlier power analysis, the 18 
+
+following parameters were used based on previous experience with the therapeutic 19 
+
+agents  and similar atherosclerotic models 20,21,28,29 : α of 0.05; power of 0.80 . For the 20 
+
+preventive therapy model,  mice  were fed a  high -fat, high -sucrose  Western  Diet 30 -33  (WD, 21 
+
+21  % butter fat and approx. 0.21  % cholesterol,  34  % sucrose,  correspond ing  to 22 
+
+TD.88137,  ssniff) and injected  simultaneously  with  either the inhibitory anti -CD47 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+7
+
+(BioXCell, clone MIAP410 20,29 ) or the respective IgG isotype control (BioXCell, clone 1
+
+MOPC -21)  intraperitoneally every other day  (200 μg per dose) for 12 weeks. For the 2
+
+interventive therapy model, the mice were fed the same  WD  for 14 weeks and the therapy 3
+
+was applied for the last 6 weeks of  WD  feeding. All animal studies were approved by the 4
+
+local Animal Care and Use Committees (Regierungspräsidium Karlsruhe, AZ: G -125/22) 5
+
+and conformed to the guidelines from Directive 2010/63/EU of the European Parliament 6
+
+on the protection of animals used for scientific purposes. 7
+
+Aortic  Single -cell  Preparation and  CD45 + Leukocyte  Isolation 8
+
+Male  mice (n=4 IgG ; n=4  anti -CD47 ), after 12 weeks of  WD  feeding (approximately 18 -9
+
+20 weeks of age),  were used to  isolate  viable CD45 + aortic leukocytes.  Male mice were 10 
+
+selected for scRNA -seq to reduce sex -related transcriptional heterogeneity within the 11 
+
+pooled single -library design; the functional and histological experiments include both 12 
+
+sexes as described.  Five  min utes  before  euthanasia  (via anesthesia overdose)  and aorta 13 
+
+isolation , the mice were injected i.v. with 2 μg CD45 -BV510 antibody to stain circulating 14 
+
+leukocytes.  Intracardiac perfusion was performed  with ice -cold PBS to  flush out  the blood .15 
+
+Aortas were isolated  by  cleaning perivascular adipose tissu e and stored in PBS until 16 
+
+digestion.  Aorta s from  the  abovementioned mice  were  individually  digested  for  40  min at 17 
+
+37  °C in  RPMI medium  containing 450  U/ml Collagenase I (Sigma -Aldrich , C0130 ), 125 18 
+
+U/ml Collagenase XI (Sigma -Aldrich , C7657 ),  and  60  U/ml Hyaluronidase (Sigma -Aldrich ,19 
+
+H3506 ), as described previously 4. The digested tissue was meshed through a 70 -μm cell 20 
+
+strainer to obtain a single -cell suspension. The cells were centrifuged at 500 x  g for 5 min 21 
+
+at 4°C  and  were resuspended in FACS Buffer  (2  % FCS, 2 mM EDTA in PBS ) containing 22 
+
+TruStain FcX anti -mouse CD16/CD32 (Biolegend , 101320, 1:100 ) to block non -specific 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+8
+
+binding of immunoglobulin to Fc receptors  and incubated for 10 min at 4  °C.  The cells 1
+
+were subsequently stained with SYTOX Green viability dye (L/D) , T ER 119 -BV510 , and 2
+
+CD45 -PerCP Cy5.5  for 30 min at 4  °C.  Due to the low yield of  viable  CD45 + leukocytes 3
+
+recoverable from individual aortas, aortas from each group  were pooled (n = 4 per group, 4
+
+yielding n = 1 sequencing library per group)  before  sorting of  viable  SYTOX Green -5
+
+TER 119 - CD45 + cells  using a 100 -μm nozzle  by excluding CD45 -BV510 + circulating 6
+
+leukocytes . This pooling strategy, which is an established approach in the field for low -7
+
+input aortic immune profiling 4,34,35 , precludes formal statistical replication at the single -cell 8
+
+sequencing level and was therefore complemented by independent  biological replicates 9
+
+in all functional, flow cytometric, and histological analyses.  Sorted cell s were immediately 10 
+
+processed for single -cell RNA -sequencing. 11 
+
+Single -cell RNA -sequencing 12 
+
+Samples were resuspended to a concentration of 600 –1,000 cells/μl and loaded into the 13 
+
+10x Chromium system to generate single -cell barcoded droplets using  the  Single Cell 3’ 14 
+
+Solution v3 Reagent Kit  (10x  Genomics)  following  the  manufacturer’s specifications. 15 
+
+Generated libraries were sequenced  using a  NextSeq 2000  Sequencing System in 16 
+
+paired -end  mode  to reach approximately  200 ,000  reads per  single  cell. 17 
+
+Mouse  Single -cell RNA -sequencing Data Analysis 18 
+
+Mouse  single -cell RNA -sequencing data were preprocessed using 10x Cell Ranger cloud 19 
+
+software (Cell Ranger v9.0.1), which included data demultiplexing, barcode processing, 20 
+
+alignment , and single -cell 3′ gene counting. The reads mapped to  reference mouse 21 
+
+genome (UCSC mm10)  were  used to generate a gene -barcode matrix for downstream 22 
+
+analysis.  Cells  with  < 200 detected genes, <  500 read counts , or  a percentage of 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+9
+
+mitochondrial genes >  5 % were filtered out.  Cells not explicitly expressing  Ptprc 1
+
+(encoding for CD45) were excluded from the analysis. The resulting data w ere  log -2
+
+normalized, scaled , and regressed on the number of unique molecular identifiers per cell 3
+
+and the percentage of mitochondrial gene content. The datasets from anti -CD47 and  IgG -4
+
+treated  animals, together with the  Ldlr -/- datasets from Cochain et al. (GSE97310) , were 5
+
+integrated  for batch correction using Harmony 36 . Data visualization, detection of marker 6
+
+genes, gene expression analyses, trajectory mapping of monocytes/macrophages using 7
+
+Monocle 3 , and CellChat analyses were conducted using BioTuring BBrowser Pro 37 .8
+
+Differentially  express ed  genes with  an  FDR  < 0. 1 based on the Wilcoxon rank -sum test 9
+
+with Benjamin -Hochberg correction  were considered statistically significant. 10 
+
+Human  Single -cell RNA -sequencing Data Analysis 11 
+
+Human  single -cell  RNA -seq uencing  data of human atherosclerotic coronary arteries  were 12 
+
+obtained from  the  Gene Expression Omnibus  (GSE131778 )38  and  analyzed  using 13 
+
+BioTuring BBrowser Pro 37 . Cells  with  < 200 detected genes, <  500 read counts , or  a14 
+
+percentage of mitochondrial genes >  5 % were filtered out.  A total of 11 ,756 cells were 15 
+
+included in the analysis.  Data were log -normalized  before dimensional reduction . Cell 16 
+
+clustering  of  the  entire cell set  using  the  Louv ain method  was per formed  at a 0.3 17 
+
+resolution . To analyze the macrophages , myeloid cells were  annotated based on  marker 18 
+
+gene expressio n, subset ted,  and  reclustered using a resolution of 0. 538 .19 
+
+Tissue Preparation,  Blood  Analysis,  Immunofluorescence , and  Histological 20 
+
+Analyses 21 
+
+Tissue preparation and histological analyses were performed as previously 22 
+
+described 21,28 . After euthanasia,  blood sample s were  rapidly  collect ed . M ice were  then 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+10 
+
+perfused with  ice -cold  PBS via cardiac puncture , and spleen, aorta -draining lymph nodes, 1
+
+bone marrow , and aorta were isolated. Serum was  obtained  by centrifuging the blood in 2
+
+clotting activator -containing micro -sample  tubes at  2,000  x g  for 10 min  at  4°C . To confirm 3
+
+the induction of the pro -atherogenic metabolic phenotype, circulating lipids  (total 4
+
+cholesterol, LDL, and HDL)  and  non -fasting  glucose were assessed  by the  Heidelberg 5
+
+University Hospital Diagnostic Laboratory  using an automated clinical chemistry  analyzer 6
+
+(Roche Diagnostics) . For analysis of aortic roots, hearts were fixed in 4 %7
+
+paraformaldehyde (PFA)  and subsequently  cryoprotected in  30  % sucrose  solution before 8
+
+being  embedded in optimal cutting temperature  (OCT)  compound. Aortic root sections  at 9
+
+8 μm  thick ness  were prepared using a cryostat (Leica CM 1950) . To accurately capture 10 
+
+the entire  plaque volume,  four  step -sections  per mouse  were  collected  at 80 -μm  intervals ,11 
+
+beginning from the anatomical base of the aortic root (identified by  the  appearance of the 12 
+
+aortic valve leaflets ). Plaque  lipid  area (in mm 2) was quantified by Oil  Red O staining 13 
+
+(Sigma -Aldrich, O1516).  Because the external elastic lamina (EEL) is not readily visible 14 
+
+with ORO alone, sections were  counter stained with Hematoxylin.  Total vessel area was 15 
+
+calculated by encircling the  EEL  on these sections, which then served as the anatomical 16 
+
+reference to determine the percentage of plaque burden . For immunofluorescence 17 
+
+staining of atherosclerotic lesions, cryosections were blocked using 5  % BSA in PBS. 18 
+
+Next, sections were incubated overnight at 4 °C with the following primary antibodies: 19 
+
+CD68 (Invitrogen, 14 -0681 -82, 1:200), cleaved caspase -3 (Cell Signaling Technology, 20 
+
+9661, 1:200) , and Ki67 (Abcam, ab16667 , 1: 50 ). After extensive washing, sections were 21 
+
+incubated with secondary antibodies from Thermo Fisher Scientific: Alexa Fluor -647 goat 22 
+
+anti -rat (A32733, 1:400) and Alexa Fluor -555 goat anti -rabbit (A48263, 1:400). 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+11 
+
+Counterstaining to visualize nuclei was performed by incubating with DAPI. Both 1
+
+histological sections and immunofluorescence staining sections were imaged  with a 20x 2
+
+objective  using a Zeiss Axioscan 7. Sections were analyzed using QuPath software 3
+
+(v.0.6.0) in a blinded fashion. 4
+
+Flow Cytometry 5
+
+Blood was filtered through a 30 -μm cell strainer, washed with FACS Buffer (2  % FCS, 2 6
+
+mM EDTA in PBS) , and erythrocytes were lysed two times with  ACK  Lys ing  Buffer ( Gibco, 7
+
+A1049201 ) for 5 min at RT. Spleens were mechanically disrupted on a 40 -μm cell strainer 8
+
+and subjected to erythrocyte lysis before staining. Femur s and tibias were cut open, and 9
+
+bone marrow was isolated by centrifuging the bones at 15 ,000 x  g for 30 sec. For flow 10 
+
+cytometry staining, all prepared cells from different tissues were incubated in TruStain 11 
+
+FcX anti -mouse CD16/CD32 (Biolegend , 101320, 1:100 ) for 10 min at 4  °C to block non -12 
+
+specific binding of immunoglobulin to Fc receptors. After blocking, cells were stained with 13 
+
+a fluorophore -conjugated antibody cocktail (Table S1) containing a fixable live/dead dye 14 
+
+(eBioscience ™ Fixable Viability Dye eFluor ™ 660, Thermo Scientific) for 30 min at 4  °C ,15 
+
+protected  from light. After  being  wash ed  with FACS Buffer, samples were  either analyzed 16 
+
+directly or  fixed in  IC Fixation Buffer  (eBios cience ™) for 20 min at 4  °C , protected from 17 
+
+light  to preserve fluorescence signal prior to acquisition . Data w ere  acquired with a BD 18 
+
+FACSCelesta ™ Cell Analyzer and processed in FlowJo v10 (TreeStar). 19 
+
+Differential Labelling and Tracking of Blood Monocytes 20 
+
+To assess monocyte recruitment specifically within the interventi ve  therapy model ,21 
+
+circulating Ly6C lo  monocytes were labeled by  i.v.  injecti on of  1 μm Fluoresbrite YG 22 
+
+microspheres (Polysciences, Inc, PA)  diluted 1:4 in sterile PBS , 3 days before sacrifice ,23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+12 
+
+as described 35,39 . To track the recruitment  of newly generated  Ly6C hi  monocytes  to the 1
+
+plaques, their proliferating bone marrow progenitors  were  pulse -labeled by an i.p. 2
+
+injection of 1 mg of EdU (5 -ethynyl -2’ -deoxyuridine, Thermo Scientific) 3 days before 3
+
+sacrifice to analyze recruitment to the plaques, as described 35,39 . The efficiency of labeling 4
+
+was verified 24 h after injection by flow cytometry analysis of blood monocytes. EdU 5
+
+labeling was determined using the Click -IT EdU Pacific Blue Flow Cytometry Assay Kit 6
+
+(Invitrogen, C10418). The EdU -labeled monocytes in aortic root sections were analyzed 7
+
+using the Click -iT ™ Plus EdU Cell Proliferation Kit for Imaging, Alexa Fluor ™ 647 dye 8
+
+(Invitrogen, C10640).  At  least 3 -4 sections per animal  were analyzed and  average  EdU +9
+
+and bead + cell  quantification per section  were reported  in the figures .10 
+
+RNA isolation and  quantitative Polymerase Chain Reaction ( qPCR )11 
+
+Aortic arches containing atherosclerotic plaques were homogenized in T RI zol Reagent 12 
+
+(Thermo Fisher Scientific) , and total RNA was isolated from homogenized aortas. Briefly, 13 
+
+200 μl chloroform was added per 1 ml T RI zol homogenate , and  the  upper aqueous phase 14 
+
+containing RNA was isolated after centrifuging the sample at 12 ,000 x  g for 15 min at 4 15 
+
+°C. RNA was precipitated in an equal volume of isopropanol containing GlycoBlue 16 
+
+(Invitrogen, AM9515). After  ethanol washes,  the  RNA pellet was resuspended in 17 
+
+DNase/ RNase -free  water . RNA concentration  and purity  were  quantified with NanoDrop 18 
+
+One (Thermo Fisher Scientific).  An equal amount of total  RNA  from each sample  was 19 
+
+reverse transcribed using iScript ™ cDNA Synthesis Kit (BioRad, 1708891) , and  qPCR of 20 
+
+the cDNA samples was performed using iQ ™ SYBR® Green Supermix (BioRad, 21 
+
+1708882) on a QuantStudio 5 (Applied Biosystems). Data were quantified  by  the 2 −ΔΔCt 22 
+
+method and normalized to  Gapdh  as an internal control.  The stability of  Gapdh  expression 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+13 
+
+across all experimental conditions was explicitly confirmed to ensure reliable 1
+
+normalization.  The qPCR primers used in the study  are  listed in Table S2. 2
+
+Statistical Analysis 3
+
+Statistical analyses were performed using GraphPad Prism 10 (GraphPad Inc.).  Data  and 4
+
+error bars  present  mean  ± SD  for parametric and median  ± IQR for non -parametric 5
+
+results . Normality of data was determined by performing a Shapiro –Wilk normality test (α 6
+
+= 0.05). Normally distributed data were analy zed using an unpaired Student’s  t-test (two -7
+
+tailed)  or  one -way analysis of variance  (ANOVA)  with Tukey’s multiple comparisons test 8
+
+or two -way ANOVA with  Geisser -Greenhouse correction . For s amples that had unequal 9
+
+variances (determined by F -test), an unpaired Welch’s t -test (two -tailed) was used. If the 10 
+
+data set did not pass the normality test (p -value  < 0.05), the statistical significance was 11 
+
+determined by Mann Whitney U test (two -tailed)  or Kruskal -Wallis test , followed by Dunn’s 12 
+
+multiple comparisons test for more than two groups . Exact p -values are indicated.  P13 
+
+values  for the diff erentially expressed genes  were adjusted  for multiple  testing using the 14 
+
+Benjamin -Hochberg  FDR.  All data behind the statistical analysis and all p values are 15 
+
+provided in Source Data. 16 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+14 
+
+Table S1 . FACS Antibodies .1
+
+Antigen  Fluorophore  Clone  Provider  Catalog Nr. 
+
+CD45  PerCP Cy5.5  30 -F11  BD  Bios ciences  561869 
+
+TER -119  BV510  TER -119  Biolegend  116237 
+
+CD45  BV510  30 -F11  Biolegend  103138 
+
+CD11b  Pacific Blue  M1/70  Biolegend  101224 
+
+Ly6C  PE  HK1.4  Biolegend  128008 
+
+Ly6G  PE -Cy5  1-A8  Biolegend  127672 
+
+F4/80  PE -Cy7  BM8  Biolegend  123114 
+
+CD11c  BV605  N418  Biolegend  117333 
+
+CX3CR1  BV711  SA011F11  Biolegend  149031 
+
+CD45  APC -Cy7  30 -F11  Biolegend  103116 
+
+CD11c  BV510  N418  Biolegend  117353 
+
+Ly6G  BV605  1-A8  Biolegend  127639 
+
+CD115  PE -Cy7  AFS98  Biolegend  135523 
+
+2
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+15 
+
+Table S2. Primer sequences .1
+
+Gene  Forward  Reverse 
+
+Gapdh  GTGTTCCTACCCCCAATGTGT  ATTGTCATACCAGGAAATGAGCTT 
+
+Il1b TGACAGTGATGAGAATGACCTGTTC  TTGGAAGCAGCCCTTCATCT 
+
+Il5 ATGGAGATTCCCATGAGCAC  AGCCCCTGAAAGATTTCTCC 
+
+Il6 GCTACCAAACTGGATATAATCAGGA  CCAGGTAGCTATGGTACTCCAGAA 
+
+Il13  CCTCTGACCCTTAAGGAGCTTAT  CGTTGCACAGGGGAGTCT 
+
+Il23  TCCCTACTAGGACTCAGCCAAC  AGAACTCAGGCTGGGCATC 
+
+Tnf  CGGAGTCCGGGCAGG  GCTGGGTAGAGAATGGATGAA 
+
+Ccl 2 CAGCCAGATGCAGTTAACGC  GCCTACTCATTGGGATCATCTTG 
+
+Ccl 5 CAGCAGCAAGTGCTCCAATC  CACACACTTGGCGGTTCCTT 
+
+Tgf b ATACCAACTATTGCTTCAGCTCCACAG  GTACTGTGTGTCCAGGCTCCAAATAT 
+
+Cx3cl1  ACGAAATGCGAAATCATGTGC  CTGTGTCGTCTCCAGGACAA 
+
+Vcam1  GCCACCCTCACCTTAATTGCTATG  TGTGCAGCCACCTGAGATCC 
+
+Icam1  AACTGTGGCACCGTGCAGTC  AGGGTGAGGTCCTTGCCTACTTG 
+
+2
+
+3
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+16 
+
+Results 1
+
+Anti -CD47  Treatment  Reprograms the  Aortic  Myeloid  Landscape .2
+
+Blockade of the CD47 -SIRPα axis promotes atherosclerotic plaque regression and 3
+
+resolves vascular inflammation across murine models, large animals, and human 4
+
+cohorts 20 -23,29 . However, the cellular mechanisms driving these therapeutic effects remain 5
+
+incompletely understood. To map the immunomodulatory landscape of CD47 blockade in 6
+
+a highly translationally relevant settin g, Ldlr -/- mice were fed a  high -fat, high -sucrose 7
+
+Western  Diet  for 12 weeks 30,31 . We then  performed single -cell RNA -sequencing (scRNA -8
+
+seq) on viable CD45 + aortic leukocytes from  Ldlr -/- mice in a prevention setting , treat ing 9
+
+the mice  concurrent ly with an  anti -CD47  antibody  or  an  IgG isotype  control for 12 weeks 10 
+
+(Figure 1A  and  Figure S1A). Of note, anti -CD47 treated animals did not show any 11 
+
+differences in their body and heart weight but had an increased spleen weight as reported 12 
+
+previously (Figure S1B –S1D) 20,24 . To confirm the induction of the pro -atherogenic 13 
+
+metabolic  phenotype, circulating lipids and non -fasting glucose  were  compared  between 14 
+
+the cohorts (Figure S1E). We integrated 2,854 high -quality cells  from our experimental 15 
+
+cohorts  (1,237 IgG; 1,617 anti -CD47) with  1,315  reference  cells  from  a public ly available 16 
+
+scRNA -seq  dataset of  Ldlr -/- mice  under  chow  diet  (CD , n = 381 ) and  Western Diet  (WD, 17 
+
+n =  934) 4, yielding a consolidated atlas of 4,169 cells  after batch correction  (Figure 1B ;18 
+
+Figure S1F  and S1G ). Unsupervised clustering based on canonical marker genes (e.g., 19 
+
+Apo e, Cd3e, Cd209a, Trem2)  revealed seven major immune cell lineages (Figure 1B and 20 
+
+1C). While the IgG control group mirrored the atherogenic  WD  phenotype, anti -CD47 21 
+
+treatment shifted  the  mononuclear phagocyte (MPC) and antigen -presenting cell (APC) 22 
+
+compositions toward a non -atherogenic baseline (Figure 1D). To resolve myeloid 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+17 
+
+heterogeneity, we reclustered the MPC and APC compartments  (macrophages, 1
+
+monocytes and monocyte -derived dendritic cells, MoDCs) , identifying 11 transcriptionally 2
+
+distinct subsets. These included established atherosclerosis -associated populations 4,5 ,3
+
+such as  TREM2 hi  foamy macrophages ( Trem2, Spp1, Cd9 ), inflammatory macrophages 4
+
+(Cxcl2, Nlrp3, and Nfkbiz ) and tissue -resident macrophages ( Cd163, Gas6, and Mrc1 )5
+
+(Figure 1E and 1F).  Consistent with myeloid reprogramming , anti -CD47 treatment  was 6
+
+associated with a r eduction  in  TREM2 hi  metabolic  macrophages in this prevention model, 7
+
+while homeostatic resident -like  populations  enriched in  phagocytosis -related  gene 8
+
+expression appeared preserved 4 (Figure 1G).  Collectively, these  compositional shifts are 9
+
+consistent with CD47 blockade driving  myeloid reprogramming  toward  a more  reparative 10 
+
+macrophage  phenotype  during atherogenesis. 11 
+
+Anti -CD47  Therapy  Alters  Monocyte  Differentiation  Trajectories .12 
+
+Given the macrophage reprogramming observed under CD47 blockade, we investigated 13 
+
+their monocyte precursors. Mouse monocytes classically divide into pro -inflammatory 14 
+
+Ly6C hi  and patrolling Ly6 Clo  subsets, with the latter serving as precursors for resolving 15 
+
+macrophages 9,40 . To  map the development trajectories of  aort a-infiltrating  monocytes  in to 16 
+
+macrophages,  we  performed pseudotime analysis using  Monocle  3. By designating 17 
+
+monocytes as the root  population,  trajectory analysis  suggested a relative bias  away from 18 
+
+a foamy macrophage fate (Figure 2A ; Figure S2A). Reclustering of the monocyte 19 
+
+compartment identified five transcriptionally distinct clusters (Figure 2B; Figure S2B and 20 
+
+S2C). Intriguingly, Ly6C lo  monocytes expanded in treated aortas, a finding confirmed by 21 
+
+flow cytometry (Fig ure  2C; Figure S3A). Furthermore, treatment increased the frequency 22 
+
+of F4/80 + Ly6C lo  macrophages, a population derived from Ly6C hi  monocytes and linked 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+18 
+
+to inflammation resolution 41 , while preserving  the  total F4/80 + macrophage  population 1
+
+(Fig ure  2C). Systemically, while blood Ly6C hi  monocyte levels trended downward, the ir 2
+
+numbers expanded in  splenic and lymph node reservoirs . This peripheral  redistribution, 3
+
+rather than systemic depletion, is consistent with  a sequestration mechanism that limits 4
+
+monocyte  availability for  plaque recruitment  (Figure 2D; Figure S3B) . Importantly, we 5
+
+observed no  changes  in the bone marrow compartment  (Figure S3B) . To confirm the shift 6
+
+toward resolution, we  analyzed  inflammatory signatures within the MPC cluster. Anti -7
+
+CD47 therapy markedly downregulated classical pro -inflammatory genes  at the single -8
+
+cell level , including  Nlrp3, Tnf , and  Il1 b (Figure 2E), as well as  Nfkb1  and  Nfkbiz  (Figure 9
+
+S3C).  At the tissue level,  qPCR  of the ascending aorta  confirmed  downregulation of  the 10 
+
+pro -inflammatory genes  Il1b, Il6, Ccl2  and  Ccl5 , alongside  the  adhesion molecule  Vcam1 11 
+
+(Figure 2F; Figure S3D).  Notably,  Tnf  expression  did not reach significance by qPCR 12 
+
+despite its reduction in scRNA -seq data, likely reflecting dilution of the macrophage -13 
+
+specific signal within bulk aortic tissue containing multiple  non -myeloid cell types. No 14 
+
+changes  were detected for  Il5, Il13, Il23, Cx3cl1 , or  Icam1  (Figure S3D). 15 
+
+CD47  Blockade in  Advanced  Atherosclerosis  Induces  Pro -efferocytic  Myeloid  Cell 16 
+
+Reprogramming .17 
+
+To disentangle direct myeloid reprogramming from secondary changes caused by plaque 18 
+
+regression, we treated mice with anti -CD47 antibodies only during the final six weeks of 19 
+
+WD -feeding (Intervention model; Figure 3A). Importantly, this regimen did not alter lesion 20 
+
+size  under  the pro -atherogenic metabolic phenotype  (Figure 3B; Figure S4A), allowing 21 
+
+the  assessment of immune dynamics independent of plaque burden. In this established 22 
+
+plaque environment, scRNA -seq analysis of the aortic arch revealed a distinct shift in the 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+19 
+
+MPC compartment ; while total dendritic cell (DC) populations (expressing  Cd209a, Itgax, 1
+
+Klrd1, Ccr7, Ifi205 ) contracted, macrophage subsets expanded (Figure 3C –3F; Figure 2
+
+S4B and S4C). Unlike the prevention model, specific macrophage subsets were not 3
+
+depleted; rather, their transcriptional state was altered. Transcriptional profiling of MPC 4
+
+and APC clusters,  alongside  global gene expression  analysis , revealed that CD47 5
+
+blockade upregulated a core pro -efferocytic program . This  includ ed  lipid metabolism 6
+
+genes ( Apoe, Trem2 ), complement factors ( C1qa, C1qb, C1qc ), bridging molecules 7
+
+(Mfge8, Gas6 ),  the  anti -inflammatory cytokine  Il10 , and scavenger receptors  (Mertk, 8
+
+Cd36 ), while  concomitantly  downregulating the “don ’t-eat -me” signal  Cd24a , a phagocytic 9
+
+checkpoint functionally analogous to CD47, which suppresses efferocytosis  through 10 
+
+interaction with S IGLEC  G/S IGLEC -10 on myeloid cells  (Figure 4A and 4B; Figure S5A) 42 .11 
+
+Pathway analysis confirmed  an  enrichment of efferocytosis  signaling  and macrophage 12 
+
+motility (Figure 4C and 4D; Figure S5B –S5D). Validating this functional restoration  in situ ,13 
+
+we observed a 3.5 -fold increase in the ratio of CD68 + macrophage -associated to free 14 
+
+apoptotic cells in treated plaques (Figure 4E).  Importantly, the absolute number of 15 
+
+apoptotic  cells did not differ significantly between groups (Figure S 5E ), indicating that the 16 
+
+improved  ratio  reflects enhanced macrophage clearance capacity rather than a reduction 17 
+
+in apoptotic cell generation per se.  These data demonstrate that CD47 blockade 18 
+
+reprograms existing macrophages toward a reparative, pro -efferocytic state. 19 
+
+Anti -CD47  Therapy  Regulates  Monocyte -Macrophage  Dynamics within the  Plaque .20 
+
+To elucidate the cellular mechanisms driving the reduction in plaque inflammation, we 21 
+
+investigated monocyte kinetics using dual pulse -labelling with EdU and fluorescent 22 
+
+microspheres 35,39,43 . While labelling efficiency was comparable between groups, anti -23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+20 
+
+CD47 therapy markedly impaired the recruitment of inflammatory Ly6C hi  monocytes into 1
+
+atherosclerotic lesions (Figure 5A; Figure S6A and S6C). In contrast, the entry of 2
+
+patrolling Ly6C lo  monocytes remained unaffected (Figure 5B; Figure S6D). This selective 3
+
+suppression of Ly6C hi  monocytes was mirrored by a reduction in aortic and circulating 4
+
+levels, but the Ly6C lo  monocyte levels  were not changed  (Figure 5C). However, we 5
+
+observed a paradoxical accumulation of these cells in the spleen, but not in  the  bone 6
+
+marrow niche (Figure 5D), confirming altered trafficking dynamics rather than systemic 7
+
+depletion. Of note, no  differences were  observe d in other myeloid cell subsets, such as 8
+
+neutrophils, macrophages  or  dendritic cells, in  either  the  aorta  or  blood (Figure S6B). To 9
+
+definitively rule out survival defects as a cause for reduced recruitment, we assessed the 10 
+
+expression of the M -CSF receptor ( CD115 ), a critical driver of monocyte viability. We 11 
+
+observed no reduction in surface CD115 expression on Ly6C hi  monocytes , yet  the 12 
+
+absolute frequency of CD115 + Ly6C hi  cells increased in peripheral reservoirs (Figure 13 
+
+S6E). This accumulation, coupled with intact survival receptor expression,  suggests  that 14 
+
+the therapy  limit s entry via impaired trafficking rather than  induc ing  cell death.  Despite 15 
+
+reduced  Ly6C hi  monocyte  recruitment,  total macrophage burden ( CD68 + area) remained 16 
+
+unchanged , suggesting that macrophage numbers are maintained through compensatory 17 
+
+mechanisms. Notably,  local macrophage proliferation (Ki67 + CD68 +) was significantly 18 
+
+decreased in anti -CD47 -treated animals (Figure 5E and 5F; Figure S6F and S6G) 44 .19 
+
+Supporting a trafficking defect , anti -CD47 treatment  downregulated  the chemokine and 20 
+
+adhesion receptor C X3CR1  specifically on Ly6C hi  monocytes in the blood and the spleen, 21 
+
+but not in  the  bone marrow (Figure 5G; Figure S6H). As C X3CR 1 mediates endothelial 22 
+
+adhesion and crawling, its downregulation, in the absence of changes to survival receptor 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+21 
+
+CD115 , suggests that therapy limits monocyte entry by impairing trafficking potential 1
+
+rather than inducing cell death.  Furthermore,  CellChat analysis  of the intervention dataset 2
+
+identified a specific disruption in the  Ccl2 -Ccr2  chemotaxis axis  within the plaque  (Figure 3
+
+5H –5J; Figure S 7A  and S7B )40,45 , driven by the simultaneous downregulation of  the  ligand 4
+
+in “Resident -2”  macrophages  and  the receptor in  TREM 2hi  macrophages (Figure 5K; 5
+
+Figure S7 C and S7 D).  Additionally , we detected a selective upregulation of  the  Gas6 6
+
+pathway  with in  the  TREM2 hi  macrophage  cluster , suggesting a reactivation of 7
+
+efferocyt osis  (Figure S7E).  Finally, t o evaluate whether  the cellular targets of this 8
+
+therapeutic reprogramming  are conserved in human  disease , we analyzed scRNA -seq 9
+
+data from human coronary atherosclerotic plaques 38  (Figure  S8A  and  S8 B).  Cross -10 
+
+species transcriptional mapping revealed that human  TREM2 hi  macrophages , which 11 
+
+natively  displayed the highest  efferocytic activation  score s (Figure  S8 C), we re 12 
+
+preferentially  enriched for the efferocyto sis - and survival -associated gene signatures 13 
+
+induced by CD47 blockade  in our murine models  (Figure  S8 D–S8F ).  Together, these data 14 
+
+demonstrate  that CD47 blockade resolves  plaque  inflammation  through two 15 
+
+complementary mechanisms:  systemically, by impairing  Ly6C hi  monocyte trafficking and 16 
+
+disrupting local CCL -CCR2 recruitment signaling; and locally,  by  reprogramming existing 17 
+
+macrophages  toward a pro -efferocytic, reparative state.  Transcriptional mapping further 18 
+
+reveals that the macrophage program reactivated by this therapy is conserved in human 19 
+
+coronary plaques, supporting its translational relevance as a therapeutic mechanism .20 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+22 
+
+Discussion 1
+
+The present study demonstrates  that pro -efferocytic therapy reshapes 2
+
+atherosclerotic inflammation  through  mechanisms that extend substantially beyond 3
+
+apoptotic cell clearance and lesion regression.  Using a model of established 4
+
+atherosclerosis in which CD47 blockade did not alter lesion size, w e show  that  anti -CD47 5
+
+therapy  re models  the plaque  immune  microenvironment and  promotes  inflammation 6
+
+resolution  by fundamentally reprogramming the monocyte -macrophage axis . Specifically, 7
+
+CD47 blockade  selectively suppresses pro -inflammatory monocyte infiltration and 8
+
+lesional macrophage proliferation while reactivating the efferocytosis machinery within 9
+
+the myeloid compartment, a transcriptional program we find to be conserved in human 10 
+
+coronary  atherosclerosis . Innate immune checkpoint inhibition targeting the CD47 -SIRPα 11 
+
+axis is  under  clinical  investigation in  hematologic malignancies and solid tumors 46 , and 12 
+
+has more recently been  evaluated  in  atherosclerotic cardiovascular disease. Despite 13 
+
+preclinical  evidence supporting  plaque regression, the precise immune mechanisms 14 
+
+underlying these therapeutic effects  have  remain ed  incompletely understood ; the present 15 
+
+findings  begin to address this gap .16 
+
+Recent single -cell analyses of atherosclerotic plaques have identified a specific 17 
+
+subset of foamy macrophages characterized by elevated expression of  Trem2 4,5,47 . These 18 
+
+TREM2 hi foamy macrophages exhibit a reduced pro -inflammatory capacity compared to 19 
+
+other plaque subsets  and are essential for apoptotic cell clearance 5,47 . Indeed,  Trem2 -/-20 
+
+macrophages display impaired efferocytosis, leading to necrotic core expansion  in 21 
+
+hyperlipidemic mice 32 . In this context, we observed that CD47 blockade exerts stage -22 
+
+dependent effects on this population.  During early atherogenesis, anti -CD47 therapy 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+23 
+
+limit ed  the formation of foamy macrophages and  shifted  monocyte trajectories toward 1
+
+beneficial phenotypes. We  speculate that  more efficient  clearance of apoptotic foam cells 2
+
+as they form  may  limit  TREM2 hi  macrophage  accumulation  during this stage, though the 3
+
+precise recognition mechani sms remain to be defined . In advanced lesions, anti -CD47 4
+
+therapy stabilized the  TREM2 hi macrophage population , assessed by both frequency and 5
+
+transcriptional score,  without altering total CD68 + plaque area, thereby augmenting the 6
+
+aggregate efferocytic capacity of plaque -associated macrophages. Importantly, cross -7
+
+species  transcriptional  mapping  revealed that the human  TREM2 hi macrophage 8
+
+population , conserved in coronary atherosclerosis , displayed  the highest enrichment for 9
+
+efferocytosis -associated  and  macrophage -survival gene signatures  transcriptionally 10 
+
+primed  by CD47 blockade in our murine models . These findings are consistent with 11 
+
+previous studies identifying  TREM2 hi  macrophages as lipid -handling, metabolically 12 
+
+adapted cells that accumulate in advanced atherosclerotic lesions 4,47 . While  these data 13 
+
+do not imply that pro -efferocytic therapy directly targets  TREM2 hi macrophages in 14 
+
+humans,  they  identif y this population as a conserved cellular state  wit h the transcriptional 15 
+
+machinery to respond  to restored efferocytosis signaling. This  cross -species 16 
+
+concordance  underscor es  the translational relevance of this axis  and provides a human 17 
+
+cellular correlate for the murine therapeutic response .18 
+
+Beyond local macrophage reprogramming, the resolution of plaque inflammation 19 
+
+relies on controlling net monocyte recruitment 48 , macrophage proliferation 49,50  and 20 
+
+macrophage egress 51 . Using monocyte fate -mapping, we investigated whether CD47 21 
+
+blockade mitigates the pro -inflammatory milieu by altering these kinetics. We observed a 22 
+
+selective reduction  (approximately 35 % ; Figure 5A ) in the recruitment of inflammatory 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+24 
+
+Ly6C hi  monocytes, but not patrolling Ly6C lo  monocytes, to lesions following therapy, 1
+
+suggesting  that  restricting the influx of  pro -inflammatory  cells  is a critical step in  initiat ing 2
+
+inflammation resolution. Mechanistically, CCR2 -dependent recruitment of Ly6C hi 3
+
+monocytes is a primary driver of macrophage replenishment and  lesional 4
+
+inflammation 9,10,45 . Consistent with this,  computational  ligand -receptor analysis predicted 5
+
+a reduction in CCL2 –CCR2  signaling  between resident and  TREM2 hi macrophages post -6
+
+therapy , an inference that warrants orthogonal  validation . Furthermore, we  observed 7
+
+compartment -specific alterations in  circulating and splenic , but not bone marrow,  Ly6C hi 8
+
+monocytes , including reduced  CX3CR1  surface expression . Th is pattern  suggests  that 9
+
+anti -CD47 therapy alters the peripheral phenotype and trafficking potential of 10 
+
+inflammatory monocytes  at sites of monocyte maturation and reservoir function rather 11 
+
+than at the level of monopoiesis . One plausible mecha nism is re -education of monocytes 12 
+
+within the splenic red pulp, where SIRP α-expressing red pulp macrophages engaged by 13 
+
+anti -CD47 therapy may alter the local cytokine or lipid milieu encountered by transitioning 14 
+
+monocytes; however,  the upstream signals lin king efferocytic reactivation to  this  systemic 15 
+
+reprogramming  require formal investigation . Additionally, macrophage burden is 16 
+
+sustained by a balance between local proliferation and cell death 49 . We found that local 17 
+
+macrophage proliferation (Ki67 + CD68 +) in established plaques was  reduc ed by ~30  %18 
+
+following  CD47  blockade.  This reduction in both monocyte -derived input and local 19 
+
+prolifer ative renewal did not alter net lesional macrophage density, which may be 20 
+
+reconcil ed  by enhanced macrophage survival  or  residency time  downstream of pro -21 
+
+efferocytic reprogramming . Alternatively , efferocytic clearance of apoptotic macrophages 22 
+
+may  offset reduced proliferative renewal,  thereby  maintaining  lesional  macrophage 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+25 
+
+density  while reducing the inflammatory quality of the infiltrate.  Distinguishing between 1
+
+these mechanisms is an important objective for future work .2
+
+Although  the  innate immune reprogramming  and inflammation resolution dynamics 3
+
+described here were observed in a well -established  Western Diet  model of 4
+
+atherosclerosis 30,32,33 , certain  limitations  warrant consideration . First,  our scRNA -seq 5
+
+experiments were performed on pooled aortic leukocytes , yielding a single sequencing 6
+
+library per experimental group,  a design consistent with published aortic single -cell 7
+
+atlases 4,34  and necessitated by the low immune cell yield from individual aortas . However, 8
+
+this approach  precludes formal sta tistical replication at the sequencing level and limits 9
+
+assessment of  inter -individual transcriptional variability . Critically, all major 10 
+
+transcriptional ly  defined ob servations  were independently corroborated by flow 11 
+
+cytometry, immunofluorescence, qPCR, and functional efferocytosis assays in fully 12 
+
+replicated cohorts ; these orthogonal validations provide the primary statistical evidence 13 
+
+supporting each claim . Multiplexed single -cell approaches  with individual -level 14 
+
+sequencing replication  will be important  in future studies . Second,  while the  Western Diet -15 
+
+fed  Ldlr -/- model  recapitulates  metabolic  atherosclero sis and has been extensively 16 
+
+characterized  as  a type 2 diabetes -like state 31 , our  study  did not perform comprehensive 17 
+
+metabolic phenotyping beyond  circulating lipid measurements  and non -fasting glucose .18 
+
+Formal parameters of systemic insulin resistance , such as  fasting  insulin levels  and 19 
+
+HOMA -IR , were  not  assessed and therefore , insulin resistance  was not  independently 20 
+
+established  in our cohorts . Third , our  investigation  focused  primarily  on  the  innate immune 21 
+
+compartment ; adaptive immune populations were not deeply profiled. Given the emerging 22 
+
+role of T and B cells in modulating plaque  phenotype  and  inflammation  resolution 35,52,53 ,23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+26 
+
+future studies  are  required to determine how pro -efferocytic therapy influences adaptive 1
+
+immun ity  and whether these  responses  contribute to the observed  atheroprotection .2
+
+Fourth , CD47  blockade  induce s erythrocyte clearance and splenomegaly , as known  on -3
+
+target hematological effects  that  remain a translational challenge  for  clinical 4
+
+application 24,54 ; the se systemic effects  did not confound the local aortic immune 5
+
+phenotypes  reported here, but their management will be essential for therapeutic 6
+
+translation . Fi fth , our  single -cell  transcriptomic  analyses  were conducted in male mice .7
+
+Functional, histological, and flow cytometric experiments included both sexes,  but  a fully 8
+
+powered sex -stratified transcriptional analysis was beyon d the scope of the present study. 9
+
+Given the well -established sexual dimorphism in atherosclerosis  and macrophage 10 
+
+biology 55 , whether  the  transcriptional reprogramming described here applies  equivalently 11 
+
+to female mice remains to be  formally determined .12 
+
+In conclusion, our data demonstrate that pro -efferocytic therapy  promot es 13 
+
+inflammation  resolution in  established atherosclerosis  not only  through  reactivati on  of 14 
+
+apoptotic cell  clearance , but  also  through  coordinated  reprogramming  of  the monocyte –15 
+
+macrophage axis  with in a chronic  pro -atherogenic  metabolic environment . By 16 
+
+suppressing Ly6C hi  monocyte  recruitment , reducing  local  macrophage proliferation, and 17 
+
+enriching efferocytic  capacity  in plaque -associated phagocytes, CD47 blockade  is 18 
+
+associated with  inflammation resolution while maintaining  lesional  macrophage stability ,19 
+
+effects that may be of particular relevance in patients with established disease and 20 
+
+residual vascular inflammation despite lipid -lowering therapy . These findings position 21 
+
+reactivation of innate efferocytosis as a mechanistically distinct and translationally 22 
+
+relevant strategy for  addressing  residual cardiovascular  risk .23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+27 
+
+Acknowledgments 1
+
+We  gratefully  acknowledge  the data storage service SDS@hd supported by the Ministry 2
+
+of Science, Research and the Arts Baden -Württemberg (MWK) and the German 3
+
+Research Foundation (DFG) through grant INST 35/1503 -1 FUGG,  the  Heidelberg 4
+
+University Core Facilit ies  (Deep Sequencing Core Facility, Flow Cytometry Core Facility ),5
+
+and  Servier Medical Art (www.smart.servier.com) for providing components of  the 6
+
+Fig ures . We thank  David Ibberson  for  his  expert technical support and all  members of the 7
+
+Jarr laboratory for discussions and critical input. 8
+
+Sources of Funding 9
+
+This  work was supported by the Deutsche Forschungsgemeinschaft (JA 2869/ 3-1 to  K. -10 
+
+U.J.), the Deutsche  Gesellschaft für Innere Medizin ( to K. -U.J.),  the Else Kröner -11 
+
+Fresenius Stiftung (2022_EKEA.91  and  2024_EKES.02  to K. -U.J .), the Deutsches 12 
+
+Zentrum für Herz -Kreislauf -Forschung (B24 -009 SE to  K. -U.J. ), the Corona -Stiftung 13 
+
+(S0199/10105/2024 to  K. -U.J. ),  the Ministry of Science, Research and the Arts Baden -14 
+
+Württemberg (MWK33 -7532 -49/15/3),  Ernst und  Berta  Grimmke -Stiftung  (1/25 to M.K. 15 
+
+and K. -U.J.),  the National Institutes of Health (R35HL 144475 to  N.J.L. ), the American 16 
+
+Heart Association (EIA34770065 to  N.J.L. ), and the Greathouse Family Foundation (to 17 
+
+N.J.L ). 18 
+
+Author C ontributions 19 
+
+M.K., M.I.,  B.B.,  A.-L.B. , L.B.,  M.M. , and K. -U.J  conducted experiments and collected and 20 
+
+analyzed data.  M.K., N.J.L.  and K. -U.J.  conceptualized and designed experiments, 21 
+
+discussed results and interpreted data.  M.K. and K. -U.J.  designed figures and wrote the 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+28 
+
+manuscript.  M.K . directed the  study.  K.U.J. supervised the study.  All authors commented 1
+
+on and approved the paper. 2
+
+Disclosures 3
+
+N.J.L. is cofounder  and  director  of Bitterroot Bio Incorporated, a cardiovascular company 4
+
+studying macrophage checkpoint inhibition. K. -U.J. and N.J.L. have filed a patent (US 5
+
+Application serial no. 63/106,794):  “CD47 Blockade and Combination Therapies Thereof 6
+
+For Reduction Of Vascular Inflammation ”. The remaining authors declare no competing 7
+
+interests .8
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+29 
+
+References 1
+
+1.  Sabatine, M.S. PCSK9 inhibitors: clinical evidence and implementation.  Nat Rev 2
+
+Cardiol  16 , 155 -165 (2019). 3
+
+2.  Soehnlein, O. & Libby, P. Targeting inflammation in atherosclerosis  - from 4
+
+experimental insights to the clinic.  Nature Reviews Drug Discovery  20 , 589 -610 5
+
+(2021). 6
+
+3.  Kong, P.  et al.  Inflammation and atherosclerosis: signaling pathways and 7
+
+therapeutic intervention.  Signal Transduct Target Ther  7, 131 (2022). 8
+
+4.  Cochain, C.  et al.  Single -Cell RNA -Seq Reveals the Transcriptional Landscape 9
+
+and Heterogeneity of Aortic Macrophages in Murine Atherosclerosis.  Circ Res 10 
+
+122 , 1661 -1674 (2018). 11 
+
+5.  Zernecke, A.  et al.  Meta -Analysis of Leukocyte Diversity in Atherosclerotic Mouse 12 
+
+Aortas.  Circ Res  127 , 402 -426 (2020). 13 
+
+6.  Fernandez, D.M.  et al.  Single -cell immune landscape of human atherosclerotic 14 
+
+plaques.  Nat Med  25 , 1576 -1588 (2019). 15 
+
+7.  Barrett, T.J. Macrophages in Atherosclerosis Regression.  Arterioscler Thromb 16 
+
+Vasc Biol  40 , 20 -33 (2020). 17 
+
+8.  Robbins, C.S.  et al.  Local proliferation dominates lesional macrophage 18 
+
+accumulation in atherosclerosis.  Nat Med  19 , 1166 -72 (2013). 19 
+
+9.  Swirski, F.K.  et al.  Ly -6Chi monocytes dominate hypercholesterolemia -20 
+
+associated monocytosis and give rise to macrophages in atheromata.  J Clin 21 
+
+Invest  117 , 195 -205 (2007). 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+30 
+
+10.  Rahman, K.  et al.  Inflammatory Ly6Chi monocytes and their conversion to M2 1
+
+macrophages drive atherosclerosis regression.  J Clin Invest  127 , 2904 -2915 2
+
+(2017). 3
+
+11.  Adkar, S.S. & Leeper, N.J. Efferocytosis in atherosclerosis.  Nat Rev Cardiol 4
+
+(2024). 5
+
+12.  Jarr, K.U., Kojima, Y., Weissman, I.L. & Leeper, N.J. 2021 Jeffrey M. Hoeg 6
+
+Award Lecture: Defining the Role of Efferocytosis in Cardiovascular Disease: A 7
+
+Focus on the CD47 (Cluster of Differentiation 47) Axis.  Arterioscler Thromb Vasc 8
+
+Biol  42 , e145 -e154 (2022). 9
+
+13.  Schrijvers, D.M., De Meyer, G.R., Kockx, M.M., Herman, A.G. & Martinet, W. 10 
+
+Phagocytosis of apoptotic cells by macrophages is impaired in atherosclerosis. 11 
+
+Arterioscler Thromb Vasc Biol  25 , 1256 -61 (2005). 12 
+
+14.  Jarr, K.U., Palm, K.C.A., Pasterkamp, G., Mokry, M. & Leeper, N.J. 13 
+
+Computational Modeling Predicts Benefits of Proefferocytic Therapy in Human 14 
+
+Atherosclerosis.  Circulation  152 , 208 -211 (2025). 15 
+
+15.  Yurdagul, A., Jr.  et al.  Macrophage Metabolism of Apoptotic Cell -Derived 16 
+
+Arginine Promotes Continual Efferocytosis and Resolution of Injury.  Cell Metab 17 
+
+31 , 518 -533 e10 (2020). 18 
+
+16.  Gerlach, B.D.  et al.  Efferocytosis induces macrophage proliferation to help 19 
+
+resolve tissue injury.  Cell Metab  33 , 2445 -2463 e8 (2021). 20 
+
+17.  Flores, A.M.  et al.  Nanoparticle Therapy for Vascular Diseases.  Arterioscler 21 
+
+Thromb Vasc Biol  39 , 635 -646 (2019). 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+31 
+
+18.  Willingham, S.B.  et al.  The CD47 -signal regulatory protein alpha (SIRPa) 1
+
+interaction is a therapeutic target for human solid tumors.  Proc Natl Acad Sci U S 2
+
+A 109 , 6662 -7 (2012). 3
+
+19.  Majeti, R.  et al.  CD47 is an adverse prognostic factor and therapeutic antibody 4
+
+target on human acute myeloid leukemia stem cells.  Cell  138 , 286 -99 (2009). 5
+
+20.  Kojima, Y.  et al.  CD47 -blocking antibodies restore phagocytosis and prevent 6
+
+atherosclerosis.  Nature  536 , 86 -90 (2016). 7
+
+21.  Jarr, K.U.  et al.  The pleiotropic benefits of statins include the ability to reduce 8
+
+CD47 and amplify the effect of pro -efferocytic therapies in atherosclerosis.  Nat 9
+
+Cardiovasc Res  1, 253 -262 (2022). 10 
+
+22.  Bamezai, S.  et al.  Pro -efferocytic nanotherapies reduce vascular inflammation 11 
+
+without inducing anemia in a large animal model of atherosclerosis.  Nat Commun 12 
+
+15 , 8034 (2024). 13 
+
+23.  Jarr, K.U.  et al.  Effect of CD47 Blockade on Vascular Inflammation.  N Engl J Med 14 
+
+384 , 382 -383 (2021). 15 
+
+24.  Mueller, P.A.  et al.  Macrophage LRP1 (Low -Density Lipoprotein Receptor -16 
+
+Related Protein 1) Is Required for the Effect of CD47 Blockade on Efferocytosis 17 
+
+and Atherogenesis -Brief Report.  Arterioscler Thromb Vasc Biol  42 , e1 -e9 (2022). 18 
+
+25.  Singla, B.  et al.  Loss of myeloid cell -specific SIRPalpha, but not CD47, 19 
+
+attenuates inflammation and suppresses atherosclerosis.  Cardiovasc Res  118 ,20 
+
+3097 -3111 (2022). 21 
+
+26.  Ridker, P.M.  et al.  Antiinflammatory Therapy with Canakinumab for 22 
+
+Atherosclerotic Disease.  N Engl J Med  377 , 1119 -1131 (2017). 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+32 
+
+27.  Azar, P.  et al.  Smooth muscle cells in atherosclerosis: essential but overlooked 1
+
+translational perspectives.  Eur Heart J  46 , 4862 -4875 (2025). 2
+
+28.  Flores, A.M.  et al.  Pro -efferocytic nanoparticles are specifically taken up by 3
+
+lesional macrophages and prevent atherosclerosis.  Nat Nanotechnol  15 , 154 -161 4
+
+(2020). 5
+
+29.  Jarr, K.U.  et al.  (18)F -Fluorodeoxyglucose -Positron Emission Tomography 6
+
+Imaging Detects Response to Therapeutic Intervention and Plaque Vulnerability 7
+
+in a Murine Model of Advanced Atherosclerotic Disease -Brief Report.  Arterioscler 8
+
+Thromb Vasc Biol  40 , 2821 -2828 (2020). 9
+
+30.  Ampomah, P.B.  et al.  Macrophages use apoptotic cell -derived methionine and 10 
+
+DNMT3A during efferocytosis to promote tissue resolution.  Nat Metab  4, 444 -457 11 
+
+(2022). 12 
+
+31.  Yang, Z.H., Miyahara, H., Takeo, J. & Katayama, M. Diet high in fat and sucrose 13 
+
+induces rapid onset of obesity -related metabolic syndrome partly through rapid 14 
+
+response of genes involved in lipogenesis, insulin signalling and inflammation in 15 
+
+mice.  Diabetol Metab Syndr  4, 32 (2012). 16 
+
+32.  Piollet, M.  et al.  TREM2 protects from atherosclerosis by limiting necrotic core 17 
+
+formation.  Nat Cardiovasc Res  3, 269 -282 (2024). 18 
+
+33.  Takaoka, M.  et al.  Early intermittent hyperlipidaemia alters tissue macrophages 19 
+
+to fuel atherosclerosis.  Nature  634 , 457 -465 (2024). 20 
+
+34.  Winkels, H.  et al.  Atlas of the Immune Cell Repertoire in Mouse Atherosclerosis 21 
+
+Defined by Single -Cell RNA -Sequencing and Mass Cytometry.  Circ Res  122 ,22 
+
+1675 -1688 (2018). 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+33 
+
+35.  Afonso, M.S.  et al.  miR -33 Silencing Reprograms the Immune Cell Landscape in 1
+
+Atherosclerotic Plaques.  Circ Res  128 , 1122 -1138 (2021). 2
+
+36.  Korsunsky, I.  et al.  Fast, sensitive and accurate integration of single -cell data 3
+
+with Harmony.  Nat Methods  16 , 1289 -1296 (2019). 4
+
+37.  Le, T.  et al.  BBrowser: Making single -cell data easily accessible.  bioRxiv  (2020). 5
+
+38. Wirka, R.C. et al.  Atheroprotective roles of smooth muscle cell phenotypic 6
+
+modulation and the TCF21 disease gene as revealed by single -cell analysis.  Nat 7
+
+Med  25 , 1280 -1289 (2019). 8
+
+39.  Weinstock, A. & Fisher, E.A. Methods to Study Monocyte and Macrophage 9
+
+Trafficking in Atherosclerosis Progression and Resolution.  Methods Mol Biol 10 
+
+1951 , 153 -165 (2019). 11 
+
+40.  Tacke, F.  et al.  Monocyte subsets differentially employ CCR2, CCR5, and 12 
+
+CX3CR1 to accumulate within atherosclerotic plaques.  J Clin Invest  117 , 185 -94 13 
+
+(2007). 14 
+
+41.  Ramachandran, P.  et al.  Differential Ly -6C expression identifies the recruited 15 
+
+macrophage phenotype, which orchestrates the regression of murine liver 16 
+
+fibrosis.  Proc Natl Acad Sci U S A  109 , E3186 -95 (2012). 17 
+
+42.  Huang, S., Zhang, X., Wei, Y. & Xiao, Y. Checkpoint CD24 function on tumor and 18 
+
+immunotherapy.  Front Immunol  15 , 1367959 (2024). 19 
+
+43.  Schlegel, M.  et al.  Silencing Myeloid Netrin -1 Induces Inflammation Resolution 20 
+
+and Plaque Regression.  Circ Res  129 , 530 -546 (2021). 21 
+
+44.  Landsman, L.  et al.  CX3CR1 is required for monocyte homeostasis and 22 
+
+atherogenesis by promoting cell survival.  Blood  113 , 963 -72 (2009). 23 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+34 
+
+45.  Combadiere, C.  et al.  Combined inhibition of CCL2, CX3CR1, and CCR5 1
+
+abrogates Ly6C(hi) and Ly6C(lo) monocytosis and almost abolishes 2
+
+atherosclerosis in hypercholesterolemic mice.  Circulation  117 , 1649 -57 (2008). 3
+
+46.  Logtenberg, M.E.W., Scheeren, F.A. & Schumacher, T.N. The CD47 -SIRPalpha 4
+
+Immune Checkpoint.  Immunity  52 , 742 -752 (2020). 5
+
+47.  Kim, K.  et al.  Transcriptome Analysis Reveals Nonfoamy Rather Than Foamy 6
+
+Plaque Macrophages Are Proinflammatory in Atherosclerotic Murine Models.  Circ 7
+
+Res  123 , 1127 -1142 (2018). 8
+
+48.  Potteaux, S.  et al.  Suppressed monocyte recruitment drives macrophage 9
+
+removal from atherosclerotic plaques of Apoe -/- mice during disease regression. 10 
+
+J Clin Invest  121 , 2025 -36 (2011). 11 
+
+49.  Robbins, C.S.  et al.  Local proliferation dominates lesional macrophage 12 
+
+accumulation in atherosclerosis.  Nature Medicine  19 , 1166 -1172 (2013). 13 
+
+50.  Tang, J.  et al.  Inhibiting macrophage proliferation suppresses atherosclerotic 14 
+
+plaque inflammation.  Sci Adv  1(2015). 15 
+
+51.  Feig, J.E.  et al.  Statins promote the regression of atherosclerosis via activation of 16 
+
+the CCR7 -dependent emigration pathway in macrophages.  PLoS One  6, e28534 17 
+
+(2011). 18 
+
+52.  Sharma, M.  et al.  Regulatory T Cells License Macrophage Pro -Resolving 19 
+
+Functions During Atherosclerosis Regression.  Circ Res  127 , 335 -353 (2020). 20 
+
+53.  Jones, P.W., Mallat, Z. & Nus, M. T -Cell/B -Cell Interactions in Atherosclerosis. 21 
+
+Arterioscler Thromb Vasc Biol  44 , 1502 -1511 (2024). 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+35 
+
+54.  Advani, R.  et al.  CD47 Blockade by Hu5F9 -G4 and Rituximab in Non -Hodgkin's 1
+
+Lymphoma.  N Engl J Med  379 , 1711 -1721 (2018). 2
+
+55.  Man, J.J., Beckman, J.A. & Jaffe, I.Z. Sex as a Biological Variable in 3
+
+Atherosclerosis.  Circ Res  126 , 1297 -1319 (2020). 4
+
+5
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint 36 
+
+Figure 1 . Single -cell  RNA -seq uencing  reveal s remodeling  of T REM 2hi  macrophages 1
+
+upon CD47 blockade .2
+
+A, Schematic of  CD45 + leukocyte  isolation  from aortic single -cell suspensions followed 3
+
+by single -cell  RNA -seq uencing  (scRNA -seq) . WD:  Western  Diet.  B, t-distributed 4
+
+stochastic neighbor embedding (t -SNE ) plot  of  aligned gene expression data from single 5
+
+CD45 + cells extracted from the aortas of  Ldlr −/−  mice.  Mice were fed a  Western  Diet ( WD) 6
+
+for 12 weeks and treated with either control IgG (n=1 ,237  cells) or anti -CD47 antibody 7
+
+(n=1 ,617  cells)  (n=4 mice  pooled  per  group , yielding one sequencing library per group ).8
+
+Publicly available scRNA -seq data from aortic  CD45 + leukocytes of mice  fed  a chow diet 9
+
+(CD) and  a WD  (Cochain et al., 2018) were integrated to facilitate cell cluster alignment. 10 
+
+C, Expression of  6 selected marker genes per cluster (left)  and  dot plot  of 5  selected 11 
+
+marker gene s used for cluster identification ( right ). The color  scale  represents  log -12 
+
+transformed gene expression.  D, Quantification of  7 major cell populations within the 13 
+
+treatment groups . E, t-SNE plot  of the  myeloid cell compartment after subsetting and 14 
+
+reclustering from the total  CD45 + population.  F, Dot plot  of  marker gene expression used 15 
+
+fo r identification of mononuclear  phagocyte  (MPC ) and  antigen -presenting cell ( APC )16 
+
+subset s. 3 selected cluster -defining genes  are  shown.  G, Quantification of  identified 17 
+
+macrophage  and dendritic cell  population s within the myeloid compartment  (top ) and 18 
+
+macrophage  compartment alone ( bottom ).19 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+37 
+
+Figure 2. CD47  blockade  induces  transcriptional  and phenotypic  rewiring  of 1
+
+monocytes .2
+
+A, Monocle3 pseudo time trajectory  of  monocyte -macrophage populations  fro m IgG - and 3
+
+anti -CD47 -treated animals  superimposed on  a t-SNE plot . The c olor  scale  represents 4
+
+differentiation progression  along pseudo time . B, t-SNE plot depicting unsupervised 5
+
+clustering of aortic monocytes ( left ) and  proportional representation of each identified 6
+
+subcluster within the total monocyte population  (right ). C, Flow cytometry  quantification 7
+
+of F4/80 + total macrophages, F4/80 + Ly6C lo  macrophages, and F4/80 - Ly6C lo  non -8
+
+classical monocytes in the aortas of  Ldlr -/- mice after 12 weeks of  WD feeding  and 9
+
+treatment with IgG  (n=8)  or anti -CD47  (n=6 ). D, Flow cytometry analysis of Ly6C hi  and 10 
+
+Ly6C lo  monocytes  in  blood  (n=12  IgG ; n=13 anti -CD47 ) and  spleen  (n=18 IgG ; n=19 anti -11 
+
+CD47).  E, scRNA -seq g ene expression of  Nlrp3 , Tnf , and  Il1 b in  the  MPC cluster.  F,12 
+
+Quantitative polymerase chain reaction ( qPCR ) analysis  of  Il1 b, Il6 , Ccl2 , and  Ccl5 13 
+
+expression  in aortic arch samples  (n= 7 IgG ; n=5 -7 anti -CD47) .14 
+
+Data and error bars present mean  ± SD . Statistical analysis was performed using 15 
+
+unpaired Student’s  t-test (two -tailed) . All data and statistical analysis are provided in 16 
+
+Source Data. 17 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+38 
+
+Figure 3 . CD47 blockade induces myeloid reprogramming independent of plaque 1
+
+regression .2
+
+A, Experimental design  of  the  intervention study  in an established atherosclerosis model. 3
+
+Ldlr -/- mice were fed  a WD for  14 weeks  and treated with IgG or anti -CD47 antibodies 4
+
+during the last 6 week s.  B, Quantification of atherosclerotic lesion area in the aortic roots 5
+
+cross -sections  stained with Oil  Red O  (n=8 IgG ; n=9 anti -CD47).  Scale bar , 250  μm . C,6
+
+t-SNE  plot of  CD45 + cells showing 9 leukocyte clusters  in IgG and anti -CD47 groups . D,7
+
+Proportional representation of each major leukocyte cluster  within  the  CD45 + population .8
+
+E, t-SNE plot  of the  myeloid cell compartment after subsetting and reclustering from the 9
+
+total  CD45 + leukocyte population . F, Proportional representation of identified macrophage 10 
+
+and dendritic cells populations within the myeloid compartment  (left ) and macrophage 11 
+
+compartmen t (right ).12 
+
+Data and error bars present mean  ± SD  for parametric and median  ± IQR for non -13 
+
+parametric results . Statistical analysis was performed using  unpaired Student’s  t-test 14 
+
+(two -tailed)  and  Mann -Whitney  U test (two -tailed) . All data and statistical analysis are 15 
+
+provided in Source Data. 16 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+39 
+
+Figure 4 . CD47 blockade reactivates efferocytosis  machinery in macrophages .1
+
+A and  B, Volcano plots  of  differentially expressed genes (DEGs)  in myeloid cells  following 2
+
+treatment with anti -CD47 versus IgG control . A, Global differential expression.  B, 3
+
+Differential express ion of  efferocytosis -related genes ( KEGG -Pathway , mmu04148) .4
+
+Significant hits  (FDR < 0.10 ; log2FC  > 0.5 ) are color -coded  red (upregulated) and  blue 5
+
+(downregulat ed) . Canonical efferocytosis  genes  in (A)  are  highlighted  with black circles. 6
+
+C and  D, Pathway analysis  depicting  significantly  upregulated  KEGG  pathways  (C) and 7
+
+biological processes  (D) in anti -CD47 -treated myeloid cells.  E, Representative 8
+
+immunofluorescence images and quantification of  the  in vivo  efferocytosis rate, calculated 9
+
+as the ratio of macrophage -associated (#) to free (*) cleaved caspase -3+ apoptotic cells 10 
+
+in aortic root sections  (n=7 IgG ; n=9 anti -CD47).  The white  dashed  line depicts  neo intima .11 
+
+Scale bar, 10  μm. 12 
+
+Data and error bars present mean  ± SD . Statistical analysis was performed using 13 
+
+unpaired Welch’s  t-test (two -tailed) . All data and statistical analysis are provided in 14 
+
+Source Data. 15 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+40 
+
+Figure  5. CD47 blockade  alters monocyte -macrophage dynamics  and innate 1
+
+immune cell communication  in atherosclerotic lesions. 2
+
+A and  B, Representative immunofluorescence images and quantification of  Ed U-labeled 3
+
+Ly6C hi  (A) and YG fluorescent bead -labelled Ly6C lo  (B) monocytes  (n=8 IgG , n=9 anti -4
+
+CD47).  The white  dashed  line depicts  neo intima.  Scale bar s, 100 μm  (A) and  50 μm  (B).5
+
+C, Flow cytometr ic  analysis of Ly6C hi  and Ly6C lo  monocytes in  the  aorta  (left ) and  blood 6
+
+(right ). D, Flow cytometric analysis of Ly6C hi  and Ly6C lo  monocytes in  the  spleen  (left )7
+
+and bone marrow  (right ). E, Representative immunofluorescence images and 8
+
+quantification of  CD68 + macrophages in aortic root sections (n=8 IgG ; n=9 anti -CD47). 9
+
+The white  dashed  line depicts  intima and neo intima . Scale bar, 250 μm . F, Representative 10 
+
+immunofluorescence images and quantification of  proliferating Ki67 + CD68 +11 
+
+macrophages in aortic root sections  (n=8 IgG ; n=9 anti -CD47).  The white  dashed  line 12 
+
+depicts  neo intima.  Scale bar, 50 μm . G, Quantification of  CX3CR1  expression , reported 13 
+
+as mean  fluorescence intensity (MFI) , by  flow cytometry  on peripheral  Ly6C hi  and Ly6C lo 14 
+
+monocytes  (n=8 IgG ; n=9 anti -CD47) . H,  CellChat analysis of innate immune cell 15 
+
+communication.  The heat  map depicts the number of interactions per immune cell cluster 16 
+
+acting as either sender (ligand) or receiver (receptor).  I, Number of interactions between 17 
+
+innate immune cell clusters serving as sender and receivers.  J, Heat  map showing the 18 
+
+number of interactions between macrophage clusters involving  Ccl2 -Ccr2  signaling.  K,19 
+
+scRNA -seq -derived  expression of  Ccr2  and  Ccl2  across  macrophage  sub clusters. 20 
+
+Data and error bars present mean  ± SD  for parametric and median  ± IQR for non -21 
+
+parametric results . Statistical analysis was performed using  unpaired Student’s  t-test 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+41 
+
+(two -tailed) , unpaired Welch’s  t-test (two -tailed)  and  Mann -Whitney  U test (two -tailed) . All 1
+
+data and statistical analysis are provided in Source Data. 2
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint 42 
+
+Supplemental Figures 1
+
+Figure  S1 . Gating strategy  for  CD45 + aortic leukocytes and  systemic 2
+
+characterization  of  the  prevention  model. 3
+
+A,  Representative flow cytometry gating strategy to  isolate  viable  aortic  CD45 + cells ,4
+
+excluding  BV510 -labelled  circulating leukocytes  (SYTOX - BV510 - PerC P-Cy5.5 +). B, 5
+
+Body weight monitoring  during the  experimental period of  the  prevention  model  (n=12 6
+
+IgG ; n=13 anti -CD47) . C and  D, Heart ( C) and spleen  (D) weight  at euthanasia  (n=2 4 IgG ;7
+
+n=2 4 anti -CD47) . E, Quantification of total cholesterol  (n= 22  IgG ; n=2 1 anti -CD47) , high -8
+
+density lipoprotein (HDL)  (n=21 IgG ; n=19 anti -CD47) , low -density lipoprotein ( LDL )9
+
+(n=21 IgG ; n=21 anti -CD47) , and non -fasting  glucose  (n=22 IgG ; n=21 anti -CD47)  in 10 
+
+blood . F,  t-SNE plot of publicly available scRNA -seq data from aortic  CD45 + leukocytes 11 
+
+of mice fed chow diet (CD) and  Western Diet ( WD ) (Cochain et al., 2018) . G, t -SNE plot 12 
+
+of  the  fully  integrated , batch -corrected  dataset  showing  distinct cell  clusters. 13 
+
+Data and error bars present mean  ± SD  for parametric and median  ± IQR for non -14 
+
+parametric results . Statistical analysis was performed using  two -way ANOVA,  Mann -15 
+
+Whitney  U test (two -tailed)  and  unpaired Student’s  t-test (two -tailed) . All data and 16 
+
+statistical analysis are provided in Source Data. 17 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+43 
+
+Figure S2 . Monocyte subcluster s.1
+
+A,  Monocle3 pseudotime trajectory of monocyte -macrophage populations  superimposed 2
+
+on  a t-SNE plot  (left) and h eat  map  represent ing  the  differentiation progression  of  the  top 3
+
+20 genes  along pseudotime  and monocyte -macrophage subclusters  (right) . B, 4
+
+Expression of  5 selected marker genes per  monocyte subclusters . The color  scale 5
+
+represents log -transformed gene expression . C, Dot plot depicting  3 selected marker 6
+
+gene s used for  monocyte sub cluster identification .7
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+44 
+
+Figure S3 . Aortic myeloid cell g ating strategy  and validation of inflammatory  gene 1
+
+expression in the prevention model .2
+
+A,  Representative flow cytometry gating strategy to analyze major myeloid cells i n the 3
+
+aorta . Live, single,  CD45 + cells  were pre -gated to  identify  CD11b + myeloid cells , Ly6G +4
+
+neutrophils, Ly6C + monocytes,  CD11c + dendritic cells , and F4/80 + macrophages.  B, Flow 5
+
+cytometr ic  analysis of Ly6C hi  and Ly6C lo  monocytes  in aorta -draining lymph nodes  (n=1 06
+
+IgG ; n= 9 anti -CD47)  and bone marrow (n= 18 IgG; n= 19 anti -CD47) . C, scRNA -seq gene 7
+
+expression of  Nfkb1 and Nfkbiz  in the MPC cluster.  D, qPCR analysis of8
+
+cytokines/chemokine  expression  (Tnf, Il5, Il13, Il23,  Cx3cl1 ) and adhesion molecules 9
+
+(Vcam1 , Icam1 ) in aortic arch samples (n=7 IgG ; n=5 -7 anti -CD47). 10 
+
+Data and error bars present mean  ± SD  for parametric and median  ± IQR for non -11 
+
+parametric results . Statistical analysis was performed using  unpaired Student’s  t-test 12 
+
+(two -tailed) , unpaired Welch’s  t-test (two -tailed)  and  Mann -Whitney  U test (two -tailed) . All 13 
+
+data and statistical analysis are provided in Source Data. 14 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+45 
+
+Figure S4 . Intervention model  cluster  representation .1
+
+A,  Additional Oil  Red O (ORO) staining  images  depicting lesion size analysis  (related to 2
+
+Figure  3B ). Scale bar , 250 μm.  B, Expression of  6 selected marker genes per  major cell 3
+
+cluste r in  the intervention scRNA -seq  (left)  and  dot plot depicting  5 selected marker gene s4
+
+used for identification (right) . The color  scale represents log -transformed gene 5
+
+expression . C,  Expression of  8 selected marker genes per  MPC  + APC  subclusters  in  the 6
+
+intervention model  (left)  and  dot plot depicting  5 selected marker gene s used for  MPC  +7
+
+APC  sub cluster identification (right).  The color  scale represents log -transformed gene 8
+
+expression .9
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+46 
+
+Figure S5 . CD47 blockade reactivates efferocytosis machinery in  leukocytes. 1
+
+A,  Volcano plot showing DEGs in  CD45 + leukocytes  following treatment with anti -CD47 2
+
+versus IgG control . Significant hits (FDR < 0.10 ; log2FC > 0.5 ) are color -coded: blue 3
+
+indicates downregulation and red indicates upregulation. Canonical efferocytosis -related 4
+
+genes are highlighted with black circles.  B and  C, Pathway analysis  depicting significantly 5
+
+upregulated KEGG pathways ( B) and biological processes ( C) in anti -CD47 -treated 6
+
+CD45 + leukocytes . D, Gene set enrichment analysis  (GSEA) of phagocytosis 7
+
+(GO:0006909) in myeloid cells after anti -CD47 treatment.  E,  Quantification of  total 8
+
+cleaved caspase -3 area  in aortic root sections , in relation to total vessel area (TVA, left) 9
+
+and lesion area (right) .10 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+47 
+
+Figure S6 . CD47 blockade  alters aortic and systemic monocyte dynamics .1
+
+A,  Flow cytometr ic  analysis of YG  bead -labeled  (top ) and EdU -labeled ( bottom ) Ly6C +2
+
+blood  monocytes 24  hours  after  injection  (n= 6 IgG ; n= 6 anti -CD47).  Population 3
+
+frequencies of EdU + and YG Bead + gate s are  depicted . B,  Flow cytometr ic  analysis of 4
+
+CD45 + leukocytes,  CD11b + myeloid cells, Ly6G + neutrophils, F4/80 + macrophages and 5
+
+CD11c + dendritic cells in aorta  (top ) and blood  (bottom ) in  the  intervention model  (n= 86
+
+IgG ; n= 9 anti -CD47).  C and  D, Additional  representative immunofluorescence images of 7
+
+EdU -labeled Ly6C hi  (C) and YG fluorescent bea d-labeled Ly6C lo  (D) monocytes.  The 8
+
+white  dashed  line depicts  neo intima . Scale bars, 100 μm ; inset , 10 μm  (C) and 50 μm  (D).9
+
+E, Flow cytometr ic  analysis of  CD115 + (M -CSF receptor,  CSF1R)  Ly6C + monocytes  (n= 610 
+
+IgG ; n= 6 anti -CD47).  Population frequenc ies  of CD115 + cells  are  depicted . F,  Additional 11 
+
+representative immunofluorescence image s of  CD68 + macrophages in aortic root 12 
+
+sections . Scale bar, 250 μm.  G, Additional r epresentative immunofluorescence images  of 13 
+
+proliferating Ki67 +CD68 + macrophages in aortic root sections.  The white  dashed  line 14 
+
+depicts  neo intima . Scale bar, 50 μm ; inset 10 μm.  H, Quantification of  CX3CR1 15 
+
+expression by flow cytometry in splenic  (top ) and bone marrow  (bottom ) Ly6C hi  and Ly6C lo 16 
+
+monocytes (n =9  IgG ; n=9 anti -CD47). Data  are  represented as mean fluorescence 17 
+
+intensity (MFI) .18 
+
+Data and error bars present mean  ± SD  for parametric and median  ± IQR for non -19 
+
+parametric results . Statistical analysis was performed using  unpaired Student’s  t-test 20 
+
+(two -tailed)  and  Mann -Whitney  U test (two -tailed) . All data and statistical analysis are 21 
+
+provided in Source Data. 22 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+48 
+
+Figure S7 . Ligand -receptor interaction analysis. 1
+
+A,  CellChat analysis of innate immune cell communication s. The heat map depicts the 2
+
+max interaction strength  per  cell communication pair,  acting as either sender (ligand) or 3
+
+receiver (receptor).  B, Heat map showing the  interaction strength s between macrophage 4
+
+clusters involving  Ccl2 -Ccr2  signaling . C, CellChat analysis of  the  overall  Ccr -Ccl 5
+
+interaction network betwee n MPC -APC subclusters.  D, Dot plot depicting ligand -receptor 6
+
+interaction strengths of  the  specific  Ccr -Ccl  pathway.  E, Heat map s showing the  number 7
+
+of interactions  (left)  and interaction strengths  (right)  between macrophage clusters 8
+
+involving  Gas6 -Axl/Mertk  signaling .9
+
+10 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+49 
+
+Figure  S8 . Efferocytosis -competent macrophage states are conserved in human 1
+
+atherosclerotic plaques. 2
+
+A,  t-SNE plot of human coronary artery cells; the myeloid cell population is highlighted in 3
+
+the box.  B,  t-SNE representation of human coronary myeloid cells after subsetting and 4
+
+reclustering.  C,  Violin plot of AUCell scores for  an  apoptotic  cell  burden gene  signature 5
+
+across human coronary myeloid cell  cluster s.  D,  Analysis workflow showing the curation 6
+
+of DEGs in mouse MPC + APC clusters following CD47 blockade and subsequent human 7
+
+ortholog conversion. Converted genes were separated into functional clusters to identify 8
+
+myeloid responders in human atherosclerotic plaques.  E,  Violin plots depicting AUCell 9
+
+scores for anti -CD47 -enhanced efferocytosis/phagocytosis (left) and 10 
+
+survival/homeostasis (right) gene sets in human coronary myeloid cells.  F,  AUCell score 11 
+
+analysis of negative control gene sets, including metabolic, housekeeping, RNA 12 
+
+processing, protein folding, and cytoskeleton -related genes. 13 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
+
+Ldlr -/-
+
+Ldlr -/-
+
+WD + IgG WD + αCD47 
+
+CD45 + cells 
+
+scRNA-seq Cell clustering 
+
+AE FDGC
+
+1: APCs 2: B cells 3: Granulocytes 4: MPCs 5: Neutrophils 6: Plasma cells 7: T cells/NK IgG αCD47 B
+
+t-SNE1 t-SNE2 
+
+356147
+
+> Ebf1 Cd79a Cd79b Ms4a1 Ly6d F5 Dach1 Alox15 Ccr3 S100a8 S100a9 Msrb1 Retnlg Il1b Jchain Mzb1 Iglc1 Iglc2 Iglv1 Ctsb Apoe Lyz2 C1qa Adgre1 Cd3e Cd3d Ms4a4b Nkg7 Cd8a H2-ab1 H2-eb1 Cd209a Flt3 Olfm1
+
+B cells Granulocytes Neutrophils Plasma cells MPCs T cells/NK APCs Log normalized expression 0 3Percent expressed 0 100 
+
+40Cd79a 40Cd3e 40Cd209a 40ApoE 40Trem2 40S100a9 
+
+t-SNE1 t-SNE2 
+
+0 20 40 60 80 100 
+
+αCD47 IgG WD CD APCs B cells Granulocytes MPCs Neutrophils Plasma cells T cells/NK CD45 + cells (%) Inflamm. CD209 + MoDC cDC 1 cDC 2 TREM2 hi Ly6C hi Mono Resident 1 Ly6C lo Mono Resident 2 Mixed/M φ
+
+Mixed/Mono. t-SNE1 t-SNE2 
+
+Pf4 Gas6 Cd163 Mrc1 F13a1 Dab2 Trem2 Spp1 Cd9 Nfkbiz Cxcl2 Nlrp3 Ly6c2 F10 Chil3 Cx3cr1 Ace Apoc2 Gm49774 Gm26917 Lars2 Cd209a Klrd1 Ifitm1 Fscn1 Ccr7 Fabp5 Xcr1 Gcsam Ifi205 Retnla Ear2 Fn1 
+
+> Resident 1 Resident 2 TREM2 hi Inflammatory Ly6C  hi  Mono Ly6C  lo  CX3CR1 + Mono Mixed/Mono CD209a + MoDC cDC 1 cDC 2 Mixed/Macrophage Percent expressed 0 100
+
+0 50 100 
+
+αCD47 IgG WD CD Total MPC+APCs (%) cDC1 Resident 1 Resident 2 TREM2 hi Mφ
+
+Inflammatory Ly6C hi Mono Ly6C lo CX3CR1 + Mono Mixed/Mono CD209a + MoDC cDC2 Mixed/Macro 
+
+0 50 100 
+
+αCD47 IgG WD CD Macrophages (%) Myeloid cell recluster 
+
+Integration of ref. dataset (Cochain et al. GSE97310) Integrated dataset Log normalized expression 0 3Figure 1 
+
+2
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint CX3CR1 +Foamy-like Ly6C hi Macrophage-like Mixed 
+
+B
+
+Pro-inflammatory gene analysis 
+
+E F
+
+MPC recluster 
+
+αCD47 IgG 
+
+Ly6C hi monocytes TREM2 hi Ly6C lo 
+
+Ly6C hi monocytes Ly6C lo Resident 
+
+A
+
+t-SNE1 t-SNE2 t-SNE1 t-SNE2 Total Macrophages 
+
+> IgG
+> αCD47
+
+010 20 30 40 50 F4/80  + (% of CD11b +)p = 0.6120 Ly6C lo Macrophages 
+
+> IgG
+> αCD47
+
+010 20 30 p = 0.0032 F4/80  +Ly6C lo (% of CD11b +)Ly6C lo Monocytes 
+
+> IgG
+> αCD47
+
+020 40 60 p = 0.0087 Ly6C lo  (% of CD11b + )
+
+C D
+
+Ly6C F4/80 Blood Spleen IgG 
+
+> αCD47
+
+0510 15 20 Ly6C hi  (% of CD11b + )p = 0.0619 IgG 
+
+> αCD47
+
+010 20 30 Ly6C lo  (% of CD11b + )p = 0.3331 
+
+020 40 60 p = 0.5188 IgG 
+
+> αCD47 Ly6C lo  (% of CD11b + )
+
+Ly6C hi Monocytes Ly6C lo Monocytes Ly6C hi Monocytes Ly6C lo Monocytes 
+
+Il1b Il6 Ccl2 Ccl5 
+
+010 20 30 40 p = 0.0244 IgG 
+
+> αCD47 Ly6C hi  (% of CD11b + )
+
+Monocyte recluster 
+
+Nlrp3 Tnf Il1b Ly6C hi 4,18 Ly6C lo 41,3 Macrophages 31,1 Ly6C hi 4,91 Ly6C lo 24,0 Macrophages 31,7 IgG αCD47 
+
+0 10 3 10 4 10 5 0 10 3 10 4 10 5010 310 410 5010 310 410 5Resident Pseudotime 70 0
+
+0 50 100 
+
+αCD47 IgG Monocytes (%) Foamy-like CX3CR1 + Ly6C hi Macrophage-like Mixed Figure 2 IgG 
+
+> αCD47
+
+0123456
+
+> Expression (Log)
+
+p < 0.0001 IgG 
+
+> αCD47
+
+0123456
+
+> Expression (Log)
+
+p = 0.0002 IgG 
+
+> αCD47
+
+01234567
+
+> Expression (Log)
+
+p < 0.0001 
+
+> IgG
+> αCD47
+
+0.0 0.5 1.0 1.5 2.0 Relative  Il1b 
+
+> mRNA expression
+
+p = 0.0120 
+
+> IgG
+> αCD47
+
+0123Relative  Il6 
+
+> mRNA expression
+
+p = 0.0241 
+
+> IgG
+> αCD47
+
+0.0 0.5 1.0 1.5 2.0 Relative  Ccl2 
+
+> mRNA expression
+
+p = 0.0007 
+
+> IgG
+> αCD47
+
+0.0 0.5 1.0 1.5 2.0 Relative  Ccl5 
+
+> mRNA expression
+
+p = 0.0337 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint 0 8weeks 14 Progression Intervention IgG or αCD47 WD 
+
+A IgG αCD47 
+
+010 20 30 40 50 Lesion area (% Total vessel area)  p = 0.6617 
+
+Aortic arch 
+
+scRNAseq of CD45 + cells FACS analysis of immune cells 
+
+Histology 
+
+Morphometric analysis Mφ recruitment Mφ proliferation and apoptosis Efferocytic rate 
+
+B
+
+1: APCs 2: B cells 3: ILC2 4: MPCs 5: Neutrophils/Myeloids 6: Plasma cells 7: T cells 8: Proliferating T cells 9: γδ T cells 
+
+> IgG
+> αCD47
+
+050 100 Cells (%) 
+
+> IgG
+> αCD47
+
+050 100 Total MPC + APC (%) 
+
+> IgG
+> αCD47
+
+050 100 Macrophages (%) IgG 
+
+> αCD47
+
+Ldlr -/-
+
+123456789
+
+t-SNE1 t-SNE2 Aortic sinus 
+
+FC CD209a + MoDC Inflammatory Ly6C hi Mono Mixed/Macrophages Resident 1 Resident 2 TREM2 hi cDC1 cDC2 
+
+D  
+
+> Resident 2 Resident 1 Inflammatory TREM2 hi CD209a +MoDC Ly6C hi Mono cDC1 cDC2 Mixed/Macrophages
+
+t-SNE1 t-SNE2 
+
+E
+
+## Figure 3 02×10 54×10 56×10 58×10 5Lesion area (μm  2)
+
+> IgG
+> αCD47 p = 0.8148
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint ApoE 
+
+20 10 0
+
+> -log  10 (FDR)
+
+-4 -2 2 40log 2 (FC) 
+
+> C1qa C1qb Mrc1 Trem2 Gas6 Il10
+
+A
+
+up in αCD47 down in αCD47 Efferocytosis related genes up in αCD47 down in αCD47 
+
+B CED
+
+> IgG
+> αCD47
+
+0246810 Macrophage-associated:free cleaved caspase-3 (Fold IgG mean) p = 0.0229 log 2(FC) 
+
+20 15 10 50-1 0 +1 -log  10 (FDR) 
+
+> Mertk Cd24a Sirpb1a Dusp2 Sirpb1b Havcr2 Cx3cr1 Dock1 Abca1 Stab1 Itgb5 Gas6 Axl Itgav Il10 C1qa C1qb C1qc
+> -10 -10
+
+positive regulation of locomotion myeloid leukocyte migration positive regulation of cell motility positive regulation of cell migration regulation of locomotion cell motility regulation of cell motility cell migration regulation of cell migration locomotion 
+
+0 1 2 3 4 5Enrichment Ratio FDR 
+
+2.5 × 10 5 × 10 -10 7.5 × 10 1 × 10 -9 
+
+GO BP enrichment 
+
+10 -3 -3 10 -3 -2 
+
+Fluid shear stress and atherosclerosis Complement and coagulation cascades Transcriptional misregulation in cancer ECM-receptor interaction Cytokine-cytokine receptor interaction Chemokine signaling pathway Chagas disease NF-kappa B signaling pathway Viral protein interaction with cytokine and cytokine receptor Efferocytosis 
+
+0 1 2 3 4 5Enrichment Ratio FDR 
+
+2.5 ×5 × 10 7.5 ×1 × 10 
+
+KEGG Pathway 
+
+IgG αCD47 Cleaved caspase 3 CD68 DAPI 
+
+# * #*
+
+> ****
+> Aortic sinus
+
+## Figure 4 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint IgG αCD47 
+
+050 100 150 200 
+
+Recruitment: Ly6C hi 
+
+> EdU  + cells / section  p = 0.0267
+
+A BC
+
+IgG αCD47 
+
+0 10 3 10 4 10 5CX3CR1 020 40 60 80 100 Modal 
+
+0 10 3 10 4 10 5020 40 60 80 100 Modal CX3CR1 
+
+0 10 3 10 4 10 5020 40 60 80 100 Normalized To Mode CX3CR1 
+
+IgG αCD47 
+
+DE F
+
+Aortic Monocytes Blood Monocytes 
+
+G Blood Monocytes Splenic Monocytes Bone Marrow IgG 
+
+> αCD47
+
+Ly6C hi Mono Resident 2 Resident 1 Inflammatory TREM2 hi cDC2 cDC1 CD209a + MoDC CD209a  + MoDC cDC1 cDC2 TREM2  hi Inflammatory Resident 1 Resident 2 Ly6C hi  Mono 
+
+Receiver Sender 
+
+IgG Number of significant interaction 53 11 Ly6C hi Mono Resident 2 Resident 1 Inflammatory TREM2 hi cDC2 cDC1 CD209a + MoDC CD209a  + MoDC cDC1 cDC2 TREM2  hi Inflammatory Resident 1 Resident 2 Ly6C hi  Mono 
+
+Receiver Sender 
+
+αCD47 Number of significant interaction 52 14 
+
+0 200 400 600 Ly6C hi Mono Resident 2 Resident 1 Inflammatory TREM2 hi cDC2 cDC1 CD209a + MoDC Sender Clusters 
+
+0 200 400 600 800 Receiver IgG 
+
+αCD47 Number of interactions TREM2  hi Inflammatory Resident 1 Resident 2 Ly6C hi  Mono 
+
+Receiver 
+
+> Number of significant interaction
+
+10Ly6C hi Mono Resident 2 Resident 1 Inflammatory TREM2 hi TREM2  hi Inflammatory Resident 1 Resident 2 Ly6C hi  Mono 
+
+> Sender
+
+αCD47 IgG Ccl2-Ccr2 pathway 
+
+HJ KI
+
+0 1 2 3 4Inflammatory Ly6C hi Mono Resident 2 Resident 1 TREM2 hi 
+
+Ccr2 
+
+Relative expression 
+
+Ccl2 
+
+αCD47 0 1 2 3 4 5 6
+
+Relative expression IgG Inflammatory Ly6C hi Mono Resident 2 Resident 1 TREM2 hi p < 0.0001 p = 0.0229 
+
+0246810 
+
+Recruitment: Ly6C lo 
+
+> YG Bead  + cells / section  p = 0.3916 IgG
+> αCD47
+
+0510 15 20 Ly6C hi  (% of CD11b +) p = 0.0446 
+
+020 40 60 80 100 Ly6C lo  (% of CD11b +) p = 0.1616 IgG 
+
+> αCD47 IgG
+> αCD47
+
+0510 15 20 25 Ly6C hi  (% of CD11b +) p = 0.0234 
+
+010 20 30 40 Ly6C lo  (% of CD11b +) p = 0.8931 IgG 
+
+> αCD47 IgG
+> αCD47
+
+010 20 30 Ly6C hi  (% of CD11b +) p = 0.0006 
+
+010 20 30 40 50 Ly6C lo  (% of CD11b +) p = 0.7782 IgG 
+
+> αCD47 IgG
+> αCD47
+
+010 20 30 Ly6C hi  (% of CD11b +) p = 0.4644 
+
+010 20 30 Ly6C lo  (% of CD11b +) p = 0.8761 IgG 
+
+> αCD47 IgG
+> αCD47
+
+010 20 30 40 50 CD68  + (% lesion area)  p = 0.6689 IgG 
+
+> αCD47
+> IgG
+> αCD47
+
+010 20 30 40 50 Ki67 + CD68  + cells / section p = 0.0489 Aortic sinus Aortic sinus Figure 5 
+
+01000 2000 3000 CX3CR1 MFI (of Ly6C hi  ) p = 0.0021 IgG 
+
+> αCD47 CX3CR1 MFI (of Ly6C lo  )
+> IgG
+> αCD47
+
+0200 400 600 800 p = 0.2581 EdU DAPI Aortic sinus 
+
+IgG αCD47 YG Beads CD68 DAPI CD68 DAPI Aortic sinus 
+
+αCD47 IgG 
+
+Ki67 CD68 DAPI 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720546 doi: bioRxiv preprint
