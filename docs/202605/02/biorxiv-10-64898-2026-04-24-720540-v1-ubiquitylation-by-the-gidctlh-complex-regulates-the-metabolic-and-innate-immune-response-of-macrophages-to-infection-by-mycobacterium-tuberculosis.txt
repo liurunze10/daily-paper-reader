@@ -1,0 +1,2282 @@
+Title: Ubiquitylation by the GID/CTLH complex regulates the metabolic and innate immune response of macrophages to infection by Mycobacterium tuberculosis
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.24.720540v1.full.pdf
+
+Number of Pages: 37
+
+Markdown Content:
+1
+
+# Ubiquityla*on by the GID/CTLH complex regulates the metabolic and innate 1
+
+# immune response of macrophages to infec*on by Mycobacterium tuberculosis 2
+
+3
+
+Nelson V. Simwela 1, Luana Johnston 1, Christopher M. Sasse: 2 David G. Russell 1*4
+
+1. Department of Microbiology and Immunology, College of Veterinary Medicine, Cornell University, 5
+
+Ithaca, New York, USA 6
+
+2. Department of Microbiology and Physiological Systems, UMass Chan Medical School, Worcester, MA 7
+
+USA 8
+
+*Correspondence: dgr8@cornell.edu 9
+
+10 
+
+11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+2
+
+Abstract 28 
+
+The GID/CTLH E3 ligase complex is implicated in several biological processes, yet its full substrate 29 
+
+repertoire remains poorly defined. We recently idenXfied the complex as a broad modulator of 30 
+
+macrophage responses to Mycobacterium tuberculosis (Mtb) infecXon. Here, we use label-free 31 
+
+proteomics and diGly capture analysis of Mtb-infected macrophages to define the GID/CTLH-dependent 32 
+
+ubiquitylome. We idenXfy thousands of dynamically altered ubiquitylaXon sites, with strong enrichment 33 
+
+among proteins involved in cellular metabolism and innate immune signaling. Concurrent proteome 34 
+
+analysis revealed extensive rewiring in GID/CTLH-deficient macrophages, with >90% of enriched pathways 35 
+
+among increased proteins consisXng of metabolic targets. Notably, inhibitory phosphatases (PTEN, 36 
+
+INPP5D) also emerged as candidate substrates. FuncXonal studies revealed proteasome-dependent 37 
+
+stabilizaXon of PTEN and INPP5D in GID/CTLH-deficient macrophages with each phosphatase individually 38 
+
+exerXng an influence on Mtb intracellular survival. Together, our study defines a GID/CTLH-dependent 39 
+
+ubiquitylome in macrophages and idenXfies the complex as a central regulator of metabolism and 40 
+
+anXmicrobial immunity. 41 
+
+42 
+
+43 
+
+44 
+
+45 
+
+46 
+
+47 
+
+48 
+
+49 
+
+50 
+
+51 
+
+52 
+
+53 
+
+54 
+
+55 
+
+56 
+
+57 
+
+58 
+
+59 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+3
+
+Author summary 60 
+
+Mycobacterium tuberculosis (Mtb), the bacterium that causes tuberculosis (TB), survives and replicates 61 
+
+within macrophages, key immune cells that normally eliminate pathogens. How macrophages control their 62 
+
+internal cellular environment in response to infecXon remains incompletely understood. One such 63 
+
+important cellular control system is ubiquitylaXon, in which proteins are tagged with ubiquiXn to 64 
+
+determine their funcXonal fate or target them for degradaXon. We recently idenXfied the GID/CTLH E3 65 
+
+ligase ubiquitylaXon complex as a criXcal modulator of macrophage anXmicrobial responses to Mtb. Here, 66 
+
+we used proteomics approaches to define the proteins controlled by the GID/CTLH complex in Mtb-67 
+
+infected macrophages. We found that this complex ubiquitylates a broad network of proteins involved in 68 
+
+cellular metabolism and immune signaling. When the complex is disrupted, macrophages undergo 69 
+
+extensive metabolic reprogramming, parXcularly increased mitochondrial energy producXon, while 70 
+
+showing reduced inflammatory signaling. Despite this dampened immune response, these cells are beger 71 
+
+able to restrict Mtb growth. We also idenXfied the phosphatases PTEN and INPP5D as targets controlled 72 
+
+by the GID/CTLH complex that independently influence intracellular bacterial survival. Our findings 73 
+
+demonstrate that the GID/CTLH complex is a criXcal regulator of metabolism and immune funcXon, 74 
+
+shaping the outcomes of Mtb infecXon. 75 
+
+76 
+
+77 
+
+78 
+
+79 
+
+80 
+
+81 
+
+82 
+
+83 
+
+84 
+
+85 
+
+86 
+
+87 
+
+88 
+
+89 
+
+90 
+
+91 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+4
+
+Introduc1on 92 
+
+Macrophages are highly plasXc immune cells that eliminate pathogens through potent anXmicrobial 93 
+
+mechanisms while balancing their own survival and maintaining Xssue homeostasis. In the context of 94 
+
+Mycobacterium tuberculosis (Mtb) infecXon, the causaXve agent of human tuberculosis (TB), this balance 95 
+
+is parXcularly criXcal, as opXmal anXmicrobial responses contain bacterial growth, whereas insufficient 96 
+
+responses promote bacterial replicaXon, host cell death, and disease disseminaXon [1-3]. Understanding 97 
+
+the molecular mechanisms that regulate intracellular signaling and anXmicrobial pathways in Mtb-infected 98 
+
+macrophages can therefore provide important insights for the development of novel strategies to treat or 99 
+
+prevent TB. One such mechanism is protein ubiquitylaXon, a post-translaXonal modificaXon that marks 100 
+
+proteins with a ubiquiXn tag either for intrinsic cell signaling or degradaXon by the 26S proteasome. In 101 
+
+macrophages, ubiquitylaXon fine-tunes innate immune responses by controlling the acXvaXon, signaling 102 
+
+capacity, stability, and turnover of proteins and molecular complexes in response to danger signals [4]. 103 
+
+This dynamic regulaXon is parXcularly important because, unlike specialized immune cells such as 104 
+
+dendriXc cells, macrophages are omen heterogeneous and must perform mulXple funcXons across the 105 
+
+body, ranging from homeostaXc acXviXes such as Xssue repair and wound healing, to inflammatory 106 
+
+acXviXes such as anXmicrobial defense and anXgen presentaXon [3, 5]. Moreover, ubiquitylaXon can 107 
+
+directly target intracellular pathogens, including Mtb, for autophagic degradaXon within phagolysosomes 108 
+
+[6-8]. 109 
+
+Protein ubiquitylaXon is mediated by a hierarchical cascade of E1 acXvaXng enzymes, E2 conjugaXng 110 
+
+enzymes, and E3 ubiquiXn ligases, with E3 ligases conferring substrate specificity and temporal control of 111 
+
+individual substrate modificaXon [9]. Among E3 ligases, mulX-subunit complexes are parXcularly versaXle, 112 
+
+as they recruit diverse substrates through modular scaffolds and adaptor components [10]. One example 113 
+
+of such a complex is the glucose-induced degradaXon (GID) E3 ligase which was originally idenXfied in 114 
+
+yeast as a regulator of carbohydrate metabolism [11]. The complex is evoluXonarily conserved in mammals 115 
+
+as the C-terminal to LisH (CTLH) E3 ubiquiXn ligase [12]. The mammalian GID/CTLH E3 ligase complex is 116 
+
+composed of the RING-domain catalyXc subunits RMND5A and MAEA, together with mulXple scaffold and 117 
+
+adaptor proteins, including GID8, GID4, WDR26, MKLN1, and YPEL5, that mediate complex stability, 118 
+
+substrate recogniXon, and recruitment [13, 14]. Although some studies have reported interacXons of the 119 
+
+mammalian GID/CTLH complex with metabolic enzymes such as PKM2 and LDHA [15], including both 120 
+
+canonical and non-canonical ubiquitylaXon of metabolic proteins such HMG-CoA Synthase 1, AMPK and 121 
+
+NMNAT1 [16-18], these effects appear largely context-dependent, and the contribuXon of the complex to 122 
+
+metabolic control in mammalian cells remains unclear [14, 19]. In contrast, geneXc and biochemical 123 
+
+studies have implicated the mammalian GID/CTLH complex in a broad spectrum of cellular processes, 124 
+
+including cell proliferaXon, cell cycle control, anXbody maturaXon, DNA replicaXon, stress responses, and 125 
+
+the coordinaXon of proteostaXc and signaling networks that support cellular adaptaXon under both 126 
+
+physiological condiXons and disease states such as cancer cell plasXcity and neurodegeneraXon [13, 14, 127 
+
+19-24]. In light of the broad range of acXviXes in which the complex is implicated, it is important that the 128 
+
+physiological substrates of the complex and its systems-level funcXons are more fully elucidated. 129 
+
+Through a genome-wide CRISPR-Cas9 knockout screen in Mtb-infected macrophages, we recently 130 
+
+discovered that the GID/CTLH complex funcXons as a negaXve modulator of macrophage anXmicrobial 131 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+5
+
+responses [25]. Loss of individual complex subunits enhances macrophage control of Mtb infecXon, 132 
+
+indicaXng that, under basal and infecXon-induced condiXons, the complex constrains host defense 133 
+
+pathways. TranscripXonal and funcXonal analyses revealed that GID/CTLH-deficient macrophages acXvate 134 
+
+a wide spectrum of anXmicrobial responses, including autophagy and nutriXonal immunity, despite 135 
+
+broadly suppressing canonical cytokine-dependent anXmicrobial pathways. However, the molecular 136 
+
+mechanisms underlying this phenotype are unknown. In parXcular, it remains unclear how GID/CTLH-137 
+
+mediated ubiquitylaXon shapes macrophage signaling networks during infecXon and which substrates 138 
+
+may be linked to intracellular bacteria control. 139 
+
+In this report, we define the substrate landscape and funcXonal impact of the GID/CTLH complex during 140 
+
+Mtb infecXon of macrophages. By combining label-free quanXtaXve (LFQ) proteomics with diGly ubiquiXn 141 
+
+remnant profiling, we map the GID/CTLH-dependent ubiquitylome and reveal widespread, dynamic 142 
+
+changes in protein abundance and ubiquitylaXon in response to infecXon and loss of GID/CTLH acXvity. 143 
+
+Our analyses uncover a strong enrichment for metabolic and innate immune targets among GID/CTLH-144 
+
+modulated proteins and demonstrate extensive metabolic rewiring in Mtb-infected GID/CTLH-deficient 145 
+
+macrophages. Notably, we idenXfy the inhibitory phosphatases PTEN and INPP5D as proteasome-146 
+
+degraded substrates of the GID/CTLH complex and establish their individual roles in controlling 147 
+
+intracellular Mtb survival. Together, these findings implicate the GID/CTLH complex as a central regulator 148 
+
+of host cellular pathways that integrate cellular metabolism and anXmicrobial immunity, providing new 149 
+
+insights into how ubiquiXn-mediated signaling fine-tunes host defense during Mtb infecXon of 150 
+
+macrophages. 151 
+
+152 
+
+Results 153 
+
+Global and ubiqui1n-remnant proteomics to uncover GID/CTLH E3 ligase substrates in Mtb-infected 154 
+
+macrophages 155 
+
+To define the role of the GID/CTLH complex in host proteome responses during Mtb infecXon, we 156 
+
+performed LFQ-based global proteomics and ubiquitylomics in infected scramble control, GID8 -/-, and 157 
+
+MAEA -/- Hoxb8 bone marrow-derived macrophages (BMDM hs). We previously idenXfied five of the twelve 158 
+
+members of the GID/CTLH complex (MAEA, GID8, WDR26, YPEL5, and UBE2H) and experimentally 159 
+
+validated up to seven individual members (the five idenXfied hits plus MKLN1 and RANBP9) as 160 
+
+determinants of Mtb replicaXon in BMDM hs [25]. FuncXonal analyses revealed that anXmicrobial 161 
+
+responses in macrophages deficient for the examined individual complex members were broadly similar. 162 
+
+We therefore focused our proteomics analysis on GID8 -/- and MAEA -/- BMDM hs to generate 163 
+
+complementary datasets and because MAEA forms part of the catalyXc domain of the GID/CTLH complex, 164 
+
+whereas GID8 is required for structural tethering and integrity of the enXre complex [14, 19, 26]. 165 
+
+Scramble control, GID8 -/-, and MAEA -/- BMDM hs were infected with wild-type Mtb Erdman strain at a 166 
+
+mulXplicity of infecXon (MOI) of 1.5 for 48 hours. Cells were methanol-fixed overnight and lysed, followed 167 
+
+by trypXc digesXon and di-glycine (diGly) pepXde enrichment. Samples were then analyzed to quanXfy 168 
+
+global protein abundance and ubiquitylaXon dynamics, as summarized in Fig. 1A. Principal component 169 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+6
+
+analysis (PCA) of LFQ proteome data revealed clear segregaXon of scramble, GID8 -/-, and MAEA -/- samples, 170 
+
+with Xght clustering of biological replicates (Fig. 1B). The first principal component (PC1; 55.7% variance) 171 
+
+separated scramble controls from both knockout condiXons, while PC2 (10.4% variance) further 172 
+
+disXnguished GID8 -/- and MAEA -/- BMDM hs, indicaXng both shared and subunit-specific proteomic effects. 173 
+
+Across all condiXons, 5,087 proteins were idenXfied. DifferenXal protein abundance analysis 174 
+
+demonstrated extensive proteome remodeling following disrupXon of the GID/CTLH complex subunits. 175 
+
+RelaXve to scramble controls, GID8 -/- BMDM hs exhibited 1,565 increased and 1,216 decreased proteins, 176 
+
+whereas MAEA -/- BMDM hs showed 1,616 increased and 1,239 decreased proteins (Fig. 1C, S1 Data). These 177 
+
+widespread changes indicate that loss of either GID8 or MAEA profoundly alters host protein homeostasis 178 
+
+in BMDM hs during Mtb infecXon. VisualizaXon of differenXal protein abundance using volcano plots (Fig. 179 
+
+S1) revealed that GID8 and MAEA were among the most significantly decreased proteins in their respecXve 180 
+
+knockout mutant cell lines, internally validaXng the robustness of our experimental approach. Notably, 181 
+
+several other components of the GID/CTLH complex were consistently decreased in GID8 -/- (ARMC8, 182 
+
+MAEA, and UBE2H) and MAEA -/- (RMND5A and UBE2H) BMDM hs (Fig. S1, S1 Data). This coordinated 183 
+
+reducXon suggests destabilizaXon of the enXre GID/CTLH complex upon loss of individual subunits, as has 184 
+
+been previously observed [19], consistent with interdependent maintenance of complex integrity. In 185 
+
+contrast, numerous proteins displayed significantly increased abundance in both knockout condiXons, 186 
+
+including NCOA3, EPHX1, SFXN5, and ABHD13, poinXng to shared downstream pathways that may 187 
+
+normally be restrained by GID/CTLH-mediated ubiquitylaXon. Together, these data demonstrate that 188 
+
+disrupXon of either GID8 or MAEA leads to coordinated reducXons in the abundance of other GID/CTLH 189 
+
+complex subunits and extensive remodeling of the host proteome in BMDM hs during Mtb infecXon. 190 
+
+191 
+
+The proteomic landscape induced by Mtb infec1on is highly similar between GID8 -/- and MAEA -/-
+
+192 
+
+macrophages .193 
+
+GID8 -/- and MAEA -/- BMDM hs showed conserved transcripXonal responses following Mtb infecXon [25] and 194 
+
+separated close together in our LFQ proteomic analyses (Fig. 1B). To further quanXfy the extent of this 195 
+
+conservaXon, we compared proteome-wide changes between the two knockouts. Venn diagram analysis 196 
+
+revealed a strong overlap in proteins whose abundance was altered upon loss of GID8 or MAEA (Fig. 2A, 197 
+
+S1 Data). Among proteins with increased abundance, 1,398 proteins (78.4%) were commonly increased in 198 
+
+both GID8 -/- and MAEA -/- BMDM hs, whereas 167 proteins (9.4%) and 218 proteins (12.2%) were uniquely 199 
+
+increased following GID8 or MAEA knockout, respecXvely. Similarly, decreased proteins showed 200 
+
+substanXal concordance, with 992 proteins (67.8%) decreased in both condiXons and smaller subsets 201 
+
+uniquely reduced upon GID8 (224 proteins, 15.3%) or MAEA (247 proteins, 16.9%) depleXon. We also 202 
+
+evaluated global proteomic similariXes using hierarchical clustering and heatmap analyses of differenXally 203 
+
+abundant proteins between the two knockout condiXons (Fig. 2B). Mtb-infected BMDM h samples 204 
+
+segregated by genotype, with GID8 -/- and MAEA -/- clustering closer together and remaining clearly disXnct 205 
+
+from scramble controls (Fig. 2B). Proteins increased upon GID8 or MAEA depleXon showed coordinated 206 
+
+increases in abundance across both mutants, whereas proteins with reduced abundance showed 207 
+
+consistent decreases relaXve to controls. The overall magnitude and direcXon of protein abundance 208 
+
+changes were highly similar between GID8 -/- and MAEA -/- BMDM hs. These results demonstrate that loss of 209 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+7
+
+GID8 or MAEA induces comparable proteomic alteraXons, in agreement with our previous transcripXonal 210 
+
+findings [25], and support a shared or cooperaXve role for individual members of the complex in 211 
+
+maintaining cellular protein homeostasis. 212 
+
+213 
+
+Metabolic processes overwhelmingly dominate the differen1ally abundant proteome in Mtb-infected 214 
+
+GID8 -/- and MAEA -/- macrophages. 215 
+
+We next performed pathway enrichment analysis [27] on differenXally abundant proteins in GID8 -/- and 216 
+
+MAEA -/- Mtb-infected BMDM hs to idenXfy overrepresented biological pathways. Given that both GID8 -/-
+
+217 
+
+and MAEA -/- BMDM hs elicited very similar proteomic responses (Fig. 1B, Fig. 2), we focused our pathway 218 
+
+enrichment on proteins that were commonly increased or decreased (S1 Data) between the mutants as 219 
+
+our input. Enrichment analysis revealed that metabolic processes overwhelmingly dominate the 220 
+
+differenXally abundant proteome in Mtb -infected GID8 -/- and MAEA -/- BMDM hs. Among the increased 221 
+
+proteins, mitochondrial respiraXon and oxidaXve phosphorylaXon emerged as the most significantly 222 
+
+enriched funcXonal categories (Fig. 3A, S2 Data). Core pathways related to cellular respiraXon, aerobic 223 
+
+respiraXon, and electron transport chain acXvity were enriched, including mitochondrial respiratory chain 224 
+
+complex assembly, with prominent enrichment of Complex I (NADH dehydrogenase) assembly, 225 
+
+respirasome formaXon, and ATP synthesis coupled to electron transport. Enrichment of mulXple terms 226 
+
+associated with proton moXve force-driven ATP synthesis and inner mitochondrial membrane organizaXon 227 
+
+suggests not only increased respiratory acXvity but also structural remodeling of mitochondrial cristae to 228 
+
+accommodate elevated bioenergeXc capacity. Consistent with this, pathways involved in mitochondrial 229 
+
+gene expression, mitochondrial translaXon, rRNA processing, and ribosome biogenesis were increased, 230 
+
+indicaXng coordinated inducXon of the mitochondrial protein synthesis machinery to sustain enhanced 231 
+
+oxidaXve phosphorylaXon capacity. These results support a state of significantly enhanced mitochondrial 232 
+
+biogenesis and respiratory capacity in GID8 -/- and MAEA -/- BMDM hs during Mtb infecXon, in line with our 233 
+
+previous funcXonal assays showing that GID/CTLH-deficient BMDM hs maintain a state of metabolic 234 
+
+resilience upon infecXon with Mtb [25]. 235 
+
+In parallel with enhanced oxidaXve phosphorylaXon, lipid and fagy acid catabolic pathways were enriched 236 
+
+amongst proteins of increased abundance. These included fagy acid β-oxidaXon, acyl-CoA metabolic and 237 
+
+biosyntheXc processes, lipid oxidaXon, and monocarboxylic and carboxylic acid catabolism. These pagerns 238 
+
+suggest a metabolic shim toward increased uXlizaXon of lipid substrates as a primary fuel source for 239 
+
+mitochondrial respiraXon. Enrichment of the tricarboxylic acid (TCA) cycle and acetyl-CoA biosyntheXc 240 
+
+pathways further supports enhanced coupling between substrate oxidaXon and mitochondrial ATP 241 
+
+producXon as has been observed previously in Mtb-infected macrophages [28]. Moreover, increase in 242 
+
+organic acid, oxoacid, and amino acid catabolic processes, including branched-chain and α-amino acid 243 
+
+catabolism, suggests broader remodeling of intermediary metabolism to provide reducing equivalents 244 
+
+(NADH and FADH₂) and metabolic intermediates to support respiratory chain acXvity. AddiXonal 245 
+
+enrichment among increased proteins was observed for pathways involved in mitochondrial transport, 246 
+
+protein import into the mitochondrial matrix and inner membrane, and monoatomic ion transmembrane 247 
+
+transport, including calcium transport. In macrophages, these processes are essenXal for maintaining 248 
+
+mitochondrial proteome integrity, controlling mitochondrial enzyme acXvity, and supporXng opXmal 249 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+8
+
+respiratory chain funcXon [29]. The concurrent enrichment of reacXve oxygen species (ROS) metabolic 250 
+
+pathways suggests altered redox homeostasis accompanying elevated electron transport acXvity, 251 
+
+consistent with increased electron flux through the respiratory chain. This could contribute to the 252 
+
+enhanced control of Mtb observed in GID/CTLH knockout BMDM hs, in line with our prior findings that Mtb 253 
+
+recovered from these macrophages are oxidaXvely stressed [25]. 254 
+
+In contrast, pathway enrichment analysis of proteins of decreased abundance revealed a pronounced 255 
+
+overrepresentaXon of protein quality control and innate immune signaling pathways (Fig. 3B, S2 Data). 256 
+
+Processes related to ubiquiXn-dependent protein catabolism were strongly enriched, including 257 
+
+proteasome-mediated protein degradaXon, proteasomal protein catabolic processes, ER-associated 258 
+
+degradaXon, and regulaXon of proteolysis. MulXple ubiquitylaXon-related pathways, such as protein 259 
+
+ubiquitylaXon, K63-linked ubiquitylaXon, polyubiquitylaXon, and proteasome assembly, were also 260 
+
+enriched, indicaXng coordinated agenuaXon of the ubiquiXn-proteasome system. This was accompanied 261 
+
+by enrichment of pathways involved in post-translaXonal protein modificaXon, phosphorylaXon and 262 
+
+dephosphorylaXon, and regulaXon of protein-containing complex assembly, suggesXng broad impairment 263 
+
+of proteostasis and signaling protein turnover in Mtb-infected GID8 -/- and MAEA -/- macrophages. Although 264 
+
+E3 ligases are omen highly substrate specific [30], our data suggest that the GID/CTLH complex has 265 
+
+excepXonal funcXonal versaXlity in Mtb-infected macrophages, as its loss broadly disrupts global protein 266 
+
+homeostasis. 267 
+
+While individual GID/CTLH complex members have been implicated in various immune processes [14], the 268 
+
+broad impact of the complex on macrophage immunometabolism had largely gone unreported unXl the 269 
+
+recent Mtb infecXon studies [25]. In agreement with the observaXons that Mtb-infected GID/CTLH 270 
+
+macrophages exhibit a strongly anX-inflammatory phenotype [25], immune-related pathways were 271 
+
+significantly enriched among the decreased proteins in Mtb-infected GID8 -/- and MAEA -/- BMDM hs (Fig. 3B, 272 
+
+S2 Data). Enriched categories included innate immune response, anXviral innate immune response, 273 
+
+pagern recogniXon receptor signaling (including cytoplasmic PRR signaling), canonical NF-κB signaling, 274 
+
+and type I interferon-mediated pathways. At the same Xme, enriched themes among decreased proteins 275 
+
+include cellular responses to interferon-β, regulaXon and producXon of type I interferons, cytokine-276 
+
+mediated signaling, and defense responses to viral and protozoan sXmuli. These results indicate 277 
+
+agenuaXon of innate immune sensing and downstream inflammatory and anXviral effector programs. We 278 
+
+also observed a concomitant enrichment of pathways associated with killing and disrupXon of cells of 279 
+
+another organism which further supports reduced cytotoxic and anXmicrobial acXvity in Mtb-infected 280 
+
+GID8 -/- and MAEA -/- macrophages. Given that GID/CTLH-deficient macrophages robustly control the 281 
+
+intracellular growth of Mtb, these data suggest that loss of the complex in the context of Mtb infecXon 282 
+
+results in cytokine-independent control of bacterial growth, in a manner that could define a metabolically 283 
+
+enforced paradigm of bacterial control that does not require immune acXvaXon [31]. 284 
+
+Several metabolic and translaXonal processes were also enriched among decreased proteins, indicaXng 285 
+
+that metabolic reprogramming in these macrophages does not bifurcate cleanly between anabolic or 286 
+
+catabolic programs but instead reflects pathway-specific changes. Core glycolyXc pathways, including 287 
+
+glucose catabolism to pyruvate and NADH/NAD regeneraXon, were enriched among decreased proteins, 288 
+
+suggesXng reduced glycolyXc flux and altered cytosolic redox metabolism. Although this contrasts with 289 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+9
+
+our previous metabolic flux data in Mtb-infected GID/CTLH knockout macrophages [25], we believe this is 290 
+
+mainly due to the increased resilience of the mutant macrophages, which may display enhanced funcXonal 291 
+
+glycolysis due to improved control of infecXon, rather than an intrinsic increase in glycolyXc flux. 292 
+
+Enrichment in nucleoXde and nucleoside monophosphate metabolic and salvage pathways among the 293 
+
+decreased proteins, including deoxyribonucleoXde and ribonucleoside monophosphate metabolism, 294 
+
+point to altered nucleoXde turnover and biosyntheXc capacity. Furthermore, translaXonal control 295 
+
+pathways, such as cytoplasmic translaXon iniXaXon and elongaXon, rescue of stalled ribosomes, and 296 
+
+ribosome disassembly, were enriched among decreased proteins, indicaXng global dampening of protein 297 
+
+synthesis and ribosome dynamics. These changes suggest that, despite enhanced mitochondrial oxidaXve 298 
+
+metabolism, cytosolic anabolic capacity and biosyntheXc readiness may be constrained due to increased 299 
+
+mitochondrial redirecXon of metabolic substrates. 300 
+
+Overall, the differenXal proteomic landscape of Mtb-infected GID8 -/- and MAEA -/- BMDM hs reveals a 301 
+
+coordinated rewiring of cellular metabolism and immune signaling, characterized by enhanced 302 
+
+mitochondrial oxidaXve metabolism and substrate catabolism alongside broad agenuaXon of innate 303 
+
+immune pathways. Although the contribuXon of the GID/CTLH complex to metabolic control in 304 
+
+mammalian cells has remained a point of contenXon [13, 14, 19], our data demonstrate that, in 305 
+
+macrophages, loss of GID/CTLH acXvity results in extensive metabolic reprogramming, consistent with a 306 
+
+central regulatory role of the complex in coordinaXng bioenergeXc states and cellular metabolic funcXons 307 
+
+during infecXon. The data implicate the GID/CTLH complex as a key integrator of metabolic and innate 308 
+
+immune programs in macrophages, enforcing a bioenergeXcally constrained and immunologically primed 309 
+
+state that shapes host-pathogen interacXons and the intracellular survival of Mtb under physiological 310 
+
+condiXons. 311 
+
+312 
+
+Quan1ta1ve diGly proteomics iden1fies candidate ubiquityla1on substrates in Mtb-infected 313 
+
+macrophages lacking GID8 or MAEA. 314 
+
+To directly idenXfy candidate substrates ubiquitylated by the GID/CTLH complex during Mtb infecXon, we 315 
+
+performed diGly ubiquiXn-remnant profiling [32, 33] in Mtb-infected scramble control, GID8 -/- and MAEA -
+
+316 /- BMDM hs in parallel with global LFQ proteomics (Fig 1A). This approach enabled site-resolved 317 
+
+quanXficaXon of lysine ubiquitylaXon events and allowed us to assess how disrupXon of either the 318 
+
+structural scaffold (GID8) or the catalyXc core (MAEA) of the complex reshapes the macrophage 319 
+
+ubiquitylome during infecXon. Across all the condiXons, we idenXfied 23,841 diGly-modified lysine sites 320 
+
+corresponding to 4,268 proteins (Fig 4A, S3 Data), indicaXng extensive ubiquitylaXon of host proteins in 321 
+
+Mtb-infected macrophages. This dataset, together with a recently published study [34], provides an 322 
+
+extremely detailed atlas of ubiquiXn modificaXon in Mtb-infected macrophages. 323 
+
+Consistent with the broad proteomic remodeling observed upon GID/CTLH disrupXon (Fig 1-3), loss of 324 
+
+either GID8 or MAEA induced widespread changes in protein ubiquitylaXon. In GID8 -/- BMDM hs, 5,146 325 
+
+diGly-modified sites on 2,065 proteins were significantly increased in abundance, whereas 5,043 sites on 326 
+
+1,560 proteins were significantly decreased. Similarly, MAEA -/- BMDM hs exhibited 4,846 increased diGly-327 
+
+modified sites on 1,958 proteins and 6,143 decreased sites on 1,805 proteins relaXve to scramble controls 328 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+10 
+
+(Fig 4A). The magnitude of these changes underscores a central role for the GID/CTLH complex in shaping 329 
+
+the global ubiquitylaXon landscape of macrophages during Mtb infecXon. In a given sample, the 330 
+
+abundance of a ubiquitylated pepXde can change either due to altered stoichiometry of ubiquitylaXon at 331 
+
+a specific site or due to changes in the abundance of the parent protein. However, proteasome inhibiXon 332 
+
+or general proteotoxic stress typically leads to pronounced ubiquitylaXon across the proteome, but with 333 
+
+low overall stoichiometry that does not usually correlate with measurable changes in total protein 334 
+
+abundance [34-36]. We therefore chose not to normalize or correlate diGly pepXde changes to total 335 
+
+protein abundance, as such a correcXon would obscure biologically meaningful, GID/CTLH-dependent 336 
+
+ubiquitylaXon events. 337 
+
+Volcano plot analyses revealed highly concordant pagerns of ubiquitylaXon changes in GID8 -/- and MAEA -
+
+338 /- BMDM hs (Fig 4B). This concordance was further supported by extensive overlap of both increased and 339 
+
+decreased diGly-modified sites between GID8 -/- and MAEA -/- BMDM hs (Fig S2A), with ~59% of increased 340 
+
+and ~54% of decreased ubiquitylaXon sites shared between the two knockout condiXons. Unsupervised 341 
+
+hierarchical clustering of differenXally abundant diGly-modified pepXdes demonstrated near-idenXcal 342 
+
+global remodeling of the ubiquitylome in GID8 -/- and MAEA -/- BMDM hs relaXve to scramble controls (Fig 343 
+
+S2B), supporXng disrupXon of a shared funcXonal complex rather than subunit-specific effects. To gain 344 
+
+mechanisXc insight into pathways directly controlled by GID/CTLH-mediated ubiquitylaXon, we focused 345 
+
+on diGly-modified sites that were consistently and commonly decreased in both GID8 -/- and MAEA -/-
+
+346 
+
+BMDM hs, reasoning that these likely represent candidate substrates of the complex (Fig 4B, Fig S2A-B, S3 347 
+
+Data). Strikingly, proteins involved in core metabolic pathways were highly enriched among these putaXve 348 
+
+substrates. MulXple enzymes involved in glycogen metabolism, glycolysis, and the TCA cycle harbored 349 
+
+shared and in some instances >20 lysine residues with reduced ubiquitylaXon in both knockout condiXons 350 
+
+(Fig 4B-C, S3 Data). These data indicate that the GID/CTLH complex directly targets a broad array of 351 
+
+metabolic enzymes for ubiquitylaXon during Mtb infecXon, which is in agreement with the extensive 352 
+
+metabolic rewiring observed at the proteome level (Fig 3). In addiXon to metabolic enzymes, several innate 353 
+
+immune and inflammatory signaling targets exhibited reduced ubiquitylaXon in GID/CTLH-deficient 354 
+
+macrophages, including components of inflammasome and pagern recogniXon pathways (NOD1, NLRP3, 355 
+
+NLRC4, NLRC5), inducible nitric oxide synthase (NOS2), STAT family transcripXon factors (STAT1, STAT2, 356 
+
+STAT3), and interferon-sXmulated gene products (IFIT1-3) (Fig 4C, S3 Data). We also idenXfied proteins 357 
+
+involved in NAD metabolism (NAMPT, NADK, NADSYN1) as candidate substrates of the GID/CTLH complex, 358 
+
+linking ubiquiXn-dependent signaling to control of cellular redox balance and metabolic cofactor 359 
+
+availability, which corroborates recent findings implicaXng the complex in the ubiquitylaXon of the NAD 360 
+
+metabolic enzyme NMNAT1 [16]. AddiXonally, the inhibitory phosphatases INPP5D (SHIP1), PTPN6 (SHP-361 
+
+1), and PTEN also emerged as prominent candidate substrates (Fig 4C, S3 Data), highlighXng inhibitors of 362 
+
+the PI3K-AKT signaling pathway as potenXal GID/CTLH-targeted proteins during Mtb infecXon. 363 
+
+In agreement with these substrate-level findings, pathway enrichment analysis of proteins harboring 364 
+
+commonly decreased diGly-modified sites between the two mutants revealed marked enrichment of 365 
+
+metabolic and immune pathways (Fig S3A, S4 Data). InteresXngly, among these, pathways involved in 366 
+
+vesicle-mediated transport, neuronal development, cell moXlity, endosomal trafficking, acXn cytoskeleton 367 
+
+organizaXon, phosphoinosiXde metabolism, and small GTPase signaling were also enriched. These data 368 
+
+extend the funcXonal scope of GID/CTLH-dependent ubiquitylaXon in Mtb-infected macrophages, 369 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+11 
+
+highlighXng its broad involvement in addiXonal biological pathways, as previously reported in other 370 
+
+mammalian cells [13, 14, 20]. Conversely, several diGly-modified pepXdes and pathways among proteins 371 
+
+harboring commonly increased diGly sites were elevated upon GID/CTLH disrupXon (Fig 4A-B; Fig S2; Fig 372 
+
+S3B; S3-S4 Data), likely reflecXng secondary remodeling of ubiquiXn-dependent signaling networks and 373 
+
+compensatory ubiquitylaXon by other E3 ligases in response to altered proteostasis. 374 
+
+375 
+
+PTEN and INPP5D are stabilized in GID8 -/- and MAEA -/- macrophages in a proteasome-dependent 376 
+
+manner. 377 
+
+Our diGly ubiquitylome analysis idenXfied numerous candidate substrates whose ubiquitylaXon was 378 
+
+consistently reduced in both GID8 -/- and MAEA ⁻/⁻ BMDM hs during Mtb infecXon (Fig 4B-C; S3 Data), 379 
+
+spanning proteins involved in innate immune signaling, NAD metabolism, and central carbon metabolism. 380 
+
+To funcXonally validate whether these changes in ubiquitylaXon reflect altered protein turnover, we 381 
+
+performed cycloheximide (CHX) chase assays on a representaXve set of candidate substrates, including 382 
+
+NLRP3 (immune signaling), NAMPT (NAD biosynthesis), and the metabolic enzymes MDH1, MDH2, and 383 
+
+UGP2. In scramble control BMDM hs, the inflammasome protein NLRP3 exhibited measurable turnover 384 
+
+over the 24-hour CHX chase period, whereas in GID8 ⁻/⁻ and MAEA ⁻/⁻ BMDM hs there was evidence of 385 
+
+delayed degradaXon, resulXng in significantly higher residual protein levels at 12 and 24 hours following 386 
+
+CHX treatment (Fig S4A). In contrast, we did not observe differences in degradaXon kineXcs for NAMPT, 387 
+
+UGP2, MDH1, or MDH2 (Fig S4A-C). Notably, MDH2 was among the earliest substrates idenXfied for the 388 
+
+GID complex in Saccharomyces cerevisiae and is now a well-characterized target of GID-mediated 389 
+
+degradaXon [11, 37]. These data suggest that loss of the GID/CTLH complex selecXvely stabilizes a subset 390 
+
+of substrates in mammalian macrophages, including immune signaling proteins such as NLRP3. For the 391 
+
+other diGly-idenXfied candidates tested, the absence of detectable changes in protein abundance over 392 
+
+the CHX chase may reflect longer intrinsic half-lives under these condiXons and/or ubiquitylaXon events 393 
+
+that do not target proteins for proteasomal degradaXon. 394 
+
+We next focused on three inhibitory phosphatases, PTPN6 (SHP-1), INPP5D (SHIP1), and PTEN, which 395 
+
+emerged as high-confidence candidate substrates in the diGly dataset (Fig 4C; S3 Data) and were also 396 
+
+idenXfied in our previous CRISPR-Cas9 knockout screen [25] as potenXal candidates that could restrict 397 
+
+intracellular Mtb growth in macrophages. In the CHX chase assay, we did not observe differences in PTPN6 398 
+
+degradaXon kineXcs over the 24-hour period (Fig S4D). INPP5D, however, was rapidly degraded in 399 
+
+scramble control macrophages, with protein levels declining sharply within 12 hours (Fig 5A), but was 400 
+
+significantly stabilized in both GID8 ⁻/⁻ and MAEA ⁻/⁻ BMDM hs, with ~50-100% of the iniXal protein 401 
+
+abundance remaining at 12-24 hours (Fig 5A-B; Fig S5A-C). Steady-state INPP5D protein levels were also 402 
+
+elevated in both knockout genotypes relaXve to scramble controls (Fig 5A, Fig S5A-B) suggesXng that 403 
+
+reduced ubiquitylaXon of INPPD5 reduces its targeXng to the proteasome and increases its levels and 404 
+
+stability in GID/CTLH-deficient macrophages. To determine whether INPP5D degradaXon is proteasome-405 
+
+dependent and whether this process requires the GID/CTLH complex, scramble control and MAEA ⁻/⁻ 
+
+406 
+
+BMDM hs were treated with CHX or the proteasome inhibitor MG132 in separate condiXons for 18 hours. 407 
+
+In scramble control cells, CHX treatment led to a marked reducXon in INPP5D protein levels (Fig 5B, Fig 408 
+
+S5C), in line with our prior observaXons (Fig 5A; Fig S5A-B), whereas MG132 treatment alone significantly 409 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+12 
+
+increased INPP5D abundance, consistent with proteasome-mediated turnover (Fig 5B, Fig S5C). In 410 
+
+contrast, INPP5D levels in MAEA ⁻/⁻ BMDM hs remained relaXvely stable following CHX treatment, and 411 
+
+MG132 treatment produced no addiXonal accumulaXon of INPP5D (Fig 5B, Fig S5C), indicaXng that loss of 412 
+
+MAEA agenuates proteasome-dependent degradaXon of INPP5D. 413 
+
+PTEN exhibited similar stabilizaXon kineXcs in the CHX chase assay, with significantly delayed degradaXon 414 
+
+and increased steady-state protein levels in GID8 ⁻/⁻ and MAEA ⁻/⁻ BMDM hs compared to scramble controls 415 
+
+(Fig 5C; Fig S5D). Notably, ~40% of PTEN protein remained amer 24 hours of CHX treatment, in contrast to 416 
+
+INPP5D (<15%), suggesXng that PTEN could be ubiquitylated by addiXonal ubiquiXn ligases beyond the 417 
+
+GID/CTLH complex. Consistent with this possibility, several E3 ligases have indeed been reported to 418 
+
+ubiquitylate PTEN in mammalian cells, including NEDD4-1, WWP2, CHIP, XIAP, RFP, HRD1, and the CUL4B– 419 
+
+DCAF13 complex [38]. 420 
+
+421 
+
+Gene1c or pharmacological inhibi1on of INPP5D and PTEN impairs Mtb replica1on in macrophages 422 
+
+We idenXfied PTEN and INPP5D as potenXal substrates of the GID/CTLH complex and confirmed their 423 
+
+increased stability and proteasome-dependent degradaXon in BMDM hs lacking individual members of the 424 
+
+complex (Fig 4-5). Both proteins are inhibitors of PI3K-Akt signaling and modulate pro-inflammatory 425 
+
+responses in macrophages [39, 40]. Because GID/CTLH-deficient BMDM hs display a strongly anX-426 
+
+inflammatory phenotype [25]; it is unlikely that increased stabilizaXon of PTEN and INPP5D contributes to 427 
+
+enhanced Mtb growth control in these cells. However, if these proteins are rouXnely degraded by the 428 
+
+proteasome under physiological condiXons in macrophages, potenXally to relieve inhibiXon of pro-429 
+
+inflammatory signaling, we reasoned that their knockout in wild-type macrophages should enhance PI3K-430 
+
+Akt signaling, promote pro-inflammatory cytokine producXon, and restrict intracellular Mtb growth. We 431 
+
+therefore invesXgated whether PTEN or INPP5D modulates intracellular Mtb replicaXon, by generaXng 432 
+
+independent CRISPR-Cas9 knockout Hoxb8 macrophage lines for each target (S5 Data). Immunoblot 433 
+
+analysis confirmed efficient depleXon of PTEN and INPP5D proteins in the respecXve knockout 434 
+
+macrophages relaXve to scramble controls (Fig 6A). 435 
+
+We next quanXfied intracellular Mtb growth in PTEN -/- and INPP5D -/- BMDM hs using both luminescence-436 
+
+based bacterial growth assays following infecXon with Mtb-Lux and standard CFU enumeraXon following 437 
+
+infecXon with wild-type Mtb Erdman. By the luciferase-based readout, neither PTEN -/- nor INPP5D -/-
+
+438 
+
+BMDM hs exhibited a detectable difference in bacterial growth compared with scramble controls at day 4 439 
+
+post infecXon (Fig 6B), in line with observaXons that luciferase readouts lack the dynamic range to resolve 440 
+
+more modest bacterial control phenotypes as we previously observed with lipid knockout mutant BMDM hs441 
+
+[41] and preferenXally detects strong restricXon phenotypes such as those observed upon disrupXon of 442 
+
+the GID/CTLH complex itself [25]. In contrast, CFU enumeraXon revealed a reducXon in intracellular 443 
+
+bacterial growth in both INPP5D -/- and PTEN -/- BMDM hs at day 4 post infecXon relaXve to scramble controls 444 
+
+(Fig 6B), with a more pronounced and consistent effect observed in INPP5D-deficient BMDM hs and a more 445 
+
+modest effect in PTEN-deficient macrophages. Importantly, bacterial uptake at day 0 was comparable 446 
+
+between genotypes, indicaXng that differences in bacterial burden at later Xme points reflected 447 
+
+intracellular growth control rather than altered phagocyXc uptake. 448 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+13 
+
+To further validate the funcXonal role of INPP5D acXvity, we pharmacologically inhibited INPP5D using the 449 
+
+selecXve small-molecule inhibitor 3α-aminocholestane (3AC) [42] in scramble control and INPP5D -/-
+
+450 
+
+BMDM hs infected with Mtb-Lux. While we found that the inhibitor restricted Mtb growth under both 451 
+
+macrophage condiXons (Fig 6C), we also observed that the compound was acXve against Mtb in broth 452 
+
+culture (Fig S6). Given the inhibitor’s structure (Fig 6C), this is perhaps not surprising due to Mtb’s known 453 
+
+suscepXbility to inhibitors of bacterial cholesterol metabolism [43, 44]. We observed a parXal loss of 3AC 454 
+
+inhibitory acXvity against Mtb in INPP5D -/- BMDM hs (Fig 6C), which supporXvely confirms the inhibitor 455 
+
+specificity. Nonetheless, the geneXc knockouts confirm the roles of PTEN and INPP5D as funcXonally 456 
+
+relevant host factors that individually limit macrophage anXmicrobial capacity against Mtb, albeit with 457 
+
+more modest effects than loss of the GID/CTLH complex itself. 458 
+
+459 
+
+Loss of INPP5D ac1vity increases Akt phosphoryla1on and promotes a pro-inflammatory response in 460 
+
+Mtb-infected macrophages 461 
+
+Next, we assessed the funcXonal consequences of INPP5D loss or inhibiXon on downstream signaling 462 
+
+pathways in infected BMDM hs, as INPP5D displayed a stronger anXbacterial phenotype than PTEN and is 463 
+
+predominantly expressed in immune cells [45]. First, we examined Akt phosphorylaXon in both uninfected 464 
+
+and Mtb-infected BMDM hs treated or not treated with 3AC, in line with the established role of INPP5D as 465 
+
+an inhibitor of PI3K-Akt signaling in macrophages [39]. INPP5D -/- BMDM hs displayed increased levels of 466 
+
+phosphorylated Akt (p-Akt) in the uninfected state compared with scramble controls, while total Akt levels 467 
+
+remained unchanged (Fig 7A, Fig S7A). InteresXngly, Mtb infecXon also increased p-Akt levels in scramble 468 
+
+control BMDM hs, but the level of phosphorylaXon was even more pronounced in Mtb-infected INPP5D -/-
+
+469 
+
+BMDM hs. Pharmacologic inhibiXon of INPP5D using 3AC similarly enhanced Akt phosphorylaXon in 470 
+
+infected INPP5D -/- BMDM hs but was relaXvely blunted in scramble control macrophages. These results 471 
+
+indicate that INPP5D knockout enhances PI3K-Akt pathway acXvaXon during Mtb infecXon and that the 472 
+
+3AC inhibitor shows some evidence of INPP5D target engagement in infected BMDM hs, but not at the 473 
+
+same level as the geneXc knockout. 474 
+
+We performed transcriptomic profiling of Mtb-infected scramble control and INPP5D -/- BMDM hs treated 475 
+
+or untreated with 3AC to idenXfy INPP5D-dependent pathways of bacterial control in infected 476 
+
+macrophages. PCA analysis revealed clear segregaXon of Mtb-infected BMDM hs by both genotype and 477 
+
+chemical INPP5D inhibiXon (Fig 7B), demonstraXng that geneXc and pharmacologic disrupXon of INPP5D 478 
+
+elicit robust and disXnct host transcripXonal responses to infecXon. Pathway enrichment analysis of genes 479 
+
+upregulated in infected INPP5D -/- BMDM hs (S6 Data) showed strong enriched of inflammatory and immune 480 
+
+response programs, including leukocyte chemotaxis and migraXon, leukocyte adhesion and extravasaXon, 481 
+
+interleukin-1 producXon, cytokine-mediated signaling, and regulaXon of inflammatory responses (Fig 7C, 482 
+
+S7 Data). These findings confirm that INPP5D funcXons as an inhibitor of pro-inflammatory gene 483 
+
+expression in Mtb-infected BMDM hs, and that its deleXon enhances these responses to restrict 484 
+
+intracellular bacterial growth. The results are also in agreement with recent reports implicaXng loss of 485 
+
+INPP5D with enhanced inflammasome acXvaXon in microglia [46]. Pathways enriched among 486 
+
+downregulated genes (S6 Data) in Mtb-infected INPP5D −/− BMDM hs were primarily related to general 487 
+
+kinase and cellular signaling (Fig S7B, S7 Data) and did not reveal addiXonal biologically informaXve 488 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+14 
+
+programs relevant to macrophage anXmicrobial programs. Mtb-infected scramble control and INPP5D −/− 
+
+489 
+
+BMDM hs treated with 3AC displayed comparable pagerns of pathway enrichment, characterized by 490 
+
+upregulated cholesterol metabolism, acyl-CoA metabolic processes, and steroid biosyntheXc processes, 491 
+
+alongside downregulated pro-inflammatory responses, including inflammasome acXvaXon and cytokine 492 
+
+producXon (Fig S8-S9, S6-S7 Data). This is consistent with the strong lipid-modulatory acXvity of 3AC, a 493 
+
+cholesterol derivaXve (Fig 6C), as well as its direct bactericidal acXvity (Fig S6). 494 
+
+495 
+
+Discussion 496 
+
+In this study, we demonstrate that the GID/CTLH E3 ubiquiXn ligase complex is a central regulator of 497 
+
+macrophage metabolism and anXmicrobial immunity during Mtb infecXon. By integraXng global 498 
+
+proteomics with ubiquiXn-remnant profiling, we reveal that loss of GID/CTLH acXvity induces extensive 499 
+
+remodeling of both protein abundance and ubiquitylaXon across metabolic and immune signaling 500 
+
+pathways. Our data implicate the GID/CTLH complex as a systems-level coordinator of macrophage cellular 501 
+
+metabolic state, linking ubiquiXn-dependent signaling to bioenergeXc programming and intracellular 502 
+
+bacterial control. 503 
+
+A striking finding of our study is the dominant metabolic signature induced by loss of GID/CTLH acXvity 504 
+
+during Mtb infecXon of macrophages. GID8 -/- and MAEA -/- macrophages displayed broad upregulaXon of 505 
+
+mitochondrial oxidaXve phosphorylaXon, fagy acid β-oxidaXon, and TCA cycle pathways, along with 506 
+
+increased abundance of mitochondrial gene expression programs and protein import machinery across 507 
+
+the global proteome. These changes indicate a shim toward enhanced mitochondrial respiratory capacity 508 
+
+and substrate oxidaXon. This metabolic rewiring agrees with our prior funcXonal observaXons that 509 
+
+GID/CTLH-deficient macrophages maintain metabolic resilience during Mtb infecXon and impose oxidaXve 510 
+
+stress on intracellular bacteria [25]. For many years, it has been recognized that macrophages possess 511 
+
+remarkable metabolic plasXcity, and that their metabolic programs omen mirror the disease environments 512 
+
+in which they reside [47, 48]. Historically, these contrasXng metabolic phenotypes were largely agributed 513 
+
+to external environmental cues, such as Xssue-derived signals and the surrounding cytokine landscape. 514 
+
+This perspecXve was influenced by the long-standing assumpXon that all macrophages originate from 515 
+
+circulaXng blood monocytes and exist in a basal “M0” state that can be polarized into M1 or M2 516 
+
+phenotypes in response to specific cytokines [47-49]. However, more recent insights into macrophage 517 
+
+heterogeneity, encompassing both developmental origin and pre-programmed metabolic states, have 518 
+
+revealed a far more complex landscape than previously appreciated [3, 50, 51]. During intracellular 519 
+
+infecXon with Mtb in the lung, for example, resident alveolar macrophages respond differently from 520 
+
+recruited intersXXal macrophages, even when exposed to idenXcal cytokine environments. These 521 
+
+divergent responses arise from differences in ontogeny and intrinsic metabolic wiring, which together 522 
+
+shape each macrophage populaXon’s capacity to support or restrict bacterial growth [50, 52]. This 523 
+
+complexity raises an important quesXon: is there a key regulator that coordinates macrophage metabolism 524 
+
+across disparate developmental, environmental, and Xssue condiXons? Our data idenXfy the GID/CTLH 525 
+
+complex as a central regulator of cellular metabolism in Mtb-infected macrophages, and a potenXal 526 
+
+candidate for such a role. The dynamic nature of ubiquitylaXon itself may confer the flexibility required to 527 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+15 
+
+fine-tune metabolic pathways, ensuring that only the appropriate metabolic programs are engaged, 528 
+
+whether during adapXve re-programming or within pre-established metabolic states, to support context-529 
+
+specific cellular responses. The findings support a model in which GID/CTLH acXvity constrains 530 
+
+mitochondrial bioenergeXc capacity under basal and infecXon-induced condiXons, thereby limiXng 531 
+
+macrophage metabolic fitness during infecXon. In this context, loss of the GID/CTLH complex in knockout 532 
+
+condiXons appears to release this bioenergeXc brake, enabling macrophages to sustain enhanced 533 
+
+oxidaXve metabolism and beger tolerate infecXon-induced stress. 534 
+
+Our diGly ubiquiXn-remnant profiling revealed that the GID/CTLH complex directly targets a remarkably 535 
+
+wide spectrum of substrates, including enzymes spanning glycolysis, glycogen metabolism, the TCA cycle, 536 
+
+and NAD metabolism. This extensive targeXng of central carbon metabolism enzymes suggests that the 537 
+
+GID/CTLH complex may funcXon as a master regulator of metabolism in macrophages, shaping pathway 538 
+
+fluxes and substrate availability through ubiquiXn-dependent modulaXon of enzyme turnover and/or non-539 
+
+degradaXve ubiquiXn signaling. Although the role of the mammalian GID/CTLH complex in metabolic 540 
+
+control remains a subject of discussion [13, 14, 19], our data provide direct in situ evidence in primary 541 
+
+macrophages that the complex exerts broad and coordinated control over metabolic networks during Mtb 542 
+
+infecXon. Notably, not all diGly-idenXfied candidate substrates exhibited altered proteasomal degradaXon 543 
+
+kineXcs, suggesXng that GID/CTLH-dependent ubiquitylaXon likely serves both degradaXve and non-544 
+
+degradaXve funcXons, consistent with emerging evidence of increased versaXlity in ubiquiXn-mediated 545 
+
+signaling [9, 30]. 546 
+
+It is significant that enhanced control of intracellular Mtb in GID/CTLH-deficient macrophages occurs 547 
+
+despite broad suppression of canonical inflammatory and cytokine-driven anXmicrobial programs. This 548 
+
+phenotype challenges the prevailing paradigm that macrophage-mediated control of Mtb is dependent 549 
+
+solely on inflammatory acXvaXon [31] and highlights an alternaXve mode of bacterial restricXon with the 550 
+
+potenXal to be cytokine independent. We believe that metabolic fitness and improved mitochondrial 551 
+
+funcXon consXtute a dominant layer of anXmicrobial control in this context. Enhanced oxidaXve 552 
+
+metabolism, redox capacity, and substrate catabolism may promote intrinsic host cell resilience and create 553 
+
+a metabolically restricXve intracellular environment that limits Mtb replicaXon. This closely aligns with 554 
+
+emerging concepts of nutriXonal immunity and metabolically enforced host restricXon of intracellular 555 
+
+pathogens [3, 41, 50, 51]. 556 
+
+Among the GID/CTLH-ubiquitylated substrates, we idenXfied the inhibitory phosphatases PTEN and 557 
+
+INPP5D as proteasome-degraded targets whose stability is increased in GID8 -/- and MAEA -/- macrophages. 558 
+
+Both proteins are inhibitors of PI3K-Akt signaling, a pathway that has been implicated in macrophage 559 
+
+survival, polarizaXon and inflammatory acXvaXon [39, 40], and were also lead host candidates idenXfied 560 
+
+in our CRISPR-Cas9 knockout screen that uncovered the GID/CTLH complex [25]. GeneXc loss of PTEN or 561 
+
+INPP5D in wild-type macrophages modestly restricted intracellular Mtb growth, with INPP5D exerXng the 562 
+
+stronger effect, and INPP5D deficiency enhanced Akt phosphorylaXon and pro-inflammatory 563 
+
+transcripXonal responses during infecXon. These findings suggest that basal GID/CTLH-dependent 564 
+
+turnover of inhibitory phosphatases allows for a dynamic modulaXon of PI3K-Akt signaling and 565 
+
+inflammatory responsiveness in macrophages [39, 40, 46]. This agrees with our integrated proteomics 566 
+
+data, which showed GID/CTLH candidate substrates in several immune pathways and a broader 567 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+16 
+
+downregulaXon of pro-inflammatory processes in infected GID/CTLH-deficient macrophages. However, 568 
+
+the anX-inflammatory phenotype of GID/CTLH-deficient macrophages indicates that stabilizaXon of PTEN 569 
+
+and INPP5D is not the mechanism driving enhanced Mtb control in these cells. Instead, these substrates 570 
+
+likely contribute to fine-tuning of inflammatory signaling thresholds under physiological condiXons, 571 
+
+whereas the robust anXbacterial phenotype observed upon GID/CTLH disrupXon reflects the combined 572 
+
+effect of widespread metabolic and proteostaXc perturbaXon. 573 
+
+Several consideraXons are relevant to the interpretaXon of our findings. First, diGly profiling idenXfies 574 
+
+candidate substrates but does not disXnguish between direct and indirect targets of ubiquitylaXon, nor 575 
+
+does it resolve the specific ubiquiXn chain topologies involved [33, 35, 53, 54]. Second, many 576 
+
+ubiquitylaXon events likely mediate non-degradaXve signaling funcXons [55, 56], which may require 577 
+
+modificaXon-specific anXbodies to validate, and were not systemaXcally assessed. Third, our experiments 578 
+
+were performed in ex vivo differenXated Hoxb8 derived bone marrow primary macrophages; whether 579 
+
+similar modulatory funcXons operate in primary macrophage populaXons in vivo during Mtb infecXon 580 
+
+remains to be established. These limitaXons do not undermine the relevance of our findings; however, 581 
+
+they highlight important direcXons for future work to refine the mechanisXc understanding and 582 
+
+physiological relevance of GID/CTLH-dependent ubiquiXn signaling in broader host-pathogen interacXons. 583 
+
+In summary, our findings idenXfy the GID/CTLH E3 ligase complex as a central regulator of ubiquiXn-584 
+
+dependent control of macrophage metabolism and anXmicrobial immunity during Mtb infecXon. By 585 
+
+constraining mitochondrial bioenergeXc capacity and shaping the ubiquitylaXon landscape of metabolic 586 
+
+and immune signaling proteins, the GID/CTLH complex enforces a cellular state that favors Mtb persistence 587 
+
+under basal and infecXon-induced condiXons in macrophages. DisrupXon of this funcXon through 588 
+
+knockout of subunit members of the GID/CTLH complex results in a metabolically enforced mode of Mtb 589 
+
+control that is largely independent of canonical inflammatory pathways, highlighXng ubiquiXn-mediated 590 
+
+regulaXon of host metabolism as an underappreciated determinant of anXmicrobial responses. 591 
+
+592 
+
+Materials and methods 593 
+
+Mtb strains 594 
+
+All CFU and standard infecXon assays were performed using the parental, PDIM-posiXve, Mtb Erdman 595 
+
+strain (ATCC 35801). Reporter strains in the Erdman background included the fluorescent Mtb Erdman 596 
+
+smyc’::mCherry, previously described [57], and the bioluminescent Erdman-Lux strain, generated by 597 
+
+transformaXon with the pMV306G13+Lux plasmid [58]. Mtb cultures were grown to logarithmic phase at 598 
+
+37 °C in Middlebrook 7H9 broth supplemented with 10% OADC enrichment (oleic acid, albumin, dextrose, 599 
+
+and catalase; Becton, Dickinson and Company), 0.2% glycerol, and 0.05% tyloxapol (Sigma-Aldrich). 600 
+
+Reporter strains were maintained under anXbioXc selecXon as appropriate: the Erdman-Lux strain was 601 
+
+cultured with 25 μg/mL kanamycin, and the smyc’::mCherry strain with 50 μg/mL hygromycin. 602 
+
+603 
+
+604 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+17 
+
+Maintenance and culture condi1ons of mammalian cell lines 605 
+
+Murine Hoxb8 estrogen responsive (ER), Cas9-expressing eGFP⁺ condiXonally immortalized myeloid 606 
+
+progenitor cells were generated as previously reported [59] and maintained as described extensively 607 
+
+elsewhere [25, 41, 60]. Briefly, Hoxb8-ER progenitors were cultured in RPMI medium (Corning®) 608 
+
+supplemented with 10% fetal bovine serum (FBS), 2 mM L-glutamine, 1 mM sodium pyruvate, 20 ng/mL 609 
+
+recombinant murine GM-CSF (PeproTech), 0.5 μM β-estradiol, 10 mM HEPES, and 1% 610 
+
+penicillin/streptomycin. To generate BMDM hs, β-estradiol was removed by washing cells twice with 1× 611 
+
+PBS. Cells were then transferred to macrophage differenXaXon medium consisXng of DMEM (Corning®) 612 
+
+supplemented with 10% FBS, 15% L-cell-condiXoned medium, 2 mM L-glutamine, 1 mM sodium pyruvate, 613 
+
+and 1% penicillin/streptomycin. DifferenXaXon was carried out at 37 °C for 6-7 days, maintaining cultures 614 
+
+at an approximate density of 0.5 × 10⁶ cells/mL throughout the process. 615 
+
+616 
+
+Genera1on of mutant CRISPR-Cas9 mutant BMDM hs617 
+
+GID/CTLH-deficient mutant BMDM hs used in this study were generated as previously described [25]. All 618 
+
+other mutants (PTEN -/- and INPP5D -/-) were generated and maintained using lenXviral-delivered CRISPR-619 
+
+Cas9 approaches in Cas9-expressing eGFP⁺ Hoxb8 ERs myeloid progenitors, as described in detail 620 
+
+elsewhere [25, 41]. 621 
+
+622 
+
+Macrophage infec1on assays 623 
+
+BMDM hs were infected with Mtb using protocols as previously described [25, 41, 60, 61]. In brief, log-624 
+
+phase cultures were harvested by centrifugaXon and resuspended in basal uptake buffer composed of 25 625 
+
+mM dextrose, 0.5% bovine serum albumin, 0.1% gelaXn, 1 mM CaCl₂, and 0.5 mM MgCl₂ in PBS. To disrupt 626 
+
+bacterial aggregates and obtain a single-cell suspension, the preparaXon was repeatedly passed through 627 
+
+a tuberculin syringe (≥20 strokes). Following mechanical dispersion, bacteria were diluted into anXbioXc-628 
+
+free macrophage culture medium and added to BMDM hs at appropriate MOIs. 629 
+
+630 
+
+Quan1ta1ve proteomics and ubiquitylomics 631 
+
+Macrophage infec1on and protein lysate prepara1on 632 
+
+Approximately 1 × 10⁸ BMDM hs per biological replicate (in triplicate: scramble control, GID8 -/-, and MAEA-633 /-) were infected with Mtb Erdman at an MOI of 1.5 for 48 hours. Amer 48 hours, cells were harvested by 634 
+
+scraping in ice-cold 1× PBS. Infected cells were sterilized to completely inacXvate Mtb by overnight 635 
+
+incubaXon in 90% methanol. The following day, methanol-fixed cells were removed from the BSL3 facility, 636 
+
+washed twice with 1× PBS, and resuspended in lysis buffer (8 M urea, 150 mM NaCl, 50 mM TEAB, 1× Halt 637 
+
+protease and phosphatase inhibitors). Resuspended cell lysates were sonicated on ice using a large-Xp 638 
+
+probe at 40% amplitude for three 10-second cycles, with 30-second intervals between cycles (5 seconds 639 
+
+on, 5 seconds off). Sonicated lysates were clarified by centrifugaXon at 14,000 rpm for 30 minutes at 4 °C. 640 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+18 
+
+Supernatants were transferred to new tubes and protein concentraXon was measured using the Pierce™ 641 
+
+Rapid Gold BCA Protein Assay Kit with a 2 mg/mL albumin standard diluXon series. Lysates were stored at 642 
+
+-80 °C unXl shipment to CreaXve Proteomics (Shirley, New York) where protein analysis was performed. 643 
+
+Approximately 5 mg of total protein was used as input for each replicate. 644 
+
+Sample prepara1on for proteomics 645 
+
+Cell lysates were subjected to both global LFQ proteomic analysis and diGly profiling. Samples stored at 646 
+
+−80 °C were thawed on ice prior to processing. Protease and deubiquiXnase inhibitors were added (1 mM 647 
+
+PMSF and 1% PR-619; Sigma-Aldrich), followed by vortexing and centrifugaXon at 4,500 × g for 10 min at 648 
+
+4 °C. Supernatants were collected, and protein concentraXons were re-measured using a BCA assay. 649 
+
+Trypsin diges1on 650 
+
+Equal amounts of protein were adjusted to 200 μL in 8 M urea. Samples were reduced with 5 mM 651 
+
+dithiothreitol (DTT) at 37 °C for 45 min and alkylated with 11 mM iodoacetamide in the dark at room 652 
+
+temperature for 15 min. Proteins were precipitated with four volumes of cold acetone at −20 °C for 2 653 
+
+hours, pelleted by centrifugaXon, air-dried, and resuspended in 25 mM ammonium bicarbonate. 654 
+
+Resuspended protein samples were digested overnight at 37 °C with sequencing-grade trypsin (Promega). 655 
+
+Digested pepXdes were desalted using C18 solid-phase extracXon columns (Millipore), quanXfied using 656 
+
+the Pierce™ QuanXtaXve PepXde Assay kit (Thermo Fisher ScienXfic), concentrated, and vacuum-dried 657 
+
+prior to LC-MS/MS analysis. An aliquot of the pepXdes was used for LFQ proteomics, while the rest were 658 
+
+subjected to diGly immunoaffinity enrichment. 659 
+
+Enrichment of diGly modified pep1des 660 
+
+For ubiquiXn remnant profiling, digested pepXdes were subjected to immunoaffinity enrichment of di-661 
+
+glycine (K-ε-GG)-modified pepXdes using anX-diglycine-lysine anXbody-conjugated agarose beads (PTM 662 
+
+Biolabs). PepXdes were dissolved in enrichment buffer (80% acetonitrile/6% trifluoroaceXc acid saturated 663 
+
+with glycine) and incubated with pre-washed anXbody-conjugated beads on a rotaXng plaorm for 1-2 664 
+
+hours at 4°C. Amer incubaXon, beads were washed sequenXally with 50% acetonitrile/6% trifluoroaceXc 665 
+
+acid/200 mM NaCl and 30% acetonitrile/0.1% trifluoroaceXc acid. Bound pepXdes were eluted with 10% 666 
+
+ammonia soluXon, vacuum-dried, desalted using C18 ZipTips, and quanXfied prior to LC-MS/MS analysis. 667 
+
+Nano LC-MS/MS Analysis 668 
+
+PepXdes were separated using a NanoElute UHPLC system (Bruker) equipped with an IonOpXcks C18 669 
+
+analyXcal column (75 μm × 25 cm, 1.6 μm parXcle size). Approximately 200 ng of pepXde was loaded per 670 
+
+injecXon. Mobile phase A consisted of 0.1% formic acid in water, and mobile phase B consisted of 0.1% 671 
+
+formic acid in acetonitrile. PepXdes were separated at 300 nL/min using a linear gradient: 2-22% B over 672 
+
+45 min, 22-35% B over 5 min, 35-80% B over 5 min, followed by 80% B for 5 min (total runXme: 60 min). 673 
+
+Mass spectrometry data was acquired on a XmsTOF Pro2 mass spectrometer (Bruker) operaXng in posiXve 674 
+
+ion mode with the data-dependent acquisiXon parallel accumulaXon-serial fragmentaXon (ddaPASEF) 675 
+
+method. The m/z range was 100-1700, and ion mobility (1/K₀) was set from 0.7 to 1.4 Vs/cm². Ion 676 
+
+accumulaXon and release Xmes were 100 ms. Instrument parameters included a capillary voltage of 1,500 677 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+19 
+
+V, drying gas flow of 3 L/min, and drying temperature of 180 °C. PASEF se:ngs included 10 MS/MS scans 678 
+
+per cycle (cycle Xme ~1.17 s), charge range 0-5, dynamic exclusion of 0.4 min, ion target intensity of 679 
+
+10,000, and intensity threshold of 2,500. Collision energy was linearly ramped based on ion mobility (20 680 
+
+eV at 1/K₀ = 0.6 Vs/cm² to 59 eV at 1/K₀ = 1.6 Vs/cm²). Quadrupole isolaXon widths were set to 2 Th for 681 
+
+m/z < 700 and 3 Th for m/z > 800. 682 
+
+Database Search and quan1fica1on 683 
+
+Raw data were processed using FragPipe (v21.1) [62, 63]. Spectra were searched against a combined FASTA 684 
+
+database (58,907 sequences) supplemented with decoy and contaminant sequences to control false 685 
+
+discovery rates (FDR). Precursor and fragment mass tolerances were set to 20 ppm. For global proteomics, 686 
+
+trypsin was specified as the digesXon enzyme with up to two missed cleavages permiged. 687 
+
+CarbamidomethylaXon of cysteine was set as a fixed modificaXon, and oxidaXon of methionine and 688 
+
+protein N-terminal acetylaXon were included as variable modificaXons. For ubiquitylomics, trypsin and 689 
+
+Lys-C were specified as proteases with up to two missed cleavages allowed. CarbamidomethylaXon (C) 690 
+
+was set as a fixed modificaXon, and oxidaXon (M), protein N-terminal acetylaXon, and ubiquitylaXon (diGly 691 
+
+modificaXon on K) were included as variable modificaXons, with a maximum of three variable 692 
+
+modificaXons per pepXde. The minimum site localizaXon probability for ubiquitylaXon sites was set to 693 
+
+0.75. PepXde- and protein-level FDRs were controlled at 1%, and decoy and contaminant hits were 694 
+
+excluded from downstream analyses. LFQ was performed using IonQuant with match-between-runs 695 
+
+(MBR) and MaxLFQ enabled. 696 
+
+Differen1al abundance and ubiquityla1on analysis 697 
+
+For LFQ global proteomics, 6,239 proteins matching the mouse protein database were idenXfied. For 698 
+
+ubiquiXn remnant profiling, 31,749 ubiquitylaXon sites were detected. Amer filtering for proteins and 699 
+
+pepXdes idenXfied in all replicates of at least one condiXon (scramble control, GID8 -/- and MAEA -/-), a total 700 
+
+of 5,087 proteins were retained in the LFQ global proteomics dataset. Amer similar filtering, 23,841 701 
+
+ubiquitylaXon sites across 4,268 proteins were retained in the ubiquitylaXon profiling dataset. 702 
+
+DifferenXally abundant proteins and ubiquitylated pepXdes were defined as those with absolute fold 703 
+
+change (FC) > 1.3 (Up) or < 1.3 (Down) and p < 0.05. StaXsXcal comparison and downstream data analysis 704 
+
+was carried out using the proteomic data analysis package DEP in R [64]. 705 
+
+Immunoblot analysis 706 
+
+Cells were harvested and rinsed with ice-cold 1× PBS and lysed in RIPA buffer (Thermo Fisher ScienXfic) 707 
+
+supplemented with 1× Halt protease and phosphatase inhibitors (Thermo Fisher ScienXfic). Lysis was 708 
+
+carried out for 30 minutes at 4 °C with gentle agitaXon. Protein concentraXons were determined using the 709 
+
+Pierce™ Rapid Gold BCA Protein Assay Kit (Thermo Fisher ScienXfic). Equal amounts of protein (30 μg) 710 
+
+were resolved by SDS-PAGE on 4-20% gradient gels and subsequently transferred onto nitrocellulose 711 
+
+membranes. Membranes were blocked in 5% non-fat milk prepared in TBST (0.1% Tween-20 in 20mM Tris 712 
+
+and 150mM NaCl) for a minimum of 30 minutes to reduce non-specific binding. Amer washing, membranes 713 
+
+were incubated overnight at 4 °C with primary anXbodies diluted in 2% non-fat milk in TBST. Primary 714 
+
+anXbodies included anX-PTEN, anX-NLRP3, anX-Akt, anX-phospho-Akt, anX-β-acXn, anX-Cyclophilin B, 715 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+20 
+
+and anX-MDH2 (Cell Signaling Technology), as well as anX-MDH1, anX-UGP2, anX-NAMPT, anX-PTPN6, and 716 
+
+anX-INPP5D (Proteintech). All anXbodies were raised in rabbits. AnX-rabbit/mouse StarBright Blue 700 717 
+
+secondary anXbodies (Bio-Rad Laboratories) were used for detecXon. Fluorescent blots were directly 718 
+
+imaged using a ChemiDoc MP imaging system (Bio-Rad Laboratories). Where appropriate, band intensiXes 719 
+
+were quanXfied using ImageJ somware. 720 
+
+721 
+
+CHX chase assays 722 
+
+CHX chase assays were performed to assess the stability of candidate substrates idenXfied in the diGly 723 
+
+ubiquitylome analysis. BMDM hs (scramble control, GID8 -/-, and MAEA -/-) were seeded in either 6-well 724 
+
+plates or T-25 culture flasks prior to treatment with 5 μg/ml CHX (Cell Signaling Technology) to inhibit de 725 
+
+novo protein synthesis and harvested at the indicated Xme points (0-24 hours). At each Xme point, cells 726 
+
+were harvested by scraping, washed once with ice-cold PBS, and lysed directly in RIPA buffer (Thermo 727 
+
+Fisher ScienXfic) supplemented with 1× Halt protease and phosphatase inhibitors, as described in the 728 
+
+previous secXon. Membranes were probed with primary anXbodies against NLRP3, NAMPT, MDH1, MDH2, 729 
+
+UGP2, PTPN6, INPP5D, PTEN, or β-acXn/Cyclophilin B as loading controls. Where necessary, band 730 
+
+intensiXes were quanXfied using ImageJ somware and normalized to β-acXn or Cyclophilin B. For 731 
+
+proteasome inhibiXon experiments, cells were treated with either CHX (5 μg/ml) or the proteasome 732 
+
+inhibitor MG132 (10 μM) for 18 hours prior to lysis and immunoblot analysis, as described above. 733 
+
+734 
+
+Quan1fica1on of intracellular Mtb growth in gene1cally modified or chemically treated BMDM hs. 735 
+
+Confluent BMDM h monolayers were infected with Mtb-Lux at MOI 0.5 for bioluminescence readouts or 736 
+
+with wild-type Mtb Erdman for CFU enumeraXon. Growth kineXcs of Mtb-Lux in infected BMDM hs were 737 
+
+quanXfied using an EnVision plate reader (PerkinElmer). For CFU enumeraXon, BMDM hs were infected 738 
+
+with Mtb Erdman at MOI 0.4. Following a 3-4-hour infecXon period to allow bacterial uptake, cells were 739 
+
+washed at least three Xmes with fresh macrophage culture medium to remove extracellular bacteria. At 740 
+
+the specified Xme points, macrophages were lysed in sterile water containing 0.01% SDS for 15 minutes 741 
+
+to release intracellular bacteria. Lysates were then serially diluted in 1× PBS supplemented with 0.05% 742 
+
+Tween-80 and plated onto Middlebrook 7H10 agar supplemented with OADC. Plates were incubated at 37 743 
+
+°C, and CFUs were enumerated amer 3-4 weeks of growth. In both cases, where applicable, compound 744 
+
+treatments were iniXated 3-4 hours post-infecXon (3AC and isoniazid [INH], both purchased from 745 
+
+MedChemExpress, at final concentraXons of 10 μM and 0.4 μg/ml, respecXvely). 746 
+
+747 
+
+Transcrip1onal analysis of Mtb-infected BMDM hs. 748 
+
+Scramble control and INPP5D -/- BMDM hs were infected with the smycʹ::mCherry Mtb strain at an MOI 0.4 749 
+
+and were treated with 3AC beginning 3-4 hours post-infecXon or lem untreated for 4 days, amer which 750 
+
+infected cells were flow-sorted based on mCherry expression. Sample preparaXon and RNA extracXon 751 
+
+were performed as previously described [25, 41], with minor modificaXons. Briefly, samples were treated 752 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+21 
+
+with RNase-free Invitrogen DNase. Library preparaXon was carried out using Illumina’s Stranded Total RNA 753 
+
+Prep LigaXon with Ribo-Zero Plus kit and 10-bp unique dual indices. Sequencing was performed on a 754 
+
+NovaSeq X Plus plaorm, generaXng paired-end 150-bp reads. DemulXplexing, quality control, and 755 
+
+adapter trimming were performed using bcl-convert (v4.2.4). Due to a change in the rRNA depleXon 756 
+
+method that did not adequately remove bacterial rRNA, downstream analyses focused exclusively on the 757 
+
+host transcriptome using analysis pipelines similar to those previously described [25, 41]. 758 
+
+759 
+
+Pathways enrichment analysis 760 
+
+Gene ontology (GO) pathway enrichment analysis for both proteomic and transcriptomic targets was 761 
+
+performed in R using the enrichGO funcXon implemented in clusterProfiler (v4.18.4) [27]. Enrichment 762 
+
+analyses were conducted separately for Biological Process (BP), Cellular Component (CC), and Molecular 763 
+
+FuncXon (MF) categories. Terms were considered significantly enriched if they met a mulXple tesXng-764 
+
+adjusted p-value threshold of < 0.05. For selected comparisons, the most significantly enriched GO terms 765 
+
+(usually BPs) were further organized and visualized using bubble plots in R. 766 
+
+767 
+
+Acknowledgements 768 
+
+This work was supported by funding from the NaXonal InsXtutes of Health (AI155319, AI162598, and 769 
+
+OD032135), the Bill & Melinda Gates FoundaXon, and the Mueller Health FoundaXon awarded to D.G.R. 770 
+
+AddiXonal support was provided through a postdoctoral seed grant from the Cornell Center for 771 
+
+AnXmicrobial Resistance Research and EducaXon to N.V.S. 772 
+
+773 
+
+Datasets 774 
+
+The proteomics datasets described in this arXcle have been deposited at the ProteomeXchange 775 
+
+ConsorXum and are accessible though the accession number PXD075792. The RNA-seq datasets have 776 
+
+been deposited at GEO Database Repository of NCBI and has an accession number of GSE325061. 777 
+
+778 
+
+References 779 
+
+780 
+
+1. Guirado E, Schlesinger LS, Kaplan G. Macrophages in tuberculosis: friend or foe. Semin Immunopathol. 781 
+
+2013; 35 :563-583. doi: 10.1007/s00281-013-0388-2. 782 
+
+2. Upadhyay S, Migal E, Philips JA. Tuberculosis and the art of macrophage manipulaXon. Pathog Dis. 783 
+
+2018; 76 :my037. doi: 10.1093/femspd/my037. 784 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+22 
+
+3. Russell DG, Simwela NV, Ma:la JT, et al. How macrophage heterogeneity affects tuberculosis disease 785 
+
+and therapy. Nat Rev Immunol. 2025; 25 :370-384. doi: 10.1038/s41577-024-01124-3. 786 
+
+4. Liu J, Qian C, Cao X. Post-translaXonal modificaXon control of innate immunity. Immunity. 2016; 45 :15-787 
+
+30. doi: 10.1016/j.immuni.2016.06.020. 788 
+
+5. Gordon S, Plüddemann A. Tissue macrophages: heterogeneity and funcXons. BMC Biol. 2017; 15 :53. doi: 789 
+
+10.1186/s12915-017-0392-4. 790 
+
+6. Campos PC, Cunha DT, Souza-Costa LP, et al. Bag it, tag it: ubiquiXn ligases and host resistance to 791 
+
+Mycobacterium tuberculosis . Trends Microbiol. 2022; 30 :973-985. doi: 10.1016/j.Xm.2022.03.010. 792 
+
+7. Franco LH, Nair VR, Scharn CR, et al. The ubiquiXn ligase Smurf1 funcXons in selecXve autophagy of 793 
+
+Mycobacterium tuberculosis and anX-tuberculous host defense. Cell Host & Microbe. 2017; 21 :59-72. doi: 794 
+
+10.1016/j.chom.2016.11.002. 795 
+
+8. Manzanillo PS, Ayres JS, Watson RO, et al. The ubiquiXn ligase parkin mediates resistance to intracellular 796 
+
+pathogens. Nature. 2013; 501 :512-516. doi: 10.1038/nature12566. 797 
+
+9. Dikic I, Schulman BA. An expanded lexicon for the ubiquiXn code. Nat Rev Mol Cell Biol. 2023; 24 :273-798 
+
+287. doi: 10.1038/s41580-022-00543-1. 799 
+
+10. Yang Q, Zhao J, Chen D, Wang Y. E3 ubiquiXn ligases: styles, structures and funcXons. Mol Biomed. 800 
+
+2021; 2:23. doi: 10.1186/s43556-021-00043-2. 801 
+
+11. Sang O, Pfirrmann T, Braun B, et al. The yeast GID complex, a novel ubiquiXn ligase (E3) involved in the 802 
+
+regulaXon of carbohydrate metabolism. Mol Biol Cell. 2008; 19 :3323-3333. doi: 10.1091/mbc.e08-03-803 
+
+0328. 804 
+
+12. Francis O, Han F, Adams JC. Molecular phylogeny of a RING E3 ubiquiXn ligase, conserved in eukaryoXc 805 
+
+cells and dominated by homologous components, the muskelin/RanBPM/CTLH complex. PLoS One. 806 
+
+2013; 8:e75217. doi: 10.1371/journal.pone.0075217. 807 
+
+13. Alpi AF, Chrustowicz J, Sherpa D, Schulman BA. The many faces of the GID/CTLH E3 ligase complex. 808 
+
+Biochem Soc Trans. 2025; 53 :1351-1364. doi: 10.1042/bst20253074. 809 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+23 
+
+14. Maitland MER, Lajoie GA, Shaw GS, Schild-Poulter C. Structural and funcXonal insights into GID/CTLH 810 
+
+E3 ligase complexes. Int J Mol Sci. 2022; 23 :5863. doi: 10.3390/ijms23115863. 811 
+
+15. Maitland MER, Kuljanin M, Wang X, et al. Proteomic analysis of ubiquiXnaXon substrates reveals a 812 
+
+CTLH E3 ligase complex-dependent regulaXon of glycolysis. FASEB J. 2021; 35 :e21825. doi: 813 
+
+10.1096/.202100664R. 814 
+
+16. Gogemukkala KV, Chrustowicz J, Sherpa D, et al. Non-canonical substrate recogniXon by the human 815 
+
+WDR26-CTLH E3 ligase regulates prodrug metabolism. Mol Cell. 2024; 84 :1948-63.e11. doi: 816 
+
+10.1016/j.molcel.2024.04.014. 817 
+
+17. Yi SA, Sepic S, Schulman BA, et al. mTORC1-CTLH E3 ligase regulates the degradaXon of HMG-CoA 818 
+
+synthase 1 through the Pro/N-degron pathway. Mol Cell. 2024; 84 :2166-2184.e9. 819 
+
+doi:10.1016/j.molcel.2024.04.026. 820 
+
+18. Liu H, Ding J, Köhnlein K, et al. The GID ubiquiXn ligase complex is a regulator of AMPK acXvity and 821 
+
+organismal lifespan. Autophagy. 2020; 16 :1618-1634. doi: 10.1080/15548627.2019.1695399. 822 
+
+19. Lampert F, Stafa D, Goga A, et al. The mulX-subunit GID/CTLH E3 ubiquiXn ligase promotes cell 823 
+
+proliferaXon and targets the transcripXon factor Hbp1 for degradaXon. Elife. 2018; 7. doi: 824 
+
+10.7554/eLife.35528. 825 
+
+20. Huffman N, Palmieri D, Coppola V. The CTLH complex in cancer cell plasXcity. J Oncol. 826 
+
+2019; 2019 :4216750. doi: 10.1155/2019/4216750. 827 
+
+21. Woo JA, Roh SE, Lakshmana MK, Kang DE. Pivotal role of RanBP9 in integrin-dependent focal adhesion 828 
+
+signaling and assembly. FASEB J. 2012; 26 :1672-1681. doi: 10.1096/.11-194423. 829 
+
+22. Bagci H, Winkler M, Grädel B, et al. The hGID(GID4) E3 ubiquiXn ligase complex targets ARHGAP11A to 830 
+
+regulate cell migraXon. Life Sci Alliance. 2024; 7:e202403046. doi: 10.26508/lsa.202403046. 831 
+
+23. Barbulescu P, Chana CK, Wong MK, et al. FAM72A degrades UNG2 through the GID/CTLH complex to 832 
+
+promote mutagenic repair during anXbody maturaXon. Nat Commun. 2024; 15 :7541. doi: 833 
+
+10.1038/s41467-024-52009-x. 834 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+24 
+
+24. Hough SH, Jhujh SS, Awwad SW, et al. Loss of CTLH component MAEA impairs DNA repair and 835 
+
+replicaXon and leads to developmental delay. EMBO Mol Med. 2026; 18 : 492-513. doi: 10.1038/s44321-836 
+
+025-00352-x. 837 
+
+25. Simwela NV, Johnston L, Bitar PP, et al. Genome-wide screen of Mycobacterium tuberculosis -infected 838 
+
+macrophages revealed GID/CTLH complex-mediated modulaXon of bacterial growth. Nat Commun. 839 
+
+2024; 15 :9322. doi: 10.1038/s41467-024-53637-z. 840 
+
+26. Menssen R, Schweiggert J, Schreiner J, et al. Exploring the topology of the GID complex, the E3 841 
+
+ubiquiXn ligase involved in catabolite-induced degradaXon of gluconeogenic enzymes. J Biol Chem. 842 
+
+2012; 287 :25602-25614. doi: 10.1074/jbc.M112.363762. 843 
+
+27. Xu S, Hu E, Cai Y, et al. Using clusterProfiler to characterize mulXomics data. Nat Protoc. 2024; 19 :3292-844 
+
+3320. doi: 10.1038/s41596-024-01020-z. 845 
+
+28. Mehrotra P, Jamwal SV, Saquib N, et al. Pathogenicity of Mycobacterium tuberculosis is expressed by 846 
+
+regulaXng metabolic thresholds of the host macrophage. PLoS Pathog. 2014; 10 :e1004265. doi: 847 
+
+10.1371/journal.ppat.1004265. 848 
+
+29. Nassef MZ, Hanke JE, Hiller K. Mitochondrial metabolism in macrophages. Am J Physiol Cell Physiol. 849 
+
+2021; 321 :C1070-C1081. doi: 10.1152/ajpcell.00126.2021. 850 
+
+30. Buetow L, Huang DT. Structural insights into the catalysis and regulaXon of E3 ubiquiXn ligases. Nat 851 
+
+Rev Mol Cell Biol. 2016; 17 :626-642. doi: 10.1038/nrm.2016.91. 852 
+
+31. Nunes-Alves C, Booty MG, Carpenter SM, et al. In search of a new paradigm for protecXve immunity 853 
+
+to TB. Nat Rev Microbiol. 2014; 12 :289-299. doi: 10.1038/nrmicro3230. 854 
+
+32. Udeshi ND, MerXns P, Svinkina T, Carr SA. Large-scale idenXficaXon of ubiquiXnaXon sites by mass 855 
+
+spectrometry. Nat Protoc. 2013; 8:1950-1960. doi: 10.1038/nprot.2013.120. 856 
+
+33. Xu G, Paige JS, Jaffrey SR. Global analysis of lysine ubiquiXnaXon by ubiquiXn remnant immunoaffinity 857 
+
+profiling. Nat Biotechnol. 2010; 28 :868-873. doi: 10.1038/nbt.1654. 858 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+25 
+
+34. Truong T, MarXn K, Salemi M, et al. The balance between anXviral and anXbacterial responses during 859 
+
+M. tuberculosis infecXon is regulated by the ubiquiXn ligase CBL. bioRxiv. 2024. doi: 860 
+
+10.1101/2024.05.15.594178. 861 
+
+35. Kim W, Benneg EJ, Huglin EL, et al. SystemaXc and quanXtaXve assessment of the ubiquiXn-modified 862 
+
+proteome. Mol Cell. 2011; 44 :325-340. doi: 10.1016/j.molcel.2011.08.025. 863 
+
+36. Osinalde N, Alduntzin U, Prieto G, Mayor U. Meta-analysis fails to show any correlaXon between 864 
+
+protein abundance and ubiquiXnaXon changes. FEBS Open Bio. 2026. doi: 10.1002/2211-5463.70197. 865 
+
+37. Chen SJ, Wu X, Wadas B, et al. An N-end rule pathway that recognizes proline and destroys 866 
+
+gluconeogenic enzymes. Science. 2017; 355 : eaal3655. doi: 10.1126/science.aal3655. 867 
+
+38. Xia Q, Ali S, Liu L, et al. Role of ubiquiXnaXon in PTEN cellular homeostasis and its implicaXons in GB 868 
+
+drug resistance. Front Oncol. 2020; 10 :1569. doi: 10.3389/fonc.2020.01569. 869 
+
+39. Terzioglu G, Young-Pearse TL. Microglial funcXon, INPP5D/SHIP1 signaling, and NLRP3 inflammasome 870 
+
+acXvaXon: implicaXons for Alzheimer's disease. Mol Neurodegener. 2023; 18 :89. doi: 10.1186/s13024-871 
+
+023-00674-9. 872 
+
+40. Linton MF, Moslehi JJ, Babaev VR. Akt signaling in macrophage polarizaXon, survival, and 873 
+
+atherosclerosis. Int J Mol Sci. 2019; 20 : 2703. doi: 10.3390/ijms20112703. 874 
+
+41. Simwela NV, Jaecklein E, Sasse: CM, Russell DG. Impaired fagy acid import or catabolism in 875 
+
+macrophages restricts intracellular growth of Mycobacterium tuberculosis . Elife. 2025; 13: RP102980. doi: 876 
+
+10.7554/eLife.102980. 877 
+
+42. Brooks R, Fuhler GM, Iyer S, et al. SHIP1 inhibiXon increases immunoregulatory capacity and triggers 878 
+
+apoptosis of hematopoieXc cancer cells. J Immunol. 2010; 184 :3582-3589. doi: 879 
+
+10.4049/jimmunol.0902844. 880 
+
+43. VanderVen BC, Fahey RJ, Lee W, et al. Novel inhibitors of cholesterol degradaXon in Mycobacterium 881 
+
+tuberculosis reveal how the bacterium's metabolism is constrained by the intracellular environment. PLoS 882 
+
+Pathog. 2015; 11 :e1004679. doi: 10.1371/journal.ppat.1004679. 883 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+26 
+
+44. Wilburn KM, Fieweger RA, VanderVen BC. Cholesterol and fagy acids grease the wheels of 884 
+
+Mycobacterium tuberculosis pathogenesis. Pathog Dis. 2018; 76 : my021. doi: 10.1093/femspd/my021. 885 
+
+45. Geier SJ, Algate PA, Carlberg K, et al. The human SHIP gene is differenXally expressed in cell lineages of 886 
+
+the bone marrow and blood. Blood. 1997; 89 :1876-1885. 887 
+
+46. Chou V, Pearse RV, 2nd, Aylward AJ, et al. INPP5D regulates inflammasome acXvaXon in human 888 
+
+microglia. Nat Commun. 2023; 14 :7552. doi: 10.1038/s41467-023-42819-w. 889 
+
+47. O'Neill LA, Pearce EJ. Immunometabolism governs dendriXc cell and macrophage funcXon. J Exp Med. 890 
+
+2016; 213 :15-23. doi: 10.1084/jem.20151570. 891 
+
+48. Van den Bossche J, O'Neill LA, Menon D. Macrophage immunometabolism: where are we (going)? 892 
+
+Trends Immunol. 2017; 38 :395-406. doi: 10.1016/j.it.2017.03.001. 893 
+
+49. Pearce EL, Pearce EJ. Metabolic pathways in immune cell acXvaXon and quiescence. Immunity. 894 
+
+2013; 38 :633-643. doi: 10.1016/j.immuni.2013.04.005. 895 
+
+50. Huang L, Nazarova EV, Tan S, et al. Growth of Mycobacterium tuberculosis in vivo segregates with host 896 
+
+macrophage metabolism and ontogeny. J Exp Med. 2018; 215 :1135-1152. doi: 10.1084/jem.20172020. 897 
+
+51. Russell DG, Huang L, VanderVen BC. Immunometabolism at the interface between macrophages and 898 
+
+pathogens. Nat Rev Immunol. 2019; 19 :291-304. doi: 10.1038/s41577-019-0124-9. 899 
+
+52. Pisu D, Huang L, Grenier JK, Russell DG. Dual RNA-seq of Mtb-infected macrophages in vivo reveals 900 
+
+ontologically disXnct host-pathogen interacXons. Cell Rep. 2020; 30 :335-350.e4. doi: 901 
+
+10.1016/j.celrep.2019.12.033. 902 
+
+53. Steger M, Karayel Ö, Demichev V. UbiquiXnomics: History, methods, and applicaXons in basic research 903 
+
+and drug discovery. Proteomics. 2022; 22 :e2200074. doi: 10.1002/pmic.202200074. 904 
+
+54. Sahu I, Zhu H, Buhrlage SJ, Marto JA. Proteomic approaches to study ubiquiXnomics. Biochim Biophys 905 
+
+Acta Gene Regul Mech. 2023; 1866 :194940. doi: 10.1016/j.bbagrm.2023.194940. 906 
+
+55. Tracz M, Bialek W. Beyond K48 and K63: non-canonical protein ubiquiXnaXon. Cell Mol Biol Leg. 907 
+
+2021; 26 :1. doi: 10.1186/s11658-020-00245-6. 908 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+27 
+
+56. Liao Y, Sumara I, Pangou E. Non-proteolyXc ubiquitylaXon in cellular signaling and human disease. 909 
+
+Commun Biol. 2022; 5:114. doi: 10.1038/s42003-022-03060-1. 910 
+
+57. Sukumar N, Tan S, Aldridge BB, Russell DG. ExploitaXon of Mycobacterium tuberculosis reporter strains 911 
+
+to probe the impact of vaccinaXon at sites of infecXon. PLoS Pathog. 2014; 10 :e1004394. doi: 912 
+
+10.1371/journal.ppat.1004394. 913 
+
+58. Andreu N, Zelmer A, Fletcher T, et al. OpXmisaXon of bioluminescent reporters for use with 914 
+
+mycobacteria. PLoS One. 2010; 5:e10777. doi: 10.1371/journal.pone.0010777. 915 
+
+59. Kiritsy MC, McCann K, Mog D, et al. Mitochondrial respiraXon contributes to the interferon gamma 916 
+
+response in anXgen-presenXng cells. Elife. 2021; 10 : e65109. doi: 10.7554/eLife.65109. 917 
+
+60. Kirubakar G, Johnston L, Nae Rin Lee B, et al. IncorporaXon of macrophage immune stresses into an 918 
+
+intracellular assay of drug tolerance in Mycobacterium tuberculosis . AnXmicrob Agents Chemother. 919 
+
+2025; 69 :e0079525. doi: 10.1128/aac.00795-25. 920 
+
+61. Nazarova EV, Russell DG. Growing and handling of Mycobacterium tuberculosis for macrophage 921 
+
+infecXon assays. Methods Mol Biol. 2017; 1519 :325-331. doi: 10.1007/978-1-4939-6581-6_22. 922 
+
+62. Kong AT, Leprevost FV, Avtonomov DM, et al. MSFragger: ultrafast and comprehensive pepXde 923 
+
+idenXficaXon in mass spectrometry-based proteomics. Nat Methods. 2017; 14 :513-520. doi: 924 
+
+10.1038/nmeth.4256. 925 
+
+63. Yu F, Haynes SE, Teo GC, et al. Fast QuanXtaXve Analysis of XmsTOF PASEF data with MSFragger and 926 
+
+IonQuant. Mol Cell Proteomics. 2020; 19 :1575-1585. doi: 10.1074/mcp.TIR120.002048. 927 
+
+64. Zhang X, Smits AH, van Tilburg GBA, et al. Proteome-wide idenXficaXon of ubiquiXn interacXons using 928 
+
+UbIA-MS. Nat Protoc. 2018; 13 :530-550. doi: 10.1038/nprot.2017.147. 929 
+
+930 
+
+931 
+
+932 
+
+933 
+
+934 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+28 
+
+935 
+
+936 
+
+937 
+
+938 
+
+939 
+
+940 
+
+941 
+
+942 
+
+Figure legends 943 
+
+Fig 1. Quan1ta1ve label free and diGly proteomics to iden1fy substrates of the GID/CTLH E3 ligase 944 
+
+complex in Mtb-infected BMDM hs. A. Overview of the experimental workflow for label-free and 945 
+
+quanXtaXve ubiquiXn diGly proteomics. Approximately 1 x 10⁸ Mtb-infected wild-type (scramble control) 946 
+
+and GID/CTLH complex-deficient BMDM hs (GID8 -/- and MAEA -/-) were fixed overnight in pre-chilled 90% 947 
+
+methanol, lysed, and digested with trypsin. An aliquot of the resulXng trypsin digested pepXdes was 948 
+
+subjected to label-free quanXficaXon (LFQ) to assess the global proteome. The remaining pepXdes were 949 
+
+enriched for ubiquitylated (diGly-modified) pepXdes and analyzed to profile global ubiquitylaXon. 950 
+
+Experiments were performed with three biological replicates per genotype. B. Principal component 951 
+
+analysis (PCA) of LFQ global proteome data showing disXnct separaXon of proteomic responses among 952 
+
+scramble control, GID8 -/- and MAEA -/- BMDM hs. C. Illustrated summary table showing the number of 953 
+
+idenXfied proteins in the experiment and the differenXally abundant proteins in GID8 -/- and MAEA -/-
+
+954 
+
+BMDM hs (Data S1). Significant increase or decrease in protein abundance was defined as p ≤ 0.05 with log₂ 955 
+
+fold change ≥ 0.3 (Up) or ≤ −0.3 (Down). 956 
+
+Fig 2. The global proteomic response to Mtb infec1on is broadly similar in GID8 -/- and MAEA -/- BMDM hs.957 
+
+A. Venn diagrams showing overlaps between increased and decreased differenXally abundant proteins in 958 
+
+Mtb-infected GID8 -/- and MAEA -/- BMDM hs, highlighXng shared and conserved responses. B. Heatmap of 959 
+
+all differenXally abundant proteins in Mtb-infected GID8 -/- and MAEA -/- BMDM hs, illustraXng similariXes 960 
+
+and conserved abundance pagerns. 961 
+
+Fig 3. Overrepresented biological pathways among DAPs in Mtb-infected GID8 -/- and MAEA -/- BMDM hs962 
+
+are dominantly metabolic . A. Top enriched pathways among commonly increased proteins in GID8 -/- and 963 
+
+MAEA -/- BMDM hs. B. Top enriched pathways among commonly decreased proteins in GID8 -/- and MAEA -/-
+
+964 
+
+BMDM hs. Complete datasets are provided in Data S2. 965 
+
+Fig 4. Quan1ta1ve diGly proteomics to iden1fy poten1al ubiquityla1on substrates in GID8 -/- and MAEA -
+
+966 /- Mtb-infected BMDM hs. A. All idenXfied diGly-modified pepXdes and their corresponding proteins 967 
+
+detected in the experiment. DiGly-modified pepXdes and associated proteins showing significant changes 968 
+
+in ubiquitylaXon upon knockout in Mtb-infected GID8 -/- and MAEA -/- macrophages are indicated (Data S3). 969 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+29 
+
+Significant increase or decrease in ubiquiXn modified sites abundance was defined as p ≤ 0.05 with log₂ 970 
+
+fold change ≥ 0.3 (Up) or ≤ −0.3 (Down). B. Volcano plots showing changes in diGly-modified pepXdes in 971 
+
+Mtb-infected macrophages upon knockout of GID8 and MAEA. Red and blue dots represent diGly-modified 972 
+
+pepXdes that are at least 1.2-fold increased or decreased in abundance, respecXvely (log2 ≥ 0.3 and log2 973 
+
+≤ −0.3, respecXvely) and have a p value of ≤0.05. C. Selected proteins across indicated pathways showing 974 
+
+commonly decreased diGly modificaXons (candidate substrates of the GID/CTLH complex) in Mtb-infected 975 
+
+GID8 -/- and MAEA -/- BMDM hs. Numbers indicate modified lysine posiXons that are shared between the two 976 
+
+mutants (black) or unique to MAEA -/- BMDM hs (red). 977 
+
+Fig 5. Proteasome dependent stabiliza1on of PTEN and INPP5D protein levels in GID8 -/- and MAEA -/-
+
+978 
+
+BMDM hs. A. Cycloheximide (CHX) chase assay performed to monitor the degradaXon of INPP5D in 979 
+
+scramble control, GID8 -/-, and MAEA -/- BMDM hs over a 24-hour period. Protein levels were analyzed by 980 
+
+immunoblo:ng. Normalized protein levels and the percentage of protein remaining in reference to iniXal 981 
+
+levels at the indicated Xme points are ploged for each protein. B. Immunoblot analysis shows that INPP5D 982 
+
+degradaXon is proteasome-dependent, as CHX treatment leads to protein degradaXon, while the 983 
+
+proteasome inhibitor MG132 results in a significant increase in basal INPP5D levels in scramble control 984 
+
+BMDM hs amer 18 hours of treatment. In contrast, INPP5D exhibits increased stabilizaXon in CHX-treated 985 
+
+MAEA -/- BMDM hs, and MG132 does not further increase INPP5D protein levels in this mutant. C. CHX chase 986 
+
+assay to monitor the degradaXon of INPP5D in scramble control, GID8 -/-, and MAEA -/- BMDM hs over a 24-987 
+
+hour period, performed as in (A). QuanXficaXon of relaXve protein expression was performed for replicate 988 
+
+blots shown in (A) and (C) and in Fig. S5A-S5D, normalized to either β-acXn or Cyclophilin B. Data represent 989 
+
+n = 3 biological replicates for INPP5D and n = 2 biological replicates for PTEN. *P < 0.05; **P < 0.01, two-990 
+
+way ANOVA alongside Dunneg’s mulXple comparison test. Data are presented as mean values ± SD. 991 
+
+Fig 6. INPP5D and PTEN inhibi1on, either chemical or gene1c, limits Mtb growth in BMDM hs. A.992 
+
+Immunoblot confirmaXon of target protein depleXon (INPP5D and PTEN) in generated knockout BMDM hs993 
+
+derived from Hoxb8 parental mutant lines described in Data S5. B. Mtb growth kineXcs in INPP5D -/- and 994 
+
+PTEN -/- BMDM hs compared with scramble controls as measured by luciferase acXvity or colony-forming 995 
+
+units (CFUs). For the luciferase-based growth assay, scramble control, INPP5D -/-, or PTEN -/- BMDM hs were 996 
+
+infected with the Mtb Erdman-Lux strain at MOI 0.5, and luciferase measurements were taken on the 997 
+
+indicated days (n = 6 biological replicates). For the CFU-based growth assay, mutant BMDM hs were infected 998 
+
+with Mtb Erdman strain at MOI 0.4. CFUs were enumerated on day 0 (3 hours post infecXon) and on Day 999 
+
+4 to assess intracellular Mtb replicaXon rates (n = 6 biological replicates). C. AcXvity of the INPP5D inhibitor 1000 
+
+3α-aminocholestane (3AC) against Mtb in scramble control and INPP5D -/- BMDM hs. The chemical structure 1001 
+
+of 3AC is shown. BMDM hs were infected with the Mtb Erdman-Lux strain at MOI 0.5, and drug treatment 1002 
+
+was iniXated 3-4 hours post-infecXon. Luciferase measurements were carried out on day 0 and day 4 (n = 5 1003 
+
+biological replicates). * P < 0.05; *** P < 0.001; **** P < 0.0001, two-way ANOVA alongside Dunneg’s 1004 
+
+mulXple comparison test. Data are presented as mean values ± SD. 1005 
+
+Fig 7. Impairment of INPP5D ac1vity increases Akt phosphoryla1on and promotes a pro-inflammatory 1006 
+
+response in Mtb-infected BMDM hs. A. Immunoblot analysis of total Akt and phosphorylated Akt (p-Akt) 1007 
+
+in scramble control and INPP5D -/- BMDM hs. Cells were lem uninfected or infected with Mtb Erdman at an 1008 
+
+MOI of 3 for 24 hours and treated or untreated with 3AC beginning 3 hours post-infecXon, as indicated. B. 1009 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+30 
+
+Principal component analysis (PCA) of host transcripXonal responses in scramble control or INPP5D -/-
+
+1010 
+
+BMDM hs, untreated or treated with 3AC, following infecXon with the Mtb smyc’::mCherry strain at MOI 1011 
+
+0.5 for 4 days. C. Top enriched biological pathways among upregulated genes in Mtb-infected INPP5D -/-
+
+1012 
+
+macrophages relaXve to scramble controls. 1013 
+
+1014 
+
+1015 
+
+1016 
+
+1017 
+
+1018 
+
+Fig 1 1019 
+
+1020 
+
+1021 
+
+1022 
+
+1023 
+
+1024 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
+
+31 
+
+1025 
+
+1026 
+
+1027 
+
+1028 
+
+1029 
+
+1030 
+
+1031 
+
+1032 
+
+Fig 2 1033 
+
+1034 
+
+1035 
+
+1036 
+
+1037 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint 32 
+
+1038 
+
+1039 
+
+1040 
+
+1041 
+
+1042 
+
+1043 
+
+1044 
+
+1045 
+
+Fig 3 1046 
+
+1047 
+
+1048 
+
+1049 
+
+1050 
+
+1051 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint 33 
+
+1052 
+
+1053 
+
+1054 
+
+1055 
+
+1056 
+
+1057 
+
+1058 
+
+1059 
+
+Fig 4 1060 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint 34 
+
+1061 
+
+1062 
+
+1063 
+
+Fig 5 1064 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint 35 
+
+1065 
+
+1066 
+
+1067 
+
+1068 
+
+Fig 6 1069 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint 36 
+
+1070 
+
+1071 
+
+Fig 7 1072 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint 37 
+
+1073 
+
+1074 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted April 27, 2026. ;https://doi.org/10.64898/2026.04.24.720540 doi: bioRxiv preprint
