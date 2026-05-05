@@ -1,0 +1,3274 @@
+Title: 37764531
+
+URL Source: https://www.biorxiv.org/content/10.1101/2025.10.29.685370v2.full.pdf
+
+Number of Pages: 35
+
+Markdown Content:
+1
+
+Glucocor'coid Receptor Signaling in Myeloid Cells Orchestrates Inflamma'on Resolu'on and Muscle Repair 
+
+Sirine Souali-Crespo 1, Joe G. Rizk 1, Emilia Calvano 1, Rajesh Sahu 1, Emina Colovic 1, Imane Chabba 1,Valen?ne Gilbart 1, Erwan Grandgirard 1, Bas?en Morlet 1, Qingshuang Cai 1, Daniel Metzger 1, Delphine Duteil 1#  
+
+> 1
+
+Université de Strasbourg, CNRS, Inserm, IGBMC UMR 7104- UMR-S 1258, F-67400 Illkirch, France  
+
+> #
+
+Author to whom correspondence should be addressed at duteild@igbmc.fr. 
+
+Abstract 
+
+Glucocor?coids are key regulators of inflamma?on and ?ssue repair, yet their precise role in muscle regenera?on remains incompletely understood. Here, we inves?gate the impact of myeloid-specific glucocor?coid receptor (GR) invalida?on on macrophage dynamics and muscle stem cell func?on following acute injury. We demonstrate that the loss of GR in myeloid cells leads to increased macrophage accumula?on, driven by altered prolifera?on and recruitment, without affec?ng fibro-adipogenic progenitor differen?a?on or satellite cell prolifera?on and differen?a?on under steady-state condi?ons. Transcriptomic and cistrome analyses at early regenera?on stages reveal that GR directly regulates gene networks involved in efferocytosis and cell cycle control in myeloid cells. Importantly, administra?on of dexamethasone during the pro-inflammatory phase markedly delays muscle regenera?on by impairing monocyte-to-macrophage transi?on and promo?ng macrophage prolifera?on in a myeloid-GR dependent manner, ul?mately reducing satellite cell prolifera?on and myogenesis. In contrast, dexamethasone treatment during the an?-inflammatory phase exerts limited effects on muscle recovery. Together, our findings uncover a cri?cal temporal role of GR signaling in myeloid cells in coordina?ng inflammatory resolu?on and stem cell func?on during muscle repair, and highlight the complexity of glucocor?coid ac?ons in regenera?ve contexts. 
+
+Keywords 
+
+Glucocor?coid receptor, Macrophage polariza?on, Muscle regenera?on, Myeloid cells, Satellite cells, Inflamma?on 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+2
+
+Introduc'on 
+
+Skeletal muscle injury is a common clinical challenge with profound effects on mobility and life quality. Muscle regenera?on is orchestrated through a ?ghtly regulated interplay between ?ssue-resident muscle stem cells, known as satellite cells (SCs) and their surrounding niche, which includes fibroadipogenic progenitors (FAPs), fibroblasts, endothelial cells, and immune cells 1-2-4 . Among these, the crosstalk between SCs and cells of the immune lineages plays a pivotal role in coordina?ng regenera?on. SCs reside in a quiescent state beneath the basal lamina of myofibers, and are defined by the expression of the paired-box transcrip?on factor 7 (PAX7). Upon injury, SCs exit quiescence, proliferate, and differen?ate into myogenic precursors under the control of myogenic regulatory factors (MRFs), including Myogenin (MYOG), to ini?ate and sustain the myogenic program 5. This process is supported by infiltra?ng immune cells. Neutrophils are the first responders, infiltra?ng the damaged ?ssue within 2 hours post-injury and peaking at ~24 hours 6. They par?cipate in debris clearance and release pro-inflammatory cytokines and reac?ve oxygen species to amplify the local inflammatory response 6, 7 . This is followed by the recruitment of inflammatory monocytes, which differen?ate into pro-inflammatory macrophages expressing both classical M1- and M2-associated genes (e.g., Tnfα , Il-1β , Arg1 , Il-10 )8. These cells contribute to debris clearance and promote SCs prolifera?on. By 3 to 4 days post-injury (dpi), a phenotypic switch occurs, leading to the emergence of an?-inflammatory macrophages that facilitate SCs differen?a?on and myofiber fusion 9. The recruitment of monocytes to the injury site is dependent on CCL2/CCR2 signaling, with both resident muscle cells and macrophages contribu?ng to chemokine expression 10-12 . In parallel, non-immune stromal cells also shape the regenera?ve landscape. FAPs undergo a transient expansion during the early stages of regenera?on and promote SCs myogenic commitment via paracrine signaling 13-15 . This expansion is followed by macrophage-mediated clearance of an excess of FAPs to prevent fibro?c remodeling and re-establish homeostasis 16 .Fibroblasts also interact reciprocally with SCs to balance prolifera?on and fibrosis during ?ssue repair 17, 18 .Muscle regenera?on occurs in a systemic context involving neuroendocrine regula?on. Ac?va?on of the hypothalamic-pituitary-adrenal (HPA) axis in response to injury results in elevated levels of glucocor?coids (GC) 19 , that are potent an?-inflammatory steroid hormones that modulate both immune and metabolic pathways 20 . Pharmacologically, synthe?c GC agonists such as dexamethasone and prednisone are widely used to treat inflammatory condi?ons and muscular disorders 21 . However, chronic GC exposure is associated with deleterious side effects, including muscle was?ng 15, 19 .Interes?ngly, GC have been reported to exert context-dependent paradoxical effects on muscle physiology. While they promote terminal myogenic differen?a?on in vitro 22 , they impair muscle regenera?on in vivo , par?cularly under chronic inflammatory condi?ons 22-25 . These opposite effects 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+3
+
+reflect the complexity of GC signaling across different cell types. In macrophages, GCs drive the acquisi?on of an an?-inflammatory and pro-resolving phenotype by repressing inflammatory programs, while inducing the expression of genes associated with ?ssue repair. However, these effects are highly context-dependent, as GCs dynamically shape macrophage func?onal states according to microenvironmental signals during ?ssue injury and regenera?on 26 .GC effects are mediated by the glucocor?coid receptor (GR, NR3C1), a ligand-dependent nuclear receptor 27 . Upon ligand binding, GR is translocated to the nucleus where it can ac?vate or repress gene expression. To date, more and more evidence suggests that the an?-inflammatory effects of GCs are thought to be primarily mediated by transrepression mechanisms, involving inhibi?on of key pro-inflammatory transcrip?on factors such as NF-κB and AP-1, whereas many of their adverse and metabolic side effects are associated with direct transcrip?onal ac?va?on via glucocor?coid response elements (GREs) 28-34 . This enables context-dependent ac?va?on or repression of gene expression depending on chroma?n accessibility and co-factor availability 35 .Although the immunosuppressive func?ons of GC are well studied 36 , the molecular mechanisms by which GC shape macrophage homeostasis, thereby influencing muscle stem cell dynamics, remain insufficiently defined. In this study, we combine genome-wide chroma?n profiling, pharmacological modula?on, and in vivo func?onal analyses to uncover a myeloid-specific GC/GR regulatory circuit. We show that GC signaling via GR in macrophages controls their prolifera?on and polariza?on, which in turn governs satellite cell ac?va?on and muscle regenera?on at pharmacological GC levels. 
+
+Results GR in Myeloid Cells Regulates Macrophage Prolifera'on and Survival During Skeletal Muscle Regenera'on 
+
+Analysis of GR expression from single-cell RNA-seq data obtained from regenera?ng ?bialis anterior (TA) muscles (PRJNA577458) revealed that GR was expressed at high levels across mul?ple myeloid popula?ons, including neutrophils, monocytes, and macrophages at various stages of regenera?on (Fig. 1A). We therefore generated condi?onal knockout mice lacking GR specifically in myeloid cells (GR Lysm-/- mice), in which the exon 3 of the Nr3c1 gene (encoding GR) is selec?vely deleted using the 
+
+Lysm -Cre deleter strain 37, 38 (Fig. 1A). PCR assays on CD45⁺ / CD11B⁺ cells, isolated from TA muscles by Fluorescence-Ac?vated Cell Sor?ng (FACS) 2 days amer cardiotoxin (Ctx) injury (2 dpi), showed the efficient recombina?on of the GR floxed allele (Fig. S1B-C). Moreover, immunofluorescence analysis revealed that GR is efficiently ablated in myeloid cells of GR Lysm-/- mice as exemplified for IBA1-posi?ve cells at 2, 4 and 7 dpi (Fig. 1B). At 2 dpi, a ?me point at which all major myeloid popula?ons are present, muscle histology assessed by Hematoxylin and Eosin staining (H&E) was similar between control and GR Lysm-/-, with abundant number 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+4
+
+of necro?c fibers and immune infiltra?on, compared to a non-injured muscle (Fig. 1C). As GR is known to be involved in cell cycle progression, we examined the prolifera?on and apoptosis of control and GR deficient myeloid cells. Importantly, KI67 and F4/80 co-immunostaining showed that the percentage of prolifera?ng macrophages was decreased by more than two-fold upon GR loss from 2 dpi. (Fig. 1D). We next evaluated whether GR impacts cell survival by performing co-staining with an?bodies directed against gH2AX, that stands for DNA damages, and the macrophage markers F4/80, and by measuring caspase 3/7 ac?vity in FACS-isolated myeloid cells. We no?ced that fewer gH2AX-posi?ve macrophages were detectable in TA of GR Lysm-/- mice 2 dpi compared to controls (Fig. 1E), showing that GR is required for double-strand DNA break forma?on. Moreover, at this regenera?on stage, caspase ac?vity was significantly lower in macrophages and monocytes lacking GR, but remained similar between control and mutant neutrophils (Fig. 1F). We next inves?gated the consequences of altered monocytes and macrophages cell cycle progression. While histological kine?cs analysis by H&E staining assessed 4 to 28 dpi did not reveal major architectural differences between regenera?ng myofibers of control and mutant mice, a marked increase in immune cell infiltra?on was observed in GR Lysm-/- muscles at 7 dpi (Fig. 1C, 1D and S1D). Immunostaining for the macrophage marker F4/80 revealed that this infiltra?on was at least in part due to macrophages despite decreased prolifera?on rate (Fig. 1D and 1G). Together our data show that GR is required for monocytes and macrophages cell cycle progression and survival associated with macrophage accumula?on at 7 dpi. 
+
+Myeloid GR Deficiency Has Moderate Impact on Satellite Cell and Fibro-Adipogenic Progenitor Dynamics 
+
+Since macrophages are known to influence the prolifera?on and differen?a?on of both muscle stem cells and FAPs upon injury 39 , we inves?gated the impact of increased macrophage accumula?on observed in GR Lysm-/- mice on myogenesis and fibrosis. 7 dpi, the number of PAX7-posi?ve satellite cells (SCs) was comparable between control and GR Lysm-/- mice, as was SCs prolifera?on, revealed by PAX7 and KI67 co-staining (Fig. 2A). Furthermore, muscle stem cell differen?a?on, assessed by MYOG expression, was similar between genotypes, including the percentage of MYOG-posi?ve prolifera?ng cells (Fig. 2A). Consistently, the number of centro-nucleated fibers was not affected by GR loss in myeloid cells at 7 dpi (Fig. 2B). These data show that GR invalida?on in myeloid cells does not impact the prolifera?on or differen?a?on of SCs at endogenous GC levels. In addi?on, immunofluorescent detec?on of alpha-ac?nin (ACTN1) did not reveal gross abnormali?es in muscle fiber structure (Fig. 2C). Terminal differen?a?on, assessed by the quan?fica?on of TA myofiber cross-sec?onal area at 28 dpi, was similar between GR Lysm-/- mice and their control lipermates (Fig. 2D). Consistently, no differences in muscle weight were observed between genotypes at 4, 7, 15 and 21 dpi (Fig. S1E), 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+5
+
+showing that GR signaling in myeloid cells does not impact muscle growth during muscle regenera?on in physiological condi?ons. Moreover, the number of adipocytes was similar between GR Lysm-/- and control mice across the regenera?on ?meline, as exemplified at 21 dpi (Fig. S1F), and Gomori Trichrome staining combined with immunofluorescent detec?on of collagen IV (COL4) showed comparable levels of fibrosis between groups 2, 7, and 15 dpi (Fig.2E and Fig. S1G). Altogether, our findings show that despite GR loss-induced perturba?on in macrophage dynamics, muscle stem cell differen?a?on and FAPs fate decisions remain largely unaffected, indica?ng that GR deficient myeloid cells have only a moderate influence on the regenera?ve microenvironment at endogenous GC levels. 
+
+Transcriptomic Profiling Reveals GR-Dependent Gene Networks in Myeloid Cells 
+
+To delineate the GR-dependent transcrip?onal signature in myeloid cells, we performed transcriptomic profiling on FACS-isolated CD11B⁺ cells from injured TA at 7 dpi (Fig. 2F). Among the differen?ally expressed genes, 299 were up- and 369 were downregulated in the absence of GR. Over-representa?on analysis using the Gene Ontology Biological Process database revealed that differen?ally expressed genes were enriched in pathways related to regula?on of cell prolifera?on and genome organiza?on (Fig. 2G). Among those genes, the expression of Sparc that is involved in G1/G0 phase regula?on and apoptosis 40 and Srcap , that contributes to chroma?n remodeling was reduced by two-fold, while that of Smc2, Smc5, Smc6 ATPases from the cohesin-dependent complexes was increased by ~1.5-fold, as well as addi?onal chroma?n-associated factors (Fig. 2H and S1H). Notably, several genes involved in DNA repair and genome stability, including Lig3 and Rmi1 , as well as the nuclear kinase Stk19 and the cell-cycle regulator Tlk2 , displayed marked elevated expression in GR Lysm-/- muscles related control lipermates (Fig. S1H). Together, these transcrip?onal altera?ons highlight that GR posi?vely or nega?vely regulates the expression of genes controlling chromosome dynamics and cell-cycle progression. To iden?fy genes poten?ally directly regulated by GR underlying the altered cell cycle dynamics observed upon GR loss, we next characterized GR cistrome by CUT&RUN on macrophages isolated from injured TA muscles. Our experiment uncovered 7,464 GR binding sites, primarily located in intronic and intergenic regions, with an average distance of ±50 kb from the TSS (Fig. S2A-B), indica?ng that GR is recruited to distal enhancers, in agreement with previous reports (GSE93736) 41 (Fig. S2C-D). To determine the chroma?n landscape rela?ve to GR binding sites, we assessed the genomic profile of H3K4me3 and H3K27ac, that are hallmarks for ac?ve promoters and enhancers, respec?vely. CUT&RUN analyses unveiled 17,202 H3K4me3 peaks predominantly located within ±2 kb of transcrip?on start sites (TSS), and 15,768 H3K27ac peaks distributed across promoter and enhancer regions within ±50 kb of TSS (Fig. S2A-B). Notably, nearly 70% of genes with read counts >100 in our 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+6
+
+transcriptome dataset showed H3K4me3 enrichment, suppor?ng the robustness of our profiling (Fig. S2E), and GR binding overlapped with ac?ve chroma?n regions marked by H3K4me3 and H3K27ac, indica?ng that GR is predominantly recruited at transcrip?onally permissive loci (Fig. 3A-B). De novo 
+
+mo?f analysis revealed that GR is bound to 5ʹ-AGAVCAgccTGGnnn-3ʹ glucocor?coid response elements (GREs) in ~45% of targeted regions (Fig. 3C). Pathway enrichment analysis on the 5,133 GR-bound genes highlighted biological processes related to efferocytosis and RAP1 signaling, as exemplified Fig 3B, D but did not iden?fy cell cycle-related pathways, even though transcriptome and histological analyses converged toward altera?ons of macrophage cell cycle dynamics (Fig. 1D-F and Fig. 2F-H). Instead, Gene Ontology analysis of genes associated with GR binding sites highlighted terms associated with developmental processes and cellular responses, including “nervous system development”, “cellular response to organic substance”, “regula?on of signaling”, and “neurogenesis”. To further refine our analysis, we intersected GR-bound genes with differen?ally expressed genes iden?fied by RNA-seq, yielding only 124 common genes, related to extracellular matrix organiza?on, regula?on of cell growth, and developmental processes (Fig. 3E-F), indica?ng that cell cycle defects observed upon GR dele?on are unlikely to be driven by direct transcrip?onal regula?on. To explore this laper possibility, we performed GR immunoprecipita?on followed by mass spectrometry (LC-MS/MS) to iden?fy proteins interac?ng with GR, aiming to uncover poten?al mechanisms by which GR may regulate macrophage cell cycle dynamics independently from direct DNA binding. GR interactome uncovered 23 interac?ng proteins, from which GR (NR3C1) was the top iden?fied protein, thereby valida?ng the specificity for our approach. Among these newly iden?fied GR partners, only 6 were previously iden?fied according to BioGrid, namely HSP90AB1, HSPA8, NFKB1, NR3C1, RPS26 and ZDBF2 (Table S3). Pathway analysis on GR-interac?ng proteins revealed that they mainly belong to immunity (e.g. STAT1 and NFKB), but also uncovered chaperones (Fig. 3G). Notably, the Heat Shock Protein Family A (Hsp70) Member 8, HSPA8 (also called heat shock cognate 71 kDa protein or Hsc70) was the most enriched pep?de, which would be in favor of an inac?ve, low-affinity GR conforma?on. In contrast, associa?on to HSP90beta (referred as HSP90AB1) was lower, sugges?ng limited forma?on of the mature high-affinity complexes in macrophages 42 .Beyond these proteins, GR partners were involved in diverse cellular processes such as cytoskeletal organiza?on (TLN1, IQGAP1, ARPC2), intracellular trafficking (RAB5C), RNA and ribosome biology (RPS26, RPL7), extracellular matrix regula?on (COL2A1), and immune effector func?ons (EPX, FCGR4, NRDC, TTR, PRSS3B, TRY10). We also iden?fied PHB1 (Prohibi?n-1), a co-regulator previously implicated in the modula?on of nuclear receptor signaling 43 , sugges?ng a poten?al role in fine-tuning GR ac?vity in myeloid cells. 
+
+Altogether, our findings show that GR does not directly regulate canonical cell cycle genes in macrophages, but rather exerts its effects through indirect transcrip?onal programs and protein 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+7
+
+interac?on networks, suppor?ng a model in which GR integrates chroma?n-dependent and non-genomic mechanisms to regulate macrophage func?on during muscle regenera?on. 
+
+Dexamethasone Administra'on During the An'-Inflammatory Phase Has Limited Impact on Muscle Regenera'on 
+
+To test whether GR ac?vity is affected by exposure to synthe?c agonists, we next aimed at inves?ga?ng GR molecular func?ons at pharmacological GC levels. To explore the func?onal role of GC signaling during the resolu?on phase of muscle regenera?on, we intraperitoneally administered dexamethasone (Dex) to control and GR Lysm-/- at 4, 5 and 6 dpi (Fig. 4A). Histological analysis performed at 7 dpi did not reveal major influence on muscle regenera?on for both genotypes (Fig. 4B). The extent of myofiber necrosis was similar between the various condi?ons, and immune cell infiltra?on was not markedly altered (Fig. 4B). Interes?ngly, Dex induced the forma?on of vesicle-like structures at the periphery of regenera?ng myofibers in a myeloid GR-independent manner (Fig. 4B). These vesicles were membrane-less and did not stain for the lipid droplet marker perilipin, sugges?ng they are not classical lipid accumula?ons. Moreover, flow cytometry analysis revealed no significant differences in the propor?ons of CD45⁺ and CD11b⁺ cells, as well as in neutrophil, monocyte, and macrophage (CD206 + and CD206 -) popula?ons across the four analyzed condi?ons (Fig. 4C). Altogether, these findings show that short-term ac?va?on of GR signaling during the an?-inflammatory phase has only minor effects on the immune landscape and does not significantly improve or impair muscle recovery. 
+
+Dexamethasone Administra'on During the Pro-Inflammatory Phase Impairs Muscle Regenera'on in a Myeloid GR-Dependent Manner 
+
+To inves?gate the consequences of an early GC treatment on muscle regenera?on, Dex was intraperitoneally injected during the acute inflammatory phase at 0, 1 and 2 dpi (Fig. 5A). Histological examina?on at 2 dpi revealed no major differences between vehicle- and Dex-treated control and GR Lysm-/- mice, the four groups displaying extensive myofiber necrosis and stromal reac?on (Fig. S3A). However, Dex-treated control and GR Lysm-/- mice exhibited a high number of persistent necro?c fibers, reminiscent of the early damage phase, related to vehicle-treated cohorts by 4 dpi, despite the emergence of nascent myofibers (Fig. S3A-B). By 7 dpi, immunofluorescence and histological analyses revealed that even though inflamma?on was par?ally resolved in vehicle-treated mice, TA muscles of Dex-treated control and GR Lysm-/- individuals displayed sustained necrosis and an exacerbated stromal response (Fig. 5B-C), indica?ng that Dex delays muscle repair. Given the potent GC an?-inflammatory proper?es, we next assessed their impact on immune cell dynamics via flow cytometry on injured TA, 2, 4, and 7 dpi (Fig. S3C). Our data revealed that the number 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+8
+
+of CD45⁺ leukocytes and CD11b⁺ myeloid cells was similar upon Dex-treatment in both control and GR Lysm-/- mice 2 dpi (Fig. S3D), as well as that of neutrophils and monocytes, that are predominant at this stage comprising ~8% and ~15% of total live cells, respec?vely. In contrast, CD206 - and CD206 + cells within the F4/80⁺ macrophage popula?on were decreased, sugges?ng that an early GC treatment delays monocyte-to-macrophage transi?on (Fig. S3D). At 4 dpi, total leukocyte and myeloid cell frequencies (~30% of living cells) were comparable between vehicle- and Dex-treated control and GR Lysm-/- animals (Fig. S3E). While monocyte and macrophage number was not affected by Dex treatment at this ?me point, neutrophil frac?on was augmented by ~3-folds in Dex-treated control mice, rela?ve to vehicle-treated individuals, most probably due to the presence of persistent necro?c fibers. This induc?on was reduced in GR Lysm-/- animals, indica?ng that addi?onal neutrophil recruitment 4 dpi is myeloid GR-dependent. Notably, while immune cell clearance was evident in vehicle-treated mice 7 dpi, with leukocytes represen?ng <10% of total living cells, Dex-treated lipermates showed persistent inflamma?on, with ~35% of CD45⁺ cells (Fig. 5D), in agreement with our histological analyses. Myeloid cell numbers remained elevated across all subpopula?ons, including a marked accumula?on of CD206⁺ macrophages. Neutrophil percentage was even more increased than at 4 dpi, reaching levels comparable to those observed at 2 dpi, indica?ng that delayed regenera?on may involve the re-ini?a?on of an inflammatory response. This second wave of myeloid infiltra?on was not affected by GR dele?on in myeloid cells, sugges?ng GR-independent mechanisms of recruitment. To gain further insight into the molecular pathways regulated by pharmacological glucocor?coids in myeloid cells, we performed RNA-seq analysis on myeloid cells isolated by FACS from 7 dpi regenera?ng muscles of control mice treated by Dex or vehicle. Transcriptomic analysis iden?fied 754 upregulated and 1337 downregulated genes following Dex treatment of control individuals (Fig. 5E). Gene Ontology pathway analysis revealed an enrichment in biological processes related to cell mo?lity and vascular remodeling (Fig. 5F), including Mmp9, Camk2a, Kif20b and Ppp2r3a that contribute to cell mo?lity, 
+
+Has1 , Wnt4 , Mmp3 and Selp involved in cell adhesion, Rasa1 , Nrp2 , Tmem100 , Bmp4 and Cd34 related to angiogenesis, Col1a1 , Col3a1 , Fbn1 , Fn1 , Mmp2 and Postn associated with extracellular matrix, as well as Dusp6, Smad7, Spry2, Rasa1 and Itga6 implicated in the nega?ve regula?on of cell migra?on. Together, our data show that pharmacological GC strongly impact muscle regenera?on by primarily altering transcrip?onal programs governing cell dynamics. 
+
+Synthe'c Glucocor'coid Treatment Reveals an Intrinsic GR-mediated Crosstalk between Macrophages and Satellite Cells 
+
+Given the elevated macrophage numbers at 7 dpi, we next assessed their prolifera?ve capacity. Dex treatment from 0 to 2 dpi doubled macrophage prolifera?on in control but not in GR Lysm-/- mice (Fig. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+9
+
+6A). Notably, the CD163 + macrophage subset was KI67-nega?ve in either control or Dex-treated condi?ons (Fig. 6B), thus showing that three-day Dex treatment induces recruited macrophage prolifera?on in a GR-dependent manner. To determine if Dex-associated increase in myeloid cell number and prolifera?on affects muscle stem cell homeostasis, we performed a KI67⁺/PAX7⁺ co-immunostaining. Our data revealed that Dex treatment significantly reduced satellite cell prolifera?on by ~1/3, and that this effect was dependent on GR in myeloid cells (Fig. 6C). These findings indicate that GR-dependent signals from myeloid cells suppress satellite cell prolifera?on in response to early Dex treatment. Moreover, immunofluorescence revealed a substan?al reduc?on in regenera?ve myofibers number at 7 dpi (1.5-fold) in Dex-treated mice, but not at 4 dpi (Fig. 6D, S3F). Long-term analysis at 28 dpi showed an increase in the number of fibers with only one central nucleus, indica?ve of ongoing regenera?on, in both control Dex-treated mice, and this phenotype was abolished in GR Lysm-/- mice (Fig. 6E, S3A). Likewise, the Dex-induced reduc?on in myofiber cross-sec?onal area was not GR-dependent (Fig. 6F), showing that GR in myeloid cells affects myogenesis and myofiber hypertrophy. To determine the molecular mechanisms through which Dex treatment exclusively in control mice influences macrophage prolifera?on, satellite cell ac?vity, and muscle hypertrophy, we analyzed the genes differen?ally expressed between control and mutant mice treated with Dex. This analysis iden?fied 72 upregulated and 47 downregulated genes (Fig. 6G). Gene Ontology enrichment revealed a marked overrepresenta?on of immune-related categories, including “defense response,” “response to other organism,” “regula?on of immune response,” and “defense response to Gram-posi?ve bacterium.” These processes encompassed robustly induced genes such as Slc15a2, Gzma, Cd36, Bmp6, F7, Chi3l1 , and Slpi , which are associated with an?microbial ac?vity, lipid metabolism, and inflammatory ac?va?on. Conversely, several genes involved in regula?on and structural organiza?on, including CV, Mfap4, Myo1b, and Zfp764l1 , were consistently repressed. Addi?onal enrichment for “regula?on of response to external s?mulus” and “posi?ve regula?on of interleukin-6 produc?on” was observed, driven by genes such as Klf5, Pla2g2d, Hopx, Htr7 , and Rnf26 , indica?ng a selec?ve modula?on of cytokine signaling and stress adapta?on (Fig. 6H-I). Together, these results demonstrate that early GC exposure disrupts the macrophage inflammatory-to-an?-inflammatory transi?on in both GR-dependent and independent manners. GR ac?va?on in myeloid cells promotes macrophage prolifera?on and impairs their phenotype, henceforth skewing satellite cell prolifera?on and muscle regenera?on. This establishes a crosstalk between myeloid cells and satellite cells, ?ghtly regulated by myeloid GR during early repair. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+10 
+
+Discussion 
+
+Understanding the fundamental role of glucocor?coids during muscle repair is a key therapeu?c ques?on. While the glucocor?coid receptor is robustly expressed across myeloid popula?ons recruited following injury, its dele?on in these cells does not markedly impair the overall outcome of muscle repair at physiological glucocor?coid levels. Indeed, satellite cell prolifera?on and differen?a?on, fibro-adipogenic progenitor fate, and long-term muscle growth remain largely unaffected. These findings indicate that myeloid GR is dispensable for the execu?on of the core myogenic program under homeosta?c regenera?ve condi?ons. In contrast, GR deficiency profoundly alters macrophage dynamics. GR is well-known to control mito?c progression and chromosome segrega?on 44 . Here we observe an increased number of macrophages despite a marked reduc?on in their prolifera?ve capacity, indica?ng that macrophage accumula?on is uncoupled from local prolifera?on. Instead, our data point toward enhanced survival, supported by reduced apopto?c ac?vity and decreased DNA damage in GR-deficient monocytes and macrophages. These findings are consistent with previous studies showing that GR effects on myeloid cell prolifera?on and survival can vary according to the experimental sezngs. Indeed, while glucocor?coids effects are mainly an?-prolifera?ve in lymphoid cells, their ac?ons in myeloid popula?ons are more heterogeneous, and can either inhibit and promote prolifera?on depending on the ac?va?on state and microenvironment ( 45-48 and references within). In macrophages, results indicate that GR acts as a sensor of inflammatory and environmental signals rather than a direct suppressor of prolifera?on, thus contribu?ng to the balance between cell cycle progression and survival. Similarly, glucocor?coids have been shown to regulate survival pathways differently depending on the type of immune cell, thus confirming the cell-specific role of GR in controlling the fate of myeloid cells ( 49 and references within). Consistent with a role of GR in the maintenance of genome integrity, we observed a marked reduc?on in gH2AX staining in GR deficient myeloid cells. gH2AX is a well-established marker of DNA double strand breaks involved in DNA damage response. Previous studies have shown that physiological concentra?ons of glucocor?coids induce DNA double strand breaks in a GR dependent manner, and that GR orchestrates cell cycle regula?on in collabora?on with the ARID1a/P53BP1 complex 50 . In this context, the reduced gH2AX signal observed in the absence of GR could reflect either a decrease in DNA damage accumula?on or perturba?ons in the pathways detec?ng these damages. Given the concomitant decreased apopto?c ac?vity, our data support a model in which GR coordinates DNA damage detec?on and downstream cellular responses, including apoptosis. Thus, our data indicate that GR contributes to the regula?on of genome integrity in myeloid cells during muscle regenera?on. At the molecular level, transcriptomic analyses reveal that GR regulates gene networks involved in chroma?n organiza?on, DNA repair, and cell cycle progression. However, the comparison with GR cistrome data demonstrates that genes directly bound by GR are not enriched for cell cycle related 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+11 
+
+func?ons. This apparent discrepancy indicates that GR does not directly control cell cycle genes in myeloid cells, but rather regulates them indirectly. Such indirect regula?on is consistent with previous studies showing that GR can modulate transcrip?onal programs through tethering mechanisms or secondary regulatory cascades, rather than direct DNA binding ( 51 and ref within). Suppor?ng this model, our interactome analysis uncovers an extensive network of GR associated proteins involved in diverse cellular processes, including cytoskeletal organiza?on, intracellular trafficking, and RNA regula?on. Strikingly, GR preferen?ally associates with HSPA8, a chaperone with 
+
+~85% iden?ty with human HSP70, rather than HSP90 species, indica?ng that in myeloid cells, GR may predominantly reside in a non-canonical or low affinity conforma?on 42, 52 . This configura?on could therefore limit its classical transcrip?onal ac?vity and favor non-genomic or protein-protein interac?on-based mechanisms. While GR is classically stabilized in an ac?ve conforma?on through HSP90 complexes 42, 52 , its associa?on with HSPA8 has been linked to alterna?ve folding states and intracellular trafficking routes, suppor?ng the idea that GR func?on in this context may deviate from canonical transcrip?onal programs. HSPA8 is predominantly localized in the cytoplasm and lysosomal compartments, where it plays a central role in chaperone-mediated autophagy 53, 54 . Through this pathway, it also promotes the degrada?on of the pro-apopto?c factor BBC3/PUMA under basal condi?ons, thereby contribu?ng to cellular protec?on against apoptosis 54 . Moreover, HSPA8 acts as a posi?ve regulator of cell cycle progression by controlling the nuclear accumula?on of cyclin D1, a key mediator of the G1 to S phase transi?on 55, 56 . Consequently, the dissocia?on of HSPA8 from GR in mutant mice may enhance non-genomic signaling mechanisms to modulate gene expression. Importantly, our results highlight a strong context- and ?me-dependent role of GR signaling. Pharmacological ac?va?on using dexamethasone reveals that early, but not late, exposure profoundly impairs muscle regenera?on. Early glucocor?coid treatment disrupts the transi?on from monocyte to macrophage, enhances macrophage prolifera?on, and delays inflamma?on resolu?on. These altera?ons are accompanied by major transcrip?onal reprogramming affec?ng cell mo?lity, vascular remodeling, and extracellular matrix organiza?on. While glucocor?coids are widely recognized for their an?-inflammatory proper?es, their effects on muscle regenera?on remain controversial. Previous studies have reported both beneficial and deleterious effects depending on dose, dura?on, and experimental context 23, 57-60 . Our findings provide a mechanis?c framework to reconcile these discrepancies by iden?fying a cri?cal temporal window during which GR ac?va?on is detrimental. Notably, neutrophils recruitment and cell death appears largely GR-independent at physiological glucocor?coid levels, consistent with previous studies indica?ng that glucocor?coid responses in neutrophils are primarily related to modula?on of trafficking, lifespan and effector func?ons rather than prolifera?on 61, 62 . In line with this, neutrophils are terminally differen?ated cells with limited prolifera?ve capacity, and several studies have reported rather low or dis?nct GR ac?vity in these cells. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+12 
+
+Together, these findings highlight a cell type-specific role of GR within the myeloid compartment, with a predominant impact on monocyte or macrophage popula?ons 63 . Conversely, upon Dex treatment, our data show an accumula?on of neutrophiles 7 dpi. These data resonate with former studies repor?ng the in vitro an?-apopto?c effect of glucocor?coids on human neutrophils, showing that glucocor?coids including Dex inhibit spontaneous neutrophil apoptosis in a concentra?on-dependent manner ( 64 and ref within). A par?cularly unexpected finding is the role of myeloid GR in regula?ng the crosstalk between macrophages and satellite cells. Early glucocor?coid exposure promotes macrophage prolifera?on while suppressing satellite cell division, ul?mately impairing myogenesis. This observa?on contrasts with previous studies, which have shown that an?-inflammatory macrophages limit satellite cell prolifera?on and promote differen?a?on 8, 26, 65, 66 . In our model, although an?-inflammatory macrophage polariza?on occurs in both control and mutant condi?ons, only control macrophages retain the ability to modulate satellite cell prolifera?on. These findings indicate that acquisi?on of an an?-inflammatory phenotype based on conven?onal marker iden?fica?on is not sufficient to confer func?onal ac?vity, which instead is highly dependent on GR signaling. Collec?vely, our study reveals that GR in myeloid cells does not directly control canonical cell cycle genes, but instead regulates macrophage dynamics through indirect and non-genomic mechanisms involving complex protein interac?on networks. Furthermore, it uncovers a GR-dependent intercellular communica?on axis that is essen?al for coordina?ng inflamma?on resolu?on and stem cell func?on. These findings emphasize the importance of ?ming and environment in glucocor?coid signaling, and highlight the need to reconsider their therapeu?c use in regenera?ve diseases. 
+
+Material and methods 
+
+Mice 
+
+Mice were maintained in a temperature- and humidity-controlled animal facility, with a 12-hours light/dark cycle. Standard rodent chow (2800 kcal/kg, Usine d’Alimenta?on Ra?onelle, Villemoisson-sur-Orge, France) and water were provided ad libitum . Breeding and maintenance of mice were performed according to ins?tu?onal guidelines. All experiments were done in an accredited animal house, in compliance with French and EU regula?ons on the use of laboratory animals for research. Intended manipula?ons were submiped to the Ethical commipee (Com’Eth, Strasbourg, France) for approval and to the French Research Ministry (MESR) for ethical evalua?on and authoriza?on according to the 2010/63/EU direc?ve under the APAFIS numbers 38761. Dexamethasone (Sigma; product D1756-1G) was dissolved at 20 mg/ml in EtOH, diluted at 0.3 mg/ml in oil, and intraperitoneally administrated at 1 mg/kg. Animals were euthanized via cervical disloca?on, and ?ssues were 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+13 
+
+immediately collected, weighed, and frozen in liquid nitrogen or processed for biochemical and histological analyses. 
+
+Genera*on of GR LysM-/- mice 
+
+For myeloid cells specific glucocor?coid receptor (GR) invalida?on, GR L2/L2 mice, in which exon 3 (encoding part of the DNA binding domain) was flanked with 2 LoxP sites 31 , were intercrossed with LyzM-Cre mice that express the Cre recombinase selec?vely in myeloid cells 38 . All mice were on a C57/Bl6J background. Primers used for genotyping are listed in Table S1. 
+
+Histological analyses 
+
+For Hematoxylin and eosin staining, ?ssues were fixed in 10% buffered formalin and embedded in paraffin, as described 67 . Five μm paraffin sec?ons were deparaffinized, rehydrated, and stained in filtered Hematoxylin (Harris, 26041-05) for 3 min, with 1 % Eosin Y (Sigma, 17372-87-1) for 3 min, dehydrated and mounted. Gomori trichrome staining was performed using a Trichrome Stain Kit according to the manufacturer recommenda?ons with modifica?ons (ScyTek Laboratories). Samples were deparaffinized, rehydrated, and incubated for 1 h in Bouin’s solu?on preheated to 65 °C under a fume hood. Slides were incubated 10 min in Weigert’s iron hematoxylin stain at room temperature. Excess stain was removed by rinsing in water and acid alcohol solu?on. Samples were next stained with Trichrome stain solu?on for 20 min at room temperature, followed by washing in water and ace?c acid solu?on. Slides were dehydrated and mounted. Images were acquired using a NanoZoomer S210 scanner coupled to a Hamamatsu camera. For immunofluorescent detec?on and TUNNEL assay, five μm paraffin sec?ons were deparaffinized and rehydrated. Immunofluorescence analysis was performed with an?bodies indicated in Table S2, as described 68 . Mouse or rabbit IgGs were used as controls. The quan?fica?on of posi?ve cells was performed with QuPath. The various analyses were done with experimenter blinded for the genotype. The TUNEL assay was performed using the In situ Cell Death Detec?on Kit (Roche, 11684795910) according to the manufacturer’s recommenda?ons. 
+
+Fiber cross-sec*onal area measurements 
+
+Muscle cross-sec?ons were stained with Wheat Germ Agglu?nin (WGA, Thermofisher W32464) to mark the membrane surrounding each fiber. CSAs were quan?fied using the FIJI image-processing somware. In brief, individual fibers were iden?fied based on the intensity and con?nuity of the WGA-stained membrane surrounding each fiber by segmenta?on. Areas were measured amer background subtrac?on, automated thresholding and analyzed with the QuPath somware. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+14 
+
+Flow cytometry analysis 
+
+Muscle stromal vascular frac?on was isolated as described (Ghaibour et al., 2023a). Briefly, hind limb muscles were dissected, minced into small fragments, and enzyma?cally digested with 1.25 U/mL Dispase II (Stemcell Technologies, Cat: 07913) and 500 μg/mL Collagenase Type I (Thermo Fisher Scien?fic, 17018029). The resul?ng cell suspension was filtered through 70 μm cell strainers (Corning Life Sciences) to remove debris. Cells isolated from digested muscle ?ssue were stained with CD45 Alexa eFluor700 (eBioscience, 56-0451-82, 1:100), CD11b PerCP-Cy5.5 (BioLegend, 101228, 1:100), Ly-6G-GR-1 FITC 488 (BioLegend, 108417, 1:100), Ly-6C PE-CF594 (BD Horizon™, AB_2737749, 1:100), F4/80 APC eFluor 780 (eBioscience™, 47-4801-82, 1:100), and CD206 BUV 785 (BioLegend, 321142, 1:100). Cells were analyzed based on forward scaper (FSC) and side scaper (SSC) parameters to exclude debris and doublets. Data analysis was performed by sequen?al ga?ng on single, live CD45⁺ leukocytes, followed by iden?fica?on of myeloid cells as CD11b⁺, neutrophils as CD11b⁺Ly6G⁺, monocytes as CD11b⁺Ly6G⁻Ly6C⁺, and macrophages as CD11b⁺Ly6G- Ly6C-F4/80⁺, with M2-like macrophages defined as CD11b⁺F4/80⁺CD206⁺. Fluorescence intensity was measured using a BD LSR II flow cytometer. Analyses were conducted using FlowJO somware, as described 67 .
+
+Fluorescence-Ac*vated Cell Sor*ng (FACS) of Myeloid Cells 
+
+Amer stromal vascular frac?on isola?on, mononucleated cells were pelleted by centrifuga?on at 400 × g for 5 min, resuspended in Ham's F-10 Nutrient Mixture (0.5% Penicillin/Streptomycin solu?on, and 15% horse serum albumin, without phenol red), and labeled with fluorescence-conjugated an?bodies. Cells were stained with CD45 PE (eBioscience, 12-0451-83, 1:100), CD11b PE-Cy7 (eBioscience, 25-0112-82, 1:100). Cells were gated based on FSC and SSC parameters to exclude cellular debris and doublets, and CD45-CD11b double-posi?ve cells were selected. Fluorescence intensity and sor?ng were conducted using a FACS sorter (BD FACSAria™, BD Biosciences, USA). Sorted satellite cells were subsequently processed for RNA extrac?on or CUT&RUN analyses. 
+
+RNA extrac*on and RNAseq analysis 
+
+TA muscles were homogenized in TRIzol reagent (Life Technologies, Darmstadt, Germany). RNA was isolated using a standard phenol/chloroform extrac?on protocol, and quan?fied by spectrophotometry (Nanodrop, Thermo Fisher). For RNA isola?on from FACS-isolated CD11B-posi?ve cells, the RNeasy Plus Micro Kit (Qiagen, 74034) was employed according to the manufacturer’s instruc?ons. RNA integrity was assessed using a Bioanalyzer. Library prepara?on was performed at the GenomEast plaorm from IGBMC. cDNA library was prepared, and sequenced by the standard Illumina protocol (NextSeq 2000, paired-end 50+50 bp for myeloid cells, and single-end 50 bp for TA muscles), following 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+15 
+
+the manufacturer’s instruc?ons. Image analysis and base calling were performed using RTA 2.7.7 and bcl2fastq 2.17.1.14. Adapter dimer reads were removed using DimerRemover (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC). FastQC 0.11.2 (hpp://www.bioinforma?cs.babraham.ac.uk/projects/fastqc/) was used to evaluate the quality of the sequencing. Reads were aligned to the mouse mm10 and mm39 genome for TA muscles and myeloid cells, respec?vely, using STAR v2.7.10b 69 , retaining only uniquely mapped reads for downstream analyses. Only uniquely aligned reads were retained for further analyses. Quan?fica?on of gene expression was performed using HTSeq 0.11.0 70 . For comparison among datasets, the transcripts with more than 50 raw reads were considered. Differen?ally expressed genes (DEGs) were iden?fied using the Bioconductor libraries DESeq2 71 with a p < 0.05. Iden?fied DEGs were subjected to func?onal analysis using STRING 12.0 72 and to pathway analysis using WebGestalt 73 with the Over-Representa?on Analysis (ORA) method, applying a false discovery rate (FDR) < 0.05 as the significance threshold. Heatmaps were generated by centering and normalizing expression values using Cluster 3.0 74 , with subsequent visualiza?on Morpheus (hpps://somware.broadins?tute.org/morpheus/). Genes were clustered using K-Mean with gene tree construc?on, Pearson correla?on, and average linkage as clustering parameters 75 .
+
+CUT&RUN analysis 
+
+CUT&RUN analysis has been performed on FACS-isolated myeloid cells as described 76 . Briefly, FACS-isolated satellite cells were centrifuged at 500 × g for 10 min at 4°C, and the resul?ng cell pellet was incubated with nuclear extrac?on buffer (20 mM HEPES-KOH pH = 7.9, 10 mM KCl, 0.5 mM Spermidine, 0.1% Triton X-100, 20% Glycerol and protease inhibitor cocktail) for 20 min on ice. Isolated nuclei were then washed and incubated with Concanavalin A-coated beads (BioMag Plus Concanavalin A, Cat: 86057-3) for 10 min at 4°C. Following addi?onal washes, the nuclei-bead complexes were incubated overnight at 4°C with gentle agita?on in the presence of 5 μg of primary an?bodies targe?ng GR (C-terminal, IGBMC, #3249), H3K27ac (ac?ve mo?f 39133) and H3K4me3 (Abcam, ab1012-100), or a rabbit IgG (Santa Cruz, sc2357) nega?ve control. Nuclei-bead complexes were precipitated and incubated with protein A-micrococcal nuclease (pA-MN, IGBMC) for 1 h at 4°C under constant agita?on. Enzyma?c cleavage was ini?ated by adding 3 μL of 100 mM CaCl₂, followed by 30 min of incuba?on on ice. The reac?on was terminated at 37°C for 20 min using stop buffer (200 mM NaCl, 20 mM EDTA, 4 mM EGTA, 50 μg/mL RNase A, 40 μg/mL glycogen, 25 pg/mL yeast spike-in DNA). DNA was extracted from immunoprecipitated samples for sequencing. Libraries were sequenced with an Illumina Hiseq 2000 as paired-end 50 bp reads, and mapped to the mm10 reference genome using Bow?e 1.3.1 77 . Uniquely mapped reads were retained for further 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+16 
+
+analysis. Reads overlapping with ENCODE blacklisted region V2 were removed using Bedtools 78 , and remaining reads into two groups: fragment size <120 bp (without nucleosome, in general for transcrip?on factors) and fragment size >150 bp (with nucleosomes, normally for histone marks). Bigwig files were generated using bamCoverage (deeptools 3.3.0: bamCoverage --normalizeUsing RPKM --binSize 20), and raw bedgraph files with genomeCoverageBed (bedtools v2.26.0). SEACR 1.3 algorithm (stringent op?on) was used for the peak calling with a threshold of 0.002. The genome-wide intensity profiles were visualized using the IGV genome browser (hpp://somware.broadins?tute.org/somware/igv/) 79 or Figeno 80 . HOMER was used to annotate peaks and for mo?f searches 81 . De novo iden?fied mo?fs were referred to as follow: R = purine (G or A); Y = pyrimidine (T or C). Genomic features (promoter/TSS, 5’ UTR, exon, intron, 3’ UTR, TTS and intergenic regions) were defined and calculated using Refseq and HOMER according to the distance to the nearest TSS. Venn diagrams were generated with Venny 2.1.0 (hpps://bioinfogp.cnb.csic.es/tools/venny/) or Interac?Venn 82 . Pathway analysis was performed with WebGestalt using the Over-Representa?on Analysis (ORA) method 73 .Clustering analyses were performed using seqMINER 83 and deeptools (-computeMatrix -skip0; -plotHeatmap). Genomic intersec?ons and sequence extrac?ons were carried out using bedtools. GetFastaBed was used to extract FASTA sequences from BED files. Intersect Interval was applied to iden?fy overlapping genomic loca?ons. When not specified, all bioinforma?cs analyses were performed using default parameters, ensuring robust and reproducible results. Pearson correla?on analysis with deeptools to determine the similarity between the samples 84 . Use the command line mul?BamSummary bins --bamfiles file1.bam file2.bam -o results.npz, followed by plotCorrela?on -in results.npz --corMethod pearson --skipZeros --plotTitle “Pearson Correla?on of Read Counts” --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o heatmap_PearsonCorr_readCounts.png --outFileCorMatrix PearsonCorr_readCounts.tab. 
+
+scRNAseq analyses 
+
+PRJNA577458 was used for scRNA-seq analysis of mouse muscles 2, 3.5, 5 and 10 dpi, using metacluster annota?ons, as described 85 . Bioinforma?cs analyses were assessed with Seurat v5.0.1. Data normaliza?on was performed with -NormalizeData, and scaled with -ScaleData with default features. Myeloid cells were clustered according to Itgam /Cd11b expression. Loupe file was generated with the -create_loupe_from_seurat func?on from the loupeR package v1.0.2. Loupe Browser 8 was used for colocaliza?on analyses. 
+
+Caspase ac*vity 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+17 
+
+The caspase ac?vity was determined on three controls and three mutants’ batches of about 5000 FACS-purified neutrophils, monocytes or macrophages each, using the Caspase-Glo 3/7 assay (Promega, USA). 
+
+Immunoprecipita'on and Liquid Chromatography Tandem Mass Spectrometry (LC-MS/MS) 
+
+FACS-isolated myeloid cells were harvested in PBS and centrifugated at 300 × g for 5 min. Pellets were lysed for 30 min under agita?on in lysis buffer [Tris (pH 7.5) 50 mM, NaCl 150 mM, glycerol 5%, NP-40 1%, PIC 1× in H 20], as described 86 . Immunoprecipita?on was performed using Slurry Dynabeads G coupled to 5 μg of an?-GR an?body or a rabbit IgG for 1 h at 4°C under agita?on. On ice, 100 μg of proteins were added on an?body-coupled beads and agitated at 4◦C overnight. Amer three washes in lysis buffer, bound proteins were eluted in 1x Laemmli and 0.1 M DTT and boiled. Isolated proteins were subjected to an overnight trypsin diges?on at 37°C. Pep?des were separated on a C18 column using an Ul?mate 3000 nano- RLSC (Thermo Fisher Scien?fic) coupled to an LTQ-Orbitrap Elite mass spectrometer (Thermo Fisher Scien?fic) for pep?de iden?fica?on. Proteins were iden?fied with Proteome Discoverer 2.4 somware (Thermo Fisher Scien?fic, PD2.4 from Mus Musculus proteome database (Swissprot), and proteins were quan?fied with a minimum of two unique pep?des based on the XIC (sum of the Extracted Ion Chromatogram). Partners of GR were considered if enriched (p<0.05, 
+
+ïlog fold-change ï > 0.5) in IP-GR condi?on compared to the protein listed in the IgG sample to exclude non-specific bindings. For visual representa?on and Gene Ontology terms analysis, the online tool STRING.db 72 was used. 
+
+Sta's'cal analyses 
+
+Data processing and analysis were conducted using DESEq2, Microsom Excel and GraphPad Prism 9. In all graphical representa?ons, error bars indicate the standard error mean (SEM). Comparisons between groups were performed using appropriate sta?s?cal tests, selected based on the number of groups, data distribu?on (normality), variance homogeneity, and mul?ple comparisons. The specific sta?s?cal tests applied are indicated in the figure legends. Sta?s?cal significance was defined as follows: ns, p > 0.05 (non-significant); *, p < 0.05; **, p < 0.01; and ***, p < 0.001. 
+
+Resource availability 
+
+Custom macro for CSA measurements quan?fica?on is available on GitLab (CSA: the BIOP cellpose extension guide). All sequencing datasets generated in this study are deposited in the Gene Expression Omnibus (GEO) with the accession number GSE311683 for CUT&RUN analyses, GSE311684 and GSE311685 for RNA-seq experiments. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+18 
+
+Acknowledgments 
+
+We thank Dr. R. Ricci (IGBMC) for generously providing the LysM-Cre mouse line. We are grateful to Anastasia Bannwarth, Brayann Weis, and Régis Lutzing for their valuable technical support, and Tao Ye, Maphieu Jung and Céline Keime for excellent bioinforma?cs assistance. We also thank members of flow cytometry IGBMC facili?es Claudine Ebel, Muriel Philipps, Cécile Macquin and Virginie Super for their technical support. We acknowledge the support of the IGBMC core facili?es, including the animal facility, microscopy and mass spectrometry plaorms, cell culture service, flow cytometry, and histopathology services, as well as the Mouse Clinical Ins?tute (ICS, Illkirch-Graffenstaden, France) and GenomEast facility, a member of the ‘France Génomique’ consor?um (ANR-10-INBS-0009). We are grateful to Jan Tuckerman, Bénédicte Chazaud, Rémi Mounier and Elodie Monsellier for helpful discussions. This work was supported by the Interdisciplinary Thema?c Ins?tute IMCBio as part of the ITI 2021-2028 program of the University of Strasbourg, the Centre Na?onal pour la Recherche Scien?fique (CNRS), Ins?tut na?onal de la santé et de la recherche médicale (Inserm), from IDex Unistra (ANR-10-IDEX-0002), SFRI-STRAT’US (ANR 20-SFRI-0012) and EUR IMCBio (ANR-17-EURE-0023) projects, under the framework of the French Investments for the Future Programme. Addi?onal support was provided by Inserm, CNRS, Unistra, IGBMC, Agence Na?onale de la Recherche and Deutsche Forschungsgemeinscham (ANR-10-BLAN-1108, ANR-DFG CORTICOSAT, ANR-22-CE92-0020-01). J.G.R. received funding from the Programme CDFA-07-22 from the Université franco-allemande and Ministère de l'Enseignement Supérieur de la Recherche et de l'Innova?on, E.C. by MESRI, and R.S. by IMCBio. 
+
+Author contribu'ons 
+
+D.D., D.M., and S.S.C. formulated the ini?al hypothesis. S.S.C., J.G.R., E.Ca., E.Co., I.C., and Q.C. carried out func?onal, molecular, and histological experiments. D.D., V.G., and S.S.C. executed bioinforma?cs analyses. S.S.C. and E.G. took responsibility of imaging analyses. R.S. and B.M. took responsibility for mass-spectrometry analysis. S.S.C., D.M., and D.D. took primary responsibility for data analysis and wri?ng the manuscript. 
+
+Declara'on of interests 
+
+The authors declare no compe?ng interests. 
+
+Declara'on of genera've AI and AI-assisted technologies 
+
+None declared. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+19 
+
+References 
+
+1. Wang, Y.X. & Rudnicki, M.A. Satellite cells, the engines of muscle repair. Nat Rev Mol Cell Biol 13 , 127-133 (2011). 2. Heredia, J.E. et al. Type 2 innate signals sPmulate fibro/adipogenic progenitors to facilitate muscle regeneraPon. Cell 153 , 376-388 (2013). 3. Varga, T. et al. Highly Dynamic TranscripPonal Signature of DisPnct Macrophage Subsets during Sterile InflammaPon, ResoluPon, and Tissue Repair. J Immunol 196 ,4771-4782 (2016). 4. Verma, M. et al. Muscle Satellite Cell Cross-Talk with a Vascular Niche Maintains Quiescence via VEGF and Notch Signaling. Cell Stem Cell 23 , 530-543.e539 (2018). 5. Dumont, N.A., Wang, Y.X. & Rudnicki, M.A. Intrinsic and extrinsic mechanisms regulaPng satellite cell funcPon. Development 142 , 1572-1581 (2015). 6. Tidball, J.G. & Villalta, S.A. Regulatory interacPons between muscle and the immune system during muscle regeneraPon. Am J Physiol Regul Integr Comp Physiol 298 ,R1173-1187 (2010). 7. Wang, W. et al. Macrophage InflammaPon, Erythrophagocytosis, and Accelerated Atherosclerosis in Jak2 (V617F) Mice. Circ Res 123 , e35-e47 (2018). 8. Arnold, L. et al. Inflammatory monocytes recruited aaer skeletal muscle injury switch into anPinflammatory macrophages to support myogenesis. J Exp Med 204 , 1057-1069 (2007). 9. Mounier, R. et al. AMPKalpha1 regulates macrophage skewing at the Pme of resoluPon of inflammaPon during skeletal muscle regeneraPon. Cell Metab 18 , 251-264 (2013). 10. Lu, H., Huang, D., Ransohoff, R.M. & Zhou, L. Acute skeletal muscle injury: CCL2 expression by both monocytes and injured muscle is required for repair. FASEB J 25 ,3344-3355 (2011). 11. Lu, H. et al. Macrophages recruited via CCR2 produce insulin-like growth factor-1 to repair acute skeletal muscle injury. FASEB J 25 , 358-369 (2011). 12. Sun, D. et al. Bone marrow-derived cell regulaPon of skeletal muscle regeneraPon. 
+
+FASEB J 23 , 382-395 (2009). 13. Joe, A.W. et al. Muscle injury acPvates resident fibro/adipogenic progenitors that facilitate myogenesis. Nat Cell Biol 12 , 153-163 (2010). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+20 14. Liu, W., Liu, Y., Lai, X. & Kuang, S. Intramuscular adipose is derived from a non-Pax3 lineage and required for efficient regeneraPon of skeletal muscles. Dev Biol 361 , 27-38 (2012). 15. Uezumi, A., Fukada, S., Yamamoto, N., Takeda, S. & Tsuchida, K. Mesenchymal progenitors disPnct from satellite cells contribute to ectopic fat cell formaPon in skeletal muscle. Nat Cell Biol 12 , 143-152 (2010). 16. Biferali, B., Proiem, D., Mozzena, C. & Madaro, L. Fibro-Adipogenic Progenitors Cross-Talk in Skeletal Muscle: The Social Network. Front Physiol 10 , 1074 (2019). 17. Fry, C.S., Kirby, T.J., Kosmac, K., McCarthy, J.J. & Peterson, C.A. Myogenic Progenitor Cells Control Extracellular Matrix ProducPon by Fibroblasts during Skeletal Muscle Hypertrophy. Cell Stem Cell 20 , 56-69 (2017). 18. Murphy, M.M., Lawson, J.A., Mathew, S.J., Hutcheson, D.A. & Kardon, G. Satellite cells, connecPve Pssue fibroblasts and their interacPons are crucial for muscle regeneraPon. 
+
+Development 138 , 3625-3637 (2011). 19. Filipovic, D., Pirkmajer, S., Mis, K., Mars, T. & Grubic, Z. Expression of glucocorPcoid receptors in the regeneraPng human skeletal muscle. Physiol Res 60 , S147-154 (2011). 20. CouPnho, A.E. & Chapman, K.E. The anP-inflammatory and immunosuppressive effects of glucocorPcoids, recent developments and mechanisPc insights. Mol Cell Endocrinol 
+
+335 , 2-13 (2011). 21. Quanrocelli, M., Zelikovich, A.S., Salamone, I.M., Fischer, J.A. & McNally, E.M. Mechanisms and Clinical ApplicaPons of GlucocorPcoid Steroids in Muscular Dystrophy. J Neuromuscul Dis 8, 39-52 (2021). 22. Montano, M.M. & Lim, R.W. GlucocorPcoid effects on the skeletal muscle differenPaPon program: analysis of clonal proliferaPon, morphological differenPaPon and the expression of muscle-specific and regulatory genes. Endocr Res 23 , 37-57 (1997). 23. Otrocka-Domagala, I., Pazdzior-Czapula, K. & Gesek, M. Dexamethasone-induced impairment of post-injury skeletal muscle regeneraPon. BMC Vet Res 15 , 56 (2019). 24. Quanrocelli, M. et al. Interminent glucocorPcoid steroid dosing enhances muscle repair without eliciPng muscle atrophy. J Clin Invest 127 , 2418-2432 (2017). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+21 25. te Pas, M.F., de Jong, P.R. & Verburg, F.J. GlucocorPcoid inhibiPon of C2C12 proliferaPon rate and differenPaPon capacity in relaPon to mRNA levels of the MRF gene family. Mol Biol Rep 27 , 87-98 (2000). 26. Desgeorges, T., Caram, G., Mounier, R., Tuckermann, J. & Chazaud, B. GlucocorPcoids Shape Macrophage Phenotype for Tissue Repair. Front Immunol 10 , 1591 (2019). 27. Kino, T. GlucocorPcoid Receptor, in Endotext . (eds. L.J. De Groot et al. ) (South Dartmouth (MA); 2000). 28. Lieberman, B.A., Bona, B.J., Edwards, D.P. & Nordeen, S.K. The consPtuPon of a progesterone response element. Mol Endocrinol 7, 515-527 (1993). 29. Presman, D.M. et al. Live cell imaging unveils mulPple domain requirements for in vivo dimerizaPon of the glucocorPcoid receptor. PLoS Biol 12 , e1001813 (2014). 30. Hua, G., Paulen, L. & Chambon, P. GR SUMOylaPon and formaPon of an SUMO-SMRT/NCoR1-HDAC3 repressing complex is mandatory for GC-induced IR nGRE-mediated transrepression. Proc Natl Acad Sci U S A 113 , E626-634 (2016). 31. Surjit, M. et al. Widespread negaPve response elements mediate direct repression by agonist-liganded glucocorPcoid receptor. Cell 145 , 224-241 (2011). 32. Lim, H.W. et al. Genomic redistribuPon of GR monomers and dimers mediates transcripPonal response to exogenous glucocorPcoid in vivo. Genome Res 25 , 836-844 (2015). 33. Uhlenhaut, N.H. et al. Insights into negaPve regulaPon by the glucocorPcoid receptor from genome-wide profiling of inflammatory cistromes. Mol Cell 49 , 158-171 (2013). 34. Starick, S.R. et al. ChIP-exo signal associated with DNA-binding moPfs provides insight into the genomic binding of the glucocorPcoid receptor and cooperaPng transcripPon factors. Genome Res 25 , 825-835 (2015). 35. Meijsing, S.H. Mechanisms of GlucocorPcoid-Regulated Gene TranscripPon. Adv Exp Med Biol 872 , 59-81 (2015). 36. Ito, K., Chung, K.F. & Adcock, I.M. Update on glucocorPcoid acPon and resistance. JAllergy Clin Immunol 117 , 522-543 (2006). 37. Tuckermann, J.P. et al. Macrophages and neutrophils are the targets for immune suppression by glucocorPcoids in contact allergy. Journal of Clinical InvesIgaIon 117 ,1381-1390 (2007). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+22 38. Clausen, B.E., Burkhardt, C., Reith, W., Renkawitz, R. & Forster, I. CondiPonal gene targePng in macrophages and granulocytes using LysMcre mice. Transgenic Res 8, 265-277 (1999). 39. Molina, T., Fabre, P. & Dumont, N.A. Fibro-adipogenic progenitors in skeletal muscle homeostasis, regeneraPon and diseases. Open Biol 11 , 210110 (2021). 40. Nian, Q. et al. SPARC silencing inhibits the growth of acute myeloid leukemia transformed from myelodysplasPc syndrome via inducPon of cell cycle arrest and apoptosis. Int J Mol Med 33 , 856-862 (2014). 41. Oh, K.S. et al. AnP-Inflammatory ChromaPnscape Suggests AlternaPve Mechanisms of GlucocorPcoid Receptor AcPon. Immunity 47 , 298-309 e295 (2017). 42. Kirschke, E., Goswami, D., Southworth, D., Griffin, P.R. & Agard, D.A. GlucocorPcoid receptor funcPon regulated by coordinated acPon of the Hsp90 and Hsp70 chaperone cycles. Cell 157 , 1685-1697 (2014). 43. He, B. et al. A repressive role for prohibiPn in estrogen signaling. Mol Endocrinol 22 ,344-360 (2008). 44. Manhews, L.C. et al. GlucocorPcoid receptor regulates accurate chromosome segregaPon and is associated with malignancy. Proc Natl Acad Sci U S A 112 , 5479-5484 (2015). 45. Jia, W.Y. & Zhang, J.J. Effects of glucocorPcoids on leukocytes: Genomic and non-genomic mechanisms. World J Clin Cases 10 , 7187-7194 (2022). 46. Chinenov, Y., Coppo, M., Gupte, R., Sacta, M.A. & Rogatsky, I. GlucocorPcoid receptor coordinates transcripPon factor-dominated regulatory network in macrophages. BMC Genomics 15 , 656 (2014). 47. Rhen, T. & Cidlowski, J.A. AnPinflammatory acPon of glucocorPcoids--new mechanisms for old drugs. N Engl J Med 353 , 1711-1723 (2005). 48. Rogatsky, I. & Ivashkiv, L.B. GlucocorPcoid modulaPon of cytokine signaling. Tissue AnIgens 68 , 1-12 (2006). 49. Cain, D.W. & Cidlowski, J.A. Immune regulaPon by glucocorPcoids. Nat Rev Immunol 
+
+17 , 233-247 (2017). 50. Akter, S. et al. Physiological concentraPons of glucocorPcoids induce pathological DNA double-strand breaks. Genes Cells 28 , 53-67 (2023). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+23 51. Escoter-Torres, L. et al. FighPng the Fire: Mechanisms of Inflammatory Gene RegulaPon by the GlucocorPcoid Receptor. Front Immunol 10 , 1859 (2019). 52. Moessmer, P. et al. AcPve unfolding of the glucocorPcoid receptor by the Hsp70/Hsp40 chaperone system in single-molecule mechanical experiments. Proc Natl Acad Sci U S A 119 , e2119076119 (2022). 53. Majeski, A.E. & Dice, J.F. Mechanisms of chaperone-mediated autophagy. Int J Biochem Cell Biol 36 , 2435-2444 (2004). 54. Xie, W. et al. Chaperone-mediated autophagy prevents apoptosis by degrading BBC3/PUMA. Autophagy 11 , 1623-1635 (2015). 55. Diehl, J.A., Yang, W., Rimerman, R.A., Xiao, H. & Emili, A. Hsc70 regulates accumulaPon of cyclin D1 and cyclin D1-dependent protein kinase. Mol Cell Biol 23 , 1764-1774 (2003). 56. Hatakeyama, T. et al. Connexin43 funcPons as a novel interacPng partner of heat shock cognate protein 70. Sci Rep 3, 2719 (2013). 57. He, Y. et al. Intravital microscopy of satellite cell dynamics and their interacPon with myeloid cells during skeletal muscle regeneraPon. Sci Adv 9, eadi1891 (2023). 58. Lin, J.W. et al. Dexamethasone accelerates muscle regeneraPon by modulaPng kinesin-1-mediated focal adhesion signals. Cell Death Discov 7, 35 (2021). 59. Pansters, N.A., Langen, R.C., Wouters, E.F. & Schols, A.M. SynergisPc sPmulaPon of myogenesis by glucocorPcoid and IGF-I signaling. J Appl Physiol (1985) 114 , 1329-1339 (2013). 60. Caram, G. et al. Macrophagic AMPKalpha1 orchestrates regeneraPve inflammaPon induced by glucocorPcoids. EMBO Rep 24 , e55363 (2023). 61. Schacke, H., Docke, W.D. & Asadullah, K. Mechanisms involved in the side effects of glucocorPcoids. Pharmacol Ther 96 , 23-43 (2002). 62. Ronchem, S., Ricci, E., MiglioraP, G., GenPli, M. & Riccardi, C. How GlucocorPcoids Affect the Neutrophil Life. Int J Mol Sci 19 (2018). 63. Ehrchen, J.M., Roth, J. & Barczyk-Kahlert, K. More Than Suppression: GlucocorPcoid AcPon on Monocytes and Macrophages. Front Immunol 10 , 2028 (2019). 64. Saffar, A.S., Ashdown, H. & Gounni, A.S. The molecular mechanisms of glucocorPcoids-mediated neutrophil survival. Curr Drug Targets 12 , 556-562 (2011). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+24 65. Saclier, M., Cuvellier, S., Magnan, M., Mounier, R. & Chazaud, B. Monocyte/macrophage interacPons with myogenic precursor cells during skeletal muscle regeneraPon. FEBS J 280 , 4118-4130 (2013). 66. Juban, G. et al. AMPK AcPvaPon Regulates LTBP4-Dependent TGF-beta1 SecrePon by Pro-inflammatory Macrophages and Controls Fibrosis in Duchenne Muscular Dystrophy. Cell Rep 25 , 2163-2176 e2166 (2018). 67. Ghaibour, K. et al. Androgen receptor coordinates muscle metabolic and contracPle funcPons. J Cachexia Sarcopenia Muscle 14 , 1707-1720 (2023). 68. Souali-Crespo, S. et al. Loss of NR5A1 in mouse Sertoli cells aaer sex determinaPon changes cellular idenPty and induces cell death by anoikis. Development 150 (2023). 69. Dobin, A. et al. STAR: ultrafast universal RNA-seq aligner. BioinformaIcs 29 , 15-21 (2013). 70. Anders, S., Pyl, P.T. & Huber, W. HTSeq--a Python framework to work with high-throughput sequencing data. BioinformaIcs 31 , 166-169 (2015). 71. Love, M.I., Huber, W. & Anders, S. Moderated esPmaPon of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15 , 550 (2014). 72. Szklarczyk, D. et al. The STRING database in 2023: protein-protein associaPon networks and funcPonal enrichment analyses for any sequenced genome of interest. Nucleic Acids Res 51 , D638-D646 (2023). 73. Wang, J., Duncan, D., Shi, Z. & Zhang, B. WEB-based GEne SeT AnaLysis Toolkit (WebGestalt): update 2013. Nucleic Acids Res 41 , W77-83 (2013). 74. de Hoon, M.J., Imoto, S., Nolan, J. & Miyano, S. Open source clustering soaware. 
+
+BioinformaIcs 20 , 1453-1454 (2004). 75. Lu, Y., Lu, S., Fotouhi, F., Deng, Y. & Brown, S.J. Incremental genePc K-means algorithm and its applicaPon in gene expression data analysis. BMC BioinformaIcs 5, 172 (2004). 76. Hainer, S.J. & Fazzio, T.G. High-ResoluPon ChromaPn Profiling Using CUT&RUN. Curr Protoc Mol Biol 126 , e85 (2019). 77. Langmead, B. & Salzberg, S.L. Fast gapped-read alignment with BowPe 2. Nat Methods 
+
+9, 357-359 (2012). 78. Quinlan, A.R. & Hall, I.M. BEDTools: a flexible suite of uPliPes for comparing genomic features. BioinformaIcs 26 , 841-842 (2010). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+25 79. Thorvaldsdomr, H., Robinson, J.T. & Mesirov, J.P. IntegraPve Genomics Viewer (IGV): high-performance genomics data visualizaPon and exploraPon. Brief Bioinform 14 ,178-192 (2013). 80. Sollier, E. et al. Figeno: mulP-region genomic figures with long-read support. 
+
+BioinformaIcs 40 (2024). 81. Heinz, S. et al. Simple CombinaPons of Lineage-Determining TranscripPon Factors Prime cis-Regulatory Elements Required for Macrophage and B Cell IdenPPes. 
+
+Molecular Cell 38 , 576-589 (2010). 82. Heberle, H., Meirelles, G.V., da Silva, F.R., Telles, G.P. & Minghim, R. InteracPVenn: a web-based tool for the analysis of sets through Venn diagrams. BMC BioinformaIcs 16 ,169 (2015). 83. Ye, T. et al. seqMINER: an integrated ChIP-seq data interpretaPon plaqorm. Nucleic Acids Res 39 , e35 (2011). 84. Ramirez, F. et al. deepTools2: a next generaPon web server for deep-sequencing data analysis. Nucleic Acids Res 44 , W160-165 (2016). 85. Oprescu, S.N., Yue, F., Qiu, J., Brito, L.F. & Kuang, S. Temporal Dynamics and Heterogeneity of Cell PopulaPons during Skeletal Muscle RegeneraPon. iScience 23 ,100993 (2020). 86. Lemee, M.V. et al. Disrupted transcripPonal networks regulated by CHD1L during neurodevelopment underlie the mirrored neuroanatomical and growth phenotypes of the 1q21.1 copy number variant. Nucleic Acids Res 53 (2025). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+26 
+
+FIGURE LEGENDS Figure 1: Glucocor'coid receptor deficiency in myeloid cells promotes macrophages survival and perturbs cell cycle progression. 
+
+(A) Violin plots showing Gr expression levels from scRNA-seq analysis of injured ?bialis anterior (TA) muscles of control mice at various stages of regenera?on, across neutrophils, monocytes, pro-inflammatory macrophages, an?-inflammatory macrophages, and prolifera?ng immune cells (Prolifera?ng IC). (B) Representa?ve immunofluorescence labeling of GR (magenta) and IBA1 (cyan) in TA muscles from control and GR Lysm-/- mice at 2-, 4-, and 7-days post-injury (dpi). White arrows indicate GR-nega?ve macrophages, yellow arrows highlight GR-posi?ve macrophages. Nuclei were counterstained with DAPI. Scale bar, 25 μm. (C) Representa?ve hematoxylin and eosin staining of TA muscles of control and GR Lysm-/- mice under non-injured condi?on, and at 2, 4 and 7 dpi. Scale bar, 100 μm. (D) Representa?ve immunofluorescent detec?on of F4/80 (magenta), and KI67 (yellow) and corresponding quan?fica?ons in TA of control and GR Lysm-/- mice 2 and 7 dpi. Nuclei were stained with DAPI. Scale bar, 50 μm. Data are presented as mean ± SEM. Sta?s?cal test used was Student's t-test; * = p < 0.05. (E) Representa?ve immunofluorescent detec?on of F4/80 (cyan), and gH2AX (red) in TA of control and GR Lysm-/- mice 2 and 7 dpi. Yellow arrows indicate gH2AX-posi?ve macrophages while white arrows indicate gH2AX-nega?ve macrophages. Scale bar, 20 μm. (F) Caspase 3/7 ac?vity measured in FACS-purified control and GR Lysm-/- neutrophils, monocytes and macrophages 2 dpi. RLU, rela?ve luminescence units. Data are presented as mean ± SEM. Sta?s?cal test used was Student's t-test; ns, non-significant; * = p < 0.05. (G) Representa?ve immunofluorescence staining of F4/80 (red) and quan?fica?on of the area occupied by F4/80-posi?ve cells rela?ve to the injury area in TA muscles from control and GR Lysm-/- mice at 2, 4, and 7 dpi. Sta?s?cal test used was Student's t-test; ns, non-significant; * = p < 0.05. Scale bar, 200 μm. 
+
+Figure 2: Glucocor'coid receptor deficiency in myeloid cells does not impact muscle regenera'on. 
+
+(A) Representa?ve immunofluorescent detec?on of PAX7 or MYOG (magenta), and KI67 (green) and corresponding quan?fica?ons in TA of control and GR Lysm-/- mice 7 dpi. Nuclei were stained with DAPI. Scale bars, 50 μm. Data are presented as mean ± SEM. Sta?s?cal test used was Student's t-test; ns, non-significant. (B) Representa?ve hematoxylin and eosin staining of 7 days-injured TA muscles from control and GR Lysm-/- mice. Quan?fica?ons shows the percentage of regenera?ve fibers containing a single nucleus. Scale 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+27 
+
+bar, 250 μm. (C) Representa?ve immunofluorescent detec?on of ACTN1 (magenta) in TA of control and GR Lysm-/- mice 7 dpi. Nuclei were stained with DAPI (yellow). Scale bar, 20 μm. (D) Representa?ve staining of Wheat Germ Agglu?nin (WGA, red) in 28-days-injured TA muscles of control and GR Lysm-/- mice, and corresponding fiber cross-sec?onal area (CSA) distribu?on across the injury site. No significant difference was observed in fiber size distribu?on between genotypes. Nuclei were stained with DAPI (gray). Scale bars, 1 mm (main image) and 50 μm (magnified inset). (E) Representa?ve Masson trichrome staining of TA of control and GR Lysm-/- mice at indicated ?me points of muscle regenera?on. Scale bar, 15 μm. (F) Heatmap showing the mean-centered normalized expression of selected genes from bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from TA muscles of control and GR Lysm-/- mice 7 dpi. (G) Pathway analysis of down- and up-regulated genes in 7-days-injured TA of control and GR Lysm-/- mice. (H) Violin plots showing normalized read counts of selected genes that were differen?ally expressed in bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from TA muscles of control and GR Lysm-/- mice 7 dpi. 
+
+Figure 3: Glucocor'coid receptor cistrome and proteomic analyses in macrophages. 
+
+(A) Tag density map of H3K4me3, H3K27ac and GR in myeloid cells, +/- 5 kb from the GR peak center sorted by GR peak length, and corresponding average tag density profiles. (B) Localiza?on of GR, H3K4me3 and H3K27ac at representa?ve promoter and intergenic regions on the chroma?n of myeloid cells by CUT&RUN. Enrichment score showing the levels of confidence of published datasets is depicted as a heatmap. (C) HOMER mo?f analysis of GR binding sites located at intergenic, intronic or promoter regions. p-value: hypergeometric tes?ng. (D) Pathway analysis performed on GR common target genes iden?fied in macrophages of TA of control and GR Lysm-/- mice 4 dpi. (E) Overlap of the genes bound by GR in macrophages and genes differen?ally expressed in bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from TA muscles of control and GR Lysm-/- mice 7 dpi. (F) Pathway analysis performed on GR common target genes iden?fied in macrophages of TA of control and GR Lysm-/- mice 4 dpi and differen?ally expressed in bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from TA muscles of control and GR Lysm-/- mice 7 dpi. (G) Volcano plot depic?ng GR partners iden?fied by mass-spectrometry in FACS-isolated myeloid cell extracts 4 dpi. (H) STRING analysis of the nuclear proteins co-immunoprecipitated with GR in FACS-isolated myeloid cell ex tracts. Line thickness indicates the strength of data support for protein-protein interac?ons 4 dpi. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+28 
+
+Figure 4: Dexamethasone treatment during the an'-inflammatory phase does not affect muscle regenera'on or myeloid cell composi'on 
+
+(A) Schema?c representa?on of the treatment regimen for control and GR Lysm-/- mice. (B) Representa?ve hematoxylin and eosin staining of ?bialis muscles (TA) of dexamethasone- (Dex) or vehicle-treated (Oil) control and GR Lysm-/- mice 7 days amer injury. Scale bar, 100 μm. (C) Percentage of myeloid cells in 7-days-injured TA of Dex- or Oil-treated control and GR Lysm-/ . Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc correc?on; ns, non-significant; ** = p < 0.01; *** = p < 0.001. 
+
+Figure 5: Dexamethasone treatment during the pro-inflammatory phase impairs muscle regenera'on 
+
+(A) Schema?c representa?on of the treatment regimen for control and GR Lysm-/- mice. (B) Representa?ve hematoxylin and eosin staining of ?bialis muscles (TA) of Dex- or vehicle-treated (Oil) control and GR Lysm-/- mice 7 days amer injury. Scale bar, 100 μm. (C) Representa?ve immunofluorescence staining of Wheat Germ Agglu?nin (WGA, green) and IgG (magenta) in TA muscles of Dex- or Oil-treated control and GR Lysm-/- mice, 7 days amer injury. Quan?fica?on represents the percentage of necro?c (IgG⁺) fibers rela?ve to the injury surface. Nuclei were stained with DAPI. Scale bar, 50 μm. Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc correc?on; ns, non-significant; ** = p < 0.01; *** = p < 0.001. (D) Percentage of myeloid cells and representa?ve immunofluorescent detec?on of CD45 (red) in 7-days-injured TA of Dex- or Oil-treated control and GR Lysm-/-. Nuclei were stained with DAPI. Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc 
+
+correc?on; ns, non-significant; ** = p < 0.01; *** = p < 0.001. (E) Heatmap showing mean-centered normalized expression of selected genes from bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from 7-days-injured TA muscles of control Dex- or Oil-treated. (F) Pathway analysis of down- and up-regulated genes in 7-days-injured TA of control Dex- or Oil-treated. (G) Violin plots showing normalized read counts of selected genes that were significantly differen?ally expressed in bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from 7-days-injured TA muscles of control Dex- or Oil-treated. 
+
+Figure 6: Dexamethasone impairs myogenesis during the pro-inflammatory phase through GR-dependent signaling in myeloid cells 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+29 
+
+(A) Representa?ve immunofluorescent detec?on of F4/80 (magenta), and KI67 (green) and corresponding quan?fica?ons in 7-days injured TA of Dex- or Oil-treated control and GR Lysm-/-mice. Nuclei were stained with DAPI. Scale bars, 25 μm. Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc correc?on; ns, non-significant; ***=p <0.001; **** = p < 0.0001. (B) Representa?ve immunofluorescent detec?on of CD163 (magenta) and KI67 (green) in 7-days injured TA of Dex- or Oil-treated control and GR Lysm-/-mice, only few, if any, CD163⁺ cells were posi?ve for KI67 in any condi?on. Nuclei were stained with DAPI. Scale bars, 50 μm. (C) Representa?ve immunofluorescent detec?on of PAX7 (magenta), and KI67 (green) and corresponding quan?fica?ons in 7-days injured TA of Dex- or Oil-treated control and GR Lysm-/-mice. Nuclei were stained with DAPI. Scale bars, 25 μm. Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc correc?on; ns, non-significant; ***=p <0.001; **** = p < 0.0001. (D) Representa?ve immunofluorescence staining of Wheat Germ Agglu?nin (WGA, maganta) in TA muscles of Dex- or Oil-treated control and GR Lysm-/- mice, 7 days amer injury. Quan?fica?on represents the percentage of regenera?ve fibers rela?ve to the injury surface. Nuclei were stained with DAPI (yellow). Scale bar, 50 μm. Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc correc?on; ns, non-significant; * = p < 0.05; ** = p < 0.01; ***=p <0.001. (E) Representa?ve immunofluorescence staining of Wheat Germ Agglu?nin (WGA, green) in TA muscles of Dex- or Oil-treated control and GR Lysm-/- mice, 28 days amer injury. Quan?fica?on shows the percentage of regenera?ve fibers containing a single nucleus (F) and the corresponding fiber cross-sec?onal area (CSA) distribu?on within the injury site. Nuclei were stained with DAPI. Data are presented as mean ± SEM. Sta?s?cal test used is Two-way ANOVA with Tukey post-hoc correc?on; ns, non-significant; * = p < 0.05; ** = p < 0.01. (G) Heatmap showing mean-centered normalized expression of selected genes from bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from 7-days-injured TA muscles of control and GR Lysm-/- mice Dex-treated. (H) Pathway analysis of down- and up-regulated genes in 7-days-injured TA muscles of control and GR Lysm-/- mice Dex-treated. (I) Violin plots showing normalized read counts of selected genes that were significantly differen?ally expressed in bulk RNA-sequencing of FACS-sorted CD11b⁺ cells isolated from 7-days-injured TA muscles of control and GR Lysm-/- mice Dex-treated. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
+
+4 dpi 7 dpi 2 dpi 
+
+GR IBA1 DAPI 
+
+25μm 
+
+> Control GR Lysm-/-
+
+AC
+
+B
+
+D
+
+F4/80 KI67 DAPI 
+
+50μm 
+
+> 7 dpi  2 dpi
+
+Control GR Lysm-/-0
+
+5
+
+10 
+
+15 
+
+20 
+
+> % F4/80 KI67 +
+
+✱ ✱
+
+Control 
+
+GR Lysm-/-
+
+2 dpi 7 dpi 
+
+G
+
+F4/80 DAPI 
+
+> 7 dpi
+
+GR Lysm-/-
+
+Control 
+
+200 μm Control 
+
+> GR Lysm-/-
+
+0
+
+5
+
+10 
+
+15 
+
+7 dpi 
+
+> % F4/80 surface/
+> Injury surface
+
+✱Monocytes 
+
+ProliferatingIC 0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+metacluster 
+
+Neutrophils 
+
+Monocytes 
+
+M1 0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275415 
+
+Neutrophils 
+
+Monocytes 
+
+ProliferatingIC 0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275417 
+
+Neutrophils 
+
+Monocytes 
+
+ProliferatingIC 0
+
+1
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+M2 
+
+ProliferatingIC 0
+
+1
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+M2 
+
+ProliferatingIC 
+
+-1 
+
+0
+
+1
+
+2
+
+3
+
+4
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+metacluster 
+
+metacluster 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+SRR10275414 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275415 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275416 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275417 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275418 Neutrophils 
+
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+metacluster 
+
+metacluster 
+
+Neutrophils 
+
+Monocytes 
+
+M1 0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275416 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275417 
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275418 -1 
+
+0
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+metacluster 
+
+Monocytes 
+
+M1 0
+
+1
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+M2 
+
+ProliferatingIC 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275416 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275417 
+
+0
+
+1
+
+2
+
+3
+
+> Neutrophils
+> Monocytes
+> M1
+> M2
+> ProliferatingIC
+
+Identity 
+
+Neutrophils 
+
+Monocytes 
+
+M1 
+
+M2 
+
+ProliferatingIC 
+
+SRR10275418 
+
+> Neutrophils Monocytes Pro-inflammatory macrophages Anti-nflammatory macrophages ProliferatingIC Neutrophils Monocytes Pro-inflammatory macrophages Anti-nflammatory macrophages ProliferatingIC
+
+2 dpi 5 dpi 10 dpi 3.5 dpi GR expression levels 
+
+E
+
+> F4/80 gH2AX
+
+2 dpi Control GR Lysm-/-
+
+20μm Control Mutant 
+
+0.0 
+
+0.5 
+
+1.0 
+
+1.5 
+
+2.0 
+
+> Caspase 3/7 activity
+> Luminescence (RLU)
+
+Neutrophils 
+
+ns 
+
+Control Mutant 
+
+0.0 
+
+0.5 
+
+1.0 
+
+1.5 
+
+2.0 
+
+> Caspase 3/7 activity
+> Luminescence (RLU)
+
+Monocytes 
+
+✱
+
+Control Mutant 
+
+0.0 
+
+0.5 
+
+1.0 
+
+1.5 
+
+> Caspase 3/7 activity
+> Luminescence (RLU)
+
+Macrophages 
+
+✱✱ 
+
+Control 
+
+GR Lysm-/-
+
+Control 
+
+GR Lysm-/-
+
+F
+
+Non injured 2 dpi 4 dpi 
+
+GR Lysm-/-
+
+Control GR Lysm-/-
+
+Control GR Lysm-/-
+
+Control 
+
+7 dpi 28 dpi 
+
+GR Lysm-/-
+
+Control GR Lysm-/-
+
+Control 
+
+Figure 1: (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint Figure 2: 
+
+7 dpi Control GR Lysm-/-
+
+20μm 
+
+> ACTN1 DAPI
+
+C
+
+2 dpi 7 dpi 15 dpi Control GR Lysm-/-
+
+> 100 μm
+
+100μm 
+
+ED 28 dpi 
+
+Control GR Lysm-/-
+
+> 1mm
+> WGA DAPI
+
+0-500 
+
+500-1000 
+
+1000-1500 
+
+1500-2000 
+
+2000-2500 
+
+2500-3000 
+
+3000-3500 
+
+3500-4000 
+
+4000-5000 
+
+0
+
+10 
+
+20 
+
+30 
+
+40 
+
+CSA ( μm 2)
+
+> % of fibers
+
+A 7 dpi Control GR Lysm-/-
+
+7 dpi Control GR Lysm-/-
+
+> MYOG KI67 DAPI PAX7 KI67 DAPI Control
+> Mutant
+> 0
+> 20
+> 40
+> 60
+> 80
+> % PAX7 KI67+  ns
+> 0.00
+> 0.01
+> 0.02
+> 0.03
+> 0.04
+> 0.05
+> % of MYOG-positive cells
+> per surface of injury
+
+ns 
+
+> 0
+> 20
+> 40
+> 60
+> % PAX7 KI67 +
+> ns
+> 0
+> 10
+> 20
+> 30
+> % MYOG KI67 +
+
+ns Control 
+
+> Mutant
+> 0
+> 20
+> 40
+> 60
+> 80
+> % PAX7 KI67+  ns
+> 0.00
+> 0.01
+> 0.02
+> 0.03
+> 0.04
+> 0.05
+> % of MYOG-positive cells
+> per surface of injury
+
+ns 
+
+> 0
+> 20
+> 40
+> 60
+> % PAX7 KI67 +
+> ns
+> 0
+> 10
+> 20
+> 30
+> % MYOG KI67 +
+
+ns Control 
+
+> Mutant
+> 0
+> 20
+> 40
+> 60
+> 80
+> % PAX7 KI67+  ns
+> 0.00
+> 0.01
+> 0.02
+> 0.03
+> 0.04
+> 0.05
+> % of MYOG-positive cells
+> per surface of injury  ns
+> 0
+> 20
+> 40
+> 60
+> % PAX7 KI67 +
+> ns
+> 0
+> 10
+> 20
+> 30
+> % MYOG KI67 +
+
+ns 0
+
+> 50
+> 100
+> 150
+> Number of PAX7+
+> cells per field
+> ns
+
+7 dpi Control GR Lysm-/-
+
+> 100μm
+
+B0
+
+20 
+
+40 
+
+60 
+
+80 
+
+> % of fibers with one
+> central nuclei
+
+ns 
+
+Control 
+
+GR Lysm-/-
+
+Control 
+
+GR Lysm-/-
+
+Bub1 
+
+Anxa1 Smc6 Smc4 Ccnd3 Pecam1 
+
+Cd200 Cav1 Nr3c1 Cdkn2d Cd209a Notch3 Ly6c1 Cxcr2 Aurka Ccna2 Smc2 
+
+> Differentially expressed genesin myeloid cells at 7 dpi
+
+-0.5 0 0.5 
+
+Centered mean normalized expression 
+
+Control GR Lysm-/-
+
+FControl 
+
+GR Lysm-/-
+
+> 0
+> 1000
+> 2000
+> 3000
+
+Nr3c1 
+
+> Normalized read counts
+> 0.0003
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 500
+> 1000
+> 1500
+> 2000
+> 2500
+> Normalized read counts
+
+Smc6 
+
+> 0.0490
+
+Control 
+
+GR Lysm-/-
+
+-1000 
+
+0
+
+1000 
+
+2000 
+
+3000 
+
+4000 
+
+5000 
+
+> Normalized read counts
+
+Sparc 
+
+> 0.2686
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> Normalized read counts
+
+Lig3 
+
+> 0.0547
+
+Control 
+
+GR Lysm-/-
+
+> -50
+> 0
+> 50
+> 100
+> 150
+> Normalized read counts
+
+Srcap 
+
+> 0.0115
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> Normalized read counts
+
+Rmi1 
+
+> 0.0012
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 200
+> 400
+> 600
+> 800
+
+Smc2 
+
+> Normalized read counts  0.1424
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> Normalized read counts
+
+Stk19 
+
+> 0.0012
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 200
+> 400
+> 600
+> 800
+> 1000
+> Normalized read counts
+
+Smc5 
+
+> 0.0213
+
+Control 
+
+GR Lysm-/-
+
+> 0
+> 500
+> 1000
+> 1500
+> Normalized read counts
+
+Tlk2 
+
+> 0.0391
+
+H
+
+Pathway enrichment on differentially expressed genes at 7 dpi 
+
+1.5 1.6 1.7 1.8 1.9 2.0 
+
+Signal 
+
+20 40 10 30 FDR 
+
+1.0e-16 1.0e-14 1.0e-12 1.0e-10 1.0e-08 1.0e-06 
+
+> Groups at similarity 0.8
+
+Gene count 
+
+Cell division Chromosome segregation Mitotic cell cycle progress Mitotic cell cycle Myofibril assembly Regulation of chromosome segregation Non-membrane-bounded organelle assembly Nuclear chromosome segregation Sister chromatid segregation Negative regulation of mitotic metaphase/anaphase transition 
+
+G
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint Figure 3: 0 2 4 6 8 10 
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Log 2(fold change) 
+
+> -Log (p-Value)
+
+Hspa8 
+
+Nr3c1 
+
+Ttr 
+
+Tln1 
+
+Rab5c 
+
+Phb1 
+
+Iqgap1 
+
+Epx 
+
+Stat1 
+
+Fcgr4 
+
+Rps26 
+
+Arpc2 
+
+Nfkb1 
+
+Rpl7 
+
+G
+
+H3K4me3 H3K27ac GR 
+
+Peak center -3 3 -3 3 -3 3kb Peak center Peak center 
+
+> GR peaks
+
+Peak center -3 3-3 3 -3 3kb 
+
+0.40 0.35 0.30 0.25 0.20 0.15 0.10 0.05 0.00 
+
+Peak center Peak center 
+
+A BCar5a Banp Zfp469           
+
+> [0 - 19.9]
+> [0 - 36.7]
+> [0 - 20.0]
+> 121,960 121,980 122,000 122,020 122,040 122,060 122,080 122,100 122,120 122,140 122,160kb
+
+chr8 
+
+Banp 
+
+H3K27ac H3K4me3 GR Il1r1 Il1rl2 Il1rl1          
+
+> [0 - 28.4]
+> [0 - 28.2]
+> [0 - 23.8]
+> 40,220 40,240 40,260 40,280 40,300 40,320 40,340 40,360 40,380 40,400kb
+
+chr1 
+
+Il1r1 
+
+H3K27ac H3K4me3 GR Cd163      
+
+> [0 - 35.8]
+> [0 - 35.2]
+> [0 - 24.2]
+> 124,305 124,310 124,315 124,320 124,325 124,330kb
+
+chr6 
+
+Cd163 
+
+H3K27ac H3K4me3 GR 
+
+C
+
+GRE 
+
+de novo known 
+
+HOMER motif search e-value 1e-396 % targets 43.4% 1e-108 29.1% 0.74 0.76 0.78 0.80 0.82 0.84 
+
+Signal 
+
+> Nervous system development
+> Cellular response to organic substance
+> Cellular response to chemical stimulus
+> Regulation of signaling
+> Regulation of cell communication
+> System development
+> Multicellular organism development
+> Neurogenesis
+> Regulation of developmental process
+> Behavior
+> Biological Process (Gene Ontology) enrichment
+> Groups at similarity 0.8
+
+FDR 
+
+Gene count 
+
+Nervous system development Cellular response to organic substance Cellular response to chemical stimulus Regulation of signaling Regulation of cell communication System development Multicellular organism development Neurogenesis Regulation of developmental process Behavior 
+
+Pathway analysis on genes bound by GR in macrophages cells at 4 dpi 
+
+250 450 100 350 
+
+2.0e-06 4.0e-07 7.0e-08 1.0e-08 1.0e-09 3.0e-10 
+
+D
+
+Genes with GR peak Genes differentially expressed in GR Lysm-/-
+
+5099 124 525 
+
+E Pathway analysis on genes differentially expressed in GR Lysm-/-
+
+macrophages and GR peak 
+
+25 55 10 40 
+
+2.4e-03 2.0e-03 1.7e-03 1.4e-03 1.2e-03 1.0e-03 
+
+Extracellular matrix organization Regulation of cell growth Animal organ development Anatomical structrure morphogenesis Regulation of cellular component organization System development Developmental process Anatomical structure development 0.30 0.32 0.34 0.36 0.38 0.40 
+
+Signal 
+
+> Groups at similarity 0.8
+
+FDR 
+
+Gene count 
+
+F
+
+H
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint Control GR Lysm-/-
+
+> Oil Dex
+
+Sacrifice CTX Day 0 4 6 7
+
+Dex 1 mg/ kg/day 
+
+CAB0.0 
+
+> 0.2
+> 0.4
+> 0.6
+> % of single cells
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> % of single cells
+
+*SUR SINGLE NEUTRO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> % of single cells
+
+Neutrophils 0
+
+> 5
+> 10
+> 15
+> % of single cells
+
+*SUR SINGLE CD45 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> % of single cells
+
+*SUR SINGLE MONO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> % of single cells
+
+*SUR SINGLE F480 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> % of single cells
+
+*SUR SINGLE NEUTRO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 2
+> 4
+> 6
+> 8
+> % of single cells
+
+*SUR SINGLE CD11B D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE LY6C- LY6G- D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE F480 CD206 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns CD11B 0
+
+> 5
+> 10
+> 15
+> % of single cells
+
+*SUR SINGLE CD45 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> % of single cells
+
+*SUR SINGLE MONO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> % of single cells
+
+*SUR SINGLE F480 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> % of single cells
+
+*SUR SINGLE NEUTRO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 2
+> 4
+> 6
+> 8
+> % of single cells
+
+*SUR SINGLE CD11B D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE LY6C- LY6G- D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE F480 CD206 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns CD45 0
+
+> 5
+> 10
+> 15
+> % of single cells
+
+ns 
+
+ns 
+
+ns ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> % of single cells
+
+*SUR SINGLE MONO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> % of single cells
+
+*SUR SINGLE F480 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> % of single cells
+
+*SUR SINGLE NEUTRO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 2
+> 4
+> 6
+> 8
+> % of single cells
+
+ns 
+
+ns 
+
+ns ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE LY6C- LY6G- D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE F480 CD206 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+F4/80 CD206+ 0
+
+> 5
+> 10
+> 15
+> % of single cells
+
+ns ns ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> % of single cells
+
+*SUR SINGLE MONO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> % of single cells
+
+*SUR SINGLE F480 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> % of single cells
+
+*SUR SINGLE NEUTRO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 2
+> 4
+> 6
+> 8
+> % of single cells
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR F4/80 CD206-0
+
+> 5
+> 10
+> 15
+> % of single cells
+
+*SUR SINGLE CD45 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> % of single cells
+
+*SUR SINGLE MONO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> % of single cells
+
+*SUR SINGLE F480 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0.0
+> 0.5
+> 1.0
+> 1.5
+> % of single cells
+
+*SUR SINGLE NEUTRO D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 2
+> 4
+> 6
+> 8
+> % of single cells
+
+*SUR SINGLE CD11B D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE LY6C- LY6G- D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+> % of single cells
+
+*SUR SINGLE F480 CD206 D7 D4-5-5 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns 
+
+ns Monocytes 
+
+Control Oil Control Dex 
+
+GR Lysm-/- Oil GR Lysm-/- Dex 
+
+7 dpi 
+
+Figure 4: (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint Control GR Lysm-/-
+
+> Oil Dex
+
+7 dpi 
+
+B Control GR Lysm-/-
+
+7 dpi DAPI IgG WGA Oil Dex 
+
+C Control Oil Control Dex 
+
+GR Lysm-/- Oil GR Lysm-/- Dex GR Lysm-/- Oil GR Lysm-/- Dex Control Dex Control Oil 
+
+> 0123
+
+Mono D7 
+
+> ns ns
+> ✱
+> ns ns ns
+> 0246810
+
+F4_80 D7 
+
+> ✱
+> ns
+> ✱✱
+> ns
+> ✱
+> 0510 15 20 25
+> % of single cells
+
+F4_80 CD206 D7 
+
+> ns ns
+> ✱✱
+> ns ns
+> ✱✱
+> 0510 15
+
+Neutro D7 
+
+> ✱✱✱
+> ns
+> ✱✱✱ ✱✱✱
+> ns
+> ✱✱✱
+
+CD45 CD11B Neutrophils Monocytes F4/80 CD206- F4/80 CD206+ 
+
+> % of single cells % of single cells % of single cells 0
+> 20
+> 40
+> 60
+> % of single cells
+
+CD45 D7 
+
+> ✱✱
+> ns
+> ✱✱✱
+> ✱✱
+> ns
+> ✱✱
+> 0
+> 20
+> 40
+> 60
+> % of single cells
+
+CD11B D7 
+
+> ✱✱
+> ns
+> ✱✱✱
+> ✱✱
+> ns
+> ✱✱
+> 0
+> 1
+> 2
+> 3
+> % of single cells
+
+Mono D7 
+
+> ns
+> ns
+> ✱
+> ns
+> ns
+> ns
+> 0
+> 10
+> 20
+> 30
+> 40
+> % of single cells
+
+LY6C- LY6G- D7 
+
+> ✱
+> ns
+> ✱✱
+> ✱
+> ns
+> ✱✱
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> % of single cells
+
+F4_80 D7 
+
+> ✱
+> ns
+> ✱
+> ns
+> ns
+> ✱
+> 15
+> 20
+> 25
+> le cells
+
+F4_80 CD206 D7 
+
+> ns
+> ns
+> ✱✱✱
+> ns
+> ns
+> ✱✱ 0
+> 20
+> 40
+> 60
+> % of single cells
+
+CD45 D7 
+
+> ✱✱
+> ns
+> ✱✱✱
+> ✱✱
+> ns
+> ✱✱
+> 0
+> 20
+> 40
+> 60
+> % of single cells
+
+CD11B D7 
+
+> ✱✱
+> ns
+> ✱✱✱
+> ✱✱
+> ns
+> ✱✱
+> 0
+> 1
+> 2
+> 3
+> % of single cells
+
+Mono D7 
+
+> ns
+> ns
+> ✱
+> ns
+> ns
+> ns
+> 0
+> 10
+> 20
+> 30
+> 40
+> % of single cells
+
+LY6C- LY6G- D7 
+
+> ✱
+> ns
+> ✱✱
+> ✱
+> ns
+> ✱✱
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> % of single cells
+
+F4_80 D7 
+
+> ✱
+> ns
+> ✱
+> ns
+> ns
+> ✱
+> 0
+> 5
+> 10
+> 15
+> 20
+> 25
+> % of single cells
+
+F4_80 CD206 D7 
+
+> ns
+> ns
+> ✱✱✱
+> ns
+> ns
+> ✱✱
+
+Neutro D7 
+
+> ns
+> ✱✱✱✱
+> ns
+
+D
+
+Sacrifice CTX Day 0 2 4 7 28 
+
+Dex 1 mg/ kg/day 
+
+A0.00 
+
+0.05 
+
+0.10 
+
+0.15 
+
+0.20 
+
+> Necrotic fibers
+> per mm 3 of injury
+
+✱✱ 
+
+ns 
+
+✱
+
+✱✱ 
+
+ns 
+
+✱
+
+0.0 
+
+0.2 
+
+0.4 
+
+0.6 
+
+0.8 
+
+1.0 
+
+> Regenerative fibers
+> per mm 3 of injury
+> 100μm
+> Oil Dex
+
+Control GR Lysm-/-
+
+7 dpi DAPI CD45 
+
+E FG
+
+> Differentially expressed genes in myeloid cells at 7 dpi
+
+-2 0 2
+
+Centered mean normalized expression 
+
+Itga6 Rasa1 Hgf Cntrl Cd34 Plavp Rpl13 Col4a2 
+
+Control GR Lysm-/-
+
+Pathway enrichment on differentially expressed genes at 7 dpi 
+
+Cytoplasmic translation Angiogenesis Blood vessel morphogenesis Vasculature development Blood vessel development Extracellular structure organization Extracellular matrix organization Regulation of cell migration Regulation of locomotion Regulation of cell motility 
+
+1.25 1.3 1.35 1.4 1.45 1.50 
+
+Signal 1.25 1.30 1.35 1.40 1.45 1.50 
+
+> Signal
+> Cytoplasmic translation
+> Angiogenesis
+> Blood vessel morphogenesis
+> Vasculature development
+> Blood vessel development
+> Extracellular structure organization
+> Extracellular matrix organization
+> Regulation of cell migration
+> Regulation of locomotion
+> Regulation of cell motility
+> Biological Process (Gene Ontology) enrichment
+> Groups at similarity 0.8  1.0e-11
+> 1.0e-13
+> 1.0e-14
+> 1.0e-16
+> 1.0e-17
+> 1.0e-19
+> FDR
+> 50
+> 100
+> 150
+> 200
+> Gene count
+
+100 200 50 150 
+
+1.0e-19 1.0e-17 1.0e-16 1.0e-14 1.0e-13 1.0e-11 
+
+Gene count 
+
+> Groups at similarity 0.8
+
+FDR Control 
+
+Control Dex 
+
+-10000 
+
+0
+
+10000 
+
+20000 
+
+Mmp9 
+
+> Normalized read counts
+
+0.0025 
+
+Control 
+
+Control Dex 
+
+-100 
+
+-50 
+
+0
+
+50 
+
+100 
+
+150 
+
+200 
+
+Bmp4 
+
+> Normalized read counts
+
+0.0004 
+
+Control 
+
+Control Dex 
+
+0
+
+200 
+
+400 
+
+600 
+
+800 
+
+Camk2a 
+
+> Normalized read counts
+
+0.00038 
+
+Control 
+
+Control Dex 
+
+-1000 
+
+0
+
+1000 
+
+2000 
+
+3000 
+
+Cd34 
+
+> Normalized read counts
+
+4.3E-13 
+
+Control 
+
+Control Dex 
+
+0
+
+100 
+
+200 
+
+300 
+
+400 
+
+500 
+
+Ppp2r3a 
+
+> Normalized read counts
+
+0.00037 
+
+Control 
+
+-1000 
+
+0
+
+1000 
+
+2000 
+
+3000 
+
+4000 
+
+Mmp2 
+
+> Normalized read counts
+
+0.0004 
+
+Control 
+
+Control Dex 
+
+0
+
+500 
+
+1000 
+
+1500 
+
+2000 
+
+Rasa1 
+
+> Normalized read counts
+
+0.0005 
+
+Control 
+
+Control Dex 
+
+Control Dex 0
+
+5000 
+
+10000 
+
+15000 
+
+20000 
+
+Rps23 
+
+> Normalized read counts
+
+0.0022 
+
+Control 
+
+Control Dex 
+
+-20000 
+
+-10000 
+
+0
+
+10000 
+
+20000 
+
+30000 
+
+Rpl13 
+
+> Normalized read counts
+
+0.0353 
+
+Control 
+
+Control Dex 
+
+-5000 
+
+0
+
+5000 
+
+10000 
+
+Col4a1 
+
+> Normalized read counts
+
+7.5E-10 
+
+Control 
+
+Control Dex 
+
+0
+
+2000 
+
+4000 
+
+6000 
+
+Itga6 
+
+> Normalized read counts
+
+0.0021 
+
+Control 
+
+Control Dex 
+
+-4000 
+
+-2000 
+
+0
+
+2000 
+
+4000 
+
+6000 
+
+8000 
+
+Col4a2 
+
+> Normalized read counts
+
+4.4E-10 
+
+Figure 5: (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint G HI
+
+> Differentially expressed genes in myeloid cells at 7 dpi
+
+Hgsnat Csad Clec4n Hyls1 Nr3c1 Tppp3 Mmp12 F7 Slc25a13 Ear2 Prelp Slc15a2 
+
+Centered mean normalized expression -2 0 2
+
+C4b 
+
+Defense response Defense response to other organism Response to other organism Positive regulation of interleukin-6 production Defense response to Gram-positive bacterium Regulation of response to external stimulus Regulation of immune response 
+
+0.325 0.350 0.375 0.400 0.425 0.450 0.475 0.500 0.525 
+
+Signal 0.325 0.350 0.375 0.400 0.425 0.450 0.475 0.500 0.525 
+
+> Signal
+> Defense response
+> Defense response to other organism
+> Response to other organism
+> Positive regulation of interleukin-6
+> production
+> Defense response to Gram-positive
+> bacterium
+> Regulation of response to external
+> stimulus
+> Regulation of immune response
+> Biological Process (Gene Ontology) enrichment
+> Groups at similarity 0.8
+> 3.9e-03
+> 2.1e-03
+> 1.1e-03
+> 6.1e-04
+> 3.3e-04
+> 1.8e-04
+> FDR
+> 5
+> 10
+> 20
+> 25
+> Gene count
+
+10 25 520 
+
+FDR 
+
+1.8e-04 3.3e-04 6.1e-04 1.1e-03 2.1e-03 3.9e-03 
+
+> Groups at similarity 0.8
+
+Gene count 
+
+Pathway enrichment on differentially expressed genes at 7 dpi 
+
+7 dpi DAPI PAX7 KI67 Control GR Lysm-/-
+
+> Oil Dex
+
+25μm 
+
+7 dpi DAPI F4/80 KI67 Control GR Lysm-/-
+
+25μm 
+
+> Oil Dex
+
+AOil Dex 
+
+Control GR Lysm-/-D
+
+7dpi DAPI WGA 
+
+50μm 
+
+> Oil Dex
+
+50μm 
+
+7 dpi DAPI CD163 KI67 Control GR Lysm-/-
+
+B
+
+Control GR Lysm-/-
+
+> Oil Dex
+
+28 dpi DAPI WGA 
+
+EC
+
+> Control Oil Control Dex
+> GR  Lysm-/- Oil GR  Lysm-/- Dex
+
+F0
+
+> 20
+> 40
+> 60
+> 80
+> 100
+> % of fibers with one
+> central nuclei
+
+1 noyau 
+
+> ✱✱
+> ns
+> ns
+> ✱
+> ✱✱
+> ns
+> Control Oil Control Dex
+> GR  Lysm-/- Oil GR  Lysm-/- Dex
+> % of fibers
+> Control Oil Control Dex
+> GR  Lysm-/- Oil GR  Lysm-/- Dex
+> Control Oil Control Dex
+> GR  Lysm-/- Oil GR  Lysm-/- Dex
+
+Control Oil Control Dex 
+
+GR Lysm-/- Oil GR Lysm-/- Dex 
+
+Control GR Lysm-/-0
+
+10 
+
+20 
+
+30 
+
+40 
+
+> % F480 KI67+
+
+✱✱✱✱ 
+
+ns 
+
+ns 
+
+✱✱✱✱ 
+
+✱✱✱ 
+
+ns 0
+
+10 
+
+20 
+
+30 
+
+40 
+
+50 
+
+> % PAX7 KI67+
+
+✱✱✱✱ 
+
+ns 
+
+ns 
+
+✱✱✱✱ 
+
+✱✱✱ 
+
+ns 0.0000  
+
+> 0.0002
+> 0.0004
+> 0.0006
+> 0.0008
+> 0.0010 ✱✱
+
+ns 
+
+ns 
+
+> ✱✱✱
+
+ns  
+
+> ✱Regenerative fibers per mm 3 of injury
+
+CSA (μm 2)
+
+GR Lysm-/- Dex Control Dex Control Dex 
+
+GR Lysm-/- Dex 
+
+0
+
+1000 
+
+2000 
+
+3000 
+
+4000 
+
+Nr3c1 
+
+> Normalized read counts  0.0101
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+0
+
+500 
+
+1000 
+
+1500 
+
+F7 
+
+> Normalized read counts
+> 0.0576
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-20 
+
+0
+
+20 
+
+40 
+
+60 
+
+80 
+
+Klf5 
+
+> Normalized read counts  0.0285
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+0
+
+100 
+
+200 
+
+300 
+
+Slc15a2 
+
+> Normalized read counts  0.0005
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-100 
+
+0
+
+100 
+
+200 
+
+300 
+
+400 
+
+Slpi 
+
+> Normalized read counts  0.0463
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-500 
+
+0
+
+500 
+
+1000 
+
+1500 
+
+Pla2g2d 
+
+> Normalized read counts
+> 0.2080
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-50 
+
+0
+
+50 
+
+100 
+
+150 
+
+Gzma 
+
+> Normalized read counts
+> 0.1522
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+0
+
+50 
+
+100 
+
+150 
+
+200 
+
+250 
+
+Cfb 
+
+> Normalized read counts  0.1083
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+0
+
+200 
+
+400 
+
+600 
+
+800 
+
+Hopx 
+
+> Normalized read counts
+> 0.0681
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-200 
+
+0
+
+200 
+
+400 
+
+600 
+
+Chil3l1 
+
+> Normalized read counts  0.1222
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-100 
+
+0
+
+100 
+
+200 
+
+300 
+
+400 
+
+Mfap4 
+
+> Normalized read counts  0.2349
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-50 
+
+0
+
+50 
+
+100 
+
+Htr7 
+
+> Normalized read counts  0.0718
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-50 
+
+0
+
+50 
+
+100 
+
+150 
+
+200 
+
+Bmp6 
+
+> Normalized read counts
+> 0.1291
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+-50 
+
+0
+
+50 
+
+100 
+
+150 
+
+Zfp764l1 
+
+> Normalized read counts  0.1934
+
+Control Dex 
+
+GR Lysm-/- Dex 
+
+0
+
+50 
+
+100 
+
+150 
+
+Rnf26 
+
+> Normalized read counts
+> 0.0397
+
+Figure 6: (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted April 30, 2026. ;https://doi.org/10.1101/2025.10.29.685370 doi: bioRxiv preprint
