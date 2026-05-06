@@ -1,0 +1,3688 @@
+Title: The Shigella E3 ubiquitin ligase IpaH7.8 reprograms host kinase signaling to suppress NOX2-dependent oxidative burst responses in human monocytes
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.04.28.721327v1.full.pdf
+
+Number of Pages: 89
+
+Markdown Content:
+1
+
+The Shigella E3 ubiquitin ligase IpaH7.8 reprograms host kinase 1
+
+signaling to suppress NOX2-dependent oxidative burst responses 2
+
+in human monocytes 3
+
+4
+
+Theresa Karagöz 1, Ivan Ngueya Yango 1, Stefanie Norkowski 1, Yannick 5
+
+Teschke 1, Britta Körner 1, Joyleen Fernandes 1, Yvonne Boergeling 2, Petra 6
+
+Dersch 1, and Christian Rüter 1*
+
+7
+
+8 
+
+> 1
+
+Institute for Infectiology, Center for Molecular Biology of Inflammation (ZMBE), 9
+
+University of Münster, Germany 10  
+
+> 2
+
+Institute of Molecular Virology, Center for Molecular Biology of Inflammation 11 
+
+(ZMBE), University of Münster, Germany 12 
+
+13 
+
+14 
+
+15 
+
+16 
+
+*Corresponding author: 17 
+
+Christian Rüter 18 
+
+Institute for Infectiology, 19 
+
+Center for Molecular Biology of Inflammation (ZMBE) 20 
+
+Von Esmarch Str. 56 21 
+
+48149 Münster 22 
+
+Germany 23 
+
+Phone: +49-251-835-2151 24 
+
+FAX: +49-251-835-6467 25 
+
+e-mail: rueterc@uni-muenster.de 26 
+
+27 
+
+Keywords: bacterial cell-penetrating effector proteins, NEL ubiquitin ligase, IpaH, 28 
+
+endocytosis, endosomal escape, LPX effector protein family, Inflammasome signaling, 29 
+
+Reactive oxygen species, Kinome profiling, Host-pathogen interaction, immune 30 
+
+evasion 31 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+2
+
+Abstract 32 
+
+Bacterial effector proteins manipulate host signalling cascades, including immune 33 
+
+responses, to facilitate infection. While most effectors of Gram-negative bacteria rely 34 
+
+on a secretion system for intracellular delivery, some possess intrinsic cell-penetrating 35 
+
+capabilities. Here, we characterize the Shigella flexneri LPX effector IpaH7.8, which 36 
+
+combines autonomous cell entry with enzymatic modulation of immunomodulatory host 37 
+
+signaling pathways through distinct structural domains. We show that recombinant 38 
+
+IpaH7.8 (rIpaH7.8) enters human cells independent of Shigella ´s type III secretion 39 
+
+system (T3SS) via lipid raft-mediated endocytosis and escapes the endosome through 40 
+
+a conserved N-terminal domain composed of two  α-helices. In the cytosol, the C-41 
+
+terminal E3 ubiquitin ligase domain of the cell-penetrating effector protein targets the 42 
+
+pore-forming protein gasdermin D (GSDMD), suppressing inflammasome-induced IL-43 
+
+1β release. Beyond inflammasome inhibition, integrated transcriptomic and kinome 44 
+
+profiling in primary human monocytes revealed that IpaH7.8 induces a coordinated 45 
+
+reprogramming of host signaling networks. Cluster-resolved gene expression analysis 46 
+
+demonstrated selective suppression of immune effector pathways alongside induction 47 
+
+of regulatory programs and interference with vesicular trafficking. These transcriptional 48 
+
+changes converged with kinase activity remodeling, characterized by attenuation of 49 
+
+PKC- and PKA-dependent signaling pathways. Notably, both datasets identified the 50 
+
+NOX2 complex as a central target of IpaH7.8 activity. The NOX2 subunit NCF1 was 51 
+
+downregulated at the transcriptional level and showed reduced phosphorylation at 52 
+
+regulatory sites, indicating impaired activation. Consistently, IpaH7.8 significantly 53 
+
+reduced reactive oxygen species production in primary human monocytes, 54 
+
+demonstrating functional suppression of oxidative burst responses. 55 
+
+56 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+3
+
+Together, our findings reveal that IpaH7.8 acts as a multi-layered regulator of host 57 
+
+immunity that integrates ubiquitination and kinase signaling to suppress both 58 
+
+inflammatory and antimicrobial responses. By converging on the NOX2 axis, this 59 
+
+effector uncovers a central vulnerability in host defense and highlights bacterial effector 60 
+
+proteins as modulators of complex signaling networks with potential therapeutic 61 
+
+relevance. 62 
+
+63 
+
+64 
+
+65 
+
+66 
+
+67 
+
+68 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+4
+
+Author Summary 69 
+
+Bacterial pathogens like Shigella flexneri manipulate host immune responses to 70 
+
+survive and spread within human cells. The Shigella effector protein IpaH7.8 is known 71 
+
+to block inflammatory cell death by targeting gasdermin D. Here, we show that IpaH7.8 72 
+
+can enter human cells without a bacterial secretion system. It uses a specialized 73 
+
+protein domain to cross the membrane and reach the cytoplasm. Once inside, IpaH7.8 74 
+
+alters host cell signaling by both attaching ubiquitin to immune proteins and 75 
+
+reprogramming phosphorylation pathways. This dual function allows Shigella to 76 
+
+suppress inflammation and promotes its escape from immune defenses. Our findings 77 
+
+reveal how IpaH7.8 combines cell entry, immune evasion, and cytoskeletal control in 78 
+
+a single protein, and highlight its potential as a tool to modulate inflammation in disease 79 
+
+contexts. 80 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+5
+
+# Introduction 81 
+
+Shigella flexneri is a Gram-negative, facultative intracellular pathogen and a major 82 
+
+cause of bacillary dysentery (shigellosis), a severe intestinal infection characterized by 83 
+
+inflammation, abdominal pain, diarrhea, and fever. Shigellosis accounts for over 270 84 
+
+million infections worldwide annually, disproportionately affecting children in low-85 
+
+income regions with limited access to clean water and sanitation [1,2]. The primary 86 
+
+mode of transmission is through the ingestion of contaminated food or water, resulting 87 
+
+in the colonization and invasion of the intestinal epithelium. After ingestion, S. flexneri 88 
+
+translocates through specialized microfold (M) cells in the intestinal epithelium, where 89 
+
+it is phagocytosed by macrophages and dendritic cells. Upon uptake, the bacterium 90 
+
+rapidly escapes from the bacteria-containing vacuole (BCV) into the cytosol, where it 91 
+
+replicates and directly interacts with the host immune system [1,2]. To evade host 92 
+
+immune responses and establish an intracellular replicative niche, S. flexneri utilizes a 93 
+
+type III secretion system (T3SS) to inject bacterial effector proteins into host cells, 94 
+
+modulating immune signaling and cell death pathways [3-6]. Among these effectors, 95 
+
+the IpaH proteins, a unique class of E3 ubiquitin ligases classified as LPX effectors 96 
+
+(harboring a Leu-Pro-X motif), play a crucial role in subverting the host’s innate 97 
+
+immune defenses by targeting key regulators of immune signaling, pyroptosis, and 98 
+
+inflammasome activation [7]. Pyroptosis is a pro-inflammatory form of regulated cell 99 
+
+death that serves as a crucial immune defense mechanism against intracellular 100 
+
+bacterial infections. This process is primarily mediated by the gasdermin family of pore-101 
+
+forming proteins, particularly gasdermin D (GSDMD), which, upon activation, 102 
+
+oligomerizes and forms membrane pores, leading to host cell lysis and the release of 103 
+
+inflammatory cytokines such as interleukin-1 beta (IL-1β) and interleukin -18 (IL-18) 104 
+
+[4,8]. The Shigella effector IpaH7.8 ubiquitinates and targets GSDMD for proteasomal 105 
+
+degradation, thereby inhibiting pyroptosis and enabling bacterial survival in the cytosol 106 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+6
+
+[9]. Notably, IpaH7.8 displays species-specific activity, efficiently targeting human 107 
+
+GSDMD but not murine GSDMD due to structural differences. This specificity may 108 
+
+contribute to the restricted host range of S. flexneri , which primarily infects humans 109 
+
+and non-human primates but not mice [9]. Additionally, IpaH7.8 targets gasdermin B 110 
+
+(GSDMB), another pore-forming cytolysin, preventing granzyme A-mediated activation 111 
+
+in epithelial cells and thereby protecting Shigella from the bactericidal effects of natural 112 
+
+killer cells [10,11]. Beyond gasdermin regulation, IpaH7.8 has also been implicated in 113 
+
+inflammasome modulation through its interaction with glomulin (GLMN), a negative 114 
+
+regulator of inflammasome activation. The degradation of GLMN by IpaH7.8 leads to 115 
+
+the activation of NLRP3 and NLRC4 inflammasomes, promoting caspase-1-dependent 116 
+
+pyroptosis in murine macrophages [3,4]. Additionally, IpaH7.8 triggers proteasome-117 
+
+mediated degradation of the N-terminal domain of murine NLRP1B, releasing a C-118 
+
+terminal fragment that is a potent activator of caspase-1 [12]. However, both NLRP1B 119 
+
+and GLMN have thus far been identified only as targets of IpaH7.8 in murine cells, and 120 
+
+their relevance in human cells remains unclear. In addition to its role in immune 121 
+
+evasion, the Shigella effector protein IpaH7.8 has recently been shown to also regulate 122 
+
+Rab13, promoting its retention on the membrane remnants of the Shigella -containing 123 
+
+vacuole (SCV) [13]. This process facilitates efficient uncoating of SCV membranes, 124 
+
+which is likely essential for IpaH7.8-dependent bacterial escape and successful 125 
+
+intercellular spread [2]. The interaction between IpaH7.8 and Rab13 appears to be 126 
+
+unique among the IpaH family members, with no functional redundancy observed for 127 
+
+other bacterial effectors [13]. Despite extensive research, the precise molecular 128 
+
+function and role of IpaH7.8 in different host cell types, as well as its broader 129 
+
+implications for Shigella pathogenesis, warrants further investigation. Moreover, the 130 
+
+precise mechanisms underlying their translocation and functional impact on host cell 131 
+
+signaling remain unresolved. Our previous studies demonstrated that LPX effectors 132 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+7
+
+can penetrate host cells independently of the bacterial T3SS, a property shared by 133 
+
+multiple family members, including IpaH proteins from Shigella flexneri , SspH proteins 134 
+
+from Salmonella , and YopM from Yersinia [14-16]. With the exception of IpaH9.8 [15], 135 
+
+the mechanisms underlying autonomous cell entry of other IpaH proteins, including 136 
+
+IpaH7.8, remain poorly understood. Here, we focus on IpaH7.8, an LPX effector 137 
+
+composed of N-terminal α -helices followed by central leucine-rich repeat (LRR) 138 
+
+domains containing LPX consensus motifs (Fig 1A). These LRR domains form a 139 
+
+characteristic curved, horseshoe-like structure and are primarily involved in protein-140 
+
+protein interactions [7,17]. In contrast to YopM, which lacks a defined enzymatic 141 
+
+domain, IpaH7.8 harbors a conserved C-terminal α -helical domain that functions as a 142 
+
+novel E3 ubiquitin ligase (NEL) [18]. The N-terminus of LPX effectors contains a flexible 143 
+
+region followed by two conserved α -helices (Fig 1B and 1D), which structurally 144 
+
+resemble cell-penetrating peptides (CPPs). Notably, unlike classical cationic CPPs 145 
+
+such as Tat (Trans-Activator of Transcription, human immunodeficiency virus 1) [20], 146 
+
+these protein transduction domains (PTDs) are negatively charged at physiological pH 147 
+
+and therefore classify as anionic CPPs (Fig 1B and 1C). A well-characterized example 148 
+
+of this class is the sweet-arrow peptide Sap(E), which enters cells via aggregation and 149 
+
+endocytosis and exhibits pH-dependent membrane interaction [21,22]. Similarly, LPX 150 
+
+PTDs display a pH-dependent shift toward increased positive charge under mildly 151 
+
+acidic conditions, suggesting that they function as dynamic, pH-sensitive modules 152 
+
+facilitating cellular entry (Fig 1C). However, particularly for IpaH7.8, the molecular 153 
+
+basis and functional consequences of this N-terminal domain mediating autonomous 154 
+
+entry remain largely unresolved. To address this, the present study focuses on the 155 
+
+Shigella effector IpaH7.8. We systematically characterize its T3SS-independent 156 
+
+translocation into different host cell types using deletion constructs and recombinant 157 
+
+protein approaches. In addition, we identify and functionally validate N-terminal protein 158 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+8
+
+transduction domains that mediate cellular uptake. Beyond entry, we investigate 159 
+
+whether IpaH7.8 retains its enzymatic activity as an E3 ubiquitin ligase following cell 160 
+
+penetration and assess its impact on host signaling pathways. By linking the cell-161 
+
+penetrating capacity of IpaH7.8 to its ability to reprogram host immune signaling, this 162 
+
+study provides new mechanistic insight into the role of LPX effectors during Shigella 163 
+
+infection. 164 
+
+165 
+
+166 
+
+167 
+
+168 
+
+169 
+
+170 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+9
+
+Results 171 
+
+rIpaH7.8 is a cell-penetrating effector protein with a functional N-terminal protein 172 
+
+transduction domain for cytosolic transport. 173 
+
+To analyze the T3SS-independent uptake of the recombinant LPX effector protein, 174 
+
+microscopy studies and a flow cytometry-based assay were performed. The latter used 175 
+
+fluorescent dye-conjugated recombinant IpaH7.8 (rIpaH7.8), as previously established 176 
+
+[14,15]. Upon incubation of HeLa cells with FITC-labeled rIpaH7.8, confocal 177 
+
+microscopy visualized rIpaH7.8 within the cytosol of HeLa cells and revealed a 178 
+
+predominant perinuclear accumulation pattern, suggesting endocytic uptake followed 179 
+
+by intracellular redistribution (Fig 2A and S1B Fig). To specifically quantify intracellular 180 
+
+fluorescence, trypan blue was employed to quench extracellular- and surface-181 
+
+associated signals [16]. In this regard, a pronounced dose- and time-dependent 182 
+
+increase in intracellular fluorescence was detected by fluorescence-based flow 183 
+
+cytometry, comparable to that observed for the cell-penetrating effectors (CPEs) 184 
+
+rYopM and rIpaH9.8 (Fig 2C, S1A Fig and S1C-D) [14,17]. Similar results were 185 
+
+obtained in HEK293T epithelial cells and THP-1-derived macrophages, confirming that 186 
+
+this T3SS-independent internalization mechanism is not restricted to a specific cell 187 
+
+type (S1E-J Fig). To define the structural determinants responsible for cellular 188 
+
+translocation, we next examined uptake of rIpaH7.8 deletion constructs (Fig 2B). The 189 
+
+C-terminal truncation mutant (ΔC), which lacks E3 ubiquitin ligase (NEL) activity, was 190 
+
+efficiently internalized, whereas the N-terminal deletion variant (ΔN) displayed 191 
+
+markedly reduced uptake (Fig 2A and 2C, S1H Fig and S1J). These results identify the 192 
+
+N-terminal α -helical region of IpaH7.8 as a functional protein transduction domain 193 
+
+(PTD), as demonstrated for other CPEs of the LPX family [14,18,19]. To test whether 194 
+
+this region alone can transport heterologous cargo, we generated a fusion construct of 195 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+10 
+
+the N-terminal 2α -helices of IpaH7.8 linked to GFP (S2A Fig ). This 2αH -IpaH7.8-GFP 196 
+
+construct was efficiently taken up by host cells, comparable to the positive control 2αH -197 
+
+YopM-GFP [20], whereas recombinant GFP alone showed only background 198 
+
+fluorescence (S2B-C Fig). To elucidate the mechanism of T3SS-independent 199 
+
+translocation, we examined the energy dependence and endocytic requirements of 200 
+
+rIpaH7.8 uptake. Internalization was markedly reduced at 4°C, indicating that the 201 
+
+process depends on active endocytosis rather than passive diffusion (S2D Fig). 202 
+
+Pharmacological inhibition revealed that Cytochalasin D and Amiloride, which interfere 203 
+
+with actin polymerization and macropinocytosis, significantly impaired uptake, whereas 204 
+
+inhibitors of clathrin-mediated or dynamin-dependent endocytosis (Dynasore) had only 205 
+
+moderate effects (Fig 2E). Likewise, disruption of lipid rafts by Methyl-β-cyclodextrin 206 
+
+(MβCD) diminished internalization, implicating lipid raft -dependent macropinocytosis 207 
+
+as the major entry pathway (Fig 2E). Co-localization analyses with fluorescent 208 
+
+endocytic tracers supported these results, showing preferential association of rIpaH7.8 209 
+
+with the cholera toxin B subunit (CTB), a marker of raft-dependent uptake [21], rather 210 
+
+than with transferrin, a marker of clathrin-dependent endocytosis (S2E Fig) [22]. 211 
+
+Following entry, rIpaH7.8 sequentially localized to Rab5-positive early endosomes, 212 
+
+Rab7-positive late endosomes, and CD63-positive lysosomes, suggesting endosomal 213 
+
+trafficking through the canonical endolysosomal pathway (Fig 2D). However, 214 
+
+endosomal escape assays using the pH-sensitive dye naphthofluorescein (NF, S2F 215 
+
+Fig) [23], demonstrated that a substantial fraction of rIpaH7.8 reached the cytosol, as 216 
+
+indicated by fluorescence activation in neutral intracellular environments (Fig 2F and 217 
+
+S2G Fig). Subcellular fractionation further confirmed the presence of rIpaH7.8 in the 218 
+
+cytoplasmic fraction, indicating successful release from endosomal compartments like 219 
+
+other CPEs of the LPX subtype (Fig 2G), [14,17,20,24]. However, rIpaH7.8, similar to 220 
+
+rIpaH9.8, was present in the membrane fraction in comparable amounts (Fig 2G), 221 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+11 
+
+suggesting that a portion of the proteins remained membrane-associated or is trapped 222 
+
+within endosomal compartments. Together, these results demonstrate that rIpaH7.8 is 223 
+
+a CPE that can enter cells via macropinocytosis and lipid-raft-dependent pathways, 224 
+
+escapes from endosomes to reach the cytosol, and uses its N-terminal α -helical 225 
+
+domain for uptake and cargo delivery. 226 
+
+The C-terminal E3 ubiquitin ligase (NEL) domain of rIpaH7.8 targets GSDMD to 227 
+
+attenuate IL-1β release. 228 
+
+Like other LPX effector proteins, rIpaH7.8 harbors a conserved C-terminal novel E3 229 
+
+ubiquitin ligase (NEL) domain that mediates substrate polyubiquitination [25,26], by 230 
+
+catalyzing the attachment of ubiquitin to a target protein’s lysine residue via an 231 
+
+isopeptide bond with ubiquitin’s C-terminal glycine (Fig 3A; [27]). To confirm that this 232 
+
+domain is enzymatically active in recombinant rIpaH7.8, we performed in vitro 233 
+
+ubiquitination assays using purified proteins. The full-length rIpaH7.8 and its N-terminal 234 
+
+deletion variant (ΔN) catalyzed the formation of polyubiquitin chains, whereas the 235 
+
+catalytic C-terminal deletion mutant (ΔC) lacked this activity (Fig 3B), showing that the 236 
+
+NEL domain of rIpaH7.8 is functional. Pull-down assays using THP-1 macrophage 237 
+
+lysates further revealed that both GLMN, a known regulatory component of SCF-type 238 
+
+E3 complexes [3], and Gasdermin D (GSDMD), a key executor of pyroptosis [9], 239 
+
+physically interact with rIpaH7.8 independent of its catalytic activity (Fig 3C). FLAG-240 
+
+tagged recombinant GFP was used as a negative control and didn’t show this 241 
+
+interaction. To determine whether cytosolic rIpaH7.8 retains its ubiquitin ligase activity 242 
+
+after T3SS-independent entry, we incubated THP-1 cells with rIpaH7.8 or its 243 
+
+catalytically inactive ΔC variant and analyzed ubiquitinated targets by tandem 244 
+
+ubiquitin-binding entity (TUBE) pull-down [14]. TUBEs covalently linked to agarose 245 
+
+beads function as high-affinity traps for polyubiquitinated proteins, enabling their 246 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+12 
+
+efficient enrichment from cell lysates for subsequent analysis [7,28]. To validate and 247 
+
+compare the extent of target protein polyubiquitination, the pull-down was followed by 248 
+
+treatment with the broad-specificity deubiquitinating enzyme USP2. The increased 249 
+
+signal intensity of the USP2-deubiquitinated protein of interest, as detected by Western 250 
+
+blotting, is consistent with prior enrichment of its polyubiquitinated forms [7,28]. The 251 
+
+corresponding Western blot analysis revealed pronounced polyubiquitination of 252 
+
+GSDMD, particularly its N-terminal pore-forming unit/fragment (PFU), in cells treated 253 
+
+with catalytically active rIpaH7.8, whereas GLMN was unaffected (Fig 3D). This finding 254 
+
+indicated that rIpaH7.8 directly modified GSDMD after cytosolic translocation. 255 
+
+Functionally, this correlated with a significant reduction in IL-1β secretion following 256 
+
+inflammasome activation by nigericin (Fig 3E), indicating that cytosolic rIpaH7.8 257 
+
+downregulates cytokine release through GSDMD ubiquitination rather than its 258 
+
+interference with GLMN. In this regard, analysis of ASC::GFP reporter cells revealed 259 
+
+that speck formation, characteristic of inflammasome assembly [29], was not affected 260 
+
+by rIpaH7.8 treatment (Fig 3F and S3A Fig). We confirmed these effects in primary 261 
+
+human monocytes and monocyte-derived macrophages (hMDMs) to more closely 262 
+
+approximate the in vivo situation and the human host environment. Flow cytometry and 263 
+
+confocal microscopy confirmed efficient uptake and intracellular localization of 264 
+
+rIpaH7.8 within 3 h (Fig 3G and 3H; S3B Fig and S3C). Consistent with results from 265 
+
+THP-1 cells, catalytically active rIpaH7.8, but not its ΔC mutant, significantly reduced 266 
+
+IL-1β release upon LPS and Nigericin stimulation (Fig 3I). These data demonstrate that 267 
+
+the enzymatic NEL domain of rIpaH7.8 remains functional after T3SS-independent 268 
+
+entry, mediating cytosolic GSDMD polyubiquitination to inhibit its pore-forming function 269 
+
+and thereby dampen inflammasome-mediated cytokine release. 270 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+13 
+
+Differential gene expression analysis defines the transcriptional impact of 271 
+
+rIpaH7.8 on primary human monocytes in four major gene expression patterns. 272 
+
+Considering the variety of previously described pathways and processes influenced by 273 
+
+IpaH7.8, such as inflammasome rewiring, cytokine release, but also vacuolar escape 274 
+
+and cell-to-cell spread [2,3,9,12,13], an unbiased transcriptomic profiling was 275 
+
+performed to evaluate the overall impact of IpaH7.8 on host gene expression in primary 276 
+
+human monocytes. The cells were tr eated with rIpaH7.8 or the ΔC -variant for 6 h to 277 
+
+ensure sufficient uptake and transcriptional changes. Simultaneously, LPS was added 278 
+
+to the cells to induce an infection-relevant context. After incubation, total RNA was 279 
+
+isolated and analyzed via polyA-enrichment-based bulk RNA-seq. This experimental 280 
+
+setup enabled us to specifically attribute observed transcriptional changes to the 281 
+
+enzymatic activity of IpaH7.8 in an immune-primed environment. Gene expression 282 
+
+distributions were consistent across replicates, and treatment-specific transcriptional 283 
+
+responses were evident from differential expressed gene (DEG) counts (S4A Fig). 284 
+
+RNA-seq analysis revealed that LPS alone induced a strong transcriptional response, 285 
+
+with > 3,300 DEGs. A similar global pattern was observed for cells treated with LPS in 286 
+
+combination with rIpaH7.8 or its catalytic mutant rIpaH7.8ΔC (Fig 4A). In contrast, 287 
+
+direct comparisons between LPS-only and LPS + protein treatments showed markedly 288 
+
+fewer DEGs, indicating that addition of recombinant proteins modulates but does not 289 
+
+override the dominant LPS response (Fig 4A). Comparison of rIpaH7.8 versus 290 
+
+rIpaH7.8ΔC under LPS stimulated conditions identified only ~250 DEGs, suggesting 291 
+
+that the catalytic activity of IpaH7.8 contributes to subtle but distinct transcriptional 292 
+
+changes (Fig 4A). A Venn diagram analysis confirmed that the majority of 293 
+
+transcriptional changes were shared across all LPS-containing treatments, while a 294 
+
+smaller subset of genes was specifically regulated by rIpaH7.8 or rIpaH7.8ΔC under 295 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+14 
+
+LPS-stimulated conditions (Fig 4B). Profiles of rIpaH7.8-induced transcriptional 296 
+
+changes are further illustrated in volcano plots (Fig 4C-E), where significantly up- and 297 
+
+downregulated genes are highlighted in red and blue, respectively. The comparison of 298 
+
+LPS-stimulated and rIpaH7.8-treated versus untreated cells showed a large number of 299 
+
+significant transcriptional changes; however, this pattern largely mirrored the strong 300 
+
+LPS-driven signature observed in the volcano plots of LPS-only treated versus 301 
+
+untreated control cells (S4B Fig). Accordingly, the most prominently regulated genes 302 
+
+in this comparison, including IL1B, SLAMF7, and STAB , are typical LPS-responsive 303 
+
+markers (Fig 4C). When comparing LPS + rIpaH7.8-treated to LPS-only treated cells, 304 
+
+the transcriptional response was less pronounced. Nonetheless, significant log ₂ fold-305 
+
+changes were observed, ranging from -6 to +4.7 for several genes such as RUFY4, 306 
+
+SPP1, and CD24 (Fig 4D). Finally, the direct comparison between LPS-stimulated cells 307 
+
+treated with either rIpaH7.8 or its catalytic mutant rIpaH7.8ΔC revealed a subset of 308 
+
+DEGs attributable specifically to the enzymatic activity of the effector (Fig 4E). To 309 
+
+detect transcriptional changes solely attributed to rIpaH7.8, we further intersected 310 
+
+pairwise comparisons and classified differentially expressed genes into two categories: 311 
+
+(a) NEL-dependent effects, defined as genes uniquely regulated in cells treated with 312 
+
+catalytically active rIpaH7.8; and (b) NEL-independent effects, defined as genes 313 
+
+similarly regulated in both rIpaH7.8- and rIpaH7.8ΔC -treated cells (S4C Fig). To 314 
+
+account for variability across pairwise comparisons and to identify consistent catalytic 315 
+
+effects, the datasets from all comparisons (Fig 4C-E) were integrated in an additional 316 
+
+Venn analysis (S4D-F Fig). This approach identified 14 DEGs consistently affected 317 
+
+across all conditions, representing the most robust rIpaH7.8-dependent transcriptional 318 
+
+signatures (S4D Fig). To determine whether the genes identified in these intersections 319 
+
+were not only significantly but also concordantly regulated, we further analyzed the 320 
+
+directionality of regulation by separating up- and downregulated genes (S4E Fig and 321 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+15 
+
+S4F). Based on these intersectional results, only genes significantly altered in the 322 
+
+rIpaH7.8 vs. rIpaH7.8ΔC comparison under LPS stimulation were retained for 323 
+
+downstream interpretation. These “overlapping DEGs” are displayed in a heatmap (Fig 324 
+
+4F; Z-scored FPKM values with Euclidean clustering, annotated version in S5 Fig). 325 
+
+The most consistently affected genes across all comparisons are additionally listed in 326 
+
+Supplemental Table 1. Unsupervised clustering of row-scaled gene expression values 327 
+
+revealed four major gene expression patterns, highlighting NEL-dependent regulatory 328 
+
+programs (Fig 4F and S5 Fig). Cluster 1 comprised genes with reduced expression 329 
+
+specifically in rIpaH7.8-treated cells compared to all other conditions. This cluster was 330 
+
+enriched for genes involved in extracellular matrix remodeling, adhesion, and immune 331 
+
+signaling, including CD74 , SELPLG , ANXA1 , and ADAMTS10 (Fig 4F and S5 Fig). In 332 
+
+contrast, Cluster 2 contained genes selectively higher expressed upon rIpaH7.8 333 
+
+treatment. This group included inflammatory mediators and immune regulatory genes 334 
+
+such as IL10 , EREG , PLAUR , and ABCA1 , indicating a partial activation or rewiring of 335 
+
+inflammatory signaling. Cluster 3 represented genes with reduced expression in the 336 
+
+presence of catalytically active rIpaH7.8 but remained elevated in cells treated with the 337 
+
+inactive mutant or LPS alone. This pattern indicates a NEL-dependent repression 338 
+
+effect (Fig 4F and S5 Fig). Finally, Cluster 4 comprised genes with elevated expression 339 
+
+in response to the catalytically inactive rIpaH7.8 ΔC, but almost unchanged expression 340 
+
+in the presence of active rIpaH7.8 or LPS. This cluster contained classical interferon-341 
+
+stimulated genes and innate immune effectors, including IFIT1 , PARP10 , MAP2K2 ,342 
+
+TRIM22 , and GSDMD , highlighting a potential NEL-dependent inhibition of 343 
+
+inflammatory and antimicrobial transcriptional programs (Fig 4F and S5 Fig). 344 
+
+Interestingly, in contrast to their upregulation in response to LPS, the genes neutrophil 345 
+
+cytosolic factor 1 ( NCF1 ) in Cluster 4 and its paralog NCF1b in Cluster 3 were both 346 
+
+downregulated only upon rIpaH7.8 treatment in LPS-stimulated monocytes (Fig 4F and 347 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+16 
+
+S5 Fig), indicating a reciprocal regulation and thus a downregulation of a pro-348 
+
+inflammatory stimulus. NCF1, also known as p47 phox , forms a subunit of the NADPH-349 
+
+oxidase-complex NOX2, which catalyzes the production of microbicidal reactive 350 
+
+oxygen species (ROS) in phagocytes [30]. 351 
+
+Functional enrichment links cluster-specific transcriptional programs to 352 
+
+immune signaling and vesicular trafficking pathways 353 
+
+To further interpret the functional significance of the cluster-specific transcriptional 354 
+
+patterns observed in rIpaH7.8-treated monocytes, we performed Gene Ontology (GO) 355 
+
+enrichment analysis of the overlapping NEL-dependent differentially expressed genes 356 
+
+identified in the rIpaH7.8 versus rIpaH7.8 ΔC comparison under LPS stimulation (S4C 357 
+
+Fig). The most significantly enriched biological processes, cellular components, and 358 
+
+molecular functions were visualized using cnetplots (Fig 5). Consistent with the 359 
+
+transcriptional clustering, several enriched biological processes mapped to genes 360 
+
+predominantly contained in Cluster 1 and Cluster 2 (Fig 4F and S5 Fig), reflecting 361 
+
+immune regulatory programs. Pathways associated with B-cell activation, 362 
+
+differentiation, and proliferation were significantly enriched and included genes such 363 
+
+as INPP5D , DDR1 , TNFRSF21 , MMP14 , and CD74 (Fig 5A). These genes, many of 364 
+
+which are suppressed in Cluster 1 or induced in Cluster 2, indicate that rIpaH7.8 365 
+
+modulates immune communication networks rather than uniformly repressing them. 366 
+
+Notably, IL10 , primarily associated with Cluster 2, formed a central hub linking immune 367 
+
+regulation with wound healing and neuronal signaling. Similarly, CD74, encoding a 368 
+
+transmembrane glycoprotein, connected immune activation pathways with gene 369 
+
+networks related to viral life cycle regulation, suggesting convergence of antibacterial 370 
+
+and antiviral responses. In line with the kinase and clustering analyses, several 371 
+
+enriched GO terms related to phosphorylation and signaling regulation, such as 372 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+17 
+
+“positive regulation of transferase activity” and “positive regulation of kinase activity”, 373 
+
+were identified. These terms included genes distributed across clusters, including 374 
+
+upregulated CD24 , EREG , CEMIP , and LCP2 (Cluster 2), as well as downregulated 375 
+
+regulators such as CHTF18 and HSP90AA1 (Cluster 1) (Fig 5A). Analysis of the 376 
+
+cellular component category further linked specific transcriptional clusters to defined 377 
+
+subcellular processes. Terms such as “protein complex involved in cell adhesion” and 378 
+
+“focal adhesion” involved genes including ITGA5 , ITGB1 , PLAU , and PLAUR , which 379 
+
+were primarily enriched in Cluster 2, consistent with activation of adhesion and 380 
+
+remodeling pathways (Fig 5B). In contrast, enrichment of the term “basal part of cell”, 381 
+
+including transporter genes such as SLC11A1 , SLC1A3 , and SLC22A4 , as well as 382 
+
+ABCA1 , reflects broader metabolic and membrane-associated adaptations. 383 
+
+Interestingly, multiple enriched terms associated with vesicular trafficking and 384 
+
+endocytosis mapped predominantly to genes within Cluster 3 (Fig 4F and S5 Fig), 385 
+
+which exhibited NEL-dependent repression (Fig 5B). This group included 386 
+
+downregulated genes such as LMAN2L , YIPF6 , and NCF1 , as well as upregulated 387 
+
+genes such as EREG , CEMIP , and SCARF1 . The selective modulation of these 388 
+
+trafficking-associated genes suggests that rIpaH7.8 interferes with intracellular 389 
+
+transport and receptor dynamics, consistent with a role in reshaping host cell signaling 390 
+
+platforms. Within the molecular function category, enriched terms included PDZ 391 
+
+domain binding and immune receptor activity (Fig 5C). These were driven by genes 392 
+
+such as CCR5 , CCRL1 , and IFNGR1 , which were predominantly associated with 393 
+
+Cluster 2, indicating selective enhancement or rewiring of receptor-mediated signaling 394 
+
+pathways rather than global suppression. In addition to these NEL-dependent effects, 395 
+
+we identified a subset of genes that were similarly regulated in rIpaH7.8- and 396 
+
+rIpaH7.8 ΔC-treated monocytes compared to LPS-only controls, indicating NEL-397 
+
+independent transcriptional responses (Fig 4B, S4C Fig). These genes did not map 398 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+18 
+
+strongly to a single cluster but were enriched for pathways related to MHC class II 399 
+
+antigen presentation and immune effector regulation, including HLA-DPA1 , HLA-400 
+
+DPB1 , HLA-DMB , and MPEG1 (S6 Fig A). Enriched cellular components included 401 
+
+endocytic and lysosomal membranes, and molecular function terms highlighted MHC 402 
+
+class II complex activity and pattern recognition receptor signaling, including 403 
+
+downregulation of CLEC7A (S6 Fig B-D). Taken together, integration of clustering and 404 
+
+functional enrichment analyses reveals that rIpaH7.8 induces a pronounced 405 
+
+transcriptional reprogramming. Clusters 1 and 4 predominantly reflect suppression of 406 
+
+immune effector and inflammatory pathways, Cluster 2 captures induced regulatory 407 
+
+and remodeling responses, and Cluster 3 highlights NEL-dependent interference with 408 
+
+vesicular trafficking and oxidative burst machinery. Notably, terms linked to 409 
+
+phosphorylation and kinase activity included genes distributed across clusters, 410 
+
+reinforcing the notion that transcriptional reprogramming by rIpaH7.8 is closely coupled 411 
+
+to alterations in host signaling networks. 412 
+
+IpaH7.8 catalytically reprograms the host kinome by counteracting LPS-induced 413 
+
+kinase responses in primary human monocytes 414 
+
+Given the transcriptional evidence pointing toward IpaH7.8-driven modulation of 415 
+
+phosphorylation-related signaling (Fig 4 and 5, S4 Fig and S5), we performed an 416 
+
+unbiased kinome activity analysis to functionally validate the predicted interference 417 
+
+with kinase activity. Primary human monocytes were stimulated with LPS and 418 
+
+incubated with either full-length and catalytically active rIpaH7.8 or its catalytically 419 
+
+inactive mutant (rIpaH7.8ΔC). Unstimulated and LPS -only treated cells served as 420 
+
+controls. Kinase activity was assessed using the PamGene platform, which monitors 421 
+
+phosphorylation of peptide substrates representing known kinase targets, 422 
+
+distinguishing between protein tyrosine kinases (PTKs) and serine/threonine kinases 423 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+19 
+
+(STKs) [31]. The phosphoproteomic analysis on the peptide level revealed a distinct 424 
+
+impact of rIpaH7.8 on host signaling pathways (Fig 6A). Although LPS stimulation 425 
+
+alone induced changes in several PKT-associated phosphorylation events, such as 426 
+
+reduced phosphorylation of TNNT1 (Tyr9), STAT2 (Tyr690), and RBL1 (Tyr805/813), 427 
+
+rIpaH7.8 partially counteracted these LPS-driven effects. Conversely, LPS-triggered 428 
+
+hyperphosphorylation of pyruvate dehydrogenase E1 (ODPAT, Tyr299) was markedly 429 
+
+diminished in the presenc e of catalytically active rIpaH7.8, but not in ΔC mutant-treated 430 
+
+cells (S8A Fig, PTK peptides). Analysis of STK-associated substrates further revealed 431 
+
+a cluster of peptides showing a pronounced decrease in phosphorylation specifically 432 
+
+upon rIpaH7.8 treatment (S8B Fig, STK peptides). This cluster included STMN2 433 
+
+(Ser97), MYPC3 (Ser269/275, Thr274), and CREB1 (Ser129/133), indicating broader 434 
+
+interference with transcriptional regulatory networks. As shown in Figure 6A, direct 435 
+
+comparison between rIpaH7.8 and rIpaH7.8ΔC identified a distinct subset of 436 
+
+significantly altered phospho-sites. Among the most prominently affected targets were 437 
+
+peptides derived from VASP, which displayed consistently reduced phosphorylation in 438 
+
+rIpaH7.8-treated cells, suggesting interference with cytoskeletal remodeling and 439 
+
+vesicle-associated processes previously implicated in bacterial immune evasion 440 
+
+[42,43]. Additional regulated phospho-targets included peptides involved in signaling, 441 
+
+migration, and cellular stress responses, including NCF1 (Ser328), which also 442 
+
+emerged as downregulated in the transcriptomic analysis (S1 Tab). A complete list of 443 
+
+differentially phosphorylated peptides is provided in Supplemental Table 2. Upstream 444 
+
+kinase analysis (UKA) based on global peptide phosphorylation profiles underlined a 445 
+
+regulatory signature induced by rIpaH7.8. Notably, catalytically active rIpaH7.8 446 
+
+exhibited lower PTK activity and modulated STK activity in a pattern not observed with 447 
+
+the ΔC mutant, indicating a catalytic activity -dependent reprogramming of host kinase 448 
+
+signaling (Fig 6B, S7 Fig A-E). This differential effect was further supported by direct 449 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+20 
+
+comparison of rIpaH7.8 and rIpaH7.8ΔC, which uncovered a wide range of 450 
+
+differentially active kinases (S9A Fig). To visualize the broader kinase landscape 451 
+
+affected by IpaH7.8, modulated kinases were mapped onto the human kinome tree 452 
+
+(S10 Fig). Affected kinases clustered within multiple families, including AGC, CMGC, 453 
+
+and TKL groups, with node size and color indicating specificity and activity score. 454 
+
+Detailed changes in kinase activity were further explored using dot-plot heatmaps. 455 
+
+Detailed PTK activity profiles (Fig 6C) demonstrated that rIpaH7.8 effectively 456 
+
+counteracted LPS-driven downregulation of multiple kinases, including FES, PTK2B, 457 
+
+and TXK, completely or partially restoring their activity relative to cells treated with LPS 458 
+
+alone or with LPS and the catalytically inactive variant (ΔC). In contrast, treatment with 459 
+
+rIpaH7.8ΔC generally mirrored the LPS -induced PTK suppression, indicating that 460 
+
+these effects depend on active NEL catalysis. In several cases, such as PTK7, CSK, 461 
+
+EPHA10, and FES, rIpaH7.8 even induced a relative upregulation compared with both 462 
+
+LPS-only and LPS + ΔC -treated cells. Of note, EPHA1 was uniquely upregulated by 463 
+
+rIpaH7.8 independent of LPS stimulation (Fig 6C). Analysis of STK activity (Fig 6D) 464 
+
+showed a similarly broad LPS-dependent activation pattern across CDK, CDLK, 465 
+
+CHEK1, and ROCK1 families, consistent across all LPS-containing treatments (S9B 466 
+
+Fig). However, treatment with rIpaH7.8 produced a distinct catalytic signature, most 467 
+
+prominently reflected in the downregulation of CAMK2 family kinases, relative to both 468 
+
+control and LPS or ΔC. In contrast, RPS6KL1 emerged as the only STK significantly 469 
+
+upregulated specifically by catalytically active rIpaH7.8. Several central STKs, 470 
+
+including PRKACA, PRKCA, SGK1/2, and MYLK3, were attenuated across conditions, 471 
+
+consistent with the phosphopeptide-based findings (Fig 6D). Consistent with the RNA-472 
+
+seq analysis (S4C Fig), an intersection of rIpaH7.8-affected kinases (both PTK and 473 
+
+STK) was performed to draw a robust conclusion from the collected data. In total, 21 474 
+
+kinases were retained for downstream interpretation (S8C Fig, PTK peptides) and are 475 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+21 
+
+listed as NEL-dependent (S3 Tab) or NEL-independent (S4 Tab). Thirteen kinases 476 
+
+were consistently regulated in all three contrasts (S9C Fig), and fourteen additional 477 
+
+kinases overlapped between rIpaH7.8 vs. LPS and rIpaH7.8 vs. ΔC comparisons. 478 
+
+Three kinases (CDK13, PRKX, CAMK2D) showed shared regulation in both rIpaH7.8-479 
+
+and ΔC -treated cells. To visualize the signaling architecture influenced by rIpaH7.8, 480 
+
+these kinases were integrated with relevant phospho-targets and known IpaH7.8 481 
+
+interaction partners (GSDMD, GSDMB, NLRP1, GLMN, Rab13) in a STRING network 482 
+
+(Fig 7A). The resulting network revealed a highly interconnected regulatory core. PKCδ 483 
+
+(PRKCD) emerged as a central node, linking kinase modulation directly to NCF1, which 484 
+
+was consistently downregulated in the RNA-seq and less phosphorylated in the 485 
+
+PamGene datasets. Similarly, PKAα (PRKACA) formed a major hub connecting to its 486 
+
+substrate VASP, whose phosphorylation was significantly reduced, and to Rab13, 487 
+
+which has previously been shown to accumulate at the Shigella-containing vacuole in 488 
+
+an IpaH7.8-dependent manner [13]. To contextualize these findings within host-489 
+
+pathway biology, an integrated KEGG pathway analysis was performed that 490 
+
+incorporated all rIpaH7.8-affected kinases, all RNA-seq DEGs, and additional IpaH7.8-491 
+
+associated proteins (GSDMD, GSDME, GLMN, Rab13). In this regard, the top 10 492 
+
+enriched pathways are shown in Figure 7B. Among them, ErbB signaling emerged as 493 
+
+the most prominent pathway, reflecting broad modulation of receptor tyrosine kinase 494 
+
+signaling. Several immune- and infection-related pathways were also enriched, 495 
+
+including Fcγ receptor -mediated phagocytosis, C-type lectin receptor signaling, 496 
+
+leukocyte transendothelial migration, NOD-like receptor signaling, and pathways 497 
+
+associated with Yersinia infection and Shigellosis (Fig 7C). Additionally, the analysis 498 
+
+highlighted multiple canonical immune-regulatory cascades, PI3K-Akt, MAPK, mTOR, 499 
+
+and HIF-1 signaling, as well as pathways linked to inflammatory modulators (TRP 500 
+
+channel regulation) and host cell survival/proliferation (Fig 7B; neurotrophin signaling, 501 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+22 
+
+glioma pathways, circadian entrainment). Taken together, the network and pathway 502 
+
+analyses demonstrate that rIpaH7.8 shapes a highly interconnected kinase-gene 503 
+
+signaling landscape that integrates immune regulation, cytoskeletal remodeling, and 504 
+
+vesicular trafficking in primary monocytes, thereby revealing coordinated host 505 
+
+pathways potentially exploited during Shigella infection. 506 
+
+rIpaH7.8 attenuates NOX2-associated kinase signaling and reactive oxygen 507 
+
+species production in LPS-stimulated human monocytes 508 
+
+Integration of kinase activity profiling with STRING network and KEGG pathway 509 
+
+analyses revealed that rIpaH7.8 preferentially targets central signaling hubs linked to 510 
+
+inflammatory and antimicrobial effector pathways. Within the rIpaH7.8-centered 511 
+
+STRING network (Fig 7A), several kinases inferred to be attenuated in the upstream 512 
+
+kinase analysis clustered around components of the NOX2 complex, including 513 
+
+NCF1/p47 phox (Fig 8A) . Among these, protein kinase C isoforms (PRKCα and PRKCδ) 514 
+
+and protein kinase A catalytic subunit α (PRKACA) emerged as key connecting nodes 515 
+
+linking kinase signaling to cytoskeletal regulation, vesicular trafficking, and immune 516 
+
+effector functions. Although PRKCα displayed very low transcript levels in human 517 
+
+monocytes (FPKM < 1), PRKCδ was abundantly expressed (FPKM > 20) and 518 
+
+transcriptionally stable across all conditions, indicating post-transcriptional or activity-519 
+
+based regulation (RNA seq data GSE324547). Consistently, phosphorylation of NCF1-520 
+
+derived peptides, including regulatory serine residues targeted by PKC family 521 
+
+members, were reduced in rIpaH7.8-treated cells (Fig 6A and 8A). Additional candidate 522 
+
+kinases included AKT3, PKC γ, and PRKACA, the latter of which occupies a central 523 
+
+position within the STRING network. RNA-seq analysis revealed significant 524 
+
+downregulation of PRKACA upon LPS stimulation, which was further enhanced by 525 
+
+rIpaH7.8 treatment, consistent with reduced inferred kinase activity. KEGG enrichment 526 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+23 
+
+analysis of integrated transcriptomic and kinome datasets highlighted Fc γ receptor-527 
+
+mediated phagocytosis, chemokine signaling, TRP channel regulation, and PI3K-Akt 528 
+
+signaling (Fig 7B), all of which are functionally linked to PKC/PKA activity and NOX2-529 
+
+dependent ROS production. In parallel, multiple NOX2 complex components 530 
+
+(NCF1/p47 phox , p40 phox , and gp91 phox ) were transcriptionally downregulated, indicating 531 
+
+a coordinated suppression of the oxidative burst machinery (Fig 8A). To functionally 532 
+
+validate the network- and pathway-based prediction of impaired NOX2 activity, 533 
+
+intracellular reactive oxygen species (ROS) production was quantified using a DCFDA-534 
+
+based cellular ROS assay (Fig 8B). Consistent with the kinase and transcriptomic data, 535 
+
+LPS and PMA stimulation increased ROS production in primary human monocytes, 536 
+
+whereas treatment with rIpaH7.8 significantly reduced LPS-induced ROS levels (Fig 537 
+
+8B). In contrast, the catalytically inactive rIpaH7.8ΔC variant had no significant effect 538 
+
+on ROS production. Together, these data demonstrate that rIpaH7.8-mediated 539 
+
+reprogramming of host kinase signaling translates into a measurable suppression of 540 
+
+NOX2-dependent oxidative burst responses in human monocytes. 541 
+
+542 
+
+543 
+
+544 
+
+545 
+
+546 
+
+547 
+
+548 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+24 
+
+Discussion 549 
+
+In this study, we demonstrate that the Shigella effector IpaH7.8 possesses an intrinsic, 550 
+
+T3SS-independent capacity to enter eukaryotic cells , expanding the functional 551 
+
+repertoire of cell-penetrating LPX effectors. Recombinant IpaH7.8 (rIpaH7.8) entered 552 
+
+host cells via macropinocytosis and lipid raft-dependent endocytosis, in a temperature-553 
+
+dependent manner consistent with an energy-requiring process (Fig 2, S1 Fig and S2). 554 
+
+Chemical inhibition of macropinocytosis and actin dynamics significantly reduced 555 
+
+uptake, highlighting the contribution of cytoskeletal remodeling. Similar to other LPX 556 
+
+effectors (IpaH9.8, SspH1, YopM) [14,17,24,32], the N-terminal  α-helical region of 557 
+
+IpaH7.8 functions as a protein transduction domain (PTD) enabling autonomous 558 
+
+internalization. Following uptake, rIpaH7.8 localized to endo-lysosomal compartments 559 
+
+but also reached the cytosol, as indicated by pH-sensitive fluorophore quenching and 560 
+
+by polyubiquitination of cytosolic GSDMD, which required the intact NEL domain (Fig 561 
+
+2 and Fig 3). This confirms that a fraction of internalized protein escapes endosomal 562 
+
+degradation. While the precise escape mechanism remains unknown, the PTD exhibits 563 
+
+pH-dependent modulation of net charge, becoming slightly more positive in acidic 564 
+
+compartments (Fig 1C), a feature shared with other pH-sensitive anionic CPPs such 565 
+
+as Sap(E) [33]. As described for Sap(E) and other negatively charged CPPs, uptake 566 
+
+appears to rely on a multifactorial mechanism combining endocytosis, 567 
+
+macropinocytosis, and local membrane interactions [34,35]. These similarities suggest 568 
+
+that LPX PTDs form a distinct class of anionic, pH-responsive CPEs optimized for 569 
+
+cytosolic delivery during infection. Whether T3SS-independent uptake contributes to 570 
+
+Shigella virulence in vivo remains unresolved. Nonetheless, CPE-mediated delivery 571 
+
+could theoretically enable effectors to act on bystander or distal host cells not directly 572 
+
+contacted by bacteria, an advantage unavailable to classical T3SS injection. Using this 573 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+25 
+
+T3SS-independent delivery approach, we show that the catalytic NEL domain remains 574 
+
+fully functional in host cells, mediating polyubiquitination of endogenous GSDMD. In 575 
+
+contrast, intracellular ubiquitination of GLMN, which was previously proposed as a key 576 
+
+IpaH7.8 substrate in mice [3], was not detectable, consistent with species-specific 577 
+
+differences reported by Luchetti et al. 2021 [9]. Functionally, GSDMD modification by 578 
+
+rIpaH7.8 resulted in a marked reduction of IL-1 β secretion following LPS priming and 579 
+
+Nigericin activation in both THP-1 macrophages and primary monocytes (Fig 3, S3 580 
+
+Fig). rIpaH7.8 did not impact upstream inflammasome assembly, as ASC speck 581 
+
+formation remained unaffected (Fig 3F), supporting a model in which IpaH7.8 acts 582 
+
+downstream of inflammasome activation, consistent with Luchetti et al. [9]. 583 
+
+To dissect broader immunomodulatory effects, we performed RNA-seq on LPS-584 
+
+stimulated monocytes treated with either full-length rIpaH7.8 or the catalytic deletion 585 
+
+variant rIpaH7.8 ΔC (Fig 4). This experimental design allowed us to distinguish between 586 
+
+transcriptional effects mediated by the cell-penetrating properties and LRR target-587 
+
+binding domain (shared by both constructs, Fig 1A, Fig 2B), and those specifically 588 
+
+driven by the catalytic activity of the NEL ubiquitin ligase domain, which is deleted in 589 
+
+the ΔC variant. The comparison of full -length IpaH7.8 to both untreated cells and its 590 
+
+catalytically inactive ΔC variant revealed a distinct transcriptional signature attributable 591 
+
+to its enzymatic activity (NEL-dependent, Fig 4 and S4 Fig). Notably, the 592 
+
+transcriptional landscape induced by rIpaH7.8 was not uniformly altered but 593 
+
+segregated into distinct gene clusters, reflecting coordinated and functionally 594 
+
+separable host responses. Genes grouped in Cluster 1 and Cluster 4 were 595 
+
+predominantly suppressed and included key mediators of innate immune effector 596 
+
+functions, most prominently components of the NOX2 complex such as NCF1, 597 
+
+consistent with the observed attenuation of ROS production. In contrast, Cluster 2 598 
+
+comprised genes that were selectively upregulated, including regulatory and 599 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+26 
+
+immunomodulatory factors such as IL10 and CD24, suggesting that rIpaH7.8 does not 600 
+
+simply silence host responses but actively reshapes them toward a more controlled or 601 
+
+anti-inflammatory state. A third group of genes (Cluster 3) displayed a characteristic 602 
+
+NEL-dependent regulation pattern, being suppressed specifically by catalytically active 603 
+
+rIpaH7.8 but not by the ΔC variant. This cluster was enriched for ge nes involved in 604 
+
+vesicular trafficking and endosomal dynamics linking the enzymatic activity of IpaH7.8 605 
+
+to interference with intracellular transport processes and antimicrobial effector 606 
+
+mobilization. Thus, rIpaH7.8 induces a defined, cluster-resolved transcriptional 607 
+
+program that functionally separates immune suppression, regulatory rewiring, and 608 
+
+vesicle-associated interference into distinct but interconnected modules. In this regard, 609 
+
+Gene Ontology analysis of NEL-dependent DEGs revealed strong enrichment for 610 
+
+pathways linked to kinase regulation, phosphorylation signaling, and immune system 611 
+
+processes, indicating that rIpaH7.8 reshapes host signaling both through direct protein 612 
+
+modification and by altering transcriptional programs. Among the most prominent 613 
+
+categories were endocytic vesicles and membrane microdomains, supporting the 614 
+
+notion that rIpaH7.8 is internalized autonomously through energy-dependent 615 
+
+endocytosis (Fig 5). Within this cluster, rIpaH7.8 strongly downregulated key regulators 616 
+
+of vesicle trafficking, including LMAN2L and YIPF6, both of which are essential for ER-617 
+
+Golgi transport and innate immune functions [36,37]. Additionally, IpaH7.8-regulated 618 
+
+candidates, such as RUFY4 and TBC1D2 (Armus), implicate the effector in modulating 619 
+
+late endosomal maturation and autophagy [38,39]. Notably, Armus also acts 620 
+
+downstream of Rac1, which is activated by the Shigella effector IpgB1, raising the 621 
+
+possibility that rIpaH7.8 supports IpgB1-dependent epithelial invasion and vacuolar 622 
+
+escape [40,41]. A second major cluster involves components of the NOX2 complex, 623 
+
+including NCF1, all downregulated by rIpaH7.8 (Fig 8A). Such coordinated 624 
+
+suppression of ROS-generating machinery, together with the known degradation of 625 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+27 
+
+GSDMB by IpaH7.8 [10], suggests that the effector might employs a multilayered 626 
+
+strategy to inhibit both oxidative and non-oxidative killing pathways within phagocytes. 627 
+
+Within the enriched GO category “positive regulation of kinase activity,” CD24 emerged 628 
+
+as one of the most robustly upregulated genes (Fig 5A). The CD24-Siglec-10 axis 629 
+
+dampens DAMP-induced inflammation [42] and can function as an anti-phagocytic 630 
+
+(“don’t eat me”) signal [43]. rIpaH7.8-mediated CD24 upregulation may therefore 631 
+
+provide Shigella with an advantage by suppressing macrophage responsiveness while 632 
+
+enhancing epithelial motility pathways relevant to infection. Intersecting DEGs shared 633 
+
+between rIpaH7.8 and rIpaH7.8 ΔC identified 36 NEL-independent genes (Fig 4B), 634 
+
+reflecting effects driven by protein uptake or LRR-mediated target binding (Fig 3). The 635 
+
+strongest signature was a coordinated downregulation of MHC class II genes, including 636 
+
+HLA-DPA1, HLA-DPB1, HLA-DMB, and HLA-DRB1. This pattern suggests modulation 637 
+
+of the master regulator CIITA, reminiscent of pathogen-driven suppression of antigen 638 
+
+presentation [44,45]. Importantly, despite efficient protein delivery, neither rIpaH7.8 nor 639 
+
+rIpaH7.8 ΔC induced signatures of endosomal rupture or lysosomal stress, unlike some 640 
+
+cationic CPPs [46]. This supports functional translocation without cytotoxicity and 641 
+
+indicates that the LRR domain alone can modulate immune gene networks without 642 
+
+provoking global stress responses. To functionally validate and link the transcriptomic 643 
+
+evidence with phosphorylation-related pathway modulation, we performed kinome 644 
+
+profiling on LPS-stimulated primary human monocytes treated with either catalytically 645 
+
+active rIpaH7.8 or its inactive variant. This analysis revealed that IpaH7.8 broadly 646 
+
+reprograms kinase signaling, rather than acting on a single linear pathway (Fig 6). 647 
+
+Strikingly, several protein tyrosine kinases (PTKs) suppressed by LPS, consistent with 648 
+
+monocyte adaptation to sustained TLR4 stimulation, were partially restored in the 649 
+
+presence of catalytically active rIpaH7.8 (S 8 Fig & S9). These effects were absent in 650 
+
+cells treated with the inactive mutant, indicating a NEL-dependent interference with 651 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+28 
+
+LPS-driven kinase attenuation . Although some predicted kinases (e.g., EPH and TRK 652 
+
+families) were not detected in RNA-seq datasets, several candidates, including FES, 653 
+
+CSK, PTK2B, and TXK, were well expressed, supporting a genuine regulatory effect. 654 
+
+Among the most consistently affected nodes were CaMKII isoforms, which displayed 655 
+
+reduced inferred activity in rIpaH7.8-treated cells (Fig 6; S9 Fig). CaMKII γ/δ function 656 
+
+as key amplifiers of TLR-induced NF-κB, IRF3, and MAPK signaling, thereby boosting 657 
+
+inflammasome priming and cytokine production. Their attenuation by IpaH7.8 may 658 
+
+therefore represent an additional layer of immune dampening, complementary to the 659 
+
+effector’s direct modification of GSDMD. Notably, CaMKII transcripts showed only 660 
+
+minimal changes, suggesting that IpaH7.8 affects CaMKII function through post-661 
+
+transcriptional or network-level mechanisms. Similarly, Akt2 and Akt3 emerged as 662 
+
+central serine/threonine kinases affected by rIpaH7.8. Although Akt transcript levels 663 
+
+remained stable, the upstream kinase analysis indicated a reduction in inferred activity 664 
+
+specifically in the presence of catalytically active IpaH7.8. Beyond their roles in 665 
+
+metabolic and polarization states of macrophages, Akt3 also phosphorylates 666 
+
+NCF1/p47 phox , a key component of the NOX2 complex involved in phagosomal ROS 667 
+
+production [47]. Consistent with this, the PamGene data revealed a significant 668 
+
+reduction of NCF1 Ser328 phosphorylation only in rIpaH7.8-treated monocytes (Fig 669 
+
+6C; S2 Tab), implicating altered Akt and PKC signaling as a mechanistic basis for 670 
+
+impaired oxidative burst induction. Indeed, PKC δ, a master regulator of inflammatory 671 
+
+signaling and a known NCF1/p47phox kinase, appeared as another major node 672 
+
+attenuated by rIpaH7.8. PKC δ activity is central for phosphorylation-dependent 673 
+
+assembly of the NOX2 complex and for efficient microbial killing by macrophages [48]. 674 
+
+The combined decrease in PKC δ-associated activity, reduced phosphorylation of 675 
+
+NCF1, and transcriptional downregulation of NCF1 , NCF4 , and CYBB in RNA-seq data 676 
+
+(Fig 8A; S1 Tab) strongly suggests that rIpaH7.8 suppresses NOX2-mediated ROS 677 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+29 
+
+production through multi-level interference which translates into a measurable 678 
+
+suppression of NOX2-dependent oxidative burst responses in human monocytes (Fig 679 
+
+8B). A similar virulence strategy has been described for Francisella tularensis , which 680 
+
+inhibits PKC-dependent NCF1 activation to block the oxidative burst [49]. Our findings, 681 
+
+therefore, raise the possibility that Shigella exploits IpaH7.8 to dampen phagosomal 682 
+
+ROS generation during infection. In addition to the NOX2 axis, the kinase network 683 
+
+contained a smaller module involving PRKACA and VASP, both of which were 684 
+
+previously linked to epithelial barrier integrity and, intriguingly, to the regulation of 685 
+
+Shigella vacuolar escape [13,50]. Although VASP phosphorylation changes were 686 
+
+modest in monocytes, the convergence of PRKACA, Rab13, and VASP within a single 687 
+
+signaling module (Fig 7A and S11 Fig A & B) may point to a broader role for IpaH7.8 688 
+
+in modulating cytoskeletal and vesicular trafficking processes beyond inflammasome 689 
+
+inhibition. However, this needs to be investigated in future experiments in the context 690 
+
+of Shigella infection, including relevant mutant strains. Overall, integration of the 691 
+
+kinome and transcriptomic datasets reveals that IpaH7.8 not only suppresses 692 
+
+inflammasome effector function via direct ubiquitination of GSDMD but also 693 
+
+reconfigures phosphorylation networks that govern TLR responses, CaMKII- and Akt-694 
+
+driven inflammatory amplification, and PKC/NOX2-dependent antimicrobial pathways. 695 
+
+This multi-layered interference underscores IpaH7.8 as a highly versatile immune 696 
+
+modulator that operates simultaneously at transcriptional, post-transcriptional, and 697 
+
+post-translational levels. Interestingly, Wang et al. 2023 discovered a third inhibitory 698 
+
+strategy, in which IpaH7.8 conducts mono-ubiquitinations of the lysines K177, K190, 699 
+
+and K192 of gasdermin B [51]. Future phosphoproteomic mapping and substrate-700 
+
+trapping NEL mutants will be essential to resolve whether the observed kinase 701 
+
+alterations arise from direct ubiquitin ligase activity or represent secondary rewiring of 702 
+
+host signaling networks. 703 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+30 
+
+In conclusion, this study reveals that IpaH7.8 is a dual-function effector that 704 
+
+combines autonomous cell entry with catalytic interference in host ubiquitin and 705 
+
+phosphorylation networks. It suppresses pyroptotic signaling through direct 706 
+
+ubiquitination of GSDMD, counteracts LPS-induced kinase responses, reprograms 707 
+
+cytoskeletal signaling by inhibiting PKA-dependent pathways, and reduces NOX2-708 
+
+mediated ROS production. These combined activities may facilitate Shigella flexneri 709 
+
+vacuolar escape and intercellular spread while attenuating host inflammatory 710 
+
+responses. The anti-inflammatory properties of rIpaH7.8, particularly its ability to 711 
+
+suppress IL-1β release via GSDMD ubiquitination, highlight its potential for therapeutic 712 
+
+exploitation. Recombinant IpaH7.8 or engineered PTD-fusion proteins could serve as 713 
+
+targeted immunosuppressive tools in diseases characterized by excessive pyroptosis 714 
+
+or IL-1-driven inflammation, such as autoinflammatory syndromes (e.g., familial 715 
+
+Mediterranean fever), sepsis, or inflammatory bowel disease (IBD). However, the 716 
+
+enzyme’s broad substrate spectrum and its ability to rewire host signaling networks 717 
+
+also pose potential risks. Off-target ubiquitination or suppression of protective immune 718 
+
+responses could increase susceptibility to infection or oncogenic transformation. 719 
+
+Therefore, any therapeutic application would require precise control of delivery, 720 
+
+activity, and tissue specificity. Beyond the direct translational potential, a better 721 
+
+understanding of how microbial effectors such as IpaH7.8 manipulate host signaling 722 
+
+may reveal an extensive natural repertoire of cell-penetrating immunomodulators. This 723 
+
+shift in perspective - from viewing effectors solely as virulence factors to recognizing 724 
+
+them as molecular tools - was previously articulated as the ‘drugs from bugs’ concept 725 
+
+[59-62]. 726 
+
+727 
+
+728 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+31 
+
+Material and Methods 729 
+
+730 
+
+Antibodies. 731 
+
+Anti-FLAG M2 (#F1804, Sigma Aldrich), anti-GAPDH (#sc-25778, Santa Cruz), anti-732 
+
+Rab5 (#3547, Cell Signaling Technology), anti-Rab7 (#9367, Cell Signaling 733 
+
+Technology), anti-CD63 (#sc-15363, Santa Cruz), anti-HA (#2367 Cell Signaling 734 
+
+Technology), anti-Ubiquitin (#sc-8017; Santa Cruz,), anti-Gasdermin-D (#97558, Cell 735 
+
+Signaling Technology), anti-Glomulin (#PA5-27838; Invitrogen), anti-GFP (#MAB3580; 736 
+
+Merck Millipore), anti-transferrin-receptor (#13-6800, invitrogen) HRP-labeled goat 737 
+
+anti-mouse IgG (#115-035-003, Dianova), HRP-labeled goat anti-rabbit IgG (#111-738 
+
+035-003, Dianova), Cy2 labeled goat anti-mouse IgG (#115-225-166, Dianova), Cy2 739 
+
+labeled goat anti-rabbit IgG (#111-22-003, Dianova), and rabbit IgG anti-mouse 740 
+
+IgG+IgM (#115-225-166, Dianova) antibodies were obtained commercially. 741 
+
+742 
+
+Plasmids. 743 
+
+Plasmids for the subsequent overexpression of the recombinant proteins IpaH7.8-744 
+
+3xFLAG , 2αH -IpaH7.8-GFP-3xFLAG, and GFP-3xFLAG were cloned based on the 745 
+
+pET-24b(+) 3xFLAG or the pET-24b(+) vector, respectively [14]. All of the above-746 
+
+named plasmids were generated using a restriction-free cloning approach [56]. The 747 
+
+plasmids for the overexpression of recombinant GFP-3xFLAG, YopM-3xFLAG, and 748 
+
+2αH -YopM-GFP-3xFLAG have been previously constructed [14,20]. Plasmids for the 749 
+
+overexpression of IpaH7.8ΔN (lacking amino acids 1 -57) and IpaH7.8ΔC (lacking 750 
+
+amino acids 359 - 519) were constructed by deleting the DNA sequence coding for the 751 
+
+indicated amino acids by inverse PCR. 752 
+
+753 
+
+Expression, purification, and fluorescent labeling of recombinant proteins. 754 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+32 
+
+Escherichia coli Clear Coli® BL21 (Lucigen, Middleton, WI, USA) harboring the 755 
+
+respective plasmids was cultured in Lysogeny Broth (LB) medium supplemented with 756 
+
+kanamycin (50 μg/mL) at 37°C, with an optical density at 600 nm (OD600) of 0.7. 757 
+
+Protein expression was induced by adding 1 mM IPTG and incubating overnight at 758 
+
+16°C. Following bacterial harvesting via centrifugation, cell disruption was performed 759 
+
+by sonication on ice for 30 seconds with 30-second breaks, repeated six times 760 
+
+(Branson Sonifier 250, level 4, 50% cycle; Branson, Danbury, CT, USA). Isolation and 761 
+
+purification of 6xHis-tag fusion proteins was carried out by affinity chromatography 762 
+
+using nickel-nitrilotriacetic acid (Ni-NTA) agarose beads (Macherey-Nagel, Düren, 763 
+
+Germany), as previously described [15]. The purified proteins were then dialyzed 764 
+
+against phosphate-buffered saline (PBS) and concentrated using Centricon centrifugal 765 
+
+filters (Merck Millipore, Billerica, MA, USA). For conjugating recombinant proteins with 766 
+
+fluorescent dyes, the Cy3 antibody labeling kit (GE Healthcare, Chicago, IL, USA), the 767 
+
+Alexa Fluor® 488 antibody labeling kit (Thermo Fisher Scientific, Waltham, MA, USA), 768 
+
+the FluoReporter™ FITC protein labeling kit (Thermo Fisher Scientific), or 5-(and 6-769 
+
+)carboxynaphthofluorescein succinimidyl ester mixed isomers (naphthofluorescein, 770 
+
+NF) (Thermo Fisher Scientific) were used according to the manufacturer’s protocols. 771 
+
+772 
+
+Cell culture. 773 
+
+HeLa cells were cultured in DMEM with low glucose (1 g/L) (Sigma-Aldrich), 774 
+
+supplemented with 10% fetal calf serum (FCS) and 5% non-essential amino acids. 775 
+
+HEK293T cells were maintained in DMEM with high glucose (4.5 g/L) (Sigma-Aldrich), 776 
+
+supplemented with 10% FCS and 5% non-essential amino acids. THP-1 cells were 777 
+
+cultured in RPMI-1640 (Sigma-Aldrich), supplemented with 10% Heat-inactivated FCS 778 
+
+(Hi-FCS). All cell lines were kept at 37°C in a 5% CO2 atmosphere, and the growth 779 
+
+medium was replaced every 2-3 days. The differentiation of THP-1 cells into THP-1-780 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+33 
+
+derived macrophages was achieved by adding 25 ng/mL of phorbol 12-myristate 13-781 
+
+acetate (PMA, BioGems) and subsequently resting the cells. On day 3 after the 782 
+
+addition of PMA, cells were gently washed with PBS and rested again until Day 5, 783 
+
+when experiments were performed. 784 
+
+785 
+
+Isolation of primary human monocytes 786 
+
+Primary human monocytes were isolated from leukocyte reduction system (LRS) 787 
+
+chambers obtained from fresh platelet apheresis donations of anonymized healthy 788 
+
+volunteers after informed consent of the donors according to the regulations of the 789 
+
+blood bank of the University Hospital Münster [57]. Briefly, the chambers were drained 790 
+
+and subsequently flushed with sterile 1x HBSS to recover all residual cells. The blood-791 
+
+HBSS-mix was carefully layered onto a Pancoll gradient (human Pancoll; density: 792 
+
+1,077g/ml PAN Biotech). After centrifugation at 600 x g for 35 min at room temperature 793 
+
+(Swingbucket rotor; break off), peripheral blood mononuclear cells (PBMCs) were 794 
+
+collected from the interphase and subjected to several washing steps with HBSS. For 795 
+
+further Monocyte enrichment and lymphocyte depletion, the PBMCs were applied to a 796 
+
+second density gradient using Percoll-® (Cytiva). After 60 min centrifugation at 540 x 797 
+
+g (brake off), the upper monocyte-enriched layer was collected and washed with 798 
+
+HBSS, and finally resuspended in RPMI 1640 medium supplemented with 10% Hi-FCS 799 
+
+and a cell density of 2 x 10 6 cells/mL. Monocyte purity (at least 85%) was assessed by 800 
+
+flow cytometry. After isolation, the monocytes were rested overnight in Lumox-foil bags 801 
+
+and used the next day for downstream applications. 802 
+
+803 
+
+Fractionation of eukaryotic cells 804 
+
+For separation of cytoplasmic and membrane proteins of HeLa cells, cell fractionation 805 
+
+was performed following incubation of the cells with the recombinant proteins (0.8 μM) 806 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+34 
+
+for 3 h as previously described and analyzed by immunoblotting [20,65-67]. Purity of 807 
+
+cytoplasmic and membrane fractions was analyzed using antibodies against soluble 808 
+
+cytosolic glyceraldehyde-3-phosphate dehydrogenase (GAPDH) and the membrane 809 
+
+marker transferrin receptor (TF-R), respectively. 810 
+
+811 
+
+Confocal laser scanning microscopy (CLSM). 812 
+
+Cells were cultured in 24-well plates until they reached 70% confluency. Adherent cell 813 
+
+lines (HeLa, HEK293T) were directly seeded onto glass coverslips, while suspension 814 
+
+cell lines (THP-1) were first allowed to attach to poly-L-lysine-coated coverslips before 815 
+
+fixation. Fluorescently labeled proteins were then added to the cells. Following 816 
+
+incubation, cells were washed three times with PBS, and residual surface-bound 817 
+
+proteins were removed by treatment with an acid buffer (0.2% w/v glycine in PBS, pH 818 
+
+2.0) for 5 min, followed by three additional PBS washes. Cells were fixed using 4% w/v 819 
+
+paraformaldehyde (PFA) in PBS and permeabilized with 0.2% w/v Triton X-100. To 820 
+
+visualize filamentous actin, cells were stained with tetramethylrhodamine (TRITC)- or 821 
+
+fluorescein isothiocyanate isomer I (FITC)-conjugated phalloidin at a 1:500 dilution in 822 
+
+PBS for 30 min. DNA was stained with DRAQ5 at a 1:500 dilution in PBS for 30 min or 823 
+
+Dapi at a 1:1000 dilution in PBS for 8 min. For additional cellular structure labeling, 824 
+
+primary antibodies specific to Rab5 (early endosomes), Rab7 (late endosomes), and 825 
+
+CD63 (lysosomes) were used at dilutions of 1:100, 1:50, and 1:600 in PBS, 826 
+
+respectively, after blocking with 5% v/v goat serum in PBS for 1 h. Appropriate Cy2-827 
+
+labeled secondary antibodies were applied at a 1:100 dilution in PBS for detection. 828 
+
+Cells were washed three times with PBS after each step. The preparations were 829 
+
+mounted in DAKO fluorescent mounting medium and analyzed using a Zeiss LSM 510 830 
+
+Meta or a Leica Stellaris 5 confocal laser-scanning microscope, utilizing the 831 
+
+appropriate filters. 832 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+35 
+
+833 
+
+Uptake analysis .834 
+
+Uptake kinetics of internalized proteins were monitored using flow cytometry 835 
+
+(FACScan flow cytometer; BD Biosciences, San Jose, CA, USA and Cytoflex S, 836 
+
+Beckman Coulter). Cellular translocation was analyzed by continuous time-lapse 837 
+
+quenched uptake assays, as previously described [16,61]. In brief, Alexa Fluor® 488-838 
+
+/FITC-labeled proteins were added to trypsinized cells for continuous incubation. To 839 
+
+quench extracellular fluorescence during measurement, trypan blue (final 840 
+
+concentration 0.2%) was used. To evaluate the effect of various endocytic inhibitors, 841 
+
+HeLa cells were grown in 6-well plates to 80% confluency. After pre-incubation with 842 
+
+inhibitors (200 μM cytochalasin D (Sigma-Aldrich), 19 mM amiloride (Sigma-Aldrich), 843 
+
+30 mM dynasore (Enzo Life Sciences, Farmingdale, NY, USA), 50 mM methyl-β-844 
+
+cyclodextrin (M βCD, Sigma-Aldrich), 16.5 mM nocodazole (Sigma-Aldrich) for 1 h, 25 845 
+
+μg/mL Alexa Fluor® 488-labeled rIpaH7.8 or its deletion variants were added to the 846 
+
+cells for an additional 3 hours. Prior to measurement, cells were trypsinized and 847 
+
+quenched with trypan blue as described above. For uptake assays involving 848 
+
+naphthofluorescein-labeled proteins, HeLa cells were cultured in 6-well plates to 80% 849 
+
+confluence. After incubation with the proteins for the specified time periods, cells were 850 
+
+washed three times with PBS and treated with acid buffer (0.2% w/v glycine in PBS, 851 
+
+pH 2.0) for 5 minutes to remove any remaining membrane-bound proteins. Unless 852 
+
+otherwise stated, cells were incubated at 37°C in a 5% CO2 atmosphere. For each 853 
+
+sample, fluorescence intensity (GeoMean) was measured in triplicate for 10,000 cells. 854 
+
+855 
+
+In vitro ubiquitination assays. 856 
+
+The enzymatic activity of recombinant proteins as E3 ubiquitin ligases was evaluated 857 
+
+through in vitro ubiquitination assays. These were conducted in 40 μL reaction mixtures 858 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+36 
+
+containing reaction buffer (25 mM Tris-HCl, pH 7.5; 50 mM NaCl; 5 mM ATP; 10 mM 859 
+
+MgCl2; 0.1 mM DTT), 0.5 μg E1, 2 μg E2 (UbcH5b), 2.0 μg HA-Ubiquitin (all purchased 860 
+
+from Boston Biochem, Cambridge, MA, USA), with or without 4 μg of the respective 861 
+
+protein of interest. The reaction mixtures were incubated at 37°C for 1 hour, and the 862 
+
+reactions were terminated by the addition of 4x Laemmli buffer. 863 
+
+864 
+
+3xFLAG Pulldown assay 865 
+
+THP-1-derived macrophages were cultured in ten 10 cm dishes and harvested after 866 
+
+differentiation by scraping in 300 μl of lysis buffer (50 mM Tris HCl, pH 7.4, with 867 
+
+150 mM NaCl, 1 mM EDTA, and 1% triton X-100) supplemented with 1x Halt™ 868 
+
+Protease Inhibitor Cocktail (100x; Thermo Scientific). Anti-FLAG-M2 Magnetic beads 869 
+
+(Sigma-Aldrich) were loaded with 120 μg recombinantly expressed and purified 870 
+
+rIpaH7.8, rIpaH7.8ΔC, both carrying a C -terminal 3xFLAG-tag (DYKDDDDK). Control 871 
+
+beads were either loaded with rGFP-3xFLAG or left unloaded. Bead loading was 872 
+
+performed by incubating the beads with the bait proteins for 1 h at room temperature 873 
+
+under constant shaking. After loading, the beads were washed twice with TBS and 874 
+
+incubated overnight at 4°C with a 16-fold excess of prey proteins (total cell lysate). The 875 
+
+next day, the beads were washed three times with TBS. Elution of bait and bound prey 876 
+
+proteins was performed by adding 3xFLAG peptides according to the manufacturer’s 877 
+
+instructions and incubating for 30 min at 4°C. 878 
+
+879 
+
+TUBEs pull-down assays. 880 
+
+THP-1-derived macrophages were treated with 1.6 μM rIpaH7.8 and respective 881 
+
+controls together with 1μg/mL LPS (Invitrogen) and 10 μM MG132 (Sigma-Aldrich). 882 
+
+After 6 hours of incubation, the cells were treated with 10 μM Nigericin (Invitrogen) to 883 
+
+induce Gasdermin D cleavage and inflammasome formation for 30 min. The cells were 884 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+37 
+
+washed with PBS, harvested by scraping the cells in 500 μL RIPA lysis buffer [25 mM 885 
+
+Tris-HCl, pH 8.0; 137 mM NaCl; 0.1% (w/v) SDS; 0.5% (w/v) Na-deoxycholate; 10% 886 
+
+(v/v) glycerol; 1% (v/v) NP-40; Complete protease inhibitor cocktail (Roche)]. The 887 
+
+lysates were incubated on ice for 30 min and subsequently were clarified by 888 
+
+centrifugation (20,000 x g, 30 min, 4°C), and equal amounts of protein were incubated 889 
+
+with anti-ubiquitin-TUBE agarose beads (LifeSensors, Malvern, PA, USA) for 2 h at 890 
+
+4°C [14]. TUBE pull-downs were performed according to the manufacturer's 891 
+
+instructions. Briefly, the beads were washed three times with 1% Triton X-100 in TBS 892 
+
+before the bound proteins were eluted using the provided elution buffer. The samples 893 
+
+were divided into two equal portions; to one, 0.5 μg of USP2core enzyme was added, 894 
+
+while the other was supplemented with the appropriate buffer. Both samples were 895 
+
+incubated for 1 h at 37°C, and the reactions were terminated by the addition of 4x 896 
+
+Laemmli buffer. 897 
+
+898 
+
+ASC::GFP based speck formation analysis 899 
+
+Inflammasome speck formation analysis was adapted from Sester, 2015 [62]. Briefly, 900 
+
+THP-1 cells expressing an ASC::GFP fusion protein were pre-stimulated with 1 μg/mL 901 
+
+LPS to induce robust expression of the fusion construct and co-treated with rIpaH7.8 902 
+
+or rIpaH7.8 ΔC to asses s their effect on inflammasome formation. In addition, Z-VAD-903 
+
+FMK (50 μM; #S7023, Selleckchem), a PAN-caspase inhibitor, was applied to prevent 904 
+
+the cells from pyroptotic cell death. Speck formation was triggered by the addition of 905 
+
+10 μM Nigericin (#tlrl nig, Invivogen) and analyzed by flow cytometry after 3 h. Speck-906 
+
+positive and speck-negative cells were distinguished based on their GFP signal profile 907 
+
+in a pulse-width vs. pulse-height plot. A reduced width indicated a condensed GFP 908 
+
+signal consistent with ASC speck formation. 909 
+
+910 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+38 
+
+Analysis of IL-1β release 911 
+
+Cells were preincubated as indicated, either cells only (Medium), LPS (1μg/ml), or LPS 912 
+
+with rIpaH7.8 (1.6 μM) or catalytically deficient IpaH7.8 ΔC for 6 h. Inflammasome 913 
+
+activation and Gasdermin D cleavage were triggered by the addition of 10 μM Nigericin 914 
+
+(#tlrl-nig, Invivogen) for the indicated time. Cell-free supernatants were analyzed using 915 
+
+human IL-1β ELISA MAX™ Deluxe Set (#437004, Biolegend) according to the 916 
+
+manufacturer’s protocol. Samples were analysed in duplicates. 917 
+
+918 
+
+RNA Sequencing and analysis 919 
+
+Primary human monocytes (1-day old) were stimulated with LPS (1 μg/mL) and 920 
+
+incubated for six hours with recombinant IpaH7.8 or IpaH7.8ΔC ( 1.6 μM). Control 921 
+
+samples consisted of cells treated only with medium or LPS. Total RNA was extracted 922 
+
+using the Monarch® Total RNA Miniprep Kit (New England Biolabs). Further 923 
+
+processing of the total RNA, including Poly-A enrichment, library preparation, and RNA 924 
+
+sequencing, was performed using the Illumina NovaSeq X Plus platform with 150 bp 925 
+
+paired-end reads (PE150) by Novogene (Munich, Germany). Bioinformatic analysis, 926 
+
+including quality control, mapping, gene expression quantification, and differential 927 
+
+gene expression analysis, was also performed by the sequencing provider. Genes 928 
+
+were considered to be relevantly affected by catalytically active rIpaH7.8 treatment if 929 
+
+they were identified as DEGs in LPS + rIpaH7.8 vs. LPS + rIpaH7.8ΔC as well as in at 930 
+
+least one additional comparison (LPS + rIpaH7.8 vs. LPS or LPS + rIpaH7.8 vs. 931 
+
+Untreated; Scheme see S4C Fig). These candidate genes were subjected to Gene 932 
+
+Ontology (GO) enrichment analysis. Gene symbols were first mapped to Entrez Gene 933 
+
+identifiers using the organism-specific annotation package org.Hs.eg.db, followed by 934 
+
+enrichment analysis using the clusterProfiler package (v4.14.6) with the enrichGO 935 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+39 
+
+function. Results were visualized as gene–concept networks (cnetplots) to illustrate 936 
+
+the relationships between enriched GO terms and associated genes. 937 
+
+938 
+
+Kinase activity profiling 939 
+
+The kinase activity profiling of 1-day-old primary human monocytes was performed 940 
+
+using the PamChip assay, which quantifies kinase activity in cell and tissue lysates by 941 
+
+measuring the phosphorylation of immobilized peptide substrates on PamChip® 942 
+
+microarrays. Tyrosine and serine/threonine kinase activity profiling was conducted 943 
+
+using a PamStation®12 (PamGene International B.V., ’s Hertogenbosch, Netherlands) 944 
+
+with PamChip® peptide arrays according to the manufacturer’s instructions. Primary 945 
+
+human monocytes were stimulated with LPS (1 μg/mL) and incubated for 6 h with 946 
+
+recombinant rIpaH7.8 or rIpaH7.8ΔC (1.6 μM). Control samples consisted of cells 947 
+
+treated only with medium or LPS. Following stimulation, the cells were lysed using M-948 
+
+PER™ Mammalian Protein Extraction Reagent (Thermo Fisher), supplemented with 949 
+
+Halt™ Protease Inhibitor Cocktail (100x) and Halt™ Phosphatase Inhibitor Cocktail 950 
+
+(100x) (Thermo Fisher). Lysates were centrifuged at 10,000 x g for 15 min at 4°C, and 951 
+
+the cleared supernatants were aliquoted and stored at -80°C until further analysis. 952 
+
+Protein concentrations were determined using Pierce™ BCA assay (Thermo Fisher 953 
+
+Scientific) according to the manufacturer’s instructions. For kinase activity profiling, 5 954 
+
+μg of protein extract was used for the protein tyrosine kinase (PTK) protocol (v06), and 955 
+
+1 μg for the serine/threonine kinase (STK) protocol (v11) using Evolve software 956 
+
+(PamGene). Signal intensities and correlation to kinase activity were analyzed using 957 
+
+BioNavigator by Tercen. 958 
+
+To model kinase signaling networks, the UniProt IDs of parent proteins corresponding 959 
+
+to the identified phosphosites were uploaded to MetaCore (Thomson Reuters), 960 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+40 
+
+facilitating pathway analysis regarding regulatory kinase activity in primary human 961 
+
+monocytes. 962 
+
+963 
+
+Integrated Transcriptome and Kinome anaylsis 964 
+
+To identify cellular pathways, signaling hubs, and interaction networks associated with 965 
+
+NEL-dependent effects across transcriptomic and kinome datasets, selected 966 
+
+candidates were subjected to downstream enrichment analyses. For kinome data, 967 
+
+kinases with altered inferred activity scores and phosphotargets exhibiting changes in 968 
+
+relative phosphorylation signal intensities, as determined by PamGene PTK and STK 969 
+
+arrays, were selected using criteria analogous to those applied for differentially 970 
+
+expressed genes (S4C Fig): Candidates were considered as relevant (NEL-dependent 971 
+
+effect) if they showed significant differences in rIpaH7.8 vs. rIpaH7.8ΔC upon LPS 972 
+
+stimulation and additionally in at least one of the comparisons LPS stimulated and 973 
+
+rIpaH7.8 treated vs. LPS alone or rIpaH7.8 vs. Untreated in inferred kinase activity or 974 
+
+relative phosphorylation intensity. Resulting identifiers were, together with relevant 975 
+
+gene-candidates subjected to KEGG-pathway enrichment analysis using the Enrichr 976 
+
+web platform with the KEGG database to identify significantly enriched pathways [63]. 977 
+
+To further explore functional relationships, protein-protein association networks were 978 
+
+constructed using the STRING database (v11.5) [64]. Networks were generated using 979 
+
+default parameters, incorporating known and predicted interactions derived from 980 
+
+experimental evidence, curated databases, co-expression, and text mining. To 981 
+
+facilitate the interpretation of identified pathways in the context of previously described 982 
+
+IpaH7.8-associated processes, literature-curated factors were manually incorporated 983 
+
+into the network. 984 
+
+985 
+
+Measurement of intracellular reactive oxygen species (ROS) 986 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+41 
+
+Intracellular reactive oxygen species (ROS) production was quantified using the 987 
+
+DCFDA/H ₂DCFDA Cellular ROS Assay Kit (Abcam, Cambridge, UK; ab113851) 988 
+
+according to the manufacturer’s instructions with minor modifications. Primary human 989 
+
+monocytes were isolated from peripheral blood of healthy donors or thawed from 990 
+
+cryopreserved stocks and seeded at a density of 2 × 10⁶ cells/mL in 6 -well plates (3 991 
+
+mL per well). Cells were treated with lipopolysaccharide (LPS; 1 μg/mL) alone or in 992 
+
+combination with recombinant rIpaH7.8 or rIpaH7.8ΔC (1.6 μM) overnight, as 993 
+
+indicated. Medium-treated cells served as negative controls. Following stimulation with 994 
+
+150nM PMA for 2h, cells were collected, washed once with PBS, and incubated with 995 
+
+DCFDA (20 μM) diluted in assay buffer for 30 min at 37 °C in the dark. After staining, 996 
+
+cells were washed once with 1x buffer and resuspended in 1x supplemented buffer 997 
+
+containing 10% heat-inactivated fetal calf serum (FCS). Cells were then transferred to 998 
+
+black 96-well plates with clear bottoms (triplicates, 150 μL per well). 999 
+
+For positive controls, cells were treated with hydrogen peroxide (H ₂O₂) immediately 1000 
+
+prior to measurement. Fluorescence was measured using a CLARIOstar microplate 1001 
+
+reader (BMG Labtech) pre-warmed to 37 °C at an excitation/emission of 485/535 nm, 1002 
+
+corresponding to oxidized DCF. Gain settings were adjusted using positive control 1003 
+
+wells to achieve ~80% of maximal signal. Blank wells containing buffer only were used 1004 
+
+for background subtraction. ROS levels are presented as mean fluorescence relative 1005 
+
+fluoresecne units (RFU) after background correction. 1006 
+
+1007 
+
+Structural Modeling and Surface Charge Visualization 1008 
+
+Protein structure predictions were performed using the AlphaFold Server (Google 1009 
+
+DeepMind) [65]. The resulting PDB files were visualized in UCSF Chimera (Chimera 1010 
+
+v1.1.9 (Resource for Biocomputing, Visualization, and Informatics, UCSF with support 1011 
+
+from NIH P41-GM103311) [66], and electrostatic surface potentials were rendered 1012 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+42 
+
+using the Coulombic surface coloring tool, accessed through Tools → Surface/Binding 1013 
+
+Analysis. Theoretical net charges of the selected peptide and protein segments were 1014 
+
+calculated at pH 5.5, 6.5, and 7.4 using the ProtPi Peptide Tool 1015 
+
+(www.protpi.ch/Calculator/PeptideTool v2.2.29.152). Calculations were based on 1016 
+
+unmodified primary sequences and standard pKa values for ionizable residues. 1017 
+
+1018 
+
+Ethics Statement 1019 
+
+Human primary monocytes were isolated from leukocyte reduction system (LRS) 1020 
+
+chambers obtained from fresh platelet apheresis donations of anonymized healthy 1021 
+
+adult volunteers. Blood donations were collected at the University Hospital Münster in 1022 
+
+accordance with institutional guidelines and national regulations. Written informed 1023 
+
+consent was obtained from all donors prior to donation. Due to the use of fully 1024 
+
+anonymized donor material, no specific ethical approval was required. 1025 
+
+1026 
+
+1027 
+
+1028 
+
+1029 
+
+1030 
+
+1031 
+
+1032 
+
+1033 
+
+1034 
+
+1035 
+
+1036 
+
+1037 
+
+1038 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+43 
+
+Acknowledgments 1039 
+
+This study was supported by grants from the Deutsche Forschungsgemeinschaft 1040 
+
+(DFG, SFB1009 TP B03 to Christian Rüter, DFG, KFO342 P10 and SFB DECIDE B03 1041 
+
+to Petra Dersch. The funders had no role in study design, data collection, and 1042 
+
+interpretation, or the decision to submit the work for publication. We thank Judith 1043 
+
+Austermann (Institute of Immunology, University of Münster) for expert training and 1044 
+
+support in the isolation of primary human monocytes. We would like to thank our 1045 
+
+colleagues at the Institute of Infectiology - ZMBE for fruitful discussions and their 1046 
+
+valuable contributions. This work is part of the doctoral thesis of T.K. Author 1047 
+
+contributions : TK, INY, and CR designed the study; TK, INY, SN, BK, YB, JF, and YT 1048 
+
+performed experiments; CR and PD supervised the study and raised funding; TK and 1049 
+
+CR wrote the manuscript. We thank Ellie Schmidt for thorough proofreading. 1050 
+
+1051 
+
+1052 
+
+1053 
+
+1054 
+
+1055 
+
+1056 
+
+1057 
+
+1058 
+
+1059 
+
+1060 
+
+1061 
+
+1062 
+
+1063 
+
+1064 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+44 
+
+References 1065 
+
+1. Khalil I, Troeger C, Blacker B, Rao P, Brown A, Atherly D, et al. Morbidity and 1066 
+
+mortality due to shigella and enterotoxigenic Escherichia coli diarrhoea: the 1067 
+
+Global Burden of Disease Study 1990-2016. Lancet Infectious Diseases. 2018. 1068 
+
+pp. 1229–1240. doi:10.1016/S1473-3099(18)30475-4 1069 
+
+2. Fernandez-Prada C, Hoover D, Tall B, Hartman A, Kopelowitz J, Venkatesan M. 1070 
+
+Shigella flexneri IpaH 7.8 facilitates escape of virulent bacteria from the endocytic 1071 
+
+vacuoles of mouse and human macrophages. Infection and Immunity. 2000. pp. 1072 
+
+3608–3619. doi:10.1128/IAI.68.6.3608-3619.2000 1073 
+
+3. Suzuki S, Mimuro H, Kim M, Ogawa M, Ashida H, Toyotome T, et al. Shigella 1074 
+
+IpaH7.8 E3 ubiquitin ligase targets glomulin and activates inflammasomes to 1075 
+
+demolish macrophages. Proceedings of the National Academy of Sciences of 1076 
+
+the United States of America. 2014. pp. E4254–E4263. 1077 
+
+doi:10.1073/pnas.1324021111 1078 
+
+4. Suzuki S, Suzuki T, Mimuro H, Mizushima T, Sasakawa C. Shigella hijacks the 1079 
+
+glomulin-cIAPs-inflammasome axis to promote inflammation. Embo Reports. 1080 
+
+2018. pp. 89–101. doi:10.15252/embr.201643841 1081 
+
+5. Paetzold S, Lourido S, Raupach B, Zychlinsky A. Shigella flexneri phagosomal 1082 
+
+escape is independent of invasion. Infection and Immunity. 2007. pp. 4826– 1083 
+
+4830. doi:10.1128/IAI.00454-07 1084 
+
+6. Bajunaid W, Haidar-Ahmad N, Kottarampatel A, Manigat F, Silué N, Tchagang 1085 
+
+C, et al. The T3SS of Shigella : Expression, Structure, Function, and Role in 1086 
+
+Vacuole Escape. Microorganisms. 2020. doi:10.3390/microorganisms8121933 1087 
+
+7. Norkowski S, Schmidt M, Rüter C. The species-spanning family of LPX-motif 1088 
+
+harbouring effector proteins. Cellular Microbiology. 2018. doi:10.1111/cmi.12945 1089 
+
+8. Man S, Karki R, Kanneganti T. Molecular mechanisms and functions of 1090 
+
+pyroptosis, inflammatory caspases and inflammasomes in infectious diseases. 1091 
+
+Immunological Reviews. 2017. pp. 61–75. doi:10.1111/imr.12534 1092 
+
+9. Luchetti G, Roncaioli J, Chavez R, Schubert A, Kofoed E, Reja R, et al. Shigella 1093 
+
+ubiquitin ligase IpaH7.8 targets gasdermin D for degradation to prevent 1094 
+
+pyroptosis and enable infection. Cell Host & Microbe. 2021. pp. 1521-+. 1095 
+
+doi:10.1016/j.chom.2021.08.010 1096 
+
+10. Hansen J, de Jong M, Wu Q, Zhang L, Heisler D, Alto L, et al. Pathogenic 1097 
+
+ubiquitination of GSDMB inhibits NK cell bactericidal functions. Cell. 2021. pp. 1098 
+
+3178-+. doi:10.1016/j.cell.2021.04.036 1099 
+
+11. Wang C, Shivcharan S, Tian T, Wright S, Ma D, Chang J, et al. Structural basis 1100 
+
+for GSDMB pore formation and its targeting by IpaH7.8. Nature. 2023. pp. 590-1101 
+
++. doi:10.1038/s41586-023-05832-z 1102 
+
+12. Sandstrom A, Mitchell P, Goers L, Mu E, Lesser C, Vance R. Functional 1103 
+
+degradation: A mechanism of NLRP1 inflammasome activation by diverse 1104 
+
+pathogen enzymes. Science. 2019. pp. 42-+. doi:10.1126/science.aau1330 1105 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+45 
+
+13. Chang Y, Valenzuela C, Lensen A, Lopez-Montero N, Sidik S, Salogiannis J, et 1106 
+
+al. Microtubules provide force to promote membrane uncoating in vacuolar 1107 
+
+escape for a cyto-invasive bacterial pathogen. Nature Communications. 2024. 1108 
+
+doi:10.1038/s41467-024-45182-6 1109 
+
+14. Norkowski, Stefanie, B K, L G, Stolle A-S R Lubos M-L, Hardwidge PR, Schmidt 1110 
+
+MA. Bacterial LPX motif-harboring virulence factors constitute a species-1111 
+
+spanning family of cell-penetrating effectors. Cell Mol. Life Sci .; 2017. 1112 
+
+doi:10.1007/s00018-017-2733-4 1113 
+
+15. Langel Ü. Handbook of cell-penetrating peptides. Boca Raton: CRC Press, 1114 
+
+Taylor & Francis Group; 2005. 1115 
+
+16. SAHLIN S, HED J, RUNDQUIST I. DIFFERENTIATION BETWEEN ATTACHED 1116 
+
+AND INGESTED IMMUNE-COMPLEXES BY A FLUORESCENCE 1117 
+
+QUENCHING CYTOFLUOROMETRIC ASSAY. Journal of Immunological 1118 
+
+Methods. 1983. pp. 115–124. doi:10.1016/0022-1759(83)90340-X 1119 
+
+17. Scharnert J, Greune L, Zeuschner D, Lubos ML, Alexander Schmidt M, Rüter C. 1120 
+
+Autonomous translocation and intracellular trafficking of the cell-penetrating and 1121 
+
+immune-suppressive effector protein YopM. Cell Mol Life Sci. 2013. pp. 4809– 1122 
+
+23. doi:10.1007/s00018-013-1413-2 1123 
+
+18. Rüter C, Buss C, Scharnert J, Heusipp G, Schmidt MA. A newly identified 1124 
+
+bacterial cell-penetrating peptide that reduces the transcription of pro-1125 
+
+inflammatory cytokines. Journal of Cell Science. 2010. pp. 2190–2198. 1126 
+
+doi:10.1242/jcs.063016 1127 
+
+19. Gomarasca M, Martins TFC, Greune L, Hardwidge PR, Schmidt MA, Ruter C. 1128 
+
+Bacterium-Derived Cell-Penetrating Peptides Deliver Gentamicin To Kill 1129 
+
+Intracellular Pathogens. Antimicrobial Agents and Chemotherapy. 2017. 1130 
+
+doi:10.1128/aac.02545-16 1131 
+
+20. Rüter C, Buss C, Scharnert J, Heusipp G, Schmidt MA. A newly identified 1132 
+
+bacterial cell-penetrating peptide that reduces the transcription of pro-1133 
+
+inflammatory cytokines. J Cell Sci. 2010. pp. 2190–8. doi:123/13/2190 [pii] 1134 
+
+10.1242/jcs.063016 1135 
+
+21. Brown E, Verkade P. The use of markers for correlative light electron 1136 
+
+microscopy. Protoplasma. 2010. pp. 91–7. doi:10.1007/s00709-010-0165-1 1137 
+
+22. Shogomori H, Futerman AH. Cholesterol depletion by methyl-beta-cyclodextrin 1138 
+
+blocks cholera toxin transport from endosomes to the Golgi apparatus in 1139 
+
+hippocampal neurons. J Neurochem. 2001. pp. 991–9. 1140 
+
+23. Qian ZQ, Dougherty PG, Pei DH. Monitoring the cytosolic entry of cell-1141 
+
+penetrating peptides using a pH-sensitive fluorophore. Chemical 1142 
+
+Communications. 2015. pp. 2162–2165. doi:10.1039/c4cc09441g 1143 
+
+24. Lubos, M-L., Norkowski S, Stolle A-S, Langel Ü, Schmidt MA, et al. Analysis of 1144 
+
+T3SS-independent Autonomous Internalization of the Bacterial Effector Protein 1145 
+
+SspH1 from Salmonella typhimurium. Inflammation and Cell Signaling. 2014. 1146 
+
+doi:10.14800/ics.423 1147 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+46 
+
+25. Rohde JR, Breitkreutz A, Chenal A, Sansonetti PJ, Parsot C. Type III secretion 1148 
+
+effectors of the IpaH family are E3 ubiquitin ligases. Cell Host Microbe. 2007. pp. 1149 
+
+77–83. doi:10.1016/j.chom.2007.02.002 1150 
+
+26. Rohde JR, Parsot CRR, Sansonetti PJ. Targeted ubiquitination of proteins and 1151 
+
+screening methods using a new class of ubiquitin ligase proteins. Official 1152 
+
+Gazette of the United States Patent and Trademark Office Patents. 2011. 1153 
+
+Available: <Go to ISI>://BIOSIS:PREV201100411983 1154 
+
+27. Damgaard R. The ubiquitin system: from cell signalling to disease biology and 1155 
+
+new therapeutic opportunities. Cell Death and Differentiation. 2021. pp. 423– 1156 
+
+426. doi:10.1038/s41418-020-00703-w 1157 
+
+28. Hjerpe R, Aillet F, Lopitz-Otsoa F, Lang V, England P, Rodriguez M. Efficient 1158 
+
+protection and isolation of ubiquitylated proteins using tandem ubiquitin-binding 1159 
+
+entities. Embo Reports. 2009. pp. 1250–1258. doi:10.1038/embor.2009.192 1160 
+
+29. Sester D, Thygesen S, Sagulenko V, Vajjhala P, Cridland J, Vitak N, et al. A 1161 
+
+Novel Flow Cytometric Method To Assess Inflammasome Formation. Journal of 1162 
+
+Immunology. 2015. pp. 455–462. doi:10.4049/jimmunol.1401110 1163 
+
+30. Sareila O, Jaakkola N, Olofsson P, Kelkka T, Holmdahl R. Identification of a 1164 
+
+region in p47phox/NCF1 crucial for phagocytic NADPH oxidase (NOX2) 1165 
+
+activation. J Leukoc Biol. 2013;93: 427–435. doi:10.1189/jlb.1211588 1166 
+
+31. Lieshout R, Faria AVS, Peppelenbosch MP, van der Laan LJW, Verstegen 1167 
+
+MMA, Fuhler GM. Kinome profiling of cholangiocarcinoma organoids reveals 1168 
+
+potential druggable targets that hold promise for treatment stratification. Mol 1169 
+
+Med. 2022;28: 74. doi:10.1186/s10020-022-00498-1 1170 
+
+32. Quezada CM, Hicks SW, Galán JE, Stebbins CE. A family of Salmonella 1171 
+
+virulence factors functions as a distinct class of autoregulated E3 ubiquitin 1172 
+
+ligases. Proc Natl Acad Sci U S A. 2009. pp. 4864–9. 1173 
+
+doi:10.1073/pnas.0811058106 1174 
+
+33. Franz J, Lelle M, Peneva K, Bonn M, Weidner T. SAP(E) - A cell-penetrating 1175 
+
+polyproline helix at lipid interfaces. Biochimica Et Biophysica Acta-1176 
+
+Biomembranes. 2016. pp. 2028–2034. doi:10.1016/j.bbamem.2016.05.021 1177 
+
+34. Wren BW. The yersiniae–a model genus to study the rapid evolution of bacterial 1178 
+
+pathogens. Nat Rev Microbiol. 2003. pp. 55–64. doi:10.1038/nrmicro730 1179 
+
+35. Guterstam P, Madani F, Hirose H, Takeuchi T, Futaki S, El Andaloussi S, et al. 1180 
+
+Elucidating cell-penetrating peptide mechanisms of action for membrane 1181 
+
+interaction, cellular uptake, and translocation utilizing the hydrophobic counter-1182 
+
+anion pyrenebutyrate. Biochimica Et Biophysica Acta-Biomembranes. 2009. pp. 1183 
+
+2509–2517. doi:10.1016/j.bbamem.2009.09.014 1184 
+
+36. Neve EPA, Svensson K, Fuxe J, Pettersson RF. VIPL, a VIP36-like membrane 1185 
+
+protein with a putative function in the export of glycoproteins from the 1186 
+
+endoplasmic reticulum ☆. Experimental Cell Research. 2003;288: 70–83. 1187 
+
+doi:10.1016/S0014-4827(03)00161-7 1188 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+47 
+
+37. Brandl K, Tomisato W, Li X, Neppl C, Pirie E, Falk W, et al. Yip1 domain family, 1189 
+
+member 6 (Yipf6) mutation induces spontaneous intestinal inflammation in mice. 1190 
+
+Proc Natl Acad Sci U S A. 2012;109: 12650–12655. 1191 
+
+doi:10.1073/pnas.1210366109 1192 
+
+38. Terawaki S, Camosseto V, Pierre P, Gatti E. RUFY4: Immunity piggybacking on 1193 
+
+autophagy? Autophagy. 2016;12: 598–600. 1194 
+
+doi:10.1080/15548627.2015.1136772 1195 
+
+39. Carroll B, Mohd-Naim N, Maximiano F, Frasa MA, McCormack J, Finelli M, et al. 1196 
+
+The TBC/RabGAP Armus Coordinates Rac1 and Rab7 Functions during 1197 
+
+Autophagy. Dev Cell. 2013;25: 15–28. doi:10.1016/j.devcel.2013.03.005 1198 
+
+40. Ohya K, Handa Y, Ogawa M, Suzuki M, Sasakawa C. IpgB1 Is a Novel Shigella 1199 
+
+Effector Protein Involved in Bacterial Invasion of Host Cells. Journal of Biological 1200 
+
+Chemistry. 2005;280: 24022–24034. doi:10.1074/jbc.M502509200 1201 
+
+41. Weddle EA, Köseoğlu VK, DeVasure BA, Agaisse HF. The type three secretion 1202 
+
+system effector protein IpgB1 promotes Shigella flexneri cell-to-cell spread 1203 
+
+through double-membrane vacuole escape. PLoS Pathog. 2022;18: e1010380. 1204 
+
+doi:10.1371/journal.ppat.1010380 1205 
+
+42. Chen G-Y, Tang J, Zheng P, Liu Y. CD24 and Siglec-10 Selectively Repress 1206 
+
+Tissue Damage-Induced Immune Responses. Science. 2009;323: 1722–1725. 1207 
+
+doi:10.1126/science.1168988 1208 
+
+43. Barkal AA, Brewer RE, Markovic M, Kowarsky M, Barkal SA, Zaro BW, et al. 1209 
+
+CD24 signalling through macrophage Siglec-10 is a new target for cancer 1210 
+
+immunotherapy. Nature. 2019;572: 392–396. doi:10.1038/s41586-019-1456-0 1211 
+
+44. Lapaque N, Hutchinson JL, Jones DC, Méresse S, Holden DW, Trowsdale J, et 1212 
+
+al. Salmonella regulates polyubiquitination and surface expression of MHC class 1213 
+
+II antigens. Proc Natl Acad Sci U S A. 2009;106: 14052–14057. 1214 
+
+doi:10.1073/pnas.0906735106 1215 
+
+45. Holling TM, Schooten E, van Den Elsen PJ. Function and regulation of MHC 1216 
+
+class II molecules in T-lymphocytes: of mice and men. Human Immunology. 1217 
+
+2004;65: 282–290. doi:10.1016/j.humimm.2004.01.005 1218 
+
+46. Kondow-McConaghy HM, Muthukrishnan N, Erazo-Oliveras A, Najjar K, Juliano 1219 
+
+RL, Pellois J-P. Impact of the endosomal escape activity of cell-penetrating 1220 
+
+peptides on the endocytic pathway. ACS Chem Biol. 2020;15: 2355–2363. 1221 
+
+doi:10.1021/acschembio.0c00319 1222 
+
+47. Polytarchou C, Hatziapostolou M, Yau TO, Christodoulou N, Hinds PW, Kottakis 1223 
+
+F, et al. Akt3 induces oxidative stress and DNA damage by activating the 1224 
+
+NADPH oxidase via phosphorylation of p47phox. Proceedings of the National 1225 
+
+Academy of Sciences. 2020;117: 28806–28815. doi:10.1073/pnas.2017830117 1226 
+
+48. Burtenshaw D, Kitching M, Redmond EM, Megson IL, Cahill PA. Reactive 1227 
+
+Oxygen Species (ROS), Intimal Thickening, and Subclinical Atherosclerotic 1228 
+
+Disease. Front Cardiovasc Med. 2019;6. doi:10.3389/fcvm.2019.00089 1229 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+48 
+
+49. McCaffrey RL, Schwartz JT, Lindemann SR, Moreland JG, Buchan BW, Jones 1230 
+
+BD, et al. Multiple mechanisms of NADPH oxidase inhibition by type A and type 1231 
+
+B Francisella tularensis. J Leukoc Biol. 2010;88: 791–805. 1232 
+
+doi:10.1189/jlb.1209811 1233 
+
+50. Lee SY, Gertler FB, Goldberg MB. Vasodilator-stimulated phosphoprotein 1234 
+
+restricts cell-to-cell spread of Shigella flexneri at the cell periphery. Microbiology 1235 
+
+(Reading). 2015;161: 2149–2160. doi:10.1099/mic.0.000173 1236 
+
+51. Wang C, Shivcharan S, Tian T, Wright S, Ma D, Chang J, et al. Structural basis 1237 
+
+for GSDMB pore formation and its targeting by IpaH7.8. Nature. 2023;616: 590– 1238 
+
+597. doi:10.1038/s41586-023-05832-z 1239 
+
+52. Grabowski R Schmidt. Immunomodulatory Yersinia outer proteins (Yops)–useful 1240 
+
+tools for bacteria and humans alike. Virulence. 2017. 1241 
+
+doi:10.1080/21505594.2017.1303588 1242 
+
+53. Rüter C, Schmidt MA. Cell-Penetrating Bacterial Effector Proteins: Better Tools 1243 
+
+than Targets. Trends in Biotechnology. 2017. pp. 109–120. 1244 
+
+doi:10.1016/j.tibtech.2016.08.002 1245 
+
+54. Rüter C, Hardwidge PR. “Drugs from Bugs”: bacterial effector proteins as 1246 
+
+promising biological (immune-) therapeutics. FEMS Microbiol Lett. 2014. pp. 1247 
+
+126–32. doi:10.1111/1574-6968.12333 1248 
+
+55. Ruter C, Lubos ML, Norkowski S, Schmidt MA. All in-Multiple parallel strategies 1249 
+
+for intracellular delivery by bacterial pathogens. International Journal of Medical 1250 
+
+Microbiology. 2018. pp. 872–881. doi:10.1016/j.ijmm.2018.06.007 1251 
+
+56. van den Ent F, Löwe J. RF cloning: a restriction-free method for inserting target 1252 
+
+genes into plasmids. J Biochem Biophys Methods. 2006. pp. 67–74. 1253 
+
+doi:10.1016/j.jbbm.2005.12.008 1254 
+
+57. Peters A, Kusche Y, Gerdkamp H, Nattkemper E, Vischedyk K, Münck N, et al. 1255 
+
+UVA1 radiation attenuates pro-inflammatory functions in human monocytes. 1256 
+
+Journal of Dermatology.  2023. pp. 46–56. doi:10.1111/1346-8138.16600 1257 
+
+58. Höfling S, Scharnert J, Cromme C, Bertrand J, Pap T, Schmidt MA, et al. 1258 
+
+Manipulation of pro-inflammatory cytokine production by the bacterial cell-1259 
+
+penetrating effector protein YopM is independent of its interaction with host cell 1260 
+
+kinases RSK1 and PRK2. Virulence. 2014. Available: 1261 
+
+http://www.ncbi.nlm.nih.gov/pubmed/24799669 1262 
+
+59. Kenny B, Finlay BB. Intimin-dependent binding of enteropathogenic Escherichia 1263 
+
+coli to host cells triggers novel signaling events, including tyrosine 1264 
+
+phosphorylation of phospholipase C-gamma1.  Infect Immun. 1997. pp. 2528–36. 1265 
+
+60. Michgehl S, Heusipp G, Greune L, Ruter C, Schmidt MA.  Esp-independent 1266 
+
+functional integration of the translocated intimin receptor (Tir) of 1267 
+
+enteropathogenic Escherichia coli (EPEC) into host cell membranes. Cellular 1268 
+
+Microbiology. 2006. pp. 625–633. doi:10.1111/j.1462-5822.2005.00655.x 1269 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+49 
+
+61. Langel Ü. Cell-Penetrating Peptides: Methods and Protocols. Springer; 2010. p. 1270 
+
+401. 1271 
+
+62. Sester D, Thygesen S, Sagulenko V, Vajjhala P, Cridland J, Vitak N, et al. A 1272 
+
+Novel Flow Cytometric Method To Assess Inflammasome Formation. Journal of 1273 
+
+Immunology. 2015. pp. 455–462. doi:10.4049/jimmunol.1401110 1274 
+
+63. Chen EY, Tan CM, Kou Y, Duan Q, Wang Z, Meirelles GV, et al. Enrichr: 1275 
+
+interactive and collaborative HTML5 gene list enrichment analysis tool. BMC 1276 
+
+Bioinformatics. 2013;14: 128. doi:10.1186/1471-2105-14-128 1277 
+
+64. Szklarczyk D, Kirsch R, Koutrouli M, Nastou K, Mehryary F, Hachilif R, et al. The 1278 
+
+STRING database in 2023: protein–protein association networks and functional 1279 
+
+enrichment analyses for any sequenced genome of interest. Nucleic Acids Res. 1280 
+
+2022;51: D638–D646. doi:10.1093/nar/gkac1000 1281 
+
+65. Abramson J, Adler J, Dunger J, Evans R, Green T, Pritzel A, et al. Accurate 1282 
+
+structure prediction of biomolecular interactions with AlphaFold 3. Nature. 1283 
+
+2024;630: 493–500. doi:10.1038/s41586-024-07487-w 1284 
+
+66. Pettersen EF, Goddard TD, Huang CC, Couch GS, Greenblatt DM, Meng EC, et 1285 
+
+al. UCSF Chimera--a visualization system for exploratory research and analysis. 1286 
+
+J Comput Chem. 2004;25: 1605–1612. doi:10.1002/jcc.20084 1287 
+
+67. Bode K, Hauri-Hohl M, Jaquet V, Weyd H. Unlocking the power of NOX2: A 1288 
+
+comprehensive review on its role in immune regulation.  Redox Biol. 2023;64: 1289 
+
+102795. doi:10.1016/j.redox.2023.102795 1290 
+
+1291 
+
+1292 
+
+1293 
+
+1294 
+
+1295 
+
+1296 
+
+1297 
+
+1298 
+
+1299 
+
+1300 
+
+1301 
+
+1302 
+
+1303 
+
+1304 
+
+1305 
+
+1306 
+
+1307 
+
+1308 
+
+1309 
+
+1310 
+
+1311 
+
+1312 
+
+1313 
+
+1314 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+50 
+
+Figures 1315 
+
+1316 
+
+1317 
+
+Figure 1: Structural visualization of IpaH7.8 and comparison to bacterial LPX effector proteins 1318  YopM from Yersinia enterocolitica and IpaH9.8 from Shigella flexneri .1319  (A) AlphaFold-predicted ribbon model of full-length IpaH7.8 (Shigella flexneri; UniProt: P18014) 1320  visualized in UCSF Chimera. The C-terminal novel E3 ubiquitin ligase (NEL) domain structure 1321  corresponds to a high-confidence prediction from the AlphaFold Protein Structure Database (P18014). 1322  The schematic representation below shows the domain architecture of IpaH7.8 (strain M90T), with N-1323  terminal domains in blue, LPX domains in green, and the E3 ubiquitin ligase domain in purple. (B) 1324  Surface representations of the N-terminal  α-helical domains of YopM (AA 1-73 ), IpaH9.8 (AA 1-56 ), IpaH7.8 1325  (AA 1-57 ), Tat (MGYGRKKRRQRRRG), and SAP(E) (CGGWVELPPPVELPPPVELPPP). Charged amino 1326  acid residues are colored according to electrostatic potential (coulombic surface coloring) in blue (pos.) 1327  and red (neg.), respectively. (C) Calculated net charge of indicated protein transduction domains (PTDs) 1328  at different pH. (D) Alignment of N-terminal domains of IpaH7.8 , IpaH9.8, and YopM. The alignment was 1329  obtained with MUSCLE with default settings and visualized using JalView. 1330 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+51 
+
+1331 
+
+1332 
+
+1333 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 52 
+
+Figure 2. T3SS-independent uptake and intracellular trafficking of recombinant IpaH7.8. (A) 1334  Representative fluorescence microscopy images of HeLa cells incubated for 6 h with 0.4 μM FITC-1335  labeled rIpaH7.8 or deletion variants ( ΔN,  ΔC). Actin (red), FITC-labeled protein (green), nuclei (blue). 1336  Scale bar, 10 μm. (B) Schematic representation of IpaH7.8 domain organization and deletion constructs. 1337  NEL, novel E3 ubiquitin ligase domain. (C) Quantification of intracellular fluorescence by flow cytometry 1338  after incubation with indicated proteins for up to 6 h. Medium-only control included. Data are shown as 1339  mean ± SD (n = 3); AUC values are indicated. Statistical analysis by one-way ANOVA with Tukey’s post 1340  hoc test. ns: non-significant, *p < 0.05, **p < 0.01. (D) Intracellular trafficking of Cy3 -labeled rIpaH7.8 1341  visualized by co-localization with Rab5-, Rab7-, and CD63-positive compartments at indicated time 1342  points. Scale bar, 10 μm. All images consist of a single optical section from a z-series with a pinhole 1343  diameter of 1 airy unit. (E) Effect of endocytosis inhibitors on rIpaH7.8 uptake. HeLa cells were 1344  pretreated with inhibitors targeting macropinocytosis, actin polymerization, or lipid raft integrity prior to 1345  incubation with Alexa Fluor 488-labeled rIpaH7.8. Intracellular fluorescence was quantified by flow 1346  cytometry (mean ± SD, n = 3; one-way ANOVA with Tukey’s post hoc test, ns non-significant, *p < 0.05, 1347  ****p < 0.0001). (F) Detection of cytosolic localization using pH-sensitive naphthofluorescein-labeled 1348  rIpaH7.8 and control proteins. Intracellular fluorescence and AUC values were determined by flow 1349  cytometry (mean ± SD, n = 3; one-way ANOVA with Tukey’s post hoc test, ns non-significant, *p < 0.05 1350  vs. BSA). (G) Immunoblot analysis of cytoplasmic (CF) and membrane (MF) fractions confirming 1351  cytosolic localization of FLAG-tagged rIpaH7.8. GAPDH and transferrin receptor (TF-R) were used as 1352  fractionation controls. 1353 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+53 
+
+1354 
+
+1355 
+
+1356 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 54 
+
+Figure 3. Cytosolic activity of rIpaH7.8 mediates GSDMD ubiquitination and suppresses IL-1 β1357  release. (A) Schematic overview of the ubiquitination cascade mediated by E1, E2, and E3 enzymes. 1358  (B) In vitro ubiquitination assay using rIpaH7.8 or deletion constructs (ΔN,  ΔC), analyzed by 1359  immunoblotting with anti-ubiquitin and anti-FLAG antibodies. (C) Anti-FLAG pulldown from THP-1-1360  derived macrophage lysates using anti-FLAG M2 magnetic beads pre-loaded with recombinant rIpaH7.8 1361  or rIpaH7.8ΔC . rGFP-3xFLAG and unloaded beads served as controls. Note: The silver-stained loading 1362  control (rIpaHΔC) migrates at the sa me position in the gel as GSDMD, which may cause GSDMD to 1363  appear slightly smaller in the Western blot than its actual size. (D) TUBE pull-down from THP-1 1364  macrophages treated with rIpaH7.8 (1.6 μM) and LPS (1 μg/mL) ± MG132, followed by Nigericin 1365  stimulation. Eluted proteins ± deubiquitinase (DUB) treatment were analyzed by immunoblotting for 1366  ubiquitin, GLMN, and GSDMD (POI, protein of interest). (E) IL-1 β release from THP-1 cells primed with 1367  LPS and activated with Nigericin following pretreatment with rIpaH7.8 or rIpaH7.8 ΔC. Supernatants 1368  were analyzed by ELISA. Data represents duplicates from three independent experiments; one-way 1369  ANOVA with Tukey’s post hoc test (ns: non-significant, *p < 0.05 vs. rIpaH7.8 ΔC). (F) ASC speck 1370  formation in ASC::GFP-expressing THP-1 cells following LPS priming and Nigericin stimulation ± 1371  rIpaH7.8 or rIpaH7.8 ΔC pretreatment. Speck-positive cells were quantified by flow cytometry using 1372  pulse-width analysis. (G) Confocal microscopy of primary human monocyte-derived macrophages 1373  incubated with FITC-labeled rIpaH7.8 (1.6 μM). Actin (red), rIpaH7.8 (green), nuclei (blue). Scale bar, 1374  20 μm. Orthogonal projections of Merged channels (left) and maximum projection (right) show single z-1375  sections (1 airy unit). (H) Uptake of FITC-labeled rIpaH7.8, rYopM, or BSA by primary human 1376  monocytes quantified by flow cytometry (n = 7 donors). AUC values are shown; one-way ANOVA with 1377  Tukey’s post hoc test (ns, non significant, **p < 0.01, ***p < 0.001, ****p < 0.0001). (I) IL-1 β release from 1378  primary human monocytes stimulated with LPS and Nigericin ± rIpaH7.8 or rIpaH7.8 ΔC pretreatment. 1379  ELISA analysis; n = 6; one-way ANOVA with Tukey’s post hoc test (ns, non significant, *p < 0.05 vs. 1380  rIpaH7.8 ΔC). 1381 
+
+1382 
+
+1383 
+
+1384 
+
+1385 
+
+1386 
+
+1387 
+
+1388 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+55 
+
+1389  Figure 4. RNA-seq analysis of LPS-stimulated human monocytes treated with rIpaH7.8 or 1390  rIpaH7.8 ΔC. Primary human monocytes were incubated for 6 h with recombinant rIpaH7.8 or 1391  rIpaH7.8 ΔC in the presence of LPS; LPS-only and medium-treated cells served as controls. Bulk 1392  poly(A)-enriched RNA-seq was performed using three biological replicates per condition, each 1393  consisting of pooled RNA from three independent donors. (A) Total number of significantly differentially 1394  expressed genes (DEGs; p ≤ 0.05) per comparison. (B) Venn diagrams showing shared and unique 1395  DEGs (p ≤ 0.05). Complete DEG lists are provided i n Supplementary Data 1. (C-E) Volcano plots 1396  depicting differential gene expression in LPS-stimulated monocytes treated with rIpaH7.8 compared to 1397  unstimulated controls (C), LPS-only treatment (D), or rIpaH7.8 ΔC (E). Significantly up- and 1398  downregulated genes (p ≤ 0.05) are shown in red and blue, respectively; the top 30 regulated genes are 1399  annotated. (F) Heatmap of rIpaH7.8-regulated genes in LPS-stimulated monocytes relative to 1400  rIpaH7.8 ΔC, LPS-only, and unstimulated conditions, based on the filtering strategy shown in 1401  Supplementary Fig. 4C. Rows represent genes and columns treatment conditions; values are Z-score 1402  normalized per gene, with red indicating higher and blue lower relative expression. Unsupervised 1403  clustering indicates four major gene expression patterns. 1404 
+
+1405 
+
+1406 
+
+1407 
+
+1408 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+56 
+
+1409 
+
+1410 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 57 
+
+Figure 5. Gene Ontology (GO) enrichment analysis of NEL-dependent overlapping DEGs. 1411  GO enrichment of NEL-dependent differentially expressed genes is shown for (A) Biological Processes, 1412  (B) Cellular Components, and (C) Molecular Functions. Left panels : Bubble plots showing the top 1413  enriched GO terms. The x-axis indicates the GeneRatio, bubble size reflects the number of genes per 1414  term (Count), and color intensity represents enrichment significance (adjusted p-value). Right panels :1415  cnet plots visualizing gene GO term associations. Central nodes represent GO terms and peripheral 1416  nodes represent genes. GO term node size corresponds to the number of associated genes, while gene 1417  node color indicates log ₂ fold change (blue, downregulated; white, unchanged; red, upregulated). 1418 
+
+1419 
+
+1420 
+
+1421 
+
+1422 
+
+1423 
+
+1424 
+
+1425 
+
+1426 
+
+1427 
+
+1428 
+
+1429 
+
+1430 
+
+1431 
+
+1432 
+
+1433 
+
+1434 
+
+1435 
+
+1436 
+
+1437 
+
+1438 
+
+1439 
+
+1440 
+
+1441 
+
+1442 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+58 
+
+1443 
+
+Figure 6. Kinome profiling of LPS-stimulated human monocytes treated with rIpaH7.8 or 1444  IpaH7.8 ΔC. (A) Heatmap of significantly regulated phosphorylation sites identified by PamChip analysis 1445  in LPS-stimulated primary human monocytes treated with rIpaH7.8 compared to the catalytically inactive 1446  mutant rIpaH7.8 ΔC. Rows represent individual peptide substrates. (B) Volcano plots of inferred 1447  upstream kinase activity based on peptide phosphorylation changes. Comparisons shown are LPS vs. 1448  control, LPS + rIpaH7.8 vs. control, and LPS + rIpaH7.8 ΔC vs. control. Each dot represents one peptide; 1449  significantly regulated peptides (median final score > 1.2) are highlighted (PTK, purple; STK, green). (C, 1450  D) Kinase activity maps for protein tyrosine kinases (PTK; C) and serine/threonine kinases (STK; D). 1451  Color indicates relative changes in inferred kinase activity (blue, decreased; white, unchanged; red, 1452  increased), and node size reflects substrate specificity. 1453 
+
+1454 
+
+1455 
+
+1456 
+
+1457 
+
+1458 
+
+1459 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+59 
+
+1460 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 60 
+
+Figure 7. rIpaH7.8-centered signaling networkand enriched host pathways. (A) STRING network 1461  analysis integrating differentially phosphorylated peptides (Table S1), regulated kinases (Tables S3 and 1462  S4), and IpaH7.8-associated proteins (GLMN, GSDMD, GSDMB, NLRP1, Rab13; underlined). Edge 1463  colors indicate STRING evidence types: curated databases (red), experimentally determined 1464  interactions (blue), gene neighborhood (green), co-expression (black), protein homology (purple), text 1465  mining (light blue), and interactions without assigned evidence (grey). Factors (F), Kinase (K), and 1466  Peptid (P) are shown, Halos indicated up- (red) or down- (blue) regulation. (B-C) KEGG pathway 1467  enrichment analysis based on genes and kinases significantly modulated in transcriptomic and 1468  PamGene kinome profiling datasets. Shown are the top 10 enriched pathways (B) ranked by statistical 1469  significance (-log10 adjusted P value, Benjamini-Hochberg FDR) and the top 10 infection- and 1470  immunology-related KEGG pathways (C). Bar length indicates enrichment significance. 1471 
+
+1472 
+
+1473 
+
+1474 
+
+1475 
+
+1476 
+
+1477 
+
+1478 
+
+1479 
+
+1480 
+
+1481 
+
+1482 
+
+1483 
+
+1484 
+
+1485 
+
+1486 
+
+1487 
+
+1488 
+
+1489 
+
+1490 
+
+1491 
+
+1492 
+
+1493 
+
+1494 
+
+1495 
+
+1496 
+
+1497 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+61 
+
+1498 
+
+Figure 8: rIpaH7.8 reduces ROS production in LPS-stimulated human monocytes. (A) Structure of 1499  the activated NOX2 complex, comprising the integral membrane proteins gp91 phox , p22 phox and 1500  associated components p40 phox , NCF1/p47 phox , p67 phox and Rac1 or Rac2 assembled at the plasma- or 1501  phagocytic membrane (upper panel). Lower panel indicates regulation of NOX2 complex proteins upon 1502  treatment of primary human monocytes with LPS+rIpaH7.8 (1 mg/ml; 1.6  μM) on transcriptional, 1503  phosphorylation or kinase-activity level. Scheme adapted from Bode et al. 2023 [67]. (B) Cellular 1504  reactive oxygen species (ROS) production in LPS-stimulated primary human monocytes following 2h 1505  PMA stimulation in the presence or absence of rIpaH7.8 or rIpaH7.8 ΔC. One-way ANOVA with Tukey’s 1506  post hoc test (ns, non significant, **p < 0.01, *p < 0.05). 1507 
+
+1508 
+
+1509 
+
+1510 
+
+1511 
+
+1512 
+
+1513 
+
+1514 
+
+1515 
+
+1516 
+
+1517 
+
+1518 
+
+1519 
+
+1520 
+
+1521 
+
+1522 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+62 
+
+Supplemental Figures 1523 
+
+1524 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 63 
+
+Supplemental Figure S1. T3SS-independent uptake of rIpaH7.8 in epithelial and immune cell 1525 
+
+lines. Flow cytometry-based quantification of intracellular fluorescence in HeLa (A, C-F), HEK293 (G, 1526 
+
+H) and THP-1 macrophages (I, J) incubated with increasing concentrations (0.4-1.6 μM) of FITC-labeled 1527 
+
+rIpaH7.8 (E, F, G, I) and rIpaH7.8/rYopM (C, D) or with 0.4 μM FITC-labeled rIpaH7.8ΔN or rIpaH7.8ΔC 1528 
+
+for up to 6 h (A, C, H, J). Medium-only samples served as controls. Data are shown as mean ± SD of 1529 
+
+three independent experiments; AU, arbitrary units. Area under the curve (AUC) values are shown for 1530 
+
+visualization. Statistical analysis by one-way ANOVA with Tukey’s post hoc test; ns: not significant, 1531 
+
+*p < 0.05, **p < 0.01, ***p < 0.001, ****p < 0.0001 vs. medium. (B) Representative fluorescence 1532 
+
+microscopy images of HeLa cells incubated with 0.8 μM FITC-labeled rIpaH7.8 for 6 h. Actin (red), FITC-1533 
+
+rIpaH7.8 (green), nuclei (blue). Scale bar, 10 μm. Images show merged channels from a single optical 1534 
+
+section. 1535 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+64 
+
+1536 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 65 
+
+Supplemental Figure S2. Uptake and cytosolic delivery of IpaH7.8 GFP fusion constructs. 1537  (A) Schematic overview of GFP fusion constructs: 2 αHIpaH7.8-GFP and 2 αHYopM-GFP, containing the 1538  N-terminal domains of IpaH7.8 or YopM; rGFP served as control. (B) Representative fluorescence 1539  microscopy images of HeLa cells incubated with 0.8 μM FITC-labeled rGFP, 2 αHYopM-GFP, or 1540  r2 αHIpaH7.8-GFP for 6 h. Actin (red), protein (green), nuclei (blue). Scale bar, 10 μm. (C) Flow 1541  cytometry quantification of intracellular GFP fluorescence after incubation with 0.4 μM FITC-labeled 1542  proteins. Data show mean ± SD (n = 3); AUC values are indicated. One-way ANOVA with Tukey’s post 1543  hoc test (ns, *p < 0.05 vs. rGFP). (D) Temperature-dependent uptake of Alexa Fluor 488-labeled 1544  rIpaH7.8 at 37 °C or 4 °C for up to 3 h (AUC; n = 3; paired t-test, *p < 0.01). Co-localization of Cy3-1545  rIpaH7.8 with Cholera Toxin B-subunit CTB-FITC (lipid rafts) or transferrin-Alexa Fluor 488 (Tf) after 30 1546  min. Quantification from six images are shown (paired t-test, **p < 0.01). Scale bar, 10 μm. (F) 1547  Experimental scheme for detecting cytosolic localization using the pH-sensitive dye 5(6)-1548  carboxynaphthofluorescein (NF). (G) Flow cytometry of HeLa cells incubated with 0.4 μM NF-labeled 1549  rIpaH7.8, rIpaH9.8, rYopM, or BSA for up to 6 h. Data show mean ± SD (n = 3); AU, arbitrary units. 1550 
+
+1551 
+
+1552 
+
+1553 
+
+1554 
+
+1555 
+
+1556 
+
+1557 
+
+1558 
+
+1559 
+
+1560 
+
+1561 
+
+1562 
+
+1563 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+66 
+
+1564 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 67 
+
+Supplemental Figure S3. ASC speck gating strategy and uptake of rIpaH7.8 in primary human 1565 
+
+monocytes. (A) Flow cytometry gating strategy for ASC speck formation in THP-1 cells expressing 1566 
+
+ASC::GFP. Cells were gated for singlets and GFP-positive events, followed by discrimination of speck-1567 
+
+positive and speck-negative populations based on FITC height versus width. (B) Uptake of FITC-labeled 1568 
+
+rIpaH7.8, rYopM, or BSA by primary human monocytes quantified by flow cytometry after incubation for 1569 
+
+up to 6 h. Medium-only served as a negative control. n = 7 donors; mean ± SD; AU, arbitrary units. (C) 1570 
+
+Confocal microscopy of primary human monocyte-derived macrophages incubated with FITC-labeled 1571 
+
+rIpaH7.8 (1.6 μM, 6 h). Actin (red), rIpaH7.8 (green), nuclei (blue). Medium-only (0 h) served as control. 1572 
+
+Scale bar, 20 μm. Orthogonal and maximum projections show single optical sections (1 airy unit). 1573 
+
+1574 
+
+1575 
+
+1576 
+
+1577 
+
+1578 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+68 
+
+1579 
+
+1580 
+
+1581  Supplementary Figure S4. Transcriptomic quality control, differential expression, and analysis 1582  strategy. (A) Gene expression distributions across biological replicates for each condition (Ctrl, LPS, 1583  LPS + rIpaH7.8, LPS + rIpaH7.8 ΔC), demonstrating comparable global expression profiles. (B) Volcano 1584  plot showing differential gene expression in LPS-treated versus untreated monocytes. (C) Schematic 1585  overview of the pairwise comparison strategy used to define NEL-dependent and NEL-independent 1586  gene regulation. NEL-dependent genes were defined as differentially expressed exclusively in cells 1587  treated with catalytically active rIpaH7.8, whereas NEL-independent genes showed comparable 1588  regulation in both rIpaH7.8- and rIpaH7.8 ΔC-treated cells (p < 0.05). For clarity, LPS co-treatment 1589  present in all conditions is not depicted. (D-F) Venn diagram analyses of differentially expressed genes 1590  across the indicated comparisons (Fig 4C-E), showing total (D), downregulated (E), and upregulated (F) 1591  DEGs. 1592 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+69 
+
+1593 
+
+Supplementary Figure S5. rIpaH7.8-dependent transcriptional signatures in LPS-stimulated 1594  monocytes. Heatmap of differentially expressed genes (DEGs) identified by the intersectional filtering 1595  strategy shown in Fig. S4D and summarized in Fig. 4F. Expression values are shown as Z-score-1596  normalized FPKM values per gene to emphasize relative differences across conditions. Rows represent 1597  individual genes clustered by Euclidean distance, and columns correspond to the indicated treatment 1598  conditions (LPS + rIpaH7.8, LPS + rIpaH7.8 ΔC, LPS only, and untreated control). Red indicates higher 1599  relative expression and blue indicates lower relative expression. Unsupervised clustering indicates four 1600  major gene expression patterns. 1601 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+70 
+
+1602 
+
+1603 
+
+1604 
+
+1605 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 71 
+
+Supplemental Figure S6. Transcriptomic changes independent of NEL activity. 1606  (A) Heatmap of NEL-independent differentially expressed genes identified by the intersectional strategy 1607  shown in Fig. S4C. Z-score-normalized FPKM values are shown for each gene (rows), clustered by 1608  Euclidean distance, across the indicated conditions (rIpaH7.8, rIpaH7.8 ΔC, LPS, and untreated). Red 1609  indicates higher and blue lower relative expression. (B-D) GO enrichment analysis of NEL-independent 1610  overlapping DEGs displayed as cnet plots for (B) Biological Processes, (C) Cellular Components, and 1611  (D) Molecular Functions. GO terms are shown as central nodes, with connected gene nodes indicating 1612  membership. 1613 
+
+1614 
+
+1615 
+
+1616 
+
+1617 
+
+1618 
+
+1619 
+
+1620 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+72 
+
+1621 
+
+1622 
+
+1623 
+
+1624 
+
+1625 
+
+1626 
+
+1627 
+
+1628 
+
+1629 
+
+1630 
+
+1631 
+
+1632 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 73 
+
+Supplemental Figure S7. Kinome profiling reveals rIpaH7.8-dependent modulation of LPS-1633  induced kinase signaling. Primary human monocytes were analyzed using PamGene kinase arrays 1634  to infer upstream kinase activity changes under the indicated conditions. (A) Volcano plot showing 1635  inferred kinase activity changes following LPS stimulation compared to untreated control cells, revealing 1636  broad alterations in PTK and STK activities. (B) Kinase activity changes in monocytes treated with 1637  catalytically active rIpaH7.8 compared to control cells, indicating direct effector-mediated modulation of 1638  selected kinase families. (C) Kinase activity profile of cells treated with the catalytically inactive 1639  rIpaH7.8 ΔC mutant compared to control, demonstrating partially overlapping but distinct, NEL-1640  independent effects. (D) Comparison of LPS-stimulated cells treated with rIpaH7.8 versus LPS alone, 1641  showing partial reversal of LPS-induced kinase attenuation and restoration of specific immune-related 1642  kinase activities. (E) Comparison of LPS-stimulated cells treated with rIpaH7.8 ΔC versus LPS alone, 1643  highlighting the requirement of the NEL domain for effective modulation of LPS-driven kinase responses. 1644  Each dot represents a kinase-associated peptide; significantly regulated peptides are highlighted (PTK, 1645  purple; STK, green), while non-significant peptides are shown in grey. The dashed line indicates the 1646  significance threshold (median final score > 1.2). 1647 
+
+1648 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+74 
+
+1649 
+
+1650 
+
+1651 
+
+1652 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 75 
+
+Supplemental Figure S8. Relative peptide phosphorylation profiles in response to rIpaH7.8. 1653  Primary human monocytes were stimulated with LPS (1 μg/mL) alone or in combination with rIpaH7.8 1654  or rIpaH7.8 ΔC (1.6 μM) for 6 h. Cell lysates were analyzed using PamGene kinase microarrays. 1655  Clustered heatmaps display log2 fold changes (log2FC) in phosphorylation of peptide substrates derived 1656  from protein tyrosine kinases (PTK, A) or serine/threonine kinases (STK, B) relative to untreated 1657  controls. Blue indicates reduced and red increased phosphorylation. Data represent three biological 1658  replicates, each consisting of pooled samples from three independent donors. (C) Venn diagram 1659  analyses of differentially phosphorylated peptides across the indicated comparisons. 1660 
+
+1661 
+
+1662 
+
+1663 
+
+1664 
+
+1665 
+
+1666 
+
+1667 
+
+1668 
+
+1669 
+
+1670 
+
+1671 
+
+1672 
+
+1673 
+
+1674 
+
+1675 
+
+1676 
+
+1677 
+
+1678 
+
+1679 
+
+1680 
+
+1681 
+
+1682 
+
+1683 
+
+1684 
+
+1685 
+
+1686 
+
+1687 
+
+1688 
+
+1689 
+
+1690 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+76 
+
+1691 
+
+Supplemental Figure S9. Kinome profiling of rIpaH7.8-treated human monocytes. 1692  (A) PTK and STK (B) activity across conditions. Color indicates relative activity changes (blue, 1693  decreased; white, unchanged; red, increased); node size reflects substrate specificity. (C) Venn 1694  diagrams depicting kinases significantly affected by rIpaH7.8 across comparisons, including all, 1695  positively regulated, and negatively regulated kinases. 1696 
+
+1697 
+
+1698 
+
+1699 
+
+1700 
+
+1701 
+
+1702 
+
+1703 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+77 
+
+1704 
+
+1705  Supplemental Figure S10. Kinome tree visualization of rIpaH7.8-induced kinase modulation. 1706  Differentially active kinases identified by upstream kinase analysis were mapped onto the human kinome 1707  tree. Node size reflects predicted kinase activity scores, and node color indicates the direction of 1708  regulation in rIpaH7.8-treated cells relative to rIpaH7.8 ΔC. Affected kinases cluster across multiple 1709  families, including AGC, CMGC, and TKL, indicating broad catalytic activity-dependent reprogramming 1710  of host kinase signaling. 1711 
+
+1712 
+
+1713 
+
+1714 
+
+1715 
+
+1716 
+
+1717 
+
+1718 
+
+1719 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+78 
+
+1720 
+
+1721  Supplemental Figure 11: Proposed mechanism of IpaH7.8 mediated promotion of vacuolar 1722  escape of Shigella . (A) In absence of IpaH7.8 mediated Rab13-retention, VASP Ser157 1723  phosphorylation is conducted by PKAC α, which in turn restricts cell-to-cell dissemination. (B) In 1724  presence of IpaH7.8, Rab13 is kept in its, active GTP bound form, leading to inhibition of PKAC α and 1725  thus prevents VASP phosphorylation. This abolishes cell-to-cell spread restriction and in a so far unclear 1726  mechanism promotes vacuolar disassembly. 1727 
+
+1728 
+
+1729 
+
+1730 
+
+1731 
+
+1732 
+
+1733 
+
+1734 
+
+1735 
+
+1736 
+
+1737 
+
+1738 
+
+1739 
+
+1740 
+
+1741 
+
+1742 
+
+1743 
+
+1744 
+
+1745 
+
+1746 
+
+1747 
+
+1748 
+
+1749 
+
+1750 
+
+1751 
+
+1752 
+
+1753 
+
+1754 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+79 
+
+Supplemental Table 1: Numeric values of most regulated genes by rIpaH7.8 compared to LPS 1755  stimulation alone. 1756 
+
+IpaH7.8 vs Ctrl  IpaH7.8 vs LPS  IpaH7.8 vs IpaH7.8 ΔC  LPS vs. Ctrl 
+
+Gene_ID  Name  log2FC  p-value  log2FC  p-value  log2FC  p-value  log2FC  p-value  
+
+> ENSG00000272398
+
+CD24  2.347  0.019  2.565  0.021  2.958  0.022  -0.180  0.887  
+
+> ENSG00000118785
+
+SPP1  1.535  0.020  1.966  5.88E -03  1.997  0.022  -0.389  0.537  
+
+> ENSG00000272168
+
+CASC15  3.660  7.96E -07  1.595  0.013  1.573  0.042  2.072  0.031  
+
+> ENSG00000198369
+
+SPRED2  2.896  4.89E -11  0.853  0.043  0.920  0.038  2.046  9.89E -05  
+
+> ENSG00000095383
+
+TBC1D2  1.132  5.52E -04  0.654  0.038  0.604  0.047  0.480  0.234  
+
+> ENSG00000043462
+
+LCP2  1.983  7.42E -16  0.330  0.218  0.577  0.010  1.661  5.96E -07  
+
+> ENSG00000161638
+
+ITGA5  1.487  1.08E -09  0.401  0.144  0.500  0.041  1.092  3.96E -04  
+
+> ENSG00000135046
+
+ANXA1  -0.987  0.003  -0.408  0.268  -0.773  0.033  -0.591  0.030  
+
+> ENSG00000168918
+
+INPP5D  -1.619  1.17E -11  -0.969  0.003  -0.817  8.88E -03  -0.661  0.032  
+
+> ENSG00000158517
+
+NCF1  0.723  0.001  -0.580  0.020  -0.819  8.31E -05  1.309  3.66E -06  
+
+> ENSG00000182487
+
+NCF1B  0.131  0.721  -0.769  0.041  -0.977  0.010  0.900  0.004  
+
+> ENSG00000211898
+
+IGHD  -0.861  0.075  -1.333  8.70E -03  -1.304  0.038  0.477  0.253  
+
+> ENSG00000181704
+
+YIPF6  -1.197  0.038  -1.388  2.29E -02  -1.582  0.020  0.189  0.678  
+
+> ENSG00000114988
+
+LMAN2L  -1.781  5.58E -03  -1.520  0.040  -1.764  0.017  -0.276  0.599  
+
+> ENSG00000188282
+
+RUFY4  -2.003  1.46E -04  -1.412  0.035  -1.905  0.008  -0.606  0.219  
+
+> ENSG00000180340
+
+FZD2  -3.031  2.30E -06  -2.063  0.013  -1.944  0.032  -0.981  0.056  
+
+> ENSG00000128000
+
+ZNF780B  -3.144  1.07E -06  -1.872  0.038  -2.246  0.014  -1.273  0.017  
+
+> ENSG00000100036
+
+SLC35E4  -2.320  0.083  -3.006  0.021  -2.838  0.045  0.689  0.379  
+
+> ENSG00000137809
+
+ITGA11  -4.001  2.56E -03  -1.257  0.562  -3.282  0.040  -2.811  7.43E -03  
+
+> ENSG00000186792
+
+HYAL3  -4.783  4.21E -03  -4.666  0.015  -4.604  0.022  -0.180  0.851  
+
+> ENSG00000213876
+
+RPL7AP64  -7.319  1.79E -08  -5.037  5.76E -03  -4.925  0.023  -2.366  7.76E -04 
+
+1757 
+
+1758 
+
+1759 
+
+1760 
+
+1761  Supplemental Table S2: Contrasts of peptide phosphorylation analysis 1762 
+
+1763 
+
+1764 
+
+1765  (attached as supplemental file) 1766 
+
+1767 
+
+1768 
+
+1769 
+
+1770 
+
+1771 
+
+1772 
+
+1773 
+
+1774 
+
+1775 
+
+1776 
+
+1777 
+
+1778 
+
+1779 
+
+1780 
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint 80 
+
+Supplemental Table 3: List of relevant kinases significantly regulated by rIpaH7.8 treatment 1781  (NEL dependent; IpaH7.8 vs. IpaH7.8 ΔC ). 1782 
+
+Kinase  Uniprot -ID 
+
+Median Final score 
+
+(Specificity) 
+
+Mean Kinase Statistic 
+
+(Kinase activity change)  Chip 
+
+MYLK3  Q32MK0  3.854  -0.874  STK 
+
+PTK7  Q13308  2.601  0.719  PTK 
+
+TXK  P42681  2.387  0.546  PTK 
+
+PRKACA  P17612  2.322  -0.356  STK 
+
+SRMS  Q9H3Y6  2.255  0.532  PTK 
+
+CAMK2B  Q13554  2.179  -0.582  STK 
+
+EPHA10  Q5JZY3  2.158  0.727  PTK 
+
+AKT3  Q9Y243  2.088  -0.559  STK 
+
+EPHA1  P21709  1.863  0.598  PTK 
+
+PRKCA  P17252  1.834  -0.412  STK 
+
+PRKG1  Q13976  1.834  -0.368  STK 
+
+RPS6KA5  O75582  1.793  -0.344  STK 
+
+CSK  P41240  1.785  0.488  PTK 
+
+RPS6KA3  P51812  1.724  -0.411  STK 
+
+PRKG2  Q13237  1.631  -0.367  STK 
+
+FES  P07332  1.608  0.539  PTK 
+
+CAMK2G  Q13555  1.525  -0.453  STK 
+
+PIM2  Q9P1W9  1.512  -0.342  STK 
+
+PLK3  Q9H4B4  1.427  -0.423  STK 
+
+RPS6KL1  Q9Y6S9  1.379  0.488  STK 
+
+CAMK2A  Q9UQM7  1.340  -0.465  STK 
+
+RPS6KB2  Q9UBS0  1.333  -0.378  STK 
+
+SGK2  Q9HBY8  1.332  -0.415  STK 
+
+SGK1  O00141  1.324  -0.405  STK 
+
+PRKCD  Q05655  1.299  -0.372  STK 
+
+RPS6KA4  O75676  1.285  -0.437  STK 
+
+PSKH1  P11801  1.239  -0.478  STK 
+
+AKT2  P31751  1.231  -0.353  STK 
+
+1783 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+81 
+
+Supplemental Table 4: List of relevant kinases significantly regulated by rIpaH7.8 treatment 1784  (NEL independent; IpaH7.8 vs. LPS). 1785  Full list of peptide regulation can be accessed at xxxDOI; Suppl_Data_S4 Tab 1786 
+
+Kinase  Uniprot-ID  Median Final score 
+
+(Specificity) 
+
+Mean Kinase Statistic  Chip 
+
+(Kinase activity change) 
+
+PRKX  P51817  3.106  -0.269  STK 
+
+CAMK2D  Q13557  2.963  -0.671  STK 
+
+CDK13  Q14004  1.265  1.655  STK 
+
+1787 
+
+> .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint
+
+.CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint .CC-BY 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 1, 2026. ;https://doi.org/10.64898/2026.04.28.721327 doi: bioRxiv preprint

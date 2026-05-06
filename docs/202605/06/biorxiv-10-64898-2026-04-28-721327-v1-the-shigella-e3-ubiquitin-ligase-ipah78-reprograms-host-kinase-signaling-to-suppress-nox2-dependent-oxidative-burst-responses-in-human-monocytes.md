@@ -1,0 +1,27 @@
+---
+title: The Shigella E3 ubiquitin ligase IpaH7.8 reprograms host kinase signaling to suppress NOX2-dependent oxidative burst responses in human monocytes
+title_zh: 志贺氏菌 E3 泛素连接酶 IpaH7.8 重编程宿主激酶信号传导，以抑制人单核细胞中 NOX2 依赖性的氧化爆发反应
+authors: "Karagöz, T., Ngueya Yango, I., Norkowski, S., Teschke, Y., Körner, B., Fernandes, J. M., Börgeling, Y., Dersch, P., Rüter, C."
+date: 2026-05-01
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.28.721327v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.5
+evidence: 抑制人单核细胞中NOX2依赖性氧化爆发反应
+tldr: 本研究揭示了志贺氏菌效应蛋白IpaH7.8通过其独特的结构域实现自主进入宿主细胞，并作为多层免疫调节因子重编程宿主信号网络。研究发现IpaH7.8不仅能通过泛素化降解GSDMD抑制炎症小体，还能通过转录和激酶组学重塑，协同抑制NOX2复合物活性，从而阻断人单核细胞的氧化应激反应，为理解细菌免疫逃逸机制提供了新视角。
+source: biorxiv
+selection_source: fresh_fetch
+motivation: 旨在探究志贺氏菌效应蛋白IpaH7.8如何通过非分泌系统依赖的方式进入细胞并操纵复杂的宿主免疫信号通路。
+method: 利用重组蛋白技术、转录组学和激酶组学分析，结合原代人单核细胞模型，系统研究了IpaH7.8的细胞进入机制及其对宿主信号网络的影响。
+result: IpaH7.8通过脂质体介导的内吞作用进入细胞，不仅抑制GSDMD介导的炎症反应，还通过下调NCF1表达和抑制PKC/PKA信号通路，显著降低了NOX2依赖的活性氧产生。
+conclusion: IpaH7.8是一种兼具细胞穿透能力和多重酶促调节功能的效应蛋白，通过整合泛素化和激酶信号重编程，协同抑制宿主的炎症和抗菌防御反应。
+---
+
+## 摘要
+细菌效应蛋白操纵宿主信号级联反应（包括免疫反应）以促进感染。虽然大多数革兰氏阴性菌的效应蛋白依赖分泌系统进行细胞内递送，但某些效应蛋白具有内在的细胞穿透能力。在本研究中，我们表征了福氏志贺氏菌（Shigella flexneri）LPX 效应蛋白 IpaH7.8，它通过不同的结构域结合了自主细胞进入和对免疫调节宿主信号通路的酶促调节。我们证明重组 IpaH7.8 (rIpaH7.8) 通过脂质筏介导的胞吞作用进入人类细胞，且不依赖于志贺氏菌的 III 型分泌系统 (T3SS)，并通过由两个 α-螺旋组成的保守 N 端结构域逃逸内体。在细胞质中，该细胞穿透效应蛋白的 C 端 E3 泛素连接酶结构域靶向成孔蛋白 gasdermin D (GSDMD)，从而抑制炎症小体诱导的 IL-1β 释放。除了抑制炎症小体外，对原代人单核细胞的综合转录组和激酶组分析显示，IpaH7.8 诱导了宿主信号网络的协调重编程。聚类解析的基因表达分析表明，它选择性地抑制了免疫效应通路，同时诱导了调节程序并干扰了囊泡运输。这些转录变化与激酶活性重塑相汇合，其特征是 PKC 和 PKA 依赖性信号通路的减弱。值得注意的是，两个数据集都确定 NOX2 复合物是 IpaH7.8 活性的核心靶点。NOX2 亚基 NCF1 在转录水平上被下调，并且在调节位点显示出磷酸化降低，表明其激活受损。一致地，IpaH7.8 显著减少了原代人单核细胞中活性氧的产生，证明了对氧化爆发反应的功能性抑制。总之，我们的研究结果表明，IpaH7.8 作为宿主免疫的多层调节因子，整合了泛素化和激酶信号传导，以抑制炎症和抗菌反应。通过汇聚在 NOX2 轴上，该效应蛋白揭示了宿主防御中的一个核心脆弱点，并突显了细菌效应蛋白作为复杂信号网络调节剂的潜力，具有潜在的治疗意义。作者总结：诸如福氏志贺氏菌之类的细菌病原体通过操纵宿主免疫反应在人类细胞内生存和扩散。已知志贺氏菌效应蛋白 IpaH7.8 通过靶向 gasdermin D 来阻断炎症性细胞死亡。在这里，我们展示了 IpaH7.8 可以在没有细菌分泌系统的情况下进入人类细胞。它利用专门的蛋白质结构域跨越细胞膜并到达细胞质。一旦进入细胞，IpaH7.8 通过向免疫蛋白添加泛素和重编程磷酸化通路来改变宿主细胞信号传导。这种双重功能使志贺氏菌能够抑制炎症并促进其逃避免疫防御。我们的发现揭示了 IpaH7.8 如何在单个蛋白质中结合细胞进入、免疫逃逸和细胞骨架控制，并强调了其作为调节疾病背景下炎症工具的潜力。
+
+## Abstract
+Bacterial effector proteins manipulate host signalling cascades, including immune responses, to facilitate infection. While most effectors of Gram-negative bacteria rely on a secretion system for intracellular delivery, some possess intrinsic cell-penetrating capabilities. Here, we characterize the Shigella flexneri LPX effector IpaH7.8, which combines autonomous cell entry with enzymatic modulation of immunomodulatory host signaling pathways through distinct structural domains. We show that recombinant IpaH7.8 (rIpaH7.8) enters human cells independent of Shigellas type III secretion system (T3SS) via lipid raft-mediated endocytosis and escapes the endosome through a conserved N-terminal domain composed of two -helices. In the cytosol, the C-terminal E3 ubiquitin ligase domain of the cell-penetrating effector protein targets the pore-forming protein gasdermin D (GSDMD), suppressing inflammasome-induced IL-1{beta} release. Beyond inflammasome inhibition, integrated transcriptomic and kinome profiling in primary human monocytes revealed that IpaH7.8 induces a coordinated reprogramming of host signaling networks. Cluster-resolved gene expression analysis demonstrated selective suppression of immune effector pathways alongside induction of regulatory programs and interference with vesicular trafficking. These transcriptional changes converged with kinase activity remodeling, characterized by attenuation of PKC- and PKA-dependent signaling pathways. Notably, both datasets identified the NOX2 complex as a central target of IpaH7.8 activity. The NOX2 subunit NCF1 was downregulated at the transcriptional level and showed reduced phosphorylation at regulatory sites, indicating impaired activation. Consistently, IpaH7.8 significantly reduced reactive oxygen species production in primary human monocytes, demonstrating functional suppression of oxidative burst responses.
+
+Together, our findings reveal that IpaH7.8 acts as a multi-layered regulator of host immunity that integrates ubiquitination and kinase signaling to suppress both inflammatory and antimicrobial responses. By converging on the NOX2 axis, this effector uncovers a central vulnerability in host defense and highlights bacterial effector proteins as modulators of complex signaling networks with potential therapeutic relevance.
+
+Author SummaryBacterial pathogens like Shigella flexneri manipulate host immune responses to survive and spread within human cells. The Shigella effector protein IpaH7.8 is known to block inflammatory cell death by targeting gasdermin D. Here, we show that IpaH7.8 can enter human cells without a bacterial secretion system. It uses a specialized protein domain to cross the membrane and reach the cytoplasm. Once inside, IpaH7.8 alters host cell signaling by both attaching ubiquitin to immune proteins and reprogramming phosphorylation pathways. This dual function allows Shigella to suppress inflammation and promotes its escape from immune defenses. Our findings reveal how IpaH7.8 combines cell entry, immune evasion, and cytoskeletal control in a single protein, and highlight its potential as a tool to modulate inflammation in disease contexts.

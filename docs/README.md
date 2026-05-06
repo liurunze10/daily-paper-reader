@@ -6,64 +6,67 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-05
-- 运行时间：2026-05-05 20:20:08 UTC
+- 最新运行日期：2026-05-06
+- 运行时间：2026-05-06 20:50:50 UTC
 - 运行状态：成功
-- 本次总论文数：14
-- 精读区：3
+- 本次总论文数：15
+- 精读区：4
 - 速读区：11
 
 ### 今日简报（AI）
-今日精研14篇文献，深度解析了氧化还原失衡与免疫微环境重塑在肠道及炎症性疾病中的关键作用。
-重点揭示了激活Nrf2缓解乳糜泻损伤的新策略，以及PTP1B在膜接触位点抑制超氧化物产生的分子机制。
-建议关注抗氧化通路与巨噬细胞重塑在自身免疫病及肿瘤免疫治疗中的转化潜力。
-- 详情：[/202605/05/README](/202605/05/README)
+今日深挖 15 篇前沿文献，重点攻克 IBD 单细胞分类基准与肿瘤免疫逃逸机制。
+核心突破在于利用供体感知模型优化肠病诊断，并揭示 AXL 抑制剂如何重塑巨噬细胞以激活免疫治疗。
+建议关注单细胞组学在精准诊疗中的落地，以及巨噬细胞在组织修复与抗感染中的关键作用。
+- 详情：[/202605/06/README](/202605/06/README)
 
 ### 精读区论文标签
-1. [Targeting redox imbalance through Nrf2 activation in the inflamed coeliac duodenum.](/202605/05/biorxiv-10-64898-2026-04-22-720101-v2-targeting-redox-imbalance-through-nrf2-activation-in-the-inflamed-coeliac-duodenum)  
+1. [Donor-Aware scRNA-seq Benchmarks for IBD Classification](/202605/06/2605.03281v1-donor-aware-scrna-seq-benchmarks-for-ibd-classification)  
    标签：评分：9.0/10、query:ros-mp
-   evidence：针对胃肠道炎症中的氧化还原失衡和氧化应激
-2. [Membrane contact site resident PTP1B limits superoxide production by suppressing a Syk-Shc1-Phagocyte Oxidase relay.](/202605/05/biorxiv-10-64898-2026-03-17-711902-v2-membrane-contact-site-resident-ptp1b-limits-superoxide-production-by-suppressing-a-syk-shc1-phagocyte-oxidase-relay)  
+   evidence：针对溃疡性结肠炎和克罗恩病队列的供体感知单细胞测序IBD分类基准。
+2. [AXL inhibition reprograms tumor-associated macrophages to restore immune checkpoint blockade efficacy in a polarization-context-dependent manner](/202605/06/biorxiv-10-1101-2025-07-30-667666-v2-axl-inhibition-reprograms-tumor-associated-macrophages-to-restore-immune-checkpoint-blockade-efficacy-in-a-polarization-context-dependent-manner)  
+   标签：评分：8.5/10、query:ros-mp
+   evidence：以极化背景依赖的方式重编程肿瘤相关巨噬细胞
+3. [Membrane contact site resident PTP1B limits superoxide production by suppressing a Syk-Shc1-Phagocyte Oxidase relay.](/202605/06/biorxiv-10-64898-2026-03-17-711902-v2-membrane-contact-site-resident-ptp1b-limits-superoxide-production-by-suppressing-a-syk-shc1-phagocyte-oxidase-relay)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：PTP1B在吞噬过程中限制巨噬细胞产生超氧化物(ROS)
-3. [Transient efferocytosis-induced activation of IKKβ reprograms macrophages to promote tissue resolution](/202605/05/biorxiv-10-64898-2026-04-27-720940-v1-transient-efferocytosis-induced-activation-of-ikk-reprograms-macrophages-to-promote-tissue-resolution)  
+   evidence：PTP1B 在吞噬过程中限制巨噬细胞产生超氧化物
+4. [Transient efferocytosis-induced activation of IKKβ reprograms macrophages to promote tissue resolution](/202605/06/biorxiv-10-64898-2026-04-27-720940-v1-transient-efferocytosis-induced-activation-of-ikk-reprograms-macrophages-to-promote-tissue-resolution)  
    标签：评分：8.0/10、query:ros-mp
    evidence：胞葬作用将巨噬细胞重编程为消退/修复表型
 
 ### 速读区论文标签
-1. [AXL inhibition reprograms tumor-associated macrophages to restore immune checkpoint blockade efficacy in a polarization-context-dependent manner](/202605/05/biorxiv-10-1101-2025-07-30-667666-v2-axl-inhibition-reprograms-tumor-associated-macrophages-to-restore-immune-checkpoint-blockade-efficacy-in-a-polarization-context-dependent-manner)  
+1. [The Shigella E3 ubiquitin ligase IpaH7.8 reprograms host kinase signaling to suppress NOX2-dependent oxidative burst responses in human monocytes](/202605/06/biorxiv-10-64898-2026-04-28-721327-v1-the-shigella-e3-ubiquitin-ligase-ipah78-reprograms-host-kinase-signaling-to-suppress-nox2-dependent-oxidative-burst-responses-in-human-monocytes)  
    标签：评分：7.5/10、query:ros-mp
-   evidence：以极化背景依赖的方式重新编程肿瘤相关巨噬细胞
-2. [Crosstalk between Stromal Cells and Macrophages Shapes Host Immunity to Mycobacteria](/202605/05/biorxiv-10-64898-2026-02-05-704052-v2-crosstalk-between-stromal-cells-and-macrophages-shapes-host-immunity-to-mycobacteria)  
+   evidence：抑制人单核细胞中NOX2依赖性氧化爆发反应
+2. [Glucocorticoid Receptor Signaling in Myeloid Cells Orchestrates Inflammation Resolution and Muscle Repair](/202605/06/biorxiv-10-1101-2025-10-29-685370-v2-glucocorticoid-receptor-signaling-in-myeloid-cells-orchestrates-inflammation-resolution-and-muscle-repair)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：研究糖皮质激素受体信号在调节巨噬细胞动态和炎症消退中的作用。
+3. [Crosstalk between Stromal Cells and Macrophages Shapes Host Immunity to Mycobacteria](/202605/06/biorxiv-10-64898-2026-02-05-704052-v2-crosstalk-between-stromal-cells-and-macrophages-shapes-host-immunity-to-mycobacteria)  
    标签：评分：7.0/10、query:ros-mp
    evidence：基质细胞塑造巨噬细胞反应和多样化
-3. [Epithelial NCAPD3 expression protects against stress-induced intestinal injury in mice](/202605/05/biorxiv-10-64898-2026-04-21-719792-v2-epithelial-ncapd3-expression-protects-against-stress-induced-intestinal-injury-in-mice)  
+4. [Comparative multi-omics of the macrophage response to infection with Mycobacterium tuberculosis complex bacteria reveals pathogen-driven epigenomic reprogramming](/202605/06/biorxiv-10-64898-2026-02-15-705989-v2-comparative-multi-omics-of-the-macrophage-response-to-infection-with-mycobacterium-tuberculosis-complex-bacteria-reveals-pathogen-driven-epigenomic-reprogramming)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：溃疡性结肠炎患者中的NCAPD3表达
-4. [Metabolic-secretory decoupling defines a disease-intrinsic state in rheumatoid arthritis monocytes](/202605/05/biorxiv-10-64898-2026-04-23-720351-v1-metabolic-secretory-decoupling-defines-a-disease-intrinsic-state-in-rheumatoid-arthritis-monocytes)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：单核细胞在M1和M2巨噬细胞激活状态下的代谢变化
-5. [CD47 Blockade Reprograms the Monocyte-Macrophage Axis to Promote Inflammation Resolution in Atherosclerosis](/202605/05/biorxiv-10-64898-2026-04-24-720546-v1-cd47-blockade-reprograms-the-monocyte-macrophage-axis-to-promote-inflammation-resolution-in-atherosclerosis)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：CD47阻断重编程单核-巨噬细胞轴
-6. [Fibroblast signaling influences macrophage-dependent, biomaterial-induced tissue remodeling](/202605/05/biorxiv-10-64898-2026-04-24-720640-v1-fibroblast-signaling-influences-macrophage-dependent-biomaterial-induced-tissue-remodeling)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：巨噬细胞依赖性炎症及促炎/抗炎信号
-7. [Integration of spatial single-cell proteomics and spatial metabolomics reveals tumor microenvironment predictive of immunotherapy response in mucosal melanoma](/202605/05/biorxiv-10-64898-2026-04-23-720453-v1-integration-of-spatial-single-cell-proteomics-and-spatial-metabolomics-reveals-tumor-microenvironment-predictive-of-immunotherapy-response-in-mucosal-melanoma)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：空间蛋白质组学和代谢组学解析肿瘤微环境中的巨噬细胞状态
-8. [Glucocorticoid Receptor Signaling in Myeloid Cells Orchestrates Inflammation Resolution and Muscle Repair](/202605/05/biorxiv-10-1101-2025-10-29-685370-v2-glucocorticoid-receptor-signaling-in-myeloid-cells-orchestrates-inflammation-resolution-and-muscle-repair)  
-   标签：评分：6.0/10、query:ros-mp
-   evidence：骨髓特异性糖皮质激素受体调节巨噬细胞动态和炎症消退
-9. [Comparative multi-omics of the macrophage response to infection with Mycobacterium tuberculosis complex bacteria reveals pathogen-driven epigenomic reprogramming](/202605/05/biorxiv-10-64898-2026-02-15-705989-v2-comparative-multi-omics-of-the-macrophage-response-to-infection-with-mycobacterium-tuberculosis-complex-bacteria-reveals-pathogen-driven-epigenomic-reprogramming)  
-   标签：评分：6.0/10、query:ros-mp
    evidence：感染期间巨噬细胞的反应和表观基因组重编程
-10. [Ubiquitylation by the GID/CTLH complex regulates the metabolic and innate immune response of macrophages to infection by Mycobacterium tuberculosis](/202605/05/biorxiv-10-64898-2026-04-24-720540-v1-ubiquitylation-by-the-gidctlh-complex-regulates-the-metabolic-and-innate-immune-response-of-macrophages-to-infection-by-mycobacterium-tuberculosis)  
+5. [Fibroblast signaling influences macrophage-dependent, biomaterial-induced tissue remodeling](/202605/06/biorxiv-10-64898-2026-04-24-720640-v1-fibroblast-signaling-influences-macrophage-dependent-biomaterial-induced-tissue-remodeling)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：巨噬细胞依赖性组织重塑及促炎/抗炎信号
+6. [Spatially Distinct Macrophage Subsets Drive Myofibroblast Heterogeneity and Maladaptive Fibrosis in Lupus Nephritis](/202605/06/biorxiv-10-64898-2026-04-27-719870-v1-spatially-distinct-macrophage-subsets-drive-myofibroblast-heterogeneity-and-maladaptive-fibrosis-in-lupus-nephritis)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：狼疮性肾炎中空间独特的巨噬细胞亚群及其与成纤维细胞的相互作用。
+7. [Cross-Species Transcriptomic Integration Reveals a MIRO1-Mediated Macrophage-T Cell Axis in Glioma](/202605/06/biorxiv-10-1101-2025-11-10-686781-v2-cross-species-transcriptomic-integration-reveals-a-miro1-mediated-macrophage-t-cell-axis-in-glioma)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：巨噬细胞反应和先天免疫信号的调节因子
-11. [Novel role of the lncRNA EPR as oncosuppressor in intestinal cancer.](/202605/05/biorxiv-10-64898-2026-04-28-719975-v1-novel-role-of-the-lncrna-epr-as-oncosuppressor-in-intestinal-cancer)  
+   evidence：线粒体蛋白 MIRO1 影响巨噬细胞-T 细胞轴和免疫信号
+8. [Coenzyme A is a redox sensing cofactor for malic enzyme 2 regulating oxidative stress and mitochondrial metabolism](/202605/06/biorxiv-10-64898-2026-04-27-721221-v1-coenzyme-a-is-a-redox-sensing-cofactor-for-malic-enzyme-2-regulating-oxidative-stress-and-mitochondrial-metabolism)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：lncRNA EPR在溃疡性结肠炎中表达降低并维持黏膜完整性
+   evidence：通过CoA和ME2进行氧化还原感知和氧化应激调节
+9. [Novel role of the lncRNA EPR as oncosuppressor in intestinal cancer.](/202605/06/biorxiv-10-64898-2026-04-28-719975-v1-novel-role-of-the-lncrna-epr-as-oncosuppressor-in-intestinal-cancer)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：lncRNA EPR在溃疡性结肠炎和黏膜完整性中的作用
+10. [Microbiota-derived indole limits Campylobacter jejuni colonization by inhibiting respiration and metabolism](/202605/06/biorxiv-10-64898-2026-04-28-721463-v1-microbiota-derived-indole-limits-campylobacter-jejuni-colonization-by-inhibiting-respiration-and-metabolism)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：DSS诱导的肠道炎症和结肠炎模型
+11. [Resident and Engrafting E. coli Populations Expand Through Dissimilar Pathways in the Inflamed Gut](/202605/06/biorxiv-10-64898-2026-04-29-721686-v1-resident-and-engrafting-e-coli-populations-expand-through-dissimilar-pathways-in-the-inflamed-gut)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：DSS诱导的结肠炎模型和肠道炎症
 
 
 <div class="dpr-home-promo-card">
