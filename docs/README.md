@@ -6,67 +6,70 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-06
-- 运行时间：2026-05-06 20:50:50 UTC
+- 最新运行日期：2026-05-07
+- 运行时间：2026-05-07 20:15:50 UTC
 - 运行状态：成功
-- 本次总论文数：15
-- 精读区：4
+- 本次总论文数：16
+- 精读区：5
 - 速读区：11
 
 ### 今日简报（AI）
-今日深挖 15 篇前沿文献，重点攻克 IBD 单细胞分类基准与肿瘤免疫逃逸机制。
-核心突破在于利用供体感知模型优化肠病诊断，并揭示 AXL 抑制剂如何重塑巨噬细胞以激活免疫治疗。
-建议关注单细胞组学在精准诊疗中的落地，以及巨噬细胞在组织修复与抗感染中的关键作用。
-- 详情：[/202605/06/README](/202605/06/README)
+今日追踪16篇免疫调控前沿，深度解析了NCoR1调控肠道炎症及结核杆菌代谢逃逸的新机制。
+核心结论揭示了辅阻遏因子对粘蛋白动态的控制作用，以及病原体如何通过重塑巨噬细胞极化实现胞内持久生存。
+建议重点关注巨噬细胞在组织修复与炎症消退中的代谢适配机制，这是理解慢性病转归的关键。
+- 详情：[/202605/07/README](/202605/07/README)
 
 ### 精读区论文标签
-1. [Donor-Aware scRNA-seq Benchmarks for IBD Classification](/202605/06/2605.03281v1-donor-aware-scrna-seq-benchmarks-for-ibd-classification)  
+1. [Corepressor NCoR1-mediated regulation of mucin dynamics governs gut inflammation](/202605/07/biorxiv-10-64898-2026-05-02-722388-v1-corepressor-ncor1-mediated-regulation-of-mucin-dynamics-governs-gut-inflammation)  
    标签：评分：9.0/10、query:ros-mp
-   evidence：针对溃疡性结肠炎和克罗恩病队列的供体感知单细胞测序IBD分类基准。
-2. [AXL inhibition reprograms tumor-associated macrophages to restore immune checkpoint blockade efficacy in a polarization-context-dependent manner](/202605/06/biorxiv-10-1101-2025-07-30-667666-v2-axl-inhibition-reprograms-tumor-associated-macrophages-to-restore-immune-checkpoint-blockade-efficacy-in-a-polarization-context-dependent-manner)  
-   标签：评分：8.5/10、query:ros-mp
-   evidence：以极化背景依赖的方式重编程肿瘤相关巨噬细胞
-3. [Membrane contact site resident PTP1B limits superoxide production by suppressing a Syk-Shc1-Phagocyte Oxidase relay.](/202605/06/biorxiv-10-64898-2026-03-17-711902-v2-membrane-contact-site-resident-ptp1b-limits-superoxide-production-by-suppressing-a-syk-shc1-phagocyte-oxidase-relay)  
+   evidence：NCoR1介导的炎症性肠病中粘蛋白动力学调节
+2. [C-Terminal Domain of Mycobacterium tuberculosis Glutamate Decarboxylase determines the bacterial stress-adaptive metabolic state that steers macrophage polarisation supporting intracellular persistence](/202605/07/biorxiv-10-64898-2026-05-05-722917-v1-c-terminal-domain-of-mycobacterium-tuberculosis-glutamate-decarboxylase-determines-the-bacterial-stress-adaptive-metabolic-state-that-steers-macrophage-polarisation-supporting-intracellular-persistence)  
+   标签：评分：9.0/10、query:ros-mp
+   evidence：结核分枝杆菌对氧化应激的代谢适应引导巨噬细胞极化
+3. [Donor-Aware scRNA-seq Benchmarks for IBD Classification](/202605/07/2605.03281v1-donor-aware-scrna-seq-benchmarks-for-ibd-classification)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：PTP1B 在吞噬过程中限制巨噬细胞产生超氧化物
-4. [Transient efferocytosis-induced activation of IKKβ reprograms macrophages to promote tissue resolution](/202605/06/biorxiv-10-64898-2026-04-27-720940-v1-transient-efferocytosis-induced-activation-of-ikk-reprograms-macrophages-to-promote-tissue-resolution)  
+   evidence：用于IBD分类的供体感知单细胞转录组基准
+4. [AXL inhibition reprograms tumor-associated macrophages to restore immune checkpoint blockade efficacy in a polarization-context-dependent manner](/202605/07/biorxiv-10-1101-2025-07-30-667666-v2-axl-inhibition-reprograms-tumor-associated-macrophages-to-restore-immune-checkpoint-blockade-efficacy-in-a-polarization-context-dependent-manner)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：胞葬作用将巨噬细胞重编程为消退/修复表型
+   evidence：AXL抑制以极化背景依赖的方式重编程肿瘤相关巨噬细胞
+5. [Membrane contact site resident PTP1B limits superoxide production by suppressing a Syk-Shc1-Phagocyte Oxidase relay.](/202605/07/biorxiv-10-64898-2026-03-17-711902-v2-membrane-contact-site-resident-ptp1b-limits-superoxide-production-by-suppressing-a-syk-shc1-phagocyte-oxidase-relay)  
+   标签：评分：8.0/10、query:ros-mp
+   evidence：PTP1B在吞噬过程中限制巨噬细胞产生超氧化物
 
 ### 速读区论文标签
-1. [The Shigella E3 ubiquitin ligase IpaH7.8 reprograms host kinase signaling to suppress NOX2-dependent oxidative burst responses in human monocytes](/202605/06/biorxiv-10-64898-2026-04-28-721327-v1-the-shigella-e3-ubiquitin-ligase-ipah78-reprograms-host-kinase-signaling-to-suppress-nox2-dependent-oxidative-burst-responses-in-human-monocytes)  
-   标签：评分：7.5/10、query:ros-mp
-   evidence：抑制人单核细胞中NOX2依赖性氧化爆发反应
-2. [Glucocorticoid Receptor Signaling in Myeloid Cells Orchestrates Inflammation Resolution and Muscle Repair](/202605/06/biorxiv-10-1101-2025-10-29-685370-v2-glucocorticoid-receptor-signaling-in-myeloid-cells-orchestrates-inflammation-resolution-and-muscle-repair)  
+1. [Epigenetic regulation of alveolar macrophage homeostasis by histone deacetylase 1 and 2](/202605/07/biorxiv-10-1101-2024-05-06-590855-v2-epigenetic-regulation-of-alveolar-macrophage-homeostasis-by-histone-deacetylase-1-and-2)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：研究糖皮质激素受体信号在调节巨噬细胞动态和炎症消退中的作用。
-3. [Crosstalk between Stromal Cells and Macrophages Shapes Host Immunity to Mycobacteria](/202605/06/biorxiv-10-64898-2026-02-05-704052-v2-crosstalk-between-stromal-cells-and-macrophages-shapes-host-immunity-to-mycobacteria)  
+   evidence：巨噬细胞稳态和发育的表观遗传调节
+2. [Glucocorticoid Receptor Signaling in Myeloid Cells Orchestrates Inflammation Resolution and Muscle Repair](/202605/07/biorxiv-10-1101-2025-10-29-685370-v2-glucocorticoid-receptor-signaling-in-myeloid-cells-orchestrates-inflammation-resolution-and-muscle-repair)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：基质细胞塑造巨噬细胞反应和多样化
-4. [Comparative multi-omics of the macrophage response to infection with Mycobacterium tuberculosis complex bacteria reveals pathogen-driven epigenomic reprogramming](/202605/06/biorxiv-10-64898-2026-02-15-705989-v2-comparative-multi-omics-of-the-macrophage-response-to-infection-with-mycobacterium-tuberculosis-complex-bacteria-reveals-pathogen-driven-epigenomic-reprogramming)  
+   evidence：髓系特异性糖皮质激素受体调节巨噬细胞动态和炎症消退
+3. [Transient efferocytosis-induced activation of IKKβ reprograms macrophages to promote tissue resolution](/202605/07/biorxiv-10-64898-2026-04-27-720940-v1-transient-efferocytosis-induced-activation-of-ikk-reprograms-macrophages-to-promote-tissue-resolution)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：感染期间巨噬细胞的反应和表观基因组重编程
-5. [Fibroblast signaling influences macrophage-dependent, biomaterial-induced tissue remodeling](/202605/06/biorxiv-10-64898-2026-04-24-720640-v1-fibroblast-signaling-influences-macrophage-dependent-biomaterial-induced-tissue-remodeling)  
+   evidence：胞葬作用将巨噬细胞重编程为消退/修复表型
+4. [Novel role of the lncRNA EPR as oncosuppressor in intestinal cancer.](/202605/07/biorxiv-10-64898-2026-04-28-719975-v1-novel-role-of-the-lncrna-epr-as-oncosuppressor-in-intestinal-cancer)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：巨噬细胞依赖性组织重塑及促炎/抗炎信号
-6. [Spatially Distinct Macrophage Subsets Drive Myofibroblast Heterogeneity and Maladaptive Fibrosis in Lupus Nephritis](/202605/06/biorxiv-10-64898-2026-04-27-719870-v1-spatially-distinct-macrophage-subsets-drive-myofibroblast-heterogeneity-and-maladaptive-fibrosis-in-lupus-nephritis)  
+   evidence：LncRNA EPR在溃疡性结肠炎中表达降低，并维持粘膜完整性
+5. [The Shigella E3 ubiquitin ligase IpaH7.8 reprograms host kinase signaling to suppress NOX2-dependent oxidative burst responses in human monocytes](/202605/07/biorxiv-10-64898-2026-04-28-721327-v1-the-shigella-e3-ubiquitin-ligase-ipah78-reprograms-host-kinase-signaling-to-suppress-nox2-dependent-oxidative-burst-responses-in-human-monocytes)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：狼疮性肾炎中空间独特的巨噬细胞亚群及其与成纤维细胞的相互作用。
-7. [Cross-Species Transcriptomic Integration Reveals a MIRO1-Mediated Macrophage-T Cell Axis in Glioma](/202605/06/biorxiv-10-1101-2025-11-10-686781-v2-cross-species-transcriptomic-integration-reveals-a-miro1-mediated-macrophage-t-cell-axis-in-glioma)  
+   evidence：抑制单核细胞中NOX2依赖性的氧化爆发
+6. [Resident and Engrafting E. coli Populations Expand Through Dissimilar Pathways in the Inflamed Gut](/202605/07/biorxiv-10-64898-2026-04-29-721686-v1-resident-and-engrafting-e-coli-populations-expand-through-dissimilar-pathways-in-the-inflamed-gut)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：使用DSS诱导的结肠炎模型研究肠道炎症和细菌扩增。
+7. [A Dynamic Model of Calcium Frequency Modulation by Mitochondrial Superoxide in Non-excitable Cells](/202605/07/biorxiv-10-1101-2025-07-28-667258-v2-a-dynamic-model-of-calcium-frequency-modulation-by-mitochondrial-superoxide-in-non-excitable-cells)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：线粒体蛋白 MIRO1 影响巨噬细胞-T 细胞轴和免疫信号
-8. [Coenzyme A is a redox sensing cofactor for malic enzyme 2 regulating oxidative stress and mitochondrial metabolism](/202605/06/biorxiv-10-64898-2026-04-27-721221-v1-coenzyme-a-is-a-redox-sensing-cofactor-for-malic-enzyme-2-regulating-oxidative-stress-and-mitochondrial-metabolism)  
+   evidence：模拟了线粒体超氧化物（一种ROS）对细胞内信号传导的调节作用。
+8. [Cross-Species Transcriptomic Integration Reveals a MIRO1-Mediated Macrophage-T Cell Axis in Glioma](/202605/07/biorxiv-10-1101-2025-11-10-686781-v2-cross-species-transcriptomic-integration-reveals-a-miro1-mediated-macrophage-t-cell-axis-in-glioma)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：通过CoA和ME2进行氧化还原感知和氧化应激调节
-9. [Novel role of the lncRNA EPR as oncosuppressor in intestinal cancer.](/202605/06/biorxiv-10-64898-2026-04-28-719975-v1-novel-role-of-the-lncrna-epr-as-oncosuppressor-in-intestinal-cancer)  
+   evidence：肿瘤微环境中MIRO1介导的巨噬细胞-T细胞轴
+9. [Spatially Distinct Macrophage Subsets Drive Myofibroblast Heterogeneity and Maladaptive Fibrosis in Lupus Nephritis](/202605/07/biorxiv-10-64898-2026-04-27-719870-v1-spatially-distinct-macrophage-subsets-drive-myofibroblast-heterogeneity-and-maladaptive-fibrosis-in-lupus-nephritis)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：lncRNA EPR在溃疡性结肠炎和黏膜完整性中的作用
-10. [Microbiota-derived indole limits Campylobacter jejuni colonization by inhibiting respiration and metabolism](/202605/06/biorxiv-10-64898-2026-04-28-721463-v1-microbiota-derived-indole-limits-campylobacter-jejuni-colonization-by-inhibiting-respiration-and-metabolism)  
+   evidence：不同的巨噬细胞亚群驱动狼疮性肾炎中的肌成纤维细胞异质性
+10. [Single-cell, label-free morphology profiling of iPSC-derived microglia reveals dynamic state transitions](/202605/07/biorxiv-10-64898-2026-04-28-721424-v1-single-cell-label-free-morphology-profiling-of-ipsc-derived-microglia-reveals-dynamic-state-transitions)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：DSS诱导的肠道炎症和结肠炎模型
-11. [Resident and Engrafting E. coli Populations Expand Through Dissimilar Pathways in the Inflamed Gut](/202605/06/biorxiv-10-64898-2026-04-29-721686-v1-resident-and-engrafting-e-coli-populations-expand-through-dissimilar-pathways-in-the-inflamed-gut)  
+   evidence：追踪小胶质细胞（脑巨噬细胞）在炎症反应中的状态转变和形态变化
+11. [Microbiota-derived indole limits Campylobacter jejuni colonization by inhibiting respiration and metabolism](/202605/07/biorxiv-10-64898-2026-04-28-721463-v1-microbiota-derived-indole-limits-campylobacter-jejuni-colonization-by-inhibiting-respiration-and-metabolism)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：DSS诱导的结肠炎模型和肠道炎症
+   evidence：小鼠DSS处理诱导的肠道炎症
 
 
 <div class="dpr-home-promo-card">
