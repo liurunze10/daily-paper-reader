@@ -1,0 +1,792 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-10T20:34:36.039767+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 17,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2605.03281v1",
+      "source": "arxiv",
+      "title": "Donor-Aware scRNA-seq Benchmarks for IBD Classification",
+      "abstract": "Donor-level disease classification from single-cell RNA sequencing (scRNA-seq) requires strict donor-aware cross-validation: naive pipelines that split cells randomly conflate training and test donors, inflating reported performance through pseudoreplication. We present a donor-aware benchmark evaluating three feature representations across two independent IBD cohorts: centered log-ratio (CLR) transformed cell-type composition, GatedStructuralCFN dependency embeddings, and scVI variational autoencoder latent embeddings. The cohorts are the SCP259 ulcerative colitis atlas (UC vs. Healthy, n=30 donors, 51 cell types) and the Kong 2023 Crohn's disease atlas (CD vs. Healthy, n=71 donors, 55-68 cell types across three intestinal regions).   Compartment-stratified CLR composition achieves AUROC 0.956 +/- 0.061 on SCP259; GatedStructuralCFN on the same features achieves 0.978 +/- 0.050. In the Kong cohort, CFN achieves its best performance in the colon region (0.960 +/- 0.055 after feature filtering), exceeding linear CLR (0.900 +/- 0.100), while terminal ileum classification is dominated by linear models (CatBoost CLR 0.967 +/- 0.075 vs. CFN 0.811 +/- 0.164). Cross-dataset transfer (CD->UC, four shared cell types) achieves AUC 0.833 with XGBoost CLR; the reverse direction performs at chance. CFN edge stability analysis shows that compartment-wise composition eliminates spurious unit-sum-induced instability present in global composition (Jaccard 0.026 vs. top-20 recurrence 1.0). CFN shows a consistent numerical advantage over linear models in the colon region of CD (AUROC 0.960 vs. 0.900), though no inter-method comparison reached statistical significance at n<=34 donors per region. Compartment-aware feature construction is critical for both classification performance and structural interpretability. Code: https://github.com/Jonathan-321/sfn-scrna-study",
+      "authors": [
+        "Jonathan Muhire"
+      ],
+      "primary_category": "q-bio.QM",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-05-05T02:13:43+00:00",
+      "link": "https://arxiv.org/pdf/2605.03281v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Donor-aware scRNA-seq benchmarks for Inflammatory Bowel Disease classification",
+      "llm_evidence_cn": "用于炎症性肠病分类的供体感知单细胞转录组基准",
+      "llm_evidence": "用于炎症性肠病分类的供体感知单细胞转录组基准",
+      "canonical_evidence": "用于炎症性肠病分类的供体感知单细胞转录组基准",
+      "llm_tldr_en": "Presents a benchmark for IBD classification using single-cell RNA-seq data from ulcerative colitis and Crohn's cohorts.",
+      "llm_tldr_cn": "提出了一个利用溃疡性结肠炎和克罗恩病队列的单细胞转录组数据进行IBD分类的基准。",
+      "llm_tldr": "提出了一个利用溃疡性结肠炎和克罗恩病队列的单细胞转录组数据进行IBD分类的基准。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-02-722388-v1",
+      "source": "biorxiv",
+      "title": "Corepressor NCoR1-mediated regulation of mucin dynamics governs gut inflammation",
+      "abstract": "Inflammatory bowel disease (IBD), comprising Ulcerative colitis (UC) and Crohns Disease, is a chronic relapsing immune-mediated inflammatory disorder of the gut. The intestinal mucus layer is a protective barrier that safeguards direct exposure of epithelium to luminal microbes and antigens. A prolonged disruption of the mucus layer may contribute to the development of IBD. Loss of mucin-producing goblet cells is a hallmark of UC. The underlying molecular mechanism controlling goblet regulation remains poorly understood. In the current work, we show a key role for NCoR1 (Nuclear corepressor 1) in goblet cell regulation. A specific downregulation of NCoR1 in intestinal crypts and goblet cells was observed in human UC and mice models. While NCoR1 was upregulated during goblet cell differentiation, inflammatory cues downregulated its expression. Experimental loss of NCoR1 resulted in exacerbated disease in a murine model of colitis, whereas its upregulation via Vitamin D led to a rescue. ChIP-seq led to the identification of KLF-16, a transcription factor, as a target of NCoR1. NCoR1 -KLF16 regulatory axis regulated key goblet cell proteins, including MUC2. Mechanistically, the regulation of MUC2 is modulated by the NCoR1-KLF16 axis, via mTOR signalling. In conclusion, this work shows a critical involvement of NCoR1-KLF16 in governing goblet cell function and intestinal homeostasis.",
+      "authors": [
+        "Rajendran, Y.",
+        "Srivastava, B.",
+        "Gaur, P.",
+        "Babar, R.",
+        "Guliya, N.",
+        "Suhail, A.",
+        "Mehra, L.",
+        "Kalra, M.",
+        "Singh, M.",
+        "Das, P.",
+        "Ahuja, V.",
+        "Srikanth, C. V."
+      ],
+      "primary_category": "molecular biology",
+      "categories": [
+        "molecular biology"
+      ],
+      "published": "2026-05-06T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.02.722388v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "NCoR1-mediated regulation of mucin dynamics governs gut inflammation in IBD",
+      "llm_evidence_cn": "NCoR1介导的粘蛋白动力学调节控制IBD中的肠道炎症",
+      "llm_evidence": "NCoR1介导的粘蛋白动力学调节控制IBD中的肠道炎症",
+      "canonical_evidence": "NCoR1介导的粘蛋白动力学调节控制IBD中的肠道炎症",
+      "llm_tldr_en": "Identifies NCoR1 as a key regulator of goblet cells and mucus barrier integrity in inflammatory bowel disease.",
+      "llm_tldr_cn": "确定了NCoR1是炎症性肠病中杯状细胞和粘液屏障完整性的关键调节因子。",
+      "llm_tldr": "确定了NCoR1是炎症性肠病中杯状细胞和粘液屏障完整性的关键调节因子。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-05-722917-v1",
+      "source": "biorxiv",
+      "title": "C-Terminal Domain of Mycobacterium tuberculosis Glutamate Decarboxylase determines the bacterial stress-adaptive metabolic state that steers macrophage polarisation supporting intracellular persistence",
+      "abstract": "Mycobacterium tuberculosis (Mtb) adapts metabolically to survive hostile conditions within alveolar macrophages, but whether specific enzyme-driven metabolic states of Mtb link stress adaptation to host immunomodulation remains unclear. Using LC-MRM/MS metabolite profiling and metabolic modeling, we previously identified elevated {gamma}-aminobutyric acid (GABA) production via the GABA shunt during adaptation to oxidative and acidic stress. Here, we show that stress-responsive enzymatic efficiency of glutamate decarboxylase (GadB) in producing GABA, not only mitigates acidic and oxidative stress but also drives macrophage polarisation towards the M2 phenotype, extending its role beyond bioenergetics into host-pathogen cross-talk.\n\nWe identify the C-terminal domain (CTD) of mycobacterial GadB as a key regulator. Enzyme kinetics and fluorescence spectroscopy revealed that CTD deletion abolishes pH-dependent regulation of catalytic efficiency (kcat/Km) and substrate affinity (Ka). Under oxidative stress, the CTD enhances catalytic efficiency without altering substrate affinity, suggesting condition-specific roles. Accordingly, in vitro, Mtb::MtbGadB with higher GABA and [~]40% lower ROS outgrew Mtb::MtbGadB{Delta}Ct under acidic and oxidative conditions. These biochemical differences influenced host immunity, wherein infection with high-GABA-producing Mtb::MtbGadB strain induced M2 polarisation, with decreased CD86, reduced RNS, limited endosomal maturation, as indicated by Rab5/Rab7 ratio and Lysotracker-based confocal microscopy, and decreased TNF-, IL-12p70, and IFN-{gamma} release compared to low-GABA-producing Mtb::MtbGadB{Delta}Ct. Consequently, Mtb::MtbGadB{Delta}Ct showed higher clearance. We conclude that by enabling pH-dependent activity of GadB, the CTD orchestrates proton consumption, ROS reduction, and GABA-mediated immunomodulation. Distinct structural features of CTDs in human versus Mtb GADs highlight the CTD as a selective drug target for pathogen-specific, host-compatible therapies.\n\nImportanceThis work establishes a direct mechanistic link between metabolic state of Mycobacterium tuberculosis (Mtb) actively shaping host immune responses, deciding infection outcome. The study identifies the C-terminal domain (CTD) of MtbGadB in steering enzymatic efficiency, regulating intrabacterial GABA production and ROS quenching, determining the stress-responsive metabolic state of the bacteria. Infection with metabolically distinct strains had differential impacts on host immunity, wherein infection with high-GABA-producing Mtb::MtbGadB induced M2-polarisation, reduced RNS, limited endosomal maturation, and reduced proinflammatory cytokine release, compared to low-GABA-producing Mtb::MtbGadB{Delta}Ct. Consequently, Mtb::MtbGadB{Delta}Ct could be cleared, but Mtb::MtbGadB persisted, deciding the fate of the infection. Structural differences between CTDs of human and Mtb GADs, make it a therapeutically-exploitable determinant for developing pathogen-specific drugs that remain compatible with the host.",
+      "authors": [
+        "Agarwal, A.",
+        "Misra, A.",
+        "Saxena, S.",
+        "Mohareer, K.",
+        "Patel, A. B.",
+        "Banerjee, S."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-05-06T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.05.722917v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Mtb metabolic states link oxidative stress to macrophage polarization",
+      "llm_evidence_cn": "结核分枝杆菌代谢状态将氧化应激与巨噬细胞极化联系起来",
+      "llm_evidence": "结核分枝杆菌代谢状态将氧化应激与巨噬细胞极化联系起来",
+      "canonical_evidence": "结核分枝杆菌代谢状态将氧化应激与巨噬细胞极化联系起来",
+      "llm_tldr_en": "Shows how Mtb metabolic adaptation to oxidative stress steers macrophage polarization to support persistence.",
+      "llm_tldr_cn": "揭示了结核分枝杆菌对氧化应激的代谢适应如何引导巨噬细胞极化以支持其存活。",
+      "llm_tldr": "揭示了结核分枝杆菌对氧化应激的代谢适应如何引导巨噬细胞极化以支持其存活。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "The role of reactive oxygen species in regulating macrophage polarization and functional plasticity",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-04-722732-v1",
+      "source": "biorxiv",
+      "title": "Ancestry-Linked IL-10 Signaling and Macrophage Activation Modulate Fibroblast Responses to Oxidative Stress in a PEG-Based Microphysiological System",
+      "abstract": "Ancestry-associated immune differences influence fibrosis risk, however, how fibrosis-associated pathways vary across individuals remains poorly understood. Fibroblasts are a main cell type involved in fibrosis. The fibroblast response is shaped by cytokine signaling and macrophage activation. The extent to which these pathways vary across individuals, and how ancestry-associated immune differences influence fibrosis risk, remains poorly understood. Here, a poly(ethylene glycol) (PEG)-based hydrogel microphysiological system was leveraged to model fibroblast-macrophage interactions following oxidative stress and to integrate donor-specific immune signals using matched macrophages and serum. Individuals of self-reported African ancestry exhibited higher monocyte expression of CCL4, lower monocyte expression of OXER1, and increased serum IL-10, compared to individuals of European ancestry. Within the hydrogel, oxidative stress reduced fibroblast prevalence while inducing Ki67 and p16. Exogenous TGF-beta increased fibroblast prevalence and collagen 3 production but did not independently increase alpha-SMA. Incorporating donor-specific macrophages and serum revealed that cultures from individuals of European ancestry demonstrated higher fibroblast alpha-SMA and p16 expression. Pharmacologic inhibition of IL-10 further increased alpha-SMA, particularly in African ancestry-derived cultures, identifying IL-10 as a key protective signal limiting fibroblast activation. This hydrogel system provides a platform for dissecting inter-individual immune variation and identifying mechanisms underlying ancestry-associated fibrosis risk.",
+      "authors": [
+        "Owusu-Boaitey, N. K.",
+        "Veintimilla, A. M.",
+        "Tamano-Blanco, M.",
+        "Parodi, P.",
+        "Barcellano, K.",
+        "Ranasinghe, S.",
+        "Moore, E."
+      ],
+      "primary_category": "bioengineering",
+      "categories": [
+        "bioengineering"
+      ],
+      "published": "2026-05-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.04.722732v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 8.5,
+      "llm_evidence_en": "macrophage activation and fibroblast responses to oxidative stress",
+      "llm_evidence_cn": "巨噬细胞激活与成纤维细胞对氧化应激的反应",
+      "llm_evidence": "巨噬细胞激活与成纤维细胞对氧化应激的反应",
+      "canonical_evidence": "巨噬细胞激活与成纤维细胞对氧化应激的反应",
+      "llm_tldr_en": "Models macrophage-fibroblast interactions under oxidative stress using a microphysiological system.",
+      "llm_tldr_cn": "利用微生理系统模拟氧化应激下的巨噬细胞-成纤维细胞相互作用。",
+      "llm_tldr": "利用微生理系统模拟氧化应激下的巨噬细胞-成纤维细胞相互作用。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Oxidative stress and macrophage phenotype",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-1101-2025-07-30-667666-v2",
+      "source": "biorxiv",
+      "title": "AXL inhibition reprograms tumor-associated macrophages to restore immune checkpoint blockade efficacy in a polarization-context-dependent manner",
+      "abstract": "BackgroundImmune checkpoint blockade (ICB) achieves durable responses in approximately half of patients with advanced melanoma, but the mechanistic basis for resistance in the remaining patients remains incompletely defined. AXL tyrosine kinase has emerged as a candidate resistance mediator, yet clinical development of AXL inhibitors has yielded heterogeneous results in unselected patient populations, suggesting that cell-type and tumor microenvironment context may critically govern therapeutic response.\n\nMethodsWe characterized AXL expression across cell types in ICB-resistant melanoma using publicly available single-cell RNA sequencing datasets and The Cancer Genome Atlas (TCGA). In vivo efficacy was assessed in the YUMM1.7 PD-1-resistant syngeneic melanoma model using three pharmacologically distinct AXL inhibitors (warfarin, bemcentinib, and cabozantinib) as monotherapy and in combination with anti-PD-1 therapy. Tumor-associated macrophage (TAM) context-dependency was established using anti-CSF1R and anti-F4/80 depletion strategies. Functional PD-L1:PD-1 checkpoint interactions were quantified in tumor sections by immune Forster Resonance Energy Transfer (iFRET). TAM secretome reprogramming was characterized by 40-plex Luminex immunoassay in polarized RAW264.7 macrophages.\n\nResultsAXL expression in ICB-resistant melanoma was predominantly localized to TAMs rather than tumor cells by single-cell analysis, with AXL+ TAMs distributed across both M1-like and M2-like phenotypic compartments. AXL inhibition significantly reduced tumor burden and synergized with anti-PD-1 therapy in vivo; however, efficacy was abolished by depletion of the monocyte-derived myeloid compartment (anti-CSF1R) and enhanced by depletion of tissue-resident TAMs (anti-F4/80), establishing TAM-context dependency. iFRET revealed a paradoxical gain of PD-L1:PD-1 interaction efficiency in anti-PD-1-treated resistant tumors, a functional resistance signature detectable by iFRET but not by PD-L1 expression that was reversed by AXL combination therapy. In vitro secretome profiling demonstrated that combination therapy reprograms macrophage secretome in a polarization-context-dependent manner, amplifying pro-inflammatory cytokines including IL-6 and GM-CSF in M2-like macrophages while selectively dampening T cell chemokine production.\n\nConclusionsThese findings establish AXL as a TAM-resident immune target in ICB-resistant melanoma whose therapeutic relevance is governed by tumor-immune micronenvironment (TiME) macrophage composition rather than tumor cell AXL expression. TAM polarization contexture represents a candidate stratification axis for AXL inhibitor-based combination strategies, and iFRET-measured checkpoint interaction offers a functional complement to PD-L1 expression for monitoring resistance and response.\n\nKey MessagesO_ST_ABSWhat is already known on this topicC_ST_ABSO_LIAXL tyrosine kinase has been studied predominantly as a tumor-intrinsic mesenchymal marker and therapeutic target in melanoma, with prior clinical development of AXL inhibitors predicated on tumor cell AXL expression as the primary biomarker; the contribution of TAM-expressed AXL to ICB resistance and the dependence of therapeutic response on TiME composition have not been defined.\nC_LI\n\nWhat this study addsO_LIAXL expression in ICB-resistant melanoma is predominantly localized to tumor-associated macrophages distributed across both M1-like and M2-like phenotypic compartments, reframing AXL as a TAM immune target whose therapeutic relevance is governed by TiME macrophage composition rather than tumor cell AXL expression.\nC_LIO_LICombination AXL inhibition and anti-PD-1 reprograms the macrophage secretome in a polarization-context-dependent manner and reverses a paradoxical gain of functional PD-L1:PD-1 checkpoint interaction in resistant tumors -- a resistance signature detectable by spatial iFRET but not by PD-L1 expression.\nC_LI\n\nHow this study might affect research, practice or policyO_LIThe context-dependent effects of AXL inhibition (immunostimulatory in M2-heavy TiMEs, potentially counterproductive in M1-heavy TiMEs) indicate that TAM polarization profiling should be incorporated into clinical trial design for AXL inhibitor-based combinations, and that unselected enrollment may obscure meaningful efficacy signals in the subset most likely to benefit.\nC_LIO_LIiFRET-based quantification of functional checkpoint interaction represents a candidate dynamic biomarker for ICB resistance monitoring that is orthogonal to PD-L1 immunohistochemistry and may identify resistant patients who retain immunosuppressive checkpoint interactions that can be disrupted by AXL targeting.\nC_LI\n\nGraphical Abstract\n\nO_FIG O_LINKSMALLFIG WIDTH=170 HEIGHT=200 SRC=\"FIGDIR/small/667666v2_ufig1.gif\" ALT=\"Figure 1\">\nView larger version (90K):\norg.highwire.dtl.DTLVardef@420ec3org.highwire.dtl.DTLVardef@d762eaorg.highwire.dtl.DTLVardef@9ef428org.highwire.dtl.DTLVardef@1af81e7_HPS_FORMAT_FIGEXP  M_FIG C_FIG",
+      "authors": [
+        "Kirane, A. R.",
+        "Lee, D.",
+        "Sharma, S.",
+        "Safrygina, E.",
+        "Applebee, C. J.",
+        "Serasanambati, M.",
+        "Singh, P.",
+        "Chadokiya, J.",
+        "Wagner, E.",
+        "Meerlev, A.",
+        "Delitto, D.",
+        "Padget, J.",
+        "Larijani, B.",
+        "Maverakis, E. M."
+      ],
+      "primary_category": "cancer biology",
+      "categories": [
+        "cancer biology"
+      ],
+      "published": "2026-05-05T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.07.30.667666v2.full.pdf",
+      "tags": [
+        "keyword:ROS MP"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reprograms tumor-associated macrophages in a polarization-context-dependent manner",
+      "llm_evidence_cn": "以极化背景依赖的方式重编程肿瘤相关巨噬细胞",
+      "llm_evidence": "以极化背景依赖的方式重编程肿瘤相关巨噬细胞",
+      "canonical_evidence": "以极化背景依赖的方式重编程肿瘤相关巨噬细胞",
+      "llm_tldr_en": "AXL inhibition reprograms macrophage polarization to overcome immune checkpoint blockade resistance.",
+      "llm_tldr_cn": "AXL抑制通过重编程巨噬细胞极化来克服免疫检查点阻断耐药性。",
+      "llm_tldr": "AXL抑制通过重编程巨噬细胞极化来克服免疫检查点阻断耐药性。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-02-06-699999-v3",
+      "source": "biorxiv",
+      "title": "A ML-framework for the discovery of next-generation IBD targets using a harmonized single-cell atlas of patient tissue",
+      "abstract": "Target discovery for IBD has traditionally relied on genetic associations, which lack the cellular resolution needed to identify novel, actionable, cell type-specific disease pathways. Here, we describe an integrated analytical and experimental framework that leverages harmonized single-cell data to systematically discover novel therapeutic strategies for IBD. We used AMICA DBTM, Immunai's harmonized database of single-cell RNA datasets to construct a harmonized 1 million single-cell atlas of the human intestine. We applied a machine learning framework (Immune Patient Representation, IPR) to identify disease-associated transcriptional programs and cell type-specific gene targets. Candidate targets were prioritized using atlas-derived metrics, refined using custom criteria emphasizing translational actionability, and validated across independent clinical cohorts. Select candidates were evaluated in human primary-cell models reflecting the target's cell-type context. The IPR framework identified 85 disease-associated transcriptional programs and ranked 400 cell type-specific target genes across immune and stromal lineages. Disease-associated programs were interpreted using a structured AI-assisted reasoning framework for structured biological reasoning, linking them to IBD-relevant pathways and guiding the identification of novel, promising gene targets. Functional validation of two cell-type-specific candidates, PTGIR in myeloid cells and IL6ST in fibroblasts, confirmed the reduction of inflammatory and fibrotic pathways linked to IBD pathology. Multi-omic profiling and projection of in vitro phenotypes to patient datasets demonstrated the reversal of disease-associated programs via mechanisms distinct from those of existing biologics. Our single-cell anchored, machine-learning framework integrates in silico discovery with experimental validation, revealing new cell type-specific therapeutic opportunities and supporting a scalable approach for precision target discovery in IBD and other immune-mediated diseases.",
+      "authors": [
+        "Joglekar, A.",
+        "Joseph, A.",
+        "Honsa, P.",
+        "Ruppova, K.",
+        "Pizzarella, V.",
+        "Honan, A.",
+        "Mediratta, D.",
+        "Vollmer, E.",
+        "Geller, E.",
+        "Valny, M.",
+        "Macuchova, E.",
+        "Zheng, S.",
+        "Greenberg, A.",
+        "Taus, P.",
+        "Kline-Schoder, A.",
+        "Konickova, R.",
+        "Cerna, L.",
+        "Sharim, H.",
+        "Ness, L.",
+        "Camilli, G.",
+        "Chouri, E.",
+        "Kaymak, I.",
+        "D'Rozario, J.",
+        "Castiblanco, D.",
+        "Oliveira, J.",
+        "Prandi, F.",
+        "Popov, N.",
+        "Moldoveanu, A. L.",
+        "Oliphant, C.",
+        "Escudero-Ibarz, L.",
+        "Uhlitz, F.",
+        "Freinkman, E.",
+        "Sponarova, J.",
+        "Vijay, P.",
+        "Joyce, C.",
+        "Leonardi, I.",
+        "Nayar, S.",
+        "Raveh-Sadka, T.",
+        "Solomon, N.",
+        "Platt, A.",
+        "Ort, T.",
+        "De Baets, G.",
+        "Corridoni, D.",
+        "Wroblewska, A.",
+        "Rahman, A."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-05-10T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.02.06.699999v3.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Discovery of next-generation IBD targets using single-cell atlas",
+      "llm_evidence_cn": "利用单细胞图谱发现下一代炎症性肠病治疗靶点",
+      "llm_evidence": "利用单细胞图谱发现下一代炎症性肠病治疗靶点",
+      "canonical_evidence": "利用单细胞图谱发现下一代炎症性肠病治疗靶点",
+      "llm_tldr_en": "A machine learning framework for identifying cell-type specific therapeutic targets in IBD.",
+      "llm_tldr_cn": "一种用于识别炎症性肠病中细胞类型特异性治疗靶点的机器学习框架。",
+      "llm_tldr": "一种用于识别炎症性肠病中细胞类型特异性治疗靶点的机器学习框架。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-05-01-720931-v1",
+      "source": "biorxiv",
+      "title": "Stromal state plasticity defines risk and therapeutic opportunity in recalcitrant inflammatory bowel disease",
+      "abstract": "Inflammatory bowel diseases (IBD) remain a relapsing, treatment-refractory disorder marked by progressive tissue injury and inflammation despite expanding immune-targeted therapies. We established a prospective cohort integrating stromal biobanking, functional phenotyping, cross-cohort benchmarking, and outcome modeling to define disease-anchored cellular states. Colonic myofibroblasts from 34 individuals spanning health, ulcerative colitis, and Crohns disease resolved into two dominant states: inflammatory (IMFs) and quiescent (QMFs) myofibroblasts. IMF predominance at recruitment forecasted progressive disease, increasing odds of worsening endoscopic severity despite therapy escalation by [~]4.6 during follow-up, thereby linking early stromal biology to clinical endpoints. Unlike QMFs, IMFs exhibited a senescence-associated secretory phenotype that impaired epithelial stemness, barrier integrity, and innate immune fitness. State-guided prioritization identified EDNRB-antagonism as a high-confidence stromal intervention, reversing pathogenic phenotypes across orthogonal assays and species. Outcome simulation positioned stromal-state reversibility by EDNRB-antagonism as a precision axis, reducing odds of recalcitrance by [~]96.4% and reframing treatment resistance as a reversible stromal state.\n\nGraphic Abstract\n\nO_FIG O_LINKSMALLFIG WIDTH=194 HEIGHT=200 SRC=\"FIGDIR/small/720931v1_ufig1.gif\" ALT=\"Figure 1\">\nView larger version (39K):\norg.highwire.dtl.DTLVardef@1e6dbcorg.highwire.dtl.DTLVardef@1b651b3org.highwire.dtl.DTLVardef@ade6a0org.highwire.dtl.DTLVardef@1005252_HPS_FORMAT_FIGEXP  M_FIG C_FIG In this work, Tindle et al. identify reversible stromal states that govern recalcitrant IBD and nominate precision reprogramming of pathogenic myofibroblasts as a new therapeutic strategy.",
+      "authors": [
+        "Tindle, C.",
+        "Penrose, H. M.",
+        "Sinha, S.",
+        "Mullick, M.",
+        "Carpio-Perkins, K.",
+        "Hayashi, M.",
+        "Carpinelli, S. S.",
+        "Mclaren, E.",
+        "Hsieh, C.-C.",
+        "Zablan, K.",
+        "Le, H. N.",
+        "Neill, J.",
+        "Katkar, G. D.",
+        "Sandborn, W. J.",
+        "Boland, B.",
+        "Ghosh, P."
+      ],
+      "primary_category": "physiology",
+      "categories": [
+        "physiology"
+      ],
+      "published": "2026-05-06T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.01.720931v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "stromal state plasticity in inflammatory bowel disease",
+      "llm_evidence_cn": "炎症性肠病中的基质状态可塑性",
+      "llm_evidence": "炎症性肠病中的基质状态可塑性",
+      "canonical_evidence": "炎症性肠病中的基质状态可塑性",
+      "llm_tldr_en": "Defines myofibroblast states that predict disease progression and therapy response in IBD.",
+      "llm_tldr_cn": "定义了预测炎症性肠病进展和治疗反应的肌成纤维细胞状态。",
+      "llm_tldr": "定义了预测炎症性肠病进展和治疗反应的肌成纤维细胞状态。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.02142v1",
+      "source": "arxiv",
+      "title": "ORBIT: Learning Gene Program Co-Activation Structure for Cell-Type-Stratified Pathway Rewiring Analysis in Single-Cell Transcriptomics",
+      "abstract": "Gene programs co-activate within cells, but existing single-cell methods either treat programs independently or require experimental perturbation data to model their interactions. We introduce ORBIT, a self-supervised transformer that learns asymmetric dependencies among gene programs from observational single-cell RNA-sequencing data alone, quantifying how strongly each program influences every other program. The key mechanism is an intervention-consistent training objective: the model learns each program's directional influence on every other program by predicting how the others change when that program is removed, yielding attention weights that reflect asymmetric influence rather than symmetric co-occurrence. Applied to 191,890 prefrontal cortex nuclei across three pathway vocabularies, ORBIT recovers co-activation structure consistent with established Alzheimer's disease vulnerability signatures, identifies cell-type-specific rewiring invisible to differential expression, and achieves 0.984 macro F1 on cell-type classification from 220 pathway scores, which is within 0.3 points of a state-of-the-art classifier using all 22,088 genes.",
+      "authors": [
+        "Yuechen Wang",
+        "Lina Jia",
+        "Qinglong Wang",
+        "Feng Tian"
+      ],
+      "primary_category": "q-bio.GN",
+      "categories": [
+        "q-bio.GN"
+      ],
+      "published": "2026-05-04T01:50:51+00:00",
+      "link": "https://arxiv.org/pdf/2605.02142v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Method for learning gene program co-activation and pathway rewiring in single-cell data",
+      "llm_evidence_cn": "学习单细胞数据中基因程序共激活和通路重连的方法",
+      "llm_evidence": "学习单细胞数据中基因程序共激活和通路重连的方法",
+      "canonical_evidence": "学习单细胞数据中基因程序共激活和通路重连的方法",
+      "llm_tldr_en": "ORBIT is a transformer model that learns directional influences between gene programs from scRNA-seq data.",
+      "llm_tldr_cn": "ORBIT是一种转换器模型，可从单细胞转录组数据中学习基因程序之间的定向影响。",
+      "llm_tldr": "ORBIT是一种转换器模型，可从单细胞转录组数据中学习基因程序之间的定向影响。",
+      "llm_tags": [
+        "query:ros-mp:composite"
+      ],
+      "matched_query_tag": "query:ros-mp:composite",
+      "matched_query_text": "Papers central to ROS与巨噬细胞极化相关研究论文检索, especially work that connects or combines: Macrophage polarization mechanisms; inflammatory bowel disease; Reactive oxygen species; Oxidative stress and macrophage phenotype; The role of reactive oxygen species in regulating macrophage polarization and functional plasticity; How ROS signaling modulates macrophage polarization status and plasticity during intestinal inflammation; The role of reactive oxygen species in regulating macrophage M1/M2 polarization in inflammatory bowel disease; Role of reactive oxygen species in macrophage M1/M2 polarization.",
+      "matched_requirement_id": "req-composite-ros-mp",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-1101-2024-05-06-590855-v2",
+      "source": "biorxiv",
+      "title": "Epigenetic regulation of alveolar macrophage homeostasis by histone deacetylase 1 and 2",
+      "abstract": "Alveolar macrophages (AMs) are the primary lung-resident macrophages that play a pivotal role in pathogen clearance and surfactant homeostasis. Although the molecular regulation of AM development at the transcriptional level has been more widely studied, the epigenetic mechanisms that maintain AM homeostasis remain incompletely understood. Here, we demonstrate that histone deacetylases HDAC1 and HDAC2 play essential roles in preserving AM integrity. Dual deletion of HDAC1 and HDAC2 resulted in severe defect in AM development, leading to pulmonary alveolar proteinosis (PAP) and increased susceptibility to influenza infection in mice. Mechanistically, HDAC1 and HDAC2 act through their deacetylase activity to suppress the expression of pro-apoptotic protein Bim, thereby enhancing cell survival. Furthermore, HDAC1 and HDAC2 form a functional complex with the histone demethylase LSD1 (KDM1A) to co-regulate a transcriptional program governing AM differentiation. Our findings identify HDAC1 and HDAC2 as central epigenetic regulators essential for alveolar macrophage homeostasis.",
+      "authors": [
+        "Lai, W.",
+        "Luo, M.",
+        "Wang, Y.",
+        "Li, X.",
+        "He, Z.",
+        "Wu, T.",
+        "Wu, L."
+      ],
+      "primary_category": "immunology",
+      "categories": [
+        "immunology"
+      ],
+      "published": "2026-05-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2024.05.06.590855v2.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Epigenetic regulation of alveolar macrophage homeostasis and development",
+      "llm_evidence_cn": "肺泡巨噬细胞稳态和发育的表观遗传调节",
+      "llm_evidence": "肺泡巨噬细胞稳态和发育的表观遗传调节",
+      "canonical_evidence": "肺泡巨噬细胞稳态和发育的表观遗传调节",
+      "llm_tldr_en": "Identifies HDAC1 and HDAC2 as essential epigenetic regulators for maintaining alveolar macrophage integrity.",
+      "llm_tldr_cn": "确定了HDAC1和HDAC2是维持肺泡巨噬细胞完整性所必需的表观遗传调节因子。",
+      "llm_tldr": "确定了HDAC1和HDAC2是维持肺泡巨噬细胞完整性所必需的表观遗传调节因子。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-1101-2025-06-11-659200-v3",
+      "source": "biorxiv",
+      "title": "Mouse peritoneal macrophages undergo female-specific remodeling with aging driven by both hormone-dependent and -independent mechanisms",
+      "abstract": "Aging is a complex process characterized by a progressive decline in physiological functions. Immune function is strongly influenced by biological sex, affecting both innate and adaptive responses. Here, we investigated the effects of age and sex on mouse peritoneal immune cells and identified macrophages as the top affected cell type. Macrophages, as central components of the innate immune system, play critical roles in homeostasis maintenance and infection response. We found that aging induces sex-specific remodeling of mouse peritoneal macrophage omic landscapes, which is accompanied by female-specific age-related functional remodeling (i.e. decreased phagocysis, increased glycolysis). We show that age-related changes in circulating estrogen levels likely drive aspects of female-specific macrophage age-related changes, specifically age-related phagocytosis decline. By leveraging our multi-omic dataset, we identify transcription factors whose female-specific age-regulation may drive female-specific age-related changes in peritoneal macrophage phenotypes. Interestingly, Irf2 downregulation was sufficient to recapitulate aspects of female peritoneal macrophage aging phenotypes, including increased glycolysis. Mechanistically, decreased Irf2 expression leads to decreased binding to its target genes, including Hk3, which encodes hexokinase (the rate-limiting enzyme of glycolysis). Our findings support the notion that aging leads to female-specific remodeling of mouse peritoneal macrophages through hormone-dependent and -independent mechanisms.",
+      "authors": [
+        "Lu, R. J.",
+        "Chen, S.",
+        "Kim, M.",
+        "Sampathkumar, N. K.",
+        "Lee, E. H.",
+        "Christensen, A.",
+        "Wang, E. E.",
+        "Lau, I. Y.",
+        "Parihar, S.",
+        "Ravikumar, C. K.",
+        "Jung, J.",
+        "Brown, S. B.",
+        "Xu, A.",
+        "Alvarenga, J. L.",
+        "Mehalko, K.",
+        "Lee, C. D.",
+        "Goodridge, H. S.",
+        "Benayoun, B. A."
+      ],
+      "primary_category": "immunology",
+      "categories": [
+        "immunology"
+      ],
+      "published": "2026-05-10T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.06.11.659200v3.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "macrophage functional remodeling and metabolic changes",
+      "llm_evidence_cn": "巨噬细胞功能重塑和代谢变化",
+      "llm_evidence": "巨噬细胞功能重塑和代谢变化",
+      "canonical_evidence": "巨噬细胞功能重塑和代谢变化",
+      "llm_tldr_en": "Identifies sex-specific functional and metabolic remodeling in peritoneal macrophages during aging.",
+      "llm_tldr_cn": "鉴定了衰老过程中腹腔巨噬细胞在性别上的功能和代谢重塑差异。",
+      "llm_tldr": "鉴定了衰老过程中腹腔巨噬细胞在性别上的功能和代谢重塑差异。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-01-722102-v1",
+      "source": "biorxiv",
+      "title": "Stromal Gasdermin D-mediated Pyroptosis Drives Maladaptive CD4⁺ T-cell Remodeling in Tet2-Deficient Hematopoiesis",
+      "abstract": "An inflammatory bone marrow microenvironment is increasingly recognized as critical in myeloid disease evolution, yet how stromal inflammation interfaces with adaptive immunity remains poorly defined. Here, we show that stromal pyroptosis drives mutation-specific myeloid expansion by coordinating monocytic remodeling and CD4 T-cell activation. Genetic ablation of gasdermin D in the bone marrow stroma suppressed stromal pyroptosis and attenuated Tet2-deficient myeloid expansion. Tet2 deficiency skewed monocyte and macrophage differentiation toward an activated, antigen-presenting state that interacted with pyroptotic stromal cells to promote expansion of a distinct CD4 T-cell population. These cells expressed canonical T follicular helper markers (Bcl6, Cxcr5, Il21, and Cd40l) together with interferon-responsive and tissue-interaction programs, consistent with an inflammation-adapted TFH-like state. CD40L produced by these cells reinforced the expansion of Tet2-deficient monocytes and macrophages, establishing a feed-forward stromal-immune circuit. Disruption of this axis through stromal gasdermin D deficiency or CD40L blockade attenuated myeloid expansion in vivo. Consistent with these findings, patients with isolated TET2 loss-of-function mutations exhibited CD4 T-cell skewing and CD40L+ T-cell-rich tertiary lymphoid structures in the bone marrow. Together, these data identify a pyroptosis-dependent stromal-immune axis that links early myeloid inflammation to maladaptive remodeling of adaptive immunity and reveals a context-dependent therapeutic vulnerability in Tet2-deficient hematopoiesis.",
+      "authors": [
+        "Ji, P.",
+        "Ren, K.",
+        "Han, X.",
+        "Li, E.",
+        "Wang, P.",
+        "Bi, H.",
+        "Cai, W.",
+        "Aydemir, I.",
+        "Wai, C. M.",
+        "Niu, H.",
+        "Yang, J.",
+        "Liu, Y.",
+        "Vadasz, B.",
+        "Sukhanova, M.",
+        "Fang, D.",
+        "Cui, W."
+      ],
+      "primary_category": "cancer biology",
+      "categories": [
+        "cancer biology"
+      ],
+      "published": "2026-05-05T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.01.722102v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Stromal pyroptosis skews macrophage differentiation toward an activated state",
+      "llm_evidence_cn": "基质焦亡使巨噬细胞分化偏向激活状态",
+      "llm_evidence": "基质焦亡使巨噬细胞分化偏向激活状态",
+      "canonical_evidence": "基质焦亡使巨噬细胞分化偏向激活状态",
+      "llm_tldr_en": "Shows how stromal inflammation and pyroptosis drive monocytic remodeling and macrophage activation in bone marrow.",
+      "llm_tldr_cn": "展示了骨髓中的基质炎症和焦亡如何驱动单核细胞重塑和巨噬细胞激活。",
+      "llm_tldr": "展示了骨髓中的基质炎症和焦亡如何驱动单核细胞重塑和巨噬细胞激活。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-1101-2025-11-10-686781-v2",
+      "source": "biorxiv",
+      "title": "Cross-Species Transcriptomic Integration Reveals a MIRO1-Mediated Macrophage-T Cell Axis in Glioma",
+      "abstract": "Mitochondrial regulators are increasingly recognized for their influence on immune signaling within the tumor microenvironment (TME). In glioma, where immunosuppression limits therapeutic efficacy, we investigate how targeting the mitochondrial protein MIRO1 alters the TME. We combine single-nucleus RNA sequencing of murine gliomas treated in vivo with a MIRO1-binding compound and bulk RNA sequencing of human glioma resections treated with the same compound ex vivo. Cross-species transcriptomic integration reveals a MIRO1-responsive program in the TME. Among shared targets, we identify PARP11/Parp11 as a consistently upregulated gene in glioma that is downregulated following MIRO1-binding compound treatment in both human and mouse gliomas. Cell-cell communication analysis shows that a specific cluster of macrophages (MAC1), which exhibits robust Parp11 and Pdl1 (encoding PD-L1) expression, sends immunosuppressive signals to CD8+ cytotoxic T cells, and may receive prostaglandin E{square} signals from another cluster of macrophages (MAC4). Targeting MIRO1 eliminates this cell circuitry and reduces the tumor cell population. Our study provides a transcriptomic framework for understanding mitochondria-immune crosstalk and nominates MIRO1-PARP11 as a potential effector axis of brain immune dysfunction.\n\nSummary BlurbTranscriptomic integration of single-nucleus RNA sequencing of murine gliomas and bulk RNA sequencing of human gliomas reveals an immunosuppressive signaling axis in the glioma TME, mediated by MIRO1.",
+      "authors": [
+        "Du, Z.",
+        "Li, M.",
+        "Bergsneider, B. H.",
+        "Tsai, A. P.",
+        "Cho, K. B.",
+        "Kim, L. H.",
+        "Choi, J.",
+        "Li, G.",
+        "Wyss-Coray, T.",
+        "Lim, M.",
+        "Wang, X."
+      ],
+      "primary_category": "cancer biology",
+      "categories": [
+        "cancer biology"
+      ],
+      "published": "2026-05-04T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.11.10.686781v2.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "mitochondrial protein MIRO1 alters macrophage immune signaling",
+      "llm_evidence_cn": "线粒体蛋白MIRO1改变巨噬细胞免疫信号",
+      "llm_evidence": "线粒体蛋白MIRO1改变巨噬细胞免疫信号",
+      "canonical_evidence": "线粒体蛋白MIRO1改变巨噬细胞免疫信号",
+      "llm_tldr_en": "Explores how mitochondrial regulators like MIRO1 influence macrophage-T cell axes in the tumor environment.",
+      "llm_tldr_cn": "探讨MIRO1等线粒体调节因子如何影响肿瘤环境中的巨噬细胞-T细胞轴。",
+      "llm_tldr": "探讨MIRO1等线粒体调节因子如何影响肿瘤环境中的巨噬细胞-T细胞轴。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-03-722306-v1",
+      "source": "biorxiv",
+      "title": "Porphyromonas gingivalis promotes lipid droplet-mediated microglial dysfunction",
+      "abstract": "Growing evidence supports a strong association between periodontitis and Alzheimer's disease (AD), yet the mechanisms linking these conditions remain poorly defined. In neurodegenerative disorders, including AD, microglia are often characterized by increased lipid droplet (LD) accumulation, heightened activation, and impaired functional capacity. In this study, we examined whether Porphyromonas gingivalis (Pg), a keystone periodontal pathogen, promotes LD accumulation in microglia and disrupts their function. We found that Pg infection induces robust LD accumulation in BV2 microglial cells and in microglia from Pg-infected App KI mice. This Pg-driven LD buildup was closely associated with elevated reactive oxygen species (ROS) production, impaired phagocytic ability, and altered activation. Notably, pharmacological inhibition of LDs with a triglyceride synthesis inhibitor effectively reversed Pg-induced LD accumulation, mitigated ROS production, and restored phagocytic function, underscoring the critical role of lipid metabolism in regulating microglial function. These findings demonstrate that Pg infection drives microglial lipid dysregulation and functional impairment and support a model in which periodontal infection promotes LD accumulation in microglia. This metabolic alteration exacerbates microglial dysfunction through a self-reinforcing cycle of oxidative stress and impaired phagocytosis that may accelerate AD progression.",
+      "authors": [
+        "RIAZ RAJOKA, M. S.",
+        "Valladeres, K. N.",
+        "La Prairie, C.",
+        "Li, W.",
+        "King, P.",
+        "Katz, J.",
+        "M. Michalek, S.",
+        "Zhang, P."
+      ],
+      "primary_category": "neuroscience",
+      "categories": [
+        "neuroscience"
+      ],
+      "published": "2026-05-06T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.03.722306v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ROS production and microglial activation",
+      "llm_evidence_cn": "ROS产生与小胶质细胞激活",
+      "llm_evidence": "ROS产生与小胶质细胞激活",
+      "canonical_evidence": "ROS产生与小胶质细胞激活",
+      "llm_tldr_en": "Pg infection induces ROS production and lipid droplet accumulation, driving microglial dysfunction.",
+      "llm_tldr_cn": "牙龈卟啉单胞菌感染诱导ROS产生和脂滴积累，导致小胶质细胞功能障碍。",
+      "llm_tldr": "牙龈卟啉单胞菌感染诱导ROS产生和脂滴积累，导致小胶质细胞功能障碍。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "The role of reactive oxygen species in regulating macrophage polarization and functional plasticity",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-04-29-721686-v1",
+      "source": "biorxiv",
+      "title": "Resident and Engrafting E. coli Populations Expand Through Dissimilar Pathways in the Inflamed Gut",
+      "abstract": "Intestinal inflammation increases the abundance of Enterobacteriaceae in the gastrointestinal tract by several orders of magnitude. These population expansions, or blooms, are associated with disease progression and have been suggested to exacerbate intestinal pathologies in some settings. Murine studies have shown that during the early stages of Escherichia coli colonization, i.e., during engraftment, inflammation enhances fitness through processes that depend on Moco, an enzyme cofactor found in a variety of oxidoreductases that consists of molybdenum coordinated by a pterin molecule. Using a murine commensal E. coli isolate and a DSS-induced colitis model in mice, we investigated whether Moco is also important for blooms of E. coli that are part of the resident microbiota, that is, for E. coli that have engrafted well before the onset of inflammation. We show that resident wild-type and Moco- E. coli exhibit comparable expansions in response to inflammation, indicating that, in this context, Moco-dependent processes such as nitrate respiration or formate oxidation were not important for inflammation-induced blooms. We find that Moco is important, however, for E. coli colonization in the absence of inflammation, suggesting that alternative respiratory pathways or other Moco-dependent processes are necessary for E. coli colonization of a healthy murine gut. Our findings demonstrate that the mechanisms underlying inflammation-induced blooms can depend on the temporal relationship between engraftment and inflammation, and also highlight the importance of considering colonization stage in identifying and interpreting the factors that affect the fitness of microbes colonizing the intestine.\n\nImportanceInflammation in the intestine disrupts the bacterial populations that inhabit this environment. One characteristic feature of this disruption is the large increase in abundance--blooms--of Escherichia coli and related species. These blooms have received considerable attention because they have been associated with disease progression of various forms of colitis. Previous work in mice identified respiratory pathways important for the fitness of E. coli that are introduced into the intestine around the same time that inflammation is induced. However, there is a common assumption that the same pathways account for blooms of E. coli that have colonized well before the onset of inflammation. Here, we show an example in which this assumption is incorrect. Therefore, one may need to distinguish between early and late colonization stages to understand some of the mechanisms underlying inflammation-induced blooms. This distinction is also likely to be important for many other aspects of microbial colonization of the intestine.",
+      "authors": [
+        "Roggiani, M.",
+        "Zhu, J.",
+        "Goulian, M."
+      ],
+      "primary_category": "microbiology",
+      "categories": [
+        "microbiology"
+      ],
+      "published": "2026-05-04T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.29.721686v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "DSS-induced colitis model and intestinal inflammation pathways",
+      "llm_evidence_cn": "DSS诱导的结肠炎模型和肠道炎症通路",
+      "llm_evidence": "DSS诱导的结肠炎模型和肠道炎症通路",
+      "canonical_evidence": "DSS诱导的结肠炎模型和肠道炎症通路",
+      "llm_tldr_en": "Investigates E. coli expansion pathways in the inflamed gut using a murine colitis model.",
+      "llm_tldr_cn": "使用小鼠结肠炎模型研究大肠杆菌在炎症肠道中的扩张路径。",
+      "llm_tldr": "使用小鼠结肠炎模型研究大肠杆菌在炎症肠道中的扩张路径。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-04-722712-v1",
+      "source": "biorxiv",
+      "title": "scLASER: a robust framework for simulating and detecting time-dependent single-cell dynamics in longitudinal studies",
+      "abstract": "Longitudinal single-cell clinical studies enable tracking within-individual cellular dynamics, but methods for modeling temporal phenotypic changes and estimating power remain limited. We present scLASER, a framework detecting time-dependent cellular neighborhood dynamics and simulating longitudinal single-cell datasets for power estimation. Across benchmark experiments, scLASER shows consistently higher sensitivity than traditional cluster--based approaches, with particularly pronounced gains in rare cell types and non-linear temporal patterns. Applications to inflammatory bowel disease (95,813 cells, 38 patients) reveal treatment-responsive NOTCH3+ stromal trajectories with high cell type discrimination (AUC > 0.92), while analysis of COVID-19 data (188,181 cells, 84 patients) identifies three distinct axes of T cell activity (cytotoxic effector, NK immunoreceptor signaling, and interferon-stimulated gene programs) over disease progression. scLASER enables robust longitudinal single-cell analysis and optimization of study design.",
+      "authors": [
+        "Vanderlinden, L. A.",
+        "Vargas, J.",
+        "Inamo, J.",
+        "Young, J.",
+        "Wang, C.",
+        "Zhang, F."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-05-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.04.722712v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Applications to inflammatory bowel disease reveal treatment-responsive stromal trajectories",
+      "llm_evidence_cn": "在炎症性肠病中的应用揭示了治疗响应性的间质细胞轨迹",
+      "llm_evidence": "在炎症性肠病中的应用揭示了治疗响应性的间质细胞轨迹",
+      "canonical_evidence": "在炎症性肠病中的应用揭示了治疗响应性的间质细胞轨迹",
+      "llm_tldr_en": "A framework for simulating single-cell dynamics applied to track stromal trajectories in inflammatory bowel disease.",
+      "llm_tldr_cn": "一种模拟单细胞动力学的框架，应用于追踪炎症性肠病中的间质细胞轨迹。",
+      "llm_tldr": "一种模拟单细胞动力学的框架，应用于追踪炎症性肠病中的间质细胞轨迹。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-04-29-721703-v1",
+      "source": "biorxiv",
+      "title": "SPP1hi macrophages in fibrin niches promote hyperplastic tissue remodeling in rheumatoid arthritis synovium",
+      "abstract": "In chronic inflammatory diseases, maladaptive tissue remodelling is driven by a complex interplay of resident cells, immune filtrates and the extracellular matrix. In the autoimmune disorder rheumatoid arthritis (RA), synovial tissue undergoes assive expansion to form an invasive pannus that drives the erosion of cartilage and bone. The mechanisms mediating this ggressive growth are incompletely defined. Using spatial transcriptomics profiling of patient tissue, we detected an bundance of proliferating fibroblasts near the synovial tissue lining surface and adjacent to SPP1hi macrophages. Notably, ese synovial lining regions were also distinctly marked by deposits of the clot-forming protein fibrin. While the SPP1hi acrophages phenotypically resemble pro-fibrotic macrophages that drive lung and liver fibrosis, these niches were devoid f the dense highly ordered collagen that marks fibrosis. Functionally, we found that SPP1hi macrophages degrade and hagocytose fibrin matrices and promote fibroblast proliferation. As fibrin provides transient matrices for de novo tissue eneration in the context of wound healing, these data support a model of hyperplastic tissue outgrowth involving SPP1hi acrophages, fibroblasts and fibrin matrices adhered to the exterior synovial tissue surface. While current RA therapies rimarily aim to dampen pro-inflammatory responses, our findings provide rationale for targeting pro-generative pathways nd SPP1hi macrophages.\n\nOnce Sentence SummarySPP1hi macrophages in RA synovial fibrin deposits promote tissue hyperplasia.",
+      "authors": [
+        "Mantel, I.",
+        "Zhang, H.",
+        "Vargas, J.",
+        "Gao, C.",
+        "Townsend, H.",
+        "Bell, R.",
+        "Lakhanpal, A.",
+        "Fein, M. R.",
+        "Accelerating Medicines Partnership: RA/SLE Network,",
+        "Norman, T.",
+        "Orange, D.",
+        "Ramirez, D.",
+        "DiCarlo, E. F.",
+        "Goodman, S. M.",
+        "Smith, M. H.",
+        "Zhang, F.",
+        "Wei, K.",
+        "Dey, K. K.",
+        "Rudensky, A.",
+        "Leslie, C. S.",
+        "Donlin, L. T."
+      ],
+      "primary_category": "immunology",
+      "categories": [
+        "immunology"
+      ],
+      "published": "2026-05-03T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.29.721703v1.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "SPP1hi macrophages in chronic inflammatory disease",
+      "llm_evidence_cn": "慢性炎症疾病中的SPP1hi巨噬细胞",
+      "llm_evidence": "慢性炎症疾病中的SPP1hi巨噬细胞",
+      "canonical_evidence": "慢性炎症疾病中的SPP1hi巨噬细胞",
+      "llm_tldr_en": "Characterizes SPP1hi macrophages and their role in tissue remodeling during rheumatoid arthritis.",
+      "llm_tldr_cn": "表征了SPP1hi巨噬细胞及其在类风湿关节炎组织重塑中的作用。",
+      "llm_tldr": "表征了SPP1hi巨噬细胞及其在类风湿关节炎组织重塑中的作用。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-04-722712-v2",
+      "source": "biorxiv",
+      "title": "scLASER: a robust framework for simulating and detecting time-dependent single-cell dynamics in longitudinal studies",
+      "abstract": "Longitudinal single-cell clinical studies enable tracking within-individual cellular dynamics, but methods for modeling temporal phenotypic changes and estimating power remain limited. We present scLASER, a framework detecting time-dependent cellular neighborhood dynamics and simulating longitudinal single-cell datasets for power estimation. Across benchmark experiments, scLASER shows consistently higher sensitivity than traditional cluster--based approaches, with particularly pronounced gains in rare cell types and non-linear temporal patterns. Applications to inflammatory bowel disease (95,813 cells, 38 patients) reveal treatment-responsive NOTCH3+ stromal trajectories with high cell type discrimination (AUC > 0.92), while analysis of COVID-19 data (188,181 cells, 84 patients) identifies three distinct axes of T cell activity (cytotoxic effector, NK immunoreceptor signaling, and interferon-stimulated gene programs) over disease progression. scLASER enables robust longitudinal single-cell analysis and optimization of study design.",
+      "authors": [
+        "Vanderlinden, L. A.",
+        "Vargas, J.",
+        "Inamo, J.",
+        "Young, J.",
+        "Wang, C.",
+        "Zhang, F."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-05-10T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.04.722712v2.full.pdf",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Application of single-cell dynamics framework to inflammatory bowel disease",
+      "llm_evidence_cn": "单细胞动力学框架在炎症性肠病中的应用",
+      "llm_evidence": "单细胞动力学框架在炎症性肠病中的应用",
+      "canonical_evidence": "单细胞动力学框架在炎症性肠病中的应用",
+      "llm_tldr_en": "Presents scLASER for detecting cellular dynamics, applied to inflammatory bowel disease datasets.",
+      "llm_tldr_cn": "提出了用于检测细胞动力学的scLASER，并应用于炎症性肠病数据集。",
+      "llm_tldr": "提出了用于检测细胞动力学的scLASER，并应用于炎症性肠病数据集。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
