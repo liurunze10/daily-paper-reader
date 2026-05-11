@@ -1,0 +1,3408 @@
+Title: 2026.02.15.705989v2.full.pdf
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.02.15.705989v2.full.pdf
+
+Number of Pages: 60
+
+Markdown Content:
+1
+
+# Comparative multi -omics of the macrophage response to infection with 1
+
+# Mycobacterium tuberculosis complex bacteria reveals pathogen -driven 2
+
+# epigenomic reprogramming 3
+
+4
+
+Thomas J. Hall 1 , Morgane Mitermite 2 , John F. O'Grady 1 , John A. Browne 1 , Gillian P. McHugo 1 , Emily L. 5
+
+Clark 3 , Mazdak Salavati 4 , Stephen V. Gordon 2,5,6 , David E. MacHugh 1,5,6 
+
+6 
+
+> 1
+
+Animal Genomics Laboratory, UCD School of Agriculture and Food Science, UCD College of Health and 7
+
+Agricultural Sciences, University College Dublin, Belfield, Dublin, D04 V1W8, Ireland. 8 
+
+> 2
+
+UCD School of Veterinary Medicine, UCD College of Health and Agricultural Sciences, University College 9
+
+Dublin, Belfield, Dublin, D04 V1W8, Ireland. 10  
+
+> 3
+
+European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Genome Campus, 11 
+
+Hinxton, Cambridge CB10 1SD, United Kingdom. 12  
+
+> 4
+
+Dairy Research and Innovation Centre, SRUC South and West Faculty, Barony Campus, Parkgate, Dumfries 13 
+
+DG1 3NE, UK. 14  
+
+> 5
+
+UCD Conway Institute of Biomolecular and Biomedical Research, University College Dublin, Belfield, 15 
+
+Dublin, D04 V1W8, Ireland. 16  
+
+> 6
+
+UCD One Health Centre, University College Dublin, Belfield, Dublin, D04 V1W8, Ireland. 17 
+
+18 
+
+19 
+
+20 
+
+21 
+
+22 
+
+23 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+2
+
+# Abstract 24 
+
+Background: Bovine tuberculosis (bTB) is a chronic infectious disease primarily caused by Mycobacterium 25 
+
+bovis , which inflicts significant economic losses on the global livestock industry worldwide and can also cause 26 
+
+tuberculosis (TB) disease in other mammalian species, including humans. Alveolar macrophages are the host 27 
+
+cells targeted by the pathogen during the early stages of infection. While they play a crucial role in controlling 28 
+
+infection, the exact nature of the host-pathogen interaction and the genetic and epigenetic factors that modulate 29 
+
+infection outcome remain poorly understood. 30 
+
+Results: Here, we used transcriptomics (RNA-seq), chromatin accessibility (ATAC-seq), and chromatin 31 
+
+configuration (ChIP-seq) analyses to examine the effects of intracellular mycobacterial infection on the bovine 32 
+
+alveolar macrophage (bAM) transcriptome and epigenome. The primary focus was M. bovis infection, but we 33 
+
+also conducted parallel comparative analyses using M. tuberculosis (the primary cause of human TB—hTB), 34 
+
+M. bovis BCG (the vaccine strain), and gamma-irradiated (killed) M. bovis . Integration of RNA-seq, ChIP-seq, 35 
+
+and ATAC-seq data revealed coordinated remodelling of chromatin accessibility and histone modification 36 
+
+landscapes underpinning transcriptional activation of key immune and metabolic pathways in response to 37 
+
+infection. The identification of candidate genes, including ERBB4 , LRCH1 , MRTFA , and RNPC3 , through 38 
+
+integrative analysis with a genome-wide association study (GWAS) for M. bovis infection susceptibility 39 
+
+underscores the functional relevance of these regulatory networks. 40 
+
+Conclusions: Our results demonstrate that M. bovis drives extensive reprogramming of the bAM epigenome, 41 
+
+distinct from the responses elicited by other members of the M. tuberculosis complex (MTBC). The results of 42 
+
+this multi-omics comparison provide new insights into the function of pivotal response genes and support the 43 
+
+hypothesis that pathogen-driven epigenetic reprogramming of the bovine host macrophage is key to M. bovis 44 
+
+survival . It also identifies molecular targets that may inform genome-enabled breeding strategies to enhance 45 
+
+resilience to bTB in cattle. 46 
+
+Keywords: chromatin, genome regulation, host-pathogen interaction, integrative genomics, macrophage, 47 
+
+mycobacteria, tuberculosis 48 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+3
+
+# Introduction 49 
+
+Bovine tuberculosis (bTB) is a chronic infectious disease that primarily affects livestock, particularly 50 
+
+taurine ( Bos taurus ), zebu ( Bos indicus ), and B. taurus × indicus hybrid cattle populations. Bovine TB has a 51 
+
+substantial socioeconomic cost through disrupting food production, threatening stockholder livelihoods, and 52 
+
+causing economic damage to global agriculture that runs to billions of dollars annually (Zinsstag et al. 2006; 53 
+
+Azami and Zinsstag 2018). The disease is primarily caused by Mycobacterium bovis , an intracellular 54 
+
+mycobacterial pathogen with 99.95% genome sequence identity to Mycobacterium tuberculosis , the primary 55 
+
+cause of human tuberculosis (hTB) (Garnier et al. 2003). However, unlike M. tuberculosis, M. bovis has a 56 
+
+broad host range and can infect several important domestic species besides cattle, including sheep ( Ovis aries ), 57 
+
+goats ( Capra hircus ), pigs ( Sus scrofa ), and llamas and alpacas ( Lama spp.). (Pesciaroli et al. 2014; Malone 58 
+
+and Gordon 2017). Importantly, M. bovis can also cause zoonotic tuberculosis (zTB), which has serious 59 
+
+implications for human health, particularly in the Global South (Olea-Popelka et al. 2017; Vayr et al. 2018; 60 
+
+Kock et al. 2021). Mycobacterium bovis and M. tuberculosis are both classified within a broader taxonomic 61 
+
+group, the Mycobacterium tuberculosis complex (MTBC), consisting of closely related intracellular 62 
+
+mycobacterial species that can propagate and transmit within a spectrum of animal hosts (Malone and Gordon 63 
+
+2017). 64 
+
+Previous research has shown that the pathogenesis of bTB is similar to hTB. There are many shared 65 
+
+characteristics between M. tuberculosis infection in humans and M. bovis infection in cattle, such that bTB can 66 
+
+serve as a valuable large animal model for TB disease in humans (Waters et al. 2014; Buddle et al. 2016; 67 
+
+Williams and Orme 2016; Gong et al. 2020). Transmission of tubercle bacilli occurs through inhalation of 68 
+
+contaminated aerosol droplets, with the primary site of infection establishing in the lungs. Tissue-resident 69 
+
+alveolar macrophages (AM) normally phagocytose airborne bacteria and other microorganisms to contain or 70 
+
+destroy them (Aegerter et al. 2022; Park et al. 2022). Disease-causing mycobacteria, however, have evolved 71 
+
+various mechanisms to interfere with host immune responses and persist and replicate within AM (Cambier et 72 
+
+al. 2014; Schorey and Schlesinger 2016; Awuh and Flo 2017; Chandra et al. 2022; Bo et al. 2023). These 73 
+
+mechanisms include the manipulation of cell surface receptors on host macrophages, inhibition of phagosome-74 
+
+lysosome fusion, neutralisation of reactive oxygen and nitrogen intermediates (ROI and RNI), exploitation of 75 
+
+intracellular nutrient supply and metabolism, suppression of apoptosis and autophagy, interference with 76 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+4
+
+antigen presentation, modulation of macrophage signalling pathways, cytosolic escape from the phagosome, 77 
+
+and induction of necrosis. These actions contribute to immunopathology, pathogen shedding from the host, 78 
+
+and overall disease progression (Ehrt and Schnappinger 2009; Hussain Bhat and Mukhopadhyay 2015; Queval 79 
+
+et al. 2017; Chaurasiya 2018; Stutz et al. 2018). 80 
+
+The discovery of substantial reprogramming of AM transcriptional networks in response to M. bovis and 81 
+
+M. tuberculosis infection exemplifies the profound impact of intracellular mycobacteria on host macrophages 82 
+
+(Nalpas et al. 2015; Vegh et al. 2015; Lavalett et al. 2017; Jensen et al. 2018; Malone et al. 2018; Papp et al. 83 
+
+2018; Hall et al. 2019; Lavalett et al. 2020a; Pisu et al. 2020; Hall et al. 2021; Hall et al. 2024). These 84 
+
+investigations have also revealed that differentially expressed genes (DEGs) and perturbed cellular pathways 85 
+
+and networks are functionally associated with macrophage processes that control or eliminate intracellular 86 
+
+microbes. It has also been shown that the rewiring of host gene expression induced by intracellular pathogens 87 
+
+to promote transmission and persistence can involve reconfiguring and remodelling of chromatin (Hamon and 88 
+
+Cossart 2008; Zhang and Cao 2019; Fol et al. 2020). This phenomenon has been observed in infections caused 89 
+
+by various bacterial pathogens, including Chlamydia spp., Leishmania donovani , Listeria monocytogenes , and 90 
+
+Yersinia enterocolitica (Marr et al. 2014; Bierne and Hamon 2020; Bekere et al. 2021; Stein and Thompson 91 
+
+2023). 92 
+
+Regarding intracellular mycobacterial infections and the host epigenome, an early study by Yaseen and 93 
+
+colleagues (Yaseen et al. 2015) demonstrated that the Rv1988 protein, secreted by virulent mycobacteria, 94 
+
+localises to chromatin during infection and represses host cell genes by methylating histone H3 at a non-95 
+
+canonical arginine residue. Additionally, chromatin immunoprecipitation sequencing (ChIP-seq) analysis 96 
+
+revealed that regulatory sequence motifs embedded in specific subtypes of Alu SINE transposable elements 97 
+
+play a significant role in the epigenetic machinery that modulates human macrophage gene expression during 98 
+
+M. tuberculosis infection (Bouttier et al. 2016). More recently, it has been demonstrated that heterologous 99 
+
+expression of the mycobacterial PE family protein PE17 gene ( PE17 /Rv1646 ) in a Mycobacterium smegmatis -100 
+
+infected macrophage cell line promotes activation of apoptotic signalling pathways via remodelling of host 101 
+
+chromatin through reduced H3K9me3 chromatin occupancy (Abo-Kadoum et al. 2021). Correa-Macedo and 102 
+
+coworkers have also shown, using a combination of RNA-seq, ATAC-seq, and ChIP-seq, that primary human 103 
+
+AM (hAM) obtained using bronchoalveolar lavage (BAL) exhibited altered transcriptional programs and 104 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+5
+
+substantially remodelled chromatin when challenged in vitro with M. tuberculosis (Correa-Macedo et al. 2021). 105 
+
+Intriguingly, this work also demonstrated that bAM from HIV-positive subjects and HIV-negative subjects 106 
+
+undergoing prophylactic antiretroviral therapy (ART) had a profoundly blunted transcriptional response with 107 
+
+little or no changes in chromatin accessibility. In addition, two different studies of THP-1 differentiated 108 
+
+macrophages infected with M. tuberculosis using transcriptomics with ATAC-seq and single-cell Hi-C, 109 
+
+respectively, showed significant reorganisation of chromatin initiated by NF-κB-directed transcriptional 110 
+
+regulation (Lin et al. 2022) and impacts on the expression of genes involved in type I interferon (IFN) 111 
+
+signalling pathways (Madden et al. 2023). 112 
+
+Host-pathogen interaction at the level of the macrophage epigenome has also been studied for bTB; our 113 
+
+group has previously shown that bovine alveolar macrophages (bAM) infected with M. bovis undergo 114 
+
+extensive transcriptional reprogramming through differential distribution of H3K4me3 and Pol II at key 115 
+
+immune genes (Hall et al. 2019). Furthermore, we found evidence suggesting that reconfigured chromatin at 116 
+
+some genomic loci may be favourable for intracellular bacterial survival, such as the triple methylation of 117 
+
+H3K4 at the transcriptional start site (TSS) of the TNFAIP3 gene, which encodes a key inhibitor of the innate 118 
+
+immune-activating NF-kB pathway. This immunoevasion strategy has also been observed for Leishmania 119 
+
+amazonensis , where the same modification is seen at TNFAIP3 in parasite-infected macrophages, but not in 120 
+
+macrophages stimulated with LPS (Lecoeur et al. 2020). 121 
+
+The present study aims to extend our understanding of macrophage reprogramming in response to 122 
+
+MTBC infection through a comparative multi-omics approach. To achieve this, we used RNA-seq, ChIP-seq, 123 
+
+and ATAC -seq to examine gene expression changes and chromatin remodelling in bAM in response to four 124 
+
+separate infections: (i) virulent M. bovis , the primary agent of bTB and the bovine-adapted MTBC species; 125 
+
+(ii) M. tuberculosis , also virulent and closely related to M. bovis but the human-adapted MTBC species; (iii) 126 
+
+M. bovis Bacillus Calmette-Guérin (BCG), the attenuated vaccine strain which lacks the RD1 locus, a major 127 
+
+virulence determinant required for ESX-1 secretion and pathogenicity in both M. tuberculosis and M. bovis ;128 
+
+and (iv) γ-irradiated M. bovis , dead bacteria that retain an intact cell wall and associated surface ligands for 129 
+
+engagement of macrophage receptors but that lack secretion of virulence effectors. Taken together, these strains 130 
+
+provided a framework for comparing the bovine alveolar macrophage transcriptional and chromatin responses 131 
+
+to infection with virulent, attenuated/dead, and host-adapted mycobacteria. Furthermore, we integrated outputs 132 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+6
+
+from these analyses with large genome-wide association study (GWAS) datasets focused on an M. bovis 133 
+
+infection-susceptibility trait to prioritise cattle genomic regions and SNPs associated with resilience to bTB. 134 
+
+# Results 135 
+
+In vitro challenge of bovine alveolar macrophages with four types of MTBC mycobacteria 136 
+
+We investigated reprogramming of the bAM regulatory genome after a 24 h in vitro challenge with four 137 
+
+different types of MTBC bacteria ( M. bovis ‒ MBO; M. tuberculosis ‒ MTU; M. bovis BCG ‒ BCG; gamma -138 
+
+irradiated (killed) M. bovis ‒ IRR). We used a combined multi-omics approach, including RNA-seq, ChIP-seq, 139 
+
+and ATAC-seq analyses, comparing each challenged bAM group to a control non-challenged bAM group 140 
+
+(CON) cultured for 24 h post-infection (hpi) (Additional file 2: Table S1). A diagrammatic summary overview 141 
+
+of the experimental design and analytical workflow is provided (Fig. 1). 142 
+
+Bacterial uptake by cultured bovine alveolar macrophages 143 
+
+Fluorescence microscopy was used to generate 10 images of tissue culture plate wells containing the 144 
+
+bAM samples for each experimental challenge group at 24 hpi (MBO, MTU, BCG, IRR, and CON). Combined 145 
+
+analysis of these images yielded quantitative infection/uptake values, including bAM counts, bacterial cell 146 
+
+counts, infected and uninfected cell counts, global multiplicity of infection (MOI) values, and the percentage 147 
+
+of infected cells for each experimental challenge group (Additional file 2: Table S2). These results indicated 148 
+
+that the relative levels of uninfected and infected cells did not differ significantly among the MBO, MTU, and 149 
+
+BCG groups, with a mean 34.5% infection rate for the MBO group ( n = 6), 33.3% for the MTU group ( n = 6) 150 
+
+and 35.0% for the BCG group ( n = 6). The exception was the IRR group ( n = 6), which had a 17.8% uptake 151 
+
+rate for these dead bacterial cells. Examples of the images used to generate these quantitative infection/uptake 152 
+
+data are provided (Additional file 1: Fig. S1a–e). A t-test was performed for each comparison, yielding FDR-153 
+
+Padj. > 0.05 for the three comparisons involving live bacteria and FDR-Padj. < 0.05 for the three comparisons 154 
+
+with live bacteria versus the IRR group (Additional file 1: Fig. S1f). 155 
+
+156 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+7
+
+157 
+
+Fig. 1 Experimental and computational workflow . Laboratory bovine alveolar macrophage (bAM) challenge, 158 
+
+data generation, and data integration steps are shown. 159 
+
+160 
+
+Transcriptional responses of bovine alveolar macrophages to different MTBC mycobacteria 161 
+
+challenges 162 
+
+RNA-seq read and mapping statistics and raw gene counts were tabulated (Methods; Additional file 3: 163 
+
+Tables S3–S4). The RNA-seq results from the five experimental groups (MBO, MTU, BCG, IRR, and CON) 164 
+
+showed distinct transcriptomic responses (Additional file 3: Tables S5 ‒S8). A single MBO RNA-seq sample 165 
+
+(animal ID: 43095) was compromised by contamination and not included in subsequent analyses (Additional 166 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+8
+
+file 2: Table S1). Using the PlotPCA function in DESeq2, we generated a plot of the first two principal 167 
+
+components (PC1 and PC2) from a principal component analysis (PCA) of the normalised gene expression 168 
+
+data for each of the 35 experimental samples (MBO, n = 5; MTU, n = 6; BCG, n = 6; IRR, n = 6; and CON, n169 
+
+= 6) (Fig. 2a). The values for PC1, which accounted for 39% of the variance, broadly separated the five 170 
+
+experimental groups, with the CON group followed sequentially by the IRR, BCG, MTU, and MBO groups, 171 
+
+corresponding approximately to the level of bAM transcriptome perturbation caused by each MTBC challenge. 172 
+
+The PC2 results, on the other hand, which accounted for 20% of the variance, were largely determined by 173 
+
+genetic variation and differentiated the individual biological samples (sample numbers 1‒6) in approximately 174 
+
+the same sequential order within each experimental group. 175 
+
+A matrix heatmap of differentially expressed genes (DEGs) detected using the default criterion for 176 
+
+differential expression (FDR-Padj. < 0.05 ) and partitioned into up- and downregulated genes for the ten 177 
+
+experimental group contrasts across the five experimental groups (MBO, MTU, BCG, IRR, and CON) was 178 
+
+generated (Fig. 2b). The numbers of DEGs detected ranged between 60 and almost 9,000 (8,852) for the 179 
+
+BCG/MTU and MBO/CON contrasts, respectively. An UpSet plot, with the intersection DEG sets across the 180 
+
+ten gene expression contrasts showed the overlaps in DEG sets among the different experimental contrasts 181 
+
+(Fig. 2c). For example, of the 8,852 DEGs in the MBO/CON comparison, 5,689 DEGs were specific to bAM 182 
+
+infected with M. bovis (i.e., only detected in the MBO/CON contrast); 960 DEGs intersected only for bAM 183 
+
+challenged with the gamma-irradiated M. bovis (i.e., detected solely in the MBO/CON and IRR/CON 184 
+
+contrasts); 713 intersected only for bAM infected with M. tuberculosis (i.e., detected solely in the MBO/CON 185 
+
+and MTU/CON contrasts); and one DEG intersected only for bAM infected with M. bovis BCG (i.e., detected 186 
+
+solely in the MBO/CON and BCG/CON contrasts). In total, across the experimental contrasts, there were 9,916 187 
+
+unique DEGs, with substantial overlaps among these DEGs across the four challenge-versus-control contrasts 188 
+
+(MBO/CON, MTU/CON, BCG/CON, and IRR/CON). For this universal set of 9,916 DEGs, 419 were 189 
+
+common to these four experimental groups (Additional file 3: Table S9) and a jitter plot was generated with 190 
+
+the log 2 fold-change (log 2 FC) values for these 419 genes with the top ten upregulated and top five 191 
+
+downregulated genes highlighted (Fig. 2d). The top ten upregulated genes shared across the four contrasts 192 
+
+included, for example, the IL36G gene (MBO/CON, MTU/CON, and BCG/CON), which encodes IL-36 γ a193 
+
+cytokine that has been shown to induce bactericidal processes in M. tuberculosis -infected macrophages (Ahsan 194 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+9
+
+et al. 2016; Gao et al. 2019). Also highlighted were CCL20 (MTU/CON and BCG/CON), which encodes a key 195 
+
+chemokine in the immunoregulatory and inflammatory response to intracellular mycobacterial pathogens 196 
+
+(Rivero-Lezcano et al. 2010; Lavalett et al. 2020b); IL6 (MTU/CON, BCG/CON, and IRR/CON), which 197 
+
+encodes the proinflammatory IL-6  cytokine  produced by macrophages infected with MTBC pathogens 198 
+
+(Martinez et al. 2013); and NOS2 (MTU/CON, BCG/CON, and IRR/CON), which encodes a nitric oxide (NO) 199 
+
+synthase that provides important antimicrobial functions in macrophages (Bogdan 2015). 200 
+
+Focusing on the four contrasts for the MBO, MTU, BCG and IRR bAM challenge groups versus the 201 
+
+CON group individually, the following numbers of statistically significant DEGs (FDR-Padj. < 0.05 ) were 202 
+
+detected: 8,852 (4,513 up, 4,339 down) for the MBO/CON contrast, 2,312 (1,469 up, 843 down) for the 203 
+
+MTU/CON contrast, 586 (523 up, 63 down) for the BCG/CON contrast, and 3,320 (2,000 up, 1,320 down) for 204 
+
+the IRR/CON contrast (Fig. 2b, Fig. 3a–d; Additional file 3: Tables S5–S8). These results show that the 205 
+
+transcriptomic response relative to the CON group was substantially more pronounced in the MBO group, and 206 
+
+that most DEGs in the MBO/CON contrast were upregulated. The volcano plots of DEGs (Fig. 3a–d) highlight 207 
+
+additional important upregulated genes for each of the four contrasts (MBO/CON, MTU/CON, BCG/CON, 208 
+
+and IRR/CON). These include IFIT3 (MBO/CON and MTU/CON), which is induced by type I interferon (IFN) 209 
+
+signalling and has been identified as an important hub gene in host transcriptional networks responding to M. 210 
+
+tuberculosis infection and as a potential biomarker of active TB disease in humans (Qiu et al. 2022; Wu et al. 211 
+
+2023; Liu and Li 2024). Also highlighted is IRF7 (MTU/CON and BCG/CON), which encodes a key regulator 212 
+
+of type I IFN-dependent immune responses that promote increased mycobacterial intracellular survival 213 
+
+(Leisching et al. 2017; Cheng and Schorey 2018). In addition, upregulation of SP110 was evident (MTU/CON 214 
+
+and BCG/CON), a gene that promotes apoptotic cell death and hence containment of infection (Wu et al. 2016) 215 
+
+and is a positive regulator of inflammatory responses in M. tuberculosis -infected macrophages (Nakamura et 216 
+
+al. 2024). 217 
+
+The DEG gene sets for the ten possible experimental group contrasts were also analysed using IPA ® ,218 
+
+and the top five pathways (by P-value) were examined (Methods; Additional file 3: Table S10). In addition, 219 
+
+the top ten pathways for the four primary challenge contrasts (MBO/CON, MTU/CON, BCG/CON, and 220 
+
+IRR/CON) were collated and visualised by activation state (Additional file 1: Fig. S2a ‒d). For each pathway 221 
+
+analysis, among the top five pathways, both unique pathways and overlaps across the ten contrasts were 222 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+10 
+
+observed. The enriched pathways that were common to two or more groups included Interferon signalling and 223 
+
+Activation of IRF by cytosolic pattern recognition receptors (MBO/CON, MTU/CON, BCG/CON, 224 
+
+MBO/BCG , MBO/IRR, MBO/MTU, MTU/BCG, and MTU/IRR); Role of 225 
+
+hypercytokinemia/hyperchemokinemia in the pathogenesis of influenza (MTU/CON, BCG/CON, BCG/IRR, 226 
+
+MBO/IRR, MTU/BCG, and MTU/IRR); Macrophage classical activation signalling pathway (MTU/CON and 227 
+
+BCG/CON); and Role of RIG1-like receptors in antiviral innate immunity (MBO/BCG, MBO/IRR, 228 
+
+MBO/MTU, and MBO/BCG), which is in agreement with previous work highlighting the importance of RIG-229 
+
+I-like receptor signalling in the specific responses of M. bovis -infected bAM (Malone et al. 2018; Hall et al. 230 
+
+2019; Hall et al. 2021; Hall et al. 2024). Although unique pathways specific to one contrast were less common, 231 
+
+two of the most notable examples were Death receptor signalling and Protein ubiquitination pathway 232 
+
+(MBO/CON). Finally, all the top five pathways in the IRR/CON contrast were unique to that group: IL-6 233 
+
+signalling, PPAR signalling, IL-10 signalling, Acute phase response signalling, and CD40 signalling .234 
+
+235 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+11 
+
+236 
+
+Fig. 2 Gene expression and differentially expressed genes (DEGs) in bovine alveolar macrophages (bAM) 237 
+
+challenged with Mycobacterium bovis (MBO), M. tuberculosis (MTU), M. bovis BCG (BCG), gamma-irradiated 238 
+
+(killed) M. bovis (IRR), and a non-challenged control (CON). a PCA summary of gene expression data across 239 
+
+the five challenge groups. b Numbers of DEGs (FDR -Padj. < 0.05; |log 2FC| > 0| for all 10 possible contrasts. c240 UpSet plot showing the intersection of shared DEGs across the four primary bAM challenges (MBO/CON, 241 
+
+MTU/CON, BCG/CON, and IRR/CON). d Binned j itter plot of log 2FC values for the 419 significant DEGs across 242 
+
+the four primary bAM challenges (MBO/CON, MTU/CON, BCG/CON, and IRR/CON). 243 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+12 
+
+244 
+
+Fig. 3 Volcano plots showing statistically significant (FDR -Padj. < 0.05) differentially expressed genes (DEGs) for 245 
+
+the four primary MTBC bAM challenges. Orange data points represent genes with |log 2FC values| < 1 , and 246 
+
+red data points denote genes with |log 2FC values| ≥ 1. The top ten genes ranked by −log 10 FDR -Padj. are also 247 
+
+shown for each contrast. a Mycobacterium bovis vs. control (MBO /CON ). b M. tuberculosis vs. control 248 (MTU /CON ). c M. bovis BCG vs. control (BCG /CON ). d gamma-irradiated (killed) M. bovis vs. control 249 
+
+(IRR/CON). 250 
+
+251 
+
+Transcriptional reprogramming of bovine alveolar macrophages challenged with different MTBC 252 
+
+mycobacteria is modulated by histone modifications and chromatin accessibility 253 
+
+Previous work has shown that bAM undergo marked transcriptional perturbation and reprogramming 254 
+
+after in vitro challenge with M. bovis 24 hpi, with a substantial proportion of the detectable bAM transcriptome 255 
+
+exhibiting significant differential expression compared to non-infected control bAM (Nalpas et al. 2015; 256 
+
+Malone et al. 2018; Hall et al. 2021). The extent of these gene expression changes is comparable to those 257 
+
+observed in studies that have also incorporated additional functional genomics assays to investigate chromatin 258 
+
+remodelling during bacterial and viral infections. In these cases, the levels of trimethylation of lysine 4 of 259 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+13 
+
+histone 3 (H3K4me3) and acetylation of lysine 27 of histone 3 (H3K27ac) were associated with active 260 
+
+transcription, and monomethylation of lysine 4 of histone 3 (H3K4me1) and trimethylation of lysine 27 of 261 
+
+histone 3 (H3K27me3) were associated with transcriptional repression (Abraham and Kulesza 2013; Bouttier 262 
+
+et al. 2016; Arts et al. 2018; Hall et al. 2019; Del Rosario et al. 2022). 263 
+
+To expand our previous work examining chromatin configuration and reprogramming of the bAM 264 
+
+transcriptome due to M. bovis infection (Hall et al. 2019), we used ChIP-seq and ATAC-seq in parallel to 265 
+
+examine histone modifications (H3K4me3, H3K4me1, H3K27ac, and H3K27me3), CTCF binding, and 266 
+
+broader regions of open chromatin (ATAC-seq) that occur in bAM 24 h after MBO, MTU, BCG, and IRR 267 
+
+challenge (Methods). The bAM samples from three sex- and age-matched Holstein-Friesian cattle used for 268 
+
+these experiments were a subset of the six biological replicates used for the RNA-seq gene expression analyses 269 
+
+(Additional file 2: Table S1). Firstly, the ChIP-seq read and mapping statistics and detailed peak statistics were 270 
+
+tabulated (Additional file 4: Tables S12 ‒S13), and analysis of the ChIP-seq data revealed a mean of 24,641 271 
+
+peaks for H3K4me3, a mark of active transcription, across the 15 challenge samples (3 MBO, 3 MTU, 3 BCG, 272 
+
+3 IRR, and 3 CON). In addition, a mean of 65,040 peaks was obtained for H3K4me1 (marks active and primed 273 
+
+enhancers), 31,844 for H3K27ac (marks active enhancers), 5,044 for H3K27me3 (marks transcriptional 274 
+
+repression of proximal genes), and 45,292 for CTCF protein binding (marks repression of enhancer-mediated 275 
+
+transcriptional activation) (Additional file 4: Tables S14). For the H3K4me1 peaks, only two control (CON) 276 
+
+samples were available, so the mean value across 14 samples was calculated (Additional file 4: Table S14). 277 
+
+Secondly, the ATAC-seq read and mapping statistics and detailed peak statistics were tabulated (Additional 278 
+
+file 5: Tables S19 ‒S20), and analysis of the ATAC-seq data revealed a mean of 90,540 peaks across the 15 279 
+
+challenge samples (3 MBO, 3 MTU, 3 BCG, 3 IRR, and 3 CON) (Additional file 5: Table S19). The H3K4me3, 280 
+
+H3K4me1, H3K27ac, H3K27me3, and ATAC-seq genome-wide peak distributions for each experimental bAM 281 
+
+challenge group (MBO, MTU, BCG, IRR, and CON) were plotted as nested circular signal tracks across the 282 
+
+ARS-UCD1.2 bovine reference genome (BTA1–BTAX) (Fig. 4‒e) .283 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+14 
+
+284 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint 15 
+
+Fig. 4 Circular plots of bAM challenge genome-wide peak distributions for ChIP -seq histone modification 285 (H3K4me3, H3K4me3, H3K27ac, and H3K27me3) and ATAC-seq data. The bottom -right radial key shows the 286 
+
+concentric circular plots for each epigenomic data type . a Mycobacterium bovis (MBO). b M. tuberculosis 287 (MTU). c M. bovis BCG (BCG). d Gamma-irradiated (killed) M. bovis (IRR). e Control non-challenged (CON). 288 
+
+289 
+
+To identify epigenomic differences for the four contrasts between the MTBC challenged bAM groups 290 
+
+(MBO, MTU, BCG, and IRR) and the control group (CON), differential affinity binding site (DABS) and 291 
+
+differential open chromatin region (DOCR) results were collated from the ChIP-seq (Methods; Additional file 292 
+
+4: Tables S15 ‒S18) and ATAC-seq datasets (Additional file 5: Tables S21 ‒S22), respectively. To obtain a 293 
+
+broader perspective on open chromatin regions that differed between MTBC-challenged bAM and control 294 
+
+(CON) bAM samples, we focused first on the results from the ATAC-seq analysis, which revealed that the M. 295 
+
+bovis (MBO/CON) and M. tuberculosis (MTU/CON) contrasts were the only two of the four primary challenge 296 
+
+contrasts (MBO/CON, MTU/CON, BCG/CON, and IRR/CON) to exhibit statistically significant DOCRs: the 297 
+
+MBO/CON contrast generated 226 DOCRs and the MTU/CON contrast produced 1 DOCR; however, there 298 
+
+were no DOCRs observed for the BCG/CON and IRR/CON contrasts (Additional file 5: Tables S21 ‒S22; 299 
+
+Additional file 1: Fig. S3a ‒d). The single statistically significant DOCR observed for the MTU/CON is located 300 
+
+at the TMPRSS2 gene, which encodes a transmembrane serine protease that is upregulated in human 301 
+
+macrophages infected with M. tuberculosis . This DOCR was also found to be significant in the MBO/CON 302 
+
+contrast. This TMPRSS2 upregulation was also shown to contribute to an increased risk of SARS-CoV-2 303 
+
+infection, because TMPRSS2 is a key protease required for spike protein cleavage and ACE2 engagement by 304 
+
+the virus (Sheerin et al. 2022). Examination of the transcriptomics results for TMPRSS2 in the bAM challenged 305 
+
+with four types of MTBC bacteria shows that it is substantially upregulated in the MBO/CON and MTU/CON 306 
+
+contrasts with log 2 FC values of +4.47 (FDR-Padj. = 2.43 × 10 -43 ) and +2.57 (FDR-Padj. = 9.48 × 10 -16 ), 307 
+
+respectively (Additional file 3: Tables S5 ‒S6). The TMPRSS2 gene is also moderately upregulated in the 308 
+
+BCG/CON contrast (log 2 FC = 1.43; FDR-Padj. = 1.48 × 10 -4 ) but is not DE in the IRR/CON contrast (Additional 309 
+
+file 3: Tables S7 ‒S8). 310 
+
+To quantify and compare the numbers of DOCRs for all 10 possible experimental contrasts, we 311 
+
+determined the numbers of statistically significant DOCRs for the remaining six contrasts (MBO/MTU, 312 
+
+BCG/MTU, IRR/MTU, MBO/BCG, IRR/BCG, and MBO/IRR) (Methods; Additional file 1: Fig. S3e). This 313 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+16 
+
+demonstrated that, across all ATAC-seq challenge datasets, M. bovis bAM infection was the only challenge 314 
+
+with relatively large numbers of DOCRs observed in all MBO contrasts with the control (CON) and other 315 
+
+MTBC challenge groups (MTU, BCG, and IRR). In addition to the 226 DOCRs observed for the MBO/CON 316 
+
+contrast, there were eight DOCRs observed for the MBO/MTU contrast. Also, in addition to the single 317 
+
+statistically significant DOCR observed for the MTU/CON contrast, there was also one DOCR observed for 318 
+
+the IRR/MTU contrast; 72 DOCRs observed for the MBO/BCG contrast, and 264 DOCRs observed for the 319 
+
+MBO/IRR contrast. The other four contrasts (BCG/CON, IRR/CON, BCG/MTU, and IRR/BCG) did not 320 
+
+reveal any statistically significant DOCRs (Additional file 1: Fig. S3e). 321 
+
+In addition to identifying statistically significant DOCRs in the ATAC-seq data, the epigenomic analyses 322 
+
+revealed significant differences in ChIP-seq peak counts for histone modifications across the bAM challenge 323 
+
+groups (MBO, MTU, BCG, and IRR) compared with the control (CON) group. Specifically, statistically 324 
+
+significant differential affinity binding sites (DABSs) for H3K4me1, H3K4me3, and H3K27ac were observed 325 
+
+at multiple genomic locations across the four primary challenge contrasts (MBO/CON, MTU/CON, 326 
+
+BCG/CON, and IRR/CON) (Additional file 4: Tables S15‒S18) . However, no significant H3K27me3 DABS 327 
+
+were observed across any of the four primary MTBC/control contrasts. As observed in the ATAC-seq results, 328 
+
+the majority of ChIP-seq-derived DABSs were detected in the M. bovis -infected samples compared with the 329 
+
+control bAM (MBO/CON). Using the default criterion for DABS detection with DiffBind (FDR-Padj. < 0.05), 330 
+
+878 DABSs were detected for the MBO/CON contrast, and 56, 15, and 138 DABSs were detected for the 331 
+
+MTU/CON, BCG/CON, and IRR/CON contrasts, respectively (Additional file 4: Tables S15‒S18 ). To 332 
+
+illustrate this further, the DABs for H3K27ac, which marks higher activation of transcription (active 333 
+
+enhancers), were plotted for each of the four primary challenge contrasts (MBO/CON, MTU/CON, 334 
+
+BCG/CON, and IRR/CON) Fig. 5a‒d) . In a similar fashion to the transcriptomics (RNA-seq) and open 335 
+
+chromatin (ATAC-seq) results, differences in the ChIP-seq chromatin accessibility landscape were 336 
+
+substantially more pronounced in the M. bovis -infected relative to the control bAM (MBO/CON). This is also 337 
+
+evident when the transcriptomics results for genes encoding proteins involved in histone methylation and 338 
+
+acetylation are examined in isolation. For these functional classes of genes, there are substantially more DEGs 339 
+
+detected in the MBO/CON contrast compared to the other three primary contrasts (MTU/CON, BCG/CON, 340 
+
+and IRR/CON) (Fig. 6). 341 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+17 
+
+When the DOCR and DABS results are compiled and compared across the four primary challenge 342 
+
+contrasts (MBO/CON, MTU/CON, BCG/CON, and IRR/CON), a clear pattern of increased chromatin 343 
+
+accessibility is observed for bAM challenged with the four different types of MTBC (Table 1). The overall 344 
+
+trends for the challenged bAM were increased deposition of the histone marks for proximal gene transcription 345 
+
+(H3K4me3) and active enhancers (H3K27ac), coupled with decreased deposition of H3K4me1, which is 346 
+
+consistent with previous observations indicating a counterintuitive repressive function for H3K4me1 in 347 
+
+macrophages (Cheng et al. 2014). The results for bAM infected with M. bovis (MBO/CON) were particularly 348 
+
+pronounced, with substantially more open chromatin regions (226 DOCRs) and genome-wide changes to 349 
+
+chromatin accessibility determined by histone modifications (878 DABSs). 350 
+
+351 
+
+Fig. 5 Volcano plots showing ChIP -seq H3K27ac differential affinity binding site (DABS) results for the four 352 
+
+primary MTBC bAM challenges. The horizontal dotted line indicates the statistical significance threshold (FDR -353 
+
+Padj. < 0.05). Orange and red data points indicate significant DAB results (MTBC challenge vs. CON) with |log 2FC 354 
+
+values| < 1 and ≥ 1, respectively. a Mycobacterium bovis vs. control (MBO /CON). b M. tuberculosis vs. control 355 (MTU /CON ). c M. bovis BCG vs. control (BCG /CON ). d gamma-irradiated (killed) M. bovis vs. control 356 
+
+(IRR/CON). 357 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+18 
+
+358 
+
+Fig. 6 Gene expression results for genes involved in the processes of histone methylation and acetylation .359 
+
+Differentially expressed genes that are statistically significant (FDR -Padj. < 0.05) are indicated with an asterisk 360 (*), and the heatmap shows log 2FC values. The four primary bAM challenge contrasts are shown: 361 
+
+Mycobacterium bovis vs control (MBO); M. tuberculosis vs control (MTU); M. bovis BCG vs control (BCG); and 362 gamma-irradiated (killed) M. bovis vs control (IRR). 363 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+19 
+
+Table 1: Statistically significant differential chromatin modifications for the four MTBC challenge 364 
+
+groups versus the control non -challenged group. 365 
+
+bAM 
+
+challen ge 
+
+contras t
+
+ATAC -seq: DOCRs  ChIP -seq: H3K4me3 DABSs 
+
+ChIP -seq: H3K4me1 DABSs 
+
+ChIP -seq: H3K27ac DABS 
+
+Increase 
+
+d
+
+Decreas ed 
+
+Increase 
+
+d
+
+Decreas ed 
+
+Increase 
+
+d
+
+Decreas ed 
+
+Increase 
+
+d
+
+Decreas ed 
+
+MBO 
+
+vs. CON  226  0 61  9 0 39  518  251 
+
+MTU vs .CON  1 0 0 0 1 30  19  6
+
+BCG vs. 
+
+CON  0 0 0 0 0 9 6 0
+
+IRR vs. 
+
+CON  0 0 11  0 2 72  50  3
+
+366 
+
+Integration of transcriptome and epigenome data reveals profound differences between bovine 367 
+
+alveolar macrophages challenged with Mycobacterium bovis and other MTBC mycobacteria 368 
+
+The HOMER software suite v.4.11 was used to annotate genes within the differential ATAC-seq and 369 
+
+ChIP-seq regions and sites (DOCRs and DABSs, respectively) detected for the four primary bAM challenge 370 
+
+contrasts (MBO/CON, MTU/CON, BCG/CON, and IRR/CON). This annotation procedure facilitated the 371 
+
+cataloguing of genes across the four groups that are located within the DABS and DOCR regions. For example, 372 
+
+it was possible, therefore, to determine if the TSS of a particular gene underwent a differential histone 373 
+
+modification caused by a specific MTBC bAM challenge (relative to the control non-challenged bAM) 374 
+
+contrast. It was then straightforward to cross-reference the other contrasts to determine if the TSS chromatin 375 
+
+environment for that gene was modified by the other MTBC bAM challenges. We could also establish if the 376 
+
+histone changes were accompanied by additional DABSs/DOCRs. To visually illustrate the correlation 377 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+20 
+
+between RNA-seq and ChIP-seq read deposition, we generated heatmaps showing the density of RNA-seq 378 
+
+reads at each ChIP-seq histone mark (Additional file 1: Fig. S4). 379 
+
+Using this workflow, we obtained a consolidated set of exactly 1000 genes that had at least one DABS 380 
+
+and/or DOCR in at least one of the four primary bAM challenge contrasts (MBO/CON, MTU/CON, 381 
+
+BCG/CON, and IRR/CON). In this regard, there were 76 genes that had multiple associated DABSs and/or 382 
+
+DOCRs, i.e. there were multiple differential regions of hypo/hyper H3 methylation or acetylation across the 383 
+
+sequence of a gene—for example, STAT1 and most notably MX2 and RSAD2 (Additional file 6: Tables S23). 384 
+
+In total, there were 928 genes with at least one DABS and/or DOCR identified for the M. bovis infected 385 
+
+compared to the control bAM (MBO/CON), and 54, 14, and 130 genes with at least one DABS and/or DOCR 386 
+
+detected for the MTU/CON, BCG/CON, and IRR/CON bAM challenge contrasts, respectively (Additional file 387 
+
+1: Fig. S5). 388 
+
+A substantial majority of the genes associated with DABSs/DOCRs that were specific to one MTBC 389 
+
+challenge were identified in the M. bovis -infected bAM (MBO/CON: 835, 83.5%). This was followed by the 390 
+
+gamma-irradiated M. bovis challenged cells (IRR/CON: 67, 6.7%), the M. tuberculosis infected cells 391 
+
+(MTU/CON: 9, 0.9%) and the M. bovis BCG infected cells (BCG/CON: 1, 0.1%) (Additional file 1: Fig. S5). 392 
+
+Of the 1000 genes located at DABSs/DOCRs, only four were common to all four bAM challenge groups; two 393 
+
+of which, CD274 and TNPO3, were upregulated in the MTBC-challenged cells. The TNPO3 gene encodes a 394 
+
+protein (transportin 3) that acts as a nuclear import receptor for the trafficking of RNA splicing factor proteins 395 
+
+into the cell nucleus (Christie et al. 2016). It has also been shown to have an important function in HIV-1 396 
+
+infection of host cells (Maertens et al. 2014); however, there is no evidence yet of a role in host macrophage 397 
+
+responses to intracellular MTBC pathogens. The CD274 gene, on the other hand, encodes the CD274 ligand, 398 
+
+which has an immunoregulatory checkpoint function in restraining T cell activation (Sharpe and Pauken 2018). 399 
+
+Increased expression of CD274 may therefore be advantageous for intracellular MTBC pathogens (Shen et al. 400 
+
+2016; Hu et al. 2020). 401 
+
+We next investigated, at a broader level, the biological pathways and processes functionally associated 402 
+
+with the consolidated multi-omic DAB/DOCR 1000-gene set. There were 20 statistically significant 403 
+
+overrepresented IPA ® canonical pathways (Additional file 1: Fig. S6a). Overrepresented pathways for these 404 
+
+1000 genes included the Inflammasome , Role of RIG1-like receptors in antiviral innate immunity , Activation 405 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+21 
+
+of IRF by cytosolic pattern recognition receptors , and Death receptor signalling pathways. However, the most 406 
+
+significantly overrepresented pathway was Interferon signalling . The gene set overrepresentation analysis 407 
+
+performed using g:Profiler yielded 194 statistically significant (FDR-Padj. < 0.05) functional entities 408 
+
+(Additional file 1: Fig. S6b). The set of 20 top-ranked functional entities (by FDR-Padj. ) included GO:CC 409 
+
+Intracellular membrane-bound organelle , KEGG C-type lectin receptor signalling pathway , KEGG NOD-like 410 
+
+receptor signalling pathway , and the WikiPathways IL-5 signalling pathway .411 
+
+Following this, the RNA-seq data were integrated to systematically determine which genes in the multi-412 
+
+omic DAB/DOCR 1000-gene set were significantly differentially expressed in the four primary bAM challenge 413 
+
+contrasts (MBO/CON, MTU/CON, BCG/CON, and IRR/CON). IGV tracks for four selected immune genes 414 
+
+(BCL2 , CD274 , OAS2 , and TMPRSS2 ) are shown, illustrating the integration of RNA-seq, ChIP-seq, and 415 
+
+ATAC-seq data (Additional file 1: Fig. S7a–d). In addition, the relationships among DABSs and DOCRs with 416 
+
+DEGs illustrate that deposition of H3K4me3, H3K27ac, and DOCR locations are associated with an increase 417 
+
+in gene expression, while, on the other hand, H3K4me1 marks a decrease in expression (Additional file 1: Fig. 418 
+
+S8a–l). To achieve a holistic interpretable overview of the epigenomic regulatory relationships among 419 
+
+differential histone modifications (DABSs), open chromatin regions (DOCRs), and transcriptional 420 
+
+perturbations (DEGs) for the four primary MTBC-bAM challenge contrasts, the relevant data (Additional file 421 
+
+6: Table S23) were visualised as interaction networks using Cytoscape for the MBO/CON, MTU/CON, 422 
+
+BCG/CON, and IRR/CON contrasts (Fig. 7a–d). The interaction network for the MBO/CON contrast is also 423 
+
+shown in more detail (Additional file 1: Fig. S9 a–d). 424 
+
+In the interaction network generated for the MBO/CON contrast, there are 919 nodes (including four 425 
+
+anchor hub interaction nodes for H3K4me3, H3K4me1, H3K27ac and ATAC) and 1104 interactions, indicating 426 
+
+that there are multiple genes with more than one histone modification (Fig. 7a). Conversely, in the interaction 427 
+
+network generated for the MTU/CON contrast, there are only 57 nodes and 57 interactions (Fig. 7b). We also 428 
+
+only obtained 16 nodes with 14 interactions for the BCG/CON contrast interaction network (Fig. 7c). The 429 
+
+network complexity increased in the interaction network generated for the IRR/CON contrast with 133 nodes 430 
+
+and 138 interactions (Fig 7d). Importantly, circular gene nodes can appear in multiple networks because some 431 
+
+genes have an associated DABS/DOCR in more than one bAM challenge group (e.g., CD274 ). Taken together, 432 
+
+these results highlight substantial epigenomic reconfiguration and transcriptional reprogramming evident in 433 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+22 
+
+the M. bovis -challenged bAM compared with the other MTBC challenges. However, it is also important to 434 
+
+note that among the other three bAM challenges, the gamma-irradiated M. bovis challenge elicits the most 435 
+
+epigenomic reconfiguration and transcriptional perturbation (Fig. 2b, Fig. 3d, and Fig. 7d). 436 
+
+Integration of the multi -omic DAB/DOCR 1000 -gene set with a cattle GWAS data set for an M. 437 
+
+bovis infection susceptibility trait 438 
+
+The consolidated multi-omic DAB/DOCR 1000-gene set was divided into eight gene subsets, which 439 
+
+corresponded, firstly, to all DABS/DOCR genes for each primary bAM challenge contrast, including overlaps 440 
+
+across other contrasts (four subsets: 928 MBO/CON overlap genes, 54 MTU/CON overlap genes, 14 441 
+
+BCG/CON overlap genes, and 130 IRR/CON overlap genes), and, secondly, all DABS/DOCR genes specific 442 
+
+to a primary bAM challenge contrast, not including overlaps (four subsets: 835 MBO/CON-specific genes, 9 443 
+
+MTU/CON-specific genes, 1 BCG/CON-specific gene, and 67 IRR/CON-specific genes). Using the gwinteR 444 
+
+tool, these eight gene subsets were integrated with a Holstein-Friesian breed GWAS data set for an M. bovis 445 
+
+infection susceptibility trait (Ring et al. 2019). After this workflow was completed, we observed that only the 446 
+
+largest MBO/CON overlap gene subset enriched additional statistically significant SNP variants associated 447 
+
+with the M. bovis infection susceptibility trait (Additional file 6: Table S26). These corresponded to 64 SNPs 448 
+
+within, or proximal to, four genes ( ERBB4 , LRCH1 , MRTFA , and RNPC3 ) that had not been previously 449 
+
+identified through integrative analyses of this GWAS dataset using either MTBC-challenged bAM or bTB 450 
+
+peripheral blood functional genomics datasets (Hall et al. 2019; Hall et al. 2021; Hall et al. 2024; O'Grady et 451 
+
+al. 2025). Circular Manhattan plots were generated to show the results of GWAS integration of the MBO/CON 452 
+
+overlap gene subset (928 genes) for the M. bovis infection susceptibility trait (Fig. 8). 453 
+
+454 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+23 
+
+455 456 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint 24 
+
+Fig. 7 Network representations of the regulatory relationships among genes, histone modifications , and 457 
+
+chromatin accessibility for the four primary MTBC bAM challenges. E ach circular node in each network 458 
+
+corresponds to a gene observed to be co -located with a differential histone modification or chromatin 459 
+
+accessibility difference (represented as square anchor hub nodes) . The circular n ode colour shows if a gene 460 
+
+was differentially expressed (up regulated : red; down regulated : blue; and yellow: no t differentially expressed ). 461 The l ines (edges) between nodes show if a histone modification difference/chromatin accessibility change 462 
+
+was larger (determined by log 2FC for peak sizes) in the challenged bAM (red) or in the control non-challenged 463 bAM (blue). Circular gene n ode size is determined by the number of connecting edges (degree). The numbers 464 
+
+shown in each of the four keys represent the numbers of nodes (N) and interactions (I). a M. bovis vs control 465 (MBO /CON) . b M. tuberculosis vs control (MTU/CON). c M. bovis BCG vs control (BCG/CON). d gamma-466 
+
+irradiated (killed) M. bovis vs control (IRR/CON). 467 
+
+468 
+
+469 
+
+470 
+
+471 
+
+Fig. 8 Integration of the MBO/CON overlap gene subset (928 genes) with a Holstein -Friesian M. bovis infection 472 
+
+susceptibility trait GWAS dataset. a Circular Manhattan plot showing GWAS results before integration of the 473 
+
+MBO/CON overlap gene subset . b Circular Manhattan plot showing GWAS results after integration of the 474 
+
+MBO/CON overlap gene subset with the gwinteR tool. Large blue and green data points indicate binned 475 
+
+statistically sign ificant SNP clusters (FDR -Padj. < 0.10 ) prior to, and post -integration, respectively. 476 
+
+477 
+
+478 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+25 
+
+# Discussion 479 
+
+In this study, we applied a comprehensive multi-omics strategy, including RNA-seq, ChIP-seq for 480 
+
+multiple histone marks, and ATAC-seq, to characterise transcriptional and epigenomic responses of bovine 481 
+
+alveolar macrophages (bAM) challenged with intracellular mycobacteria. To do this, we compared bAM 482 
+
+responses to four distinct types of MTBC: bovine-adapted M. bovis (MBO); M. tuberculosis (MTU), the 483 
+
+primary cause of hTB; the attenuated M. bovis BCG vaccine strain (BCG); and dead, gamma-irradiated M. 484 
+
+bovis cells (IRR). From these experiments, we could delineate how host adaptation and bacterial viability 485 
+
+influence the reprogramming of alveolar macrophages—phagocytic cells that normally play a crucial role in 486 
+
+the immune defence of the respiratory system—to favour the survival and dissemination of intracellular MTBC 487 
+
+pathogens that cause tuberculosis in mammals. In addition, we integrated information on key genes identified 488 
+
+from our multi-omics analyses with GWAS data to improve our understanding of the genomic architecture of 489 
+
+an M. bovis infection susceptibility trait in Holstein-Friesian dairy cattle. 490 
+
+Live, attenuated, and killed MTBC strains elicit distinct transcriptional responses in bovine alveolar 491 
+
+macrophages 492 
+
+This study significantly extends previous work by our group showing that M. bovis and M. tuberculosis 493 
+
+separately induce extensive rewiring of the bAM transcriptome, revealing both a core gene expression program 494 
+
+induced by the two infections, and importantly, a distinct M. bovis -specific bAM transcriptional module 495 
+
+governing the interaction between this MTBC strain and the bovine innate immune system (Malone et al. 496 
+
+2018). In the work presented here, using the same FDR-Padj. threshold of 0.05 but with no fold-change cut-off, 497 
+
+we observed substantially larger numbers of DEGs at 24 hpi compared to this previous study, and an almost 498 
+
+four-fold difference in the numbers of DEGs detected for the MBO/CON compared to the MTU/CON bAM 499 
+
+challenge contrast (8,852 versus 2,312), which is also reflected in the number of DEGs detected for the direct 500 
+
+MBO/MTU contrast (5,052) (Fig. 2b). The marked reprogramming of the virulent MBO-challenged bAM is 501 
+
+even more striking in comparison to the attenuated M. bovis BCG strain. The BCG/CON bAM challenge 502 
+
+contrast at 24 hpi only generated 586 DEGs—less than 7% of the total number of DEGs observed under the 503 
+
+same conditions for the virulent MBO strain; a difference that is also apparent in the 6,741 DEGs detected in 504 
+
+the direct MBO/BCG contrast (Fig. 2b). When considering these results, it is important to keep in mind that 505 
+
+there were no statistically significant differences observed in the bacterial uptake by bAM for the MBO, MTU, 506 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+26 
+
+and BCG challenges (Fig. S1f). It was somewhat surprising, therefore, that the gamma-irradiated (killed) M. 507 
+
+bovis (IRR), which were phagocytosed two-fold less compared to the live bacterial strains, caused substantially 508 
+
+more perturbation of the bAM transcriptome compared to the MTU/CON (3,320 vs. 2,312 DEGs) and 509 
+
+BCG/CON (3,320 vs. 586 DEGs) bAM challenge contrasts (Fig. 2b). Given that γ-irradiation preserves 510 
+
+bacterial integrity and PAMPs, it was expected that the initial infection response might be similar between live 511 
+
+and dead bacteria. Indeed, Andreu and colleagues (Andreu et al. 2017) previously compared the transcriptional 512 
+
+response of murine macrophages to gamma-irradiated vs live M. tuberculosis . They found that live and 513 
+
+irradiated bacilli triggered a similar transcriptional response at 4 and 24 hours of infection, although the 514 
+
+response in cells infected with irradiated bacilli diminished after 24 hours. Our findings of a more robust 515 
+
+macrophage transcriptional response to M. bovis -irradiated cells compared to M. tuberculosis or BCG may 516 
+
+reflect the inability of dead bacilli to actively suppress the bovine macrophage response to infection, a function 517 
+
+that live MTBC are well adapted to. 518 
+
+Examination of the DEGs specific to the bAM challenged with M. bovis (the MBO/CON contrast), and 519 
+
+the enriched pathways for the MBO/CON and MBO/IRR DEGs (Additional file 1: Fig. S2 and Additional file 520 
+
+3: Table S10), demonstrated that genes related to cytosolic sensing are more apparent in the M. bovis -infected 521 
+
+bAM compared to the bAM challenged with the dead M. bovis cells. In addition, focusing on the results for 522 
+
+the IPA ® Role of RIG1-like receptors antiviral innate immunity canonical pathway, activation of downstream 523 
+
+cytosolic targets of the RIG-I-like receptor (RLR) pathway was evident for several bAM challenge contrasts 524 
+
+involving the live MTBC strains (MBO/CON, MBO/IRR, MTU/CON, IRR/CON and BCG/CON) (Additional 525 
+
+file 1: Fig. S10a–e). M. bovis infection induced coordinated perturbation of upstream RNA sensors and 526 
+
+downstream signalling and transcriptional effectors (including IRF3/IRF7 and NF-κB), consistent with 527 
+
+activation of a canonical type I interferon response. In contrast, M. bovis BCG and irradiated M. bovis triggered 528 
+
+differential expression of selected RLR pathway components without comparable activation of downstream 529 
+
+interferon regulatory networks, suggesting partial pathway engagement rather than a robust type I interferon 530 
+
+programme (Additional file 1: Fig. S10a–e). The RIG-I–like receptor pathway mediates cytosolic RNA sensing 531 
+
+and engages NF-κB and IRF7 signalling axes, coupling intracellular nucleic acid detection to inflammatory 532 
+
+responses and, under appropriate conditions, induction of type I interferons (Fallahi-Sichani et al. 2012; 533 
+
+Rehwinkel and Gack 2020; Wang et al. 2024). 534 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+27 
+
+The RIG-I-like receptor pathway for DEGs obtained from the killed M. bovis bAM challenge contrast 535 
+
+(IRR/CON) shows activation of the NF-κb pathway but little or no activation of any of the other ligands, 536 
+
+receptors, or targets, including IRF7 (Additional file 1: Fig S10e). Moreover, comparison of the RIG-I-like 537 
+
+receptor pathway in the M. bovis versus gamma-irradiated (killed) M. bovis (MBO/IRR) and MBO/CON bAM 538 
+
+challenge contrasts revealed highly similar pathway activation profiles (Additional file 1: Fig. S10a and Fig. 539 
+
+S10b). This is to be expected as dead M. bovis lacks the ability to secrete ESX-1 effectors that facilitate 540 
+
+phagosomal escape and induction of cytosolic nucleic acid-sensing pathways and downstream interferon-541 
+
+stimulated genes (ISGs), and also accounts for the differences in the top ten enriched IPA ® pathways observed 542 
+
+for the MBO/CON and IRR/CON bAM challenges (Additional file 1: Fig. S2a and Fig. S2d). Additionally, 543 
+
+RIG-I-like receptor pathway activation was seen in the MTU/CON contrast, but at lower levels of upregulation 544 
+
+when compared to MBO/CON, suggesting less cytosolic escape of M. tuberculosis vs. M. bovis in bovine 545 
+
+macrophages, as seen in our previous work (Malone et al. 2018). 546 
+
+Another feature of the transcriptomics results for the primary bAM challenge contrasts (MBO/CON, 547 
+
+MTU/CON, BCG/CON, and IRR/CON) was the distinct expression patterns of Toll-like receptor (TLR) genes. 548 
+
+The functions of TLRs in MTBC infections have been the subject of intensive research efforts for more than 549 
+
+25 years (Brightbill et al. 1999; Means et al. 1999; Underhill et al. 1999), and as pathogen recognition receptors 550 
+
+(PRRs), TLRs play critical roles in MTBC infections (Mortaz et al. 2015; Stamm et al. 2015). Using various 551 
+
+techniques to detect DEGs, it has long been established that the TLR2 and TLR4 genes are generally 552 
+
+upregulated at 6–72 hpi across various human and bovine macrophage types in response to tuberculous 553 
+
+mycobacterial infections. For example, using a targeted RNA-seq methodology (Ampliseq), Papp and 554 
+
+colleagues (Papp et al. 2018) observed significantly increased TLR2 expression in human AM (hAM) and 555 
+
+monocyte-derived macrophages (hMDM) infected with M. tuberculosis at 24 hpi and 72 hpi, and detected 556 
+
+significantly increased TLR4 expression in hMDM at 72 hpi. Also, upstream regulator analysis of gene 557 
+
+expression microarray data revealed upregulation of TLR2 and TLR4 in response to M. tuberculosis challenge 558 
+
+in hAM and splenic macrophages (Lavalett et al. 2020a). Regarding bovine macrophages, we previously 559 
+
+showed, using RT-qPCR, that TLR2 and TLR4 were upregulated in bovine MDM (bMDM) challenged with M. 560 
+
+bovis 24 hpi (Taraktsoglou et al. 2011). Analysis of RNA-seq data from M. bovis -challenged bAM at 6, 24, 561 
+
+and 48 hpi showed increased expression of TLR2 and TLR4 (Nalpas et al. 2015). Using the same bAM 562 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+28 
+
+challenge model and RNA-seq, we also showed that M. tuberculosis challenge caused upregulation of these 563 
+
+two genes (Malone et al. 2018). Finally, in a more recent integrative transcriptomics study of bAM, hAM, and 564 
+
+hMDM, we showed that TLR2 is upregulated 24 hpi after challenge with M. bovis and M. tuberculosis in 565 
+
+bovine cells, and in both types of human macrophages 24 hpi with M. tuberculosis (Hall et al. 2024). 566 
+
+Surprisingly, therefore, in the present study although we observed that both TLR2 and TLR4 were 567 
+
+upregulated at 24 hpi in the bAM challenged with live and dead M. bovis (MBO/CON and IRR/CON), there 568 
+
+was no differential expression of these two genes in bAM challenged with M. tuberculosis or M. bovis BCG 569 
+
+(MTU/CON and BCG/CON) (Additional file 3: Tables S5–S8). These differences are evident through 570 
+
+downstream effects on other genes associated with innate immunity. For example, focusing on TLR2 , signalling 571 
+
+via TLR2 has been shown to drive the expression of the CXCL5 gene, which is critical for innate cell 572 
+
+communication and polymorphonuclear leukocyte-driven destructive inflammation during M. tuberculosis 573 
+
+infection (Nouailles et al. 2014). As expected, CXCL5 was significantly upregulated in the MBO/CON and 574 
+
+IRR/CON bAM challenge contrasts with log 2 FC values of 2.40 (FDR-Padj. = 0.0077) and 4.65 (FDR-Padj. =575 
+
+4.84 × 10 −8 ), respectively; however, it did not exhibit any significant differential expression for the MTU/CON 576 
+
+or BCG/CON bAM challenge contrasts. With regard to TLR4 , signalling through TLR4 induces immune cell 577 
+
+activation in response to live M. tuberculosis bacilli, phosphatidylinositol mannosides (PIM4–6) derived from 578 
+
+M. tuberculosis , and purified cell wall preparations from M. bovis (Heldwein et al. 2003). In this regard, TLR4 -
+
+579  
+
+> /-
+
+knockout mice show lower expression of TNF when exposed to M. tuberculosis (Reiling et al. 2002; Branger 580 
+
+et al. 2004). In the present study, the TNF gene was upregulated across all the four primary bAM challenge 581 
+
+contrasts; the highest increased expression was detected for the MBO/CON (log 2 FC = 3.98; FDR-Padj. = 3.99 582 
+
+× 10 −18 ) and IRR/CON (log 2 FC = 2.73; FDR-Padj. = 3.99 × 10 −18 ) contrasts compared to the MTU/CON (log 2FC 583 
+
+= 2.64; FDR-Padj. = 6.96 × 10 −9 ) and BCG/CON (mean log 2 FC = 1.90; FDR-Padj. = 4.61 × 10 −4 ) contrasts. 584 
+
+Because human and murine TLR4 activate in the presence of M. tuberculosis , it is noteworthy that it remains 585 
+
+largely inactivated in bAM unless stimulated by PAMPs derived from M. bovis cells (MBO and IRR). 586 
+
+One further difference in TLR activation among the primary bAM challenge contrasts should be 587 
+
+highlighted: TLR3 was upregulated only in M. bovis -challenged bAMs (MBO/CON) (Additional file 3: Tables 588 
+
+S5–S8). Because TLR3 is an intracellular nucleic acid sensor (Sellge and Kufer 2015), significant activation 589 
+
+of TLR3 solely in the MBO/CON bAM challenge contrast further supports a scenario where live M. bovis 590 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+29 
+
+were the only bacilli to achieve substantial phagosomal escape. This suggests that the presence of M. bovis in 591 
+
+the cytosol partly explains the markedly more extensive reprogramming observed in M. bovis -infected bAM 592 
+
+compared with the other three MTBC challenges. However, it is important to note that TLR3 expression may 593 
+
+also be induced by host mitochondrial DNA released intracellularly following infection-induced cell damage 594 
+
+(Carty et al. 2021). The causes and implications of these differences in TLR signalling activity between the 595 
+
+host-adapted ( M. bovis ) and non-host-adapted ( M. tuberculosis ), attenuated ( M. bovis BCG), and dead 596 
+
+(gamma-irradiated M. bovis ) bacilli remain to be fully elucidated; however, it is possible that TLR activation 597 
+
+may contribute to the host tropism differences between M. bovis and M. tuberculosis. 598 
+
+Notwithstanding the substantial differences observed in the bAM transcriptome that are induced by 599 
+
+challenge with different types of MTBC, it is important to highlight DEGs that had similar patterns of 600 
+
+expression across the four primary bAM challenge contrasts (MBO/CON, MTU/CON, BCG/CON, and 601 
+
+IRR/CON). Firstly, there were several chemokine genes that were significantly upregulated across all the 602 
+
+contrasts ( CCL3, CCL4 , CCL20 , CXCL2 , CXCL3 , and CXCL16 ), and secondly, numerous interleukin ( IL1A ,603 
+
+IL1B , IL6 , IL10 , IL15 , and IL27 ) and interleukin receptor genes ( IL7R , IL10RB , IL17REL , and IL36G )604 
+
+(Additional file 3: Tables S5–S8). Not only were these genes upregulated across all four primary bAM 605 
+
+challenge contrasts, but many were also among the DEGs showing the greatest increases in expression relative 606 
+
+to the control non-challenged bAM, highlighting the critical importance of cell-to-cell signalling during MTBC 607 
+
+infection (Domingo-Gonzalez et al. 2016). In addition to chemokine and cytokine genes, other important genes 608 
+
+that were upregulated across all bAM challenge contrasts included NOS2, which encodes nitric oxide synthase 609 
+
+(NOS2), an antimicrobial effector produced by IFN-γ-activated macrophages (Bogdan 2015). The NOS2 gene 610 
+
+was markedly upregulated in the MBO/CON (log 2 FC = 5.84; FDR-Padj. = 1.32 × 10 −15 ), MTU/CON (log 2 FC = 611 
+
+4.91; FDR-Padj. = 1.81 × 10 −11 ), and BCG/CON (log 2FC = 4.27; FDR-Padj. = 4.63 × 10 −8 ) bAM challenge 612 
+
+contrasts; however, it was most significantly upregulated for the IRR/CON contrast (log 2 FC = 6.50; FDR-Padj. 613 
+
+= 3.37 × 10 −19 ) (Additional file 3: Tables S5–S8). The strongest NOS2 upregulation in IRR-challenged 614 
+
+macrophages likely reflects unopposed TLR–NF-κB–driven transcription in the absence of immune-evasion 615 
+
+mechanisms used by live MTBC strains to suppress antimicrobial effectors such as iNOS . Live bacilli actively 616 
+
+dampen IFN-γ and STAT1–NF-κB signalling, whereas killed bacilli engage full proinflammatory 617 
+
+transcriptional programs, yielding higher NOS2 expression (Platanitis and Decker 2018; Chai et al. 2020). 618 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+30 
+
+The SLAMF8 gene, which encodes a member of the CD2 family of cell surface proteins involved in 619 
+
+lymphocyte activation, was also observed to be significantly upregulated across all four bAM challenge 620 
+
+contrasts: MBO/CON (log 2 FC = 5.29; FDR-Padj. = 3.16 × 10 −14 ), MTU/CON (log 2 FC = 4.35; FDR-Padj. = 6.28 621 
+
+× 10 −10 ), BCG/CON (log 2FC = 3.76; FDR-Padj. = 6.05 × 10 −7 ), and IRR/CON (log 2 FC = 3.82; FDR-Padj. = 1.11 622 
+
+× 10 −7 ), which we also previously observed at 24 and 48 hpi in independent bAM challenge experiments with 623 
+
+M. bovis and M. tuberculosis (Malone et al. 2018; Hall et al. 2019). Finally, CSF3, which encodes the colony 624 
+
+stimulating factor 3 protein (CSF3) a member of the IL-6 superfamily of cytokines was significantly 625 
+
+upregulated across all four bAM challenge contrasts: MBO/CON (log 2 FC = 4.50; FDR-Padj. = 8.21 × 10 −4 ), 626 
+
+MTU/CON (log 2 FC = 4.05; FDR-Padj. = 6.52 × 10 −3 ), BCG/CON (log 2 FC = 3.64; FDR-Padj. = 4.80 × 10 −2), 627 
+
+with the IRR/CON contrast exhibiting the most significant gene expression change (log 2 FC = 7.03; FDR-Padj. 628 
+
+= 7.23 × 10 −8). 629 
+
+Epigenetic reprogramming in response to MTBC challenge in bovine alveolar macrophages is 630 
+
+primarily restricted to M. bovis infection 631 
+
+During the last decade, it has been established that intracellular mycobacterial infections cause 632 
+
+modifications to the host cell epigenome that can have major downstream impacts on host-pathogen interaction 633 
+
+through reprogramming of the host transcriptome (Yaseen et al. 2015; Bouttier et al. 2016; Hall et al. 2019; 634 
+
+Abo-Kadoum et al. 2021; Correa-Macedo et al. 2021; Lin et al. 2022; Madden et al. 2023)—findings that have 635 
+
+been comprehensively reviewed (Gauba et al. 2021; Madden et al. 2022; Sengupta et al. 2023; Mishra et al. 636 
+
+2025). In the present study, where we conducted systematic analyses of the transcriptome and chromatin 637 
+
+landscape using RNA-seq, ChIP-seq, and ATAC-seq, we observed that M. bovis challenge (MBO/CON) 638 
+
+induced substantially more reconfiguration of the bAM epigenome compared to the other three challenges 639 
+
+(MTU/CON, BCG/CON, and IRR/CON) (Table 1, Fig. 5a–d, and Additional file 1: Fig. S3a–d). This is also 640 
+
+reflected in the transcriptomics results for genes encoding proteins involved with histone methylation and 641 
+
+acetylation, processes that ultimately determine the accessibility of many genes to the host cell transcriptional 642 
+
+machinery (Fig. 6). In this regard, our ChIP-seq results showed that the MBO/CON bAM challenge contrast 643 
+
+generated 878 DABS, more than ten-fold the combined total (71) obtained for the other two live bacilli 644 
+
+challenges (MTU/CON and BCG/CON). In addition, the bAM challenge with dead M. bovis cells (IRR/CON) 645 
+
+produced almost twice as many DABS (138). The extent of chromatin remodelling for the MBO bAM 646 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+31 
+
+challenge was also reflected in the open chromatin regions detected using ATAC-seq. For the MBO/CON, 647 
+
+MBO/MTU, MBO/BCG, and MBO/IRR bAM challenge contrasts, we obtained 226, 8, 72, and 264 DOCR, 648 
+
+respectively, which compares to a total of 2 DOCR detected for the other six contrasts (MTU/CON, 649 
+
+MTU/BCG, MTU/IRR, BCG/CON, BCG/IRR, and IRR/CON) (Additional file 1: Fig S3e). Our results, 650 
+
+therefore, support the hypothesis that epigenomic modifications are a major contributor to the substantial 651 
+
+reprogramming of the bAM transcriptome induced by infection with virulent M. bovis .652 
+
+One of the key questions arising from this multi-omics analysis is why M. bovis provokes such extensive 653 
+
+chromatin remodelling in bAMs compared with M. tuberculosis or M. bovis BCG. The transcriptional data 654 
+
+indicate stronger activation of innate immune signalling in the M. bovis group, yet this response is accompanied 655 
+
+by distinctive shifts in histone modification and chromatin accessibility. To explore this, we examined 656 
+
+differential affinity binding sites (DABs) and differential open chromatin regions (DOCRs) associated with 657 
+
+genes central to Toll-like receptor (TLR) signalling—particularly the MyD88–TRAF6–NF-κB axis, which 658 
+
+integrates early pathogen recognition with pro-inflammatory transcriptional responses. 659 
+
+Although identifying the precise cause of the observed DABs and DOCRs lies beyond the scope of this 660 
+
+study, consistent patterns emerge. The absence of TLR activation in the M. tuberculosis (MTU) and M. bovis 661 
+
+BCG (BCG) groups has downstream effects that are also evident at the epigenetic level. For example, reduced 662 
+
+H3K4me1 deposition was detected at the promoter-proximal region of MYD88 . In macrophages, H3K4me1 663 
+
+can act as a repressive chromatin mark (Hyun et al. 2017), and our data align with this observation—genes 664 
+
+showing decreased H3K4me1 enrichment in infected cells were generally upregulated (Fig. 6). Following TLR 665 
+
+engagement, MYD88 recruits IRAK1, which interacts with the E3 ubiquitin ligase TRAF6. TRAF6, together 666 
+
+with the ubiquitin-conjugating enzyme complex UBC13–UEV1A, stimulates K63-linked polyubiquitination 667 
+
+of both TRAF6 and the TAK1 kinase complex (Kawasaki and Kawai 2014) . This, in turn, activates NF-κB and 668 
+
+MAPK signalling cascades that coordinate pro-inflammatory responses to mycobacterial infection (Xu and 669 
+
+Lei 2020). Accordingly, loss of the repressive H3K4me1 mark at MYD88 following TLR activation is 670 
+
+consistent with the chromatin remodelling required for pathway activation. Despite these epigenetic signatures, 671 
+
+MYD88 expression itself was not significantly altered (log₂FC = −0.33; Padj . = 0.052) and TAK1, encoded by 672 
+
+MAP3K7 , was only modestly upregulated (log₂FC = 0.25; Padj . = 0.032). This subdued transcriptional 673 
+
+activation may reflect increased TRAF2 expression, a negative regulator of TRAF6-dependent signalling 674 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+32 
+
+(Kawasaki and Kawai 2014; Xie et al. 2019). The TRAF2 gene was markedly upregulated in the MBO group 675 
+
+and uniquely associated with increased H3K27ac, suggesting that M. bovis fine-tunes inflammatory signalling 676 
+
+by epigenetically modulating inhibitory feedback loops within the TLR–MyD88 axis. 677 
+
+Finally, an H3K4me3 DAB was observed at the NFKB1 transcription start site exclusively in the MB 678 
+
+group, consistent with selective activation of the canonical NF-κB subunit. Together, these results indicate that 679 
+
+M. bovis infection drives a unique interplay of activating (H3K4me3, H3K27ac) and repressive (H3K4me1) 680 
+
+histone modifications at innate immune loci, reflecting an epigenetically mediated re-wiring of the TLR– 681 
+
+MyD88–NF-κB pathway that distinguishes host-adapted M. bovis from non-host-adapted or attenuated MTBC 682 
+
+strains. 683 
+
+Although there were several H3K4me3, H3K4me1, and H3K27ac histone modification DABS present 684 
+
+in the MTU/CON, BCG/CON, and IRR/CON bAM challenge contrasts, significant DOCR results were almost 685 
+
+exclusively observed in the MBO/CON primary bAM challenge contrast (Table 1). Examination of these 686 
+
+regions highlighted genes involved in the innate immune response (Additional file 6: Table S23). For example, 687 
+
+the TRIM25, ISG15, ADAR , and DHX58 genes encode protein products involved with the RLR signalling 688 
+
+pathway, which is involved with cytosolic sensing of RNA leading to activation of type I interferons and 689 
+
+inflammatory cytokines, such as TNF (Rehwinkel and Gack 2020). Each of these genes was in a DOCR region, 690 
+
+and all four were highly upregulated. As described above, based on RNA-seq results, the RLR signalling 691 
+
+pathway was activated in bAM challenged with live bacilli (MBO, MTU, and BCG); however, activation was 692 
+
+most marked in the MBO-challenged bAM. Localised patterns of open chromatin detected by ATAC-seq 693 
+
+exclusively in the MBO contrast are consistent with these enhanced transcriptomic responses. 694 
+
+A cluster of related genes associated with multiple DOCR detected in the MBO-challenged bAM was 695 
+
+the 2'-5'-oligoadenylate synthetase (OAS) gene family on BTA17 ( OAS1X , OAS1Y , OAS1Z , OAS2 , and OASL )696 
+
+(Additional file 1: Fig. S7c). The OAS1Y gene was significantly upregulated in the MBO/CON (log 2 FC = 3.53; 697 
+
+FDR-Padj. = 3.97 × 10 −64 ), MTU/CON (log 2 FC = 1.95; FDR-Padj. = 1.11 × 10 −20 ). and BCG/CON (log 2 FC = 698 
+
+1.35; FDR-Padj. = 3.31 × 10 −9 ) bAM challenge contrasts; it was not upregulated in the IRR/CON contrast 699 
+
+(Additional file 6: Table S23). It is important to note that OAS2 was another OAS family DEG we identified 700 
+
+that was significantly upregulated in the MBO/CON (log 2 FC =3.57; FDR-Padj. = 6.47 × 10 −59 ), MTU/CON 701 
+
+(log 2 FC = 2.15; FDR-Padj. = 1.08 × 10 −19 ) and BCG/CON (log 2 FC = 1.45; FDR-Padj. = 2.32 × 10 −8 ) bAM 702 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+33 
+
+challenge contrasts; it was not statistically significant for the IRR/CON contrast. The OAS gene family 703 
+
+members are interferon-stimulated genes, and, using the human THP-1 macrophage-like cell line, Leisching 704 
+
+et al. (2019) have shown that the protein products of the human orthologs ( OAS1 and OAS2 ) act to restrict 705 
+
+intracellular M. tuberculosis replication and enhance cytokine secretion. Although our OAS DEG results are 706 
+
+somewhat equivocal, the presence of the OAS gene cluster DOCR regions only in MBO-challenged bAMs 707 
+
+may contribute to the increased relative expression of OAS1X in these cells. 708 
+
+Although most of the DABS and DOCR regions for the primary bAM challenge contrasts were detected 709 
+
+in the M. bovis -infected cells (MBO/CON), there were also significant numbers of DABS regions identified 710 
+
+in the IRR/CON bAM challenge contrast; in fact, the highest number of H3K4me1 DABS were detected for 711 
+
+this contrast (74), almost twice the number detected for the MBO/CON contrast (39) (Table 1). It is important 712 
+
+to note that, for this histone mark, almost all the DABS indicated decreased deposition in MTBC-challenged 713 
+
+cells; for example, 39/39 in the MBO/CON and 72/74 in the IRR/CON bAM challenge contrasts. Again, it is 714 
+
+also important to emphasise that H3K4me1—normally enriched at active and primed enhancers—has been 715 
+
+hypothesised to be a repressive histone mark in macrophages (Cheng et al. 2014). Our results for bAM 716 
+
+challenged with live/attenuated/dead MTBC clearly support this hypothesis (Table 1). The reduced H3K4me1 717 
+
+deposition we observed in bAM challenged with live and dead MTBC bacilli suggested that it may partly drive 718 
+
+the upregulation of many innate immune and downstream genes (Additional file 6: Table S23). For example, 719 
+
+the CD82 locus had decreased H3K4me1 deposition in M. bovis -infected bAM compared to non-challenged 720 
+
+control bAM (MBO/CON: log 2 FC −2.25; FDR-Padj. = 0.0402) and increased expression (log 2 FC 0.50; FDR-721 
+
+Padj. = 4.37 × 10 −4 ). Increased expression of CD82 has been shown to lead to retardation of phagosome 722 
+
+maturation, alteration of the innate immune response, and enhanced survival of virulent M. tuberculosis in 723 
+
+macrophages, and it was found to be highly expressed in granulomas from hTB patients (Koh et al. 2018). The 724 
+
+CD82 locus also showed decreased H3K4me1 deposition in the IRR/CON bAM contrast (log 2FC = −3.00; 725 
+
+FDR-Padj. = 0.0163) but was not significantly different in expression. In addition, the CXCL3 locus also showed 726 
+
+substantially decreased H3K4me1 deposition for the MBO/CON bAM contrast (log 2FC = −4.25; FDR -Padj. =727 
+
+7.69 × 10 −5 ) and increased expression (log 2 FC = 2.93; FDR-Padj. = 6.47 × 10 −8 ). Expression of the CXCL3 gene 728 
+
+has been shown to be elevated in peripheral blood mononuclear cells (PBMC) from active and latent hTB 729 
+
+patients (Yu et al. 2017) and in PBMC from naïve individuals stimulated with M. tuberculosis H37Ra antigen 730 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+34 
+
+(Mtb-Ag) (Wei et al. 2023). The CXCL3 locus also had decreased H3K4me1 deposition in the IRR/CON bAM 731 
+
+contrast (log 2FC = −2.97; FDR -Padj. = 2.77 × 10 −4 ) and was also substantially increased in expression (log 2FC 732 
+
+= 4.47; FDR-Padj. = 2.10 × 10 −17 ). Finally, the CD274 locus had markedly decreased H3K4me1 deposition in 733 
+
+the MBO/CON bAM contrast (log 2FC = −5.32; FDR -Padj. = 1.58 × 10 −4 ) and increased expression (log 2 FC = 734 
+
+2.08; FDR-Padj. = 2.22 × 10 −79 ). It also exhibited decreased H3K4me1 deposition and increased expression for 735 
+
+the other three bAM challenge contrasts (MTU/CON, BCG/CON, and IRR/CON) (Additional file 6: Table 736 
+
+S23). As described in the Results section, increased expression of CD274 in alveolar macrophages may be 737 
+
+advantageous for intracellular MTBC pathogens (Shen et al. 2016; Hu et al. 2020). 738 
+
+Multi -omics integration focused on the alveolar macrophage response to MTBC challenge sheds 739 
+
+new light on the function of key genes 740 
+
+Integration of transcriptomic (RNA-seq), histone modification (ChIP-seq), and open chromatin state 741 
+
+(ATAC-seq) datasets has provided comprehensive insights into host-pathogen interactions in bAM challenged 742 
+
+with live/attenuated/dead MTBC. A multi-omics interaction network representation of four epigenomic data 743 
+
+types (H3K4me1, H3K4me3, H3K27ac, and ATAC open chromatin state), plus transcriptomics (RNA-seq), 744 
+
+facilitates exploration and evaluation of bAM gene regulation in response to these MTB challenges (Fig. 7 and 745 
+
+Additional file 1: Fig. S9). Systematic examination of these networks requires keeping in mind that H3K4me1 746 
+
+has a repressive function in macrophages (Cheng et al. 2014), that H3K4me3 indicates active transcription of 747 
+
+proximal genes, H3K27ac is associated with active enhancers, and that DOCRs detected with ATAC-seq 748 
+
+correspond to open chromatin (Zhang and Cao 2019). 749 
+
+The CD274 gene exemplifies how multi-omics integration can provide new functional insights into 750 
+
+infection biology, as shown in the interaction network for the MBO/CON bAM challenge contrast (Fig. 7a and 751 
+
+Additional file 1: Fig. S9b). The integrative transducing effect of the active histone marks (increased H3K4me 752 
+
+and 3H3K27ac), repressive histone marks (reduced H3K4me1), and open chromatin (increased ATAC signal) 753 
+
+on CD274 transcription (increased RNA-seq expression: log 2 FC = 2.08; FDR-Padj. = 2.22 × 10 −79 ) is evident 754 
+
+at this gene node. Epigenomic regulation of CD274 , although not as dramatic, is also evident with decreased 755 
+
+H3K4me1 and increased RNA-seq expression for the MTU/CON (log 2 FC = 0.88; FDR-Padj. = 4.36 × 10 −15 ), 756 
+
+BCG/CON (log 2 FC = 0.62; FDR-Padj. = 4.91 × 10 −7 ), and IRR/CON (log 2 FC = 0.42; FDR-Padj. = 8.23 × 10 −4 )757 
+
+contrasts. These results suggest that epigenomic regulation of CD274 activity may contribute to M. bovis 758 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+35 
+
+virulence, immunoevasion, and host tropism. This gene encodes the CD274 ligand (also known as PDL1) of 759 
+
+the inhibitory programmed cell death protein 1 (PDCD1—also known as PD1) receptor, which is expressed 760 
+
+on T cells and has an immunoregulatory checkpoint function in restraining T cell activation (Sharpe and 761 
+
+Pauken 2018). Interestingly, we only observed increased expression of PDCD1 in the MBO/CON bAM 762 
+
+challenge group (log 2 FC = 3.55; FDR-Padj. = 7.13 × 10 −5 ); however, there were no DABS or DOCR associated 763 
+
+with the PDCD1 locus, and the gene was not significantly altered in expression for any of the other three 764 
+
+primary bAM challenge contrasts (MTU/CON, BCG/CON, or IRR/CON). 765 
+
+Expression of PDCD1 and CD274 was previously observed to be significantly elevated in active hTB 766 
+
+cases compared to healthy controls (Shen et al. 2016). This study also demonstrated that antibody-directed 767 
+
+blockade of the PDCD1/CD274 (PD1/PDL1) pathway in human MDM/CD4 + T cell co-cultures inhibited M. 768 
+
+bovis BCG replication in the hMDM. In addition, it has been shown that murine AM (mAM) infected with M. 769 
+
+tuberculosis H37Rv and M. bovis BCG exhibited elevated PDCD1 and CD274 mRNA levels, concomitant 770 
+
+with increased abundance of the PD1 and PDL1 proteins (Hu et al. 2020). Increased activation of the 771 
+
+PD1/PDL1 pathway may therefore benefit pathogenic MTBC by impairing intracellular mycobacterial killing 772 
+
+in macrophages and dampening T-cell activation. Our results support this hypothesis and the heightened 773 
+
+activation of the pathway—which may be epigenetically driven—in bAM infected with virulent M. bovis 774 
+
+indicates immunomodulation by the pathogen. Paradoxically, however, this relatively simple interaction is 775 
+
+complicated by accumulating evidence in vivo that immune checkpoint inhibitor (ICI) therapy for cancer 776 
+
+treatment, which blocks PD1 or PDL1, can increase susceptibility to M. tuberculosis infection and disease 777 
+
+reactivation, albeit contingent on the immune status of individual patients (Vaddi et al. 2024). This picture is 778 
+
+further complicated by recent work using spatial proteomics of granuloma tissue from hTB cases, which 779 
+
+showed that increased PDL1 expression was associated with progression to active TB (McCaffrey et al. 2022). 780 
+
+These observations and our bAM MTBC challenge results suggest that disentangling the role of the PD1/PDL1 781 
+
+pathway in human and animal MTBC infections will require coordinated in vitro , ex vivo , and in vivo research 782 
+
+efforts that leverage all omics technologies that can be used to study genome regulation and host-pathogen 783 
+
+interaction. 784 
+
+The IRF1 gene is also located in a genomic region that had multiple chromatin modifications and 785 
+
+exhibited differential expression in bAM infected with M. bovis (Fig. 7, Additional file 1: Fig. S9d). The IRF1 786 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+36 
+
+gene encodes interferon regulatory factor 1 (IRF1), a transcriptional regulator of innate and acquired immunity 787 
+
+(Feng et al. 2021). The chromatin alterations evident in the MBO/CON bAM challenge contrast (increased 788 
+
+H3K27ac and ATAC signal) corresponded to upregulation of IRF1 expression (log 2 FC = 2.42; FDR-Padj. = 1.90 789 
+
+× 10 −34 ). The gene was also moderately upregulated in the other three MTBC bAM challenge contrasts (log 2FC: 790 
+
+0.88–1.38; FDR-Padj. : ranging between 8.96 × 10 −5 and 5.74 × 10 −12 ), but there was no IRF1 chromatin 791 
+
+reconfiguration observed for these contrasts (Additional file 3: Tables S5–S8 and Additional file 6: Table S23). 792 
+
+It has been shown that homozygous loss-of-function mutations in IRF1 produce a severe Mendelian 793 
+
+susceptibility to mycobacterial disease (MSMD) in humans (Rosain et al. 2023). This study also convincingly 794 
+
+demonstrated that IRF1 governs IFN-γ-dependent macrophage activation and resistance to intracellular 795 
+
+pathogens. In addition, recent deployment of a bovine multicellular spheroid model of MTBC infection and 796 
+
+follow-on multi-omics analyses highlighted the importance of IRF1 expression as an early biomarker of MTBC 797 
+
+infection (Bhaskar et al. 2025). It is noteworthy, therefore, that our results indicate that a bAM epigenetic 798 
+
+program drives the upregulation of IRF1 , which is exclusive to M. bovis infection. 799 
+
+In a similar fashion to IRF1 , the LDLR gene exhibited evidence for epigenomic reconfiguration 800 
+
+exclusive to the MBO/CON bAM challenge contrast (Fig. 7, Additional file 1: Fig. S9b). The H3K27ac and 801 
+
+ATAC signal observed predicted upregulation of LDLR in these bAM, which we observed (log 2 FC = 3.00; 802 
+
+FDR-Padj. = 5.62 × 10 −34 ). Again, we also found modest upregulation of LDLR expression without chromatin 803 
+
+modification in the other three MTBC bAM challenge contrasts (log 2 FC: 1.40–1.65; FDR-Padj. : ranging 804 
+
+between 2.00 × 10 −7 and 5.19 × 10 −11 ) (Additional file 3: Tables S5–S8 and Additional file 6: Table S23). The 805 
+
+LDLR gene encodes the low-density lipoprotein receptor (LDR1) that mediates endocytosis of cholesterol-rich 806 
+
+low-density lipoprotein (LDL) (Schmidt et al. 2025). The epigenetic regulation of LDLR expression we 807 
+
+observe in M. bovis -infected bAM may therefore be relevant to recent observations that LDLR plays a key role 808 
+
+in the M. bovis BCG-induced trained immunity in macrophages that promotes cholesterol uptake and leads to 809 
+
+enhanced type I interferon responses (Lai et al. 2025). 810 
+
+The final part of this study was the integration of the consolidated multi-omics DAB/DOCR 1000-gene 811 
+
+set with GWAS data from the Holstein-Friesian breed for an M. bovis infection susceptibility trait (Ring et al. 812 
+
+2019). The four genes identified via the GWAS integration included the ERBB4 gene (BTA2: 56 SNPs) that 813 
+
+encodes an epidermal growth factor receptor involved in innate immunity signalling, and that binds epiregulin 814 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+37 
+
+encoded by the EREG gene, which has been shown to contain polymorphisms that influence several hTB 815 
+
+susceptibility traits in human populations (Thuong et al. 2012; Cao et al. 2019). Also included was RNPC3 816 
+
+(BTA3: 1 SNP), which encodes the RNA binding region (RNP1, RRM) containing 3 protein, a component of 817 
+
+the spliceosome (Beusch and Madhani 2024). It is important to note that, in addition to the MBO-challenged 818 
+
+bAM, ERBB4 and RNPC3 also exhibited DABS in the IRR-challenged bAM. The other two genes were 819 
+
+MRTFA (previously known as MKL1 ; BTA5: 1 SNP), which encodes the myocardin related transcription factor 820 
+
+A protein—a coactivator of serum response factor (SRF)—that exhibits a loss-of-function mutation in humans 821 
+
+leading to immunodeficiency and severe susceptibility to bacterial infection (Record et al. 2015); and LRCH1 822 
+
+(BTA12: 6 SNPs), which encodes the leucine rich repeats and calponin homology domain containing 1 protein 823 
+
+that has been shown to be a negative regulator of LAT-mediated TCR signal transduction and CD8 + T cell 824 
+
+responses against the intracellular bacterial pathogen Listeria monocytogenes (Liu et al. 2020). These results 825 
+
+will be relevant to genome-enabled breeding programmes aimed at enhancing bTB disease resilience traits in 826 
+
+domestic cattle (Banos 2023; Madenci et al. 2025). 827 
+
+Conclusions 828 
+
+There are limitations inherent in this study that should be considered. For example, a parallel reciprocal 829 
+
+experiment involving multi-omics analyses of cultured hAM challenged with the same MTBC types would 830 
+
+provide valuable complementary information to deepen understanding of host tropism for tuberculous 831 
+
+mycobacteria. In addition, single-cell multi-omics (i.e., scRNA-seq, scChIP-seq, and scATAC-seq) would be 832 
+
+a superior approach for understanding how macrophage heterogeneity in the lung can impact MTBC infections 833 
+
+(Russell et al. 2025). Notwithstanding these limitations, we have shown in this study that epigenetic 834 
+
+reprogramming of the transcriptome differentiates the bovine alveolar macrophage response to bovine-adapted 835 
+
+M. bovis from that elicited by closely related MTBC strains. We also demonstrate that multiple types of 836 
+
+functional genomics data outputs can be integrated with relevant GWAS data and signpost future multi-omics 837 
+
+research that can exploit the very large GWAS datasets available for cattle and other livestock species. 838 
+
+839 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+38 
+
+# Materials and Methods 840 
+
+Harvesting bovine alveolar macrophages by lung lavage 841 
+
+Six unrelated and age-matched (6–8 weeks old) male Holstein-Friesian calves were used in this study 842 
+
+(Additional file 2: Table S1). All animals were maintained under uniform housing conditions and nutritional 843 
+
+regimens at the UCD Lyons Research Farm (Newcastle, County Kildare, Ireland). The subject animals were 844 
+
+selected from a tuberculosis-free herd that is screened annually using the single intradermal comparative 845 
+
+tuberculin test (SICTT). These cattle were also negative for infection with Brucella abortus , M. avium subsp. 846 
+
+paratuberculosis , Salmonella Typhimurium, bovine herpesvirus 1 (BHV-1) and bovine viral diarrhoea (BVD) 847 
+
+virus. All animal procedures were performed in accordance with Irish law (SI 543/2012, as per EU Directive 848 
+
+2010/63/EU), and ethical approval for the study was obtained from the University College Dublin (UCD) 849 
+
+Animal Ethics Committee (protocol number AREC-19-07-Gordon). 850 
+
+Euthanasia was performed by administration into the jugular vein of an overdose of sodium 851 
+
+pentobarbital. Lungs and heart were separated from the animal and were visually inspected by a veterinary 852 
+
+surgeon for inflammation and pathology before proceeding to pulmonary lavage for harvesting of bovine 853 
+
+alveolar macrophages (bAM) as previously described by our group (Magee et al. 2014; Nalpas et al. 2015). 854 
+
+Lungs were separated from the heart to prevent blood contamination. The washes were performed using 5–6 855 
+
+L of phosphate-buffered saline (PBS) (Gibco, Thermo Fisher Scientific) infused into the lungs via the trachea 856 
+
+(500 ml per infusion), followed by a massage of the infused lungs and then collection of the resulting cell 857 
+
+suspension into sterile beakers. Cell suspension (50 ml) from the first infusion was collected, pelleted by 858 
+
+centrifugation (200 × g for 10 min at RT), resuspended in 10 ml PBS, and cultured on a range of solid media 859 
+
+to screen for microbial contamination; all animals tested negative. 860 
+
+The cell suspension was transferred to 50 ml conical tubes, filtered through 100 μm cell strainers, and 861 
+
+centrifuged (300 × g for 10 min at RT). The supernatants were discarded, except for the 5 ml volumes covering 862 
+
+the cell pellets, which were pooled. When required, red blood cell lysis was performed by centrifugation (300 863 
+
+× g for 10 min at RT), followed by removal of the supernatant, except for 10 ml remaining on top of the pellet. 864 
+
+Then, 30 ml of erythrocyte lysis buffer (Qiagen) was added, the pellet was resuspended and incubated for 3 865 
+
+min, and then the tube was filled to 50 ml with PBS. The tubes were then centrifuged (300 × g for 10 min at 866 
+
+RT), the supernatants were discarded entirely, and the pellets were resuspended in 5 ml R medium (RPMI 867 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+39 
+
+medium with GlutaMAX (Gibco), supplemented with 10% foetal bovine serum (FBS) (Gibco)) and pooled 868 
+
+into volumes of 40 ml. The cells were counted using a haemocytometer and 0.4% Trypan Blue Solution 869 
+
+(Thermo Fisher Scientific) to estimate viability. The cells were then centrifuged (300 × g for 10 min at RT) 870 
+
+and resuspended in freezing solution (10% DMSO (Sigma-Aldrich), 90% FBS) at a density of approximately 871 
+
+2.5 × 10 7 cells/ml. Cell aliquots (1.5 ml) were then prepared in 2 ml sterile cryovials (Sarstedt) and placed into 872 
+
+Mr Frosty ® Cryo −1°C/min freezing containers (Nalgene ® , Thermo Fisher Scientific) containing 100% 873 
+
+isopropanol. Cryovials were stored at −80°C for 20 h, after which they were removed from the freezing 874 
+
+containers and transferred to liquid nitrogen until required for further use. 875 
+
+Culture of bovine alveolar macrophage s876 
+
+Stored cells were thawed, transferred to a 50 ml tube with 20 ml complete R+ medium (RPMI medium 877 
+
+with GlutaMAX (Gibco) supplemented with 10% FBS (Gibco), 2.5 μg/ml Amphotericin B (Sigma-Aldrich) 878 
+
+and 50 μg/ml Cefotaxime (Sigma-Aldrich)) and centrifuged (200 × g for 5 min at RT). The supernatant was 879 
+
+discarded, and cells were resuspended in 20 ml of fresh R+ medium. Cell solutions were then placed in T75 880 
+
+vented culture flasks (CELLSTAR ® , Greiner Bio-One) and incubated at 37°C with 5% CO 2 for 24 h prior to 881 
+
+plating in 24-well plates. After incubation, the medium was removed together with non-adherent cells. 882 
+
+Adherent bAM cells were washed with 15 ml PBS and dissociated by adding 10 ml pre-warmed non-enzymatic 883 
+
+cell dissociation buffer in PBS (Gibco) to each culture flask, incubating for 10 min at RT, gently tapping the 884 
+
+flask after 5 min, and then collecting cells by gentle scraping with a cell scraper. The bAM cells, in cell 885 
+
+dissociation buffer, were transferred to a 50 ml tube with 20 ml R medium (RPMI medium with GlutaMAX 886 
+
+(Gibco) supplemented with 10% Foetal calf serum (Gibco), no antibiotics) and pelleted (200 × g for 5 min at 887 
+
+RT), then resuspended in 5 ml R medium. The number of viable cells was measured using 0.4% Trypan Blue 888 
+
+Solution, and cells were counted using a haemocytometer. Cell counts were adjusted to 5 × 10 5 cells/ml (based 889 
+
+on viable cell counts) in R medium, and 5 × 10 5 cells were seeded per well in individual 24-flat-well tissue 890 
+
+culture plates (Sarstedt). A 10 mm-diameter round coverslip was placed at the bottom of the wells used for 891 
+
+fluorescence microscopy before cell seeding. The plates were incubated for 24 h at 37°C in 5% CO 2 until 892 
+
+required for mycobacterial challenge. 893 
+
+894 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+40 
+
+Bacterial culture and preparation for in vitro challenge assay 895 
+
+Culturing of M. bovis AF2122/97, M. bovis BCG Denmark, and M. tuberculosis H37Rv was performed 896 
+
+in a Biosafety Containment Level 3 (BCL3) laboratory, which conformed to the national guidelines on the use 897 
+
+of Hazard Group 3 infectious organisms. M. bovis BCG Denmark and M. tuberculosis H37Rv were cultured 898 
+
+in Middlebrook 7H9 medium (Difco ™ , BD) with 0.05% Tween 80, 0.2% glycerol, 0.5% BSA, 0.2% glucose, 899 
+
+and 0.085% NaCl. M. bovis AF2122/97 was cultured in the same media supplemented with 10 mM sodium 900 
+
+pyruvate (Sigma-Aldrich). Gamma-irradiated whole M. bovis AF2122/97 cells were obtained from BEI 901 
+
+Resources (Catalogue number NR-31210, ATCC). To prepare the gamma-irradiated cells for use and to 902 
+
+minimise clumping, 1 ml of the original stock was added to 9 ml of Middlebrook 7H9 medium, sonicated at 903 
+
+full power in a Branson 2510 ultrasonic cleaner (Branson Ultrasonics Corporation) for 15 min, and passaged 904 
+
+eight times through a 26G needle. The bacterial suspension was aliquoted into 2 ml centrifuge tubes and 905 
+
+centrifuged (100 × g for 3 min at RT). The bacterial suspensions were then collected in 15 ml tubes, and the 906 
+
+pellets were discarded. The optical density at 600 nm (OD 600 nm) of the bacterial suspension was measured 907 
+
+and adjusted to 0.3– 0.5. The bacterial suspension was then aliquoted into 1 ml tubes and stored at −80°C. 908 
+
+To prepare live bacterial strains for the infection experiments, 18 days prior to the bAM challenge, 1 ml 909 
+
+of mycobacterial stock was retrieved from the −80°C freezer, thawed, and then added to 4 ml of medium .910 
+
+These starter cultures were incubated for 1 week at 37°C, after which 5 ml of fresh media was added and 911 
+
+incubated for a further week without shaking. Cultures were then scaled up to a larger volume by transferring 912 
+
+4 ml of the starter culture into 46 ml of media in 2-L-capacity cell culture roller bottles (Greiner). The bottles 913 
+
+were incubated at 37°C with rolling, at approximately 1-2 rotations per minute, for 4 days. The bacterial 914 
+
+cultures were monitored until they reached the required optical density of 0.5–0.6 at OD 600 nm. On the day of 915 
+
+bAM challenge, 15 ml aliquots were removed and transferred to 50 ml conical tubes. The cultures were 916 
+
+centrifuged (1000 × g for 10 min at RT). Supernatants were discarded, and 10–15 glass beads (3 mm) were 917 
+
+added to the tubes, which were then vortexed for 1 min. Complete R medium (6 ml) was then added to 918 
+
+resuspend the pellet, and tubes were left to rest for 5 min. The top 5 ml was then removed and transferred to 919 
+
+fresh 50 ml conical tubes, which were centrifuged (300 × g for 7 min at RT). The supernatant (4 ml) was then 920 
+
+passaged 15 times through a 26G needle. Ready-to-use aliquots of gamma-irradiated whole M. bovis 921 
+
+AF2122/97 were retrieved from the −80°C freezer and thawed, centrifuged (3800 rpm for 10 min at RT), and 922 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+41 
+
+the supernatant discarded. The bacterial pellets were then resuspended in 4 ml of R medium, and the bacterial 923 
+
+suspension was passaged 15 times through a 26G needle. 924 
+
+The cultures (live bacteria) and prepared gamma-irradiated bacteria were then placed in fresh 15 ml 925 
+
+conical tubes and sonicated at full power in a Bransonic 2510 ultrasonic cleaner (Branson Ultrasonics) for 1 926 
+
+min. The OD 600 nm values of the cultures and the preparation were then determined, and cell numbers were 927 
+
+estimated based on an OD 600 nm of 0.1 corresponding to 1 × 10 7 bacterial cells. The cell numbers were then 928 
+
+adjusted to 5 × 10 5 bacterial cells/ml in pre-warmed R medium to achieve a multiplicity of infection (MOI) of 929 
+
+one bacillus per bAM cell (1:1). 930 
+
+Bovine alveolar macrophage challenge 931 
+
+All in vitro bAM challenges were performed in a BCL3 laboratory. The challenged bAM groups were 932 
+
+M. bovis (MBO), M. tuberculosis (MTU), M. bovis BCG (BCG), and gamma-irradiated (killed) M. bovis (IRR); 933 
+
+a non-challenged bAM control group (CON) was also run in parallel. The R medium from all tissue culture 934 
+
+plate wells containing bAM (5 × 10 5 cells/well) was removed and replaced with 1 ml of the prepared live or 935 
+
+gamma-irradiated strains in R media (5 × 10 5 bacteria/ml). The parallel wells for non-challenged control bAM 936 
+
+samples received 1 ml R medium only. Once challenged, the bAM were incubated for bacterial uptake at 37°C, 937 
+
+5% CO 2 for 3 h. After 3 h of bacterial uptake, the media for all wells used for analyses at 24 h of challenge 938 
+
+was removed, the wells washed twice with pre-warmed PBS, and then filled with 1 ml fresh, clean R medium. 939 
+
+The plates were then reincubated at 37°C and 5% CO 2 for 24 h. For the wells required for fluorescence 940 
+
+microscopy analysis at 0 h, the media was removed, and cells were directly treated according to sampling 941 
+
+requirements without washing. 942 
+
+Colony -forming unit (CFU) counts 943 
+
+The CFU counts were obtained using the mycobacterial challenge dose at the time of bacterial uptake. 944 
+
+All counts were processed by plating serial dilutions on Middlebrook 7H11 agar plates (Difco ™ ) with 0.05% 945 
+
+Tween 80, 0.2% glycerol, 0.5% BSA, 0.2% glucose, and 0.085% NaCl supplemented with 10 mM sodium 946 
+
+pyruvate (Sigma-Aldrich). For all CFU counts, 10-fold serial dilutions were prepared in triplicate in 96-well 947 
+
+plates, with 360 μl of Middlebrook 7H9 medium and 40 μl of the live bacteria suspension to be examined 948 
+
+added to the first well and mixed by vigorous pipetting. Serial dilutions were then performed on the 96-well 949 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+42 
+
+plates using the same relative volumes, from 1:10 to 1:100,000. Subsequently, 50 μl of each serial dilution was 950 
+
+plated onto 7H11 agar plates. Plates were placed in plastic bags (to prevent drying out) and stored at 37°C for 951 
+
+up to 6 weeks, with colonies checked weekly from the second week after plating before final counting. 952 
+
+Fluorescence microscopy 953 
+
+The bAM cell culture wells containing the coverslips were washed once with pre-warmed PBS, fixed 954 
+
+with 1 ml 4% paraformaldehyde (Thermo Fisher Scientific) in PBS for 30 min at RT, and then stored at 4°C. 955 
+
+The coverslips were prepared for fluorescence microscopy using the following protocol: the mycobacteria 956 
+
+were stained by washing the wells once with PBS, then covering the coverslips with Modified Auramine-O 957 
+
+stain (Scientific Device Laboratory) for 2 min at RT. The wells were washed once with PBS, and the coverslips 958 
+
+were covered with modified Auramine-O Quencher decolouriser (Scientific Device Laboratory) for 2 min at 959 
+
+RT, followed by one PBS wash. Cells and nuclei were then stained simultaneously with a staining mix of 2 960 
+
+μg/ml HCS CellMask ™ Red stain (Thermo Fisher Scientific) and 10 μg/ml Hoechst stain (Thermo Fisher 961 
+
+Scientific) in PBS for 5 min, followed by three washes with PBS. The coverslips were then removed from the 962 
+
+wells with tweezers and mounted cell-side down, on a slide with 5 μl of mounting media. 963 
+
+Wide-field fluorescence microscopy was performed on a Zeiss Axio Imager M1 (Carl Zeiss Microscopy) 964 
+
+within 2 h of the staining procedure. The excitation light intensity and exposure time settings were maintained 965 
+
+across all conditions to facilitate quantitative comparisons. A 40× magnification was used to achieve 966 
+
+appropriate resolution and a large field of view, with 10 fields per condition. The microscopy images were 967 
+
+analysed using the CellProfiler software v.4.2.4 (Stirling et al. 2021). Identification of the biological objects 968 
+
+was performed independently for each channel of the composite microscopy image. For nuclei segmentation, 969 
+
+a global thresholding strategy based on the Otsu method was applied to the blue channel of the composite 970 
+
+image. Adjacent merged nuclei were separated into individual objects of interest by shape and intensity. The 971 
+
+same thresholding strategy and method were used for cell segmentation, with adjacent cells separated by 972 
+
+intensity. Image processing was performed on the green channel of the composite image to enhance the 973 
+
+bacteria, using the Tubeness method, before measuring Neurite features. The processed image was used for 974 
+
+bacteria segmentation, with global thresholding using the Otsu method. Clumped bacteria were separated by 975 
+
+intensity, with a single central peak of brightness identified for each organism. Object relationships were then 976 
+
+assigned: nuclei were related to parent cell objects, and bacteria were related to parent cell objects. The 977 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+43 
+
+CellProfiler analysis for each image provides the total number of cells, the number of nuclei per cell, and the 978 
+
+number of bacteria per cell. 979 
+
+Sampling and preparation of RNA for RNA -seq, and DNA for ChIP -seq and ATAC -seq 980 
+
+To extract total RNA from cultured bAM, the media from 5 wells per condition (~ 2.5 × 10 6 cells) was 981 
+
+removed and replaced with a total of 700 μl of QIAzol lysis reagent (Qiagen), which was then transferred 982 
+
+sequentially across the 5 wells with pipetting to achieve disruption and lysis of the cells. RNA purification and 983 
+
+separation of small RNA-enriched fractions (<50 nucleotides) from larger RNAs was performed using a 984 
+
+miRNeasy Mini kit (Qiagen) according to the manufacturer's instructions. RNA quantity and quality were 985 
+
+assessed using a NanoDrop™ 1000 spectrophotometer (Thermo Fisher Scientific) and an Agilent 2100 986 
+
+Bioanalyzer using an RNA 6000 Nano LabChip kit (Agilent Technologies). Purified RNA samples for mRNA 987 
+
+sequencing were stored at −80°C before shipping to a commercial provider for RNA -seq library preparation 988 
+
+and sequencing (Azenta Life Sciences, Leipzig, Germany). 989 
+
+For ChIP-seq sample preparation, bAM cells were fixed by adding 1/10 volume of freshly prepared 11% 990 
+
+formaldehyde to the fixation buffer (0.1 M NaCl, 1.0 mM EDTA, 0.5 mM EGTA, 50 mM HEPES, pH 7.6) 991 
+
+directly to the cell culture media in each well. The bAM cells were incubated with gentle shaking at RT for 8 992 
+
+min. Fixation was stopped by adding 1/10 volume of 1.25 M glycine, and the cells were then incubated with 993 
+
+gentle shaking for a further 5 min at RT. Using a cell scraper, the bAM cells were collected, centrifuged (1000 994 
+
+× g for 10 min at 4°C), and washed once with ice-cold PBS. The cell pellets were then frozen immediately at 995 
+
+−80°C before shipment to a commercial service provider (Diagenode SA, Liège, Belgium) for downstream 996 
+
+laboratory processing. Chromatin for the ChIP-seq analyses was prepared by Diagenode from bAM cell pellets 997 
+
+(~ 1 × 10 7 cells each using the Bioruptor ® Pico sonication device (Diagenode) and the iDeal ChIP-seq kit for 998 
+
+Transcription Factors (Diagenode) according to the manufacturer’s instructions. The ChIP assays were 999 
+
+performed using 200 ng of chromatin for each immunoprecipitation with antibodies for H3K4me1, H3K4me3, 1000 
+
+H3K27ac, H3K27me3, and CTCF according to the Functional Annotation of Animal Genomes (FAANG; 1001 
+
+www.faang.org ) recommendations (Clark et al. 2020). Purified DNA samples were stored at −20°C prior to 1002 
+
+ChIP-seq library preparation and sequencing (Diagenode). 1003 
+
+Cell preparation and tagmentation for ATAC-seq were performed with bAM cells, which were washed 1004 
+
+once with PBS containing 0.1% BSA. The bAM cells were then dissociated by adding pre-warmed non-1005 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+44 
+
+enzymatic cell dissociation buffer in PBS (Thermo Fisher Scientific) to the wells and incubating at RT for 10 1006 
+
+min. Gentle scraping of the cells with a cell scraper was performed after 5 min, followed by the addition of R 1007 
+
+media after 10 min. The bAM cells were collected and pelleted (500 × g for 10 min at 4°C), then resuspended 1008 
+
+in 500 μl R medium. The number of viable cells was determined using 0.4% Trypan Blue Solution, and cells 1009 
+
+were counted using a haemocytometer. As determined by cell counting, 50,000 cells were collected and 1010 
+
+centrifuged (500 × g for 10 min at 4°C); the supernatant was discarded, and the cell pellets were maintained 1011 
+
+on ice. Permeabilisation and transposition reactions were performed simultaneously on whole cells by 1012 
+
+resuspending gently in 50 μl of the permeabilisation/transposition mix (Diagenode), then incubating for 30 1013 
+
+min at 37°C with mixing at 500 rpm. The samples were then transferred to ice, and the DNA was purified 1014 
+
+using the Diapure kit (Diagenode) according to the manufacturer’s instructions. Purified DNA samples were 1015 
+
+stored at −20°C before shipping to a commercial provider for ATAC -seq library preparation and sequencing 1016 
+
+(Diagenode). 1017 
+
+RNA -seq, ChIP -seq, and ATAC -seq library preparation and sequencing 1018 
+
+Illumina-compatible DNA libraries (30 samples: 6 biological replicates for 5 conditions)  were prepared 1019 
+
+with polyA selection for strand-specific  RNA-seq and used for paired-end sequencing (2 × 150 bp) on the 1020 
+
+Illumina NovaSeq 6000 platform ( Azenta Life Sciences). Illumina-compatible DNA libraries (75 samples: 3 1021 
+
+biological replicates for 5 conditions and 5 histone marks) were also prepared for ChIP-seq and used for paired-1022 
+
+end sequencing  (2 × 50 bp) on the Illumina NovaSeq 6000 platform (Diagenode). In addition,  Illumina-1023 
+
+compatible DNA libraries (15 samples: 3 biological replicates per condition) were prepared for ATAC-seq and 1024 
+
+sequenced in paired-end mode  (2 × 50 bp) on the Illumina NovaSeq 6000 platform (Diagenode). The cattle 1025 
+
+bAM sample IDs and the allocations to the different functional genomics assays are detailed in Additional file 1026 
+
+2: Table S1. 1027 
+
+RNA -seq bioinformatics 1028 
+
+Computational analyses for all RNA-seq bioinformatic processes were performed on a 72-CPU Linux 1029 
+
+Ubuntu (version 18.04.4 LTS) server. Following RNA-seq data generation and pre-processing, a mean of 70.43 1030 
+
+million (M) paired-end 150 bp reads per individual library were obtained ( n = 29 libraries) (Additional file 3: 1031 
+
+Table S3). The RNA-seq datasets were M. bovis -challenged (MBO, n = 5 ); M. tuberculosis -challenged (MTU, 1032 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+45 
+
+n = 6); M. bovis-BCG-challenged (BCG, n = 6); gamma-irradiated M. bovis -challenged (IRR, n = 6); and 1033 
+
+control non-challenged (CON, n = 6). A single MBO RNA-seq sample (animal ID: 43095) was compromised 1034 
+
+by contamination and not included in subsequent analyses (Additional file 2: Table S1). Adapter sequence 1035 
+
+contamination and low-quality paired-end reads were filtered out using the FastP v.0.23.2 FASTQ file 1036 
+
+processor (Chen et al. 2018). At each step, read quality was assessed with FastQC v.0.12.0 (Andrews 2023). 1037 
+
+After quality control and filtering, a mean of 66.16 M reads per library were mapped to the B. taurus ARS-1038 
+
+UCD1.2 reference genome (Rosen et al. 2020) using the STAR aligner v.2.7.1b (Dobin et al. 2013) with an 1039 
+
+average read mapping efficiency of 93.1%. Read counts for each gene were generated using featureCounts 1040 
+
+v.1.6.4 (Liao et al. 2014), set to unambiguously assign uniquely aligned paired-end reads in a stranded manner 1041 
+
+to gene exon annotations. Using the R statistical programming language v.4.3.1 (R Core Team 2023), gene 1042 
+
+annotation was obtained from an NCBI GFF annotation file (GCF_002263805.1) with additional descriptions 1043 
+
+and chromosomal locations annotated using the GO.db v.3.17.0 (Carlson 2019) and biomaRt v.2.56.1 (Durinck 1044 
+
+et al. 2009) packages. 1045 
+
+Differential gene expression analysis was performed with the DESeq2 package v.1.40.2 (Love et al. 1046 
+
+2014) for the 10 possible experimental group contrasts with five experimental groups (MBO, MTU, BCG, 1047 
+
+IRR, and CON). The differential expression analysis used the DESeq2 Wald test, and to obtain reliable variance 1048 
+
+estimates, shrunken log fold-changes were computed by combining information across all genes; these 1049 
+
+estimates were then used for subsequent analysis. Multiple testing correction was performed for each gene 1050 
+
+expression contrast using the Benjamini-Hochberg (B-H) false discovery rate (FDR) method (Benjamini and 1051 
+
+Hochberg 1995) and the default threshold for differentially expressed genes (DEGs) was an FDR-adjusted P-1052 
+
+value (FDR-Padj. ) < 0.05. 1053 
+
+ChIP -seq bioinformatics 1054 
+
+Computational analyses for all ChIP-seq bioinformatic processes were performed on a 72-CPU Linux 1055 
+
+Ubuntu (v.18.04.4 LTS) server. Following ChIP-seq data generation and pre-processing, a mean of 129.78 M 1056 
+
+paired-end 50 bp reads were obtained from three biological replicates per experimental group (MBO, MTU, 1057 
+
+BCG, IRR, and CON) for each histone mark (H3K27ac, H3K4me3, H3K27me3, and H3K4me1), CTCF 1058 
+
+binding, and input controls (Additional file 4: Table S12). Therefore, for each of the three biological replicates 1059 
+
+across the five experimental groups, there were input libraries for five ChiP-seq assays, except for the 1060 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+46 
+
+AS41_H3K4me1 control (CON) group, which did not yield sufficient material for sequencing. Consequently, 1061 
+
+74 ChIP-seq datasets were produced ( Additional file 4: Table S12‒13). At each step of data processing, read 1062 
+
+quality was assessed using FastQC v.0.12.0. Reads were aligned to the ARS-UCD1.2 reference genome using 1063 
+
+the BWA software package v.0.7.5a (Li and Durbin 2009) with the BWA-backtrack algorithm, yielding a mean 1064 
+
+mapping efficiency of 93.3%. Samples were filtered for regions blacklisted by the ENCODE project (Hoffman 1065 
+
+et al. 2013). PCR duplicates and multimapping reads were removed using Samtools v.1.13 (Danecek et al. 1066 
+
+2021). Alignment coordinates were converted to BED format using BEDTools v.2.17 (Quinlan and Hall 2010), 1067 
+
+and peak calling was performed using epic2 v.0.0.52, a reimplementation of SICER with optimised parameters 1068 
+
+for each histone mark, as determined by the optimal peak calling protocol (Stovner and Sætrom 2019). 1069 
+
+Peaks were called using alignment files to determine where reads aligned to specific regions of the 1070 
+
+genome, and then those alignments were compared to the input samples as a normalisation step. Peaks in all 1071 
+
+marks were visually assessed in parallel across the bovine reference genome with the Integrative Genomics 1072 
+
+Viewer (IGV) (Robinson et al. 2023). Differential peak calling was performed with the DiffBind v.3.10 (Ross-1073 
+
+Innes et al. 2012) and DESeq2 v.1.40.2 R packages to identify differential affinity binding sites (DABSs) 1074 
+
+between the control group (CON) and the four experimental groups (MBO, MTU, BCG, and IRR), and then 1075 
+
+combined into a DABS score matrix and summarised into a comparative table (Additional file 6: Table S23). 1076 
+
+Peaks for each biological sample and experimental condition for each mark were cross-referenced with the 1077 
+
+IGV images and the differential peak caller to generate a fold enrichment value for each observed peak 1078 
+
+difference between conditions. This procedure required comparing and evaluating peak start and end sites, 1079 
+
+chromosomal locations, P-values, and FDR-Padj. values for each peak summit, as well as the normalised fold 1080 
+
+enrichment of each peak relative to the input sample, and the comparison of that enrichment between the 1081 
+
+control group (CON) and the challenged groups (MBO, MTU, BCG, and IRR). 1082 
+
+Differential binding affinity analyses were performed using the dba.analyze function in DiffBind. 1083 
+
+DiffBind includes functions to support the processing of peak sets, the inclusion of overlapping and merging 1084 
+
+peak sets, sequence read counting, the overlapping of intervals in peak sets, and the identification of 1085 
+
+statistically significantly differentially bound sites based on evidence of binding affinity measured by 1086 
+
+differences in read densities (Additional file 4: Table S15–18). Parallel normalisation using the CTCF datasets 1087 
+
+was implemented as described in the DiffBind vignette, as no differences were observed among groups in 1088 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+47 
+
+CTCF binding. The default criterion for identification of a DABS was FDR-Padj. < 0.05. All detected DABS 1089 
+
+were then annotated using the Hypergeometric Optimisation of Motif EnRichment (HOMER) software suite 1090 
+
+v.4.11 (Heinz et al. 2010). HOMER provides various tools for motif discovery, annotation, and visualisation. 1091 
+
+It leverages the hypergeometric distribution to identify significant motif enrichments and provides extensive 1092 
+
+options for analysing ChIP-seq, RNA-seq, and ATAC-seq data. The process of annotating peaks or regions 1093 
+
+consisted of two main steps: an initial step that identifies the closest transcription start site (TSS) and associates 1094 
+
+the peak with the corresponding gene; a second step then determines the annotation for the genomic interval 1095 
+
+encompassing the peak or region’s centre. Importantly, HOMER can be used with a custom genome annotation, 1096 
+
+such as GCF_002263795.1_ARS-UCD1.2_genomic.gtf, making it a suitable tool for analysing bovine data 1097 
+
+and genome annotation. 1098 
+
+ATAC -seq bioinformatics 1099 
+
+Computational analyses for all ATAC-seq bioinformatic processes were performed on a 72-CPU Linux 1100 
+
+Ubuntu (version 18.04.4 LTS) server. Following ATAC-seq data generation and pre-processing, a mean of 1101 
+
+100.45 M paired-end 50 bp sequence reads were obtained for each sample (Additional file 5: Table S19) and 1102 
+
+read QC was performed using FastQC v.0.12.0. Reads were aligned to the ARS-UCD1.2 reference genome 1103 
+
+using Bowtie2 v. 2.4.5  (Langmead and Salzberg 2012) with a mean mapping efficiency of 95.07%. Samples 1104 
+
+were filtered for regions blacklisted by the ENCODE project and deduplicated using Picard v.2.26.10 1105 
+
+(http://broadinstitute.github.io/picard ). Alignment coordinates were converted to BED format using BEDTools 1106 
+
+v.2.17, and peak calling and fragment-in-peak scores (FriP) were calculated using MACS2 v.2.1.2 (Zhang et 1107 
+
+al. 2008; Gaspar 2018) with customised parameters for ATAC-seq data. For consistency, ATAC-seq peak 1108 
+
+analysis closely followed the ChIP-seq analysis pipeline, and peaks were visually assessed across the bovine 1109 
+
+reference genome using IGV. Differential peak calling was performed with DiffBind v.3.10 and DESeq2 1110 
+
+v.1.40.2 to identify differential open chromatin regions (DOCRs) between the control group (CON) and the 1111 
+
+four experimental groups (MBO, MTU, BCG, and IRR). These results were then combined into a DOCR score 1112 
+
+matrix and summarised into a comparative table (Additional file 6: Table S23). Peaks from each biological 1113 
+
+sample for each condition and mark were cross-referenced with the IGV images and the differential peak caller 1114 
+
+to generate a fold enrichment value for each observed peak difference between conditions. This procedure 1115 
+
+required cataloguing and evaluating peak start and end sites, chromosomes, P-values and FDR-Padj. values for 1116 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+48 
+
+each peak summit, peak summit locations, normalised fold enrichment of a peak against the input sample, and 1117 
+
+comparisons of that enrichment between the control group (CON) and each of the challenged groups (MBO, 1118 
+
+MTU, BCG, and IRR). Differential binding affinity analyses were performed using the dba.analyze function 1119 
+
+in DiffBind v.3.10. The default criterion for identification of a DOCR was FDR-Padj. < 0.05 and all DOCR sites 1120 
+
+were then annotated using HOMER v.4.11 and the GCF_002263795.1_ARS-UCD1.2_genomic.gtf file as 1121 
+
+described for the ChIP-seq analysis. 1122 
+
+Multi -omic s data integration 1123 
+
+The DEG, DABS, and DOCR locations for the four primary bAM challenge contrasts (MBO vs. CON, 1124 
+
+MTU vs. CON, BCG vs. CON, and IRR vs. CON) were integrated based on gene location, HOMER annotation 1125 
+
+and any ChiP-seq peak, ATAC-seq peak, or RNA-seq expression log 2 fold change (log 2 FC) with an FDR-Padj. 1126 
+
+< 0.05 (Additional file 6: Table S23). Correlation heatmaps were generated using genome-wide H3K4me1, 1127 
+
+H3K4me3, H3K27me3, and H3K27ac sequencing reads, along with RNA-seq data from each experimental 1128 
+
+group (MBO, MTU, BCG, IRR, and CON), using EaSeq v.1.05 (Lerdrup et al. 2016). Circle plots for each 1129 
+
+experimental group containing all peaks of H3K4me1, H3K4me3, H3K27me3, H3K27ac and ATAC-seq reads 1130 
+
+were generated using the circlize R package v.0.4.15 (Gu et al. 2014). BED files for each of the histone 1131 
+
+modification experimental contrasts from each sample were concatenated and visualised as stacked signal 1132 
+
+tracks, where the x-axis represents a two-point start and end location for a given read, and the y-axis shows the 1133 
+
+signal score value of that read, a measurement of overall enrichment for the region generated by MACS2. 1134 
+
+Multi-omic IGV track images for each infection group were generated by converting each binary alignment 1135 
+
+file for each ChIP-seq, ATAC-seq and RNA-seq sample to bigWig format using the deepTools bamCoverage 1136 
+
+program v. 3.5.0 (Ramírez et al. 2016), and then combining and merging overlapping peaks in all samples for 1137 
+
+each dataset. Peak images were generated by visually assessing all bigWigs in tandem across the entire bovine 1138 
+
+genome using IGV. Interaction networks were generated in Cytoscape v.3.10.0 (Shannon et al. 2003) and node 1139 
+
+colour was determined by the positive (red) or negative (blue) log 2 FC change for each gene. Lines (edges) 1140 
+
+between nodes were coloured by the increase in peak signal in the control bAM group (blue) or in the 1141 
+
+challenged bAM groups (red). Node size was determined by the number of connecting edges to that node from 1142 
+
+other nodes (degree). A gene/node was connected to the square histone hubs if that gene exhibited either a 1143 
+
+DABS or a DORC between the control bAM and the challenged bAM groups. 1144 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+49 
+
+Gene set enrichment analysis, overrepresentation analysis, and GWAS integration 1145 
+
+The Ingenuity ® Pathway Analysis (IPA ® ) software tool (Krämer et al. 2014) with the Ingenuity ®
+
+1146 
+
+Knowledge Base (Qiagen; release date December 2022) was used to perform pathway-focused gene set 1147 
+
+enrichment analysis (GSEA) using each of the ten possible transcriptomics (DEG) experimental group contrast 1148 
+
+datasets with further investigation of the results of four contrasts (MBO, MTU, BCG, and IRR vs. CON), and 1149 
+
+overrepresentation analysis (ORA) of a composite set of genes that also had DABS and/or DOCRs 1150 
+
+(DEG/DABS/DOCR set). This approach enabled the identification of canonical pathways and biological 1151 
+
+processes important to host-pathogen interactions for bAM challenged with M. bovis, M. tuberculosis, M. bovis 1152 
+
+BCG, and gamma-irradiated M. bovis . The statistical threshold used to generate suitable input gene sets for 1153 
+
+GSEA and ORA was FDR-Padj. < 0.05, unless a more stringent threshold was required to obtain an input gene 1154 
+
+set of an appropriate size (< 3000 genes) for IPA ® based on the IPA ® KnowledgeBase Core Analysis Setup 1155 
+
+recommendations. The IPA ® settings were configured with Homo sapiens as the target species, “Macrophage” 1156 
+
+as the cell type, all node types selected, and with the “Experimentally Observed” and “High Predicted” 1157 
+
+confidence settings. Following best practice, the background gene set used for GSEA and ORA was the set of 1158 
+
+detectable genes across all RNA-seq libraries for each time point contrast, not the complete bovine 1159 
+
+transcriptome (Timmons et al. 2015). The background gene set used for the ORA was the IPA ® Knowledge 1160 
+
+Base. Finally, the g:GOSt partition of the g.Profiler webtool (version release 19/04/2023) (Raudvere et al. 1161 
+
+2019) was used to perform a gene ontology (GO) focused ORA using the composite set of DEG/DABS/DOCR 1162 
+
+genes. 1163 
+
+The DEG/DABS/DOCR output gene set obtained from the multi-omics analyses was integrated with a 1164 
+
+published bTB M. bovis infection susceptibility trait GWAS dataset for Holstein-Friesian cattle (Ring et al. 1165 
+
+2019). The gwinteR tool was used, which can test the hypothesis that a specific set of genes is enriched for 1166 
+
+signal in a GWAS dataset relative to the genomic background (Hall et al. 2021). The bTB GWAS dataset 1167 
+
+consisted of 12,740,315 autosomal SNPs with nominal P-values from an analysis of estimated breeding values 1168 
+
+(EBVs) derived from an M. bovis infection phenotype, generated for 1502 Holstein sires and described in detail 1169 
+
+elsewhere (Ring et al. 2019; Hall et al. 2021). 1170 
+
+1171 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+50 
+
+Declaration of competing interest s1172 
+
+The authors declare that the research was conducted in the absence of any commercial or financial 1173 
+
+relationships that could be construed as a potential conflict of interest. 1174 
+
+Data and computer code availability 1175 
+
+The bovine RNA-seq, ChIP-seq, and ATAC-seq datasets were generated by the authors and are available 1176 
+
+from the NCBI Gene Expression Omnibus (GEO) under the following accessions: RNA-seq data – 1177 
+
+GSE317895; ChIP-seq data – GSE317896; and ATAC-seq data – GSE317894. The bovine GWAS summary 1178 
+
+statistics were obtained from a published study that provides the information concerning sequence and 1179 
+
+genotype data availability (Ring et al. 2019). The code used to integrate the functional genomics outputs and 1180 
+
+GWAS datasets for this study is available on GitHub ( https://github.com/ThomasHall1688/gwinteR ). 1181 
+
+Author contributions 1182 
+
+TJH, MM, SVG and DEM conceived and designed the study. MM and JAB performed experimental 1183 
+
+work. TJH, JFO’G, and GPM performed bioinformatics and computational analyses. ELC and MS provided 1184 
+
+input on bioinformatics and computational genomics. TJH and DEM wrote and prepared the manuscript and 1185 
+
+figures. MM wrote the laboratory-based methodology. All authors read and approved the final manuscript. 1186 
+
+Funding 1187 
+
+This study was supported by Science Foundation Ireland (SFI) Investigator Programme Awards to DEM 1188 
+
+and SVG (grant nos. SFI/08/IN.1/B2038 and SFI/15/IA/3154); a Department of Agriculture, Food and the 1189 
+
+Marine (DAFM) project award to DEM (TARGET-TB; grant no. 17/RD/US-ROI/52); a Wellcome Trust 1190 
+
+Computational Infection Biology PhD studentship awarded to MM (grant no. 109166/Z/15/A); a Research 1191 
+
+Ireland Centre for Research Training in Genomics Data Science PhD Studentship awarded to JFOG (grant no. 1192 
+
+18/CRT/6214); the University College Dublin—University of Edinburgh Strategic Partnership in One Health 1193 
+
+awarded to DEM, SVG, and ELC; and the European Network on Livestock Phenomics (EU-LI-PHE) COST 1194 
+
+Action (grant no. CA22112). Note: Since the 1 st of August 2024, Science Foundation Ireland (SFI) has been 1195 
+
+part of Taighde Éireann—Research Ireland ( www.researchireland.ie ). 1196 
+
+1197 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+51 
+
+Acknowledgements 1198 
+
+The authors would like to thank Donagh Berry and Siobhán Ring for providing cattle GWAS data. 1199 
+
+1200 
+
+# References 1201 
+
+Abo-Kadoum MA, Assad M, Ali MK, Uae M, Nzaou SAE, Gong Z, Moaaz A, Lambert N, Eltoukhy A, Xie J. 1202 
+
+2021. Mycobacterium tuberculosis PE17 (Rv1646) promotes host cell apoptosis via host chromatin 1203 
+
+remodeling mediated by reduced H3K9me3 occupancy. Microb Pathog 159 : 105147. 1204 
+
+Abraham CG, Kulesza CA. 2013. Polycomb repressive complex 2 silences human cytomegalovirus 1205 
+
+transcription in quiescent infection models. J Virol 87 : 13193-13205. 1206 
+
+Aegerter H, Lambrecht BN, Jakubzick CV. 2022. Biology of lung macrophages in health and disease. Immunity 1207 
+
+55 : 1564-1580. 1208 
+
+Ahsan F, Moura-Alves P, Guhlich-Bornhof U, Klemm M, Kaufmann SH, Maertzdorf J. 2016. Role of 1209 
+
+interleukin 36 γ in host defense against tuberculosis. J Infect Dis 214 : 464-474. 1210 
+
+Andreu N, Phelan J, de Sessions PF, Cliff JM, Clark TG, Hibberd ML. 2017. Primary macrophages and J774 1211 
+
+cells respond differently to infection with Mycobacterium tuberculosis . Sci Rep 7: 42225. 1212 
+
+Andrews S. 2023. FastQC: a quality control tool for high throughput sequence data. 1213 
+
+Arts RJW, Moorlag S, Novakovic B, Li Y, Wang SY, Oosting M, Kumar V, Xavier RJ, Wijmenga C, Joosten 1214 
+
+LAB et al. 2018. BCG vaccination protects against experimental viral infection in humans through the 1215 
+
+induction of cytokines associated with trained immunity. Cell Host Microbe 23 : 89-100 e105. 1216 
+
+Awuh JA, Flo TH. 2017. Molecular basis of mycobacterial survival in macrophages. Cell Mol Life Sci 74 :1217 
+
+1625-1648. 1218 
+
+Azami HY, Zinsstag J. 2018. Economics of bovine tuberculosis: a One Health issue. In Bovine Tuberculosis ,1219 
+
+doi:10.1079/9781786391520.0031 (ed. M Chambers, et al.), pp. 31–42. CABI International, 1220 
+
+Wallingford, UK. 1221 
+
+Banos G. 2023. Selective breeding can contribute to bovine tuberculosis control and eradication. Ir Vet J 76 :1222 
+
+19. 1223 
+
+Bekere I, Huang J, Schnapp M, Rudolph M, Berneking L, Ruckdeschel K, Grundhoff A, Gunther T, Fischer 1224 
+
+N, Aepfelbacher M. 2021. Yersinia remodels epigenetic histone modifications in human macrophages. 1225 
+
+PLoS Pathog 17 : e1010074. 1226 
+
+Benjamini Y, Hochberg Y. 1995. Controlling the false discovery rate - a practical and powerful approach to 1227 
+
+multiple testing. J R Stat Soc Ser B Method 57 : 289-300. 1228 
+
+Beusch I, Madhani HD. 2024. Understanding the dynamic design of the spliceosome. Trends Biochem Sci 49 :1229 
+
+583-595. 1230 
+
+Bhaskar V, Kumar R, Praharaj MR, Gandham S, Maity HK, Sarkar U, Dey B. 2025. A bovine pulmosphere 1231 
+
+model and multiomics reveal early host response signature in tuberculosis. Commun Biol 8: 559. 1232 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+52 
+
+Bierne H, Hamon M. 2020. Targeting host epigenetic machinery: The Listeria paradigm. Cell Microbiol 22 :1233 
+
+e13169. 1234 
+
+Bo H, Moure UAE, Yang Y, Pan J, Li L, Wang M, Ke X, Cui H. 2023. Mycobacterium tuberculosis -1235 
+
+macrophage interaction: molecular updates. Front Cell Infect Microbiol 13 : 1062963. 1236 
+
+Bogdan C. 2015. Nitric oxide synthase in innate and adaptive immunity: an update. Trends Immunol 36 : 161-1237 
+
+178. 1238 
+
+Bouttier M, Laperriere D, Memari B, Mangiapane J, Fiore A, Mitchell E, Verway M, Behr MA, Sladek R, 1239 
+
+Barreiro LB et al. 2016. Alu repeats as transcriptional regulatory platforms in macrophage responses 1240 
+
+to M. tuberculosis infection. Nucleic Acids Res 44 : 10571-10587. 1241 
+
+Branger J, Leemans JC, Florquin S, Weijer S, Speelman P, Van Der Poll T. 2004. Toll-like receptor 4 plays a 1242 
+
+protective role in pulmonary tuberculosis in mice. Int Immunol 16 : 509-516. 1243 
+
+Brightbill HD, Libraty DH, Krutzik SR, Yang RB, Belisle JT, Bleharski JR, Maitland M, Norgard MV, Plevy 1244 
+
+SE, Smale ST et al. 1999. Host defense mechanisms triggered by microbial lipoproteins through toll-1245 
+
+like receptors. Science 285 : 732-736. 1246 
+
+Buddle BM, Vordermeier HM, Hewinson RG. 2016. Experimental infection models of tuberculosis in domestic 1247 
+
+livestock. Microbiol Spectr 4.1248 
+
+Cambier CJ, Falkow S, Ramakrishnan L. 2014. Host evasion and exploitation schemes of Mycobacterium 1249 
+
+tuberculosis . Cell 159 : 1497-1509. 1250 
+
+Cao W, Luo LL, Chen WW, Liang L, Zhang RR, Zhao YL, Chen J, Yue J. 2019. Polymorphism in the EREG 1251 
+
+gene confers susceptibility to tuberculosis. BMC Med Genet 20 : 7. 1252 
+
+Carlson M. 2019. GO.db: A set of annotation maps describing the entire Gene Ontology. R package version 1253 
+
+3.8.2. doi:10.18129/B9.bioc.GO.db doi:10.18129/B9.bioc.GO.db. 1254 
+
+Carty M, Guy C, Bowie AG. 2021. Detection of viral infections by innate immunity. Biochem Pharmacol 183 :1255 
+
+114316. 1256 
+
+Chai Q, Wang L, Liu CH, Ge B. 2020. New insights into the evasion of host innate immunity by 1257 
+
+Mycobacterium tuberculosis . Cell Mol Immunol 17 : 901-913. 1258 
+
+Chandra P, Grigsby SJ, Philips JA. 2022. Immune evasion and provocation by Mycobacterium tuberculosis .1259 
+
+Nat Rev Microbiol 20 : 750-766. 1260 
+
+Chaurasiya SK. 2018. Tuberculosis: smart manipulation of a lethal host. Microbiol Immunol 62 : 361-379. 1261 
+
+Chen S, Zhou Y, Chen Y, Gu J. 2018. fastp: an ultra-fast all-in-one FASTQ preprocessor. Bioinformatics 34 :1262 
+
+i884-i890. 1263 
+
+Cheng J, Blum R, Bowman C, Hu D, Shilatifard A, Shen S, Dynlacht BD. 2014. A role for H3K4 1264 
+
+monomethylation in gene repression and partitioning of chromatin readers. Mol Cell 53 : 979-992. 1265 
+
+Cheng Y, Schorey JS. 2018. Mycobacterium tuberculosis -induced IFN-beta production requires cytosolic DNA 1266 
+
+and RNA sensing pathways. J Exp Med 215 : 2919-2935. 1267 
+
+Christie M, Chang CW, Rona G, Smith KM, Stewart AG, Takeda AA, Fontes MR, Stewart M, Vertessy BG, 1268 
+
+Forwood JK et al. 2016. Structural biology and regulation of protein import into the nucleus. J Mol 1269 
+
+Biol 428 : 2060-2090. 1270 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+53 
+
+Clark EL, Archibald AL, Daetwyler HD, Groenen MAM, Harrison PW, Houston RD, Kuhn C, Lien S, 1271 
+
+Macqueen DJ, Reecy JM et al. 2020. From FAANG to fork: application of highly annotated genomes 1272 
+
+to improve farmed animal production. Genome Biol 21 : 285. 1273 
+
+Correa-Macedo W, Fava VM, Orlova M, Cassart P, Olivenstein R, Sanz J, Xu YZ, Dumaine A, Sindeaux RH, 1274 
+
+Yotova V et al. 2021. Alveolar macrophages from persons living with HIV show impaired epigenetic 1275 
+
+response to Mycobacterium tuberculosis . J Clin Invest 131 .1276 
+
+Danecek P, Bonfield JK, Liddle J, Marshall J, Ohan V, Pollard MO, Whitwham A, Keane T, McCarthy SA, 1277 
+
+Davies RM et al. 2021. Twelve years of SAMtools and BCFtools. Gigascience 10 .1278 
+
+Del Rosario RCH, Poschmann J, Lim C, Cheng CY, Kumar P, Riou C, Ong ST, Gerges S, Hajan HS, Kumar 1279 
+
+D et al. 2022. Histone acetylome-wide associations in immune cells from individuals with active 1280 
+
+Mycobacterium tuberculosis infection. Nat Microbiol 7: 312-326. 1281 
+
+Dobin A, Davis CA, Schlesinger F, Drenkow J, Zaleski C, Jha S, Batut P, Chaisson M, Gingeras TR. 2013. 1282 
+
+STAR: ultrafast universal RNA-seq aligner. Bioinformatics 29 : 15-21. 1283 
+
+Domingo-Gonzalez R, Prince O, Cooper A, Khader SA. 2016. Cytokines and chemokines in Mycobacterium 1284 
+
+tuberculosis infection. Microbiol Spectr 4.1285 
+
+Durinck S, Spellman PT, Birney E, Huber W. 2009. Mapping identifiers for the integration of genomic datasets 1286 
+
+with the R/Bioconductor package biomaRt. Nat Protoc 4: 1184-1191. 1287 
+
+Ehrt S, Schnappinger D. 2009. Mycobacterial survival strategies in the phagosome: defence against host 1288 
+
+stresses. Cell Microbiol 11 : 1170-1178. 1289 
+
+Fallahi-Sichani M, Kirschner DE, Linderman JJ. 2012. NF-kappaB signaling dynamics play a key role in 1290 
+
+infection control in tuberculosis. Front Physiol 3: 170. 1291 
+
+Feng H, Zhang YB, Gui JF, Lemon SM, Yamane D. 2021. Interferon regulatory factor 1 (IRF1) and anti-1292 
+
+pathogen innate immune responses. PLoS Pathog 17 : e1009220. 1293 
+
+Fol M, Wlodarczyk M, Druszczynska M. 2020. Host epigenetics in intracellular pathogen infections. Int J Mol 1294 
+
+Sci 21 .1295 
+
+Gao Y, Wen Q, Hu S, Zhou X, Xiong W, Du X, Zhang L, Fu Y, Yang J, Zhou C et al. 2019. IL-36 γ promotes 1296 
+
+killing of Mycobacterium tuberculosis by macrophages via WNT5A-induced noncanonical WNT 1297 
+
+signaling. J Immunol 203 : 922-935. 1298 
+
+Garnier T, Eiglmeier K, Camus JC, Medina N, Mansoor H, Pryor M, Duthoy S, Grondin S, Lacroix C, 1299 
+
+Monsempe C et al. 2003. The complete genome sequence of Mycobacterium bovis . Proc Natl Acad 1300 
+
+Sci U S A 100 : 7877-7882. 1301 
+
+Gaspar JM. 2018. Improved peak-calling with MACS2. bioRxiv doi:10.1101/496521: 496521. 1302 
+
+Gauba K, Gupta S, Shekhawat J, Sharma P, Yadav D, Banerjee M. 2021. Immunomodulation by epigenome 1303 
+
+alterations in Mycobacterium tuberculosis infection. Tuberculosis (Edinb) 128 : 102077. 1304 
+
+Gong W, Liang Y, Wu X. 2020. Animal models of tuberculosis vaccine research: an important component in 1305 
+
+the fight against tuberculosis. Biomed Res Int 2020 : 4263079. 1306 
+
+Gu Z, Gu L, Eils R, Schlesner M, Brors B. 2014. circlize implements and enhances circular visualization in R. 1307 
+
+Bioinformatics 30 : 2811-2812. 1308 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+54 
+
+Hall TJ, McHugo GP, Mullen MP, Ward JA, Killick KE, Browne JA, Gordon SV, MacHugh DE. 2024. 1309 
+
+Integrative and comparative genomic analyses of mammalian macrophage responses to intracellular 1310 
+
+mycobacterial pathogens. Tuberculosis (Edinb) 147 : 102453. 1311 
+
+Hall TJ, Mullen MP, McHugo GP, Killick KE, Ring SC, Berry DP, Correia CN, Browne JA, Gordon SV, 1312 
+
+MacHugh DE. 2021. Integrative genomics of the mammalian alveolar macrophage response to 1313 
+
+intracellular mycobacteria. BMC Genomics 22 : 343. 1314 
+
+Hall TJ, Vernimmen D, Browne JA, Mullen MP, Gordon SV, MacHugh DE, O'Doherty AM. 2019. Alveolar 1315 
+
+macrophage chromatin is modified to orchestrate host response to Mycobacterium bovis infection. 1316 
+
+Front Genet 10 : 1386. 1317 
+
+Hamon MA, Cossart P. 2008. Histone modifications and chromatin remodeling during bacterial infections. 1318 
+
+Cell Host Microbe 4: 100-109. 1319 
+
+Heinz S, Benner C, Spann N, Bertolino E, Lin YC, Laslo P, Cheng JX, Murre C, Singh H, Glass CK. 2010. 1320 
+
+Simple combinations of lineage-determining transcription factors prime cis-regulatory elements 1321 
+
+required for macrophage and B cell identities. Mol Cell 38 : 576-589. 1322 
+
+Heldwein KA, Liang MD, Andresen TK, Thomas KE, Marty AM, Cuesta N, Vogel SN, Fenton MJ. 2003. 1323 
+
+TLR2 and TLR4 serve distinct roles in the host immune response against Mycobacterium bovis BCG. 1324 
+
+J Leukoc Biol 74 : 277-286. 1325 
+
+Hoffman MM, Ernst J, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, Ellenbogen PM, Bilmes 1326 
+
+JA, Birney E et al. 2013. Integrative annotation of chromatin elements from ENCODE data. Nucleic 1327 
+
+Acids Res 41 : 827-841. 1328 
+
+Hu JF, Zhang W, Zuo W, Tan HQ, Bai W. 2020. Inhibition of the PD-1/PD-L1 signaling pathway enhances 1329 
+
+innate immune response of alveolar macrophages to Mycobacterium tuberculosis in mice. Pulm 1330 
+
+Pharmacol Ther 60 : 101842. 1331 
+
+Hussain Bhat K, Mukhopadhyay S. 2015. Macrophage takeover and the host-bacilli interplay during 1332 
+
+tuberculosis. Future Microbiol 10 : 853-872. 1333 
+
+Hyun K, Jeon J, Park K, Kim J. 2017. Writing, erasing and reading histone lysine methylations. Exp Mol Med 1334 
+
+49 : e324. 1335 
+
+Jensen K, Gallagher IJ, Johnston N, Welsh M, Skuce R, Williams JL, Glass EJ. 2018. Variation in the early 1336 
+
+host-pathogen interaction of bovine macrophages with divergent Mycobacterium bovis strains in the 1337 
+
+United Kingdom. Infect Immun 86 .1338 
+
+Kawasaki T, Kawai T. 2014. Toll-like receptor signaling pathways. Front Immunol 5: 461. 1339 
+
+Kock R, Michel AL, Yeboah-Manu D, Azhar EI, Torrelles JB, Cadmus SI, Brunton L, Chakaya JM, Marais B, 1340 
+
+Mboera L et al. 2021. Zoonotic tuberculosis - the changing landscape. Int J Infect Dis 113 Suppl 1 :1341 
+
+S68-S72. 1342 
+
+Koh HJ, Kim YR, Kim JS, Yun JS, Kim S, Kim SY, Jang K, Yang CS. 2018. CD82 hypomethylation is essential 1343 
+
+for tuberculosis pathogenesis via regulation of RUNX1-Rab5/22. Exp Mol Med 50 : 1-15. 1344 
+
+Krämer A, Green J, Pollard J, Jr., Tugendreich St. 2014. Causal analysis approaches in Ingenuity Pathway 1345 
+
+Analysis. Bioinformatics 30 : 523-530. 1346 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+55 
+
+Lai Y, Yang X, Wei D, Wang X, Sun R, Li Y, Ji P, Bao Y, Chu T, Zhang C et al. 2025. BCG-trained macrophages 1347 
+
+couple LDLR upregulation to type I IFN responses and antiviral immunity. Cell Rep 44 : 115493. 1348 
+
+Langmead B, Salzberg SL. 2012. Fast gapped-read alignment with Bowtie 2. Nat Methods 9: 357-359. 1349 
+
+Lavalett L, Ortega H, Barrera LF. 2020a. Human alveolar and splenic macrophage populations display a 1350 
+
+distinct transcriptomic response to infection with Mycobacterium tuberculosis . Front Immunol 11 :1351 
+
+630. 1352 
+
+Lavalett L, Ortega H, Barrera LF. 2020b. Infection of monocytes from tuberculosis patients with two virulent 1353 
+
+clinical isolates of Mycobacterium tuberculosis induces alterations in myeloid effector functions. 1354 
+
+Front Cell Infect Microbiol 10 : 163. 1355 
+
+Lavalett L, Rodriguez H, Ortega H, Sadee W, Schlesinger LS, Barrera LF. 2017. Alveolar macrophages from 1356 
+
+tuberculosis patients display an altered inflammatory gene expression profile. Tuberculosis (Edinb) 1357 
+
+107 : 156-167. 1358 
+
+Lecoeur H, Prina E, Rosazza T, Kokou K, N'Diaye P, Aulner N, Varet H, Bussotti G, Xing Y, Milon G et al. 1359 
+
+2020. Targeting macrophage histone H3 modification as a Leishmania strategy to dampen the NF-1360 
+
+κB/NLRP3-mediated inflammatory response. Cell Rep 30 : 1870-1882 e1874. 1361 
+
+Leisching G, Cole V, Ali AT, Baker B. 2019. OAS1, OAS2 and OAS3 restrict intracellular M. tb replication 1362 
+
+and enhance cytokine secretion. Int J Infect Dis 80S : S77-S84. 1363 
+
+Leisching G, Pietersen RD, van Heerden C, van Helden P, Wiid I, Baker B. 2017. RNAseq reveals 1364 
+
+hypervirulence-specific host responses to M. tuberculosis infection. Virulence 8: 848-858. 1365 
+
+Lerdrup M, Johansen JV, Agrawal-Singh S, Hansen K. 2016. An interactive environment for agile analysis and 1366 
+
+visualization of ChIP-sequencing data. Nat Struct Mol Biol 23 : 349-357. 1367 
+
+Li H, Durbin R. 2009. Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics 1368 
+
+25 : 1754-1760. 1369 
+
+Liao Y, Smyth GK, Shi W. 2014. featureCounts: an efficient general purpose program for assigning sequence 1370 
+
+reads to genomic features. Bioinformatics 30 : 923-930. 1371 
+
+Lin D, Xu W, Hong P, Wu C, Zhang Z, Zhang S, Xing L, Yang B, Zhou W, Xiao Q et al. 2022. Decoding the 1372 
+
+spatial chromatin organization and dynamic epigenetic landscapes of macrophage cells during 1373 
+
+differentiation and immune activation. Nat Commun 13 : 5857. 1374 
+
+Liu C, Li X. 2024. Identification of hub genes and establishment of a diagnostic model in tuberculosis 1375 
+
+infection. AMB Express 14 : 36. 1376 
+
+Liu C, Xu X, Han L, Wan X, Zheng L, Li C, Liao Z, Xiao J, Zhong R, Zheng X et al. 2020. LRCH1 deficiency 1377 
+
+enhances LAT signalosome formation and CD8 + T cell responses against tumors and pathogens. Proc 1378 
+
+Natl Acad Sci U S A 117 : 19388-19398. 1379 
+
+Love MI, Huber W, Anders S. 2014. Moderated estimation of fold change and dispersion for RNA-seq data 1380 
+
+with DESeq2. Genome Biol 15 : 550. 1381 
+
+Madden K, El Hamra R, Berton S, Felker J, Alvarez GG, Blais A, Sun J. 2023. Mycobacterium tuberculosis 1382 
+
+infection triggers epigenetic changes that are enriched in a type I IFN signature. Microlife 4: uqad006. 1383 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+56 
+
+Madden K, Liang YC, Rajabalee N, Alvarez GG, Sun J. 2022. Surveying the epigenetic landscape of 1384 
+
+tuberculosis in alveolar macrophages. Infect Immun 90 : e0052221. 1385 
+
+Madenci D, Sanchez-Molano E, Winters M, Mitchell A, Coffey MP, Hadfield JD, Woolliams JA, Banos G, 1386 
+
+Doeschl-Wilson A. 2025. Detection of genetic variability in dairy cattle infectivity for bovine 1387 
+
+tuberculosis. J Dairy Sci 108 : 3835-3849. 1388 
+
+Maertens GN, Cook NJ, Wang W, Hare S, Gupta SS, Oztop I, Lee K, Pye VE, Cosnefroy O, Snijders AP et al. 1389 
+
+2014. Structural basis for nuclear import of splicing factors by human Transportin 3. Proc Natl Acad 1390 
+
+Sci U S A 111 : 2728-2733. 1391 
+
+Magee DA, Conlon KM, Nalpas NC, Browne JA, Pirson C, Healy C, McLoughlin KE, Chen J, Vordermeier 1392 
+
+HM, Gormley E et al. 2014. Innate cytokine profiling of bovine alveolar macrophages reveals 1393 
+
+commonalities and divergence in the response to Mycobacterium bovis and Mycobacterium 1394 
+
+tuberculosis infection. Tuberculosis (Edinb) 94 : 441-450. 1395 
+
+Malone KM, Gordon SV. 2017. Mycobacterium tuberculosis complex members adapted to wild and domestic 1396 
+
+animals. Adv Exp Med Biol 1019 : 135-154. 1397 
+
+Malone KM, Rue-Albrecht K, Magee DA, Conlon K, Schubert OT, Nalpas NC, Browne JA, Smyth A, Gormley 1398 
+
+E, Aebersold R et al. 2018. Comparative 'omics analyses differentiate Mycobacterium tuberculosis and 1399 
+
+Mycobacterium bovis and reveal distinct macrophage responses to infection with the human and 1400 
+
+bovine tubercle bacilli. Microb Genom 4.1401 
+
+Marr AK, MacIsaac JL, Jiang R, Airo AM, Kobor MS, McMaster WR. 2014. Leishmania donovani infection 1402 
+
+causes distinct epigenetic DNA methylation changes in host macrophages. PLoS Pathog 10 : e1004419. 1403 
+
+Martinez AN, Mehra S, Kaushal D. 2013. Role of interleukin 6 in innate immunity to Mycobacterium 1404 
+
+tuberculosis infection. J Infect Dis 207 : 1253-1261. 1405 
+
+McCaffrey EF, Donato M, Keren L, Chen Z, Delmastro A, Fitzpatrick MB, Gupta S, Greenwald NF, Baranski 1406 
+
+A, Graf W et al. 2022. The immunoregulatory landscape of human tuberculosis granulomas. Nat 1407 
+
+Immunol 23 : 318-329. 1408 
+
+Means TK, Wang S, Lien E, Yoshimura A, Golenbock DT, Fenton MJ. 1999. Human Toll-like receptors 1409 
+
+mediate cellular activation by Mycobacterium tuberculosis . J Immunol 163 : 3920-3927. 1410 
+
+Mishra A, Rawat V, Zhang K, Jagannath C. 2025. The pathway of autophagy in the epigenetic landscape of 1411 
+
+Mycobacterium -host interactions. Autophagy doi:10.1080/15548627.2025.2511074: 1-19. 1412 
+
+Mortaz E, Adcock IM, Tabarsi P, Masjedi MR, Mansouri D, Velayati AA, Casanova JL, Barnes PJ. 2015. 1413 
+
+Interaction of pattern recognition receptors with Mycobacterium tuberculosis . J Clin Immunol 35 : 1-1414 
+
+10. 1415 
+
+Nakamura H, Hikichi H, Seto S, Hijikata M, Keicho N. 2024. Transcriptional regulators SP110 and SP140 1416 
+
+modulate inflammatory response genes in Mycobacterium tuberculosis -infected human macrophages. 1417 
+
+Microbiol Spectr doi:10.1128/spectrum.00101-24: e0010124. 1418 
+
+Nalpas NC, Magee DA, Conlon KM, Browne JA, Healy C, McLoughlin KE, Rue-Albrecht K, McGettigan 1419 
+
+PA, Killick KE, Gormley E et al. 2015. RNA sequencing provides exquisite insight into the 1420 
+
+manipulation of the alveolar macrophage by tubercle bacilli. Sci Rep 5: 13629. 1421 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+57 
+
+Nouailles G, Dorhoi A, Koch M, Zerrahn J, Weiner J, 3rd, Fae KC, Arrey F, Kuhlmann S, Bandermann S, 1422 
+
+Loewe D et al. 2014. CXCL5-secreting pulmonary epithelial cells drive destructive neutrophilic 1423 
+
+inflammation in tuberculosis. J Clin Invest 124 : 1268-1282. 1424 
+
+O'Grady JF, McHugo GP, Ward JA, Hall TJ, Faherty O'Donnell SL, Correia CN, Browne JA, McDonald M, 1425 
+
+Gormley E, Riggio V et al. 2025. Integrative genomics sheds light on the immunogenetics of 1426 
+
+tuberculosis in cattle. Commun Biol 8: 479. 1427 
+
+Olea-Popelka F, Muwonge A, Perera A, Dean AS, Mumford E, Erlacher-Vindel E, Forcella S, Silk BJ, Ditiu 1428 
+
+L, El Idrissi A et al. 2017. Zoonotic tuberculosis in human beings caused by Mycobacterium bovis – a 1429 
+
+call for action. Lancet Infect Dis 17 : e21-e25. 1430 
+
+Papp AC, Azad AK, Pietrzak M, Williams A, Handelman SK, Igo RP, Jr., Stein CM, Hartmann K, Schlesinger 1431 
+
+LS, Sadee W. 2018. AmpliSeq transcriptome analysis of human alveolar and monocyte-derived 1432 
+
+macrophages over time in response to Mycobacterium tuberculosis infection. PLoS ONE 13 :1433 
+
+e0198221. 1434 
+
+Park MD, Silvin A, Ginhoux F, Merad M. 2022. Macrophages in health and disease. Cell 185 : 4259-4279. 1435 
+
+Pesciaroli M, Alvarez J, Boniotti MB, Cagiola M, Di Marco V, Marianelli C, Pacciarini M, Pasquali P. 2014. 1436 
+
+Tuberculosis in domestic animal species. Res Vet Sci 97 Suppl : S78-85. 1437 
+
+Pisu D, Huang L, Grenier JK, Russell DG. 2020. Dual RNA-seq of Mtb-infected macrophages in vivo reveals 1438 
+
+ontologically distinct host-pathogen interactions. Cell Rep 30 : 335-350 e334. 1439 
+
+Platanitis E, Decker T. 2018. Regulatory networks involving STATs, IRFs, and NF κB in inflammation. Front 1440 
+
+Immunol 9: 2542. 1441 
+
+Qiu Q, Peng A, Zhao Y, Liu D, Liu C, Qiu S, Xu J, Cheng H, Xiong W, Chen Y. 2022. Diagnosis of pulmonary 1442 
+
+tuberculosis via identification of core genes and pathways utilizing blood transcriptional signatures: a 1443 
+
+multicohort analysis. Respir Res 23 : 125. 1444 
+
+Queval CJ, Brosch R, Simeone R. 2017. The macrophage: A disputed fortress in the battle against 1445 
+
+Mycobacterium tuberculosis . Front Microbiol 8: 2284. 1446 
+
+Quinlan AR, Hall IM. 2010. BEDTools: a flexible suite of utilities for comparing genomic features. 1447 
+
+Bioinformatics 26 : 841-842. 1448 
+
+R Core Team. 2023. R: A language and environment for statistical computing. R Foundation for Statistical 1449 
+
+Computing.  http://www.R-project.org , Vienna, Austria. 1450 
+
+Ramírez F, Ryan DP, Grüning B, Bhardwaj V, Kilpert F, Richter AS, Heyne S, Dündar F, Manke T. 2016. 1451 
+
+deepTools2: a next generation web server for deep-sequencing data analysis. Nucleic Acids Res 44 :1452 
+
+W160-165. 1453 
+
+Raudvere U, Kolberg L, Kuzmin I, Arak T, Adler P, Peterson H, Vilo J. 2019. g:Profiler: a web server for 1454 
+
+functional enrichment analysis and conversions of gene lists (2019 update). Nucleic Acids Res 47 :1455 
+
+W191-W198. 1456 
+
+Record J, Malinova D, Zenner HL, Plagnol V, Nowak K, Syed F, Bouma G, Curtis J, Gilmour K, Cale C et al. 1457 
+
+2015. Immunodeficiency and severe susceptibility to bacterial infection associated with a loss-of-1458 
+
+function homozygous mutation of MKL1. Blood 126 : 1527-1535. 1459 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+58 
+
+Rehwinkel J, Gack MU. 2020. RIG-I-like receptors: their regulation and roles in RNA sensing. Nat Rev 1460 
+
+Immunol 20 : 537-551. 1461 
+
+Reiling N, Holscher C, Fehrenbach A, Kroger S, Kirschning CJ, Goyert S, Ehlers S. 2002. Cutting edge: Toll-1462 
+
+like receptor (TLR)2- and TLR4-mediated pathogen recognition in resistance to airborne infection 1463 
+
+with Mycobacterium tuberculosis . J Immunol 169 : 3480-3484. 1464 
+
+Ring SC, Purfield DC, Good M, Breslin P, Ryan E, Blom A, Evans RD, Doherty ML, Bradley DG, Berry DP. 1465 
+
+2019. Variance components for bovine tuberculosis infection and multi-breed genome-wide 1466 
+
+association analysis using imputed whole genome sequence data. PLoS ONE 14 : e0212067. 1467 
+
+Rivero-Lezcano OM, Gonzalez-Cortes C, Reyes-Ruvalcaba D, Diez-Tascon C. 2010. CCL20 is overexpressed 1468 
+
+in Mycobacterium tuberculosis -infected monocytes and inhibits the production of reactive oxygen 1469 
+
+species (ROS). Clin Exp Immunol 162 : 289-297. 1470 
+
+Robinson JT, Thorvaldsdottir H, Turner D, Mesirov JP. 2023. igv.js: an embeddable JavaScript implementation 1471 
+
+of the Integrative Genomics Viewer (IGV). Bioinformatics 39 .1472 
+
+Rosain J, Neehus AL, Manry J, Yang R, Le Pen J, Daher W, Liu Z, Chan YH, Tahuil N, Turel O et al. 2023. 1473 
+
+Human IRF1 governs macrophagic IFN-γ immunity to mycobacteria. Cell 186 : 621-645 e633. 1474 
+
+Rosen BD, Bickhart DM, Schnabel RD, Koren S, Elsik CG, Tseng E, Rowan TN, Low WY, Zimin A, Couldrey 1475 
+
+C et al. 2020. De novo assembly of the cattle reference genome with single-molecule sequencing. 1476 
+
+Gigascience 9.1477 
+
+Ross-Innes CS, Stark R, Teschendorff AE, Holmes KA, Ali HR, Dunning MJ, Brown GD, Gojis O, Ellis IO, 1478 
+
+Green AR et al. 2012. Differential oestrogen receptor binding is associated with clinical outcome in 1479 
+
+breast cancer. Nature 481 : 389-393. 1480 
+
+Russell DG, Simwela NV, Mattila JT, Flynn J, Mwandumba HC, Pisu D. 2025. How macrophage heterogeneity 1481 
+
+affects tuberculosis disease and therapy. Nat Rev Immunol 25 : 370-384. 1482 
+
+Schmidt HM, Jarrett KE, de Aguiar Vallim TQ, Tarling EJ. 2025. Pathways and molecular mechanisms 1483 
+
+governing LDL receptor regulation. Circ Res 136 : 902-919. 1484 
+
+Schorey JS, Schlesinger LS. 2016. Innate immune responses to tuberculosis. Microbiol Spectr 4.1485 
+
+Sellge G, Kufer TA. 2015. PRR-signaling pathways: Learning from microbial tactics. Semin Immunol 27 : 75-1486 
+
+84. 1487 
+
+Sengupta S, Pattanaik KP, Mishra S, Sonawane A. 2023. Epigenetic orchestration of host immune defences by 1488 
+
+Mycobacterium tuberculosis . Microbiol Res 273 : 127400. 1489 
+
+Shannon P, Markiel A, Ozier O, Baliga NS, Wang JT, Ramage D, Amin N, Schwikowski B, Ideker T. 2003. 1490 
+
+Cytoscape: a software environment for integrated models of biomolecular interaction networks. 1491 
+
+Genome Res 13 : 2498-2504. 1492 
+
+Sharpe AH, Pauken KE. 2018. The diverse functions of the PD1 inhibitory pathway. Nat Rev Immunol 18 :1493 
+
+153-167. 1494 
+
+Sheerin D, Abhimanyu, Peton N, Vo W, Allison CC, Wang X, Johnson WE, Coussens AK. 2022. 1495 
+
+Immunopathogenic overlap between COVID-19 and tuberculosis identified from transcriptomic meta-1496 
+
+analysis and human macrophage infection. iScience 25 : 104464. 1497 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+59 
+
+Shen L, Gao Y, Liu Y, Zhang B, Liu Q, Wu J, Fan L, Ou Q, Zhang W, Shao L. 2016. PD-1/PD-L pathway 1498 
+
+inhibits M.tb-specific CD4(+) T-cell functions and phagocytosis of macrophages in active 1499 
+
+tuberculosis. Sci Rep 6: 38362. 1500 
+
+Stamm CE, Collins AC, Shiloh MU. 2015. Sensing of Mycobacterium tuberculosis and consequences to both 1501 
+
+host and bacillus. Immunol Rev 264 : 204-219. 1502 
+
+Stein RA, Thompson LM. 2023. Epigenetic changes induced by pathogenic Chlamydia spp. Pathog Dis 81 .1503 
+
+Stirling DR, Swain-Bowden MJ, Lucas AM, Carpenter AE, Cimini BA, Goodman A. 2021. CellProfiler 4: 1504 
+
+improvements in speed, utility and usability. BMC Bioinformatics 22 : 433. 1505 
+
+Stovner EB, Sætrom P. 2019. epic2 efficiently finds diffuse domains in ChIP-seq data. Bioinformatics 35 :1506 
+
+4392-4393. 1507 
+
+Stutz MD, Clark MP, Doerflinger M, Pellegrini M. 2018. Mycobacterium tuberculosis : rewiring host cell 1508 
+
+signaling to promote infection. J Leukoc Biol 103 : 259-268. 1509 
+
+Taraktsoglou M, Szalabska U, Magee DA, Browne JA, Sweeney T, Gormley E, MacHugh DE. 2011. 1510 
+
+Transcriptional profiling of immune genes in bovine monocyte-derived macrophages exposed to 1511 
+
+bacterial antigens. Vet Immunol Immunopathol 140 : 130-139. 1512 
+
+Thuong NT, Hawn TR, Chau TT, Bang ND, Yen NT, Thwaites GE, Teo YY, Seielstad M, Hibberd M, Lan NT 1513 
+
+et al. 2012. Epiregulin (EREG) variation is associated with susceptibility to tuberculosis. Genes Immun 1514 
+
+13 : 275-281. 1515 
+
+Timmons JA, Szkop KJ, Gallagher IJ. 2015. Multiple sources of bias confound functional enrichment analysis 1516 
+
+of global -omics data. Genome Biol 16 : 186. 1517 
+
+Underhill DM, Ozinsky A, Smith KD, Aderem A. 1999. Toll-like receptor-2 mediates mycobacteria-induced 1518 
+
+proinflammatory signaling in macrophages. Proc Natl Acad Sci U S A 96 : 14459-14463. 1519 
+
+Vaddi A, Hulsebus HJ, O'Neill EL, Knight V, Chan ED. 2024. A narrative review of the controversy on the risk 1520 
+
+of mycobacterial infections with immune checkpoint inhibitor use: does Goldilocks have the answer? 1521 
+
+J Thorac Dis 16 : 1601-1624. 1522 
+
+Vayr F, Martin-Blondel G, Savall F, Soulat JM, Deffontaines G, Herin F. 2018. Occupational exposure to 1523 
+
+human Mycobacterium bovis infection: A systematic review. PLoS Negl Trop Dis 12 : e0006208. 1524 
+
+Vegh P, Magee DA, Nalpas NC, Bryan K, McCabe MS, Browne JA, Conlon KM, Gordon SV, Bradley DG, 1525 
+
+MacHugh DE et al. 2015. MicroRNA profiling of the bovine alveolar macrophage response to 1526 
+
+Mycobacterium bovis infection suggests pathogen survival is enhanced by microRNA regulation of 1527 
+
+endocytosis and lysosome trafficking. Tuberculosis (Edinb) 95 : 60-67. 1528 
+
+Wang L, Zhu Y, Zhang N, Xian Y, Tang Y, Ye J, Reza F, He G, Wen X, Jiang X. 2024. The multiple roles of 1529 
+
+interferon regulatory factor family in health and disease. Signal Transduct Target Ther 9: 282. 1530 
+
+Waters WR, Maggioli MF, McGill JL, Lyashchenko KP, Palmer MV. 2014. Relevance of bovine tuberculosis 1531 
+
+research to the understanding of human disease: historical perspectives, approaches, and immunologic 1532 
+
+mechanisms. Vet Immunol Immunopathol 159 : 113-132. 1533 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted May 5, 2026. ;https://doi.org/10.64898/2026.02.15.705989 doi: bioRxiv preprint
+
+60 
+
+Wei J, Guo F, Song Y, Xu K, Lin F, Li K, Li B, Qian Z, Wang X, Wang H et al. 2023. Transcriptional analysis 1534 
+
+of human peripheral blood mononuclear cells stimulated by Mycobacterium tuberculosis antigen. 1535 
+
+Front Cell Infect Microbiol 13 : 1255905. 1536 
+
+Williams A, Orme IM. 2016. Animal models of tuberculosis: an overview. Microbiol Spectr 4.1537 
+
+Wu X, Liu K, Li S, Ren W, Wang W, Shang Y, Zhang F, Huang Y, Pang Y, Gao M. 2023. Integrated 1538 
+
+bioinformatics analysis of dendritic cells hub genes reveal potential early tuberculosis diagnostic 1539 
+
+markers. BMC Med Genomics 16 : 214. 1540 
+
+Wu Y, Guo Z, Yao K, Miao Y, Liang S, Liu F, Wang Y, Zhang Y. 2016. The transcriptional foundations of 1541 
+
+Sp110-mediated macrophage (RAW264.7) resistance to Mycobacterium tuberculosis H37Ra. Sci Rep 1542 
+
+6: 22041. 1543 
+
+Xie X, Jin J, Zhu L, Jie Z, Li Y, Zhao B, Cheng X, Li P, Sun SC. 2019. Cell type-specific function of TRAF2 1544 
+
+and TRAF3 in regulating type I IFN induction. Cell Biosci 9: 5. 1545 
+
+Xu YR, Lei CQ. 2020. TAK1-TABs complex: a central signalosome in inflammatory responses. Front 1546 
+
+Immunol 11 : 608976. 1547 
+
+Yaseen I, Kaur P, Nandicoori VK, Khosla S. 2015. Mycobacteria modulate host epigenetic machinery by 1548 
+
+Rv1988 methylation of a non-tail arginine of histone H3. Nat Commun 6: 8922. 1549 
+
+Yu EA, John SH, Tablante EC, King CA, Kenneth J, Russell DG, Mehta S. 2017. Host transcriptional responses 1550 
+
+following ex vivo re-challenge with Mycobacterium tuberculosis vary with disease status. PLoS ONE 1551 
+
+12 : e0185640. 1552 
+
+Zhang Q, Cao X. 2019. Epigenetic regulation of the innate immune response to infection. Nat Rev Immunol 1553 
+
+19 : 417-432. 1554 
+
+Zhang Y, Liu T, Meyer CA, Eeckhoute J, Johnson DS, Bernstein BE, Nusbaum C, Myers RM, Brown M, Li 1555 
+
+W et al. 2008. Model-based analysis of ChIP-Seq (MACS). Genome Biol 9: R137. 1556 
+
+Zinsstag J, Schelling E, Roth F, Kazwala R. 2006. Economics of bovine tuberculosis. In Mycobacterium bovis 1557 
+
+Infection in Animals and Humans , doi:10.1002/9780470344538.ch9 (ed. CO Thoen, et al.), pp. 68-1558 
+
+83. Blackwell Publishing Ltd., Oxford, UK. 1559 
+
+1560

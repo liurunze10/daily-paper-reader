@@ -1,0 +1,3076 @@
+Title: A mitochondrial quality control mechanism reverses the phagosome maturation arrest caused by Mycobacterium tuberculosis
+
+URL Source: https://www.biorxiv.org/content/10.1101/2023.12.01.569475v2.full.pdf
+
+Number of Pages: 58
+
+Markdown Content:
+1
+
+# Title 1
+
+2
+
+A mitochondrial quality control mechanism reverses the phagosome maturation arrest 3
+
+caused by Mycobacterium tuberculosis. 4
+
+5
+
+6
+
+# Authors 7
+
+8
+
+Surbhi Verma 1, Shweta Thakur 1, Mrinmoy Das 1, Raman D. Sharma 1, Vikas Yadav 2, Priya 9
+
+Sharma 1, Mardiana Marzuki 3, Shihui Foo 4, Giulia M. Piperno 5, Mehak Z. Khan 6, Babu 10 
+
+Mathew 7, Meenu Bajpai 8, Jaswinder Singh Maras 7, Shanshan Howland 4, Sovan Sarkar 9,11 
+
+Federica Benvenuti 5, Amit Singh 2, Vinay Nandicoori 6,10 , Amit Singhal 3,4,11,12 and Dhiraj 12 
+
+Kumar 1* 
+
+13 
+
+14 
+
+15 
+
+# Affiliations 16 1Cellular Immunology Group, International Centre for Genetic Engineering and 17 
+
+Biotechnology, Aruna Asaf Ali Marg, New Delhi-110067, India. 18 
+
+19 2Department of Microbiology and Cell Biology (MCBL), Centre for Infectious Disease and 20 
+
+Research (CIDR), Indian Institute of Science (IISc), Bangalore-12, India. 21 
+
+22 3A*STAR Infectious Diseases Labs (A*STAR ID labs), Agency for Science, Technology and 23 
+
+Research (A*STAR), Singapore, Republic of Singapore. 24 
+
+25 4Singapore Immunology Network (SIgN), A*STAR, Singapore, Republic of Singapore. 26 
+
+27 5Cellular Immunology, International Centre for Genetic Engineering and Biotechnology, 28 
+
+ICGEB, Area di Ricerca, Padriciano 99, 34149 Trieste, Italy. 29 
+
+30 6Signal Transduction Lab, National Institute of Immunology, Aruna Asaf Ali Marg, New 31 
+
+Delhi-110067, India. 32 
+
+33 7Department of Molecular and Cellular Medicine, Institute of Liver and Biliary Sciences, 34 
+
+New Delhi, India 35 
+
+36 8Department of Immunohematology and Transfusion Medicine, Institute of Liver and Biliary 37 
+
+Sciences, New Delhi, India 38 
+
+39 9Institute of Cancer and Genomic Sciences, Institute of Biomedical Research, College of 40 
+
+Medical and Dental Sciences, University of Birmingham, Edgbaston, Birmingham B15 2TT, 41 
+
+United Kingdom. 42 
+
+43 10 Centre for Cellular and Molecular Biology, Hyderabad, India. 44 
+
+45 
+
+> 11
+
+Lee Kong Chian School of Medicine, Nanyang Technological University, Singapore 46 
+
+636921, Republic of Singapore 47 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+2
+
+12 Department of Medicine, University of Massachusetts Medical School, Worcester, MA, 48 
+
+USA 49 
+
+50 
+
+51 
+
+*Correspondence: dhiraj@icgeb.res.in 52 
+
+53 
+
+54 
+
+55 
+
+56 
+
+57 
+
+58 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 3
+
+# Abstract 59 
+
+60 
+
+Phagosome maturation arrest (PMA) imposed by Mycobacterium tuberculosis (Mtb ) is a 61 
+
+classic tool that helps Mtb evade macrophage anti-bacterial responses. The exclusion of RAB7, 62 
+
+a small GTPase, from Mtb -phagosomes causes PMA. Here, we report an unexpected 63 
+
+mechanism that triggers crosstalk between the mitochondrial quality control (MQC) and the 64 
+
+phagosome maturation pathways that reverses the PMA. CRISPR-mediated p62/SQSTM1 65 
+
+depletion ( p62 KD ) does not appear to impact mitochondrial quality. The p62 KD cells are 66 
+
+restrictive to Mtb growth, triggered by an increasingly oxidative environment and increased 67 
+
+lysosomal targeting. The lysosomal targeting of Mtb is facilitated by enhanced TOM20 +
+
+68 
+
+mitochondria-derived vesicles (MDVs) biogenesis, a key MQC mechanism. In p62 KD cells, 69 
+
+TOM20 +-MDVs biogenesis is MIRO1/MIRO2-dependent and gets delivered to lysosomes for 70 
+
+degradation in a RAB7-dependent manner. Upon infection in p62 KD cells, TOM20 +-MDVs get 71 
+
+extensively targeted to Mtb -phagosomes, inadvertently facilitating RAB7 recruitment, PMA 72 
+
+reversal and lysosomal targeting of Mtb ; the phenotype also replicated in p62/SQSTM1 73 
+
+knockout cells. Triggering MQC collapse in p62 KD cells further diminishes Mtb survival, 74 
+
+signifying cooperation between redox- and lysosome-mediated mechanisms. The MQC-anti-75 
+
+bacterial pathway crosstalk could be exploited for host-directed anti-tuberculosis therapies. 76 
+
+77 
+
+78 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+4
+
+# Introduction 79 
+
+80 
+
+Tuberculosis (TB), caused by the pathogen Mycobacterium tuberculosis (Mtb ), continues to 81 
+
+pose challenges to global communicable disease management and is one of the leading 82 
+
+causes of mortality due to infectious diseases. The ability of the bacteria to alter and/or hijack 83 
+
+various host cellular responses in its favour is one of the major factors contributing to the 84 
+
+success of Mtb as a human pathogen. Arguably, understanding the host physiological 85 
+
+processes hijacked or altered by Mtb also presents an opportunity to develop unconventional 86 
+
+strategies to target and control the infection. In the past decade, several host-dependency 87 
+
+factors have been identified, through large genome-wide screens, high-throughput 88 
+
+transcriptome and systematic analysis of bacterial trajectory inside the host macrophages, the 89 
+
+primary cells infected by Mtb (1). 90 
+
+The role of lysosomes in killing bacterial pathogens, including Mtb is well-known (2). 91 
+
+Macrophages phagocytose bacterial pathogens, forming phagosomes, which mature from 92 
+
+early to late phagosomes, eventually fusing with the lysosomes, where the pathogen is 93 
+
+degraded (3) . The phagosome maturation involves RAB5 (early phagosome) to RAB7 (late 94 
+
+phagosome) exchange as a critical rate-limiting step (4). Mtb is known to block this RAB-95 
+
+conversion by excluding RAB7 recruitment, which helps them evade the lysosomal killing 96 
+
+(5). Several mechanisms, including the role of lipid mediators and other signalling events, 97 
+
+have been shown to contribute towards the phagosome maturation arrest (PMA) caused by 98 
+
+Mtb (6). 99 
+
+Autophagy is another important anti-bacterial process that kills bacteria through a lysosomal 100 
+
+targeting mechanism (7, 8). Autophagy performs crucial housekeeping functions like 101 
+
+degradation of misfolded proteins or damaged organelles like mitochondria, peroxisomes, 102 
+
+Endoplasmic Reticulum etc., in addition to its role in response to stresses like oxidative, 103 
+
+nutritional or infection-induced stress (9). Understanding how autophagy machinery 104 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+5
+
+distinguishes and segregates its homeostatic cargos, as mentioned above, from those like 105 
+
+pathogens is of considerable fundamental significance (10). 106 
+
+The cargos targeted for autophagic degradation are usually ubiquitinated, followed by their 107 
+
+recognition by the autophagy adaptors, which interact with the ubiquitinated cargos and 108 
+
+ATG8 or LC3B to capture the cargos into the growing autophagosomes (11). Autophagy 109 
+
+adaptors are a family of proteins with ubiquitin-binding domains and LC3/ATG8 interaction 110 
+
+domains. These adaptors primarily include p62/SQSTM1, NDP52, NBR1, OPTN and 111 
+
+TAX1BP1 (12). Each of these adaptors is reported to have its roles defined in cargo 112 
+
+selectivity. However, some reports suggest functional redundancy among them (13, 14). 113 
+
+While autophagic targeting of bacteria via xenophagy is part of the defence arm of 114 
+
+autophagy, degradation of cellular cargos like mitochondria via mitophagy constitutes the 115 
+
+homeostatic arm (10, 15). Mitophagy is a key pathway for mitochondrial quality control 116 
+
+(MQC) through which damaged mitochondria are removed from the cell (16). Since 117 
+
+mitochondrial damage is a normal consequence of respiration and other oxidative stresses, 118 
+
+their quality control through mitophagy and other pathways is fundamental to cellular 119 
+
+survival (17, 18). 120 
+
+In this study, while studying the effect of depletion of autophagy adaptor proteins like 121 
+
+p62/SQSTM1 on intracellular Mtb survival, we unravel an unexpected MQC that facilitated 122 
+
+Mtb targeting to the lysosomes by reversing the PMA. Our data provide mechanistic insights 123 
+
+on the crosstalk between MQC and conventional host anti-bacterial pathways that are of both 124 
+
+fundamental and biomedical relevance. 125 
+
+126 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+6
+
+# Results 127 
+
+Selective recruitment of autophagy adaptors to Mtb phagosomes and 128 
+
+mitochondria 129 
+
+130 
+
+Since the autophagy adaptors target the autophagic cargo during selective autophagy, we 131 
+
+investigated how the expression and recruitment of these adaptors to the phagosomes and 132 
+
+mitochondria are affected upon Mtb infection. We first analysed for any perturbation in the 133 
+
+expression of the major autophagy adaptors, such as p62/SQSTM1 , OPTN , NBR1 , NDP52 134 
+
+and TAX1BP1 , in THP-1 macrophages upon infection with the Mtb strain, H37Rv (MOI 1:10, 135 
+
+see methods). For all the infection experiments in this study, the time 0 hpi (hours post-136 
+
+infection) includes incubation with H37Rv for 4 hours followed by 2 hours of amikacin 137 
+
+treatment to kill extracellular bacteria (detailed in the methods section). At the transcript 138 
+
+level, OPTN and p62/SQSTM1 showed increased expression at 0-, 24- and 48-hpi (Fig. S1A). 139 
+
+However, immunoblotting indicated higher expression of only p62/SQSTM1 proteins upon 140 
+
+infection (Fig. S1B-C). To target the bacteria for autophagic degradation, autophagy adaptors 141 
+
+need to get recruited onto the bacteria or bacterial phagosomes. Therefore, we evaluated the 142 
+
+recruitment of autophagy adaptors on mCherry-H37Rv phagosomes by immunostaining and 143 
+
+confocal microscopy at 0-, 6-, 12-, 24- and 48-hpi (see methods). While all of the five 144 
+
+autophagy adaptors being studied were recruited onto the bacterial phagosomes (Fig.1A-E), 145 
+
+we did observe some selectivity in the extent of colocalisation. For instance, OPTN showed 146 
+
+the least recruitment to bacterial phagosomes, ranging from 2-4% colocalisation across all the 147 
+
+time points (Fig. 1B), whereas p62/SQSTM1 showed maximum recruitment starting at ~12% 148 
+
+colocalisation at 0 hpi and increasing to ~40% colocalisation at 48-hpi (Fig. 1A). The other 149 
+
+three adaptors showed intermediate levels of recruitment: NBR1 5-20%, NDP52 10-15% and 150 
+
+TAX1BP1 5-15% (Fig. 1C-E). Notably, only p62/SQSTM1 and NBR1 showed increased 151 
+
+recruitment to the bacterial phagosomes over time as the infection progressed (Fig. 1A, 1C). 152 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+7
+
+Since there are common autophagy adaptors involved in the autophagic targeting of bacteria 153 
+
+(for xenophagy) as well as other cellular cargos like mitochondria (for mitophagy) (10, 19), 154 
+
+we studied the distribution of these autophagy adaptors to a major cellular autophagic cargo 155 
+
+such as mitochondria, during infection. For this, we analysed TOM20, an integral outer 156 
+
+membrane mitochondrial protein that can be reliably used to track mitochondrial dynamics 157 
+
+inside the cell (20). In uninfected as well as mCherry-H37Rv infected THP-1 cells, the 158 
+
+recruitment of p62/SQSTM1 to TOM20 + mitochondria was significantly higher than any 159 
+
+other autophagy adaptors (Fig. 1F). Upon H37Rv-infection, the pattern of autophagy adaptor 160 
+
+recruitment on TOM20 + mitochondria mainly remained unchanged, except that there was a 161 
+
+marginal increase in OPTN recruitment. Thus, no significant re-distribution of autophagy 162 
+
+adaptors on mitochondria occurred during Mtb infection. 163 
+
+Fig. 1. Selective recruitment of autophagy adaptors to Mtb phagosomes and 164 
+
+mitochondria : (A-E) Confocal images show the colocalisation of individually immunostained 165 
+
+autophagy adaptors as indicated (green) with mCherry-H37Rv (red) respectively at indicated 166 
+
+time points post-infection in THP-1 macrophages. The area in the box is zoomed in and shown 167 
+
+across the individual colour channels at the right. The bar graphs at the right represent the 168 
+
+percent co-localization calculated manually using Imaris software. Scale bar: 10 μm. Data 169 
+
+show mean ± SEM, n >10 fields per group, 20-35 cells per field, from three independent 170 
+
+experiments. (F) Representative images of the interaction between immunostained 171 
+
+p62/SQSTM1 (green) and mitochondrial marker TOM20 (Red). Nucleus were stained with 172 
+
+DAPI (blue) at 24 hpi in THP-1 macrophages. To the right, representative 3D 173 
+
+reconstruction is shown for TOM20 structures and p62/SQSTM1 spots. Magenta spots: 174 
+
+non-interacting, >0.2 μm from TOM20, blue spots: interacting, <0.2 μm from the TOM20 175 
+
+structure. The graph represents the percentage of indicated adaptor spots interacting with 176 
+
+TOM20 structures, calculated by the shortest distance module of Imaris software. Scale bar: 177 
+
+10 μm. Data show mean ± SD, n=15 fields per group, 20-35 cells per field, from three 178 
+
+independent experiments. Scale Bar: 10 μm. 179 
+
+180 
+
+Role of autophagy adaptors in intracellular bacterial growth and survival 181 
+
+All five autophagy adaptors being studied were recruited to the bacteria and mitochondria in 182 
+
+the macrophages, albeit differentially. To investigate their involvement in the bacterial 183 
+
+targeting for autophagic degradation, we individually depleted the autophagy adaptors in the 184 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 8
+
+H37Rv-infected macrophages. Each one of the five autophagy adaptors ( p62/SQSTM1, 185 
+
+OPTN, NBR1, NDP52 and TAX1BP1 ) was knocked down in separate experiments using 186 
+
+siRNAs (see methods) with 60-80% knockdown efficiency (Fig. S2A). While different 187 
+
+autophagy adaptors showed differential recruitment to the phagosomes (Fig. 1), surprisingly, 188 
+
+all except NDP52 knockdown resulted in a lower intracellular bacterial CFU (Fig. 2A). 189 
+
+Paradoxically, while the autophagy adaptors were expected to facilitate xenophagy, knocking 190 
+
+them down reduced the bacterial CFU, implicating that these adaptors could be possibly 191 
+
+helpful in Mtb growth in the host macrophages. Likewise, knocking down p62/SQSTM1 or 192 
+
+OPTN in another human monocytic cell line U937 also reduced intracellular bacterial load 193 
+
+(Fig. S2B). 194 
+
+To gain further mechanistic insights into the role of autophagy adaptors in governing 195 
+
+bacterial growth and survival inside macrophages, we focused on p62/SQSTM1 since it 196 
+
+showed the highest recruitment to both mCherry-H37Rv phagosomes and TOM20 +
+
+197 
+
+mitochondria. We targeted p62/SQSTM1 by CRISPR/Cas9-mediated gene knockout in THP-198 
+
+1 macrophages (see methods) using gRNA designed against exon 3 of the primary protein-199 
+
+coding transcript (see methods). We achieved ~80% knockdown using p62/SQSTM1 gRNA 200 
+
+and hCAS9 co-transfection followed by selection as assessed by immunoblotting (Fig. S2C) 201 
+
+and immunofluorescence (Fig. S2D). We continued using these stable cells as p62 202 
+
+knockdown ( p62 KD ) cells and repeatedly analysed p62 expression to ensure efficient 203 
+
+downregulation even after infection with Mtb (Fig. S2E). Knockdown of p62/SQSTM1 did 204 
+
+not overtly alter the cellular autophagy response since no discernible alterations in LC3-II 205 
+
+levels were observed in the absence or presence of bafilomycin A 1 (BafA 1) (Fig. S2F). 206 
+
+Likewise, p62/SQSTM1 knockdown did not affect the xenophagy response against H37Rv, as 207 
+
+measured by colocalisation studies with LC3B (Fig. S2G). Similar to siRNA knockdown 208 
+
+experiments, in p62 KD THP-1 cells, bacterial CFU was consistently lower than in the WT 209 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+9
+
+cells (Fig. 2B). To confirm whether the reduction in bacterial CFU was due to slowing down 210 
+
+of replication or enhanced killing in p62 KD cells, we used the replication clock plasmid (21). 211 
+
+The replication clock plasmid (pBP10) is unstable and contains the Kanamycin resistance 212 
+
+gene that gets lost from Mtb during active replication. Loss of Kan R during assay is indicative 213 
+
+of active replication. A time-course experiment with pBP10 containing H37Rv clearly 214 
+
+showed that the gradual loss of Kan r over time in both WT and p62 KD cells was 215 
+
+indistinguishable, suggesting that the lower Mtb CFU observed in p62 KD cells compared to 216 
+
+the WT cells is due to a loss of survival and not due to a slowing down of replication (Fig. 217 
+
+2C). 218 
+
+Furthermore, we knocked down p62 using siRNAs in human Monocyte-derived 219 
+
+Macrophages (hMDMs) from three independent donors. In each case, we observed 220 
+
+significant but varying degrees of decline in bacterial CFU in the knockdown cells (Fig. 2D). 221 
+
+Thus, the absence of autophagy adaptor p62 appears to hamper Mtb growth and survival in 222 
+
+THP-1 cells, U937 cells and also in the human primary macrophages, indicating it to be a 223 
+
+general phenomenon in human macrophages. 224 
+
+In other animal models like zebrafish and mice, there are reports on p62/SQSTM1 and OPTN 225 
+
+being host resistance factors against Mtb infection (22). We knocked down p62/SQSTM1 and 226 
+
+OPTN in the mouse BMDMs and did not observe any significant difference in Mtb CFU (Fig. 227 
+
+S2H-I). Similarly, in a HOXB8-derived p62 KO mouse monocytic cell line, there was no effect 228 
+
+on Mtb CFU between WT and p62 KO cells (Fig S2J). These results were consistent with 229 
+
+another report, where bacterial CFU load in the lungs of p62 knockout mice was not 230 
+
+significantly different from the wild-type animals (23). Therefore, autophagy adaptors like 231 
+
+p62/SQSTM1 and OPTN may have some distinct species-specific functions in mouse and 232 
+
+human macrophages. 233 
+
+234 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+10 
+
+Fig. 2. Autophagy adaptors regulate intracellular Mtb survival: (A) The bar graph 235 
+
+represents the H37Rv CFU upon individual autophagy adaptor depletion using siRNAs in 236 
+
+THP-1 macrophages 24 hpi. Data show mean ± SD, from four independent experiments. (B) 237 
+
+Time course assay of H73Rv CFU in WT and p62 KD THP-1 macrophages. Data show mean ± 238 
+
+SD from four independent experiments. (C) WT and p62 KD cells were infected with pBP10 +-239 
+
+H37Rv, and CFU plating was done at designated time points on kan + or Kan - 7H11 plates. The 240 
+
+total bacterial burden (i.e., CFU on Kan - plates, left panel) and %pBP10 +Mtb (ratio of CFU on 241 
+
+Kan + to Kan - plates, right panel) for the WT (left) and p62 KD (right) cells are shown. Data is 242 
+
+mean± SD, representative from two independent experiments. (D) The bar graph represents 243 
+
+H37Rv CFU in hMDMs in control and p62 knockdown conditions at 24 hpi. Data show mean 244 
+
+± SD; individual data points for three different donors are shown. (E-G) Heatmap represents 245 
+
+the mean z-scaled expression of mitochondrial-related DEGs (differentially expressed genes, 246 
+
+absolute log2FC>=1 & q value <= 0.1) between infected versus uninfected in WT and p62 KD 
+
+247 
+
+macrophages at 0-, 24- and 48-.hpi (H-I) Pie charts showing functional classes of 248 
+
+mitochondrial-associated DEGs at different time points in infected WT and p62 KD 
+
+249 
+
+macrophages. 250 
+
+251 
+
+252 
+
+Perturbations in mitochondria-associated gene expression in p62 KD cells 253 
+
+upon Mtb infection 254 
+
+255 
+
+To understand the role of autophagy adaptors, specifically p62/SQSTM1, in regulating 256 
+
+bacterial survival, we sought to elucidate the underlying mechanism behind the bacterial 257 
+
+killing in the p62 KD cells. In an unbiased approach, we performed gene expression analysis of 258 
+
+WT and p62 KD cells under uninfected and infected conditions at 0-, 24- and 48- hpi 259 
+
+(methods). Overall, both WT and p62 KD cells showed similar gene expression patterns across 260 
+
+the three-time points and broadly similar expression patterns upon H37Rv infection. 261 
+
+However, the magnitude of regulation showed some differences between the WT and p62 KD 
+
+262 
+
+cells at later time points (Fig. S3A, Table S1). This was reflected in the gene ontology 263 
+
+analysis. In both WT and p62 KD cells, functional classes like a response to cytokine stimulus, 264 
+
+inflammatory responses and response to LPS stimulation were equally upregulated (Fig. 265 
+
+S3B). There were also some unique upregulated events in the p62 KD cells, like NF kB266 
+
+pathway upregulation at 0 hpi, chemokine response pathways at 24 hpi and inflammatory 267 
+
+responses at 48 hpi (Fig. S3B). In the cellular component GO class, most regulated genes 268 
+
+belonged to trafficking vesicles, Golgi apparatus and Mitochondria (Table S2). Since 269 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 11 
+
+p62/QSTM1 was the central autophagy adaptor getting recruited at the mitochondria, we 270 
+
+specifically examined mitochondrial genes (Table S3). While at 0 hpi, WT and p62 KD cells 271 
+
+appeared almost identical in terms of gene expression, as the infection progressed, some 272 
+
+differences emerged at later time points (24 and 48 hpi) (Fig. 2E-G). While genes like RP2, 273 
+
+GSR and OXR1 were upregulated only in the WT cells at 24 hpi, several other genes like 274 
+
+ETFBMKT, SLC25A19, SOD2, FTH1 and BNIP3 were upregulated only in the p62 KD cells 275 
+
+(Fig. 2F). Increased BNIP3 expression in the p62 KD cells was exciting since it along with 276 
+
+proteins like FUNDC1 and NIX constitutes ubiquitin independent autophagy adaptors and 277 
+
+can directly tag damaged mitochondria for mitophagy-mediated degradation (24). Another 278 
+
+interesting observation was the significantly enhanced expression of MGME1, a279 
+
+mitochondrial genome maintenance protein, in the p62 KD cells at 48 hpi that gets 280 
+
+downregulated upon Mtb infection (Fig. 2G). Overall, the mitochondria-targeted genes 281 
+
+showing differential regulation upon Mtb infection at later time points included functional 282 
+
+classes like lipid metabolism, mitochondrial nucleotide metabolism, immune response, redox 283 
+
+regulation, mitophagy, autophagy and trafficking (Fig. 2H-I, Table S4). Thus, p62 KD cells 284 
+
+could exhibit a few differences in mitochondrial functioning or dynamics upon infection 285 
+
+compared to the infected WT cells. In addition, p62 KD cells showed dysregulated cytokine 286 
+
+expression upon H37Rv infection compared to the WT cells (Fig. S3B, Table S5). Some of 287 
+
+these cytokines, which consistently showed increased expression in p62 KD cells compared to 288 
+
+the WT cells, were IL1B, TNF, CXCL6 and CXCL2, suggesting a more inflammatory 289 
+
+phenotype in the p62 KD cells upon H37Rv infection. The results above indicate that 290 
+
+p62/SQSTM1 is involved in mitochondrial dynamics and controlling inflammatory pathways 291 
+
+during infection. 292 
+
+Mitochondrial quality is maintained during H37Rv infection in 293 
+
+p62/SQSTM1-depleted cells 294 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+12 
+
+The gene expression analysis suggested that the WT and p62 KD cells responded differently to 295 
+
+Mtb infection, particularly for genes involved in mitochondrial dynamics and function. 296 
+
+However, how that could undermine mycobacterial growth and survival in those cells is 297 
+
+unclear. Given the role of autophagy adaptors, specifically p62/SQSTM1 in the process of 298 
+
+mitophagy (25-28) and also the fact that it was the maximally recruited autophagy adaptor on 299 
+
+the mitochondria (Fig. 1F), we measured the parameters for assessing the mitochondrial 300 
+
+function and dynamics in the cell. MitoTracker green (MTG) staining showed that there was 301 
+
+a marginal increase in the total mitochondrial content in the p62 KD cells upon H37Rv 302 
+
+infection at early time points but not at the later time points (Fig. 3A). Moreover, there was 303 
+
+no significant change in the overall status of mitochondrial depolarisation, as observed by 304 
+
+TMRE staining at 0-, 24- and 48- hpi in p62 KD and WT cells (Fig. 3B). Next, we measured 305 
+
+mitochondrial superoxide that indicates the presence of active mitochondria, using MitoSox 306 
+
+dye. While there was not much difference between the WT and p62 KD cells, both cells, 307 
+
+however, showed a tendency for an increase in the mitochondrial superoxide upon Mtb 308 
+
+infection (Fig. 3C). The infection-dependent increase in MitoSox signal increased as the 309 
+
+infection progressed from 0- to 24- and 48 hpi (Fig. 3C). However, only at the later time-310 
+
+point (48 hpi), this increase was significant in p62 KD cells (Fig. 3C). The seahorse 311 
+
+extracellular flux analyzer further examined mitochondrial respiration by performing the 312 
+
+mitostress test, where we measured the cellular oxygen consumption rate (OCR) in response 313 
+
+to the sequential addition of inhibitors of the electron transport chain (ETC). Overall, the 314 
+
+OCR was found to be similar between WT and p62 KD cells, although the latter showed a non-315 
+
+significant increase in basal and maximal respiration (Fig. 3D). Additionally, there was no 316 
+
+significant difference in the mitochondrial DNA content and the expression of genes involved 317 
+
+in mitochondrial fission/fusion in WT versus p62 KD cells even after infection (Fig. S4A-B). 318 
+
+Our data suggest that p62/SQSTM1 depletion does not overtly alter the mitochondrial 319 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+13 
+
+function and dynamics, like content and mitochondrial outer membrane permeabilization 320 
+
+(MOMP). However, we did observe a delayed increase in the mitochondrial respiration in 321 
+
+Mtb-infected p62 KD cells, indicating involvement and/or activation of specific quality control 322 
+
+pathways in these cells. 323 
+
+324 
+
+Fig. 3. Mitochondrial quality is maintained during H37Rv infection in the absence of 325 
+
+p62/SQSTM1: (A-C) The bar graphs represent the MFI (% of control) of (A) MTG 326 
+
+(MitoTracker Green), (B) TMRE (Tetramethylrhodamine, ethyl ester), and (C) MitoSOX, via 327 
+
+flow cytometry at 0-, 24- and 48-hpi in H37Rv-infected and uninfected WT and p62 KD THP-1 328 
+
+macrophages. Data show mean ± SD, three independent experiments. (D) Mitostress 329 
+
+(Seahorse extracellular flux assay) test in H37Rv-infected WT and p62 KD macrophages at 24 330 
+
+hpi. Data show mean ± SD, three independent experiments. (E) DCFDA MFI (% of control) 331 
+
+in WT and p62 KD THP-1 macrophages at 0-, 24- and 48-hpi. Data show mean ± SD, three 332 
+
+independent experiments. (F) IF analysis of CellROX staining (magenta) in WT and p62 KD 
+
+333 
+
+THP-1 macrophages at 24 hpi. The bar graph represents CellROX MFI. Data show mean ± 334 
+
+SD, n=5 from two independent experiments. (G) The ratio of emission MFI of Mrx1-roGFP 335 
+
+reporter at 510nm as excited at 405nm to 488nm via flow cytometry in WT and p62 KD cells 336 
+
+infected with the Mrx1-roGFP2 expressing H37Rv at 24 hpi. CHP and DTT were used as 337 
+
+oxidising and reducing controls, respectively. Data show mean ± SD, three independent 338 
+
+experiments. (H-I) Confocal microscopy images of H37Rv::Mrx1-roGFP2 in WT and p62 KD 
+
+339 
+
+cells, at 24 hpi, when excited at 405nm and 488nm. The bar graph depicts the ratio of emission 340 
+
+MFIs at 510nm obtained upon excitation at 405nm to that at 488nm. Data show mean ± SD, 341 
+
+n>20 fields, 30-50 bacteria per field, from two independent experiments. (J) Time course 342 
+
+CFU analysis of H37Rv ΔaosR and complemented strain H37Rv ΔaosR::WT in WT and p62 KD 
+
+343 
+
+cells. Data show mean± SD, representative of two independent experiments (K) CFU 344 
+
+analysis of H37Rv in the presence of N-acetyl cysteine (NAC, 2mM for 24 hours) in p62 KD 
+
+345 
+
+macrophages at 24 hpi. Data show mean ± SD, three independent experiments. (L) Dot plot 346 
+
+depicts the ratio of emission MFI of Mrx1-roGFP2 :: H37Rv at 510nm as excited at 405nm to 347 
+
+488nm via confocal microscopy in NAC treated and untreated WT and p62 KD at 24 hpi. Data 348 
+
+show mean ± SD, n>=6 fields, 30-50 bacteria per field, from two independent experiments. 349 
+
+350 
+
+Mtb witnesses increased redox stress in p62 KD cells. 351 
+
+While the usual mitochondrial quality parameters were unperturbed in the p62 KD cells upon 352 
+
+H37Rv infection, an infection-induced increase in the production of mitochondrial 353 
+
+superoxide indicated the possibility of a redox imbalance in these cells. Indeed, there was a 354 
+
+significant increase in the reactive oxygen species (ROS), as measured by DCFDA staining 355 
+
+in the p62 KD macrophages in the uninfected state or upon H37Rv infection compared to the 356 
+
+corresponding WT conditions (Fig. 3E). Increased ROS in the infected p62 KD cells was also 357 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 14 
+
+corroborated with significantly higher CellRox fluorescence observed in the Mtb infected 358 
+
+p62 KD cells compared to the WT cells (Fig. 3F). Next, we examined, whether Mtb too 359 
+
+experienced a more oxidising environment in p62 KD cells and if that contributed to their 360 
+
+diminished growth in these cells. To do this, we utilized a genetically encoded biosensor of 361 
+
+mycothiol redox potential in Mtb (mrx1-roGFP2 ) (29). The dynamic changes in mycothiol 362 
+
+redox potential serve as a proxy for changes in the cytoplasmic redox state of Mtb . The redox 363 
+
+state of Mtb was quantified by measuring the Mrx1-roGFP2 fluorescence ratio (excitation: 364 
+
+405 nm/488 nm; emission: 510 nm). Upon oxidation, the biosensor ratio increases, whereas 365 
+
+the ratio decreases in response to the reductive stress (30). Flow cytometry and imaging data 366 
+
+revealed that Mtb was exposed to a highly oxidising environment in the p62 KD cells compared 367 
+
+to the WT cells (Fig. 3G-I). To test whether increased oxidative stress impacted bacterial 368 
+
+growth in these cells, we used a redox-sensitive strain of Mtb - H37Rv 
+
+DaosR . The 369 
+
+H37Rv 
+
+DaosR lacks a critical cysteine biosynthesis pathway, thereby rendering the strain 370 
+
+sensitive to oxidative stress (31). Similar to the WT H37Rv strain, the H37Rv 
+
+DaosR strain 371 
+
+showed a significant decline in CFU in the p62 KD cells compared to the WT THP-1 cells (Fig. 372 
+
+3J). Interestingly, the CFU count of redox-sensitive strain H37Rv 
+
+DaosR was significantly 373 
+
+lower than the WT H37Rv strain in p62 KD cells (Fig. 3J). Moreover, complementation of the 374 
+
+deleted strains with WT aosR rescued the bacterial CFU in the p62 KO cells (Fig. 3J). While 375 
+
+the 
+
+DaosR::WT strain showed higher CFU in the p62 KO cells than the H37Rv, it was 376 
+
+significantly lower than the aosR::WT CFU in the WT cells (Fig. (3J). These results suggest 377 
+
+that the elevated oxidative stress witnessed by Mtb may contribute to a decline in its CFU 378 
+
+count in p62 KD cells. To test this hypothesis, we used the ROS scavenger N-acetyl cysteine 379 
+
+(NAC), which significantly rescued the bacterial CFU in the NAC-treated p62 KD cells 380 
+
+compared to the untreated p62 KD cells (Fig. 3K). Using mrx1-roGFP2 reporter, via confocal 381 
+
+microscopy we verified that NAC treatment indeed led to a decrease in the level of oxidative 382 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+15 
+
+stress witnessed by Mtb in the p62 KD cells. (Fig. 3L) These data suggest that the depletion of 383 
+
+p62/SQSTM1 in THP-1 macrophages enhances redox stress, contributing to reduced 384 
+
+mycobacterial growth and survival in these cells. 385 
+
+Understanding mitochondrial quality control in p62 KD cells 386 
+
+We next studied if mitochondria contributed to the enhanced cellular ROS in p62 KD cells, 387 
+
+despite showing normal mitochondrial parameters. Mitochondria may act as the direct source 388 
+
+of ROS for bacterial killing upon their recruitment to the bacterial phagosome (32). In p62 KD 
+
+389 
+
+cells, there was significantly enhanced recruitment of the mitochondria to the bacterial 390 
+
+phagosomes, as evident from mitochondrial marker protein TOM20 (translocase of outer 391 
+
+mitochondrial membrane 20) immunostaining and 3D-reconstructions to analyse TOM20 392 
+
+recruitment on H37Rv structures (Fig. 4A). Since TOM20 recruitment to Mtb correlated with 393 
+
+reduced bacterial growth, we suspected that the phagosome-recruited mitochondria could 394 
+
+contribute to the bacterial killing. We also hypothesised that the fraction of mitochondria 395 
+
+recruited to the phagosomes could be mostly depolarised, considering they are the major 396 
+
+source of mitochondria-generated ROS (33, 34). The ubiquitin ligase Parkin is known to get 397 
+
+stabilised on the depolarised mitochondria and ubiquitinates mitochondrial outer membrane 398 
+
+proteins for mitophagy targeting (35, 36). Contrary to our expectation, there was a decline in 399 
+
+Parkin-TOM20 co-localization in p62 KD cells (Fig. 4B). However, unlike Parkin, there was 400 
+
+an increase in the ubiquitin-TOM20 interaction in the p62 KD cells (Fig. 4C). Curiously, the 401 
+
+pattern of Ubiquitin and Parkin recruitment to TOM20 mirrored with their recruitment to 402 
+
+H37Rv, where there was an increase in the Ubiquitination of Mtb but a decline in Parkin 403 
+
+recruitment (Fig. 4D-E). The contrasting observation of enhanced ubiquitination and reduced 404 
+
+Parkin recruitment at TOM20 +-mitochondria and Mtb -containing phagosomes was intriguing. 405 
+
+Since ubiquitinated mitochondria could undergo autophagy-mediated degradation or 406 
+
+mitophagy, we next checked the status of mitochondrial localization of LC3B in p62 KD cells 407 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+16 
+
+upon infection. We analysed the co-localization of TOM20 with LC3B in the WT and p62 KD 
+
+408 
+
+cells. There was a significant increase in TOM20-LC3B colocalisation in p62 KD cells 409 
+
+compared to the WT cells (Fig. 4F). We also included a BafA 1 treatment group for both WT 410 
+
+and p62 KD cells in this assay to examine whether LC3B +-mitochondria positive vesicles 411 
+
+matured and fused with the lysosomes distinctly in the p62 KD cells compared to the WT cells. 412 
+
+We expected an increase in TOM20-LC3B colocalization in the BafA 1-treated group 413 
+
+compared to the corresponding untreated controls, as BafA 1 would block both LC3B and 414 
+
+TOM20 degradation. Surprisingly, in either the WT or p62 KD cells, BafA 1 treatment did not 415 
+
+increase the TOM20-LC3B colocalisation (Fig. 4F). However, BafA 1-treated p62 KD cells had 416 
+
+significantly higher TOM20-LC3B colocalisation compared to the corresponding WT cells. 417 
+
+Thus, whereas more mitochondrial cargos were targeted towards LC3B +-compartments in the 418 
+
+p62 KD cells, the mitochondrial degradation was less efficient in both WT and p62 KD cells. 419 
+
+Since similar BafA1 treatment shows increased LC3II upon immunoblotting (Fig. S2F), we 420 
+
+infer that autophagic degradation of cargos other than mitochondria continues in p62 KD cells. 421 
+
+Could an increase in ubiquitination alone explain the enhanced LC3B recruitment to TOM20 422 
+
+in p62-depleted cells? LC3B can also be recruited to mitochondria through ubiquitin-423 
+
+independent autophagy receptors like BNIP3, FUNDC1, NIX, etc. Incidentally, BNIP3, but 424 
+
+not FUNDC1 or NIX, was also among the highly upregulated genes in Mtb -infected p62 KD 
+
+425 
+
+cells (Fig. 2F), a finding that we confirmed at the protein level by immunoblotting (Fig. 426 
+
+S4C). The increased BNIP3 levels in the p62 KD cells were also associated with a significantly 427 
+
+increased BNIP3 recruitment to both TOM20 and Mtb as compared to the WT cells (Fig. 4G-428 
+
+H). 429 
+
+Greater recruitment of BNIP3 and also TOM20, both of which are mitochondrial outer 430 
+
+membrane proteins, to Mtb -phagosomes indicated that in p62 KD cells, damaged mitochondria 431 
+
+or possibly mitochondria-derived vesicles (MDVs) could be recruited to Mtb -phagosomes on 432 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+17 
+
+their way to being targeted for mitophagy. While significantly higher BNIP3 recruitment, as 433 
+
+well as ubiquitination, could explain enhanced LC3B recruitment to TOM20, overall, the 434 
+
+pattern of recruitment of several key molecules to mitochondria and Mtb phagosomes in 435 
+
+p62 KD cells was incongruent with the anticipated mitophagy pathways and indicated that 436 
+
+there were additional mechanisms operational to ensure MQC in p62 KD cells. Results so far, 437 
+
+while strongly suggesting crosstalk between mitochondria and Mtb phagosomes, were 438 
+
+inconclusive regarding the nature of mitochondrial recruitment to the Mtb phagosomes and 439 
+
+whether and how that contributed to the enhanced redox stress to Mtb in the p62 KD cells. 440 
+
+441 
+
+Fig. 4. Mitochondrial Quality Control in p62/SQSTM1 KD cells: 442 
+
+(A) Immunofluorescence images for mCherry-H37Rv (Red) and TOM20 (green) interaction 443 
+
+in WT and p62 KD THP-1 macrophages at 24 hpi. The 3D reconstruction of H37Rv structures 444 
+
+and TOM20 spots is shown at the right; the bar graph shows the average number of yellow 445 
+
+TOM20 spots/bacteria. Data show mean ± SD, n> 10 fields, 20-35 cells per field, from three 446 
+
+independent experiments, (B-C) Immunofluorescence images of TOM20 (green) and Parkin 447 
+
+(red, B) or Ubiquitin (red, C) respectively. Representative TOM20 3D structures and Parkin or 448 
+
+Ubiquitin spots are shown on the right. The bar graph shows per cent of Ubiquitin (B) or Parkin 449 
+
+(C) spots interacting with the TOM20 structures. Data show mean± SD, n>6 fields, 20-35 450 
+
+cells per field, from two independent experiments. (D-E) Immunofluorescence images of 451 
+
+Ubiquitin (D) and Parkin (E) respectively with mCherry-H37Rv, and 3D reconstructed 452 
+
+images of H37Rv structures and Ubiquitin (D) or Parkin (E) spots. The bar graph shows 453 
+
+per cent of spots <0.2 μm from Mtb . Data show mean ± SD, n>5 fields, >20-35 cells per 454 
+
+field, from two independent experiments. (F) Mitophagy flux assessed by the interaction of 455 
+
+LC3B spots and TOM20 structures in the presence and absence of bafilomycin A1 (BafA 1,456 
+
+100nM, 3 hours) in WT and p62 KD THP1 macrophages at 24 hpi. Data show mean ± SD, n>6 457 
+
+fields, 20-35 cells per field, from two independent experiments. (G-H) Immunofluorescence 458 
+
+images on the left show the interaction of BNIP3 spots with TOM20 (G) or H37Rv (H) 459 
+
+structures, respectively. The bar graphs depict the number of BNIP3 spots <0.2 μm from 460 
+
+TOM20 (G) or H37Rv (H) structures. Data show mean ± SD, n=5 fields, 20-35 cells per field, 461 
+
+from two independent experiments. For all 3D reconstructions, yellow spots <0.2 μm from 462 
+
+TOM20 or Mtb structures, magenta spots >0.2 μm from TOM20 or Mtb structures; Scale bar: 463 
+
+10 μm. 464 
+
+465 
+
+H37Rv-infected p62 KD cells show enhanced biogenesis of TOM20 +-466 
+
+Mitochondria-derived vesicles (MDVs) 467 
+
+468 
+
+While mitophagy is the primary mechanism for MQC in diverse cell types, increasingly, 469 
+
+MDVs are being reported as an important mechanism for MQC, specifically in those cells 470 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 18 
+
+where mitophagy is compromised (37, 38). MDVs are small vesicles (50-200 nm in size) 471 
+
+derived exclusively from the outer or inner mitochondrial membrane that buds off from the 472 
+
+damaged parts of mitochondria and fuses with the lysosome for autophagy-independent 473 
+
+degradation (39, 40) . Analysis of TOM20 immunostaining in p62 KD THP-1 cells under high-474 
+
+resolution microscopy revealed a large number of smaller TOM20 + vesicles-like structures in 475 
+
+a size range of 200 nm or smaller compared to the WT cells (Fig. 5A). Dual staining with 476 
+
+TOM20 and MCU, which respectively are mitochondrial outer membrane (OM) and inner 477 
+
+membrane (IM) proteins, strongly indicated that indeed the smaller TOM20 structures seen in 478 
+
+p62 KD cells represented MDVs. While we could notice both IM-derived (TOM20 -MCU +) and 479 
+
+OM-derived (TOM20 +MCU -) MDVs (Fig. 5B) in WT and p62 KD cells, we counted the 480 
+
+number of TOM20 + vesicles in the size range of 100-200nm and observed more than two-481 
+
+fold increase in the number of these vesicles in p62 KD cells compared to the WT cells (Fig. 482 
+
+5C). Interestingly, Mtb infection did not alter the MDV numbers in the WT or p62 KD cells 483 
+
+further (Fig. 5C), suggesting that MDV biogenesis reflected an infection-independent 484 
+
+mechanism, which most likely was activated as an MQC pathway in the absence of 485 
+
+autophagy adaptor p62/SQSTM1. To further confirm that in Mtb -infected p62 KD cells, there 486 
+
+was an increase in the formation of TOM20 +-MDVs, we analysed TOM20 co-localization 487 
+
+with additional markers from the mitochondrial IM (MCU and ECSIT) or the mitochondrial 488 
+
+matrix (PDHA1, HSP60, SOD2) (Fig. 5D). We anticipated that TOM20 + MDVs being 489 
+
+exclusively derived from the OM of the mitochondria should show selectivity in terms of its 490 
+
+association with IM proteins and matrix proteins. Among the three mitochondrial matrix 491 
+
+proteins studied, only SOD2 showed a marginal increase (from ~66% in the WT cells to 492 
+
+~73% in p62 KD cells) in its association with TOM20 in the p62 KD cells compared to the WT 493 
+
+cells (Fig. 5E). In contrast, PDHA1 and HSP60 showed no significant difference (Fig. 5E, 494 
+
+S5A-C). Unlike the matrix proteins, there was a substantial decline in TOM20 colocalisation 495 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+19 
+
+with the mitochondrial IM proteins ECSIT and MCU (Fig. 5F and S5D-E). The clear 496 
+
+distinction in the association between TOM20 and IM proteins (ECSIT and MCU) and OM 497 
+
+proteins (BNIP3, Fig. 4), coupled with the increased TOM20 +-vesicles observed in p62 KD 
+
+498 
+
+cells, further suggested an increase in OM-derived MDV-biogenesis in p62 KD cells. Taken 499 
+
+together from the results in the above sections, it was evident that p62-depleted macrophages 500 
+
+trigger TOM20 +-MDV biogenesis. 501 
+
+Fig.5. Enhanced TOM20 +-Mitochondria-derived vesicles (MDVs) biogenesis in p62 KD 
+
+502 
+
+cells: (A) High-resolution images of immunostained TOM20 (green) in H37Rv-infected WT 503 
+
+and p62 KD macrophages at 24 hpi. The zoomed images on the right show encircled TOM20 +-504 
+
+MDVs in the p62 KD cells. (B) High-resolution images of immunostained TOM20 (red) and 505 
+
+MCU (green). The encircled area depicts TOM20 +MDVs in the zoomed images at the right. 506 
+
+(C) Quantification of number of TOM20 +MDVs in uninfected and Mtb -infected WT and p62 KD 
+
+507 
+
+cells. Data show mean ± SD, n=6 fields having 5-10 cells per field, from two independent 508 
+
+experiments (D) Schematic depiction of the presence of different proteins on mitochondrial 509 
+
+matrix, inner and outer membrane. (E) Bar graphs show quantitative interactions of matrix 510 
+
+mitochondrial protein spots of PDHA1, HSP60 and SOD2 with TOM20 structures. (F) Bar 511 
+
+graphs show the quantitative association of inner membrane mitochondrial protein spots of 512 
+
+ECSIT and MCU with TOM20 structures. ( G-K) Immunofluorescent images depict the 513 
+
+interaction of mCherryH37Rv (red) with ECSIT (G), MCU (H ), PDHA1 (I) , SOD2 (J) and 514 
+
+HSP60 (K) (green), respectively, in WT and p62 KD THP-1 macrophages at 24 hpi. The 3D 515 
+
+reconstruction shows H37Rv structures and indicates mitochondrial protein spots. The yellow 516 
+
+spots are <0.2 μm from H37Rv structures, and the magenta spots are >0.2 μm from bacterial 517 
+
+structures. The bar graph on the right shows a number of mitochondrial protein spots on Mtb .518 
+
+Data show (E-K) mean ± SD, n>5 fields having 20-35 cells per field, from two independent 519 
+
+experiments, Scale bar =10 μm unless specified. 520 
+
+521 
+
+# TOM20 recruited at Mtb phagosomes in p62 KD cells represent 522 
+
+# TOM20+-MDVs 523 
+
+524 
+
+Given the results above, it was imperative to assess whether the enhanced TOM20 525 
+
+recruitment on Mtb phagosomes in p62 KD cells was actually due to the recruitment of 526 
+
+TOM20 +-MDVs in these cells. We examined the recruitment of mitochondrial IM and matrix 527 
+
+markers shown in Fig. 5E-F for their recruitment to Mtb phagosomes. There was a significant 528 
+
+decline in the recruitment of mitochondrial IM marker ECSIT to Mtb -phagosomes in the 529 
+
+p62 KD cells, a pattern similar to ECSIT-TOM20 colocalisation (Fig. 5G, S5D). Unlike 530 
+
+ECSIT, there was no decline in the recruitment of the other IM protein MCU on Mtb -531 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 20 
+
+phagosomes (Fig. 5H, S5E). Since MCU +TOM20 - MDVs are also formed in both WT and 532 
+
+p62 KD cells (Fig. 5B), it is possible that some of the MCU +MDVs continue getting recruited 533 
+
+to the phagosomes in both WT and p62 KD cells. Additionally, it is possible that ECSIT 534 
+
+proteins were not included in the MCU + IM-derived MDVs. The matrix proteins PDHA1, 535 
+
+SOD2, and HSP60 did not entirely follow the pattern for Mtb colocalisation vis-à-vis TOM20 536 
+
+colocalisation (Fig. 5I-K, SA-C). Overall, these colocalisation studies reveal that TOM20 and 537 
+
+Mtb showed a remarkable similarity in increased recruitment of OM (BNIP3) and decreased 538 
+
+recruitment of IM (ECSIT) proteins. However, the matrix proteins did not show a strong 539 
+
+correlation. These results suggest that in p62 KD cells, there is a significant increase in OM-540 
+
+derived TOM20 +-MDVs formation and that a large fraction of these MDVs gets recruited to 541 
+
+the Mtb +-phagosomes upon infection. 542 
+
+543 
+
+TOM20 +-MDVs overcome phagosome maturation arrest imposed by 544 
+
+Mycobacterium tuberculosis. 545 
+
+546 
+
+We next investigated whether MDV recruitment to the Mtb -phagosomes contributed to 547 
+
+bacterial growth and survival phenotype observed in these cells. MDVs, once formed, can 548 
+
+either be secreted out of the cells as extracellular vesicles (EVs) or fuse with intracellular 549 
+
+compartments, such as lysosomes, where they are degraded (41-43). Since TOM20 levels on 550 
+
+Mtb -phagosomes were increased in the p62 KD cells, it is possible that TOM20 +-MDVs were 551 
+
+recruited to the Mtb -phagosomes while en route to being targeted to the lysosomes. The 552 
+
+lysosomal targeting of MDVs requires proteins from the Sortin-Nexin family, like SNX9 and 553 
+
+the small GTPase RAB7 (37, 44) . Incidentally, the exclusion of RAB7 from mycobacterial 554 
+
+phagosomes and autophagosomes is a widely studied mechanism that helps the bacteria 555 
+
+evade the lysosomal targeting (45). In p62 KD THP-1 cells, there was a significant increase in 556 
+
+RAB7 recruitment to Mtb -phagosomes compared to the WT cells (Fig. 6A). Increased RAB7 557 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+21 
+
+recruitment on the bacterial phagosomes should also result in increased lysosomal targeting 558 
+
+of Mtb in these cells. In agreement with that, there was a significant increase in mycobacterial 559 
+
+localisation to LysoTracker, Cathepsin D, and LAMP1 positive compartments in p62 KD cells 560 
+
+(Fig. 6B-D). It is, therefore, possible that TOM20 +-MDVs, while getting recruited to the Mtb 561 
+
+phagosomes for lysosomal targeting in p62 KD cells, also help recruit RAB7, which unblocks 562 
+
+the maturation arrest imposed by Mtb on these phagosomes. This was further corroborated by 563 
+
+an increase in LAMP1-TOM20 colocalisation in p62 KD cells, confirming the targeting of 564 
+
+MDVs to the lysosomes (Fig. 6E). To verify if indeed RAB7 recruitment was involved in 565 
+
+enhanced lysosomal targeting and impacted Mtb survival in p62 KD cells, we knocked down 566 
+
+RAB7 using siRNA (Fig. S5F). In the WT cell, the knockdown of RAB7 did not have much 567 
+
+impact on H37Rv survival (Fig. 6F), which is expected since very little RAB7 is known to get 568 
+
+recruited to Mtb under WT conditions (45). However, the knockdown of RAB7 in p62 KD cells 569 
+
+substantially improved Mtb growth and survival, suggesting that RAB7-recruitment indeed 570 
+
+played a role in combating Mtb growth in these cells (Fig 6F). In agreement with this notion, 571 
+
+the knockdown of RAB7 in p62 KD cells decreased lysosomal targeting of Mtb, as evident 572 
+
+from lower colocalisation of Mtb with LAMP1 (Fig. 6G). Curiously, RAB7 knockdown in 573 
+
+the p62 KD cells also led to a decline in the TOM20 recruitment on Mtb phagosomes, 574 
+
+suggesting that TOM20 +-MDV recruitment to Mtb phagosomes was somewhat dependent on 575 
+
+RAB7 (Fig. 6H). 576 
+
+While it was now evident that Mtb was driven towards the lysosomes by TOM20+MDVs, we 577 
+
+also witnessed ROS-mediated killing of Mtb in the p62 KD cells (Fig. 3). We hypothesised that 578 
+
+the increased oxidative stress seen by Mtb in p62 KD cells could also be attributed to the 579 
+
+recruitment of TOM20 +-MDVs. At least one recent study shows similar MDV-mediated 580 
+
+oxidative stress and killing of Staphylococcus sp. Bacteria (46). Since RAB7 knockdown in 581 
+
+p62 KD cells decreased TOM20 +MDV recruitment on Mtb phagosomes, using H37Rv:: mrx1-582 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+22 
+
+roGFP2 bacteria, we found that the loss of TOM20 +-MDV recruitment reversed the oxidative 583 
+
+stress witnessed by Mtb in the p62 KD cells (Fig. 6I). Our data implicate that TOM20 +MDV 584 
+
+recruitment on Mtb phagosomes could have anti-bacterial functions due to a combination of 585 
+
+both redox stress and reversal of PMA. 586 
+
+Fig. 6. TOM20 +-MDVs overcome phagosome maturation arrest imposed by 587 
+
+Mycobacterium tuberculosis : (A-C) Confocal images show the colocalisation of mCherry 588 
+
+H37Rv (red) with RAB7, Lysotracker and Cathepsin D respectively (green) in WT and p62 KD 
+
+589 
+
+THP-1 macrophages at 24 hpi. The bar graph shows per cent colocalisation, calculated 590 
+
+manually using Imaris software. Data show mean ± SD, n=5 fields, 20-35 cells per field, 591 
+
+from two independent experiments. (D) The image shows the interaction of LAMP1 spots 592 
+
+with TOM20 structures. The bar graph depicts the number of LAMP1 spots <0.2 um (yellow) 593 
+
+from the bacterial structure. Data show means ± SD, n=5 fields, 20-35 cells per field, from 594 
+
+two independent experiments. (E) Images show the interaction of LAMP1 spots with 595 
+
+TOM20 structures in Mtb -infected WT and p62 KD cells. The plot shows LAMP1 spot 596 
+
+quantification on TOM20 structure in Mtb -infected WT and p62 KD cells. Data show mean 597 
+
+± SD, n> 5 fields, 20-35 cells per field, from two independent experiments (F) H37Rv CFU 598 
+
+in WT and p62 KD cells upon RAB7 knockdown at 24 hpi. Data show means ± SD, n=5. (G-599 
+
+H) Quantifying LAMP1 (G) and TOM20 (H) spots on H37Rv in RAB7 knockdown p62 KD 
+
+600 
+
+cells at 24 hpi. Data show means ± SD, n=5 fields, > 20 cells per field, from two 601 
+
+independent experiments. (I) The relative oxidation state of Mrx1-roGFP2 reporter as the 602 
+
+ratios of emission MFI at 510nm when excited at 488nm to that of 405nm in p62 KD and RAB7 603 
+
+depleted p62 KD cells. Data show means ± SD, n=5 Fields, > 40 bacteria per field, from two 604 
+
+independent experiments. Scale bar: 10 μm 605 
+
+606 
+
+# MQC pathways intricately impact anti-bacterial responses in the 607 
+
+# macrophages 608 
+
+609 
+
+As evident from our data, TOM20 +-MDV-dependent facilitation of lysosomal targeting of 610 
+
+Mtb in p62 KD cells showed a unique perspective in the crosstalk between mitochondrial 611 
+
+homeostasis and cellular anti-bacterial responses. It is also evident that increased 612 
+
+TOM20 +MDVs observed in p62 KD cells could be helping MQC in these cells since we did 613 
+
+not observe any significant loss of MQC in the p62 KD cells upon Mtb infection (Fig. 3). We 614 
+
+therefore next studied whether the loss of MQC under these circumstances could further aid 615 
+
+to the bacterial killing. Parkin is an important mediator of MQC, specifically since it triggers 616 
+
+ubiquitin-mediated mitophagy and is also implicated in MDV biogenesis under diverse 617 
+
+conditions (47, 48). 618 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 23 
+
+Expectedly, the knockdown of PRKN in p62 KD THP-1 cells led to a loss of MQC, as was 619 
+
+evidenced by a significant increase in mitochondrial depolarisation in p62 KD cells (Fig. 7A). 620 
+
+We also observed round, spherical TOM20 structures, typical of depolarised mitochondria 621 
+
+upon PRKN knockdown in p62 KD cells (Fig. 7B). Since the presence of depolarised 622 
+
+mitochondria could cause more oxidative damage to the cell, we investigated the oxidative 623 
+
+stress witnessed by Mtb in p62 KD cells upon PRKN knockdown. We observed a slight but 624 
+
+significant increase in the redox stress witnessed by Mtb in p62 KD cells upon PRKN 625 
+
+knockdown compared to p62 KD cells alone (Fig. 7C). To test whether the loss of MQC in 626 
+
+p62 KD cells upon PRKN knockdown had any impact on intracellular bacterial growth and 627 
+
+survival, we investigated Mtb CFUs in these cells. We observed significantly reduced Mtb 628 
+
+survival in PRKN knockdown p62 KD cells compared to the p62 KD cells (Fig. 7D). PRKN 629 
+
+knockdown did not impact MDV biogenesis as inferred from the absence of any difference in 630 
+
+the recruitment of TOM20 +-MDVs to the Mtb phagosomes (Fig. 7E-F). In agreement to that, 631 
+
+there was no change in the lysosomal targeting of Mtb upon PRKN knockdown in p62 KD cells 632 
+
+(Fig. 7G). Thus, enhanced redox stress due to mitochondrial depolarisation, along with 633 
+
+continued lysosomal targeting, caused excessive Mtb -killing in these cells. This was further 634 
+
+corroborated by using Nigericin, a K +/H + ion exchanger, which causes mitochondrial 635 
+
+depolarisation (49). Treatment with nigericin led to a dramatic loss of mitochondrial outer 636 
+
+membrane permeability (Fig. S5H) and showed significantly increased oxidation of Mrx1-637 
+
+RoGFP2 reporter (Fig. S5I). Moreover, similar to the results in PRKN knockdown in p62 KD 
+
+638 
+
+cells, nigericin treatment also led to a significantly reduced Mtb survival in the p62 KD cells 639 
+
+(Fig. S5J). At the doses used, nigericin did not impact host cell survival (Fig. S5K). 640 
+
+641 
+
+Fig. 7: Triggering loss of MQC in p62 KD cells aggravates bacterial killing 642 
+
+(A) TMRE per cent MFI in PRKN knockdown cells in WT and p62 KD THP-1 macrophages. 643 
+
+Data show mean ± SD from three independent experiments (B) The confocal images depict 644 
+
+the circular depolarised mitochondria (immunostained with TOM20, green) in PRKN -645 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+24 
+
+depleted p62 KD cells. (C) MFI ratio of Mrx1-roGFP2 :: H37Rv at 405nm to 488nm in p62 KD 
+
+646 
+
+and Parkin-depleted p62 KD cells. Data show mean ± SD, n=5 Fields, > 40 bacteria per field, 647 
+
+from two independent experiments. (D) H37Rv CFU in WT and p62 KD THP-1 macrophages 648 
+
+upon PRKN depletion at 24 hpi. Data show mean ± SD from three independent experiments. 649 
+
+(E-F) TOM20 spots on H37Rv structures in p62 KD cells upon PRKN knockdown. Data show 650 
+
+means ± SD, n=7 fields, each having 20-35 cells, from two independent experiments. (G) 651 
+
+LAMP1 spots on H37Rv structures in p62 KD cells upon PRKN knockdown. Data show 652 
+
+means ± SD, n=6 fields, 20-35 cells per field, from two independent experiments. (H) 653 
+
+H37Rv CFU in siCtrl , siMIRO1 and siMIRO2 treated p62 KD THP-1 macrophages at 24 hpi. 654 
+
+Data show mean ± SD from two independent experiments. (I) High-resolution images of 655 
+
+immunostained TOM20 (green) in siCtrl , siMIRO1 and siMIRO2 treated p62 KD THP-1 656 
+
+macrophages at 24 hpi. The plot depicts the quantification of TOM20 + MDV in these cells. 657 
+
+Data show means ± SD, n>7 fields, 5-10 cells per field, from two independent experiments. 658 
+
+(J) The images show the interaction of TOM20 spots with H37Rv structures in siCtrl ,659 
+
+siMIRO1 and siMIRO2 treated p62 KD THP-1 macrophages at 24 hpi. The bar graph depicts 660 
+
+the number of TOM20 spots <0.2 μm (blue) from the bacterial structure. Data show means ± 661 
+
+SD, n=6 fields, 20-35 cells per field, from two independent experiments. (K) The image 662 
+
+shows the interaction of RAB7 spots with H37Rv structures in siCtrl , siMIRO1 and siMIRO2 663 
+
+treated p62 KD THP-1 macrophages at 24 hpi. The bar graph depicts the number of RAB7 664 
+
+spots <0.2 μm (blue) from the bacterial structure. Data show means ± SD, n=5 fields, 20-35 665 
+
+cells per field, from two independent experiments. Scale bar: 10 μm 666 
+
+667 
+
+MIRO1, a Rho-family type GTPase, is required for enhanced MDV biogenesis in p62 KD 
+
+668 
+
+cells 669 
+
+Next, we wanted to understand what regulates MDV biogenesis in p62 KD cells. Along with 670 
+
+PRKN1 and DRP1, another family of proteins that have recently been implicated in MDV 671 
+
+biogenesis is MIRO1/2 (50). At the same time, SNX9 is reported to help in the trafficking of 672 
+
+MDVs (38). We knocked down DRP1 (DNML1), SNX9, MIRO1 (RHOT1), and MIRO2 673 
+
+(RHOT2) in separate experiments using WT and p62 KD cells, and screened for conditions that 674 
+
+could reverse the decline in Mtb CFU in the p62 KD cells (Fig. S6A). Out of these, siMIRO1 675 
+
+and siMIRO2 were able to reverse the Mtb growth in the p62 KD cells back to the levels seen in 676 
+
+the WT cells (Fig. S6B-C, Fig. 7H). We next investigated whether the increase in the 677 
+
+bacterial CFU in MIRO1/2 knockdown cells was due to a direct role of MIRO1 and 2 in 678 
+
+MDV biogenesis. We observed a significant decline in the cellular MDV count in p62 KD cells 679 
+
+where MIRO1 or MIRO2 were knocked down (Fig. 7I). This also led to a significant decline 680 
+
+in the recruitment of TOM20 to Mtb phagosomes (Fig. 7J), which in turn led to reduced 681 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 25 
+
+recruitment of RAB7 on Mtb phagosomes in the MIRO1 or MIRO 2 knocked down p62 KD 
+
+682 
+
+cells (Fig. 7K). Thus, MIRO1/2-mediated MDV biogenesis in p62 KD cells contributes to 683 
+
+enhanced TOM20 and RAB7 recruitment to Mtb -phagosomes. 684 
+
+685 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 26 
+
+# Discussion 686 
+
+Autophagy adaptors recognise and target the cargos for autophagy-mediated degradation (12). 687 
+
+The damaged mitochondria are one of the significant cellular cargos that must get degraded via 688 
+
+mitophagy to ensure mitochondrial quality and cellular health (51). Since the autophagy 689 
+
+adaptors also play a crucial role in targeting the bacterial pathogens for lysosomal degradation, 690 
+
+in this study, we wanted to study the distribution of the autophagy adaptors between 691 
+
+mitochondria, the cellular cargo and Mtb , the pathogenic cargo, in the infected macrophages. 692 
+
+Understanding this functional segregation of the autophagy adaptors is crucial since several 693 
+
+host-directed therapies against tuberculosis envisage targeting the autophagy (52). However, 694 
+
+most autophagy regulators do not distinguish between the homeostatic and defence arm of 695 
+
+autophagy, potentially limiting the evolution of these regulators to clinically acceptable uses. 696 
+
+Our data suggest p62/SQSTM1 as the major autophagy adaptor recruited to both Mtb and 697 
+
+mitochondria in the infected macrophages. Contrary to our hypothesis, infection with Mtb did 698 
+
+not significantly alter, except for a minor change in OPTN, recruitment and the distribution of 699 
+
+autophagy adaptors on mitochondria. However, irrespective of their high or low association 700 
+
+with the Mtb or mitochondria, individual depletion of each autophagy adaptor, except for 701 
+
+NDP52, resulted in reduced bacterial survival in THP-1 macrophages. These early results 702 
+
+showed that autophagy adaptors in the human macrophages regulate some housekeeping 703 
+
+functions that crisscross with the anti-bacterial pathways. Moreover, it was also apparent that 704 
+
+p62/SQSTM1 regulates some distinct downstream pathways in humans versus other 705 
+
+vertebrates like mice and zebrafish. That is because, in the zebrafish model, p62/SQSTM1 and 706 
+
+OPTN were previously shown to play a critical role in host resistance to mycobacterial 707 
+
+infections (22). In mice, there are reports of an inverse correlation between Mtb -p62/SQSTM1 708 
+
+colocalisation and the bacterial CFU in the BMDMs (53). In yet another study, the absence of 709 
+
+p62/SQSTM1 in mouse BMDMs did not affect Mtb CFU (54). The same study reported that 710 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+27 
+
+starvation, which reduced Mtb CFU in the WT cells failed to do the same in the absence of 711 
+
+p62/SQSTM1(54). In our experiments, mouse macrophages, knocking down autophagy 712 
+
+adaptors in BMDM ( p62 and Optn ) or knocking out in HOXB8-derived macrophages (p62), 713 
+
+did not show any impact on intracellular Mtb growth, which is consistent with earlier reports 714 
+
+(54). In addition, even in vivo studies in p62 -/- animals did not show any significant impact on 715 
+
+Mtb survival or killing (23). Curiously emerging evidences suggest that p62/SQSTM1could 716 
+
+have tissue-specific functions (55). How p62/SQSTM1 regulates the anti-bacterial pathways 717 
+
+in a host-specific manner has significant implications for developing new host-directed therapy 718 
+
+against tuberculosis. 719 
+
+Autophagy, through mitophagy, ensures the maintenance of mitochondrial quality -a serious 720 
+
+challenge for the cells with respiring mitochondria since the process of oxidative 721 
+
+phosphorylation itself generates free radicals that can damage the mitochondria (17). The 722 
+
+damaged mitochondria must get degraded via mitophagy to keep cellular apoptotic pathways 723 
+
+under check (56). The damaged mitochondria can also cause bacterial killing, primarily 724 
+
+through enhanced redox stresses (32, 57). While p62/SQSTM1 was highly recruited on 725 
+
+mitochondria in the macrophages, we did not observe any loss to mitochondrial quality in 726 
+
+p62 KD cells. However, loss of p62/SQSTM1 in human cortical neurons is associated with an 727 
+
+aberrant mitochondrial functionality (58). In HeLa cells, only OPTN, NDP52, and, to some 728 
+
+extent, TAX1BP1 were essential for the mitophagy (59). Therefore, it is possible to have 729 
+
+tissue/species-specific functions for each autophagy adaptor. Despite maintaining MQC, Mtb 730 
+
+witnessed enhanced oxidative stress in the p62 KD cells; which also contributed to the reduced 731 
+
+bacterial survival in these cells. The increased redox stress could also be due to the proven role 732 
+
+of p62/SQSTM1 in regulating the KEAP1-NRF2 antioxidant pathway (60, 61). 733 
+
+Interestingly, in addition to its role in mitophagy, p62/SQSTM1 also regulates peroxisome 734 
+
+quality control by recognising ubiquitinated peroxisome protein PEX5 and targeting the 735 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+28 
+
+peroxisomes for pexophagy (62). We cannot rule out peroxisomal dysfunction in p62 KD cells, 736 
+
+which could also contribute towards enhanced oxidative stress witnessed by the Mtb . The 737 
+
+involvement of pexophagy in regulating redox stress during mycobacterial infections is only 738 
+
+beginning to emerge and needs further explorations (63). 739 
+
+The more exciting discovery in this study was the determination that in the absence of 740 
+
+p62/SQSTM1, these cells maintained mitochondrial quality through MDV biogenesis. As 741 
+
+described by others, MDV biogenesis takes over in the absence of mitophagy to ensure MQC 742 
+
+(37). The MDV biogenesis in p62 KD cells was independent of infection, suggesting the 743 
+
+homeostatic role of this process. Targeting MDVs to the lysosome for degradation ensures 744 
+
+MQC and depends on RAB7 (64). Since MDV biogenesis in p62 KD cells is independent of 745 
+
+infection, we believe that RAB7 recruitment to Mtb phagosome occurs inadvertently during 746 
+
+the transit of TOM20+-MDVs towards the lysosomes. Phagosome maturation arrest, or 747 
+
+inhibition of xenophagy flux, caused by Mtb, specifically acts via the exclusion of RAB7 from 748 
+
+the Mtb -containing phagosomes and autophagosomes (5) (45). Since RAB7 recruitment was 749 
+
+the effector that impacted Mtb survival in p62 KD cells, depletion of RAB7 rescued Mtb survival 750 
+
+only in p62 KD cells. Mechanistically, RAB7 depletion reduced the lysosomal targeting of Mtb 751 
+
+and rescued Mtb from the redox stress, coinciding with a reduction in TOM20 recruitment to 752 
+
+the Mtb phagosomes. Thus, MDV recruitment to Mtb phagosomes facilitated bacterial 753 
+
+targeting to the lysosomes and also brought redox mediators to the bacterial compartments. At 754 
+
+least one report in the literature suggests redox mediators brought in by MDVs to the 755 
+
+Staphylococcus -containing phagosomes, which helps in the bacterial killing (46). 756 
+
+Could MDV biogenesis be blocked in p62 KD cells to rescue Mtb survival? Among many 757 
+
+regulators, Parkin, DRP1 and MIRO1/MIRO2 are implicated in MDV biogenesis 758 
+
+(39, 50) . Depleting Parkin in p62 KD cells provided yet another intriguing insight. In the absence 759 
+
+of Parkin, MQC was affected in both WT and p62 KD cells, as expected from what is known 760 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+29 
+
+about Parkin’s function in MQC (64). However, this also led to a further decline in bacterial 761 
+
+survival in WT cells, contrary to earlier results using PRKN -/- BMDMs (65). Crucially, in the 762 
+
+p62 KD cells, the loss of Parkin synergised and further enhanced bacterial killing. Contrary to 763 
+
+the perceived role of Parkin in MDV biogenesis, loss of Parkin in p62 KD cells had no impact 764 
+
+on TOM20 recruitment to Mtb phagosomes and lysosomes. In fact, increased Mtb killing in 765 
+
+Parkin depleted condition was more consistent with other studies that show possible negative 766 
+
+influence of Parkin on MDV formation (50, 66). In contrast, knocking down MIRO1 and 767 
+
+MIRO2 in p62 KD cells inhibited MDV biogenesis, reduced TOM20 and RAB7 recruitment on 768 
+
+Mtb phagosomes and rescued intracellular Mtb CFU. It appears that cells can activate yet 769 
+
+another MQC mechanism in p62 KD cells independent of MIRO1/2. Further studies are needed 770 
+
+to understand the complex interplay between diverse MQC pathways. Collectively, we 771 
+
+conclude that the cumulative effect of lysosomal targeting and mitochondrial damage 772 
+
+compromises bacterial survival in p62 KD cells (Fig. 8). 773 
+
+This study provides an as-yet unrecognised crosstalk between mitochondrial quality control 774 
+
+and the phagosome maturation pathway. The reversal of phagosome maturation reported here 775 
+
+is unprecedented and underscores the need to dissect further the MQC pathways vis-à-vis anti-776 
+
+bacterial pathways in the host. We propose that these results provide novel ways to target MQC 777 
+
+to achieve bacterial killing as a potential host-directed therapy strategy. 778 
+
+779 
+
+Fig. 8. Crosstalk between mitochondrial quality control mechanisms and lysosomal 780 
+
+targeting of Mtb in macrophages. Mitochondrial depolarisation triggers the mitophagy 781 
+
+process by recruiting autophagy adaptor p62/SQSTM1 on mitochondria. p62/SQSTM1 binds 782 
+
+the LC3B to form the mitophagosome, which fuses with lysosomes to clear the damaged 783 
+
+mitochondria. In the p62 KD cells, the loss of p62/SQSTM1 impairs the mitophagy process and 784 
+
+triggers an alternative mitochondrial quality control pathway, i.e., the biogenesis of MDVs. 785 
+
+MIRO1 and MIRO2 drive the formation of these vesicles from the outer mitochondrial 786 
+
+membrane enriched with TOM20 (TOM20+-MDVs). They bud off from the damaged areas of 787 
+
+mitochondria to fuse with lysosomes in a RAB7-dependent process. In WT macrophages, 788 
+
+virulent strains of Mtb inhibit the RAB5 to RAB7 conversion, thereby preventing the fusion of 789 
+
+early bacterial phagosomes/autophagosomes with the lysosomes, a process known as 790 
+
+phagosome maturation arrest. In the p62 KD condition, the TOM20 +-MDVs get recruited on Mtb 791 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 30 
+
+phagosomes/autophagosomes that inadvertently also help recruitment of RAB7 to the Mtb -792 
+
+phagosomes, thereby overcoming the phagosome maturation arrest. RAB7 recruitment to the 793 
+
+phagosomes enhances the lysosomal targeting and Mtb killing in these cells. Both MDVs and 794 
+
+damaged mitochondria contribute to the redox-mediated killing of Mtb and complement the 795 
+
+lysosomal killing of Mtb .796 
+
+797 
+
+798 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+31 
+
+# Materials and Methods 799 
+
+Ethics Statement 800 
+
+The Institutional Ethics Committee, ILBS (IEC/2020/81/MA03) and ICGEB 801 
+
+(ICGEB/IEC/2020/25, version 3) approved studies on healthy human samples (healthy adults 802 
+
+following informed consent). For BMDM experiments, animals were approved by IAEC of 803 
+
+ICGEB (ICGEB/IAEC/18092021/CI-15). 804 
+
+805 
+
+Cell Culture 806 
+
+Human monocytic cell line THP-1 was procured from American Type Culture Collection 807 
+
+(ATCC) and cultured in RPMI 1640 medium (Cell Clone, CC3014) along with 10% Fetal 808 
+
+Bovine Serum (Gibco). Cells were regularly checked for mycoplasma contamination. The cells 809 
+
+were incubated in a humidified 5% CO 2 chamber at 37 °C. THP-1-derived macrophages were 810 
+
+obtained by treating THP-1 cells with 20 ng/ml phorbol myristate acetate (Sigma, P8139) for 811 
+
+24 hours, followed by washing and maintenance in complete media. Human MDMs (hMDMs) 812 
+
+were isolated from human PBMCs and separated from healthy human donors' blood using 813 
+
+PolymorphPrep (PROGEN,1895) layering and centrifugation. The heparinised blood was 814 
+
+layered on PolymorphPrep in a 1:1 ratio and centrifuged at 500g for 45 min at 25°C. The 815 
+
+interface containing PBMC was isolated carefully and treated with RBC lysis buffer. 816 
+
+Subsequently, cells were washed twice with DPBS. PBMCs were diluted in 10% RPMI 1640 817 
+
+media to a concentration of 1 × 10 6 cells/ml. Cells were put in a six-well cell culture plate and 818 
+
+incubated for 4 hours at 37°C in a humidified 5% CO 2 chamber. Non-adherent cells were 819 
+
+removed, followed by two washes with RPMI media. Complete RPMI media containing 820 
+
+50 ng/ml recombinant human M-CSF (R & D systems, 216-MC-025) was added and cells were 821 
+
+allowed to differentiate for a week into macrophages in a humidified 5% CO 2 incubator at 822 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+32 
+
+37 °C. For BMDMs, bone marrow was isolated from the femur and tibia (hind limb) of mice 823 
+
+(6-8 wk old, female, C57BL/6 mice) and passed through a 23G needle. The RBCs were lyzed 824 
+
+by RBC lysis buffer and then washed with 1x PBS. The isolated Bone marrow cells were 825 
+
+cultured in 10% DMEM containing 20% L929 supernatant for 5-7 days. All mice were housed 826 
+
+in the Bio experimentation animal facility in a sterile environment. 827 
+
+Generation of Hoxb8 progenitors cell lines and differentiation in 828 
+
+macrophages .829 
+
+830 
+
+The method was previously described (67). Briefly, BM cells were collected from the femurs 831 
+
+of 8-week-old mice and separated on a Ficoll gradient. Cells were resuspended in RPMI 832 
+
+containing 15% FBS and supplemented with 15% of Flt3L and 30% GM-CSF containing 833 
+
+supernatant. After 2 days of cell culture, cells were collected and resuspended in RPMI 834 
+
+supplemented with 10% FBS, 1 μM β-estradiol (MilliporeSigma, E-2758), 1% gentamicin and 835 
+
+infected with MSCV herad-3HAHOXB8 retroviral particles. For 1-month, cells were 836 
+
+dispensed in fresh medium every 3–4 days and transferred into new wells. After this period, 837 
+
+cells were expanded in Hoxb8 Medium supplemented with 15% Flt3L supernatant. For 838 
+
+subsequent differentiation experiments, cells were washed twice with warm PBS containing 839 
+
+1% FBS and resuspended in a concentration of 0.5 × 10 5 cells/mL in IMDM containing 20% 840 
+
+M-CSF. On day 4 medium was replaced with a fresh one, and 1/3 of starting media was added 841 
+
+on day 6. Differentiated cells were used between days 7 and 8. Flow cytometry confirmed 842 
+
+homogeneous differentiation between different genotypes using F4/80 and CD11b markers. 843 
+
+Mycobacterium tuberculosis culture and infection 844 
+
+Mycobacterial strain H37Rv was obtained from Colorado State University. The mCherry-845 
+
+H37Rv was made using pMSP12: mCherry plasmid (Addgene No. 30169). H37Rv culture was 846 
+
+grown in Middlebrook 7H9 (BD, 271310) media supplemented with 10% ADC (Albumin 847 
+
+Dextrose Catalase, BD, 211887), 0.4% glycerol, and 0.05% Tween 80 until the mid-log phase. 848 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+33 
+
+The bacteria were then pelleted down by spinning at 4000 rpm for 5 min, washed with RPMI 849 
+
+1640 and their single-cell suspension was obtained by passing the culture through needles of 3 850 
+
+different gauge (G) sizes in the following way- 23 G (7 times), 26 G (5 times) and 30 G (3 851 
+
+times). For Mtb quantification, OD600 was considered equivalent to 100 million bacteria. The 852 
+
+required number of bacteria was added onto the seeded cells in complete media at MOI of 1:10, 853 
+
+followed by spinning the plates at 800 rpm for 5 min. After 4 hrs, 200ug/ml amikacin sulphate 854 
+
+(Sigma, A2324) treatment was done for 2 hrs. Subsequently, cells were washed, fresh media 855 
+
+was added, and cells were kept at 37°C for the desired time point of processing. Thus, the 856 
+
+duration to complete the infection protocol was 6 hours, and the time point immediately after 857 
+
+the amikacin step was considered 0 hours post-infection (hpi). All Mtb work was carried out in 858 
+
+the Tuberculosis Aerosol Challenge Facility (TACF), a national BSL3 facility for tuberculosis 859 
+
+research. 860 
+
+861 
+
+CFU Experiment 862 
+
+For CFU experiments, the cells were seeded in 96-well cell culture plates. At desired time 863 
+
+point, culture media was removed, and cells were washed with 1X PBS. Cells were lysed with 864 
+
+100 μl of 0.06% SDS lysis buffer for 10 minutes at room temperature. The lysate was then 865 
+
+diluted in 7H9 media, and 10μl of this sample was plated on 7H11 agar (BD, 8801671) square 866 
+
+plates supplemented with 10 % OADC (BD, 211886). Plates were dried and incubated at 37°C 867 
+
+humidified incubator for a minimum of two weeks or till the appearance of Mtb colonies. CFUs 868 
+
+were calculated by multiplying the actual colony count with the dilution factor and the volume 869 
+
+of the diluted sample used for plating. For the replication clock experiment, pBP10 containing 870 
+
+H37Rv was used for infection, and at the designated time points, CFU plating was performed 871 
+
+parallelly on normal or kanamycin-containing 7H11-OADC plates. The fraction of CFU 872 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+34 
+
+obtained in Kan + plates compared to the Kan - plates was calculated to determine the %pBP10 +
+
+873 
+
+Mtb .874 
+
+875 
+
+Flow Cytometry Assays 876 
+
+Cells were seeded in a 12-well culture plate for all the flow cytometry experiments. The H37Rv 877 
+
+used was labelled with CellVue Claret Far red dye (Sigma, MINCLARET-1KT) according to 878 
+
+the manufacturer’s protocol. After processing the samples at the desired time, 500 μl of 1X 879 
+
+PBS was added to the wells, and cells were scrapped off using a scrapper and added to fresh 880 
+
+round bottom polystyrene FACS tubes. The samples were immediately acquired in BD 881 
+
+FACSAria Flow cytometer. For most experiments, 30000 events were captured and analysed 882 
+
+by FlowJo v10 software. The assay for DCFDA (10 μM, 30 minutes) (Sigma, D6883), TMRE 883 
+
+(100 μM, 30 minutes) (Invitrogen, T669), Mitotracker Green (200 nM, 40 minutes) 884 
+
+(Invitrogen, M7514), and MitoSOX Red (5 μM, 20 minutes) (Invitrogen, M36008) were 885 
+
+performed according to manufacturer’s protocol. 886 
+
+887 
+
+Immunoblotting 888 
+
+For the lysate preparation, cells were seeded in a 6-well cell culture plate, and at the desired 889 
+
+time, cells were washed with ice-cold 1X PBS. The lysis of the cells was performed by 890 
+
+incubating them with the lysis solution containing RIPA buffer (Sigma-Aldrich, R0278) and 891 
+
+1X Protease Arrest (G −Biosciences) for 20 minutes on ice. The lysate was collected in 892 
+
+microcentrifuge tubes and centrifuged at 6000 g for 10 minutes at 4 °C. The supernatant 893 
+
+(cytoplasmic extract) was collected, and protein quantification was done by Bradford Assay. 894 
+
+The protein sample was mixed with 6× loading dye, and denaturation was done at 95 °C for 10 895 
+
+minutes. The protein sample was subjected to SDS-PAGE for separation and blotted onto the 896 
+
+nitrocellulose membrane (BIO-RAD) using BIO-RAD Trans-Blot Turbo Transfer System. 897 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+35 
+
+Blocking was performed for an hour with Odyssey blocking buffer (LI-COR Biosciences) and 898 
+
+1X PBS in the ratio of 1:1 at room temperature. Blots were stained overnight with primary 899 
+
+antibody at 4 °C and then with secondary antibody for 1.5 hours at RT, with good washes with 900 
+
+1X PBST in between. The IR-conjugated secondary antibodies anti-mouse IR780 (926–32210) 901 
+
+and anti-rabbit IR780 (925–68071) were obtained from LI-COR Biosciences. The dilutions of 902 
+
+the antibodies were made according to the supplier’s protocol in the Odyssey blocking buffer. 903 
+
+The blots were scanned with the Odyssey Infra-Red Imaging system (LI-COR Biosciences). 904 
+
+905 
+
+siRNA Transfection 906 
+
+Cells were either transfected with control or specific siRNA using Dharmafect-2 reagent 907 
+
+(Dharmacon Inc, T-2002-02) according to the manufacturer’s protocol. 50nM siRNA was 908 
+
+added to cells at 0-hour post infection for 24 hours. All the siRNA used in our study were 909 
+
+siGenome siRNA SmartPool (Dharmacon Inc). The following were used: p62/SQSTM1 (M-910 
+
+010230-00-0005), NDP52 (M-010637-01-0005), OPTN (M-016269-02-0005), TAX1BP1 (M-911 
+
+016892-01-0005), NBR1 (M-010522-01-0005), RAB7A (M-010388-00-0005), PARKIN 912 
+
+(PRKN) (M-003603-00-0005), MIRO1 (RHOT1) (M-010365-01-0005), MIRO2 (RHOT2) 913 
+
+(M-008340-01-0005), DRP1 (DNM1L) ( M-012092-01-0005), and SNX9 (M-017335-02-914 
+
+0005). In BMDM, mouse-specific p62/sqstm1 (M-047628-01-0005) and optn ( M-041705-01-915 
+
+0005) siRNA was used. 916 
+
+917 
+
+Confocal Microscopy 918 
+
+For microscopy experiments, cells were seeded on the sterile coverslips in a 24-well tissue 919 
+
+culture plate. All the staining steps were performed at room temperature. At the requisite time, 920 
+
+cells were fixed with 4% PFA (Sigma, 158127) for 20 minutes, followed by 2 washes with 1X 921 
+
+PBS. The cells were permeabilised with 0.2% Triton-X100 (Sigma, T8787) (in 1X PBS) for 922 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+36 
+
+15 minutes with two subsequent washes with 1X PBS. Blocking was performed with the buffer 923 
+
+of 3% BSA (Sigma, A7906) and 0.5% Tween 20 (Sigma, P1379) in 1X PBS for 1 hour. The 924 
+
+cells were stained with respective primary antibodies for 2 hours and then washed twice with 925 
+
+1X PBST. This was followed by staining with individual secondary antibodies tagged with the 926 
+
+fluorophore of choice for 1 hour. Both primary and secondary antibodies were made in the 927 
+
+blocking buffer at the required dilution. The cells were washed twice with 1X PBS before 928 
+
+mounting the coverslips on glass slides with ProLong Gold anti-fade reagent (Life 929 
+
+Technologies, P36930). Confocal images were acquired with a Nikon A1R microscope 930 
+
+equipped with 100X/1.4 NA plan-apochromat VC, DIC N2 objective lens. The analysis was 931 
+
+performed on Imaris 9.6 imaging software using several tools like deconvolution, 3D 932 
+
+reconstruction and shortest distance calculation. The research for the roGFP2 redox sensor was 933 
+
+conducted with Nikon NIS Element. For MDVs spot analysis, Deep learning-based TruAI tool 934 
+
+of cellSens Imaging software was used. 935 
+
+936 
+
+The primary antibodies used were: α-p62/SQSTM1 (Abcam, ab155686), α-OPTN (Abcam, 937 
+
+ab23666), α-NDP52 (Abcam, ab68588), α-TAX1BP1 (Abcam, ab121812), α-NBR1 (Novus 938 
+
+Biologicals, NBP1-71703), α-MAP1LC3B (NB100-2200), α-BNIP3 (Abcam, ab109362), α-939 
+
+FUNDC1 (ab74834), α-NIX (Abcam, ab8399), α-TOM20 (Abcam, ab56783, ab78547), α-940 
+
+Parkin (Novus Biologicals, NBP2-67017), α-HSP60 (Abcam, ab13532), α-SOD2 (Novus 941 
+
+Biologicals, NB100-1992), α-PDHA1 (Abcam, ab110330), α-DRP1 (Abcam, ab184247), α-942 
+
+SNX9 (Abcam, ab181856), α-ECSIT (Novus Biologicals, NBP1-918858), α-LAMP1 (Santa 943 
+
+Cruz Biotechnology, Sc-20011), MIRO1 (Novus, NBP1-89011), MIRO-2 (Novus, NBP1-944 
+
+88982), α-RAB7 (Abcam, ab50533), α-CATHEPSIN-D (Santa Cruz Biotechnology, Sc-945 
+
+10725), α-Ubiquitin (Abcam, ab134953), α-MCU (Cell Signaling Technology, D2Z3B), α-946 
+
+TUBULIN (Abcam, ab6046), α-ACTIN (Abcam, ab8226), α-GAPDH (Abcam, ab9485) 947 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+37 
+
+All secondary antibodies used were from Invitrogen, conjugated with Alexa Flour dye: anti-948 
+
+mouse Alexa Fluor 405 (A31553), anti-mouse Alexa Fluor 488 (A28175), anti-mouse Alexa 949 
+
+Fluor 568 (A11031), anti-mouse Alexa Fluor 647 (A21235), anti-rabbit Alexa Fluor 405 950 
+
+(A31556), anti-rabbit Alexa Fluor 488 (A11034), anti-rabbit Alexa Fluor 568 (A11011), anti-951 
+
+rabbit Alexa Fluor 647 (A21245). CellROX deep red reagent (C10422) and LysoTracker green 952 
+
+(L7526) were from Invitrogen. For microscopy experiments, mCherry-H37Rv was used. 953 
+
+954 
+
+p62 KD THP-1 monocytic cell line generation 955 
+
+The p62 KD cells were generated using the CRISPR/Cas9 system. The guide RNA was designed 956 
+
+against exon 3 of p62 and cloned into a gRNA cloning vector plasmid (Addgene No. 41824). 957 
+
+The Cas9 enzyme encoding hCas9 plasmid was from Addgene (No. 41815). Both the plasmids 958 
+
+were co-transfected into THP-1 monocytes using the Invitrogen Neon Transfection system 959 
+
+according to the manufacturer’s protocol. At 24 hours post-transfection, the cells were selected 960 
+
+on Neomycin (Sigma, G418 A1720) at 750ug/ml for 21 days, followed by checking the absence 961 
+
+of p62 in knockdown cells by microscopy and immunoblotting. 962 
+
+963 
+
+RNA Sequencing 964 
+
+Total RNA was extracted from THP-1 macrophages, following the double extraction 965 
+
+protocol: RNA isolation by acid guanidinium thiocyanate-phenol-chloroform 966 
+
+extraction (TRIzol) followed by a Qiagen RNeasy Micro clean-up procedure. RNA was 967 
+
+analysed on Agilent Bioanalyser for quality assessment with RNA Integrity Number (RIN) 968 
+
+ranging from 7.5 to 10 and a median of RIN 9.8. cDNA libraries were prepared using 2 ng of 969 
+
+total RNA using the SMARTSeq v2 protocol with the following modifications: 1. Addition of 970 
+
+20 μM TSO; 2. Use of 200 pg cDNA with 1/5 reaction of Illumina Nextera XT kit. The length 971 
+
+distribution of the cDNA libraries was monitored using a DNA High Sensitivity Reagent Kit 972 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+38 
+
+on the Perkin Elmer Labchip. All samples were subjected to an indexed paired-end sequencing 973 
+
+run of 2x151 cycles on an Illumina HiSeq 4000 system (28 samples/lane). 974 
+
+RNA-Seq analysis 975 
+
+Reads were quality filtered using Trimmomatic (v.0.39, LEADING:10 TRAILING:10 976 
+
+SLIDING WINDOW:4:15 MINLEN:75). They were assessed for quality using FastQC 977 
+
+(v.10.1) )] and visualised with MultiQC (v.1.9). Salmon (v.1.8, –numGibbsSamples 30) was 978 
+
+used to quantify quality filtered reads against the human genome (GRCh38, primary assembly) 979 
+
+with Gencode annotation (v.40). Profiles were imported using tximeta (v.1.10) and 980 
+
+SummarizedExperiment (v.1.22) which were then summarised to gene-level expression. Non-981 
+
+coding genes were filtered out, and the following gene biotypes were retained: protein-coding, 982 
+
+pseudogenes (translated and transcribed), Immunoglobulin (IG) and T cell receptor (TCR) 983 
+
+genes). Dataset was further filtered to retain only those genes whose expression was detected 984 
+
+in at least 3 samples. Statistical analysis was done using swish methodology from fishpond 985 
+
+(v.1.8) (68) and significantly differentially expressed genes (DEGs) were defined based on 986 
+
+qvalue ≤ 0.1 and absolute log 2 fold change ≥ 1. Heatmap of the DEGs was generated with 987 
+
+heatmap (v.1.0.12) using mean z-scaled normalised scaled TPM values (summarised to gene 988 
+
+level using summarizeToGene() function) and clustered based on Euclidean distance and 989 
+
+Ward.D2 methodology. Enrichment analysis was done separately on overexpressed and 990 
+
+repressed DEGs from each pairwise comparison using enrichR (v.3.0) (69) with KEGG Human 991 
+
+2021 and Gene Ontology (GO) (70) (Biological Process (BP), Cellular Component (CC) and 992 
+
+Molecular Function (MF)) 2021 database. Mitochondrial DEGs and their associated pathways 993 
+
+were identified using Mitocarta 3.0 (71). Cytokines were identified from the comprehensive 994 
+
+list as described by Pro et al.(72). Figures were generated using ggplot2 (v.3.3.5). Analyses 995 
+
+were done in R statistical software (v.4.1). 996 
+
+997 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+39 
+
+Mrx1-roGFP2 Redox Sensor Assay 998 
+
+H37Rv cultures were electroporated with Mrx1-roGFP2, and colonies were selected on a 999 
+
+hygromycin 7H11 plate.THP-1 macrophages were infected with Mrx1-roGFP2-H37Rv at 1000 
+
+M.O.I of 10. At the requisite time, cells were washed with 1X PBS, with subsequent treatment 1001 
+
+of 10 mM NEM (N-ethylmaleimide, Sigma, E3876) for 10 minutes at 37 °C. To the positive 1002 
+
+and negative control groups, 5 mM CHP (Cumene hydroperoxide, Sigma) and 10 mM DTT 1003 
+
+(Dithiothreitol, Sigma, D0632) were added respectively for 5 minutes at 37 °C. The cells were 1004 
+
+washed twice with 1X PBS, followed by NEM-PFA fixing. For FACS, 2% PFA was used, 1005 
+
+whereas for confocal microscope acquisition, 4% PFA was used. 1006 
+
+1007 
+
+Extracellular flux analysis 1008 
+
+At 24 hours post-infection, THP-1 macrophages were scrapped off from a 6-well culture plate, 1009 
+
+and 4 x 10 4 cells were seeded in Cell-Tak (Corning, 354240) coated Agilent Seahorse XFp cell 1010 
+
+culture mini plate (Agilent, Santa Clara, CA). The plates were centrifuged at 200g for 1 min 1011 
+
+with minimum deceleration. The plates were parafilm-wrapped and incubated in a non-CO 21012 
+
+incubator at 37°C for 25-30 minutes. After adding 130μl warm assay media and incubation for 1013 
+
+for 15-25 minutes at 37°C, the plates were ready for the assay. The Agilent Seahorse XFp 1014 
+
+analyser was used to assess the oxygen consumption rate. The modulators included in this assay 1015 
+
+were oligomycin (1.5 μM, Sigma, #75351), Carbonyl cyanide-4 (trifluoromethoxy) 1016 
+
+phenylhydrazone (FCCP) (1 μM; Sigma, C2920), Rotenone (0.5 μM; Sigma, R8875) and 1017 
+
+antimycin A (0.5 μM; Sigma, A8674) (73). Initially, the baseline OCR of the cells was 1018 
+
+measured, from which the basal respiration was determined by eliminating the non-1019 
+
+mitochondrial respiration. Maximal respiration was calculated by subtracting the non-1020 
+
+mitochondrial respiration from the maximal OCR after FCCP addition. Non-mitochondrial 1021 
+
+respiration represents the minimum OCR after rotenone and antimycin A treatment. 1022 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+40 
+
+1023 
+
+mtDNA/nDNA 1024 
+
+The cellular DNA was extracted from the DNeasy kit (Qiagen) according to the manufacturer’s 1025 
+
+protocol. To quantify the mtDNA/nDNA ratio, qPCR was performed to amplify one gene from 1026 
+
+the mitochondrial genome (mt CO1 ) and one gene from the nuclear genome ( RPL13A ). Primer 1027 
+
+sequences were as: mt CO1 _forward: 5′-CAGGAGTAGGAGAGAGGGAGGTAAG-3′, 1028 
+
+mt CO1_ reverse: 5′-TACCCATCATAATCGGAGGCTTTGG-3′; RPL13A _forward:5′-1029 
+
+CGCCCTACGACAAGAAAAAG-3′, and RPL13A _reverse: 5′ 1030 
+
+CCGTAGCCTCATGAGCTGTT-3′ 1031 
+
+1032 
+
+Inhibitor or Activators treatment 1033 
+
+The reagents were used according to the following conditions before processing the samples: 1034 
+
+Bafilomycin A1 (B1793) 100 nM for 3 hrs, Carbonyl Cyanide m-Chlorophenylhydrazine 1035 
+
+(CCCP, Sigma, C2759): 5 μM for 12 hours for CFU and 20 μM for 20 min for mitochondrial 1036 
+
+depolarisation assay (TMRE), Nigericin (Sigma, N7143-5MG): 2 μM for 24 hours, N-acetyl 1037 
+
+cysteine (NAC, Sigma, A7250), 2mM for 24 hours. 1038 
+
+1039 
+
+RT-PCR 1040 
+
+Total RNA was extracted at the required time point from THP-1 macrophages using MDI total 1041 
+
+RNA Miniprep kit (MTRK250) according to the manufacturer’s protocol. cDNA was 1042 
+
+synthesised from 500 ng of total RNA by reverse transcriptase PCR using a BIO-RAD iScript 1043 
+
+cDNA synthesis kit (170–8891). The qPCR was set using the mixture of cDNA sample, SYBR 1044 
+
+green dye (QuantiNova) and desired primers, where 18s rRNA was used as an internal control. 1045 
+
+The acquisition was made on the Bio-Rad CFX 96 Real-time PCR system. The primers used 1046 
+
+are Fw_p62/SQSTM1: 5’ -GCACCCCAATGTGATCTGC-3’, 1047 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+41 
+
+Rv_p62/SQSTM1:5’-CGCTACACAAGTCGTAGTCTGG-3’, 1048 
+
+Fw_NBR1:5’ -AGGAGCAAAACGACTAGCTGC-3’, 1049 
+
+Rv_NBR1:5’-TCTGGGGTCTTCATGTCTGAT-3’, 1050 
+
+Fw_NDP52:5’-ATTTCATCCCTCGTCGAAAGGA-3’, 1051 
+
+Rv_NDP52:5’-TGAAGGTGTAATACTCACGGGTT-3’, 1052 
+
+Fw_OPTN:5’-CCAAACCTGGACACGTTTACC-3’, 1053 
+
+Rv_OPTN:5’-CCTCAAATCTCCCTTTCATGGC-3’, 1054 
+
+Fw_TAX1BP1:5’-TAAAGGAGCAACTTCGTAAAGCA-3’, 1055 
+
+Rv_TAX1BP1:5’-CTGCCATCGTTCTGTCTCGT-3’, 1056 
+
+Fw_MFN1:5’-TGGCTAAGAAGGCGATTACTGC-3’, 1057 
+
+Rv_MFN1:5’-TCTCCGAGATAGCACCTCACC-3’, 1058 
+
+Fw_MFN2:5’-CTCTCGATGCAACTCTATCGTC-3’, 1059 
+
+Rv_MFN2:5’-TCCTGTACGTGTCTTCAAGGAA-3’, 1060 
+
+Fw_DRP1:5’-CTGCCTCAAATCGTCGTAGTG-3’, 1061 
+
+Rv_DRP1:5’-GAGGTCTCCGGGTGACAATTC-3’, 1062 
+
+Fw_OPA1:5’-TGTGAGGTCTGCCAGTCTTTA-3’, 1063 
+
+Rv_OPA1:5’-TGTCCTTAATTGGGGTCGTTG-3’, 1064 
+
+Fw_FIS1:5’-GTCCAAGAGCACGCAGTTTG-3’, 1065 
+
+Rv_FIS1:5’-ATGCCTTTACGGATGTCATCATT-3’, 1066 
+
+Fw_18s:5’-GCTTAATTTGACTCAACACGGGA-3’, 1067 
+
+Rv_18s: 5’-AGCTATCAATCTGTCAATCCTGTC-3’. 1068 
+
+1069 
+
+Statistical Analysis 1070 
+
+Statistical significance for comparisons between two sets of the experiment was performed 1071 
+
+using an unpaired two-tailed Student’s t-test . For multiple treatment experiments, one-way 1072 
+
+ANOVA followed by multiple comparison analyses was conducted in GraphPad PRISM 8. 1073 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+42 
+
+1074 
+
+Data availability statement: The RNAseq data presented in this study is available at 1075 
+
+GEO database under the accession ID: GSE216985. 1076 
+
+1077 
+
+1078 
+
+1079 
+
+1080 
+
+1081 
+
+1082 
+
+1083 
+
+1084 
+
+1085 
+
+1086 
+
+1087 
+
+1088 
+
+1089 
+
+1090 
+
+1091 
+
+1092 
+
+1093 
+
+1094 
+
+1095 
+
+1096 
+
+1097 
+
+1098 
+
+1099 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint 43 
+
+# Acknowledgements 1100 
+
+1101 
+
+We acknowledge Dr David Sherman for the replication clock plasmid (pBP10). We 1102 
+
+acknowledge the Tuberculosis Aerosol Challenge Facility (TACF), supported by the 1103 
+
+Department of Biotechnology, Govt of India (BT/INF/22/SP43067/2021), for all BSL3 1104 
+
+experiments. This work was supported by the Department of Science and Technology through 1105 
+
+a DST-UKIERI collaborative grant (DST/INT/UKP-136/2016, DK and SS) and partly by the 1106 
+
+Department of Biotechnology, Govt of India (BT/IC-06/003/91 and RAD-40/104/2023-MED-1107 
+
+DBT; Flagship program, DK), DBT-Wellcome Trust India Alliance Senior Fellowship 1108 
+
+(IA/S/17/1/503071, DK) and Science and Engineering Research Board (SERB), Govt of India 1109 
+
+(EMR/2016/005296, and CRG/2022/008256; DK). University of Birmingham India Institute 1110 
+
+Visiting Fellowship to S.V. and S.S.; LifeArc, Wellcome Trust and Birmingham Fellowship to 1111 
+
+S.S. and DST-INSPIRE fellowship to S.V. A.S is supported by A*STAR ID Labs, 1112 
+
+R01HL152078 and NMRC/OFIRG/may-0096. 1113 
+
+1114 
+
+Author contributions: 1115 
+
+1116 
+
+Conceptualization: DK, SS, SV 1117 
+
+Methodology: SV, ST, RS, VY, GMP, MZK, MM, SF, SH, PS, ST 1118 
+
+Investigation: SV, ST, RS, MD, VY 1119 
+
+Visualization: SV, ST, MD, DK 1120 
+
+Resources: VN, BM, MB, JSM, FB 1121 
+
+Supervision: DK 1122 
+
+Writing—original draft: DK, SV 1123 
+
+Writing—review & editing: DK, SV, ST, MD, VY, FB, AS, SS, AS 1124 
+
+1125 
+
+Competing interests: All authors declare they have no competing interests. 1126 
+
+1127 
+
+Data and materials availability: All data are available in the main text or the 1128 
+
+supplementary materials. The RNAseq raw data is available at GEO database, 1129 
+
+accession number- GSE216985 1130 
+
+1131 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+44 
+
+# References 1132 
+
+1133 
+
+1. Kumar D, Nath L, Kamal MA, Varshney A, Jain A, Singh S, et al. Genome-wide analysis 1134 
+
+of the host intracellular network that regulates survival of Mycobacterium tuberculosis. Cell. 1135 
+
+2010;140(5):731-43. 1136 
+
+2. Sachdeva K, Sundaramurthy V. The Interplay of Host Lysosomes and Intracellular 1137 
+
+Pathogens. Front Cell Infect Microbiol. 2020;10:595502. 1138 
+
+3. Gruenberg J, van der Goot FG. Mechanisms of pathogen entry through the 1139 
+
+endosomal compartments. Nat Rev Mol Cell Biol. 2006;7(7):495-504. 1140 
+
+4. Rink J, Ghigo E, Kalaidzidis Y, Zerial M. Rab conversion as a mechanism of progression 1141 
+
+from early to late endosomes. Cell. 2005;122(5):735-49. 1142 
+
+5. Via LE, Deretic D, Ulmer RJ, Hibler NS, Huber LA, Deretic V. Arrest of mycobacterial 1143 
+
+phagosome maturation is caused by a block in vesicle fusion between stages controlled by 1144 
+
+rab5 and rab7. J Biol Chem. 1997;272(20):13326-31. 1145 
+
+6. Fratti RA, Chua J, Vergne I, Deretic V. Mycobacterium tuberculosis glycosylated 1146 
+
+phosphatidylinositol causes phagosome maturation arrest. Proc Natl Acad Sci U S A. 1147 
+
+2003;100(9):5437-42. 1148 
+
+7. Huang J, Brumell JH. Bacteria-autophagy interplay: a battle for survival. Nat Rev 1149 
+
+Microbiol. 2014;12(2):101-14. 1150 
+
+8. Deretic V, Levine B. Autophagy, immunity, and microbial adaptations. Cell Host 1151 
+
+Microbe. 2009;5(6):527-49. 1152 
+
+9. Kroemer G, Marino G, Levine B. Autophagy and the integrated stress response. Mol 1153 
+
+Cell. 2010;40(2):280-93. 1154 
+
+10. Sharma V, Verma S, Seranova E, Sarkar S, Kumar D. Selective Autophagy and 1155 
+
+Xenophagy in Infection and Disease. Front Cell Dev Biol. 2018;6:147. 1156 
+
+11. Shaid S, Brandts CH, Serve H, Dikic I. Ubiquitination and selective autophagy. Cell 1157 
+
+Death Differ. 2013;20(1):21-30. 1158 
+
+12. Johansen T, Lamark T. Selective autophagy mediated by autophagic adapter 1159 
+
+proteins. Autophagy. 2011;7(3):279-96. 1160 
+
+13. Kirkin V, Rogov VV. A Diversity of Selective Autophagy Receptors Determines the 1161 
+
+Specificity of the Autophagy Pathway. Mol Cell. 2019;76(2):268-85. 1162 
+
+14. Stolz A, Ernst A, Dikic I. Cargo recognition and trafficking in selective autophagy. Nat 1163 
+
+Cell Biol. 2014;16(6):495-501. 1164 
+
+15. Randow F, Youle RJ. Self and nonself: how autophagy targets mitochondria and 1165 
+
+bacteria. Cell Host Microbe. 2014;15(4):403-11. 1166 
+
+16. Ashrafi G, Schwarz TL. The pathways of mitophagy for quality control and clearance 1167 
+
+of mitochondria. Cell Death Differ. 2013;20(1):31-42. 1168 
+
+17. Zhao RZ, Jiang S, Zhang L, Yu ZB. Mitochondrial electron transport chain, ROS 1169 
+
+generation and uncoupling (Review). Int J Mol Med. 2019;44(1):3-15. 1170 
+
+18. Guo C, Sun L, Chen X, Zhang D. Oxidative stress, mitochondrial damage and 1171 
+
+neurodegenerative diseases. Neural Regen Res. 2013;8(21):2003-14. 1172 
+
+19. Singh A, Kendall SL, Campanella M. Common Traits Spark the Mitophagy/Xenophagy 1173 
+
+Interplay. Front Physiol. 2018;9:1172. 1174 
+
+20. Kanaji S, Iwahashi J, Kida Y, Sakaguchi M, Mihara K. Characterization of the signal 1175 
+
+that directs Tom20 to the mitochondrial outer membrane. J Cell Biol. 2000;151(2):277-88. 1176 
+
+21. Gill WP, Harik NS, Whiddon MR, Liao RP, Mittler JE, Sherman DR. A replication clock 1177 
+
+for Mycobacterium tuberculosis. Nat Med. 2009;15(2):211-4. 1178 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+45 
+
+22. Zhang R, Varela M, Vallentgoed W, Forn-Cuni G, van der Vaart M, Meijer AH. The 1179 
+
+selective autophagy receptors Optineurin and p62 are both required for zebrafish host 1180 
+
+resistance to mycobacterial infection. PLoS Pathog. 2019;15(2):e1007329. 1181 
+
+23. Kimmey JM, Huynh JP, Weiss LA, Park S, Kambal A, Debnath J, et al. Unique role for 1182 
+
+ATG5 in neutrophil-mediated immunopathology during M. tuberculosis infection. Nature. 1183 
+
+2015;528(7583):565-9. 1184 
+
+24. Fritsch LE, Moore ME, Sarraf SA, Pickrell AM. Ubiquitin and Receptor-Dependent 1185 
+
+Mitophagy Pathways and Their Implication in Neurodegeneration. J Mol Biol. 1186 
+
+2020;432(8):2510-24. 1187 
+
+25. Abudu YP, Shrestha BK, Zhang W, Palara A, Brenne HB, Larsen KB, et al. SAMM50 1188 
+
+acts with p62 in piecemeal basal- and OXPHOS-induced mitophagy of SAM and MICOS 1189 
+
+components. J Cell Biol. 2021;220(8). 1190 
+
+26. Yamano K, Kojima W. Molecular functions of autophagy adaptors upon ubiquitin-1191 
+
+driven mitophagy. Biochim Biophys Acta Gen Subj. 2021;1865(10):129972. 1192 
+
+27. Liu H, Dai C, Fan Y, Guo B, Ren K, Sun T, et al. From autophagy to mitophagy: the 1193 
+
+roles of P62 in neurodegenerative diseases. J Bioenerg Biomembr. 2017;49(5):413-22. 1194 
+
+28. Huang C, Andres AM, Ratliff EP, Hernandez G, Lee P, Gottlieb RA. Preconditioning 1195 
+
+involves selective mitophagy mediated by Parkin and p62/SQSTM1. PLoS One. 1196 
+
+2011;6(6):e20975. 1197 
+
+29. Bhaskar A, Chawla M, Mehta M, Parikh P, Chandra P, Bhave D, et al. Reengineering 1198 
+
+redox sensitive GFP to measure mycothiol redox potential of Mycobacterium tuberculosis 1199 
+
+during infection. PLoS Pathog. 2014;10(1):e1003902. 1200 
+
+30. Hanson GT, Aggeler R, Oglesbee D, Cannon M, Capaldi RA, Tsien RY, et al. 1201 
+
+Investigating mitochondrial redox potential with redox-sensitive green fluorescent protein 1202 
+
+indicators. J Biol Chem. 2004;279(13):13044-53. 1203 
+
+31. Khan MZ, Singha B, Ali MF, Taunk K, Rapole S, Gourinath S, et al. Redox homeostasis 1204 
+
+in Mycobacterium tuberculosis is modulated by a novel actinomycete-specific transcription 1205 
+
+factor. EMBO J. 2021;40(14):e106111. 1206 
+
+32. West AP, Brodsky IE, Rahner C, Woo DK, Erdjument-Bromage H, Tempst P, et al. TLR 1207 
+
+signalling augments macrophage bactericidal activity through mitochondrial ROS. Nature. 1208 
+
+2011;472(7344):476-80. 1209 
+
+33. Federico A, Cardaioli E, Da Pozzo P, Formichi P, Gallus GN, Radi E. Mitochondria, 1210 
+
+oxidative stress and neurodegeneration. J Neurol Sci. 2012;322(1-2):254-62. 1211 
+
+34. Arsenijevic D, Onuma H, Pecqueur C, Raimbault S, Manning BS, Miroux B, et al. 1212 
+
+Disruption of the uncoupling protein-2 gene in mice reveals a role in immunity and reactive 1213 
+
+oxygen species production. Nat Genet. 2000;26(4):435-9. 1214 
+
+35. Pickrell AM, Youle RJ. The roles of PINK1, parkin, and mitochondrial fidelity in 1215 
+
+Parkinson's disease. Neuron. 2015;85(2):257-73. 1216 
+
+36. Narendra DP, Youle RJ. Targeting mitochondrial dysfunction: role for PINK1 and 1217 
+
+Parkin in mitochondrial quality control. Antioxid Redox Signal. 2011;14(10):1929-38. 1218 
+
+37. Towers CG, Wodetzki DK, Thorburn J, Smith KR, Caino MC, Thorburn A. 1219 
+
+Mitochondrial-derived vesicles compensate for loss of LC3-mediated mitophagy. Dev Cell. 1220 
+
+2021;56(14):2029-42 e5. 1221 
+
+38. Mondal P, Towers C. Beyond mitophagy: mitochondrial-derived vesicles can get the 1222 
+
+job done! Autophagy. 2022;18(2):449-51. 1223 
+
+39. Sugiura A, McLelland GL, Fon EA, McBride HM. A new pathway for mitochondrial 1224 
+
+quality control: mitochondrial-derived vesicles. EMBO J. 2014;33(19):2142-56. 1225 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+46 
+
+40. Soubannier V, Rippstein P, Kaufman BA, Shoubridge EA, McBride HM. Reconstitution 1226 
+
+of mitochondria derived vesicle formation demonstrates selective enrichment of oxidized 1227 
+
+cargo. PLoS One. 2012;7(12):e52830. 1228 
+
+41. Braschi E, Goyon V, Zunino R, Mohanty A, Xu L, McBride HM. Vps35 mediates vesicle 1229 
+
+transport between the mitochondria and peroxisomes. Curr Biol. 2010;20(14):1310-5. 1230 
+
+42. Soubannier V, McLelland GL, Zunino R, Braschi E, Rippstein P, Fon EA, et al. A 1231 
+
+vesicular transport pathway shuttles cargo from mitochondria to lysosomes. Curr Biol. 1232 
+
+2012;22(2):135-41. 1233 
+
+43. Todkar K, Chikhi L, Desjardins V, El-Mortada F, Pepin G, Germain M. Selective 1234 
+
+packaging of mitochondrial proteins into extracellular vesicles prevents the release of 1235 
+
+mitochondrial DAMPs. Nat Commun. 2021;12(1):1971. 1236 
+
+44. Picca A, Guerra F, Calvani R, Coelho-Junior HJ, Bossola M, Landi F, et al. Generation 1237 
+
+and Release of Mitochondrial-Derived Vesicles in Health, Aging and Disease. J Clin Med. 1238 
+
+2020;9(5). 1239 
+
+45. Chandra P, Ghanwat S, Matta SK, Yadav SS, Mehta M, Siddiqui Z, et al. 1240 
+
+Mycobacterium tuberculosis Inhibits RAB7 Recruitment to Selectively Modulate Autophagy 1241 
+
+Flux in Macrophages. Sci Rep. 2015;5:16320. 1242 
+
+46. Abuaita BH, Schultz TL, O'Riordan MX. Mitochondria-Derived Vesicles Deliver 1243 
+
+Antimicrobial Reactive Oxygen Species to Control Phagosome-Localized Staphylococcus 1244 
+
+aureus. Cell Host Microbe. 2018;24(5):625-36 e5. 1245 
+
+47. Ge P, Dawson VL, Dawson TM. PINK1 and Parkin mitochondrial quality control: a 1246 
+
+source of regional vulnerability in Parkinson's disease. Mol Neurodegener. 2020;15(1):20. 1247 
+
+48. McLelland GL, Soubannier V, Chen CX, McBride HM, Fon EA. Parkin and PINK1 1248 
+
+function in a vesicular trafficking pathway regulating mitochondrial quality control. EMBO J. 1249 
+
+2014;33(4):282-95. 1250 
+
+49. Nicholls DG. Simultaneous monitoring of ionophore- and inhibitor-mediated plasma 1251 
+
+and mitochondrial membrane potential changes in cultured neurons. J Biol Chem. 1252 
+
+2006;281(21):14864-74. 1253 
+
+50. Konig T, Nolte H, Aaltonen MJ, Tatsuta T, Krols M, Stroh T, et al. MIROs and DRP1 1254 
+
+drive mitochondrial-derived vesicle biogenesis and promote quality control. Nat Cell Biol. 1255 
+
+2021;23(12):1271-86. 1256 
+
+51. Ma K, Chen G, Li W, Kepp O, Zhu Y, Chen Q. Mitophagy, Mitochondrial Homeostasis, 1257 
+
+and Cell Fate. Front Cell Dev Biol. 2020;8:467. 1258 
+
+52. Verma S, Sharma RD, Kumar D. Autophagy as a Target for Host-Directed Therapy 1259 
+
+Against Tuberculosis. In: Karakousis PC, Hafner R, Gennaro ML, editors. Advances in Host-1260 
+
+Directed Therapies Against Tuberculosis. Cham: Springer International Publishing; 2021. p. 1261 
+
+71-95. 1262 
+
+53. Watson RO, Manzanillo PS, Cox JS. Extracellular M. tuberculosis DNA targets bacteria 1263 
+
+for autophagy by activating the host DNA-sensing pathway. Cell. 2012;150(4):803-15. 1264 
+
+54. Ponpuak M, Davis AS, Roberts EA, Delgado MA, Dinkins C, Zhao Z, et al. Delivery of 1265 
+
+cytosolic components by autophagic adaptor protein p62 endows autophagosomes with 1266 
+
+unique antimicrobial properties. Immunity. 2010;32(3):329-41. 1267 
+
+55. Yan Y, Zhang K, Pycior G, Guillen-Poza PA, Hervas R, Leal P, et al. p62 protein 1268 
+
+pleomorphism confers tissue-specific function. bioRxiv. 2026:2026.01.10.696886. 1269 
+
+56. Ding WX, Yin XM. Mitophagy: mechanisms, pathophysiological roles, and analysis. 1270 
+
+Biol Chem. 2012;393(7):547-64. 1271 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+47 
+
+57. Matta SK, Kumar D. Hypoxia and classical activation limits Mycobacterium 1272 
+
+tuberculosis survival by Akt-dependent glycolytic shift in macrophages. Cell Death Discov. 1273 
+
+2016;2:16022. 1274 
+
+58. Poon A, Saini H, Sethi S, O'Sullivan GA, Plun-Favreau H, Wray S, et al. The role of 1275 
+
+SQSTM1 (p62) in mitochondrial function and clearance in human cortical neurons. Stem Cell 1276 
+
+Reports. 2021;16(5):1276-89. 1277 
+
+59. Lazarou M, Sliter DA, Kane LA, Sarraf SA, Wang C, Burman JL, et al. The ubiquitin 1278 
+
+kinase PINK1 recruits autophagy receptors to induce mitophagy. Nature. 1279 
+
+2015;524(7565):309-14. 1280 
+
+60. Ikeda R, Noshiro D, Morishita H, Takada S, Kageyama S, Fujioka Y, et al. 1281 
+
+Phosphorylation of phase-separated p62 bodies by ULK1 activates a redox-independent 1282 
+
+stress response. EMBO J. 2023;42(14):e113349. 1283 
+
+61. Komatsu M, Kurokawa H, Waguri S, Taguchi K, Kobayashi A, Ichimura Y, et al. The 1284 
+
+selective autophagy substrate p62 activates the stress responsive transcription factor Nrf2 1285 
+
+through inactivation of Keap1. Nat Cell Biol. 2010;12(3):213-23. 1286 
+
+62. Jo DS, Park NY, Cho DH. Peroxisome quality control and dysregulated lipid 1287 
+
+metabolism in neurodegenerative diseases. Exp Mol Med. 2020;52(9):1486-95. 1288 
+
+63. Ganguli G, Pattanaik KP, Jagadeb M, Sonawane A. Mycobacterium tuberculosis 1289 
+
+Rv3034c regulates mTORC1 and PPAR-gamma dependant pexophagy mechanism to control 1290 
+
+redox levels in macrophages. Cell Microbiol. 2020;22(9):e13214. 1291 
+
+64. Popov LD. Mitochondrial-derived vesicles: Recent insights. J Cell Mol Med. 1292 
+
+2022;26(12):3323-8. 1293 
+
+65. Manzanillo PS, Ayres JS, Watson RO, Collins AC, Souza G, Rae CS, et al. The ubiquitin 1294 
+
+ligase parkin mediates resistance to intracellular pathogens. Nature. 2013;501(7468):512-6. 1295 
+
+66. Matheoud D, Sugiura A, Bellemare-Pelletier A, Laplante A, Rondeau C, Chemali M, et 1296 
+
+al. Parkinson's Disease-Related Proteins PINK1 and Parkin Repress Mitochondrial Antigen 1297 
+
+Presentation. Cell. 2016;166(2):314-27. 1298 
+
+67. Redecke V, Wu R, Zhou J, Finkelstein D, Chaturvedi V, High AA, et al. Hematopoietic 1299 
+
+progenitor cell lines with myeloid and lymphoid potential. Nat Methods. 2013;10(8):795-1300 
+
+803. 1301 
+
+68. Zhu A, Srivastava A, Ibrahim JG, Patro R, Love MI. Nonparametric expression analysis 1302 
+
+using inferential replicate counts. Nucleic Acids Res. 2019;47(18):e105. 1303 
+
+69. Chen EY, Tan CM, Kou Y, Duan Q, Wang Z, Meirelles GV, et al. Enrichr: interactive and 1304 
+
+collaborative HTML5 gene list enrichment analysis tool. BMC Bioinformatics. 2013;14:128. 1305 
+
+70. Ashburner M, Ball CA, Blake JA, Botstein D, Butler H, Cherry JM, et al. Gene ontology: 1306 
+
+tool for the unification of biology. The Gene Ontology Consortium. Nat Genet. 1307 
+
+2000;25(1):25-9. 1308 
+
+71. Rath S, Sharma R, Gupta R, Ast T, Chan C, Durham TJ, et al. MitoCarta3.0: an updated 1309 
+
+mitochondrial proteome now with sub-organelle localization and pathway annotations. 1310 
+
+Nucleic Acids Res. 2021;49(D1):D1541-D7. 1311 
+
+72. Carrasco Pro S, Dafonte Imedio A, Santoso CS, Gan KA, Sewell JA, Martinez M, et al. 1312 
+
+Global landscape of mouse and human cytokine transcriptional regulation. Nucleic Acids 1313 
+
+Res. 2018;46(18):9321-37. 1314 
+
+73. Cumming BM, Addicott KW, Adamson JH, Steyn AJ. Mycobacterium tuberculosis 1315 
+
+induces decelerated bioenergetic metabolism in human macrophages. Elife. 2018;7. 1316 
+
+74. Ji W, Zhang L, Liu X. Protocol using lentivirus to establish THP-1 suspension cell lines 1317 
+
+for immunostaining and confocal microscopy. STAR Protoc. 2023;4(1):102032. 1318 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+48 
+
+75. Beatty WL, Russell DG. Identification of mycobacterial surface proteins released into 1319 
+
+subcellular compartments of infected macrophages. Infect Immun. 2000;68(12):6997-7002. 1320 
+
+1321 
+
+1322 
+
+1323 
+
+1324 
+
+# Supporting information 1325 
+
+1326 
+
+S1 Fig. Expression profile of autophagy adaptors in H37Rv infected and uninfected 1327 
+
+THP-1 Macrophages. (A) Gene expression of NBR1, NDP52, TAX1BP1, OPTN, and 1328 
+
+p62/SQSTM1 (p62) by RT-PCR at 0-, 24-, and 48-hpi. Data show mean ± SD from three 1329 
+
+independent experiments. (B) Immunoblots represent protein expression of TAX1BP1, 1330 
+
+NDP52, OPTN, NBR1, and p62 at 0-,24- and 48-hpi; GAPDH is used separately as the 1331 
+
+loading control for each condition; (C) bar graphs on the right show the quantification of the 1332 
+
+protein levels of these adaptors after normalising with GAPDH. Data show mean ± SD from 1333 
+
+three independent experiments. 1334 
+
+1335 
+
+S2 Fig. Depletion of autophagy adaptors in human and mouse macrophages and their 1336 
+
+effect on H37Rv survival. (A) Immunoblot represent the siRNA-targeted depletion of 1337 
+
+adaptors TAX1BP1, p62, NDP52, OPTN and NBR1 in THP-1 monocytes in the separate 1338 
+
+experiment for each adaptor at 24 hours post-transfection. The numbers depict the ratio of 1339 
+
+intensities of specific proteins to that of GAPDH. (B) CFU analysis of H37Rv in control and 1340 
+
+siRNA-targeted-OPTN and -p62 U937 macrophages at 24 hpi. Right panel: Immunoblot 1341 
+
+represents the siRNA-targeted depletion of p62 and OPTN at 24 hours post-transfection. The 1342 
+
+numbers depict the ratio of intensities of specific proteins to that of GAPDH. (C-D) Respective 1343 
+
+immunoblot and IFA images for p62 in p62 KD THP-1 cells generated using CRISPR/Cas9 and 1344 
+
+their quantification graphs (Right Panel). Plots represent data from three experiments (C) and 1345 
+
+5 fields from two different experiments (D). (E) Immunoblot depicts the levels of p62 in 1346 
+
+uninfected and infected cells in WT and p62 KD cells at 24- and 48 hpi and separate 1347 
+
+quantification plots from two independent experiments (Right). (F) Immunoblot represents 1348 
+
+LC3B levels in the lysates of WT and p62 KD macrophages at 0-,24-, and 48-hpi in the presence 1349 
+
+and absence of BafA1 (100nM for 3 hours before processing). (G) Confocal images show the 1350 
+
+interaction of LC3B spots (blue spots, at <0.2 um from bacteria) and H37Rv. The bar graph 1351 
+
+represents the quantification of blue spots on H37Rv in WT and p62 KD cells in the presence 1352 
+
+and absence of BafA1 at 0- and 24-hpi. Data show mean ± SD, n> 9 Fields, 20-35 per field, 1353 
+
+from three experiments. (H-I) Respective CFU analysis of H37Rv in control and siRNA-1354 
+
+targeted p62/sqstm1 depleted and Optn depleted mouse bone marrow monocyte-derived 1355 
+
+macrophages at 24 hpi. Data show mean ± SD, from three independent experiments, right panel 1356 
+
+shows immunoblot confirming the p62 and OPTN depletion upon siRNA transfection. The 1357 
+
+numbers depict the ratio of intensities of specific proteins to that of GAPDH. (J) CFU analysis 1358 
+
+of H37Rv in WT and p62 KO HOXB8 derived macrophages at 24 hpi. Data show mean ± SD, 1359 
+
+from three independent experiments. The immunoblot shows the levels of p62 in these cells. 1360 
+
+1361 
+
+S3 Fig. Gene expression patterns and functional class enrichment. (A) DEGs (differentially 1362 
+
+expressed genes, absolute log2FC ≥1 & q-value ≤ 0.1) at each time point. Row annotation 1363 
+
+represents DEGs identified when compared between infected versus uninfected in WT and 1364 
+
+p62 KD macrophages at 0-, 24- and 48-.hpi. Row clustering was done using ward. D2 1365 
+
+methodology on Euclidean distance calculated from the z-scaled values. Heatmap key reflects 1366 
+
+expression intensity based on z-scaled values (B) shows Gene Ontology Biological Process 1367 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+49 
+
+(GOBP) enrichment of the upregulated or downregulated genes identified based on infected 1368 
+
+versus uninfected in WT and p62 KD macrophages at 0-, 24- and 48-.hpi. Significance is 1369 
+
+determined by nominal p.value ≤ 0.05. Only the top 15 enriched GOBPs from each comparison 1370 
+
+are visualised. Coverage represents the proportion of genes identified in a particular GOBP out 1371 
+
+of the total genes associated with that process. Colour intensity represents the nominal p-value 1372 
+
+gradient. (C) is a subset of (A) which shows an expression of the identified DE cytokine genes 1373 
+
+between infected versus uninfected in WT and p62 KD macrophages at 0-, 24- and 48-.hpi. 1374 
+
+1375 
+
+S4 Fig. Impact of p62/SQSTM1 depletion on mitochondrial DNA content and fission-1376 
+
+fusion pathways. (A) Quantification of mtDNA by normalising the gene expression of the 1377 
+
+mitochondria encoded protein (mtCO1) with nuclear genome encoded RNA polymerase 1378 
+
+(RPL13A) in WT and p62 KD THP-1 macrophages in infected and uninfected THP-1 1379 
+
+macrophages at 0-, 24-, and 48-hpi. (B) Fold change in gene expression of mitochondrial fusion 1380 
+
+proteins MFN1, MFN2 and OPA1, and fission proteins DRP1 and FIS1 by RT-PCR in H37Rv 1381 
+
+infected WT and p62 KD THP-1 macrophages at 24 hpi. (C) Immunoblots represent protein 1382 
+
+expression of BNIP3 in infected WT and p62 KD cells at 24 hpi. 1383 
+
+1384 
+
+S5 Fig. Effect of mitochondrial quality control in H37Rv infected THP-1 macrophages. 1385 
+
+(A-E) Confocal images depict the interaction of TOM20 (green) with proteins from three 1386 
+
+different mitochondrial compartments (red). Representative TOM20 3D structures and 1387 
+
+mitochondrial protein spots: (A) PDHA1, (B) HSP60, (C) SO2, (D) ECSIT, and (E) MCU are 1388 
+
+shown at the right. The yellow spots are at <0.2 μm, and the magenta spots are at > 0.2 μm 1389 
+
+from TOM20 structures. (F) Immunoblot show the levels of RAB7 in siControl and siRAB7 1390 
+
+in THP-1 macrophages at 24 hours post-siRNA transfection. (G) Immunoblot show the levels 1391 
+
+of PARKIN in siControl and siPRKN in THP-1 macrophages at 24 hours post-siRNA 1392 
+
+transfection. (H) Per cent MFI change in TMRE of infected THP-1 macrophages in the 1393 
+
+presence and absence of nigericin. (I) The relative oxidation state of Mrx1-roGFP2 reporter as 1394 
+
+the ratios of emission MFI at 510nm when excited at 405nm to 488nm in nigericin-treated WT 1395 
+
+and p62KD cells at 24 hpi. Data show mean ± SD, n=3. (J) H37Rv CFU in Nigericin-treated 1396 
+
+and untreated WT and p62KD cells. Data show mean ± SD, n=4, from two independent 1397 
+
+experiments. (K) The graph represents the MTT cell viability assay of nigericin-treated and 1398 
+
+untreated WT and p62KD THP-1 macrophages. Scale bar: 10 μm. 1399 
+
+1400 
+
+S6 Fig. Role of MIRO1 and MIRO2 in MDV biogenesis. (A) CFU analysis of H37Rv in 1401 
+
+control and siRNA-targeted-MIRO1, MIRO2, DNM1L (DRP1) and SNX9 WT and p62 KD 
+
+1402 
+
+macrophages at 24 hours post-transfection, Data show mean ± SD, n=5, from two independent 1403 
+
+experiments. (B-C) Immunoblot represents the siRNA targeted depletion of MIRO1 and 1404 
+
+MIRO2, respectively at 24 hours post-transfection .1405 
+
+1406 
+
+1407 
+
+S1 Table. Infection-associated changes at different hours 1408 
+
+1409 
+
+S2 Table. Enrichment analysis of the DEGs 1410 
+
+1411 
+
+S3 Table. DEGs identified to be associated with mitochondria based on Mitocarta 3.0 (a 1412 
+
+subset of total DEGs) 1413 
+
+1414 
+
+S4 Table: Mitochondrial DEGs associated with mitochondria pathways based on 1415 
+
+Mitocarta 3.0 1416 
+
+1417 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
+
+50 
+
+S5 Table: DEGs identified to cytokine genes (a subset of total DEGs) 1418 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 11, 2026. ;https://doi.org/10.1101/2023.12.01.569475 doi: bioRxiv preprint
