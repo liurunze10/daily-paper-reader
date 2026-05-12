@@ -1,0 +1,2512 @@
+Title: 68135224
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.03.722560v1.full.pdf
+
+Number of Pages: 57
+
+Markdown Content:
+> 1
+
+Multiple ShKT domain-containing MUL-1 proteins act as redox-responsive modulators of 1
+
+oxidative stress signaling in C. elegans 2
+
+> 3
+
+Emilio Carranza-Garcia 1 , Abe Gayle Santos 2-4 , Kyoung-Hye Yoon 3, 4 , Anton Gartner* 1, 5 
+
+> 4
+
+1) Center for Genomic Integrity, Institute for Basic Science, UNIST-gil 50, Ulsan 44919, 5
+
+Republic of Korea, 6
+
+2) Department of Physiology, Yonsei University Wonju College of Medicine, 20 Ilsan-ro, Wonju, 7
+
+South Korea 8
+
+3) Organelle Medicine Research Center, Yonsei University Wonju College of Medicine, 20 Ilsan-9
+
+ro, Wonju, South Korea 10 
+
+4) Department of Global Medical Science, Yonsei University Wonju College of Medicine, 20 11 
+
+Ilsan-ro, Wonju, South Korea 12 
+
+5) Department for Health Science and Technology, Ulsan National Institute of Science and 13 
+
+Technology (UNIST), UNIST-gil 50, Ulsan 44919, Republic of Korea. 14 
+
+* To whom correspondence should be addressed. Email tgartner67@gmail.com 15 
+
+> 16
+
+Keywords: C. elegans , oxidative stress, ionizing irradiation, MUL-1, ShKT domain, stress 17 
+
+signaling 18 
+
+> 19
+
+Acknowledgements 20 
+
+We want to thank the members of the Gartner Laboratory and the Korean Institute for Basic 21 
+
+Science Center for Genomic Integrity for their fruitful discussions. We especially thank Aymeric 22 
+
+Bailly and Albena Dinkova-Kostova for prereviewing the manuscript and Ulrike Gartner for 23 
+
+proofreading. We thank Prof KJ Myung for his unwavering support. This work was supported by 24 
+
+the Korean Institute for Basic Science (grant IBS-R022-D1-2025) and the National Research 25 
+
+Foundation of Korea (grant: RS-2024-00409403). Author contributions: ECG, and AG: 26 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 2
+
+Conceptualization and writing. ECG, vast majority of reagent generation and experimental work. 27 
+
+AGS, and KHJ, Pseudomonas experiments. 28 
+
+> 29
+
+remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 3
+
+Multiple ShKT domain-containing MUL-1 proteins act as redox-responsive modulators of 30 
+
+oxidative stress signaling in C. elegans 31 
+
+> 32
+
+Abstract 33 
+
+Organismal survival depends on coordinated responses to oxidative stress and DNA damage. 34 
+
+Using Caenorhabditis elegans , we investigate mul-1, a robust transcriptional target of ionizing 35 
+
+radiation and reactive oxygen species. Although annotated as a mucin, MUL-1 is a small ShKT 36 
+
+domain-containing protein belonging to an invertebrate expanded family of cysteine-rich 37 
+
+proteins. mul-1 is selectively induced by oxidative stress, including IR, hydrogen peroxide 38 
+
+(H 2 O2 ), Pseudomonas aeruginosa infection, or loss of the peroxiredoxin PRDX-2, via the p38 39 
+
+MAPK-ATF-7 pathway in intestinal cells. Loss of mul-1 and its paralogs increases ROS 40 
+
+accumulation, oxidative stress sensitivity, and CEP-1/p53 dependent germ cell apoptosis. 41 
+
+Combined deletion of mul-1 paralogs causes constitutive apoptosis, reduced fecundity, and 42 
+
+compensatory activation of DAF-16/Foxo and SKN-1/Nrf2 stress response pathways. Together 43 
+
+with genetic analysis of SYSM-1, these findings suggest MUL-1-like ShKT proteins buffer 44 
+
+oxidative stress. 45 
+
+> 46
+
+Introduction 47 
+
+Organismal survival depends on the activation of coordinated stress response pathways. 48 
+
+Ionizing radiation (IR) and reactive oxygen species (ROS) are among the most potent inducers 49 
+
+of cellular stress, triggering DNA damage and oxidative insults. The nematode Caenorhabditis 50 
+
+elegans provides a genetically tractable model to dissect the regulation and functional impact of 51 
+
+these pathways at the organismal level. Although IR can directly induce DNA strand breaks, 52 
+
+most DNA damage associated with IR exposure arises indirectly through ROS generation. ROS 53 
+
+include superoxide (O 2- ), hydrogen peroxide (H 2 O2 ), and hydroxyl radicals (•OH), produced 54 
+
+when radiation interacts with cellular water and organic molecules (Roots & Okada, 1975; Ward, 55 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 4
+
+1994). In addition to oxidizing bases, generating abasic sites, and causing DNA strand breaks, 56 
+
+ROS also inflict cellular damage by oxidizing metabolites, lipids, and proteins (Dalle-Donne et 57 
+
+al., 2006; Yohe & Davies, 2014). ROS are also generated endogenously, for instance, through 58 
+
+mitochondrial electron leakage and NADPH oxidase activity (Forman et al., 2010). Among ROS, 59 
+
+H2 O2 is a precursor to highly reactive hydroxyl radicals generated via Fenton chemistry (Forman 60 
+
+& Zhang, 2021; Koppenol, 1993), but can also act as a signaling molecule (Forman et al., 2010; 61 
+
+Miranda-Vizuete & Veal, 2017). For instance, in C. elegans, H2 O2 regulates FLP-1 neuropeptide 62 
+
+release from AIY interneurons during diet-induced stress response in the gut (Jia & Sieburth, 63 
+
+2021), and this response is potentiated by the H 2 O2 -dependent release of the FLP-2 peptide 64 
+
+from the intestine (Jia et al., 2024). Elevated ROS in AWC neurons causes NLP-1 peptide 65 
+
+secretion, which induces the mitochondrial unfolded protein response in the gut and reduces its 66 
+
+digestive capacity (Liu et al., 2024). Cellular detoxification of H 2 O2 is primarily mediated by 67 
+
+antioxidant enzymes such as superoxide dismutases, peroxiredoxins, and glutathione 68 
+
+peroxidases, which rely on conserved cysteine residues or thiol-containing cofactors for redox 69 
+
+cycling (Aranda-Rivera et al., 2022; Juan et al., 2021). 70 
+
+> 71
+
+Transcriptomic analyses following IR in C. elegans revealed no induction of canonical DNA 72 
+
+repair genes (Greiss et al., 2008). Among the DNA damage response genes, only the pro-73 
+
+apoptotic BH3-only genes egl-1 and ced-13 , both CEP-1/p53 targets, and required for DNA 74 
+
+damage-induced germ cell apoptosis, were upregulated (Greiss et al., 2008; Schumacher et al., 75 
+
+2005). In contrast, a broad CEP-1/p53 independent transcriptional activation of oxidative stress-76 
+
+related and innate immunity-associated genes was observed, many of which are nematode-77 
+
+specific (Greiss et al., 2008). Notably, mul-1 emerged as the most robustly IR-induced 78 
+
+transcript, and its induction requires the conserved p38 MAPK pathway (Greiss et al., 2008; 79 
+
+Kimura et al., 2012). Recently, a MUL-1 high-copy transgene was shown to be expressed in the 80 
+
+gut, and mul-1 deletion was associated with reduced sensitivity to Pseudomonas aeruginosa 81 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 5
+
+infection, possibly by limiting bacterial association with gut epithelium (Hoffman et al., 2020). 82 
+
+However, while annotated as a mucin-like gene, MUL-1 lacks some hallmark features of 83 
+
+vertebrate mucins, which are typically thousands of amino acids long, highly enriched in serine 84 
+
+and threonine, and heavily glycosylated to form gel-like protective barriers in gut epithelia 85 
+
+(Johansson et al., 2013). Instead, MUL-1 is a small 259-amino-acid protein composed mainly of 86 
+
+five ~36-42 amino acid ShKT domains (InterPro Entry IPR003582: ShKT domain). Only a 42-87 
+
+amino-acid unstructured region between the two C-terminal ShKT domains is highly enriched in 88 
+
+serine/threonine residues. ShKT domains were initially characterized as potent toxins derived 89 
+
+from sea anemones that inhibit mammalian potassium channels (Castañeda et al., 1995; Gerdol 90 
+
+et al., 2019; Harvey & Vita, n.d.; Shafee et al., 2019; Tudor et al., 1998). Except for the human 91 
+
+metalloprotease MMP23, which contains a single ShKT module, this motif is otherwise absent 92 
+
+from vertebrate proteomes (Rangaraju et al., 2010). Structurally, ShKT domains are defined by 93 
+
+six conserved cysteine residues that form three disulfide bonds, stabilizing a compact two-α-94 
+
+helix fold commonly used to engage and modulate potassium channels (Castañeda et al., 1995; 95 
+
+Shafee et al., 2019; Tudor et al., 1998). Given this distinctive organization, we posit that MUL-1 96 
+
+may perform roles unrelated to, or in addition to, those of traditional mucins. 97 
+
+> 98
+
+The identification of mul-1 as an IR-responsive gene is reminiscent of sysm-1 , a small protein 99 
+
+also induced by IR and composed of two ShKT domains (Soltanmohammadi et al., 2022). Like 100 
+
+mul-1 , sysm-1 induction depends on the p38 MAPK pathway (Soltanmohammadi et al., 2022). 101 
+
+Functional studies have shown that SYSM-1 is secreted from the intestine and is required for 102 
+
+germ cell apoptosis following IR, acting in parallel to the C. elegans CEP-1/p53 pathway. 103 
+
+Notably, the induction of the two pro-apoptotic BH3 domain-only genes, egl-1 and ced-13 104 
+
+remains intact in sysm-1 mutants, suggesting that SYSM-1 conveys stress signals across 105 
+
+tissues, independent of CEP-1 transcriptional activity (Soltanmohammadi et al., 2022). 106 
+
+> 107
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 6
+
+Here, we employed a mul-1 transcriptional reporter as an inroad to dissect regulatory circuits 108 
+
+involved in the oxidative stress response. mul-1 is induced by IR, H 2 O2 , Pseudomonas infection 109 
+
+and loss of the peroxiredoxin PRDX-2. Peroxiredoxins are abundant cysteine-based peroxide 110 
+
+reductases that detoxify H 2 O2 through the oxidation of conserved N-terminal cysteines to 111 
+
+sulfenic acid, followed by disulfide bond formation with a receiving cysteine (Rhee, 2016). We 112 
+
+found that mul-1 expression is induced in the intestine and depends on p38 signaling and its 113 
+
+downstream transcription factor, ATF-7. mul-1 mutants are hypersensitive to oxidative stress 114 
+
+and exhibit increased p53-dependent germ cell apoptosis upon IR. MUL-1 belongs to a family of 115 
+
+proteins expanded in invertebrates, and we included the three most closely related paralogs, as 116 
+
+well as related sysm-1, in our analysis. MUL-1 family quadruple mutants display a further 117 
+
+increase in radiation-induced apoptosis, and excessive apoptosis occurs even in the absence of 118 
+
+IR. Furthermore, both mul-1 and the quadruple mutant bypass the apoptosis defect of sysm-1 .119 
+
+In compound mul-1 paralog mutants and prdx-2 single mutants, compensatory DAF-16-120 
+
+dependent SOD-3 and SKN-1-dependent GST-4 induction occurs even in the absence of 121 
+
+exogenous stress. We argue that MUL-1-like proteins are part of a regulatory circuit that have a 122 
+
+key role in the organismal responses to oxidative stress. We hypothesize that MUL1-like genes 123 
+
+may act via their ShKT domains as scavengers or rheostats of oxidative damage. 124 
+
+> 125
+
+Results 126 
+
+Transcriptional regulation of mul-1 127 
+
+To assess if and where mul-1 (F49F1.6) is induced upon IR, we developed a transcriptional 128 
+
+reporter strain, mul-1(syb3342) , in which the coding sequence of mul-1 is replaced with 129 
+
+mCherry fused to histone H2B for fluorescent detection and nuclear targeting. Under control 130 
+
+conditions, the basal expression of mul-1 is predominantly localized to the nuclei of gut cells, 131 
+
+with the strongest expression observed in the two anterior-most gut nuclei (Fig. 1A, C), with 132 
+
+expression gradually increasing during larval development, reaching a maximum in L4 larvae 133 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 7
+
+and adults (Fig. 1A, C-D, black lines). To examine the induction of mul-1 under DNA-damaging 134 
+
+conditions, we exposed mul-1(syb3342) animals at all larval stages to 100 Gy of IR and 135 
+
+analyzed transcriptional activation 6 hours post-treatment. IR exposure results in a strong 136 
+
+induction of mul-1 across all gut cells at every developmental stage, most notably in the anterior 137 
+
+two nuclei (Fig. 1B, C-D, red lines). The induction is dose- and time-dependent, becoming 138 
+
+detectable after 2 hours and peaking at 6 hours (Figs. S1, S2). For Western blotting, we 139 
+
+generated a knock-in strain with a C-terminal 3xHA tag at the endogenous mul-1 locus. In 140 
+
+untreated controls, MUL-1::3xHA protein was undetectable by immunoblotting, consistent with 141 
+
+very low basal expression (Fig. 1). However, 6 hours after IR treatment, a specific ~35 kDa 142 
+
+band corresponding to the predicted molecular weight appears (Fig. S3). 143 
+
+> 144
+
+To determine if the induction of mul-1 is specific to IR-induced DNA damage, we tested other 145 
+
+genotoxic agents. Neither cisplatin, a DNA crosslinking agent, nor methyl methanesulfonate 146 
+
+(MMS), an alkylating agent, induced mul-1 expression (Fig. 2A-D, F). In contrast, some 147 
+
+induction was observed following UV treatment (Fig. 2E, F). UV exposure not only generates 148 
+
+cyclobutane pyrimidine dimers (CPDs) and 6-4 photoproducts (6-4 PPs) but also produces ROS 149 
+
+through photochemical reactions (Yoshiyama et al., 2023), suggesting that mul-1 induction 150 
+
+might be linked to oxidative stress rather than DNA damage itself. Additionally, no induction was 151 
+
+observed after starvation, heat shock, or osmotic stress (Fig. 3A-D, K). However, a strong 152 
+
+induction occurred after exposure to H 2 O2, a potent ROS generator that produces hydroxyl 153 
+
+> radicals (∙OH) and superoxide anions (O2-)
+
+(Kumsta et al., 2011) (Fig. 3E, K). ROS are also 154 
+
+produced during normal metabolism, and the two 2-Cys peroxiredoxins, PRDX-2 and PRDX-3, 155 
+
+serve as key antioxidants, with PRDX-2 playing a vital role in detoxifying H 2 O2 . Loss of PRDX-2 156 
+
+results in increased sensitivity to H 2 O2 , a shortened lifespan, and developmental abnormalities 157 
+
+(Kumsta et al., 2011; Oláhová et al., 2008). To investigate whether impaired H 2 O2 detoxification 158 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 8
+
+can trigger mul-1 induction, we used CRISPR/Cas9 to introduce the prdx-2(gk169) mutation into 159 
+
+mul-1(syb3342) animals. Under normal conditions, basal mul-1 expression in prdx-2(gk169); 160 
+
+mul-1(syb3342) animals was similar to that of controls during early larval stages (Fig. 3F). 161 
+
+However, as development progressed, mul-1 transcription first appeared in anterior gut cells. It 162 
+
+gradually expanded along the intestine, eventually resulting in widespread, strong expression in 163 
+
+adult animals (Fig. 3G-J, L). Our results suggest that both exogenous and endogenous ROS 164 
+
+induce mul-1 expression. 165 
+
+> 166
+
+The p38 MAPK pathway and its downstream effector ATF-7 regulate mul-1 167 
+
+Next, we examined the role of key stress response pathways in regulating mul-1 . Previous RNAi 168 
+
+studies and quantitative PCR showed that both the p38/PMK-1 and insulin/IGF-1 signaling 169 
+
+pathways are necessary for mul-1 induction after IR treatment (Kimura et al., 2012). Using our 170 
+
+mul-1 transcriptional reporter, we systematically dissected the contribution of the p38/PMK-1 171 
+
+pathway and its downstream effectors, including SKN-1 and ATF-7, as well as the upstream 172 
+
+regulator SEK-1, in response to IR-induced DNA damage. In C. elegans , the TIR-1-NSY-1-SEK-173 
+
+1-PMK-1 signaling cascade mediates the innate immune response in the gut (Inoue et al., 174 
+
+2005). SEK-1 (stress-activated protein kinase-1), a mitogen-activated protein kinase kinase 175 
+
+(MAPKK), acts upstream of p38/PMK-1, modulating its activity through phosphorylation in 176 
+
+response to various stress stimuli, including infection, oxidative stress, or environmental insults 177 
+
+(Kim et al., 2002). We found that IR-induced mul-1 upregulation is compromised in sek-1(km4) 178 
+
+and pmk-1 (km25) mutants (Fig. 4A-C, F). We also found that ATF-7, but not the SKN-1 179 
+
+downstream effector, is required for mul-1 induction (Fig. 4D-F). ATF-7 and SKN-1 have distinct 180 
+
+roles downstream of p38/PMK-1. SKN-1 mediates responses to oxidative stress by regulating 181 
+
+classical phase II detoxification genes, whereas ATF-7 governs immune responses, such as 182 
+
+resistance to P. aeruginosa (Foster et al., 2020; Zhu et al., 2022). Although mul-1 induction was 183 
+
+strongly reduced in atf-7 mutants, a residual response remained detectable, suggesting that 184 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 9
+
+additional factors may contribute to mul-1 activation in parallel with ATF-7 (Fig. 4E-F). Mutations 185 
+
+in the daf-2 insulin receptor and the daf-16 transcription factor show no effect on mul-1 induction 186 
+
+(Fig. S4). 187 
+
+> 188
+
+To visualize MUL-1 protein, we created a translational reporter, mul-1::linker::eGFP(gt3545) .189 
+
+Detecting MUL-1 was challenging due to autofluorescence from gut granules, which interfered 190 
+
+with signal clarity. To overcome this, we introduced the glo-1(zu391) mutation, which disrupts 191 
+
+gut granule formation, thus reducing autofluorescence without affecting intestinal function 192 
+
+(Hermann et al., 2005) (Fig. 5A). Under control conditions, MUL-1 expression was not 193 
+
+detectable in the mul-1(gt3545); glo-1(zu391) reporter strain (Fig. 5B, F, G-H). After IR and 194 
+
+H2 O2 treatment, MUL-1 expression was induced, resulting in a low but visible diffuse 195 
+
+cytoplasmic signal in intestinal cells, along with distinct cytoplasmic puncta (Fig. 5C, D, F), MUL-196 
+
+1 expression was increased in prdx-2(gk169); mul-1(gt3545); glo-1(zu391) animals, indicating 197 
+
+that endogenous oxidative stress promotes MUL-1 induction (Fig. 5I-J) in line with the 198 
+
+transcriptional induction (Fig. 3I, J, L). An intense cytoplasmic signal can be observed in a high 199 
+
+copy MUL-1::eGFP transgene (Fig. 5E) (Hoffman et al., 2020). 200 
+
+> 201
+
+MUL-1 mitigates oxidative stress and modulates DNA damage-induced germ cell 202 
+
+apoptosis 203 
+
+We could not identify an overt phenotype associated with the mul-1 reporter line lacking the 204 
+
+open reading frame under basal conditions, based on progeny numbers, embryonic lethality, or 205 
+
+lifespan (Fig. 6A-C). Additionally, after exposure to IR, we did not observe any deviation from 206 
+
+wild type in developmental progression from the L1 stage or in progeny survival at the L4 stage 207 
+
+(see below, Fig. 7G). To further explore the role of mul-1 in oxidative stress management, we 208 
+
+used the CellROX Green assay. This fluorescent probe detects multiple ROS, including H 2 O2 ,209 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 10
+
+superoxide, and hydroxyl radicals (Palacin-Martinez et al., 2024). Under control conditions, both 210 
+
+wild-type and mul-1(syb3342) mutants showed minimal green fluorescence, indicating low basal 211 
+
+ROS levels (Fig. 6D, E, G). Following IR exposure, wild-type animals showed a moderate 212 
+
+increase in ROS levels (Fig. 6D, F), whereas mul-1(syb3342) mutants exhibited a stronger 213 
+
+signal, especially in intestinal cells (Fig. 6D, H). We then directly tested sensitivity to H 2 O2214 
+
+exposure and first identified the most suitable concentration, finding that L1 worms treated with 215 
+
+1 mM H 2 O2 developed normally, while those treated with 5 mM H 2 O2 were uniformly arrested at 216 
+
+the L1 stage; treatment with 2.5 mM resulted in an intermediate response (Fig. S5A). When 217 
+
+assessing sensitivity to 2.5 mM H2 O2 , we observed that developmental progression was 218 
+
+moderately delayed in mul-1(syb3342) , comparable to daf-16 and pmk-1 mutants, which served 219 
+
+as positive controls (Fig. 6I). 220 
+
+> 221
+
+Next, we analyzed germ cell apoptosis using a widely used reporter where the CED-1 apoptotic 222 
+
+corpse receptor is tagged with GFP (Zhou et al., 2001). Under basal conditions, mul-1(syb3342) 223 
+
+animals exhibited normal levels of apoptosis (Fig. 6J, lanes 1 and 5). In contrast, following IR, 224 
+
+apoptosis was hyperinduced in mul-1(syb3342), a finding confirmed when using a second mul-1 225 
+
+allele (Fig. 6J, lanes 2, 6, 8). Excessive IR-dependent apoptosis was suppressed in cep-226 
+
+1(lg12501) , which is defective for the nematode p53-like transcription factor (Fig. 6J, lanes 4 227 
+
+and 10). Complementation analyses using mul-1::eGFP and mul-1::3xHA alleles under the 228 
+
+same conditions confirmed that both tagged MUL-1 proteins are functional, as they suppress 229 
+
+the extra apoptosis phenotype of mul-1 to wild-type apoptosis levels (Fig. S5B). 230 
+
+> 231
+
+MUL-1 belongs to a conserved ShKT-containing gene cluster that modulates oxidative 232 
+
+stress and germline homeostasis 233 
+
+> 234
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 11
+
+We aimed to investigate if mul-1 might act redundantly. Performing BLAST searches for MUL-1 235 
+
+paralogs and scanning through the WormBase we indeed found multiple MUL-1 paralogs. mul-1 236 
+
+is part of a four-gene cluster on chromosome IV that includes three additional closely related 237 
+
+genes ( drd-50 , F49F1.5, F49F1.7) (Fig. 7A, B, Suppl. Table 1). MUL-1 paralogs contain multiple 238 
+
+ShKT domains with six conserved cysteines, forming three disulfide bonds that stabilize a 239 
+
+compact double α-helix structure (Fig. 7A). This clustering suggests potential co-regulation or 240 
+
+shared functions. Consistent with this, transcriptional analysis revealed a strong induction of 241 
+
+mul-1 upon IR, whereas its paralogs display only modest changes, indicating differential 242 
+
+regulation within the cluster (Fig. S6A). We refer to the syb8776 mutation when taking out all 4 243 
+
+paralogs as the ‘quadruple mutant’ (Fig.7C). To test for redundancy, we started by analyzing the 244 
+
+quadruple mutant and focused on developmental progression and lifespan, a key measure of 245 
+
+organismal resilience affected by genes involved in stress response, genomic stability, and 246 
+
+cellular homeostasis. 247 
+
+> 248
+
+While wild-type or single deletions of mul-1 or pmk-1 do not impair developmental progression 249 
+
+following IR, the quadruple mutant exhibits delayed larval development, indicating functional 250 
+
+redundancy among MUL-1 paralogs during recovery from genotoxic stress.maintenance 251 
+
+(López-Otín et al., 2023). The quadruple mutant showed no change in lifespan compared to 252 
+
+wild-type (Fig. 7D). However, the quadruple mutant had a significant reduction in progeny (Fig. 253 
+
+7254 
+
+E). In contrast, no embryonic lethality was observed in the quadruple mutant, similar to the wild-255 
+
+type (Fig. 7F). Importantly, expression of the multicopy mul-1(gtIs3000) transgene restored 256 
+
+brood size in the quadruple mutant without affecting embryonic survival (Fig. S6B-C). We then 257 
+
+tested if reduced progeny in the quadruple mutant was correlated with excessive germ cell 258 
+
+apoptosis and found that it was the case, both with and without IR treatment (Fig. 7G). 259 
+
+Excessive apoptosis was CEP-1/p53 dependent under both conditions. Given the redundancy 260 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 12
+
+of MUL-1-like proteins, we tested whether larval development is delayed upon treating L1 stage 261 
+
+animals with IR, and found that this is true for the quadruple mutant (Fig. 7H). In contrast, single 262 
+
+deletions of mul-1 or pmk-1 do not impair developmental recovery after IR, the combined loss of 263 
+
+mul-1 paralogs slows development. 264 
+
+> 265
+
+MUL-1 paralogs protect from Pseudomonas aeruginosa infection 266 
+
+We hypothesized that MUL-1 and its closely related paralogs may protect against bacterial 267 
+
+infection, commonly associated with oxidative stress. Therefore, we tested susceptibility to P. 268 
+
+aeruginosa PA14 infection, a model commonly used in vertebrates and C. elegans (Tan et al., 269 
+
+1999), and known to induce oxidative stress in the nematode (Zhang et al., 2025). We observed 270 
+
+that mul-1(syb3242) animals died slightly earlier than wild type, with the quadruple mutant being 271 
+
+the most sensitive, comparable to the pmk-1 positive control (Fig. 8A). mul-1 expression was 272 
+
+robustly induced upon exposure to PA14, as indicated by increased reporter fluorescence 273 
+
+intensity relative to OP50-fed controls (Fig. 8B-D). 274 
+
+> 275
+
+Loss of MUL-1 paralogs activates oxidative stress response pathways via daf-16 /FoxO 276 
+
+and skn-1 /Nrf2 277 
+
+If MUL-1-like proteins act by scavenging or sensing oxidative stress, their absence might lead to 278 
+
+increased endogenous ROS and possibly activate compensatory stress-response pathways. 279 
+
+We thus tested if ROS is induced in the quadruple mutants even in the absence of IR, and 280 
+
+found that this is the case using the CellROX green assay (Fig. 9A-C). 281 
+
+> 282
+
+To examine if this leads to the activation of compensatory pathways, we investigated oxidative 283 
+
+stress response pathways regulated by daf-16 /FoxO and skn-1/Nrf 2 (Doonan et al., 2008; Inoue 284 
+
+et al., 2005; Leiers et al., 2003). We generated translational reporters for sod-3 and gst-4 to 285 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 13
+
+assess pathway activation by fusing eGFP to sod-3 (sod-3(gt3598)) and mCherry to gst-4 (gst-286 
+
+4(gt3596)) . We combined both reporters with the glo-1(zu391) mutation to reduce 287 
+
+autofluorescence from intestinal gut granules (Hermann et al., 2005). sod-3 encodes a288 
+
+mitochondrial manganese superoxide dismutase (MnSOD), which neutralizes superoxide 289 
+
+radicals and is often linked to increased stress resistance and longevity (Doonan et al., 2008). 290 
+
+GST-4 is a phase II detoxification enzyme, glutathione S-transferase, which has a peroxidase 291 
+
+activity and catalyzes the conjugation of glutathione (GSH) to electrophilic compounds, 292 
+
+promoting detoxification and excretion (Hurst et al., 1998; Inoue et al., 2005; Leiers et al., 2003). 293 
+
+Analysis of GST-4::mCherry and SOD-3::eGFP expression in wild-type L1 larvae confirmed that 294 
+
+GST-4 is primarily expressed in the intestine, with additional localization in head hypodermal 295 
+
+cells (Fig. 10A). In contrast, SOD-3::eGFP fluorescence was localized to the pharynx, especially 296 
+
+in the anterior bulb, with a faint but detectable signal around the terminal bulb of the pharynx. 297 
+
+No sod-3 expression was observed in the intestine under normal conditions, nor in the 298 
+
+hypodermis, body wall muscles, neurons, or tail (Fig. 10A). Deletion of mul-1 alone did not 299 
+
+significantly change GST-4 expression but increased SOD-3 expression in the pharynx (Fig. 300 
+
+10B). Remarkably, the F49F1(syb8776) quadruple deletion caused a strong induction of GST-4 301 
+
+throughout the body, especially in the anterior gut, with widespread upregulation of SOD-3 (Fig. 302 
+
+10C). Consistent with these findings, prdx-2 mutants, which are known to accumulate 303 
+
+endogenous ROS and which we show to induce mul-1 (Fig. 3 and 5), also showed strong GST-304 
+
+4 induction and pharyngeal SOD-3 expression (Fig. 10D). As expected, GST-4 induction in 305 
+
+prdx-2 mutants was skn-1 -dependent (Fig. 10E), while SOD-3 induction required daf-16 (Fig. 306 
+
+10F). Overall, these results suggest that deleting mul-1 and its paralogs increases oxidative 307 
+
+stress and the expression of key genes involved in oxidative stress response. 308 
+
+> 309
+
+Genetic interaction with further MUL-1 paralogs 310 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 14
+
+Our results are consistent with MUL-1 proteins acting redundantly to protect animals from 311 
+
+oxidative stress. Given that the nematode genome encodes multiple additional MUL-1 paralogs 312 
+
+we wanted to test this notion more generally and examined a more distantly related MUL-1 313 
+
+paralog SYSM-1, given its reported role as an apoptosis effector, deficiency leading to 314 
+
+decreased, and not increased DNA damage induced germ cell apoptosis. SYSM-1 acts cell-non 315 
+
+autonomously, being secreted from the gut and functioning independently of p53 316 
+
+(Soltanmohammadi et al., 2022). We confirmed that sysm-1 mutants are defective for DNA 317 
+
+damage-induced apoptosis (Soltanmohammadi et al., 2022) (Fig. 11A). However, analysis of 318 
+
+sysm-1; mul-1 double mutants as well as quadruple mutant in conjunction with sysm-1 revealed 319 
+
+that the excessive apoptosis phenotype observed in mul-1 single mutants as well as in the 320 
+
+quadruple mutant where excessive apoptosis occurs even without IR is not suppressed by 321 
+
+sysm-1. In other words, the apoptosis defect associated with sysm-1 is bypassed by mul-1 and 322 
+
+its paralogs (Fig. 11A). 323 
+
+> 324
+
+We next generated and analysed syb8669 a deletion of F46B3.1, the most closely related MUL-325 
+
+1 paralog located outside the MUL-1 paralog cluster (quadruple mutant). Double mutant 326 
+
+analysis of the allele leads to complex genetic interactions with mul-1 and the quadruple mutant: 327 
+
+While the single mutant has no overt phenotype compared to N2, the quintuple mutant 328 
+
+suppressed some phenotypes, while enhancing others. syb8669 suppressed the reduced 329 
+
+fecundity of the quadruple mutant (Fig.11B). Conversely, the reduced H 2 O2 sensitivity of the 330 
+
+quadruple mutant was further suppressed to an extent such that quintuple mutants are partially 331 
+
+resistant compared to WT (Fig. 11C). Also, the hypersensitivity towards Pseudomonas PA14 of 332 
+
+the quadruple mutant is suppressed in the quintuple mutant (Fig. 11D). In contrast, quintuple 333 
+
+mutants are hypersensitive to IR (Fig. 11E). All in all, the experiments including sysms-1 and 334 
+
+syb8669 point towards a more complex picture where MUL-1 paralogs can have opposing 335 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 15
+
+functions, in line with the hypothesis that MUL-1 like proteins might besides being scavengers 336 
+
+may also act as rheostates for ROS. 337 
+
+> 338
+
+Discussion 339 
+
+We initiated our study by focusing on MUL-1 and later included the four closest paralogs in our 340 
+
+analyses. MUL-1 and its close paralogs are unstructured, except for possessing 3-5 ShKT 341 
+
+domains. These domains are cysteine-rich motifs initially described in sea anemone toxins and 342 
+
+are widely found in invertebrate proteins, although their function in nematodes remains largely 343 
+
+unexplored (Rangaraju et al., 2010; Sachkova et al., 2020). We postulate that nematode multi-344 
+
+ShKT domain proteins may act as scavengers or rheostats of oxidative stress, owing to their 345 
+
+potential to scavenge ROS via disulfide formation facilitated by the six cysteines in each ShKT 346 
+
+domain (Fig. 12, see below). 347 
+
+> 348
+
+We certainly do not rule out that MUL-1 and its paralogs are mucin-like proteins (Hoffman et al., 349 
+
+2020). MUL-1 encodes a 42-amino-acid domain highly enriched in serine/threonine residues, 350 
+
+which is akin to mammalian mucins that are highly enriched for serine/threonine throughout 351 
+
+most of their length. The parasitic nematode Toxocara canis encodes four secreted proteins, 352 
+
+each with an N-terminal signal peptide for secretion and an 83-97 amino acid S/T-enriched 353 
+
+mucin domain, N-terminal to two ShkT domains (Loukas et al., 2000). For MUL-1, prominent 354 
+
+enrichment of serine and threonine residues, which occurs along the entire length of 355 
+
+mammalian mucins comprising several thousand amino acids (Johansson et al., 2013), occurs 356 
+
+only in a 44-amino-acid unstructured region between the 4th and 5th ShKT domains. 357 
+
+Irrespective, our combined genetic analysis indicates that MUL-1 and related paralogs are 358 
+
+involved in a circulatory regulatory circuit associated with oxidative stress as discussed below. 359 
+
+> 360
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 16
+
+We discovered that the transcriptional induction of MUL-1 by IR, which generates ROS, is 361 
+
+restricted to the gut, with the most pronounced effects observed in the anterior cells. Notably, 362 
+
+MUL-1 induction is not triggered by DNA-damaging agents such as the methylating agent MMS 363 
+
+or the DNA cross-linking agent cisplatin, nor by osmotic stress or starvation, but rather by 364 
+
+oxidative stress, as demonstrated by direct exposure to H 2 O2 or increased endogenous H 2 O2365 
+
+levels in peroxidase-deficient prdx-2 mutants . mul-1 induction is mediated by the p38 MAPK 366 
+
+signaling pathway, consistent with previous RNAi-based studies (Kimura et al., 2012), and 367 
+
+requires the transcription factor ATF-7, but not SKN-1. While SKN-1 is widely recognized as a 368 
+
+master regulator of oxidative stress responses by inducing phase II detoxification genes 369 
+
+(Blackwell et al., 2015; Foster et al., 2020), our findings underscore a previously 370 
+
+underappreciated role for ATF-7 in orchestrating transcriptional responses to ROS 371 
+
+accumulation. At first glance, gut expression seems intriguing; however, it aligns with bacterial-372 
+
+nematode infections, in which bacterial pathogens and C. elegans produce ROS upon pathogen 373 
+
+exposure (Chavez et al., 2007; Hoeven et al., 2011; Jansen et al., 2002; Miranda-Vizuete & 374 
+
+Veal, 2017) . Indeed, Rhizobium infection and the associated oxidative stress led to defective 375 
+
+genome integrity during larval gut development, resulting in excessive DNA bridges and 376 
+
+karyokinesis defects in gut nuclei, with the phenotype most prominent in the anteriormost gut 377 
+
+cells (Kniazeva & Ruvkun, 2019). We did not find decreased susceptibility to P. aeruginosa 378 
+
+infection in the mul-1 single mutant, as previously reported (Hoffman et al., 2020), but did find 379 
+
+increased sensitivity in the quadruple mutant. This is due to us using 5-fluoro-2’-deoxyuridine 380 
+
+(FUDR) to prevent germ cell proliferation, animals otherwise producing embryos that hatch 381 
+
+inside their parents (bagging phenotype) leading to lethality (Kwon et al., 2024). 382 
+
+> 383
+
+Functionally, in our study, mul-1 mutants exhibited a small increase of ROS after IR, a modest 384 
+
+delayed development under oxidative stress conditions, and elevated CEP-1-dependent germ 385 
+
+cell apoptosis. mul-1 is part of a cluster of three additional paralogs, each encoding three to five 386 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 17
+
+ShKT domains. Deleting these three paralogs, along with mul-1 (quadruple mutant), reduced 387 
+
+progeny numbers and exhibited CEP-1/p53-dependent germline apoptosis even without 388 
+
+irradiation. Also, genetic interactions with SYSM-1, a small, 99-amino-acid, unstructured protein 389 
+
+that carries two ShKT domains and is induced by IR (Soltanmohammadi et al., 2022), yielded 390 
+
+surprising results. Like MUL-1, SYSM-1 is a transcriptional target of p38 signaling and the 391 
+
+downstream ATF-7 transcription factor (Soltanmohammadi et al., 2022). In contrast to MUL-1, 392 
+
+which reduces CEP-1 p53-induced germ cell apoptosis, SYSM-1 is essential for DNA damage-393 
+
+induced apoptosis. We find that radiation-induced apoptosis of sysm-1 mutants is bypassed by 394 
+
+mul-1 single and quadruple mutants. SYSM-1 was suggested to be secreted from the gut to 395 
+
+facilitate DNA damage-induced apoptosis in the germ line (Soltanmohammadi et al., 2022). 396 
+
+> 397
+
+We show that in the absence the 4 MUL-1 paralogs, endogenous ROS accumulates, and this 398 
+
+aligns with our observation that DAF-16-dependent SOD-3::eGFP and SKN-1-dependent 399 
+
+Cherry::GST-4 are induced in the mul-1 quadruple paralog mutant. Together, these data 400 
+
+support a circular model of redox signaling, in which MUL-1 and MUL-1-like ShKT domain 401 
+
+proteins may function as scavengers or rheostats of ROS (Fig. 12). This way, the loss of the 402 
+
+MUL-1 cluster may lead to increased oxidative stress and the compensatory activation of stress 403 
+
+pathways, conferring increased survival under oxidizing conditions, but is insufficient to protect 404 
+
+against apoptosis induction, sensitivity to IR and Pseudomonas infection. A localized balance 405 
+
+between the expression of various MUL-1 paralogs and the differential activation of 406 
+
+compensatory pathways might determine the activity of different stress response pathways. At 407 
+
+present, we do not know how signals associated with mul-1 single and compound mutants are 408 
+
+transmitted across worm tissues, especially to the germ line, where CEP-1-dependent apoptosis 409 
+
+is induced. Signaling, and this hypothesis remains to be tested, might be conferred via direct 410 
+
+translocation of closely related MUL-1 paralogs, as shown for SYSM-1 (Soltanmohammadi et 411 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 18
+
+al., 2022). Alternatively, intercellular signalling could be directly mediated by H 2 O2 diffusion 412 
+
+across plasma membranes mediated by aquaporins (Sies & Jones, 2020). 413 
+
+> 414
+
+ShKT domains were initially characterized as potent toxins derived from sea anemones that 415 
+
+inhibit mammalian potassium channels (Castañeda et al., 1995; Harvey & Vita, n.d.; Shafee et 416 
+
+al., 2019; Tudor et al., 1998). We postulate that ShKT domains may be involved in redox 417 
+
+reactions. If so, ShKT domains are used in redox regulation, and their cysteines could be 418 
+
+oxidised akin to the 3 amino acid GSH (glutathione) peptide to its oxidized dimeric (GSSG) 419 
+
+form. Each ShKT domain contains six cysteine residues, potentially allowing for extensive 420 
+
+disulfide bond formation and redox reactivity. Although such a system may appear inefficient, 421 
+
+especially if reductive recycling does not occur, it could serve as a buffering mechanism during 422 
+
+acute oxidative stress. In this context, the expansion of proteins primarily composed of ShKT 423 
+
+domains in nematodes and other invertebrates might reflect an evolutionary strategy to cope 424 
+
+with transient yet potentially lethal oxidative insults. Akin, peroxiredoxin ShKT domains might act 425 
+
+as direct H2 O2 scavengers or enable thiol oxidation by relaying H 2 O2 -derived oxidation 426 
+
+equivalents to other proteins (Stöcker et al., 2018). 427 
+
+> 428
+
+The hypothesis that ShKT domains might be linked to redox reactions is supported by 429 
+
+invertebrate redox-active proteins, such as peroxidases and tyrosinases that carry ShKT 430 
+
+domains (Rangaraju et al., 2010). For instance, C. elegans MLT-7 and SKPO-1, 2, and 3, 431 
+
+peroxidases have acquired an N-terminal ShKT domain and are closely related to the human 432 
+
+peroxidasin PXDN which lacks a ShKT domain (Thein et al., 2009; Tiller & Garsin, 2014). These 433 
+
+proteins have been shown to crosslink collagen and regulate endothelial basement membrane 434 
+
+structure and protect against E. faecalis infection (Thein et al., 2009; Tiller & Garsin, 2014). 435 
+
+Peroxidase reactions use H2O2 to catalyze the oxidation of various substrates, and C. 436 
+
+elegans peroxidases modify cuticle collagen structure and permeability (Edens et al., 2001; 437 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 19
+
+Myllyharju & Kivirikko, 2004; Thein et al., 2009). Beyond peroxidases, ShKT domains are also 438 
+
+present in several C. elegans tyrosinases-like proteins (TYR-1 through TYR-6), which belong to 439 
+
+the type-3 copper enzyme family and are annotated to contain tyrosinases copper-binding 440 
+
+domains together with an N-terminal ShKT module. Although the specific biochemical activities 441 
+
+of TYR proteins in C. elegans remain untested and are inferred primarily from homology, 442 
+
+mammalian tyrosinases are well-established type-3 copper oxidoreductases that function 443 
+
+through catalytic redox cycling (Pretzler & Rompel, 2024). 444 
+
+> 445
+
+Overall, our combined results indicate that MUL-1-like proteins may act as buffers or rheostats 446 
+
+for oxidative stress. It remains to be directly tested if and when ShKT domains are oxidised and 447 
+
+if this involves disulfide bond formation. Certainly, it is possible, and this remains to be tested, 448 
+
+that MUL-1 like proteins have a role in connecting neuronal circuits and gut behavior, where 449 
+
+H2O2 has a role in signaling (Jia et al., 2024; Jia & Sieburth, 2021; Liu et al., 2024). Irrespective, 450 
+
+the expansion of ShKT domains in nematodes and other invertebrates may facilitate rapid 451 
+
+evolutionary adaptation to the various challenges posed by oxidative stress. The expansion of 452 
+
+MUL-1 paralogs may also have facilitated different MUL-1 paralogs having overlapping and 453 
+
+opposing functions. 454 
+
+> 455
+
+Limitations of the study. 456 
+
+Overall, our combined results indicate that MUL-1 is part of a regulon induced by oxidative 457 
+
+stress via p38 MAP kinase signaling, and that MUL-1 and its paralogs may act as buffers or 458 
+
+rheostats for oxidative stress. It remains to be directly tested if and when ShKT domains are 459 
+
+oxidised and if this involves disulfide bond formation. MUL-1 paralog SYSM-1 was previously 460 
+
+shown to be secreted from the gut and taken up in the germ line. Analysing high copy MUL-1 461 
+
+we do not see any evidence for germ line localization, but acknowledge that this might be due to 462 
+
+the limited sensitivity of GFP. We recognize that we have not investigated if MUL-1 and its 463 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 20
+
+paralogs act cell non-autonomously, which will be an interesting future question. Also, our 464 
+
+analysis largely depends on the analysis of the mul-1 single mutant and the quadruple mutant 465 
+
+where all 4 paralogs of the locus are deleted. It will be interesting to investigate how all single, 466 
+
+double and triple mutant combinations behave relating to apoptosis induction, H 2 O2 resistance, 467 
+
+the accumulation of ROS as well as the activation of compensatory GST-4 and SOD-3 468 
+
+activation. Finally, we acknowledge that we do not provide direct evidence that the heightened 469 
+
+sensitivity of the quadruple mutant to Pseudomonas infection PA14 is due to excessive 470 
+
+oxidative stress. 471 
+
+> 472
+
+Materials and Methods 473 
+
+> 474
+
+Experimental design 475 
+
+The aim of this study was to determine if and how MUL-1 and its ShKT-domain paralogs 476 
+
+regulate organismal responses to oxidative stress and DNA damage in C. elegans . We used 477 
+
+genetically defined wild-type and mutant strains to compare responses to IR, chemical 478 
+
+genotoxins, oxidative stress, osmotic stress, heat shock, starvation, and Pseudomonas 479 
+
+aeruginosa infection. Stress-induced signaling and ROS levels were monitored using single 480 
+
+copy fluorescent transcriptional and translational reporters at endogenous loci, CellROX 481 
+
+staining, and quantitative microscopy. Strains were generated by CRISPR-Cas9 genome editing 482 
+
+and genetic crosses. Alleles were validated by PCR and sequencing. All assays were performed 483 
+
+with age-synchronized populations. Phenotypic outcomes were quantified using standardized 484 
+
+assays. All experiments included at least three independent biological replicates. Sample sizes 485 
+
+varied depending on the assay and are indicated in the corresponding figure legends. For most 486 
+
+microscopy-based assays, 20-30 animals per condition were analyzed, whereas lifespan and 487 
+
+progeny assays were performed using assay-appropriate cohort sizes. The number of animals 488 
+
+(n) refers to individual worms scored per condition, unless otherwise specified. 489 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 21
+> 490
+
+Strain maintenance and genetics 491 
+
+Caenorhabditis elegans strains were maintained using standard procedures as originally 492 
+
+described by Brenner (Brenner, 1974). Animals were cultured on NGM-lite agar plates seeded 493 
+
+with Escherichia coli OP50 and maintained at 20°C under standard laboratory conditions unless 494 
+
+otherwise indicated. For specific assays, animals were propagated at 25°C (e.g., P. aeruginosa 495 
+
+PA14 survival assays) or at 15°C for the maintenance of selected strains. Strains are listed 496 
+
+under Suppl Table 2. 497 
+
+> 498
+
+Age-synchronized populations were generated either by alkaline hypochlorite treatment of 499 
+
+gravid adults followed by overnight L1 arrest in M9 buffer, or by filtration-based synchronization 500 
+
+methods, as indicated. Transgenic and CRISPR-Cas9-edited strains were generated by 501 
+
+standard microinjection protocols (Dokshin et al., 2018; Ghanta & Mello, 2020; Wang et al., 502 
+
+2018) or obtained from the Caenorhabditis Genetics Center (CGC) or SunyBiotech. Compound 503 
+
+mutant strains were generated through standard genetic crosses and verified by PCR 504 
+
+genotyping and/or DNA sequencing. All strains used in this study are listed in Suppl. Table 2, 505 
+
+and corresponding reagents can be found in Suppl. Table 3. 506 
+
+> 507
+
+Genotoxic stress analysis 508 
+
+For IR experiments, age-synchronized animals were exposed to X-rays using an RS2000 X-ray 509 
+
+irradiator (Rad Source Technologies) operated at 160 kV and 25 mA with a 0.3 mm copper filter, 510 
+
+as previously described (Ermolaeva et al., 2013; Zou et al., 2024). Following irradiation, animals 511 
+
+were returned to OP50-seeded NGM plates and allowed to recover under standard conditions. 512 
+
+> 513
+
+For chemical genotoxic stress assays, freshly prepared aliquots of cisplatin dissolved in saline 514 
+
+and MMS diluted in water were used according to established protocols (Volkova et al., 2020). 515 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 22
+
+All solutions were protected from light until use. Groups of 20-30 age-synchronized animals 516 
+
+were transferred into 2 mL of S-basal buffer supplemented with 5 μl of concentrated OP50 517 
+
+bacterial suspension as a food source. For MMS treatment, animals were exposed to 0.8 mM 518 
+
+MMS for 16 h at 20 °C, as previously reported. For cisplatin treatment, animals were incubated 519 
+
+with 10 μM cisplatin for 16 h at 20 °C. Samples were incubated under gentle agitation 520 
+
+throughout the treatment period. After exposure, animals were washed thoroughly to remove 521 
+
+residual genotoxins, transferred to OP50-seeded NGM plates, and allowed to recover. 522 
+
+> 523
+
+For UV irradiation, age-synchronized animals were placed on unseeded NGM plates without lids 524 
+
+and exposed to 200 mJ/cm 2 UV light using a CL-1000 UV crosslinker (UVP), as previously 525 
+
+described (Yue et al., 2024). Animals were transferred immediately to OP50-seeded NGM 526 
+
+plates following exposure and imaged 24 h post-treatment. 527 
+
+> 528
+
+Western blot analysis of MUL-1::3xHA 529 
+
+Synchronized C. elegans populations were collected and washed three times with M9 buffer, 530 
+
+flash-frozen in liquid nitrogen and stored at -80°C. Worm pellets were thawed on ice and mixed 531 
+
+1:1 with a 2x Laemmli buffer containing 5% β-mercaptoethanol, boiled at 95°C for 5 min, and 532 
+
+briefly centrifuged. Proteins were resolved on hand-cast 12% SDS-PAGE gels in Tris-glycine-533 
+
+SDS buffer (Jeong et al., 2018) and transferred to a PVDF membrane using a semi-dry system 534 
+
+(15V, ~0.8 mA cm -2 , 15 min). Membranes were blocked in 5% non-fat milk in PBST for 1h, 535 
+
+incubated with mouse anti-HA (sigma, clone 16B12; 1:1000) overnight at 4°C, washed and 536 
+
+probed with HRP-conjugated anti-mouse secondary antibody (1:5000) for 1h. Signals were 537 
+
+detected using Pierce ECL Plus substrate and imaged on a Bio-Rad Chemidoc system. 538 
+
+> 539
+
+Microscopy and image acquisition 540 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 23
+
+Images were acquired on a Zeiss Axio Imager microscope equipped with an Axiocam 503 mono 541 
+
+camera and controlled by ZEN software. Z-stacks were collected at 1 μm intervals. For each 542 
+
+experiment, exposure times, illumination intensity, and acquisition settings were kept constant 543 
+
+across all genotypes and conditions. Detailed acquisition parameters for each experiment are 544 
+
+provided in the corresponding Methods section. 545 
+
+> 546
+
+Quantification of intestinal nuclei fluorescence 547 
+
+Fluorescence intensity from the transcriptional reporter, and from all mutant strains generated in 548 
+
+this reporter background, was quantified by performing line-scan measurements across the first 549 
+
+pair of anterior intestinal nuclei in mul-1(syb3342) IV animals. A transverse (10 pixels wide) line 550 
+
+was manually positioned through the nuclei, spanning 30 μm in L1-L3 larvae or 40 μm in L4 and 551 
+
+adult animals. Line placement was optimized to minimize background contributions from 552 
+
+adjacent intestinal cells and out-of-focus planes. For each nucleus, the maximum fluorescence 553 
+
+intensity peak along the line profile was extracted and used for quantitative analysis. 554 
+
+> 555
+
+For translational reporters and CellROX green staining, fluorescence intensity was quantified by 556 
+
+measuring the corrected total cell fluorescence (CTCF). Images were acquired as z-stacks, and 557 
+
+a single optical section representing a comparable focal plane was selected for each animal. 558 
+
+Whole-animal regions of interest (ROIs) were manually delineated for individual animals, and 559 
+
+CTCF values were calculated as the integrated fluorescence intensity after background 560 
+
+subtraction and used for quantitative analysis. 561 
+
+> 562
+
+Stress response experiments 563 
+
+To assess stress responses, age-synchronized C. elegans at the indicated developmental 564 
+
+stages were subjected to defined stress conditions, following established protocols. 565 
+
+> 566
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 24
+
+For starvation stress, L1 larvae were transferred to unseeded NGM plates and incubated at 20 567 
+
+°C for 6 h, as previously described for starvation-induced stress responses ( PMC3697962 ). For 568 
+
+osmotic stress, synchronized L1 animals were placed on OP50-seeded NGM plates 569 
+
+supplemented with 250 mM NaCl and incubated for 24 h at 20 °C, following standard 570 
+
+hyperosmotic stress assays (Urso et al., 2020). For heat-shock treatment, synchronized L4 571 
+
+animals were incubated on OP50-seeded NGM plates at 35 °C for 1 h, followed by a 1 h 572 
+
+recovery period at 20 °C, as previously described (Golden et al., 2020; Lithgow et al., 1995). For 573 
+
+oxidative stress, synchronized L1 animals were exposed to 10 mM H 2 O2 in liquid culture. Briefly, 574 
+
+animals suspended in M9 buffer were treated by adding 10 μl of a 5x H 2 O2 stock solution to 40 575 
+
+> μ
+
+l of the animal suspension and incubated for 1 h at 20 °C under gentle agitation (Offenburger & 576 
+
+Gartner, 2018). After treatment, animals were washed four times with 1 mL M9 buffer to remove 577 
+
+residual H 2 O2 transferred to OP50-seeded NGM plates, and incubated at 20 °C. Animals were 578 
+
+imaged 24 h post-treatment. 579 
+
+> 580
+
+Generation of a stable integrated multicopy mul-1::eGFP line 581 
+
+A multicopy mul-1::eGFP reporter line was generated by first establishing an extrachromosomal 582 
+
+array in the temperature-sensitive lin-15(n765) background using a PCR-amplified mul-583 
+
+1P::linker::eGFP fragment co-injected with the rescue plasmid pL15EK. Transgenic F1 animals 584 
+
+showing robust intestinal GFP expression and phenotypic rescue of the lin-15 defect were 585 
+
+selected. To obtain a stable genomic insertion, animals carrying the array were exposed to 50 586 
+
+Gy of IR, and subsequent generations were screened for lines that maintained uniform GFP 587 
+
+expression in the absence of selection, indicative of successful array integration. 588 
+
+> 589
+
+Analysis of mitochondrial ROS 590 
+
+A 5x CellROX green solution was prepared by diluting the 2.5 mM stock solution in M9 buffer 591 
+
+and protected from light until use, as previously described for ROS detection in C. elegans (Min 592 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 25
+
+et al., 2021) For each reaction, synchronized L1 animals were collected in M9, and 160 μl of the 593 
+
+suspension was mixed with 40 μl of the 5x CellROX Green solution to obtain a final reaction 594 
+
+volume of 200 μl. Samples were incubated for 2 h at 20 °C in the dark under gentle agitation to 595 
+
+ensure uniform staining. Following incubation, animals were pelleted by centrifugation at 1000 596 
+
+rpm for 1 min, washed three times with fresh M9 buffer to remove residual dye, mounted on 2% 597 
+
+agarose pads, and imaged. 598 
+
+> 599
+
+Sensitivity to stress 600 
+
+Sensitivity to oxidative stress was assessed using H 2 O2 treatment in liquid culture following 601 
+
+established protocols in C. elegans (Offenburger & Gartner, 2018). A H 2 O2 stock solution was 602 
+
+freshly prepared from 30% (w/v 9.8 M) H 2 O2 and diluted with water to generate a 5x stock 603 
+
+solution of 50 mM. For treatment, the 5x stock was added to synchronized L1 animals 604 
+
+suspended in M9 buffer to obtain the desired final concentration. Samples were incubated for 1 605 
+
+h at 20 °C under gentle agitation. After treatment, animals were washed three times with 1 mL 606 
+
+of M9 buffer to remove residual H 2 O2 and transferred to OP50-seeded NGM plates for recovery. 607 
+
+Animals were plated in triplicate, and developmental progression was scored 48 h post-608 
+
+treatment. 609 
+
+> 610
+
+Sensitivity to IR was assessed by exposing age-synchronized animals to X-ray irradiation, 611 
+
+followed by analysis of post-IR developmental progression (Ermolaeva et al., 2013). Briefly, 612 
+
+synchronized animals were irradiated with a single dose of 100 Gy, transferred to OP50-seeded 613 
+
+NGM plates for recovery under standard conditions, and plated in triplicate. Sensitivity to IR was 614 
+
+quantified by scoring developmental stage 48 h post-IR, using vulval morphology and overall 615 
+
+body size as staging criteria. 616 
+
+> 617
+
+Lifespan, reproductive fitness, and apoptosis assays 618 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 26
+
+Age-synchronized L4 animals from different genetic backgrounds were transferred to OP50-619 
+
+seeded NGM plates and maintained under standard conditions. For lifespan analysis, groups of 620 
+
+20 animals were plated on each NGM plate and transferred to fresh plates daily until egg-laying 621 
+
+ceased. Viability was assessed daily by gently prodding the head or tail with a platinum wire; 622 
+
+animals unresponsive to stimulation were scored as dead. Animals that escaped, ruptured, or 623 
+
+died due to internal hatching (“bagging”) were censored from the analysis, following standard 624 
+
+lifespan assay criteria (Kenyon et al., 1993). 625 
+
+> 626
+
+For reproductive fitness assays, individual animals were placed on 35 mm OP50-seeded NGM 627 
+
+plates and transferred to fresh plates daily until egg-laying ceased. After 24 h, unhatched 628 
+
+embryos were scored as dead embryos, and after 48 h, live larvae were counted to determine 629 
+
+brood size. Total progeny counts were analyzed and compared across genotypes, as previously 630 
+
+described (Andux & Ellis, 2008). 631 
+
+> 632
+
+For apoptosis assays, animals were collected at 24 h after the L4 stage, immobilized with 1 mM 633 
+
+levamisole, and mounted on 2% agarose pads. Germ cell corpses in the gonad arms were 634 
+
+visualized and quantified using fluorescence microscopy with the ced-1::gfp(bcIs39) reporter 635 
+
+strain, as previously described (Zhou et al., 2001). To assess DNA damage-induced apoptosis, 636 
+
+L4 animals were exposed to IR, and apoptotic germ cells were quantified at 24 h post-IR 637 
+
+treatment (Gartner et al., 2000). 638 
+
+> 639
+
+Pseudomonas survival assays 640 
+
+Survival assays on P. aeruginosa PA14 were performed as previously described (Kwon et al., 641 
+
+2024) with minor modifications. Briefly, PA14 was grown overnight in LB broth at 37 °C, seeded 642 
+
+evenly across the entire surface of NGM plates, and incubated at 37 °C for 24 h followed by an 643 
+
+additional 24 h at 25 °C prior to use. Age-synchronized L4 animals were transferred to PA14-644 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 27
+
+seeded plates supplemented with 50 μM 5-fluoro-2’-deoxyuridine (FUDR) to prevent progeny 645 
+
+production and maintained at 25 °C. Survival was monitored every 12 h. Animals that ruptured 646 
+
+internally (“bagging”), crawled off the agar, or exhibited vulval bursting were censored from the 647 
+
+analysis. At least 60 animals per genotype were scored per assay, and three independent 648 
+
+biological replicates were performed. 649 
+
+> 650
+
+Statistical analysis 651 
+
+Statistical analyses were performed using GraphPad Prism. For experiments involving two 652 
+
+independent variables, data were analyzed by ordinary two-way ANOVA. When significant 653 
+
+effects were detected, multiple comparisons were performed using Šidak’s or Tukey’s post hoc 654 
+
+tests, as indicated in the figure legends. Comparisons between two independent groups were 655 
+
+performed using unpaired two-tailed Student’s t-test. Survival curves were compared using log-656 
+
+rank (Mantel-Cox) test and the Gehan-Berslow-Wilcoxon test. All tests were two-sided. Data are 657 
+
+presented as mean ± SEM unless stated otherwise. A p value < 0.05 was considered 658 
+
+statistically significant. 659 
+
+> 660
+
+Figure legends 661 
+
+> 662
+
+Figure 1 663 
+
+IR induces transcriptional activation of mul-1 in the intestine of C. elegans. 664 
+
+(A) Under control conditions, mul-1 expression in mul-1(syb3342) IV animals is detected 665 
+
+predominantly in intestinal nuclei, with the strongest signal in the two anterior-most nuclei and a 666 
+
+gradual increase during larval development. 667 
+
+(B) Six hours after exposure to 100 Gy IR, mul-1 expression is robustly induced in intestinal 668 
+
+nuclei across all larval stages, initiating in the anterior cells and subsequently expanding 669 
+
+throughout the gut. 670 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 28
+
+(C) Representative fluorescence intensity profiles measured along a transverse line across the 671 
+
+first pair of anterior intestinal nuclei in mul-1(syb3342) IV animals. 672 
+
+(D) Quantification of nuclear fluorescence intensity derived from the maximum intensity peaks 673 
+
+corresponding to each nucleus, following optimized line placement to minimize background 674 
+
+contributions from adjacent intestinal cells in different focal planes. 675 
+
+Scale bars, 20 μm. Statistical analysis was performed using two-way ANOVA with Šidak’s 676 
+
+multiple comparisons test. Quantification includes animals from at least three independent 677 
+
+experiments (n = 20-30 animals per developmental stage and condition). 678 
+
+> 679
+
+Figure 2 680 
+
+mul-1 expression is selectively induced by IR but not by other DNA-damaging agents. 681 
+
+Representative images of mul-1(syb3342) IV animals under control (A) conditions or following 682 
+
+exposure to IR (B), cisplatin (C), MMS (D), or UV irradiation (E). Robust induction of mul-1 683 
+
+expression in intestinal nuclei is observed specifically after IR (B) whereas other DNA-damaging 684 
+
+agents elicit little or no reporter activation (C-E). Animals were treated with the respective 685 
+
+agents at the L4 stage and assayed after 6h after IR (B) , 24h after cisplatin treatment (C), 16 686 
+
+hours after MMS treatment (D) and 24hours after UV treatment (E) (Materials and Methods). 687 
+
+(F) quantification of nuclear mCherry fluorescence intensity in intestinal cells under the indicated 688 
+
+conditions. 689 
+
+Scale bars, 20 μm. Data are shown as mean ± SEM and include animals from at least three 690 
+
+independent experiments (n = 20-30 animals per condition). Statistical analysis was performed 691 
+
+using two-way ANOVA Tukey’s multiple comparisons test. 692 
+
+> 693
+
+Figure 3 694 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 29
+
+Oxidative stress, but not general stressors, triggers mul-1 induction. 695 
+
+(A-D) Representative images of mul-1(syb3342) IV animals subjected to starvation, heat shock, 696 
+
+or osmotic stress show no detectable reporter activation in intestinal nuclei. 697 
+
+(E) Treatment with H 2 O2 induces robust mul-1 expression in intestinal nuclei. 698 
+
+(A-E) All animals were treated at the L1 stage and imaged after 24hours (note that starved and 699 
+
+H2 O2 treated worms are developmentally arrested. 700 
+
+(F-G) Basal mul-1 expression in prdx-2(gk169) II; mul-1(syb3342) IV animals is comparable to 701 
+
+controls during early larval stages ( L1-L2). 702 
+
+(H-J) As development progresses, mul-1 activation in prdx-2 mutants initiates in anterior 703 
+
+intestinal nuclei and gradually extends toward posterior regions of the gut. 704 
+
+(K) Quantification of fluorescence intensity in anterior intestinal nuclei confirms selective mul-1 705 
+
+induction by oxidative stress. 706 
+
+(L) Comparative quantification under control conditions reveals elevated basal mul-1 activation 707 
+
+in prdx-2 mutants. 708 
+
+Scale bars, 20 μm. Data are shown as mean ± SEM and include animals from at least three 709 
+
+independent experiments (n = 20-30 animals per condition). Statistical analysis was performed 710 
+
+using two-way ANOVA followed by Tukey’s multiple comparisons test. 711 
+
+> 712
+
+Figure 4 713 
+
+The p38 MAPK pathway and ATF-7, but not SKN-1, are required for mul-1 induction 714 
+
+following IR. 715 
+
+(A) IR-induced mul-1 reporter expression in mul-1(syb3342) IV animals. 716 
+
+(B-C) Loss of the core p38 MAPK components sek-1 and pmk-1 abolishes mul-1 induction in 717 
+
+response to IR, indicating an essential role for this signaling pathway. 718 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 30
+
+(D-E) Genetic analysis of downstream transcription factors shows that atf-7 , but not skn-1 , is 719 
+
+required for IR-dependent mul-1 activation. 720 
+
+(F) Quantification of fluorescence intensity in anterior intestinal nuclei across genotypes and 721 
+
+conditions. 722 
+
+Animals were treated at the L1 stage. Scale bars, 20 μm. Data are shown as mean ± SEM and 723 
+
+include animals from at least three independent experiments (n = 20-30 animals per condition). 724 
+
+Statistical analysis was performed using two-way ANOVA followed by Tukey’s multiple 725 
+
+comparisons test. 726 
+
+> 727
+
+Figure 5 728 
+
+MUL-1 protein accumulates in response to IR and oxidative stress. 729 
+
+(A) The glo-1(zu391) X mutation reduces intestinal autofluorescence, improving visualization of 730 
+
+fluorescent reporters. 731 
+
+(B) No detectable MUL-1 expression is observed in mul-1(gt3545) IV; glo-1(zu391) X animals 732 
+
+under control conditions. 733 
+
+(C-D) Following exposure to IR or H 2 O2 treatment, MUL-1 protein accumulates in intestinal cells, 734 
+
+displaying diffuse cytoplasmic localization and formation of cytoplasmic puncta. 735 
+
+(E) An integrated multicopy mul-1::eGFP transgene displays detectable basal expression in 736 
+
+intestinal cells under control conditions, with cytoplasmic and punctate localization, particularly 737 
+
+evident in anterior intestinal cells. 738 
+
+(F) Quantification of intestinal MUL-1 fluorescence intensity following IR exposure, measured as 739 
+
+corrected total cell fluorescence (CTCF). 740 
+
+(G-H) Basal MUL-1 protein levels in mul-1(gt3545) IV; glo-1(zu391) X animals at the L4 and 741 
+
+adult stages, intestinal MUL-1 protein signal is not readily detectable under control conditions. 742 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 31
+
+(I-J) In contrast, prdx-2(gk169) II; mul-1(gt3545); glo-1(zu391) X animals display detectable 743 
+
+intestinal MUL-1 protein accumulation at the L4 and adult stages, with cytoplasmic distribution 744 
+
+and punctate structures. 745 
+
+Unless otherwise indicated, animals were analysed at the L1 stage. Scale bars, 20 μm. Data are 746 
+
+shown as mean ± SEM from at least three independent experiments (n = 20-30 animals per 747 
+
+genotype and condition). Statistical analysis was performed using two-way ANOVA followed by 748 
+
+Tukey’s multiple comparisons test. 749 
+
+> 750
+
+Figure 6 751 
+
+MUL-1 buffers oxidative stress, promotes developmental progression under oxidative 752 
+
+stress, and restrains IR-induced germline apoptosis. 753 
+
+(A) Lifespan analysis under control conditions reveals no significant difference between wild-754 
+
+type and mul-1 mutants (n = 10 animals per genotype). 755 
+
+(B) Brood size analysis of wild-type and mul-1(syb3342) IV animals under control conditions 756 
+
+shows no significant difference in total progeny (n = 10-20 animals per genotype). 757 
+
+(C) Embryonic viability, assessed by the fraction of hatched embryos, is comparable between 758 
+
+wild-type and mul-1 mutants (n = 10-20 animals per genotype). 759 
+
+(D) Quantification of CellROX Green fluorescence intensity in wild-type and mul-1(syb3342) IV 760 
+
+animals under control conditions and following IR reveals exaggerated ROS accumulation in 761 
+
+mul-1 mutants after IR (n = 20-30 animals per genotype and condition). 762 
+
+(E-F) Representative CellROX green images of wild-type animals show low basal ROS levels 763 
+
+under control conditions and a moderate increase following IR. 764 
+
+(G-H) In contrast, mul-1(syb3342) IV animals display low basal CellROX signal under control 765 
+
+conditions, but accumulate excessive ROS after IR, with strong fluorescence particularly evident 766 
+
+in intestinal cells. 767 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 32
+
+(I) Developmental stages distribution 48 h after exposure to 2.5 mM H 2 O2 at the L1 stage (n = 768 
+
+60 animals per genotype). Developmental stages were scored based on vulval morphology and 769 
+
+overall body size. mul-1 (syb3342) IV mutants display a moderate delay in developmental 770 
+
+profession compared to wild-type animals, comparable to that observed in daf-16 and pmk-1 771 
+
+mutants, which were included as positive controls for oxidative stress sensitivity. 772 
+
+(J) Quantification of germ cell corpses 24 h after exposure to IR reveals a hyperinduction of 773 
+
+apoptosis in mul-1 mutants, which is suppressed in cep-1; mul-1 double mutants (n = 20-30 774 
+
+animals per genotype and condition). This phenotype was independently confirmed using a mul-775 
+
+1(STOP-IN) null allele. Germ cell corpses were scored using the ced-1::gfp reporter. 776 
+
+L1 animals were analysed unless otherwise indicated. Scale bars, 20 μm. Data are shown as 777 
+
+mean ± SEM from at least three independent experiments. Lifespan (A) was analyzed using log-778 
+
+rank (Mantel-Cox) and Gehan-Breslow-Wilcoxon tests. Brood size and embryonic viability (B-C) 779 
+
+were analyzed using unpaired two-tailed Student’s t-tests. CellROX fluorescence (D) and germ 780 
+
+cell apoptosis (J) were analyzed by two-way ANOVA followed by Tukey’s or Šidak’s multiple 781 
+
+comparisons tests. 782 
+
+> 783
+
+Figure 7 784 
+
+A ShKT-containing MUL-1 paralog cluster acts redundantly to maintain germline 785 
+
+homeostasis and enable developmental recovery after IR. 786 
+
+(A) Schematic representation of the domain architecture of MUL-1 and its closest paralogs, all 787 
+
+encoding ShKT domain-containing proteins. 788 
+
+(B) Pairwise sequence identity matrix comparing MUL-1 and related paralogs. 789 
+
+(C) Schematic representation of the F49F1 genomic locus on chromosome IV showing the 790 
+
+organization of mul-1 and its paralogs. The syb8776 allele corresponds to a deletion of an 791 
+
+approximately 7.9 kb region encompassing all four genes. 792 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 33
+
+(D) Lifespan analysis of F49F1 quadruple mutant shows no significant difference compared to 793 
+
+wild-type under control conditions (n = 10-20 animals per genotype). 794 
+
+(E) Progeny production is significantly reduced in the F49F1 quadruple mutant (n = 10-20 795 
+
+animals per genotype). 796 
+
+(F) Embryonic lethality remains unchanged in F49F1 quadruple mutants (n = 10-20 animals per 797 
+
+genotype). 798 
+
+(G) Germ cell apoptosis is elevated in the F49F1 quadruple mutants under both control and IR 799 
+
+conditions (n = 20-30 animals per condition). 800 
+
+(H) Developmental stage distribution of animals exposed to IR at the L1 stage and scored after 801 
+
+48 hours recovery (n = 60 animals per genotype). 802 
+
+Data are shown as mean ± SEM. Lifespan analyses (D) were performed using log-rank (Mantel-803 
+
+Cox) and Gehan-Breslow-Wilcoxon tests. Progeny production and embryonic viability (E-F) 804 
+
+were analyzed using unpaired two-tailed Student’s t-tests. Germ cell apoptosis (G) was 805 
+
+analyzed by two-way ANOVA followed by Tukey’s multiple comparisons test. 806 
+
+> 807
+
+Figure 8 808 
+
+Redundant MUL-1 paralogs contribute to resistance against P. aeruginosa infection. 809 
+
+(A) Survival analysis of wild-type animals, mul-1(syb3342) IV , pmk-1 and the F49F1 mutants 810 
+
+following exposure to P. aeruginosa PA14. While mul-1 single mutants do not display increased 811 
+
+sensitivity, the quadruple mutant exhibits reduced survival comparable to the pmk-1 positive 812 
+
+control (n = 60 animals per genotype). 813 
+
+(B-C) Representative images showing reporter expression in adult animals exposed to E. coli 814 
+
+OP50 (B) or P. aeruginosa PA14 (C). 815 
+
+(D) Quantification of fluorescence intensity reveals robust induction of mul-1 reporter expression 816 
+
+upon PA14 exposure compared to OP50-fed controls. 817 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 34
+
+Data are shown as mean ± SEM from three independent experiments. Fluorescence intensity 818 
+
+(D) was analyzed using an unpaired two-tailed Student’s t-test with Welch’s correction. 819 
+
+> 820
+
+Figure 9 821 
+
+MUL-1 paralogs restrain basal ROS accumulation. 822 
+
+Representative images of wild-type (A) and F49F1(syb8776) IV animals (B) stained with 823 
+
+CellROX Green under control conditions. 824 
+
+(C) Quantification of fluorescence intensity reveals increased basal ROS levels in the quadruple 825 
+
+mutant compared to wild-type animals (n = 20 animals per genotype). 826 
+
+Data are shown as mean ± SEM from at least three independent experiments. Statistical 827 
+
+analysis was performed using an unpaired two-tailed Student’s t-test with Welch’s correction. 828 
+
+> 829
+
+Figure 10 830 
+
+Compensatory induction of GST-4::mCherry and SOD-3::eGFP. 831 
+
+(A) Expression pattern of the oxidative stress reporters gst-4::mCherry and sod-3::eGFP in wild-832 
+
+type L1 larvae carrying the glo-1(zu391) X mutation. gst-4::mCherry is predominantly expressed 833 
+
+in the intestine, whereas sod-3::eGFP localizes mainly to the pharynx. 834 
+
+(B) Deletion of mul-1 alone does not alter gst-4 or sod-3 expression. 835 
+
+(C) The quadruple mutant shows strong induction of gst-4 throughout the body, particularly in 836 
+
+the anterior intestine, together with widespread upregulation of sod-3 .837 
+
+(D) prdx-2(gk169) II mutants exhibit robust induction of gst-4 and increased sod-3 expression, 838 
+
+consistent with elevated endogenous oxidative stress. 839 
+
+(E) Induction of gst-4 in prdx-2 mutants requires skn-1 .840 
+
+(F) Induction of sod-3 in prdx-2 mutants is abolished in the absence of daf-16 .841 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 35
+
+Representative images are shown. Quantification of gst-4::mCherry and sod-3::eGFP 842 
+
+fluorescence was performed on 20-30 animals per genotype per experiment. Data are shown as 843 
+
+mean ± SEM from at least three independent experiments. Statistical analysis was performed 844 
+
+using one-way ANOVA followed by Tukey’s multiple comparisons test. 845 
+
+> 846
+
+Figure 11 847 
+
+Genetic interactions between MUL-1 and its paralogs shape organismal responses to 848 
+
+oxidative and genotoxic stress. 849 
+
+(A) Suppression of apoptosis defect of sysm-1 .850 
+
+(B) Genetic interaction with the F46B3.1 MUL-1 paralog. 851 
+
+(C) Suppression of H 2 O2 sensitivity by F46B3.1 loss-of-function. 852 
+
+(D) Suppression of Pseudomonas PA14 sensitivity by F46B3.1 loss-of-function. 853 
+
+(E) F46B3.1 loss-of-function increases sensitivity to IR. 854 
+
+Data are shown as mean ± SEM from at least three independent experiments. Germ cell 855 
+
+apoptosis (A) was analyzed by two-way ANOVA followed by Tukey’s multiple comparisons test 856 
+
+(n = 20-30 animals per condition). H 2O2 and IR sensitivity assays (C, E) were analyzed by two-857 
+
+way ANOVA (n = 60 animals per genotype). Survival assays (D) were analyzed using log-rank 858 
+
+(Mantel-Cox) tests (n = 60 animals per genotype). 859 
+
+> 860
+
+Figure 12 861 
+
+Model for the integration of DNA damage and redox signaling by MUL-1 and ShKT 862 
+
+domain proteins. 863 
+
+IR increases ROS, engaging the SEK-1/PMK-1 p38 MAPK pathway and its downstream 864 
+
+transcription factor ATF-7 to induce MUL-1 and other ShKT-domain proteins. Under 865 
+
+physiological conditions, PRDX-2 limits basal ROS levels. Upon stress, ShKT proteins function 866 
+
+as redox-responsive modulators that limit the magnitude of antioxidant gene activation. In 867 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 36
+
+parallel, elevated ROS activate SKN-1/Nrf2 to promote GST-4 expression and DAF-16/FoxO to 868 
+
+drive SOD-3 expression. In the absence of ShKT proteins, derepression of GST-4 and SOD-3 869 
+
+enhances antioxidant capacity, thereby supporting genome stability and normal development 870 
+
+while mitigating p53/CEP-1-dependent germ cell apoptosis. 871 
+
+> 872
+> 873
+
+References 874 
+
+Andux, S., & Ellis, R. E. (2008). Apoptosis maintains oocyte quality in aging Caenorhabditis 875 
+
+elegans females. PLoS Genetics , 4(12), e1000295. 876 
+
+Aranda-Rivera, A. K., Cruz-Gregorio, A., Arancibia-Hernández, Y. L., Hernández-Cruz, E. Y., & 877 
+
+Pedraza-Chaverri, J. (2022). RONS and oxidative stress: An overview of basic concepts. 878 
+
+Oxygen , 2(4), 437–478. 879 
+
+Blackwell, T. K., Steinbaugh, M. J., Hourihan, J. M., Ewald, C. Y., & Isik, M. (2015). SKN-1/Nrf, 880 
+
+stress responses, and aging in Caenorhabditis elegans. Free Radical Biology & Medicine ,881 
+
+88 (Pt B), 290–301. 882 
+
+Brenner, S. (1974). The genetics of Caenorhabditis elegans. Genetics , 77 (1), 71–94. 883 
+
+Castañeda, O., Sotolongo, V., Amor, A. M., Stöcklin, R., Anderson, A. J., Harvey, A. L., 884 
+
+Engström, A., Wernstedt, C., & Karlsson, E. (1995). Characterization of a potassium 885 
+
+channel toxin from the Caribbean Sea anemone Stichodactyla helianthus. Toxicon: Official 886 
+
+Journal of the International Society on Toxinology , 33 (5), 603–613. 887 
+
+Chavez, V., Mohri-Shiomi, A., Maadani, A., Vega, L. A., & Garsin, D. A. (2007). 712 enzymes 888 
+
+are required for DAF-16-mediated immunity due to generation of reactive oxygen species 889 
+
+by Caenorhabditis elegans. E.A. Veal Redox Biology , 11 , 708–714. 890 
+
+Dalle-Donne, I., Rossi, R., Colombo, R., Giustarini, D., & Milzani, A. (2006). Biomarkers of 891 
+
+oxidative damage in human disease. Clinical Chemistry , 52 (4), 601–623. 892 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 37
+
+Dokshin, G. A., Ghanta, K. S., Piscopo, K. M., & Mello, C. C. (2018). Robust genome editing 893 
+
+with short single-stranded and long, partially single-stranded DNA donors in Caenorhabditis 894 
+
+elegans. Genetics , 210 (3), 781–787. 895 
+
+Doonan, R., McElwee, J. J., Matthijssens, F., Walker, G. A., Houthoofd, K., Back, P., 896 
+
+Matscheski, A., Vanfleteren, J. R., & Gems, D. (2008). Against the oxidative damage theory 897 
+
+of aging: superoxide dismutases protect against oxidative stress but have little or no effect 898 
+
+on life span in Caenorhabditis elegans. Genes & Development , 22 (23), 3236–3241. 899 
+
+Edens, W. A., Sharling, L., Cheng, G., Shapira, R., Kinkade, J. M., Lee, T., Edens, H. A., Tang, 900 
+
+X., Sullards, C., Flaherty, D. B., Benian, G. M., & Lambeth, J. D. (2001). Tyrosine cross-901 
+
+linking of extracellular matrix is catalyzed by Duox, a multidomain oxidase/peroxidase with 902 
+
+homology to the phagocyte oxidase subunit gp91phox. The Journal of Cell Biology , 154 (4), 903 
+
+879–891. 904 
+
+Ermolaeva, M. A., Segref, A., Dakhovnik, A., Ou, H.-L., Schneider, J. I., Utermöhlen, O., Hoppe, 905 
+
+T., & Schumacher, B. (2013). DNA damage in germ cells induces an innate immune 906 
+
+response that triggers systemic stress resistance. Nature , 501 (7467), 416–420. 907 
+
+Forman, H. J., Maiorino, M., & Ursini, F. (2010). Signaling functions of reactive oxygen species. 908 
+
+Biochemistry , 49 (5), 835–842. 909 
+
+Forman, H. J., & Zhang, H. (2021). Targeting oxidative stress in disease: promise and 910 
+
+limitations of antioxidant therapy. Nature Reviews. Drug Discovery , 20 (9), 689–709. 911 
+
+Foster, K. J., Cheesman, H. K., Liu, P., Peterson, N. D., Anderson, S. M., & Pukkila-Worley, R. 912 
+
+(2020). Innate immunity in the C. elegans intestine is programmed by a neuronal regulator 913 
+
+of AWC olfactory neuron development. Cell Reports , 31 (1), 107478. 914 
+
+Gartner, A., Milstein, S., Milstein, S., Ahmed, S., Hodgkin, J., & Hengartner, M. (2000). A 915 
+
+conserved checkpoint pathway mediates DNA damage--induced apoptosis and cell cycle 916 
+
+arrest in C. elegans. Molecules and Cells , 5(3), 435–443. 917 
+
+Gerdol, M., Cervelli, M., Mariottini, P., Oliverio, M., Dutertre, S., & Modica, M. V. (2019). A 918 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 38
+
+recurrent motif: Diversity and evolution of ShKT domain containing proteins in the vampire 919 
+
+snail Cumia reticulata. Toxins , 11 (2), 106. 920 
+
+Ghanta, K. S., & Mello, C. C. (2020). Melting dsDNA donor molecules greatly improves 921 
+
+precision genome editing in Caenorhabditis elegans. Genetics , 216 (3), 643–650. 922 
+
+Golden, N. L., Plagens, R. N., Kim Guisbert, K. S., & Guisbert, E. (2020). Standardized methods 923 
+
+for measuring induction of the heat shock response in Caenorhabditis elegans. Journal of 924 
+
+Visualized Experiments: JoVE , 161 . https://doi.org/10.3791/61030 925 
+
+Greiss, S., Schumacher, B., Grandien, K., Rothblatt, J., & Gartner, A. (2008). Transcriptional 926 
+
+profiling in C. elegans suggests DNA damage dependent apoptosis as an ancient function 927 
+
+of the p53 family. BMC Genomics , 9, 334. 928 
+
+Harvey, A. L., & Vita, C. (n.d.). A Potassium-Channel Toxin From the Sea Anemone 929 
+
+Bunodosoma Granulifera, An Inhibitor for Kv1 Channels - Revision of the Amino Acid 930 
+
+Sequence. Disulfide-Bridge Assignment, Chemical Synthesis, and Biological Activity Jöel 931 
+
+Cotton .932 
+
+Hermann, G. J., Schroeder, L. K., Hieb, C. A., Kershner, A. M., Rabbitts, B. M., Fonarev, P., 933 
+
+Grant, B. D., & Priess, J. R. (2005). Genetic analysis of lysosomal trafficking in 934 
+
+Caenorhabditis elegans. Molecular Biology of the Cell , 16 (7), 3273–3288. 935 
+
+Hoeven, R. van der, McCallum, K. C., Cruz, M. R., & Garsin, D. A. (2011). Ce-Duox1/BLI-3 936 
+
+generated reactive oxygen species trigger protective SKN-1 activity via p38 MAPK 937 
+
+signaling during infection in C. elegans. PLoS Pathogens , 7(12), e1002453. 938 
+
+Hoffman, C. L., Lalsiamthara, J., & Aballay, A. (2020). Host mucin is exploited by Pseudomonas 939 
+
+aeruginosa to provide monosaccharides required for a successful infection. mBio , 11 (2). 940 
+
+https://doi.org/10.1128/mBio.00060-20 941 
+
+Hurst, R., Bao, Y., Jemth, P., Mannervik, B., & Williamson, G. (1998). Phospholipid 942 
+
+hydroperoxide glutathione peroxidase activity of human glutathione transferases. The 943 
+
+Biochemical Journal , 332 (1), 97–100. 944 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 39
+
+Inoue, H., Hisamoto, N., An, J. H., Oliveira, R. P., Nishida, E., Blackwell, T. K., & Matsumoto, K. 945 
+
+(2005). The C. elegans p38 MAPK pathway regulates nuclear localization of the 946 
+
+transcription factor SKN-1 in oxidative stress response. Genes & Development , 19 (19), 947 
+
+2278–2283. 948 
+
+Jansen, W. T. M., Bolm, M., Balling, R., Chhatwal, G. S., & Schnabel, R. (2002). Hydrogen 949 
+
+Peroxide-Mediated Killing of Caenorhabditis elegans by Streptococcus pyogenes . Infection 950 
+
+and Immunity , 70 (9), 5202–5207. 951 
+
+Jeong, D.-E., Lee, Y., & Lee, S.-J. V. (2018). Western Blot Analysis of C. elegans Proteins. 952 
+
+Methods in Molecular Biology (Clifton, N.J.) , 1742 , 213–225. 953 
+
+Jia, Q., & Sieburth, D. (2021). Mitochondrial hydrogen peroxide positively regulates 954 
+
+neuropeptide secretion during diet-induced activation of the oxidative stress response. 955 
+
+Nature Communications , 12 (1), 2304. 956 
+
+Jia, Q., Young, D., Zhang, Q., & Sieburth, D. (2024). Endogenous hydrogen peroxide positively 957 
+
+regulates secretion of a gut-derived peptide in neuroendocrine potentiation of the oxidative 958 
+
+stress response in Caenorhabditis elegans. eLife , 13 (RP97503). 959 
+
+https://doi.org/10.7554/eLife.97503 960 
+
+Johansson, M. E. V., Sjövall, H., & Hansson, G. C. (2013). The gastrointestinal mucus system in 961 
+
+health and disease. Nature Reviews. Gastroenterology & Hepatology , 10 (6), 352–361. 962 
+
+Juan, C. A., Pérez de la Lastra, J. M., Plou, F. J., & Pérez-Lebeña, E. (2021). The chemistry of 963 
+
+reactive oxygen species (ROS) revisited: Outlining their role in biological macromolecules 964 
+
+(DNA, lipids and proteins) and induced pathologies. International Journal of Molecular 965 
+
+Sciences , 22 (9), 4642. 966 
+
+Kenyon, C., Chang, J., Gensch, E., Rudner, A., & Tabtiang, R. (1993). A C. elegans mutant that 967 
+
+lives twice as long as wild type. Nature , 366 (6454), 461–464. 968 
+
+Kim, D. H., Feinbaum, R., Alloing, G., Emerson, F. E., Garsin, D. A., Inoue, H., Tanaka-Hino, 969 
+
+M., Hisamoto, N., Matsumoto, K., Tan, M.-W., & Ausubel, F. M. (2002). A conserved p38 970 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 40
+
+MAP kinase pathway in Caenorhabditis elegans innate immunity. Science (New York, 971 
+
+N.Y.) , 297 (5581), 623–626. 972 
+
+Kimura, T., Takanami, T., Sakashita, T., Wada, S., Kobayashi, Y., & Higashitani, A. (2012). 973 
+
+Innate immune genes including a mucin-like gene, mul-1, induced by ionizing radiation in 974 
+
+Caenorhabditis elegans. Radiation Research , 178 (4), 313–320. 975 
+
+Kniazeva, M., & Ruvkun, G. (2019). Rhizobium induces DNA damage in Caenorhabditis 976 
+
+elegans intestinal cells. Proceedings of the National Academy of Sciences of the United 977 
+
+States of America , 116 (9), 3784–3792. 978 
+
+Koppenol, W. H. (1993). The centennial of the Fenton reaction. Free Radical Biology & 979 
+
+Medicine , 15 (6), 645–651. 980 
+
+Kumsta, C., Thamsen, M., & Jakob, U. (2011). Effects of oxidative stress on behavior, 981 
+
+physiology, and the redox thiol proteome of Caenorhabditis elegans . Antioxidants & Redox 982 
+
+Signaling , 14 (6), 1023–1037. 983 
+
+Kwon, S., Park, K.-S., & Yoon, K.-H. (2024). Regulator of lipid metabolism NHR-49 mediates 984 
+
+pathogen avoidance through precise control of neuronal activity. Cells (Basel, Switzerland) ,985 
+
+13 (11), 978. 986 
+
+Leiers, B., Kampkötter, A., Grevelding, C. G., Link, C. D., Johnson, T. E., & Henkle-Dührsen, K. 987 
+
+(2003). A stress-responsive glutathione S-transferase confers resistance to oxidative stress 988 
+
+in Caenorhabditis elegans. Free Radical Biology & Medicine , 34 (11), 1405–1415. 989 
+
+Lithgow, G. J., White, T. M., Melov, S., & Johnson, T. E. (1995). Thermotolerance and extended 990 
+
+life-span conferred by single-gene mutations and induced by thermal stress. Proceedings of 991 
+
+the National Academy of Sciences of the United States of America , 92 (16), 7540–7544. 992 
+
+Liu, Y., Li, Q., Tian, G., Zhou, X., Chen, P., Chen, B., Shan, Z., & Qi, B. (2024). Neuronal 993 
+
+PRDX-2-mediated ROS signaling regulates food digestion via peripheral UPRmt activation. 994 
+
+Nature Communications , 15 (1), 10582. 995 
+
+López-Otín, C., Blasco, M. A., Partridge, L., Serrano, M., & Kroemer, G. (2023). Hallmarks of 996 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 41
+
+aging: An expanding universe. Cell , 186 (2), 243–278. 997 
+
+Loukas, A., Hintz, M., Linder, D., Mullin, N. P., Parkinson, J., Tetteh, K. K., & Maizels, R. M. 998 
+
+(2000). A family of secreted mucins from the parasitic nematode Toxocara canis bears 999 
+
+diverse mucin domains but shares similar flanking six-cysteine repeat motifs. The Journal 1000 
+
+of Biological Chemistry , 275 (50), 39600–39607. 1001 
+
+Min, H., Youn, E., & Shim, Y.-H. (2021). Long-term caffeine intake exerts protective effects on 1002 
+
+intestinal aging by regulating vitellogenesis and mitochondrial function in an aged 1003 
+
+Caenorhabditis elegans model. Nutrients , 13 (8), 2517. 1004 
+
+Miranda-Vizuete, A., & Veal, E. A. (2017). Caenorhabditis elegans as a model for understanding 1005 
+
+ROS function in physiology and disease. Redox Biology , 11 , 708–714. 1006 
+
+Myllyharju, J., & Kivirikko, K. I. (2004). Collagens, modifying enzymes and their mutations in 1007 
+
+humans, flies and worms. Trends in Genetics: TIG , 20 (1), 33–43. 1008 
+
+Offenburger, S.-L., & Gartner, A. (2018). 6-hydroxydopamine (6-OHDA) Oxidative Stress Assay 1009 
+
+for Observing Dopaminergic Neuron Loss in Caenorhabditis elegans. Bio-Protocol , 8(18). 1010 
+
+https://doi.org/10.21769/BioProtoc.3025 1011 
+
+Oláhová, M., Taylor, S. R., Khazaipoul, S., Wang, J., Morgan, B. A., Matsumoto, K., Blackwell, 1012 
+
+T. K., & Veal, E. A. (2008). A redox-sensitive peroxiredoxin that is important for longevity 1013 
+
+has tissue- and stress-specific roles in stress resistance. Proceedings of the National 1014 
+
+Academy of Sciences of the United States of America , 105 (50), 19839–19844. 1015 
+
+Palacin-Martinez, C., Anel-Lopez, L., Alvarez, M., Neila-Montero, M., Montes-Garrido, R., 1016 
+
+Soriano-Úbeda, C., de Paz, P., Anel, L., & Riesco, M. F. (2024). The characterization of 1017 
+
+CellROX TM probes could be a crucial factor in ram sperm quality assessment. Frontiers in 1018 
+
+Veterinary Science , 11 , 1342808. 1019 
+
+Pretzler, M., & Rompel, A. (2024). Tyrosinases: a family of copper-containing metalloenzymes. 1020 
+
+ChemTexts , 10 (4), 12. 1021 
+
+Rangaraju, S., Khoo, K. K., Feng, Z.-P., Crossley, G., Nugent, D., Khaytin, I., Chi, V., Pham, C., 1022 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 42
+
+Calabresi, P., Pennington, M. W., Norton, R. S., & Chandy, K. G. (2010). Potassium 1023 
+
+channel modulation by a toxin domain in matrix metalloprotease 23. The Journal of 1024 
+
+Biological Chemistry , 285 (12), 9124–9136. 1025 
+
+Rhee, S. G. (2016). Overview on peroxiredoxin. Molecules and Cells , 39 (1), 1–5. 1026 
+
+Roots, R., & Okada, S. (1975). Estimation of life times and diffusion distances of radicals 1027 
+
+involved in x-ray-induced DNA strand breaks of killing of mammalian cells. Radiation 1028 
+
+Research , 64 (2), 306–320. 1029 
+
+Sachkova, M. Y., Landau, M., Surm, J. M., Macrander, J., Singer, S. A., Reitzel, A. M., & Moran, 1030 
+
+Y. (2020). Toxin-like neuropeptides in the sea anemone Nematostella unravel recruitment 1031 
+
+from the nervous system to venom. Proceedings of the National Academy of Sciences of 1032 
+
+the United States of America , 117 (44), 27481–27492. 1033 
+
+Schumacher, B., Schertel, C., Wittenburg, N., Tuck, S., Mitani, S., Gartner, A., Conradt, B., & 1034 
+
+Shaham, S. (2005). C. elegans ced-13 can promote apoptosis and is induced in response 1035 
+
+to DNA damage. Cell Death and Differentiation , 12 (2), 153–161. 1036 
+
+Shafee, T., Mitchell, M. L., & Norton, R. S. (2019). Mapping the chemical and sequence space 1037 
+
+of the ShKT superfamily. Toxicon: Official Journal of the International Society on 1038 
+
+Toxinology , 165 , 95–102. 1039 
+
+Sies, H., & Jones, D. P. (2020). Reactive oxygen species (ROS) as pleiotropic physiological 1040 
+
+signalling agents. Nature Reviews. Molecular Cell Biology , 21 (7), 363–383. 1041 
+
+Soltanmohammadi, N., Wang, S., & Schumacher, B. (2022). Somatic PMK-1/p38 signaling links 1042 
+
+environmental stress to germ cell apoptosis and heritable euploidy. Nature 1043 
+
+Communications , 13 (1), 701. 1044 
+
+Stöcker, S., Maurer, M., Ruppert, T., & Dick, T. P. (2018). A role for 2-Cys peroxiredoxins in 1045 
+
+facilitating cytosolic protein thiol oxidation. Nature Chemical Biology , 14 (2), 148–155. 1046 
+
+Tan, M.-W., Rahme, L. G., Sternberg, J. A., Tompkins, R. G., & Ausubel, F. M. (1999). 1047 
+
+Pseudomonas aeruginosa killing of Caenorhabditis elegans used to identify P. aeruginosa 1048 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 43
+
+virulence factors. Proceedings of the National Academy of Sciences of the United States of 1049 
+
+America , 96 (5), 2408–2413. 1050 
+
+Thein, M. C., Winter, A. D., Stepek, G., McCormack, G., Stapleton, G., Johnstone, I. L., & Page, 1051 
+
+A. P. (2009). Combined extracellular matrix cross-linking activity of the peroxidase MLT-7 1052 
+
+and the dual oxidase BLI-3 is critical for post-embryonic viability in Caenorhabditis elegans. 1053 
+
+The Journal of Biological Chemistry , 284 (26), 17549–17563. 1054 
+
+Tiller, G. R., & Garsin, D. A. (2014). The SKPO-1 peroxidase functions in the hypodermis to 1055 
+
+protect Caenorhabditis elegans from bacterial infection. Genetics , 197 (2), 515–526. 1056 
+
+Tudor, J. E., Pennington, M. W., & Norton, R. S. (1998). Ionisation behaviour and solution 1057 
+
+properties of the potassium channel blocker ShK toxin. European Journal of Biochemistry ,1058 
+
+251 (1-2), 133–141. 1059 
+
+Urso, S. J., Comly, M., Hanover, J. A., & Lamitina, T. (2020). The O-GlcNAc transferase OGT is 1060 
+
+a conserved and essential regulator of the cellular and organismal response to hypertonic 1061 
+
+stress. PLoS Genetics , 16 (10), e1008821. 1062 
+
+Volkova, N. V., Meier, B., González-Huici, V., Bertolini, S., Gonzalez, S., Vöhringer, H., Abascal, 1063 
+
+F., Martincorena, I., Campbell, P. J., Gartner, A., & Gerstung, M. (2020). Mutational 1064 
+
+signatures are jointly shaped by DNA damage and repair. Nature Communications , 11 (1), 1065 
+
+2169. 1066 
+
+Wang, H., Park, H., Liu, J., & Sternberg, P. W. (2018). An efficient genome editing strategy to 1067 
+
+generate putative null mutants in Caenorhabditis elegans using CRISPR/Cas9. G3 1068 
+
+(Bethesda, Md.) , 8(11), 3607–3616. 1069 
+
+Ward, J. F. (1994). The complexity of DNA damage: relevance to biological consequences. 1070 
+
+International Journal of Radiation Biology , 66 (5), 427–432. 1071 
+
+Yohe, K. M., & Davies, M. J. (2014). Lipid peroxidation in signaling and disease. Free Radical 1072 
+
+Biology and Medicine , 70 , 47–54. 1073 
+
+Yoshiyama, K. O., Okamoto, N. L., Hidema, J., & Higashitani, A. (2023). 222 nm far-UVC 1074 
+
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 44
+
+efficiently introduces nerve damage in Caenorhabditis elegans. PloS One , 18 (1), 1075 
+
+e0281162. 1076 
+
+Yue, Z., Liu, H., Liu, M., Wang, N., Ye, L., Guo, C., & Zheng, B. (2024). Cornus officinalis 1077 
+
+Extract Enriched with Ursolic Acid Ameliorates UVB-Induced Photoaging in Caenorhabditis 1078 
+
+elegans. Molecules (Basel, Switzerland) , 29 (12), 2718. 1079 
+
+Zhang, Y., Shu, C., Li, Z., Qu, M., Wang, C., Nie, S., Xu, Q., Gu, S., Fan, M., Shi, B., Fu, L., & 1080 
+
+Zhang, F. (2025). The protective effects and mechanisms of rosmarinic acid against 1081 
+
+Pseudomonas aeruginosa infection in Caenorhabditis elegans. Frontiers in Pharmacology ,1082 
+
+16 (1701885), 1701885. 1083 
+
+Zhou, Z., Hartwieg, E., & Horvitz, H. R. (2001). CED-1 is a transmembrane receptor that 1084 
+
+mediates cell corpse engulfment in C. elegans. Cell , 104 (1), 43–56. 1085 
+
+Zhu, A., Zheng, F., Zhang, W., Li, L., Li, Y., Hu, H., Wu, Y., Bao, W., Li, G., Wang, Q., & Li, H. 1086 
+
+(2022). Oxidation and antioxidation of natural products in the model organism 1087 
+
+Caenorhabditis elegans. Antioxidants (Basel, Switzerland) , 11 (4), 705. 1088 
+
+Zou, Y., Pronker, M. F., Damen, J. M. A., Heck, A. J. R., & Reiding, K. R. (2024). Genotype-1089 
+
+dependent N-glycosylation and newly exposed O-glycosylation affect plasmin-induced 1090 
+
+cleavage of histidine-rich glycoprotein (HRG). The Journal of Biological Chemistry , 300 (3), 1091 
+
+105683. 1092 
+
+> 1093
+> 1094
+> 1095
+> 1096
+> 1097
+> 1098
+> remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint 45
+> 1099
+
+remix, or adapt this material for any purpose without crediting the original authors. preprint (which was not certified by peer review) in the Public Domain. It is no longer restricted by copyright. Anyone can legally share, reuse, The copyright holder has placed this this version posted May 7, 2026. ;https://doi.org/10.64898/2026.05.03.722560 doi: bioRxiv preprint Fig 1 DIC mCherry Merge L1 L2 L3 L4 Adult 
+
+Control 
+
+> DIC mCherry Merge
+
+IR 
+
+ABCDL1 L2 L3 L4 Adult 0 10 20 30 0200 400 600 800 Distance (um) Fluorescence intensity (a.u.) L1 Control IR 0 10 20 30 0200 400 600 800 L2 Distance (um) 0 10 20 30 0200 400 600 800 Distance (um) L3 0 10 20 30 40 0200 400 600 800 Distance (um) L4 0 10 20 30 40 0200 400 600 800 Distance (um) Adult L1 L2 L3 L4 Adult 0200 400 600 800 Fluorescence intensity (a.u.) Control IR Fig 2 
+
+MMS DIC mCherry Merge UV Control Cisplatin IR A B C D E
+
+F
+
+Control DNA damaging agent 
+
+IR Cisplatin MMS UV 0200 400 600 800 Fluorescence intensity (a.u.)  ns ns Fig 3 DIC mCherry Merge L1 L2 L3 L4 Adult 
+
+prdx-2(gk169) II; mul-1(syb3342) IV 
+
+F G I JDIC mCherry Merge Starvation Heat shock Oxidative 
+
+A B C D EControl Osmotic HK L
+
+Starvation Heat shock Osmotic Oxidative 0200 400 600 800 Fluorescence intensity (a.u.) ns ns ns L1 L2 L3 L4 Adult 0200 400 600 800 1000 1200 1400 Fluorescence intensity (a.u.) 
+
+mul-1(syb3342) IV prdx-2(gk169)III; mul-1(syb3342) IV 
+
+Control Stress Fig 4 
+
+> DIC mCherry Merge
+
+mul-1(syb3342) IV mul-1(syb3342) pmk-1(km25) IV atf-7(qd221qd130) III; mul-1(syb3342) IV mul-1(syb3342) IV; sek-1(km4) X mul-1(syb3342) skn-1(zj15) IV 
+
+A B C D EF
+
+mul-1(syb3342) IV sek-1(km4) X pmk-1(km25) IV skn-1(zj15) IV atf-7(qd22qd130) III 
+
+0200 400 600 800 Fluorescence intensity (a.u.) ns ns 
+
+Control IR DIC eGFP Merge Control 
+
+glo-1(zu391) X mul-1(gt3545) IV; glo-1(zu391) X 
+
+Control IR Oxidative 
+
+> prdx-2(gk169) II; mul-1(gt3545) IV; glo-1(zu391) X
+
+A B C DFJAdult 
+
+> mul-1(gt3545) IV; glo-1(zu391) X
+
+L4 G HIDIC eGFP DIC eGFP 
+
+mul-1(gtIs3000) lin-15 (+) 
+
+EControl Fig 5 
+
+glo-1(zu391) X mul-1(gt3545) IV; glo-1(zu391) X 
+
+02 10 54 10 56 10 5CTCF (a.u.)  ns ns 
+
+Control IR Fig 6 
+
+mul-1(syb3342) IV 
+
+IR Control Wild-type IR Control 
+
+> DIC mCherry CellROX
+
+E F G HA BC D0 5 10 15 20 020 40 60 80 100 Days post-L4 Survival (%) Wild-type 
+
+mul-1(syb3342) IV 
+
+Wild-type 
+
+mul-1(syb3342) IV 
+
+020 40 60 80 100 Hatching embryos (%) ns Wild-type 
+
+daf-16(mu86) I pmk-1(km25) IV mul-1(syb3342) IV 
+
+020 40 60 80 100 % of individuals 2.5 mM H 2 O2L4 L3 L2 L1 
+
+ced-1::gfp(bcIs39) V cep-1(lg12501) I mul-1(syb3342) IV mul-1(gt3459) IV cep-1(lg12501) I; mul-1(syb3342) IV 
+
+0510 15 20 25 30 germ cell corpses/ gonad arm ns 
+
+Control IR Wild-type 
+
+mul-1(syb3342) IV 
+
+0.0 5.0 10 51.0 10 61.5 10 62.0 10 6CTCF (a.u.)  ns 
+
+Control IR I JWild-type 
+
+mul-1(syb3342) IV 
+
+0100 200 300 Brood size 
+
+> ns
+
+Fig 7 A BD E FGMUL-1A Signal ShKT ShKT ShKT ShKT ShKT MUL-1B ShKT ShKT ShKT ShKT DRD-50 Signal ShKT ShKT ShKT ShKT ShKT F49F1.7A Signal ShKT ShKT ShKT ShKT F49F1.5A Signal ShKT ShKT ShKT MUL-1A MUL-1B DRD-50 F49F1.5A F49F1.7A Residues Query Cover (%) Identity (%) Signal Peptide ShKT Domains 259 189 189 265 159 100 72 98 48 96 100 100 49 50 32 +-+++545430 5 10 15 20 020 40 60 80 100 Days post-L4 Survival (%) Wild-type F49F1(syb8776) IV 
+
+Wild-type 
+
+F49F1(syb8776) IV 
+
+0100 200 300 Brood size 
+
+Wild-type 
+
+F49F1(syb8776) IV 
+
+020 40 60 80 100 Hatching embryos (%) Wild-type 
+
+pmk-1(km25) IV mul-1(syb3342) IV F49F1(syb8776) IV 
+
+020 40 60 80 100 % of individuals IR L4 L3 L2 L1 H
+
+ced-1::gfp(bcIs39) V cep-1(lg12501)I F49F1(syb8776) IV cep-1(lg12501)I; F49F1(syb8776)IV 
+
+0510 15 20 25 30 germ cell corpses/ gonad arm ns ns ns 
+
+Control IR 
+
+mul-1a 
+
+5000 bp 
+
+mul-1b F49F1.5b F49F1.5a drd-50 F49F1.7a F49F1.7b 
+
+10000 bp 
+
+syb8776 
+
+CFig 8 Brightfield mCherry Merge OP50 PA14 
+
+B CDA
+
+OP50 PA14 020000 40000 60000 Fluorescence intensity (a.u.) 0 12 24 36 48 60 0.0 0.2 0.4 0.6 0.8 1.0 Time (h) Survival on PA14 (%) Wild-type pmk-1(km25) IV mul-1(syb3342) IV F49F1(syb8776) IV Fig 9 
+
+Wild-type DIC eGFP Merge 
+
+F49F1(syb8776) IV 
+
+Wild-type 
+
+F49F1(syb8776) IV 
+
+> 0
+
+200000 400000 600000 800000 CTCF (a.u.) A B CFig 10 
+
+> DIC
+
+daf-16(mu86) I; prdx-2(gk169) II; gst-4::mCherry; sod-3::egfp glo-1(zu391) X 
+
+F
+
+prdx-2(gk169) II; skn-1(zj15) gst-4::mCherry IV; sod-3::egfp glo-1(zu391) X 
+
+E
+
+prdx-2(gk169) II; gst-4::mCherry IV; sod-3::egfp glo-1(zu391) X 
+
+D
+
+F49F1(gt3613) gst-4::mCherry IV; sod-3::egfp glo-1(zu391) X 
+
+C
+
+mul-1(gt3625) gst-4::mCherry IV; sod-3::egfp glo-1(zu391) X 
+
+BeGFP  mCherry 
+
+gst-4::mCherry IV; sod-3::egfp glo-1(zu391) X 
+
+> Merge
+
+A
+
+gsg mul-1; gsg F49F1; gsg prdx-2; gsg prdx-2; skn-1; gsg daf-16; prdx-2; gsg 
+
+02 x 10 5CTCF (a.u.) ns ns mCherry 4 x 10 56 x 10 58 x 10 51 x 10 6
+
+gsg mul-1; gsg F49F1; gsg prdx-2; gsg prdx-2; skn-1; gsg daf-16; prdx-2; gsg 
+
+> 0CTCF (a.u.) ns ns ns
+
+eGFP 2 x 10 64 x 10 66 x 10 6
+
+gst-4::mCherry IV; sod-3::egfp glo-1(zu391) X gsg {Fig 11 A BDCE0 12 24 36 48 60 0.0 0.2 0.4 0.6 0.8 1.0 Time (h) Survival on PA14 (%)  
+
+> pmk-1(km25) IV F49F1(syb8776) IV F49F1(syb8776) IV; F46B3.1(syb8669) V
+> Wild-type
+
+Wild-type 
+
+pmk-1(km25) IV F49F1(syb8776) IV F49F1(syb8776) IV; F46B3.1(syb8669) V 
+
+020 40 60 80 100 % of individuals IR L4 L3 L2 L1 Wild-type 
+
+daf-16(mu86) I pmk-1(km25) IV F49F1(syb8776) IV F49F1(syb8776) IV; F46B3.1(syb8669) V 
+
+020 40 60 80 100 % of individuals 2.5 mM H 2O2L4 L3 L2 L1 
+
+Wild-type 
+
+F49F1(syb8776) IV; F46B3.1(syb8669) V 
+
+0100 200 300 Brood size ns 0510 15 20 25 30 germ cell corpses/ gonad arm ns ns 
+
+Control IR 
+
+ced-1::gfp(bcIs39) V sysm-1(ok3236) II sysm-1(ok3236) II; mul-1(syb3342) IV sysm-1(ok3236) II; F49F1(syb8776) IV Fig 12 Ionizing radiation ROS SEK-1/SEK PMK-1/p38 ATF-7/ATF2/ATF7/CREB 
+
+MUL-1/ShKT Proteins 
+
+SKN-1/Nrf2 GST-4/GSTP1 PRDX-2/PRDX1/PRDX2 DAF-16/FoxO SOD-3/SOD3 
+
+Genome stability, Development p53-dependent germ cell apoptosis 
+
+S-S S-S S-S

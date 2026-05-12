@@ -1,0 +1,2435 @@
+Title: C-Terminal Domain of Mycobacterium tuberculosis Glutamate Decarboxylase determines the bacterial stress-adaptive metabolic state that steers macrophage polarisation supporting intracellular persistence
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.05.722917v1.full.pdf
+
+Number of Pages: 54
+
+Markdown Content:
+1
+
+C-Terminal Domain of Mycobacterium tuberculosis Glutamate Decarboxylase determines the 1
+
+bacterial stress -adaptive metabolic state that steers macrophage polarisation supporting 2
+
+intracellular persistence 3
+
+Anushka Agarwal 1, Akash Misra 1, Shalini Saxena 2, Krishnaveni Mohareer 1, Anant B. Patel 3,4
+
+Sharmistha Banerjee 1*5
+
+> 1
+
+Department of Biochemistry, School of Life Sciences, University of Hyderabad, Hyderabad, 6
+
+Telangana, India 7
+
+> 2
+
+Department of Chemistry, University of Hyderabad, Hyderabad, Telangana, India 8
+
+> 3
+
+Chief Scientist, Center for Cellular and Molecular Biology, Hyderabad, Telangana, India 9
+
+*Correspondence: Department of Biochemistry, School of Life Sciences, University of Hyderabad, 10 
+
+Hyderabad, Telangana, India;  sbsl@uohyd.ac.in 11 
+
+12 
+
+Abstract: 13 
+
+Mycobacterium tuberculosis (Mtb ) adapts metabolically to survive hostile conditions within 14 
+
+alveolar macrophages, but whether specific enzyme -driven metabolic states of Mtb link stress 15 
+
+adaptation to host immuno modulation remains unclear. Using LC -MRM/MS metabolite profiling 16 
+
+and metabolic modeling , we previously identified elevated γ-aminobutyric acid (GABA) 17 
+
+production via the GABA shunt during adaptation to oxidative and acidic stress. Here, we show 18 
+
+that stress -responsive enzymatic efficiency of glutamate decarboxylase (GadB) in producing 19 
+
+GABA , not only mitigates acidic and oxidative stress but also drives macrophage polarisation 20 
+
+towards the M2 phenotype, extending its role beyond bioenergetics into host –pathogen cross -talk. 21 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+2
+
+We identify the C -terminal domain (CTD) of mycobacterial GadB as a key regulator . Enzyme 22 
+
+kinetics and fluorescence spectroscopy revealed that CTD deletion abolishes pH -dependent 23 
+
+regulation of catalytic efficiency ( kcat /Km) and substrate affinity ( Ka). Under oxidative stress, the 24 
+
+CTD enhances catalytic efficiency without altering substrate affinity, suggesting condition -specific 25 
+
+roles. Accordingly, in vitro , Mtb :: Mtb GadB with higher GABA and ~40% lower ROS outgrew 26 
+
+Mtb :: Mtb GadB ΔCt under acidic and oxidative conditions. Th ese biochemical difference s27 
+
+influenced host immunity, wherein infection with high -GABA -producing Mtb :: Mtb GadB strain 28 
+
+induced M2 polarisation , with de creased CD 86 , reduced RNS , limited endosomal maturation , as 29 
+
+indicated by Rab5/Rab7 ratio and Lysotracker -based confocal microscopy, and decreased TNF -α, 30 
+
+IL -12 p70 , and IFN -γ release compared to low -GABA -producing Mtb :: Mtb GadB ΔCt .31 
+
+Consequently, Mtb :: Mtb GadB ΔCt showed higher clearance. We conclude that by enabling pH -32 
+
+dependent activity of GadB , the CTD orchestrates proton consumption, ROS reduction, and 33 
+
+GABA -mediated immun omodulation. Distinct structural features of CTDs in h uman versus Mtb 34 
+
+GADs highlight the CTD as a selective drug target for pathogen -specific, host -compatible 35 
+
+therapies. 36 
+
+37 
+
+Importance :38 
+
+This work establishes a direct mechanistic link between metabolic state of Mycobacterium 39 
+
+tuberculosis (Mtb ) actively shap ing host immune responses , deciding infection outcome. The study 40 
+
+identifies the C-terminal domain (CTD) of Mtb GadB in steering enzymatic efficiency , regulating 41 
+
+intrabacterial GABA production and ROS quenching, determining the stress -responsive metabolic 42 
+
+state of the bacteria. Infection with metabolical ly distinct strains had differential impacts on host 43 
+
+immunity, wherein infection with high -GABA -producing Mtb :: Mtb GadB induced M2 -44 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+3
+
+polarisation, reduced RNS, limited endosomal maturation, and reduced proinflammatory cytokine 45 
+
+release, compared to low -GABA -producing Mtb :: Mtb GadB ΔCt . Consequently, 46 
+
+Mtb :: Mtb GadB ΔCt could be cleared , but Mtb :: Mtb GadB persisted, deciding the fate of the 47 
+
+infection. Structural differences between CTDs of human and Mtb GADs, make it a48 
+
+therapeutically -exploitable determinant for developing pathogen -specific drugs that remain 49 
+
+compatible with the host. 50 
+
+51 
+
+Keywords: Mycobacterium tuberculosis , Glutamate decarboxylase (GadB) , GABA, C -terminal 52 
+
+domain, acidic stress, oxidative stress, macrophages, immunomodulation, M2 polarisation 53 
+
+54 
+
+Introduction 55 
+
+Mycobacterium tuberculosis (Mtb ), the causative agent of tuberculosis (TB), survives for 56 
+
+prolonged periods within macrophages despite exposure to multiple host -imposed stresses, 57 
+
+including acidic pH, oxidative stress, nutrient limitation, and hypoxia (1 –3) . Among these, 58 
+
+phagosomal acidification and reactive oxygen species (ROS) represent dominant early 59 
+
+antimicrobial pressures encountered during infection (4 –6) . Notably, acidic and oxidative stresses 60 
+
+are functionally interconnected, as proton accumulation can influence redox reactions, while 61 
+
+oxidative stress can disrupt proton gradients and intracellular pH homeostasis, together imposing 62 
+
+a combined metabolic burden on the bacterium (7, 8) . These coupled stresses perturb central 63 
+
+metabolism and redox balance, necessitating coordinated adaptive responses for the survival of 64 
+
+intracellular bacteria (9 –11) . Consequently, successful persistence of Mtb within macrophages 65 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+4
+
+relies on metabolic pathways that simultaneously maintain cytosolic pH, redox homeostasis, and 66 
+
+energy production. 67 
+
+Metabolic remodeling during infection has emerged as a critical determinant of mycobacterial 68 
+
+survival (12) . Systems -level studies, including metabolomics and infection models, have revealed 69 
+
+stress -induced reprogramming of central carbon metabolism, amino acid utilization, and redox 70 
+
+buffering pathways that enable adaptation to hostile intracellular environments (13, 14) .71 
+
+Importantly, these metabolic adaptations extend beyond bacterial physiology and intersect with 72 
+
+host immune responses , thereby modulating macrophage activation states and inflammatory 73 
+
+signaling (15 –17) . Given that macrophage polarisation is tightly linked to metabolic programs, 74 
+
+pathogen -derived metabolites represent a potential mechanism by which Mtb may reprogram host 75 
+
+immunity to favor its persistence. 76 
+
+Our previous metabolomic analysis identified increased accumulation of γ-aminobutyric acid 77 
+
+(GABA) and glutamate in Mtb exposed to acidic and oxidative stress conditions (18) . GABA is 78 
+
+produced from glutamate by the enzyme Glutamate Decarboxylase (GadB), a pyridoxal -5′ -79 
+
+phosphate (PLP) –dependent enzyme that catalyzes a proton -consuming decarboxylation reaction 80 
+
+(19) . In several bacterial systems, this reaction functions as an acid resistance mechanism by 81 
+
+consuming intracellular protons and contributing to pH homeostasis (19, 20) . In addition, the 82 
+
+GABA shunt feeds into central metabolism and can influence redox balance through 83 
+
+NAD⁺/NADH -linked reactions (21 –24) . Recently, various studies have suggested the potential role 84 
+
+for GABA in immunomodulation (25 –28) ; however, whether Mtb GadB -mediated metabolism can 85 
+
+influence host immunometabolic pathways during infection remains an open question. 86 
+
+Furthermore, recent studies using non -pathogenic mycobacteria have suggested a role for 87 
+
+mycobacterial GadB in intracellular survival (29, 30) ; however, the biochemical regulation of 88 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+5
+
+Mtb GadB under host -relevant stress conditions and its potential contribution to host –pathogen 89 
+
+interactions remain poorly understood . In particular, the structural determinants that govern 90 
+
+enzyme activity, stress responsiveness, and metabolic output have not been defined. 91 
+
+In this study, we investigated the biochemical regulation and functional role of Mtb GadB under 92 
+
+acidic and oxidative stresses and show that stress -induced catalytic efficiency of Mtb GadB aids in 93 
+
+adaptation to intracellular stresses and shift s the macrophage immune responses toward an 94 
+
+anti -inflammatory state. Importantly, we highlight the significance of the integrity of the C-95 
+
+terminal domain of Mtb GadB in intracellular adaptation as well as immunomodulation vis -à-vis 96 
+
+enhanced catalytic efficiency. Together, our findings position Mtb GadB as a pivotal metabolic 97 
+
+node that links bacterial stress adaptation with host immunomodulation. This underscores the 98 
+
+essential role of stress -induced bacterial metabolism in mediating metabolic cross -talk between 99 
+
+Mtb and the host, thereby shaping host –pathogen interactions and revealing the intricate interplay 100 
+
+between Mtb adaptation and the host immune response. 101 
+
+102 
+
+Results 103 
+
+Expression and catalytic efficiency of Mycobacterium tuberculosis GadB are enhanced under 104 
+
+acidic and oxidative stress conditions 105 
+
+Building on our earlier observation that intra bacterial GABA and glutamate levels rise under in 106 
+
+vitro infection -mimicking conditions (18) , we examined the expression of key enzymes of the 107 
+
+GABA shunt pathway in pathogenic Mtb strain (H37Rv ) during acidic and oxidative stress. Mid -108 
+
+log phase cultures were exposed to acidic (pH 5.5) or oxidative (10 mM H₂O₂) conditions. 109 
+
+Transcript levels, quantified by qRT -PCR, showed significant upregulation of glutamate 110 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+6
+
+decarboxylase ( gadB ), GABA transaminase ( gabT), and succinic semialdehyde dehydrogenases 111 
+
+(gabD1 and GabD2) (Supplementary Fig ure S1A –D). Notably, the succinate -producing enzyme 112 
+
+gabD showed an interesting pattern, where gabD1 and gabD2 were differe ntially induced under 113 
+
+acidic and oxidative stress, suggesting context -specific roles for these paralogs. 114 
+
+We focused on Mtb GadB , the first and rate -limiting enzyme of the GABA shunt pathway , which 115 
+
+was upregulated under both acidic and oxidative stresses. Consistent with transcript levels, 116 
+
+Mtb GadB protein levels increased nearly 2-fold under both stresses (Fig. 1A, 1B). To determine 117 
+
+the functional impact, we measured GABA production in stressed Mtb cultures. Int rabacterial 118 
+
+GABA increased by ~2 -fold under acidic and ~3 -fold under oxidative stress, as shown by a 119 
+
+modified Berthelot assay (Fig. 1C). Given reports of GABA release by some gut microbiota . (31) ,120 
+
+we also quantified extracellular GABA. LC -MS analysis demonstrated enhanced GABA in the 121 
+
+culture supernatant of Mtb exposed to acidic conditions compared to control, further quantified by 122 
+
+the modified Berthelot assay (32) (Fig. 1D). These results confirm the activation of GABA shunt 123 
+
+pathway , with Mtb GadB -driven GABA accumulation under stress, supporting a role for this 124 
+
+pathway in Mtb metabolic adaptation. 125 
+
+To further investigate how Mtb GadB behaves enzymatically under these two independent yet 126 
+
+related stresses, we cloned, expressed, and purified recombinant Mtb GadB (Supplementary Fig. 127 
+
+S2A –C) and compared its kinetic parameters under acidic and oxidative conditions. To test if the 128 
+
+recombinant Mtb GadB was active, reactions with L -glutamate as a substrate were performed, and 129 
+
+the production of GABA was confirmed using HPLC (Supplementary Fig ure S2D –F). Under 130 
+
+identical conditions, the end -point production of GABA was measured using a modified Berthelot 131 
+
+assay (detailed in methodology) to determine kinetic parameters ( Km and Vmax ) and catalytic 132 
+
+efficiencies ( kcat /Km). Under acidic conditions, a marked decrease in Km for L-glutamate, with a 133 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+7
+
+moderate increase in turnover ( kcat ), led to ~2-fold higher catalytic efficiency relative to neutral 134 
+
+pH. Under oxidative conditions, both an increase in turnover and a reduction in Km contributed to 135 
+
+a ~2.5 -fold enhancement in catalytic efficiency (Fig. 1E, 1F; Table 1). 136 
+
+Because a lower Km indicates higher substrate affinity, we also determined the association 137 
+
+(binding) constants ( Ka) for L -glutamate binding to Mtb GadB under acidic and oxidative 138 
+
+conditions using fluorescence spectroscopy. The Stern -Volmer equation was applied to calculate 139 
+
+the Ka values (Table 1). Ka was higher under both acidic and oxidative conditions than in the 140 
+
+control, supporting the observed lower Km values and indicating increased substrate affinity (Fig. 141 
+
+1G –I). 142 
+
+Collectively, these data indicate that acidic and oxidative stresses enhance the catalytic efficiency 143 
+
+of Mtb GadB by increasing substrate binding , thereby increasing GABA production. 144 
+
+145 
+
+C-terminal domain orchestrate s catalytic efficiency and pH -dependent activity of Mtb GadB 146 
+
+Our in vitro enzymatic assays demonstrated that Mtb GadB exhibits increased catalytic efficiency 147 
+
+under both acidic and oxidative conditions. We therefore sought to identify the structural features 148 
+
+of Mtb GadB that underlie this enhancement, as such features are likely to contribute to intracellular 149 
+
+persistence during infection. 150 
+
+To add ress this, w e generated a three -dimensional model of Mtb GadB using the E.coli Gad crystal 151 
+
+structure as a template, since the crystal structure of Mtb GadB is not yet available. Computational 152 
+
+analyses have demonstrated pH -dependent conformational changes in E.coli Gad (33) . In addition, 153 
+
+mutational studies of Lactobacillus Gad , based on homology modeling using E.coli Gad ,154 
+
+highlighted the critical role of the C -terminal region in pH -dependent catalysis (34) . Together, 155 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+8
+
+these findings motivated us to use E.coli Gad as a reliable template for modeling Mtb GadB . The 156 
+
+predicted structure of Mtb GadB displayed the canonical PLP -dependent decarboxylase fold, 157 
+
+comprising an N -terminal region (residues 1 –58), a catalytic domain (58 –346), and a C -terminal 158 
+
+region (348 –460). The C -terminal region of Mtb GadB differs markedly from that of E.coli Gad. 159 
+
+In E.coli , it forms a stable α-helix -loop , whereas in Mtb it adopts a flexible loop (Figure 2A). 160 
+
+Despite this structural difference, analysis of the Mtb GadB model suggests that the C -terminal 161 
+
+region contributes to protein stability, with residues  Asp445, Lys446, Phe453, and His460  playing 162 
+
+key roles. Given that Mtb encounters acidic environments during macrophage infection, we 163 
+
+hypothesized that the C -terminal region may similarly regulate stress -responsive activity, and that 164 
+
+its removal could affect the pH -dependent stability of the protein. To test this, we generated a 165 
+
+C-terminal truncation mutant lacking residues Val447 –His460 ( Mtb GadB ΔCt ). To distinguish 166 
+
+regulatory effects from catalytic defects and to confirm that regulation arises from the C -terminal 167 
+
+domain (Val447 -His460) (CTD) rather than the catalytic domain, we generated a control catalytic 168 
+
+mutant using site -directed mutagenesis. In this mutant, the conserved active -site residues His276 169 
+
+and Lys277 (Figure 2B) were substituted with alanine ( Mtb GadBSDM ), while the C TD was left 170 
+
+intact. Both mutants were purified under native conditions for biochemical characterization 171 
+
+(Supplementary Figure S3). 172 
+
+In vitro enzymatic assays were performed with purified Mtb GadB ΔCt and Mtb GadBSDM , and 173 
+
+kinetic parameters were evaluated as described previously. Mtb GadB ΔCt showed reduced catalytic 174 
+
+turnover and increased Km under acidic conditions, resulting in ~2-fold decrease in catalytic 175 
+
+efficiency compared to wild -type Mtb GadB (Figure 2C) . This increase in Km was further confirmed 176 
+
+by fluorescence spectroscopy, which demonstrated that the binding constant ( Ka) of Mtb GadB ΔCt 177 
+
+to L-glutamate was reduced to half that of wild -type Mtb GadB under acidic conditions (Figure 178 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+9
+
+2G) . To investigate the role of the C TD in pH -dependent catalytic efficiency, we compared the 179 
+
+catalytic parameters of Mtb GadB ΔCt at acidic (pH 5.5) and neutral (pH 7.2) conditions. 180 
+
+Mtb GadB ΔCt displayed similar kcat /Km and Ka values at both pH levels, indicating that deletion of 181 
+
+the C TD not only decreased catalytic efficiency but also abolished pH -dependent activity, likely 182 
+
+by impairing L -glutamate binding (Figure 2E -G, Table 2 ). To further confirm that the pH -183 
+
+dependent increase in catalytic efficiency is mediated by the C TD , rather than the catalytic domain, 184 
+
+we performed kinetic assays with the catalytic mutant Mtb GadBSDM under acidic conditions. 185 
+
+Mtb GadBSDM exhibited a ~ 2-fold decrease in both catalytic efficiency and binding const ant ( Ka)186 
+
+compared to wild -type Mtb GadB (Supplementary Figure S4A, S4F -G) . However, Mtb GadBSDM 187 
+
+retained higher catalytic efficiency at acidic pH than at neutral pH, mirroring wild -type Mtb GadB 188 
+
+(Supplementary Figure S4C ). This preservation of pH -dependent behavior in Mtb GadBSDM 189 
+
+confirms that the catalytic domain is not responsible for pH sensing and underscores the role of 190 
+
+the C TD in mediating pH -dependent increase in catalytic efficiency of Mtb GadB . Tables S3 and 191 
+
+S4 list the kinetic parameters of Mtb GadB ΔCt and Mtb GadBSDM .192 
+
+We next focused on the possible impact of the CTD of Mtb GadB on catalysis under oxidative 193 
+
+conditions. In vitro enzymatic assays were performed with Mtb GadB ΔCt and Mtb GadBSDM in 194 
+
+the presence of 0.5 μM H 2O2, as previously described. Mtb GadB ΔCt exhibited reduced catalytic 195 
+
+turnover ( kcat ) but maintained a Km similar to wild -type Mtb GadB , resulting in ~2-fold decrease in 196 
+
+catalytic efficiency (Figure 2D) . This similarity in Km between Mtb GadB ΔCt and wild -type 197 
+
+Mtb GadB under oxidative conditions was further supported by binding constant (Ka)198 
+
+measurements using fluorescence spectroscopy ( Figure 2H, Table 2). These results indicate that 199 
+
+deletion of the C TD impairs catalytic turnover without affecting substrate binding affinity during 200 
+
+oxidative stress. Since we observed the role of CTD in pH -dependent regulation of catalytic 201 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+10 
+
+efficiency, we further examined its involvement under oxidative conditions. Kinetic assays using 202 
+
+Mtb GadBSDM , which retains a functional C TD , revealed a 50% decrease in catalytic efficiency 203 
+
+compared to wild -type Mtb GadB , suggesting that His276 and Lys277 are important for activity 204 
+
+under oxidative stress (Supplementary Figure S4B , S4H ).205 
+
+Together, these results show that the C -terminal domain of Mtb GadB functions as a regulatory 206 
+
+element that confers pH -dependent increase in catalytic efficiency , primarily by enhancing 207 
+
+substrate binding at acidic pH. In contrast, the catalytic domain governs enzymatic turnover but is 208 
+
+not involved in sensing pH changes. Under oxidative conditions, the C -terminal domain supports 209 
+
+catalytic efficiency rather than regulating substrate affinity, suggesting condition -specific 210 
+
+functional contributions. 211 
+
+212 
+
+C-terminal domain of Mtb GadB regulates intrabacterial GABA production and ROS 213 
+
+reduction shaping the bacterial stress -adaptive metabolic state .214 
+
+Our comparative enzyme kinetic analyses showed that deletion of the C -terminal domain (CTD) 215 
+
+markedly reduces the catalytic efficiency of Mtb GadB under acidic and oxidative conditions. 216 
+
+Importantly, these findings indicate that the CTD plays a critical role in regulating the enzyme’s 217 
+
+pH -dependent activity. To assess the physiological relevance of this observation, we expressed 218 
+
+wild -type and mutant Mtb GadB constructs in the pathogenic Mtb H37Rv (Supplementary Figure 219 
+
+S5) . Strains overexpressing wild -type Mtb GadB , a catalytic mutant ( Mtb GadBSDM ), or a C -220 
+
+terminal truncation mutant ( Mtb GadB ΔCt ) were subjected to acidic and oxidative stress es .221 
+
+Intra bacterial GABA levels were quantified by NMR and expressed as the ratio of GABA produced 222 
+
+under stress versus control conditions. Under acidic conditions, the ratio of GABA levels at pH 223 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+11 
+
+5.5 relative to pH 7.2 was higher in the wild -type overexpression strain ( Mtb :: Mtb GadB ) compared 224 
+
+to the vector control, indicating enhanced acid -responsive GABA production. As expected, the 225 
+
+catalytic mutant (Mtb :: Mtb GadBSDM ) produced lower GABA levels than the wild -type. 226 
+
+However, it retained an increased GABA ratio at low pH, suggesting that pH -dependent regulation 227 
+
+is largely preserved despite reduced catalytic activity. In contrast, the CTD truncation mutant 228 
+
+(Mtb :: Mtb GadB ΔCt ) not only exhibited reduced GABA production but also showed a GABA ratio 229 
+
+close to unity, demonstrating a loss of pH responsiveness. These results establish that the CTD is 230 
+
+essential for pH -dependent GABA production (Figure 3A). A similar trend was observed under 231 
+
+oxidative stress as well. Mtb :: Mtb GadB increased GABA levels compared to the vector control, 232 
+
+whereas both Mtb :: Mtb GadBSDM and Mtb :: Mtb GadB ΔCt produced lower amounts of GABA 233 
+
+(Figure 3B). 234 
+
+The f unctional consequences of these biochemical differences were evident in in vitro growth 235 
+
+assays. Mtb :: Mtb GadB displayed enhanced growth under acidic stress relative to the control strain 236 
+
+Mtb ::pVV16 (Figure 3C). Mtb :: Mtb GadB exhibited improved growth at acidic pH compared to 237 
+
+neutral pH, whereas the CTD truncation mutant ( Mtb :: Mtb GadB ΔCt ) displayed similar growth 238 
+
+profiles under both conditions, indicating a loss of pH - enhanced growth advantage (Figures 3E –239 
+
+F). Under oxidative stress, Mtb :: Mtb GadB showed improved growth compared to 240 
+
+Mtb :: Mtb GadB ΔCt as well as Mtb :: Mtb GadBSDM (Figure 3D). As we understand that GABA 241 
+
+production by Mtb GadB consumes a proton (H⁺), thereby buffering intracellular pH and reducing 242 
+
+conditions that favor ROS amplification, indirectly contributing to ROS quenching (35) , we 243 
+
+measured intra bacterial ROS using CM -H2DCFDA dye in Myco lici bacterium smegmatis (Msmeg )244 
+
+strains overexpressing wild -type Mtb GadB , Mtb GadBSDM and Mtb GadB ΔCt , under oxidative 245 
+
+stress. Consistent with the ir Mtb GadB enzymatic efficiencies , intracellular ROS in 246 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+12 
+
+Msmeg :: Mtb GadB was 20% less than Msmeg ::p MSP (control) . In contrast, Msmeg :: Mtb GadB ΔCt 247 
+
+had elevated ROS accumulation relative to Msmeg :: Mtb GadB (Figure 3G). Collectively, these 248 
+
+findings suggest that Mtb GadB enhances the survival of Mtb under acidic and oxidative stress by 249 
+
+promoting GABA production and limiting ROS accumulation. Crucially, the C -terminal domain 250 
+
+is indispensable for this stress -adaptive function, as its deletion compromises both pH -dependent 251 
+
+regulation and the ability of Mtb GadB to mitigate intracellular oxidative stress. 252 
+
+253 
+
+CTD -regulated GABA -producing metabolic state of Mtb blocks endosomal maturation and 254 
+
+dampens oxidative stress during infection 255 
+
+After establishing that Mtb :: Mtb GadB aids bacterial growth under acidic and oxidative stresses, 256 
+
+we next investigated the intracellular fate of these biochemically distinct strains during infection. 257 
+
+We hypothesized that the strain overexpressing wild -type (wt) Mtb GadB, due to its enhanced 258 
+
+conversion of glutamate to GABA, would facilitate proton quenching, thereby contributing to 259 
+
+neutrali zation of the acidic environment of phagolysosomes. Furthermore, we proposed that 260 
+
+increased Mtb GadB and GABA production would serve as an indirect defense mechanism against 261 
+
+oxidative stress , reducing macrophage ROS generation during infection. In contrast, strains 262 
+
+overexpressing Mtb GadBSDM and Mtb GadB ΔCt would lack these protective effects. To test our 263 
+
+hypothesis, we used mCherry -tagged Msmeg ::pMSP , Msmeg :: Mtb GadB , Msmeg :: Mtb GadBSDM ,264 
+
+and Msmeg :: Mtb GadB ΔCt for live cell imaging experiments. 265 
+
+THP -1 macrophages were infected with the indicated Msmeg strains (MOI 1:20) and stained at 6 266 
+
+hours post -infection (hpi) for quantification of LysoTracker intensity by confocal microscopy. Line 267 
+
+intensity profile analysis demonstrated overlapping spatial distribution of Msmeg and LysoTracker 268 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+13 
+
+signals across all strains, consistent with similar Manders’ M1 coefficients (Figure 4A). However, 269 
+
+LysoTracker intensity at bacteria -associated regions was reduced in the Msmeg :: Mtb GadB strain 270 
+
+compared to the vector control and mutant strains (Figure 4 B-D, Supplementary Figure S6). These 271 
+
+results indicate that although the strains do not differ in their ability to localize to acidified 272 
+
+compartments (similar M1 coefficient) , they do exhibit differential acidification of these 273 
+
+compartments, as reflected in their LysoTracker intensity profiles. Notably, infection with the 274 
+
+strain expressing the most catalytically efficient wild -type Mtb GadB (Msmeg :: Mtb GadB ) resulted 275 
+
+in the greatest neutralization of acidic compartments. 276 
+
+Similarly, intracellular ROS levels were quantified 6 hours post -infection using CM -H2DCFDA 277 
+
+staining and flow cytometry. Macrophages infected with Msmeg :: Mtb GadB exhibited a ~20% 278 
+
+reduction in ROS levels compared to the vector control (Figure 4 E, Supplementary Figure S7). 279 
+
+Consistent with their reduced capacity to produce GABA, infections with Msmeg :: Mtb GadBSDM 280 
+
+and Msmeg :: Mtb GadB ΔCt resulted in higher ROS accumulation relative to Msmeg :: Mtb GadB .281 
+
+Because endosomal acidification and ROS levels are indicators of endosomal maturation (36) , we 282 
+
+assessed the expression of early and late endosome markers Rab5 and Rab7, respectively, during 283 
+
+infection with these strains. The Rab5/Rab7 ratio served as a metric for endosomal maturation, 284 
+
+reflecting the shift from early (Rab5 -positive) to late (Rab7 -positive) endosomes. We observed 285 
+
+that the strain expressing wild -type Mtb GadB (Mtb :: Mtb GadB ) showed the highest Rab5/Rab7 286 
+
+ratio , followed by Mtb :: Mtb GadBSDM . In contrast, the Mtb :: Mtb GadB ΔCt mutant displayed 287 
+
+Rab5/Rab7 ratios similar to control infections, indicating the least impairment in endosomal 288 
+
+maturation. Infection with Mtb :: Mtb GadB led to a ~4-fold increase in the Rab5/Rab7 ratio 289 
+
+compared to the vector control (Mtb ::pVV16) , indicating substantial inhibition of endosomal 290 
+
+maturation by this strain (Figure 4 F-H). These findings demonstrate that Mtb GadB expression 291 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+14 
+
+decreases host endosomal maturation , whereas loss of CTD and the accompanying reduction in 292 
+
+catalytic efficiency diminish this effect. 293 
+
+Overall, our results suggest that Mtb GadB -dependent GABA production dampens host -induced 294 
+
+intracellular acidic and oxidative stresses and delays endosomal maturation during infectio n. 295 
+
+296 
+
+The C TD of Mtb GadB is required for M2 macrophage polarisation and intracellular 297 
+
+persistence during infection 298 
+
+Given that infection with Msmeg ::Mtb GadB clearly decreases ROS levels and phagosomal 299 
+
+maturation, a classical feature of M2 -macrophages, and considering the established 300 
+
+immunometabolic role of GABA in various intracellular infections (37 –39) , it was essential to 301 
+
+examine the total intracellular GABA pool , following infection with these biochemically distinct 302 
+
+strains and the polarisation state of the infected macrophages. 303 
+
+The intracellular GABA pool following infection was quantified using the modified Berthelot 304 
+
+assay. THP -1 macrophages infected with Mtb :: Mtb GadB exhibited significantly higher 305 
+
+intracellular GABA levels compared to control infections (Mtb ::pVV16) . In contrast, infections 306 
+
+with Mtb :: Mtb GadBSDM and Mtb :: Mtb GadB ΔCt resulted in markedly reduced intracellular 307 
+
+GABA levels compared to Mtb :: Mtb GadB (Figure 5A), indicating that the ability of Mtb to 308 
+
+synthesize GABA affects the total GABA pool of macrophages during infection. 309 
+
+We next examined different phenotyp ic markers of macrophage polarisation in THP -1310 
+
+macrophages infected with Mtb :: Mtb GadB , Mtb :: Mtb GadBSDM , and Mtb :: Mtb GadB ΔCt .311 
+
+Infection with Mtb :: Mtb GadB led to an approximately 50% reduction in iNOS expression and 312 
+
+nitrite production, as well as a ~2 -fold increase in arginase -1 (Arg -1) expression. These changes 313 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+15 
+
+indicate decreased generation of reactive nitrogen species (RNS) and a shift away from classical 314 
+
+M1 macrophage activation (Figure 5 B-D). Consistent with this, Mtb :: Mtb GadB infection reduced 315 
+
+the levels of pro -inflammatory cytokines (IFN -γ, TNF -α, and IL -12p70) and increased anti -316 
+
+inflammatory cytokines (IL -4 and IL -10) (Figure 5 E-I). Flow cytometry further revealed reduced 317 
+
+CD86 expression and a lower CD86/CD206 ratio, indicating polarisation toward an M2 -like 318 
+
+phenotype (Figure 5 J, Supplementary Figure S8). As expected, these effects were less pronounced 319 
+
+in macrophages infected with Mtb :: Mtb GadBSDM or Mtb :: Mtb GadB ΔCt , suggesting that the 320 
+
+GABA -producing capacity of Mtb drives this immunomodulation and creates a niche favo urable 321 
+
+for intracellular mycobacterial survival within THP -1 macrophages. Th erefore, we assessed 322 
+
+colony -forming unit (CFU) enumeration at specified time points post -infection. Results showed 323 
+
+that Mtb :: Mtb GadB had the highest CFU count, with ~1.5 -fold increase in intracellular survival 324 
+
+relative to the vector control. In contrast, Mtb :: Mtb GadBSDM showed moderate, and 325 
+
+Mtb :: Mtb GadB ΔCt the lowest, CFU counts, indicating enhanced bacterial clearance by 326 
+
+macrophages (Figure 5 K). 327 
+
+Collectively, these results show that the CTD of Mtb GadB orchestrate s the accumulation of GABA 328 
+
+in macrophages during infection, polari sing the m towards an M2 -phenotype , dampening the Mtb 329 
+
+clearance responses. 330 
+
+331 
+
+Discussion 332 
+
+Intracellular survival of Mtb relies on integrating responses to diverse host -imposed stresses and 333 
+
+reshaping the immune environment (10, 40) . Traditionally, acid resistance and redox homeostasis 334 
+
+were viewed as parallel processes, but our results indicate metabolic coordination between these 335 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+16 
+
+stresses and a functional linkage to host immunomodulation via glutamate decarboxylase 336 
+
+(Mtb GadB ). Our study shows that Mtb GadB is not merely stress -responsive in Mtb ; it is optimized 337 
+
+for the intracellular environment, especially through condition -specific enh anced substrate 338 
+
+binding. Whereas non -pathogenic mycobacteria such as Mycolicibacterium smegmatis 339 
+
+(Msmeg matis ) employ this enzyme against environmental stresses, pathogenic mycobacteria like 340 
+
+Mtb may have evolved to exploit it to counteract host -induced bactericidal pressures. Glutamate 341 
+
+decarboxylation consumes intracellular protons, aiding pH homeostasis, while the GABA shunt 342 
+
+influences redox balance through NAD⁺/NADH regulatory pathways (24, 35) . Further, enhanced 343 
+
+GABA may mitigate oxidative stress by lowering intracellular ROS and stabilizing redox 344 
+
+homeostasis (9) . Notably, our observation that both acidic and oxidative stress upregulate 345 
+
+Mtb GadB and the GABA shunt pathway (Figure 1) supports a functional coupling between proton 346 
+
+consumption, GABA -mediated antioxidant effects, and redox balance, positioning Mtb GadB at 347 
+
+the nexus of multiple stress adaptation pathways. Furthermore, differential expression of gabD1 348 
+
+and gabD2 under acidic and oxidative stress ( Supplementary Figure S1) implies that Mtb may 349 
+
+channel GABA -derived carbon flux through alternative metabolic branches depending on the 350 
+
+stress encountered. This regulation fine -tunes redox homeostasis and energy metabolism, revealing 351 
+
+metabolic flexibility within the GABA shunt pathway. 352 
+
+Structural and mutational analyses identify the C -terminal domain (CTD) as a key determinant of 353 
+
+Mtb GadB function under stress. Deleting the CTD reduced catalytic efficiency ( kcat /Km) and 354 
+
+abolished pH -dependent variation in activity, indicating the CTD is essential for optimal, pH -355 
+
+responsive enzyme performance (Figure 2) . This likely occurs through effects on conformational 356 
+
+dynamics or substrate access, rather than acting as a direct catalytic determinant. Interestingly, the 357 
+
+loss of the CTD also led to reduced enzymatic activity under oxidative conditions , suggesting that 358 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+17 
+
+this domain may play a broader role in maintaining stress -responsive enzyme function. Since 359 
+
+acidic and oxidative stress can cause structural changes and alter residue protonation (41) , the CTD 360 
+
+may stabilize the active conformation of Mtb GadB , linking pH sensing with oxidative stress 361 
+
+adaptation. This is relevant for pyridoxal phosphate (PLP) -dependent enzymes, whose activity 362 
+
+depends on the active -site microenvironment and is influenced by redox -driven conformational 363 
+
+changes (42, 43) , further supporting the CTD’s role in maintaining catalytic competence under 364 
+
+variable conditions. Conversely, mutation of active -site residues mainly reduced turnover while 365 
+
+preserving stress responsiveness, supporting a model in which the CTD enables dynamic 366 
+
+conformational changes to optimize function under stress. Comparative analysis of Mtb GadB from 367 
+
+that of Msmeg matis , a non -pathogenic species, reveals greater sequence variability and structural 368 
+
+flexibility in its C -terminal region. This likely reflects different evolutionary pressures, where 369 
+
+environmental mycobacteria need adaptability, while pathogenic Mtb requires stringent regulation 370 
+
+to survive in a defined but hostile host niche. Overall, the Mtb GadB C-terminal region appears to 371 
+
+have specialized in pathogenic mycobacteria, evolving from a flexible structure in to a regulatory 372 
+
+domain that integrates pH sensing and oxidative stress adaptation, a mechanism that may underlie 373 
+
+Mtb ’s persistence and resilience within the host. 374 
+
+Deletion of CTD resulted in decreased GABA production and mitigated adaptation to acidic and 375 
+
+oxidative stresses (Figure 3). Further, infection with Msmeg :: Mtb GadB decreased phagosomal 376 
+
+maturation and reduced ROS compared to Msmeg :: pMSP as well as Msmeg :: Mtb GadB ΔCt (Figure 377 
+
+4) , indicating that GadB -mediated metabolic state of mycobacteria influences the stress -adaptive 378 
+
+response against acidic and oxidative stresses within THP -1 macrophages . Further, b eyond its 379 
+
+established role in bacterial physiology, our data demonstrate that stress -induced Mtb GadB -380 
+
+mediated GABA production significantly influences host –pathogen interactions. We detected 381 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+18 
+
+GABA in the culture supernatant of Mtb exposed to in vitro acidic and oxidative stress, despite no 382 
+
+reported antiporters in Mtb (Figure 1). In high -GABA -producing strains, GABA may leak or be 383 
+
+exported via unknown mechanisms . Using Mtb strains overexpressing Mtb GadB 384 
+
+(Mtb :: Mtb GadB ), we observed that infected macrophages showed markedly higher intracellular 385 
+
+GABA, whereas infections with Mtb :: Mtb GadBSDM and Mtb :: Mtb GadB ΔCt did not (Figure 5A). 386 
+
+This suggests that the ability of Mtb to synthesize GABA affects the total GABA pool during 387 
+
+infection. Whether this increase results from bacterial GABA leakage, or GABA release due to 388 
+
+bacterial lysis, or infection -induced host GABA synthesis remains unclear. Dissecting the relative 389 
+
+contributions of bacterial - versus host -derived GABA will require targeted approaches, such as 390 
+
+host GAD inhibition or isotope tracing, and represents a key area for future research. 391 
+
+Our study demonstrates that Mtb strains overexpressing Mtb GadB and producing increased GABA 392 
+
+suppress multiple pro -inflammatory responses, driving macrophage polarisation toward s an M2 -393 
+
+like phenotype (Figure 5) . Although we observed increased expression of GABA transporters 394 
+
+(GATs) and GABA receptor subunit (GABRA2) in THP -1 infected with Mtb :: Mtb GadB as 395 
+
+compared to Mtb :: Mtb GadBSDM and Mtb :: Mtb GadB ΔCt (Supplementary figure S9), the specific 396 
+
+receptor -mediated mechanisms in this context remain to be elucidated. These immunomodulatory 397 
+
+effects require an intact CTD, directly connecting stress -responsive enzyme activity with host 398 
+
+immuno modulation. Notably, the diminished survival of the C -terminal truncation mutant 399 
+
+highlights the essential role of Mtb GadB -mediated metabolism in infection, linking stress 400 
+
+adaptation and immunomodulation to bacterial persistence in macrophages. 401 
+
+In summary, this study identifies the C -terminal domain of Mtb GadB as a pivotal structural and 402 
+
+functional determinant for enhanced catalytic efficiency under acidic and oxidative conditions, as 403 
+
+well as governing pH -dependent enzymatic activity. This critical role directly contributes to 404 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+19 
+
+intracellular stress adaptation and immunomodulatory processes, thereby enhancing the survival 405 
+
+capacity of Mtb within host cells during infection. F igure 6 represents a proposed model of the 406 
+
+impact of stress -adaptive metabolic state of Mtb :: Mtb GadB and Mtb :: Mtb GadB ΔCt on the 407 
+
+intracellular survival of Mtb . Notably, the marked structural divergence between the C -terminal 408 
+
+regions of host GAD s and Mtb GadB underscores its potential as a selective therapeutic target 409 
+
+(Supplementary Figure S11 ). Collectively, these findings provide compelling experimental 410 
+
+evidence that the C TD of Mtb GadB represents a strategically exploitable vulnerability, offering a 411 
+
+robust framework for the rational design of specific inhibitors that impair pathogen survival 412 
+
+without affecting host homologs. 413 
+
+414 
+
+Materials and methods 415 
+
+Cell lines and antibodies 416 
+
+THP -1 monocytes (ATCC) were maintained in complete RPMI 1640 (Gibco, USA) media, 417 
+
+supplemented with 10% Fetal Bovine Serum (Gibco, USA), 1x concentration of Antibiotic -418 
+
+Antimycotic (Gibco, USA) at 37˚C in 5% CO 2 incubator (Eppendorf, Germany). Different 419 
+
+antibodies used in this study include anti -GroEL2 (BEI resources); anti -Mtb GadB antibody (in -420 
+
+house generated); anti -Rab5 (#3547S Cell Signaling Technology), anti -Rab7 (#9367S Cell 421 
+
+Signaling Technology) and anti -GAPDH (#sc -47724 Santa Cruz Biotechnology); Anti -His (#sc -422 
+
+8036 Santa Cruz Biotechnology), Anti -mCherry (#43590S Cell Signaling Technology). Secondary 423 
+
+antibodies used in the study include anti -rabbit (#111 -035 -144 , Jackson ImmunoResearch, UK) 424 
+
+and anti -mouse (#115 -035 -146, Jackson ImmunoResearch, UK) . All antibodies were diluted in 1x 425 
+
+TBST buffer before use .426 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+20 
+
+Plasmid constructs and mutants 427 
+
+Mtb GadB ORF was PCR amplified using H37Rv genomic DNA as template and cloned into the 428 
+
+pET28a vector (SnapGene), pMSP12 vector using EcoRI/HindIII (NEB, USA) , and pVV16 vector 429 
+
+using NdeI/HindIII (NEB, USA) restriction sites to generate pET28a_ Mtb GadB ,430 
+
+pMSP12_ Mtb GadB and pVV16_ Mtb GadB , respectively. A catalytic site mutant (Histidine276 -431 
+
+Lysine277 mutated to Alanine) was generated by site -directed mutagenesis using the Q5 DNA 432 
+
+polymerase (NEB, USA) enzyme, following the manufacturer’s protocol. A C-terminal deletion 433 
+
+mutant was generated by cloning truncated Mtb GadB into pET28a and pVV16/pMSP vector using 434 
+
+specific primers (Table S1 ). All constructs were confirmed by double digestion and sequencing. 435 
+
+Bacterial strains 436 
+
+Mtb ::pVV16, Mtb :: Mtb GadB , Mtb :: Mtb GadBSDM , and Mtb :: Mtb GadB ΔCt strains were 437 
+
+generated by electroporati on (Eppendorf, Germany) of pVV16 vector, Mtb GadB _pVV16, 438 
+
+Mtb GadBSDM _pVV16 , and Mtb GadB ΔCt_pVV16 into electrocompetent H37Rv cells at a pulse 439 
+
+of 2500mV for 4.5 milliseconds, followed by recovery in 7H9 media and plating on 7H10 440 
+
+hygromycin (Himedia, India) plates. Colonies were picked and inoculated in 7H9 media , and 441 
+
+expression was confirmed by western blotting using specific antibodies. Similarly, Msmeg ::pMSP, 442 
+
+Msmeg :: Mtb GadB , Msmeg :: Mtb GadBSDM , and Msmeg :: Mtb GadB ΔCt strains were generated. 443 
+
+All the strains used in the study are tabulated in Table S2. 444 
+
+Mycobacterial cultur e and stress treatment 445 
+
+Mycobacterium tuberculosis H37Rv or Mycobacterium smegmatis was cultured in 7H9 broth 446 
+
+(Himedia, INDIA) including 0.4% (v/v) glycerol (Himedia, India) and 0.05% (v/v) Tween 80 447 
+
+(Sigma Aldrich, USA) supplemented with 10% Middlebrook OADC (Himedia, India) at 37˚C, 180 448 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+21 
+
+rpm until log phase, to an O.D. of 0.7 -0.8 at 600nm. Bacterial cells were further harvested, washed 449 
+
+with 1x PBS , and resuspended in the required stress media for 36 hours ( Mtb H37Rv ) or 4 hours 450 
+
+(Msmeg matis ). The stress media w ere prepared mimicking the infection stress conditions , such as 451 
+
+acidic stress (pH 5.5), oxidative stress (10 mM H 2O2), in Sauton’s minimal medium (18) . Any 452 
+
+possible contamination in the culture was ruled out by using the Zeil -Neilson staining kit (Himedia ,453 
+
+India) before and after stress. Each experiment was performed in triplicate with technical 454 
+
+duplicates. After 36 hours of stress, the cells were harvested for further experiments. 455 
+
+Homology modeling of Mtb GadB 456 
+
+Homology modeling of Mtb GadB was performed using the Prime application in Schrodinger 457 
+
+Maestro Suite 2024 (Schrodinger, LLC, New York, NY, 2024). The 460 -amino -acid sequence of 458 
+
+Mtb GadB (accession ID: I6YG46) was retrieved from the UniProt database. Using NCBI Protein 459 
+
+BLAST against the PDB database, E.coli GadB protein was identified as the best template, based 460 
+
+on high sequence identity and similarity (44.1% and 60.5%) and conserved catalytic residues. 461 
+
+Thus, the 3 -D crystal structure of the E.coli GadB protein (PDB ID: 1pmm; resolution 2.0 Å) was 462 
+
+retrieved from the RCSB PDB database , and homology modeling was done using the knowledge -463 
+
+based model -building method in Prime, generating one model. Stereochemical quality was 464 
+
+evaluated with Ramachandran plots and structural validation tools. The resulting model displayed 465 
+
+a well -preserved fold characteristic of PLP -dependent decarboxylases, with the active -site pocket 466 
+
+and cofactor -binding region closely resembling those of the template enzyme. The generated 467 
+
+model was selected for further refinement, comprising loop refinement and energy minimization 468 
+
+using the OPLS4 force field in Schrodinger Prime. This model was optimized prior to refinement 469 
+
+using the protein preparation workflow in Schrodinger Maestro Suite 2024. 470 
+
+In silico alanine scanning 471 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+22 
+
+To validate the importance of the selected single -point mutation, in silico alanine scanning was 472 
+
+performed using the BioLuminate module in the Schrödinger Suite. For this purpose, the complex 473 
+
+of Mtb GadB with PLP cofactor was considered. In this step, the backbone atoms were optimized, 474 
+
+and rotamer prediction was performed for the residues surrounding the site of substitution. The 475 
+
+effect of each substitution mutation on the overall stability of the complex was evaluated after 476 
+
+local relaxation of the residues around the substituted site.  The difference in the binding free energy 477 
+
+between the wild -type (ΔGwild -type ) protein and its alanine mutant (ΔGalanine ) counterpart, 478 
+
+ΔΔ Gbinding (kcal/mol), is given by Eq 1 :479 
+
+ΔΔ Gbinding =ΔGwild ‐type -ΔGalanine 1480 
+
+Mycobacterial infection and persistence assay 481 
+
+THP -1 monocytes (ATCC) were seeded at an appropriate density and differentiated into 482 
+
+macrophages using PMA (Sigma -Aldrich, USA) at 100 ng/mL for 24 hours, followed by 12 hours 483 
+
+of incubation in 5% CO 2 at 37˚C. Differentiated cells were infected with appropriate mycobacterial 484 
+
+strain s at MOI s of 1:10 (Mtb H37Rv ) and 1:20 ( Msmeg ) for 4 hours, followed by stringent washes 485 
+
+with 1x PBS to remove the extracellular bacilli. The cells were incubated at 37˚C in complete 486 
+
+RPMI and harvested at 24 hours post -infection (hpi) (Mtb H37Rv ), for lysate preparation and RNA 487 
+
+isolation. For mycobacterial persistence assay, the infected THP -1 macrophages were lysed (at 488 
+
+0hpi and 24hpi) by incubation in Milli -Q water for 1 hour at 37˚C, followed by plating on 7H10 489 
+
+hygromycin agar plates for CFU count. The obtained colonies were counted and the CFU was 490 
+
+calculated using the formula cfu/ml= no of colonies*dilution factor/volume of the culture plated. 491 
+
+Data was normalised to control infection (Mtb ::pVV16) and represented as percentage survival. 492 
+
+Macrophage polarisation 493 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+23 
+
+THP -1 monocytes (ATCC) were seeded at an appropriate density and differentiated into 494 
+
+macrophages using PMA (Sigma -Aldrich, USA) at 100 ng/mL for 24 hours, followed by 12 hours 495 
+
+of incubation in 5% CO 2 at 37˚C. For M1 polarisation , cells were treated with 1 μg/ml LPS 496 
+
+(#sc3535A) and 20ng/ml IFN -γ ( BD #285 -IF/CF) for 24 hours . For M2 polarisation , cells were 497 
+
+treated with 40ng/ml of IL -4 (BD #204 -IL/CF) for 24 hours. After 24 hours of treatment, cells 498 
+
+were washed thrice with pre -warmed 1x PBS and incubated at 37˚C, 5% CO2 in complete RPMI 499 
+
+for 24 hours (44) .500 
+
+RNA isolation and qRT -PCR 501 
+
+Mtb H37Rv cells were harvested after 36 hours of stress and resuspended in Trizol (Invitrogen, 502 
+
+USA) along with 0.1mm of zirconia beads. The cells were lysed by bead beating for 15 cycles with 503 
+
+a pulse of 1 min utes followed by incubation on ice for 2 min utes . The clear lysate was collected 504 
+
+and total RNA was isolated following the manufacturer’s protocol. For THP -1 macrophages, cells 505 
+
+were washed with 1x PBS and total RNA was isolated using Trizol method. 5 μg of isolated RNA 506 
+
+was treated with DNase I (NEB, USA) to remove any genomic DNA contamination. 1ug of DNase 507 
+
+I (NEB, USA) treated RNA was converted to cDNA using the iScript cDNA synthesis kit (BIO -508 
+
+Rad, USA) according to the manufacturer’s protocol. The diluted cDNA was used as template and 509 
+
+qRT -PCR was performed using the iTaq Universal SYBR green Supermix (Bio -Rad, USA) 510 
+
+following the manufacturer’s protocol, in a 96 -well plate (Applied Biosystems, USA) and analyzed 511 
+
+using QuantStudio3 software. 512 
+
+Western blotting 513 
+
+The cells were resuspended in 1x PBS (mycobacterial) or RIPA buffer (mammalian) and lysed by 514 
+
+bead beating ( mycobacterial ) or vigorous vortexing (mammalian). The clear lysate was collected 515 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+24 
+
+and protein concentration was estimated by Bradford assay (Bio -Rad, USA). Equal amounts of 516 
+
+lysates were loaded on SDS -PAGE, transferred onto a nitrocellulose membrane (0.2 μm517 
+
+Nitrocellulose membranes, Bio -Rad, USA) and visualized by ponceau (Fluka Analytical, USA) 518 
+
+staining. The blots were blocked with 5% skimmed milk (Himedia, India) for 1 h our at room 519 
+
+temperature, followed by 3 washes with 1 x PBS and then incubated with primary antibody 520 
+
+overnight at 4°C. The following day, the blots were washed 3 times with 1x TBST, incubated with 521 
+
+a secondary antibody (Jackson ImmunoResearch, UK) for 2 h ours at room temperature, and 522 
+
+developed using a WesternBright ™ ECL kit (Advansta, K -12045 -D20) on a Bio -Rad ChemiDoc 523 
+
+instrument. The protein levels of Mtb GadB were quantified by densitometry analysis using ImageJ 524 
+
+software and normalized to the loading control for each condition. 525 
+
+Metabolite isolation 526 
+
+Mtb H37Rv cells were harvested after 36 hours of stress , and metabolism was quenched by freezing 527 
+
+in liquid nitrogen. Culture supernatant was collected and passed through 0.22 μm filters. For 528 
+
+intracellular metabolite isolation, the cells were thawed on ice for 5 minutes and resuspended in 529 
+
+metabolite isolation solution ( 2:1 methanol: chloroform ). The cells were lysed by bead beating for 530 
+
+15 cycles with a 1-minute pulse, followed by incubation on ice for 2 min utes on a mini bead -beater. 531 
+
+The clear lysate was collected by high -speed centrifugation . For extracellular metabolites, 3 -4532 
+
+volumes of chilled methanol were added to the culture filtrate, followed by mild vortexing and 533 
+
+incubation at -80°C for 2 hours. The sample was further centrifuged at 14,000xg for 15 minutes at 534 
+
+4°C , and the supernatant was collected. All samples were vacuum -concentrated using a SpeedVac 535 
+
+concentrator (Eppendorf, Germany) and stored at -80°C until quantification or acquisition. For 536 
+
+THP -1 macrophages, the cells were washed with pre -warmed 1x PBS, and 1 ml of chilled 537 
+
+metabolite quenching solution (50% methanol: 30% acetonitrile: 20% water) was added per 1 538 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+25 
+
+million cells, and the mixture was incubated on ice for 30 minutes. Cells were collected using a539 
+
+mechanical scrapper ( #3010 Corning, USA ) and vortexed at 4°C for 15 minutes, followed by 540 
+
+centrifugation at high speed (>13,000rpm) for 15 minutes at 4°C. Extracted metabolites were 541 
+
+vacuum concentrated using Speed Vac concentrator (Eppendorf, Germany) and stored at -80°C 542 
+
+until quantification or acquisition. 543 
+
+NMR spectroscopy to measure metabolites 544 
+
+Dried bacterial metabolites were dissolved in 550 μL phosphate buffer (H 2O: D2O, 20:80 v/v) 545 
+
+containing sodium trimethylsilyl propionate (TSP, 0.25 mM) and transferred to NMR tubes. 1H546 
+
+NMR spectroscopy was performed on a 600 MHz spectrometer (Bruker Biospin, Ettlingen, 547 
+
+Germany) using a triple -resonance probe equipped with a Z -axis gradient. Spectra were acquired 548 
+
+using a pulse -acquire sequence with the following parameters: 32,768 data points, spectral width 549 
+
+of 7212 Hz, repetition time of 6 s ec , and 32 scans. Water suppression was achieved by pre -550 
+
+saturation during the relaxation delay (4 s ec ). Free induction decays (FIDs) were apodized using a 551 
+
+Lorentzian window function (line broadening = 0.5 Hz), zero -filled to 262,144 points, and Fourier 552 
+
+transformed, followed by phase and baseline correction. Metabolite intensities were quantified 553 
+
+relative to TSP, and concentrations were calculated using TSP (0.25 mM) as an internal standard .554 
+
+Protein purification and antibody generation 555 
+
+E.coli BL21 -pET28a_ Mtb GadB , E.coli BL21 -pET28a_ Mtb GadBSDM , and E.coli BL21 -556 
+
+pET28a_ Mtb GadB ΔCt were cultured in LB broth (Himedia , India) containing 34 μg/mL 557 
+
+kanamycin (Himedia, India), at 37°C with shaking at 180 rpm until the optical density at 600 nm 558 
+
+(OD 600 ) reached 0.6 –0.8. Protein expression was induced by adding IPTG (Sigma Aldrich, USA) 559 
+
+to a final concentration of 0.2 mM, followed by incubation at 18°C overnight. The bacterial culture 560 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+26 
+
+was then harvested, and the resulting pellet was resuspended in lysis buffer containing 50 mM Tris 561 
+
+(pH 8.0) and 1 mM PMSF (Sigma Aldrich, USA). The cells were lysed using an ultrasonic 562 
+
+disruptor under ice bath conditions (34% amplitude, 10 sec pulses ON, 20 sec pulse OFF for 20 563 
+
+minutes at 4°C), followed by centrifugation at 4°C. Mtb GadB was purified using Ni -NTA affinity 564 
+
+chromatography. The clear lysate was collected and incubated with Ni -NTA beads (Qiagen, 565 
+
+Germany) on an endo -rotor at 4°C for 2 hours. Beads were washed with 50 mM Tris (pH 8), 1 mM 566 
+
+PMSF, 300 mM NaCl, and 20 mM imidazole, and the protein was eluted with a 250 mM imidazole 567 
+
+solution. The protein was dialyzed to remove excess salts and analyzed by 12% SDS -PAGE. 568 
+
+Protein concentration was determined by the Bradford protein assay (Bio -Rad, USA) using the 569 
+
+manufacturer’s protocol. 570 
+
+Anti -Mtb GadB antibody was raised as per the protocol approved by the Institutional Animal Ethics 571 
+
+Committee (UH/IAEC/SB/2022/45). Briefly, 500 μg purified Mtb GadB was diluted in a mixture 572 
+
+of 0.5 ml PBS and 0.5 ml complete Freund’s adjuvant and injected subcutaneously into a healthy 573 
+
+rabbit as a prime dose. A booster dose was given every 2 weeks for 3 months, with a gradual 574 
+
+decrease in the amount of Mtb GadB protein, emulsified with incomplete Freund’s adjuvant to elicit 575 
+
+a robust immune response. Once the immunization schedule was completed, approximately 10 ml 576 
+
+of blood was collected, and serum was isolated by centrifugation at 2000 x g for 10 min utes . The 577 
+
+specificity of the antibody was confirmed by western blotting against purified Mtb GadB protein, 578 
+
+with a non -specific protein as a negative control (Supplementary Figure S10 ).579 
+
+Enzymatic reaction and GABA quantification ( modified Berthelot method) 580 
+
+The activity of Mtb GadB was estimated based on the amount of GABA produced by a modified 581 
+
+Berthelot reaction (32, 45 –47) . The reactions were performed under three different conditions :582 
+
+control (pH 7.2), acidic (pH 5.5), and oxidative (0.5 μM H 2O2). Briefly, t he 400 μl reaction mixture 583 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+27 
+
+composed of 0.2 M Na 2HPO 4-citric acid buffer (pH was adjusted to 5.5 and 7.2), 12.5 mM 584 
+
+Pyridoxal -5’ phosphate (Sigma Aldrich, USA), 50 μg purified protein, and different concentrations 585 
+
+of substrate, L -Glutamate (0 mM -100 mM) (Sigma Aldrich, USA), volume of 400 μl is adjusted 586 
+
+with Mil liQ water. The reaction mixture was incubated at 37°C for 60 minutes, followed by boiling 587 
+
+for 10 minutes to inactivate the enzyme. Immediately after boiling, the mixture was cooled on ice. 588 
+
+The prepared reaction mixtures were then used to quantify GABA using the Berthelot method. 589 
+
+Specifically, 75 μl of the reaction mixture was transferred into a test tube, followed by the addition 590 
+
+of 50 μl of 0.2 M borate buffer (pH 9.0), 250 μl of 6% phenol, and 200 μl of 5% sodium 591 
+
+hypochlorite (Himedia, India). The contents were thoroughly mixed, heated and rapidly cooled in 592 
+
+an ice bath for 10 minutes. Finally, 500 μl of 60% ethanol was added to the reaction mixture, and 593 
+
+the absorbance was measured at 645 nm using a UV -Vis spectrophotometer. 594 
+
+The total amount of GABA obtained in the enzymatic assay was measured using GABA ( Sigma -595 
+
+Aldrich, USA) as a standard and expressed as micromolar GABA produced per minute . To obtain 596 
+
+the kinetic parameters Vmax , Km, and kcat of Mtb Gad B activity, the initial velocities of GABA release 597 
+
+assayed at different substrate concentrations were analyzed through Michaelis -Menten plots. 598 
+
+High Performance Liquid Chromatography 599 
+
+Amount of GABA in a sample was quantified by Reverse -phase HPLC using a Phenomenex Luna 600 
+
+5u C18(2) 100A column (250 × 4.6 mm) as the stationary phase and sodium acetate buffer (pH 601 
+
+9.0) as the mobile phase (48) . Briefly, the sample or the enzymatic reaction mixture was mixed 602 
+
+with HPLC -grade water and derivatized with the orthophthaldehyde -N-Acetyl Cystine (OPA -603 
+
+NAC) derivatization reagent. The sample was incubated on ice for 2 minutes , and the desired 604 
+
+volume was made with HPLC -grade water. The sample was run on a C18 column, with 100% 605 
+
+Sodium acetate buffer as mobile phase at room temperature. The chromatogram was recorded at a 606 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+28 
+
+wavelength of 334nm. GABA (Sigma -Aldrich, USA) and Glutamate (Sigma -Aldrich, USA) were 607 
+
+used as standards. 608 
+
+Fluorescence spectroscopy 609 
+
+To measure the binding between the ligand (Glutamate) and the protein Mtb GadB at different pH 610 
+
+levels , we used previously validated method (49) . T he reaction was set up with recombinant 611 
+
+Glutamate Decarboxylase at a concentration of 1 μM along with L-glutamate within a612 
+
+concentration range of 0 mM to 50 mM, keeping PLP concentrations constant in the reaction. The 613 
+
+final volume of each reaction was adjusted with 0.2 M Na2HPO 4-citric acid buffer at pH 5.5 and 614 
+
+7.2. Control reactions were performed with MilliQ water and PBS. Intrinsic fluorophore residues 615 
+
+were excited at a wavelength of 285 nm, and emission spectra were collected from 300 nm to 420 616 
+
+nm using a Spectrofluorometer FP -8550 (Japan). Spectral readings were monitored and collected, 617 
+
+and the graphs were plotted in GraphPad Prism. 618 
+
+Mycobacterial growth assay 619 
+
+Mycobacterium tuberculosis H37Rv was cultured as described earlier. Briefly, the bacteria were 620 
+
+grown in 7H9 broth including 0.4% (v/v) glycerol and 0.05% (v/v) Tween 80, supplemented with 621 
+
+10% Middlebrook OADC, at 37˚C and 180 rpm until log phase, to an O.D. 600 of 0.7. Cells were 622 
+
+then collected, washed with 1x PBS, and equally resuspended in respective stress media. The 623 
+
+bacterial cultures were then placed in an incubator at 37˚C and 180 rpm, and the O.D. 600 was 624 
+
+measured at different intervals up to the specified time. 625 
+
+Bacterial ROS measurement 626 
+
+The assay was performed with non -pathogenic Msmeg strains overexpressing Mtb GadB, 627 
+
+Mtb GadBSDM and Mtb GadB ΔCt cloned in pMSP shuttle vector. Mycobacterial strains were 628 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+29 
+
+grown in complete 7H9 media up to log phase and subjected to oxidative stress (10 mM H 2O2) for 629 
+
+4 hours. Total intrinsic ROS was quantified using CM -H2DCFDA dye (#C6827 Invitrogen, USA) 630 
+
+according to the manufacturer’s protocol. Briefly, mycobacterial strains were grown till log phase 631 
+
+and subjected to oxidative stress. After 4 hours of stress, the bacterial cells were collected and 632 
+
+washed thrice with pre -warmed 1 x PBS, and incubated with CM -H2DCFDA (Sigma Aldrich, 633 
+
+USA) dye for 30 minutes at 37˚C, 180 rpm. The cells were then collected and washed with 1 x PBS 634 
+
+to remove the excess dye and resuspended in 1x PBS to measure the intrinsic fluorescence. Total 635 
+
+fluorescence was recorded at 527 nm in a UV -Vis Fluorescence Spectrophotometer (Eppendorf, 636 
+
+Germany) and a graph was plotted using GraphPad Prism. 637 
+
+Live cell imaging 638 
+
+The assay was performed with non -pathogenic Msmeg strains overexpressing Mtb GadB, 639 
+
+Mtb GadBSDM and Mtb GadB ΔCt cloned in pMSP shuttle vector (cherry tag). THP -1 monocytes 640 
+
+were seeded in live -cell imaging dishes (Ibidi GmbH, Germany) at an appropriate density and 641 
+
+differentiated into macrophages with PMA at 100 ng/ml for 24 hours, followed by 12 hours of 642 
+
+incubation at 37˚C with 5% CO 2. Cells were infected with mycobacterial strains ( Msmeg matis ) at 643 
+
+an MOI of 1:20 for 4 hours, followed by stringent washes with 1x PBS to remove the extracellular 644 
+
+bacilli. The cells were incubated at 37˚C in complete RPMI media for 6 hours. After 6 hours of 645 
+
+infection, the cells were treated with Lysotracker Green DND -26 (#L7526 Invitrogen, USA) at 646 
+
+37˚C for 30 minutes following the manufacturer’s protocol. The cells were washed twice with 1x 647 
+
+PBS, then replaced with fresh media and subjected to live -cell imaging (Leica confocal 648 
+
+microscope). The images were acquired as Z -stacks with an axial step size of 0.3 μm, for 15 649 
+
+min utes at every 30 s ec and visualized by Leica Las X software. The images were analysed using 650 
+
+Fiji (ImageJ) software , detailed in Supplementary Figure 6 (50, 51) .651 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+30 
+
+Flow cytometry 652 
+
+The assay was performed with non -pathogenic Msmeg strains overexpressing Mtb GadB, 653 
+
+Mtb GadBSDM and Mtb GadB ΔCt cloned in pMSP shuttle vector. THP -1 monocytes were seeded 654 
+
+at an appropriate density and differentiated into macrophages using PMA at a concentration of 100 655 
+
+ng/ml for 24 hours, followed by 12 hours of incubation at a 37˚C incubator with 5% CO 2. Cells 656 
+
+were infected with mycobacterial strains ( Msmeg matis ) at an MOI of 1:20 for 4 hours, followed 657 
+
+by stringent washes with 1x PBS to remove the extracellular bacilli. The cells were then incubated 658 
+
+at 37˚C in complete RPMI media (containing antibiotics) for 6 hours. After incubation, the cells 659 
+
+were washed 3 times with 1x PBS and incubated with CM -H2DCFDA (Sigma Aldrich, USA) at 660 
+
+37 °C for 30 minutes in the dark, following the manufacturer’s protocol. The cells were washed, 661 
+
+collected using a cell scraper, and passed several times through a blunt 20 -gauge needle fitted to a 662 
+
+sterile syringe to make single -cell suspensions (without any visible clumps), which were then 663 
+
+acquired immediately on a BD Fortessa Flow cytometer to evaluate the total median fluorescence 664 
+
+intensity (MFI). Cells treated with 200 μM H 2O2 were used as a positive control for experimental 665 
+
+validation. The data w ere analysed using FACS FlowJo.10 software. Data were normalised to 666 
+
+uninfected macrophages and represented as MFI fold change .667 
+
+Greiss assay 668 
+
+Nitrite accumulation in culture supernatants was measured as an indicator of nitric oxide (NO) 669 
+
+production using the Griess reaction. Briefly, THP -1 monocytes (ATCC) were seeded at an 670 
+
+appropriate density and differentiated into macrophages using PMA (Sigma -Aldrich, USA) at 100 671 
+
+ng/mL for 24 hours, followed by 12 hours of incubation in 5% CO 2 at 37˚C. Cells were infected 672 
+
+with mycobacterial H37Rv strains at an MOI of 1:10 for 4 hours, followed by stringent washes 673 
+
+with 1x PBS to remove the extracellular bacilli. The cells were incubated in 5% CO 2 at 37˚C in 674 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+31 
+
+complete RPMI for 24 hours. After 24 hours of incubation, culture supernatant was collected and 675 
+
+passed through 0.22 μm filters and used to measure the total nitrite produced. Equal volumes (50 676 
+
+μL) of culture supernatant and Griess reagent [1% sulfanilamide in 5% phosphoric acid and 0.1% 677 
+
+N-(1 -naphthyl) ethylenediamine dihydrochloride (NEDA)] were mixed in a 96 -well flat -bottom 678 
+
+plate and incubated at room temperature for 15 minutes in the dark. The absorbance was measured 679 
+
+at 540 nm using a microplate reader. Nitrite concentrations were determined by comparison with 680 
+
+a standard curve generated using serial dilutions of sodium nitrite (NaNO₂) prepared in culture 681 
+
+medium. 682 
+
+Cytokine profiling 683 
+
+THP -1 monocytes (ATCC) were seeded at an appropriate density and differentiated into 684 
+
+macrophages using PMA (Sigma -Aldrich, USA) at 100 ng/mL for 24 hours, followed by 12 hours 685 
+
+of incubation in 5% CO 2 at 37˚C. Cells were infected with mycobacterial strains at an MOI of 1:10 686 
+
+for 4 hours, followed by stringent washes with 1x PBS to remove the extracellular bacilli. The 687 
+
+cells were incubated in 5% CO 2 at 37˚C in complete RPMI for 24 hours. After 24 hours of 688 
+
+incubation, culture supernatant was collected and passed through 0.22 μm filters and used to 689 
+
+measure the different cytokines by indirect ELISA using human BD OptEIA ELISA sets (#555194, 690 
+
+#555157, #555183, #555212, #555142) using the manufacturer’s protocol. M1 and M2 polari sed 691 
+
+macrophages were used as positive controls. 692 
+
+Cell surface marker staining 693 
+
+THP -1 macrophages were infected with mycobacterial strains as described above and stained with 694 
+
+cell surface marker antibodies using the manufacturer’s protocol. Briefly, infected/treated 695 
+
+macrophages were washed with pre -warmed 1x PBS and harvested using a mechanical scrapper 696 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+32 
+
+followed by centrifugation at 1000 rpm for 5 minutes. Non -specific binding was restricted by 697 
+
+blocking the cells with Fc blocker (BD Pharmingen #564219) at room temperature for 20 minutes. 698 
+
+Cells were washed with 1x PBS and stained with FITC -tagged anti -CD86 (BD Pharmingen 699 
+
+#555657) and PE tagged anti -CD206 (BD Pharmingen #555954) for 1 hour on ice in the dark. The 700 
+
+cells were washed and fixed using 4% paraformaldehyde (Sigma Aldrich, USA) for 15 minutes in 701 
+
+the dark. The cells were washed and passed several times through a blunt 20 -gauge needle fitted 702 
+
+to a sterile syringe to make single -cell suspensions (without any visible clumps), which were then 703 
+
+acquired immediately on a BD Fortessa Flow cytometer to evaluate surface staining. M1/M2 704 
+
+polari sed cells were used as positive controls. 705 
+
+Statistical significance 706 
+
+All the experiments were performed in biological triplicate. Plots were generated , and the 707 
+
+statistical significance was calculated by a two -tailed unpaired Student’s t -test using GraphPad 708 
+
+Prism. A p -value of =/<0.05 was considered statistically significant. 709 
+
+Supplementary Information710 
+
+Supplementary figures S1-S11711 
+
+Supplementary tables S1-S4712 
+
+Funding acquisition: Science and Research Engineering Board, India (SERB) Research grant 713 
+
+(SPR/2021/000137) under the scheme SUPRA, and the DST -BRICS grant 714 
+
+DST/ICDBRICS/PilotCall2/MRP -TB (G) to SB. 715 
+
+Acknowledgments : We acknowledge DST -INSPIRE JRF and SRF to AA. SS acknowledges 716 
+
+support from DST/WISE -PDF/CS -22/2023 . We thank the Department of Biochemistry and the 717 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+33 
+
+School of Life Sciences for their common facilities . We thank the UoH -NIAB BSL3/ABSL3 718 
+
+facility for aiding mycobacterial work. We acknowledge Novelgene Technologies for the LC -MS 719 
+
+acquisition. We acknowledge the support from BEI resources for the GroEL2 antibody. We thank 720 
+
+Mr. Vinay for helping with HPLC. We thank Mr. Manikanta for assisting with flow cytometry. We 721 
+
+thank Ms. Deepti for helping with microscopy. We thank Mr. Omkar Zade for assisting in antibody 722 
+
+generation. We thank Mr. Asutosh Sahoo for helping in protein purification. DST -FIST to the 723 
+
+Department of Biochemistry (SR/FST/LS -II/2023/1172), the DBT -BUILDER grant to the School 724 
+
+of Life Sciences (BT/INF/22/SP41176/2020), and the Institution of Eminence supported projects 725 
+
+RC1 -20 -017 and RC4 -21 -012 to SB and IoE to the University of Hyderabad MHRD (F11/9/2019 -726 
+
+U3(A) for infrastructure support to the department of Biochemistry, School of Life Sciences and 727 
+
+University common facilities are acknowledged. The model figure was generated using the 728 
+
+BioRender.com site . We acknowledge GraphPad Prism for aiding the generati on of graphs and 729 
+
+statistical analysis, and AI tools , Grammarly for language review and correction. 730 
+
+Author Contributions: AA: conceptualization, investigation, designed and performed 731 
+
+experiments, analysed data, manuscript writing (original draft), review and editing; AM: 732 
+
+performed experiments, analysed data, manuscript review and editing; SS: bioinformatics analysis, 733 
+
+manuscript review and editing; ABP: NMR acquisition and analysis , manuscript review and 734 
+
+editing; KM: manuscript review and editing; SB: conceptualization, supervision, manuscript 735 
+
+review and editing, funding acquisition. 736 
+
+Conflicts of Interest: The authors declare no conflict of interest. 737 
+
+738 
+
+739 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+34 
+
+References 740 
+
+1. Ehrt S, Schnappinger D. 2009. Mycobacterial survival strategies in the phagosome: 741 
+
+defence against host stresses. Cell Microbiol 11:1170 –1178. 742 
+
+2. Gengenbacher M, Kaufmann SHE. 2012. Mycobacterium tuberculosis : success 743 
+
+through dormancy. FEMS Microbiol Rev 36:514 –532. 744 
+
+3. Russell DG. 2001. Mycobacterium tuberculosis: here today, and here tomorrow. Nat 745 
+
+Rev Mol Cell Biol 2:569 –578. 746 
+
+4. Nathan C, Shiloh MU. 2000. Reactive oxygen and nitrogen intermediates in the 747 
+
+relationship between mammalian hosts and microbial pathogens. Proceedings of the 748 
+
+National Academy of Sciences 97:8841 –8848. 749 
+
+5. Vandal OH, Pierini LM, Schnappinger D, Nathan CF, Ehrt S. 2008. A membrane 750 
+
+protein preserves intrabacterial pH in intraphagosomal Mycobacterium tuberculosis. 751 
+
+Nat Med 14:849 –854. 752 
+
+6. Rohde K, Yates RM, Purdy GE, Russell DG. 2007. Mycobacterium tuberculosis and 753 
+
+the environment within the phagosome. Immunol Rev 219:37 –54. 754 
+
+7. Imlay JA. 2013. The molecular mechanisms and physiological consequences of 755 
+
+oxidative stress: lessons from a model bacterium. Nat Rev Microbiol 11:443 –454. 756 
+
+8. Krulwich TA, Sachs G, Padan E. 2011. Molecular aspects of bacterial pH sensing 757 
+
+and homeostasis. Nat Rev Microbiol 9:330 –343. 758 
+
+9. Imlay JA. 2013. The molecular mechanisms and physiological consequences of 759 
+
+oxidative stress: lessons from a model bacterium. Nat Rev Microbiol 11:443 –454. 760 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+35 
+
+10. Ehrt S, Schnappinger D, Rhee KY. 2018. Metabolic principles of persistence and 761 
+
+pathogenicity in Mycobacterium tuberculosis. Nat Rev Microbiol 16:496 –507. 762 
+
+11. Nair T, Rosenn EH, Singha B, Shukla S, Vashisht S, Upadhyay A, Padmanarayana 763 
+
+M, Soni V. 2026. Adaptive metabolic strategies of intracellular bacterial pathogens. 764 
+
+Front Microbiol 17. 765 
+
+12. Rohde KH, Veiga DFT, Caldwell S, Balázsi G, Russell DG. 2012. Linking the 766 
+
+Transcriptional Profiles and the Physiological States of Mycobacterium tuberculosis 767 
+
+during an Extended Intracellular Infection. PLoS Pathog 8:e1002769. 768 
+
+13. Lerner TR, Borel S, Greenwood DJ, Repnik U, Russell MRG, Herbst S, Jones ML, 769 
+
+Collinson LM, Griffiths G, Gutierrez MG. 2017. Mycobacterium tuberculosis 770 
+
+replicates within necrotic human macrophages. Journal of Cell Biology 216:583 –771 
+
+594. 772 
+
+14. Zimmermann M, Kogadeeva M, Gengenbacher M, McEwen G, Mollenkopf H -J, 773 
+
+Zamboni N, Kaufmann SHE, Sauer U. 2017. Integration of Metabolomics and 774 
+
+Transcriptomics Reveals a Complex Diet of Mycobacterium tuberculosis during 775 
+
+Early Macrophage Infection. mSystems 2. 776 
+
+15. Viola A, Munari F, Sánchez -Rodríguez R, Scolaro T, Castegna A. 2019. The 777 
+
+Metabolic Signature of Macrophage Responses. Front Immunol 10. 778 
+
+16. Mohareer K, Medikonda J, Vadankula GR, Banerjee S. 2020. Mycobacterial Control 779 
+
+of Host Mitochondria: Bioenergetic and Metabolic Changes Shaping Cell Fate and 780 
+
+Infection Outcome. Front Cell Infect Microbiol 10. 781 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+36 
+
+17. Medikonda J, Wankar N, Asalla S, Raja SO, Yandrapally S, Jindal H, Agarwal A, 782 
+
+Pant C, Kalivendi S V., Kumar Dubey H, Mohareer K, Gulyani A, Banerjee S. 2024. 783 
+
+Rv0547c, a functional oxidoreductase, supports Mycobacterium tuberculosis 784 
+
+persistence by reprogramming host mitochondrial fatty acid metabolism. 785 
+
+Mitochondrion 78:101931. 786 
+
+18. Rizvi A, Shankar A, Chatterjee A, More TH, Bose T, Dutta A, Balakrishnan K, 787 
+
+Madugulla L, Rapole S, Mande SS, Banerjee S, Mande SC. 2019. Rewiring of 788 
+
+Metabolic Network in Mycobacterium tuberculosis During Adaptation to Different 789 
+
+Stresses. Front Microbiol 10. 790 
+
+19. Feehily C, Karatzas KAG. 2013. Role of glutamate metabolism in bacterial responses 791 
+
+towards acid and other stresses. J Appl Microbiol 114:11 –24. 792 
+
+20. Lund P, Tramonti A, De Biase D. 2014. Coping with low pH: molecular strategies in 793 
+
+neutralophilic bacteria. FEMS Microbiol Rev 38:1091 –1125. 794 
+
+21. Goyal M, Tiwari S, Arora J, Cooper B, Subramanian R, Mukherjee T. 2025. 795 
+
+Metabolic coupling of ROS generation and antioxidant synthesis by the GABA shunt 796 
+
+pathway in myeloid -like blood progenitor cells of Drosophila. PLoS Genet 797 
+
+21:e1011602. 798 
+
+22. Bown AW, Shelp BJ. 1997. The Metabolism and Functions of [gamma] -799 
+
+Aminobutyric Acid. Plant Physiol 115:1 –5. 800 
+
+23. Kim K -J, Pearl PL, Jensen K, Snead OC, Malaspina P, Jakobs C, Gibson KM. 2011. 801 
+
+Succinic Semialdehyde Dehydrogenase: Biochemical –Molecular –Clinical Disease 802 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+37 
+
+Mechanisms, Redox Regulation, and Functional Significance. Antioxid Redox 803 
+
+Signal 15:691 –718. 804 
+
+24. de Carvalho LPS, Ling Y, Shen C, Warren JD, Rhee KY. 2011. On the chemical 805 
+
+mechanism of succinic semialdehyde dehydrogenase (GabD1) from Mycobacterium 806 
+
+tuberculosis. Arch Biochem Biophys 509:90 –99. 807 
+
+25. Jin Z, Mendu SK, Birnir B. 2013. GABA is an effective immunomodulatory 808 
+
+molecule. Amino Acids 45:87 –94. 809 
+
+26. Tian J, Kaufman DL. 2023. The GABA and GABA -Receptor System in 810 
+
+Inflammation, Anti -Tumor Immune Responses, and COVID -19. Biomedicines 11. 811 
+
+27. Bhat R, Axtell R, Mitra A, Miranda M, Lock C, Tsien RW, Steinman L. 2010. 812 
+
+Inhibitory role for GABA in autoimmune inflammation. Proceedings of the National 813 
+
+Academy of Sciences 107:2580 –2585. 814 
+
+28. Zhang B, Vogelzang A, Miyajima M, Sugiura Y, Wu Y, Chamoto K, Nakano R, Hatae 815 
+
+R, Menzies RJ, Sonomura K, Hojo N, Ogawa T, Kobayashi W, Tsutsui Y, Yamamoto 816 
+
+S, Maruya M, Narushima S, Suzuki K, Sugiya H, Murakami K, Hashimoto M, Ueno 817 
+
+H, Kobayashi T, Ito K, Hirano T, Shiroguchi K, Matsuda F, Suematsu M, Honjo T, 818 
+
+Fagarasan S. 2021. B cell -derived GABA elicits IL -10+ macrophages to limit anti -819 
+
+tumour immunity. Nature 599:471 –476. 820 
+
+29. Rai R, Paroha R, Rai S, Singh AK, Chaurasia R, Agarwal N, Pandey MK, Chaurasiya 821 
+
+SK. 2025. Cloning, expression, purification, and characterization of glutamate 822 
+
+decarboxylase (Rv3432c) from Mycobacterium tuberculosis. International 823 
+
+Microbiology 28:1603 –1616. 824 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+38 
+
+30. Rai R, Mathew BJ, Chourasia R, Singh AK, Chaurasiya SK. 2025. Glutamate 825 
+
+decarboxylase confers acid tolerance and enhances survival of mycobacteria within 826 
+
+macrophages. Journal of Biological Chemistry 301:108338. 827 
+
+31. Strandwitz P, Kim KH, Terekhova D, Liu JK, Sharma A, Levering J, McDonald D, 828 
+
+Dietrich D, Ramadhar TR, Lekbua A, Mroue N, Liston C, Stewart EJ, Dubin MJ, 829 
+
+Zengler K, Knight R, Gilbert JA, Clardy J, Lewis K. 2018. GABA -modulating 830 
+
+bacteria of the human gut microbiota. Nat Microbiol 4:396 –403. 831 
+
+32. KITAOKA S, NAKANO Y. 1969. Colorimetric Determination of ω-Amino Acids. 832 
+
+The Journal of Biochemistry 66:87 –94. 833 
+
+33. Capitani G. 2003. Crystal structure and functional analysis of Escherichia coli 834 
+
+glutamate decarboxylase. EMBO J 22:4027 –4037. 835 
+
+34. Shin S -M, Kim H, Joo Y, Lee S -J, Lee Y -J, Lee SJ, Lee D -W. 2014. Characterization 836 
+
+of Glutamate Decarboxylase from Lactobacillus plantarum and Its C -Terminal 837 
+
+Function for the pH Dependence of Activity. J Agric Food Chem 62:12186 –12193. 838 
+
+35. De Biase D, Pennacchietti E. 2012. Glutamate decarboxylase‐dependent acid 839 
+
+resistance in orally acquired bacteria: function, distribution and biomedical 840 
+
+implications of the <scp> gadBC </scp> operon. Mol Microbiol 86:770 –786. 841 
+
+36. Huotari J, Helenius A. 2011. Endosome maturation. EMBO J 30:3481 –3500. 842 
+
+37. Mills CD, Kincaid K, Alt JM, Heilman MJ, Hill AM. 2000. M -1/M -2 macrophages 843 
+
+and the Th1/Th2 paradigm. J Immunol 164:6166 –73. 844 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+39 
+
+38. Canton J, Khezri R, Glogauer M, Grinstein S. 2014. Contrasting phagosome pH 845 
+
+regulation and maturation in human M1 and M2 macrophages. Mol Biol Cell 846 
+
+25:3330 –3341. 847 
+
+39. Nathan C, Shiloh MU. 2000. Reactive oxygen and nitrogen intermediates in the 848 
+
+relationship between mammalian hosts and microbial pathogens. Proceedings of the 849 
+
+National Academy of Sciences 97:8841 –8848. 850 
+
+40. Rohde K, Yates RM, Purdy GE, Russell DG. 2007. Mycobacterium tuberculosis and 851 
+
+the environment within the phagosome. Immunol Rev 219:37 –54. 852 
+
+41. Davies MJ. 2005. The oxidative environment and protein damage. Biochimica et 853 
+
+Biophysica Acta (BBA) - Proteins and Proteomics 1703:93 –109. 854 
+
+42. Go Y -M, Jones DP. 2013. The Redox Proteome. Journal of Biological Chemistry 855 
+
+288:26512 –26520. 856 
+
+43. Eliot AC, Kirsch JF. 2004. Pyridoxal Phosphate Enzymes: Mechanistic, Structural, 857 
+
+and Evolutionary Considerations. Annu Rev Biochem 73:383 –415. 858 
+
+44. Yandrapally S, Agarwal A, Chatterjee A, Sarkar S, Mohareer K, Banerjee S. 2023. 859 
+
+Mycobacterium tuberculosis EspR modulates Th1 -Th2 shift by transcriptionally 860 
+
+regulating IL -4, steering increased mycobacterial persistence and HIV propagation 861 
+
+during co -infection. Front Immunol 14. 862 
+
+45. Liu Q, Cheng H, Ma X, Xu N, Liu J, Ma Y. 2016. Expression, characterization and 863 
+
+mutagenesis of a novel glutamate decarboxylase from Bacillus megaterium. 864 
+
+Biotechnol Lett 38:1107 –1113. 865 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+40 
+
+46. Karladee D, Suriyong S. 2012. <title/>. ScienceAsia 38:13. 866 
+
+47. Fan L -Q, Li M -W, Qiu Y, Chen Q, Jiang S -J, Shang Y -J, Zhao L -M. 2018. Increasing 867 
+
+thermal stability of glutamate decarboxylase from Escherichia. coli by site -directed 868 
+
+saturation mutagenesis and its application in GABA production. J Biotechnol 278:1 –869 
+
+9. 870 
+
+48. Zandy SL, Doherty JM, Wibisono ND, Gonzales RA. 2017. High sensitivity HPLC 871 
+
+method for analysis of in vivo extracellular GABA using optimized fluorescence 872 
+
+parameters for o-phthalaldehyde (OPA)/sulfite derivatives. Journal of 873 
+
+Chromatography B 1055 –1056:1 –7. 874 
+
+49. Vadankula GR, Nilkanth V V., Rizvi A, Yandrapally S, Agarwal A, Chirra H, Biswas 875 
+
+R, Arifuddin M, Nema V, Mallika A, Mande SC, Banerjee S. 2024. Confronting 876 
+
+Tuberculosis: A Synthetic Quinoline -Isonicotinic Acid Hydrazide Hybrid Compound 877 
+
+as a Potent Lead Molecule Against Mycobacterium tuberculosis . ACS Infect Dis 878 
+
+10:2288 –2302. 879 
+
+50. Aylan B, Botella L, Gutierrez MG, Santucci P. 2023. High content quantitative 880 
+
+imaging of Mycobacterium tuberculosis responses to acidic microenvironments 881 
+
+within human macrophages. FEBS Open Bio 13:1204 –1217. 882 
+
+51. Santucci P, Aylan B, Botella L, Bernard EM, Bussi C, Pellegrino E, Athanasiadi N, 883 
+
+Gutierrez MG. 2022. Visualizing Pyrazinamide Action by Live Single -Cell Imaging 884 
+
+of Phagosome Acidification and Mycobacterium tuberculosis pH Homeostasis. mBio 885 
+
+13. 886 
+
+887 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+41 
+
+Figure 1: Expression and catalytic efficiency of Mtb GadB are increased  under acidic and 888 
+
+oxidative stress in Mycobacterium tuberculosis . (A)  Immunoblots of Mtb GadB protein under 889 
+
+acidic and oxidative microbicidal stress conditions in Mtb H37Rv cell lysates. Equal amounts of 890 
+
+lysate (Bradford -normali zed) were loaded, with GroEL2 serving as the loading control. (B) 891 
+
+Immunoblot -derived quantification of Mtb GadB, normali zed to GroEL2 and presented relative to 892 
+
+the normal condition.  (C) Bar graph showing quantification of the total amount of intracellular 893 
+
+GABA produced under stress, as quantified by the modified Berthelot assay and normali zed to 894 
+
+total protein concentration. (D)  Bar graph showing extracellular GABA levels released under 895 
+
+acidic and oxidative stress. The standard GABA curve was used as the reference for quantification 896 
+
+in panels C and D.  (E)  Michaelis -Menten plots of Mtb GadB at pH 5.5 and pH 7.2 (control); (F) 897 
+
+Michaelis -Menten plots of Mtb GadB in the presence (0.5 μM) and absence of H 2O2 (control) (G -898 
+
+I) Representative fluorescence spectra of quenching of emission of Mtb GadB with L -glutamate 899 
+
+under different conditions. Modified Stern -Volmer equations with the  Ka values of L -glutamate at 900 
+
+(G) pH 7.2 , (H) pH 5.5, and (I) 0.5 μM of H 2O2. All the experiments were performed in biological 901 
+
+triplicate . Statistical significance was determined using an unpaired Student’s t -test. The p -values 902 
+
+are denoted as ‘***’ p ≤0.0005; ‘**’ p ≤ 0.005, ‘*’ p≤ 0.05, while ns denote non -significant values. 903 
+
+904 
+
+Figure 2: Deletion of the C-terminal domain reduced the catalytic efficiency of Mtb GadB 905 
+
+under acidic and oxidative stresses. (A) Cartoon representation of the superimposition of C -906 
+
+terminal domains of Mtb GadB and E.coli GadB . (B) Cartoon representation of the catalytic site of 907 
+
+Mtb GadB highlighting a highly conserved lysine residue (Lys277), which forms a Schiff base with 908 
+
+the PLP cofactor, and other residues including Asp244, Gly127, Ser128, Ser129, Ser274, and 909 
+
+His276. (C)  Michaelis Menten plots of Mtb GadB and Mtb GadB ΔCt at pH 5.5; (D) Michaelis 910 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+42 
+
+Menten plots of Mtb GadB and Mtb GadB ΔCt in the presence of 0.5 μM H 2O2 (E) Michaelis Menten 911 
+
+plot of Mtb GadB ΔCt at pH 5.5 and pH 7.2 (F -H) Representative fluorescence spectra of quenching 912 
+
+of emission of Mtb GadB ΔCt with L -glutamate under different conditions. Modified Stern -Volmer 913 
+
+plots for the fluorescence quenching of the Mtb GadB Ct at (F) pH 7.2, (G) pH 5.5, and (H) 0.5μM 914 
+
+of H 2O2. All the experiments were performed in biological triplicates. 915 
+
+916 
+
+Figure 3: Deletion of C -terminal domain impaired GABA production and stress tolerance in 917 
+
+Mtb . (A) Ratio of GABA produced at pH 5.5 to pH 7.2 (B) Ratio of GABA produced in the 918 
+
+presence and absence of H 2O2. The data w ere first normalized to the total protein concentration, 919 
+
+followed by normalization to the vector control ( Mtb ::pVV16) , and rep orted as ratios. (C) Time -920 
+
+growth plot s of Mtb::Mtb GadB, Mtb::Mtb GadBSDM and Mtb::Mtb GadB ΔCt in acidic pH (D) 921 
+
+Time -growth plot s of Mtb::Mtb GadB, Mtb::Mtb GadBSDM , and Mtb::Mtb GadB ΔCt in H 2O2.922 
+
+Mtb ::pVV16 was used as a control. (E) Time -growth plot s of Mtb::Mtb GadB in acidic and neutral 923 
+
+pH. (F) Time -growth plot of Mtb::Mtb GadB ΔCt in acidic and neutral pH. (G) Quantification of 924 
+
+intra -bacterial ROS by Fluorescence spectroscopy. Unstained bacteria were used as a control, and 925 
+
+the data were normalized to the Msmeg ::pMSP vector control. All the experiments were performed 926 
+
+in biological triplicate . Statistical significance was determined using an unpaired Student’s t -test. 927 
+
+The p -values are denoted as ‘***’ p ≤0.0005; ‘**’ p ≤ 0.005, ‘*’ p≤ 0.05, while non -significant 928 
+
+values are denoted by ns. 929 
+
+930 
+
+Figure 4: CTD -regulated GABA -producing metabolic state of Mtb blocks endosomal 931 
+
+maturation and dampens oxidative stress during infection: (A)  Bar -graph representing 932 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+43 
+
+Mander’s colocalization coefficient (M1) of different strains of Msmegmatis with Lysotracker 933 
+
+stained compartments (B)  Confocal microscopy of Lysotracker -stained THP -1 macrophages 934 
+
+infected with different cherry -tagged Msmeg strains showing localization with acidified 935 
+
+compartments.  Acidified compartments are seen as green fluorescence, and Msmeg is seen in red 936 
+
+fluorescence. Bacteria localised with acidified compartments are seen in yellow fluorescence. (C) 937 
+
+The plot profiles of representative single -cell images of insets (i -iv) for lysotracker positive 938 
+
+compartments (green line) and Msmeg (red line) were generated using ImageJ software. (D) Violin 939 
+
+plots showing the mean Lysotracker intensity associated with individual bacterial region of 940 
+
+interests (ROIs). Individual data points represent the background -corrected lysotracker intensity 941 
+
+associated with a bacterial ROI of the particular strain. Data was normalized to control 942 
+
+(Msmeg ::pMSP) and represented as Msmeg asssociated Lysotracker intensity. (E) Bar graph 943 
+
+showing quantification of Median Fluorescence Intensity (MFI) of CM -H2DCFDA dye 944 
+
+representing intracellular ROS measured by flow cytometry. Data were normalized to the PMA -945 
+
+treated group and reported as fold change. (F -G) Immunoblots showing protein levels of Rab5 (G) 946 
+
+and Rab7 (H) under infection conditions in THP -1 cell lysates. Equal amounts (as measured by 947 
+
+Bradford assay) of lysate were loaded in each well, and GAPDH was used as an internal control. 948 
+
+(H) Bar graph showing the ratio of Rab5/Rab7 expression by immunoblot -based quantification of 949 
+
+expression, normalized to GAPDH, and represented as relative ratios compared to vector control. 950 
+
+All the experiments were performed at least in biological triplicate . Statistical significance was 951 
+
+determined using an unpaired Student’s t -test. The p -values are denoted as ‘***’ p ≤0.0005; ‘**’ p 952 
+
+≤ 0.005, ‘*’ p≤ 0.05., while non -significant values are denoted by ns. 953 
+
+954 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+44 
+
+Figure 5: The C -terminal domain of Mtb GadB is required for M2 macrophage polarisation 955 
+
+and intracellular persistence during infection. (A)  Bar graph showing the total amount of 956 
+
+GABA accumulated within THP -1 macrophages upon infection with different strains of Mtb .957 
+
+Uninfected THP -1 macrophages served as controls . Data was normalized to the total protein 958 
+
+concentration of each sample.  (B -D) Transcript levels of (A) iNOS and (B) Arginase -1 (Arg -1) in 959 
+
+THP -1 macrophages were quantified by qRT -PCR at 24 hpi. Mtb :: pVV16 infected macrophages 960 
+
+were used as control. GAPDH was used as an internal control. (D) Bar graph showing total nitrite 961 
+
+levels in the culture supernatant of infected THP -1 macrophages, as measured by the Griess assay. 962 
+
+LPS+IFN -y and IL -4 treated macrophages were used as control for M1 and M2 polarized states 963 
+
+respectively. A standard plot of nitrite was used for the quantification of total nitrite. (E -I) ELISA 964 
+
+based quantification of different cytokines (pro -inflammatory (E) [IFN -γ], ( F) [TNF -α]), ( G) [IL -965 
+
+12p70] and anti -inflammatory (H) [IL -4], (I) [IL -10]) in the culture supernatant of THP -1966 
+
+macrophages at 24 hours post -infection (hpi). Uninfected and M1/M2 polarized macrophages were 967 
+
+used as controls. (J) Flow -cytometry based analysis of CD86 and CD206 positive population of 968 
+
+macrophages upon infection with different strains of Mtb . Data were represented as a ratio of 969 
+
+CD86/CD206 -positive population. M1/M2 polarized macrophages were used as controls. (K) Bar -970 
+
+graph showing % survival of Mtb in THP -1 macrophages. Infected  macrophages were lysed and 971 
+
+plated on 7H10 agar plates, and CFU was calculated at 24 hpi. Data was normalized to a CFU 972 
+
+count at 0 hpi and represented as % survival. Error bars represent standard deviation.  All the 973 
+
+experiments were performed at least in biological triplicate. Statistical significance was 974 
+
+determined using an unpaired Student’s t -test. The p -values are denoted as ‘***’ p ≤0.0005; ‘**’ p 975 
+
+≤ 0.005, ‘*’ p≤ 0.05., while non -significant values are denoted by ns. 976 
+
+977 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+45 
+
+Figure 6: Proposed model of Mtb GadB -driven influence of stress -adaptive bacterial 978 
+
+metabolic state on macrophage immunomodulation and bacterial persistence: 979 
+
+Mtb :: Mtb GadB shows enhanced catalytic efficiency under acidic and oxidative environments of 980 
+
+the Mtb -containing endosomes, resulting in increased production of GABA. Infection of THP -1981 
+
+macrophages with the high -GABA - producing ( Mtb :: Mtb GadB ) strain shows neutralization of pH, 982 
+
+and a decrease in cellular ROS, with a high Rab5/7 ratio, leading to a decrease in phagosomal 983 
+
+maturation and enhanced bacterial adaptation to these stresses. In parallel, increased Mtb GadB 984 
+
+activity and the associated rise in intracellular GABA levels drive macrophages toward an anti -985 
+
+inflammatory state, characterized by reduced secretion of pro -inflammatory cytokines (TNF -α, 986 
+
+IFN -γ, and IL -12p70) and increased expression of the M2 -associated surface marker (CD206), 987 
+
+indicative of an M2 -like phenotype. Collectively, the dual role of Mtb GadB in intracellular stress 988 
+
+adaptation and induction of M2 -like polarisation promotes enhanced persistence of Mtb within 989 
+
+macrophages. In contrast, Mtb :: Mtb GadB ΔCt shows decreased catalytic efficiency and no pH 990 
+
+responsiveness , resulting in less GABA production. Infection with this mutant strain resulted in 991 
+
+low pH and accumulation of cellular ROS, along with a low Rab5/7 ratio, leading to an increase 992 
+
+in phagosomal maturation. Mtb :: Mtb GadB ΔCt strain results in a pro -inflammatory response 993 
+
+associated with enhanced expression of M1 -associated surface marker (CD86), and decreased anti -994 
+
+inflammatory cytokines (IL -4, IL -10). Together, the inability to counter intracellular acidic and 995 
+
+oxidative stress , along with a pro -inflammatory immune response, leads to enhanced clearance of 996 
+
+Mtb within macrophages. 997 
+
+998 
+
+999 
+
+1000 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+46 
+
+Table 1: Kinetic parameters of Mtb GadB at pH 7.2, pH 5.5 and 0.5μM of H 2O21001 
+
+Kinetic parameter  pH 7.2  pH 5.5  0.5μM H 2O2
+
+Vmax (μM GABA/min)  21.84±3.576  26.75±3.77  31.79±9.747 
+
+Km (mM)  51.02±15.54  32.36±10.20  28.76±19.67 
+
+kcat (sec -1) 0.145±0.023  0.178±0.025  0.211±0.06 
+
+Catalytic efficiency kcat /Km (sec -1 mM -1) 0.0028±0.0014  0.0055±0.0024  0.007±0.003 
+
+Ka (mM -1) 0.059±0.009  0.087±0.02  0.065±0.001 
+
+1002 
+
+Table 2: Catalytic efficiencies ( kcat /Km) and association constants ( Ka) of Mtb GadB ΔCt and 1003 
+
+Mtb GadBSDM under acidic and oxidative conditions. 1004 
+
+Enzyme  Kinetic parameter  pH 7.2  pH 5.5  0.5μM H 2O2
+
+Mtb GadB ΔCt  kcat /Km (sec -1 mM -1) 0.0028±0.001  0.003±0.001  0.003±0.001 
+
+Ka (mM -1) 0.041±0.01  0.046±0.01  0.065±0.004 
+
+Mtb GadBSDM  kcat /Km (sec -1 mM -1) 0.0021±0.001  0.003±0.001  0.0031±0.0016 
+
+Ka (mM -1) 0.053±0.004  0.062±0.007  0.056±0.01 
+
+WT Mtb GadB  kcat /Km (sec -1 mM -1) 0.0028±0.0014  0.0055±0.0024  0.007±0.003 
+
+Ka (mM -1) 0.059±0.009  0.08667±0.02  0.065±0.001 
+
+1005 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 6, 2026. ;https://doi.org/10.64898/2026.05.05.722917 doi: bioRxiv preprint
+
+Figure 1: Expression and catalytic efficiency of Mtb GadB are increased  under acidic and oxidative 
+
+stress in Mycobacterium tuberculosis . (A)  Immunoblots of Mtb GadB protein under acidic and oxidative 
+
+microbicidal stress conditions in Mtb H37 Rv cell lysates . Equal amounts of lysate (Bradford -
+
+normalised) were loaded, with GroEL 2 serving as the loading control . (B)  Immunoblot -derived 
+
+quantification of Mtb GadB, normalised to GroEL 2 and presented relative to the normal condition . (C) 
+
+Bar graph showing quantification of the total amount of intracellular GABA produced under stress, as 
+
+quantified by modified Berthelot assay and normalised to total protein concentration . (D)  Bar graph 
+
+showing extracellular GABA levels released under acidic and oxidative stress . The standard GABA 
+
+curve was used as the reference for quantification in panels C and D. (E)  Michaelis -Menten plots of 
+
+Mtb GadB at pH 5.5 and pH 7.2 (control) ; (F) Michaelis -Menten plots of Mtb GadB in presence (0.5 μM )
+
+and absence of H2O2 (control) (G -I) Representative fluorescence spectra of quenching of emission of 
+
+Mtb GadB with L-glutamate under different conditions . Modified Stern -Volmer equations with the  Ka
+
+values of L-glutamate at (G) pH 7.2 (H), pH 5.5 and (I) 0.5μM of H2O2. All the experiments were 
+
+performed in biological triplicates . Statistical significance was determined using an unpaired Student’s t-
+
+test . The p-values are denoted as ‘***’ p ≤0.0005 ; ‘**’ p ≤ 0.005 , ‘*’ p≤ 0.05 , while ns denote non -
+
+significant values .0 20 40 60 80 0510 15 20 25         
+
+> WT GadB pH 5.5 GadB DCt pH 5.5
+> [S] mM v ( M GABA/min) 020 40 60 80 0510 15 20 25 30 35
+> GadB DCt (0.5 μM H 2O2)WT GadB (0.5 μM H 2O2)
+> [S] mM v ( M GABA/min) 020 40 60 80 0510 15 20
+> GadB DCt pH 7.2 GadB DCt pH 5.5
+> [S] mM v ( M GABA/min)
+
+A B
+
+C ED
+
+F HG
+
+Figure 2: Deletion of C-terminal domain reduced the catalytic efficiency of Mtb GadB under 
+
+acidic and oxidative stresses . (A) Cartoon representation of superimposition of C -terminal domains 
+
+of Mtb GadB and E.coli GadB (B) Cartoon representation of catalytic site of Mtb GadB highlighting 
+
+highly conserved lysine residue (Lys 277 ), which forms a Schiff base with the PLP cofactor, and other 
+
+residues including Asp 244 , Gly 127 , Ser 128 , Ser 129 , Ser 274 , and His 276 . (C)  Michaelis Menten plots 
+
+of Mtb GadB and Mtb GadBΔCt at pH 5.5; (D) Michaelis Menten plots of Mtb GadB and Mtb GadBΔCt 
+
+in presence of 0.5 μM H2O2 (E) Michaelis Menten plot of Mtb GadBΔCt at pH 5.5 and pH 7.2 (F -H) 
+
+Representative fluorescence spectra of quenching of emission of Mtb GadBΔCt with L-glutamate 
+
+under different conditions . Modified Stern -Volmer plots for the fluorescence quenching of the 
+
+Mtb GadB DCt at (F) pH 7.2, (G) pH 5.5, and (H) 0.5μM of H2O2. All the experiments were performed 
+
+in biological triplicates .Figure 3: Deletion of C-terminal domain impaired GABA production and stress tolerance in 
+
+Mtb . (A) Ratio of GABA produced at pH 5.5 to pH 7.2 (B) Ratio of GABA produced in presence and 
+
+absence of H2O2. The data was first normalized to the total protein concentration, followed by 
+
+normalization to the vector control (Mtb :: pVV 16 ) and represented as ratios . (C) Time -growth plot of 
+
+Mtb :: Mtb GadB, Mtb :: Mtb GadBSDM and Mtb :: Mtb GadBΔCt in acidic pH (D) Time -growth plot of 
+
+Mtb :: Mtb GadB, Mtb :: Mtb GadBSDM and Mtb :: Mtb GadBΔCt in H2O2. Mtb :: pVV 16 was used as 
+
+control . (E) Time -growth plot of Mtb :: Mtb GadB in acidic and neutral pH . (F) Time -growth plot of 
+
+Mtb :: Mtb GadBΔCt in acidic and neutral pH . (G) Quantification of intra -bacterial ROS by 
+
+Fluorescence spectroscopy . Unstained bacteria were used as control and data was normalized to 
+
+Msmeg :: pMSP vector control . All the experiments were performed in biological triplicates .
+
+Statistical significance was determined using an unpaired Student’s t-test . The p-values are denoted 
+
+as ‘***’ p ≤0.0005 ; ‘**’ p ≤ 0.005 , ‘*’ p≤ 0.05 ., while non -significant values are denoted by ns .Figure 4: CTD regulated GABA -producing metabolic state of Mtb blocks endosomal maturation 
+
+and dampens oxidative stress during infection : (A)  Bar -graph representing Mander’s colocalization 
+
+coefficient (M 1) of different strains of Msmegmatis with Lysotracker stained compartments (B)  Confocal 
+
+microscopy of Lysotracker stained THP -1 macrophages infected with different cherry -tagged Msmeg 
+
+strains showing localization with acidified compartments . Acidified compartments are seen as green 
+
+fluorescence, and Msmeg is seen in red fluorescence . Bacteria localised with acidified compartments are 
+
+seen in yellow fluorescence . (C)  The plot profiles of representative single -cell images of insets (i-iv) for 
+
+lysotracker positive compartments (green line) and Msmeg (red line) were generated using ImageJ 
+
+software . (D) Violin plots showing the mean Lysotracker intensity associated with individual bacterial 
+
+region of interests (ROIs) . Individual data points represent the background corrected lysotracker intensity 
+
+associated with a bacterial ROI of the particular strain . Data was normalized to control (Msmeg :: pMSP )
+
+and represented as Msmeg asssociated Lysotracker intensity . (E) Bar graph showing quantification of 
+
+Median Fluorescence Intensity (MFI) of CM -H2DCFDA dye representing intracellular ROS measured by 
+
+flow cytometry . Data were normalised to the PMA -treated group and reported as fold change . (F -G) 
+
+Immunoblots showing protein levels of Rab 5 (G) and Rab 7 (H) under infection conditions in THP -1 cell 
+
+lysates . Equal amounts (as measured by Bradford assay) of lysate was loaded in each well and GAPDH 
+
+was used as internal control . (H) Bar graph showing Ratio of Rab 5/Rab 7 expression by immunoblot -
+
+based quantification of expression, normalized to GAPDH and represented as relative ratios compared to 
+
+vector control . All the experiments were performed at least in biological triplicates . Statistical 
+
+significance was determined using an unpaired Student’s t-test . The p-values are denoted as ‘***’ p
+
+≤0.0005 ; ‘**’ p ≤ 0.005 , ‘*’ p≤ 0.05 ., while non -significant values are denoted by ns .Figure 5: The C-terminal domain of Mtb GadB is required for M2 macrophage polarisation and 
+
+intracellular persistence during infection . (A)  Bar graph showing the total amount of GABA 
+
+accumulated within THP -1 macrophages upon infection with different strains of Mtb . Uninfected THP -1
+
+macrophages were used as control . Data was normalised to the total protein concentration of each 
+
+sample . (B -D) Transcript levels of (A) iNOS and (B) Arginase -1 (Arg -1) in THP -1 macrophages were 
+
+quantified by qRT -PCR at 24 hpi . Mtb pVV 16 infected macrophages were used as control . GAPDH was 
+
+used as internal control . (D) Bar graph showing total nitrite levels in the culture supernatant of infected 
+
+THP -1 macrophages, as measured by Greiss assay . LPS+IFN -y and IL -4 treated macrophages were used 
+
+as control for M1 and M2 polarized states respectively . Standard plot of nitrite was used for the 
+
+quantification of total nitrite . (E -I) ELISA based quantification of different cytokines (pro -inflammatory 
+
+(E) [IFN -γ], (F) [TNF -α]), (G) [IL -12 p70 ] and anti -inflammatory (H) [IL -4], (I) [IL -10 ]) in the culture 
+
+supernatant of THP -1 macrophages at 24 hours post infection (hpi ). Uninfected and M1/M 2 polarized 
+
+macrophages were used as controls . (J) Flow -cytometry based analysis of CD 86 and CD 206 positive 
+
+population of macrophages upon infection with different strains of Mtb . Data was represented as ratio of 
+
+CD 86 /CD 206 positive population . M1/M 2 polarized macrophages were used as controls . (K) Bar -graph 
+
+showing % survival of Mtb in THP -1 macrophages . Infected  macrophages were lysed and plated on 
+
+7H10 agar plates, and CFU was calculated at 24 hpi . Data was normalised to a CFU count at 0 hpi and 
+
+represented as % survival . Error bars represent standard deviation . All the experiments were performed 
+
+at least in biological triplicate . Statistical significance was determined using an unpaired Student’s t-test .
+
+The p-values are denoted as ‘***’ p ≤0.0005 ; ‘**’ p ≤ 0.005 , ‘*’ p≤ 0.05 ., while non -significant values 
+
+are denoted by ns .Figure 6: Proposed model of Mtb GadB driven influence of stress -adaptive bacterial metabolic state on 
+
+macrophage immunomodulation and bacterial persistence :
+
+Mtb :: Mtb GadB shows enhanced catalytic efficiency under acidic and oxidative environment of the Mtb -
+
+containing endosomes, resulting in increased production of GABA . Infection of THP -1 macrophages with 
+
+the high GABA - producing (Mtb :: Mtb GadB) strain shows neutralization of pH, and decrease in cellular 
+
+ROS, with a high Rab 5/7 ratio, leading to decrease in phagosomal maturation and enhanced bacterial 
+
+adaptation to these stresses . In parallel, increased Mtb GadB activity and the associated rise in intracellular 
+
+GABA levels drive macrophages toward an anti -inflammatory state, characterized by reduced secretion of 
+
+pro -inflammatory cytokines (TNF -α, IFN -γ, and IL -12 p70 ) and increased expression of the M2-associated 
+
+surface marker (CD 206 ), indicative of an M2-like phenotype . Collectively, the dual role of Mtb GadB in 
+
+intracellular stress adaptation and induction of M2-like polarisation promotes enhanced persistence of Mtb 
+
+within macrophages . In contrast, Mtb :: Mtb GadBΔCt shows decreased catalytic efficiency and no pH 
+
+responsiveness leading to less GABA production . Infection with this mutant strain resulted in low pH and 
+
+accumulation of cellular ROS, with a low Rab 5/7 ratio, leading to increase in phagosomal maturation .
+
+Mtb :: Mtb GadBΔCt strain results in a pro -inflammatory response associated with enhanced expression of 
+
+M1-associated surface marker (CD 86 ), and decreased anti -inflammatory cytokines (IL -4, IL -10 ). Together, 
+
+the inability to counter intracellular acidic and oxidative stress and a pro -inflammatory immune response 
+
+leads to enhanced clearance of Mtb within the macrophages .

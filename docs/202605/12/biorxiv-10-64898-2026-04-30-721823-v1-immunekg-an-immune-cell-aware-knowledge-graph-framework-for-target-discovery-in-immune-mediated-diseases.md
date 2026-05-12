@@ -1,0 +1,25 @@
+---
+title: "immuneKG: An Immune-Cell-Aware Knowledge Graph Framework for Target Discovery in Immune-Mediated Diseases"
+authors: "Ye, Y., PB-IDD Department, Pharmablock Sciences Inc.,"
+date: 2026-05-05
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.30.721823v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.0
+evidence: 免疫介导疾病靶点发现的知识图谱
+tldr: 本研究提出immuneKG，一个专注于自身免疫性疾病的多模态知识图谱框架。它创新性地引入了免疫细胞实体和四种特定关系，并通过自身抗体、细胞因子及HLA基因型等特征对疾病节点进行重编程。结合HeteroPNA-Attn图神经网络和新颖性评分机制，该框架能有效识别潜在药物靶点，为免疫疾病的药物研发提供具有生物学解释性的决策支持。
+source: biorxiv
+selection_source: fresh_fetch
+motivation: 现有的生物医学知识图谱在免疫介导疾病的靶点识别中缺乏深度机制建模和免疫特异性特征。
+method: 构建包含免疫细胞节点及多模态特征的知识图谱，并开发HeteroPNA-Attn网络进行跨模态特征融合与推理。
+result: "在炎症性肠病靶点预测中，该模型在临床管线验证下达到0.99的Hits@100，并成功识别出高潜力的“暗靶点”。"
+conclusion: immuneKG通过整合免疫特异性知识和先进的图学习算法，实现了从候选筛选到开发导向的药物发现范式转变。
+---
+
+## Abstract
+Biomedical knowledge graphs have emerged as foundational infrastructure for AI-driven drug discovery, yet their translational impact on novel target identification in immune-mediated diseases remains limited. Here we present immuneKG, a multimodal knowledge graph centred on autoimmune diseases, constructed through biologically meaningful feature reprogramming of disease nodes to enable deep mechanistic modelling of immune-related disorders. immuneKG introduces a new entity class immune_cell and four original directed relation types, together adding 9,105 novel triples absent from all existing biomedical KG schemas. Disease nodes are endowed with three novel modal feature sets quantifying immune homeostatic imbalance: autoantibody profiles, cytokine signatures, and HLA genotypes, complemented by systemic involvement scores and genetic features. The graph encompasses over 407,000 training triples across 7,287 entities and 32 relation types. Applied to inflammatory bowel disease (IBD), immuneKG combined with a HeteroPNA-Attn graph neural network achieves a Hits@100 of 0.99 against a Clarivate Phase II+ clinical pipeline, while a novelty-penalised scoring function surfaces high-potential dark targets. The framework shifts from conventional candidate-space screening to a development-oriented decision-support paradigm, providing actionable and interpretable guidance for downstream drug discovery. The immuneKG project is publicly available on GitHub at https://github.com/YaowenYe/immuneKG.
+
+HighlightsO_LIWe propose ImmuneKG, introducing novel immune_cell node types, four original immune-cell relation types, and a gold feature set for autoimmune disease nodes, while pruning redundant nodes to enhance feature depth and distribution balance.
+C_LIO_LIWe develop HeteroPNA-Attn, a dedicated heterogeneous graph attention network that mitigates uneven feature distribution density across node modalities. Multi-head mutual attention balances cross-modal weights, yielding steady downstream performance gains as modalities are added.
+C_LIO_LIOur novelty-driven scoring module prioritises de novo target discovery over retrospective data fitting. Optimising Hits@1 rather than reporting successes from large candidate pools eliminates selection bias and demonstrates authentic predictive power in real-world R&D scenarios.
+C_LIO_LIInterpretability analysis confirms that immune cell nodes play a pivotal role in complex multi-hop graph reasoning; visualisation of path-level attention weights reveals that immuneKG routes predictions through biologically coherent immune-cell intermediaries.
+C_LI
