@@ -1,0 +1,622 @@
+Title: Programmable synthetic cytokine receptors polarize macrophages to user-defined functional states
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.12.724672v2.full.pdf
+
+Number of Pages: 43
+
+Markdown Content:
+# Programmable synthetic cytokine receptors polarize 1
+
+# macrophages to user-defined functional states 2
+
+# Authors: 3
+
+Judith C. Lunger 1, Lucas E. Sant’Anna 1,2,3,† , Antonio Salcido-Alcántar 1,2,† , Rebeca Arroyo 4Hornero 6, Wansang Cho 1, Alun Vaughan-Jackson 1,5 , Mingxin Gu 1, Jenny Y. Liu 1, Alex N. 5Beckett 1, Joaquin Parrilla-Garcia 1, Sneha Ramakrishna 4,6 , Michael C. Bassik 1, Kyle G. 6Daniels 1,4,7, *7
+
+# Affiliations: 8
+
+> 1
+
+Department of Genetics, Stanford University School of Medicine, Stanford, CA 94305, USA. 9
+
+> 2
+
+Department of Bioengineering, Stanford University, Stanford, CA 94305, USA. 10 
+
+> 3
+
+Department of Mechanical Engineering, Stanford University, Stanford, CA 94305, USA. 11 
+
+> 4
+
+Stanford Center for Cancer Cell Therapy, Stanford Cancer Institute, Stanford University, 12 Stanford, CA, USA. 13 
+
+> 5
+
+Chan Zuckerberg Biohub, San Francisco, CA, USA. 14 
+
+> 6
+
+Division of Pediatric Hematology/Oncology/Stem Cell Transplant and Regenerative Medicine, 15 Department of Pediatrics, Stanford University, Stanford, CA, USA. 16 
+
+> 7
+
+Parker Institute for Cancer Immunotherapy, San Francisco, CA 94129, USA. 17 18 *Corresponding author 19 †These authors contributed equally 20 Correspondence to: kyledan@stanford.edu 21 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Summary 22 
+
+Technology that precisely controls macrophage polarization to distinct functional states would 23 deepen our understanding of macrophage biology and enable the development of new 24 macrophage cell therapies. Here, we use a synthetic cytokine receptor (SCR) platform with a 25 programmable signaling domain to control the polarization of primary human macrophages. SCRs 26 containing signaling motifs from the interferon-gamma (IFN-γ) or Interleukin-10 (IL-10) receptors 27 mimic key features of pro-inflammatory or anti-inflammatory polarization, respectively. Random 28 recombination of nine distinct signaling motifs to create new SCR signaling domains generates a 29 diverse landscape of synthetic macrophage states with varied expression of inflammatory 30 markers (CD80, CD40) and anti-inflammatory markers (CD163, CD206), and varied phagocytic 31 capacity. SCRs programmed with multiple YLxQ motifs increase macrophage phagocytosis of E. 32 
+
+coli and chimeric antigen receptor (CAR)-macrophage phagocytosis of cancer cells in mice, 33 reducing tumor burden by 30-fold. The motif-dependent polarization is well-described by a two-34 state model, enabling quantitative prediction of macrophage polarization state from SCR signaling 35 domain composition. Leveraging this model, we design an SCR that simultaneously enhances 36 phagocytosis and maintains a macrophage pro-inflammatory state. Together, these findings 37 establish a framework for synthetic programming of macrophage polarization states, with potential 38 applications in cancer immunotherapy and other disease contexts. 39 40 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Main Text 41 
+
+42 
+
+# Introduction 43 
+
+Macrophages are highly plastic cells that play critical roles in natural immunity and, increasingly, 44 as engineered cell therapies 1. Macrophages sense infection and tissue damage, phagocytose 45 pathogens and debris, and sculpt the local environment through a broad repertoire of cytokines 46 and chemokines 2. Central to these roles is macrophages' ability to polarize into distinct cell states 47 with unique functional properties in response to external cues. For example, interferon-gamma 48 (IFN-γ) can polarize macrophages into a state characterized by the display of costimulatory 49 molecules and secretion of pro-inflammatory cytokines 3. Conversely, interleukin (IL)-10 can 50 polarize macrophages to a state characterized by the secretion of anti-inflammatory cytokines 51 and promotion of tissue repair 4. Evidence indicates that macrophages can integrate signals from 52 multiple stimuli to adopt a broad spectrum of phenotypic states 5–7 . This plasticity enables 53 macrophages to perform a variety of essential functions, such as secretion of pro-inflammatory 54 or anti-inflammatory cytokines, clearance of apoptotic cells, and presentation of antigens. 55 Dysregulation of such functions through aberrant polarization is associated with a range of 56 diseases, including susceptibility to infection, cancer progression, atherosclerosis, and fibrosis 8– 
+
+57 11 . Accordingly, there has been growing interest in engineering primary human macrophages for 58 therapeutic applications. Technologies for precisely engineering macrophage polarization states 59 would significantly enhance our understanding of macrophage biology and provide new strategies 60 for controlling the immune landscape in various disease contexts. 61 62 Several strategies have advanced macrophage engineering, including polarization with 63 exogenous cytokines, use of chimeric switch receptors 12 or chimeric antigen receptors with 64 polarizing signaling domains 13 , and gene knockdown or overexpression 14 . These approaches can 65 guide macrophages to altered polarization states and enable coarse-grained control of 66 macrophage phenotype. A remaining challenge is to reliably program macrophage polarization 67 states for research and therapeutic applications. Ideally, we would be able to co-optimize 68 phenotypes like phagocytic activity and inflammatory state. One potential solution is a69 programmable platform that allows the user to precisely navigate the polarization landscape and 70 predictably guide human primary macrophages to desired states. 71 72 Cytokines are major drivers of macrophage polarization state 15 . In addition to IFN-γ and IL-10, 73 cytokines like IL-4, IL-13, tumor necrosis factor (TNF), transforming growth factor (TGF)-β, 74 macrophage colony-stimulating factor (M-CSF), granulocyte-macrophage colony-stimulating 75 factor (GM-CSF), and others can alter macrophage polarization 6. These cytokines are sensed by 76 receptors whose intracellular domains contain short linear signaling motifs 16–18 . These signaling 77 motifs serve as docking sites for downstream effectors that activate signaling cascades and drive 78 phenotype changes 17,18 . Nature has evolved hundreds of cytokine receptors that use varied 79 signaling motifs to steer the phenotypes of innate and adaptive immune cell types 19 . Because 80 natural receptor domains achieve functional diversity through varied combinations of signaling 81 motifs, we hypothesized that synthetic recombination of these motifs could polarize macrophages 82 to diverse functional states. We further reasoned that a quantitative model that relates signaling 83 motif combination to macrophage polarization would enable rational programming of macrophage 84 phenotype. 85 86 We previously developed a synthetic cytokine receptor (SCR), which constitutively activates cell 87 signaling cascades via short modular signaling motifs (~16 amino acids, including a 4 to 8 amino 88 acid consensus binding motif and flanking amino acids) in the receptor’s intracellular signaling 89 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+domain. SCR signaling is cytokine-independent, activating signals in the absence of external 90 input. SCRs with varied signaling motifs produce diverse chimeric antigen receptor (CAR) T cell 91 states with unique survival, proliferation, differentiation, and cytotoxicity 20 .92 
+
+93 Here, we extend the use of SCRs to program user-defined macrophage polarization states. By 94 recombining signaling motifs in the SCR signaling domain, we generate a broad spectrum of 95 synthetic macrophage polarization states, encompassing pro-inflammatory, anti-inflammatory, 96 and highly phagocytic phenotypes. We find that expression of select SCRs can improve the 97 targeted phagocytosis of cancer cells by CAR-macrophages in vitro and in vivo . We find that a 98 two-state model describes the motif-to-phenotype relationship and use this model to rationally 99 design an SCR whose expression drives macrophages to a state that is highly phagocytic, but 100 also maintains a pro-inflammatory profile during a long-term CAR-macrophage killing assay. 101 Together, these results establish a modular and programmable strategy for interrogating 102 macrophage polarization and provide a foundation for the rational engineering of macrophage 103 functions for therapeutic applications. 104 
+
+105 
+
+# Results 106 
+
+107 
+
+Synthetic cytokine receptors drive ligand-independent macrophage polarization 108 
+
+109 Cytokine binding to natural receptors induces receptor complex assembly and activates signaling 110 cascades. The specific signaling pathways activated are determined by the signaling motifs 111 present on the receptors’ intracellular domain (ICD) 21 . To achieve cytokine-independent activation 112 of user-defined signaling, we created synthetic cytokine receptors (SCRs) (Fig. 1a). A single 113 lentiviral vector encodes both the SCR and green fluorescent protein (GFP) (Fig. 1a). Each SCR 114 contains three domains: an extracellular coiled-coil that facilitates homodimerization, a115 transmembrane domain (TMD) positioned for maximal signaling 20,22 , and the gp130 box domain, 116 which recruits Janus kinases (JAKs) 23 . These three domains are followed by signaling motifs in 117 the distal region, which can be varied to alter cell signaling and thereby program cell phenotype. 118 SCR0, which lacks signaling motifs, serves as a control. 119 120 To construct SCRs with varied signaling, we selected nine signaling motifs from natural receptor 121 ICDs (Fig. 1b). Each motif has binding or signaling activity that has previously been documented. 122 Included are signaling motifs from the IL-10 receptor (IL-10R), which drives anti-inflammatory 123 polarization, and the IFN-γ receptor (IFNGR1), which drives pro-inflammatory polarization 6. We 124 hypothesized that SCRs containing these motifs would drive distinct macrophage polarization 125 states. To test this hypothesis, we constructed nine SCRs, each containing one of the motifs (S1 126 through S9) (Fig. 1b). We then co-transduced human primary monocyte-derived macrophages 127 with lentivirus encoding the nine SCRs (Fig. 1c) and virus-like particles containing the protein Vpx, 128 which enables efficient myeloid cell transduction 24–26 (Extended Data Fig. 1b). To assess the 129 effect of each SCR on macrophage polarization, we used flow cytometry to measure expression 130 of select surface proteins that serve as macrophage polarization markers (CD40, CD80, PDL1, 131 CD206, and CD163). E. coli labeled with a pH-sensitive dye (pHrodo) that fluoresces in the 132 phagolysosome was used in live-cell imaging experiments to assess the effects of the SCRs on 133 phagocytosis (Fig. 1c). We benchmarked the SCR-driven effects against 48-hour treatments with 134 exogenous ligands (LPS and IFN-γ, IFN-γ, IL-10, IL-4, and GM-CSF) known to drive macrophage 135 polarization into distinct states 6 (Extended Data Fig. 1e). 136 137 For each of the measured surface markers, at least one motif increased expression to levels 138 comparable to ligand stimulation (Fig. 1d and Fig. 1e). For example, SCR(S1), which contains the 139 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+core amino acid “YDKPH” sequence from IFNGR1, increased CD40, CD80, and PDL1 expression 140 (Fig. 1e). In contrast, SCRs containing motifs S2 or S3, each with a core “YxxQ” sequence, 141 increased both CD163 expression and E. coli phagocytosis (Fig. 1e). 142 143 As expected, IL-4 treatment resulted in expression of CD206. However, motif S7, a reported 144 STAT6-binding motif from the IL-4 receptor α chain 27 , did not increase CD206 expression. To 145 investigate whether increasing the copy number of the S7 motif on the SCR would proportionally 146 enhance CD206 expression, we expressed SCRs containing either one or three copies of the S7 147 motif. Three copies of S7 reached CD206 levels comparable to IL-4 stimulation (Extended Data 148 Fig. 1c), suggesting that copy number can tune phenotype. Additionally, the S4 motif, a STAT5-149 binding motif from the IL-2 receptor β chain (IL-2Rβ) 28 , substantially increased CD206 expression, 150 suggesting that STAT5 activation may also drive CD206 expression. Thus, the SCR can be used 151 to drive specific phenotypes of interest, such as surface marker expression, through distinct 152 signaling motifs. 153 154 Expression of SCR0 (the dimerization and JAK-binding scaffold alone) drove a modest increase 155 in several measured phenotypes (Extended Data Fig. 1f). However, signaling motifs (Fig. 1e) and 156 exogenous ligands (Extended Data Fig. 1f) drove significantly larger changes. Together, these 157 results demonstrate that SCRs drive ligand-independent macrophage polarization into motif-158 dependent states distinguished by surface markers and phagocytosis. 159 
+
+160 
+
+SCRs with signaling motifs from natural receptors mimic cytokine-induced macrophage 161 
+
+polarization 162 
+
+163 The motifs S1 through S9 are small fragments of natural receptors, and our initial characterization 164 of SCR-induced polarization investigated a narrow set of phenotypes. This raises two questions. 165 First, can these signaling motifs recapitulate cytokine-induced macrophage polarization? Second, 166 how do cytokine-induced and SCR-induced changes compare for more global phenotypic 167 readouts like transcriptional state? 168 169 To address these questions, we compared the transcriptional programs induced by SCRs with 170 those induced by cytokines that activate the native receptors from which the motifs were derived 171 (Fig. 2a). We focused our inquiry on IFNγ and IL-10, which polarize macrophages into well-172 defined pro-inflammatory and anti-inflammatory states, respectively 4,29–31 . As in Fig. 1c, we 173 transduced macrophages to express SCRs containing phosphotyrosine signaling motifs from 174 either IFNGR1 (S1) or IL-10Rα (S3) (Extended Fig. 2b). We then performed bulk RNA sequencing 175 (RNA-seq) on these macrophages and on macrophages treated with IFNγ or IL-10 for 48 hours. 176 Cytokine-stimulated macrophages were also transduced with SCR0 to control for lentiviral 177 transduction effects (Extended Fig. 2b). Monocytes from three different donors were used to 178 assess donor variability (Extended Fig. 2a—b). 179 180 SCR(S1-S1), SCR(S3-S3), IL-10, and IFNγ each changed gene expression relative to SCR0 (Fig. 181 2b). Hierarchical clustering showed that samples clustered by stimulation condition rather than 182 donor (Fig. 2b). Consistent with their motif origins, macrophages expressing SCR(S3-S3) 183 clustered with IL-10-treated macrophages, and macrophages expressing SCR(S1-S1) clustered 184 with IFNγ-treated macrophages (Fig. 2b). The top differentially expressed genes (DEGs) included 185 many DEGs shared between conditions. IL-10-stimulated and SCR(S3-S3) macrophages shared 186 canonical IL-10-responsive genes (e.g., TNIP, CD163, JAK3, SOCS3) (Fig. 2b) 32 . Similarly, 187 several IFNγ-responsive genes (e.g., CXCL9, GBP1, IDO1, GBP4, GBP5, IDO2) were shared 188 between the IFNγ-treated and SCR(S1-S1) macrophages 31,33 (Fig. 2b). These known cytokine-189 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+regulated genes also appeared in the top 10 DEGs across all samples, indicating strong activation 190 of general macrophage polarization pathways (Extended Data Fig. 3a). 191 192 Principal component analysis showed a clear separation of cytokine-treated macrophages from 193 the SCR0 control (Fig. 2c). Macrophages engineered with SCR(S1-S1) and SCR(S3-S3) 194 projected in the same direction of PC1 as their cognate cytokines, but with greater displacement 195 from the control (Fig. 2c). This observation led us to hypothesize that signaling motifs were driving 196 similar transcriptional programs as their cognate cytokines, but to a stronger degree. Indeed, we 197 observed a strong positive correlation (ρ = 0.96) in DEGs shared between the SCR(S3-S3) versus 198 SCR0 comparison, and the IL-10 versus SCR0 comparison (Fig. 2d). The slope of the linear fit 199 was greater than 1 (1.18), indicating a higher magnitude of differential expression in SCR(S3-S3)-200 expressing macrophages compared to IL-10-treated macrophages. We found a similarly positive 201 correlation (ρ = 0.97) and slope (1.24) for DEGs shared between the SCR(S1-S1) versus SCR0 202 comparison and the IFNγ versus SCR0 comparison (Fig. 2e). In both cases, genes known to be 203 regulated by IL-10 or IFNγ were predominantly positioned above the line of concordance, 204 indicating stronger differential expression in SCR(S3-S3) and SCR(S1-S1) compared to cytokine-205 stimulated controls (Fig. 2d—e). Collectively, these results demonstrate that SCRs can mimic and 206 exceed the transcriptional effects of cytokines at typically used concentrations (50 ng/mL). 207 208 
+
+Motif S1 induces a myeloid activation state associated with CAR T cell activity in patients 209 
+
+210 The RNAseq data demonstrate that SCRs with signaling motifs from cytokine receptors can 211 induce transcriptional features similar to those induced by cytokine treatment in vitro . We next 212 investigated whether the SCR-driven transcriptional signatures reflect transcriptional signatures 213 observed in clinical settings. A previous study included single-cell RNA sequencing (scRNA-seq) 214 of cerebrospinal fluid (CSF) samples collected from four patients undergoing CAR T cell therapy 215 for diffuse midline glioma 34 . This study identified an interferon response signature in myeloid cells 216 that emerged in the days immediately following intracerebroventricular (ICV) CAR T cell infusion 217 in a patient (DIPG2) who experienced improved neurological symptoms and a 27% reduction in 218 tumor volume 34,35 . Patient DIPG2 also showed increases in CSF cytokines, including IFNγ and 219 CXCL9, following ICV CAR T cell infusion. To determine if SCR(S1-S1) drives macrophages to a 220 state reflective of this clinical myeloid response to CAR T cell therapy, we calculated an SCR(S1-221 S1) signature score for myeloid cells in the scRNA-seq dataset. The signature score quantifies 222 the transcriptional similarity between patient myeloid cells and SCR(S1-S1) macrophages. In 223 patient DIPG2, the SCR(S1-S1) signature was mostly highly enriched immediately following ICV 224 CAR T cell infusion and subsequently decreased over the following days (Fig 2f, upper panel). 225 This signature score closely paralleled the concentration of IFNγ measured in the patient’s CSF 226 (Fig 2f, lower panel). To generalize this observation, we analyzed all time points across patients 227 for which IFNγ measurements and CSF cells were collected on the same day. We observed a 228 strong correlation (ρ = 0.94) between CSF IFNγ measurements and the myeloid SCR(S1-S1) 229 gene signature score (Fig. 2g). These results demonstrate that the SCR(S1-S1)-driven 230 transcriptional program observed in vitro is similar to the IFNγ-driven myeloid transcriptional 231 programs observed in CSF following ICV CAR T infusion in a treatment-responsive patient. The 232 alignment of SCR-macrophage transcriptomics with patient-identified myeloid signatures 233 suggests programmed cells may serve as a model to understand the mechanistic implications of 234 these cell types in patients. 235 236 
+
+Signaling motif combinations enable navigation of diverse macrophage polarization states 237 
+
+238 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+We next asked if combining multiple motifs in one SCR can achieve unique polarization states 239 not achieved using single cytokine stimulations. In contrast to the classical “M1/M2” paradigm, 240 transcriptomic analyses have shown that polarized macrophages exist along a polarization 241 spectrum, shaped by diverse stimuli 5. Thus, we sought to explore whether expression of SCRs 242 with several motifs would access a spectrum of polarization states (Fig. 3a). We generated a 243 library of 131 unique SCRs (Fig. 3b) containing zero (n=1), one (n=9), two (n=81), or three (n=40) 244 of the nine signaling motifs (Fig. 1b). With these 131 SCRs, we performed an arrayed experiment 245 to assess each SCR’s effect on macrophage polarization (Fig. 3c). To contextualize these effects, 246 we compared SCR-induced phenotypes to untransduced macrophages, SCR0-expressing 247 macrophages, and macrophages stimulated with exogenous factors (IL-10, IFNγ, LPS + IFNγ, 248 IL4, or GM-CSF). 249 250 The SCR library induced a broad spectrum of macrophage polarization states with distinct 251 phagocytosis and expression of CD163, CD206, CD40, CD80, and PDL1 (Fig. 3d). This spectrum 252 included both states that mimicked single cytokine treatments and states not achieved with 253 cytokine stimulation. We used hierarchical clustering (Fig. 3d) and dimensionality reduction (Fig. 254 3e—g) to summarize SCR-induced polarization. UMAP embedding of all normalized surface 255 marker and phagocytosis measurements showed that exogenous ligand treatments occupy 256 distinct regions of the map, while SCR-driven phenotypes occupy the intervening phenotypic 257 space (Fig. 3e). Five distinct functional clusters emerged. First, a CD40 high PDL1 high region 258 occupied by LPS + IFNγ-stimulated macrophages (Fig. 3f). Second, a CD206 high area populated 259 by GM-CSF-stimulated macrophages (Fig. 3f). Third, a region containing SCR-expressing 260 samples with elevated phagocytic activity (Phago high ) (Fig. 3f). Fourth, a baseline cluster 261 containing SCR0 controls and SCRs with motif combinations that produced no significant 262 phenotypic shifts (Fig. 3e). Lastly, a cluster of untransduced or IL-4-treated macrophages (Fig. 263 3e). The measured phenotypes were variably correlated with each other, with CD40 and PDL1 264 showing the strongest correlation (r = 0.86) (Extended Data Fig. 4b). Unexpectedly, CD80, a 265 canonical pro-inflammatory marker, was expressed in multiple clusters, demonstrating that CD80 266 expression can occur outside strictly pro-inflammatory contexts (Extended Data Fig. 4c). 267 268 We analyzed how motifs were distributed across UMAP space to determine each motif’s 269 contribution to macrophage polarization. SCRs containing solely the S1 motif (derived from 270 IFNGR1) populated the CD40 high PDL1 high region (Fig. 3g). This S1-driven effect dominated 271 regardless of the presence or number of non-S1 motifs within the SCR (Fig. 3g). In contrast, motif 272 S4 (derived from IL2Rβ) drove macrophages to the CD206 high region, while S2 (derived from IL9R) 273 and S3 (derived from IL10Rα) drove macrophages to the Phago high region. Unlike S1, the effects 274 of S4, S2, and S3 were not dominant and could be modulated by the presence of other motifs 275 within the SCR (Fig. 3g, Extended Data Fig. 4d). Motif position within the ICD did not affect 276 phenotype. SCRs with reversed motif orders (e.g. ‘S1-S2’ vs. ‘S2-S1’) produced similar 277 phenotypes (Extended Data Fig. 4e). Additionally, motif copy number impacted phenotype 278 differently for each motif and phenotype (Extended Data Fig. 4f). For example, one copy of S1 279 drove maximal PDL1, CD40 and CD80 expression, while S2 increased phagocytosis 280 proportionally with copy number (Extended Data Fig. 4f). Collectively, these findings are 281 consistent with the macrophage polarization spectrum model and demonstrate that the complex 282 phenotypic landscape can be navigated by varying SCR motif combinations. 283 
+
+284 
+
+SCRs containing motifs S2 or S3 improve the anti-tumor activity of CAR macrophages 285 
+
+286 We next sought to evaluate whether SCRs could improve the potential therapeutic functions of 287 macrophages. Chimeric antigen receptor-expressing macrophages (CAR-Ms) have emerged as 288 promising immunotherapeutics for a range of diseases, including cancer, cardiac fibrosis, and 289 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+bacterial infections 36–39 . The efficacy of CAR-Ms in these therapies will depend on factors like 290 inflammatory state and phagocytic capacity. 291 292 Macrophages expressing SCRs with S2 or S3 motifs showed increased phagocytosis of E. coli 293 (Fig. 1d and Fig. 3d). We therefore asked whether SCRs containing these motifs would augment 294 CAR-M-mediated phagocytosis of cancer cells. To answer this, we co-expressed each of four 295 SCRs that in increased E. coli phagocytosis— SCR(S2-S2-S2), SCR(S3-S3), SCR(S5-S3), 296 SCR(S2-S3)—with a second-generation αHER2-41BBζ chimeric antigen receptor (CAR) in 297 primary human macrophages (Fig. 4a). We then co-cultured these CAR-SCR-Ms with BT474 298 breast cancer cells, which express high levels of the antigen human epidermal growth factor 2 299 (HER2) (Fig. 4b). Macrophages were challenged with pHrodo-labeled BT474 cells three times 300 over nine days at increasing effector-to-target ratios (Fig. 4b). 301 302 CAR-Ms expressing any of the four SCRs significantly reduced BT474 survival compared to CAR-303 SCR0-Ms (Fig. 4c–e). Correspondingly, pHrodo signal increased in these samples, 304 demonstrating that phagocytosis contributed to this enhanced killing (Fig. 4f). Importantly, the 305 decrease in BT474 survival was dependent on expression of the CAR, as SCR expression alone 306 did not cause a reduction in BT474 survival (Fig. 4c, e). To additionally test whether CAR-SCR-307 M-mediated killing depends on the presence of target antigen, we co-cultured CAR-SCR-Ms with 308 either wild-type (WT) K562 cells or K562 cells overexpressing HER2 (HER2 +) for 72 hours. CAR-309 SCR-Ms killed HER2 + K562s but not WT K562s (Fig. 4g). Together, these data demonstrate that 310 SCRs can augment antigen-dependent CAR-mediated killing of cancer cells in vitro without 311 increasing off-target killing. 312 313 We further evaluated the anti-tumor activity of CAR-SCR-Ms in vivo using a SKOV3 human 314 ovarian cancer xenograft model. SKOV3s, which naturally express HER2, were injected 315 intraperitoneally (i.p) into NOD.Cg-Prkdc scid Il2 rgtm1Wjl/SzJ (NSG) mice. Mice then received a single 316 i.p. injection of either saline (PBS), SCR0-Ms, CAR-SCR0-Ms, or CAR-SCR(S2-S2-S2)-Ms (Fig. 317 4h). Both CAR-M treatments significantly reduced tumor burden compared to PBS or SCR0-M 318 controls (Fig. 4i—j). Strikingly, CAR-SCR(S2-S2-S2)-Ms reduced tumor burden 30-fold compared 319 to CAR-SCR0-Ms at day 36 post-injection (Fig. 4k). SCRs thus improve CAR-M therapeutic 320 function in a disease-relevant context. Because SCRs enhance CAR-mediated phagocytosis 321 without altering the CAR itself, SCRs can be readily combined with existing CARs to create more 322 effective CAR-M therapies. 323 
+
+324 
+
+Signaling motifs predictably alter macrophage phenotypes to enable programmable 325 
+
+control of macrophage polarization 326 
+
+327 While SCRs with unique combinations of one to three signaling motifs generated a wide range of 328 macrophage polarization states, these SCRs represent only ~1.78% of the 7,372 possible SCRs 329 containing up to four motifs. Future applications may require expanding the motif selection and 330 increasing the number of motifs per SCR. As this combinatorial space grows, experimentally 331 testing all SCRs becomes impractical, necessitating computational models to predict optimal SCR 332 designs from limited experimental data 40 . Neural networks can predict the effects of signaling 333 motifs on CAR T cell phenotype 20,41 , but these models require more data than is present in our 334 macrophage array dataset. Thus, we sought a data-efficient model that connects the choice of 335 signaling motifs to measurable phenotypes such as cellular activity (e.g., phagocytosis) or 336 expression of a protein. 337 338 Two-state models have relatively few parameters and have been used to describe various 339 biological phenomena, such as protein folding reactions or receptor-ligand interactions 42,43 . We 340 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+employed a two-state model to predict how SCR signaling motifs program macrophage 341 polarization (Fig. 5a, Extended Data Fig. 7). Because motif position does not alter measured 342 phenotypes (Extended Data Fig. 4e), the model assumes motif effects are position-independent. 343 This model also assumes that for each phenotype, cells can exist in an ON state or an OFF state 344 whose relative populations are defined by the polarization constant K (Fig 5a). Without SCR 345 signaling, the relative populations of the ON and OFF states are defined by the intrinsic 346 polarization constant, Ki (Fig. 5b). Each motif added to the SCR shifts these populations of the 347 ON and OFF states for a given phenotype. The effect of each motif on each phenotype is 348 described by motif-dependent polarization constant s, Ks (s, signaling motif) (Fig. 5b). 349 
+
+350 We fit this two-state model to the array data (Fig. 3d) to estimate the effects of each motif ( Ks ) on 351 each phenotype (Fig. 5b). The data were well-described by the model. We observed high 352 correlation between predicted and observed values across phenotypes, including surface marker 353 expression (CD163 (r = 0.85), PDL1 (r = 0.95), CD40 (r = 0.94), CD80 (r = 0.80), CD206 (r = 354 0.92)), and phagocytic activity (r = 0.79) (Fig. 5b—c). Estimated Ks values reflect the impact of 355 each motif on phenotype. These values were consistent with the prior observation that motif S1 356 drove macrophages to a CD40 high state (log 10 Ks = 1.01) (Fig. 5d), motifs S2 and S3 drove 357 macrophages to the Phago high state (log 10 Ks (S2) = 0.32; log 10 Ks (S3) = 0.70), and motif S4 drove 358 macrophages to a CD206 high state (log 10 Ks (S3) = 1.17) (Fig. 5d). These modeling results suggest 359 that signaling motifs, ubiquitous elements in cytokine receptors that control macrophage 360 phenotype, shift phenotype in a predictable manner. 361 362 
+
+Modeling guides programming of signaling domains that polarize macrophages to a highly 363 
+
+phagocytic and pro-inflammatory cell state 364 
+
+365 We sought to leverage the two-state model to engineer a macrophage with a unique polarization 366 profile advantageous in a disease setting. One desirable macrophage state for anti-cancer 367 therapy is one that both phagocytoses cancer cells efficiently and remodels the tumor 368 microenvironment through pro-inflammatory actions 44 . However, within the experimentally tested 369 SCRs, we noticed a tradeoff between the level of phagocytosis and the expression of pro-370 inflammatory markers (CD40 and CD80) by SCR-expressing macrophages (Fig. 6a). No SCR 371 drove macrophages to a high CD40 and CD80 expression state while also maintaining enhanced 372 phagocytosis (Fig. 6a). We hypothesized that the two-state model could be used to identify motif 373 combinations that overcome this tradeoff—specifically, combinations that would drive 374 macrophages to the CD80 +/CD40 +/phagocytosis high quadrant (Fig. 6a). 375 376 We used the fitted Ks values to predict CD40, CD80, and phagocytosis measurements for all 377 possible SCRs containing up to four motifs. These predictions recapitulated the tradeoff between 378 phagocytosis and CD40/CD80 expression for the SCR designs that were experimentally tested 379 (Fig. 6b). However, we also found that several untested SCRs were predicted to drive 380 macrophages to the CD40 +/CD80 +/Phago high quadrant (Fig. 6b). SCRs along the trade-off 381 boundary (black and green points) contained decreasing copies of motif S1 and increasing copies 382 of motif S2 and S3, with the four SCRs predicted to simultaneously maximize CD40, CD80 and 383 phagocytosis containing one S1 copy and three copies of either S2 or S3 (Fig. 6c). 384 385 To test these predictions, we constructed six, four-motif SCRs spanning all stoichiometric 386 combinations of S1 and S3 (Fig. 6d). We benchmarked these against SCR(S1-S1) and SCR(S3-387 S3) from the earlier tested library (Fig. 3b). As expected, two of the three S1/S3 SCRs drove the 388 S1-dominant phenotype (CD40 +/CD80 +/Phago low ), while macrophages expressing one S1 copy 389 and three S3 copies (SCR(S3-S3-S3-S1)) displayed simultaneously high phagocytosis and high 390 CD40 and CD80 expression (Fig. 6d). To understand if the high phagocytosis and inflammatory 391 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+phenotype generated by SCR(S3-S3-S3-S1) is maintained in the context of CAR-M, we followed 392 the experimental design established in Fig. 4a and Fig. 4b. Expression of SCR(S3-S3-S3-S1) 393 enhanced CAR-dependent killing of BT474 cells to a similar extent as SCR(S3-S3), with both 394 constructs promoting enhanced killing compared to SCR0 (Fig. 6e). 395 396 We previously found that macrophages expressing SCR(S1-S1) mimic the polarization state 397 induced by IFNγ at the transcriptional level (Fig. 2b) and that one of the top differentially expressed 398 genes between SCR(S1-S1) and SCR0-expressing macrophages is CXCL9 (Fig. 2c, Extended 399 Data Fig. 3a). The IFNγ/CXCL9 signaling program is known to promote anti-tumor immunity by 400 encouraging cytotoxic T lymphocyte recruitment and effector differentiation 1. It has also been 401 shown that CXCL9 expression requires sustained IFNγ signaling in macrophages 45 , making the 402 constitutive nature of SCR signaling potentially advantageous for driving CXCL9 expression and 403 an anti-tumor response. To see if CXCL9 secretion is enhanced in CAR-Ms expressing SCR(S1-404 S1) over several days and if this effect is retained when expressing SCR(S3-S3-S3-S1), we 405 collected supernatant at the end of the 9-day CAR-M co-culture experiment. We found a 406 significant increase in the concentration of CXCL9 in the media when macrophages expressed 407 SCR(S1-S1) compared to SCR0. This effect was not observed in macrophages expressing 408 SCR(S3-S3) yet was retained in macrophages expressing SCR(S3-S3-S3-S1) (Fig. 6f). 409 Macrophages expressing SCR(S3-S3-S3-S1) also exhibited greater secretion of CXCL10, CCL7, 410 and IL-15 (Fig. 6g), other pro-inflammatory cytokines known to recruit a diversity of immune cells 411 to the tumor microenvironment. Together, these data demonstrate that rational, model-guided 412 SCR design can generate a macrophage with simultaneously enhanced phagocytosis and pro-413 inflammatory signaling. More broadly, this exemplifies the capacity of the SCR platform to fine-414 tune complex cellular phenotypes through model-guided receptor design. 415 416 
+
+## Discussion 417 
+
+418 Macrophages adopt a wide array of polarization states to carry out diverse functions. However, 419 precise control over these states remains a challenge. Here, we leveraged synthetic signaling to 420 systematically program human primary macrophage polarization. Using a two-state model to 421 quantify the motif-to-phenotype relationship, we rationally designed a synthetic receptor that 422 overcomes an observed trade-off between macrophage inflammatory markers and phagocytosis. 423 We additionally showed that this fine-tuned phenotype persists in CAR-macrophages during a 424 long-term co-culture with cancer cell targets. This highlights an important advantage of the motif 425 recombination strategy: each motif has a unique effect on phenotypes like phagocytosis, CD80 426 expression, or CD40 expression. Recombination of motifs therefore allows multi-dimensional 427 programming of phenotypes that are not inherently coupled. 428 429 Building on recent advances in engineered macrophage cell therapies, we used an SCR to 430 enhance the killing of solid tumor cells by CAR-Ms. Further optimization of SCRs could increase 431 CAR-M survival and persistence of these cells to increase anti-tumor efficacy. The wide range of 432 SCR-driven phenotypes observed in our arrayed screen may also be useful in different 433 therapeutic contexts. For example, phagocytic pro-inflammatory CAR-Ms may be useful in the 434 treatment of immunosuppressive tumors 44 , while anti-inflammatory macrophages that release 435 Secreted Phosphoprotein 1 (SPP1) may be useful in treating spinal injuries 47 .436 437 The programmability enabled by signaling motif recombination offers a significant advantage over 438 traditional use of exogenous cytokines. By combining signaling motifs from different receptors, 439 we can generate unique signaling 20 —and corresponding macrophage phenotypes—that would 440 be difficult or impossible to control using conventional cytokine stimulation. This programmability 441 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+creates new possibilities for rational design of SCRs that induce desired macrophage phenotypic 442 profiles for various therapeutic applications, as well as T cells and potentially other immune cells. 443 Though this study focuses on the use of SCRs to polarize macrophages, we have also used SCRs 444 to program T cell differentiation 20 . Considering the conservation of cell signaling machinery across 445 cell types, we suspect that the utility of SCRs will extend to other immune cell types—such as 446 natural killer cells and dendritic cells—and hematopoietic stem cells. 447 448 
+
+# References 449 
+
+450 1. Ji, L., Li, J., Hsu, T.-W. & Li, M. O. Pathophysiological roles of monocytes and macrophages 451 in cancer. Nat. Rev. Immunol. 1–18 (2026). 452 2. Chen, S. et al. Macrophages in immunoregulation and therapeutics. Signal Transduct. 453 
+
+Target. Ther. 8, 207 (2023). 454 3. Burke, J. D. & Young, H. A. IFN-γ: A cytokine at the right time, is in the right place. Semin. 455 
+
+Immunol. 43 , 101280 (2019). 456 4. Saraiva, M., Vieira, P. & O’Garra, A. Biology and therapeutic potential of interleukin-10. J. 457 
+
+Exp. Med. 217 , jem.20190418 (2020). 458 5. Xue, J. et al. Transcriptome-based network analysis reveals a spectrum model of human 459 macrophage activation. Immunity 40 , 274–288 (2014). 460 6. Murray, P. J. et al. Macrophage activation and polarization: nomenclature and experimental 461 guidelines. Immunity 41 , 14–20 (2014). 462 7. Martinez, F. O. & Gordon, S. The M1 and M2 paradigm of macrophage activation: time for 463 reassessment. F1000Prime Rep. 6, 13 (2014). 464 8. Park, M. D., Silvin, A., Ginhoux, F. & Merad, M. Macrophages in health and disease. Cell 465 
+
+185 , 4259–4279 (2022). 466 9. Bied, M., Ho, W. W., Ginhoux, F. & Blériot, C. Roles of macrophages in tumor development: 467 a spatiotemporal perspective. Cell. Mol. Immunol. 20 , 983–992 (2023). 468 10. Hou, P. et al. Macrophage polarization and metabolism in atherosclerosis. Cell Death Dis. 469 
+
+14 , 691 (2023). 470 11. Jiang, Y. et al. Macrophages in organ fibrosis: from pathogenesis to therapeutic targets. Cell 471 
+
+Death Discov. 10 , 487 (2024). 472 12. Cao, Q. et al. Targeting inflammation with chimeric antigen receptor macrophages using a 473 signal switch. Nat. Biomed. Eng. 9, 1502–1516 (2025). 474 13. Morrissey, M. A. et al. Chimeric antigen receptors that trigger phagocytosis. Elife 7, (2018). 475 14. Jung, H. et al. Virus-like particles enable targeted gene engineering and pooled CRISPR 476 screening in primary human myeloid cells. bioRxivorg (2025) 477 doi:10.64898/2025.12.14.692434. 478 15. Murray, P. J. Macrophage polarization. Annu. Rev. Physiol. 79 , 541–566 (2017). 479 16. Morris, R., Kershaw, N. J. & Babon, J. J. The molecular details of cytokine signaling via the 480 JAK/STAT pathway. Protein Sci. 27 , 1984–2009 (2018). 481 17. Diella, F. Understanding eukaryotic linear motifs and their role in cell signaling and regulation. 482 
+
+Front. Biosci. Volume , 6580 (2008). 483 18. O’Shea, J. J. & Murray, P. J. Cytokine signaling modules in inflammatory responses. 484 
+
+Immunity 28 , 477–487 (2008). 485 19. Cui, A. et al. Dictionary of immune responses to cytokines at single-cell resolution. Nature 486 
+
+625 , 377–384 (2024). 487 20. Cho, W. et al. A continuous landscape of signaling encodes a corresponding landscape of 488 CAR T cell phenotype. bioRxiv (2025) doi:10.1101/2025.06.05.658149. 489 21. Stahl, N. et al. Choice of STATs and other substrates specified by modular tyrosine-based 490 motifs in cytokine receptors. Science 267 , 1349–1353 (1995). 491 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+22. Seubert, N. et al. Active and inactive orientations of the transmembrane and cytosolic 492 domains of the erythropoietin receptor dimer. Mol. Cell 12 , 1239–1250 (2003). 493 23. Heinrich, P. C., Behrmann, I., Müller-Newen, G., Schaper, F. & Graeve, L. Interleukin-6-type 494 cytokine signalling through the gp130/Jak/STAT pathway. Biochem. J. 334 , 297–314 (1998). 495 24. Sunseri, N., O’Brien, M., Bhardwaj, N. & Landau, N. R. Human immunodeficiency virus type 496 1 modified to package Simian immunodeficiency virus Vpx efficiently infects macrophages 497 and dendritic cells. J. Virol. 85 , 6263–6274 (2011). 498 25. Pertel, T., Reinhard, C. & Luban, J. Vpx rescues HIV-1 transduction of dendritic cells from 499 the antiviral state established by type 1 interferon. Retrovirology 8, 49 (2011). 500 26. Bobadilla, S., Sunseri, N. & Landau, N. R. Efficient transduction of myeloid cells by an HIV-501 1-derived lentiviral vector that packages the Vpx accessory protein. Gene Ther. 20 , 514–520 502 (2013). 503 27. Ryan, J. J., McReynolds, L. J., Huang, H., Nelms, K. & Paul, W. E. Characterization of a 504 mobile Stat6 activation motif in the human IL-4 receptor. J. Immunol. 161 , 1811–1821 (1998). 505 28. Delespine-Carmagnat, M., Bouvier, G. & Bertoglio, J. Association of STAT1, STAT3 and 506 STAT5 proteins with the IL-2 receptor involves different subdomains of the IL-2 receptor beta 507 chain. Eur. J. Immunol. 30 , 59–68 (2000). 508 29. Gordon, S. Alternative activation of macrophages. Nat. Rev. Immunol. 3, 23–35 (2003). 509 30. Tau, G. & Rothman, P. Biologic functions of the IFN-gamma receptors. Allergy 54 , 1233– 510 1251 (1999). 511 31. Kang, K. et al. Interferon-γ represses M2 gene expression in human macrophages by 512 disassembling enhancers bound by the transcription factor MAF. Immunity 47 , 235-250.e4 513 (2017). 514 32. Lurier, E. B. et al. Transcriptome analysis of IL-10-stimulated (M2c) macrophages by next-515 generation sequencing. Immunobiology 222 , 847–856 (2017). 516 33. Tassiulas, I. et al. Amplification of IFN-alpha-induced STAT1 activation and inflammatory 517 function by Syk and ITAM-containing adaptors. Nat. Immunol. 5, 1181–1189 (2004). 518 34. Majzner, R. G. et al. GD2-CAR T cell therapy for H3K27M-mutated diffuse midline gliomas. 519 
+
+Nature 603 , 934–941 (2022). 520 35. Monje, M. et al. Intravenous and intracranial GD2-CAR T cells for H3K27M+ diffuse midline 521 gliomas. Nature 637 , 708–715 (2025). 522 36. Klichinsky, M. et al. Human chimeric antigen receptor macrophages for cancer 523 immunotherapy. Nat. Biotechnol. 38 , 947–953 (2020). 524 37. Wang, J. et al. CAR-macrophage therapy alleviates myocardial ischemia-reperfusion injury. 525 
+
+Circ. Res. 135 , 1161–1174 (2024). 526 38. Tang, C. et al. MRNA-laden lipid-nanoparticle-enabled in situ CAR-macrophage engineering 527 for the eradication of multidrug-resistant bacteria in a sepsis mouse model. ACS Nano 18 ,528 2261–2278 (2024). 529 39. Dai, H. et al. Chimeric antigen receptor-modified macrophages ameliorate liver fibrosis in 530 preclinical models. J. Hepatol. 80 , 913–927 (2024). 531 40. Capponi, S. & Daniels, K. G. Harnessing the power of artificial intelligence to advance cell 532 therapy. Immunol. Rev. 320 , 147–165 (2023). 533 41. Daniels, K. G. et al. Decoding CAR T cell phenotype using combinatorial signaling motif 534 libraries and machine learning. Science 378 , 1194–1200 (2022). 535 42. Zwanzig, R. Two-state models of protein folding kinetics. Proc. Natl. Acad. Sci. U. S. A. 94 ,536 148–150 (1997). 537 43. Buchwald, P. A three-parameter two-state model of receptor function that incorporates 538 affinity, efficacy, and signal amplification. Pharmacol. Res. Perspect. 5, e00311 (2017). 539 44. Pierini, S. et al. Chimeric antigen receptor macrophages (CAR-M) sensitize HER2+ solid 540 tumors to PD1 blockade in pre-clinical models. Nat. Commun. 16 , 706 (2025). 541 45. Naigles, B., Narla, A. V., Soroczynski, J., Tsimring, L. S. & Hao, N. Quantifying dynamic pro-542 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+inflammatory gene expression and heterogeneity in single macrophage cells. J. Biol. Chem. 543 
+
+299 , 105230 (2023). 544 46. Waldmann, T. A. The biology of interleukin-2 and interleukin-15: implications for cancer 545 therapy and vaccine design. Nat. Rev. Immunol. 6, 595–601 (2006). 546 47. Dolci, S. et al. Tumor-associated macrophages enhance peripheral nerve tumor infiltration 547 and spinal cord repair. Immunity 59 , 438-457.e16 (2026). 548 48. Ewels, P., Magnusson, M., Lundin, S. & Käller, M. MultiQC: summarize analysis results for 549 multiple tools and samples in a single report. Bioinformatics 32 , 3047–3048 (2016). 550 49. Patro, R., Duggal, G., Love, M. I., Irizarry, R. A. & Kingsford, C. Salmon provides fast and 551 bias-aware quantification of transcript expression. Nat. Methods 14 , 417–419 (2017). 552 50. Love, M. I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for 553 RNA-seq data with DESeq2. Genome Biol. 15 , 550 (2014). 554 51. Subramanian, A. et al. Gene set enrichment analysis: A knowledge-based approach for 555 interpreting genome-wide expression profiles. Proc. Natl. Acad. Sci. U. S. A. 102 , 15545– 556 15550 (2005). 557 52. Kanehisa, M. & Goto, S. KEGG: kyoto encyclopedia of genes and genomes. Nucleic Acids 558 
+
+Res. 28 , 27–30 (2000). 559 53. Ashburner, M. et al. Gene ontology: tool for the unification of biology. The Gene Ontology 560 Consortium. Nat. Genet. 25 , 25–29 (2000). 561 54. Gene Ontology Consortium. The Gene Ontology knowledgebase in 2026. Nucleic Acids Res. 562 
+
+54 , D1779–D1792 (2026). 563 55. Liberzon, A. et al. Molecular signatures database (MSigDB) 3.0. Bioinformatics 27 , 1739– 564 1740 (2011). 565 56. Garcia-Alonso, L., Holland, C. H., Ibrahim, M. M., Turei, D. & Saez-Rodriguez, J. Benchmark 566 and integration of resources for the estimation of human transcription factor activities. 567 
+
+Genome Res. 29 , 1363–1375 (2019). 568 57. Badia-I-Mompel, P. et al. decoupleR: ensemble of computational methods to infer biological 569 activities from omics data. Bioinform. Adv. 2, vbac016 (2022). 570 58. Hao, Y. et al. Dictionary learning for integrative, multimodal and scalable single-cell analysis. 571 
+
+Nat. Biotechnol. 42 , 293–304 (2024). 572 59. Chen, S. et al. CAR macrophages with built-In CD47 blocker combat tumor antigen 573 heterogeneity and activate T cells via cross-presentation. Nat. Commun. 16 , 4069 (2025). 574 575 
+
+# Materials and Methods 576 
+
+577 
+
+# Study Design 578 
+
+This study was designed to determine if expression of synthetic cytokine receptors (SCRs) could 579 drive polarization of macrophages. SCRs were cloned and expressed in human primary 580 macrophages. Effects of SCR expression on several macrophage phenotypes was assessed 581 using surface marker staining and flow cytometry or by co-culturing the macrophages with 582 biological targets of phagocytosis followed by live cell imaging. Shifts in measured phenotypes 583 were compared to those achieved when untransduced macrophages were stimulated for 48 hours 584 with select exogenous ligands. To determine the transcriptional effects of expressing select SCRs 585 in macrophages, we performed bulk RNA sequencing. To discover if SCRs could generate a wide 586 range of macrophage phenotypes, we recombined 9 signaling motifs on the intracellular domain 587 of the SCR to generate >100 SCRs and tested these using previously described methods. Data 588 from this screen were used to fit a two-state equilibrium model and predict SCR designs to drive 589 both a high inflammatory profile and high phagocytosis. To evaluate if SCRs associated with high 590 phagocytosis could augment the targeted phagocytosis of cancer cells by CAR-Macrophages, we 591 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+co-cultured macrophages expressing both an SCR and a CAR (SCR-CAR-Ms) with cancer cells 592 expressing the CAR-targeting antigen and a fluorescent marker. Cancer cell number was 593 monitored via live cell imaging. SCR-CAR-Ms were then tested for their ability to phagocytose 594 cancer cells in mice using an ovarian tumor model. Numbers of biological and experimental 595 replicates and statistical analyses are reported in the figure legends. 596 
+
+597 
+
+# Lentiviral vector construction 598 
+
+All DNA constructs were visualized using SnapGene software (v.8.1.1; Dotmatics). DNA 599 fragments encoding the variable library parts (S1 through S9), SCR, T2A-GFP, and P2A-CAR 600 were codon optimized for expression in human cells using ThermoFisher GeneArt’s website tool 601 and synthesized by ThermoFisher GeneArt. All DNA fragments were isolated by agarose gel 602 purification using a NuceloSpin Gel and PCR Clean-up Kit (Macherey-Nagel #740609.50). All 603 cloning reactions were conducted using In-Fusion Snap Assembly (Takara Bio USA #638949). 604 All plasmids were sequence verified using Sanger sequencing (MCLAB) before use. 605 606 Lentiviral vectors encoding the synthetic cytokine receptor were generated as described in Cho 607 et al. (2025) 20 . The synthetic cytokine receptor (SCR) is a chimeric protein consisting of a signal 608 peptide, myc tag, Put3 coiled-coil domain, erythropoietin receptor transmembrane domain, gp130 609 box motifs and disordered region (residue 642 to residue 725), and gp130 dileucine internalization 610 motif (residue 780 to residue 796). This SCR sequence, along with a fragment encoding T2A-611 GFP were then cloned into the pHR-PGK (Addgene #79120) backbone. This pHR-PGK-SCR-612 T2A-GFP construct is indicated as the SCR containing no motifs (SCR0). 613 614 To integrate motifs into the SCR0 construct, motifs were restriction digested using flanking BfuAI 615 sites, and fragments were cloned into the SCR0 construct. This cloning process resulted in the 616 SCR backbone, followed by the motif sequence, in the same frame, separated by a (GS) 3 linker 617 sequence. Each motif contains the proper sequence to regenerate the BamHI restriction site for 618 insertion of subsequent motifs. 619 620 For constructs containing both an SCR and a CAR, a T2A-αHER2-41BBζ CAR was inserted 621 upstream of the P2A-GFP to create SCR-(MOTIF) n-T2A-αHER2-41BBζ-P2A-GFP. The P2A-CAR 622 is a chimeric protein consisting of a P2A sequence, signal peptide, hemagglutinin (HA) tag, anti-623 HER2 4D5 single-chain variable fragment, CD8a hinge and transmembrane domain, 41BB-624 derived costimulatory domain, and CD3z signaling domain. 625 626 For in vitro and in vivo tracking of cancer cells, a dual BFP/firefly-luciferase lentiviral expression 627 vector was constructed. Lenti-NLS-mTagBFP2 plasmid (Addgene #216128) was digested with 628 PacI. A P2A and firefly luciferase (ffluc) sequence (from Addgene #115684) were PCR amplified 629 and cloned into the linearized lenti-NLS-mTagBFP2 to create lenti-NLS-mTagBFP2-P2A-ffluc. 630 
+
+631 
+
+# Human primary cells 632 
+
+Human peripheral blood from healthy anonymous donors was purchased as apheresis leukopaks 633 (STEMCELL Technologies #70500.1). Human primary monocytes were negatively selected from 634 leukopaks using EasySep Human Monocyte Isolation Kit (STEMCELL Technologies #19359) 635 according to the manufacturer’s instructions. Isolated monocytes were suspended in RPMI-1640 636 containing 20% DMSO and 20% FBS and cryopreserved in liquid nitrogen until use. Upon 637 thawing, monocytes were centrifuged at 400xg for 4 minutes, and the supernatant was aspirated 638 to remove DMSO. Monocytes were then cultured in Immunocult-SF Macrophage Medium 639 (STEMCELL Technologies #10961) containing human recombinant M-CSF (STEMCELL 640 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+Technologies #78057) at 50 ng/mL. Isolated monocytes were profiled by flow cytometry using 641 αCD45, αCD14, and αCD16 antibodies as described in Flow cytometry > Monocyte isolation 642 
+
+profiling . All tissue culture was performed under sterile conditions. All cells were kept in 643 temperature-controlled incubators at 37°C with 5% CO 2.644 
+
+645 
+
+# Lentivirus production 646 
+
+Lentiviral supernatant was produced in the Lenti-X 293T packaging cell line (Clontech #11131D). 647 293T cells were grown to ~70% confluency before transfection. VSVG-pseudotyped lentivirus was 648 generated by transient transfection of 293T cells with lentiviral packaging plasmids pCMVdR8.91 649 and pMD2.G (Addgene #12259), using FuGENE HD (Promega #E2312) at a 3:1 DNA:FuGene 650 ratio. Transfection solutions were diluted in Opti-MEM (Gibco, Opti-MEM) and incubated for 10 651 minutes before being added to the 293T cell culture. 652 
+
+653 
+
+## In vitro experiments 654 
+
+For in vitro experiments, 293T cells were plated on TC-treated flat-bottom plates. 200ngs of total 655 DNA was used for transfection in a 96-well format or 3.4μgs of total DNA in a 6-well format. 656 Lentiviral supernatant was harvested at 48 hours, centrifuged to deplete cell debris, and used 657 fresh. Transfections were conducted side-by-side to reduce sample-to-sample variability. 658 
+
+659 
+
+## In vivo experiments 660 
+
+For in vivo experiments, 293T cells were plated on 10cm TC-treated dishes. 12μgs of total DNA 661 was used for the transfection of each plate. The media was completely changed the following 662 day. Lentiviral supernatant was harvested at 48 hours after media change, centrifuged to deplete 663 cell debris, transferred to a new container, and concentrated using Lenti-X Concentrator (Takara 664 #631232) using a 3:1 supernatant:LentiX ratio by volume. Concentrated lentivirus was stored in -665 80°C for later use. Concentrated lentivirus stock was titrated using serial dilution and flow 666 cytometry to optimize for transduction efficiency and transduced macrophage yield. 667 
+
+668 
+
+# Virus-like particle production 669 
+
+Virus-like particles containing Vpx protein were generated by transient transfection of 293T cells 670 with pSIV-D3psi (Addgene #132928) and pMD2.G (Addgene #12259) using FuGENE HD 671 (Promega #E2312) at a 3:1 DNA:FuGene (mass:volume) ratio. After 48 hours, lentiviral 672 supernatant was collected, centrifuged to deplete cell debris, transferred to a new container, and 673 concentrated using Lenti-X Concentrator (Takara #631232) using a 3:1 supernatant:LentiX ratio 674 by volume and frozen at -80°C until use. Vpx + VLPs were titrated using serial dilution and imaging 675 of GFP positivity of human primary macrophages upon co-transduction with a GFP + lentiviral 676 vector to establish the lowest amount of VLPs that could be used for efficient transduction. Large 677 volumes of stock Vpx + VLPs were generated and aliquoted to reduce variability across 678 experiments. 679 
+
+680 
+
+# Primary macrophage transduction 681 
+
+682 
+
+## In vitro experiments 683 
+
+Macrophages for either flow cytometry (60E5 cells per well), phagocytosis of E. coli (25E4 cells 684 per well), or bulk RNA sequencing (1E6 cells per well) were seeded onto a TC-treated 96-well 685 plate, flat-bottom 96-well plate (Thermo Scientific, 167008), or TC-treated 6-well plate, 686 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+respectively. Cells were cultured in serum-free macrophage media (STEMCELL Technologies, 687 #10961) and differentiated with 50 ng/mL of M-CSF (STEMCELL Technologies, #78057) for 4 688 days before transduction. Cells were then co-transduced with both Vpx + virus-like particle stock 689 (described in Virus-like particle production ) and lentiviral supernatant containing lentivirus with 690 the construct of interest (described in Lentivirus production ). Cells were incubated overnight. 691 Lentiviral media was replaced the following morning with fresh, serum-free macrophage media 692 (STEMCELL Technologies, #10961) containing M-CSF 50 ng/mL (STEMCELL Technologies, 693 #78057). Cells were incubated at 37°C until endpoints were measured. 694 
+
+695 
+
+## In vivo experiments 696 
+
+Primary monocytes were thawed and seeded (described in Human primary cells ) onto 6-well 697 Nunc dishes with an UpCell surface (Thermo Scientific). Four days after thaw, cells were co-698 transduced with both Vpx + virus-like particle stock (described in Virus-like particle production )699 and concentrated lentivirus containing the construct of interest (described in Lentivirus 700 
+
+production ). Cells were incubated overnight. Lentiviral media was replaced the following morning 701 with fresh, serum-free macrophage media (STEMCELL Technologies, #10961) containing M-CSF 702 50 ng/mL (STEMCELL Technologies, #78057). Cells were incubated for 6 days, with M-CSF 703 being replenished after 3 days. 704 
+
+705 
+
+# Cytokine-mediated macrophage polarization 706 
+
+Cytokine-mediated polarization was performed as controls. The following cytokines or other 707 factors were added (at the indicated final concentration) to the media, 48 hours before 708 measurements were performed: LPS (10 ng/mL) (Sigma-Aldrich, L4391), IFN-γ (50 ng/mL) 709 (STEMCELL Technologies, #78020), IL-4 (50 ng/mL) (Gibco, 200-04), IL-10 (50 ng/mL) (Gibco, 710 #200-10), GM-CSF (50 ng/mL) (Gibco, #300-03). 711 
+
+712 
+
+# Flow cytometry 713 
+
+714 
+
+## Monocyte isolation profiling 715 
+
+Isolated monocytes (described in Human primary cells ) were thawed and immediately washed 716 with PBS. Cells were then stained using LIVE/DEAD Aqua (ThermoFisher #L34966) for 30 717 minutes at room temperature. Cells were then washed twice, and Fc receptors were blocked using 718 Fc Receptor Block (BioLegend, #422301) at a 1:20 dilution in FACS buffer (3% FBS and 5mM 719 EDTA in PBS) on ice for 20 minutes. Staining was performed in the Fc Binding Inhibitor + FACS 720 buffer solution for 1 hour at 4°C using the following pre-conjugated monoclonal antibodies: CD45-721 eFluor450, clone HI30, 1:200 (eBioscience), CD16-PE, clone CB16, 1:200 (eBioscience), and 722 CD14-APC, clone 61D3, 1:200 (eBioscience). After staining, cells were washed twice with FACS 723 buffer and analyzed using an Attune NxT Flow Cytometer (Blue/Red/Yellow/Violet 6) (Thermo 724 Fisher). FlowJo software (BD) was used for data analysis. 725 
+
+726 
+
+## Macrophage surface marker profiling 727 
+
+Macrophages were lifted with Accutase (STEMCELL Technologies #07920) for 30 minutes at 728 37°C. Cells were then washed with PBS and stained using LIVE/DEAD Near-IR (ThermoFisher 729 #L34975) for 30 minutes at room temperature. Cells were then washed twice, and Fc receptors 730 were blocked using Fc Receptor Block (BioLegend, #422301) at a 1:20 dilution in FACS buffer 731 (3% FBS and 5mM EDTA in PBS) on ice for 20 minutes. Staining was performed in the Fc Binding 732 Inhibitor + FACS buffer solution for 1 hour at 4C using the following pre-conjugated monoclonal 733 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+antibodies: CD80-PE, clone 2D10.4, 1:200 (eBioscience), CD206-BV421, clone 19.2, 1:200 734 (eBioscience), CD163-APC, clone GHI/61, 1:200 (eBioscience), CD40-PE-Cy7, clone 5C3, 1:200 735 (eBioscience), and PDL1-PerCP-eFluor710, clone MIH1, 1:200 (eBioscience). After staining, cells 736 were washed twice with FACS buffer and analyzed using an Attune NxT Flow Cytometer 737 (Blue/Red/Yellow/Violet 6) (Thermo Fisher). FlowJo software (BD) was used for compensation 738 and gating. For analysis, samples with low transduction efficiency (“% GFP + living cells” < 62.5%) 739 were filtered out. 740 
+
+741 
+
+# Cell lines 742 
+
+K562, BT474, and SKOV3 cell lines were originally commercially obtained from the American 743 Type Culture Collection (ATCC). Lx293T cells were purchased from Takara Bio USA (#632180) 744 and cultured in DMEM (Life Technologies #10564029) + 10% FBS (Gibco, #A3840102) + 745 50μg/mL Gentamycin (Corning #30-005-CR). Both K562 cells and BT474 cells were cultured in 746 complete RPMI 1640 medium supplemented with GlutaMAX, HEPES, and Phenol Red (Gibco, 747 #72400047) with 10% fetal bovine serum (FBS) (Gibco, #A3840102). SKOV3 cells were cultured 748 in complete McCoy’s 5A medium (Gibco, #16600082) with 10% FBS (Gibco, #A3840102). For 749 expanding cells in culture, all cells were kept between 30-80% confluence. Adherent cell cultures 750 were split using TrypLE (Gibco, #12604013). Cells were frozen using the following solution: 80% 751 complete media (listed above), 10% FBS (Gibco, #A3840102), 10% DMSO (Sigma-Aldrich, 752 #D8418). All tissue culture was performed under sterile conditions. All cells were kept in 753 temperature-controlled incubators at 37°C with 5% CO 2.754 
+
+755 
+
+To generate BFP + K562, BT474, and SKOV3 cells, each cell line was transduced with lenti-NLS-756 mTagBFP2-P2A-ffluc (described in Lentiviral vector construction ). Cells were then sorted for 757 high expression of BFP using fluorescence-activated cell sorting (FACS) at the Stanford Shared 758 FACS Facility. BFP +/HER2 + K562 cells were provided by the lab of Dr. Rogelio Hernandez-Lopez. 759 To generate HER2-overexpressing K562s, K562 cells were transduced with a lentiviral vector 760 encoding both cDNA for HER2 and BFP. K562s with high expression of BFP were sorted using 761 Fluorescence-activated cell sorting (FACS) at the Stanford Shared FACS Facility. For all cell lines 762 expressing HER2, HER2 expression was validated using flow cytometry. 763 
+
+764 
+
+# E. coli phagocytosis assay 765 
+
+pHrodo-red E. coli Bioparticles (Invitrogen, #P35361) were thawed, resuspended, and added to 766 macrophages at 100μg/mL in serum-free macrophage media (STEMCELL Technologies, 767 #10961). Cells were promptly imaged using a 4X objective on either the Cellcyte (Echo, CellCyte 768 1) or the Incucyte (Sartorius, Incucyte S3), every 30-45 minutes for 24 hours. Red fluorescence 769 intensity measurements were downloaded from the respective imager using either CELLCYTE 770 studio software (v.2.7.4) or Incucyte S3 software (v2018B). “ E. coli phagocytosis index” was 771 calculated using either “red total intensity (a.u)” (CellCyte) or “red total integrated intensity (RCU 772 x μm²/Image)” (Incucyte). For analysis, samples with low transduction efficiency (“green count per 773 image” < 1000) were filtered out. 774 
+
+775 
+
+# Bulk RNA sequencing of primary macrophages 776 
+
+Monocytes from three different donors were isolated, differentiated, and transduced with either 777 pHR-PGK-SCR-T2A-GFP, pHR-PGK-SCR(S3-S3)-T2A-GFP, or pHR-PGK-SCR(S1-S1)-T2A-778 GFP, and the media was changed the following day (described in Human primary cells and 779 
+
+Primary macrophage transduction ). Cells were then incubated for 3 days, after which they were 780 treated with either IL-10 (50 ng/mL) (Gibco, #200-10) or IFN-γ (50 ng/mL) (STEMCELL 781 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+Technologies, #78020). Cells receiving cytokine treatment were transduced with the control pHR-782 PGK-SCR-T2A-GFP to ensure transcriptional changes between samples were not due to lentiviral 783 transduction. 48 hours after cytokine treatment, cells were imaged on the Cellcyte (Echo, CellCyte 784 1) to verify high (>80%) and even transduction efficiency across samples. Total RNA was 785 extracted from each well using the RNeasy Mini Kit (QIAGEN, #74104). cDNA library construction 786 using mRNA library preparation (poly A enrichment) and bulk RNA sequencing were performed 787 by Novogene (Sacramento, CA) on an Illumina NovaSeq X Plus System (PE150). MultiQC 48 was 788 used to evaluate sequencing quality with default parameters. Transcript abundances were 789 quantified using Salmon (v1.10.3) 49 , a reference transcriptome (Gencode GRCh38.p14), and 790 default parameters. Differential gene expression analysis (DESeq2) 50 , Gene Set Enrichment 791 Analysis (GSEA) 51 , Kyoto Encyclopedia of Genes and Genomes (KEGG) 52 , and Gene Ontology 792 (GO) 53,54 pathway enrichment analysis were performed in R (v4.3.2). MSigDB (v3.0) 55 was used 793 to identify lists of genes experimentally validated to be regulated by IL-10 and IFNγ. Hierarchical 794 clustering was performed using the “pheatmap” function in R. Transcription factor activity was 795 inferred from bulk RNA sequencing data using the DoRothEA human regulon database 56 and the 796 decoupleR weighted mean method 57 . TF activity scores were calculated for each sample and 797 contrasted using linear modeling (limma) relative to the reference condition SCR0. Empirical 798 Bayes moderation was applied, and p-values were adjusted using the Benjamini–Hochberg 799 method. 800 801 
+
+## Gene signature scoring and cytokine analysis from scRNA-seq data 802 
+
+Publicly available scRNA-seq (GSE186802) from diffuse midline glioma patients treated with 803 GD2-CAR T therapy 34 was downloaded and analyzed in R using Seurat (v5) 58 . Data were 804 normalized (‘LogNormalize’, scale factor 10,000), scaled (‘ScaleData’), and UMAPs generated. 805 The CAR T-cell product was removed from the dataset based on metadata. Myeloid cells were 806 specifically selected based on relatively high expression of myeloid genes (AIF1, CSF1R, CD14, 807 CD68), compared to B cell-related genes (CD19, CD22, PAX5), and T cell-related genes 808 (CD2, CD3E, CD3D, CD3G, CD247, and CD7). Differential gene expression analysis (DESeq2) 50 
+
+809 was used to create a signature of genes upregulated in SCR(S1-S1) vs SCR0 (p.adj <0.05, 810 baseMean > 50, log2FoldChange >=2). Gene signatures were analyzed using 811 ‘AddModuleScore_Ucell’ and hierarchical clustering was performed using “pheatmap”. Donor 812 (i.e., DIPG1, DIPG2, DIPG3, and spinal_DMG1) and treatment (intravenous (IV) or 813 intracerebroventricular (ICV) infusion) information was stated in the original publication. 814 815 IFNγ measurements from the cerebrospinal fluid of the same were extracted from source data 34 
+
+816 and matched to scRNA-seq sampling timepoints. Cytokine values were normalized to day 0 levels 817 for each patient and each infusion type and expressed as log2 fold-change before downstream 818 correlation analyses. 819 
+
+820 
+
+# CAR macrophage and cancer cell co-culture assays 821 
+
+For the BT474 co-culture assay, BFP + BT474 cells were generated as described in cell lines .822 Macrophages (50,000 cells per well) were cultured in a Nunc dish with an UpCell surface (Thermo 823 Scientific). Four days after macrophages were transduced as described in primary macrophage 824 
+
+transduction > in vitro experiments , BT474 cells were pH-labeled using pHrodo Red SE 825 (Invitrogen, #P36600). The pHrodo-labeled BT474s were added at a specified effector to target 826 (E:T) ratio using 1/2 media indicated for the cancer cell line of interest and 1/2 serum-free 827 macrophage media (STEMCELL Technologies #10961) by volume, with M-CSF (STEMCELL 828 Technologies #78057) at 50ngs/mL. For the first two challenges, 25,000 BT474 cells (E:T = 2:1) 829 were added to each well. For the second two challenges, 50,000 BT474 cells (E:T = 1:1) were 830 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+added to each well. Wells were imaged (BF, Blue, Red, and Green channels) using a 4X objective 831 on the Cellcyte 1 (Echo), every 3 hours for 12 days. 832 833 For the K562 co-culture assay, HER2 + K562s were generated as described in cell lines .834 Macrophages (50,000 cells per well) were cultured in a Nunc dish with an UpCell surface (Thermo 835 Scientific). Four days after macrophages were transduced as described in primary macrophage 836 
+
+transduction > in vitro experiments , HER2 - or HER2 + K562s (20,000 per well) were added to 837 each well. Wells were imaged (BF, Blue, and Green channels) using a 4X objective on the Cellcyte 838 1 (Echo), every 3 hours for 3 days. 839 
+
+840 
+
+# Animal models 841 
+
+All experimental studies were approved and performed in ethical compliance with Institutional 842 Animal Care and Use Committee (IACUC) approved protocols at Stanford University. 843 NOD/SCID/IL2Rγ −/− (NSG) mice were purchased from JAX and bred by the Breeding Colony 844 Management Service at Stanford University. Mice were housed in sterile cages at 22°C and 50% 845 humidity under a 12h-12h light-dark cycle. Mice were monitored daily by the Veterinary Services 846 Center (VSC) staff at Stanford University. Mice that were used for experiments were not involved 847 in previous procedures or given drug treatment. Mice were aged between 6 and 10 weeks at 848 tumor or macrophage engraftment. Mice were euthanized upon manifestation of persistent 849 hunched posture, scruffy coat, paralysis, impaired mobility, or greater than 20% weight loss. 850 Sample size calculations were not performed, but were determined by experience with well-851 established, previously published models 36,59 .852 
+
+853 
+
+# SKOV3 ovarian cancer model 854 
+
+1 x 10 6 SKOV3 cells in 100μL of PBS were injected intra-peritoneally (IP) into female mice aged 855 8-10 weeks old. Tumor growth was monitored using bioluminescent imaging (BLI), with the first 856 image taken between SKOV3 injection and macrophage injection. Mice were then split into 857 random groups of five mice each and injected with 100uL of PBS or 3 x 10 6 macrophages in PBS 858 (preparation of macrophages is described in Primary macrophage transduction > In vivo 859 
+
+experiments ). Tumor growth was monitored using BLI. 860 
+
+861 
+
+# Bioluminescent imaging 862 
+
+Mice were injected with 50μL of 15mg mL -1 D-Luciferin retro-orbitally to avoid interfering with 863 cancer cells or macrophages in the peritoneal cavity. Images were acquired on the IVIS (Perkin 864 Elmer) imaging system immediately after injection using exposure times of 1 second, 15 seconds, 865 30 seconds, and auto-exposure settings. Total flux was measured using Living Image (v4.8.2; 866 Perkin Elmer) software by drawing a region of interest around the body of each mouse. Only non-867 saturated images were used for quantification of BLI. For visualization of tumor burden, images 868 were set to the same luminescent scale. 869 870 
+
+# Luminex cytokine measurements 871 
+
+At the end of the third challenge of macrophages with BT474 cells, supernatant was collected for 872 further processing. The Luminex assay was performed by the Human Immune Monitoring Center 873 at Stanford University - Immunoassay Team. Kits were purchased from EMD Millipore 874 Corporation, Burlington, MA, and run according to the manufacturer’s recommendations with 875 modifications described as follows: The H48 kits include one panel: Milliplex HCYTA-60K-PX48. 876 The assay setup adhered to the recommended protocol with the following steps: 1. Sample 877 Preparation: Supernatant samples were run undiluted. 2. Incubation: The samples were incubated 878 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+overnight at 4°C with shaking. Cold and room temperature incubation steps were performed on 879 an orbital shaker at 500-600 rpm. 3. Washing: Plates were washed twice with wash buffer using 880 a BioTek ELx405 washer (BioTek Instruments, Winooski, VT). 4. Detection: After a one-hour 881 incubation at room temperature with a biotinylated detection antibody, streptavidin-PE was added 882 and incubated for 30 minutes with shaking. 5. Final Wash and Reading: Plates were washed as 883 described above, and Wash Buffer was added to the wells for reading in the Luminex FlexMap3D 884 Instrument, ensuring a lower bound of 50 beads per sample per cytokine. 6. Replication and 885 Quality Control: Each sample was measured in duplicate replicates. Custom Assay Chex control 886 beads (Radix BioSolutions, Georgetown, Texas) were added to all wells. Wells with a bead count 887 <20 were excluded. 888 
+
+889 
+
+# Two-state model 890 
+
+The two-state model was carried out using both R (v.4.3.2) and Mathematica (Wolfram), which 891 produced nearly identical results. Motif combinations and all phenotype measurements (CD163, 892 CD206, CD80, CD40, PDL1, and phagocytosis) for all replicates were used as input to fit models 893 that predict the effect of SCR motif combinations on each phenotype. Equations used in this model 894 can be found in Extended Data Figure 7 and on Github (see Code Availability ). For each SCR, 895 the copy number of each of the 9 motifs (S1–S9) was enumerated from the motif composition 896 metadata. Standard errors across technical replicates were retained as a measure of replicate 897 variability but were not used as weights in fitting. Phenotype-specific fluorescence bounds were 898 defined as the single lowest and single highest mean observed value across all samples for that 899 phenotype, specifying the dynamic range of the two-state model. Model parameters—an intrinsic 900 energy term (ΔEi) and a per-motif energy contribution for each of the nine motifs (ΔEs for S1– 901 S9)—were estimated by minimizing the sum of squared residuals between observed and model-902 predicted fluorescence values, using all individual technical replicates and BFGS optimization 903 (optim() in base R). Model fit statistics (r and R²) were evaluated on per-condition averages of 904 technical replicates. Generalization performance was evaluated via 10-fold cross-validation using 905 the rsample package. Coefficient stability was assessed as the standard deviation of each ΔEs 906 estimate across folds. The difference between in-sample R² and cross-validated R² was used as 907 a diagnostic for overfitting. Data manipulation was performed using dplyr , tidyr , and purrr .908 Per-motif equilibrium constant contributions (Ks) were derived from the fitted ΔEs coefficients, 909 where Ks values greater than 1 indicate that a motif shifts the equilibrium toward the ON state, 910 while values less than 1 indicate a shift toward the OFF state. Ks values are reported on a log ₁₀ 911 scale for visualization. Uncertainty on each log ₁₀ Ks value was propagated from the cross-912 validation fold standard deviation of ΔEs. See Data Availability and Code Availability for details 913 on how this model can be run. 914 915 
+
+# Statistical analysis 916 
+
+For all experiments, the number of replicates and statistical analyses used are described in the 917 figure legends. Statistical analyses were performed using R (v.4.3.2). P value <0.05 was 918 considered statistically significant (p < 0.05, ** p < 0.01, *** p < 0.001). 919 
+
+920 
+
+# Data Visualization 921 
+
+Initial plots were generated using R (v.4.3.2). Plots were organized and refined with Adobe 922 Illustrator (v.30.2.1). 923 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+924 
+
+# Data Availability 925 
+
+Source data are provided with this paper as of the date of publication. The data for the bulk RNA-926 seq dataset described in this study have been deposited at the NCBI Gene Expression Omnibus 927 (GEO) under accession number GSE328683. Differentially expressed genes from bulk RNA 928 sequencing, as well as surface marker and phagocytosis measurements which can be used to 929 run the two-state model are available at Zenodo (10.5281/zenodo.19699424) and will be publicly 930 released upon publication. 931 
+
+932 
+
+# Code Availability 933 
+
+The custom code used to run the two-state model in this manuscript is available at 934 https://github.com/jodielunger/SCR-macrophages and will be archived on Zenodo 935 (10.5281/zenodo.19699424) upon publication. 936 937 
+
+# Acknowledgements 938 
+
+939 We thank Trung Pham and Karla Kirkegaard for insightful discussions. We thank the Barsh, 940 Baker, Kirkegaard, Sherlock, and Hernandez-Lopez labs for generous sharing of equipment and 941 reagents. We thank Jaclyn Ng and Céline Prange for offering support for mouse experiments and 942 providing protocols. We thank Jaclyn Ng, Céline Prange, Adrià Cañellas-Socias, Kylie Burdsall, 943 and Peng Xu for guidance with animal experiments. This work was supported by the grants listed 944 below. 945 National Institutes of Health Grant DP2EB039061 (K.G.D) 946 National Institutes of Health Grant R21EB037367 (K.G.D) 947 Hypothesis Fund (K.G.D) 948 Shurl and Kay Curci Foundation (K.G.D) 949 Parker Institute for Cancer Immunotherapy (K.G.D) 950 Stanford CShaRP (K.G.D) 951 Stanford Cancer Institute (K.G.D) 952 Stanford Department of Genetics (K.G.D) 953 National Human Genome Research Institute 5T32HG000044-27 (J.C.L) 954 National Science Foundation Graduate Research Fellowship DGE-2146755 (A.S.A, 955 L.E.S) 956 Stanford Graduate Fellowship (A.S.A) 957 
+
+958 
+
+# Author contributions 959 
+
+960 K.G.D and J.C.L conceptualized the study. J.C.L conducted experiments. J.C.L and K.G.D set up 961 computational pipelines and analyzed all data. L.E.S and A.S.A provided support for the design 962 and execution of in vitro experiments. R.A.H developed analysis to integrate the clinical scRNA-963 seq data with the bulk RNA-seq. J.Y.L cloned and tested initial designs of constructs used in this 964 study. J.P.G cloned several constructs used in this study and provided support for in vivo 965 experiments. A.V.J, M.G, W.C, and A.N.B provided support for the study and experimental design. 966 All figures were prepared by J.C.L. The manuscript was written by J.C.L and K.G.D. The 967 manuscript was finalized with input from all authors. 968 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+969 
+
+# Competing interests 970 
+
+971 K.G.D and J.C.L are co-inventors on a patent application related to the work described in this 972 manuscript. No other authors declare competing interests. 973 
+
+.CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint Figures 974 
+
+975 
+
+# Figure 1 976 
+
+977 
+
+978 
+
+Figure 1 | Synthetic cytokine receptors drive ligand-independent macrophage polarization. 979 
+
+a, Schematic depicting natural dimeric cytokine receptors (left) compared to the SCR platform 980 (right). Also depicted is the SCR expression cassette driven by the phosphoglycerate kinase 981 (PGK) promoter (bottom). The SCR and GFP are separated by a Thosea asigna virus 2A (T2A) 982 self-cleaving peptide. SCR0, an SCR containing no motifs; SCR(Sn), an SCR containing a single 983 synthetic signaling motif; TMD, transmembrane domain; JAK, Janus kinase. b, List of signaling 984 motifs (S1 through S9), their full amino acid sequences, and the natural receptor they are derived 985 from. The core sequence, known to bind to downstream effectors, is bolded. c, Schematic 986 depicting the overall experimental design. Primary monocytes were differentiated and transduced 987 with lentivirus containing an SCR. To benchmark against exogenous ligand treatment, control 988 samples were treated (LPS, 10 ng/mL; IFN-γ, 50 ng/mL; IL-10, 50 ng/mL; IL-4, 50 ng/mL; GM-989 CSF, 50 ng/mL) 48 hours before phenotype measurement. Effects of each receptor were 990 measured using surface marker flow cytometry and phagocytosis of pHrodo-Red-labelled E. coli .991 
+
+d, Representative flow cytometry histograms and E. coli phagocytosis of pHrodo-Red-labelled E. 992 coli measured by red total intensity (TFI) for macrophages expressing an SCR containing no 993 motifs (SCR0; grey), macrophages expressing an SCR containing the indicated motif (light blue), 994 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+and macrophages treated with the indicated stimulation (dark blue). For phagocytosis, data are 995 mean ± s.e.m. e, Quantification of mean fluorescence intensity (MFI) or phagocytosis of pHrodo-996 Red-labelled E. coli measured by red total intensity (TFI) for macrophages treated with the 997 selected stimulation (dark blue; n = 5), macrophages expressing an SCR containing no motifs 998 (grey; n = 10), or any single-motif SCR (light grey; n = 3). SCRs displaying an increase in the 999 measured phenotype are indicated (light blue). Data are mean ± s.e.m. MFI, mean fluorescence 1000 intensity; TFI, total fluorescence intensity. 1001 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Figure 2 1002 
+
+1003 
+
+1004 
+
+Figure 2 | Synthetic cytokine receptors mimic cytokine-driven macrophage polarization 1005 
+
+states . a, Schematic depicting the SCRs containing signaling motifs (S3 and S1) derived from 1006 the ICD of either the natural IL-10 receptor (IL-10R) or the natural IFN-γ receptor (IFN-γR), 1007 respectively. Motif sequences are indicated in Fig. 1b. b, Heatmap showing variance-stabilized 1008 expression of the top 50 differentially expressed genes across all sample comparisons (ranked 1009 by Benjamini–Hochberg–adjusted p-value). Columns and rows were hierarchically clustered 1010 using Euclidean distance. Genes known to be regulated in macrophages by either IL-10 or IFNγ 1011 are labeled. c, Principal component analysis (PCA) of RNAseq data from all donors and 1012 conditions. Donor is indicated by shape. d, Scatter plot of log 2 fold changes for genes differentially 1013 expressed (padj < 0.05) in both IL-10 vs. SCR0 and SCR(S3-S3) vs. SCR0 comparisons ( n =1014 773). Spearman correlation coefficient (ρ = 0.97) was calculated. The slope was estimated using 1015 linear regression constrained through the origin (green; slope = 1.18). Genes known to be 1016 regulated by IL-10 are indicated (blue). FC, fold change. e, Scatter plot of log 2 fold changes 1017 (log 2FCs) for genes differentially expressed (padj < 0.05) in both IFN-γ vs. SCR0 and SCR(S1-1018 S1) vs. SCR0 comparisons ( n = 667). Spearman correlation coefficient (ρ = 0.96) was calculated 1019 using the log 2-fold-change (log 2FC) values. The slope was estimated using linear regression 1020 constrained through the origin (green; slope = 1.24). Genes known to be regulated by IFN-γ are 1021 indicated (orange). FC, fold change. f, The SCR(S1-S1) transcriptional signature score of myeloid 1022 cells (above) and measured IFNγ levels (below) in the CSF of a patient with DIPG before and 1023 after either IV or ICV infusion of CAR-T therapy (data from Majzner and Ramakrishna et al, 1024 2022 34 ). FC, fold change; CSF, cerebrospinal fluid; DIPG, diffuse intrinsic pontine glioma; IV, 1025 intravenous; ICV, intracerebroventricular. g, Correlation between CSF levels of IFNγ and the 1026 SCR(S1-S1) transcriptional signature of myeloid cells from all patients in Majzner and 1027 Ramakrishna et al, 2022, 34 for which these measurements were collected on the same day. 1028 Spearman correlation coefficient (ρ = 0.94) was calculated. FC, fold change; CSF, cerebrospinal 1029 fluid; DIPG, diffuse intrinsic pontine glioma; DMG, diffuse midline glioma. 1030 1031 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Figure 3 1032 
+
+1033 
+
+1034 
+
+Figure 3 | Combining motifs on the SCR reveals a navigable landscape of primary 1035 
+
+macrophage polarization states. a, Schematic depicting the utility of recombining signaling 1036 motifs with SCRs to drive macrophages toward cytokine-induced polarization states, intermediate 1037 states, or user-defined states. b, Schematic of the combinatorial library of SCRs containing zero 1038 (SCR0; n = 1), one ( n = 9), two ( n = 81), or three ( n = 40) signaling motifs (S1 through S9) from 1039 the motif library shown in Fig. 1b. c, Schematic of overall experimental design. d, Heatmap of 1040 macrophage phenotypes for all tested SCR constructs, cytokine stimulation controls, and 1041 transduction controls. Samples were hierarchically clustered using Euclidean distance based on 1042 z-scores of measured phenotypes. Dot color indicates sample type: macrophages stimulated with 1043 cytokines (LPS + IFN-γ, red, n = 5; IFN-γ, orange, n = 5; IL-10, blue, n = 5; IL-4, purple, n = 5), 1044 macrophages expressing SCR0 (black, n = 10), or macrophages expressing SCR constructs from 1045 the combinatorial library (light grey, n = 3 per SCR). E. coli phagocytosis was quantified using red 1046 integrated intensity measured 5.5 h after assay initiation. Sn, signaling motif. e, UMAP projection 1047 of all samples, including replicates. Controls are colored as in d. f, UMAP projection showing only 1048 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+samples expressing SCR constructs from the combinatorial library, colored by z-score for CD40, 1049 CD206, or E. coli phagocytosis. g, UMAP projection colored by motif presence for selected motifs 1050 (S1, S3, and S4). Pink indicates SCRs containing the indicated motif, while maroon indicates 1051 SCRs containing only that motif in one, two, or three copies. S, signaling motif. 1052 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Figure 4 1053 
+
+1054 
+
+1055 
+
+Figure 4 | SCR expression augments phagocytosis of cancer cells by CAR-Macrophages. 1056 
+
+a, Schematic depicting co-expression of a human epidermal growth factor (HER)2-specific 1057 chimeric antigen receptor (CAR) and an SCR in human primary macrophages. Also depicted is 1058 the co-expression cassette driven by the phosphoglycerate kinase (PGK) promoter (bottom). 1059 HER2, human epidermal growth factor; GFP, green fluorescent protein. b, Schematic depicting 1060 the experimental design for repeated challenge of αHER2-CAR macrophages with HER2 ⁺ cancer 1061 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+cells. HER2, human epidermal growth factor 2. c, Representative images of BT474 cell 1062 abundance over 9-days of repeated co-culture with macrophages. Macrophages were transduced 1063 with the indicated constructs. UT, untransduced. d, BT474 cell abundance over nine days of 1064 repeated co-culture with macrophages transduced with SCR0 ( n = 4), CAR + SCR0 ( n = 4), or 1065 CAR + SCR (S2-S2-S2) ( n = 3). BT474 cell abundance was measured as total BFP fluorescence 1066 intensity using live-cell imaging. Faint lines represent the raw mean value. Darker lines represent 1067 the smoothed curve for each challenge period. Data are mean ± s.e.m. e, BT474 cell abundance 1068 after nine days of repeated co-culture with macrophages transduced with SCRs containing motifs 1069 that drove high phagocytosis in Fig. 3d , with (light) or without (dark) co-expression of a CAR. 1070 Data are mean ± s.e.m. f, Quantification of pHrodo signal intensity after nine days of repeated co-1071 culture with macrophages transduced with SCRs containing motifs that drove high phagocytosis 1072 in Fig. 3d , with (light) or without (dark) co-expression of a CAR. Data are mean ± s.e.m. g, 1073 Quantification of relative K562 growth at the end of a 3-day co-culture between CAR-SCR-Ms 1074 and wild-type K562 cells (light) or HER2 + K562 cells (dark). K562 cell growth is the normalized 1075 growth of K562s in the absence of macrophages (K562 only). Data are mean ± s.e.m. h, 1076 
+
+Schematic depicting the in vivo experimental design. 1x10 6 SKOV3 cells expressing firefly 1077 luciferase (ffluc) were injected i.p. into each mouse. Mice were then treated i.p. with PBS (grey, n1078 
+
+= 5) or 3x10 6 macrophages expressing SCR0 (grey, n = 5), αHER2-CAR + SCR0 (light blue, n =1079 4), or αHER2-CAR + SCR(S2-S2-S2) (dark blue, n = 5). Tumor burden was measured using 1080 bioluminescent imaging (BLI). i.p., intraperitoneal. i, Representative images from the experiment 1081 depicted in f at day 0, day 15, and day 36 after tumor injection. BLI, bioluminescent imaging. j,1082 Tumor burden measured as total flux (photons s ⁻¹) of luciferase signal. k, Tumor burden at day 1083 36 post treatment, normalized by the day 0 luciferase signal. 1084 1085 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Figure 5 1086 
+
+1087 
+
+1088 
+
+Figure 5 | A two-state model describes the contribution of each signaling motif to each 1089 
+
+measured phenotype. a, Schematic of the two-state phenotype model that describes 1090 polarization of macrophages to ON and OFF phenotypic states. K represents the relative 1091 population of cells in the ON and OFF states. b, Observed and predicted CD163 MFI and K values 1092 estimated from the model. MFI, mean fluorescence intensity. c, Observed vs. Predicted 1093 scatterplots for each measured phenotype (MFI of surface marker or phagocytosis of E. coli ). 1094 Points are labeled by the number of motifs in the sample (no motifs, black; single motif, pink; more 1095 than 1 motif, grey). Observed data are averaged per motif combination. MFI, mean fluorescence 1096 intensity; TFI, total fluorescence intensity. d, Calculated Ks parameter values for each motif for 1097 each phenotype. Positive Ks values (green) indicate a shift toward the positive state for the 1098 indicated phenotype, while negative Ks values (grey) indicate a shift toward the negative state for 1099 the indicated phenotype. Data are fitted parameters ± s.d. of cross-validation folds ( n = 10). 1100 
+
+1101 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Figure 6 1102 
+
+1103 
+
+1104 
+
+Figure 6 | Modeling guides rational SCR design to drive a simultaneously pro-inflammatory 1105 
+
+and phagocytic macrophage state. a, Scatterplot of phagocytosis of E. coli (Phagocytosis TFI) 1106 by inflammatory score (normalized sum of CD40 and CD80 MFI) for experimentally tested SCR-1107 expressing macrophages. The dashed line indicates quadrants that can be drawn on top of the 1108 point distribution. MFI, mean fluorescence intensity; TFI, total fluorescence intensity. Data are 1109 mean ± s.e.m. b, Scatterplot of predicted phagocytosis of E. coli (Phagocytosis TFI) by 1110 inflammatory score (normalized sum of CD40 and CD80 MFI) for all SCRs containing between 0 1111 and 4 motifs. SCRs that were previously tested experimentally are indicated (blue). SCRs 1112 predicted to drive macrophages to values along the boundary are indicated (black). SCRs 1113 predicted to drive macrophages to a simultaneously high inflammatory and high phagocytosis 1114 state are indicated (green). The dashed line indicates quadrants that can be drawn on top of the 1115 point distribution. MFI, mean fluorescence intensity; TFI, total fluorescence intensity. c, Total motif 1116 count for each motif along the boundary labeled in b. d, Scatterplot of measured phagocytosis by 1117 inflammatory score (normalized sum of CD40 and CD80 MFI) for macrophages expressing SCRs 1118 containing motif S1 and motif S3 at varying copy number ratios. Points are colored by the copy 1119 number of each motif present in the SCR (S1, orange; S3, purple). Data are mean ± s.e.m. e, 1120 
+
+BT474 cell abundance after nine days of repeated co-culture with macrophages transduced with 1121 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+controls or the model-guided motif combination (SCR(S3-S3-S3-S1)), with (light) or without (dark) 1122 co-expression of a CAR. Data are mean ± s.e.m. f, Concentration of CXCL9 in the supernatant 1123 at the end of the third challenge from the experiment in d. Data are mean ± s.e.m. g, Heatmap 1124 showing log 2 fold-change in selected cytokine concentration in the supernatant at the end of the 1125 third addition of BT474 cells to CAR macrophages co-expressing the indicated SCR, relative to 1126 the CAR + SCR0 control. Only cytokines with minimal baseline secretion by BT474 cells alone 1127 are shown. Statistical significance was assessed using a two-sample t-test comparing replicate 1128 concentration values (n = 3) for each condition against the CAR + SCR0 baseline for each 1129 cytokine independently. 1130 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+## Extended Data Figure 1 1131 
+
+1132 
+
+1133 
+
+Extended Data Figure 1 | Characterization of exogenous ligand-treated and SCR-1134 
+
+expressing macrophages. a, Representative flow cytometry gating strategy for either an 1135 untransduced macrophage sample (UT) or macrophages transduced with SCR(S2). b, 1136 
+
+Transduction efficiency of each single-motif SCR as measured by the percentage of cells positive 1137 for GFP. c, MFI of CD206 for IL-4-treated macrophages compared to macrophages expressing 1138 an SCR containing no motif (SCR0), motif S7 in one or three copies. Data are mean ± s.e.m. MFI, 1139 mean fluorescence intensity. d, Representative images of phagocytosis of pHrodo-Red-labelled 1140 
+
+E. coli by untransduced macrophages (UT), macrophages transduced with SCR0, or 1141 macrophages transduced with SCR(S3). The initial (0 hours) timepoint was taken immediately 1142 after the addition of phRodo-Red-labeled E. coli. e, Quantification of MFI or phagocytosis of 1143 pHrodo-Red-labelled E. coli by untransduced macrophages (UT) or macrophages treated for 48 1144 hours with the indicated exogenous ligands (orange). Data are mean ± s.e.m. MFI, mean 1145 fluorescence intensity. f, Quantification of MFI or phagocytosis of pHrodo-Red-labelled E. coli by 1146 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+untransduced macrophages (UT, black), macrophages transduced with an SCR containing no 1147 signaling motifs (SCR0, grey), or macrophages treated for 48 hours with the indicated exogenous 1148 ligands (orange). Data are mean ± s.e.m. MFI, mean fluorescence intensity. 1149 
+
+.CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint Extended Data Figure 2 1150 
+
+1151 
+
+1152 
+
+Extended Data Figure 2 | RNA-sequencing comparing SCR-driven vs. cytokine-mediated 1153 
+
+transcriptional states. a, Representative flow cytometry plots for all three donor monocyte 1154 isolations used for the RNA-seq experiment. Cells were stained with CD45, CD14, and CD16. 1155 Unstained cells are indicated as controls. b, Schematic of experimental design for RNA-seq. RNA-1156 seq, RNA sequencing. c, Volcano plots showing differential gene expression for each indicated 1157 comparison. Each point represents a single gene, plotted by log ₂ fold change and −log ₁₀ 1158 Benjamini–Hochberg–adjusted p-value. Genes meeting significance thresholds (adjusted p < 1159 0.05 and log ₂ fold change > 1) are highlighted in color. Selected, highly differentially expressed 1160 genes are labeled. Horizontal and vertical dashed lines indicate significance and fold-change 1161 cutoffs, respectively. 1162 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Extended Data Figure 3 1163 
+
+1164 
+
+1165 
+
+Extended Data Figure 3 | Gene programs are differentially enriched in SCR(S1-S1) and 1166 
+
+SCR(S3-S3) conditions. a, MFI of CD163 for IL-10-treated macrophages compared to 1167 macrophages expressing an SCR containing no motif (SCR0), motif S3 in one (SCR(S3) or two 1168 (SCR(S3-S3) copies (left), or of CD40 for IFN-γ-treated macrophages compared to macrophages 1169 expressing an SCR containing no motif (SCR0), motif S1 in one (SCR(S1) or two (SCR(S1-S1) 1170 copies (right) as measured by flow cytometry. Data are mean ± s.e.m. MFI, mean fluorescence 1171 intensity. b, Bubble plot of the top 5 differentially expressed genes between each sample and the 1172 SCR0-expressing control (ranked by Benjamini–Hochberg–adjusted p-value). The color and size 1173 of the dot corresponds to the log 2-fold-change (log 2FC) of the indicated gene. FC, fold change. 1174 
+
+c, KEGG pathway enrichment analysis on differentially expressed genes identified for SCR(S1-1175 S) relative to SCR0 control. The top 10 KEGG-enriched pathways are shown. Dot color represents 1176 Benjamini–Hochberg–adjusted p-value (padj). The total number of genes used as input for 1177 analysis is indicated. d, KEGG pathway enrichment analysis on differentially expressed genes 1178 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+identified for SCR(S1-S) relative to SCR0 control. The top 10 KEGG-enriched pathways are 1179 shown. Dot color represents Benjamini–Hochberg–adjusted p-value (padj). The total number of 1180 genes used as input for analysis is indicated. e, Bubble plot of inferred transcriptional activity from 1181 bulk RNA sequencing using DoRothEA human regulons. For each contrast (indicated condition 1182 vs. mock transduction control (SCR0), the top five transcription factors (lowest padj) were 1183 selected, and the union of these transcription factors across all contrasts is shown. Bubble size 1184 represents statistical significance (−log10 padj). Color represents the direction and magnitude of 1185 activity change. FC, fold change. f, Fold change of IFNγ in the CSF relative to day 0, after either 1186 IV or ICV CAR T infusion (above), compared to the SCR(S1-S1) signature of myeloid cells in the 1187 CSF for each of the four patients reported in Majzner and Ramakrishna et al, 2022 34 . IV, 1188 intravenous; ICV, intracerebroventricular; FC, fold change; DIPG, diffuse intrinsic pontine glioma; 1189 DMG, diffuse midline glioma; CSF, cerebrospinal fluid. 1190 1191 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Extended Data Figure 4 1192 
+
+1193 
+
+1194 
+
+Extended Data Figure 4 | Combining motifs on the SCR reveals a navigable landscape of 1195 
+
+primary macrophage polarization states. a, Transduction efficiency across all samples, 1196 measured by the percentage of living macrophages that are positive for GFP (% GFP + cells). The 1197 red dashed line indicates the threshold of 62.5% applied to the dataset for further analysis. b, 1198 
+
+Heatmap of the pairwise Pearson correlation coefficients between all measured phenotypes. 1199 Color intensity indicates the strength and direction of the correlation. Select correlation 1200 coefficients are displayed within each cell. c, UMAP from Fig. 3e containing only points for 1201 macrophages expressing an SCR from the combinatorial library, colored by z-score for all 1202 measured phenotypes. d, UMAP projection colored by motif presence for all motifs. Pink indicates 1203 SCRs containing the indicated motif, while maroon indicates SCRs containing only that motif in 1204 one, two, or three copies. S, signaling motif. e, Pairwise correlations for all double-motif 1205 combinations and all phenotypes measured. Pearson correlation coefficient (r) is indicated on 1206 each plot. MFI, mean fluorescence intensity. f, Line plots showing the effect of increasing copy 1207 number (0–3) of each signaling motif on all measured phenotypes. Relative change from SCR0 1208 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+(Δ) was calculated as the difference between the mean phenotype value for each motif copy 1209 number and the mean value of the SCR0 control. Colors indicate the signaling motif. Data are 1210 mean ± s.e.m. MFI, mean fluorescence intensity. 1211 
+
+.CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint Extended Data Figure 5 1212 
+
+1213 
+
+1214 
+
+Extended Data Figure 5 | SCR expression augments phagocytosis of cancer cells by CAR-1215 
+
+Ms. a, Correlation between phagocytosis of E. coli in Fig. 3d and phagocytosis of cancer by CAR-1216 Ms in Fig. 4f. b, Quantification of pHrodo intensity and representative images from single-1217 challenge co-culture of pHrodo-labeled HER2 + K562s and macrophages transduced with SCR0 1218 (grey, n = 2), CAR + SCR0 (black, n = 2), or CAR + SCR(S2-S2-S2) (blue, n = 2). Data are mean 1219 ± s.e.m. c, Tumor burden as seen in Fig. 4j on a linear scale. Tumor burden is measured as the 1220 total flux (photons s ⁻¹) of luciferase signal. Data are mean ± s.e.m. d, Weights of mice over the 1221 course of the in vivo experiment depicted in Fig. 4h . Data are mean ± s.e.m. 1222 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+# Extended Data Figure 6 1223 
+
+1224 
+
+1225 
+
+Extended Data Figure 6 | Model-guided SCR drives a unique cytokine secretion profile. a, 1226 Concentration of IL-15 in the supernatant at the end of the third addition of BT474 cells to CAR 1227 macrophages co-expressing the indicated SCR. Data are mean ± s.e.m. b, Concentration of IL-1228 10 in the supernatant at the end of the third addition of BT474 cells to CAR macrophages co-1229 expressing the indicated SCR. Data are mean ± s.e.m. c, Heatmap showing log 2 fold-change in 1230 cytokine concentration in the supernatant at the end of the third addition of BT474 cells to CAR 1231 macrophages co-expressing the indicated SCR, relative to the CAR + SCR0 control. Only 1232 cytokines with minimal baseline secretion by BT474 cells alone are shown. Statistical significance 1233 was assessed using a two-sample t-test comparing replicate concentration values (n = 3) for each 1234 condition against the CAR + SCR0 baseline for each cytokine independently. d, Heatmap showing 1235 log 2 fold-change in cytokine concentration in the supernatant of macrophage monoculture, four 1236 
+
+> .CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
+
+days after transduction with the indicated SCR. Statistical significance was assessed using a two-1237 sample t-test comparing replicate concentration values (n = 3) for each condition against the 1238 SCR0 baseline for each cytokine independently. 1239 1240 
+
+.CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint Extended Data Figure 7 1241 
+
+1242 1243 
+
+Extended Data Figure 7 | A two-state model for predicting motif-to-phenotype relationship. 1244 
+
+a, Graphic and high-level explanation of the two-state model framework. b, Equations used for 1245 fitting parameters and model evaluation. 1246 
+
+.CC-BY-NC-ND 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted May 14, 2026. ;https://doi.org/10.64898/2026.05.12.724672 doi: bioRxiv preprint
