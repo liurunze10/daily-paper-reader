@@ -6,73 +6,73 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-14
-- 运行时间：2026-05-14 21:33:21 UTC
+- 最新运行日期：2026-05-15
+- 运行时间：2026-05-15 20:11:06 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-今日深度解析 17 篇前沿文献，重点攻克炎症性肠病（IBD）靶点发现与巨噬细胞功能重塑。
-机器学习驱动的单细胞图谱与族裔相关的 IL-10 信号通路为精准医疗提供了从靶点筛选到微环境模拟的新范式。
-建议关注合成受体编程与代谢调控在组织再生中的跨学科应用。
-- 详情：[/202605/14/README](/202605/14/README)
+今日深度解析17篇前沿文献，聚焦合成免疫学突破与AI驱动的精准医疗靶点发现。
+重点关注可编程受体对巨噬细胞状态的精准调控，以及利用机器学习框架从单细胞图谱中挖掘IBD治疗新靶点。
+建议深入探索合成生物学与计算医学在炎症及感染性疾病干预中的跨界应用潜力。
+- 详情：[/202605/15/README](/202605/15/README)
 
 ### 精读区论文标签
-1. [A ML-framework for the discovery of next-generation IBD targets using a harmonized single-cell atlas of patient tissue](/202605/14/biorxiv-10-64898-2026-02-06-699999-v3-a-ml-framework-for-the-discovery-of-next-generation-ibd-targets-using-a-harmonized-single-cell-atlas-of-patient-tissue)  
+1. [Programmable synthetic cytokine receptors polarize macrophages to user-defined functional states](/202605/15/biorxiv-10-64898-2026-05-12-724672-v1-programmable-synthetic-cytokine-receptors-polarize-macrophages-to-user-defined-functional-states)  
+   标签：评分：9.5/10、query:ros-mp
+   evidence：合成细胞因子受体可精确控制巨噬细胞向促炎或抗炎状态极化
+2. [A ML-framework for the discovery of next-generation IBD targets using a harmonized single-cell atlas of patient tissue](/202605/15/biorxiv-10-64898-2026-02-06-699999-v3-a-ml-framework-for-the-discovery-of-next-generation-ibd-targets-using-a-harmonized-single-cell-atlas-of-patient-tissue)  
    标签：评分：9.0/10、query:ros-mp
-   evidence：利用单细胞图谱发现下一代IBD靶点的机器学习框架
-2. [Ancestry-Linked IL-10 Signaling and Macrophage Activation Modulate Fibroblast Responses to Oxidative Stress in a PEG-Based Microphysiological System](/202605/14/biorxiv-10-64898-2026-05-04-722732-v1-ancestry-linked-il-10-signaling-and-macrophage-activation-modulate-fibroblast-responses-to-oxidative-stress-in-a-peg-based-microphysiological-system)  
+   evidence：利用单细胞图谱发现IBD靶点的机器学习框架
+3. [Discovery and Characterization of Interleukin-4-Specific Affibodies for Affinity-Controlled Protein Release and Macrophage Polarization](/202605/15/biorxiv-10-64898-2026-05-07-723637-v1-discovery-and-characterization-of-interleukin-4-specific-affibodies-for-affinity-controlled-protein-release-and-macrophage-polarization)  
    标签：评分：9.0/10、query:ros-mp
-   evidence：巨噬细胞激活和成纤维细胞对氧化应激的反应
-3. [C-Terminal Domain of Mycobacterium tuberculosis Glutamate Decarboxylase determines the bacterial stress-adaptive metabolic state that steers macrophage polarisation supporting intracellular persistence](/202605/14/biorxiv-10-64898-2026-05-05-722917-v1-c-terminal-domain-of-mycobacterium-tuberculosis-glutamate-decarboxylase-determines-the-bacterial-stress-adaptive-metabolic-state-that-steers-macrophage-polarisation-supporting-intracellular-persistence)  
+   evidence：用于受控蛋白质释放和M2巨噬细胞极化的IL-4特异性亲和体
+4. [Programmable synthetic cytokine receptors polarize macrophages to user-defined functional states](/202605/15/biorxiv-10-64898-2026-05-12-724672-v2-programmable-synthetic-cytokine-receptors-polarize-macrophages-to-user-defined-functional-states)  
    标签：评分：9.0/10、query:ros-mp
-   evidence：细菌应激适应在氧化应激下引导巨噬细胞极化
-4. [Low-self-reactive, circulation-biased blood regulatory T cells sense danger-associated nucleotides to restrain atherosclerosis](/202605/14/biorxiv-10-64898-2026-05-07-723421-v1-low-self-reactive-circulation-biased-blood-regulatory-t-cells-sense-danger-associated-nucleotides-to-restrain-atherosclerosis)  
+   evidence：将巨噬细胞极化为用户定义的功能状态
+5. [Ancestry-Linked IL-10 Signaling and Macrophage Activation Modulate Fibroblast Responses to Oxidative Stress in a PEG-Based Microphysiological System](/202605/15/biorxiv-10-64898-2026-05-04-722732-v1-ancestry-linked-il-10-signaling-and-macrophage-activation-modulate-fibroblast-responses-to-oxidative-stress-in-a-peg-based-microphysiological-system)  
+   标签：评分：8.0/10、query:ros-mp
+   evidence：巨噬细胞激活与氧化应激
+6. [Low-self-reactive, circulation-biased blood regulatory T cells sense danger-associated nucleotides to restrain atherosclerosis](/202605/15/biorxiv-10-64898-2026-05-07-723421-v1-low-self-reactive-circulation-biased-blood-regulatory-t-cells-sense-danger-associated-nucleotides-to-restrain-atherosclerosis)  
    标签：评分：8.0/10、query:ros-mp
    evidence：抑制干扰素伽马驱动的巨噬细胞炎症极化
-5. [Discovery and Characterization of Interleukin-4-Specific Affibodies for Affinity-Controlled Protein Release and Macrophage Polarization](/202605/14/biorxiv-10-64898-2026-05-07-723637-v1-discovery-and-characterization-of-interleukin-4-specific-affibodies-for-affinity-controlled-protein-release-and-macrophage-polarization)  
-   标签：评分：8.0/10、query:ros-mp
-   evidence：IL-4递送用于M2巨噬细胞极化
-6. [Programmable synthetic cytokine receptors polarize macrophages to user-defined functional states](/202605/14/biorxiv-10-64898-2026-05-12-724672-v1-programmable-synthetic-cytokine-receptors-polarize-macrophages-to-user-defined-functional-states)  
-   标签：评分：8.0/10、query:ros-mp
-   evidence：合成细胞因子受体使巨噬细胞极化
 
 ### 速读区论文标签
-1. [Programmable synthetic cytokine receptors polarize macrophages to user-defined functional states](/202605/14/biorxiv-10-64898-2026-05-12-724672-v2-programmable-synthetic-cytokine-receptors-polarize-macrophages-to-user-defined-functional-states)  
-   标签：评分：8.0/10、query:ros-mp
-   evidence：合成细胞因子受体控制巨噬细胞极化
-2. [Macrophage metabolism directs regenerative versus fibrotic healing through BMP signaling in the mouse digit tip](/202605/14/biorxiv-10-64898-2026-05-04-722661-v1-macrophage-metabolism-directs-regenerative-versus-fibrotic-healing-through-bmp-signaling-in-the-mouse-digit-tip)  
+1. [Transcriptional remodeling of ubiquitin regulatory networks during trained immunity](/202605/15/biorxiv-10-64898-2026-05-06-723281-v1-transcriptional-remodeling-of-ubiquitin-regulatory-networks-during-trained-immunity)  
    标签：评分：7.5/10、query:ros-mp
-   evidence：巨噬细胞代谢与表型转变
-3. [Stromal state plasticity defines risk and therapeutic opportunity in recalcitrant inflammatory bowel disease](/202605/14/biorxiv-10-64898-2026-05-01-720931-v1-stromal-state-plasticity-defines-risk-and-therapeutic-opportunity-in-recalcitrant-inflammatory-bowel-disease)  
+   evidence：训练免疫过程中巨噬细胞的转录重塑和功能重编程
+2. [A mitochondrial quality control mechanism reverses the phagosome maturation arrest caused by Mycobacterium tuberculosis](/202605/15/biorxiv-10-1101-2023-12-01-569475-v2-a-mitochondrial-quality-control-mechanism-reverses-the-phagosome-maturation-arrest-caused-by-mycobacterium-tuberculosis)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：炎症性肠病（IBD）中的基质状态可塑性
-4. [Corepressor NCoR1-mediated regulation of mucin dynamics governs gut inflammation](/202605/14/biorxiv-10-64898-2026-05-02-722388-v1-corepressor-ncor1-mediated-regulation-of-mucin-dynamics-governs-gut-inflammation)  
+   evidence：巨噬细胞中的氧化环境限制细菌生长
+3. [Resident and Engrafting E. coli Populations Expand Through Dissimilar Pathways in the Inflamed Gut](/202605/15/biorxiv-10-64898-2026-04-29-721686-v2-resident-and-engrafting-e-coli-populations-expand-through-dissimilar-pathways-in-the-inflamed-gut)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：NCoR1在炎症性肠病中对粘蛋白动态的调节
-5. [Porphyromonas gingivalis promotes lipid droplet-mediated microglial dysfunction](/202605/14/biorxiv-10-64898-2026-05-03-722306-v1-porphyromonas-gingivalis-promotes-lipid-droplet-mediated-microglial-dysfunction)  
+   evidence：DSS诱导的结肠炎模型和肠道炎症
+4. [Macrophage metabolism directs regenerative versus fibrotic healing through BMP signaling in the mouse digit tip](/202605/15/biorxiv-10-64898-2026-05-04-722661-v1-macrophage-metabolism-directs-regenerative-versus-fibrotic-healing-through-bmp-signaling-in-the-mouse-digit-tip)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：病原体驱动的脂质积累与活性氧升高和小胶质细胞功能障碍相关
-6. [Fatty Acid Oxidation Suppression Reprograms Fibroblasts in Fibrostenotic Crohns Disease](/202605/14/biorxiv-10-64898-2026-05-06-723289-v1-fatty-acid-oxidation-suppression-reprograms-fibroblasts-in-fibrostenotic-crohns-disease)  
+   evidence：巨噬细胞代谢与再生或纤维化结果
+5. [scLASER: a robust framework for simulating and detecting time-dependent single-cell dynamics in longitudinal studies](/202605/15/biorxiv-10-64898-2026-05-04-722712-v2-sclaser-a-robust-framework-for-simulating-and-detecting-time-dependent-single-cell-dynamics-in-longitudinal-studies)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：纤维狭窄型克罗恩病的代谢重编程
-7. [Preserved Type 2 Immune Cell Plasticity in Human Obesity and Differential Immune Reconstitution After Bariatric Surgery](/202605/14/biorxiv-10-64898-2026-05-09-723984-v1-preserved-type-2-immune-cell-plasticity-in-human-obesity-and-differential-immune-reconstitution-after-bariatric-surgery)  
-   标签：评分：7.0/10、query:ros-mp
-   evidence：肥胖中的替代激活巨噬细胞和免疫细胞可塑性
-8. [scLASER: a robust framework for simulating and detecting time-dependent single-cell dynamics in longitudinal studies](/202605/14/biorxiv-10-64898-2026-05-04-722712-v1-sclaser-a-robust-framework-for-simulating-and-detecting-time-dependent-single-cell-dynamics-in-longitudinal-studies)  
-   标签：评分：6.5/10、query:ros-mp
    evidence：应用于炎症性肠病数据集
-9. [scLASER: a robust framework for simulating and detecting time-dependent single-cell dynamics in longitudinal studies](/202605/14/biorxiv-10-64898-2026-05-04-722712-v2-sclaser-a-robust-framework-for-simulating-and-detecting-time-dependent-single-cell-dynamics-in-longitudinal-studies)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：应用于炎症性肠病数据集
-10. [A mitochondrial quality control mechanism reverses the phagosome maturation arrest caused by Mycobacterium tuberculosis](/202605/14/biorxiv-10-1101-2023-12-01-569475-v2-a-mitochondrial-quality-control-mechanism-reverses-the-phagosome-maturation-arrest-caused-by-mycobacterium-tuberculosis)  
+6. [Organoid modeling of tumor-associated macrophages reveals phagocytosis checkpoint blockade-induced conversion to an immunosuppressive SPP1+ phenotype](/202605/15/biorxiv-10-64898-2026-05-06-722767-v1-organoid-modeling-of-tumor-associated-macrophages-reveals-phagocytosis-checkpoint-blockade-induced-conversion-to-an-immunosuppressive-spp1-phenotype)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：肿瘤相关巨噬细胞对极化信号的反应及向免疫抑制表型的转化
+7. [Epigenetic regulation of alveolar macrophage homeostasis by histone deacetylase 1 and 2](/202605/15/biorxiv-10-1101-2024-05-06-590855-v2-epigenetic-regulation-of-alveolar-macrophage-homeostasis-by-histone-deacetylase-1-and-2)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：日益增加的氧化环境触发的巨噬细胞抗菌反应
-11. [Modulating Protein Function through Genetically Encoded Oxidative Chemistry](/202605/14/biorxiv-10-1101-2025-11-06-686050-v2-modulating-protein-function-through-genetically-encoded-oxidative-chemistry)  
+   evidence：维持肺泡巨噬细胞稳态的表观遗传机制
+8. [A Specialized CD107a+ Macrophage Subset Drives Selective Mycobacterial Phagocytosis](/202605/15/biorxiv-10-1101-2025-10-31-685620-v2-a-specialized-cd107a-macrophage-subset-drives-selective-mycobacterial-phagocytosis)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：使用miniSOG产生活性氧的遗传编码氧化化学
+   evidence：巨噬细胞亚群特化与促炎信号传导
+9. [Modulating Protein Function through Genetically Encoded Oxidative Chemistry](/202605/15/biorxiv-10-1101-2025-11-06-686050-v2-modulating-protein-function-through-genetically-encoded-oxidative-chemistry)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：基因编码的ROS产生以调节蛋白质功能
+10. [TLR2-mediated microbial sensing by intestinal stem cells coordinates epithelial antimicrobial defense.](/202605/15/biorxiv-10-64898-2026-05-04-722581-v1-tlr2-mediated-microbial-sensing-by-intestinal-stem-cells-coordinates-epithelial-antimicrobial-defense)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：TLR2介导的微生物感知和肠道防御
+11. [scLASER: a robust framework for simulating and detecting time-dependent single-cell dynamics in longitudinal studies](/202605/15/biorxiv-10-64898-2026-05-04-722712-v1-sclaser-a-robust-framework-for-simulating-and-detecting-time-dependent-single-cell-dynamics-in-longitudinal-studies)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：单细胞框架在炎症性肠病患者中的应用
 
 
 <div class="dpr-home-promo-card">

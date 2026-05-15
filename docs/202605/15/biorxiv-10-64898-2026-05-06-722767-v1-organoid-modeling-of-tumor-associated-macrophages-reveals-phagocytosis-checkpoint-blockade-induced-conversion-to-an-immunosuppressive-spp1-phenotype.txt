@@ -1,0 +1,2401 @@
+Title: Nakano et al Main Text Final 042026
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.06.722767v1.full.pdf
+
+Number of Pages: 35
+
+Markdown Content:
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10 
+
+11 
+
+Organoid modeling of tumor-associated macrophages reveals phagocytosis checkpoint 12 
+
+blockade-induced conversion to an immunosuppressive SPP1+ phenotype 13 
+
+14 
+
+15 
+
+16 
+
+17 
+
+Michitaka Nakano 1, Lyong Heo 2, Yu-Ping Yang 3, Lorena P. Munoz 1, Yihua Liu 3, Lei Zhao 1, Juhyung Park 1,18 
+
+Eirini Tsekitsidou 1, Anthony Francois 1,4 , Jie Liu 1,4 , Aaron C. Trotman-Grant 1,4 , Maria Fernanda Henao 19 
+
+Echeverri 1, Cara C. Rada 1, Edward Tran 1, Arya Khokhar 1, Kanako Yuki 1, Asmita Bhattacharya 1,5 , Hudson T. 20 
+
+Horn 1, Roel Polak 1, Leonard N. Yenwongfai 6, Ying Li 3, Matt Peach 3, Emon Nasajpour 7, Ana Jimena 21 
+
+Pavlovitch-Bedzyk 8, Anne Lynn S. Chang 9, Michael Lim 7, Claudia K. Petritsch 7, Melanie Hayden Gephart 7,22 
+
+John T. Leppert 10 , Ramesh V. Nair 2, Mark M. Davis 8, Michael C. Bassik 5, Melody Zhang 6, Jared Odegard 3,23 
+
+Jamie G. Bates 3, Lawrence L. K. Leung 1, Ravindra Majeti 1,4 , Calvin J. Kuo 1＊
+
+24 
+
+25 1Department of Medicine, Division of Hematology, Stanford University School of Medicine, Stanford, CA, 26 
+
+USA 27 2Stanford Center for Genomics and Personalized Medicine, Stanford University School of Medicine, Stanford, 28 
+
+CA, USA 29 3Gilead Sciences, Inc, Foster City, CA, USA 30 4Institute for Stem Cell Biology and Regenerative Medicine, Stanford University School of Medicine, Stanford, 31 
+
+CA, USA 32 
+
+Departments of Genetics 5, Pathology 6, Neurosurgery 7, Microbiology and Immunology 8, Dermatology 9 and 33 
+
+Urology 10 , Stanford University School of Medicine, Stanford, CA, USA 34 
+
+35 
+
+36 
+
+Running title: Organoid modeling of TAM and phagocytosis checkpoints 37 
+
+38 
+
+> ＊
+
+Corresponding author. Email: Calvin J. Kuo (cjkuo@stanford.edu) 39 
+
+40 
+
+41 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+39 
+
+40 
+
+41 
+
+42 
+
+43 
+
+Abstract 44 
+
+45 
+
+Tumor-associated macrophages (TAM) exert essential functions during the immune response to cancer. 46 
+
+However, investigations of TAM within a native human tumor microenvironment (TME) have been 47 
+
+impeded by a lack of appropriate model systems. Here, patient-derived organoids (PDO) from air-liquid 48 
+
+interface (ALI)-grown tumor fragments, containing a human TME that encompassed stroma and immune 49 
+
+subsets, robustly preserved TAM that were maintained by endogenous CSF-1 and appropriately responded 50 
+
+to polarization signals. Antibody blockade of the CD47 regulatory checkpoint in organoids stimulated 51 
+
+phagocytosis and remodeled TAM cytokine secretion profiles that were confirmed in anti-CD47 phase I 52 
+
+trial patients. Amongst PDO histologies screened, anti-CD47 tumor killing was notable in clear cell renal 53 
+
+cell carcinoma (ccRCC) which was associated with increased TAM infiltration. PDO contained diverse 54 
+
+previously described TAM subsets; however, anti-CD47 reprogrammed organoid TAM toward an 55 
+
+immunosuppressive SPP1+ phenotype, highlighting a negative feedback mechanism. Our findings 56 
+
+uncover a resistance circuit engaged by macrophage checkpoint blockade and position ALI PDO as a 57 
+
+robust translational platform for dissecting human macrophage biology and informing precision 58 
+
+immunotherapy. 59 
+
+60 
+
+61 
+
+62 
+
+63 
+
+64 
+
+65 
+
+66 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Introduction 78 
+
+The tumor microenvironment (TME) encompasses stroma and diverse immune subsets, whose 79 
+
+manipulation holds substantial promise for cancer treatment (1-3).Within the immune TME, tumor-80 
+
+associated macrophages (TAM) have emerged as a target for cancer immunotherapy (4-6). TAM exert 81 
+
+central functions within the TME, residing at the nexus of cancer cell phagocytosis, antigen presentation 82 
+
+and immune network interactions(7-9). However, contemporary in vitro tumor culture systems lack TAM 83 
+
+and thus do not recapitulate these complex TAM functions, hindering mechanistic investigations and 84 
+
+development of TAM-directed cancer therapies. 85 
+
+> 86
+
+TAMs have been historically characterized as M1 pro-inflammatory TAMs that exert anti-tumor effects, 87 
+
+or M2 anti-inflammatory and pro-tumorigenic TAMs (10,11). However, recent single cell multiomic 88 
+
+studies have revealed additional TAM phenotypic and functional diversity (12-16). SPP1+ TAM support 89 
+
+fibrosis and matrix remodeling (13,17,18), are associated with poor prognosis in human cancer (19,20), 90 
+
+and have attracted significant interest because of their association with immunosuppression (21-24) and 91 
+
+cancer immunotherapy resistance (25,26). C1Q+ TAMs express complement components and MHC class 92 
+
+II molecules (27,28), promote tumor progression(28,29) and are mutually exclusive with SPP1+ TAM 93 
+
+(30,31). The NLRP3+ TAM subset is defined by inflammasome expression (32), releasing pro-94 
+
+inflammatory cytokines such as IL-1 b in response to innate stimuli (33). CXCL9+ TAM are regulated by 95 
+
+IFN-g signaling and correlate with immune checkpoint inhibition response. Together, these individual 96 
+
+TAM subsets embody distinct functions within the TME(31,34). 97 
+
+> 98
+
+Tumor phagocytosis is a canonical TAM activity with potential for cancer therapeutic manipulation. 99 
+
+Tumor cells can escape phagocytosis by elaborating cell surface “don’t eat me” signals such as CD47 100 
+
+(35), CD24 (36), and MHC-I, which interact with negative regulatory checkpoint inhibitory molecules on 101 
+
+TAM, such as signal protein-a (SIRP a), sialic acid-binding immunoglobulin-like lectin (SIGLEC-10) and 102 
+
+leucocyte immunoglobulin-like receptor B1 (LILRB1), respectively. As CD47 is ubiquitously expressed 103 
+
+in normal cells and overexpressed in diverse cancers (37-39), promoting TAM-mediated tumor 104 
+
+phagocytosis by antibody blockade of CD47-SIRP a has been investigated for cancer therapy (40-42). 105 
+
+However, clinical trials of blocking CD47 or SIRP a with or without additional agents have not 106 
+
+demonstrated efficacy or safety in hematologic malignancies (43-46), while solid tumor activity (47-49) 107 
+
+remains to be confirmed in definitive trials. To realize the potential of TAM-targeted therapies in general, 108 
+
+further explorations are needed to define biological mechanisms, optimize response, resistance and safety, 109 
+
+and stratify responsive patients by prognostic biomarkers and tumor histologies. 110 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+111 
+
+Patient-derived tumor organoids (PDO) are widely used for three-dimensional human tumor culture, but 112 
+
+typically only contain tumor epithelium and lack stromal and immune components (50-53). Recent 113 
+
+advances in tumor immunotherapy have incurred a pressing need to extend PDO technology beyond 114 
+
+epithelial tumor compartments to include immune subsets that would model the complex immune-tumor 115 
+
+intratumoral crosstalk (54-57). We previously reported a 3D air-liquid interface (ALI) organoid method 116 
+
+that cultures intact human tumor fragments with endogenous immune components (58,59). Here, we 117 
+
+address the longstanding need for in vitro modeling of TME macrophages by demonstrating that ALI 118 
+
+tumor organoids robustly preserve TAM subsets that are functionally-responsive and phagocytosis-119 
+
+competent, and exploit this system for mechanistic assessment of TAM-targeted anti-tumor therapies, 120 
+
+using CD47 inhibition as proof-of-principle. 121 
+
+122 
+
+123 
+
+124 
+
+125 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Results 126 
+
+Human tumor ALI organoids preserve TAM within a holistic immune TME 127 
+
+We used an ALI system to culture intact fragments of surgically resected human cancer tissues. The PDO 128 
+
+were embedded in a collagen matrix within a transwell exposed directly to air and cultured in media 129 
+
+containing WNT3A, EGF, Noggin, R-spondin-1 (WENR) and low-dose IL-2 in an outer dish to support 130 
+
+tumor and immune cells (see Methods) . Across all experiments, organoids were created from surgical 131 
+
+tumor fragments from 67 clear cell renal cell carcinoma (ccRCC), 46 non-small cell lung cancer (NSCLC), 132 
+
+and 31 colorectal adenocarcinoma (CRC) patients, but also including additional tumor histologies (Fig. 133 
+
+1A, Supplementary Table S1) . PDO cultures typically reproduced tumor architecture with distinct 134 
+
+epithelial and stromal compartments ( Fig. 1B-D ). Immunofluorescence (IF) demonstrated IBA1+ TAM 135 
+
+across all ALI organoid cancer types surveyed, in association with tumor epithelium appropriately 136 
+
+expressing CA9 (ccRCC) ( Fig. 1E ), CK7 (NSCLC adenocarcinoma) ( Fig. 1F ) or CK19 (CRC) ( Fig. 1G ). 137 
+
+Upon flow cytometry, CD163 and scatter characteristics were used to differentiate TAM versus smaller 138 
+
+monocytes lacking CD163 (62). ALI organoids preserved CD45+CD11b+HLA-DR+CD14+CD163+ 139 
+
+TAM compared to freshly isolated tumor specimens at culture days 7, 14 and 28 ( Fig. 1H , Supplementary 140 
+
+Fig. S1A ). The detected degree of TAM preservation could be influenced by concomitant tumor cell 141 
+
+proliferation. In contrast, PDO CD45+CD11b+HLA-DR+CD14+CD163- monocytes rapidly decreased, 142 
+
+consistent with their short in vivo lifespan of 1-7 days (63) (Supplementary Fig. S1A-B ). Organoid 143 
+
+TAM were still detected by histology at extended time points (85 days was the longest time attempted), 144 
+
+albeit at significantly decreased and/or variable levels ( Supplementary Fig. S1C) . ALI PDO could be 145 
+
+cryopreserved in-gel and recovered, preserving tissue architectures and immune subsets including TAM 146 
+
+(Supplementary Fig. S1D-F). We also evaluated PDO preservation of tumor identity by targeted DNA 147 
+
+sequencing of selected cases to confirm that genomic mutations present in fresh tumor were also detected 148 
+
+in matched organoids ( Supplementary Fig. S2) , consistent with prior studies (59). 149 
+
+> 150
+
+Niche factor CSF-1 supports TAM survival in ALI organoids 151 
+
+The persistence of TAM without addition of exogenous macrophage/monocyte-related growth factors 152 
+
+suggested that ALI organoid cultures intrinsically supported TAM survival. We performed Luminex 153 
+
+cytokine analysis of organoid conditioned medium from different tumor histologies to evaluate secretion 154 
+
+of colony-stimulating factor-1 (CSF-1), which is essential for macrophage/monocyte survival (11,64). The 155 
+
+CSF-1 concentrations in ALI organoid conditioned medium at days 8-28 culture (longest time point 156 
+
+attempted was day 70) were >1000 pg/ml across 3 tumor types (ccRCC, NSCLC, CRC), which are 157 
+
+sufficient to maintain macrophage culture in vitro (65) ( Fig. 1I ) and vastly exceeded the CSF-1 present in 158 
+
+media alone without cells (average 31.2 pg/ml) (Supplementary Fig. S3A) . We further evaluated if PDO 159 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+TAM survival required endogenously produced CSF-1 by treatment with the small molecule CSF-1R 160 
+
+kinase inhibitor PLX5622, which is widely used for functional macrophage and microglia depletion (66). 161 
+
+Accordingly, PLX5622 treatment decreased the prevalence of TAM in ccRCC and NSCLC organoids 162 
+
+detected by flow cytometry ( Fig. 1J-K ). Further, PLX5622 treatment of GBM organoids converted 163 
+
+microglia from an activated ameboid morphology to an inactive state with ramified processes 164 
+
+(Supplementary Fig. S3B-C ). These results suggest that the endogenous production of the essential 165 
+
+macrophage growth factor CSF-1 maintains TAM abundance and activation state in ALI tumor organoids, 166 
+
+and that TAM can be functionally manipulated in PDO by inhibiting the CSF-1 axis. 167 
+
+> 168
+
+Functional responsiveness of TAM within ALI tumor organoids 169 
+
+To further demonstrate the physiologic responsiveness of PDO TAM, we added known cytokines that 170 
+
+polarize macrophages toward classical M1 and M2 phenotypes (67). Interferon-γ (IFNγ) was included in 171 
+
+the culture media of day 8 tumor ALI organoids as a M1 phenotype inducer or IL-4 as a M2 phenotype 172 
+
+inducer. After 24 hours treatment with IFNγ or IL-4, macrophages were purified from ALI organoid 173 
+
+cultures by FACS. Bulk RNA-seq analysis revealed that the organoid TAM underwent distinct 174 
+
+transcriptomic changes upon IFNγ versus IL-4 exposure ( Fig. 1L-M, Supplementary Fig. S4A-B, 175 
+
+Supplementary Table S2 ). Differentially expressed gene and pathway analysis comparing IFNγ and IL-176 
+
+4 exposures indicated that IFNγ-treated TAM (IFN-TAM) showed enrichment of IFN-inducible loci 177 
+
+including GBP5, JAK2, ISG15 and IFITM1 (Fig. 1M, Supplementary Fig. S4C ). IL-4 treated TAM (IL4-178 
+
+TAM) showed IL-4 related gene enrichment with higher expression of CCL17, CCL18, CCL22 and 179 
+
+CCL24 (Fig. 1M , Supplementary Fig. S4D ). IFN-TAM exhibited higher expression of the M1 180 
+
+macrophage-related genes CXCL9/10/11, IDO1, TNF, IL6 and NOS2 ( Fig. 1M , Supplementary Fig. 181 
+
+S4E ) while IL4-TAM showed higher expression of the M2 macrophage-related genes TGFB1, FN1, 182 
+
+FCER2, IGF1, POSTN, CD209 and CD180 (Fig. 1M and Supplementary Fig. S4F ). 183 
+
+Immunofluorescence revealed TAM polarization toward M1 and M2 phenotypes in ALI organoids by 184 
+
+CXCL9 and CCL17, respectively ( Supplementary Fig. S4G-I ). Upon flow cytometry, IFNγ consistently 185 
+
+promoted expression of the M1 markers CD40 and CD80, while IL-4 induced the M2 marker CD206 in 186 
+
+ALI organoid TAM cultures ( Supplementary Fig. S4J). 187 
+
+> 188
+
+ALI tumor organoid TAM possess functional phagocytosis ability 189 
+
+We next assessed if organoid TAM exhibited phagocytic activity using imaging flow cytometry, in which 190 
+
+high throughput cell analysis is combined with single cell microscopic imaging (68). TAM were isolated 191 
+
+from ALI organoids (day 8-63) and then cultured with FITC-conjugated beads at 37 °C or 4 °C culture. 192 
+
+Subsequent imaging flow cytometry allowed quantitation of phagocytic TAM that had functionally 193 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+internalized beads by FITC positivity. The organoid TAM that had engulfed FITC bead conjugates were 194 
+
+robustly captured at 37 °C culture but were only infrequently observed at 4 °C, indicative of specific 195 
+
+phagocytic activity ( Fig. 2A-B ). Phagocytosis was further confirmed by measuring within intact ALI 196 
+
+organoids the fluorescence intensity of the pH-sensitive fluorophore pHrodo, which is activated in low 197 
+
+pH endosomes and lysosomes (69). Accordingly, organoid pHrodo fluorescence was prominently detected 198 
+
+in PDO and was partially reversed by cytochalasin D which inhibits actin polymerization necessary for 199 
+
+efficient phagocytosis, indicative of a specific signal ( Fig. 2C ). Further, we confirmed phagocytosis within 200 
+
+TAM by the overlay of pHrodo and CD11b+ cells within intact organoids ( Fig. 2D-E ). Overall, TAM 201 
+
+phagocytic capacity was well preserved in ALI tumor organoid culture ( Fig. 2A-E ). 202 
+
+> 203
+
+Organoid TAM tumor cell phagocytosis enhancement by anti-CD47 204 
+
+We examined the modulation of tumor phagocytosis in ALI organoids by employing anti-CD47 as proof-205 
+
+of-principle for targeting negative inhibitory checkpoints mediated by anti-phagocytic “don’t eat me” 206 
+
+signals. We confirmed that the anti-CD47 antibody B6H12, which functionally inhibits the CD47-207 
+
+SIRP a interaction (35,41,42), achieved quantitative CD47 occupancy in organoid tumor cells by 208 
+
+pronounced inhibition of an anti-CD47 flow cytometry detection antibody ( Supplementary Fig. S5A ). 209 
+
+The B6H12 clone was thus used for all anti-CD47 experiments in subsequent studies. TAM were isolated 210 
+
+by anti-CD11b bead enrichment from ALI organoids (ccRCC, NSCLC, CRC) and labeled with 211 
+
+CellTrace TM Far Red. In parallel, ALI organoid tumor epithelium from identical patients was isolated by 212 
+
+anti-EpCAM beads and labeled with Calcein AM. The isolated CellTracker TM Deep Red-labeled organoid 213 
+
+TAM were then combined with autologous Calcein AM-labeled tumor epithelium with and without the 214 
+
+B6H12 anti-CD47 antibody. In this phagocytosis assay, anti-CD47 increased the uptake of Calcein AM-215 
+
+labeled fluorescent tumor cells within CellTrace TM Far Red dye-positive ALI tumor organoid-derived 216 
+
+TAMs as determined by CD11b+ Far Red+ Calcein AM+ events ( Fig. 3A-B ). This indicated that tumor 217 
+
+phagocytosis by ALI PDO TAM can be promoted by inhibition of the CD47 anti-phagocytic signal. 218 
+
+> 219
+
+Organoid screening of anti-CD47 responsive tumor histologies 220 
+
+To explore if PDO could screen tumors to identify histologic subsets that respond to a given therapy, thus 221 
+
+informing clinical trial design and patient selection, we therefore used ALI organoids to identify potential 222 
+
+anti-CD47-responsive tumor types. PDO were screened for anti-CD47-induced tumor killing across 8 223 
+
+tumor histologies from a total of 82 patients, including ccRCC (N=27), NSCLC (N=22), CRC (N=13) and 224 
+
+other tumors (N=20). The cytotoxic effects of anti-CD47 organoid treatment were measured after 8 days 225 
+
+by the decreased fractional viability of CD45- EpCAM+ organoid tumor epithelium using flow cytometry 226 
+
+with fixable cell viability dyes ( Fig. 3C ). Anti-CD47 promoted organoid tumor epithelial cell death most 227 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+prominently in ccRCC as opposed to NSCLC and CRC (Fig. 3D) ; effects in other histologies were not 228 
+
+observed but cannot be excluded as they were underrepresented in our screening panel ( Supplementary 229 
+
+Fig. S5C ). Tumor fragments could be detected within TAM from intact organoids upon anti-CD47 230 
+
+treatment ( Supplementary Fig. S5B ). Notably, TAM tended to be more abundant in organoids from 231 
+
+ccRCC, which was significant versus CRC but not NSCLC or other tumor types ( Fig. 3E and 232 
+
+Supplementary Fig. S5D ). The high TAM content of ccRCC organoids is consistent with CD68 233 
+
+enrichment in ccRCC versus diverse tumor histologies in pan-cancer TCGA data ( Supplementary Fig. S 234 
+
+5E ) and in several published studies (12,70-72). The degree of TAM infiltration stratified ccRCC organoid 235 
+
+responders versus non-responders, where higher TAM organoid content was associated with increased 236 
+
+anti-CD47-induced organoid tumor epithelial killing (Fig. 3F) . NSCLC organoids, which displayed a 237 
+
+generally weaker anti-CD47 cytotoxic response (Fig. 3D) , also exhibited correlation of tumor killing with 238 
+
+TAM content, while CRC organoids could not be stratified in this manner ( Fig. 3F ). 239 
+
+> 240
+
+Concordance of secreted cytokines between anti-CD47 treated organoids and patients 241 
+
+To more broadly evaluate TAM cytokine production in PDO, Luminex cytokine array analysis was 242 
+
+performed on culture supernatants from anti-CD47-treated day 8 tumor organoids from 49 patients (19 243 
+
+ccRCC, 20 NSCLC, 10 CRC). Higher secretion of numerous cytokines related to pro-inflammatory 244 
+
+macrophages (CCL3, CCL4 and TNFA) were detected in the conditioned medium of organoids treated 245 
+
+with anti-CD47-treated compared with IgG control, while IFNγ , CXCL9 and CXCL10 were not elevated 246 
+
+(Fig. 4A and Supplementary Table S3 ). 247 
+
+> 248
+
+We confirmed these organoid observations in patient populations by analyzing plasma from a phase I 249 
+
+clinical trial of patients with advanced solid tumors treated with the anti-CD47 antibody magrolimab 250 
+
+(NCT02216409) (40). In this trial, magrolimab was administered at 1 mg/kg (priming dose) on study day 251 
+
+1 and at 20-45 mg/kg (loading dose) on day 8, followed by multiplexed cytokine plasma immunoassay. 252 
+
+Plasma CCL3, CCL4 and TNFA were elevated after magrolimab priming (day 1) and loading (day 8) 253 
+
+doses versus pre-administration samples from the same patients (Fig. 4B) . Notably, this paralleled 254 
+
+elevations of CCL3, CCL4 and TNFA in anti-CD47-treated organoids (Fig. 4A) . Importantly, cytokines 255 
+
+related to macrophage functions such as IFNγ , CXCL9 and CXCL10 that were not elevated by anti-CD47 256 
+
+in organoids, similarly were not upregulated in the magrolimab-treated clinical cohort ( Fig. 4A-B ). Taken 257 
+
+together, anti-CD47 cytokine endpoints from ALI tumor organoids were concordant with 258 
+
+pharmacodynamic measurements in patients. 259 
+
+> 260
+
+Anti-CD47 induces dynamic changes in TAM and promotes the SPP1+ phenotype 261 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+To investigate anti-CD47-regulated TAM phenotypic changes in single cell resolution, we next performed 262 
+
+scRNA-seq of the CD45+ hematopoietic fraction organoid cultures from tumors of 10 distinct patients (6 263 
+
+ccRCC and 4 NSCLC) after 8 days of treatment with anti-CD47- or IgG1. In parallel, scRNA-seq was 264 
+
+performed on matched fresh tumor for 5 of the ccRCC and 2 of the NSCLC organoid cultures. ALI PDO 265 
+
+maintained essential immune components including myeloids, mast cells, CD4 and CD8 T cells, B cells 266 
+
+and NK cells ( Fig. 5A and Supplementary Fig. S6A-D ). 267 
+
+> 268
+
+Recent single cell analyses have revealed substantial phenotypic diversity within TAM, including SPP1+ ,269 
+
+NLRP3+ , C1Q+ and CXCL9+ subsets (12-16). Accordingly, unsupervised subclustering of the myeloid 270 
+
+scRNA-seq populations from Fig. 5A revealed prominent SPP1+ , NLRP3+ , C1Q+ and CXCL9+ TAM, 271 
+
+and monocyte clusters (Fig. 5B and Supplementary Fig. S6E-H ). TAM subsets were well conserved in 272 
+
+day 8 ALI PDO compared with fresh tumor, but revealed an expected decrease in monocytes, which 273 
+
+exhibit a lifespan of 1-7 days (63) ( Supplementary Fig. S6E-H) . The main TAM subsets ( C1Q +, SPP1 +, 274 
+
+NLRP3 +, CXCL9 +) were conserved in both organoids and cognate fresh tumors but organoids exhibited 275 
+
+a disproportionate increase in NLRP3+ TAM ( Supplementary Fig. S6E ). 276 
+
+> 277
+
+Anti-CD47 notably stimulated the abundance of organoid SPP1+ TAM, which have been linked to 278 
+
+immunosuppression (21-26). Simultaneously, anti-CD47 repressed organoid C1Q+ TAM ( Fig. 5B-C) .279 
+
+Notably, SPP1+ TAM stimulation by anti-CD47 was greater in ccRCC than in NSCLC ( Fig. 5E and 280 
+
+Supplementary Fig. S7A-B ). Pseudotime trajectory analysis suggested that CD47 inhibition promoted a 281 
+
+cell state progression where C1Q+ TAM phenotypically converted into SPP1+ TAM (Fig. 5D-E ), 282 
+
+inferring that the CD47 pathway physiologically regulates interconversion between these two TAM 283 
+
+subsets. Consistent with a cell state transition, anti-CD47 did not alter proliferative transcripts in organoid 284 
+
+TAM (Supplementary Fig. S7C) .285 
+
+> 286
+
+Anti-CD47 induced transcripts for numerous cytokines, chemokines and secreted factors within organoid 287 
+
+TAM, including SPP1 , MMP1, MMP9 and MMP10 related to fibrosis and tissue remodeling(13,14) ( Fig. 288 
+
+5F, Supplementary Fig. S7D and Supplementary Table S4 ). Interestingly, anti-CD47 downregulated 289 
+
+TAM gene expression profiles including transcripts for C1Q+ TAM ( C1QA, C1QB, C1QC), regulators of 290 
+
+MHC class II expression ( CIITA) , MHC class-I antigen presentation pathway ( B2M, TAP1, TAP2), MHC 291 
+
+class -I and -II ( HLA-DRA, HLA-DPB1 , HLA-DQA1, HLA-A, HLA-B, HLA-C) , and interferon response 292 
+
+(ISG15, GBP1, IRF1, STAT1, IFITM3, CXCL10) (Fig. 5C and Supplementary Fig. S7E ). These 293 
+
+transcriptomic changes were observed both in ccRCC and NSCLC organoid TAM ( Supplementary Fig. 294 
+
+S7D-E ). Concordantly, pathway analysis revealed that the strongest processes downregulated in anti-295 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+CD47-treated organoid TAM included MHC-II antigen presentation, MHC-I cross-presentation and IFN 296 
+
+signaling ( Supplementary Fig. S7F ). 297 
+
+298 
+
+Notably, SPP1 was the most strongly anti-CD47-induced mRNA in organoid TAM and was paralleled by 299 
+
+robust downregulation of C1QA, C1QB and C1Q mRNA ( Fig. 5F ). Further, SPP1 stimulation by anti-300 
+
+CD47 was greater in ccRCC than in NSCLC ( Fig. 5G and Supplementary Fig. 7A-B ). Crucially, the 301 
+
+elevation of SPP1 mRNA was concordant with the anti-CD47 promotion of the SPP1+ TAM subset ( Fig. 302 
+
+5B-C ). In parallel with increased SPP1+ TAM, CD47 inhibition promoted SPP1 secretion in ELISA 303 
+
+assays of organoid culture supernatants from multiple cancer types ( Fig. 5H ). Further, SPP1 expression 304 
+
+was specific for TAM but not other immune cell populations upon scRNA-seq (Fig. 5I) .305 
+
+306 
+
+The possibility that anti-CD47-stimulated SPP1 production also occurred in human populations was 307 
+
+explored in serum from the NCT02216409 phase I magrolimab clinical trial (40). Strikingly, magrolimab 308 
+
+administration to patients at day 8 elevated SPP1 levels in patient serum after 2 hours with further 309 
+
+increases after 24 hours ( Fig. 5J ). In summary, the concordant SPP1 elevations induced by anti-CD47 in 310 
+
+both organoids and patients reiterate that organoids faithfully recapitulate in vivo human TAM biology 311 
+
+across tumor histologies, and reveal induction of the immunosuppressive SPP1+ TAM subset as an 312 
+
+unforeseen complication of CD47 blockade. 313 
+
+314 
+
+315 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Discussion 316 
+
+> 317
+
+TAM exert manifold phagocytic, paracrine and antigen-presenting functions within the TME(7-9), which 318 
+
+have raised significant interest in their therapeutic targeting (4-6). However, experimental systems to 319 
+
+study endogenous TAM within their native human TME have been notably lacking, despite extensive 320 
+
+reconstitutive studies in which tumor cells are co-cultured with exogenous myeloid elements (73,74). We 321 
+
+previously described PDO cultures in which primary human tumor fragments cultured in an ALI 322 
+
+successfully retained a diverse immune TME spanning T, B, NK and myeloid subsets without requiring 323 
+
+artificial reconstitution (59). Here, we extended these studies to deeply characterize the TAM content of 324 
+
+ALI PDO. The organoid TAM were maintained for >70 days as supported by endogenous CSF-1 325 
+
+production and were functionally competent in phagocytosis, polarization induction and cytokine 326 
+
+secretion. Major TAM subsets that have been as extensively described by single cell RNA-sequencing(12-327 
+
+16) ( C1Q+, SPP1+, NLRP3+, CXCL9+ ) were conserved in both organoids and cognate fresh tumors. 328 
+
+Interestingly, organoids exhibited substantially increased NLRP3+ TAM versus fresh tumors, which could 329 
+
+reflect in vitro culture conditions. 330 
+
+> 331
+
+As proof-of-principle for functional TAM exploration in the ALI organoid system, anti-CD47 blocking 332 
+
+antibodies stimulated tumor phagocytosis but also enabled mechanistic identification of events regulated 333 
+
+by the CD47-SIRP a pathway. Unexpectedly, anti-CD47 stimulated an increase in SPP1+ TAM, 334 
+
+accompanied by decreased C1Q+ TAM. Our results support a model where CD47 inhibition directly 335 
+
+induces a cell fate transition of C1Q+ TAM into SPP1+ TAM, based upon scRNA-seq pseudotime 336 
+
+analysis and lack of anti-CD47 proliferative effects on SPP1+ or C1Q+ TAM. Further, these findings are 337 
+
+aligned with the known mutual exclusivity of SPP1+ and C1Q+ TAM (30,31). Conversely, this infers 338 
+
+that the CD47 pathway physiologically regulates TAM subset identity, potentially by promoting the C1Q+ 339 
+
+TAM cell fate at the expense of SPP1+ TAM. 340 
+
+> 341
+
+Notably, CD47 inhibition stimulated two distinct negative feedback mechanisms that could oppose tumor 342 
+
+immunity. Firstly, the induction of SPP1+ TAM could obligately dampen immune responses after 343 
+
+phagocytosis, and actively oppose beneficial anti-tumor activities of CD47 inhibition. Indeed, in addition 344 
+
+to facilitating matrix remodeling and fibrosis (13,17,18), SPP1+ TAM exhibit immunosuppressive 345 
+
+functions (21-24) and SPP1+ TAM tumor infiltration is related to poor prognosis (19) and dysfunctional 346 
+
+and regulatory T cells (75). Further, SPP1+ TAM mediate immune checkpoint therapy resistance (25,26) 347 
+
+through adenosine signaling, emphasizing their importance as a therapeutic target and biomarker for 348 
+
+treatment response (25). SPP1 interaction with its receptor CD44, and spatial association of SPP1+ TAM 349 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+and CD44+ cancer cells are associated with treatment resistance and cancer stemness (76,77). The anti-350 
+
+CD47 induction of SPP1+ TAM could be either dependent or independent of phagocytosis, given the 351 
+
+numerous downstream effector functions of the CD47 pathway (37-39). Secondly, anti-CD47 also 352 
+
+downregulated MHC in organoid TAM, potentially reflecting in part the decreased abundance of MHC 353 
+
+class II-expressing C1Q+ TAM (27,28). The resultant decrease in antigen presentation capacity could 354 
+
+further exacerbate the anti-CD47-induced immunosuppressive and TME remodeling effects of SPP1+ 355 
+
+TAM. Thus, CD47-SIRP a pathway blockade promotes phagocytosis by TAM but obligately induces two 356 
+
+distinct negative feedback mechanisms that could underlie the lack of clinical efficacy of current CD47 357 
+
+inhibitors (45,46). These results further suggest rational strategies for improving the antitumor efficacy of 358 
+
+blocking CD47 or of other TAM regulatory checkpoints. 359 
+
+> 360
+
+Our data also demonstrate the potential of organoids to identify responsive tumor histologies for 361 
+
+macrophage-targeted therapeutics. Amongst the ccRCC, NSCLC and CRC tumor ALI cultures screened, 362 
+
+ccRCC organoids manifested the highest degree of anti-CD47-induced tumor killing. This ccRCC 363 
+
+organoid susceptibility was linked to a higher degree of TAM infiltration, consistent with reports of TAM 364 
+
+enrichment in ccRCC tumors amongst diverse cancer histologies (12,70-72). In contrast, anti-CD47 365 
+
+promoted SPP1 secretion and CCL3/CCL4/TNFA cytokine release across all tumor histologies examined, 366 
+
+which may represent more promiscuous responses to CD47 inhibition that are not sufficient to confer anti-367 
+
+CD47 tumor cytotoxicity, which was strongest in ccRCC organoids. In parallel with scRNA-seq, anti-368 
+
+CD47 increased SPP1 secretion in both organoid culture supernatant and in patient serum, although this 369 
+
+could reflect either SPP1+ TAM expansion and/or increased SPP1 transcription. Of note, increased 370 
+
+circulating SPP1 levels are associated with more advanced disease and tumor progression in cancer (78-371 
+
+81). Our findings also suggest that elevated SPP1 secretion comprises a robust biomarker for anti-CD47 372 
+
+treatment that could further mediate tumor therapeutic resistance. 373 
+
+> 374
+
+The ccRCC organoid response to proof-of-principle CD47 blockade also suggests the potential benefit of 375 
+
+targeting this tumor type with next-generation macrophage checkpoint inhibitors, such as anti-CD47 376 
+
+antibodies with disabled Fc regions (47-49) or targeting SIGLEC-10 and LILRB1 (36,82). This will 377 
+
+require clinical validation, as macrophage checkpoint inhibition has not yet been evaluated in ccRCC 378 
+
+trials. Notably, any potential anti-tumor activity of inhibition of SIGLEC-10 or LILRB1 could potentially 379 
+
+be obligately blunted by identical or similar negative feedback mechanisms as for CD47/SIRP a in the 380 
+
+present studies. Here, the anti-CD47 tool antibody blocked the SIRP a inhibitory signal and provided a 381 
+
+pro-phagocytic signal through Fc. The addition of tumor antigen-targeting antibodies and Fc domain 382 
+
+engineering (83) could further enhance this activity and specificity against cancer histologies beyond 383 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+ccRCC but could elicit different downstream responses from the present study. PDO may also nominate 384 
+
+clinical biomarkers, since the observed anti-CD47 induction of cytokine secretion (CCL3, CCL4, TNFA) 385 
+
+and SPP1 in organoids were all confirmed in patient plasma and serum from a magrolimab monotherapy 386 
+
+phase I trial (40). 387 
+
+388 
+
+Overall, the present TME organoid model should enable mechanistic investigations of tumor macrophage 389 
+
+biology, immune network interactions and treatment resistance that have been previously inaccessible to 390 
+
+conventional in vitro methods. The intact human immune TME of ALI organoids may also allow 391 
+
+biomarker discovery and precision medicine identification of tumor types and patient subsets that might 392 
+
+optimally respond to functional macrophage modulation, such as ccRCC. Such studies could also facilitate 393 
+
+pre-clinical development of next-generation TAM therapeutics for targets beyond our proof-of-principle 394 
+
+explorations with anti-CD47. Finally, through recapitulation of the in vivo biology of macrophages and 395 
+
+their interactions with other immune subsets and epithelium, the current organoid method may find 396 
+
+application to additional categories of human disease, such as infectious disease and autoimmunity. 397 
+
+398 
+
+399 
+
+400 
+
+401 
+
+402 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Methods 403 
+
+> 404
+
+Human specimens 405 
+
+Tumor specimens from surgical resections used for ALI patient-derived tumor organoid (PDO) generation 406 
+
+were obtained through the Stanford Hospital Tissue Bank. All experiments using human tissue were 407 
+
+approved by the Stanford University Institutional Review Board. Tumors from 170 patients included clear 408 
+
+cell renal cell carcinoma (ccRCC; N=67), non-small cell lung cancer (NSCLC; N=46), colorectal 409 
+
+adenocarcinoma (CRC, N=31), cutaneous squamous carcinoma (cSCC; N=7), malignant melanoma (MM: 410 
+
+N=4), pancreatic adenocarcinoma (PDAC; N=6), gastric adenocarcinoma (GAC: N=3), and glioblastoma 411 
+
+GBM; (N=6) under IRB-28908 approved by the Research Compliance Office of Stanford University. 412 
+
+Patient characteristics are presented in Supplementary Table S1 .413 
+
+> 414
+
+Establishment of ALI tumor organoid cultures 415 
+
+Transwell inserts (60 mm 2) with a membranous bottom (Millipore, PICM03050) were placed into wells of 416 
+
+a 6-well plate. Collagen mixtures were prepared by mixing Cellmatrix Type I-A (FUJIFILM Wako,637-417 
+
+00653), 10x concentrated Ham’s F-12 (Gibco, 21700075), and reconstitution buffer (260 mM NaHCO 3,418 
+
+0.05 M NaOH and 200 mM HEPES) on ice at a ratio of 8:1:1. 1 ml of reconstituted collagen mixture was 419 
+
+added to each insert, which served as a bottom layer without tissue. This bottom layer was left to solidify 420 
+
+for 10 min in a 37 °C incubator. Surgically resected tumor tissues were minced finely with iris scissors on 421 
+
+a petri dish and added to the remaining collagen mixture after wash with PBS. 1 ml of WENR media (50% 422 
+
+ADMEM/F12 (Gibco, 12634028) with 50% WNT3A-, RSPO1-, Noggin-containing media (L-WRN, CRL-423 
+
+3276 TM , ATCC) and HEPES (1 mM, Gibco, 15630080), Glutamax (1X, Gibco, 35050061), nicotinamide 424 
+
+(10 nM, Sigma, N0636-500G), N-acetylcysteine (1 mM, Sigma, A9165-100G), B-27 without vitamin A 425 
+
+(1X, Gibco, 125870-01), A83-01 (0.5 μM, Tocris, 2939), Pen-Strep glutamine (1X, Gibco, 10378016), 426 
+
+gastrin (10 μM, Sigma, G9145), EGF (50 ng/ml, PeproTech, AF-100-15)), and supplemented with 427 
+
+Normocin (Invitrogen, ant-nr-2), 5% FBS (Biotechne, S11550), 10 μM Y-27632 dihydrochloride 428 
+
+(Biogems, 1293823), 10 μM CHIR 99021 (Biogems, 2520691), IL-2 (100 IU/ml, Peprotech, 200-02) was 429 
+
+added into each well of the 6-well plate outside of the inserts, generating an air-liquid interface (58,59). 430 
+
+> 431
+
+ALI tumor organoid culture and immune modulation treatments 432 
+
+All experiments modulating the ALI organoid immune component were performed in WENR media 433 
+
+described above. To block the CD47-SIRPα axis, an anti-human CD47 antibody (BioXcell, clone: B6.H12, 434 
+
+BE0019-1) or human IgG1 isotype control (BioXcell, BE0297) were added to the culture medium, each at 435 
+
+20 μg/ml, for 7 days. For macrophage polarization experiments, recombinant human IFN-γ (PeproTech, 436 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+300-02) was added at 100 ng/ml for M1 polarization and recombinant human IL-4 (PeproTech, 200-04) at 437 
+
+50 ng/ml for M2 polarization. After 24 hours incubation, ALI tumor organoids were analyzed and 438 
+
+macrophages were isolated by FACS. For macrophage loss-of-function experiments, PLX5622 439 
+
+(Selleckchem, S8874) was used at 10 nM and analyzed at day 8 by flow cytometry and IF staining. 440 
+
+> 441
+
+Organoid cryopreservation 442 
+
+ALI PDO were generated as above and grown for at least 5 days. Each organoid containing collagen gel 443 
+
+was carefully removed from the insert and replaced into 1 ml of cryopreservation media (Bambanker) and 444 
+
+stored at -80℃ for at least 24 h. For cryorecovery, gels were quickly thawed in 37℃ water bath and each 445 
+
+organoid-containing collagen gels were washed with WENR media for 2 times in tissue culture dishes. 446 
+
+Gels were then mounted on the top of bottom layer of collagen gel as described, and a further 500 μl of 447 
+
+collagen-mixture was layered on top. After solidifying for 10 min in a 37℃ incubator, 1 ml of media was 448 
+
+added to each well. 449 
+
+> 450
+
+Immunofluorescence 451 
+
+Unstained sections from FFPE were deparaffinized and rehydrated, followed by antigen retrieval using 452 
+
+citrate-based buffer (MilliporeSigma, C9999) at 95℃ for 20 minutes in a steamer. Sections were blocked 453 
+
+with 10% donkey serum (Jackson ImmunoResearch, 017-000-121) for 1 hour at room temperature (RT). 454 
+
+Primary antibodies were incubated overnight at 4℃, followed by secondary antibodies incubation with 455 
+
+DAPI for 1 hour at RT. Sections were mounted in mounting medium (Vector Laboratories, H-5501) and 456 
+
+cover-slipped. As for whole mount immunofluorescence, the organoid containing collagen matrix was cut 457 
+
+into smaller pieces, then fixed in 4% paraformaldehyde (PFA) for 1 h at RT and washed with PBS. PFA 458 
+
+was quenched with PBS-glycine (130 mM NaCl, 13.2 mM Na 2HPO 4, 3.5 mM NaH 2PO 4, 100 mM glycine 459 
+
+in PBS at pH 7.4) for 30 minutes at RT with gentle rocking. After washing, the collagen pieces were 460 
+
+incubated in blocking solution (10% donkey serum diluted in permeabilizing solution (130 mM NaCl, 13.2 461 
+
+mM Na 2HPO 4, 3.5 mM NaH 2PO 4, 7.7 mM NaN 3, 15 μM BSA, 2% Triton X-100, 0.5% TWEEN-20 in 462 
+
+PBS at pH 7.4) for 2 hours at RT with gentle rocking. The collagen pieces were then stained with primary 463 
+
+antibodies diluted in blocking solution for 1-3 days at RT with gentle rocking. After washes with 464 
+
+permeabilizing solution, the collagen pieces were incubated with secondary antibodies diluted in blocking 465 
+
+solution for 4 hours at RT with gentle rocking. The collagen pieces were transferred and mounted on slide. 466 
+
+Vacuum grease was used around the collagen pieces to avoid flattening the organoids inside. Alternatively, 467 
+
+whole mount staining was performed by dissolving collagen gels with collagenase IV (Worthington, 468 
+
+LS004212) at 37 °C for 40 min to release intact organoids followed by the same procedure as above. All 469 
+
+images were taken using Keyence BZ-X700 microscope or Zeiss LSM900 or LSM980 confocal 470 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+microscopes. Immunofluorescence staining of sections and whole-mount organoids used the following 471 
+
+anti-human antibodies: anti-CD68 (Abcam, ab213363), anti-CD68 (Agilent Dako, M0876), Alexa Fluor 472 
+
+555-anti-CD68 (Abcam, ab279323), anti-IBA1 (FUJIFILM Wako, 019-19741), anti-PAX8 (Proteintech, 473 
+
+10336-1-AP), anti-TTF1 (Abcam, ab76013), anti-pan-cytokeratin (Abcam, ab7753), Alexa Fluor 488-anti-474 
+
+pan-cytokeratin (Abcam, ab277270), anti-cytokeratin 19 (Biotechne, AF3506), anti-EpCAM (Abcam, 475 
+
+ab79079), anti-EpCAM (Abcam, ab223582), anti-GFAP (Thermo Fisher Scientific, 13-0300), anti-476 
+
+melanoma (Abcam, ab732), anti-CXCL9 (Biotechne, AF392), anti-CCL17 (Abcam, ab195044), anti-CD3 477 
+
+(Abcam, ab11089) and anti-osteopontin (Biotechne, AF1433). 478 
+
+> 479
+
+Flow cytometry analysis and FACS isolation 480 
+
+Organoids were dissociated in collagenase IV (Worthington, LS004212) at 37 °C for 40 min, washed in 481 
+
+PBS and digested using a tumor dissociation kit (Miltenyi Biotec, 130-095-929) following the 482 
+
+manufacturer’s protocol at 37 °C for 30 min. Samples were stained in Zombie Aqua (BioLegend, 423101) 483 
+
+at RT for 20 min, after wash and filtration through FACS tubes in PBS. Surface marker staining used the 484 
+
+following antibodies: Apoptracker TM Green (BioLegend, 427402), anti-CD68-PE (BioLegend, 333808), 485 
+
+anti-CD14-PerCP/Cy5.5 (BioLegend, 324622), anti-CD80-PE/Cy7 (BioLegend, 375408), anti-EpCAM-486 
+
+APC (BioLegend, 324208), anti-CD206-Alexa Fluor 700 (BioLegend, 321132), anti-CD40-APC/Cy7 487 
+
+(BioLegend, 334323), anti-CD11b-BV421 (BioLegend, 301324), anti-CD86-BV605 (BioLegend, 488 
+
+374213), anti-HLA-DR-BV650 (BioLegend, 307650), anti-CD163-BV786 (BioLegend, 333632), anti-489 
+
+CD45-BUV395 (BD Horizon, 563792), anti-CD8-FITC (BioLegend, 301060), anti-CD3-PE (BioLegend, 490 
+
+300408), anti-CD45-APC (BioLegend, 304012), anti-CCR7-Alexa Fluor 700 (BioLegend, 353244), anti-491 
+
+CD4-APC/Cy7 (BioLegend, 300518), anti-CD45RA-BV786 (BioLegend, 304140), anti-CD90-Alexa 492 
+
+Fluor 700 (BioLegend, 328120), anti-CD47-BV605 (BioLegend, 323120), anti-CD3-PrCP/Cy5.5 493 
+
+(BioLegend, 300328), all diluted at 1:50 in FACS buffer and stained on ice except for Apoptracker TM Green 494 
+
+which was stained at 400 nM. After wash in FACS buffer, the organoid cells were sorted and analyzed in 495 
+
+a BD FACSAria-Ⅱ SORP machine after sequential gating for viable cells and singlet cells. Macrophages 496 
+
+were gated on CD45+CD11b+HLA-DR+CD68+ cells. We used CD163 to distinguish monocytes 497 
+
+(CD45+CD11b+HLA-DR+CD14+CD163-) versus TAM (CD45+CD11b+HLA-DR+CD14+CD163+). 498 
+
+Representative gating strategy is shown in Supplementary Fig. S1A .499 
+
+> 500
+
+Bead-based phagocytosis assay using imaging flow cytometry 501 
+
+Single suspension PDO cells (1 x 10 5) were co-cultured with 1 x 10 5 streptavidin-coated fluorescent 502 
+
+magnetic particles yellow (Spherotech, FSVM-8052-2) in a 96 well ultra-low attachment round bottom 503 
+
+plate (Corning, 7007). at 37℃ or 4℃ for 2 h. After co-culture, cells were stained with for FACS using 504 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+anti-CD45 BUV396, anti-CD11b BV421, HLA-DR BV650 and anti-CD163 BV786. Single cell images 505 
+
+were acquired in an imaging cytometer BD FACS Discover S8 sorter. After strictly gating on 506 
+
+CD45+CD11b+HLA-DR+CD163+ macrophages, macrophages that further phagocytosed FITC positive 507 
+
+beads were enumerated in FlowJo 10. 508 
+
+> 509
+
+pHrodo-based phagocytosis assay 510 
+
+Intact ALI organoids were plated at 50-100 organoids per well in a 96-well flat bottom plate (Corning, 511 
+
+353072) and allowed to adhere overnight. Organoids were incubated with 100 μg/ml pHrodo TM Red E.coli 512 
+
+BioParticles TM Conjugate for Phagocytosis (Invitrogen, P35361) ± 1 μM Cytochalasin D (Invitrogen, 513 
+
+PHZ1063). Changes in fluorescence were monitored with an Incucyte Live Cell Analysis System. 514 
+
+> 515
+
+Cell-based phagocytosis assay 516 
+
+Single cell suspension ALI PDO cells were incubated with magnetic beads to isolate TAM (CD11b: 517 
+
+Miltenyi Biotec, 130-097-142) and tumor cells (EpCAM, Miltenyi Biotec, 130-061-101) by magnetic cell 518 
+
+separation following the manufacturer’s protocol. Organoid-derived TAM and tumor cells were pre-labeled 519 
+
+with CellTracker TM Deep Red (Thermo Fisher Scientific, C34565) and Calcein AM (Thermo Fisher 520 
+
+Scientific, C3100MP) respectively. 1 x 10 4 of single cell suspension of CD11b+ organoid TAM and 521 
+
+EpCAM+ organoid tumor cells were co-cultured and incubated at 37℃ or 4℃ for 2 h in a 96 well ultra-522 
+
+low attachment round bottom plates (Corning, 7007) with IgG1 isotype control or anti-CD47 (clone 523 
+
+B6H12) prior to co-culture. After 2 hours incubation, plates were centrifuged after washing with ice cold 524 
+
+FACS buffer. Cells were stained with anti-CD45 BUV396, anti-CD11b BV421, anti-HLA-DR BV650 and 525 
+
+anti-CD163 BV786, as described above and analyzed by FACS. The fraction of CellTracker TM Deep 526 
+
+Red+CD45+CD11b+HLA-DR+CD163+ cells that was additionally positive for Calcein AM was 527 
+
+calculated as macrophages that had phagocytosed the Calcein AM(+) tumor cells. 528 
+
+> 529
+
+Cytokine quantification from organoid culture supernatants 530 
+
+Conditioned medium from PDO were collected at day 8 of culture, reflecting 3 days after media change 531 
+
+immediately frozen at -80 °C. On the day of assay, samples were thawed at RT. Luminex bead-based assays 532 
+
+(MILLIPLEX HCYTA-60K-PX48 and MILLIPLEX HCD8MAG15K17PMX, Millipore) were used to 533 
+
+quantitate cytokines, and the assay was performed following to manufacturer’s protocol at the Stanford 534 
+
+Human Immune Monitoring Center. Secreted SPP1 (osteopontin) was quantified by sandwich ELISA. A 535 
+
+commercially available anti-human SPP1 monoclonal (R&D Systems, mAb1433) was used as the 536 
+
+capturing antibody and was coated in PBS at 4 μg/ml onto 96-well ELISA plates for 2 hours after blocking 537 
+
+with 1% BSA in PBS. Purified recombinant human SPP1 (R&D systems, 1433-OP) was used as standards 538 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+to construct calibration curves. Culture supernatant from organoids (1:30 and 1:300 dilutions) and 539 
+
+standards were diluted with 1% BSA in PBS and incubated in the wells for 2 hours. After washing with 540 
+
+0.05% Tween-20 in PBS, the samples were incubated with biotinylated anti-human SPP1 detection 541 
+
+antibody (500 ng/ml, R&D Systems, BAF1433) in PBS with 1% BSA for 1 hour followed by washing and 542 
+
+incubation with HRP-streptavidin (200 ng/ml) in PBS with 1% BSA for 1 hour. After washing, 543 
+
+tetramethylbenzidine substrate was incubated for 10 minutes followed by the addition of Stop solution 544 
+
+(Alpha Diagnostic International) and measurement of absorbance at 450 nm. The concentrations of 545 
+
+osteopontin in samples were calculated from the calibration curves of the purified osteopontin standards. 546 
+
+> 547
+
+Cytokine quantitation from human patient plasma 548 
+
+Patient plasma was collected from advanced solid tumors treated with the anti-CD47 blocking antibody 549 
+
+magrolimab as part of a phase I clinical trial (NCT02216409)(40). Cytokine (CCL3, CCL4, IFN-gamma, 550 
+
+CXCL-9, CXCL-10, and TNF-alpha) concentrations were measured using fit-for-purpose validated Simple 551 
+
+Plex TM assays using the Ella TM automated immunoassay platform (Bio-Techne, Minneapolis MN). Briefly, 552 
+
+plasma samples, stored at -80 °C, were thawed at RT, diluted with an equal volume of assay diluent SD13 553 
+
+(Bio-Techne, Minneapolis, MN) and loaded into wells of the Simple Plex TM cartridge. High and Low 554 
+
+control samples were also loaded into each cartridge to monitor assay performance. Cartridges were 555 
+
+analyzed on the Ella TM instrument, where analytes are detected using specific capture and fluorescent-556 
+
+labeled detection antibodies in microfluidic channels. The intensity of the fluorescent signal is proportional 557 
+
+to the amount of analyte present in the sample. Analyte concentrations are interpolated from a factory-558 
+
+generated standard curve for each cartridge. All data analyzed met pre-specified acceptance criteria. 559 
+
+Luminex Discovery Assay (R&D Systems, LXSAH15) was used to quantify SPP1/osteopontin (OPN) 560 
+
+from human patient serum (N=6) collected at various timepoints from a phase I magrolimab clinical trial 561 
+
+(NCT02216409) (40). 562 
+
+> 563
+
+Single cell RNA-seq analysis 564 
+
+ALI tumor organoid cultures were dissociated 8 days after anti-CD47 or IgG1 isotype control treatment as 565 
+
+described above. Fresh tumor tissues were dissociated on the same day of receiving samples. Live CD45+ 566 
+
+or CD45+CD11b+HLA-DR+CD68+ organoid cells or fresh tumor tissues were purified by FACS into PBS 567 
+
+with 10% FBS and subjected to droplet based scRNA-seq with the 10X Genomics Chromium single cell 568 
+
+5’ platform following to the manufacturer’s protocol using the Chromium NextGEM Single Cell 5’ Kit v2 569 
+
+(PN-1000263) and Library Construction Kit (PN-1000190). Gene expression matrices (GEXs) for each 570 
+
+sample were generated using CellRanger (v7.2.0) with the hg38 reference genome for alignment, filtering, 571 
+
+barcode counting, and UMI counting. The resulting GEXs were loaded into R (v4.3.3) and converted into 572 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Seurat objects using the Seurat package (v5.1.0). Low-quality cells were removed for (1) total number of 573 
+
+unique genes per cell fewer than 300 and greater than 3,000-5,000, (2) total UMI counts greater than 574 
+
+10,000-20,000 and (3) greater than 10%-15% of reads mapping to mitochondrial genes. 575 
+
+After filtering, cells from all samples were merged. Next, data were normalized, transformed and 576 
+
+scaled using SCTransform v2. Principal component analysis (PCA) was performed, and variation 577 
+
+(including sample, group, and tissue type) were corrected using Harmony (v.1.2.1). Cells were clustered 578 
+
+using the Louvain algorithm, and dimensionality reduction was conducted via uniform manifold 579 
+
+approximation and projection for dimension reduction (UMAP). Macrophages and T cells were identified 580 
+
+using well-known marker genes (CD68 and LYZ for macrophages and CD3D for T cells). Subsets of 581 
+
+macrophages and T cells were subsequently extracted and subjected to additional clustering for 582 
+
+identification of minor cell populations within each subset. Differential expression analysis was performed 583 
+
+on macrophages using the FindMarkers in the Seurat R package. Genes with a log 2 fold-change greater 584 
+
+than 1.0 and adjusted p-values (FDR: False Discovery Rate) below 0.05 were considered significant DEGs 585 
+
+in organoid TAM treated by anti-CD47 versus IgG1. To construct single-cell trajectories, the integrated 586 
+
+Seurat object was converted into a CellDataSet. Trajectory graphs were computed using the learn graph 587 
+
+function in the Monocle3 R package (v 1.3.7) and cells were ordered along the trajectory designating C1Q+ 588 
+
+TAMs as the root population. Cell-cell interaction was inferred by CellChat (v 2.1.2), which employs a 589 
+
+curated ligand-receptor interaction database. We computed interaction for anti-CD47 and IgG1 treated 590 
+
+conditions separately and generated individual CellChat objects for each. Two objects were then merged 591 
+
+to identify differential interactions between two experimental groups. 592 
+
+> 593
+
+Bulk RNA-seq analysis 594 
+
+Viable CD45+CD11b+HL-DR+CD68+ cells from organoids were purified through FACS isolation into 595 
+
+PBS with 10% FBS. After RNA isolation using the PicoPure RNA isolation kit (Applied Biosystems, 596 
+
+KIT0204), isolated RNA sample quality and quantity was assessed using the BioAnalyzer RNA Pico 597 
+
+Assay. Library construction was performed following the manufacturer’s protocol for SMART-seq v4 598 
+
+Ultra Low Input RNA kit. Libraries were sequenced on an Illumina NovaSeq X Plus. Raw reads were 599 
+
+processed using fastp software to remove adapter sequences, low-quality reads, and ploy-N stretches. The 600 
+
+cleaned reads were then aligned to hg38 reference genomes using Hisat2 (v2.0.5). Raw gene expression 601 
+
+levels were generated with featureCounts(v1.5.0-p3), and FPKM values were calculated based on gene 602 
+
+length and raw reads count. Differential expression analysis was performed using DESeq2 (v1.42.1), and 603 
+
+genes with a log 2 fold-change greater than 1.0 and FDR below 0.05 were considered significant. 604 
+
+Gene set scores for Kyoto Encyclopedia of Genes and Genomes (KEGG) pathways were computed 605 
+
+using gsva function from the GSVA R package (v1.50.5). For pathway analysis, significant DEGs 606 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+identified from single cell and bulk RNA sequencing dataset were ranked by their log 2 fold-change and 607 
+
+used as input for a pre-ranked gene set enrichment analysis. Gene ontology (GO) terms (Biological Process, 608 
+
+Molecular Function, and Cellular Component) and KEGG pathways were analyzed using gseGO and 609 
+
+gseKEGG functions in the clusterProfiler R packages (v 4.10.1). Gene expression heatmap of selected gene 610 
+
+signatures were normalized to average expressions of individual genes. 611 
+
+> 612
+
+Targeted DNA sequencing to detect genomic mutation of fresh tumor and organoids 613 
+
+Genomic DNA was extracted from pairs of fresh tumor and day 8 ALI PDO cultures using the DNA Easy 614 
+
+Blood & Tissue Kit (Qiagen, 69506). DNA was submitted to the STAMP (Stanford Actionable Mutation 615 
+
+Panel for Solid Tumors) assay. The Stanford Actionable Mutation Panel (STAMP) for solid tumors is a 616 
+
+targeted next-generation sequencing assay covering a total of 200 genes with potentially clinically 617 
+
+actionable mutations and/or frequently mutated in cancers (60). The workflow includes acoustic sonication 618 
+
+of tumor genomic DNA, followed by preparation of sequencing libraries and a target enrichment approach 619 
+
+to capture genomic regions of interest for sequencing. The enrichment was performed using custom-620 
+
+designed libraries of capture oligonucleotides that target a specific set of genomic regions. Pooled libraries 621 
+
+were sequenced on an Illumina sequencing instrument. Pooled Fastq files were demultiplexed, and reads 622 
+
+with non-matching barcodes were discarded. Mapping was performed against the human reference genome 623 
+
+hg19, and variants are called separately for single-nucleotide variants (SNVs), indels, fusions, and copy 624 
+
+number alterations. Variant calling results were converted to a VCF format, and genotyping and QC reports 625 
+
+were generated and reviewed by a board-certified Molecular Genetic Pathologist. 626 
+
+> 627
+
+Machine learning model evaluation of activated microglia 628 
+
+Immunofluorescence image of glioblastoma ALI PDO stained with anti-IBA1 (FUJIFILM Wako, 019-629 
+
+19741) and DAPI were analyzed by a deep learning-based classification model that was developed to 630 
+
+distinguish activated and resting microglia based on morphological characteristics. The model was based 631 
+
+on EfficientNet, a convolutional neural network family optimized for biomedical image analysis (61). The 632 
+
+model’s performance was evaluated using precision-recall metrics and AUC-ROC. Images were processed 633 
+
+to determine the total number and proportion of activated and resting microglia. Code is available upon 634 
+
+request. 635 
+
+> 636
+
+Statistics and reproducibility 637 
+
+All data are representative of at least 3 biological replicates. Non-parametric two-tailed Mann-Whitney 638 
+
+tests were used to determine statistical significance for two samples from different patients, and two-tailed 639 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Wilcoxon tests were used for two paired samples from the same patients. P values are denoted as *p640 
+
+=<0.05, ** p =<0.01 and *** p =<0.001. 641 
+
+> 642
+
+Data Availability 643 
+
+This study did not generate new unique reagents. Single-cell RNA-seq (GSE292336) data and RNA-seq 644 
+
+data (GSE292328) have been deposited at GEO. All original code has been deposited at 645 
+
+https://doi.org/10.5281/zenodo.17087682. 646 
+
+> 647
+
+Authors’ Disclosures 648 
+
+RM is on the Advisory Boards of Kodikaz Therapeutic Solutions, Orbital Therapeutics, Pheast 649 
+
+Therapeutics, 858 Therapeutics, Prelude Therapeutics, Mubadala Capital, and Aculeus Therapeutics. R.M. 650 
+
+is a co-founder and equity holder of Pheast Therapeutics, MyeloGene Orbital Therapeutics and 651 
+
+Sequentify. CJK is an inventor on a patent describing organoid modeling of tumor-resident immune 652 
+
+populations and is a co-founder and equity holder for Surrozen, Inc and Mozart Therapeutics. 653 
+
+> 654
+
+Author’s Contributions 655 
+
+Conceptualization, MN, CJK. Data curation, LH, RN, JPB. Visualization, LH, RN, MN. Investigation, 656 
+
+MN, YLI, YLIU, YPY, MP, LPM, LZ, ET, JP, AF, MFE, KY, CR, HH, RP. Resources, YPY, JO, AB, 657 
+
+PD, RM, ATG, JL, EN, ML, CKP, MHG, JTL, LLKL, ASC. Methodology: MN, CJK. Writing – original 658 
+
+draft: MN, CJK. Writing – review and editing, MN, RM, JB, CJK. Project administration: RM, MMD, 659 
+
+MB, LLKL, JO, JB. Supervision, CJK. 660 
+
+> 661
+
+Acknowledgments 662 
+
+We thank members of the Kuo, Majeti and Bassik laboratories and Kouta Niizuma and Masashi Miyauchi 663 
+
+for discussions. We also thank Stanford core facilities for FACS (Catherine Carswell-Crumpton, Cheng 664 
+
+Pan, Joe Pasillas), Human Histology (Pauline Chu), Human Immune Monitoring Center (Iris Herschmann, 665 
+
+Yael Rosenberg-Hasson, Holden Maecker), Bioinformatics Service Center (bioinformatics services and 666 
+
+computing resources) and Tissue Bank (sample provision). These studies were supported by the Japan 667 
+
+Society for the Promotion of Science Overseas Research Fellowship (MN), a Uehara Memorial 668 
+
+Foundation Research Fellowship (MN), and a Stanford University School of Medicine Dean’s 669 
+
+Postdoctoral Fellowship (MN, ET) and a BRAF LGG consortium research fund (CKP), Support was also 670 
+
+provided from the National Institutes of Health 5T32DK705648 (JP), R01CA251514 (CJK), 671 
+
+U54CA261717 (CJK, CKP), U54CA261719 (CJK), U54CA224081 (CJK) and OT2CA278713 (CJK), the 672 
+
+Scientific Foundation of the Spanish Association Against Cancer, AECC (CJK), the PROMINENT team 673 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+supported by the Cancer Grand Challenges partnership, Cancer Research UK CGCATF-2021/100010 674 
+
+(CJK) and the Stanford Ludwig Center for Cancer Stem Cell Research and Medicine (RM, CJK). Lastly, 675 
+
+we are grateful to the participating patients, their family members and the nurses, investigators, and study 676 
+
+staff who contributed to this study. 677 
+
+678 
+
+679 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+References 680 
+
+1. Hanahan D. Hallmarks of Cancer: New Dimensions. Cancer Discov 2022 ;12(1):31-46 doi 681 
+
+10.1158/2159-8290.CD-21-1059. 682 
+
+2. de Visser KE, Joyce JA. The evolving tumor microenvironment: From cancer initiation to 683 
+
+metastatic outgrowth. Cancer Cell 2023 ;41(3):374-403 doi 10.1016/j.ccell.2023.02.016. 684 
+
+3. Binnewies M, Roberts EW, Kersten K, Chan V, Fearon DF, Merad M , et al. Understanding the 685 
+
+tumor immune microenvironment (TIME) for effective therapy. Nat Med 2018 ;24(5):541-50 doi 686 
+
+10.1038/s41591-018-0014-x. 687 
+
+4. Li MO, Wolf N, Raulet DH, Akkari L, Pittet MJ, Rodriguez PC , et al. Innate immune cells in the 688 
+
+tumor microenvironment. Cancer Cell 2021 ;39(6):725-9 doi 10.1016/j.ccell.2021.05.016. 689 
+
+5. Pittet MJ, Michielin O, Migliorini D. Clinical relevance of tumour-associated macrophages. Nat 690 
+
+Rev Clin Oncol 2022 ;19(6):402-21 doi 10.1038/s41571-022-00620-6. 691 
+
+6. Mantovani A, Allavena P, Marchesi F, Garlanda C. Macrophages as tools and targets in cancer 692 
+
+therapy. Nat Rev Drug Discov 2022 ;21(11):799-820 doi 10.1038/s41573-022-00520-5. 693 
+
+7. Wynn TA, Chawla A, Pollard JW. Macrophage biology in development, homeostasis and disease. 694 
+
+Nature 2013 ;496(7446):445-55 doi 10.1038/nature12034. 695 
+
+8. Cassetta L, Pollard JW. A timeline of tumour-associated macrophage biology. Nat Rev Cancer 696 
+
+2023 ;23(4):238-57 doi 10.1038/s41568-022-00547-1. 697 
+
+9. Bleriot C, Dunsmore G, Alonso-Curbelo D, Ginhoux F. A temporal perspective for tumor-698 
+
+associated macrophage identities and functions. Cancer Cell 2024 ;42(5):747-58 doi 699 
+
+10.1016/j.ccell.2024.04.002. 700 
+
+10. Mantovani A, Sica A, Locati M. Macrophage polarization comes of age. Immunity 701 
+
+2005 ;23(4):344-6 doi 10.1016/j.immuni.2005.10.001. 702 
+
+11. Murray PJ, Allen JE, Biswas SK, Fisher EA, Gilroy DW, Goerdt S , et al. Macrophage activation 703 
+
+and polarization: nomenclature and experimental guidelines. Immunity 2014 ;41(1):14-20 doi 704 
+
+10.1016/j.immuni.2014.06.008. 705 
+
+12. Cheng S, Li Z, Gao R, Xing B, Gao Y, Yang Y , et al. A pan-cancer single-cell transcriptional atlas 706 
+
+of tumor infiltrating myeloid cells. Cell 2021 ;184(3):792-809 e23 doi 10.1016/j.cell.2021.01.010. 707 
+
+13. Ma RY, Black A, Qian BZ. Macrophage diversity in cancer revisited in the era of single-cell omics. 708 
+
+Trends Immunol 2022 ;43(7):546-63 doi 10.1016/j.it.2022.04.008. 709 
+
+14. Matusiak M, Hickey JW, van IDGP, Lu G, Kidzinski L, Zhu S , et al. Spatially Segregated 710 
+
+Macrophage Populations Predict Distinct Outcomes in Colon Cancer. Cancer Discov 711 
+
+2024 ;14(8):1418-39 doi 10.1158/2159-8290.CD-23-1300. 712 
+
+15. Mulder K, Patel AA, Kong WT, Piot C, Halitzki E, Dunsmore G , et al. Cross-tissue single-cell 713 
+
+landscape of human monocytes and macrophages in health and disease. Immunity 714 
+
+2021 ;54(8):1883-900 e5 doi 10.1016/j.immuni.2021.07.007. 715 
+
+16. Obradovic A, Chowdhury N, Haake SM, Ager C, Wang V, Vlahos L , et al. Single-cell protein 716 
+
+activity analysis identifies recurrence-associated renal tumor macrophages. Cell 717 
+
+2021 ;184(11):2988-3005 e16 doi 10.1016/j.cell.2021.04.038. 718 
+
+17. Su Z, He Y, You L, Chen J, Zhang G, Liu Z. SPP1+ macrophages and FAP+ fibroblasts promote 719 
+
+the progression of pMMR gastric cancer. Sci Rep 2024 ;14(1):26221 doi 10.1038/s41598-024-720 
+
+76298-w. 721 
+
+18. Yue B, Xiong D, Chen J, Yang X, Zhao J, Shao J , et al. SPP1 induces idiopathic pulmonary fibrosis 722 
+
+and NSCLC progression via the PI3K/Akt/mTOR pathway. Respir Res 2024 ;25(1):362 doi 723 
+
+10.1186/s12931-024-02989-7. 724 
+
+19. Bill R, Wirapati P, Messemaker M, Roh W, Zitti B, Duval F , et al. CXCL9:SPP1 macrophage 725 
+
+polarity identifies a network of cellular programs that control human cancers. Science 726 
+
+2023 ;381(6657):515-24 doi 10.1126/science.ade2292. 727 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+20. Cha SM, Park JW, Lee YJ, Lee HJ, Lee H, Lee IW , et al. SPP1+ macrophages in HR+ breast 728 
+
+cancer are associated with tumor-infiltrating lymphocytes. NPJ Breast Cancer 2024 ;10(1):83 doi 729 
+
+10.1038/s41523-024-00695-7. 730 
+
+21. Klement JD, Paschall AV, Redd PS, Ibrahim ML, Lu C, Yang D , et al. An osteopontin/CD44 731 
+
+immune checkpoint controls CD8+ T cell activation and tumor immune evasion. J Clin Invest 732 
+
+2018 ;128(12):5549-60 doi 10.1172/JCI123360. 733 
+
+22. Shurin MR. Osteopontin controls immunosuppression in the tumor microenvironment. J Clin 734 
+
+Invest 2018 ;128(12):5209-12 doi 10.1172/JCI124918. 735 
+
+23. Sangaletti S, Tripodo C, Sandri S, Torselli I, Vitali C, Ratti C , et al. Osteopontin shapes 736 
+
+immunosuppression in the metastatic niche. Cancer Res 2014 ;74(17):4706-19 doi 10.1158/0008-737 
+
+5472.CAN-13-3334. 738 
+
+24. Wang KX, Denhardt DT. Osteopontin: role in immune regulation and stress responses. Cytokine 739 
+
+Growth Factor Rev 2008 ;19(5-6):333-45 doi 10.1016/j.cytogfr.2008.08.001. 740 
+
+25. Lyu A, Fan Z, Clark M, Lea A, Luong D, Setayesh A , et al. Evolution of myeloid-mediated 741 
+
+immunotherapy resistance in prostate cancer. Nature 2025 ;637(8048):1207-17 doi 742 
+
+10.1038/s41586-024-08290-3. 743 
+
+26. Jiang W, Liu L, Xu Z, Qiu Y, Zhang B, Cheng J , et al. SPP1+ Tumor-Associated Macrophages 744 
+
+Drive Immunotherapy Resistance via CD8+ T-cell Dysfunction in Clear-Cell Renal Cell 745 
+
+Carcinoma. Cancer Immunol Res 2025 ;13(10):1533-46 doi 10.1158/2326-6066.CIR-24-1146. 746 
+
+27. Zhang S, Peng W, Wang H, Xiang X, Ye L, Wei X , et al. C1q(+) tumor-associated macrophages 747 
+
+contribute to immunosuppression through fatty acid metabolic reprogramming in malignant 748 
+
+pleural effusion. J Immunother Cancer 2023 ;11(8) doi 10.1136/jitc-2023-007441. 749 
+
+28. Revel M, Sautes-Fridman C, Fridman WH, Roumenina LT. C1q+ macrophages: passengers or 750 
+
+drivers of cancer progression. Trends Cancer 2022 ;8(7):517-26 doi 10.1016/j.trecan.2022.02.006. 751 
+
+29. Roumenina LT, Daugan MV, Noe R, Petitprez F, Vano YA, Sanchez-Salas R , et al. Tumor Cells 752 
+
+Hijack Macrophage-Produced Complement C1q to Promote Tumor Growth. Cancer Immunol Res 753 
+
+2019 ;7(7):1091-105 doi 10.1158/2326-6066.CIR-18-0891. 754 
+
+30. Leader AM, Grout JA, Maier BB, Nabet BY, Park MD, Tabachnikova A , et al. Single-cell analysis 755 
+
+of human non-small cell lung cancer lesions refines tumor classification and patient stratification. 756 
+
+Cancer Cell 2021 ;39(12):1594-609 e12 doi 10.1016/j.ccell.2021.10.009. 757 
+
+31. Zhang L, Li Z, Skrzypczynska KM, Fang Q, Zhang W, O'Brien SA , et al. Single-Cell Analyses 758 
+
+Inform Mechanisms of Myeloid-Targeted Therapies in Colon Cancer. Cell 2020 ;181(2):442-59 759 
+
+e29 doi 10.1016/j.cell.2020.03.048. 760 
+
+32. Swanson KV, Deng M, Ting JP. The NLRP3 inflammasome: molecular activation and regulation 761 
+
+to therapeutics. Nat Rev Immunol 2019 ;19(8):477-89 doi 10.1038/s41577-019-0165-0. 762 
+
+33. Mangan MSJ, Olhava EJ, Roush WR, Seidel HM, Glick GD, Latz E. Targeting the NLRP3 763 
+
+inflammasome in inflammatory diseases. Nat Rev Drug Discov 2018 ;17(9):688 doi 764 
+
+10.1038/nrd.2018.149. 765 
+
+34. Nasir I, McGuinness C, Poh AR, Ernst M, Darcy PK, Britt KL. Tumor macrophage functional 766 
+
+heterogeneity can inform the development of novel cancer therapies. Trends Immunol 767 
+
+2023 ;44(12):971-85 doi 10.1016/j.it.2023.10.007. 768 
+
+35. Majeti R, Chao MP, Alizadeh AA, Pang WW, Jaiswal S, Gibbs KD, Jr. , et al. CD47 is an adverse 769 
+
+prognostic factor and therapeutic antibody target on human acute myeloid leukemia stem cells. 770 
+
+Cell 2009 ;138(2):286-99 doi 10.1016/j.cell.2009.05.045. 771 
+
+36. Barkal AA, Brewer RE, Markovic M, Kowarsky M, Barkal SA, Zaro BW , et al. CD24 signalling 772 
+
+through macrophage Siglec-10 is a target for cancer immunotherapy. Nature 2019 ;572(7769):392-773 
+
+6 doi 10.1038/s41586-019-1456-0. 774 
+
+37. Brown EJ, Frazier WA. Integrin-associated protein (CD47) and its ligands. Trends Cell Biol 775 
+
+2001 ;11(3):130-5 doi 10.1016/s0962-8924(00)01906-1. 776 
+
+38. Logtenberg MEW, Scheeren FA, Schumacher TN. The CD47-SIRPalpha Immune Checkpoint. 777 
+
+Immunity 2020 ;52(5):742-52 doi 10.1016/j.immuni.2020.04.011. 778 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+39. Willingham SB, Volkmer JP, Gentles AJ, Sahoo D, Dalerba P, Mitra SS , et al. The CD47-signal 779 
+
+regulatory protein alpha (SIRPa) interaction is a therapeutic target for human solid tumors. Proc 780 
+
+Natl Acad Sci U S A 2012 ;109(17):6662-7 doi 10.1073/pnas.1121623109. 781 
+
+40. Sikic BI, Lakhani N, Patnaik A, Shah SA, Chandana SR, Rasco D , et al. First-in-Human, First-in-782 
+
+Class Phase I Trial of the Anti-CD47 Antibody Hu5F9-G4 in Patients With Advanced Cancers. J 783 
+
+Clin Oncol 2019 ;37(12):946-53 doi 10.1200/JCO.18.02018. 784 
+
+41. Chao MP, Alizadeh AA, Tang C, Myklebust JH, Varghese B, Gill S , et al. Anti-CD47 antibody 785 
+
+synergizes with rituximab to promote phagocytosis and eradicate non-Hodgkin lymphoma. Cell 786 
+
+2010 ;142(5):699-713 doi 10.1016/j.cell.2010.07.044. 787 
+
+42. Tseng D, Volkmer JP, Willingham SB, Contreras-Trujillo H, Fathman JW, Fernhoff NB , et al. 788 
+
+Anti-CD47 antibody-mediated phagocytosis of cancer by macrophages primes an effective 789 
+
+antitumor T-cell response. Proc Natl Acad Sci U S A 2013 ;110(27):11103-8 doi 790 
+
+10.1073/pnas.1305569110. 791 
+
+43. Advani R, Flinn I, Popplewell L, Forero A, Bartlett NL, Ghosh N , et al. CD47 Blockade by Hu5F9-792 
+
+G4 and Rituximab in Non-Hodgkin's Lymphoma. N Engl J Med 2018 ;379(18):1711-21 doi 793 
+
+10.1056/NEJMoa1807315. 794 
+
+44. Sallman DA, Al Malki MM, Asch AS, Wang ES, Jurcic JG, Bradley TJ , et al. Magrolimab in 795 
+
+Combination With Azacitidine in Patients With Higher-Risk Myelodysplastic Syndromes: Final 796 
+
+Results of a Phase Ib Study. J Clin Oncol 2023 ;41(15):2815-26 doi 10.1200/JCO.22.01794. 797 
+
+45. Zeidner JF, Sallman DA, Recher C, Daver NG, Leung AYH, Hiwase DK , et al. Magrolimab plus 798 
+
+azacitidine vs physician's choice for untreated TP53-mutated acute myeloid leukemia: the 799 
+
+ENHANCE-2 study. Blood 2025 ;146(5):590-600 doi 10.1182/blood.2024027408. 800 
+
+46. Daver N, Vyas P, Huls G, Dohner H, Maury S, Novak J , et al. The ENHANCE-3 study: venetoclax 801 
+
+and azacitidine plus magrolimab or placebo for untreated AML unfit for intensive therapy. Blood 802 
+
+2025 ;146(5):601-11 doi 10.1182/blood.2024027506. 803 
+
+47. Lakhani NJ, Chow LQM, Gainor JF, LoRusso P, Lee KW, Chung HC , et al. Evorpacept alone and 804 
+
+in combination with pembrolizumab or trastuzumab in patients with advanced solid tumours 805 
+
+(ASPEN-01): a first-in-human, open-label, multicentre, phase 1 dose-escalation and dose-806 
+
+expansion study. Lancet Oncol 2021 ;22(12):1740-51 doi 10.1016/S1470-2045(21)00584-2. 807 
+
+48. R. Lentz PB, J. Hu, T. Pitts, A. Bokhoven, H. Robinson, N. Balmaceda, E. Toegel, A. Leal, S. 808 
+
+Kim, S. Davis, C. Lieu, R. Wadlow, K. Spencer, A. Scott, P. Boland, H.Hochster, and W. A. 809 
+
+Messersmith. Results of a phase 2 study of evorpacept (E, ALX148), cetuximab (C), and 810 
+
+pembrolizumab (P) in patients with refractory microsatellite stable metastatic colorectal cancer 811 
+
+(MSS CRC). J Clin Oncol 2024 ;Volume 42, Number 16_suppl doi 812 
+
+https://doi.org/10.1200/JCO.2024.42.16_suppl.3530. 813 
+
+49. Shitara KW, Z.; Tabernero, J.; Cutcem, E.C.; Coutzac, C.; Fouchardiere, C.; Lee, J.;Rha, S.Y.; 814 
+
+Kang, Y.K.; Fanning, P; An, G.; Jin, F.; Forgie, A.; Pons, J.;Tsiatis, A.; Rndolph, S.; Lee, K.W. 815 
+
+Final analysis of the randomized phase 2 part of the ASPEN-06 study: A phase 2/3 study of 816 
+
+evorpacept (ALX148), a CD47 myeloid checkpoint inhibitor, in patients with HER2 817 
+
+overexpressing gastric/gastroesophageal cancer. Journal of Clinical Oncology 2025 ;43 doi 818 
+
+https://doi.org/10.1200/JCO.2025.43.4_suppl.332. 819 
+
+50. van de Wetering M, Francies HE, Francis JM, Bounova G, Iorio F, Pronk A , et al. Prospective 820 
+
+derivation of a living organoid biobank of colorectal cancer patients. Cell 2015 ;161(4):933-45 doi 821 
+
+10.1016/j.cell.2015.03.053. 822 
+
+51. Fujii M, Shimokawa M, Date S, Takano A, Matano M, Nanki K , et al. A Colorectal Tumor 823 
+
+Organoid Library Demonstrates Progressive Loss of Niche Factor Requirements during 824 
+
+Tumorigenesis. Cell Stem Cell 2016 ;18(6):827-38 doi 10.1016/j.stem.2016.04.003. 825 
+
+52. Drost J, Clevers H. Organoids in cancer research. Nat Rev Cancer 2018 ;18(7):407-18 doi 826 
+
+10.1038/s41568-018-0007-6. 827 
+
+53. Tuveson D, Clevers H. Cancer modeling meets human organoid technology. Science 828 
+
+2019 ;364(6444):952-5 doi 10.1126/science.aaw6985. 829 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+54. Polak R, Zhang ET, Kuo CJ. Cancer organoids 2.0: modelling the complexity of the tumour 830 
+
+immune microenvironment. Nat Rev Cancer 2024 ;24(8):523-39 doi 10.1038/s41568-024-00706-831 
+
+6. 832 
+
+55. Bar-Ephraim YE, Kretzschmar K, Clevers H. Organoids in immunological research. Nat Rev 833 
+
+Immunol 2020 ;20(5):279-93 doi 10.1038/s41577-019-0248-y. 834 
+
+56. Jenkins RW, Aref AR, Lizotte PH, Ivanova E, Stinson S, Zhou CW , et al. Ex Vivo Profiling of 835 
+
+PD-1 Blockade Using Organotypic Tumor Spheroids. Cancer Discov 2018 ;8(2):196-215 doi 836 
+
+10.1158/2159-8290.CD-17-0833. 837 
+
+57. Voabil P, de Bruijn M, Roelofsen LM, Hendriks SH, Brokamp S, van den Braber M , et al. An ex 838 
+
+vivo tumor fragment platform to dissect response to PD-1 blockade in cancer. Nat Med 839 
+
+2021 ;27(7):1250-61 doi 10.1038/s41591-021-01398-3. 840 
+
+58. Ootani A, Li X, Sangiorgi E, Ho QT, Ueno H, Toda S , et al. Sustained in vitro intestinal epithelial 841 
+
+culture within a Wnt-dependent stem cell niche. Nat Med 2009 ;15(6):701-6 doi 10.1038/nm.1951. 842 
+
+59. Neal JT, Li X, Zhu J, Giangarra V, Grzeskowiak CL, Ju J , et al. Organoid Modeling of the Tumor 843 
+
+Immune Microenvironment. Cell 2018 ;175(7):1972-88 e16 doi 10.1016/j.cell.2018.11.021. 844 
+
+60. Newman AM, Bratman SV, To J, Wynne JF, Eclov NC, Modlin LA , et al. An ultrasensitive 845 
+
+method for quantitating circulating tumor DNA with broad patient coverage. Nat Med 846 
+
+2014 ;20(5):548-54 doi 10.1038/nm.3519. 847 
+
+61. Tan MX, Le QV. EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. Pr 848 
+
+Mach Learn Res 2019 ;97. 849 
+
+62. Ambarus CA, Krausz S, van Eijk M, Hamann J, Radstake TR, Reedquist KA , et al. Systematic 850 
+
+validation of specific phenotypic markers for in vitro polarized human macrophages. J Immunol 851 
+
+Methods 2012 ;375(1-2):196-206 doi 10.1016/j.jim.2011.10.013. 852 
+
+63. Patel AA, Zhang Y, Fullerton JN, Boelen L, Rongvaux A, Maini AA , et al. The fate and lifespan 853 
+
+of human monocyte subsets in steady state and systemic inflammation. J Exp Med 854 
+
+2017 ;214(7):1913-23 doi 10.1084/jem.20170355. 855 
+
+64. Guilliams M, Thierry GR, Bonnardel J, Bajenoff M. Establishment and Maintenance of the 856 
+
+Macrophage Niche. Immunity 2020 ;52(3):434-51 doi 10.1016/j.immuni.2020.02.015. 857 
+
+65. Caracciolo D, Shirsat N, Wong GG, Lange B, Clark S, Rovera G. Recombinant human 858 
+
+macrophage colony-stimulating factor (M-CSF) requires subliminal concentrations of 859 
+
+granulocyte/macrophage (GM)-CSF for optimal stimulation of human macrophage colony 860 
+
+formation in vitro. J Exp Med 1987 ;166(6):1851-60 doi 10.1084/jem.166.6.1851. 861 
+
+66. Montilla A, Zabala A, Er-Lukowiak M, Rissiek B, Magnus T, Rodriguez-Iglesias N , et al. 862 
+
+Microglia and meningeal macrophages depletion delays the onset of experimental autoimmune 863 
+
+encephalomyelitis. Cell Death Dis 2023 ;14(1):16 doi 10.1038/s41419-023-05551-3. 864 
+
+67. Sica A, Mantovani A. Macrophage plasticity and polarization: in vivo veritas. J Clin Invest 865 
+
+2012 ;122(3):787-95 doi 10.1172/JCI59643. 866 
+
+68. Schraivogel D, Kuhn TM, Rauscher B, Rodriguez-Martinez M, Paulsen M, Owsley K , et al. High-867 
+
+speed fluorescence image-enabled cell sorting. Science 2022 ;375(6578):315-20 doi 868 
+
+10.1126/science.abj3013. 869 
+
+69. Lindner B, Burkard T, Schuler M. Phagocytosis assays with different pH-sensitive fluorescent 870 
+
+particles and various readouts. Biotechniques 2020 ;68(5):245-50 doi 10.2144/btn-2020-0003. 871 
+
+70. Hakimi AA, Voss MH, Kuo F, Sanchez A, Liu M, Nixon BG , et al. Transcriptomic Profiling of 872 
+
+the Tumor Microenvironment Reveals Distinct Subgroups of Clear Cell Renal Cell Cancer: Data 873 
+
+from a Randomized Phase III Trial. Cancer Discov 2019 ;9(4):510-25 doi 10.1158/2159-8290.CD-874 
+
+18-0957. 875 
+
+71. Vuong L, Kotecha RR, Voss MH, Hakimi AA. Tumor Microenvironment Dynamics in Clear-Cell 876 
+
+Renal Cell Carcinoma. Cancer Discov 2019 ;9(10):1349-57 doi 10.1158/2159-8290.CD-19-0499. 877 
+
+72. Chevrier S, Levine JH, Zanotelli VRT, Silina K, Schulz D, Bacac M , et al. An Immune Atlas of 878 
+
+Clear Cell Renal Cell Carcinoma. Cell 2017 ;169(4):736-49 e18 doi 10.1016/j.cell.2017.04.016. 879 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+73. Noel G, Baetz NW, Staab JF, Donowitz M, Kovbasnjuk O, Pasetti MF , et al. A primary human 880 
+
+macrophage-enteroid co-culture model to investigate mucosal gut physiology and host-pathogen 881 
+
+interactions. Sci Rep 2017 ;7:45270 doi 10.1038/srep45270. 882 
+
+74. Park DS, Kozaki T, Tiwari SK, Moreira M, Khalilnezhad A, Torta F , et al. iPS-cell-derived 883 
+
+microglia promote brain organoid maturation via cholesterol transfer. Nature 2023 ;623(7986):397-884 
+
+405 doi 10.1038/s41586-023-06713-1. 885 
+
+75. Sathe A, Mason K, Grimes SM, Zhou Z, Lau BT, Bai X , et al. Colorectal Cancer Metastases in 886 
+
+the Liver Establish Immunosuppressive Spatial Networking between Tumor-Associated SPP1+ 887 
+
+Macrophages and Fibroblasts. Clin Cancer Res 2023 ;29(1):244-60 doi 10.1158/1078-0432.CCR-888 
+
+22-2041. 889 
+
+76. Pietras A, Katz AM, Ekstrom EJ, Wee B, Halliday JJ, Pitter KL , et al. Osteopontin-CD44 signaling 890 
+
+in the glioma perivascular niche enhances cancer stem cell phenotypes and promotes aggressive 891 
+
+tumor growth. Cell Stem Cell 2014 ;14(3):357-69 doi 10.1016/j.stem.2014.01.005. 892 
+
+77. Liu F, Zhang J, Gu X, Guo Q, Guo W. Single-cell transcriptome sequencing reveals SPP1-CD44-893 
+
+mediated macrophage-tumor cell interactions drive chemoresistance in TNBC. J Cell Mol Med 894 
+
+2024 ;28(13):e18525 doi 10.1111/jcmm.18525. 895 
+
+78. Singhal H, Bautista DS, Tonkin KS, O'Malley FP, Tuck AB, Chambers AF , et al. Elevated plasma 896 
+
+osteopontin in metastatic breast cancer associated with increased tumor burden and decreased 897 
+
+survival. Clin Cancer Res 1997 ;3(4):605-11. 898 
+
+79. Hotte SJ, Winquist EW, Stitt L, Wilson SM, Chambers AF. Plasma osteopontin: associations with 899 
+
+survival and metastasis to bone in men with hormone-refractory prostate carcinoma. Cancer 900 
+
+2002 ;95(3):506-12 doi 10.1002/cncr.10709. 901 
+
+80. Isa S, Kawaguchi T, Teramukai S, Minato K, Ohsaki Y, Shibata K , et al. Serum osteopontin levels 902 
+
+are highly prognostic for survival in advanced non-small cell lung cancer: results from JMTO LC 903 
+
+0004. J Thorac Oncol 2009 ;4(9):1104-10 doi 10.1097/JTO.0b013e3181ae2844. 904 
+
+81. Xu C, Yuan Q, Wang W, Chi C, Zhang Q, Li L , et al. Prognostic significance of serum osteopontin 905 
+
+levels in small cell lung cancer. BMC Pulm Med 2020 ;20(1):235 doi 10.1186/s12890-020-01242-906 
+
+3. 907 
+
+82. Barkal AA, Weiskopf K, Kao KS, Gordon SR, Rosental B, Yiu YY , et al. Engagement of MHC 908 
+
+class I by the inhibitory receptor LILRB1 suppresses macrophages and is a target of cancer 909 
+
+immunotherapy. Nat Immunol 2018 ;19(1):76-84 doi 10.1038/s41590-017-0004-z. 910 
+
+83. Osorio JC, Smith P, Knorr DA, Ravetch JV. The antitumor activities of anti-CD47 antibodies 911 
+
+require Fc-FcgammaR interactions. Cancer Cell 2023 ;41(12):2051-65 e6 doi 912 
+
+10.1016/j.ccell.2023.10.007. 913 
+
+> 914
+> 915
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Figure Legends 916 
+
+Figure 1. TAM within ALI patient-derived tumor organoids are maintained by endogenous CSF1 917 
+
+and exhibit functional responsiveness. A, Schematic depicting air-liquid interface (ALI) culture of 918 
+
+patient-derived tumor organoids (PDO) from surgically resected tumor specimens and total biological 919 
+
+replicates for all experiments aggregated by histologic subtype. B-D, Representative H&E staining of 920 
+
+organoids from ( B) clear cell renal cell carcinoma (ccRCC), culture day 34, ( C) lung adenocarcinoma 921 
+
+(LUAD), day 14 and ( D) colorectal adenocarcinoma (CRC), day 20. Scale bars = 50 μm. E-G, 922 
+
+Representative immunofluorescence staining of ( E) ccRCC organoids, day 47, CA9 (white), IBA1 923 
+
+(green) and DAPI (blue), ( F) LUAD organoids day 64, CK7 (white), IBA1 (green) and DAPI (blue), ( G)924 
+
+CRC organoids day 29, CK19 (white), IBA1 (green), and DAPI (blue). Scale bars = 50 μm. H, Time 925 
+
+course analysis of tumor-associated macrophage (TAM) abundance per 1000 live cells comparing fresh 926 
+
+tumor versus matched day 7, 14, and 28 organoids (N=11 patients; 4 ccRCC, 3 NSCLC, 4 CRC). I, CSF-927 
+
+1 concentration in day 8 ALI organoid media measured by Luminex (N=54 patients; 22 ccRCC, 21 928 
+
+NSCLC, 11 CRC, 3 media only). Box plots represent mean and interquartile boundaries and whiskers 929 
+
+extend to the minimum and maximum values. J, Representative immunofluorescence staining of day 8 930 
+
+ALI PDO (ccRCC) treated with DMSO or CSF-1R inhibitor PLX5622. IBA1 (green), phalloidin (white) 931 
+
+and DAPI (blue), scale bar = 50 μm. K, Flow cytometry quantification of normalized macrophage 932 
+
+abundance from ( J) in day 8 ccRCC ALI organoids +/- CSF-1R-inihibitor PLX5622 for 8 days (N=23 933 
+
+patients, 15 ccRCC and 8 NSCLC), **= p <0.01, Wilcoxon test. L, Principal component analysis (PCA) 934 
+
+plot of bulk RNA-seq of FACS-purified CD45+CD11b+HLA-DR+CD68+ TAM from day 8 ccRCC PDO 935 
+
+after 24 h treatment with vehicle control, IFN g- or IL-4, n=3 technical replicates. M, Heatmap of 936 
+
+differential expressed genes (DEGs) from ( L) depicting fold-induction of control-, IFN g- and IL-4- TAM 937 
+
+over averaged value of individual genes. Gene expression of IFN signaling, IL-4 signaling, M1- and M2-938 
+
+related gene signatures are depicted. 939 
+
+> 940
+
+Figure 2. Organoid TAM conduct functional phagocytosis. A, Representative image of fluorescent 941 
+
+bead phagocytosis assay using imaging flow cytometry (IFC), gated on macrophages (organoid TAM). 942 
+
+Single-cell suspensions of NSCLC day 10 ALI organoids were co-cultured with FITC-labeled beads at 4 943 
+
+℃ or 37 ℃ and single CD45+CD11b+HLA-DR+CD68+ macrophages were imaged by IFC for the 944 
+
+presence of phagocytosed beads (green). B, Quantification of ( A) showing frequencies of FITC+ bead 945 
+
+positivity in organoid TAM (day 8-45) (N=7 patients), ****= p <0.0001, Wilcoxon test. Box plots 946 
+
+represent mean and interquartile boundaries and whiskers extend to the minimum and maximum values. 947 
+
+C, Representative real time kinetics of phagocytosis assay showing pHrodo bioparticle uptake in ccRCC, 948 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+NSCLC and CRC organoids (day 10-63) with or without cytochalasin D treatment. D, Representative live 949 
+
+cell organoid imaging from ( C) showing pHrodo-positive cells co-localized with CD11b+ cells. Data are 950 
+
+represented as mean ± SD. ( E) Quantification of ( C) showing organoid median pHrodo fluorescence 951 
+
+intensity at 12 hours (N=8 patients), **= p <0.01, Mann-Whitney test. 952 
+
+> 953
+
+Figure 3. Organoid screening of anti-CD47-responsive tumor histologies. A, Representative flow 954 
+
+cytometry plots of organoid TAM tumor phagocytosis assays. Matched organoid TAM and tumor 955 
+
+epithelium from ALI PDO were isolated by magnetic beads, labeled with Calcein-AM and CellTracker 956 
+
+respectively, and then co-cultured. Tumor phagocytosis of Calcein-AM+ tumor cells by Celltracker+ 957 
+
+organoid TAM was indicated by double-positive cells within the red box. B, Quantification of ( A) (N=11, 958 
+
+5 ccRCC, 2 NSCLC and 4 CRC). C, Representative flow cytometry histogram of CD45-EpCAM+ pre-959 
+
+gated live (DAPI-) versus dead (DAPI+) organoid tumor cells in CRC organoids after anti-CD47 or IgG1 960 
+
+treatment, day 8. D, Box plots of fractional tumor cell viability in anti-CD47-treated day 8 ALI organoids 961 
+
+determined by flow cytometry and normalized to IgG1 control as in ( C). N=62; 27 ccRCC, 22 NSCLC, 962 
+
+13 CRC. *= p<0.05, ***= p<0.001 versus IgG1, Wilcoxon test. E, CD45+CD11b+HLA-DR+CD163+ 963 
+
+macrophage abundance per 1000 live organoid cells from ( D) quantified by flow cytometry (N=51 964 
+
+patients; 25 ccRCC, 15 NSCLC, 11 CRC). F, Fractional tumor cell viability of TAM-low versus TAM-965 
+
+high ALI PDO from ( A), ccRCC: low N=13, high N=12, NSCLC: low N=7, high N=8, CRC: low N=5, 966 
+
+high N=6. A median value for macrophage abundance per 1000 live organoid cells (ccRCC: 55.5, NSCLC: 967 
+
+42, CRC: 16) was used as a threshold for TAM-low versus TAM-high status. **= p<0.01, *= p<0.05 Mann-968 
+
+Whitney test. 969 
+
+> 970
+
+Figure 4. Concordance of secreted cytokine biomarkers between anti-CD47-treated organoids and 971 
+
+patients. A, Luminex quantification of cytokine release into the conditioned media in IgG1- or anti-972 
+
+CD47- treated day 8 ALI organoids. The supernatant was collected on day 8 culture, with the last media 973 
+
+change 3 days prior. The IgG1 and anti-CD47 conditions were harvested in parallel for each biological 974 
+
+replicate pair. Samples exceeding the linear range of detection were excluded from the analysis 975 
+
+(Supplementary Table S3 ). CCL3 (15 ccRCC, 18 NSCLC, 8 CRC), CCL4 (14 ccRCC, 17 NSCLC, 9 976 
+
+CRC), TNFA (19 ccRCC, 20 NSCLC, 10 CRC), IFN γ (19 ccRCC, 20 NSCLC, 10 CRC), CXCL9 (15 977 
+
+ccRCC, 20 NSCLC, 10 CRC) and CXCL10 (16 ccRCC, 17 NSCLC, 6 CRC). *= p<0.05, **= p<0.01, 978 
+
+***= p<0.001, Wilcoxon test. B, Quantification of cytokines from patient plasma in an anti-CD47 979 
+
+magrolimab monotherapy phase I clinical trial (NCT02216409)(40). Cytokines were measured using fit-980 
+
+for-purpose validated Simple Plex TM assays (Bio-Techne, Minneapolis, MN). Plasma was collected before 981 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+magrolimab infusion (“pre”) and 2 hours after infusion (“post”) at day 1 (priming dose 1 mg/kg) and day 982 
+
+8 (loading dose 20-45 mg/kg) from 41 advanced solid tumor patients. No cytokine levels were above 983 
+
+ULoQ. For measurements below LLoQ, we imputed values with an offset of 0.1. *= p <0.05, ** =p <0.01, 984 
+
+***= p <0.001, ****= p <0.0001; Mann-Whitney test. ULoQ and LLoQ refer to upper and lower limits of 985 
+
+quantitation, respectively. 986 
+
+> 987
+
+Figure 5. Anti-CD47 induces dynamic changes in organoid TAM and promotes the SPP1+ 988 
+
+phenotype. A, UMAP plot of single cell RNA-seq from the FACS-sorted CD45+ fraction of 10 ALI 989 
+
+PDO (6 ccRCC and 4 NSCLC) cultured at day 8 showing major immune subsets. B, High-resolution 990 
+
+UMAP subclustering of the scRNA-seq TAM and monocyte clusters from ( A) depicting PDO TAM subset 991 
+
+differences in IgG1- versus anti-CD47-treated day 8 ALI organoids, N=10 patients (6 ccRCC, 4 NSCLC). 992 
+
+C, Quantification of ( B) depicting proportion of TAM subsets per total TAM, ＊=P<0.01, Mann-Whitney 993 
+
+test. D, Monocle3 trajectory analysis of TAMs in PDO from ( B) excluding monocytes. Approximate 994 
+
+locations of cell types are labeled. e, SPP1 and C1QA expression changes along the pseudotime axis from 995 
+
+(D). F, Volcano plot of differentially expressed genes between IgG1- or anti-CD47-treated PDO TAM, 996 
+
+culture day 8, N=10 patients (6 ccRCC, 4 NSCLC). Log 2 fold change is shown on the x axis and -log 10 997 
+
+adjusted p value on the y axis. p value of 0.05 and fold change of 1 are indicated. G, SPP1 gene expression 998 
+
+induction by anti-CD47 in organoid TAM from ccRCC (N=6) and in NSCLC (N=4) as in ( F). H, SPP1 999 
+
+ELISA of conditioned media from IgG- or anti-CD47- treated day 8 ALI organoids (N=59 patients; 33 1000 
+
+ccRCC, 19 NSCLC and 7 CRC). *= p <0.05, ** = p<0.01, Wilcoxon test. I, SPP1 gene expression in 1001 
+
+UMAP plots of PDO CD45+ cells from ( A). J, Quantification of secreted SPP1 from patient serum in an 1002 
+
+anti-CD47 magrolimab monotherapy phase I clinical trial (NCT02216409)(40) measured by Luminex 1003 
+
+(N=6 patients). Serum was collected before infusion and 2 hours or 24 hours after magrolimab infusion at 1004 
+
+day 1 and day 8. *= p <0.05, Wilcoxon test. 1005 
+
+> was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
+
+Fig. 1 
+
+Colon adenocarcinoma 
+
+CB
+
+IBA1 CK19 DAPI 
+
+Kidney ccRCC 
+
+F GE Day 29 Day 64 
+
+D
+
+ALI tumor organoid 
+
+Lung adenocarcinoma 
+
+Day 34 Day 14 Day 20 IBA1 CK7 DAPI 
+
+A
+
+IBA1 CA9 DAPI Day 47 
+
+HTAM /1000 live organoid cells 
+
+I
+
+DMSO PLX5622 Phalloidin IBA1 DAPI ccRCC Phalloidin IBA1 DAPI 
+
+J
+
+> Organoid CSF1 in media (pg/ml)
+
+L  
+
+> 20 0-20 PC2 020 40 PC1 -20 -40
+
+Organoid TAM transcriptome 
+
+> Control TAM IL4-TAM IFN-TAM Organoid-1 Organoid-2 Organoid-3
+
+ALI tumor organoid 
+
+Patient Tumor cell Fibroblast T cell B cell NK cell Macrophage Monocyte Dendritic cell 
+
+Tumor fragments Total N=170 
+
+ccRCC NSCLC CRC Others 
+
+ccRCC NSCLC CRC Others 
+
+N=67 N=46 N=31 N=26 N=7 N=4 N=6 N=3 N=6 scSCC MM PDAC GAC GBM ccRCC NSCLC CRC Others 
+
+K
+
+> Normalized macrophage abundance
+
+ccRCC NSCLC 
+
+> DMSO PLX5622 DMSO PLX5622
+
+STAT1 GBP5 JAK1 ISG15 OAS2 IFIT3 ISG20 GBP3 GBP4 JAK2 TNF IDO1 CXCL10 CXCL9 CXCL11 NOS2 IL6 CX3CL1 CCL13 CCL22 CCL17 CCL24 CCL23 TGFB1 FOLR2 CD209 FN1 CD180 FCER2 IL17RB POSTN IGF1 IFITM1 CCL18 Control_1 Control_2 Control_3 IFN_1 IFN_2 IFN_3 IL4_1 IL4_2 IL4_3 
+
+> IFN-γ signaling  M1 macrophage  IL-4 signaling  M2 macrophage
+> Expression
+
+M   
+
+> Fresh Day 7 Day 14 Day 28
+
+was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint Time 
+
+CRC 
+
+> pHrodo fluorescence
+
+**** **** 
+
+> + pHrodo + pHrodo/cytochalasin D - pHrodo
+
+ACD E
+
+4°C co-cultured 37°C co-cultured ccRCC organoid TAM imaging flow cytometry 
+
+B
+
+Time **** **** 
+
+NSCLC 
+
+> pHrodo fluorescence  + pHrodo + pHrodo/cytochalasin D - pHrodo
+
+**** **** Time 
+
+ccRCC 
+
+> pHrodo fluorescence
+> + pHrodo + pHrodo/cytochalasin D - pHrodo
+
+Fig. 2 
+
+> FITC+ beads/macrophage (%)
+
+**** 
+
+> 37°C co-culture 4°C co-culture
+> No pHrodo pHrodo pHrodo+Cytochalasin D
+
+02×10 64×10 66×10 68×10 61×10 7 ** ** 
+
+> pHrodo median fluorescence
+
+pHrodo CD11b TMRM - pHrodo pHrodo CD11b TMRM + pHrodo 
+
+was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint Fig. 3      
+
+> ccRCC NSCLC CRC 050 100 150 200 250
+> low high 0.4 0.6 0.8 1.0 1.2
+> low high 0.4 0.6 0.8 1.0 1.2
+> low high 0.4 0.6 0.8 1.0 1.2
+
+D E
+
+ccRCC 
+
+F
+
+> Tumor cell viability anti-CD47 normalized to IgG1
+
+Organoid macrophage abundance 
+
+> Tumor cell viability anti-CD47 normalized to IgG1
+
+*** * NSCLC CRC TAM abundance per 1000 live organoid cells 
+
+**  
+
+> p= 0.12 p= 0.08
+
+** * n.s.   
+
+> ccRCC NSCLC CRC 0.4 0.6 0.8 1.0 1.2
+
+Low High Low High Low High Phagocytosis index 
+
+A B
+
+*** *** 
+
+> Tumor labeling (Calcein-AM)
+
+TAM labelling (CellTracker) 
+
+37°C IgG 37°C anti-CD47 4°C    
+
+> Phagocytosis 10.2 % Phagocytosis 19.2 %
+> 4 degree IgG Anti-CD47 020 40 60 80
+
+IgG1 Anti-CD47 Counts DAPI 
+
+C
+
+was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint A B NCT02216409 Magrolimab phase I patient plasma 
+
+CCL3 IFNγ CCL4 CXCL9 TNFA CXCL10 
+
+> Log 2 normalized value
+
+Upregulated Stable 
+
+Day 1 Day 8 Pre- Post 2H Pre- Post 2H Day 1 Day 8 Pre- Post 2H Pre- Post 2H Day 1 Day 8 Pre- Post 2H Pre- Post 2H Day 1 Day 8 Pre- Post 2H Pre- Post 2H Day 1 Day 8 Pre- Post 2H Pre- Post 2H Day 1 Day 8 Pre- Post 2H Pre- Post 2H 
+
+> TNFA (pg/ml)  CCL4 (pg/ml)  CCL3 (pg/ml) IFN γ (pg/ml) CXCL9 (pg/ml) CXCL10 (pg/ml)
+
+ccRCC NSCLC CRC ccRCC NSCLC CRC 
+
+Organoids 
+
+Upregulated Stable 
+
+IgG1 Anti-CD47 02000 4000 6000 
+
+✱✱✱ 
+
+IgG1 Anti-CD47 02000 4000 6000 8000 10000 ✱✱✱ 
+
+IgG1 Anti-CD47 0200 400 600 800 1000 
+
+✱✱✱ 
+
+IgG1 Anti-CD47 02000 4000 6000 
+
+✱✱✱ 
+
+IgG1 Anti-CD47 02000 4000 6000 8000 10000 
+
+✱✱ 
+
+IgG1 Anti-CD47 0200 400 600 800 1000 
+
+✱
+
+IgG1 Anti-CD47 02000 4000 6000 
+
+✱✱ 
+
+IgG1 Anti-CD47 02000 4000 6000 8000 10000 
+
+✱
+
+IgG1 Anti-CD47 0200 400 600 800 1000 
+
+✱
+
+IgG1 Anti-CD47 0200 400 600 800 1000 
+
+ns 
+
+IgG1 Anti-CD47 0200 400 600 800 1000 
+
+ns 
+
+IgG1 Anti-CD47 0200 400 600 800 1000 
+
+ns 
+
+IgG1 Anti-CD47 0100000 200000 300000 400000 
+
+ns 
+
+IgG1 Anti-CD47 0100000 200000 300000 400000 
+
+ns 
+
+IgG1 Anti-CD47 0100000 200000 300000 400000 ns 
+
+IgG1 Anti-CD47 010000 20000 30000 40000 50000 ns 
+
+IgG1 Anti-CD47 010000 20000 30000 40000 50000 
+
+ns 
+
+IgG1 Anti-CD47 010000 20000 30000 40000 50000 
+
+ns 
+
+> IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47 IgG1 Anti-CD47
+
+Fig. 4 was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint CJ
+
+> Serum SPP1 (pg/ml)
+
+Patient serum sampling 
+
+NCT02216409 magrolimab phase I patient serum 
+
+Fig. 5 
+
+A BD
+
+SPP1+ CXCL9+ -5.0 5.0 2.5 -7.5 UMAP 2  0-2.5 UMAP 1 -10 -5 0 5 10 -5.0 5.0 2.5 UMAP 2  0-2.5 UMAP 1 -10 -5 0 5 10 
+
+> TAM subset proportion
+
+＊ ＊ ns ns ns 
+
+Pseudotime Pseudotime 
+
+> 40620
+> C1QB  expression
+
+IgG1 IgG1 aCD47 aCD47 
+
+> 3421
+> SPP1  expression
+
+E
+
+SPP1    
+
+> -5 0510 UMAP 1 -5.0 -7.5 0-2.5 5.0 2.5 UMAP 2
+
+C1Q 
+
+> -10
+
+C1Q+ Monocyte NLRP3+ SPP1+ CXCL9+ C1Q+ Monocyte NLRP3+ 
+
+BPlasma Mast Myeloid Prolif T CD8 CD4   
+
+> UMAP 2  0-10 10 5-5 -15 UMAP 1 -10 -5 0
+
+NK 
+
+PDO CD45+ fraction day 8 IgG1 and aCD47 conditions  
+
+> 510
+
+GF
+
+IgG aCD47 IgG aCD47 
+
+ccRCC NSCLC 
+
+> SPP1  expression
+> 0.0 2.0 1.5 1.0 0.5
+
+H
+
+ccRCC 
+
+> SPP1 (ng/ml)
+
+IgG aCD47 
+
+NSCLC 
+
+> SPP1 (ng/ml)
+
+IgG aCD47 
+
+CRC 
+
+> SPP1 (ng/ml)
+
+IgG aCD47 
+
+d8 PDO TAM scRNA-seq   
+
+> 024-2 -Log 10  P
+> 100 0200 150 50 250 -Log 2
+> fold change
+
+Enriched by IgG1 Enriched by aCD47 
+
+> Prolif T CD8 T CD4 T NK TAM Mast Plasma BMonocyte
+> 6
+> SPP1  expression
+> 420
+
+I
+
+PDO IgG1 (myeloid) PDO aCD47 (myeloid) 
+
+was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint (which this version posted May 9, 2026. ;https://doi.org/10.64898/2026.05.06.722767 doi: bioRxiv preprint
