@@ -1,0 +1,1418 @@
+Title: 2802176
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.13.724422v1.full.pdf
+
+Number of Pages: 29
+
+Markdown Content:
+1
+
+Reprogra mming tumour-associated macrophages from immune suppressive to inflammatory state by Checkpoint kinase 1 inhibitor combination treatment 
+
+Zhen Zeng 1, Anastasia Gandini 1, Ritu Bhatt 1, Martina Proctor 1, Jintao Guo 1, Susan Millard 1,Sherry Wu 2, Riccardo Dolcetti 3,4,5 , James W. Wells 6, Jazmina Gonzalez Cruz 6, Katharine Irvine 1, Brian Gabrielli 1.
+
+1. Mater Research Institute, The University of Queensland, Brisbane Australia 
+
+2.  Faculty of Health, Medicine and Behavioral Sciences, School of Biomedical Sciences,  The 
+
+University of Queensland, Brisbane Australia 
+
+3. Peter MacCallum Cancer Centre, Melbourne, Victoria 3000, Australia, 4Sir Peter MacCallum 
+
+Department of Oncology, The University of Melbourne, Victoria 3010, Australia, 5Department of Microbiology and Immunology, The University of Melbourne, Victoria 3010, Australia. 
+
+6. Frazer Institute, Faculty of Health, Medicine and Behavioral Sciences, The University of 
+
+Queensland, Brisbane, Australia Corresponding authors: 
+
+Prof Brian Gabrielli, brianG@uq.edu.au, ORCID#0000-0003-3933-1651 
+
+Dr Zhen Zeng, jenny.zeng@uq.edu.au, ORCID #0000-0002-8120-0973 
+
+Competing Interests: The authors declare no conflict of interest. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+2
+
+Abstract 
+
+Background: Tumour-associated macrophages (TAMs) play critical roles within the tumour microenvironment regulating immune evasion and therapeutic response. Previously, we have shown that the combination of Checkpoint kinase 1 inhibitor (CHK1i) with a subclinical dose of hydroxyurea (LDHU) reprograms the tumour immune microenvironment to a pro-inflammatory status. 
+
+Methods: We investigated a tumour-restricted Fcgr4 (Cd16.2) expressing macrophage population in multiple murine tumour models and the impact of CHK1i+LDHU on this population , using conventional and imaging flow cytometry as well as single-cell sequencing. 
+
+Results: Transcriptional profiling using CITE-seq and single-cell RNA sequencing reveals that Fcgr4⁺ TAMs closely resemble Fcgr4⁻ TAMs but display modest enrichment of interferon-associated and inflammatory gene programs, consistent with a functionally biased state rather than a distinct lineage. Importantly, we show that a highly tumour selective CHK1i+LDHU therapy shifts TAMs toward a more inflammatory phenotype while preserving dominant immunosuppressive features. Depletion of CSF1R⁺ macrophages enhanced CD8⁺ T cell activation without influencing tumour growth but significantly augmented therapeutic efficacy of CHK1i+LDHU. 
+
+Conclusion: Together, these findings define a novel TAM population and establish how targeted therapy reshapes, but does not fully overcome, TAM-mediated immune regulation. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+3
+
+Introduction 
+
+Tumour -associated macrophages (TAMs) are a dominant immune population within the 
+
+tumour microe nvironment where they play critical roles in regulat ing tumo ur growth, immune 
+
+evasion, angiogenesis, metastasis, and therap eutic response [1] . Across multiple solid 
+
+malignancies, including breast, lung, pancreatic, ovarian, and colorectal cancers, increased 
+
+TAM infiltration correlate s with poorer clinical outcomes [2, 3] . These observations underscore 
+
+the ce ntral contribution of macrophages to tumour progression and highlight the need to better 
+
+define their functional states within tumours , and importantly, changes in response to anti -
+
+cancer treatments .
+
+Macrophages are highly plastic innate immune cells deriv ed from circulating monocytes or 
+
+tissue -resident precursors and are capable of adopting diverse functional states in response to 
+
+environmental cues [4 -7] . Although m acrophage activation was historically simplified into 
+
+M1/M2 polarization model , it is now clear that TAMs exist along a dynamic continuum shaped 
+
+by tumour -derived signals, hypoxia, metabolic stress, and interactions with stromal and 
+
+immune cells [1, 4, 8] .
+
+Mechanistically, TAMs suppress anti -tumour immunity through secretion of 
+
+immunoregulatory cytokines such as interleukin -10 (IL -10) and transforming growth factor -β
+
+(TGF -β), expression of immune checkpoint ligands such as Tim3 , and metaboli c regulation of 
+
+the tumour microenvironment [9 -12] . Elevated TAM expression of Arginase ( Arg1 ) and heme 
+
+oxygenase 1 (HO -1; Hmox1 ), among other mediators, contributes to impaired cytotoxic T cell 
+
+and natural killer (NK) cell function by altering the tumour microenvironment [13] . In parallel, 
+
+TAMs promote tumour angiogenesis and metastasis through pr oduc tion of vascular endothelial 
+
+growth factor (VEGF), matrix metalloproteinases (MMPs), and factors that facilitate 
+
+extracellular matrix remodelling and pre -metastatic niche formation [1] . Together, these 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+4
+
+multifaceted pro -tumoral functions underscore the central contribution of TAMs to tumour 
+
+immune suppression and disease progression. TAMs have also been implicated in resistance 
+
+to chemotherapy, radiotherapy, and immune checkpoint blockade, positioning the m as 
+
+attractive targets for combination therapies [14, 15] .
+
+We have previously reported that the combination of Checkpoint kinase 1 inhibitor (CHK1i) 
+
+with a subclinical dose of the ribonucleotide inhibitor hydroxy urea (low dose HU, LDHU) not 
+
+only selectively kills a range of tumour types with little normal tissue toxicity but appears to 
+
+reprogram TAMs from a pro -tumour to pro -inflammatory phenotype [16 -18] . Here, we have 
+
+investigated this change in macrophage phenotype in more detail using single cell RNA 
+
+sequencing to assess the contribution of these reprogrammed TAMs to tumour growth and 
+
+treatment response. 
+
+Materials and Methods 
+
+Cell lines 
+
+Immune -edited mouse melanoma cell lines YUMMUV1.7ie and YUMMUV3.3ie were 
+
+generated as previously described [17] . Additional murine tumour cell lines used in this study 
+
+included ID8p53 -/-, B16F10 . Cells were cultured in RPMI 1640 (Gibco) or high -glucose 
+
+DMEM (Gibco) supplemented with 10% heat -inactivated fetal bovine serum (FBS; Bovogen), 
+
+1 mM sodium pyruvate (Gibco), GlutaMAX (Gibco), 20 mM HEPES (Sigma -Aldrich), and 1× 
+
+antibiotic -antimycotic (Gibco). Cultures were maintained at 37°C in a humidified incubator 
+
+(Binder) with 5% CO ₂ and 2% O ₂. 
+
+To generate CSF1 k nockdown YUMMUV1.7ie clones, cells were transduced with lentiviral 
+
+particles (Cat# 169120940296; Applied Biological Materials Inc., Richmond, BC, Canada) 
+
+encoding a CSF1 -specific short hairpin RNA (shRNA), GFP reporter, and puromycin resistance 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+5
+
+gene. Follo wing puromycin selection, resistant colonies were expanded and assessed for CSF1 
+
+knockdown by fluorescence microscopy (GFP expression). GFP -positive cells were further 
+
+purified by fluorescence -activated cell sorting. 
+
+CSF1 quantification by LEGENDplex 
+
+Cyto kine secretion was measured from untreated cell lines. Briefly, 3,000 cells were seeded in 
+
+96 -well plates in the appropriate culture medium and incubated for 48h as previously described. 
+
+After incubation, culture supernatants were collected and stored at −20 °C until analysis. M-
+
+CSF levels (740687) in the supernatants were quantified using a LEGENDplex bead -based 
+
+immunoassay kit from BioLegend, following the manufacturer ’s instructions for the 
+
+LEGENDplex Multi -Analyte Flow Assay Kit. Samples were acquired o n a BD LSRFortessa 
+
+X-20 flow cytometer, and cytokine concentrations were calculated using LEGENDplex Qognit 
+
+analysis software. 
+
+RT -qPCR 
+
+Total RNA was extracted from cell  lines  using TRIzol (Invitrogen), and cDNA was generated 
+
+from 2 μg RNA using the High -Capacity cDNA Reverse Transcription Kit (Applied 
+
+Biosystems). qPCR was performed using PowerUp SYBR Green Master Mix (Applied 
+
+Biosystems) on a ViiA 7 or QuantStudio 7 Flex system with KiCqS tart primers (M erck ). 
+
+Relative gene expression was calculated using the 2^ –ΔCt method with Actin (mouse) as 
+
+reference gene. 
+
+Mouse tumour assays 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+6
+
+Experiments were performed with approval from The University of Queensland Animal Ethics 
+
+Committee (2021/AE0002 49, 2022/AE000025 and 2022/AE000652). Tumour establishment: 
+
+Syngeneic mouse YUMMUV1.7ie, YUMMUV3.3ie and ID8 -p53 −/− tumours were established 
+
+in C57BL/6J mice as described previously [17, 18] . B16F10 cells (2.5  × 10 4) in 100  μl of 
+
+Hank ’s balanced salt solution were subcutaneously (s.c.) injected into C57BL6/J mice 
+
+(RRID:IMSR JAX:000664). Following tumour establishment, mice were treated with CHK1i 
+
+(SRA737) + LDHU as described previously [17] . Briefly, mice were treated every other day 
+
+for 3 days per week for 3 weeks with vehicle (10% DMSO, 5% Tween80, 5% PEG400 in 
+
+clinical -grade saline) or 50 mg/kg CHK1i (SRA737, Sierra Oncology, San Mat eo, CA, USA) 
+
+combined with 100 mg/kg HU in the vehicle by oral gavage, then 4 h later by i.p. injection of 
+
+50 mg/kg HU (in saline). To examine the influence of macrophages on treatment responses, anti -
+
+Csf1r (clone AFS98, Cat# BE0213, BioXcell) or appropriate isotype control injections were 
+
+initiated 3 days prior to CHK1i+LDHU treatments and then repeated twice a week. At the 
+
+experimental endpoint, tumours were collected, and other organ sites were dissected in a 
+
+double -blinded manner. 
+
+Immune Profi ling 
+
+Tumours were harvested, mechanically minced, and enzymatically digested with DNase I and 
+
+collagenase IV for 30 minutes at 37°C. The resulting cell suspensions were passed through a 
+
+40 μm cell strainer to generate single -cell suspensions. For splenocy te isolation, harvested 
+
+spleens were gently dissociated through a 70 μm cell strainer using a syringe plunger. Red 
+
+blood cells were lysed, and c ells were washed and resuspended in staining buffer. Processed 
+
+cells were incubated with Fc block TruStain FcX ™ (anti -mouse CD16/32 ; Biolegend 101320) 
+
+prior to staining with Live/Dead Aqua (Thermo Fisher Scientific, Waltham, MA, USA) and a 
+
+panel of fluorochrome -conjugated antibodies (1:100 dilution) for immune cell profiling 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+7
+
+(Supplementary Table S1 ). Intracellular F oxP3 staining was performed using the FoxP3 
+
+Staining Kit (eBioscience) according to the manufacturer ’s instructions. Absolute cell counts 
+
+were determined using Flow -Count Fluorospheres (Beckman Coulter, Miami, FL, USA). Flow 
+
+cytometric analyses were primar ily performed using BD LSRFortessa instruments. For 
+
+extended panels, stained cells were analysed using a Cytek Aurora spectral flow cytometer 
+
+(Cytek Biosciences) with SpectroFlo software. Spectral unmixing was performed as described 
+
+in the Supplementary Ma terials. Cell sorting was performed using BD FACSAria Fusion 
+
+sorters or a MoFlo Astrios cell sorter. 
+
+Imaging flow cytometry 
+
+Sorted live GFP + cells were stained with antibody cocktails (as outlined in the gating strategy 
+
+and detailed in Supplementary? Table xx) in the presence of CD16/CD32 blocking reagent 
+
+(TruStain FcX ™ anti -mouse CD16/32 antibody; BioLegend) for 30 minutes on ice. Cells were 
+
+then washed with 2% FBS/PBS and resuspended at 2 x 10 7 cells/mL for acquisition. Samples 
+
+were analysed using a three -laser (405 nm, 488 nm, 642 nm) Amnis ImageStreamX Mk II 
+
+imaging flow cytometer (Luminex Corporation, Austin, TX, USA). Data were analysed u sing 
+
+Amnis IDEAS Software (version 6.2). 
+
+CITEseq + scRNAseq 
+
+Single cell capture 
+
+Sorted live CD45.2 ⁺ cells from YUMMUV1.7ie tumours were labelled with BD AbSeq Ab -
+
+Oligos (Supplementary Table S2 ) according to the manufacturer ’s instructions (BD Doc ID: 
+
+23 -24262(01)). Labelled cells were washed three times with BD Pharmingen ™ Stain Buffer 
+
+(500 × g, 10 min) and preserved in Omics Guard buffer (1 mL per 10 ⁴–10 ⁷ cells). Single -cell 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+8
+
+capture was performed using the BD Rhapsody ™ Single -Cell Analysis System with the BD 
+
+Rhapsody ™ Scanner (BD Doc ID: 23 -24252(01)). For a complete list of materials, see 
+
+Supplementary Table 2. A total of 3.3 –9.4 × 10 ⁴ cells per sample were captured, as determined 
+
+by the BD Rhapsody Scanner. 
+
+Library preparation 
+
+Abseq and targeted mRNA libraries were generated according to the manufacturer ’s
+
+instructions (BD Doc ID: 23 -24514(01)) at Central Analytical Research Facility (CARF), 
+
+Queensland University of Technology (QUT). Libraries were quantified and assessed for 
+
+fragment size distribution using a high -sensitivity NGS Fragment Analyzer assay (DNF -474 -
+
+33, 1 - 6000 bp; Agilent) prior to pooling and sequencing. 
+
+Sequencing 
+
+For each sample, AbSeq and targeted mRNA were uniquely indexed, pooled, and sequenced 
+
+on a NovaSeq X (Illumina; 25B flow cell). Target sequencing depths were 5,000 reads per cell 
+
+for AbSeq libraries and 15,000 reads per cell for targeted mRNA libraries. Following Illumina 
+
+demultiplexing, separate FASTQ files were generated for each library type per sam ple and 
+
+processed using the BD Rhapsody ™ Targeted Analysis Pipeline (Seven Bridges platform; BD 
+
+Doc ID: 23 -24580(01)). Processing included read quality control, barcode and UMI extraction, 
+
+alignment to the mm10 reference genome, gene assignment, and molecu le counting with 
+
+recursive substitution error correction (RSEC) and distribution -based error correction (DBEC). 
+
+Data analys is
+
+DBEC count matrices were imported into R using Read10X and CreateSeuratObject (Seurat 
+
+v4.5.1). RNA data were normalised using SCTr ansform prior to integration across samples. 
+
+AbSeq antibody counts were normalised using centred log -ratio (CLR) transformation. 
+
+Macrophages were extracted based on AbSeq expression of CD11 B and F4/80. For 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+9
+
+macrophage subsets, RNA counts from the targeted p anel were log -normalised and scaled prior 
+
+to principal component analysis. Given the targeted 397 -gene panel, all genes were used for 
+
+downstream dimensionality reduction. UMAP was performed using the first 20 principal 
+
+components, followed by graph -based c lustering (resolution = 0.4). Cluster marker genes were 
+
+identified using the Wilcoxon rank -sum test (FindAllMarkers). Genes detected in more than 
+
+two clusters were excluded, and the top -ranked markers per cluster were used for annotation 
+
+and heatmap visual isation. 
+
+Statistical analysis 
+
+All statistical analyses were performed using GraphPad Prism 9 (RRID:SCR_002798). Bar 
+
+graphs display mean values and standard deviation (SD). 
+
+Data Availability 
+
+The original contributions presented in this study are included in the article/supplementary 
+
+material.  Raw and processed single cell CITE -seq and RNA -seq data described in the study 
+
+have been submitted to the NCBI Gene Expression Omnibus repository  and wil l be available 
+
+upon manuscript acceptance.  Further inquiries can be directed to the corresponding author(s). 
+
+Results: 
+
+Tumour macrophage content correlates with tumour expressed cytokines 
+
+F4/80 + macrophages and monocytes can represent a high proportion of the tumour stroma. In 
+
+mouse tumour models , we have found F4/80+ monocyte/ macrophage content ranged from 20 %
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+10 
+
+of total live cell number in YUMMUV1.7 to ~1 % in B16F10 melanomas in agreement with 
+
+published ranges for these tumours (Figure 1A; Supp. Figure S1 ) [19 -21] . Cs f1 secretion in 
+
+vitro was highest in the YUMMUV1.7 and lowest in B16F10 , with t he level of Csf1 expressed 
+
+correlating with the level of macrophage content in vivo in four models including the ovarian 
+
+cancer ID8 p53 -/- and three melanoma models (Figure 1B ). Csf1 is a critical growth and 
+
+survival factor for macrophages [5] . Depletion of Csf1 expression using shRNA (Clone A and 
+
+Clone C) in the high expressing YUMMUV1.7 model reduced Csf1 to a level similar to 
+
+YUMMUV3.3 , but this reduction in Csf1 expression did not affect macrophage content in vivo 
+
+(Figure 1C,D ), although more complete depletion of Csf1 has been reported to reduce TAM 
+
+content in other tumours [22] . These tumour lines also had strong basal expression of the 
+
+macrophage ch emo -attractants Ccl2 , Ccl5 and Ccl7 expression , and although the levels of 
+
+individual chemokines varied between tumour s, each tumour exhibited high expression of at 
+
+least one of these chemokines (Figure 1E) [23] . No expression of the other Csf1r ligand Il34 
+
+was found in any of the human or mouse models , a nd Il34 has been reported to have little 
+
+contribution of TAM levels [22] . Th e strong correlation between Csf1 levels and TAM 
+
+abundance suggest s that tumour expressed Csf1 is a deter minant of the level of tumour 
+
+associated macrophage recruitment . However , the lack of effect on TAM content of Csf1 
+
+depletion in YUMMUV1.7 cells to levels comparable with other tumour lines suggests that 
+
+either a minimal level of Csf1 expression is required for TAM recruitment and/or other tumour -
+
+derived tumour -expressed chemokines a re also likely to contribute to recruitment .
+
+Tumour -associated macrophages express Fc rg 4
+
+When analysing the tumour immune microenvironment in a panel of syngeneic mouse tumours ,
+
+an antibody panel containing both lymphoid and myeloid markers identified populations of 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+11 
+
+CD3 - TCR - cells expressing the macrophage marker F4/80 and natural killer (NK) cell marker 
+
+NK1.1  (Figure 2A , gate 1 ) in additional to F4/80 − NK1.1 + NK cells (gate 2). When the 
+
+forward and side scatter profiles of the F4/80 + NK1.1 + and F4/80 − NK 1.1 + cells were 
+
+compared, the F4/80 − populations were smaller and had less complexity , whereas the F4/80 +
+
+NK 1.1 + cells had size and complexity comparable to F4/80 + NK1.1 − macrophages (Figure 2B ). 
+
+Since tissue disaggregation can lead to macrophage fragmentation and erroneous identification 
+
+of marker expression [24] , Amnis imaging flow cytometry was used to further investigate these 
+
+unexpected F4/80 + NK 1.1 + cells using MacGreen mice that express EGFP from the Csf1r 
+
+promoter . Gating for CD45 + NK1.1 − cells revealed l ymphocyte sized CD 3+ F4/80 − GFP − T
+
+cells (Supp. Figure S 2) while gating for the CD45 + NK1.1 + cells revealed similarly sized CD 3-
+
+NK1.1 + F4/80 − GFP − NK cells (Figure 2C) . The NK1.1 + population also contained GFP 
+
+> Low/neg
+
+F4/80 + and GFP + F4/80 + population s that were significantly larger than the lymphocytes 
+
+(Figure 2C). The NK1.1 staining was generally uniform and fully overlapped the F4/80 staining 
+
+on the cells indicating this was not NK cell fragments but NK1.1 antibody binding to these 
+
+large cells. This suggested that , despite the use of conventional Fc -blocking reagents, the 
+
+NK1.1 antibody (a mouse IgG2a antibody ) was binding to the Fc gr4 expressed on these large ,
+
+predominantly Csf1r -GFP -expressing macrophages , as previously reported [25] . This was 
+
+demonstrated by the NK1.1 and mouse IgG2a isotype control antibodies producing identical 
+
+staining of the F4/80 population from tumours (Figure 2D ). The presence of Fc gr4-expressing 
+
+macrophages appeared to be specific for tumour as th is was not found in the spleen of tumour 
+
+bearing mice (Figure 2E) . The IgG2a binding Fc gr4 ( CD 16.2) expressing macrophages were 
+
+a common feature of multiple cancer models representing approximately 40 % of all 
+
+macrophages in range of tumour models including ascites of ID8 p53 -/- tumour bearing mice 
+
+(Figure 2F ). 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+12 
+
+We performed CITEse q and s ingle cell RNAseq (scRNAseq) of YUMMUV1.7 tumour derived 
+
+CD45 + cells FACS sorted from control (62,980 cells) and CHK1i+LDHU treated mice 
+
+(146,106 cells; Figure 3A). ScRNAseq was performed using BD Rhapsody imaging based 
+
+single cell targeted mRNA amplification which selectively amplified 390 immune related and 
+
+housekeeping genes (Supp. Figure S3, Supp. Table S 3), and BD AbSeq for CITEseq detection 
+
+of marker antibody binding to further investigate the nature of these Fc r4-expressing 
+
+macrophages. Initially, the control samples were analysed separately . In control tumours, 
+
+CITEseq identified 10,379 F4/80 + CD11B + macrophage/monocytes , and t hese were further 
+
+divided into CD16.2/ Fcgr4 + and – populations. Both populations expressed similar levels of 
+
+the other indicated markers including CD16/ Fc gr (Figure 3B). UMAP dimensionality 
+
+reduction analysis of the control F4/80 + CD11B + macrophage/monocyte of the scRNAseq data 
+
+revealed a single major and several minor clusters, but overlaying CD16.2/ Fc gr4 staining 
+
+showed that cells expressing this marker were uniformly spread across all clusters as were the 
+
+Fc gr4- macrophage s (Figure 3C) , demonstrating little difference in gene expression patterns 
+
+of these subsets (Supp. Figure S3) . Only nine genes were significantly differentially expressed 
+
+genes between the Fc gr4 + and – macrophage/monocyte populations, including increased 
+
+expression of Cxcl10 , CD72 , CD74 , Irf7 , and Stat1 which are associated with inflammatory 
+
+macrophages [26, 27] , and reduced expression of Lmna in Fc rg 4+ macrophages (Figure 3 D). 
+
+However, the common highly expressed genes suggested the control TAM population 
+
+possessed a dominant pro -tumoral phenotype [2 7-30] , with strong expression of macrophage 
+
+markers Apoe , Lgals3 , Trem2 , Spp1 , Arg1, and C1qa /b , Fn1 , CD 63 relatively uniformly across 
+
+the clusters (Figure 3E , Supp. Figure S4 ), and low or no expression of pro -inflammatory 
+
+markers such as Cxcl9/10 , Il1b , Lap3 , Stat1 , Tnf rsf13b , although the Fcrg4+ cells express 
+
+higher levels of Cxcl10 and Stat1 (Supp. Figure S3 , Figure 3D ). Only a few genes such as the 
+
+MHCII genes e.g. H2Aa demonstrated enhanced expression in a subset of macrophages ,
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+13 
+
+whereas MHCI genes e. g. H2K1 were uniformly expressed (Figure 3E ). Other pro -tumoral 
+
+macrophage markers such type 2 chemokines Ccl6 , Ccl9 and Cxcl16 [31] were also expressed 
+
+by all macrophages (Supp. Figure S4). This suggests the Fc rg 4+ macrophage ha ve increased 
+
+expression of a few pro -inflammatory markers , but the strong pro -tumoral signals in the control 
+
+TAM population are likely to dominate .
+
+Tumour targeted treatment reprograms macrophage s phenotype 
+
+We have previously reported a combination of CHK1 inhibitor (CHK1i) with low dose of 
+
+hydroxyurea (LDHU) demonstrated strong and selective anti -tumour activity in vitro [16] , and 
+
+in vivo triggered an anti -tumour immune response characte rized by altered macrophage gene 
+
+express suggestive of a change from pro -tumour to anti -tumour pro -inflammatory phenotype ,
+
+for example decreased expression of Mrc1 /CD 206 and increased expression of Nos 2/iNos [17] .
+
+To further investigate the effect of this treatment on the tumour associated macrophages, 
+
+scRNAseq was performed comparing tumours from control and treated mice. CITEseq 
+
+identif ied 10,379 control and 49,475 treated tumour -derived CD 45 + CD11b + F4/80 + cells . The 
+
+difference in the numbers of cells was due to differences in batch processing and not increase d
+
+number of macrophages with treatment. All CD45 + CD11b + F4/80 + cells expressed high levels 
+
+of macrophage marker s Apoe , C1qa/b , Ccr1 , CD 63 , Fcgr3 , Lgals1 , Lyz2 , Spp1 , and 
+
+immunosuppressive genes e.g. Arg1 , Ccl2/9 , CD 52 , Ctsd , Hmox1 , Lagals3 and Trem2 [30] 
+
+(Supp Table S 3; Supp Figure S3 ). Many of the strongly suppressive markers ( Apoe, C1qa/b, 
+
+Ctsd, Lgals1, Spp1 ) were relatively unchanged with treatment (Supp Figure S3 ). UMAP 
+
+analysis revealed 12 cl usters in the scRNAseq data (Figure 4A). Most macrophages from 
+
+untreated mice clustered tightly together (Figure 4B , cluster 2 ), which appears similar to the 
+
+major cluster in the control only UMAP (Figure 3C). Cluster 2 was distinguished from the other 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+14 
+
+clusters by high expression of suppressive markers such as CD 163 , Fcna , F13a1 and Maf and 
+
+strongly downregulated expression of the inflammatory markers Irf7 , Stat1 and MHC -I H2 -K1 
+
+(Figure 5C; Supp . Figure S5; Supp . Table S 4). Cells from treated mice formed a large cluster 
+
+comprising: clusters 0 and 1, characterized by suppressive genes Arg1 and Mmp12 respectively 
+
+(Figure 5C; Supp Figure S5; Supp Table S 4); cluster 3 with increased expression of 
+
+proliferative markers such as Aurkb , Mcmc2/4 , Tyms , Ube2c , Pclaf ; and cluster 4 with modestly 
+
+increased expression of both inflammatory markers Nlrp3 and Tnf and suppressive markers 
+
+Il4ra , Cd72, C1qa/b indicating a mixed response. Macrophages from treated mice were also 
+
+enriched in clusters 5, 6 and 11, which were separated from the major clusters and characterized 
+
+by strongly increased expression of NK (cluster 5; Gzma/b, Prf1, Klra1/3/7/21, Nkg7 ), T cell 
+
+(cluster 6; CD 3, CD 8, Trac, Lat, CD 247 ) and B cell (cluster 11; CD 19, Igkc, Mzb1, Pou2af1 )
+
+genes. As t hese genes are expressed at extremely low levels in control macrophage populations 
+
+(Supp Table S 3), the very strong enrichment (up to 70 -fold) in macrophages from treated mice 
+
+to levels that could be readily detected (Figure 4 D), whereas tumour associated macrophage 
+
+markers such as C1qa , Lyz2 and Lgals1 were strongly expressed in all clusters (Figure 4 E). 
+
+This suggest ed that the macrophages are directly in contact with the NK, T and B cells in treated 
+
+mice and co -isolated during tissue disruption . The presence of Gzma/b and Prf1 in the NK 
+
+cluster 6 and Gzmb , Icos and Pd CD 1 in the T cell cluster 5 suggest the NK and T cells may be 
+
+activated (Figure 4 D). Cluster 7 was characterised by markers of multiple stromal cell type 
+
+fibroblast ( CD 34 , Tgfb3 ) and neutrophils ( Mmp9 ) (Supp Table S 3). Cluster 8 appears to have 
+
+a set of genes that are induced through Tlr4 signal ling ( S100a8/9, Mmp9, Tnf ); cluster 9 is 
+
+marked by increase possible dendritic and mast cells markers Flt3, Ccl17 , CD 40 , CD 86 and 
+
+Kit expression ( Figure 5C; Supp Figure S5; Supp Tables S 4); cluster 10 is strongly pro -
+
+inflammatory with increased expression of Nlrp3, Il6ra, Nod2, Casp1 . Together, the data 
+
+suggest that treatment of tumours with CHK1i+LDHU reprogrammed the macrophage 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+15 
+
+phenotype to a more pro -inflammatory, anti -tumour phenotype having increased interaction 
+
+with effector cells such as NK and T cells. 
+
+CHK1i+LDHU treatment had little effect on the numbers of Fc rg 4+ macrophages across 
+
+multiple tumour types (Figure 5A ), and as in control mouse tumours, Fc rg 4+ macrophages did 
+
+not cluster selectively compared to Fc rg 4- (Figure 5B ). When the differen tially expresse d
+
+gene s between control and treated macrophages were assessed , there was little difference 
+
+between the Fc rg 4 populations (Figure 5C ). Surprisingly, m any of the strongly altered genes 
+
+were not present as cluster markers, but visualization in the UMAP show ed strong enrichment 
+
+of treatment -upregulated genes e.g. Arg1 , Cxcl10 , Myc and Stat1 across all treatment -specific 
+
+clusters, and enrichment of down -regulated genes e.g. Pdia4 and Cx3cr1 . Pcna was down -
+
+regulated in most treatment -specific clusters except in the proliferative cluster 3 , and Il1b had 
+
+very low expression in parts of clusters 0 and 3 (Figure 5D ). A number of genes that are 
+
+commonly used as markers of macrophage phenotypes such as C1qa and Spp1 were 
+
+re present ed in the scRNAseq panel used here, but only C1qa wa s found selectively expressed 
+
+in any of the clusters in this study ( Supp. Table 4; clusters 0,3,4 ). Mapping expression of these 
+
+genes on the UMAP revealed they are generally expressed, although there were modest 
+
+increases in C1qa levels in its assigned clusters (Supp. Figure S6). This express ion pattern was 
+
+followed many genes including Hmox1 , Cd63 , Cd86 and Fcgr3 . Cd163 and Irf7 displayed 
+
+expression profiles supporting their down and up -regulation, respectively , with treatment, the 
+
+latter across all treatment related clusters. The MHC I gene H2K1 also displayed general 
+
+treatment -dependent up -regula tion, whereas MHC II H2Aa displayed more selective high 
+
+expression in multiple clusters (Supp. Figure S6). Together, t his suggest ed that whereas 
+
+macrophages retain much of their suppressive character in treated tumours, they have gain ed 
+
+pro -inflammatory characteristics e.g. Cxcl10 , Il1b expression , and downregulated pro -tumour 
+
+signals e.g. Cd63 , Hmox1. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+16 
+
+To determine the contribution of the tumour -associated macrophages to th e CHK1i+LDHU 
+
+treatment response, we used a Csf 1r neutralising antibody to depleted monocyte/macrophages 
+
+prior to and during treatment to assess the effects on tumour growth and immune response 
+
+(Figure 6A). Csf1r antibody treatment deplete d >95% of F4/80 hi CD 11b hi macrophages and 
+
+F4/ 80 int CD 11b int Mo-MDSC in the YUMMUV1.7 model (Figure 6B box 1, 2 ; Figure 6C ), but 
+
+not F4/ 80 int CD11b hi cells lacking Csf1r expression, possibly classical dendritic cells (cDCs) 
+
+[32] . Csf1r depletion completely depleted F4/80 + NK1.1 antibody binding Fc rg 4+ macrophages 
+
+(Supp. Figure 7A box 1 , Figure 6C ) but had no effect on the F4/80 - NK1.1 + NK cell (box 2) .
+
+The two -fold increase in NK cells is likely to simply reflect the 50% reduction in total tumour 
+
+associated CD 45 + cells with anti -Csf1r antibody treatment ( Supp. Figure 7B). Csf1r depletion 
+
+of macrophages had no significant effect on tumour growth but significantly enhanced the anti -
+
+tumour effects of treatment (Figure 6D ). We have previously demonstrated that CHK1i+LDHU 
+
+treatment triggers a CD 8+ T cell dependent immune response [17, 18] . Analysis of the CD 8+
+
+T cell population from control and treated tumours showed that CHK1i+LDHU treatment 
+
+increased the proportion of CD 8+ T cells expressing PD -1, a marker of T cell activation, and 
+
+the level of expression (Figure 6E ). Depletion of Csf1r + monocyte/ macrophages enhanced the 
+
+number of PD1 + CD 8+ T cells, which increased further with treatment. The number of 
+
+granzyme B (GrB) expressing CD 8+ T cells, a marker of T cell effector function, was also 
+
+significantly increased with CHK1i+LDHU treatment, and likewise increased with 
+
+macrophage depletion, bu t increased further with treatment and macrophage depletion. 
+
+Macrophage depletion did not augment the impact of CHK1i+LDHU treatment on the 
+
+measured CD8 T cell parameters, indicating an alternative mechanism underlying the 
+
+synergistic anti -tumour effect. T ogether the data indicate that the anti -proliferative effect of 
+
+CHK1i+LDHU treatment was required in combination with T cell activation to inhibit tumour 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+17 
+
+growth , and despite treatment reprogramming of the TAM population to a more anti -tumour 
+
+phenotype, the dominant effect of macroph ages remains immune suppressive. 
+
+Discussion 
+
+TAM are a common feature of tumours and often major stromal component that has a major 
+
+role in imposing an immunosuppressive tumour microenvironment . The question of what is 
+
+responsible for the differing TAM content of tumours has not been unequivocally answered 
+
+here. We have found that TAM content was significantly cor related with the level of tumour 
+
+expressed Csf1, and tumours also variably expressed other chemokines that can act as 
+
+attractants for macrophages suggest ing that multiple factors likely contribute to the overall 
+
+TAM content as suggested by the reduced TAM content in CCR2 -/- mice [33] . The alternative 
+
+Csf1r ligands Il34 was not expressed and has no contribution to TAM levels as reported 
+
+previous ly [22] .
+
+The discovery that a high proportion of TAM express Fcr g4 was surprising . This uncommon 
+
+Fc receptor is not blocked by the commercial Fc blocking agents commonly used [25] , but 
+
+CD16.2/Fc gr4 is normally present on a minor population of lung interstitial monocytes [34] 
+
+and its expression is strong increased on macrophages with cyclophosphamide treatment [35] .
+
+In TAM, the expression of Fc gr4 had only a minor effect on their phenotype, but the lack of 
+
+these in other lymphoid tissues suggests that the increase expression is consequence of the 
+
+tumour microenvironment. Fcr g4 has moderate affinity for IgG2a and IgG2b isotypes and is 
+
+responsible for the therapeutic efficacy of IgG2a antibody treatment media ted through 
+
+Antibody -Dependent Cellular Cytotoxicity (ADCC) and Antibody -Dependent Cellular 
+
+Phagocytosis [36] . This is relevant not only for antibody -mediated therapies but may also 
+
+explain additional contribution of these cells to the efficacy of the combination treatment. One 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+18 
+
+potential consequence is that testing antibody therapies in mouse cancer models may be 
+
+confounded by the high -level expression of this unexpected Fc receptor in tumours. The large 
+
+numbers of CD16.2/Fc gr4 + macrophages found in tumours may also provide a cr itical 
+
+mechanistic link to a potent ial humoral (antibody -mediated) antitumor response. 
+
+CHK1i+LDHU has been demonstrated to trigger immunogenic cell death in all tumour models 
+
+tested [17, 18] , and the release of tumour antigens by the treatment may prime B cells to 
+
+produce endogenous tumour -specific antibodies [37] that may then trigger a Fcr g4-dependent 
+
+phagocytic response . However, the enhanced anti -tumour effect of macrophage depletion 
+
+indicates that the main effect of TAM remains immunosuppressive even with treatment. The 
+
+human orthologues of mouse Fcr g4, FCGR3A and FCGR3B , are commonly expressed on 
+
+tumour associated NK cells and macrophages and have been shown to contribute to the efficacy 
+
+of immunotherapies [38 -40] . Natural variants of FCGR3A influence therapy responses to 
+
+antibody treatments [41] demonstrating the potential importance of this Fc receptor in antibody 
+
+therapeutic responses. Thus, while not previously recognised as being a major component of 
+
+mouse tumour stroma, the presence of high levels of Cd16. 2/Fcgr4 in mouse tumour expressed 
+
+on macrophages mimics human tumour s, although we did not find Fcr g4 expression on NK 
+
+cells in mouse tumours .
+
+Many groups have published different TAM clusters defined by expression of specific marker 
+
+gene s such as C1qa and Spp1 [28 -30, 42, 43] . We have not identified similar macrophage 
+
+clusters, although on the basis of more generalised clusters suggested by Ma and colleagues 
+
+[30] , clusters 0 and 2 have reg ulatory -TAM (Reg -) like expression signatures with cluster 2 
+
+(control TAMs) also possessing some lipid associated -TAM ) and monocyte characteristics such 
+
+as expression of Fcgr3 /C d16, F13a1 , Maf and Mgst1. The Reg -TAM resemble alternatively 
+
+activated macrophages, pointing to their strongly suppressive properties. The monocyte -like 
+
+properties of the control cluster 2 TAMs may reflect the possible circulating monocyte origin 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+19 
+
+of this population [30] . Subtype markers common reported such as Spp1 [30, 42, 43] were 
+
+found generally express ed across all clusters in this study, whereas others such as C1qa showed 
+
+some selective accumulation although all cluster s had significant expression. One difference 
+
+between this and published studies is the gene set interrogated here represented ~400 immune -
+
+related genes rather than whole exomes used in the majority of published studies, possibly 
+
+limiting the clusters that can be defined. Another impor tant distinction is all the published 
+
+studies were analysis of TAMs in untreated tumours and define subsets of immune suppressive 
+
+TAM , whereas the TAM clustering in this study was primarily driven by the response to 
+
+CHK1i+LDHU. While specific molecules wer e found to be strongly upregulated with 
+
+treatment , for example MHC I molecules such as H2K1 were strongly upregulated with 
+
+CHK1i+LDHU treatment across all treatment defined clusters whereas MHC II molecules such 
+
+as H2Aa accumulated only in s pecific regions of control and several treatment -defined clusters. 
+
+We have previously reported that CHK1i+LDHU promotes strong PD -1 expression on CD8 +
+
+T cells in vivo , suggestive of an exhausted state [17] . The overall effect of CHK1i+LDHU 
+
+treatment was to drive macrophages from a pro -tumour immune suppressive (clusters 2) to a 
+
+less suppressive (clusters 0, 1) and inflammatory (clusters 9, 10) with cluster 4 representing an 
+
+intermediate state. It also promoted proliferation (cluster 3) . Clusters with high level 
+
+expression of markers of other immune cell types, T, NK and B cells (clusters 5, 6, 11) suggests 
+
+that with treatment macrophages may be acting as antigen presenting cells (APCs). TAM were 
+
+shown to be responsible for T cell exhaustion states through their MHC I expression and their 
+
+high numbers in tumour compared to other tumour associated APCs [33] . Treatment also 
+
+enhanced interactions with other stromal components (cluster 7). However, the overall effect 
+
+of TAM remained immune suppressive, demonstrated by Csf1r antibody depletion increas ing 
+
+response to treatment. Macrophage depletion alone was sufficient to increase markers of CD8+
+
+T cells activation, providing further functional evidence of immunosuppressive macrophage 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+20 
+
+phenotype, but this was not sufficient to influence tumour growth. This matches previous 
+
+studies that have demonstrated targeting TAM using either CSF1R inhibitor or CSF1R antibody 
+
+depletion increases treatment efficacy in range of tumour types and treatments [44 -47] , and the 
+
+failure of TAM targeted treatments as single agents in human clinical trials [15, 48] .
+
+The data presented here demonstrates that CHK1i+LDHU can promote reprogramming of 
+
+TAM to a more inflammatory anti -tumour phenotype, however, this was not suffic ient to fully 
+
+reprogram TAMs and combination with another therapy that drives this reprogramming 
+
+enhance the inflammatory phenotype is required to maximise therapeutic benefit .
+
+Acknowledgements 
+
+ID8 -p53WT, ID8 -p53 −/− were kindly provided by Professor Roby (Kansas University Medical 
+
+Center ).
+
+Author Contributions: Conceptualization, ZZ, BG.; methodology, ZZ, RB , AG, MP, JG, SM ;
+
+validation, ZZ, AG, RB, MP ; formal analysis, ZZ, AG, RB, JG, BG.; investigation, ZZ, AG, 
+
+RB, MP, JG ; resources, SW, KI ; data curation, ZZ, AG,MP; writing —original draft preparation, 
+
+ZZ, AG, RB, BG.; writing —review and editing, ZZ, AG, RB, MP, SM, SW, RD, KI, JW, JGC, 
+
+BG.; visualization, ZZ, AG, JG, BG.; supervision, ZZ, RB, SM , BG.; project administration, 
+
+BG.; funding acquisition, RD, JW, JGC , BG. All authors have read and agreed to the published 
+
+version of the manuscript. 
+
+Funding: This study was funded by the Melanoma Research Alliance Established Investigator 
+
+Award: #827115 , Ovarian Cancer Research Foundation GA -2023 -05, and Mater Foundation 
+
+Smiling for Smiddy. 
+
+Ethics: Animal ethics was obtained from The University of Queensland Molecular Biosciences 
+
+Animal Ethics Committee - 2021/AE000 025 and The University of Queensland Health 
+
+Sciences Animal Ethics Committee – 2022 /AE000652 .
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+21 
+
+References 
+
+1.  Cassetta, L. and J.W. Pollard, A timeline of tumour -associated macrophage biology. 
+
+Nature Reviews Cancer, 2023. 23 (4): p. 238 -257. 
+
+2.  Kloosterman, D.J. and L. Akkari, Macrophages at the interface of the co -evolving 
+
+cancer ecosystem. Cell, 2023. 186 (8): p. 1627 -1651. 
+
+3.  DeNardo, D.G. and B. Ruffell, Macrophages as regulators of tumour immunity and 
+
+immunotherapy. Nature Reviews Immunology, 2019. 19 (6): p. 369 -382. 
+
+4.  Hume, D.A., The Many Alternative Faces of Macrophage Activation. Frontiers in 
+
+Immunology, 2015. 6(370). 
+
+5.  Hume, D.A., K.M. Irvine, and C. Pridans, The Mononuclear Phagocyte System: The 
+
+Relationship between Monocytes and Macrop hages. Trends in Immunology, 2019. 
+
+40 (2): p. 98 -112. 
+
+6.  Dash, S.P., S. Gupta, and P.P. Sarangi, Monocytes and macrophages: Origin, homing, 
+
+differentiation, and functionality during inflammation. Heliyon, 2024. 10 (8). 
+
+7.  Yang, S., et al., Advanced insights on tumor -associated macrophages revealed by 
+
+single -cell RNA sequencing: The intratumor heterogeneity, functional phenotypes, and 
+
+cellular interactions. Cancer Lett., 2024. 584:216610. (doi): p. 
+
+10.1016/j.canlet.2024.216610. Epub 2024 Jan 19. 
+
+8.  Loke, P.n. a nd J. -D. Lin, Redefining inflammatory macrophage phenotypes across 
+
+stages and tissues by single -cell transcriptomics. Science Immunology. 7(70): p. 
+
+eabo4652. 
+
+9.  Georgoudaki, A.M., et al., Reprogramming Tumor -Associated Macrophages by 
+
+Antibody Targeting Inh ibits Cancer Progression and Metastasis. Cell Rep, 2016. 15 (9): 
+
+p. 2000 -11. 
+
+10.  Nguyen, T.D.T., et al., Pan -cancer single -cell RNA sequencing analysis refines multi -
+
+origin monocyte and macrophage lineages. Cancer Immunology Research, 2025. 
+
+14 (2): p. 350 -36 6. 
+
+11.  Nowak, M. and M. Klink, The Role of Tumor -Associated Macrophages in the 
+
+Progression and Chemoresistance of Ovarian Cancer. Cells, 2020. 9(5): p. 1299. 
+
+12.  Zhang, S., et al., C1q(+) tumor -associated macrophages contribute to 
+
+immunosuppression through fatty acid metabolic reprogramming in malignant pleural 
+
+effusion. J Immunother Cancer, 2023. 11 (8). 
+
+13.  Jin, R., L. Neufeld, and T.L. McGaha, Linking macrophage metabolism to function in 
+
+the tumor microenvironment. Nature Cancer, 2025. 6(2): p. 239 -252. 
+
+14.  Pyonteck, S.M., et al., CSF -1R inhibition alters macrophage polarization and blocks 
+
+glioma progression. Nat Med, 2013. 19 (10): p. 1264 -72. 
+
+15.  Rannikko, J.H. and M. Hollmén, Clinical landscape of macrophage -reprogramming 
+
+cancer immunotherapies. Br J Can cer, 2024. 131 (4): p. 627 -640. 
+
+16.  Oo, Z.Y., et al., Combined use of subclinical hydroxyurea and CHK1 inhibitor 
+
+effectively controls melanoma and lung cancer progression, with reduced normal tissue 
+
+toxicity compared to gemcitabine. Mol Oncol., 2019. 13 (7): p. 1503 -1518. doi: 
+
+10.1002/1878 -0261.12497. Epub 2019 Jun 14. 
+
+17.  Proctor, M., et al., Targeting Replication Stress Using CHK1 Inhibitor Promotes Innate 
+
+and NKT Cell Immune Responses and Tumour Regression. Cancers (Basel), 2021. 
+
+13 (15): p. 3733. 
+
+18.  Zeng, Z., et al., Using targeted therapy to promote a pro -inflammatory tumour 
+
+microenvironment and anti -tumour immune response in high grade serous ovarian 
+
+cancer. Br J Cancer, 2026. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+22 
+
+19.  Di Martile, M., et al., Melanoma -specific bcl -2 promotes a protumoral M2 -like 
+
+phenotype by tumor -associated macrophages. J Immunother Cancer, 2020. 8(1): p. 
+
+e000489. 
+
+20.  Meeth, K., et al., The YUMM lines: a series of congenic mouse melanoma cell lines 
+
+with defined genetic alterations. Pigment Cell Melanoma Res., 2016. 29 (5): p. 590 -7. 
+
+doi: 10.1111/pcmr.12498. Epub 2016 Aug 3. 
+
+21.  Moughon, D.L., et al., Macrophage Blockade Using CSF1R Inhibitors Reverses the 
+
+Vascular Leakage Underlying Malignant Ascites in Late -Stage Epithelial Ovarian 
+
+Cancer. Cancer Research, 2015. 75 (22): p. 4742 -4752. 
+
+22.  Lin, W., et al., Function of CSF1 and IL34 in Macrophage Homeostasis, Inflammation, 
+
+and Cancer. Frontiers in Immunology, 2019. Volume 10 - 2019 .
+
+23.  Sokol, C.L. and A.D. Luster, The chemokine system in innate immunity. Cold Spring 
+
+Harbor perspectives in biology, 2015. 7(5): p. a016303. 
+
+24.  Millard, S.M., et al., Fragmentation of tissue -resident macrophages during isolation 
+
+confounds analysis of single -cell preparations from mouse hematopoietic tissues. Cell 
+
+Rep, 2021. 37(8): p. 110058. 
+
+25.  De Visscher, A., et al., Upregulation of Fc γ Receptor IV on Activated Monocytes and 
+
+Macrophages Causes Nonspecific Binding of the PK136 Anti -NK1.1 Antibody in 
+
+Murine Models of Toll -Like Receptor -Induced Inflammation. Scand. J. Immunol. , 2025. 
+
+101 (5): p. e70027. 
+
+26.  Chen, L., et al., NF -κB p65 and SETDB1 expedite lipopolysaccharide -induced 
+
+intestinal inflammation in mice by inducing IRF7/NLR -dependent macrophage M1 
+
+polarization. International Immunopharmacology, 2023. 115 : p. 109554. 
+
+27.  Zhang, L., et al., Single -Cell Analyses Inform Mechanisms of Myeloid -Targeted 
+
+Therapies in Colon Cancer. Cell, 2020. 181 (2): p. 442 -459.e29. 
+
+28.  Wei, C., et al., Tumor -associated macrophage clusters linked to immunotherapy in a 
+
+pan -cancer census. npj Prec ision Oncology, 2024. 8(1): p. 176. 
+
+29.  Zilionis, R., et al., Single -Cell Transcriptomics of Human and Mouse Lung Cancers 
+
+Reveals Conserved Myeloid Populations across Individuals and Species. Immunity, 
+
+2019. 50 (5): p. 1317 -1334.e10. 
+
+30.  Ma, R. -Y., A. Black , and B. -Z. Qian, Macrophage diversity in cancer revisited in the 
+
+era of single -cell omics. Trends in Immunology, 2022. 43 (7): p. 546 -563. 
+
+31.  Mempel, T.R., J.K. Lill, and L.M. Altenburger, How chemokines organize the tumour 
+
+microenvironment. Nature Review s Cancer, 2024. 24 (1): p. 28 -50. 
+
+32.  Merad, M., et al., The dendritic cell lineage: ontogeny and function of dendritic cells 
+
+and their subsets in the steady state and the inflamed setting. Annu Rev Immunol, 2013. 
+
+31 : p. 563 -604. 
+
+33.  Waibl Polania, J., et a l., Antigen presentation by tumor -associated macrophages drives 
+
+T cells from a progenitor exhaustion state to terminal exhaustion. Immunity, 2025. 
+
+58 (1): p. 232 -246.e6. 
+
+34.  Schyns, J., et al., Non -classical tissue monocytes and two functionally distinct 
+
+po pulations of interstitial macrophages populate the mouse lung. Nat Commun., 2019. 
+
+10 (1): p. 3964. 
+
+35.  Lossos, C., et al., Mechanisms of Lymphoma Clearance Induced by High -Dose 
+
+Alkylating Agents. Cancer Discovery, 2019. 9(7): p. 944 -961. 
+
+36.  Nimmerjahn, F., et al., Fc γRIV deletion reveals its central role for IgG2a and IgG2b 
+
+activity in vivo. Proceedings of the National Academy of Sciences, 2010. 107 (45): p. 
+
+19396 -19401. 
+
+37.  Largeot, A., et al., The B -Side of Cancer Immunity: The Underrated Tune. Cells, 2019 .
+
+8(5): p. 449. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+23 
+
+38.  Jiang, X., et al., Depletion of Effector Regulatory T Cells Associates with Major 
+
+Response to Induction Dual Immune Checkpoint Blockade. Cancer Discovery, 2025. 
+
+15 (8): p. 1569 -1592. 
+
+39.  El -Khoueiry, A., et al., First -in -Human Phase I St udy of a CD16A Bispecific Innate 
+
+Cell Engager, AFM24, Targeting EGFR -Expressing Solid Tumors. Clinical Cancer 
+
+Research, 2025. 31 (7): p. 1257 -1267. 
+
+40.  Lee, H., et al., Intratumoral CD16+ Macrophages Are Associated with Clinical 
+
+Outcomes of Patients with Me tastatic Melanoma Treated with Combination Anti -PD -1
+
+and Anti -CTLA -4 Therapy. Clinical Cancer Research, 2023. 29 (13): p. 2513 -2524. 
+
+41.  Msika, A., et al., Fc γR3A polymorphism influences natural killer cell activation and 
+
+response to anti -PD -L1 (avelumab) i n gestational trophoblastic neoplasia. Am J Obstet 
+
+Gynecol, 2025. 232 (4): p. 381.e1 -381.e11. 
+
+42.  Wang, J., et al., Novel tumor -associated macrophage populations and subpopulations 
+
+by single cell RNA sequencing. Frontiers in Immunology, 2024. Volume 14 - 2023 .
+
+43.  Duval, F., et al., Trajectories of macrophage ontogeny and reprogramming in cancer. 
+
+iScience, 2025. 28 (5): p. 112498. 
+
+44.  Li, Z., et al., Depletion of tumor associated macrophages enhances local and systemic 
+
+platelet -mediated anti -PD -1 delivery f or post -surgery tumor recurrence treatment. Nat 
+
+Commun., 2022. 13 (1): p. 1845. doi: 10.1038/s41467 -022 -29388 -0. 
+
+45.  Liang, X., et al., TAMs -mediated resistance to oncolytic virus M1 in solid tumors. J
+
+Immunother Cancer., 2025. 13 (11): p. e012858. doi: 10.1 136/jitc -2025 -012858. 
+
+46.  Shimizu, D., et al., Pexidartinib and Immune Checkpoint Inhibitors Combine to 
+
+Activate Tumor Immunity in a Murine Colorectal Cancer Model by Depleting M2 
+
+Macrophages Differentiated by Cancer -Associated Fibroblasts. Int J Mol Sci., 2024. 
+
+25 (13): p. 7001. doi: 10.3390/ijms25137001. 
+
+47.  Stromnes, I.M., et al., Differential Effects of Depleting versus Programming Tumor -
+
+Associated Macrophages on Engineered T Cells in Pancreatic Ductal Adenocarcinoma. 
+
+Cancer Immunol Res., 2019. 7(6): p. 977 -989. doi: 10.1158/2326 -6066.CIR -18 -0448. 
+
+Epub 2019 Apr 26. 
+
+48.  Gomez -Roca, C.A., et al., Phase I study of emactuzumab single agent or in combination 
+
+with paclitaxel in patients with advanced/metastatic solid tumors reveals depletion of 
+
+immunosuppressiv e M2 -like macrophages. Ann Oncol., 2019. 30 (8): p. 1381 -1392. doi: 
+
+10.1093/annonc/mdz163. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+# A B
+
+> YUMMUV1.7 YUMMUV3.3 ID8 p53 -/-B16 0510 15 20 CD45  + F4/80 +% of single cells Y1.7 Clone A Y1.7 Clone C 020 40 60 CSF1 (ng/ml) YUMMUV1.7EV YUMMUV3.3
+
+# D YUMMUV1.7 EV Clone A Clone C 
+
+> CD45.2
+
+## F4/80 
+
+Ccl2 Ccl5 Ccl7 0.0001 0.001 0.01 0.1 110 Fold expression(2 -∆CT )relative to Actin B16F10 Y1.7 Y3.3 ID8 p53-/-
+
+# ECPearson r 0.83 p 0.042 0 5 10 15 20 25 020 40 60 CD45 + F4/80 + %of single cells CSF1 (ng/ml) 
+
+Figure 1: A; The proportion of CD45 + F4/80 + cells in the indicated syngenic mouse tumours of total cells. 
+
+B; Correlation of secreted Csf1 in media plotted against the CD45 + F4/80 + population for mouse tumours in A. the indicated mouse tumour cell lines. The data are the mean and SD of 4 replicates for the Csf1 measurements. C; The secreted Csf1 levels in YUMMUV1.7 cells expressing empty vector (EV) or two different Csf1 shRNA (clone A, C) compared to YUMMUV3.3. D; Representative flow cytometry dot plots identifying the CD45 + F4/80 + cells in YUMMUV1.7 EV or Csf1 shRNA clone A and clone C expressing tumours. E; Expression level of the indicated chemokines from the indicated mouse tumour cell lines treated in in vitro with CHK1i+LDHU for 24h. The data is expressed relative to Actin and are the mean and SD from 4 replicates. Live CD45        
+
+> CD3 TCR β
+> NK1.1 F4/80  CD3 -
+> F4/80 -NK1.1 +F4/80 +NK1.1 +
+
+# A B
+
+> 12
+
+# E    
+
+> SSC - H FSC - H  F4/80 ⁺NK1.1 ⁺
+> F4/80 ⁺NK 1.1 -mac
+
+# D Tumor Spleen NK1.1 IgG2a isotype  
+
+> F4/80 F4/80 PE-Cy7 NK1.1 IgG2a isotype
+> PE-Cy7
+
+# CNK1.1 F4/80 GFP CD3 
+
+> NK1.1 intensity
+
+CD3 intensity Live single cells GFP intensity 
+
+NK1.1 + CD3 -GFP intensity 
+
+> F4/80 intensity
+
+NK1.1 + CD3 -F4/80 intensity 
+
+# F    
+
+> 020 40 60 80 % CD45  + F4/80 + YUMMUV1.7 YUMMUV3.3 ID8 p53 -/-Tumour ID8 p53 -/-Ascites
+
+Figure 2: F4/80 expression on NK1.1 + populations. A; Mouse melanoma YUMMUV1.7 tumours were analysed using multiparameter flow cytometry. Representative gating strategy for gating live CD45 + cells. CD3- TCR β- cells were analysed for F4/80 and NK1.1 staining. Gate 1 are F4/80 + NK1.1 + cells and gate 2 F4/80- NK1.1 + NK cells. B; Flow cytometry analysis of size (FSC) and complexity (SSC) comparisons of gate 2 F4/80- NK1.1 + NK cells compared to gate 1 F4/80 + NK1.1 + cells (left panel) and gate 1 F4/80 +NK1.1 + cells with F4/80 - NK1.1 - macrophages. C; Amnis imaging flow cytometry of CD45 + tumour associated cells from MacGreen mice. YUMMUV1.7 tumours were grown in MacGreen mice that express EGFP from the Csf1r promoter. The CD45+ cells were stained for CD3, F4/80 and NK1.1 and GFP fluorescence was used to identify Csf1r + cells. The CD3 - NK1.1 + cells were gated for F4/80 and GFP staining intensity and images of cells from the indicated gates are shown. D, E; Flow cytometry of live CD45 + cells immunostained for F4/80 and either NK1.1 or IgG2a isotype antibody from YUMMUV1.7 tumour or normal spleen. F; The proportion of live CD45 + F4/80 + cells expressing FcR γ4 (identified by IgG2a binding) in the indicated mouse tumour models. A BC
+
+CD16.2 +CD16.2 −
+
+> counts 0.0 0.5 1.0 1.5 2.0 2.5 3.0 0.0 0.2 0.4 0.6 0.8 1.0 Cd72 Cd74 Cxcl10 H2-Aa H2-Ab1 Irf7 Itgax/ Cd11c Lmna Stat1 310.3 Fold change
+
+p value 
+
+# E   
+
+> CD16.2 +CD16.2 −
+> 50-5 -10 -5 50CITESeq macrophages
+
+Apoe Lgals3 Trem2 Spp1 Arg1 C1qa C1qb H2Aa 
+
+# D
+
+010 20 30 40 50 60 70 CD11b F4/80 CD16 CD16.2 CD11c Ly6G CD3 Ly6G/Ly6C NK1.1 TCRB CD19 CD25 CD4 CD8a 
+
+> YUMMUV1.7
+
+7 14 Control CHK1i+LDHU Treatment CD45+ FACS sorted CITEseq + scRNAseq 
+
+Figure 3: A; Diagram of the mouse experiment. B; CITEseq analysis of the CD11b + F4/80 + monocyte/ macrophage populations (CD16.2 -/FcR γ4- and CD16.2 + /FcR γ4+ ) from YUMMUV1.7 tumours for the indicated markers. The data are mean of 4 tumours. C; UMAP clustering from scRNAseq of control (untreated tumour) CD11b + F4/80 + cells overlaid for CITEseq CD16.2 -/FcR γ4 - and CD16.2 + /FcR γ4 +staining. D; The dot plot of fold change against adjusted p value (t-test, left panel) in gene expression from the comparison of control FcR γ4- and FcR γ4 + macrophages. These data are for the combination of all four control tumours. The yellow dots are significant (p<0.05) differentially expressed genes. Fold change of the significant differentially expressed genes in the individual tumours (right panel). E; 
+
+Marker of the suppressive macrophage phenotype overlaid on the control CD11b + F4/80 +macrophage UMAP clustering. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint
+
+# A BD   
+
+> 40-4 -5 0510
+> Control Tx
+
+Control v Tx macrophages 
+
+0 Suppressive 1 Suppressive 2 Control Suppressive 3 Proliferative 4 Mixed 5 NK interacting 6 T cell interacting 7 Stroma interacting 8 Tlr4 induced 9 Cd86+ inflammatory 10 Inflammatory 11 B cell interacting -5 0 5 10 40-4 Macrophage cluster scRNAseq 
+
+# E
+
+Cd8a 
+
+Gzmb Prf1 
+
+Cd4 
+
+Gzma Klra7 
+
+Icos Pdcd1 
+
+C1qa Lgals Lyz2 
+
+0 1 2 3 4 5 6 7 8 9 10 11 cluster Z score 
+
+# C
+
+1657810 432011 9
+
+Cluster 5 Cluster 6 Figure 4: A; UMAP clustering of scRNAseq data of macrophages from control and treated YUMMUV1.7 tumours (n=4 for each arm). B; The control and CHK1i+LDHU treated (Tx) cluster are identified. C; 
+
+Heat maps showing the z score of gene expression in the individual clusters compared to the rest of the clusters combined. A full-size version of this heatmap with gene names is shown in Supp Figure S5). D; Overlay of the indicated T and NK cell markers on the macrophage UMAP. The scale bar indicates the log2 gene expression. E; Overlay of the indicated macrophage gene expression on the macrophage UMAP. The scale bar indicates the log2 gene expression. 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint A B
+
+> Pdia4
+
+Control Tx 
+
+> Arg1
+> Cxcl10
+> Il1b
+> Stat1
+> Cx3cr1
+> Pcna
+> Myc
+
+Control Tx 
+
+# C    
+
+> 40-4 -5 0510
+> CD16.2 +CD16.2 −
+> CITESeq macrophages
+
+# D
+
+> YUMMUV1.7 YUMMUV3.3 ID8 p53 -/-
+
+05×10 51×10 61.5×10 6number/10 6 tumour  Control Tx 
+
+Figure 5: A; The numbers of FcR γ4 + macrophages (identified as CD45 + F4/80 + CD11b + IgG2a + )from the indicated control and treated tumours. B; Overlay of the CITEseq data for CD16.2/FcR γ4status on the macrophage UMAP clustering. C; Differentially expressed genes in control versus treated tumours (>2 fold change p>0.05 multiple 2 tailed t tests, mean of replicate tumours) for the FcR γ4+ and FcR γ4 - macrophages. D; Overlay of a subset of the differentially expressed genes onto the macrophage UMAP clustering. The control and treated (Tx) UMAPs are shown for each gene. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted May 17, 2026. ;https://doi.org/10.64898/2026.05.13.724422 doi: bioRxiv preprint 100000 # cells/10 6 tumour cells
+
+PD-1 + CD8 T GrB + CD8 T Iso Con MFI (Geometric Mean) PD-1 MFI on CD8 T 
+
+∗∗∗ ∗ ∗∗ ∗∗ ∗∗ ∗
+
+> 1000 10000 100000 100 1000 10000 100000 1000 10000 # cells/10 6 tumour cells Csf1r Con Iso Tx Csf1r Tx Iso Con Csf1r Con Iso Tx Csf1r Tx Iso Con Csf1r Con Iso Tx Csf1r Tx Cd16.2+ mac Cd16.2- mac Cd11bint F4/80int 020 40 % CD45  + cells Isotype Anti-Csf1r
+> ∗∗∗∗ ∗∗∗∗
+
+# A B
+
+> NK
+> ✱✱✱
+> 60
+
+# C     
+
+> 6810 12 14 16 0246810 12 Days post tumour challenge Tumour volume fold-change CHK1i+LDHU ISO CON ISO Tx
+> αCsf1r CON
+> αCsf1r Tx
+> ∗∗ ∗∗∗∗
+
+# ED
+
+CD11b F4/80 Isotype Anti- Csf1r 12
+
+> YUMMUV1.7
+
+7 14 Control CHK1i+LDHU Treatment FACS Immune profiling Anti-Csf1r /IgG control 
+
+Figure 6: A; Diagram of the mouse experiment. Mice bearing YUMMUV1.7 tumours were treated with either isotype or anti-Csf1r antibodies to deplete Csf1r expressing macrophages and myeloid cells. Mice were also treated without or with CHK1i+LDHU and tumour growth measured. After five CHK1i+ LDHU treatments, tumours were excised and analysed for the tumour-associated immune cells. B; 
+
+Flow cytometry of live CD45 + cells stained for F4/80 and CD11b. Gates 1 and 2 show the Csf1r antibody depleted F4/80 + CD11b + population has been further subdivided into intermediate (int) and high (hi) staining. C; Numbers of CD11b + F4/80 + cells in YUMMUV1.7 tumours from either isotype antibody or anti-Csf1r treated mice. The F4/80hi CD11bhi and CD11bint macrophages and myeloid cells were further divided on the IgG2a binding as CD16.2/FcR γ4 + and CD16.2/FcR γ4- . The F4/80 -NK1.1 + NK cells were defined as in Supp. Figure S6A. The number cells are presented as cells/million tumour cells. The data are from 4 control and 4 CHK1i+LDHU treated for isotype and anti-Csf1r antibody treatments. D; Tumour growth of YUMMUV1.7 tumour either without (isotype contorl; ISO) or with CSF1R antibody depletion ( αCsf1r) and without (Con) or with CHK1i+LDHU treatment (TX). This indicate treatments. The data are the mean and SD for 4 mice for each arm. Data was analysed by 2way ANOVA using Tukey’s multiple comparisons test. ** p<0.01, ****p<0.0001. E; The number of CD8 + T cells expressing PD-1, level of expression (mean fluorescence intensity MFI) of PD-1 on CD8 +T cells and number of CD8 + T cells expressing the markers of immune activity Granzyme B (GrB), for each treatment group. The data are the mean and SD for 5-7 mice. Data was analysed by 2way ANOVA using Tukey’s multiple comparisons test. * p<0.05, ** p<0.01, ***p<0.001.
