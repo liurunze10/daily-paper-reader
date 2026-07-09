@@ -1,0 +1,665 @@
+Title: IBD stress impacts gut microbiome intra-species diversity
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.02.736057v1.full.pdf
+
+Number of Pages: 31
+
+Markdown Content:
+# IBD stress impacts gut microbiome intra-species 1
+
+# diversity 234Chiara Mazzoni* 1, Moran Yassour* 1,2 
+
+56 
+
+> 1
+
+Microbiology and Molecular Genetics Department, Institute for Medical Research Israel-7Canada, Hebrew University of Jerusalem, Jerusalem, Israel 8 
+
+> 2
+
+The Rachel and Selim Benin School of Computer Science and Engineering, Hebrew University 9of Jerusalem, Jerusalem, Israel 10 11 *Corresponding authors: Chiara Mazzoni chiara.mazzoni@mail.huji.ac.il, Moran Yassour 12 moranya@mail.huji.ac.il 13 
+
+14 
+
+15 
+
+16 
+
+17 
+
+18 
+
+19 
+
+20 
+
+21 
+
+22 
+
+23 
+
+24 
+
+.CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint Abstract 25 Intra-species genomic variation results from diversity-generating processes and supplies the raw 26 material for subsequent natural selection. Environmental stress can be regarded as the ultimate 27 accelerator of these processes, especially for microorganisms, which can alter their DNA if 28 presented with nutrient limitation, toxins, or pathogen attack. Chronic intestinal inflammation, as 29 in inflammatory bowel diseases (IBD), may be regarded as prolonged environmental stress for 30 gut commensal bacteria, bringing many enteric species down to undetectable levels. 31 However, it remains unclear how the microbes that survive the IBD gut environment actually 32 respond to IBD stress, and whether their stress response may leave a transient or permanent 33 signature in their genomes. 34 To investigate whether IBD stress induces and selects for certain genetic diversity, we performed 35 metagenomic analyses on gut species in IBD patients and Controls. We focused on strain 36 diversity within single individuals, which might be the result of more recent diversification 37 processes under stress. We found measurable differences at the genome level between IBD and 38 Controls, yet this was species-dependent. We then investigated gene-level diversity and found 39 that certain functions were more likely to be enriched with either neutral divergence, functional 40 divergence, or both. Functions that were enriched in IBD with both kinds of diversity were 41 associated with motility and iron-scavenging, among others. These results may point towards 42 functions that are under selection in the context of IBD stress, and could inform future mechanistic 43 work, exploring previously unknown routes of bacterial diversification and adaptation to stress in 44 the gut microbiome. 45 
+
+46 
+
+47 
+
+48 
+
+49 
+
+50 
+
+51 
+
+52 
+
+53 
+
+54 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+# Introduction 55 56 Host-associated microbiomes are generally considered more stable than free-living ones(1), as a 57 host actively regulates its own internal bodily environment, promoting microbiome stability over 58 time. Yet, host-associated microbiomes need to adapt to fluctuating conditions that affect the 59 body, such as feeding cycles, seasonal shifts and climate changes(2–6). 60 In modern times, the human microbiome has been radically altered by the adoption of 61 industrialized diets, sedentary lifestyle and use of medications(7–12). Many chronic diseases are 62 globally on the rise, and many of these seem to be accompanied by changes in the human 63 microbiome, particularly in the gut microbiome, the largest and most complex in the human body. 64 Chronic intestinal inflammation, as in inflammatory bowel diseases (IBD)(13), alters profoundly 65 both the host luminal environment and the resident gut microbiome composition(14). In order to 66 clear invading organisms and defend the mucosal barrier, the host inflammatory response 67 induces ample secretion of both biotic (defensins, lysozymes, secretory immunoglobulins) and 68 abiotic (reactive oxygen and nitrogen species) antimicrobial agents(15–19). This antimicrobial 69 response is meant to kill bacteria indiscriminately, but factors such as stress duration, intrinsic 70 stress-tolerance and cell-to-cell interaction can affect whether certain strains are able to survive 71 over others(20–23). 72 IBD is a complex and multifactorial disease that can be diagnosed as early as pediatric age, 73 radically affecting the patient’s quality of life(24–27). Reduced gut microbial richness is a well-74 recognized hallmark of IBD, but beyond species-level shifts in the microbial composition, more 75 research is needed to understand what characterizes the strains that tolerate IBD-driven stress 76 in the gut(28, 29). 77 Tracking strain diversity has been largely used to determine the timeline and dynamics of single 78 or multi-strain synthetic communities, while they acquire, accumulate and share genomic 79 adaptations, both in stable and high stress conditions(30–33). Metagenomic sequencing allows 80 the retrieval of genomes as they are present in their complex native communities(34), and with 81 sufficient sequencing depth it can capture the presence of conspecific strains(35). To better 82 characterize microbiome complexity and decipher microbial evolutionary dynamics, it is 83 imperative to employ genomic approaches that take advantage of comprehensive genomic 84 information. In human microbiome studies, metagenomics has been paired with multi-strain 85 isolations and sequencing to resolve within-host diversification of phylogenetically related 86 strains(36, 37). Employment of large cross-sectional metagenomic collections has been also used 87 to infer species-specific evolutionary processes across hosts(38). These kinds of approaches 88 have been used to identify and monitor individual strains over time, or describe scenarios of strain 89 colonization, persistence and turnover, but mostly within healthy microbiomes, or specifically in 90 the context of bacterial infections and fecal microbial transplants(39–41). More studies 91 investigating microbiomes under stress are needed to understand the biological factors underlying 92 bacterial survival to perturbation. This could potentially unlock avenues of clinical intervention in 93 the context of antibiotic resistance, where exploiting dynamics of niche exclusion seems to hold 94 promise(42). 95 Here, we employed a simple approach to track intra-specific genomic diversity across different 96 gut commensals, comparing IBD patients to healthy individuals. Examining genomic positions 97 that are polymorphic within a subject we evaluated the impact of IBD-stress on the gut 98 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+microbiome. We employed nucleotide diversity, a metric commonly used in population genetics, 99 as a measure of strain mixture within single subjects. We then expanded our analysis to evaluate 100 the distribution and protein-changing potential of gene-level variants, distinguishing between 101 nonsynonymous and synonymous ones. Analysing strain diversity, both at the genome and gene 102 level, led us to define gene categories, which reflect gene-specific propensities to evolve under 103 stress. To better understand mutational and selective processes in the context of stress, 104 investigating metagenomic diversity could potentially inform microbiome remediation strategies 105 in clinical and environmental settings. 106 
+
+107 
+
+# Results 108 
+
+## Gut commensals exhibit decreased or unchanged genome nucleotide 109 
+
+## diversity in IBD 110 In order to describe global strain-level diversity within individual hosts, we employed nucleotide 111 
+
+diversity , a commonly used metric in population genetics ( Methods ). Nucleotide diversity is 112 calculated as the average, per-position degree of polymorphism, over any nucleotide sequence 113 length. It increases with the number of polymorphic positions and with the frequency of their minor 114 alleles, peaking as alleles approach equal split. Coverage affects the number of positions that are 115 included in estimating nucleotide diversity, as well as the number of minor alleles that can be 116 confidently detected ( Methods ). In the context of this metagenomic analysis, nucleotide diversity 117 is used as a proxy for within-host strain mixture or richness .118 To compare nucleotide diversity (ND) levels between inflammatory bowel disease (IBD) patients 119 and healthy individuals, we gathered metagenomic sequencing data from four different cohorts 120 and three different countries, including gut microbiome samples from the Control group and both 121 IBD subtypes (Crohn’s disease - CD, Ulcerative colitis - UC; Methods ). We identified 20 gut 122 commensals that could be robustly analysed across disease groups based on their prevalence 123 across cohorts, and calculated their genome-level ND ( Supplementary Table 1, Methods ). 124 As displayed by the Control samples alone, ND estimates spanned different ranges across 125 species, with Blautia_A faecis exhibiting the highest and Agathobacter faecis exhibiting the lowest 126 median average ND ( Figure 1a ). Using per-species linear regression models, 13/20 species 127 exhibited higher ND in Control compared to both IBD subtypes, while the remaining 7 species 128 showed no difference, irrespective of existing differences in coverage breadth, coverage depth, 129 relative abundance levels and different age group ( Figure 1b, Supplementary Figure 2a,c; 130 
+
+Methods ). 131 Reliable ND estimation relies on accurate sequence alignment, hence we wondered whether 132 systematic non-specific mapping across sequences of the same or different species could have 133 potentially confounded our estimates. To account for this possibility and validate our results, we 134 annotated species-specific marker genes within our species genomes (according to MetaPhlAn 135 DB, Methods ) and reran our models on this collection of genes ( Methods, Supplementary 136 
+
+Figure 2b) . When analyzing only the marker genes, we observed similar results to the full genome 137 models, and the differences between IBD and Control groups were globally confirmed. 138 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Both Control and IBD groups exhibited considerable within-group genome ND variation, and 139 subjects in the same disease group could either display an enrichment of high frequency alleles 140 or intermediate frequency alleles ( Figure 1c ). After establishing that our genome-level ND 141 estimates were representative of the species core genome, it was clear that variance across 142 samples reflected the multiple strains present within a subject, rather than possible differences in 143 gene presence-absence. We selected two examples per disease group to illustrate how subjects 144 could exhibit genome-level ND at the extremes of their group’s distribution, suggesting that health 145 and IBD are not characterized by strictly high and low strain-level diversity respectively. 146 Using ND estimates as proxies for population-level strain diversity indicated that, on average, 147 some species are subjected to prominent strain diversity loss in IBD, while others do not, and 148 these changes recapitulate genetic diversity of core genes, independent from coverage levels. 149 150 
+
+## Only a few genes display increased nucleotide diversity in IBD 151 To explore whether there could be differences in nucleotide diversity (ND) levels across different 152 regions of the genome, we next built a large set of linear regression models, one for each gene 153 within a species genome ( Methods, Supplementary Figure 3 ). We applied coverage-based and 154 prevalence-based quality filtering of genes, and modelled disease differences, identifying gene-155 specific trends in ND levels. As a result, we categorized the genes based on whether their ND 156 was invariant across study groups ( ND-invariant, gray), or their ND was either lower or higher in 157 IBD compared to Control ( ND-decreased, blue ; and ND-increased, orange , respectively; Figure 158 
+
+2a, left-center ). Analogously to what was observed at the genome level, the same species that 159 exhibited a prominent reduction in nucleotide diversity had a large fraction of their genes 160 categorized as ND-decreased (such as B. wexlerae and A. hadrus ). These species had ~75% of 161 their genes categorized as ND-decreased, with at most 47% gene overlap between CD and UC 162 samples (intersection over union; Figure 2a, right ). In a similar manner, species that exhibited 163 no change in nucleotide diversity at the genome level, had most of the genes categorized as ND-164 invariant, with at most 82 individual genes categorized as ND-increased (in case of B. uniformis ), 165 which counted at most a 18% gene overlap between CD and UC. In order to validate the gene 166 categorization that resulted from gene-level linear regression coefficients, we also calculated 167 mean gene ND values (mean over subjects), distinguishing between Control and IBD, and 168 calculated the IBD-over-Control ratio for ND-decreased and ND-increased genes ( Figure 2b ). 169 Here, we confirmed that our gene categorization was valid, since ND-increased genes had higher 170 IBD-to-Control ratio compared to ND-decreased genes (Wilcoxon rank-sum test, ND-decreased 171 genes=586 [randomly sampled subset], ND-increased genes=45 [all]; Methods ). 172 Since nucleotide diversity estimates are affected by the number of polymorphic positions, as well 173 as their allele frequencies, we investigated the contribution of each of these components to the 174 ND levels measured ( Figure 2c-d ). We employed a similar strategy as before by using gene 175 polymorphic fraction as the basis for calculating the IBD-to-Control ratio ( Figure 2c ). Also here, 176 ND-increased genes had significantly higher IBD-to-Control ratio compared to ND-decreased 177 genes (Wilcoxon rank-sum test; Methods ). Finally, we tested the differential distribution of minor 178 allele frequencies in ND-decreased genes and ND-increased genes, comparing IBD to Control 179 subjects. Here, we observed significantly lower minor allele frequencies for ND-decreased genes 180 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+in IBD subjects, while higher minor allele frequencies for ND-increased genes (Kolmogorov-181 Smirnov test, Figure 2d ). 182 Focusing on the intra-species gene-level diversity, this analysis highlighted how individual genes, 183 as units or subunits of cellular function, exhibited different levels of sequence diversity when 184 comparing selected representatives of IBD- and Control-associated microbiomes. 185 
+
+## Nonsynonymous variants are enriched in IBD across species 186 To reason whether the observed trends in gene-level nucleotide diversity (ND) could be linked to 187 adaptational processes happening in the IBD gut, we next investigated gene-level enrichment of 188 nonsynonymous variants at polymorphic positions within subjects ( Methods, Supplementary 189 
+
+Figure 4a ). We modelled genes’ relative accumulation of nonsynonymous and synonymous 190 variants at polymorphic positions ( Nsyn-enrichment ) using a binomial generalized linear mixed-191 model on variant counts ( Methods ). For most of the 20 species, global Nsyn-enrichment was 192 identified in both CD and UC, with few exceptions where only CD reached statistical significance 193 (Supplementary Figure 4b ). In the model, we included dNdS, which accounts for 194 nonsynonymous enrichment at non-polymorphic positions, to approximate long-term genetic 195 divergence between strains. Across species, dNdS was negatively correlated with Nsyn-196 enrichment, as shown by the negative model coefficients ( Supplementary Figure 4b ). Using 197 model-derived gene-specific coefficients, we categorized genes in Nsyn-decreased (purple) and 198 
+
+Nsyn-increased (yellow), based on whether they respectively exhibited a lower or higher Nsyn-199 enrichment in IBD compared to Control ( Figure 3a , Supplementary Figure 4c ). Some of the 200 species that previously had no ND-decreased genes and few ND-increased genes, exhibited the 201 largest fraction of Nsyn-increased genes (e.g. A. faecis and A. sp900066565 ; Figure 3a, left ). 202 CD and UC had a much more consistent overlap in Nsyn-increased genes (~90%), with few 203 species such as B. ovatus , B. longum and P. distasonis reaching only 51% or less overlap 204 (intersection over union; Figure 3a, right ). 205 To validate that the Nsyn-enrichment identified by the model could be observed directly on genes 206 using pNpS (nonsynonymous enrichment at polymorphic positions , Methods ), we calculated IBD-207 to-Control ratios based on group-level mean pNpS, and tested gene category statistical difference 208 (Nsyn-decreased=1283, Nsyn-increased=43263, Figure 3b-c ). We confirmed Nsyn-increased 209 genes had significantly higher mean pNpS IBD-to-Control ratio (Wilcoxon rank-sum test), as well 210 as higher mean dNdS IBD-to-Control ratio ( Figure 3d, Wilcoxon rank-sum test). Both pNpS- and 211 dNdS-derived statistics confirmed that Nsyn-variants were specifically enriched in IBD across a 212 subset of genes within the species’ genomes. Moreover, we also tested whether ND-categorized 213 genes carried IBD Nsyn-enrichment, and only pNpS resulted to be differential between ND 214 categories ( Figure 3e-g, Wilcoxon rank-sum test). 215 These results showed that nonsynonymous polymorphisms were more prominent in IBD-216 associated strains compared to Control-associated ones and this was a common feature across 217 the species investigated. The accumulation of nonsynonymous polymorphisms in IBD strains 218 suggests specific mutational and selective processes happening in the IBD gut, potentially 219 facilitating bacterial adaptation to environmental stress. 220 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+## Gene-level nucleotide diversity and nonsynonymous variants enrichment 221 
+
+## inform on gene evolutionary propensity under IBD stress 222 Thus far, we measured gene-level nucleotide diversity (ND) and gene-level nonsynonymous 223 variant (Nsyn) enrichment. To offer a unified framework describing gene propensity to 224 evolutionary change under IBD stress, we explored using ND and Nsyn model coefficients as 225 axes of diversity, describing a two dimensional space, where genes can be localized in one of 226 four gene categories: (1) adaptive with ND-increased & Nsyn-increased; (2) neutrally-divergent 227 with ND-increased only; (3) functionally-divergent with Nsyn-increased only; and (4) invariant with 228 ND-decreased & Nsyn-decreased ( Figure 4a ). As defined, adaptive genes exhibit higher genetic 229 diversity in IBD along both ND and Nsyn axes, while neutrally-divergent and functionally-divergent 230 genes exhibit higher genetic diversity along only one of the two axes. According to this framework, 231 species exhibited differences in gene distribution and occupancy of the different categories, with 232 visible differences between CD (top) and UC (bottom) patients ( Figure 4b, Supplementary 233 
+
+Figure 5a ). Some species, such as B. faecis and B. wexlerae exhibited large variance along the 234 ND axis, while B. longum and P. vulgatus exhibited only variance along the Nsyn axis. To 235 investigate whether gene distribution across the four categories could be correlated with certain 236 metabolic pathways or cellular functions, we computed functional enrichment propensities 237 (logarithmic odds-ratios, log(OR)), grouping genes in KEGG pathways, BRITE hierarchical 238 groups, EC numbers and KO terms ( N functions with ≧5 genes=242; Methods ). Specifically, we 239 computed the odds-ratios of being categorized as adaptive , functionally-divergent or neutrally-240 
+
+divergent for each functional group ( Methods ). Odds-ratios for the adaptive category identified 241 62 functional groups, as either strongly enriched with- or depleted of diversity in IBD [ absolute 242 
+
+log(OR)>=1 ] ( Figure 4c, left ). For these functional groups, we highlighted both neutrally-divergent 243 and functionally-divergent odds-ratios, together with species-specific gene contributions to the 244 functional group ( Figure 4c, center-right ). Functional groups that had the highest adaptive odds-245 ratios (top of list) included bacterial motility ( Chemotaxis , Flagellar assembly ), iron binding and 246 oxygen/redox sensing ( ferritin and hemerythrin, respectively), secretion systems components 247 (Gram-positive secretion component; HlyD family secretion protein) , outer membrane vesicle 248 formation (LemA protein ), sugar metabolism (glucosidase , L− 
+
+rh am 
+
+nose m
+
+ut a
+
+rot a
+
+se ,249 
+
+neopullulanase), and host-derived polysaccharide degradation (Glycosaminoglycan degradation 250 and unsaturated chondroitin disaccharide hydrolase). Among the functional groups that were 251 depleted of diversity ( Figure 4c, center-right, bottom of list), we identified cofactor-associated 252 functions ( copper homeostasis protein , cobalamin reductase ), enzymes involved in fatty acid 253 metabolism ( a
+
+cyl−C 
+
+oA
+
+thioester h y
+
+dro la 
+
+se , oleate hydratase ), sulfur cycling and metabolism 254 
+
+(Sulfur relay systems, Glutathione metabolism , Sulfoquinovose metabolism ), and pore forming 255 toxins (Bacterial toxins - hemolysin III ). Finally, we also looked at functions that exhibited 256 particularly large ND and Nsyn coefficients in individual species ( Supplementary Figure 5b ). 257 Among these, we found several genes encoding for tRNA biogenesis proteins, transporters and 258 factors involved in sensory signal-transduction cascades, including again proteins involved in 259 chemotaxis and flagellar assembly. 260 These results showed that some genes, possibly related to bacterial stress avoidance (motility) 261 or inter-specific competition (secretion systems), are likely to present signs of genetic 262 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+diversification in IBD, suggesting higher propensity to evolve under stress, while other genes, 263 involved in nutrient scavenging and cycling, might be devoid of genetic diversity for their essential 264 roles in bacterial stress management. 265 266 
+
+# Discussion 267 268 Healthy microbiomes may support large and diverse populations of conspecific strains, which can 269 usually stably colonize and diversify for years within the host(36, 40, 43–46). Factors that alter 270 the diversity of the existing pool of strains in a community can be seen as ecological disturbances 271 (e.g. bottlenecks), which filter out poorly adapted strains before allowing for recolonization 272 events(47–50). 273 IBD acts as a strong and prolonged ecological filter, with escalating bouts of gut inflammation 274 causing drastic remodeling of the microbial community within the gut(51). As we showed in the 275 first section, more than half of the species tested in our analyses exhibited signs of reduced strain 276 richness in IBD, while the remaining few showed no change. On one hand, reduced strain 277 richness in IBD could result from the lack of either strain retention or recolonization processes, 278 but in both cases the IBD gut exhibits overall lower ecosystem carrying capacity, lacking open 279 and stable niches that can be occupied, potentially due to mucosal inflammation(52). On the other 280 hand, the lack of change in the diversity of some species across disease groups is surprising, 281 given that drastic compositional changes are observed ( Supplementary Figure 2c ). For these 282 species, one possible interpretation could be that already at homeostasis, a few strains tend to 283 dominate, and the IBD gut has the potential to accommodate all of them(40, 53). Alternatively, 284 these species might be characterized by intrinsic capacity to survive and adapt to the IBD stress 285 environment. The species that exhibited no change in our analysis, such as P. vulgatus , B. 286 
+
+uniformis and B. longum , are not opportunistic facultative anaerobes, such as the ones belonging 287 to the Enterobacteriaceae family, which easily adapt to the more aerobic gut environment driven 288 by inflammation(54, 55). These species are prevalent and at times highly abundant human gut 289 species, suggesting that high prevalence and abundance might indeed be signs of high resistance 290 to ecological stress. 291 Resilience to IBD stress could be encoded in a species metabolic capacity, in particular by 292 encoding complete metabolic modules enabling for the biosynthesis or assembly of essential 293 nutrients and cofactors, which are often turned into rare commodities under gut inflammatory 294 conditions(29, 56–58). Thus, our analysis focused heavily on genetic diversity at the individual 295 gene level, where we identified a specific gene subset across species that exhibited an increase 296 of nucleotide diversity in IBD, in contrast to the rest of the genome (ND-increased genes). This 297 suggested that a gene-level diversity analysis has the potential to identify gene functions that tend 298 to accumulate polymorphisms, and that the retention of these polymorphisms might be explained 299 by an acquired survival advantage in the context of IBD stress. 300 Additionally, we measured the overall enrichment of nonsynonymous diversity at the gene level 301 and identified gene-specific enrichments unique to IBD strains. These analyses suggest that 302 overall IBD-associated strains seem to undergo a specific selection process, where functional 303 innovations (nonsynonymous variants) are selected for. Also in this case, some species exhibited 304 a more prominent nonsynonymous variant enrichment than others, not necessarily overlapping 305 the nucleotide diversity enrichment. Assuming IBD stress exerts high purifying selection pressure 306 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+on the gut microbiome, the identified functional variants in IBD-associated strains could be likely 307 the result of recent adaptive diversification, rather than relaxed purifying selection(59). The trigger 308 to these nonsynonymous mutations could be the exposure to oxidative stress (ROS and NOS), 309 which triggers DNA damage(60–62). When DNA damage occurs, such as the oxidation of a 310 guanine (8-oxo-G), stalled DNA replication triggers recruitment of an error-prone DNA 311 polymerase, which often incorporates the wrong nucleotide, increasing the likelihood for 312 nonsynonymous codon change. The process of stress-induced mutagenesis is very prominent in 313 the context of a variety of environmental stresses, including antibiotic stress(63, 64). Another 314 trigger for the biased incorporation of nucleotides under stress could be nutrient limitation. It has 315 been described that nutrient limitation was the basis of evolutionary variants among marine 316 bacterial genomes, specifically under limited availability of nitrogen(65). In IBD stress, many 317 nutrients are limited, though whether this kind of nutrient limitation is responsible for specific 318 evolutionary innovations in IBD remains unknown. 319 Finally, we focused on combining all the evidence in one unified framework. We defined four gene 320 categories describing differential propensity to evolutionary change under stress, and identified 321 functions that were enriched in overall nucleotide diversity and nonsynonymous variants in IBD 322 (adaptive functions). We highlighted motility, secretion system components, oxidative stress 323 management proteins and many others that open interesting avenues for future mechanistic work. 324 Specifically, the gene group associated with flagellar assembly was one of the biggest functional 325 groups enriched in the adaptive category. Some studies have highlighted that mutated flagellar 326 components may induce cell aggregation, allow for better host colonization, or possibly reduce 327 intracellular ROS production and mutagenesis(66–70). In the context IBD stress in the gut, further 328 experimental work will be needed to elucidate whether increased genetic diversity in flagellar 329 components positively or negatively impact survival in the gut by optimizing or inactivating 330 bacterial motility. 331 We also identified diversity enrichment in proteins associated with housekeeping functions. 332 Among them, we found ribosomal proteins, which are commonly used as universal marker genes 333 to infer phylogenetic relationships between distantly related bacteria(71, 72). Recent work has 334 performed a large-scale phylogenetic analysis using a set of universal marker genes (including 335 ribosomal proteins and an RNA polymerase subunit) and identified IBD-associated strains that 336 were later confirmed to be likely IBD-adapted, based on the metabolic functions that they 337 encoded(29). This work suggested that IBD-associated strains might carry an evolutionary 338 signature in their universal marker genes, and this signature might derive from stress exposure. 339 Other in vitro studies on E. coli confirm that, in response to long-term starvation, strains 340 reproducibly acquire mutations in RNA polymerase subunits (rpoB and rpoC), to the extent that 341 coexisting strains can be tracked over time by means of RNA Pol subunit barcoding(73–75). 342 Collectively, these findings point towards the occurrence of global genetic remodeling in bacteria 343 under stress, and understanding the nature of these genetic changes might further uncover 344 unknown strategies of bacterial tolerance and interaction with the environment. 345 This work provides robust findings on the group-level relationship between disease and strain 346 diversity, but also ignores sources of heterogeneity within disease groups, such as severity level 347 and disease duration. These factors might be investigated in future work to elucidate whether 348 remissive or active disease states are associated with different levels of strain diversity and 349 whether disease duration could be associated with different kinds of genetic diversity. 350 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Furthermore, longitudinal sampling of individual patients was only used to maximize species 351 retrieval, but in future work this could be an interesting direction to investigate temporal dynamics 352 of the genetic diversity observed cross-sectionally. 353 In the past decade, the study of host- and environment-associated microbiomes has uncovered 354 how microbial communities can be used as dynamic barometers of organismal and ecosystemic 355 health. This work highlights the potential of using intra-species gene-level diversity as a sensor 356 for environmental stress, and suggests the presence of stress-derived evolutionary signatures in 357 the genomes of commensal species in the IBD gut. 358 359 
+
+360 
+
+361 
+
+362 
+
+363 
+
+364 
+
+365 
+
+366 
+
+367 
+
+368 
+
+369 
+
+370 
+
+371 
+
+372 
+
+373 
+
+374 
+
+375 
+
+376 
+
+377 
+
+378 
+
+379 
+
+380 
+
+381 
+
+382 
+
+383 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+# Materials and Methods 384 
+
+## Metagenomic data cohorts 385 We compiled a collection of gut metagenomic sequencing data amounting to 2397 samples from 386 the following cohorts: (1) the SZ pediatric cohort including 134 samples 387 (Control=29,CD=61,UC=44), available at BioProject PRJNA1265906 ; (2) the LifeLines-388 DEEP_followup adult cohort including 337 samples from healthy individuals available under Data 389 Access Agreement with the UMCG Department of Genetics to access EGAD00001006959 data 390 repository; (3) the 1000IBD adult cohort including 352 samples (CD=203,UC=149) available 391 under Data Transfer Agreement with the University Medical Center Groningen and Prof. Dr. R.K. 392 Weersma to access EGAD00001003991 and EGAD00001004194 data repositories; the HMP2 393 mixed cohort including 1574 samples (Control=424,CD=714,UC=436) available at 394 https://ibdmdb.org. 395 
+
+## Selection of the species 396 We identified species suitable for our strain-level metagenomic analysis by calculating species 397 prevalence across the cohorts described above. We used Metaphlan4(76) and Metaphlan DB v. 398 mpa_vJan21_CHOCOPhlAnSGB_202103 to taxonomically profile the samples, then we filtered 399 out species instances with relative abundance < 0.01% and selected species whose prevalence 400 reached at least 50% in each study group (Control, CD, UC). Since SZ and HMP2 cohorts include 401 multiple samples from the same individuals, we calculated prevalence by considering any one 402 sample with the species present per subject. From here we retrieved a list of 20 species whose 403 prevalence and median relative abundance is reported in Supplementary Table 1 .404 
+
+## Cross-database mapping 405 The taxonomic identifiers for the 20 species selected were cross-mapped to the UHGGv1 406 database (taxonomy derived from GTDB release89) to identify corresponding representative 407 genomes. We used the mapping file available with the Metaphlan DB 408 (mpa_vJan21_CHOCOPhlAnSGB_202103_SGB2GTDB.tsv ), then checked that the species 409 representatives reported in GTDB release89 did not change till release202, ensuring that these 410 representative genomes were stably identified as such for these species. Only one within our 20 411 species ( Phocaeicola vulgatus SGB1814) was not present in GTDB release89, but it was 412 introduced in release202 with GCA_964248265.1 as a representative genome. Hence, we 413 retrieved GCA_964248265.1 from NCBI and renamed it GUT_964248265 to uniform it with other 414 UHGGv1 representatives. The list of the 20 species with their SGB identifiers, GTDB naming and 415 UHGGv1 identifiers is available in Supplementary Table 2 .416 
+
+417 
+
+418 
+
+419 
+
+420 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+## Strain-level metrics from metagenomic reads with inStrain 421 
+
+inStrain database 422 We used inStrain(77) to retrieve strain-level metrics directly from metagenomic reads. We first 423 downloaded the UHGGv1 full set of representative genomes, identified coding regions with 424 Prodigal(78) and built a bowtie2(79) database including genome GCA_964248265.1 as a 425 representative for Phocaeicola vulgatus. Then we mapped all samples against the UHGGv1 DB 426 using bowtie2 and samtools(80) to sort and index the mapping files. Then we ran inStrain with -427 
+
+-database_mode which sets some parameters that are appropriate for mapping metagenomic 428 reads to an external DB of genomes. This mostly ensures that the genome ANI threshold used is 429 (1) not too stringent to allow for sample-specific strains to be mapped to their representative 430 genome in the database, and (2) not too relaxed to ensure accurate, species-specific sequence 431 mapping. Additionally we used different read pairing parameters based on whether the 432 metagenomic samples were paired-end or single-end: for the single-end read samples (SZ 433 cohort) we used --non_discordant , while for all the other paired-end read samples we used 434 
+
+--paired_only (default). 435 inStrain by default filtered out samples that had less than 1x coverage depth for a species of 436 interest, so the number of samples that were positive for at least one of the 20 species selected 437 was 1435. 438 
+
+Coverage breadth filtering and the B. longum case 439 We gathered all inStrain genome-level outputs and filtered out instances where a species of 440 interest did not reach a minimum coverage breadth threshold. The recommended minimum 441 coverage breadth by inStrain documentation is 0.5, but we noticed that, applying this threshold, 442 one of the 20 species selected, Bifidobacterium longum , was underrepresented in our dataset 443 compared to our prevalence expectations. The UHGGv1 database indeed includes a B. longum 444 
+
+subsp. infantis representative genome and this likely resulted in the lower coverage breadth 445 observed for B. longum in our data, which likely belongs to B. longum subsp. longum . In 446 
+
+Supplementary Figure 1a it is visible how all instances of B. longum genomes are indeed right 447 below the recommended coverage breadth threshold, so we decided to use 0.45 as the coverage 448 breadth threshold specific to B. longum . Additionally, we filtered out species instances where the 449 genome had at least a coverage breadth equal to 0.2 at a minimum coverage depth equal to 5x 450 (breadth_minCov >=0.2 , minCov=5x , default). Applying these coverage filtering thresholds, 451 1408 samples were positive for at least one species of interest. 452 
+
+Coverage depth and nucleotide diversity 453 Among the metrics provided by inStrain, we started analysing nucleotide diversity (ND). inStrain 454 calculates ND according to its original implementation(81) and by default only using positions that 455 reach a minimum coverage depth threshold ( minCov=5x ). ND is provided both at the genome 456 and gene level, but to have better control on ND estimation accuracy we decided to use only 457 gene-level ND estimates for genes that had breadth_minCov >=0.2. 458 
+
+459 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+## Linear regression modelling 460 
+
+Genome-level nucleotide diversity 461 To obtain genome-level nucleotide diversity averages, we calculated the mean nucleotide 462 diversity across genes previously filtered by breadth_minCov , adjusting nucleotide diversity by 463 the product of breadth_minCov and gene length, to account for nucleotide diversity estimates 464 calculated from poorly covered genes, without raising the general threshold for gene inclusion. 465 We did the same for calculating the genome-level mean for coverage depth and breadth and 466 compared the unweighted and weighted genome-level nucleotide diversity means as shown in 467 
+
+Supplementary Figure 1b . Then we used these weighted metrics to run a linear regression 468 model estimating the effect of disease on genome-level nucleotide diversity per species, adjusting 469 for coverage depth and breadth and age group, as follows: lm( calc_genome_metric ~470 
+
+Phenotype + log(calc_genome_coverage) + calc_genome_breadth_minCov + cohort, 471 
+
+weights = breadth_minCov* gene_length) .472 Results from this set of models are reported in Supplementary Table 3 and Supplementary 473 
+
+Figure 2a . As input to the linear regression model, we used only cross-sectional data, so for 474 subjects with more than one sample available, we selected the sample with the highest genome-475 level mean breadth_minCov . Finally, we collected model results for all 20 species, used the 476 lmerTest (v.3.2-1) R package to retrieve statistical significance for the model coefficients and 477 applied the Benjamini-Hochberg procedure to account for multiple hypothesis testing. 478 
+
+Marker gene-level nucleotide diversity 479 To evaluate whether the results from the genome-level nucleotide diversity means could reflect 480 variability across genes included in the mean rather than the whole genome, we decided to rerun 481 the linear regression model using nucleotide diversity means coming from core genes only. To 482 identify genes that could represent the core genome, we searched for the Metaphlan DB species-483 specific marker genes in our set of genes. For this, we mapped the 20 species representative 484 genomes against the Metaphlan DB (v. mpa_vJan21_CHOCOPhlAnSGB_202103) using 485 BLAST(82) and then selected for the best alignments using their bitscore. Out of 2388 total 486 markers associated with the 20 species, we confidently identified 2296. Then we calculated 487 genome-level mean as described previously and ran the linear regression model as before. 488 Results from this set of models are reported in Supplementary Table 4 and Supplementary 489 
+
+Figure 2b .490 
+
+Gene-level nucleotide diversity 491 To obtain gene-level disease effects on nucleotide diversity we ran a large set of gene-level linear 492 regression models, since parametrization for the full set of genes in the previous model set did 493 not manage to converge, even with the introduction of different optimizers. For this reason, we 494 ran a linear regression model per gene and then collectively applied bayesian shrinkage using 495 the R package ashr (2.2-63) to reduce overinflated coefficients. Genes that did not reach per 496 study group a prevalence>0.2 and were present in a minimum number of subjects of 10 were not 497 used to build a model. The models were run as follows using stats R package (v. 3.6.2): 498 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+lm( gene_metric ~ Phenotype + log(coverage_scaled) + breadth_minCov + cohort, 499 
+
+weights = breadth_minCov* gene_length) .500 According to this procedure, genes that had a Local False Sign Rate (lfsr) < 0.05, derived from 501 shrinkage were considered to have a statistically significant coefficient and if the genes had 502 coefficient<0 were termed as “ND-decreased”, while if the coefficient>0 they were termed as “ND-503 increased”. To confirm that the gene categorization that resulted from the linear regression model 504 corresponded to our expectations in (1) mean nucleotide diversity, (2) polymorphic fraction and 505 (3) minor allele frequency, we selected the genes that were categorized concordantly across CD 506 and UC, for both ND-decreased and ND-increased genes, and then calculated the IBD-to-Control 507 ratios based on the three different metrics mentioned and tested statistical difference (ND-508 decreased genes=586 [randomly-sampled subset], ND-increased genes=45 [all]) 509 
+
+Gene-level nonsynonymous variants enrichment 510 To model the relative gene-level accumulation of nonsynonymous and synonymous variants, we 511 decided to use raw variant counts ( SNV_N_count and SNV_S_count in inStrain, respectively) in 512 a binomial generalized linear mixed-effects model using glmmTMB function from glmmTMB (v. 513 1.1.13) R package, as follows: SNV_N_count, SNV_S_count ~ Phenotype +514 
+
+dNdS_substitutions + log_cov_scaled + breadth_minCov + (1 + Phenotype 515 
+
+|| gene), family = binomial(), control = glmmTMBControl( optimizer =516 
+
+nlminb). Thanks to the binomial structure, the model interprets data from genes with few 517 variants as less reliable, and with gene-specific random effects, as in (1+Phenotype|gene), 518 we are able to estimate disease-specific effects for all genes, while reducing uncertainty by 519 borrowing confidence from the entire distribution of coefficients (internal shrinkage). Moreover, 520 gene-specific effects help accounting for baseline differences across genes (codon usage, GC 521 content, gene-specific mutation tendencies) which, if left unaccounted for, can skew modelling 522 results. In this respect, instead of using variant counts, we could have used pNpS (polymorphic 523 nonsynonymous-to-synonymous ratio). pNpS is similar to its non-polymorphic version, dNdS 524 (non-polymorphic nonsynonymous-to-synonymous ratio), but less known. Metrics like pNpS and 525 dNdS normalize for the actual number of nonsynonymous and synonymous opportunities in the 526 sequence, however, ratio-based metrics have the disadvantage of being less interpretable in 527 modelling. For these reasons, we decided to model gene-level nonsynonymous variant 528 enrichment at polymorphic positions using variant counts, but then to use pNpS to confirm the 529 model results. In fact, after modelling, we selected the genes that were categorized concordantly 530 across CD and UC, for both Nsyn-decreased and Nsyn-increased genes, and then calculated 531 their mean pNpS over subjects, for Control and IBD separately. Finally, we used these pNpS 532 means to compute IBD-to-Control ratios and test statistical difference (Nsyn-decreased=1283, 533 Nsyn-increased=43263). In the model, we also included dNdS, to approximate long-term genetic 534 divergence existing between the strains within the subject and the reference genome, which could 535 confound our results, when considering that different subjects could harbor strains that differ quite 536 a lot in their genomic background. For this reason, we did not want to detect more 537 nonsynonymous polymorphisms, only because some individuals might harbor a different 538 uncharacterized subspecies. 539 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+## Functional enrichment 540 To retrieve gene’s KEGG Orthology (KO) terms and definitions we ran KofamScan on all the 20 541 genomes protein coding sequences provided by Prodigal, and selected only confident annotations 542 (score > 0, N=361). Then, for each KO term we (1) extracted EC numbers from the KO terms 543 definition, (2) retrieved KEGG pathway identifiers and definitions (from 544 https://rest.kegg.jp/link/pathway/ko and https://rest.kegg.jp/list/pathway respectively), and (3) 545 used the KEGGREST R package in batch mode to collect BRITE hierarchies. These last three 546 steps allowed us to collect general functional annotation encompassing more KO terms together, 547 while providing annotation for most of them. Before calculating odds-ratios we removed BRITE 548 annotations reporting “Unknown function” or “General function prediction only” and excluded 549 functions with less than 5 genes to reduce weakly supported results. Finally we manually curated 550 annotations that reported eukaryotic-associated functions, opting for homologous annotations 551 suitable for prokaryotes. Odds-ratios were calculated for each functional group by using raw 552 frequency counts of genes as within one of the three gene evolutionary categories ( adaptive ,553 
+
+neutrally-divergent and functionally-divergent ), based on their ND and Nsyn coefficients, with a 554 smoothing correction (+0.5). In particular, odds-ratios were defined as follows = cat_pos_in +555 
+
+0.5)*(cat_neg_out + 0.5) / (cat_pos_out + 0.5)*(cat_neg_in + 0.5) .556 
+
+557 
+
+# Data availability 558 Scripts used for running the linear regression models and other analyses will be available at 559 https://github.com/yassourlab/IBD_gene_diversity 560 
+
+561 
+
+562 
+
+563 
+
+564 
+
+565 
+
+566 
+
+567 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+# References 568 1. Lin Z, Pang S, Li Z, Xu T, Zhou Y-L, Zhang C, Qian P-Y, Zhang S. 2026. The response 569 of biofilms to nutrient environments and their potential in biogeochemical cycles. Microbiol 570 Res 309:128515. 571 2. Woodhams DC, Bletz MC, Becker CG, Bender HA, Buitrago-Rosas D, Diebboll H, 572 Huynh R, Kearns PJ, Kueneman J, Kurosawa E, LaBumbard BC, Lyons C, McNally K, 573 Schliep K, Shankar N, Tokash-Peters AG, Vences M, Whetstone R. 2020. Host-associated 574 microbiomes are predicted by immune system complexity and climate. Genome Biol 21:23. 575 3. Lardinois LL, Hinojosa NA, Quintero-Arrieta H, Sellers AJ, Leray M, Barrett RDH. 2026. 576 Host matters: coral reef fish species show distinct skin microbiome responses to upwelling-577 driven environmental changes. BMC Microbiol 26. 578 4. Yao X-Q, Bao H, La N-T, Jiang G-S, Zhai P-H, Liu C-B, Yu L. 2025. Gut microbiota 579 contribute to cold adaptation in mammals-primates and ungulates. iScience 28:112245. 580 5. Houwenhuyse S, Stoks R, Mukherjee S, Decaestecker E. 2021. Locally adapted gut 581 microbiomes mediate host stress tolerance. The ISME Journal 15:2401–2414. 582 6. Smits SA, Leach J, Sonnenburg ED, Gonzalez CG, Lichtman JS, Reid G, Knight R, 583 Manjurano A, Changalucha J, Elias JE, Dominguez-Bello MG, Sonnenburg JL. 2017. 584 Seasonal cycling in the gut microbiome of the Hadza hunter-gatherers of Tanzania. 585 Science 357:802–806. 586 7. David LA, Materna AC, Friedman J, Campos-Baptista MI, Blackburn MC, Perrotta A, 587 Erdman SE, Alm EJ. 2014. Host lifestyle affects human microbiota on daily timescales. 588 Genome Biol 15:R89. 589 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+8. Vangay P, Johnson AJ, Ward TL, Al-Ghalith GA, Shields-Cutler RR, Hillmann BM, Lucas 590 SK, Beura LK, Thompson EA, Till LM, Batres R, Paw B, Pergament SL, Saenyakul P, 591 Xiong M, Kim AD, Kim G, Masopust D, Martens EC, Angkurawaranon C, McGready R, 592 Kashyap PC, Culhane-Pera KA, Knights D. 2018. US Immigration Westernizes the Human 593 Gut Microbiome. Cell 175:962–972.e10. 594 9. Carter MM, Olm MR, Merrill BD, Dahan D, Tripathi S, Spencer SP, Yu FB, Jain S, Neff 595 N, Jha AR, Sonnenburg ED, Sonnenburg JL. 2023. Ultra-deep sequencing of Hadza 596 hunter-gatherers recovers vanishing gut microbes. Cell 186:3111–3124.e13. 597 10. Baldanzi G, Larsson A, Sayols-Baixeras S, Dekkers KF, Hammar U, Nguyen D, 598 Graells T, Ahmad S, Gazolla Volpiano C, Meric G, Järhult JD, Tängdén T, Ludvigsson JF, 599 Lind L, Sundström J, Michaëlsson K, Ärnlöv J, Kennedy B, Orho-Melander M, Fall T. 2026. 600 Antibiotic use and gut microbiome composition links from individual-level prescription data 601 of 14,979 individuals. Nature Medicine 32:1351–1361. 602 11. Maier L, Pruteanu M, Kuhn M, Zeller G, Telzerow A, Anderson EE, Brochado AR, 603 Fernandez KC, Dose H, Mori H, Patil KR, Bork P, Typas A. 2018. Extensive impact of non-604 antibiotic drugs on human gut bacteria. Nature 555:623–628. 605 12. Lu J, Zhang L, Zhai Q, Zhao J, Zhang H, Lee Y-K, Lu W, Li M, Chen W. 2021. 606 Chinese gut microbiota and its associations with staple food type, ethnicity, and 607 urbanization. npj Biofilms and Microbiomes 7:71. 608 13. Ahmad R, Sorrell MF, Batra SK, Dhawan P, Singh AB. 2017. Gut permeability 609 and mucosal inflammation: bad, good or context dependent. Mucosal Immunology 10:307– 610 317. 611 14. Dong X, Yang J, He L, Fang H, Wang L, Zhu J, Xu J, Song K, Xuan Z. 2026. The 612 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Barrier-Microbiota-Inflammation Axis in Colorectal Cancer: Mechanisms and Emerging 613 Diagnostic & Therapeutic Strategies. Cancers (Basel) 18. 614 15. Chairatana P, Nolan EM. 2017. Defensins, lectins, mucins, and secretory 615 immunoglobulin A: microbe-binding biomolecules that contribute to mucosal immunity in the 616 human gut. Crit Rev Biochem Mol Biol 52:45–56. 617 16. Dajani R, Zhang Y, Taft PJ, Travis SM, Starner TD, Olsen A, Zabner J, Welsh 618 MJ, Engelhardt JF. 2005. Lysozyme secretion by submucosal glands protects the airway 619 from bacterial infection. Am J Respir Cell Mol Biol 32:548–552. 620 17. Nikolaou A, Salvador M, Wright I, Wantock T, Sandison G, Harle T, Carta D, 621 Gutierrez-Merino J. 2025. The ratio of reactive oxygen and nitrogen species determines the 622 type of cell death that bacteria undergo. Microbiol Res 292:127986. 623 18. Yang C, Chen-Liaw A, Spindler MP, Tortorella D, Moran TM, Cerutti A, Faith JJ. 624 2022. Immunoglobulin A antibody composition is sculpted to bind the self gut microbiome. 625 Sci Immunol 7:eabg3208. 626 19. Rodríguez-Rojas A, Makarova O, Rolff J. 2014. Antimicrobials, Stress and 627 Mutagenesis. PLOS Pathogens 10:e1004445. 628 20. Ng KM, Pannu S, Liu S, Burckhardt JC, Hughes T, Van Treuren W, Nguyen J, 629 Naqvi K, Nguyen B, Clayton CA, Pepin DM, Collins SR, Tropini C. 2023. Single-strain 630 behavior predicts responses to environmental pH and osmolality in the gut microbiota. mBio 631 https://doi.org/10.1128/mbio.00753-23. 632 21. Choudhary D, Lagage V, Foster KR, Uphoff S. 2023. Phenotypic heterogeneity in 633 the bacterial oxidative stress response is driven by cell-cell interactions. Cell Rep 634 42:112168. 635 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+22. Brauner A, Fridman O, Gefen O, Balaban NQ. 2016. Distinguishing between 636 resistance, tolerance and persistence to antibiotic treatment. Nature Reviews Microbiology 637 14:320–330. 638 23. Helaine S, Conlon BP, Davis KM, Russell DG. 2024. Host stress drives tolerance 639 and persistence: The bane of anti-microbial therapeutics. Cell Host Microbe 32:852–862. 640 24. Lin Z, Luo W, Zhang K, Dai S. 2024. Environmental and Microbial Factors in 641 Inflammatory Bowel Disease Model Establishment: A Review Partly through Mendelian 642 Randomization. Gut and Liver 18:370–390. 643 25. Mayorga L, Noguera Segura A, Campderros L, Pons-Tarin M, Soler Z, Vega-644 Abellaneda S, Serrano-Gomez G, Herrera-deGuise C, Robles-Alonso V, Borruel N, 645 Manichanh C. 2026. Distinct microbial mediators link diet to inflammation in Crohn’s 646 disease and ulcerative colitis. Gut 75:1136–1146. 647 26. D’Silva A, Fox DE, Nasser Y, Vallance JK, Quinn RR, Ronksley PE, Raman M. 648 2022. Prevalence and Risk Factors for Fatigue in Adults With Inflammatory Bowel Disease: 649 A Systematic Review With Meta-Analysis. Clin Gastroenterol Hepatol 20:995–1009.e7. 650 27. Rosen MJ, Dhawan A, Saeed SA. 2015. Inflammatory Bowel Disease in Children 651 and Adolescents. JAMA Pediatr 169:1053–1060. 652 28. Schirmer M, Stražar M, Avila-Pacheco J, Rojas-Tapias DF, Brown EM, Temple 653 E, Deik A, Bullock K, Jeanfavre S, Pierce K, Jin S, Invernizzi R, Pust M-M, Costliow Z, 654 Mack DR, Griffiths AM, Walters T, Boyle BM, Kugathasan S, Vlamakis H, Hyams J, Denson 655 L, Clish CB, Xavier RJ. 2024. Linking microbial genes to plasma and stool metabolites 656 uncovers host-microbial interactions underlying ulcerative colitis disease course. Cell Host 657 Microbe 32:209–226.e7. 658 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+29. Kumbhari A, Cheng TNH, Ananthakrishnan AN, Kochar B, Burke KE, Shannon 659 K, Lau H, Xavier RJ, Smillie CS. 2024. Discovery of disease-adapted bacterial lineages in 660 inflammatory bowel diseases. Cell Host Microbe 32:1147–1162.e12. 661 30. Pribis JP, García-Villada L, Zhai Y, Lewin-Epstein O, Wang AZ, Liu J, Xia J, Mei 662 Q, Fitzgerald DM, Bos J, Austin RH, Herman C, Bates D, Hadany L, Hastings PJ, 663 Rosenberg SM. 2019. Gamblers: An antibiotic-induced evolvable cell subpopulation 664 differentiated by reactive-oxygen-induced general stress response. Mol Cell 74:785– 665 800.e7. 666 31. Herron MD, Doebeli M. 2013. Parallel Evolutionary Dynamics of Adaptive 667 Diversification in Escherichia coli. PLOS Biology 11:e1001490. 668 32. Barreto HC, Frazão N, Sousa A, Konrad A, Gordo I. 2020. Mutation accumulation 669 and horizontal gene transfer in Escherichia coli colonizing the gut of old mice. 670 Communicative & Integrative Biology 89–96. 671 33. Blount ZD, Borland CZ, Lenski RE. 2008. Historical contingency and the 672 evolution of a key innovation in an experimental population of Escherichia coli. Proceedings 673 of the National Academy of Sciences 105:7899–7906. 674 34. Quince C, Walker AW, Simpson JT, Loman NJ, Segata N. 2017. Shotgun 675 metagenomics, from sampling to analysis. Nature Biotechnology 35:833–844. 676 35. Treichel NS, Pauvert C, Séneca J, Pjevac P, Berry D, Penders J, Hitch TCA, 677 Clavel T. 2026. Benchmarking of shotgun sequencing depth reveals the potential and 678 limitations of shallow metagenomics and strain-level analysis. Nature Microbiology 679 11:1233–1244. 680 36. Zhao S, Lieberman TD, Poyet M, Kauffman KM, Gibbons SM, Groussin M, 681 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Xavier RJ, Alm EJ. 2019. Adaptive evolution within gut microbiomes of healthy people. Cell 682 Host Microbe 25:656–667.e8. 683 37. Poyet M, Groussin M, Gibbons SM, Avila-Pacheco J, Jiang X, Kearney SM, 684 Perrotta AR, Berdy B, Zhao S, Lieberman TD, Swanson PK, Smith M, Roesemann S, 685 Alexander JE, Rich SA, Livny J, Vlamakis H, Clish C, Bullock K, Deik A, Scott J, Pierce KA, 686 Xavier RJ, Alm EJ. 2019. A library of human gut bacterial isolates paired with longitudinal 687 multiomics data enables mechanistic microbiome research. Nat Med 25:1442–1452. 688 38. Garud NR, Good BH, Hallatschek O, Pollard KS. 2019. Evolutionary dynamics of 689 bacteria in the gut microbiome within and across hosts. PLoS Biol 17:e3000102. 690 39. Aggarwala V, Mogno I, Li Z, Yang C, Britton GJ, Chen-Liaw A, Mitcham J, 691 Bongers G, Gevers D, Clemente JC, Colombel J-F, Grinspan A, Faith J. 2021. Precise 692 quantification of bacterial strains after fecal microbiota transplantation delineates long-term 693 engraftment and explains outcomes. Nat Microbiol 6:1309–1318. 694 40. Chen-Liaw A, Aggarwala V, Mogno I, Haifer C, Li Z, Eggers J, Helmus D, Hart A, 695 Wehkamp J, Lamousé-Smith ESN, Kerby RL, Rey FE, Colombel JF, Kamm MA, Olle B, 696 Norman JM, Menon R, Watson AR, Crossette E, Terveer EM, Keller JJ, Borody TJ, 697 Grinspan A, Paramsothy S, Kaakoush NO, Dubinsky MC, Faith JJ. 2025. Gut microbiota 698 strain richness is species specific and affects engraftment. Nature 637:422–429. 699 41. Watson AR, Füssel J, Veseli I, DeLongchamp JZ, Silva M, Trigodet F, Lolans K, 700 Shaiber A, Fogarty E, Runde JM, Quince C, Yu MK, Söylev A, Morrison HG, Lee STM, Kao 701 D, Rubin DT, Jabri B, Louie T, Eren AM. 2023. Metabolic independence drives gut 702 microbial colonization and resilience in health and disease. Genome Biol 24:78. 703 42. Spragge F, Bakkeren E, Jahn MT, B N Araujo E, Pearson CF, Wang X, 704 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Pankhurst L, Cunrath O, Foster KR. 2023. Microbiome diversity protects against pathogens 705 by nutrient blocking. Science 382:eadj3502. 706 43. Oki K, Akiyama T, Matsuda K, Gawad A, Makino H, Ishikawa E, Oishi K, Kushiro 707 A, Fujimoto J. 2018. Long-term colonization exceeding six years from early infancy of 708 Bifidobacterium longum subsp. longum in human gut. BMC Microbiol 18:209. 709 44. Reeves PR, Liu B, Zhou Z, Li D, Guo D, Ren Y, Clabots C, Lan R, Johnson JR, 710 Wang L. 2011. Rates of mutation and host transmission for an Escherichia coli clone over 3 711 years. PLoS One 6:e26907. 712 45. Kang JTL, Teo JJY, Bertrand D, Ng A, Ravikrishnan A, Yong M, Ng OT, 713 Marimuthu K, Chen SL, Chng KR, Gan Y-H, Nagarajan N. 2022. Long-term ecological and 714 evolutionary dynamics in the gut microbiomes of carbapenemase-producing 715 Enterobacteriaceae colonized subjects. Nat Microbiol 7:1516–1524. 716 46. Kumar L, Whang SN, Verges DK, Potter RF, Gilbert NM. 2026. Strain-level 717 heterogeneity in Gardnerella urinary tract persistence and pathogenesis in an in vivo model 718 is consistent with comparative phylogenomic analyses. BMC Microbiology 26:283. 719 47. Ørsted M, Yashiro E, Hoffmann AA, Kristensen TN. 2022. Population bottlenecks 720 constrain host microbiome diversity and genetic variation impeding fitness. PLoS Genet 721 18:e1010206. 722 48. Ley RE, Peterson DA, Gordon JI. 2006. Ecological and evolutionary forces 723 shaping microbial diversity in the human intestine. Cell 124:837–848. 724 49. Wein T, Dagan T. 2019. The Effect of Population Bottleneck Size and Selective 725 Regime on Genetic Diversity and Evolvability in Bacteria. Genome Biol Evol 11:3283–3290. 726 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+50. Ng KM, Aranda-Díaz A, Tropini C, Frankel MR, Van Treuren W, O’Loughlin CT, 727 Merrill BD, Yu FB, Pruss KM, Oliveira RA, Higginbottom SK, Neff NF, Fischbach MA, 728 Xavier KB, Sonnenburg JL, Huang KC. 2020. Recovery of the Gut Microbiota after 729 Antibiotics Depends on Host Diet, Community Context, and Environmental Reservoirs. Cell 730 Host Microbe 28:628. 731 51. Xie J, Deng S, Zhang X, Zhang L, Jia X. 2026. From dysbacteriosis to ecological 732 remodeling: A new breakthrough in microbial treatment of inflammatory bowel disease. 733 iScience 29:115483. 734 52. Contijoch EJ, Britton GJ, Yang C, Mogno I, Li Z, Ng R, Llewellyn SR, Hira S, 735 Johnson C, Rabinowitz KM, Barkan R, Dotan I, Hirten RP, Fu S-C, Luo Y, Yang N, Luong 736 T, Labrias PR, Lira S, Peter I, Grinspan A, Clemente JC, Kosoy R, Kim-Schulze S, Qin X, 737 Castillo A, Hurley A, Atreja A, Rogers J, Fasihuddin F, Saliaj M, Nolan A, Reyes-Mercedes 738 P, Rodriguez C, Aly S, Santa-Cruz K, Peters L, Suárez-Fariñas M, Huang R, Hao K, Zhu J, 739 Zhang B, Losic B, Irizar H, Song W-M, Di Narzo A, Wang W, Cohen BL, DiMaio C, 740 Greenwald D, Itzkowitz S, Lucas A, Marion J, Maser E, Ungaro R, Naymagon S, Novak J, 741 Shah B, Ullman T, Rubin P, George J, Legnani P, Telesco SE, Friedman JR, Brodmerkel 742 C, Plevy S, Cho JH, Colombel J-F, Schadt EE, Argmann C, Dubinsky M, Kasarskis A, 743 Sands B, Faith JJ. 2019. Gut microbiota density influences host physiology and is shaped 744 by host and microbial factors https://doi.org/10.7554/eLife.40553. 745 53. Bleich RM, Li C, Sun S, Ahn J-H, Dogan B, Barlogio CJ, Broberg CA, Franks AR, 746 Bulik-Sullivan E, Carroll IM, Simpson KW, Fodor AA, Arthur JC. 2023. A consortia of clinical 747 E. coli strains with distinct in vitro adherent/invasive properties establish their own co-748 colonization niche and shape the intestinal microbiota in inflammation-susceptible mice. 749 Microbiome 11:277. 750 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+54. Baldelli V, Scaldaferri F, Putignani L, Del Chierico F. 2021. The Role of 751 Enterobacteriaceae in Gut Microbiota Dysbiosis in Inflammatory Bowel Diseases. 752 Microorganisms 9. 753 55. Wu H, Zeng W, Dai N, Gu J, He Y, Qin H, Lin L, Fu X, Fu B, Xing Z. 2025. 754 Hyperoxia as a driver of gut dysbiosis. Front Microbiol 16:1675652. 755 56. Veseli I, Chen YT, Schechter MS, Vanni C, Fogarty EC, Watson AR, Jabri B, 756 Blekhman R, Willis AD, Yu MK, Fernàndez-Guerra A, Füssel J, Murat Eren A. 2024. 757 Microbes with higher metabolic independence are enriched in human gut microbiomes 758 under stress. eLife 12. 759 57. Ugwu CE, Akinsulie OC, Ayandokun TF, Ajibade FA, Shahzad S, Aliyu VA, 760 Oladoye MJ, Idris I, Obasi KO, Edeh JK, Olojede A-AA, Ukauwa CB, Adeyemi MI, Ugwu 761 CC, Ugorji LC. 2026. Mechanisms and Therapeutic Potential of Nutritional Immunity. 762 Pathogens 15. 763 58. Murdoch CC, Skaar EP. 2022. Nutritional immunity: the battle for nutrient metals 764 at the host-pathogen interface. Nat Rev Microbiol 20:657–670. 765 59. Yu LC-H. 2018. Microbiota dysbiosis and barrier dysfunction in inflammatory 766 bowel disease and colorectal cancers: exploring a common ground hypothesis. Journal of 767 Biomedical Science 25:79. 768 60. Tratenšek A, Locatelli I, Grabnar I, Drobne D, Vovk T. 2024. Oxidative stress-769 related biomarkers as promising indicators of inflammatory bowel disease activity: A 770 systematic review and meta-analysis. Redox Biol 77:103380. 771 61. Carvajal-Garcia J, Samadpour AN, Hernandez Viera AJ, Merrikh H. 2023. 772 Oxidative stress drives mutagenesis through transcription-coupled repair in bacteria. 773 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Proceedings of the National Academy of Sciences 120:e2300761120. 774 62. Fasnacht M, Polacek N. 2021. Oxidative Stress in Bacteria and the Central 775 Dogma of Molecular Biology. Front Mol Biosci 8:671037. 776 63. Vasse M, Bonhoeffer S, Frenoy A. 2022. Ecological effects of stress drive 777 bacterial evolvability under sub-inhibitory antibiotic treatments. ISME Communications 2:80. 778 64. Revitt-Mills SA, Robinson A. 2020. Antibiotic-Induced Mutagenesis: Under the 779 Microscope. Front Microbiol 11:585175. 780 65. Shenhav L, Zeevi D. 2020. Resource conservation manifests in the genetic code. 781 Science 370:683–687. 782 66. Bhattacharyya S, Lopez S, Singh A, Harshey RM. 2024. Flagellar motility is 783 mutagenic. Proceedings of the National Academy of Sciences 121:e2412541121. 784 67. Chen G, Qin Z, Fan F, Luo M, Wang H, Xue B, Li S, Chen S, Yang X, Mao X, Yi 785 L, Yi C, Li W, Liu X, Kan B, Liu Z. 2026. A comprehensive analysis of flagellar mutations in 786 
+
+Vibrio cholerae : Trade-off mechanisms between motility loss and host adaptability. bioRxiv. 787 bioRxiv. 788 68. Hershey DM. 2021. Integrated control of surface adaptation by the bacterial 789 flagellum. Curr Opin Microbiol 61:1–7. 790 69. Alvi S, Mondelo VD, Boyle J, Buck A, Gejo J, Mason M, Matta S, Sheridan A, 791 Kreutzberger MAB, Egelman EH, McLoon A. 2024. Flagellar point mutation causes social 792 aggregation in laboratory-adapted Bacillus subtilis under conditions that promote 793 swimming. J Bacteriol 206:e0019924. 794 70. Lin T, Gao L, Zhao X, Liu J, Norris SJ. 2015. Mutations in the Borrelia burgdorferi 795 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+flagellar type III secretion system genes fliH and fliI profoundly affect spirochete flagellar 796 assembly, morphology, motility, structure, and cell division. MBio 6:e00579–15. 797 71. Wu M, Eisen JA. 2008. A simple, fast, and accurate method of phylogenomic 798 inference. Genome Biol 9:R151. 799 72. Wu M, Scott AJ. 2012. Phylogenomic analysis of bacterial and archaeal 800 sequences with AMPHORA2. Bioinformatics 28:1033–1034. 801 73. Lan Y, Rosen G, Hershberg R. 2016. Marker genes that are less conserved in 802 their sequences are useful for predicting genome-wide similarity levels between closely 803 related prokaryotic strains. Microbiome 4:18. 804 74. Zion S, Katz S, Hershberg R. 2024. Escherichia coli adaptation under prolonged 805 resource exhaustion is characterized by extreme parallelism and frequent historical 806 contingency. PLoS Genet 20:e1011333. 807 75. Cohen Y, Hershberg R. 2022. Rapid adaptation often occurs through mutations 808 to the most highly conserved positions of the RNA polymerase core enzyme. Genome Biol 809 Evol 14. 810 76. Blanco-Míguez A, Beghini F, Cumbo F, McIver LJ, Thompson KN, Zolfo M, 811 Manghi P, Dubois L, Huang KD, Thomas AM, Nickols WA, Piccinno G, Piperni E, 812 Punčochář M, Valles-Colomer M, Tett A, Giordano F, Davies R, Wolf J, Berry SE, Spector 813 TD, Franzosa EA, Pasolli E, Asnicar F, Huttenhower C, Segata N. 2023. Extending and 814 improving metagenomic taxonomic profiling with uncharacterized species using MetaPhlAn 815 4. Nat Biotechnol 41:1633–1644. 816 77. Olm MR, Crits-Christoph A, Bouma-Gregson K, Firek BA, Morowitz MJ, Banfield 817 JF. 2021. inStrain profiles population microdiversity from metagenomic data and sensitively 818 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+detects shared microbial strains. Nat Biotechnol 39:727–736. 819 78. Hyatt D, Chen G-L, Locascio PF, Land ML, Larimer FW, Hauser LJ. 2010. 820 Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC 821 Bioinformatics 11:119. 822 79. Langmead B, Salzberg SL. 2012. Fast gapped-read alignment with Bowtie 2. Nat 823 Methods 9:357–359. 824 80. Li H, Handsaker B, Wysoker A, Fennell T, Ruan J, Homer N, Marth G, Abecasis 825 G, Durbin R, 1000 Genome Project Data Processing Subgroup. 2009. The Sequence 826 Alignment/Map format and SAMtools. Bioinformatics 25:2078–2079. 827 81. Nei M, Li WH. 1979. Mathematical model for studying genetic variation in terms 828 of restriction endonucleases. Proc Natl Acad Sci U S A 76:5269–5273. 829 82. Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden 830 TL. 2009. BLAST+: architecture and applications. BMC Bioinformatics 10:421. 831 
+
+832 
+
+> .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
+
+Figure 1 : Genome mean nucleotide diversity differences across 20 gut commensals are independent of coverage levels a. Genome mean nucleotide diversity per sample across 20 gut commensal species, comparing IBD groups (CD and UC - orange and red, respectively) to Control (green). Species ordered by decreasing Control group median. Group differences tested by 
+
+species-specific linear-mixed modelling, adjusting for breadth and depth of coverage and age group ( Methods ). Statistical 
+
+significance was corrected for multiple hypothesis testing using the Benjamini-Hochberg procedure. b. Mean coverage depth per sample, same order as in (a). Group differences were tested by Wilcoxon rank-sum test, corrected for multiple hypothesis test using the Benjamini-Hochberg procedure. c. Major allele frequency density distribution across six different subjects (two per disease group) for the species Blautia_A faecis : annotations correspond to the total number of polymorphic positions along the genome (N polymorphic) and the genome mean nucleotide diversity (ND). Comparisons are statistically significant at alpha=0.05 and non-significant difference is reported as “ns” (p<0.05 : ‘*’, p<0.01 : ‘**’, p<0.001 : ‘***’, p<1e-04 : ‘****’). 
+
+0.000 
+
+0.005 0.010 
+
+Blautia_A faecis 
+
+Faecalibacterium prausnitzii_G Agathobaculum butyriciproducens Blautia_A wexlerae Agathobacter rectalis Blautia_A obeum Fusicatenibacter saccharivorans Dorea formicigenerans CA G−41 sp900066215 
+
+Anaerostipes hadrus Roseburia inulinivorans Coprococcus_B comes Blautia_A massiliensis Bacteroides ovatus Bifidobacterium longum Phocaeicola vulgatus Acetatifactor 
+
+sp900066565 
+
+Bacteroides uniformis Parabacteroides distasonis Agathobacter faecis 
+
+> Genome mean nucleotide diversity
+
+1.0 
+
+2.0 3.0 
+
+4.0 5.0 
+
+> Mean cover age depth
+
+Blautia_A faecis Faecalibacterium prausnitzii_G Agathobaculum butyriciproducens Blautia_A wexlerae Agathobacter rectalis Blautia_A obeum Fusicatenibacter saccharivorans Dorea formicigenerans CA G−41 sp900066215 
+
+Anaerostipes hadrus Roseburia inulinivorans Coprococcus_B comes Blautia_A massiliensis Bacteroides ovatus Bifidobacterium longum Phocaeicola vulgatus Acetatifactor 
+
+sp900066565 
+
+Bacteroides uniformis Parabacteroides distasonis Agathobacter faecis 
+
+## bc                              
+
+> Control subject: EGAF00004983183 Control subject: EGAF00004983353
+> 0.5 0.6 0.7 0.8 0.9 1.0 0.5 0.6 0.7 0.8 0.9 1.0
+> 0
+> 1
+> 23
+> 4
+> 0
+> 1
+> 23
+> Major allele frequency
+> ND=0.01004 N polymorphic=50089 ND=0.00366 N polymorphic=1431
+> Kernel density
+> CD subject: GB_398_1 CD subject: 1000IBD00654
+> 0.5 0.6 0.7 0.8 0.9 1.0 0.5 0.6 0.7 0.8 0.9 1.0
+> 0
+> 1
+> 23
+> 4
+> 0
+> 1
+> 2
+> Kernel density
+> ND=0.00876 N polymorphic=33644 ND=0.00006 N polymorphic=594
+> Major allele frequency
+> UC subject: GB_498_1 UC subject: 1000IBD00502
+> 0.5 0.6 0.7 0.8 0.9 1.0 0.5 0.6 0.7 0.8 0.9 1.0
+> 02
+> 4
+> 0
+> 1
+> 23
+> Major allele frequency
+> ND=0.00918 N polymorphic=29224 ND=0.00117 N polymorphic=863
+> Kernel density
+
+Blautia_A faecis 
+
+## a .CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint CD UC 0 10 20 30 40 50 60 70 80 90 100 0 10 20 30 40 50 60 70 80 90 100 
+
+> Agathobacter faecis Parabacteroides distasonis Phocaeicola vulgatus Acetatifactor sp900066565 Bifidobacterium longum Bacteroides uniformis Bacteroides ovatus Roseburia inulinivorans Blautia_A massiliensis Coprococcus_B comes Anaerostipes hadrus Dorea formicigenerans CA G−41 sp900066215
+> Fusicatenibacter saccharivorans Blautia_A obeum Agathobacter rectalis Blautia_A wexlerae Agathobaculum butyriciproducens Faecalibacterium prausnitzii_G Blautia_A faecis
+
+ND−decreased ND−increased ND−in variant Fraction of genes [%] 
+
+ND−decreased ND−increased 
+
+**** ** 0.1 0.2 0.3 0.4 0.5 0.1 0.2 0.3 0.4 0.5 0246
+
+Mean minor allele frequency 
+
+> Kernel density  Control
+> IBD
+
+## a
+
+## b c d
+
+0 121 64 1754 16 340 12010 14 1 00 82 2 55 2191 11 2297 31291 92740 19 1049 42303 61278 55 01972 29 1 027 5230 70 15 13 71613 19 26 01762 60 00 60 66 2397 92031 31276 82524 81401 21569 10 1087 2339 31812 16 0 00 3168 3CD UC                     
+
+> ND−decreased ND−increased ND−decreased ND−increased
+> 0% 0% 36% 4% 86% 9% 7% 0% 84% 5% 0% 0% 0% 4% 0% 22% 83% 11% 85% 0% 60% 6% 88% 8% 69% 20% 66% 0% 62% 0% 1% 0% 81% 15% 0% 0% 0% 14% 25% 0%
+> ND−decreased ND−increased
+
+Intersection/Union 
+
+**** 0110 
+
+ND−decreased ND−increased Mean nucleotide di versity IBD/Control ratio 
+
+**** 0369
+
+ND−decreased ND−increased Mean polymorphic fraction IBD/Control ratio 
+
+Figure 2 : Nucleotide diversity enrichment in IBD defines 2 distinct groups of genes across gut commensals a. ND-categorization overview based on linear regression coefficients ( Methods ):per-species fraction of genes colored by ND categories (ND-decreased - blue; ND-increased - orange; left ), total number of genes in ND-decreased and ND-increased groups (center) , gene overlap percentage (intersection over union) between CD and UC subjects for ND-decreased and ND-increased groups (right) . b. IBD/Control ratio based on mean nucleotide diversity over subjects by disease group (IBD and Control). For this comparison ND-decreased genes were randomly selected (N=586), while all ND-increased genes were included (N=45). All selected genes were concordant in their ND category across IBD subtypes. c. IBD/Control ratio based on mean polymorphic fraction over subjects by disease group (IBD and Control), using the same selection of genes in (b). d. Mean minor allele frequency density distribution for ND-decreased genes and ND-increased genes as selected in (b,c). Differences in the distributions were tested using the Kolmogorov-Smirnov test. Comparisons are statistically significant at alpha=0.05 and non-significant difference is reported as “ns” (p<0.05 : ‘*’, p<0.01 : ‘**’, p<0.001 : ‘***’, p<1e-04 : ‘****’): p<0.05 : ‘*’, p<0.01 : ‘**’, p<0.001 : ‘***’, p<1e-04 : ‘****’. 
+
+.CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint 20 2575                                     
+
+> 1300 2068 39 3398 12 2002 290 1046 116 3119 950 2900 18 2238 50 2608 150 2664 81 2481 168 1966 31 1525 64 2681 170 2278 63 2695 234 3051 23 1031 29 2280
+> 03121
+> 20 2575
+> 1668 1700 39 3398 72007 985 351 74 3161 1345 2505 27 2229 36 2622 575 2239 82 2480 166 1968 26 1530 81 2664 23 2425 59 2699 352 2933 97 957 32 2277
+> 53 3068
+
+CD UC 
+
+> Nsyn−decreased
+> Nsyn-increased
+> Nsyn−decreased
+> Nsyn-increased
+
+CD UC          
+
+> 025 50 75 100 025 50 75 100
+> Agathobacter faecis Parabacteroides distasonis Phocaeicola vulgatus Acetatifactor sp900066565 Bifidobacterium longum Bacteroides uniformis Bacteroides ovatus Roseburia inulinivorans Blautia_A massiliensis Coprococcus_B comes Anaerostipes hadrus Dorea formicigenerans CA G−41 sp900066215
+> Fusicatenibacter saccharivorans Blautia_A obeum Agathobacter rectalis Blautia_A wexlerae Agathobaculum butyriciproducens Faecalibacterium prausnitzii_G Blautia_A faecis
+
+Nsyn−decreased Nsyn−increased 
+
+Fraction of genes                      
+
+> 18% 99% 23% 34% 8% 98% 0% 99% 19% 23% 10% 95% 13% 51% 2% 98% 5% 97% 10% 78% 9% 95% 7% 86% 4% 97% 7% 95% 2% 92% 16% 97% 17% 87% 6% 90% 5% 98% 0% 98%
+> Intersection/Union
+> Nsyn−decreased
+> Nsyn-increased
+
+## a
+
+## b c d
+
+Nsyn−decreased Nsyn−increased 
+
+0 1 2 3 0 1 2 30.0 0.5 1.0 1.5 2.0 
+
+Control − mean pNpS IBD − mean pNpS 
+
+ND−decreased ND−increased 
+
+0.00 0.25 0.50 0.75 0.00 0.25 0.50 0.75 0.0 0.5 1.0 
+
+Control − mean pNpS IBD − mean pNpS 
+
+## e f g
+
+**** 
+
+0110 
+
+Nsyn−decreased Nsyn−increased 
+
+> Mean  dNdS  IBD/Control ratio
+
+**** 
+
+0110 50 
+
+> Mean  pNpS  IBD/Control ratio
+
+Nsyn−decreased Nsyn−increased 
+
+**** 
+
+0110 40 
+
+ND−decreased ND−increased 
+
+> Mean  pNpS  IBD/Control ratio
+
+ns 
+
+110 
+
+ND−decreased ND−increased 
+
+> Mean  dNdS  IBD/Control ratio
+
+0
+
+Figure 3 : Nonsynonymous variants enrichment in IBD defines 2 distinct groups of genes across gut commensals a. Nsyn-categorization overview based on linear regression coefficients ( Methods ): per-species fraction of genes colored by Nsyn categories (Nsyn-decreased - purple, Nsyn-increased - yellow; left ), total number of genes in Nsyn-decreased and Nsyn-increased groups ( center ), gene overlap percentage (intersection over union) between CD and UC subjects for Nsyn-decreased and Nsyn-increased groups ( right ). 
+
+b. IBD/Control ratio based on mean pNpS over subjects by disease group (IBD and Control). For this comparison all Nsyn-decreased genes (N=1283) and all Nsyn-increased genes (N=43263) were used. All selected genes were concordant in their ND category across IBD subtypes. c. Comparison between mean pNpS of Nsyn-decreased genes and Nsyn-increased genes in Control (x-axis) and IBD (y-axis) d. IBD/Control ratio based on mean dNdS over subjects by disease group (IBD and Control), using the same selection of genes in (b). e. IBD/Control ratio based on mean pNpS over subjects by disease group (IBD and Control) for ND-decreased (blue) and NS-increased genes (orange). For this comparison ND-decreased genes corresponded to the group randomly selected previously (N=586), while all ND-increased genes were included (N=45). All selected genes were concordant in their ND category across IBD subtypes. f. Comparison between mean pNpS of ND-decreased genes and ND-increased genes in Control (x-axis) and IBD (y-axis). g. IBD/Control ratio based on mean dNdS over subjects by disease group (IBD and Control). For this comparison ND-decreased genes and ND-increased genes corresponded to the group selected in (e). Comparisons are statistically significant at alpha=0.05 by Wilcoxon rank-sum test and non-significant difference is reported as “ns” (p<0.05 : ‘*’, p<0.01 : ‘**’, p<0.001 : ‘***’, p<1e-04 : ‘****’). 
+
+.CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint Figure 4 : Gene-level nucleotide diversity and nonsynonymous variants enrichment suggest motility as the most adaptive function under IBD stress a. Four categories of gene evolutionary propensity are described by nucleotide diversity (ND) coefficients (x-axis) and nonsynonymous variant enrichment (Nsyn) coefficients (y-axis). Contour lines describe the distribution of genes in these categories across species. b. Selected species-specific distribution of genes in the four categories of evolutionary propensity under IBD (CD on top, UC on the bottom). The gene fraction occupying each of the four categories is reported in percentage. 
+
+Supplementary Figure 5a shows the rest of the species. c. (left ) Functional group enrichment in the Adaptive category (ND 
+
+coefficient>0 and Nsyn coefficient>0) across IBD subtypes, measured as logarithmic odds-ratios (x-axis) against the joint functional group-level coefficient, measured as the median of individual gene sums of ND coefficient and Nsyn coefficient (y-axis). Size of the dots corresponds to the number of genes and data points beyond the dashed lines exhibit strong functional enrichment. Some functions at the extremes are highlighted using their functional ID. ( center ) Functional groups with strong positive and 
+
+negative enrichment in the Adaptive category (side sign bar) with their logarithmic odd-ratios for the other two evolutionary categories (squares, Neutrally-divergent and Functionally-divergent). Functions highlighted on the left are also reported here in bold. Labels report the functional identifier (either BRITE number, EC number or KO), a short definition and the number of genes in that category in brackets. ( right ) Species-specific gene contribution to the functional group: the panel reports with a colored cell whether a functional group includes a gene encoded by a certain species. The colors used for the species are the same as in (a). 
+
+ND-increased ND-decreased Nsyn-increased Nsyn-decreased   
+
+> 0.0 0.5 1.0 1.5 −0.0015 −0.0010 −0.0005
+
+ND coefficient Nsyn coefficient 
+
+Functionally-divergent Invariant Adaptive  Neutrally-divergent 
+
+> 0.0
+
+Agathobaculum butyriciproducens 
+
+> −0.006 −0.002 0.000 0.002
+
+Blautia_A wexlerae 
+
+> −0.006 −0.002 0.000 0.002
+
+Agathobacter rectalis 
+
+> −0.006 −0.002 0.000 0.002
+
+Coprococcus_B comes 
+
+> −0.006 −0.002 0.000 0.002
+
+Bifidobacterium longum 
+
+> −0.006 −0.002 0.000 0.002
+
+Acetatifactor sp900066565 
+
+> −0.006 −0.002 0.000 0.002
+
+Phocaeicola vulgatus 
+
+> −0.006 −0.002 0.000 0.002
+
+Blautia_A faecis 
+
+> −0.006 −0.002 0.000 0.002 −0.5 0.0 0.5 1.5 −0.5 0.0 0.5 1.5
+> CD
+
+ND coefficient Nsyn coefficient 
+
+> UC
+
+## a bc
+
+> Blautia_A faecis Faecalibacterium prausnitzii_G Agathobaculum butyriciproducens Blautia_A wexlerae Agathobacter rectalis Blautia_A obeum Fusicatenibacter saccharivorans CA G−41 sp900066215
+> Dorea formicigenerans Anaerostipes hadrus Coprococcus_B comes Blautia_A massiliensis Roseburia inulinivorans Bacteroides ovatus Bacteroides uniformis Bifidobacterium longum Acetatifactor sp900066565 Phocaeicola vulgatus Parabacteroides distasonis Agathobacter faecis
+
+Log(OR) Neutrally-divergent 
+
+−1 0 1 2
+
+Log(OR) Functionally-divergent 
+
+−2 −1 0 1
+
+# genes in functional group 
+
+1000 2000 3000 Log(OR) Adapti ve 
+
+−2 −1 0 1 2
+
+UC CD 
+
+Log(OR) Adapti ve 
+
+> Functional group coefficient
+
+br02030 br02040 br02030 br02040 
+
+3.2.1.-
+
+br04210 
+
+1.16.3.2 K21908 
+
+br05120 br02042 
+
+>2 br02042 : Bacterial to xins (N=16) br00566: Sul foquinov ose metabolism (N=16) EC:3.1.4.59: cyclic−di−AMP phosphodieste rase (N=14) br99974: T ranslation (N=15) K07025: putati ve hydrolase of the HAD superf amily (N=15) br99987: Co factor metabolism (N=14) br00362: Ben zoate degr adation (N=15) EC:3.5.1.28: N−acetyl muramo yl−L−alanine amidase (N=14) EC:2.7.11.− 2.7.4.−: HPr kinase/phospho rylase (N=14) EC:3.1.2.−: acyl−CoA thioester hydrolase (N=13) EC:1.1.1.−: alcohol de hydrogenase (N=34) EC:4.2.1.53: oleate hydr atase (N=11) K06201: copper homeostasis protein (N=11) EC:1.1.1.346: 2,5−di keto−D−gluconate reductase A (N=11) EC:6.4.1.−: acyl−CoA carb oxylase su bunit beta (N=11) EC:3.1.3.48: protein−tyrosine phosphatase (N=10) EC:1.15.1.2: super oxide reductase (N=10) EC:3.2.1.218: alpha−3'− ketoglucosidase (N=10) 
+
+br05120 : U32 family peptidase (N=29) EC:2.4.1.211: 1,3−beta−galactosyl−N−acetylh exosamine phospho rylase (N=8) br04122: Sulfur rel ay system (N=66) EC:5.6.1.9: (R)−2− hydro xyacyl−CoA de hydratese activating A TPase (N=26) br99984: Nucleotide metabolism (N=8) br00480: Glutathione metabolism (N=25) br99985: Amino acid metabolism (N=43) EC:5.1.3.11: cellobiose epime rase (N=7) K03744: LemA protein (N=10) br04382: Co rnified envelope for mation (N=13) br03010: Ribosome (N=836) br00360: Phe nylalanine metabolism (N=22) EC:3.2.1.172: unsatu rated rhamnogalacturonyl h ydrolase (N=24) EC:3.6.3.−: M oxR−li ke A TPase (N=18) br04812: Cytos keleton proteins (N=9) br03272: Dipeptidyl−peptidase 4 (N=6) br00627: Aminoben zoate degr adation (N=6) EC:2.4.1.281: 4−O−beta−D−mannosyl−D−glucose phospho rylase (N=6) EC:1.21.4.2: glycine/sarcosine/betaine reductase, C alpha (N=5) EC:3.2.1.89: a rabinogalactan endo−1,4−beta−galactosidase (N=17) map00130: Ubiquinone and other te rpenoid−quinone biosynthesis (N=27) br00540: Lipopolysaccha ride biosynthesis (N=37) br00531: Glycosaminoglycan deg radation (N=10) br05017: Twinkle helicase (Phage o rigin) (N=5) br03070: Metabolite efflux membrane protein (N=24) br05152: G ram positiv e secretion component (N=5) br04013: Super oxide dis mutase , Fe−Mn family (N=5) EC:3.2.1.135: neopullulanase (N=5) EC:3.2.1.180: unsatu rated chondroitin disaccharide h ydrolase (N=13) K09014: Fe−S cluster assem bly protein SufB (N=8) EC:3.1.2.29: fluoroacetyl−CoA thioeste rase (N=7) EC:1.12.1.3: NADP−reducing hydrogenase sub unit HndD (N=7) 
+
+br02040 : Flagellar assemb ly (N=100) EC:5.1.3.32: L−rhamnose mutarotase (N=7) EC:3.1.1.−: putati ve tributyrin ester ase (N=9) K02005: HlyD family secretion protein (N=10) EC:1.1.1.69: gluconate 5−de hydrogenase (N=6) K07216: heme rythr in (N=10) K21571: starch−binding outer memb rane protein SusE/F (N=12) 
+
+K21908 : membr ane protein HdeD (N=8) EC: 1.16.3.2 : ferr itin (N=7) EC: 3.2.1.− : glucosidase (N=5) 
+
+br04210 : Endo nuclease (N=6) 
+
+br02030 : Bacter ial chemotaxis (N=24) 
+
+CD UC CD UC Adaptive OR sign 
+
++
+
+-
+
+.CC-BY-NC-ND 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736057 doi: bioRxiv preprint
