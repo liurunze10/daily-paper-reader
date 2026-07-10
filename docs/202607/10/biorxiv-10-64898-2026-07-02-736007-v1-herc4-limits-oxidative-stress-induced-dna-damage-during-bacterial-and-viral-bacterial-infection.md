@@ -1,0 +1,24 @@
+---
+title: HERC4 limits oxidative stress-induced DNA damage during bacterial and viral-bacterial infection
+title_zh: HERC4 限制细菌及病毒-细菌感染期间氧化应激诱导的 DNA 损伤
+authors: "Cammann, C., Gering, V., Sura, T., Singh, A. K., Boehme, J. D., Topfstedt, E., Koch, A. K., Ritter, U., Becker, K., Bruder, D., Blohm, U., Slevogt, H., Maass, S., Rohde, G., Rupp, J., CAPNetz Study Group,, Hammerschmidt, S., Becher, D., Seifert, U."
+date: 2026-07-04
+pdf: "https://www.biorxiv.org/content/10.64898/2026.07.02.736007v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 肺炎链球菌产生的活性氧是巨噬细胞样细胞中的关键效应因子
+tldr: 本研究探讨了流感病毒与肺炎链球菌共感染对宿主细胞的影响。研究发现，肺炎链球菌产生的活性氧（ROS）会降低细胞内泛素化水平，并导致E3连接酶HERC4下调。通过CRISPR-Cas9技术和过表达实验，研究揭示了HERC4在减轻ROS诱导的DNA损伤和细胞凋亡中的关键作用。HERC4可作为预测感染预后的生物标志物，并为保护宿主细胞免受感染损伤提供了新的治疗策略。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-001.webp\", \"caption\": \"\", \"page\": 36, \"index\": 1, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-002.webp\", \"caption\": \"\", \"page\": 37, \"index\": 2, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-003.webp\", \"caption\": \"\", \"page\": 38, \"index\": 3, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-004.webp\", \"caption\": \"\", \"page\": 39, \"index\": 4, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-005.webp\", \"caption\": \"\", \"page\": 40, \"index\": 5, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-006.webp\", \"caption\": \"\", \"page\": 41, \"index\": 6, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-007.webp\", \"caption\": \"\", \"page\": 42, \"index\": 7, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-008.webp\", \"caption\": \"\", \"page\": 43, \"index\": 8, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-009.webp\", \"caption\": \"\", \"page\": 44, \"index\": 9, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-010.webp\", \"caption\": \"\", \"page\": 45, \"index\": 10, \"width\": 8846, \"height\": 11304}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736007-v1/fig-011.webp\", \"caption\": \"\", \"page\": 46, \"index\": 11, \"width\": 8846, \"height\": 11304}]"
+motivation: 旨在探究呼吸道细菌及病毒共感染过程中，宿主细胞泛素化系统如何响应病原体诱导的氧化应激。
+method: 通过分析感染样本、利用CRISPR-Cas9敲除及过表达HERC4，研究其在DNA损伤修复中的功能。
+result: 发现HERC4在感染中显著下调，其缺失会加剧ROS诱导的DNA损伤和凋亡，而过表达则能减轻损伤。
+conclusion: HERC4是限制感染诱导的DNA损伤的关键因子，可作为预测感染结果的标志物及潜在治疗靶点。
+---
+
+## 摘要
+由流感病毒和肺炎链球菌（Streptococcus pneumoniae）引起的呼吸道（共）感染对全球健康构成了重大威胁。在对宿主细胞泛素化的分析中，我们发现肺炎链球菌产生的活性氧（ROS）是减少细胞内多泛素化蛋白含量的关键效应因子。伴随着泛素化的减少，我们观察到在肺炎链球菌感染的人肺泡上皮细胞和类巨噬细胞，以及来自受肺炎链球菌感染的人类和小鼠样本中，E3 连接酶 HERC4 的表达下调。在与甲型流感病毒的病毒-细菌共感染中，这种情况进一步加剧。在细菌感染前通过 CRISPR-Cas9 敲除 HERC4 会导致 ROS 诱导的 DNA 损伤增加、宿主细胞凋亡增强以及组蛋白 2B（Histone 2B）泛素化减少。相反，HERC4 的过表达减少了 DNA 损伤，表明 HERC4 在感染后的 DNA 损伤修复中发挥作用。通过建立 HERC4 表达与 ROS 诱导的 DNA 损伤及修复之间的联系，我们确定了一个预测病毒和细菌（共）感染结果的潜在标志物。靶向 HERC4 表达为保护宿主细胞免受肺炎链球菌（共）感染并减轻感染恶化提供了一种新策略。
+
+## Abstract
+Respiratory (co-)infections caused by influenza viruses and Streptococcus pneumoniae represent significant threats to global health. In our analysis of host cell ubiquitination, we identified reactive oxygen species (ROS) produced by S. pneumoniae as critical effectors in reducing the amount of intracellular polyubiquitinated proteins. Together with reduced ubiquitination we observed a downregulation of the E3 ligase HERC4 upon infection with S. pneumoniae in human alveolar epithelial and macrophage-like cells as well as in samples obtained from S. pneumoniae infected humans and mice. This was further aggravated in the viral-bacterial coinfection with influenza A. CRISPR-Cas9 deletion of HERC4 prior bacterial infection resulted in increased ROS-induced DNA damage, enhanced host cell apoptosis and reduced Histone 2B ubiquitination. In contrast, HERC4 overexpression diminished DNA damage indicating a role of HERC4 in DNA-damage-repair upon infection. By establishing a link between HERC4 expression and ROS-induced DNA damage and repair, we identified a potential marker for predicting the outcome of viral and bacterial (co-)infections. Targeting HERC4 expression defines a novel strategy to protect host cells from S. pneumoniae (co-)infection attenuating infection exacerbation.
