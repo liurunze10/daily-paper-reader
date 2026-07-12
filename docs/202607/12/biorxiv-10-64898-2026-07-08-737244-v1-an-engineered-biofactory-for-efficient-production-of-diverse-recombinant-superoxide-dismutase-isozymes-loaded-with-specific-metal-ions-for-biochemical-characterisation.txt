@@ -1,0 +1,2073 @@
+Title: An engineered biofactory for efficient production of diverse recombinant superoxide dismutase isozymes loaded with specific metal ions for biochemical characterisation
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.08.737244v1.full.pdf
+
+Number of Pages: 39
+
+Markdown Content:
+1
+
+An engineered biofactory for efficient production of diverse recombinant superoxide 1
+
+dismutase isozymes loaded with specific metal ions for biochemical characterisation 2
+
+3
+
+Rafał Mazgaj 1†, Agnieszka Ko łpa 1†, Mariam Esmaeeli 1†, Justyna Pełczyńska 1, Diana Galea 1, Jan 4
+
+Gaw or1, Agata Malinowska 1, Agnieszka Szczypiorowska 1, Thomas Kehl -Fie 2, and Kevin J. 5
+
+Waldron 1*6
+
+7 
+
+> 1
+
+Institute of Biochemistry & Biophysics, Polish Academy of Science, Warsaw 02 -106, Poland 8 
+
+> 2
+
+Department of Microbiology and Immunology, University of Iowa, Iowa City, Iowa, USA 9
+
+10 
+
+† These authors contributed equally 11 
+
+* Correspondence: 12 
+
+kwaldron@ibb.waw.pl: Tel: + 48 225 923 342 13 
+
+14 
+
+Short title: Genomic and proteomic analysis of Escherichia coli BL21 Δ sodA ΔsodB cell factory 15 
+
+16 
+
+Keywords: Escherichia coli ; superoxide dismutase ; cell factory ; proteomics; genome 17 
+
+18 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+2
+
+Abstract 19 
+
+Background: Biochemical, biophysical and structural characterisation of isozymes from the 20 
+
+ubiquitous family of iron - or manganese -dependent superoxide dismutases (SodFMs) requires 21 
+
+the purification of high -quality preparations of recombinant enzymes. Determination of their key 22 
+
+biochemical parameter, their catalytic metal -preference, requires the comparison of the catalytic 23 
+
+turnover of samples loaded exclusively with iron versus samples loaded exclusively with 24 
+
+manganese. Both of these aims are inhibited by the potential contamination of recombinant 25 
+
+preparations of SodFMs, prepared by heterologous overexpression inside Escherichia coli cells, 26 
+
+by even low levels of endogenous SodFMs from the host, both of which show very high turnover 27 
+
+with either manganese ( E. coli MnSOD) or iron (FeSOD). To overcome this problem, we created 28 
+
+a strain of E. coli lacking the endogenous SodFMs. Here, we characterised this E. coli BL21 (DE3) 29 
+
+sodA sodB strain, determining the physiological effects of SodFM deletion and demonstrating 30 
+
+its utility for producing recombinant SodFMs for in vitro characterisation and use. 31 
+
+Results: Genomic analysis verified the targeted gene deletions, without off -target effects. Growth, 32 
+
+expression, elemental analysis, and proteomic data confirmed a lack of physiological defects of 33 
+
+the strain except for a known inability to grow on glucose, which is overcome by heterologous 34 
+
+SodFM expression. We demonstrate the utility of the strain for the efficient production of diverse 35 
+
+recombinant SodFMs, including highly divergent, understudied isozymes, including the ability to 36 
+
+precisely control the metal -loading of the heterologously expressed protein. 37 
+
+Conclusions: The E. coli strain described herein is a useful microbial cell factory for production 38 
+
+of recombinant SodFMs, which should find widespread utility as expression host of choi ce, 39 
+
+enabling more efficient production of protein for studies of the biochemical, biophysical and 40 
+
+structural properties of this remarkable family of metalloenzymes. 41 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+3
+
+Background 42 
+
+Since t he first expression of a recombinant protein inside cells of Escherichia coli was reported in 43 
+
+1977 [1] and t he first recombinant therapeutic , human insulin, in 1979 [2] , demand for recombinant 44 
+
+protein production for academic study and for commercial, medical or industrial applications has 45 
+
+grown dramatically. Although alternatives are available, E. coli remain s the cell factory of choice 46 
+
+for producing recombinant proteins [3,4] . It offers several advantages for recombinant protein 47 
+
+synthesis. It has been extensively studied, with well -characterised physiology and genetics and 48 
+
+easy -to -use tools available [5 –10] . These include inducible expression vectors [6,7,11] and the 49 
+
+host strain, BL21 (DE3) . This strain lacks Lon and OmpT proteases, limit ing degradation of foreign 50 
+
+protein, and incorporates RNA polymerase from T7 bacteriophage in its genome [12] , enabl ing it 51 
+
+to express transcripts from the strong T7 promoter [5] .52 
+
+Derivatives of E. coli BL21 (DE3) ha ve been constructed to improve its production of 53 
+
+proteins for specific applications. Strains were created that are optimised for production of 54 
+
+proteins containing a poly -histidine tag to facilitate their purification . Th es e strains have mutations 55 
+
+in five endogenous E. coli genes whose product s commonly contaminate protein preparations 56 
+
+after purifi cation by immobilised metal affinity chromatography (IMAC), reducing their affinity for 57 
+
+IMAC or enabling a pre -clearance step using chitin [13] . Other modified BL21 strains eliminate 58 
+
+contamination of recombinant protein preparations by the chaperone DnaK [14] , improve 59 
+
+expression of outer membrane proteins [15] , facilitate site -specific incorporation of non -natural or 60 
+
+isotopically labelled amino acids [16,17] , produc e glycosylated eukaryotic proteins [18] , or 61 
+
+improve production of specific metabolites such as N‑acetyl ‑D‑neuraminic acid (Neu5Ac) [19] ,62 
+
+lycopene [8] , or phenylpyruvic acid [20] .63 
+
+For the last decade, we have been studying the iron - or manganese -dependent 64 
+
+superoxide dismutase (SOD) family of metallo enzymes (SodFM) [21 –27] . SODs are the primary 65 
+
+cellular defence against superoxide radicals , key antioxidant enzymes that maintain redox 66 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+4
+
+balance, and in higher eukaryotes have been implicated in signalling, immune function and 67 
+
+disease [28] . The SodFMs are the most common and most widely distributed class of SODs, 68 
+
+present in diverse organisms including some obligate anaerobes [21] . SodFMs exhibit a spectrum 69 
+
+of metal specificities, ranging from highly manganese -preferring to highly iron -preferring enzymes 70 
+
+[21,29,30] . Between these extremes are isozymes that can catalyse their reaction with either 71 
+
+metal cofactor, termed cambialism [21,24,31] , a rare biochemical property among 72 
+
+metalloenzymes [32] . Yet, all SodFMs share identical folds and remarkably similar active site 73 
+
+architectures [21,28,33,34] , lead ing t o questions about how different isozymes control their 74 
+
+distinct catalytic metal -preferences [22,23,28,35] . The d etailed biochemical, biophysical and 75 
+
+structural characterisation of SodFMs needed to answer such questions requires purified 76 
+
+preparations of recombinant enzymes, free of contamination by the endogenous SodFMs that are 77 
+
+expressed by the host cell. E. coli possesses two SodFMs, strongly manganese -preferring SodA 78 
+
+and iron -preferring SodB [36 –38] , which are highly active enzymes with their cognate metal 79 
+
+cofactor [21,29,30] . This makes even very low levels of their contamination in recombinant 80 
+
+preparations of heterologous SodFMs highly problematic for quantifying the catalytic turnover of 81 
+
+an isozyme with each metal, especially as highly metal -preferring isozymes can have very low 82 
+
+catalytic efficiency when loaded with the ‘wrong’ metal cofactor [21,23,29,30] .83 
+
+To overcome this bottleneck, we created a strain of E. coli BL21 (DE3) in which both genes 84 
+
+encoding SodFMs were deleted from the genome [21] . The strain grows normally in aerobic 85 
+
+culture when used for recombinant protein expression [21,39] . The BL21 (DE3) sodA sodB 86 
+
+strain enables large -scale preparation of recombinant SodFMs, free of contamination by native 87 
+
+E. coli SodFMs , and with specific metal -loading despite the BL21 parental strain being known to 88 
+
+have defects in metal homeostasis [40] . Using this strain, we developed medium throughput in -89 
+
+gel assays to assess the catalytic metal -preference of SodFM isozymes, which enabl ed a study 90 
+
+of the evolution of the SodFM family [21] . Here, we have characterised this E. coli mutant strain, 91 
+
+indicated its lack of physiological growth defects under standard culture conditions, and 92 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+5
+
+demonstrated its usefulness as an expression host for the production of diverse SodFM enzymes 93 
+
+for downstream studies .94 
+
+95 
+
+Methods 96 
+
+Bacterial strains, constructs and culture media 97 
+
+The E. coli BL21 (DE3) strain used was derived from a batch of competent cells purchased from 98 
+
+Thermo . The construction of the strain lacking both endogenous S odFM -encoding genes within 99 
+
+this BL21 strain was described previously [21] . Competent cells of each strain, wild type (WT) and 100 
+
+sodA sodB , were produced using a standard Mg/Ca method and transformed with a pET22b 101 
+
+construct for expression of a heterologous SodFM isozyme from our library, also previously 102 
+
+described [21] , or with pET22b empty vector . Cells were cultured in LB medium or in M9 medium 103 
+
+containing selected supplements , with 100 μg/mL ampicillin added to select for the pET plasmid, 104 
+
+at 37°C with 140 rpm orbital shaking. Growth analyses were performed in 96 -well microtitre plates 105 
+
+by monitoring OD 600nm at 37°C with 140 rpm orbital shaking us in g a Synergy H1 microplate reader 106 
+
+(BioTek ). Glucose or glycerol (0.2% w/v) as carbon source, casamino acids (0.4% w/v) or 1 00 μM 107 
+
+MnCl 2, were added to 200 μL M9 minimal medium. Cell samples for proteomics were cultured 108 
+
+(100 mL LB) in batch flasks. Cell samples for testing of recombinant protein expression and 109 
+
+activity were cultured ( 50 mL in M9 medium supplemented with metals as previously described 110 
+
+[21] to control metal -loading) 111 
+
+DNA isolation, sequencing and genomic analysis 112 
+
+Short -read bacterial genome sequencing was performed using the MiSeq instrument (Illumina 113 
+
+Inc., San Diego, CA, USA) at Genomed S.A. (Warsaw, Poland). Genomic DNA was purified using 114 
+
+the PureLink Genomic DNA Mini Kit (Thermo Fisher Scientific, Waltham, MA, USA) . DNA quality 115 
+
+control was performed by measuring the absorbance at 260/230 using Nanodrop 116 
+
+Spectrophotometer (Thermo Scientific) and DNA integrity was analyzed by 0. 5% agarose gel 117 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+6
+
+electrophoresis. DNA libraries were constructed using an NEB Ultra II FS kit (NEB, Ipswich, MA, 118 
+
+USA), followed by paired -end 300 basepair sequencing (aiming for at least 50x genome 119 
+
+coverage). Sequence quality metrics were assessed using FASTQC v.0.12.1 120 
+
+(http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ , accessed on 31 January 2025). Raw 121 
+
+sequencing reads were trimmed for quality and residual library adaptors were removed using 122 
+
+fastp v.0.23.4 (accessed on 31 January 2025) [41] . Cleaned sequencing reads were then 123 
+
+processed by breseq v.0.39.0 pipeline [42] to map reads to the reference genome (GenBank 124 
+
+accession number: CP001509) and identify variants. Illumina reads for DeltaBL21 mutant were 125 
+
+additionally assembled into contigs using the Unicycler v.0.4.8 pipeline ( accessed on 31 January 126 
+
+2025) [43] . De novo assembled contigs were annotated using DFAST v.1.3.0 [44] . GenBank 127 
+
+annotation files for the DeltaBL21 mutant strain and the E. coli BL21 reference genome were used 128 
+
+for sequence alignment and visualization using Clinker v0.0.31 [45] .129 
+
+Proteomic analyses 130 
+
+Parallel cultures of E. coli BL21 (DE3) WT and the sodA sodB strain, each transformed with 131 
+
+pET22 b-SodM, were inoculated into LB . The initial batch of samples was collected after 2 h 40 132 
+
+min at mid -log phase. The cultures were then induced with 100 μM IPTG and the second batch 133 
+
+of samples was collected after 4 h induction. For sample collection, 1 mL culture was removed, 134 
+
+cells harvested (5,000 g, 10 min, 4°C), then washed twice in 1 mL wash buffer (20 mM Tris, pH7 .5, 135 
+
+150 mM NaCl) with centrifugation (6,000 g, 10 min, 4°C) , and pellets stored at -80°C . This 136 
+
+procedure was repeated for 5 independent biological replicates on different days. 137 
+
+For lysis, pellets were thawed on ice and resuspended in 300 μL of lysi s buffer (100 mM 138 
+
+NH 4HCO 3 with 2% SDS) , t hen samples sonicated in an ice bath (10 cycles: 1 min on , 2 min off). 139 
+
+Samples were heated at 95 °C for 15 min and centrifuged (12,000 g, 20 min , 4°C), the s upernatant 140 
+
+removed and transferred to fresh t ubes , frozen in liquid nitrogen and kept at -80 °C. 141 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+7
+
+After thawing, the protein concentration in each sample was estimated using a142 
+
+bicinchoninic acid (BCA) assay using a Pierce ™ BCA Protein Assay Kit (T hermo Scientific ) for 143 
+
+mass spectrometry (MS) analysis at the Mass Spectrometry Laboratory at the Institute of 144 
+
+Biochemistry and Biophysics, Polish Academy of Sciences (PA S). The samples (35 μg protein) 145 
+
+were mixed with 1% SDS in 100 mM NH 4HCO 3, cysteines reduced by 1 h incubation with 5 mM 146 
+
+tris(2 -carboxyethyl)phosphine (TCEP) at 60 °C followed by 10 min incubation at room temperature 147 
+
+with 20 mM methylmethanethiosulfonate (MMTS) , then processed using single -pot solid -phase -148 
+
+enhanced sample preparation (SP3). Magnetic beads were prepared by combining equal parts of 149 
+
+Sera -Mag carboxyl hydrophilic and hydrophobic particles (09 -981 -121 and 09 -981 -123, GE 150 
+
+Healthcare). The bead mix was washed three times with MS -grade water and re suspended at a151 
+
+working concentration in 85% acetonitrile (ACN). The bead mix was added to the samples, which 152 
+
+were suspended in 0.1% formic acid in ACN. Using the magnet beads , the samples bound to the 153 
+
+bead mix were separated , washed in 100% isopropylalcohol , then washed three times in 85% 154 
+
+ethanol , then twice in 100% ACN. Digestion was performed by incubation at 37 °C overnight with 155 
+
+1 μg of trypsin (Promega) in 100 mM NH 4HCO 3, then peptides were eluted from the beads using 156 
+
+1% dimethyl sulfoxide (DMSO) in MS -grade water. Peptides were dried in SpeedVac and 157 
+
+resuspended in 60 μL of 0.1% formic acid in MS -grade water with sonication. 158 
+
+Peptide concentrations were measured using Colorimetric Peptide Assay (Thermo 159 
+
+Scientific). Peptide mixture s from each sample (2 μg) were analysed using an LC -MS system 160 
+
+consisting of an Evosep One (Evosep Biosystems) coupled with an Orbitrap Exploris 480 mass 161 
+
+spectrometer (Thermo Scientific). The raw data were submitted to MaxQuant/Andromeda (version 162 
+
+2.5) for peptide and protein identification, and calculation of quantitative values. For peptide and 163 
+
+protein identification, a UniProt -derived reference database for E. coli (strain B/BL21 -DE3, 4,156 164 
+
+sequences, version2024_06) was used. The database was supplemented with the sequence of 165 
+
+the S. aureus SodM protein (Q2G261) and a database of common mass spectrometry (MS) 166 
+
+contaminants. Further analysis was performed using Perseus (version1.6.15). 167 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+8
+
+Recombinant protein expression and analyses 168 
+
+For heterologous expression of SodFM enzymes, E. coli BL21(DE3) wild type and the isogenic 169 
+
+ΔsodA ΔsodB strains were transformed with a pET 22b(+) plasmid construct encoding one of the 170 
+
+following SodFM enzymes: SodFM1 from Staphylococcus aureus (SodA), SodFM2 from 171 
+
+Neisseria gonorrhoeae , SodFM3 from Mycobacterium abscessus , SodFM4 from CPR 172 
+
+Parkubacteria , or SodFM5 from Homo sapiens [21] .173 
+
+Overnight cultures were grown in M9 minimal media supplemented with 50 μg/mL 174 
+
+ampicillin at 37 °C with 140 rpm shaking, then diluted 1:100 into fresh M9 medium with 50 μg/mL 175 
+
+ampicillin. Cultures were grown at 37 °C until mid -log phase (OD 600 nm ~0.5), induced with 100 μM176 
+
+IPTG and supplemented with 200 μM of the appropriate metal (MnCl 2 or FeSO 4). Induced cultures 177 
+
+were incubated at 37 °C for 16 h. Cells were harvested by centrifugation (4000 g, 15 min, 4 °C), 178 
+
+pellets washed twice with 20 mM Tris pH 7.5 150 mM NaCl 10 mM EDTA and stored at -20 °C. 179 
+
+Whole -cell extracts were prepared by resuspending cell pellets in wash buffer , 100 mg/mL 180 
+
+lysozyme added followed by incubat ion for 30 min with gentle rocking , followed by 4 freeze -thaw 181 
+
+cycles with liquid nitrogen. Cell lysates were clarified by centrifugation (20 ,000 g, 20 min, 4 °C), 182 
+
+and the soluble fraction was used for further analyses. 183 
+
+Expression was confirmed by SDS -PAGE, total protein concentration was determined by 184 
+
+BCA assay using a commercial kit (ThermoFisher). 185 
+
+In -gel activity staining 186 
+
+Enzymatic activity of the recombinant SodFM proteins was measured in the clarified lysates using 187 
+
+in -gel activity assay [21] , and activities were normalized to total protein content. Protein samples ,188 
+
+prepared in native gel protein loading buffer , were resolved on native 12% (v/v) polyacrylamide 189 
+
+gels lacking SDS . Metal -specific activity was assessed by incubation of one of two identical gels 190 
+
+for 30 min in solution of 0.3% (v/v) H2O2 at 4°C prior to activity staining . Gels were subsequently 191 
+
+washed and incubated with a staining solution of 0 .25 mM nitro blue tetrazolium, 0 .03 mM 192 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+9
+
+riboflavin, 0 .1 mM TEMED (N,N,N´,N´ -tetramethylethylenediamine) for 30 min at 4°C. Gels were 193 
+
+then washed in water and placed on a white light transilluminator for development of the in -gel 194 
+
+activity staining . The gels were exposed to equal white light for standardised time. Images of the 195 
+
+gels were acquired with a Bio -Rad ChemiDoc System .196 
+
+Inductively coupled plasma optical e mission spectrometry elemental analysis 197 
+
+For ICP -OES analysis, 500 μL of ultrapure nitric acid (Merck) was added to the cell pellet, and 198 
+
+the mixture was digested at 80°C for 2 h. Digested s amples were diluted with 1% (v/v) nitric acid 199 
+
+prior to measuring the metal content. Elemental analysis was performed on an iCAP Pro ICP -200 
+
+OES instrument (Thermo -Fisher Scientific) run in aqueous -axial -iFR mode , equipped with a n iSC -201 
+
+65 autosampler and a Torch Duo (Slot) Rev 02 argon plasma torch set , at 1,250 W RF power and 202 
+
+using Qtegra software. An external calibration curve was recorded with ICP -single -element 203 
+
+standards mix in 1% (v/v) nitic acid. The sample was introduced via a peristaltic pump for analy sis .204 
+
+The wavelengths for S (182.034 mm), Zn (206.200 nm ), Mn (257.610 nm), Fe (259.940 nm), Mg 205 
+
+(285.213 mm) were selected to minimi se overlapping emissions. The results were calculated from 206 
+
+the ppb data , normalized to the S content .207 
+
+Gene expression analysis by quantitative PCR (pQCR) 208 
+
+E. coli BL21 (DE3) WT and the Δ sodA ΔsodB strain, each transformed with either pET22 -SodM 209 
+
+or the empty vector, were inoculated into LB medium. Overnight cultures were diluted 1:100 and 210 
+
+cultivated at 37 °C with shaking at 140 rpm. When the cultures reached an OD 600nm of 0.5, protein 211 
+
+expression was induced with 100 μM IPTG, followed by incubation for an additional 4 h. A liquots 212 
+
+(1 mL ) of each culture w ere harvested by centrifug ation (5,000 × g, 10 min, 4 °C). 213 
+
+Total RNA was isolated using a PureLink RNA Mini Kit (Invitrogen). Genomic DNA was 214 
+
+removed by on -column DNase digestion with the PureLink DNase Set (Invitrogen). For real -time 215 
+
+quantitative PCR (RT -qPCR), 2 μg of total RNA was reverse -transcribed using the Maxima First 216 
+
+Strand cDNA Synthesis Kit (Thermo Fisher Scientific, Waltham, MA, USA) according to the 217 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+10 
+
+manufacturer’s instructions. The obtained cDNA was diluted 200 -fold. RT -qPCR was performed 218 
+
+on a LightCycler 480 system (Roche, Basel, Switzerland) using the Luminaris Color HiGreen 219 
+
+qPCR Master Mix (Thermo Fisher Scientific, Waltham, MA, USA). The cycling conditions 220 
+
+consisted of an initial denaturation at 95 °C for 6 min, followed by 40 cycles of denaturation at 95 221 
+
+°C for 5 s and annealing at 60 °C for 30 s. The rrsA and hcaT genes, encoding 16S ribosomal 222 
+
+RNA and a putative 3 -phenylpropionic acid transporter, respectively, were used as reference 223 
+
+genes. Primers used for qRT -PCR are listed in Supp . Table S1 . Each sample was measured in 224 
+
+triplicate, and four biological replicates were used. Relative gene expression levels were 225 
+
+calculated using the ΔΔCt method [46] . Statistical significance was assessed using Student’s t -226 
+
+test. 227 
+
+228 
+
+Results 229 
+
+The g enome of the BL21 -derived host strain show s no off -target mutations 230 
+
+The E. coli BL21 strain is known to be vulnerable to genetic mutations, show ing an increased 231 
+
+mutation rate relative to other Type B E. coli [47] . The Lambda Red method for genetic 232 
+
+modification of the E. coli genome ha s also been suggested to be vulnerable to secondary 233 
+
+mutations due to the use of low and high temperature selection steps [48,49] . Further, d elet ing 234 
+
+genes encoding superoxide dismutase s, which are involved in cellular defence against 235 
+
+exogenous oxidative stress , also make s the host cell vulnerable to secondary mutations [50] . For 236 
+
+these reasons, we began our study of the BL21 sodA sodB strain by sequencing its genome to 237 
+
+identify any mutations that were present in addition to the targeted deletions .238 
+
+We used Illumina sequencing to compare the genome sequences of both the sodA sodB 239 
+
+strain and the parental BL21 (DE3) strain from which it was made (herein ‘wild type’ , WT ) to the 240 
+
+reference genome for E. coli BL21 (DE3) [51] . The WT strain showed no deviations from that of 241 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+11 
+
+the reference genome. In the sodA sodB strain, a s expected, clean deletions of the sodA and 242 
+
+sodB genes were observed, with the genes replaced by scar sequence s (F ig. 1A, 1B ), a remnant 243 
+
+of the flippase recombination event that excised a selectable marker during the mutagenesis 244 
+
+protocol [48] . Consistent with this, we detected three bands of abundant SOD activity in crude 245 
+
+lysates prepared from BL21 (DE3) cells using an in -gel activity assay, corresponding to 246 
+
+homodimers of SodA and SodB plus a heterodimeric form, as previously observed [52] . All three 247 
+
+bands were absent from lysates prepared from the BL21 sodA sodB strain (Fig. 1C ). 248 
+
+Aside from the two targeted deletions, the only other mutation we observed in the 249 
+
+sodA sodB strain was a sing le SNP (T able 1 ). This was a n A→G mutation within the region 250 
+
+between the sul A and sxy genes. Inspection of that region suggested that this SNP was unlikely 251 
+
+to impact on the transcription of either of the neighbouring genes [53] . Thus, the construction of 252 
+
+the expression host strain from wild type BL21 had been remarkably faithful, despite the potential 253 
+
+risks posed by this method of manipulation , the parental genotype, and the potential effects of the 254 
+
+predicted phenotype that might be caused by the deletions. 255 
+
+Growth of the E. coli BL21 
+
+sodA 
+
+sodB strain was indistinguishable from wild type 256 
+
+Previous reports show ed that a sodA sodB strain of Type A E. coli , the widely used model 257 
+
+isolate K -12, exhibited a severe growth defect under certain growth conditions. Specifically, this 258 
+
+strain was unable to grow in media containing glucose but was able to grow on alternative carbon 259 
+
+sources such as amino acids [39] . Subsequent studies have indicated that superoxide stress 260 
+
+strongly affects enzymes containing exposed iron -sulphur clusters, including enzymes in central 261 
+
+carbon metabolism and the biosynthesis of branched -chain amino acids [54 –56] . Therefore , this 262 
+
+failure of the K -12 sodA sodB strain to grow in glucose was proposed to be a result of a 263 
+
+superoxide -induced metabolic block [39,55] .264 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+12 
+
+Consistent with this, w e observed only a minor growth defect of the sodA sodB strain , carrying 265 
+
+an empty vector, when cultured in LB medium , but a severe growth defect of the same strain in 266 
+
+an M9 minimal medium supplemented with glucose or with glycerol (F ig. 2A ). Growth of the double 267 
+
+knockout strain was significantly better when the medium was supplemented with amino acids or 268 
+
+with excess manganese (F ig. 2A ). In all media , provision of SodFM activity abolished the 269 
+
+phenotype, with the sodA sodB strain that carried a pET22 vector from which the cambialistic 270 
+
+SodM from S. aureus was expressed [21] showing growth analogous to the WT strain (F ig. 2A ). 271 
+
+We selected this isozyme because it is cambialistic, i.e. can catalyse its dismutation reaction 272 
+
+equally well using either a manganese or iron cofactor [23,24] , thus ensuring molecules of SodM 273 
+
+would be catalytically active inside the E. coli cells regardless of which of these metal ions they 274 
+
+acquired in vivo . It also has a relatively low catalytic turnover with both metal cofactors [21,23] ,275 
+
+and therefore its heterologous expression would not produce vast quantities of SOD activity, as it 276 
+
+does when a more catalytically efficient, metal -specific SOD, such as the Mn -specific SodA or Fe -277 
+
+specific SodB native to E. coli [21] . These data demonstrate that the E. coli BL21 sodA sodB 278 
+
+strain exhibits similar growth phenotypes to those observed previously in an analogous strain 279 
+
+derived from E. coli Type A [39] , and these phenotypes can be attributed to loss of endogenous 280 
+
+SOD activity .281 
+
+Given the apparent improvement in growth observed when the media was supplemented with 282 
+
+manganese, we considered whether the sodA sodB strain might exhibit a metal deficiency, for 283 
+
+example through superoxide -mediated disruption of iron or manganese homeostasis [55,57,58] .284 
+
+To test this, we compared the metal content of cells of the sodA sodB strain relative to its 285 
+
+parental WT cells using inductively coupled plasma optical emission spectrometry (ICP -OES) 286 
+
+(Fig. 2 A). The data demonstrated no significant differences in the cellular Mg, Ca, Fe, Zn or Mn 287 
+
+content between the strains, transformed with either the SodM -expression plasmid or an empty 288 
+
+pET22 vector. We also assessed the transcription of known manganese and iron uptake genes 289 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+13 
+
+in E. coli [59 –61] by reverse -transcription quantitative polymerase chain reaction (RT -qPCR) to 290 
+
+assess whether the sodA sodB strain displays a metal -deprived phenotype . We observed no 291 
+
+significant change in the expression of the gene encoding the manganese -importer MntH [58,62] 292 
+
+in the sodA sodB strain, nor of either of genes that encode the primary iron -importers under 293 
+
+standard culture conditions, FeoA (which transports ferrous ions) or FecA (which transports ferric 294 
+
+citrate) [60,63] (F ig. 2 B). These data indicate that the sodA sodB strain does not suffer from an 295 
+
+inherent defect in metal homeostasis. 296 
+
+Proteomic analyses indicate few differences between cells of E. coli BL21 WT and the 297  sodA 
+
+sodB strain under recombinant protein expression conditions 298 
+
+We next sought t o investigate the cellular physiology in the sodA sodB strain and its usefulness 299 
+
+as a microbial expression host for the production of heterologous SodFM isozymes. We used 300 
+
+proteomic analyses to measure changes in prot ein expression in this strain relative to its WT 301 
+
+parent during overexpression of the heterologous proteins . We quantified proteins from each 302 
+
+strain , transformed with the pET22 construct containing the sodM gene from S. aureus , before 303 
+
+and after induction of expression of the heterologous gene, to determine how the cellular 304 
+
+proteome was affected by deletion of sodA and sodB and by the induction of the heterologous 305 
+
+SOD. 306 
+
+We analysed the proteome s of both the WT and the sodA sodB strain , in standard LB 307 
+
+medium , comparing the proteins quantified between the strains under both induced (100 μM 308 
+
+IPTG) and uninduced conditions (S upp. Fig. S1 ). As expected, both the E. coli SodFMs, SodA 309 
+
+and SodB, were detected in the WT cell s but not from sodA sodB cells (Tabl e 2 ). Sod A showed 310 
+
+similar abundance in both wild type samples, whereas the abundance of Sod B was increased 311 
+
+after induction of the heterologous protein. Also as expected, t he S. aureus SodM was detected 312 
+
+in all samples carrying the SodM vector , consistent with leaky expression from pET plasmids ,313 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+14 
+
+even in the absence of added inducer [64] , but its abundance was dramatically increased ( 6-fold 314 
+
+in wild type and 8-fold in sodA sodB ) after induction (Tabl e 2 ). 315 
+
+When we compared proteomes of the wild type to the sodA sodB strain prior to induction 316 
+
+of the heterologous protein, we identified just 50 protein s whose abundance had significantly 317 
+
+changed , 42 that were up - and 8 that were down -regulated (Fig. 3A ). This small number of 318 
+
+changes indicated an absence of serious metabolic or physiological problems in the sodA sodB 319 
+
+strain when carrying an expression construct encoding a functional, heterologous SodFM, 320 
+
+consistent with leaky expression from the pET system being sufficient to provide the cell with 321 
+
+protection against endogenous oxidative stress. Indeed, we detected the presence of S. aureus 322 
+
+SodM in both proteomes, and its abundance was found not to be statistically significantly different 323 
+
+when comparing between the extracts from WT vs the sodA sodB cells (Fig. 3A). 324 
+
+Likewise, when we compared the proteome of the same cells after induction of the 325 
+
+heterologous SodM, we identified even fewer proteins whose abundance had significantly 326 
+
+changed, 10 that were up - and 4 that were down -regulated (Fig. 3B). This indicated the physiology 327 
+
+of the sodA sodB strain is highly similar to that of WT BL21 cells, when over -expressing SodM .328 
+
+Importantly , the abu ndance of S. aureus SodM was unchanged in the two proteomes, showing 329 
+
+that the sodA sodB cells are as efficient for production of SodM as the WT BL21 cells (Fig. 3 B). 330 
+
+Importantly, we observed far more proteomic changes within each strain when we 331 
+
+compared induced to uninduced samples (Supp. Fig. S1 ). We detected 125 proteins whose 332 
+
+abundance was significantly changed (89 increased, 36 decreased) by induction of the 333 
+
+recombinant protein within wild type cells (S upp. Fig. S2 ), reflect ing the physiological effects on 334 
+
+E. coli BL21 (DE3) cells caused by the overexpression of the heterologous SodFM isozyme . We 335 
+
+also observed 223 proteins whose abundance was significantly changed ( 163 increased, 60 336 
+
+decreased) by induction of the recombinant protein within sodA sodB cells (S upp. Fig. S3 ). The 337 
+
+latter included changes in sulfur metabolism and Fe -S cluster pathways, perhaps indicating that 338 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+15 
+
+overexpression of the heterologous SOD , under conditions in which it gets primarily metalated 339 
+
+with iron [23,27] affects iron homeostasis and thereby iron -sulfur cluster synthesis .340 
+
+Taken together, the proteomic data indicate that the sodA sodB strain shows no obvious 341 
+
+physiological problems when transformed with an expression construct encoding a heterologous 342 
+
+SOD isozyme that is express ed inside E. coli BL21 cells , even in the absence of inducer . Further, 343 
+
+the data demonstrate that the sodA sodB strain is as efficient a host for production of a 344 
+
+recombinant SodFM isozyme as the WT BL21 parent strain. 345 
+
+The E. coli BL21 
+
+sodA 
+
+sodB strain is an excellent host for expression of diverse SodFMs 346 
+
+We have use d the E. coli BL21 sodA sodB strain for production of recombinant SodFMs for in 347 
+
+vitro characterisation. Our goal has been to characterise WT and mutated variants of SodFM 348 
+
+isozymes to test their catalytic metal -preference [24,26] . We have used this approach to 349 
+
+determine how mutations within the metal ion’s secondary coordination sphere influence metal 350 
+
+preference [23] , and how this biochemical parameter has evolved within the SodFM superfamily 351 
+
+[21] . To characterise a SodFM’s catalytic metal -preference, we must accurately quantify its 352 
+
+activity with both manganese and with iron, but for highly metal -preferring isozymes, one or other 353 
+
+of these activities can be extremely low [21] . Th is E. coli strain was created to prevent 354 
+
+contamination of recombinant SodFM preparations by the native E. coli SodFMs, SodA or SodB. 355 
+
+The E. coli SodFMs exhibit highly metal specific (for manganese and iron, respectively) activity 356 
+
+with very high catalytic efficiency [30,65] , thus even low levels of contamination by them can 357 
+
+interfere with such measurements. 358 
+
+We sought to validate that the E. coli BL21 sodA sodB strain makes a suitable 359 
+
+expression host chassis for the synthesis of heterologous SodFM isozymes in forms loaded 360 
+
+specifically with each target metal cofactor, in high abundance, free of contamination by the E. 361 
+
+coli SodFMs, enabling measurement of their metal preferences. To achieve this, we took 362 
+
+advantage of our ability to perform in -gel assays. SOD enzyme activity can be assayed easily and 363 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+16 
+
+semi -quantitatively in native polyacrylamide gel electrophoresi s (PAGE). After resolving, the gels 364 
+
+are exposed to a source of superoxide (light -dependent production catalysed by riboflavin) and a 365 
+
+colorimetric dye (nitroblue tetrazolium, NBT) that develops colour in the presence of superoxide, 366 
+
+forming a dark purple precipitate whose absence in regions of the gel indicates the presence of 367 
+
+superoxide dismutase enzyme. We used this assay to demonstrate that the three bands of SOD 368 
+
+activity (representing the two homodimeric, plus a heterodimeric form), which are readily detected 369 
+
+in extracts from wild type E. coli BL21 in NBT -stained gels , were absent in equivalent extracts 370 
+
+prepared from the sodA sodB strain (Fig. 1C) . This confirmed that both SodA and SodB activity 371 
+
+were eliminated from this strain, as expected. 372 
+
+Next, we tested the expression in the E. coli BL21 sodA sodB strain of isozymes from 373 
+
+each of the five SodFM subfamilies , which we previously defined by bioinformatic analyses [21] ,374 
+
+denoted SodFM1 -5. These isozymes were the SodFM1 from Staphylococcus aureus (SodA), the 375 
+
+SodFM2 from Neisseria gonorrhoeae , the SodFM3 from Mycobacterium abscessus , the SodFM4 376 
+
+from CPR Parkubacteria and the mitochondrial SodFM5 from Homo sapiens . Expression 377 
+
+constructs for each isozyme, constructed in a prior study [21] , were transformed into the BL21 378 
+
+sodA sodB strain. Transformants were cultured in an M9 medium supplemented with iron to 379 
+
+mid -log phase, and then expression of the heterologous SodFM was induced by addition of 0.1 380 
+
+mM IPTG. To achieve selective metal -loading inside the bacterial cells, either 200 M MnCl 2 or 381 
+
+100 M Fe SO 4 was added to the growth medium at the point of induction. Cells were harvested 382 
+
+after 4 h incubation and cell lysates analysed by gel electrophoresis to assess expression and 383 
+
+metal -loading. 384 
+
+Initial SDS -PAGE analysis showed that all SodFM isozymes , with the exception of the 385 
+
+SodFM3 from Mycobacterium abscessus , was successfully overexpressed inside both host 386 
+
+strains of E. coli (Fig. 4 ). In a prior study , expression of this SodFM3 was improved by expression 387 
+
+within E. coli cells by an additional plasmid that provides additional expression of tRNAs for rare 388 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+17 
+
+codons [21] . Notably, when an increased quantity of biomass (50 g) was loaded on SDS -PAGE, 389 
+
+even the SodFM3’s expression could be observed, albeit at relatively low levels (Supp. Fig. S 4). 390 
+
+Thus, all five of the SodFM isozymes w ere expressed in the BL21 sodA sodB host strain . In all 391 
+
+cases, the expression level obtained with the BL21 sodA sodB strain was analogous to that 392 
+
+obtained in the parental wild type BL21 strains (Fig. 4; Supp. Fig. S 4). 393 
+
+To test the activity of the overexpressed enzymes, we resolved equal amount s of each 394 
+
+crude soluble extract (3 g) on native PAGE and negatively stained the resulting gel with 395 
+
+NBT/ riboflavin ( Fig. 5A ). In each case, an abundant band of activity was clearly detected in both 396 
+
+the BL21 wild type and the sodA sodB strain for all SodFM isozymes, including the SodFM3 397 
+
+despite its relatively low expression. In the samples from both E. coli strains, the SodFM1, 398 
+
+SodFM3, SodFM4 and SodFM5 isozymes showed much more activity in the samples cultured in 399 
+
+the presence of manganese than those cultured in the presence of iron, whereas the opposite 400 
+
+was the case for the SodFM2 , consistent with the metal -preferences of the five tested SodFMs 401 
+
+that were previously demonstrated [21] . Importantly, whereas additional bands of activity in the 402 
+
+crude lysates prepared from wild type BL21 cells were observed in the activity gels, these 403 
+
+additional bands were absent in the crude lysates prepared from the BL21 sodA sodB strain 404 
+
+(Fig. 5A) .405 
+
+Replicate native gel s were soaked in 0.3% (v/v) H2O2 prior to negative staining for 406 
+
+enzymatic activity (Fig. 5B) . Hydrogen peroxide is a specific inhibitor of the iron -loaded forms of 407 
+
+SodFMs but has negligible effects on manganese -dependent SodFM activity [21] . As expected, 408 
+
+when gels stained with or without prior peroxide treatment were compared (Fig. 5) , all bands of 409 
+
+activity in lysates prepared from cells cultured in the presence of iron showed significant inhibition 410 
+
+of activity, whereas those from cells cultured in the presence of manganese showed little inhibitory 411 
+
+effects. Th is indicat ed that the over -expressed protein had, in each case, primarily been loaded 412 
+
+with the metal ion that was added in excess to the bacterial culture medium at the point of 413 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+18 
+
+induction. Quantification of the activity bands in the gels through densitometry enabled the 414 
+
+assessment of the relative activity with iron and with manganese for each SodFM isozyme and 415 
+
+calculation of the approximate cambialism ratio (aCR) using a published protocol [21] . Th is 416 
+
+analysis demonstrated that the metal -preference of these five SodFM isozymes was in line with 417 
+
+those previously reported ( Fig. 5 ). 418 
+
+To confirm metal loading inside cells of the E. coli BL21 sodA sodB strain, we purified 419 
+
+samples of the S. aureus SodA protein after expression during growth in media containing either 420 
+
+excess manganese or iron . Each sample of protein was purified according to existing protocol s421 
+
+we have used to generate samples for in vitro studies [27] . Triplicate samples were analysed for 422 
+
+metal content using ICP -OES. The data demonstrated highly specific metal -loading was achieved 423 
+
+during over -expression inside the E. coli cells when cultured under these conditions (Fig. 6). 424 
+
+Taken together, these results demonstrated that the E. coli BL21 sodA sodB strain is an 425 
+
+ideal expression chassis for production of recombinant SodFM isozymes, from all five identified 426 
+
+phylogenetic subfamily lineages, and is capable of producing them in a form that is largely loaded 427 
+
+with a specific metal cofactor, thereby enabling in vitro assessment of its metal -preference of 428 
+
+catalysis. 429 
+
+430 
+
+Discussion 431 
+
+We previously constructed a strain of E. coli BL21 for the purpose of creating a microbial cell 432 
+
+factory for the efficient synthesis of recombinant heterologous superoxide dismutase enzymes 433 
+
+free of contamination by its endogenous cytosolic SodFM isozymes . The native E. coli SodFMs 434 
+
+exhibit very high metal -preference of their catalysis, with SodA being active only with manganese 435 
+
+and SodB only with iron, each with very high catalytic turnover [30,65] . Therefore , even low levels 436 
+
+of contamination by the E. coli SodFMs can contribute to the measured SOD activity of 437 
+
+recombinant protein preparations, especially when biochemically characterising an isozyme with 438 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+19 
+
+low catalytic turnover (for example, when measuring turnover from a manganese -pre ferring 439 
+
+isozyme when wrongly loaded with iron and vice versa ). Additionally, while the expression of the 440 
+
+iron -dependent E. coli SOD, SodB, is largely constitutive, the manganese -dependent E. coli SOD, 441 
+
+SodA, is induced under stress conditions [66] . Thus, it is inevitably unclear to what extent each of 442 
+
+these isozymes will contribute through their contamination to a given extract, interfering not only 443 
+
+with the measurement of catalytic activity but also to elemental analysis to determine the metal 444 
+
+content of recombinant protein preparations of heterologously expressed SodFMs. Our E. coli 445 
+
+BL21 sodA sodB strain was designed to overcome this contamination problem, enabl ing us to 446 
+
+produce large quantities of the purified recombinant enzymes for detailed biochemical and 447 
+
+biophysical characterisation [21,22] . It also create d a system for screening the activity of SodFMs 448 
+
+in a higher throughput manner, avoiding the need for full purification of target isozymes in each 449 
+
+metal form by assaying the recombinant enzyme direct from crude bacterial lysates, either in 450 
+
+solution or in gel activity assays. The latter provided us with a tool that enabled us to survey a 451 
+
+diverse set of 60 SodFM isozymes from across the entire phylogenetic tree, as well as more than 452 
+
+100 different mutated variants of those isozymes, to determine the evolutionary history of this 453 
+
+widely distributed metalloenzyme family [21] .454 
+
+In this study, we sought to characterise this mutant strain of E. coli BL21 to identify any 455 
+
+physiological defects which it might exhibit and to validate it as a new tool for use in the study of 456 
+
+the remarkable SodFM family of metalloenzymes. Based on prior observations made with a 457 
+
+mutated strain of Type A E. coli , strain K -12, we anticipated that we would observe physiological 458 
+
+defects in our E. coli BL21 sodA sodB strain. In particular, it was shown that the E. coli K-12 459 
+
+sodA sodB strain failed to grow in medium supplemented with glucose [39] , a phenotype 460 
+
+proposed to result from superoxide -mediated damage to Fe -S clusters in essential enzymes of 461 
+
+carbon metabolism [67] . Remarkably, this phenotype was not observed in our BL21 strain , which 462 
+
+grew well in either LB or M9 minimal medium supplemented with glucose. Notably, w e found no 463 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+20 
+
+significant changes in the genome sequence of the strain, ruling out a strong selection pressure 464 
+
+giv ing rise to suppressor mutations during the selection stages of genetic modification. Finally, 465 
+
+we observed only minor differences in the expression of the proteome between WT and 466 
+
+sodA sodB cells in LB medium, further confirming that the physiology of the sodA sodB strain 467 
+
+presents no problems for its use as a cell factory for production of recombinant SodFMs. The 468 
+
+apparent contradiction in phenotype between our BL2 1 (DE3) sodA sodB strain and that in K-469 
+
+12 may imply substantial physiological difference in carbon metabolism and/or redox defence 470 
+
+between type A and type B E. coli , or may reflect complexities of the specific genotype K -12 471 
+
+strain s used in prior studies, which w ere constructed using phage mutagenesis [39,68] .472 
+
+We demonstrated the usefulness of this E. coli BL21 (DE3) sodA sodB strain for 473 
+
+production of recombinant SodFM enzymes. First and foremost, the strain can produce large 474 
+
+quantities of heterologous isozymes from across the SodFM phylogenetic tree, assuring that 475 
+
+preparations are free of contamination by E. coli SodA and SodB. The resulting samples can be 476 
+
+readily purified to near -homogeneity by liquid chromatography, without need for affinity tags, 477 
+
+resulting in samples that are suited for biochemical characterisation or structural determination 478 
+
+[21 –24] . Metal -loading control can be achieved to a significant extent by culturing the strain under 479 
+
+carefully defined metal conditions in M9 minimal medium. Unfortunately, some mixed metal 480 
+
+loading of heterologous proteins are unavoidable in -cell: both of the contaminating metals, Fe and 481 
+
+Zn , are needed for growth so cannot be omitted, and therefore are also present in low -levels in 482 
+
+the purified preparations. Nonetheless, the strain can make protein predominantly loaded with a 483 
+
+target metal ion. We have optimised these conditions specifically for our extensive studies of the 484 
+
+SodFM1 isozymes from S. aureus , and these conditions produce highly selective metal loading 485 
+
+with either manganese or iron based on supplementation of the growth medium with these metals. 486 
+
+Importantly, the strain also enables a higher throughput assay that enables the assessment of 487 
+
+relative activity of isozymes with manganese and iron as cofactor, using an in -gel activity assay 488 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+21 
+
+combined with the use of the selective inhibitor of iron -dependent SodFM activity, hydrogen 489 
+
+peroxide [21] . The combination of this E. coli strain, a microbial cell factory that avoids 490 
+
+contaminating contributions to detected activity from endogenous SodFMs, with the convenient 491 
+
+in -gel assay and the conserved selective inhibition by peroxide, enables assessment of the metal -492 
+
+preference of diverse SodFMs without the need for time -consuming and costly purification of two 493 
+
+metal forms of each isozymes under study. 494 
+
+495 
+
+Conclusions 496 
+
+Here, we have characterised the physiology and utility of an E. coli BL21 sodA sodB strain for 497 
+
+production of recombinant SodFM proteins for in vitro studies. Genomic analysis verified the 498 
+
+targeted gene deletions, without significant off -target effects. Growth, expression, elemental 499 
+
+analysis, and proteomic data confirmed a lack of physiological defects of the mutant strain , except 500 
+
+for a known inability to grow on glucose, which we have demonstrated can be overcome by 501 
+
+heterologous expression of a SodFM isozyme . We demonstrate the strain can efficient ly produc e502 
+
+diverse recombinant SodFMs, including precise control of metal -loading of the heterologously 503 
+
+expressed protein. The E. coli strain is thus a useful microbial cell factory for production of 504 
+
+recombinant SodFMs, which should find widespread utility as expression host of choise, enabling 505 
+
+improved production of protein for studies of the biochemical, biophysical and structural properties 506 
+
+of this remarkable family of metalloenzymes. 507 
+
+508 
+
+List of Abbreviations 509 
+
+aCR : approximate cambialism ratio 510 
+
+CR : cambialism ratio 511 
+
+IMAC : immobilised metal affinity chromatography 512 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+22 
+
+IPTG : isopropyl β -D-1-thiogalactopyranoside 513 
+
+LB medium: Luria -Bertani medium 514 
+
+NBT : nitroblue tetrazolium 515 
+
+PAGE : polyacrylamide gel electrophoresis 516 
+
+SDS -PAGE : sodium dodecyl sulfate polyacrylamide gel electrophoresis 517 
+
+SNP : single nucleotide polymorphism 518 
+
+SOD : superoxide dismutase 519 
+
+SodFM : iron - or manganese -dependent superoxide dismutase 520 
+
+521 
+
+Declarations 522 
+
+Ethics approval and consent to participate 523 
+
+Not applicable. 524 
+
+525 
+
+Consent for publication 526 
+
+Not applicable. 527 
+
+528 
+
+Availability of data and materials 529 
+
+The genomic sequencing data supporting the conclusions of this article are available in the 530 
+
+BioProject repository (BioProject ID: PRJNA1272326 ;531 
+
+http://www.ncbi.nlm.nih.gov/bioproject/1272326 ). The proteomic data supporting the 532 
+
+conclusions of this article are available in the PRIDE repository. All other data supporting the 533 
+
+conclusions of this article are included within the article and its additional file(s). 534 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+23 
+
+535 
+
+Competing interests 536 
+
+The authors declare that they have no competing interests. 537 
+
+538 
+
+Funding 539 
+
+This work was funded by a MAESTRO grant from the National Science Center (NCN), Poland 540 
+
+(2021/42/A/NZ1/00214) to KJW and by a grant from the National Institutes of Health (R01 541 
+
+AI155611) to TEKF .542 
+
+543 
+
+Authors' contributions 544 
+
+The preparation of DNA and protein samples for sequencing and proteomics were performed by 545 
+
+AC under supervision by RM and ME . Growth analyses were performed by DG and gene 546 
+
+expression analyses were performed by JP. The expression, analysis and purification of SodFMs 547 
+
+were performed by RM, with assistance from ME. Genomic data analysis was performed by JG .548 
+
+Mass spectrometry analyses were performed by AM and AS, and proteomic data w ere analysed 549 
+
+by RM with assistance from ME, AC , AM and AS . The project was conceived by KJW and TEKF 550 
+
+and supervised and managed by KJW. The manuscript was written by KJW with contributions 551 
+
+from all other authors. All authors read and approved the final manuscript. 552 
+
+553 
+
+Tables 554 
+
+Table 1: Mutations unique to mutant (∆∆) and wild type (WT) .555 
+
+Mutations present in ∆∆ and not present in WT 
+
+Position  Mutation  Annotation  Gene  Description 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+24 
+
+1,026,050  A→G  Intergenic 
+
+(-42/ -177)  sulA ← / → sxy 
+
+SOS cell division 
+
+inhibitor/CRP -S-dependent 
+
+promoter expression factor 
+
+1,680,577  558 bp→84 bp  Coding 
+
+(4 ‑561/582 nt)  sodB → superoxide dismutase, Fe 
+
+4,008,735  597 bp→84 bp  Coding 
+
+(4 ‑600/621 nt)  sodA → superoxide dismutase, Mn 
+
+Mutations present in WT and not present in ∆∆ 
+
+1,136,454  C→T  A29V 
+
+(GCC→GTC)  flgF →
+
+flagellar component of 
+
+cell ‑proximal portion of 
+
+basal ‑body rod 
+
+2,006,172  G→A  A338V 
+
+(GCC→GTC)  vioA ←
+
+VioA, involved in 
+
+dTDP ‑N‑acetylviosamine 
+
+synthesis 
+
+List of mutations identified by b reseq pipeline after mapping sequencing data to the E. coli BL21 556 
+
+(DE3) Δ sodA ΔsodB strain and the wild -type reference genome, respectively. 557 
+
+558 
+
+Table 2: Detection of superoxide dismutase isozymes in proteomic analyses of WT and 559 
+
+ΔsodAΔsodB cells .560 
+
+Protein  LFQ intensity average log 2 Fold change after induction 
+
+WT  2Δ  WT  2Δ 
+
+S. aureus SodM  34.26  34.22  6.39  8.68 
+
+E. coli SodB  30.89  ND 2.13  ND
+
+E. coli SodA  29.28  ND 1.17  ND
+
+Detection and abundance of endogenous E. coli SodA (MnSOD) and SodB (FeSOD) isozymes 561 
+
+or heterologously expressed S. aureus SodM in the proteomic samples. ND = not detected in 562 
+
+this sample. 563 
+
+564 
+
+Figure Legends 565 
+
+Figure 1: Genome and in -gel activity assay confirms deletion of SOD genes . A-B. 566 
+
+Schematic representation s of the alignment of the (A) sodA and (B) sodB gene region s between 567 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+25 
+
+the E. coli BL21 (DE3) reference genome (CP001509) and the BL21 sodA sodB strain (Delta 568 
+
+BL21) . Scar sequences in the muta nt strain are highlighted with red boxes . C. Equal amounts 569 
+
+(10 μg) of crude soluble extracts from E. coli BL21 (DE3) wild type (WT) and from the E. coli 570 
+
+BL21 sodA sodB strain ( ) were resolved by native PAGE on a 15% acrylamide gel, and 571 
+
+SOD activity detected with NBT/riboflavin straining. 572 
+
+573 
+
+Figure 2: E. coli sodA sodB strain shows expected growth phenotype but no defects in 574 
+
+metal homeostasis . A. Growth and total metal accumulation phenotypes of the E. coli 575 
+
+sodA sodB strain . Growth of E. coli BL21 (DE3) WT (grey) and the sodA sodB strain (red) 576 
+
+strains , carrying either a pET22 empty vector (lighter colours) or with the pET22 -SodM construct 577 
+
+(darker colours), were assessed either in a rich LB medium, or in M9 minimal medium 578 
+
+supplemented with glucose (Glu), glycerol (Gly), casamino acids (aa), or with 100 μM MnCl 2579 
+
+(Mn). Samples (1 mL) of cells of the same strains were h arvested at mid -log phase (OD 600nm 580 
+
+~0.5) during growth in LB medium, digested in nitric acid, and their elemental composition was 581 
+
+quantified by ICP -OES for magnesium (Mg), calcium (Ca), iron (Fe), manganese (Mn) or zinc 582 
+
+(Zn). B. Total RNA was extracted from samples (1 mL) of cells from LB cultures of the same 583 
+
+strains. Cells were cultured to mid -log (OD 600nm ~0.5) then expression of SodM was induced by 584 
+
+addition of 100 μM IPTG in one set of cultures and left uninduced in another set, followed by 4 h 585 
+
+further incubation at 37°C with 140 rpm shaking. A control culture was exposed to 10 mM EDTA 586 
+
+in the medium for 30 minutes. After RNA purification and genomic DNA digestion, RNA samples 587 
+
+(2 μg) were reverse -transcribed, and resulting cDNA used for qPCR analyses. The abundance 588 
+
+of transcripts for mntH , feoA and fecA were quantified, while t he rrsA and hcaT genes were 589 
+
+used as reference genes. Each sample was measured in technical triplicate, across four 590 
+
+biological replicates, and r elative gene expression calculated using the ΔΔCt method. Statistical 591 
+
+significance was assessed using Student’s t-test. 592 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+26 
+
+593 
+
+Figure 3: Proteomic comparison of wild type and mutant BL21 cells shows production 594 
+
+strain lacks physiological defects. Proteins were extracted from aliquots (1 mL) of cultured E. 595 
+
+coli BL21 (DE3) wild type and from the E. coli BL21 sodA sodB strain , each carrying the 596 
+
+pET22 b-SodM construct, before and after induction (100 μM IPTG) of expression of the 597 
+
+heterologous SodM protein. Cells were lysed in SDS buffer by sonication , equal amounts of 598 
+
+protein ( 35 μg) digested with trypsin , and resulting peptides were purified. Peptide mixtures (2 599 
+
+μg) analysed by LC -MS. Peptides were assigned to proteins with MaxQuant using an E. coli 600 
+
+reference database, and then changes in protein abundance analysed with Perseus . The 601 
+
+resulting volcano plots are presented for comparison between WT and  strains (A) without 602 
+
+added IPTG inducer and (B) with induction of the heterologous protein. The red circles 603 
+
+represent proteins that were up -regulated (>1 log 2), the green circles represent the proteins that 604 
+
+were down -regulated (<1 log 2), and all proteins found to show no change in abundance are 605 
+
+represented by orange circles. The large blue circle represents the heterologously expressed S. 606 
+
+aureus SodM protein. The dotted blue lines represent the log2 fold -change cutoff used. 607 
+
+608 
+
+Figure 4: SDS -PAGE analysis of lysates from E. coli expressing diverse SodFMs. 609 
+
+The BL21 wild type (WT) or  ΔsodA ΔsodB (ΔΔ ) strains were each transformed with pET22b 610 
+
+constructs for the heterologous expression of the SodFM1 from Staphylococcus aureus (SodA), 611 
+
+the SodFM2 from Neisseria gonorrhoeae , the SodFM3 from Mycobacterium abscessus , the 612 
+
+SodFM4 from CPR Parkubacteria or the SodFM5 from Homo sapiens . Each strain was cultured 613 
+
+to mid -log phase in M9 minimal medium containing glucose and supplemented with 1 μM 614 
+
+FeSO 4. Expression was induced by addition of 100 μM IPTG, at which point selected cultures 615 
+
+were also supplemented with either 200 μM FeSO 4 (Fe) or 200 μM MnCl 2 (Mn), and cultures 616 
+
+were incubated at 37°C overnight. Cells were harvested, washed and lysed in 20 mM Tris, pH 617 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+27 
+
+7.5, 100 mM NaCl through multiple (x3) freeze -thaws using liquid N 2. Equal amounts (1 μg) of 618 
+
+each extract w ere resolved by SDS -PAGE on a 15% acrylamide gel alongside molecular weight 619 
+
+markers (MW) and stained with Coomassie Brilliant Blue. 620 
+
+621 
+
+Figure 5: In -gel SOD activity assay of lysates from E. coli expressing diverse SodFMs. 622 
+
+The same cell extracts, prepared from t he BL21 wild type (WT) or  ΔsodA ΔsodB (ΔΔ ) strains 623 
+
+transformed with the SodFM expression constructs , and selectively loaded with Mn or Fe, as 624 
+
+described in Fig. 4, were analysed in -gel for enzymatic activity . Equal amounts (3 μg) of each 625 
+
+extract were resolved by native PAGE on pairs of 15% (v/v) acrylamide gels at pH 8.8. One gel 626 
+
+(A) was incubated in water alone, and the other gel ( B) was incubated in a solution of 0.3% (v/v) 627 
+
+H2O2 at 4°C, for 30 min and then both gels underwent negative staining with NBT/riboflavin to 628 
+
+detect regions of superoxide dismutase activity. Gels were scanned and inverted for clarity. 629 
+
+Densitometry was used to quantify activity in each gel and used to calculate the approximate 630 
+
+cambialism ratio (aCR) [23] , shown below the gels along with the equivalent result from a prior 631 
+
+study [21] .632 
+
+633 
+
+Figure 6: Selective metal -loading of heterologous, over -expressed SodFMs is possible in 634 
+
+the E. coli ΔsodA ΔsodB strain. Recombinant SodA from S. aureus was over -expressed 635 
+
+inside cells of the E. coli BL21 (DE3) Δ sodA ΔsodB strain . Cells were cultured in M9 medium, 636 
+
+and then at the point of protein induction with IPTG, cultures were supplemented with either 100 637 
+
+μM FeSO 4 (left) or with 200 μM MnCl 2 (right) to achieve loading of the recombinant proteins with 638 
+
+these respective metals. The over -expressed proteins were purified by standard methods 639 
+
+[23,27,69] , and the loading of each recombinant isoform with iron, manganese or zinc was 640 
+
+measured by ICP -OES , with protein quantitation in the ICP samples determined using their S 641 
+
+content. 642 
+
+643 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+34 
+
+References 678 
+
+1. Itakura K, Hirose T, Crea R, Riggs AD, Heyneker HL, Bolivar F, et al. Expression in Escherichia 679 
+
+coli of a Chemically Synthesized Gene for the Hormone Somatostatin. Science (1979). 680 
+
+1977;198:1056 –63. https://doi.org/10.1126/science.412251 681 
+
+2. Goeddel D V, Kleid DG, Bolivar F, Heyneker HL, Yansura DG, Crea R, et al. Expression in 682 
+
+Escherichia coli of chemically synthesized genes for human insulin. Proceedings of the National 683 
+
+Academy of Sciences. 1979;76:106 –10. https://doi.org/10.1073/pnas.76.1.106 684 
+
+3. Bill RM. Playing catch -up with Escherichia coli: using yeast to increase success rates in 685 
+
+recombinant protein production experiments. Front Microbiol. 2014;5. 686 
+
+https://doi.org/10.3389/fmicb.2014.00085 687 
+
+4. Ferrer -Miralles N, Domingo -Espín J, Corchero JL, Vázquez E, Villaverde A. Microbial factories 688 
+
+for recombinant pharmaceuticals. Microb Cell Fact. 2009;8:17. https://doi.org/10.1186/1475 -689 
+
+2859 -8-17 690 
+
+5. Daegelen P, Studier FW, Lenski RE, Cure S, Kim JF. Tracing Ancestors and Relatives of 691 
+
+Escherichia coli B, and the Derivation of B Strains REL606 and BL21(DE3). J Mol Biol. 692 
+
+2009;394:634 –43. https://doi.org/10.1016/j.jmb.2009.09.022 693 
+
+6. Shilling PJ, Mirzadeh K, Cumming AJ, Widesheim M, Köck Z, Daley DO. Improved designs for 694 
+
+pET expression plasmids increase protein production yield in Escherichia coli. Commun Biol. 695 
+
+2020;3:214. https://doi.org/10.1038/s42003 -020 -0939 -8696 
+
+7. Rosenberg AH, Lade BN, Dao -shan C, Lin S -W, Dunn JJ, Studier FW. Vectors for selective 697 
+
+expression of cloned DNAs by T7 RNA polymerase. Gene. 1987;56:125 –35. 698 
+
+https://doi.org/10.1016/0378 -1119(87)90165 -X699 
+
+8. Shukal S, Lim XH, Zhang C, Chen X. Metabolic engineering of Escherichia coli BL21 strain 700 
+
+using simplified CRISPR -Cas9 and asymmetric homology arms recombineering. Microb Cell Fact. 701 
+
+2022;21:19. https://doi.org/10.1186/s12934 -022 -01746 -z702 
+
+9. Heyde SAH, Nørholm MHH. Tailoring the evolution of BL21(DE3) uncovers a key role for RNA 703 
+
+stability in gene expression toxicity. Commun Biol. 2021;4:963. https://doi.org/10.1038/s42003 -704 
+
+021 -02493 -4705 
+
+10. Kim H, Kim S, Yoon SH. Metabolic network reconstruction and phenome analysis of the 706 
+
+industrial microbe, Escherichia coli BL21(DE3). PLoS One. 2018;13:e0204375. 707 
+
+https://doi.org/10.1371/journal.pone.0204375 708 
+
+11. Guzman LM, Belin D, Carson MJ, Beckwith J. Tight regulation, modulation, and high -level 709 
+
+expression by vectors containing the arabinose PBAD promoter. J Bacteriol. 1995;177:4121 –30. 710 
+
+https://doi.org/10.1128/jb.177.14.4121 -4130.1995 711 
+
+12. Studier FW, Moffatt BA. Use of bacteriophage T7 RNA polymerase to direct selective high -712 
+
+level expression of cloned genes. J Mol Biol. 1986;189:113 –30. https://doi.org/10.1016/0022 -713 
+
+2836(86)90385 -2714 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+35 
+
+13. Robichon C, Luo J, Causey TB, Benner JS, Samuelson JC. Engineering Escherichia coli 715 
+
+BL21(DE3) Derivative Strains To Minimize E. coli Protein Contamination after Purification by 716 
+
+Immobilized Metal Affinity Chromatography. Appl Environ Microbiol. 2011;77:4634 –46. 717 
+
+https://doi.org/10.1128/AEM.00119 -11 718 
+
+14. Ratelade J, Miot M -C, Johnson E, Betton J -M, Mazodier P, Benaroudj N. Production of 719 
+
+Recombinant Proteins in the lon -Deficient BL21(DE3) Strain of Escherichia coli in the Absence 720 
+
+of the DnaK Chaperone. Appl Environ Microbiol. 2009;75:3803 –7. 721 
+
+https://doi.org/10.1128/AEM.00255 -09 722 
+
+15. Meuskens I, Michalik M, Chauhan N, Linke D, Leo JC. A New Strain Collection for Improved 723 
+
+Expression of Outer Membrane Proteins. Front Cell Infect Microbiol. 2017;7. 724 
+
+https://doi.org/10.3389/fcimb.2017.00464 725 
+
+16. Mukai T, Hoshi H, Ohtake K, Takahashi M, Yamaguchi A, Hayashi A, et al. Highly reproductive 726 
+
+Escherichia coli cells with no specific assignment to the UAG codon. Sci Rep. 2015;5:9699. 727 
+
+https://doi.org/10.1038/srep09699 728 
+
+17. Iwasaki T, Miyajima -Nakano Y, Fukazawa R, Lin MT, Matsushita S, Hagiuda E, et al. 729 
+
+Escherichia coli amino acid auxotrophic expression host strains for investigating protein 730 
+
+structure –function relationships. The Journal of Biochemistry. 2021;169:387 –94. 731 
+
+https://doi.org/10.1093/jb/mvaa140 732 
+
+18. Valderrama -Rincon JD, Fisher AC, Merritt JH, Fan Y -Y, Reading CA, Chhiba K, et al. An 733 
+
+engineered eukaryotic protein glycosylation pathway in Escherichia coli. Nat Chem Biol. 734 
+
+2012;8:434 –6. https://doi.org/10.1038/nchembio.921 735 
+
+19. Zhang Q, Zhang J, Shao Y, Shang G. Escherichia coli BL21(DE3) optimized deletion mutant 736 
+
+as the host for whole -cell biotransformation of N -acetyl -d-neuraminic acid. Biotechnol Lett. 737 
+
+2023;45:1521 –8. https://doi.org/10.1007/s10529 -023 -03426 -3738 
+
+20. Hou Y, Hossain GS, Li J, Shin H, Du G, Liu L. Combination of phenylpyruvic acid (PPA) 739 
+
+pathway engineering and molecular engineering of l -amino acid deaminase improves PPA 740 
+
+production with an Escherichia coli whole -cell biocatalyst. Appl Microbiol Biotechnol. 741 
+
+2016;100:2183 –91. https://doi.org/10.1007/s00253 -015 -7048 -5742 
+
+21. Sendra KM, Barwinska -Sendra A, Mackenzie ES, Baslé A, Kehl -Fie TE, Waldron KJ. An 743 
+
+ancient metalloenzyme evolves through metal preference modulation. Nat Ecol Evol. 2023;7. 744 
+
+https://doi.org/10.1038/s41559 -023 -02012 -0745 
+
+22. Barwinska -Sendra A, Baslé A, Waldron KJ, Un S. A charge polarization model for the metal -746 
+
+specific activity of superoxide dismutases. Physical Chemistry Chemical Physics. 2018;20. 747 
+
+https://doi.org/10.1039/c7cp06829h 748 
+
+23. Barwinska -Sendra A, Garcia YM, Sendra KM, Baslé A, Mackenzie ES, Tarrant E, et al. An 749 
+
+evolutionary path to altered cofactor specificity in a metalloenzyme. Nat Commun. 2020;11. 750 
+
+https://doi.org/10.1038/s41467 -020 -16478 -0751 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+36 
+
+24. Garcia YM, Barwinska -Sendra A, Tarrant E, Skaar EP, Waldron KJ, Kehl -Fie TE. A752 
+
+Superoxide Dismutase Capable of Functioning with Iron or Manganese Promotes the Resistance 753 
+
+of Staphylococcus aureus to Calprotectin and Nutritional Immunity. PLoS Pathog. 2017;13. 754 
+
+https://doi.org/10.1371/journal.ppat.1006125 755 
+
+25. Frye KA, Sendra KM, Waldron KJ, Kehl -Fie TE. Old dogs, new tricks: New insights into the 756 
+
+iron/manganese superoxide dismutase family. J Inorg Biochem . 2022;230. 757 
+
+https://doi.org/10.1016/j.jinorgbio.2022.111748 758 
+
+26. Tu WY, Pohl S, Gray J, Robinson NJ, Harwood CR, Waldron KJ. Cellular iron distribution in 759 
+
+Bacillus anthracis . J Bacteriol. 2012;194. https://doi.org/10.1128/JB.06195 -11 760 
+
+27. Esmaeeli M, Nikolić L, Mazgaj R, Das S, Zhukova L, Puchała W, et al.  A closely related pair 761 
+
+of superoxide dismutase isozymes from Staphylococcus aureus show distinct stabilities and 762 
+
+proton -exchange dynamics. Journal of Biological Chemistry. 2026;113226. 763 
+
+https://doi.org/10.1016/j.jbc.2026.113226 764 
+
+28. Sheng Y, Abreu IA, Cabelli DE, Maroney MJ, Miller AF, Teixeira M, et al. Superoxide 765 
+
+dismutases and superoxide reductases. Chem. Rev. 2014. https://doi.org/10.1021/cr4005296 766 
+
+29. Yamakura F, Suzuki K. Cadmium, chromium, and manganese replacement for iron in iron -767 
+
+superoxide dismutase from pseudomonas ovalis. J Biochem. 1980;88. 768 
+
+30. Ose DE, Fridovich I. Manganese -containing superoxide dismutase from Escherichia coli :769 
+
+Reversible resolution and metal replacements. Arch Biochem Biophys. 1979;194. 770 
+
+https://doi.org/10.1016/0003 -9861(79)90628 -3771 
+
+31. Martin ME, Byers BR, Olson MOJ, Salin ML, Arceneaux JE, Tolbert C. A Streptococcus 772 
+
+mutans superoxide dismutase that is active with either manganese or iron as a cofactor. Journal 773 
+
+of Biological Chemistry. 1986;261. https://doi.org/10.1016/s0021 -9258(18)67663 -x774 
+
+32. Smethurst DGJ, Shcherbik N. Interchangeable utilization of metals: New perspectives on the 775 
+
+impacts of metal ions employed in ancient and extant biomolecules. Journal of Biological 776 
+
+Chemistry. 2021;297:101374 . https://doi.org/10.1016/j.jbc.2021.101374 777 
+
+33. Stallings WC, Pattridge KA, Strong RK, Ludwig ML. Manganese and iron superoxide 778 
+
+dismutases are structural homologs. Journal of Biological Chemistry. 1984;259. 779 
+
+https://doi.org/10.1107/s0108767384098627 780 
+
+34. Jackson SMJ, Cooper JB. An analysis of structural similarity in the iron and manganese 781 
+
+superoxide dismutases based on known structures and sequences. Biometals. 1998;11:159 –73. 782 
+
+https://doi.org/10.1023/A:1009238214394 783 
+
+35. Vance CK, Miller AF. A simple proposal that can explain the inactivity of metal -substituted 784 
+
+superoxide dismutases. J Am Chem Soc. 1998;120. https://doi.org/10.1021/ja972060j 785 
+
+36. Keele BB, McCord JM, Fridovich I. Superoxide dismutase from Escherichia coli B. A new 786 
+
+manganese -containing enzyme. Journal of Biological Chemistry. 1970;245. 787 
+
+37. Yost FJ, Fridovich I. An iron containing superoxide dismutase from Escherichia coli. Journal 788 
+
+of Biological Chemistry. 1973;248. 789 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+37 
+
+38. Steinman HM, Hill RL. Sequence homologies among bacterial and mitochondrial superoxide 790 
+
+dismutases.  Proc Natl Acad Sci U S A. 1973;70. https://doi.org/10.1073/pnas.70.12.3725 791 
+
+39. Carlioz A, Touati D. Isolation of superoxide dismutase mutants in Escherichia coli : is 792 
+
+superoxide dismutase necessary for aerobic life? EMBO J. 1986;5:623 –30. 793 
+
+https://doi.org/10.1002/j.1460 -2075.1986.tb04256.x 794 
+
+40. Pinske C, Bönn M, Krüger S, Lindenstrauß U, Sawers RG. Metabolic Deficiences Revealed 795 
+
+in the Biotechnologically Important Model Bacterium Escherichia coli BL21(DE3). PLoS One. 796 
+
+2011;6:e22830. https://doi.org/10.1371/journal.pone.0022830 797 
+
+41. Chen S, Zhou Y, Chen Y, Gu J. fastp: an ultra -fast all -in -one FASTQ preprocessor. 798 
+
+Bioinformatics. 2018;34:i884 –90. https://doi.org/10.1093/bioinformatics/bty560 799 
+
+42. Deatherage DE, Barrick JE. Identification of Mutations in Laboratory -Evolved Microbes from 800 
+
+Next -Generation Sequencing Data Using breseq . 2014. p. 165 –88. https://doi.org/10.1007/978 -801 
+
+1-4939 -0554 -6_12 802 
+
+43. Wick RR, Judd LM, Gorrie CL, Holt KE. Unicycler: Resolving bacterial genome assemblies 803 
+
+from short and long sequencing reads. PLoS Comput Biol. 2017;13:e1005595. 804 
+
+https://doi.org/10.1371/journal.pcbi.1005595 805 
+
+44. Tanizawa Y, Fujisawa T, Nakamura Y. DFAST: a flexible prokaryotic genome annotation 806 
+
+pipeline for faster genome publication. Bioinformatics. 2018;34:1037 –9. 807 
+
+https://doi.org/10.1093/bioinformatics/btx713 808 
+
+45. Gilchrist CLM, Chooi Y -H. clinker & clustermap.js: automatic generation of gene cluster 809 
+
+comparison figures. Bioinformatics. 2021;37:2473 –5. 810 
+
+https://doi.org/10.1093/bioinformatics/btab007 811 
+
+46. Livak KJ, Schmittgen TD. Analysis of Relative Gene Expression Data Using Real -Time 812 
+
+Quantitative PCR and the 2−ΔΔCT Method. Methods. 2001;25:402 –8. 813 
+
+https://doi.org/10.1006/meth.2001.1262 814 
+
+47. Schlegel S, Genevaux P, de Gier J -W. De -convoluting the Genetic Adaptations of E. coli 815 
+
+C41(DE3) in Real Time Reveals How Alleviating Protein Production Stress Improves Yields. Cell 816 
+
+Rep. 2015;10:1758 –66. https://doi.org/10.1016/j.celrep.2015.02.029 817 
+
+48. Datsenko KA, Wanner BL. One -step inactivation of chromosomal genes in Escherichia coli K-818 
+
+12 using PCR products.  Proc Natl Acad Sci U S A. 2000;97. 819 
+
+https://doi.org/10.1073/pnas.120163297 820 
+
+49. Chu X -L, Zhang B -W, Zhang Q -G, Zhu B -R, Lin K, Zhang D -Y.  Temperature responses of 821 
+
+mutation rate and mutational spectrum in an Escherichia coli strain and the correlation with 822 
+
+metabolic rate. BMC Evol Biol. 2018;18:126. https://doi.org/10.1186/s12862 -018 -1252 -8823 
+
+50. Farr SB, D’Ari R, Touati D. Oxygen -dependent mutagenesis in Escherichia coli lacking 824 
+
+superoxide dismutase. Proceedings of the National Academy of Sciences. 1986;83:8268 –72. 825 
+
+https://doi.org/10.1073/pnas.83.21.8268 826 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+38 
+
+51. Jeong H, Barbe V, Lee CH, Vallenet D, Yu DS, Choi S -H, et al. Genome Sequences of 827 
+
+Escherichia coli B strains REL606 and BL21(DE3). J Mol Biol. 2009;394:644 –52. 828 
+
+https://doi.org/10.1016/j.jmb.2009.09.052 829 
+
+52. Clare DA, Blum J, Fridovich I. A hybrid superoxide dismutase containing both functional iron 830 
+
+and manganese. Journal of Biological Chemistry. 1984;259. https://doi.org/10.1016/s0021 -831 
+
+9258(18)91104 -x832 
+
+53. Jaskólska M, Gerdes K. <scp>CRP</scp> ‑dependent Positive Autoregulation and Proteolytic 833 
+
+Degradation Regulate Competence Activator Sxy of Escherichia coli . Mol Microbiol. 834 
+
+2015;95:833 –45. https://doi.org/10.1111/mmi.12901 835 
+
+54. Flint DH, Tuminello JF, Emptage MH. The inactivation of Fe -S cluster containing hydro -lyases 836 
+
+by superoxide. Journal of Biological Chemistry. 1993;268:22369 –76. 837 
+
+https://doi.org/10.1016/S0021 -9258(18)41538 -4838 
+
+55. Gu M, Imlay JA. Superoxide poisons mononuclear iron enzymes by causing mismetallation. 839 
+
+Mol Microbiol. 2013;89. https://doi.org/10.1111/mmi.12263 840 
+
+56. Keyer K, Imlay JA. Superoxide accelerates DNA damage by elevating free -iron levels. 841 
+
+Proceedings of the National Academy of Sciences. 1996;93:13635 –40. 842 
+
+https://doi.org/10.1073/pnas.93.24.13635 843 
+
+57. Macomber L, Imlay JA. The iron -sulfur clusters of dehydratases are primary intracellular 844 
+
+targets of copper toxicity.  Proc Natl Acad Sci U S A. 2009;106:8344 –9. 845 
+
+https://doi.org/10.1073/pnas.0812808106 846 
+
+58. Anjem A, Varghese S, Imlay JA. Manganese import is a key element of the OxyR response 847 
+
+to hydrogen peroxide in Escherichia coli . Mol Microbiol. 2009;72:844 –58. 848 
+
+https://doi.org/10.1111/j.1365 -2958.2009.06699.x 849 
+
+59. Makui H, Roig E, Cole ST, Helmann JD, Gros P, Cellier MFM. Identification of the Escherichia 850 
+
+coli K‑12 Nramp orthologue (MntH) as a selective divalent metal ion transporter. Mol Microbiol. 851 
+
+2000;35:1065 –78. https://doi.org/10.1046/j.1365 -2958.2000.01774.x 852 
+
+60. Kammler M, Schön C, Hantke K. Characterization of the ferrous iron uptake system of 853 
+
+Escherichia coli. J Bacteriol. 1993;175:6212 –9. https://doi.org/10.1128/jb.175.19.6212 -854 
+
+6219.1993 855 
+
+61. Wagegg W, Braun V. Ferric citrate transport in Escherichia coli requires outer membrane 856 
+
+receptor protein fecA. J Bacteriol. 1981;145:156 –63. https://doi.org/10.1128/jb.145.1.156 -857 
+
+163.1981 858 
+
+62. Patzer SI, Hantke K. Dual Repression by Fe 2+ -Fur and Mn 2+ -MntR of the mntH Gene, 859 
+
+Encoding an NRAMP -Like Mn 2+ Transporter in Escherichia coli . J Bacteriol. 2001;183:4806 –13. 860 
+
+https://doi.org/10.1128/JB.183.16.4806 -4813.2001 861 
+
+63. Frost GE, Rosenberg H. The inducible citrate -dependent iron transport system in Escherichia 862 
+
+coli K12. Biochimica et Biophysica Acta (BBA) - Biomembranes. 1973;330:90 –101. 863 
+
+https://doi.org/10.1016/0005 -2736(73)90287 -3864 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+39 
+
+64. Grossman TH, Kawasaki ES, Punreddy SR, Osburne MS. Spontaneous cAMP -dependent 865 
+
+derepression of gene expression in stationary phase plays a role in recombinant expression 866 
+
+instability. Gene. 1998;209:95 –103. https://doi.org/10.1016/s0378 -1119(98)00020 -1867 
+
+65. Vance CK, Miller AF. Novel insights into the basis for Escherichia coli superoxide dismutase’s 868 
+
+metal ion specificity from Mn -substituted FeSOD and its very high Em. Biochemistry. 2001;40. 869 
+
+https://doi.org/10.1021/bi0113317 870 
+
+66. Fee JA. Regulation of sod genes in Escherichia coli : relevance to superoxide dismutase 871 
+
+function. Mol Microbiol. 1991;5:2599 –610. https://doi.org/10.1111/j.1365 -2958.1991.tb01968.x 872 
+
+67. Imlay JA. The molecular mechanisms and physiological consequences of oxidative stress: 873 
+
+lessons from a model bacterium. Nat Rev Microbiol. 2013;11:443 –54. 874 
+
+https://doi.org/10.1038/nrmicro3032 875 
+
+68. Imlay JA, Linn S. Mutagenesis and stress responses induced in Escherichia coli by hydrogen 876 
+
+peroxide. J Bacteriol. 1987;169:2967 –76. https://doi.org/10.1128/jb.169.7.2967 -2976.1987 877 
+
+69. Mackenzie ES, Sendra KM, Baslé A, Mazgaj R, Kehl -Fie TE, Waldron KJ. An enzyme’s metal 878 
+
+preference evolves through redox modulation driven by the cofactor’s secondary coordination 879 
+
+sphere. Mol Biol Evol. 2026; https://doi.org/10.1093/molbev/msag040 880 
+
+881 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 9, 2026. ;https://doi.org/10.64898/2026.07.08.737244 doi: bioRxiv preprint
+
+Figure 1 
+
+A
+
+B
+
+WT  ΔΔ 
+
+SodA 2
+
+SodB 2
+
+SodASodB 
+
+Ca
+
+a
+
+a a
+
+a
+
+a
+
+a
+
+b
+
+ab 
+
+ab 
+
+ab  b a ab  ab  a
+
+ab 
+
+ab a ab  ab  b b a ab  ab a
+
+A
+
+B
+
+Figure 2 A
+
+B−2 −1 0 1 2 3 4 50,0 0,5 1,0 1,5 2,0 2,5 3,0 3,5 4,0 
+
+> -log 10 (P-value)
+
+log 2(Fold Change) WT(+)-2 D(+) −3 −2 −1 0 1 2 3 4 50123456
+
+> -log 10 (P-value)
+
+log 2(Fold Change) WT(-)-2 D(-) WT 
+
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+
+Fe Mn Fe Mn  Fe Mn Fe Mn  Fe Mn Fe Mn  Fe Mn Fe Mn  Fe  Mn  Fe  Mn 
+
+SodFM1  SodFM2  SodFM3  SodFM4  SodFM5 
+
+> MW
+> MW
+> MW
+
+Figure 4 WT 
+
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+
+Fe Mn Fe Mn  Fe Mn Fe Mn  Fe Mn Fe Mn  Fe Mn Fe Mn  Fe  Mn  Fe  Mn 
+
+SodFM1  SodFM2  SodFM3  SodFM4  SodFM5 
+
+Fe Mn Fe Mn  Fe Mn Fe Mn  Fe Mn Fe Mn  Fe Mn Fe Mn  Fe  Mn  Fe  Mn 
+
+SodFM1  SodFM2  SodFM3  SodFM4  SodFM5 
+
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+> WT
+> ΔΔ
+> WT
+> ΔΔ
+> ΔΔ
+> WT
+
+A
+
+B
+
+SodFM1  SodFM2  SodFM3  SodFM4  SodFM5 
+
+aCR : 0.15  39.71  0.01  0.44  0.05 
+
+Prior : 0.23  14.46  0.13  0.12  0.15 
+
+Figure 5 Figure 6
