@@ -1,0 +1,1999 @@
+Title: IFNγ and IFNγ mimetics prevent IFN-I-mediated TB susceptibility by regulating iron metabolism and lipid peroxidation
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.01.735930v1.full.pdf
+
+Number of Pages: 64
+
+Markdown Content:
+IFN 𝛾 and IFN 𝛾 mimetics prevent IFN-I-mediated TB susceptibility by 1
+
+regulating iron metabolism and lipid peroxidation. 2
+
+3
+
+4
+
+Running title: IFN γ Opposes Type I IFN-Driven Lipid Peroxidation to Enhance Macrophage TB 5
+
+Resistance 6
+
+7
+
+Authors: 8
+
+Prasanna Babu Araveti 1,9
+
+Shivraj M. Yabaji 1,10 
+
+Muhammad Zainul Arifin 2,11 
+
+Suruchi Lata 1,12 
+
+Yuriy O. Alekseyev 3,13 
+
+Alexander A. Gimelbrant 4,14 
+
+William R. Bishai 5,15 
+
+Vadim Zhernovkov 2,16 
+
+Oleksii S. Rukhlenko 2
+
+17 
+
+Boris N. Kholodenko 2,6,7 
+
+18 
+
+Igor Kramnik 1,8,9,* 
+
+19 
+
+20 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Affiliations: 21 
+
+> 1
+
+The National Emerging Infectious Diseases Laboratories, Boston University, Boston, United 22 
+
+States; 23 
+
+> 2
+
+Systems Biology Ireland, School of Medicine, University College Dublin, Dublin, Ireland; 24 
+
+> 3
+
+The Department of Pathology and Laboratory Medicine, Boston University Chobanian Avedisian 25 
+
+School of Medicine, Boston, United States; 26 
+
+> 4
+
+Altius Institute for Biomedical Sciences, Seattle, United States; 27 
+
+> 5
+
+Center for TB Research, Johns Hopkins School of Medicine, Baltimore, United States; 28 
+
+> 6
+
+Conway Institute of Biomolecular & Biomedical Research, University College Dublin, Dublin, 29 
+
+Ireland; 30 
+
+> 7
+
+Department of Pharmacology, Yale University School of Medicine, New Haven, CT, USA; 31 
+
+> 8
+
+Pulmonary Center, The Department of Medicine, Boston University Chobanian and Avedisian 32 
+
+School of Medicine, Boston, United States; 33 
+
+> 9
+
+Department of Microbiology, Boston University Chobanian and Avedisian School of Medicine, 34 
+
+Boston, United States. 35 
+
+> *
+
+Correspondence to ikramnik@bu.edu 36 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Abstract 37 
+
+38 
+
+Type I interferons (IFN-I) and IFNγ exert divergent effects during tuberculosis, but the 39 
+
+mechanisms that determine whether macrophage activation promotes host defense or 40 
+
+inflammatory pathology remain incompletely understood. Here, we dissect the interplay between 41 
+
+IFN-I and IFNγ in macrophage activation using genetically susceptible B6.Sst1S macrophages. 42 
+
+We show that, during tumor necrosis factor (TNF) stimulation, susceptible macrophages enter a 43 
+
+persistent pathological activation state (pPAS) characterized by sustained lipid peroxidation and 44 
+
+super-induction of IFN-I responses. This pathological state is maintained by autocrine IFN-I 45 
+
+signaling. In contrast, IFNγ priming prevents pPAS development by enhancing macrophage 46 
+
+resilience to oxidative stress, in part through regulation of iron metabolism and induction of ferritin 47 
+
+expression. Computational cell state transition assessment and regulation (cSTAR) analysis 48 
+
+identified pathways and small molecules predicted to promote the transition of susceptible 49 
+
+macrophages toward an IFNγ-induced, Mtb-resistant state. Consistent with these predictions, the 50 
+
+CDK4/6 inhibitor trilaciclib reduced lipid peroxidation by regulating iron metabolism, whereas 51 
+
+retinoic acid signaling enhanced GPX4 expression and lipid biosynthesis programs. Combined 52 
+
+CDK4/6 inhibition and retinoic acid receptor activation efficiently prevented the pathological 53 
+
+activation state. Together, these findings delineate a mechanism of IFN-I/IFNγ crosstalk during 54 
+
+macrophage activation and identify pharmacologic strategies to prevent IFN-I-dominant, lipid 55 
+
+peroxidation-driven macrophage pathology. 56 
+
+57 
+
+58 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Introduction 59 
+
+60 
+
+Tuberculosis (TB), caused by Mycobacterium tuberculosis (Mtb), remains the leading cause of 61 
+
+death by a single infectious agent worldwide, with 10.7 million new cases and 1.23 million deaths 62 
+
+reported in 2024. Despite the availability of antimicrobial therapy , treatment failures occurred in 63 
+
+12% of TB patients (WHO, 2024), primarily attributed to the emergence of multidrug-resistant 64 
+
+strains, HIV co-infections and host immune dysregulation (Furin et al., 2019; Pai et al., 2016). 65 
+
+Remarkably, about a quarter of the global human population has been infected with Mtb, but only 66 
+
+a fraction of those develop TB disease and transmits the bacteria, suggesting that the majority of 67 
+
+immunocompetent humans are capable of spontaneously controlling and, possibly, eradicating 68 
+
+Mtb (Behr et al., 2024). In contrast, the susceptible individuals, even immunocompetent, are not 69 
+
+sufficiently protected by existing vaccines. Therefore, better understanding mechanisms of TB 70 
+
+susceptibility are necessary to improve TB prevention and treatment outcomes in the susceptible 71 
+
+individuals. 72 
+
+73 
+
+Among central unanswered questions are the mechanisms of dysregulation of macrophages that 74 
+
+may either eradicate the bacteria or serve as the major host cell niche for the Mtb intracellular 75 
+
+growth and persistence. Interferons are among the main known host factors that regulate 76 
+
+macrophage interactions with virulent Mtb (Russell et al., 2025; Vance, 2025). Despite significant 77 
+
+overlap of the transcriptional targets and signaling pathways of type I (IFN-I) and type II 78 
+
+(interferon-gamma) interferons (Ravi Sundar Jose Geetha et al., 2024), their effects on TB are 79 
+
+strikingly divergent: IFN-gamma (IFN 𝛾 ) is essential for Mtb resistance, while IFN-I may induce 80 
+
+a dysfunctional macrophage activation state associated with TB susceptibility (Moreira-Teixeira 81 
+
+et al., 2018). IFN 𝛾 is produced by antigen-stimulated Th1 cells and natural killer (NK) cells and 82 
+
+activates macrophages enabling them to control or kill the bacteria. It plays an essential role in 83 
+
+host resistance to mycobacterial infections, including Mtb, as well as avirulent vaccine strain M. 84 
+
+bovis BCG and opportunistic environmental mycobacteria in mice (Cooper et al., 1993; Flynn et 85 
+
+al., 1993) and in humans (Fortin et al., 2007; Rosain et al., 2019). Among pleiotropic effects of 86 
+
+IFN 𝛾 relevant to TB are the upregulation of macrophage effector functions, such as production of 87 
+
+reactive oxygen and nitrogen species, phagocytosis, autophagy, phagosome maturation and 88 
+
+targeting the bacteria for lysosomal degradation (Flynn et al., 1993; Gutierrez et al., 2004; 89 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+MacMicking et al., 1997; Via et al., 1998). IFN 𝛾 promotes T cell-mediated immunity by inducing 90 
+
+major histocompatibility complex (MHC) class II expression on the antigen-presenting cells and 91 
+
+the formation of immunoproteasomes, which increase the peptide supply for the antigen 92 
+
+presentation (O'Garra et al., 2013; Seifert et al., 2010). At the tissue and whole organism levels, 93 
+
+IFN 𝛾 modulates hematopoiesis and immune cell trafficking (Kaufmann et al., 2018; MacNamara 94 
+
+et al., 2011), regulates epithelial cell responses to injury (Li et al., 2024; Lin et al., 2024) and 95 
+
+displays a paradoxical anti-inflammatory activity (Nandi & Behar, 2011). 96 
+
+97 
+
+The type I interferons (IFN-I) are mediators of innate immunity produced by multiple cells in 98 
+
+response to viral infections, cytokines and stress (Boccuni et al., 2022). Compared to IFN 𝛾 , their 99 
+
+roles in TB pathogenesis are more nuanced (Moreira-Teixeira et al., 2018; Munson & Kaushal, 100 
+
+2025). Thus, several experimental studies demonstrate protective effects of IFN-I pathway using 101 
+
+macrophage infection with Mtb in vitro (Roberts et al., 2025) or during an early stage of Mtb 102 
+
+infection in mice (Desvignes et al., 2012; Moreira-Teixeira et al., 2016). However, the overall 103 
+
+impact of IFN-I on TB progression in vivo is negative. In human patients, transcriptomic studies 104 
+
+identified an IFN-I inducible gene signature in the peripheral blood of active TB patients, which 105 
+
+correlated with the disease severity and the risk of progression from latent to active disease (Berry 106 
+
+et al., 2010; Cliff et al., 2013; Maertzdorf et al., 2011; Scriba et al., 2017). The upregulation of 107 
+
+IFN-I pathways in human TB lesions was associated with TB severity (Fonseca et al., 2025). In 108 
+
+animal TB models, more virulent Mtb strains induced higher levels of IFN-I that was associated 109 
+
+with reduced Th1 immunity and decreased survival (Manca et al., 2005). Accordingly, inhibition 110 
+
+of the IFN-I signaling using either the IFN-I receptor knockout or blocking antibodies reduced the 111 
+
+inflammatory lung damage and increased the animal survival in several mouse models (Dorhoi et 112 
+
+al., 2014; Ji et al., 2019; Moreira-Teixeira et al., 2020; Wiens & Ernst, 2016). Several mechanisms 113 
+
+by which the IFN-I hyperactivity contributes to TB pathogenesis have been described. In vitro 114 
+
+IFN-I suppressed macrophage responses to IFN 𝛾 (Teles et al., 2013) and exacerbated Mtb-induced 115 
+
+macrophage death (Lee & Nathan, 2024). In vivo, IFN-I counters essential TB protective cytokine 116 
+
+pathways: inhibits IL-12 and promotes the immunosuppressive IL-10 production (McNab et al., 117 
+
+2014); promotes macrophage polarization towards anti-inflammatory state (Benard et al., 2018); 118 
+
+induces IL-1Ra, which blocks IL-1 (Ji et al., 2019), an essential protective cytokine (Mayer-Barber 119 
+
+et al., 2010); promotes the neutrophil-driven lung damage (Chowdhury et al., 2024; Moreira-120 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Teixeira et al., 2020; Saqib et al., 2025); suppresses T cell mobility and interactions with target 121 
+
+cells in the lung (Branchett et al., 2025; Caouaille et al., 2025), and suppresses macrophage 122 
+
+response to interferon gamma (Kotov et al., 2023; Teles et al., 2013; Zheng et al., 2025). 123 
+
+124 
+
+Our studies demonstrated a major role of the IFN-I pathway hyperactivity in the context of TB 125 
+
+susceptible host – the sst1 -susceptible mouse model of human-like pulmonary TB, which is 126 
+
+characterized by the development of necrotic TB lesions (Kramnik et al., 2000; Pichugin et al., 127 
+
+2009; S. M. Yabaji, S. Lata, I. Gavrish, et al., 2025; S. M. Yabaji, S. Lata, A. E. Tseng, et al., 128 
+
+2025). In vitro the sst1 -susceptible macrophages displayed an aberrant activation characterized by 129 
+
+the superinduction of IFN b that led to the development of the integrated stress response 130 
+
+(Bhattacharya et al., 2021; He et al., 2013). The critical role of the IFN-I-driven ISR in vivo was 131 
+
+further supported by the administration of the Integrated Stress Response Inhibitor (ISRIB) or 132 
+
+blockade of the IFN-I pathway that reduced lung pathology and Mtb burdens in the sst1 -133 
+
+susceptible congenic B6.Sst1S mice (Bhattacharya et al., 2021; Ji et al., 2019; Krug et al., 2023). 134 
+
+Next, we demonstrated that the aberrant activation of the sst1 -susceptible macrophages was 135 
+
+primarily driven by coupling of the IFN-I pathway to dysfunctional antioxidant response, leading 136 
+
+to the accumulation of lipid peroxidation products, unresolving stress and compromised Mtb 137 
+
+resistance (Shivraj M. Yabaji et al., 2025). 138 
+
+139 
+
+Several lines of evidence suggest that boosting Th1-mediated adaptive immunity may correct the 140 
+
+sst1 -susceptible phenotype: subcutaneous immunization with BCG or Mtb delayed the pulmonary 141 
+
+TB progression in the sst1 -susceptible mice (Gern et al., 2025; Yan et al., 2007). It has been 142 
+
+established that BCG vaccination induces Th1 response in the genetically resistant and susceptible 143 
+
+mice (Kramnik et al., 1994) and in non-human primates (Simonson et al., 2025). The BCG-induced 144 
+
+T lymphocytes restored the ability of the sst1 -susceptible macrophages to control Mtb in vitro 145 
+
+(Shivraj M. Yabaji et al., 2025). Therefore, we hypothesized that IFN 𝛾 may counter pathogenic 146 
+
+effects of the IFN-I hyperactivity that drive TB progression. Moreover, an IFN 𝛾 -mimetic, 147 
+
+rocaglamide A, identified in our previous studies, also prevented the aberrant macrophage 148 
+
+activation and IFN b superinduction (Bhattacharya et al., 2021; Chatterjee et al., 2021; Yabaji et 149 
+
+al., 2023). 150 
+
+151 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Here, we demonstrate that type I and type II interferons (IFN-I and IFN 𝛾 ) antagonize each other 152 
+
+in activated macrophages through differential regulation of iron metabolism and lipid peroxidation 153 
+
+and propose small-molecule modulation of these pathways as a strategy to prevent pathogenic 154 
+
+macrophage activation. 155 
+
+156 
+
+Results 157 
+
+158 
+
+1. IFN-I autocrine signaling sustains pathological macrophage activation in a TNF-159 
+
+independent manner 160 
+
+The IFN-I and lipid peroxidation pathways underlying the aberrant activation of the sst1 -161 
+
+susceptible macrophages by TNF are prone to auto-amplification. Therefore, we hypothesized that 162 
+
+their coupling maintained this pathological activation state (PAS). To test this hypothesis, first we 163 
+
+compared the activation states of the wild type B6 and the mutant B6.Sst1S bone marrow-derived 164 
+
+macrophages (BMDMs) after TNF withdrawal. BMDMs were initially stimulated with TNF for 165 
+
+24 h, washed and cultured in fresh medium without exogenous TNF for an additional 16 h (Figure 166 
+
+1A). After this period, ROS production and Ifnb1 mRNA expression in B6 BMDMs returned to 167 
+
+baseline. In contrast, in B6.Sst1S macrophages we observed continuous ROS production, lipid 168 
+
+peroxidation and Ifnb1 mRNA upregulation (Figure 1B and 1C, Figure 1-figure supplement 1A, 169 
+
+1B). Consistent with the hyperactivity of the IFN-I pathway, we also observed the upregulation of 170 
+
+Rsad2 mRNA and downregulation of genes involved in lipid and cholesterol biosynthesis Srebf2 ,171 
+
+Scd2 , and Dhcr24 (Figure 1D, Figure 1-figure supplement 1C, 1D, and 1E) and unresponsiveness 172 
+
+to IFN 𝛾 (Figure 1E). After blocking TNF signaling at 24 h, the level of intracellular 4-HNE adducts 173 
+
+remained elevated exclusively in the B6.Sst1S macrophages (Figure 1-figure supplement 1J). 174 
+
+Restimulation of B6.Sst1S macrophages with TNF at 24 h (Figure 1A) resulted in further 175 
+
+upregulation of Ifnb1 mRNA (Figure 1F, Figure 1-figure supplement 1F), increased levels of ROS 176 
+
+and 4-HNE adducts (Figure 1G, Figure 1-figure supplement 1G and 1H) and persistent suppression 177 
+
+of lipid biosynthesis genes (Figure 1H, Figure 1-figure supplement 1I). Thus, after initial TNF 178 
+
+stimulation, the sst1 -susceptible macrophages develop a self-sustained persistent pathological 179 
+
+activation state (pPAS), which is characterized by continuous ROS production, dysregulated lipid 180 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+metabolism with the accumulation of lipid peroxidation (LPO) products, unresponsiveness to IFN 𝛾 181 
+
+and an aberrant response to TNF restimulation, leading to further IFN-I pathway escalation. 182 
+
+To test the role of IFN-I in the pPAS maintenance, we blocked IFN-I signaling using IFNAR1-183 
+
+specific antibodies after 24 h of TNF stimulation (Figure 2A). This blockade restored the B6.Sst1S 184 
+
+macrophage responsiveness to IFN 𝛾 (Figure 2B) and prevented the 4-HNE adducts accumulation 185 
+
+during the 24 – 40 h interval (Figure 2C, Figure 2-figure supplement 1A). The blockade of IFN-I 186 
+
+signaling at the PAS initiation phase, i.e. at 2 h or 12 h after TNF stimulation, also significantly 187 
+
+reduced the rates of lipid peroxidation (LAA biosynthesis) at 12 and 24 h of TNF stimulation, 188 
+
+respectively (Figure 2D, Figure 2-figure supplement 1B and 1C). These data suggest that IFN-I 189 
+
+signaling was a major driver of lipid peroxidation in TNF-activated B6.Sst1S macrophages at both 190 
+
+the pPAS initiation and maintenance stages. 191 
+
+Accordingly, treatment of naïve B6 and B6.Sst1S BMDMs with IFN 𝛽 alone induced lipid 192 
+
+peroxidation, as determined by the rate of LAA production (Figure 2E) and the intracellular 4-193 
+
+HNE adducts accumulation (Figure 2F), which occurred in a sst1 -independent manner. We 194 
+
+hypothesized that this effect could be mediated by itaconate, an electrophilic metabolite produced 195 
+
+by the IFN-inducible enzyme Acod1 (Lampropoulou et al., 2016; Peace & O'Neill, 2022). Indeed, 196 
+
+treatment of naïve BMDMs with 4-octyl itaconate (4-OI) led to the 4-HNE adducts accumulation 197 
+
+(Figure 2G, Figure 2-figure supplement 1D). 198 
+
+Considering other factors involved in lipid peroxidation in TNF-stimulated macrophages, IFN-I 199 
+
+signaling neither affected the levels of the intracellular labile iron pool (Figure 2H and 2I, 200 
+
+respectively), nor did it appeared to be a major driver of ROS production (Figure 2-figure 201 
+
+supplement 1F and 1G). In these settings, however, IFN-I suppressed lipid biosynthesis genes, as 202 
+
+evidenced by their upregulation after the IFN-I receptor blockade (Figure 2J, Figure 2-figure 203 
+
+supplement 1E). 204 
+
+Taken together, these data suggest that persistent IFN-I signaling maintains pPAS by stimulating 205 
+
+itaconate biosynthesis and suppressing lipid biosynthesis genes, thus promoting the accumulation 206 
+
+of toxic lipid peroxidation products. 207 
+
+208 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+2. IFN 𝛾 priming prevents pPAS by limiting intracellular iron availability 209 
+
+Previous studies demonstrated that the induction of Th1-mediated immunity partially corrected the 210 
+
+sst1 -mediated Mtb susceptibility in vivo (Gern et al., 2025). Accordingly, co-stimulation of the 211 
+
+B6.Sst1S BMDMs with IFN 𝛾 and TNF significantly increased their ability to control the 212 
+
+intracellular Mtb growth in vitro (Figure 3A). Therefore, we tested whether macrophage priming 213 
+
+with IFN 𝛾 could prevent or ameliorate pPAS induced by TNF in the susceptible macrophages 214 
+
+(Figure 3-figure supplement 1A). 215 
+
+Although IFN 𝛾 alone moderately stimulated ROS production and LPO synthesis, the IFN 𝛾 216 
+
+priming significantly reduced LPO synthesis and accumulation induced by TNF (Figure 3B, Figure 217 
+
+3-figure supplement 1B). Moreover, IFN 𝛾 priming prevented the Ifnb1 super-induction (Figure 218 
+
+3C), and reduced the upregulation of IFN-I-driven pPAS markers, such as Rsad2 , the integrated 219 
+
+stress response (ISR) genes, Trib3 and Chac1 , and Acod1 (Figure 3C, 3D, 3F). Of note, IFN 𝛾 220 
+
+priming also suppressed the 4-HNE adduct accumulation caused by synthetic itaconate 4-OI 221 
+
+(Figure 3G, Figure 3-figure supplement 1C). The latter observations suggested that IFN 𝛾 priming 222 
+
+prevented the LPO accumulation independently of the IFN-I - Acod1 – itaconate downregulation. 223 
+
+In addition, the IFN 𝛾 priming suppressed the expression of lipid biosynthesis genes, similarly to 224 
+
+the IFN-I mediated effect of TNF described above (Figure 3H, Figure 3-figure supplement 1D). 225 
+
+Also, IFN 𝛾 priming did not enhance the GPX4 expression in B6.Sss1S BMDMs (Figure 3-figure 226 
+
+supplement 1E), which is maintained at lower levels compared to the B6 BMDMs during TNF 227 
+
+stimulation (Shivraj M. Yabaji et al., 2025). The latter observations suggested that IFN 𝛾 prevented 228 
+
+the LPO accumulation independently of the downregulation of the IFN-I - Acod1 – itaconate axis 229 
+
+and lipid biosynthesis. 230 
+
+To reveal the preventive effect of IFN 𝛾 on pPAS development, we compared transcriptional 231 
+
+responses of the B6 and B6.Sss1S BMDMs to IFN 𝛾 , TNF and their combination at the pPAS 232 
+
+incipient stage, i.e. at 12 h after the cytokine stimulation, using bulk RNA-seq. The co-stimulation 233 
+
+with IFN 𝛾 and TNF induced similar shifts in cell states and reduced the PC1 distance between the 234 
+
+resistant and susceptible macrophages, as evidenced by the Principal Component Analysis (PCA) 235 
+
+(Figure 3I), and by the similarities of their transcriptomes (Figure 3J). Thus, the MHC class II 236 
+
+genes were upregulated, and the genes related to tissue remodeling, alternative macrophage 237 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+activation, and cell division were downregulated in both B6 and B6.Sst1S macrophages (Figure 238 
+
+3J). The pathway analysis and gene set variation analysis (GSVA) also demonstrated similar 239 
+
+modulation of TNF responses by IFN 𝛾 in BMDMs of both genetic backgrounds (Figure 3K and 240 
+
+3L). Among key metabolic pathways, the Hypoxia-Inducible Factor 1-alpha (Hif1a) and glycolysis 241 
+
+pathways were upregulated, while the cell cycle, cholesterol biosynthesis and lipid metabolism 242 
+
+pathways were downregulated in agreement with other published studies. Importantly, we found 243 
+
+that IFN 𝛾 co-stimulation downregulated the expression of pro-ferroptic gene set in TNF-244 
+
+stimulated B6.Sst1S macrophages to the B6 level (Figure 3L). 245 
+
+As we reported previously, an impairment of the anti-oxidant response in TNF-stimulated 246 
+
+B6.Sst1S macrophages, led to the LPO accumulation. In contrast to B6, the B6.Sst1S macrophages 247 
+
+failed to upregulate ferritin light and heavy chains upon TNF stimulation and, thus, did not reduce 248 
+
+the intracellular labile iron pool that sustained lipid peroxidation (Shivraj M. Yabaji et al., 2025). 249 
+
+In contrast, IFN 𝛾 upregulated Fth1 and Ftl1 proteins in the s st1 -independent manner either alone 250 
+
+or in synergy with TNF (Figure 3M) and significantly reduced the labile iron pool in the B6.Sst1S 251 
+
+macrophages (Figure 3N). We propose that this IFN 𝛾 effect plays a major role in preventing LPO 252 
+
+accumulation in macrophages maximally activated by the IFN 𝛾 and TNF co-stimulation and, 253 
+
+therefore, producing copious amounts of ROS. 254 
+
+In agreement with the Hif1a pathway upregulation detected by GSVA, we demonstrated 255 
+
+upregulation of the Hif1a protein level in IFN 𝛾 and TNF co-stimulated macrophages, as compared 256 
+
+to macrophages stimulated with TNF alone (Figure 3O). Because treatment with IFN 𝛾 alone did 257 
+
+not upregulate the Hif1a protein level, we hypothesized that the TNF and IFN 𝛾 synergy could be 258 
+
+explained by the known role of iron in regulating degradation of Hif1a (Knowles et al., 2006). 259 
+
+Indeed, adding free iron to B6.Sst1S macrophages co-stimulated with IFN 𝛾 and TNF abolished 260 
+
+the Hif1a upregulation, while iron chelation using deferiprone (DFP) further increased the protein 261 
+
+level (Figure 3P). Taken together, these data demonstrate that by reducing the intracellular labile 262 
+
+iron pool, IFN 𝛾 prevents lipid peroxidation and promotes Hif1a-mediated metabolic 263 
+
+reprogramming of macrophages, thereby increasing their resilience to oxidative stress and 264 
+
+preventing self-sustained pathological activation. 265 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+3. IFN 
+
+𝛾 mimetics prevent pPAS 266 
+
+To determine how to mimic the effect of IFN 𝛾 using small molecules, we used cell State Transition 267 
+
+Assessment and Regulation (cSTAR) analysis, a recently developed systems biology approach that 268 
+
+integrates multi-omics data to map distinct cell states and predict perturbations controlling 269 
+
+transitions between them (Kholodenko et al., 2023; Rukhlenko et al., 2022). 270 
+
+We used RNA-sequencing (RNA-seq) data to map the cytokine priming states of B6 and B6.Sst1S 271 
+
+macrophages following a 12 h stimulation with TNF, IFN 𝛾 , and their combination (Figure 4A). To 272 
+
+capture these dynamics, we built a State Transition Vector (STV TB ). Unlike previous works relying 273 
+
+on classification methods (Rukhlenko et al., 2022; Yabaji et al., 2023), we utilized regression 274 
+
+methods to achieve higher quantitative precision. This STV TB determines the direction of gene 275 
+
+expression changes towards the most TB-resistant state while integrating both genetic background 276 
+
+(B6 vs. B6.Sst1S) and cytokine priming effects. Dynamic phenotype descriptor (DPD TB ) scores 277 
+
+were then calculated to quantify the phenotypic shifts induced by each perturbation (Rukhlenko et 278 
+
+al., 2022; Yabaji et al., 2023). It can be seen (Figure 4B) that TNF stimulation of B6.Sst1S 279 
+
+macrophages decreased their DPD TB score, in agreement with their pathological activation state. 280 
+
+In contrast, TNF and IFN 𝛾 stimulation of B6 macrophages increased their DPD TB scores, with the 281 
+
+highest score obtained by combining both cytokines, reflecting their known synergistic effect on 282 
+
+macrophage activation. Although IFN 𝛾 and IFN 𝛾 + TNF stimulation of B6.Sst1S macrophages 283 
+
+resulted in increased DPD TB scores, these responses were significantly weaker than those observed 284 
+
+in B6 macrophages (Figure 4A). The calculated DPD TB scores strongly correlated with Mtb fold 285 
+
+change data (Figure 4B). Thus, in these settings, a negative DPD TB is indicative of Mtb-permissive 286 
+
+macrophage cell state, whereas an increase in DPD TB score is indicative of increased Mtb 287 
+
+resistance. 288 
+
+By analyzing transcriptional responses to perturbations using publicly available perturbation 289 
+
+transcriptomics datasets, cSTAR enables reconstruction of the protein signaling network wiring 290 
+
+(Deng et al., 2025). Here, we applied cSTAR to reconstruct the network that controls the transition 291 
+
+between the susceptible and resistant macrophage activation states and identified key signaling 292 
+
+pathways (nodes) that govern macrophage priming for Mtb resistance. Predictions of how 293 
+
+activation of each node by 1% will change DPD TB score are shown in Figure 4C. As anticipated, 294 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+the IFN 𝛾 pathway had the strongest positive effect on the DPD TB score. Also, activation of NFkB, 295 
+
+ERK, retinoic acid receptor (RAR), JAK/STAT and mTOR pathways contributed to the DPD TB 296 
+
+increase , i.e. predicted to move macrophage activation state towards higher Mtb resistance. In 297 
+
+contrast, cyclin dependent kinases (CDK 4/6 and CDK1/2) and TGF b receptor-mediated pathways 298 
+
+reduced DPD TB , i.e. were predicted to compromise the resistant state. In summary, our cSTAR 299 
+
+analysis predicted that stimulating the sst1 -susceptible macrophages with TNF in combination 300 
+
+with either CDK inhibition or RAR activation could partially mimic the IFN 𝛾 priming and enhance 301 
+
+their Mtb resistance. Next, we tested these predictions experimentally. 302 
+
+To investigate the effect of CDK4/6 inhibition, we pre-treated B6.Sst1S macrophages with 303 
+
+CDK4/6-specific inhibitors trilaciclib and palbociclib (Figure 4D). Pre-treatment with both 304 
+
+inhibitors suppressed the Ifnb1 and Rsad2 super-induction during TNF stimulation, although the 305 
+
+effect of trilaciclib was more prominent (Figure 4E and Figure 4-figure supplement 1A). The 306 
+
+trilaciclib pretreatment also significantly reduced the ROS production, LPO synthesis and 307 
+
+accumulation (Figure 4F). Accordingly, we found that the trilaciclib treatment during TNF 308 
+
+stimulation enhanced the Fth1 and Ftl1 protein expression (Figure 4G) and prevented the 309 
+
+intracellular labile iron pool (LIP) increase (Figure 4H). The Hif1a protein levels also increased 310 
+
+during the trilaciclib plus TNF treatment (Figure 4I). Perhaps, the latter effect could be mediated 311 
+
+via the LIP reduction, because this effect could be reproduced by iron chelator DFP (Figure 3P), 312 
+
+and the CDK4/6 inhibitor alone induced neither the Hif1a mRNA nor the protein Hif1a levels 313 
+
+(Figure 4I and Figure 4-figure supplement 1B). GPX4 expression remained unaffected by 314 
+
+trilaciclib pretreatment (Figure 4-figure supplement 1C). In contrast to IFN 𝛾 , the trilaciclib 315 
+
+pretreatment upregulated the expression of lipid biosynthesis genes Srebf2 , Scd2 and Dhcr24 either 316 
+
+alone or during TNF stimulation (Figure 4J). Thus, CDK4/6 inhibition using trilaciclib partially 317 
+
+recapitulated the effects of IFN 𝛾 priming by regulating iron metabolism and, thus, prevented the 318 
+
+development of the pathological activation state (PAS) in sst1 -susceptible macrophages during 319 
+
+TNF stimulation. 320 
+
+To investigate the effects of RAR activation on PAS, we pre-treated B6.Sst1S BMDMs prior to 321 
+
+TNF stimulation with a retinoic acid derivative, All-Trans Retinoic Acid (ATRA) (Figure 4K). The 322 
+
+ATRA pretreatment did not decrease the ROS levels, but completely prevented the 4-HNE adducts 323 
+
+accumulation (Figure 4L), and partially reduced the Ifnb1 and Rsad2 mRNA levels (Figures 4M). 324 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+In contrast to trilaciclib, however, the effects of ATRA on LIP and ferritin subunits expression were 325 
+
+minimal (Figures 4N and 4O, respectively). Searching for the mechanisms of RAR-mediated LPO 326 
+
+inhibition, we found that ATRA pretreatment upregulated a major lipid peroxidation inhibiting 327 
+
+enzyme GPX4 (Figure 4P), whose defective induction by TNF in the sst1 -susceptible macrophages 328 
+
+we previously reported (Shivraj M. Yabaji et al., 2025). In addition, ATRA treatment alone or in 329 
+
+combination with TNF significantly increased the expression of an anti-ferroptotic gene Scd2 that 330 
+
+promotes the accumulation of the lipid peroxidation resistant monounsaturated fatty acids (MUFA) 331 
+
+in cell membranes and a cholesterol biosynthesis gene Dhcr24 (Figure 4Q). These effects 332 
+
+demonstrate that RAR activation remodel macrophage lipid metabolism to increase their resilience 333 
+
+to lipid peroxidation-induced damage. 334 
+
+Taken together, our data demonstrate that the cSTAR-predicted IFN 𝛾 mimetics partially 335 
+
+recapitulate effects of IFN 𝛾 via diverse mechanisms, whose activities converge on protecting 336 
+
+activated macrophages from the damage inflicted by lipid peroxidation. 337 
+
+338 
+
+4. CDK4/6 Inhibition and RAR Activation Cooperate to Prevent pPAS and Improve Intracellular 339 
+
+Mtb Control at Lower Doses 340 
+
+To understand how CDK4/6- and RAR-mediated pathways interact during in macrophage 341 
+
+activation, we analyzed the structure of the cSTAR-inferred network (Rukhlenko et al., 2022). 342 
+
+cSTAR leverages Modular Response Analysis (MRA) (Kholodenko et al., 2021) for both network 343 
+
+inference and predicting network function. First, we used cSTAR to infer the network that regulates 344 
+
+macrophage activation and demonstrated the overall positive effect of RAR and negative effect of 345 
+
+CDK4/6 (Figure 5A). To understand the operation of the inferred network we analyzed the cSTAR-346 
+
+predicted global response matrix (Figure 5B). The global response matrix predicts the change in 347 
+
+node activity following a 1% activation of a target node (Kholodenko et al., 2021). Hierarchical 348 
+
+clustering was applied to identify co-activated or mutually antagonistic nodes (Figure 5B). Here, 349 
+
+columns show the responses of the entire network to a specific node’s activation, whereas rows 350 
+
+show a single node’s response to the activation of all other nodes. Hierarchical clustering of the 351 
+
+response matrix reveals two mutually antagonistic clusters. The first, comprising RAR, mTOR, 352 
+
+and IFN 𝛾 signaling modules, shows mutual intra-cluster activation; notably, activating these nodes 353 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+increases Mtb resistance. In contrast, the second cluster (PAK, CDK1/2, and CDK4/6) promoted 354 
+
+Mtb susceptibility, also in agreement with DPD TB score predictions (Figure 4C). Therefore, we 355 
+
+focused on the interplay between CDK4/6, the strongest contributor to Mtb susceptible phenotype, 356 
+
+and key contributors to Mtb resistant phenotype - IFN 𝛾 and RAR, that clustered closest to IFN 𝛾 357 
+
+in the network. 358 
+
+We analyzed how activation of each of these 3 nodes affects activity of the other 2 key nodes. It 359 
+
+can be seen in Figure 5B, the activation of CDK4/6 suppresses activity of both RAR and IFN 𝛾 ,360 
+
+and activation of IFN 𝛾 and RAR suppresses activity of CDK4/6. This behavior is caused by 361 
+
+mutually inhibiting connections between CDK4/6 and RAR, and between CDK4/6 and IFN 𝛾 362 
+
+(Figure 5A). Such network topology is known to generate bi-stable states, with either one or the 363 
+
+other node to be active, but not both simultaneously (Tsyganov et al., 2012). Based on the network 364 
+
+topology, we hypothesized that combination of CDK4/6 inhibition and RAR stimulation could 365 
+
+produce synergistic effect in inducing the Mtb resistant macrophage activation state. 366 
+
+To experimentally test the predicted synergy of CDK4/6 inhibition and RAR activation on pPAS, 367 
+
+we pretreated B6.Sst1S macrophages individually with various concentrations of trilaciclib, ATRA 368 
+
+and their combinations followed by TNF stimulation and measured the 4-HNE adducts 369 
+
+accumulation (Figure 5C, 5D). At higher concentrations, treatments with either trilaciclib (250 370 
+
+nM) or ATRA (500 nM) prevented the 4-HNE adducts accumulation. Their combination, however, 371 
+
+was efficient at limiting the TNF-induced lipid peroxidation at almost 10 times lower 372 
+
+concentrations of trilaciclib (30 nM) and ATRA (60 nM). 373 
+
+Next, we evaluated whether this combinatorial treatment could improve control of intracellular 374 
+
+Mtb growth in B6.Sst1S macrophages. Of note, treatments of Mtb-infected BMDMs with the 375 
+
+higher concentrations of trilacilib (1.5 μM) or ATRA (2 μM) during the 5 day-long experiment 376 
+
+caused macrophage death (Figure 5-figure supplement 1A and 1B). The lower doses of trilaciclib 377 
+
+(30 nM) or ATRA (30 or 60 nM), however, were not toxic (Figure 5E, Figure 5-figure supplement 378 
+
+1C) and partially reduced the intracellular Mtb growth (Figure 5F, and Figure 5-figure supplement 379 
+
+1D). Notably, the combination of trilaciclib and ATRA at low concentrations preserved the infected 380 
+
+macrophage viability and further reduced the intracellular Mtb loads (Figure 5E, 5G). In fact, in 381 
+
+this treatment groups the Mtb loads at Day 5 post infection were lower as compared to Day 1, 382 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+which is suggestive of Mtb clearance by the susceptible macrophages (Figure 5-figure supplement 383 
+
+1E and 1F). Thus, combining trilaciclib and ATRA at low concentrations to treat susceptible 384 
+
+macrophages prevented the pathological activation state, preserved their viability and significantly 385 
+
+improved their ability to control Mtb. 386 
+
+387 
+
+Discussion 388 
+
+389 
+
+Our findings reveal a fundamental divergence between type I and type II interferon programs in 390 
+
+macrophages. They suggest that the conflicting roles of the type I and type II interferons during 391 
+
+chronic TB can be accounted for by their opposing effects on lipid peroxidation: IFN-I enhances, 392 
+
+while IFN 𝛾 prevents it (Table 1). We found that persistent IFN-I signaling promotes a self-393 
+
+amplifying cycle of ROS production and lipid peroxidation that impairs host resistance to Mtb, 394 
+
+whereas IFN 𝛾 primes macrophages for antimicrobial activation while simultaneously increasing 395 
+
+their resilience to oxidative damage through iron sequestration, thereby limiting the conversion of 396 
+
+ROS into damaging lipid peroxidation products. Thus, beyond differences in downstream effector 397 
+
+pathways, IFN-I and IFN 𝛾 differ in their ability to couple inflammatory activation to cyto-398 
+
+protection, a distinction with important biological causes and pathological consequences. 399 
+
+400 
+
+We demonstrate that persistent IFN-I signaling and autocatalytic lipid peroxidation form a self-401 
+
+reinforcing pathological circuit, in which ROS-driven lipid damage further amplifies inflammatory 402 
+
+signaling leading to the IFN-I pathway hyperactivity. This circuit is sufficient to maintain the 403 
+
+persistent pathological activation state (pPAS) of macrophages in an autocrine manner after 404 
+
+removal of TNF, the initial PAS trigger in our in vitro model. The pPAS is characterized by the 405 
+
+continuous ROS generation, the accumulation of lipid peroxidation products, suppression of lipid 406 
+
+biosynthesis, and further escalation of the IFN-I pathway upon repeated TNF stimulation. 407 
+
+Mechanistically, this vicious cycle develops in sst1 susceptible macrophages because of their 408 
+
+failure to upregulate the sst1 -encoded IFN-inducible proteins SP110 and SP140, which serve as 409 
+
+feedback regulators of the IFN-I pathway either directly (Ji et al., 2021; Witt et al., 2025) or 410 
+
+indirectly, downstream of Myc hyperactivity (Shivraj M. Yabaji et al., 2025). We propose that other 411 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+molecular pathologies characterized by persistent cellular stress and IFN-I hyperactivity, such as 412 
+
+interferonopathies, may be driven by similar IFN-I/lipid peroxidation amplification loops. 413 
+
+414 
+
+Because type I interferons are produced by virus-infected cells, as well as by cells undergoing 415 
+
+chronic stress or damage (Boccuni et al., 2022), we hypothesize that the IFN-I/lipid peroxidation 416 
+
+amplification loop may represent an element of an evolutionarily conserved host-defense strategy 417 
+
+for containing or eliminating infected, damaged, or otherwise aberrant cells. Consistent with this 418 
+
+hypothesis, toxic aldehydes generated by lipid peroxidation have been shown to limit the 419 
+
+replication of viruses and intracellular pathogens (Anaya-Sanchez et al., 2025), and IFN-I 420 
+
+signaling has been implicated in the elimination of epigenetically altered or premalignant cells in 421 
+
+vitro (Leonova et al., 2013; Zhao et al., 2021). Similarly, lipid peroxidation-induced cellular 422 
+
+senescence could restrict aberrant cell proliferation. We found that IFN-I promotes lipid 423 
+
+peroxidation by inducing ROS without iron sequestration. This mode permits ROS amplification 424 
+
+and may be more efficient in containing acute infection. However, during chronic infection or 425 
+
+persistent inflammation, sustained activation of this pathway becomes maladaptive. In chronic TB 426 
+
+lesions, this response is particularly detrimental because the lipid-rich cell wall and non-replicative 427 
+
+persistence programs of Mtb allow the bacterium to withstand the initial host attack, whereas host 428 
+
+macrophages are vulnerable to self-inflicted oxidative injury. The resulting macrophage damage 429 
+
+impairs their antimicrobial effector functions and antigen presentation thereby creating a430 
+
+permissive niche for the bacterial persistence and growth. This framework provides a plausible 431 
+
+explanation for the dual role of type I interferon in TB (Desvignes et al., 2012; Munson & Kaushal, 432 
+
+2025). 433 
+
+434 
+
+In contrast, IFN 𝛾 is produced not by the infected or stressed cells themselves, but by specialized 435 
+
+immune cells, primarily T lymphocytes and NK cells, upon recognition of specific targets. Thus, 436 
+
+IFN 𝛾 functions as a paracrine messenger that alerts and preconditions host tissues before or during 437 
+
+pathogen encounter. Its local and systemic pleiotropic effects include priming macrophages for 438 
+
+subsequent activation through epigenetic and metabolic reprogramming, enabling them to 439 
+
+reallocate cellular resources toward antimicrobial effector functions. Our current studies reveal 440 
+
+that, in parallel with boosting ROS production, IFN 𝛾 enhances macrophage resilience to oxidative 441 
+
+stress by limiting the labile iron pool, thereby preventing the amplification of ROS-mediated host-442 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+cell damage through Fenton chemistry. By coordinating antimicrobial effector mechanisms with 443 
+
+anticipatory cyto-protection, IFN 𝛾 limits self-inflicted oxidative injury during full-scale activation, 444 
+
+supports more robust and sustained effector activities, and reduces bystander tissue damage. This 445 
+
+mechanism may help explain the paradoxical anti-inflammatory and tissue-protective effects of 446 
+
+this classical pro-inflammatory cytokine in vivo. 447 
+
+448 
+
+Both type I and type II interferon pathways evolved as host defense mechanisms against 449 
+
+taxonomically diverse pathogens. Conceivably, their cross-regulation and mutual antagonism help 450 
+
+shape responses appropriate for viral versus intracellular bacterial infections, respectively. 451 
+
+However, during Mtb infection lesion dynamics and architecture critically influence the local IFN 452 
+
+balance. The IFN-I-mediated protection is transient and limited to the early stages of infection, 453 
+
+when and where macrophage - Mtb interactions occur primarily in a cell autonomous manner. 454 
+
+Following adequate T cell activation, IFN 𝛾 -mediated macrophage reprogramming provides a more 455 
+
+efficient coordinated response, enabling both control of intracellular Mtb and tissue protection. 456 
+
+Consistent with this model, BCG vaccination (Yan et al., 2007) or prior Mtb infection (Gern et al., 457 
+
+2025) accelerate the formation of IFN 𝛾 -dominated protective lesions, even in the genetically 458 
+
+susceptible but immunocompetent mice. 459 
+
+460 
+
+However, in the susceptible animals, preexisting immunity delays, but does not prevent lesion 461 
+
+progression (Cohen et al., 2022; S. M. Yabaji, S. Lata, A. E. Tseng, et al., 2025; Yan et al., 2007). 462 
+
+Myeloid cells increasingly dominate TB lesions, whereas T cells are relegated to the lesion 463 
+
+periphery (Branchett et al., 2025; McCaffrey et al., 2026; McCaffrey et al., 2022; S. M. Yabaji, S. 464 
+
+Lata, A. E. Tseng, et al., 2025). As expanding myeloid compartments spatially segregate infected 465 
+
+macrophages from IFN 𝛾 -producing lymphocytes, the local interferon balance shifts toward IFN-I 466 
+
+dominance, because Mtb-infected and aberrantly activated stressed macrophages produce IFN b in 467 
+
+a cell autonomous manner. This shift leads to gradual loss of protection within individual lesions 468 
+
+and promotes hyperinflammatory tissue damage. Eventually, bacteria resume intracellular 469 
+
+replication, destroy host cells, and begin growing extracellularly. Subsequent neutrophil 470 
+
+recruitment expands local tissue damage, promotes bacterial expansion (Eruslanov et al., 2005), 471 
+
+and further stimulates the IFN-I pathway (Kotov et al., 2023). In addition, systemic IFN-I 472 
+
+hyperactivity compromises IFN 𝛾 -mediated hematopoietic reprogramming (Kaufmann et al., 2018; 473 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Khan et al., 2020). Thus, in susceptible hosts the immune system becomes locked into an IFN-I-474 
+
+dominant state at both local and systemic levels. 475 
+
+476 
+
+Preventing macrophages from transitioning into an IFN-I-dominant pathological activation state 477 
+
+may therefore represent a logical therapeutic strategy. We searched for small molecules that could 478 
+
+recapitulate protective components of IFN 𝛾 -mediated macrophage reprogramming and promote 479 
+
+an oxidative-stress-resilient, Mtb-resistant state. 480 
+
+Using cSTAR analysis of resistant and susceptible macrophage states, we found that IFN 𝛾 priming 481 
+
+shifted B6.Sst1S susceptible macrophages toward the transcriptional state of B6 resistant 482 
+
+macrophages. We then confirmed that this transcriptome shift is closely correlated with an 483 
+
+increased ability of susceptible macrophages to control Mtb replication. Thus, using transcriptomic 484 
+
+data, we have built DPD TB score as a novel in vitro metric for macrophages priming to be either 485 
+
+susceptible or resistant to Mtb infection, consistent with the in vivo phenotype. 486 
+
+487 
+
+Next, we used publicly available data to identify perturbations that could regulate the transition of 488 
+
+susceptible macrophages toward the IFN 𝛾 -mediated Mtb-resistant state. This analysis identified 489 
+
+several candidate pathways predicted to either mimic or antagonize the effects of IFN 𝛾 . However, 490 
+
+the pathways that increased macrophage resistance only partially recapitulated the potent effect of 491 
+
+IFN 𝛾 priming. Therefore, we assessed interactions among the candidate pathways and identified 492 
+
+two mutually antagonistic regulatory clusters. The Mtb resistance-promoting cluster comprised 493 
+
+retinoic acid receptor (RAR), mTOR, and IFN 𝛾 signaling modules, which showed mutual intra-494 
+
+cluster activation. The antagonistic cluster, consisting of PAK, CDK1/2, and CDK4/6 nodes, was 495 
+
+predicted to promote Mtb susceptibility. We focused on the interplay between CDK4/6, the 496 
+
+strongest contributor to the Mtb-susceptible phenotype, and RAR, a key contributor to the Mtb-497 
+
+resistant phenotype. Network topology analysis suggested that simultaneous CDK4/6 inhibition 498 
+
+and RAR stimulation could synergize to induce an Mtb-resistant macrophage activation state. 499 
+
+500 
+
+The importance of retinoic acid (RA) in host resistance to tuberculosis has been demonstrated in 501 
+
+humans and animal models (Faye Lanni, 2025; Podell et al., 2022). However, the specific 502 
+
+mechanisms underlying RA-mediated protection in TB remain incompletely understood. RA has 503 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+previously been shown to induce expression of interferon regulatory factor 1 (IRF1), a master 504 
+
+transcriptional regulator downstream of IFN 𝛾 receptor signaling, through a STAT1-independent 505 
+
+mechanism (Luo & Ross, 2006). In addition, cooperation between retinoic acid receptor (RAR) 506 
+
+and IRF1 transcription factors has been reported to enhance transcriptional activation at selected 507 
+
+promoters (Clarke et al., 2004). Our studies suggest that, in addition to boosting macrophage 508 
+
+effector functions, RA signaling increases macrophage resilience to stress, thereby partially 509 
+
+mimicking the ability of IFN 𝛾 to prevent runaway lipid peroxidation. Unlike IFN 𝛾 , however, this 510 
+
+protective effect did not depend on upregulation of ferritins and was more likely associated with 511 
+
+the induction of the anti-ferroptotic enzyme GPX4 and increased lipid biosynthesis. 512 
+
+513 
+
+CDK4/6 inhibition emerged as a second, mechanistically distinct route to an IFN 𝛾 -like protective 514 
+
+state. The role of cyclin-dependent kinases in TB pathogenesis remains poorly understood. 515 
+
+However, prior studies using broad-spectrum tyrosine kinase inhibitors, such as imatinib and 516 
+
+dasatinib, demonstrated improved outcomes of Mtb infection in mice, primarily by reducing 517 
+
+inflammatory tissue damage (Napier et al., 2011; Shee et al., 2026). CDK4/6 are central regulators 518 
+
+of cell-cycle progression that are activated by D cyclins in response to mitogenic signals. They 519 
+
+phosphorylate Rb and thereby promote downstream regulators of G0-to-S phase progression, 520 
+
+including E2F and Myc. CDK4/6 activity also antagonizes terminal differentiation of myeloid 521 
+
+progenitors, and CDK4/6 inhibitors have been explored therapeutically in myeloid leukemias (He 522 
+
+et al., 2017; Xie et al., 2023). 523 
+
+Our previous work demonstrated increased activity of E2F and Myc pathways in TNF-stimulated 524 
+
+B6.Sst1S macrophages compared with B6 wild-type macrophages. Moreover, hyperactivity of the 525 
+
+Myc pathway in blood transcriptomes from TB patients was associated with poorer treatment 526 
+
+outcomes (Shivraj M. Yabaji et al., 2025). Of note, recent in vivo single-cell RNA-seq studies in 527 
+
+genetically resistant and susceptible mice after aerosol Mtb infection demonstrated that increased 528 
+
+activity of Myc and E2F pathways was among the earliest manifestations of sst1 /Sp140-mediated 529 
+
+susceptibility, preceding IFN-I pathway upregulation (Duffy et al., 2026). We found that CDK4/6 530 
+
+inhibitors recapitulated the ability of IFN 𝛾 to stimulate ferritin expression and reduce the 531 
+
+intracellular labile iron pool in an sst1 -independent manner. This reallocation of intracellular iron 532 
+
+into ferritin storage pools likely reflects a transition away from an anabolic, proliferation-533 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+supporting state toward terminal differentiation and priming for activation. As discussed above, 534 
+
+conversion of labile redox-active iron into redox-inactive ferritin stores would limit ROS-driven 535 
+
+Fenton chemistry and thereby reduce oxidative host-cell damage. 536 
+
+Together, our findings suggest a strategy to reduce inflammatory pathology without broadly 537 
+
+suppressing host defense. They support a model in which the outcome of interferon signaling in 538 
+
+TB depends on whether inflammatory activation is coupled to oxidative-stress resilience. In sst1 -539 
+
+susceptible macrophages, persistent autocrine IFN-I signaling promotes ROS production, lipid 540 
+
+peroxidation, suppression of lipid repair, and further IFN-I amplification, producing a self-541 
+
+reinforcing pathological activation state. In contrast, IFN 𝛾 acts as a paracrine anticipatory signal 542 
+
+that primes macrophages for antimicrobial function while limiting labile iron and lipid 543 
+
+peroxidation, thereby preserving cell viability and effector capacity. Pharmacological activation of 544 
+
+RAR signaling and inhibition of CDK4/6 recapitulate complementary components of this IFN 𝛾 -545 
+
+protective state (Table 2) and may jointly better resist pathological activation state. Importantly, 546 
+
+combining these small molecules may allow lower doses of each agent, potentially enhancing 547 
+
+efficacy while mitigating nonspecific toxicity. We anticipate that such disease-modifying 548 
+
+approaches, used together with antibiotics, may reduce inflammatory tissue damage, shorten 549 
+
+treatment duration, and limit post-TB lung impairment and systemic inflammatory complications. 550 
+
+More broadly, these findings suggest that pharmacological reinforcement of oxidative-stress 551 
+
+resilience may represent a strategy for limiting interferon-associated tissue pathology in chronic 552 
+
+inflammatory disease 553 
+
+554 
+
+555 
+
+556 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Methods 557 
+
+558 
+
+Cell culture 559 
+
+560 
+
+Bone marrow cells were isolated from the tibia and fibula of either B6 or B6.Sst1S mice. The bone 561 
+
+marrow cell isolation, culture, and bone marrow-derived macrophage (BMDM) generation were 562 
+
+performed according to the method previously described (Yabaji et al., 2022). 563 
+
+564 
+
+Determination of lipid peroxidation product synthesis/Click-iT lipid peroxidation detection 565 
+
+566 
+
+BMDMs were cultured on cover slips in 24-well plates. After the treatments, linoleamide alkyne 567 
+
+(LAA) was added to the culture at a concentration of 50 μM 1 h prior to cell harvest. Cells were 568 
+
+processed according to the instructions provided in the manual. Briefly, cells were washed with 569 
+
+PBS and fixed with 3.7% formaldehyde in PBS for 15 min at room temperature. Cells were washed 570 
+
+with PBS and permeabilized with 0.5% Triton X-100 in PBS for 10 min at room temperature. 571 
+
+Further, blocking was carried out with 1% BSA in PBS for 30 min at room temperature. Cells were 572 
+
+washed with PBS and incubated with Click-iT reaction cocktail for 30 min at room temperature, 573 
+
+protected from light. Cells were washed with 1% BSA in PBS and further with PBS. The coverslip 574 
+
+was mounted onto the slide using Prolong Gold antifade reagent with DAPI. The fluorescent 575 
+
+images were captured using a Leica SP5 confocal microscope. The images were analyzed using 576 
+
+ImageJ software (NIH). 577 
+
+578 
+
+Immunofluorescence staining for 4-HNE adducts 579 
+
+580 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+BMDMs were cultured on cover slips in 24-well plates. After the treatments, fixation, 581 
+
+permeabilization, and blocking were performed as mentioned in the earlier sections. The cells were 582 
+
+incubated with the 4-HNE antibody overnight at 4°C. The cells were washed with 1% BSA in PBS 583 
+
+and incubated with Alexa Fluor 488 conjugated goat anti-rabbit antibodies for 1 h at room 584 
+
+temperature, protected from light. The cells were washed with PBS, and the coverslip was mounted 585 
+
+onto the slide using Prolong Gold antifade reagent with DAPI. The fluorescent images were 586 
+
+captured using a Leica SP5 confocal microscope. The images were analyzed using ImageJ software 587 
+
+(NIH). 588 
+
+589 
+
+Intracellular measurement of labile iron pool 590 
+
+591 
+
+BMDMs were cultured in 96-well plates. After the treatments, cells were washed with serum-free 592 
+
+culture medium and incubated with 1 mM FerroOrange solution in serum-free media for 30 min 593 
+
+at 37°C and 5% CO₂. The fluorescent images were captured using the Perkin-Elmer Operetta CLS 594 
+
+High-Content Analysis System, and the signal quantification was performed using software. 595 
+
+596 
+
+Measurement of reactive oxygen species 597 
+
+598 
+
+BMDMs were cultured in 96-well plates. After the treatments, CellROX Green reagent was added 599 
+
+to the cell culture at a concentration of 5 mM and further incubated for 30 min at 37°C and 5% 600 
+
+CO₂. The cells were washed with PBS and fixed using 3.7% formaldehyde in PBS for 15 min at 601 
+
+room temperature. The cells were washed with PBS and resuspended in PBS. The fluorescent 602 
+
+images were captured using a Nexcelom Celigo Micro-Well Plate Imager and analyzed using 603 
+
+ImageJ software (NIH). 604 
+
+605 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Real-time quantitative RT-PCR 606 
+
+607 
+
+The BMDMs were cultured in 6-well plates. After the treatments, cells were washed with PBS and 608 
+
+collected in TRIzol reagent. The total RNA was isolated using the RNeasy Plus Mini Kit 609 
+
+(QIAGEN), involving the DNase treatment using RNase-Free DNase (QIAGEN) following the 610 
+
+recommended procedure. The total RNA concentration was quantified using the NanoDrop 1000 611 
+
+Spectrophotometer. The cDNA synthesis was carried out from 500 ng of total RNA from each 612 
+
+sample using PrimeScript RT Master Mix (Takara Bio USA) following the recommended protocol. 613 
+
+The qRT-PCR was performed using the reagents of GoTaq qPCR Master Mix (Promega 614 
+
+Corporation) and the CFX Opus 96 Real-Time PCR system (Bio-Rad Laboratories). The thermal 615 
+
+cycle conditions are as follows: 95°C for 3 min followed by 39 cycles of 95°C for 15 sec and 55°C 616 
+
+for 1 min and finally the melt curve conditions as preset in the machine. The fold change in gene 617 
+
+expression was calculated by the ddCT method using either 18S rRNA or β-actin as endogenous 618 
+
+control. 619 
+
+620 
+
+RNA-seq library preparation & sequencing 621 
+
+622 
+
+B6 and B6.Sst1S BMDMs were treated with TNF, IFN 𝛾 , and in combination of both for 12 h and 623 
+
+total RNA was extracted using TRIzol reagent as mentioned in previous section. Total RNA 624 
+
+integrity was verified using the High Sensitivity RNA Pico 6000 assay run on an Agilent 2100 625 
+
+Bioanalyzer (Agilent Technologies, Palo Alto, CA). To enrich for mRNA, 150 ng of total RNA for 626 
+
+each sample was incubated with magnetic Oligo-d(T) 25 beads per the manufacturer’s instructions 627 
+
+using NEB Next Poly(A) mRNA Magnetic Isolation Module (New England Biolabs, USA). 628 
+
+Libraries were prepared using NEB Next Ultra II Directional RNA Library Kit for Illumina 629 
+
+according to the manufacturer’s protocol. Briefly, after mRNA enrichment, the RNA was 630 
+
+fragmented at 94 oC for 15 min. First strand cDNA was generated, and incorporation of dUTP 631 
+
+occurred during synthesis of second strand cDNA to indicate strandedness. Double-stranded cDNA 632 
+
+then underwent end repair, A-tailing, adaptor ligation, and incorporation of sample-specific 633 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+multiplex indices via PCR amplification (11 cycles) according to the manufacturer’s protocol 634 
+
+(New England Biolabs, USA). Size distribution and molarity of amplified cDNA libraries were 635 
+
+assessed via the Bioanalyzer High Sensitivity DNA Assay (Agilent Technologies, USA). All cDNA 636 
+
+libraries were sequenced on an Illumina NextSeq 2000 instrument at 600 pM with 2% PhiX control 637 
+
+library spiked in (Illumina, USA) using P3 100 cycles sequencing kit (Illumina, USA) and 638 
+
+resulting in 55-91 million reads per sample (50x50bp paired-end reads). All samples were 639 
+
+performed in triplicates. 640 
+
+641 
+
+RNA-seq pre-processing and differential expression analysis 642 
+
+643 
+
+Data pre-processing and the downstream computational analyses were all performed using R 644 
+
+statistical software v4.4.3 (Core, 2022). Genes with lower total counts of 10 across samples were 645 
+
+removed. RNA counts were normalized with DESeq2 and log-2-transformed (Love et al., 2014). 646 
+
+The data included two biological factors: genotype (wild type and B6.Sst1S) and treatment 647 
+
+(untreated, TNFα, IFN 𝛾 , and TNFα+IFN 𝛾 ). To identify differentially expressed genes (DEGs), 648 
+
+contrasts were defined as follows: 649 
+
+1. Within-genotype treatment contrasts: comparisons between all possible treatments within 650 
+
+each genotype (e.g., TNFα+IFN 𝛾 vs TNFα in B6.Sst1S or wild type). 651 
+
+2. Treatment contrasts accounting for genotype: comparisons between all possible treatments 652 
+
+with genotype as a covariate. 653 
+
+3. Genotype contrasts accounting for treatment: comparisons between all possible genotypes 654 
+
+with treatment as a covariate. 655 
+
+Differentially expressed genes were filtered using a standard threshold (absolute fold-change > 1.5 656 
+
+and BH adjusted p-value < 0.05). 657 
+
+658 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Principal component analysis 659 
+
+660 
+
+Principal component analysis was performed for all samples using the PCAtools R package v2.16 661 
+
+(Blighe K, 2025). Colour represents treatment type and shape represents genotype. 662 
+
+663 
+
+Gene set enrichment and semantic reduction analysis 664 
+
+665 
+
+Differential expression analysis statistic scores were used for gene set enrichment analysis using 666 
+
+the fgsea R package v1.30 (Korotkevich et al., 2021). The default fgsea parameters were used, 667 
+
+except for the minSize parameter, which was set to 15. The gene ontology biological processes 668 
+
+(GO:BP) database, obtained from the Human Molecular Signature Database (MSigDB), was used 669 
+
+for pathways reference (Ashburner et al., 2000; Liberzon et al., 2015). Significant enriched 670 
+
+pathways were defined with adjusted p-value < 0.05. Semantic reduction of significantly enriched 671 
+
+pathways were performed with the rrvgo R package v1.16 (Sayols, 2023) .672 
+
+673 
+
+Single sample gene set enrichment analysis 674 
+
+675 
+
+Single sample gene set enrichment analysis were performed with the GSVA R package v1.52 676 
+
+(Hanzelmann et al., 2013). Several pathways were picked to be further explored that were obtained 677 
+
+either from GO:BP or Hallmark (Ashburner et al., 2000; Liberzon et al., 2015). Specifically, for 678 
+
+ferroptosis-induction and ferroptosis-inhibition pathways, the underlying genes were obtained 679 
+
+from Amaral et.al study (Amaral et al., 2024). The gene list for each pathway was included in Data 680 
+
+file 1. 681 
+
+682 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+cSTAR analysis 683 
+
+684 
+
+To build State Transition Vector STV TB we have applied ordinary least squares linear 685 
+
+regression of transcriptomic data for cytokine stimulation (Figure 4A) over Mtb fold change data 686 
+
+(Figure 3A). Since the available perturbation transcriptomics data from CMAP dataset had only 687 
+
+978 genes measured directly (Subramanian et al., 2017), we have built STV TB in the space of these 688 
+
+978 genes. To reflect increase of TB resistance in response to the increase of appropriate DPD 689 
+
+score, DPD TB , we have multiplied STV TB on -1, so the increase in DPD TB corresponds to the 690 
+
+decrease in Mtb fold change, and consequently, increase in TB-resistance. 691 
+
+Next, we utilized publicly available perturbation data to understand how priming of 692 
+
+macrophages towards Mtb resistance can be controlled. Particularly, we used a cSTAR pipeline 693 
+
+adapted for perturbation transcriptomics data, that allows reconstruction of the protein signaling 694 
+
+network wiring from transcriptomics responses perturbation data (Deng et al., 2025). This 695 
+
+approach allows us to access how pharmacological interventions targeting different druggable 696 
+
+proteins move macrophage states along the STV TB , by changing DPD TB score. Among cellular 697 
+
+models that are considered relevant for the task of controlling macrophage cell states, THP1 cell 698 
+
+line has the highest amount of perturbation data. Accordingly, we have collected perturbation data 699 
+
+for this cell line to run our cSTAR pipeline (Deng et al., 2025). While most of perturbation data 700 
+
+that we used originated from CMAP dataset (Subramanian et al., 2017), this dataset lacks 701 
+
+perturbations to some critically important nodes, such as RAR receptors and receptors of IFN 𝛾 .702 
+
+For these nodes we have taken data from the following GEO accession numbers: GSE46268, 703 
+
+GSE244129 and GSE229710. Since THP1 cells do not directly resemble sst1 -driven susceptibility 704 
+
+phenotype, we excluded IFN type I and TNF from the network, and focused on other key signaling 705 
+
+nodes. 706 
+
+In brief, we collated from different publicly available sources (see above) a dataset of perturbation 707 
+
+responses, combining log fold changes of gene expression levels with respect to appropriate 708 
+
+control. For each data point, we have calculated DPD TB responses to specific perturbation. Next, 709 
+
+we have selected core network components based on ranking of DPD TB responses, as well as on 710 
+
+our prior knowledge of key pathways involved. Then, we inferred module activity coefficients, 711 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+which allow calculating module activities, as described in (Deng et al., 2025). Using calculated 712 
+
+module activities, we have calculated matrix of global response coefficients 𝑅 , that served as an 713 
+
+input to Bayesian Modular Response Analysis (BMRA) (Tapesh Santra, 2018) method, and 714 
+
+inferred matrix of local connections 𝑟 . According to MRA theory, each column of −𝑟 !" matrix 715 
+
+represents MRA-predicted responses of all network nodes to 1% activation of the specific node 716 
+
+(Kholodenko et al., 2021). Thus, we plotted elements of −𝑟 !" matrix as cSTAR network 717 
+
+predictions at Figures 4C and 5B. 718 
+
+719 
+
+Bacterial culture 720 
+
+721 
+
+Mtb Erdman reporter strain (SSB-GFP, smyc::mCherry) was grown in Middlebrook 7H9 broth 722 
+
+supplemented with 10% Oleic Albumin Dextrose Catalase (OADC) in a shaking incubator at 37 oC. 723 
+
+For infection experiment, bacteria were grown until the log phase (OD 0.4-0.6), centrifuged at 724 
+
+3000 rpm for 10 min and resuspended in DMEM F/12 supplemented with 10% FBS, 20 mM 725 
+
+HEPES, 2 mM L-glutamine, 10% L929 cell conditioned media (LCCM). The bacteria were briefly 726 
+
+sonicated using a sonicating water bath at 20 oC-25 oC. Single bacterial suspension was obtained by 727 
+
+passing the bacteria through 5 μm filter using control syringe. The bacterial count was measured 728 
+
+at OD 600 and considered OD 600 1 = 3x10 8 bacteria per ml. 729 
+
+730 
+
+M. tuberculosis infection of BMDMs 731 
+
+732 
+
+B6 or B6.Sst1S BMDMs were cultured in 96-well plates supplemented with DMEM F/12, 10% 733 
+
+FBS, 20 mM HEPES, 2 mM L-glutamine, 10% LCCM. The single bacterial suspension was diluted 734 
+
+in the above media without antibiotics to achieve the multiplicity of infection (MOI) - 1. Hundred 735 
+
+microliters of the Mtb were added to the BMDMs pretreated with TNF, IFN 𝛾 , TNF + IFN 𝛾 , TNF 736 
+
++ trilaciclib, or TNF + ATRA. The culture plates were centrifuged at 500 g for 5 min and incubated 737 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+at 37 oC for 1 h. The extracellular bacteria were eliminated by Amikacin treatment at 200 μg/ml for 738 
+
+45 min at 37 oC. The cells were washed and cultured in presence of the treatment conditions. Post 739 
+
+day 1 and day 5 of infection, cells were harvested and the cell numbers and Mtb load were 740 
+
+quantified as described earlier (Yabaji et al., 2022). All experimental procedures involving Mtb 741 
+
+were executed within Biosafety Level 3 (BSL-3) containment facilities in strict compliance with 742 
+
+Boston University’s Institutional Biosafety Committee (IBC) approved protocol #25-875, as well 743 
+
+as biosafety standards established by the Centers for Disease Control and Prevention and the 744 
+
+National Emerging Infectious Disease Laboratories. 745 
+
+746 
+
+Western blotting 747 
+
+748 
+
+BMDMs were washed with PBS and were collected by scraping in the ice-cold lysis buffer (20 749 
+
+mM Tris-HCl. pH 7.5, 150 mM NaCl, 1 mM EDTA, 1.5 mM MgCl₂, 1% NP-40 alternative, 10% 750 
+
+glycerol, 50 mM sodium fluoride, 0.1 mM sodium orthovanadate, 1 mM PMSF, 1X protease 751 
+
+inhibitor cocktail, 1X phosphatase inhibitor II, 1X phosphatase inhibitor III). The cell lysis was 752 
+
+performed by brief sonication, and the cell lysate was collected by centrifugation at 12,000 g for 753 
+
+10 min at 4°C. Total protein concentration was determined by using Bradford reagent (Bio-Rad 754 
+
+Laboratories). The Laemmli buffer (2X) was added to each sample, and the proteins were 755 
+
+denatured at 95°C for 5 min. The cell lysates were resolved by SDS-PAGE, and the protein bands 756 
+
+were electro-blotted onto the PVDF membranes. The membranes were blocked with 3% BSA in 757 
+
+TBST and probed with primary antibodies overnight at 4°C. After washing the membranes with 758 
+
+TBST, they were further incubated with relevant secondary antibodies. The membranes were 759 
+
+washed with TBST, and the chemiluminescent signals were captured using SuperSignal West Pico 760 
+
+Chemiluminescent Substrate (Thermo Scientific) in the FujiFilm LAS-4000 Luminescent Image 761 
+
+Analyzer. The protein band densities were quantified using the ImageJ software (Version 1.54P). 762 
+
+All the experiments were carried out in two biological replicates and beta-tubulin was considered 763 
+
+as an endogenous loading control, and the normalized relative band intensities were calculated. 764 
+
+765 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Statistical analysis 766 
+
+767 
+
+All graphs were plotted, and statistical analyses were performed using GraphPad Prism Version 768 
+
+10.6.1. For comparison across multiple groups based on single variable, ordinary one-way ANOVA 769 
+
+with Tukey's multiple comparisons test, with a single pooled variance was applied. Comparisons 770 
+
+among groups involving two or more variables were analyzed by two-way ANOVA with Tukey's 771 
+
+multiple or Sidak tests. Statistical significance levels are indicated as: ns, non-significant; 772 
+
+*,p<0.05; **,p<0.01; ***,p<0.001; and ***,p<0.0001. 773 
+
+774 
+
+Data availability 775 
+
+The code for RNA-seq pre-processing and differential expression analysis is available on GitHub 776 
+
+at https://github.com/ZainulArifin1/Boston_Macrophae_Transcriptomics_Analysis/tree/main. 777 
+
+The code for cSTAR analysis is available on GitHub at 778 
+
+https://github.com/OleksiiR/THP1_TB_cSTAR/. The RNAseq data are available under GEO 779 
+
+accession number GSE337186. 780 
+
+781 
+
+Acknowledgements 782 
+
+This work was supported by NIH grants R01HL126066 to IK, R01AI189410 to WRB and IK, EU 783 
+
+grant no. 101136926 MULTIR to BNK, Research Ireland grant 22/PATH-S/10875 to OSR, and 784 
+
+Leducq Foundation for Cardiovascular Research grant ARTIST to OSR and BNK. We would like 785 
+
+to thank Dr. Michael Kirber, the Boston University Cellular Imaging, and Sequencing Resource 786 
+
+cores for their advice and technical assistance. We thank Dr. Lingyi Lynn Deng, Mr. Matthew Au 787 
+
+and the Analytical Instrumentation core for their services. OSR and BNK would like to thank 788 
+
+Ciardha Carmody and Prof. Jonathan Bond from Systems Biology Ireland UCD for help in 789 
+
+processing THP1 perturbation data from CMAP (LINCS L1000) dataset. 790 
+
+791 
+
+Competing interest 792 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+cSTAR approach is protected by OSR, VZ and BNK by patent application WO2022248728A1. 793 
+
+All other authors declare no competing interests. 794 
+
+795 
+
+Authors contributions 796 
+
+Conceptualization IK, SMY, PBA, BNK, OSR, WRB 797 
+
+Data curation PBA, OSR, BNK, IK, VZ, MZA, AAG 798 
+
+Formal analysis PBA, MZA, VZ, OSR 799 
+
+Validation PBA, SMY, SL 800 
+
+Investigation PBA, SL, SMY, OSR, MZA 801 
+
+Methodology PBA, SMY, OSR, VZ, YOA 802 
+
+Writing- original draft PBA, IK 803 
+
+Writing- review and editing IK, AAG, BNK, OSR, WRB 804 
+
+Resources, Supervision IK, BNK 805 
+
+Funding acquisition IK, WRB, BNK, OSR, VZ 806 
+
+Project administration IK 807 
+
+808 
+
+809 
+
+810 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+References 811 
+
+812 
+
+Amaral, E. P., Namasivayam, S., Queiroz, A. T. L., Fukutani, E., Hilligan, K. L., Aberman, K., 813 Fisher, L., Bomfim, C. C. B., KauNman, K., Buchanan, J., Santuo, L., Gazzinelli-814 Guimaraes, P. H., Costa, D. L., Teixeira, M. A., Barreto-Duarte, B., Rocha, C. G., 815 Santana, M. F., Cordeiro-Santos, M., Barber, D. L.,…Sher, A. (2024). BACH1 promotes 816 tissue necrosis and Mycobacterium tuberculosis susceptibility. Nat Microbiol , 9(1), 817 120–135. https://doi.org/10.1038/s41564-023-01523-7 818 Anaya-Sanchez, A., Berry, S. B., Espich, S., Zilinskas, A., Tran, P. M., Agudelo, C., Samani, H., 819 Darwin, K. H., Portnoy, D. A., & Stanley, S. A. (2025). Methylglyoxal is an antibacterial 820 eNector produced by macrophages during infection. Cell Host Microbe , 33 (7), 1121– 821 1132 e1125. https://doi.org/10.1016/j.chom.2025.05.026 822 Ashburner, M., Ball, C. A., Blake, J. A., Botstein, D., Butler, H., Cherry, J. M., Davis, A. P., 823 Dolinski, K., Dwight, S. S., Eppig, J. T., Harris, M. A., Hill, D. P., Issel-Tarver, L., 824 Kasarskis, A., Lewis, S., Matese, J. C., Richardson, J. E., Ringwald, M., Rubin, G. M., & 825 Sherlock, G. (2000). Gene ontology: tool for the unification of biology. The Gene 826 Ontology Consortium. Nat Genet , 25 (1), 25–29. https://doi.org/10.1038/75556 827 Behr, M. A., Edelstein, P. H., & Ramakrishnan, L. (2024). Rethinking the burden of latent 828 tuberculosis to reprioritize research. Nat Microbiol , 9(5), 1157–1158. 829 https://doi.org/10.1038/s41564-024-01683-0 830 Benard, A., Sakwa, I., Schierloh, P., Colom, A., Mercier, I., Tailleux, L., Jouneau, L., Boudinot, 831 P., Al-Saati, T., Lang, R., Rehwinkel, J., Loxton, A. G., Kaufmann, S. H. E., Anton-832 Leberre, V., O'Garra, A., Sasiain, M. D. C., Gicquel, B., Fillatreau, S., Neyrolles, O., & 833 Hudrisier, D. (2018). B Cells Producing Type I IFN Modulate Macrophage Polarization 834 in Tuberculosis. Am J Respir Crit Care Med , 197 (6), 801–813. 835 https://doi.org/10.1164/rccm.201707-1475OC 836 Berry, M. P., Graham, C. M., McNab, F. W., Xu, Z., Bloch, S. A., Oni, T., Wilkinson, K. A., 837 Banchereau, R., Skinner, J., Wilkinson, R. J., Quinn, C., Blankenship, D., Dhawan, R., 838 Cush, J. J., Mejias, A., Ramilo, O., Kon, O. M., Pascual, V., Banchereau, J.,…O'Garra, 839 A. (2010). An interferon-inducible neutrophil-driven blood transcriptional signature in 840 human tuberculosis. Nature , 466 (7309), 973–977. 841 https://doi.org/10.1038/nature09247 842 Bhattacharya, B., Xiao, S., Chatterjee, S., Urbanowski, M., Ordonez, A., Ihms, E. A., Agrahari, 843 G., Lun, S., Berland, R., Pichugin, A., Gao, Y., Connor, J., Ivanov, A. R., Yan, B. S., 844 Kobzik, L., Koo, B. B., Jain, S., Bishai, W., & Kramnik, I. (2021). The integrated stress 845 response mediates necrosis in murine Mycobacterium tuberculosis granulomas. J846 
+
+Clin Invest , 131 (3). https://doi.org/10.1172/JCI130319 847 Blighe K, L. A. (2025). PCAtools: PCAtools: Everything Principal Components Analysis. 848 doi:10.18129/B9.bioc.PCAtools, R package version 2.20.0, 849 https://bioconductor.org/packages/PCAtools. 850 Boccuni, L., Podgorschek, E., Schmiedeberg, M., Platanitis, E., Traxler, P., Fischer, P., 851 Schirripa, A., Novoszel, P., Nebreda, A. R., Arthur, J. S. C., Fortelny, N., Farlik, M., Sexl, 852 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+V., Bock, C., Sibilia, M., Kovarik, P., Muller, M., & Decker, T. (2022). Stress signaling 853 
+
+boosts interferon-induced gene transcription in macrophages. Sci Signal , 15 (764), 854 eabq5389. https://doi.org/10.1126/scisignal.abq5389 855 Branchett, W. J., Stavropoulos, E., Shields, J., Al-Dibouni, A., Cardoso, M., Fernandes, A. I., 856 Moreira-Teixeira, L., Slawinski, H., Mikolajczak, A., Rodgers, A., Saraiva, M., & O'Garra, 857 A. (2025). Type I IFN drives neutrophil swarming, impeding lung T cell-macrophage 858 interactions and TB control. J Exp Med , 222 (12). 859 https://doi.org/10.1084/jem.20250466 860 Caouaille, M., Fromont, L., Shinkawa, T., Faucher, M., Abdul Hamid, A. I., Mazeres, S., 861 Duverge, Y., Lorreyte, Y., Naser, E., Behar, S. M., Lefrancais, E., Neyrolles, O., & 862 Hudrisier, D. (2025). SP140 limits type I interferon-driven pathology, preserving T cell 863 motility and promoting resistance in tuberculosis. bioRxiv .864 https://doi.org/10.64898/2025.12.05.692491 865 Chatterjee, S., Yabaji, S. M., Rukhlenko, O. S., Bhattacharya, B., Waligurski, E., Vallavoju, N., 866 Ray, S., Kholodenko, B. N., Brown, L. E., Beeler, A. B., Ivanov, A. R., Kobzik, L., Porco, 867 J. A., Jr., & Kramnik, I. (2021). Channeling macrophage polarization by rocaglates 868 increases macrophage resistance to Mycobacterium tuberculosis. iScience , 24 (8), 869 102845. https://doi.org/10.1016/j.isci.2021.102845 870 Chowdhury, C. S., Kinsella, R. L., McNehlan, M. E., Naik, S. K., Lane, D. S., Talukdar, P., 871 Smirnov, A., Dubey, N., Rankin, A. N., McKee, S. R., Woodson, R., Hii, A., Chavez, S. 872 M., Kreamalmeyer, D., Beatty, W., Mattila, J. T., & Stallings, C. L. (2024). Type I IFN-873 mediated NET release promotes Mycobacterium tuberculosis replication and is 874 associated with granuloma caseation. Cell Host Microbe , 32 (12), 2092–2111 e2097. 875 https://doi.org/10.1016/j.chom.2024.11.008 876 Clarke, N., Jimenez-Lara, A. M., Voltz, E., & Gronemeyer, H. (2004). Tumor suppressor IRF-1 877 mediates retinoid and interferon anticancer signaling to death ligand TRAIL. EMBO J ,878 
+
+23 (15), 3051–3060. https://doi.org/10.1038/sj.emboj.7600302 879 CliN, J. M., Lee, J. S., Constantinou, N., Cho, J. E., Clark, T. G., Ronacher, K., King, E. C., Lukey, 880 P. T., Duncan, K., Van Helden, P. D., Walzl, G., & Dockrell, H. M. (2013). Distinct phases 881 of blood gene expression pattern through tuberculosis treatment reflect modulation 882 of the humoral immune response. J Infect Dis , 207 (1), 18–29. 883 https://doi.org/10.1093/infdis/jis499 884 Cohen, S. B., Gern, B. H., & Urdahl, K. B. (2022). The Tuberculous Granuloma and Preexisting 885 Immunity. Annu Rev Immunol , 40 , 589–614. https://doi.org/10.1146/annurev-886 immunol-093019-125148 887 Cooper, A. M., Dalton, D. K., Stewart, T. A., GriNin, J. P., Russell, D. G., & Orme, I. M. (1993). 888 Disseminated tuberculosis in interferon gamma gene-disrupted mice. J Exp Med ,889 
+
+178 (6), 2243–2247. https://doi.org/10.1084/jem.178.6.2243 890 Core, R. (2022). R: A language and environment for statistical computing . https://www.r-891 project.org 892 Deng, H., Rukhlenko, O. S., Joshi, D., Hu, X., Junk, P., Tuliakova, A., Kholodenko, B. N., & 893 Schwartz, M. A. (2025). cSTAR analysis identifies endothelial cell cycle as a key 894 regulator of flow-dependent artery remodeling. Sci Adv , 11 (1), eado9970. 895 https://doi.org/10.1126/sciadv.ado9970 896 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Desvignes, L., Wolf, A. J., & Ernst, J. D. (2012). Dynamic roles of type I and type II IFNs in early 897 
+
+infection with Mycobacterium tuberculosis. J Immunol , 188 (12), 6205–6215. 898 https://doi.org/10.4049/jimmunol.1200255 899 Dorhoi, A., Yeremeev, V., Nouailles, G., Weiner, J., 3rd, Jorg, S., Heinemann, E., Oberbeck-900 Muller, D., Knaul, J. K., Vogelzang, A., Reece, S. T., Hahnke, K., Mollenkopf, H. J., 901 Brinkmann, V., & Kaufmann, S. H. (2014). Type I IFN signaling triggers 902 immunopathology in tuberculosis-susceptible mice by modulating lung phagocyte 903 dynamics. Eur J Immunol , 44 (8), 2380–2393. https://doi.org/10.1002/eji.201344219 904 DuNy, F. J., Neal, M. L., Plumlee, C. R., Cohen, S. B., Gern, B. H., Diercks, A. H., Gerner, M. Y., 905 Urdahl, K. B., & Aitchison, J. D. (2026). Single-cell profiling reveals that dynamic lung 906 immune responses distinguish protection from susceptibility to tuberculosis. PLoS 907 
+
+Pathog , 22 (4), e1013635. https://doi.org/10.1371/journal.ppat.1013635 908 Eruslanov, E. B., Lyadova, I. V., Kondratieva, T. K., Majorov, K. B., Scheglov, I. V., Orlova, M. O., 909 & Apt, A. S. (2005). Neutrophil responses to Mycobacterium tuberculosis infection in 910 genetically susceptible and resistant mice. Infect Immun , 73 (3), 1744–1753. 911 https://doi.org/10.1128/IAI.73.3.1744-1753.2005 912 Faye Lanni, R. K., David Forrest Ackart, Victoria Mitcham, Sarah K Cooper, Connor King, 913 Hadley Gary, Dr. Chuangqi Wang, Dr Brendan Podell. (2025). Dysfunctional immunity 914 in the comorbidity of vitamin A deficiency and tuberculosis identifies therapeutic 915 potential of vitamin A supplementation. International Journal of Infectious Diseases ,916 
+
+152 (107559). https://doi.org/10.1016/j.ijid.2024.107559 917 Flynn, J. L., Chan, J., Triebold, K. J., Dalton, D. K., Stewart, T. A., & Bloom, B. R. (1993). An 918 essential role for interferon gamma in resistance to Mycobacterium tuberculosis 919 infection. J Exp Med , 178 (6), 2249–2254. https://doi.org/10.1084/jem.178.6.2249 920 Fonseca, K. L., Lozano, J. J., Despuig, A., Habgood-Coote, D., Sidorova, J., Aznar, D., Arias, 921 L., Del Rio-Alvarez, A., Carrillo-Reixach, J., GoN, A., Wildner, L. M., Gogishvili, S., 922 Nikolaishvili, K., Shubladze, N., Avaliani, Z., Tapia, G., Rodriguez-Martinez, P., 923 Cardona, P. J., Martinon-Torres, F.,…Vilaplana, C. (2025). Unravelling the 924 transcriptome of the human tuberculosis lesion and its clinical implications. Nat 925 
+
+Commun , 16 (1), 5028. https://doi.org/10.1038/s41467-025-60255-w 926 Fortin, A., Abel, L., Casanova, J. L., & Gros, P. (2007). Host genetics of mycobacterial 927 diseases in mice and men: forward genetic studies of BCG-osis and tuberculosis. 928 
+
+Annu Rev Genomics Hum Genet , 8, 163–192. 929 https://doi.org/10.1146/annurev.genom.8.080706.092315 930 Furin, J., Cox, H., & Pai, M. (2019). Tuberculosis. Lancet , 393 (10181), 1642–1656. 931 https://doi.org/10.1016/S0140-6736(19)30308-3 932 Gern, B. H., Klas, J. M., Foster, K. A., Kanagy, M. E., Cohen, S. B., Plumlee, C. R., DuNy, F. J., 933 Neal, M. L., Halima, M., Gustin, A. T., Stull, S. M., Wilson, J. J., Diercks, A. H., Aderem, 934 A., Gale, M., Jr., Aitchison, J. D., Gerner, M. Y., & Urdahl, K. B. (2025). Early and 935 opposing neutrophil and CD4 T cell responses shape pulmonary tuberculosis 936 pathology. J Exp Med , 222 (10). https://doi.org/10.1084/jem.20250161 937 Gutierrez, M. G., Master, S. S., Singh, S. B., Taylor, G. A., Colombo, M. I., & Deretic, V. (2004). 938 Autophagy is a defense mechanism inhibiting BCG and Mycobacterium tuberculosis 939 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+survival in infected macrophages. Cell , 119 (6), 753 –766. 940 
+
+https://doi.org/10.1016/j.cell.2004.11.038 941 Hanzelmann, S., Castelo, R., & Guinney, J. (2013). GSVA: gene set variation analysis for 942 microarray and RNA-seq data. BMC Bioinformatics , 14 , 7. 943 https://doi.org/10.1186/1471-2105-14-7 944 He, S., Roberts, P. J., Sorrentino, J. A., Bisi, J. E., Storrie-White, H., Tiessen, R. G., Makhuli, K. 945 M., Wargin, W. A., Tadema, H., van Hoogdalem, E. J., Strum, J. C., Malik, R., & 946 Sharpless, N. E. (2017). Transient CDK4/6 inhibition protects hematopoietic stem 947 cells from chemotherapy-induced exhaustion. Sci Transl Med , 9(387). 948 https://doi.org/10.1126/scitranslmed.aal3986 949 He, X., Berland, R., Mekasha, S., Christensen, T. G., Alroy, J., Kramnik, I., & Ingalls, R. R. 950 (2013). The sst1 resistance locus regulates evasion of type I interferon signaling by 951 Chlamydia pneumoniae as a disease tolerance mechanism. PLoS Pathog , 9(8), 952 e1003569. https://doi.org/10.1371/journal.ppat.1003569 953 Ji, D. X., Witt, K. C., Kotov, D. I., Margolis, S. R., Louie, A., Chevee, V., Chen, K. J., Gaidt, M. M., 954 Dhaliwal, H. S., Lee, A. Y., Nishimura, S. L., Zamboni, D. S., Kramnik, I., Portnoy, D. A., 955 Darwin, K. H., & Vance, R. E. (2021). Role of the transcriptional regulator SP140 in 956 resistance to bacterial infections via repression of type I interferons. eLife , 10 .957 https://doi.org/10.7554/eLife.67290 958 Ji, D. X., Yamashiro, L. H., Chen, K. J., Mukaida, N., Kramnik, I., Darwin, K. H., & Vance, R. E. 959 (2019). Type I interferon-driven susceptibility to Mycobacterium tuberculosis is 960 mediated by IL-1Ra. Nat Microbiol , 4(12), 2128–2135. 961 https://doi.org/10.1038/s41564-019-0578-3 962 Kaufmann, E., Sanz, J., Dunn, J. L., Khan, N., Mendonca, L. E., Pacis, A., Tzelepis, F., Pernet, 963 E., Dumaine, A., Grenier, J. C., Mailhot-Leonard, F., Ahmed, E., Belle, J., Besla, R., 964 Mazer, B., King, I. L., Nijnik, A., Robbins, C. S., Barreiro, L. B., & Divangahi, M. (2018). 965 BCG Educates Hematopoietic Stem Cells to Generate Protective Innate Immunity 966 against Tuberculosis. Cell , 172 (1-2), 176–190 e119. 967 https://doi.org/10.1016/j.cell.2017.12.031 968 Khan, N., Downey, J., Sanz, J., Kaufmann, E., Blankenhaus, B., Pacis, A., Pernet, E., Ahmed, 969 E., Cardoso, S., Nijnik, A., Mazer, B., Sassetti, C., Behr, M. A., Soares, M. P., Barreiro, 970 L. B., & Divangahi, M. (2020). M. tuberculosis Reprograms Hematopoietic Stem Cells 971 to Limit Myelopoiesis and Impair Trained Immunity. Cell , 183 (3), 752–770 e722. 972 https://doi.org/10.1016/j.cell.2020.09.062 973 Kholodenko, B. N., Kolch, W., & Rukhlenko, O. S. (2023). Reversing pathological cell states: 974 the road less travelled can extend the therapeutic horizon. Trends Cell Biol , 33 (11), 975 913–923. https://doi.org/10.1016/j.tcb.2023.04.004 976 Kholodenko, B. N., Rauch, N., Kolch, W., & Rukhlenko, O. S. (2021). A systematic analysis of 977 signaling reactivation and drug resistance. Cell Rep , 35 (8), 109157. 978 https://doi.org/10.1016/j.celrep.2021.109157 979 Knowles, H. J., Mole, D. R., RatcliNe, P. J., & Harris, A. L. (2006). Normoxic stabilization of 980 hypoxia-inducible factor-1alpha by modulation of the labile iron pool in diNerentiating 981 U937 macrophages: eNect of natural resistance-associated macrophage protein 1. 982 
+
+Cancer Res , 66 (5), 2600–2607. https://doi.org/10.1158/0008-5472.CAN-05-2351 983 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Korotkevich, G., Sukhov, V., Budin, N., Shpak, B., Artyomov, M. N., & Sergushichev, A. (2021). 984 
+
+Fast gene set enrichment analysis. bioRxiv , 060012. https://doi.org/10.1101/060012 985 Kotov, D. I., Lee, O. V., Fattinger, S. A., Langner, C. A., Guillen, J. V., Peters, J. M., Moon, A., 986 Burd, E. M., Witt, K. C., Stetson, D. B., Jaye, D. L., Bryson, B. D., & Vance, R. E. (2023). 987 Early cellular mechanisms of type I interferon-driven susceptibility to tuberculosis. 988 
+
+Cell , 186 (25), 5536–5553 e5522. https://doi.org/10.1016/j.cell.2023.11.002 989 Kramnik, I., Dietrich, W. F., Demant, P., & Bloom, B. R. (2000). Genetic control of resistance 990 to experimental infection with virulent Mycobacterium tuberculosis. Proc Natl Acad 991 
+
+Sci U S A , 97 (15), 8560–8565. https://doi.org/10.1073/pnas.150227197 992 Kramnik, I., Radzioch, D., & Skamene, E. (1994). T-helper 1-like subset selection in 993 Mycobacterium bovis bacillus Calmette-Guerin-infected resistant and susceptible 994 mice. Immunology , 81 (4), 618–625. 995 Krug, S., Prasad, P., Xiao, S., Lun, S., Ruiz-Bedoya, C. A., Klunk, M., Ordonez, A. A., Jain, S. K., 996 Srikrishna, G., Kramnik, I., & Bishai, W. R. (2023). Adjunctive Integrated Stress 997 Response Inhibition Accelerates Tuberculosis Clearance in Mice. mBio , 14 (2), 998 e0349622. https://doi.org/10.1128/mbio.03496-22 999 Lampropoulou, V., Sergushichev, A., Bambouskova, M., Nair, S., Vincent, E. E., Loginicheva, 1000 E., Cervantes-Barragan, L., Ma, X., Huang, S. C., Griss, T., Weinheimer, C. J., Khader, 1001 S., Randolph, G. J., Pearce, E. J., Jones, R. G., Diwan, A., Diamond, M. S., & Artyomov, 1002 M. N. (2016). Itaconate Links Inhibition of Succinate Dehydrogenase with 1003 Macrophage Metabolic Remodeling and Regulation of Inflammation. Cell Metab ,1004 
+
+24 (1), 158–166. https://doi.org/10.1016/j.cmet.2016.06.004 1005 Lee, A. M., & Nathan, C. F. (2024). Type I interferon exacerbates Mycobacterium tuberculosis 1006 induced human macrophage death. EMBO Rep , 25 (7), 3064–3089. 1007 https://doi.org/10.1038/s44319-024-00171-0 1008 Leonova, K. I., Brodsky, L., Lipchick, B., Pal, M., Novototskaya, L., Chenchik, A. A., Sen, G. 1009 C., Komarova, E. A., & Gudkov, A. V. (2013). p53 cooperates with DNA methylation and 1010 a suicidal interferon response to maintain epigenetic silencing of repeats and 1011 noncoding RNAs. Proc Natl Acad Sci U S A, 110 (1), E89–98. 1012 https://doi.org/10.1073/pnas.1216922110 1013 Li, C., Qian, W., Wei, X., Narasimhan, H., Wu, Y., Arish, M., Cheon, I. S., Tang, J., de Almeida 1014 Santos, G., Li, Y., Sharifi, K., Kern, R., Vassallo, R., & Sun, J. (2024). Comparative 1015 single-cell analysis reveals IFN-gamma as a driver of respiratory sequelae after acute 1016 COVID-19. Sci Transl Med , 16 (756), eadn0136. 1017 https://doi.org/10.1126/scitranslmed.adn0136 1018 Liberzon, A., Birger, C., Thorvaldsdottir, H., Ghandi, M., Mesirov, J. P., & Tamayo, P. (2015). The 1019 Molecular Signatures Database (MSigDB) hallmark gene set collection. Cell Syst ,1020 
+
+1(6), 417–425. https://doi.org/10.1016/j.cels.2015.12.004 1021 Lin, X., Chen, W., Yang, G., Zhang, J., Wang, H., Liu, Z., Xi, Y., Ren, T., Liu, B., & Sui, P. (2024). 1022 Viral infection induces inflammatory signals that coordinate YAP regulation of 1023 dysplastic cells in lung alveoli. J Clin Invest , 134 (19). 1024 https://doi.org/10.1172/JCI176828 1025 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of fold change and 1026 
+
+dispersion for RNA-seq data with DESeq2. Genome Biol , 15 (12), 550. 1027 https://doi.org/10.1186/s13059-014-0550-8 1028 Luo, X. M., & Ross, A. C. (2006). Retinoic acid exerts dual regulatory actions on the 1029 expression and nuclear localization of interferon regulatory factor-1. Exp Biol Med 1030 
+
+(Maywood) , 231 (5), 619–631. https://doi.org/10.1177/153537020623100517 1031 MacMicking, J. D., North, R. J., LaCourse, R., Mudgett, J. S., Shah, S. K., & Nathan, C. F. (1997). 1032 Identification of nitric oxide synthase as a protective locus against tuberculosis. Proc 1033 
+
+Natl Acad Sci U S A , 94 (10), 5243–5248. https://doi.org/10.1073/pnas.94.10.5243 1034 MacNamara, K. C., Jones, M., Martin, O., & Winslow, G. M. (2011). Transient activation of 1035 hematopoietic stem and progenitor cells by IFNgamma during acute bacterial 1036 infection. PLoS One , 6(12), e28669. https://doi.org/10.1371/journal.pone.0028669 1037 Maertzdorf, J., Repsilber, D., Parida, S. K., Stanley, K., Roberts, T., Black, G., Walzl, G., & 1038 Kaufmann, S. H. (2011). Human gene expression profiles of susceptibility and 1039 resistance in tuberculosis. Genes Immun , 12 (1), 15–22. 1040 https://doi.org/10.1038/gene.2010.51 1041 Manca, C., Tsenova, L., Freeman, S., Barczak, A. K., Tovey, M., Murray, P. J., Barry, C., & 1042 Kaplan, G. (2005). Hypervirulent M. tuberculosis W/Beijing strains upregulate type I 1043 IFNs and increase expression of negative regulators of the Jak-Stat pathway. J1044 
+
+Interferon Cytokine Res , 25 (11), 694–701. https://doi.org/10.1089/jir.2005.25.694 1045 Mayer-Barber, K. D., Barber, D. L., Shenderov, K., White, S. D., Wilson, M. S., Cheever, A., 1046 Kugler, D., Hieny, S., Caspar, P., Nunez, G., Schlueter, D., Flavell, R. A., Sutterwala, F. 1047 S., & Sher, A. (2010). Caspase-1 independent IL-1beta production is critical for host 1048 resistance to mycobacterium tuberculosis and does not require TLR signaling in vivo. 1049 
+
+J Immunol , 184 (7), 3326–3330. https://doi.org/10.4049/jimmunol.0904189 1050 McCaNrey, E. F., Delmastro, A. C., Fitzhugh, I., Ranek, J. S., Douglas, S., Peters, J. M., 1051 Fullaway, C. C., Bosse, M., Liu, C. C., Gillen, C., Greenwald, N. F., Anzick, S., Martens, 1052 C., Winfree, S., Bai, Y., Sowers, C., Goldston, M., Kong, A., Boonrat, P.,…Angelo, M. 1053 (2026). The immunometabolic topography of cellular organization and bacterial 1054 control in tuberculosis granulomas. Nat Immunol , 27 (4), 867–880. 1055 https://doi.org/10.1038/s41590-026-02431-8 1056 McCaNrey, E. F., Donato, M., Keren, L., Chen, Z., Delmastro, A., Fitzpatrick, M. B., Gupta, S., 1057 Greenwald, N. F., Baranski, A., Graf, W., Kumar, R., Bosse, M., Fullaway, C. C., 1058 Ramdial, P. K., Forgo, E., Jojic, V., Van Valen, D., Mehra, S., Khader, S. A.,…Angelo, M. 1059 (2022). The immunoregulatory landscape of human tuberculosis granulomas. Nat 1060 
+
+Immunol , 23 (2), 318–329. https://doi.org/10.1038/s41590-021-01121-x 1061 McNab, F. W., Ewbank, J., Howes, A., Moreira-Teixeira, L., Martirosyan, A., Ghilardi, N., 1062 Saraiva, M., & O'Garra, A. (2014). Type I IFN induces IL-10 production in an IL-27-1063 independent manner and blocks responsiveness to IFN-gamma for production of IL-1064 12 and bacterial killing in Mycobacterium tuberculosis-infected macrophages. J1065 
+
+Immunol , 193 (7), 3600–3612. https://doi.org/10.4049/jimmunol.1401088 1066 Moreira-Teixeira, L., Mayer-Barber, K., Sher, A., & O'Garra, A. (2018). Type I interferons in 1067 tuberculosis: Foe and occasionally friend. J Exp Med , 215 (5), 1273–1285. 1068 https://doi.org/10.1084/jem.20180325 1069 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Moreira -Teixeira, L., Sousa, J., McNab, F. W., Torrado, E., Cardoso, F., Machado, H., Castro, 1070 
+
+F., Cardoso, V., Gaifem, J., Wu, X., Appelberg, R., Castro, A. G., O'Garra, A., & Saraiva, 1071 M. (2016). Type I IFN Inhibits Alternative Macrophage Activation during 1072 Mycobacterium tuberculosis Infection and Leads to Enhanced Protection in the 1073 Absence of IFN-gamma Signaling. J Immunol , 197 (12), 4714–4726. 1074 https://doi.org/10.4049/jimmunol.1600584 1075 Moreira-Teixeira, L., Stimpson, P. J., Stavropoulos, E., Hadebe, S., Chakravarty, P., Ioannou, 1076 M., Aramburu, I. V., Herbert, E., Priestnall, S. L., Suarez-Bonnet, A., Sousa, J., 1077 Fonseca, K. L., Wang, Q., Vashakidze, S., Rodriguez-Martinez, P., Vilaplana, C., 1078 Saraiva, M., Papayannopoulos, V., & O'Garra, A. (2020). Type I IFN exacerbates 1079 disease in tuberculosis-susceptible mice by inducing neutrophil-mediated lung 1080 inflammation and NETosis. Nat Commun , 11 (1), 5566. 1081 https://doi.org/10.1038/s41467-020-19412-6 1082 Munson, C. W., & Kaushal, D. (2025). Type I interferons in tuberculosis pathogenesis and 1083 prevention. Trends Microbiol . https://doi.org/10.1016/j.tim.2025.11.003 1084 Nandi, B., & Behar, S. M. (2011). Regulation of neutrophils by interferon-gamma limits lung 1085 inflammation during tuberculosis infection. J Exp Med , 208 (11), 2251–2262. 1086 https://doi.org/10.1084/jem.20110919 1087 Napier, R. J., Rafi, W., Cheruvu, M., Powell, K. R., Zaunbrecher, M. A., Bornmann, W., 1088 Salgame, P., Shinnick, T. M., & Kalman, D. (2011). Imatinib-sensitive tyrosine kinases 1089 regulate mycobacterial pathogenesis and represent therapeutic targets against 1090 tuberculosis. Cell Host Microbe , 10 (5), 475–485. 1091 https://doi.org/10.1016/j.chom.2011.09.010 1092 O'Garra, A., Redford, P. S., McNab, F. W., Bloom, C. I., Wilkinson, R. J., & Berry, M. P. (2013). 1093 The immune response in tuberculosis. Annu Rev Immunol , 31 , 475–527. 1094 https://doi.org/10.1146/annurev-immunol-032712-095939 1095 Pai, M., Behr, M. A., Dowdy, D., Dheda, K., Divangahi, M., Boehme, C. C., Ginsberg, A., 1096 Swaminathan, S., Spigelman, M., Getahun, H., Menzies, D., & Raviglione, M. (2016). 1097 Tuberculosis. Nat Rev Dis Primers , 2, 16076. https://doi.org/10.1038/nrdp.2016.76 1098 Peace, C. G., & O'Neill, L. A. (2022). The role of itaconate in host defense and inflammation. 1099 
+
+J Clin Invest , 132 (2). https://doi.org/10.1172/JCI148548 1100 Pichugin, A. V., Yan, B. S., Sloutsky, A., Kobzik, L., & Kramnik, I. (2009). Dominant role of the 1101 sst1 locus in pathogenesis of necrotizing lung granulomas during chronic 1102 tuberculosis infection and reactivation in genetically resistant hosts. Am J Pathol ,1103 
+
+174 (6), 2190–2201. https://doi.org/10.2353/ajpath.2009.081075 1104 Podell, B. K., Aibana, O., Huang, C. C., DiLisio, J. E., Harris, M. C., Ackart, D. F., Armann, K., 1105 Grover, A., Severe, P., Juste, M. A. J., Dupnik, K., Basaraba, R. J., & Murray, M. B. (2022). 1106 The Impact of Vitamin A Deficiency on Tuberculosis Progression. Clin Infect Dis ,1107 
+
+75 (12), 2178–2185. https://doi.org/10.1093/cid/ciac326 1108 Ravi Sundar Jose Geetha, A., Fischer, K., Babadei, O., Smesnik, G., Vogt, A., Platanitis, E., 1109 Muller, M., Farlik, M., & Decker, T. (2024). Dynamic control of gene expression by 1110 ISGF3 and IRF1 during IFNbeta and IFNgamma signaling. EMBO J , 43 (11), 2233–2263. 1111 https://doi.org/10.1038/s44318-024-00092-7 1112 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Roberts, A. W., Del Cid, L. N., Garelis, N. E., & Cox, J. S. (2025). Genome -wide screen in 1113 
+
+Mycobacterium tuberculosis infected macrophages reveals innate regulation of 1114 antibacterial mediators by IRF2. bioRxiv . https://doi.org/10.1101/2025.09.26.678671 1115 Rosain, J., Kong, X. F., Martinez-Barricarte, R., Oleaga-Quintas, C., Ramirez-Alejo, N., Markle, 1116 J., Okada, S., Boisson-Dupuis, S., Casanova, J. L., & Bustamante, J. (2019). Mendelian 1117 susceptibility to mycobacterial disease: 2014-2018 update. Immunol Cell Biol , 97 (4), 1118 360–367. https://doi.org/10.1111/imcb.12210 1119 Rukhlenko, O. S., Halasz, M., Rauch, N., Zhernovkov, V., Prince, T., Wynne, K., Maher, S., 1120 Kashdan, E., MacLeod, K., Carragher, N. O., Kolch, W., & Kholodenko, B. N. (2022). 1121 Control of cell state transitions. Nature , 609 (7929), 975–985. 1122 https://doi.org/10.1038/s41586-022-05194-y 1123 Russell, D. G., Simwela, N. V., Mattila, J. T., Flynn, J., Mwandumba, H. C., & Pisu, D. (2025). 1124 How macrophage heterogeneity aNects tuberculosis disease and therapy. Nat Rev 1125 
+
+Immunol , 25 (5), 370–384. https://doi.org/10.1038/s41577-024-01124-3 1126 Saqib, M., Das, S., Nafiz, T. N., McDonough, E., Sankar, P., Mishra, L. K., Zhang, X., Cai, Y., 1127 Subbian, S., & Mishra, B. B. (2025). Pathogenic role for CD101-negative neutrophils in 1128 the type I interferon-mediated immunopathogenesis of tuberculosis. Cell Rep , 44 (1), 1129 115072. https://doi.org/10.1016/j.celrep.2024.115072 1130 Sayols, S. (2023). rrvgo: a Bioconductor package for interpreting lists of Gene Ontology 1131 terms. MicroPubl Biol , 2023 . https://doi.org/10.17912/micropub.biology.000811 1132 Scriba, T. J., Penn-Nicholson, A., Shankar, S., Hraha, T., Thompson, E. G., Sterling, D., Nemes, 1133 E., Darboe, F., Suliman, S., Amon, L. M., Mahomed, H., Erasmus, M., Whatney, W., 1134 Johnson, J. L., Boom, W. H., Hatherill, M., Valvo, J., De Groote, M. A., Ochsner, U. 1135 A.,…other members of the, A. C. S. c. s. t. (2017). Sequential inflammatory processes 1136 define human progression from M. tuberculosis infection to tuberculosis disease. 1137 
+
+PLoS Pathog , 13 (11), e1006687. https://doi.org/10.1371/journal.ppat.1006687 1138 Seifert, U., Bialy, L. P., Ebstein, F., Bech-Otschir, D., Voigt, A., Schroter, F., Prozorovski, T., 1139 Lange, N., SteNen, J., Rieger, M., Kuckelkorn, U., Aktas, O., Kloetzel, P. M., & Kruger, E. 1140 (2010). Immunoproteasomes preserve protein homeostasis upon interferon-induced 1141 oxidative stress. Cell , 142 (4), 613–624. https://doi.org/10.1016/j.cell.2010.07.036 1142 Shee, S., Martinez-Martinez, Y. B., Koleske, B., Shaku, M. T., Yabaji, S., Kobzik, L., Kramnik, I., 1143 & Bishai, W. (2026). Elimination of senescent cells with senolytic drugs as adjunctive 1144 host-directed therapy reduces tuberculosis progression in mice. Nat Commun .1145 https://doi.org/10.1038/s41467-026-72874-y 1146 Simonson, A. W., Zeppa, J. J., Bucsan, A. N., Chao, M. C., Pokkali, S., Hopkins, F., Chase, M. 1147 R., Vickers, A. J., Sutton, M. S., Winchell, C. G., Myers, A. J., Ameel, C. L., Kelly, R. J., 1148 Krouse, B., Hood, L. E., Li, J., Lehman, C. C., Kamath, M., Tomko, J.,…Flynn, J. L. 1149 (2025). Intravenous BCG-mediated protection against tuberculosis requires CD4+ T 1150 cells and CD8alpha+ lymphocytes. J Exp Med , 222 (4). 1151 https://doi.org/10.1084/jem.20241571 1152 Subramanian, A., Narayan, R., Corsello, S. M., Peck, D. D., Natoli, T. E., Lu, X., Gould, J., 1153 Davis, J. F., Tubelli, A. A., Asiedu, J. K., Lahr, D. L., Hirschman, J. E., Liu, Z., Donahue, 1154 M., Julian, B., Khan, M., Wadden, D., Smith, I. C., Lam, D.,…Golub, T. R. (2017). A Next 1155 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles. Cell ,1156 
+
+171 (6), 1437–1452 e1417. https://doi.org/10.1016/j.cell.2017.10.049 1157 Tapesh Santra, O. R., Vadim Zhernovkov, Boris N. Kholodenko. (2018). Reconstructing static 1158 and dynamic models of signaling pathways using Modular Response Analysis. 1159 
+
+Current Opinion in Systems Biology , 9, 11–21. 1160 https://doi.org/10.1016/j.coisb.2018.02.003 1161 Teles, R. M., Graeber, T. G., Krutzik, S. R., Montoya, D., Schenk, M., Lee, D. J., Komisopoulou, 1162 E., Kelly-Scumpia, K., Chun, R., Iyer, S. S., Sarno, E. N., Rea, T. H., Hewison, M., 1163 Adams, J. S., Popper, S. J., Relman, D. A., Stenger, S., Bloom, B. R., Cheng, G., & 1164 Modlin, R. L. (2013). Type I interferon suppresses type II interferon-triggered human 1165 anti-mycobacterial responses. Science , 339 (6126), 1448–1453. 1166 https://doi.org/10.1126/science.1233665 1167 Tsyganov, M. A., Kolch, W., & Kholodenko, B. N. (2012). The topology design principles that 1168 determine the spatiotemporal dynamics of G-protein cascades. Mol Biosyst , 8(3), 1169 730–743. https://doi.org/10.1039/c2mb05375f 1170 Vance, R. E. (2025). Tuberculosis as an unconventional interferonopathy. Curr Opin 1171 
+
+Immunol , 92 , 102508. https://doi.org/10.1016/j.coi.2024.102508 1172 Via, L. E., Fratti, R. A., McFalone, M., Pagan-Ramos, E., Deretic, D., & Deretic, V. (1998). 1173 ENects of cytokines on mycobacterial phagosome maturation. J Cell Sci , 111 ( Pt 7) ,1174 897–905. https://doi.org/10.1242/jcs.111.7.897 1175 WHO. (2024). The WHO Global tuberculosis report .1176 https://doi.org/https://worldhealthorg.shinyapps.io/TBrief/?_inputs_&sidebarItemE 1177 xpanded=null&sidebarCollapsed=true&iso3=%22AFG%22&entity_type=%22group 1178 %22 1179 Wiens, K. E., & Ernst, J. D. (2016). Type I Interferon is Pathogenic During Chronic 1180 Mycobacterium africanum Infection. J Infect Dis , 214 (12), 1893–1896. 1181 https://doi.org/10.1093/infdis/jiw519 1182 Witt, K. C., Dziulko, A., An, J., Pekovic, F., Cheng, A. X., Liu, G. Y., Lee, O. V., Turner, D. J., Lari, 1183 A., Gaidt, M. M., Chavez, R., Fattinger, S. A., Abraham, P., Dhaliwal, H., Lee, A. Y., 1184 Kotov, D. I., Coscoy, L., Glaunsinger, B. A., Valkov, E.,…Vance, R. E. (2025). SP140-1185 RESIST pathway regulates interferon mRNA stability and antiviral immunity. Nature ,1186 
+
+643 (8074), 1372–1380. https://doi.org/10.1038/s41586-025-09152-2 1187 Xie, X., Zhang, W., Zhou, X., Ye, Z., Wang, H., Qiu, Y., Pan, Y., Hu, Y., Li, L., Chen, Z., Yang, W., 1188 Lu, Y., Zou, S., Li, Y., & Bai, X. (2023). Abemaciclib drives the therapeutic 1189 diNerentiation of acute myeloid leukaemia stem cells. Br J Haematol , 201 (5), 940– 1190 953. https://doi.org/10.1111/bjh.18735 1191 Yabaji, S. M., Chatterjee, S., Waligursky, E., Gimelbrant, A., & Kramnik, I. (2022). Medium 1192 throughput protocol for genome-based quantification of intracellular mycobacterial 1193 loads and macrophage survival during in vitro infection. STAR Protoc , 3(2), 101241. 1194 https://doi.org/10.1016/j.xpro.2022.101241 1195 Yabaji, S. M., Lata, S., Gavrish, I., Lo, M., O'Connell, A. K., Gertje, H. P., Thurman, C. E., 1196 Crossland, N. A., Kobzik, L., & Kramnik, I. (2025). Protocol for developing a mouse 1197 model of post-primary pulmonary tuberculosis after hematogenous spread in native 1198 
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint
+
+lungs and lung implants. STAR Protoc , 6(3), 103984. 1199 
+
+https://doi.org/10.1016/j.xpro.2025.103984 1200 Yabaji, S. M., Lata, S., Tseng, A. E., Araveti, P. B., Lo, M., Gavrish, I., O'Connell, A. K., Gertje, 1201 H. P., Belkina, A. C., Thurman, C. E., Kiyokawa, H., Kotton, D., Tan, S., Endsley, J. J., 1202 Bishai, W. R., Crossland, N., Kobzik, L., & Kramnik, I. (2025). Dysplastic lung repair 1203 fosters a tuberculosis-promoting microenvironment through maladaptive 1204 macrophage polarization. PLoS Pathog , 21 (10), e1013563. 1205 https://doi.org/10.1371/journal.ppat.1013563 1206 Yabaji, S. M., Rukhlenko, O. S., Chatterjee, S., Bhattacharya, B., Wood, E., Kasaikina, M., 1207 Kholodenko, B. N., Gimelbrant, A. A., & Kramnik, I. (2023). Cell state transition 1208 analysis identifies interventions that improve control of Mycobacterium tuberculosis 1209 infection by susceptible macrophages. Sci Adv , 9(39), eadh4119. 1210 https://doi.org/10.1126/sciadv.adh4119 1211 Yabaji, S. M., Zhernovkov, V., Araveti, P. B., Lata, S., Rukhlenko, O. S., Abdullatif, S. A., 1212 Vanvalkenburg, A., Alekseyev, Y. O., Ma, Q., Dayama, G., Lau, N. C., Johnson, W. E., 1213 Bishai, W. R., Crossland, N. A., Campbell, J. D., Kholodenko, B. N., Gimelbrant, A. A., 1214 Kobzik, L., & Kramnik, I. (2025). Lipid peroxidation and type I interferon coupling fuels 1215 pathogenic macrophage activation causing tuberculosis susceptibility. eLife , 14 ,1216 RP106814. https://doi.org/10.7554/eLife.106814 1217 Yan, B. S., Pichugin, A. V., Jobe, O., Helming, L., Eruslanov, E. B., Gutierrez-Pabello, J. A., 1218 Rojas, M., Shebzukhov, Y. V., Kobzik, L., & Kramnik, I. (2007). Progression of pulmonary 1219 tuberculosis and eNiciency of bacillus Calmette-Guerin vaccination are genetically 1220 controlled via a common sst1-mediated mechanism of innate immunity. J Immunol ,1221 
+
+179 (10), 6919–6932. https://doi.org/10.4049/jimmunol.179.10.6919 1222 Zhao, Y., Oreskovic, E., Zhang, Q., Lu, Q., Gilman, A., Lin, Y. S., He, J., Zheng, Z., Lu, J. Y., Lee, 1223 J., Ke, Z., Ablaeva, J., Sweet, M. J., Horvath, S., Zhang, Z., Nevo, E., Seluanov, A., & 1224 Gorbunova, V. (2021). Transposon-triggered innate immune response confers cancer 1225 resistance to the blind mole rat. Nat Immunol , 22 (10), 1219–1230. 1226 https://doi.org/10.1038/s41590-021-01027-8 1227 Zheng, W., Limberis, J. D., Howard, Z. P., Mohapatra, A., Takagi, E., & Ernst, J. D. (2025). 1228 Impaired IFNγ responsiveness of lung monocyte-derived cells limits immunity to 1229 &lt;em&gt;Mycobacterium tuberculosis&lt;/em&gt. bioRxiv ,1230 2025.2010.2006.680719. https://doi.org/10.1101/2025.10.06.680719 1231 
+
+1232 
+
+1233 
+
+1234     
+
+> .CC-BY-NC 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 7, 2026. ;https://doi.org/10.64898/2026.07.01.735930 doi: bioRxiv preprint A. B. D. C. E. F. G. H.
+
+Figure 1: Susceptible B6.Sst1S macrophages undergo a persistent pathological activation state (pPAS) during TNF stimulation. Figure 1: Susceptible B6.Sst1S macrophages undergo a persistent pathological activation state (pPAS) during TNF stimulation. 
+
+A. Schematic of the experimental workflow. BMDMs from B6 and B6.Sst1S mice were stimulated with 10 ng/mL TNF for 24 h. Cells were either harvested immediately or cultured for an additional 16 h in fresh medium containing either TNF (TNF restimulation) or no TNF (TNF withdrawal) before harvest at 40 h after the initial stimulation. B. Persistent accumulation of ROS and 4-HNE adducts in B6.Sst1S BMDMs. BMDMs from B6 and B6.Sst1S mice were treated as described in panel A. Intracellular ROS levels (left panel) and accumulation of 4-HNE adducts (right panel) were subsequently assessed. ROS accumulation was detected using CellROX Green staining, and fluorescence images were acquired by fluorescence microscopy. Accumulation of the lipid peroxidation product 4-HNE was detected by confocal microscopy using a 4-HNE-specific antibody. Scale bar: 20 μm. C. IFN-I signaling remains persistently super-induced in B6.Sst1S BMDMs following TNF withdrawal. BMDMs from B6 and B6.Sst1S mice were treated as described in panel A. The mRNA expression levels of Ifnb1 were quantified by qRT-PCR at 24 and 40 h post stimulation. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. D. Lipid biosynthesis genes remain downregulated in B6.Sst1S BMDMs following TNF withdrawal. BMDMs from B6 and B6.Sst1S mice were treated as described in panel A. The mRNA expression levels of Srebf2, Scd2 , and Dhcr24 
+
+were quantified by qRT-PCR at 40 h post TNF stimulation. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. E. B6.Sst1S BMDMs fail to respond to IFNγ during the pPAS state. B6.Sst1S BMDMs were stimulated with TNF for 18 h. After 18 h of TNF stimulation, IFNγ ( 5 U/mL) was added to the culture media, and cells were harvested at 40 h. The mRNA expression levels of Ciita was quantified by qRT-PCR. Fold change was calculated relative to the unstimulated control using the ΔΔCt method with 18S as an internal control. F. TNF restimulation during pPAS further enhances IFN-I signaling in B6.Sst1S BMDMs. BMDMs derived from B6 and B6.Sst1S mice were stimulated with TNF as described in panel A, including TNF restimulation at 24 h. Cells were harvested at 40 h, and Ifnb1 mRNA expression levels were quantified by qRT-PCR. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. G. TNF restimulation sustains elevated ROS levels and further increases 4-HNE adduct accumulation in B6.Sst1S BMDMs. BMDMs derived from B6 and B6.Sst1S mice were treated as described in panel A, including TNF restimulation at 24 h. Intracellular ROS levels were assessed using CellROX Green staining, and fluorescence images were acquired by fluorescence microscopy (left panel). Accumulation of 4-HNE adducts was detected by confocal microscopy using a 4-HNE-specific antibody (right panel). Scale bar: 20 μm. H. Lipid biosynthesis genes remain suppressed in B6.Sst1S BMDMs during TNF restimulation. BMDMs derived from B6 and B6.Sst1S mice were treated as described in panel A, including TNF restimulation at 24 h. The mRNA expression levels of Srebf2 were quantified by qRT-PCR at 40 h. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. The data are presented as mean ± standard deviation (SD) from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by two-way ANOVA with Tukey's multiple comparisons test (Panel D and E) and Sidak’s multiple comparison test (Panel F and H) ), and one-way ANOVA with Tukey's multiple comparisons test (Panel C) Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Figure 1-figure supplement 1:       
+
+> A. B. C. D. E. F. G. H. I. J.
+
+Figure 1-figure supplement 1: 
+
+A. ROS levels remain elevated in B6.Sst1S BMDMs following TNF withdrawal. BMDMs derived from B6 and B6.Sst1S mice were treated as described in Figure 1A. Accumulation of ROS was detected using CellROX Green staining, and fluorescence images were acquired by fluorescence microscopy. Bar graphs show the fold change in fluorescence intensity relative to unstimulated B6 controls. B. Accumulation of 4-HNE adducts persists in B6.Sst1S BMDMs following TNF withdrawal. BMDMs from B6 and B6.Sst1S mice were treated as described in Figure 1A. The accumulation of lipid peroxidation product, 4-HNE was detected by confocal microscopy using 4-HNE specific antibody. The 4-HNE accumulation was quantified using ImageJ and plotted as fold accumulation compared to untreated B6 group. C. IFN-I signaling remains persistently super-induced in B6.Sst1S BMDMs following TNF withdrawal. BMDMs from B6 and B6.Sst1S mice were treated as described in Figure 1A. The mRNA expression levels of Rsad2 were quantified by qRT-PCR at 24 and 40 h post TNF stimulation. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. D. Lipid biosynthesis genes are downregulated in B6.Sst1S BMDMs during TNF stimulation. Heatmap showing the average fold change in FPKM values from RNA-seq analysis of B6 and B6.Sst1S BMDMs following 12 h TNF stimulation. Fold change was calculated relative to unstimulated controls. E. Lipid biosynthesis genes remain downregulated in B6.Sst1S BMDMs following TNF stimulation. BMDMs from B6 and B6.Sst1S mice were treated with 10 ng/mL TNF for 24 h. The mRNA expression levels of Srebf2, Scd2, and Dhcr24 were quantified by qRT-PCR. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S rRNA as an internal control. F. TNF restimulation further enhances IFN-I signaling in B6.Sst1S BMDMs. BMDMs from B6 and B6.Sst1S mice were treated as described in Figure 1A, including TNF restimulation at 24 h. Cells were harvested at 40 h, and Rsad2 mRNA expression levels were quantified by qRT-PCR. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. G. TNF restimulation during pPAS sustains elevated ROS levels in B6.Sst1S BMDMs. BMDMs from B6 and B6.Sst1S mice were treated as described in Figure 1A, including TNF restimulation at 24 h for additional 16 h. Accumulation of ROS was detected using CellROX Green staining, and fluorescence images were acquired by fluorescence microscopy. Bar graphs show the fold change in fluorescence intensity relative to unstimulated B6 controls. H. TNF restimulation during pPAS further increases 4-HNE adduct accumulation in B6.Sst1S BMDMs. BMDMs derived from B6 and B6.Sst1S mice were treated as described in Figure 1A, including TNF restimulation at 24 h for additional 16 h. The accumulation of lipid peroxidation product, 4-HNE was detected by confocal microscopy using 4-HNE specific antibody. The 4-HNE accumulation was quantified using ImageJ and plotted as fold accumulation compared to untreated B6 group. I. Lipid biosynthesis genes remain suppressed in B6.Sst1S BMDMs during TNF restimulation. BMDMs derived from B6 and B6.Sst1S mice were treated as described in Figure 1A, including TNF restimulation at 24 h for additional 16 h. Cells were harvested at 40 h, and the mRNA expression levels of Scd2 and Dhcr24 were quantified by qRT-PCR. Fold change was calculated relative to the unstimulated B6 control using the ΔΔCt method with 18S as an internal control. J. Sustained lipid peroxidation in B6.Sst1S BMDMs is independent of continued TNF signaling. B6.Sst1S BMDMs were stimulated with 10 ng/mL TNF for 24 h. Following the 24 h TNF stimulation, cells were treated with either isotype control antibodies or anti-TNFR antibodies and harvested at 36 h. The accumulation of lipid peroxidation product, 4-HNE was detected by confocal microscopy using 4-HNE specific antibody. The 4-HNE accumulation was quantified using ImageJ and plotted as fold accumulation compared to untreated group. Scale bar: 20 μm. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by two-way ANOVA with Tukey's multiple comparisons test (Panel A, B, C, and E), Sidak’s multiple comparison test (Panel F, G, H, and I), and one-way ANOVA with Tukey's multiple comparisons test (Panel J). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Figure 2: IFN-I autocrine signaling sustains pathological macrophage activation in TNF-independent manner.      
+
+> A. B. C. D. E.
+> H.
+> F. G. I. J.
+
+Figure 2: IFN-I autocrine signaling sustains pathological macrophage activation in TNF-independent manner. 
+
+A. Schematic of the experimental workflow. BMDMs from B6 and B6.Sst1S mice were stimulated with 10 ng/mL TNF for 24 h. Cells were either harvested immediately or cultured for an additional 16 h following replacement with fresh medium containing either TNF (TNF restimulation) or no TNF (TNF withdrawal). Where indicated, cells additionally received isotype control antibodies or anti-IFNAR antibodies (5 μg/mL) at the time of media replacement. Cells were harvested at 40 h after the initial TNF stimulation. B. IFN-I signaling suppresses IFNγ responsiveness in B6.Sst1S BMDMs during the pPAS state. B6.Sst1S BMDMs were stimulated with TNF for 18 h, followed by addition of IFNγ (5 U/mL) in the presence of either isotype control antibodies or anti-IFNAR antibodies, where indicated. Cells were harvested at 40 h after the initial TNF stimulation, and Ciita mRNA expression was quantified by qRT-PCR. Gene expression was normalized to 18S and expressed relative to unstimulated controls using the ΔΔCt method. C. IFN-I sustains the 4-HNE adducts accumulation in B6.Sst1S BMDMs during pPAS. BMDMs from B6.Sst1S mice were treated as described in A. The accumulation of lipid peroxidation product, 4-HNE was detected by confocal microscopy using 4-HNE specific antibody. Scale bar- 20 𝜇 m. D. IFN-I signaling initiates and sustains lipid peroxidation product synthesis in B6.Sst1S BMDMs during TNF stimulation. B6.Sst1S BMDMs were stimulated with TNF, and either isotype control antibodies or anti-IFNAR antibodies were added at 2 h or 12 h after TNF stimulation. Cells receiving antibody treatment at 2 h were harvested at 12 h following TNF stimulation (top panel), whereas cells receiving antibody treatment at 12 h were harvested at 24 h following TNF stimulation (bottom panel). Lipid peroxidation product synthesis was assessed by LA alkyne staining. Representative fluorescence images are shown. Scale bar, 20 μm. E. IFNβ induces lipid peroxidation product synthesis independently of the sst1 locus. BMDMs from B6 and B6.Sst1S mice were treated with IFNβ (300 U/mL) for 12 h, followed by assessment of lipid peroxidation product synthesis by LA alkyne staining. Representative fluorescence images are shown. Scale bar, 20 μm. F. IFNβ induces 4-HNE adduct accumulation independently of the sst1 locus. BMDMs from B6 and B6.Sst1S mice were treated with IFNβ (300 U/mL) for 24 h, followed by immunofluorescence staining for 4-HNE adducts using 4-HNE specific antibodies. Representative confocal images are shown. Scale bar, 20 μm. G. Direct 4-octyl itaconate treatment induces 4-HNE adduct accumulation in B6.Sst1S BMDMs. B6.Sst1S BMDMs were treated with 4-octyl itaconate (4-OI) (5 𝜇 M) for 24 h, followed by immunofluorescence staining for 4-HNE adducts using 4-HNE specific antibodies. Representative confocal images are shown. Scale bar, 20 μm. H. IFNβ does not alter the labile iron pool in B6.Sst1S BMDMs. B6.Sst1S BMDMs were treated with TNF (10 ng/mL) or IFNβ (300 U/mL) for 24 h and the cells were stained with FerroOrange to assess intracellular labile iron levels. Representative fluorescence images are shown. Fluorescence intensity was quantified and expressed as fold change relative to untreated controls. Scale bar, 20 μm. I. IFN-I signaling does not regulate iron metabolism during TNF stimulation in B6.Sst1S BMDMs. B6.Sst1S BMDMs were stimulated with TNF (10 ng/mL), followed by addition of either isotype control antibodies or anti-IFNAR antibodies at 2 h post stimulation. Cells were stained with FerroOrange at 24 h to assess intracellular labile iron levels. Fluorescence intensity was quantified and expressed as fold change relative to isotype control antibody-treated samples. J. IFN-I signaling suppresses lipid biosynthesis gene expression during the pPAS state. B6.Sst1S BMDMs were treated as described in panel A under the TNF withdrawal condition. Cells were harvested at 40 h after the initial TNF stimulation, and expression of Srebf2, Scd2, and Dhcr24 was quantified by qRT-PCR. Gene expression was normalized to 18S and expressed relative to unstimulated controls using the ΔΔCt method. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by two-way ANOVA with Tukey's multiple comparisons test (Panel J), and one-way ANOVA with Tukey's multiple comparisons test (Panel B, H, and I). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Figure 2-figure supplement 1:    
+
+> A. B. C. D. E.
+> F. G.
+
+Figure 2-figure supplement 1: 
+
+A. IFN-I sustains the 4-HNE adducts accumulation in B6.Sst1S BMDMs during pPAS. Bar graphs showing the fold change in fluorescence compared to the unstimulated samples. N=3. B and C. IFN-I initiates and maintains lipid peroxidation product synthesis in B6.Sst1S BMDMs during TNF stimulation. B6.Sst1S BMDMs were stimulated with TNF. Either at 2 h or 12 h, isotype control or anti-IFNAR antibodies were added to the culture, and the LA alkyne staining was carried out at either 12 h (B) or 24 h (C), respectively. Bar graphs showing the fold change in fluorescence compared to the respective untreated samples. N=3. D. Direct 4-Octyl itaconate treatment leads to 4-HNE adducts accumulation. B6.Sst1S BMDMs were treated with 4-OI for 24 h and the cells were immuno-stained for 4-HNE adducts. Bar graphs showing the fold change in fluorescence compared to the untreated samples. n=3. E. IFN-I downregulates the lipid biosynthesis gene expression during pPAS. Cells were harvested at 40 h for TNF restimulation condition and the mRNA levels of Srebf2 , Scd2 , and Dhcr24 were quantified by RT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method using 18S as endogenous control. F and G. IFN-I do not regulate ROS during the pPAS. Confocal images showing the ROS during TNF withdrawal (F) or TNF restimulation (G) upon blocking IFN-I signaling. Scale bar- 20 𝜇 m. Bar graphs showing the fold change in fluorescence compared to the unstimulated samples. n=3. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by two-way ANOVA with Tukey's multiple comparisons test (Panel A, E, F, and G), and one-way ANOVA with Tukey's multiple comparisons test (Panel B and C). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). A. B. D. E. F. G. 
+
+Figure 3: IFN 𝛾 priming prevents pPAS by limiting intracellular iron availability.     
+
+> L. I. J. H.
+> M. N. O. P.
+> C.
+> K.
+
+Figure 3: IFN 𝛾 priming prevents pPAS. 
+
+A. IFNγ controls intracellular Mtb growth in both B6 and B6.Sst1S BMDMs following TNF stimulation. BMDMs were stimulated with TNF (10 ng/mL) in the presence or absence of IFNγ (5 U/mL). The following day, cells were infected with Mtb Erdman reporter strain (SSB-GFP, smyc’::mCherry) at MOI = 1 and cultured for 5 days. On day 5 post-infection, intracellular Mtb load was quantified by qRT-PCR-based method. B. IFNγ priming attenuates TNF-induced oxidative stress and lipid peroxidation in B6.Sst1S BMDMs. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by TNF (10 ng/mL) stimulation for 36 h (24 h for LA alkyne). ROS levels were assessed using CellROX Green staining and quantified by fluorescence microscopy (top panel). Accumulation of 4-HNE adducts was evaluated by confocal microscopy using a 4-HNE-specific antibody (middle panel). Lipid peroxidation product synthesis was assessed by LA alkyne staining, with images acquired by confocal microscopy (bottom panel). Representative images are shown. Scale bar, 20 μm. C-D. IFN 𝛾 priming prevents IFN-I super-induction and integrated stress response during TNF stimulation. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by TNF (10 ng/mL) stimulation for 24 h. The mRNA levels of 
+
+Ifnb1 and Rsad2 (Panel C) and Trib3 and Chac1 (Panel D) were quantified by qRT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method using 18S as an internal control. E. IFN-I maintains Acod1 overexpression during TNF stimulation in B6.Sst1S BMDMs. B6.Sst1S BMDMS were treated with TNF (10 ng/mL) for 40 h and the mRNA levels of Acod1 was quantified by qRT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method using 18S as an internal control. Isotype control or anti-IFNAR antibodies were added to the culture at 2 h after TNF stimulation. F. IFNγ priming prevents Acod1 overexpression during TNF stimulation. B6.Sst1S BMDMs were either primed with IFNγ (5 U/mL) for 16 h or left unprimed, followed by treatment with TNF (10 ng/mL) for an additional 24 h. The Acod1 mRNA expression was quantified by qRT-PCR and presented as fold change. Gene expression was normalized to 18S and expressed compared to unstimulated controls using the ΔΔCt method. G. IFN 𝛾 priming prevents 4-OI induced 4-HNE adducts accumulation. B6.Sst1S BMDMs were either primed with IFNγ (5 U/mL) for 16 h or left unprimed, followed by treatment with 4-octyl itaconate (4-OI; 5 𝜇 M) for an additional 36 h. 4-HNE adducts accumulation was observed by confocal microscopy using 4-HNE specific antibody. Scale bar- 20 𝜇 m. H. IFN 𝛾 priming do not restore lipid biosynthesis gene expression during TNF stimulation. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by TNF (10 ng/mL) stimulation for an additional 24 h. The mRNA levels of Srebf2 
+
+and Scd2 were quantified by qRT-PCR and presented as fold change. Gene expression was normalized to 18S and expressed compared to unstimulated controls using the ΔΔCt method. I. The PCA plot showing the combination of IFN 𝛾 and TNF leads to a distinct transcriptomic profile compared to the individual counterparts with least variation between B6 and B6.Sst1S macrophages. B6 and B6.Sst1S BMDMs were treated individually with IFN 𝛾 (5 U/mL) or TNF (10 ng/mL) or in combination for 12 h. Cells were harvested, and transcriptome was analyzed by RNA-seq. J. The combination of IFN 𝛾 and TNF causes similar transcriptomic profile in B6 and B6.Sst1S macrophages. The differential gene expression analysis showing the significantly upregulated and downregulated genes were common in B6 and B6.Sst1S macrophages when treated in combination of IFN 𝛾 and TNF compared to TNF alone. The differentially expressed genes with adjusted p-value < 0.05 and absolute fold change >1.5 were considered. K. The type II interferon response, glucose catabolic processes were upregulated, and cell cycle related processes were downregulated in both B6 and B6.Sst1S macrophages upon stimulation in combination of IFN 𝛾 and TNF compared to TNF alone. The gene set enrichment analysis based on biological processes comparing the IFN 𝛾 and TNF combination treatment to TNF alone in B6 and B6.Sst1S macrophages. The significant enriched pathways were defined with adjusted p-value < 0.05. L. The single sample gene set enrichment analysis showing downregulation of genes involved in pro-ferroptosis, cholesterol biosynthesis, lipid metabolism, cell cycle and upregulation of genes involved in Hif1a pathway, glycolysis when treated with both IFN 𝛾 and TNF in B6 and B6.Sst1S macrophages independent of sst1. M. IFN 𝛾 priming enhances ferritins heavy chain and ferritin light chain expression independent of sst1. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by TNF (10 ng/mL) stimulation for 24 h. and Fth1 and Ftl1 protein levels were quantified by Western immunoblotting. 𝛽 -tubulin was used as loading control. Average densitometric values from two independent experiments were included above the blot. N. IFN 𝛾 priming suppresses labile iron pool during TNF stimulation. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by TNF (10 ng/mL) stimulation for 24. After 24 h the cells were stained with FerroOrange and fluorescence intensities were quantified. Bar graphs showing the fold change in fluorescence intensities compared to the untreated samples. (n=4). O. IFN 𝛾 priming enhances Hif1a protein levels in B6.Sst1S BMDMs. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by TNF (10 ng/mL) stimulation for 24 h and HIF1 𝛼 protein levels were quantified by Western immunoblotting. 
+
+𝛽 -tubulin was used as loading control. Average densitometric values from two independent experiments were included above the blot. P. The iron metabolism regulated by IFN 𝛾 priming enhances Hif-1 𝛼 protein levels during TNF stimulation in B6.Sst1S BMDMs. B6.Sst1S BMDMs were primed with IFNγ (5 U/mL) for 16 h, followed by stimulation with TNF (10 ng/mL) alone or in presence of either FeSO 4 or deferiprone (DFP) for 24 h. Hif1a protein levels were quantified by Western immunoblotting. 
+
+𝛽 -tubulin was used as loading control. Average densitometric values from two independent experiments were included above the blot. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by two-way ANOVA with Tukey's multiple comparisons test (Panel A), and one-way ANOVA with Tukey's multiple comparisons test (Panel C, D, E, F,H, and N). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Figure 3-figure supplement 1:    
+
+> A. B. C. D. E.
+
+Figure 3-figure supplement 1: 
+
+A. Experimental workflow. B6.Sst1S BMDMs were primed with IFN 𝛾 12 h prior TNF stimulation. Cells were harvested either at 24 h or 36 h to understand the role of IFN 𝛾 on the IFN-I maintained pathological activation state. B. IFN 𝛾 priming reduces ROS levels during TNF stimulation. Upon IFN 𝛾 priming followed by TNF stimulation, B6.Sst1S BMDMs were stained with CellROX Green at 36 h. Bar graphs showing the fold change in fluorescence compared to the untreated samples. N=3. IFN 𝛾 priming prevents 4-HNE adducts accumulation during TNF stimulation. Upon IFN 𝛾 
+
+priming followed by TNF stimulation, B6.Sst1S BMDMs were immuno-stained for 4-HNE adducts at 36 h. Bar graphs showing the fold change in fluorescence compared to the untreated samples. N=3. IFN 𝛾 priming prevents lipid peroxidation product synthesis during TNF stimulation. Upon IFN 𝛾 priming followed by TNF stimulation, B6.Sst1S BMDMs were stained for LA alkyne at 24 h. Bar graphs showing the fold change in fluorescence compared to the untreated samples. n=3. C. IFN 𝛾 priming prevents 4-OI induced 4-HNE adducts accumulation. B6.Sst1S BMDMs were treated with 4-OI with or without IFN 𝛾 priming. Cells were immuno-stained for 4-HNE adducts at 36 h. Bar graphs showing the fold change in fluorescence compared to the untreated samples. n=3. D. IFN 𝛾 priming do not restore lipid biosynthesis gene expression during TNF stimulation. Upon IFN 𝛾 priming followed by TNF stimulation, B6.Sst1S BMDMs were harvested at 24 h and the mRNA levels of Dhcr24 were quantified by RT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method using 18S as endogenous control. E. IFN 𝛾 priming do not enhance GPX4 expression. Upon IFN 𝛾 priming followed by TNF stimulation, B6.Sst1S BMDMs were harvested at 24 h GPX4 protein levels were quantified. Western blot images showing GPX4 protein expression considering 𝛽 -tubulin as loading control. The average fold change in expression was mentioned compared to the untreated sample, normalized with 𝛽 -tubulin levels. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by one-way ANOVA with Tukey's multiple comparisons test (Panel B, C, and D). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). A. B. C. D. F. E. H. G.    
+
+> K. J. I. L. M. N. O. P. Q.
+
+Figure 4: IFN 𝛾 mimetics prevents pPAS. 
+
+Susceptible states Resistant states 
+
+> TB resistance increases
+
+Figure 4: IFN 𝛾 mimetics prevents pPAS. 
+
+A. The PCA plot illustrating qualitative separation between TB-resistant and TB-sensitive states. Each dots shows average of 3 biological replicates, presented individually at Figure 2I. B. Comparison of DPD_TB scores of macrophage resistance towards Mtb (DPD_TB) calculated for B6.Sst1S (red) and B6 (blue) macrophages treated with TNF (10 ng/mL), IFN 𝛾 (5 U/mL) and their combination for 12 hours. The DPD scores were computed using the changes in macrophage transcriptomics patterns. Higher DPD_TB scores indicate the greater the Mtb resistance. C. cSTAR network predicted responses of the DPD_TB phenotypic score to activation of core network modules. The responses of the DPD_TB score were calculated using the inferred influences of the core network pathways depicted in (C). Negative values represent decreases in macrophage resistance to Mtb, positive values indicate enhanced Mtb resistance following an increase in each core pathway activity. D. Schematic of the experimental workflow. B6.Sst1S BMDMs were pretreated with CDK4/6 inhibitor, trilaciclib (3 𝜇 M) for 12 h followed by TNF (10 ng/mL) stimulation for 24 h or 36 h. E. Trilaciclib pretreatment prevents IFN-I super-induction during TNF stimulation. B6.Sst1S BMDMs were pretreated with trilaciclib (3 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. The mRNA levels of Ifnb1 and Rsad2 were quantified by qRT-PCR. The fold change was calculated by normalizing with the untreated control using ∆∆Ct method. 18S was used an an internal control. F. Trilaciclib pretreatment reduces ROS accumulation and lipid peroxidation during TNF stimulation. B6.Sst1S BMDMs were pretreated with trilaciclib (3 𝜇 M) for 12 h, followed by TNF (10 ng/ml) stimulation for an additional 36 h (24 h for LA alkyne staining). Separate control groups were treated with either TNF alone or trilaciclib alone. Intracellular ROS levels were assessed using CellROX Green staining and quantified by fluorescence microscopy (top panel). Accumulation of 4-HNE adducts was evaluated by confocal microscopy using a 4-HNE-specific antibody (middle panel). Lipid peroxidation product synthesis was assessed by LA alkyne staining, and images were acquired by confocal microscopy (bottom panel). Representative images are shown. Scale bar: 20 μm. Bar graphs show the fold change in fluorescence intensity relative to untreated controls. Data represent mean ± SEM from three independent experiments (n=3). G. Trilaciclib pretreatment enhances ferritins heavy chain and ferritin light chain expression during TNF stimulation. B6.Sst1S BMDMs were pretreated with trilaciclib for 12 h followed by TNF stimulation for additional 24 h. Fth1 and Ftl1 protein levels were measured by western immunoblotting. Average densitometric values from two independent experiments were included above the blot. 𝛽 -tubulin was used as loading control. H. Trilaciclib pretreatment suppresses labile iron pool during TNF stimulation. B6.Sst1S BMDMs were pretreated with trilaciclib (3 𝜇 M) for 12 h followed by TNF (10 ng/mL) stimulation for additional 24 h. Cells were stained with FerroOrange, and fluorescence intensities were quantified by florescence microscopy. Bar graphs showing the fold change in fluorescence intensities compared to the untreated samples. (n=5). I. Trilaciclib pretreatment enhances Hif1a protein levels in B6.Sst1S BMDMs. B6.Sst1S BMDMs were pretreated with trilaciclib (3 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. Hif1a protein level was measured by Western immunoblotting. Average densitometric values from two independent experiments were included above the blot. 𝛽 -tubulin was used as loading control. J. Trilaciclib pretreatment enhances lipid biosynthesis gene expression during TNF stimulation. B6.Sst1S BMDMs were pretreated with trilaciclib (3 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. The mRNA levels of Srebf2 ,
+
+Scd2 , and Dhcr24 were quantified by qRT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method. 18S was used as an internal control. K. Schematic of the experimental workflow. B6.Sst1S BMDMs were pretreated with All trans Retinoic acid (ATRA) (2 
+
+𝜇 M) for 12 h followed by TNF (10 ng/mL) stimulation for 24 h or 36 h. L. ATRA pretreatment show minimal effect ROS levels during TNF stimulation. B6.Sst1S BMDMs were pretreated with ATRA (2 𝜇 M) for 12 h, followed by TNF (10 ng/ml) stimulation for an additional 36 h. Separate control groups were treated with either TNF alone or ATRA alone. Intracellular ROS levels were assessed using CellROX Green staining and quantified by fluorescence microscopy (top panel). Accumulation of 4-HNE adducts was evaluated by confocal microscopy using a 4-HNE-specific antibody (bottom panel). Scale bar: 20 μm. Bar graphs show the fold change in fluorescence intensity relative to untreated controls. Data represent mean ± SEM from three independent experiments (n=3). M. ATRA pretreatment controls IFN-I super-induction during TNF stimulation. B6.Sst1S BMDMs were pretreated with ATRA (2 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. The mRNA levels of Ifnb1 and Rsad2 were quantified by qRT-PCR. The fold change was calculated by normalizing with the untreated control using ∆∆Ct method. 18S was used an an internal control. N. ATRA pretreatment reduces labile iron pool during TNF stimulation. B6.Sst1S BMDMs were pretreated with ATRA (2 
+
+𝜇 M) for 12 h followed by TNF (10 ng/mL) stimulation for additional 24 h. Cells were stained with FerroOrange, and fluorescence intensities were quantified by florescence microscopy. Bar graphs showing the fold change in fluorescence intensities compared to the untreated samples. (n=5). O. ATRA pretreatment enhances ferritins heavy chain and ferritin light chain expression during TNF stimulation. B6.Sst1S BMDMs were pretreated with ATRA (2 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. Fth1 and Ftl1 protein levels were measured by western immunoblotting. Average densitometric values from two independent experiments were included above the blot. 𝛽 -tubulin was used as loading control. P. ATRA pretreatment enhances GPX4 protein expression in B6.Sst1S BMDMs. B6.Sst1S BMDMs were pretreated with ATRA (2 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. GPX4 protein levels was measured by Western immunoblotting. Average densitometric values from two independent experiments were included above the blot. 𝛽 -tubulin was used as loading control. Q. ATRA pretreatment enhances lipid biosynthesis gene expression during TNF stimulation. B6.Sst1S BMDMs were pretreated with ATRA (2 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. The mRNA levels of Srebf2 ,
+
+Scd2 , and Dhcr24 were quantified by qRT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method. 18S was used as an internal control. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed one-way ANOVA with Tukey's multiple comparisons test (Panel E, F, H, J, L, M, N, and Q). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Figure 4-figure supplement 1:   
+
+> A. B. C.
+
+Figure 4-figure supplement 1: 
+
+A. Palbociclib pretreatment partially prevents IFN-I super-induction during TNF stimulation. B6.Sst1S BMDMs were pretreated with palbociclib (3 𝜇 M) for 12 h then with TNF. After 24 h of TNF stimulation, cells were harvested and the mRNA levels of Ifnb1 and Rsad2 were quantified by RT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method using 18S as endogenous control. B. Trilaciclib pretreatment enhances Hi1f1a during TNF stimulation. B6.Sst1S BMDMs were pretreated with trilaciclib (3 
+
+𝜇 M) for 12 h then with TNF. After 24 h of TNF stimulation, cells were harvested and the mRNA levels of Hif1a were quantified by RT-PCR. The fold change was calculated normalizing with the untreated control using ∆∆Ct method using 18S as endogenous control. C. Trilaciclib pretreatment do not enhance GPX4 expression. Upon Trilaciclib (3 𝜇 M) pretreatment followed by TNF stimulation, B6.Sst1S BMDMs were harvested at 24 h GPX4 protein levels were quantified. Western blot images showing GPX4 protein expression considering 𝛽 -tubulin as loading control. The average fold change in expression was mentioned compared to the untreated sample, normalized with 𝛽 -tubulin levels. The data are presented as mean ± SD from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by one-way ANOVA with Tukey's multiple comparisons test (Panel A and B). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Figure 5: The combination of CDK4/6 inhibition and RAR activation allows dose reduction while preventing pPAS and controlling intracellular Mtb growth.    
+
+> A. B. C. E. F. G.
+> D.
+
+Figure 5: The combination of CDK4/6 inhibition and RAR activation allows dose reduction while preventing pPAS and controlling intracellular Mtb growth. 
+
+A. cSTAR-inferred network that controls resistance priming of macrophages. Black arrows indicate activation, while red arrows indicate inhibition. The intensity of the color is proportional to the strength of connection. Perturbation data for THP1 cell line were used for network inference. B. Hierarchical clustering of the cSTAR-predicted global response matrix. Each column of the heatmap shows responses of all nodes to activation of the node in question, while each row of the heatmap shows responses of the node in question to activation of all other nodes. Correlation distance was used for the clustering algorithm. C. The combination of trilaciclib and ATRA enables dose reduction effectively suppressing 4-HNE adducts accumulation during TNF stimulation. B6.Sst1S BMDMs were pretreated with Trilaciclib and ATRA at different concentration combinations for 12 h followed by TNF (10 ng/mL) for 36 h. Accumulation of 4-HNE adducts was evaluated by confocal microscopy using a 4-HNE-specific antibody. Scale bar- 20 𝜇 m. D. Heat map showing the average fold change in 4-HNE adducts fluorescence upon Trilaciclib and ATRA combinations compared to the untreated samples. (n=3). E-G. The combination of 30 nM of trilaciclib and 30 nM ATRA did not cause B6.Sst1S BMDMs cell death during Mtb infection. (n=4). The combination of trilaciclib and ATRA controls the intracellular Mtb growth. B6.Sst1S BMDMs were pretreated with trilaciclib (30 nM) and ATRA (30 nM or 60 nM) alone or in combination for 12 h followed by TNF (10 ng/mL) for 24 h. Following day, cells were infected with Mtb Erdman reporter strain (SSB-GFP, smyc’::mCherry) at MOI=1 for five days. Day 1 and 5 post infection, total cell numbers (E) were quantified by automated microscopy and intracellular Mtb load was quantified by qPCR based assay (G). Images of infected BMDMs were acquired by confocal microscopy 5 days post infection (F). Scale bar: 20 μm. (n=4). The data are presented as mean ± standard deviation (SD) from three-five samples per experiment, representative of three independent experiments. The statistical analysis was performed by one-way ANOVA with Tukey's multiple comparisons test (Panel E and G). Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). A. B. C. D. 
+
+Figure 5-figure supplement 1:  
+
+> E. F.
+
+Figure 5-figure supplement 1: 
+
+A - B. Higher concentration of Trilaciclib (1.5 𝜇 M) and ATRA (2 𝜇 M) induces cell loss in B6.Sst1S BMDMs under TNF stimulated and Mtb infected condition. B6.Sst1S BMDMs were pretreated with Trilaciclib (1.5 𝜇 M) and ATRA (2 𝜇 M) for 12 h followed by TNF stimulation for additional 24 h. Following day cells were infected with Mtb (MOI=1). Percent cell number was observed 5 days post infection using automated microscopy. (n=4). C – F. B6.Sst1S BMDMs were pretreated with trilaciclib (30 nM) and ATRA (30 nM or 60 nM), either alone or in combination, for 12 h followed by TNF stimulation (10 ng/mL) for an additional 24 h. Cells were subsequently infected with the Mtb Erdman reporter strain (SSB-GFP, smyc’::mCherry) at an MOI of 1 for 5 days. Total cell numbers were quantified by automated microscopy on days 1 and 5 post-infection (C). Combination treatment with 30 nM trilaciclib and either 30 nM or 60 nM ATRA reduced intracellular Mtb growth in B6.Sst1S BMDMs, as determined by qPCR-based assay on day 5 post-infection (D – F). Bar graphs show the fold change in Mtb burden from day 1 to day 5 post-infection following combination treatment. Data represent mean ± SEM from four independent experiments (n=4). The data are presented as mean ± standard deviation (SD) from three-five samples per experiment, representative of three independent experiments. The statistical analysis was one-way ANOVA with Tukey's multiple comparisons test. Significant differences are indicated with asterisks (ns, non significant; *, p < 0.05; **, p < 0.01; ***, p < 0.001; ****, p < 0.0001). Table 1: Differential regulation of pPAS features by interferons ↑ Induction level 
+
+↓ Suppression level 
+
+= Not affected 
+
+IFN 𝛽 
+
+(during TNF or alone) IFN 𝛾 
+
+IFN-I signaling Ifnb ↑↑ ＝
+
+Rsad2 ↑↑ ＝
+
+Acod1 ↑ ↑
+
+Iron metabolism Labile iron pool ＝ ↓
+
+FTH1 ＝ ↑↑ 
+
+FTL ＝ ↑↑ 
+
+Oxidative stress & lipid peroxidation ROS ↑ ↑
+
+LA alkyne ↑ ↑
+
+4-HNE ↑ ＝
+
+Lipid biosynthesis Srebf2 ↓ ↓
+
+Scd2 ↓ ↓
+
+Dhcr24 ↓ ↓
+
+Net result pPAS ↑ ↓Table 2: IFN 𝛾 mimicking effect of trilaciclib and ATRA on pPAS features during TNF stimulation 
+
+IFN 𝛾 Trilaciclib ATRA Oxidative stress ROS ↑ ↑ ↑
+
+Iron metabolism Labile iron pool ↓↓ ↓↓ ↓
+
+FTH1 ↑↑ ↑↑ ↑
+
+FTL ↑↑ ↑↑ ↑
+
+Lipid peroxidation GPX4 = = ↑
+
+LA alkyne ↓ ↓ NT 
+
+4-HNE ↓ ↓ ↓
+
+Lipid biosynthesis Srebf2 ↓ ↑ ↑↑ 
+
+Scd2 ↓ ↑ ↑↑ 
+
+Dhcr24 ↓ ↑ ↑↑ 
+
+IFN-I signaling Ifnb ↓ ↓ ↓
+
+Rsad2 ↓ ↓ ↓
+
+Net result pPAS ↓ ↓ ↓
+
+↑ Induction level 
+
+↓ Suppression level 
+
+= Not affected
