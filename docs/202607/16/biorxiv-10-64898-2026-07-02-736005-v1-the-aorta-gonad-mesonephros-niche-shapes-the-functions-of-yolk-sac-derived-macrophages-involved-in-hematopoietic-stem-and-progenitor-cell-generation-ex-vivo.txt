@@ -1,0 +1,2200 @@
+Title: The Aorta-Gonad-Mesonephros niche shapes the functions of yolk sac-derived macrophages involved in hematopoietic stem and progenitor cell generation ex vivo
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.02.736005v1.full.pdf
+
+Number of Pages: 37
+
+Markdown Content:
+The Aorta-Gonad-Mesonephros niche shapes the functions of yolk sac-derived macrophages 1
+
+involved in hematopoietic stem and progenitor cell generation ex vivo .2
+
+3
+
+Rebecca L. Belmonte 1, Marianna Romano 1, Anna Popravko 2, Amanda MacCallum 2, Samidha 4
+
+Kulkarni 2, Malgorzata Rumowska 2, Cristiana Barone 3, Alessandro Muratore 3, Ella Blanks 2, Hena 5
+
+Modha 2, Subhankar Mukhopadhyay 4, Emanuele Azzoni 3,5 , Siamon Gordon 6,7 , Samanta A. 6
+
+Mariani 1* 
+
+7
+
+8
+
+> 1
+
+Centre for Reproductive Health, Institute for Regeneration and Repair, University of Edinburgh 9
+
+(UK); 2Centre for Inflammation Research, Institute for Regeneration and Repair, University of 10 
+
+Edinburgh (UK); 3School of Medicine and Surgery, University of Milano-Bicocca, Monza (Italy); 11 
+
+> 4
+
+Peter Gorer Department of Immunobiology, School of Immunology & Microbial Sciences, King's 12 
+
+College London (UK), 5Fondazione IRCCS San Gerardo dei Tintori, Monza (Italy); 6Graduate 13 
+
+Institute of Biomedical Science, College of Medicine, Chang Gung University, Taiwan and 7Sir 14 
+
+William Dunn School of Pathology, University of Oxford (UK). 15 
+
+16 
+
+* corresponding author 17 
+
+18 
+
+Abstract 19 
+
+Hematopoietic stem cells (HSCs) generated from induced pluripotent stem cells (iPSCs) offer a 20 
+
+promising patient-specific alternative to allogeneic transplantation, yet current differentiation 21 
+
+protocols fail to fully recapitulate in vivo HSC maturation. During mouse development, yolk sac 22 
+
+(YS)-derived macrophages populate the aorta-gonad-mesonephros (AGM) region at the time of 23 
+
+HSC emergence, but the mechanisms by which they support ex vivo hematopoietic stem and 24 
+
+progenitor cell (HSPC) generation remain poorly defined. Bulk RNA sequencing revealed that 25 
+
+mature AGM CD206 ⁺ macrophages upregulate pro-inflammatory cytokines and the adhesion 26 
+
+molecule F4/80. Using F4/80 knockout embryos, we identify a previously unreported, niche-27 
+
+specific role for F4/80 in restraining the frequency and colony-forming activity of HSPC subsets 28 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+in the AGM, while supporting endothelial cell maintenance; this effect was absent in the YS. 29 
+
+Lineage-tracing with a Cdh5-CreER T2 ;Rosa26 LSL-tdTomato pulse-chase system confirmed that both 30 
+
+CD206 ⁺ and CD206 ⁻ AGM cells originate from early YS-derived endothelial precursors, with no 31 
+
+evidence of local macrophage generation within the AGM. Functional co-culture assays further 32 
+
+demonstrated that the ability of CD206 ⁺ macrophages to enhance the progenitor potential of 33 
+
+hemogenic endothelium is AGM-specific and not an intrinsic, ontogeny-determined property, as 34 
+
+YS macrophages failed to confer the same benefit even when paired with AGM endothelial 35 
+
+cells, and AGM macrophages were ineffective with YS endothelium. Differential expression and 36 
+
+NicheNet ligand-receptor interaction analyses identified a small set of AGM-restricted 37 
+
+macrophage genes - including Mmp2, Nrep, Ccl2, and Cxcl16 - which are predicted to interact 38 
+
+with both endothelial and cluster cells during endothelial-to-hematopoietic transition. Together, 39 
+
+these findings establish that AGM macrophages acquire niche-specific transcriptional and 40 
+
+functional properties upon entry into the aortic microenvironment, independent of their YS origin, 41 
+
+and identify candidate macrophage-derived factors and a novel regulatory role for F4/80 in 42 
+
+shaping HSPC output. These insights may guide the refinement of iPSC-based HSC 43 
+
+differentiation protocols through the targeted, temporally controlled addition of macrophage-44 
+
+associated signals. 45 
+
+46 
+
+Introduction 47 
+
+Hematopoietic stem cells (HSCs) are vital components of the hematopoietic system, 48 
+
+responsible for the production of all blood cell types throughout the lifetime on an individual. 49 
+
+HSCs can be used for hematopoietic stem cell transplantation, a curative therapy for various 50 
+
+blood disorders. 51 
+
+HSCs are unique in their ability to self-renew, differentiate, and reconstitute the entire blood 52 
+
+system in a recipient after transplantation 1.53 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+For over six decades, allogeneic HSC transplantation has been employed to treat a range of 54 
+
+malignant and non-malignant blood diseases. However, several challenges limit the widespread 55 
+
+application of this therapeutic approach. Two major obstacles are the variability in patient 56 
+
+response to treatment, and the scarcity of human leukocyte antigen (HLA)-matched donors, 57 
+
+particularly for individuals from ethnically diverse backgrounds 2, 3 . The latter can lead to serious 58 
+
+consequences such as graft-versus-host disease, a life-threatening complication in which T cells 59 
+
+transplanted together with the HSCs recognize the recipient’s body as non-self and mount an 60 
+
+immune response against it 4. The possibility of mitigating transplantation-related side effects by 61 
+
+expanding patient-derived functional HSCs in vitro is hindered by the difficulty of maintaining 62 
+
+and expanding HSCs outside a living organism 5, 6 . As a result, many patients face significant 63 
+
+barriers in accessing curative treatments for blood disorders, highlighting the need for innovative 64 
+
+solutions to address these challenges. 65 
+
+66 
+
+An alternative approach is to generate HSCs from induced pluripotent stem cells (iPSCs) in a 67 
+
+patient-specific manner 2. Years of research have significantly advanced our knowledge on the 68 
+
+topic, with several scientific breakthroughs moving the field from suboptimal early attempts to 69 
+
+highly promising iPSC differentiation protocols 7-9 . Recent work from by Ng et al. described a 70 
+
+method for generating repopulating iPSC-derived HSCs with high-level multipotent 71 
+
+engraftment 9. However, they reported a 20-fold lower frequency of primary engraftment 72 
+
+compared to mobilized CD34 + cells, and low levels of secondary engraftment 9, suggesting that 73 
+
+some aspects of in vivo HSC generation and maturation remain difficult to recapitulate in vitro .74 
+
+75 
+
+HSCs are generated during embryonic development in both humans and mice 10-13 . They are 76 
+
+produced in the aorta-gonad-mesonephros (AGM) region of the embryo during the third 77 
+
+definitive wave of developmental hematopoiesis, occurring at embryonic day (E)10.5 in mouse 78 
+
+and Carnegie stages (CS)13-17 in humans, through a trans-differentiation process called 79 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+endothelial-to-hematopoietic transition (EHT) 14-17 . The first two waves preceding HSC 80 
+
+generation occur in the extra embryonic yolk sac (YS) at E7.5 and E8.5 in mice, and CS6-CS7 81 
+
+and CS8-CS10 in humans 13, 18 . Moreover, an additional wave of fetal-restricted hematopoietic 82 
+
+stem and progenitor cells (HSPCs) has recently been described, emerging from vitelline and 83 
+
+umbilical arteries between E8.5 and E9.5 in the mouse embryo 19 .84 
+
+85 
+
+Both waves of YS hematopoiesis see the production of various progenitors, such as early and 86 
+
+late erythroid-myeloid-progenitors (EMPs) which give rise to differentiated cells including 87 
+
+macrophages 20-23 .88 
+
+89 
+
+YS-derived macrophages have well-established functions in tissue specification and remodeling 90 
+
+during development 12, 24-26 Moreover, we and others previously demonstrated that YS-derived 91 
+
+macrophages are present in the AGM of mouse and human embryos at the time of HSC 92 
+
+generation 27, 28 . However, the mechanism through which macrophages contribute to HSPC 93 
+
+generation and/or maturation remains an open question. Understanding which macrophage-94 
+
+related factors can promote HSPC generation and/or maturation is key to informing human 95 
+
+iPSC-based differentiation protocols and to more fully recapitulating HSC generation in vitro. 96 
+
+Here we demonstrate that macrophages expressing the mannose receptors in the mouse AGM 97 
+
+at E10.5 have specific HSPC-promoting functions in an in vitro model of endothelial-to-98 
+
+hematopoietic transition. These macrophages, while YS-derived, remodel their transcriptome 99 
+
+upon entry into the AGM and acquire niche-specific functions not shared by macrophages 100 
+
+present in the YS at the same developmental stage. Transcriptomic analyses revealed that AGM 101 
+
+macrophages express a combination of pro-inflammatory genes and metalloproteinases that 102 
+
+may mediate their niche-specific functions. Furthermore, we describe a previously unreported 103 
+
+role for F4/80 in controlling the frequency of specific HSPC subsets in the mouse AGM. 104 
+
+105 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Material and Methods 106 
+
+Timed matings 107 
+
+Wild type C57BL/6 from the University of Edinburgh’s animal facility, as well as MacGreen 108 
+
+(B6N.Cg-Tg(Csf1r-EGFP)) 29 , and F4/80 knock out (KO) 30 mice were used for timed mating 109 
+
+experiments. Embryos were generated from MacGreen males crossed with wild type females, 110 
+
+and F4/80 KO males crossed with F4/80 KO females. Embryos were staged accurately by 111 
+
+counting somite pairs (sp), with 30-34sp corresponding to embryonic day (E) 10 and 35-39sp 112 
+
+corresponding to E10.5. The day of vaginal plug detection was designated as E0.5, and plugged 113 
+
+females were sacrificed at E10.5 for embryo collection. All mice were housed and bred at the 114 
+
+University of Edinburgh's animal facilities in accordance with Home Office regulations, and all 115 
+
+animal experiments were performed under the authority of a UK Home Office Project License 116 
+
+and were approved by the University of Edinburgh's Animal Welfare and Ethical Review Body 117 
+
+(AWERB). All procedures were conducted in accordance with the Animals (Scientific 118 
+
+Procedures) Act 1986 and the EU Directive 2010/63/EU on the protection of animals used for 119 
+
+scientific purposes. For lineage-tracing experiments using the Cdh5-CreER T2 system, pregnant 120 
+
+females received a single intraperitoneal (i.p.) injection of 4-hydroxytamoxifen (4-OHT; 37.5 121 
+
+mg/kg body weight) dissolved in corn oil at either E7.5 or E8.5. Embryos were then harvested at 122 
+
+E10.5 for analysis. Cdh5-CreER T2 and Rosa26 LSL-tdTomato mice were maintained at the San 123 
+
+Raffaele Scientific Institute under standard housing conditions with ad libitum access to food 124 
+
+and water. All animal procedures were conducted in accordance with protocols approved by the 125 
+
+Institutional Animal Care and Use Committee (IACUC) of the San Raffaele Scientific Institute 126 
+
+and by the Italian Ministry of Health. 127 
+
+128 
+
+Embryo dissection and tissue digestion 129 
+
+E10 and E10.5 embryos were collected in Phosphate-Buffered Saline (PBS, Gibco) 130 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+supplemented with 10% fetal bovine serum (FBS, Gibco) prior to dissection. The aorta-gonad-131 
+
+mesonephros (AGM) region and the yolk sac (YS) were dissected using a previously described 132 
+
+method 31 . Briefly, an incision was made in the lower abdomen of the pregnant females to 133 
+
+expose the uterus , and e mbryos were subsequently collected and dissected with fine -point 134 
+
+insulin needles (BD Microfine U -100). The yolk -sac was carefully detached from umbilical 135 
+
+and vitelline arteries. To isolate the AGM region, tissues including the head, limbs, 136 
+
+intestines, heart, tail, and somites were removed. To obtain a single -cell suspension for 137 
+
+use in flow cytometry and functional assays, the dissected YS and AGM tissues were then 138 
+
+digested in 0.125% type I collagenase (C0130; Sigma -Aldrich) in PBS + 10% FBS at 37°C for 139 
+
+45 minutes. 140 
+
+141 
+
+Ex vivo co-culture system and CFU-C assay 142 
+
+Cells from YS and AGM were incubated with TruStain FcX (anti-mouse CD16/32) antibody 143 
+
+(BioLegend) in PBS+10% FBS to block non-specific binding, followed by staining with relevant 144 
+
+antibodies (Supplementary Table 1) for 30 minutes on ice. Endothelial cells were identified and 145 
+
+sorted by fluorescent activated cell sorting (FACS) with FACS Aria II (BD) as CD45 -CD41 -
+
+146 
+
+CD31 +. Macrophages were sorted as CD45 + CD11b +F4/80 + CD206 +/- and those from MacGreen 147 
+
+embryos were additionally identified by their expression of Csf1r-GFP. Sorted endothelial cells 148 
+
+and macrophages were plated on OP9 stromal cells at a 3:1 ratio in aMEM medium 149 
+
+supplemented with cytokines (SCF100ng/ml, IL3 100ng/ml and Flt3-ligand 100ng/ml; 150 
+
+Peprotech). After seven days of co-culture, CD45 + cells were FACS sorted and plated in 151 
+
+methylcellulose (M3434; Stem Cell Technologies) to assess their colony-forming unit (CFU) 152 
+
+potential. Colonies were counted and scored after 10 days. 153 
+
+154 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Immunostaining 155 
+
+E10.5 embryos were fixed in 2% paraformaldehyde (ThermoFisher Scientific) in PBS solution 156 
+
+for 30 minutes at 4°C in the dark. This was followed by an overnight incubation in 20% sucrose 157 
+
+(Sigma-Aldrich) in PBS solution at 4°C in the dark. The embryos were then embedded in 158 
+
+Cryomatrix (Epredia) and frozen at -80°C, with the yolk sac positioned on the side but still 159 
+
+attached to the embryo. Frozen embryos were sectioned into 10 μm thick sections using a 160 
+
+cryostat (Bright) and collected on Superfrost Plus slides (ThermoFisher Scientific). After 161 
+
+thawing, the sections were treated with absolute acetone for 10 minutes and allowed to air dry. 162 
+
+The sections were then washed three times with 0.05% Tween 20 (Sigma-Aldrich) in PBS by 163 
+
+gentle shaking for 5 minutes. The sections were subsequently incubated with primary antibodies 164 
+
+(Supplementary Table 1) in PBS-block buffer (PBS + 0.05% Tween 20 + 1% bovine serum 165 
+
+albumin (Sigma-Aldrich)) for 1 hour at room temperature in a humid chamber. This was followed 166 
+
+by three washes with PBS-Tween 20 before incubation with secondary antibodies 167 
+
+(Supplementary Table 1) in PBS-block for 30 minutes at room temperature. However, for the 168 
+
+F4/80 antibody, which was directly conjugated to the BV421 fluorophore, an overnight 169 
+
+incubation at -20°C in the humid chamber was performed, omitting the secondary antibody step. 170 
+
+After washing, the slides were mounted in Slowfade Diamond mountant (ThermoFisher 171 
+
+Scientific) and the coverslips were sealed with clear nail polish and allowed to dry. The slides 172 
+
+were stored at 4°C until visualization under a confocal microscope. 173 
+
+To control for non-specific binding, single antibody-stained and secondary antibody-only stained 174 
+
+sections were included in each experiment. Immunostained slides were visualized using a Leica 175 
+
+SP8 microscope. 176 
+
+177 
+
+RNA extraction and real time PCR 178 
+
+E10.5 AGM and YS cells were FACS sorted, and RNA was extracted using the RNeasy Plus 179 
+
+Micro kit (Qiagen) according to the manufacturer's instructions. Complementary DNA (cDNA) 180 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+was synthesized using the SuperScript III Reverse Transcriptase protocol (ThermoFisher 181 
+
+Scientific) following the manufacturer's instructions. Real-time PCR was performed using the 182 
+
+SybrGreen master mix (Applied Biosystems), with β-actin serving as the housekeeping gene for 183 
+
+ΔCt normalization. The list of primers used is provided in Supplementary Table 2. 184 
+
+185 
+
+Bulk RNA sequencing preparation 186 
+
+CD206 - cells and CD206 + macrophages were FACS sorted from E10.5 AGM and YS, and RNA 187 
+
+extracted using with the RNeasy Micro kit (Qiagen), according to manufacturer’s instructions. 188 
+
+The RNA samples were sent to the BGI (Honk Kong) for library preparation and sequencing 189 
+
+using the low-input protocol. The sequencing was performed on three biological replicates, with 190 
+
+each sample representing a pool of 4 or 5 embryos. 191 
+
+192 
+
+RNA sequencing processing 193 
+
+Fastq files of 51 bp single-end reads were quality controlled using FASTQC. Reads were then 194 
+
+aligned to the GENCODE M14 32 mouse reference genome (mm10) using STAR aligner (version 195 
+
+2.3) for Linux Ubuntu, with default options, and ran over 8 threads per sample. For improved 196 
+
+accuracy, the exon junction coordinates from the reference annotation were used. Resulting 197 
+
+BAM files from different lanes were merged into one sample. Gene quantification on the merged 198 
+
+samples was performed using the function “featureCounts” from the subRead package 33 .199 
+
+200 
+
+Statistical analysis for differentially expressed genes 201 
+
+All statistical calculations were performed in R programming language (version 4.4.1) 34 .202 
+
+Differential expression analysis was performed using DeSeq2 package (version 1.46.0) 35 to 203 
+
+identify significantly differentially expressed genes with a false discovery rate (likelihood ratio 204 
+
+test) of 5% (adjusted p-value > 0.05). Principal component analysis was performed on the 205 
+
+variance stabilized matrix of all genes. AGM CD206 + enriched genes were identified as genes 206 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+with a log 2 fold change greater than |1.5| in comparison to all other cell populations. Genes 207 
+
+expressed by endothelial or cluster cells were identified as genes with a log 2 fold change greater 208 
+
+than |0.5|. Normalized counts were calculated using a median of ratios method using the 209 
+
+DeSeq2 package and plotted with ggplot2 (version 4.0.0) 36 .210 
+
+211 
+
+Interaction analysis 212 
+
+Potential ligands expressed by AGM CD206 + cells were identified as genes with a maximum 213 
+
+log 2 fold change greater than 0 and compared with known ligands from the NicheNet (version 214 
+
+2.2.0) network 37 . Potential ligands expressed by AGM CD206 + cells interacting with receptors 215 
+
+expressed by endothelial or cluster cells were identified by the NicheNet network. Using the 216 
+
+genes expressed by endothelial or cluster cells, predicted ligands were determined using the 217 
+
+“predict_ligand_activities” function and ligands expressed in AGM CD206 + were input as 218 
+
+potential ligands. The predicted ligands were ranked according to the area under the precision-219 
+
+recall curve (AUPR). Prior ligand-receptor interaction potential was determined using the 220 
+
+“get_weighted_ligand_receptor_links” function. 221 
+
+222 
+
+Data analysis and statistics 223 
+
+Flow cytometry data were analyzed with FlowJo 10. Graphs were made and statistics calculated 224 
+
+with GraphPad Prism 11 (Dotmatics). The statistical tests used are specified in the figure 225 
+
+legends. 226 
+
+227 
+
+Results 228 
+
+CD206 expression defines mature macrophages in the AGM 229 
+
+We previously identified two main populations of myeloid cells in the mouse AGM at the time of 230 
+
+HSC generation, distinguished by expression of CD206 (mannose receptor) 28 . CD206 +
+
+231 
+
+macrophages were found to be important for the correct ex vivo generation and/or maturation of 232 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+mouse HSCs, while the role of CD206 - cells in supporting hematopoiesis was confounded by 233 
+
+their residual multipotent progenitor potential in colony-forming unit (CFU-C) assays 28 . To 234 
+
+determine whether a more refined sorting strategy would help define the composition and 235 
+
+function of AGM CD206 ⁻ myeloid cells, additional flow cytometry analyses were performed. 236 
+
+Using the MacGreen mouse model 29 , in which GFP expression is driven by the colony-237 
+
+stimulating factor 1 receptor (Csf1r) promoter, flow cytometry revealed that 9±1.2% of E10.5 238 
+
+AGM CD45 ⁺GFP ⁺CD206 ⁻ cells express low levels of CD11b and F4/80 and retain cKit 239 
+
+expression (Fig. 1A), indicating the presence of myeloid progenitors and explaining the residual 240 
+
+CFU-C activity previously observed 28 . In contrast, the CD206 ⁺ population was confirmed to 241 
+
+consist of terminally differentiated macrophages, with only 1±0.4% of cells retaining cKit 242 
+
+expression at E10.5 (Fig. 1A). These findings suggested that a more comprehensive sorting 243 
+
+strategy incorporating CD11b, F4/80, and cKit is needed to discriminate AGM CD206 ⁻ myeloid 244 
+
+progenitors from CD206 ⁻ macrophages (Fig. 1A) and to assess the role of the latter in 245 
+
+embryonic hematopoiesis. 246 
+
+We previously observed that MacGreen -derived CD206 + macrophages express a higher level of 247 
+
+pro-inflammatory cytokines as compared to CD45 +GFP +CD206 - cells 28 . This was confirmed 248 
+
+when CD45 +GFP +CD11b -F4/80 -cKit +CD206 - progenitors (CD206 - Prog) were sorted separately 249 
+
+from CD45 +GFP +CD11b +F4/80 +cKit -CD206 - cells (hereafter referred to as CD206 - Mac) from 250 
+
+E10.5 MacGreen AGMs. CD206+ Mac expressed significantly higher levels of CCl2, Ccl9, 251 
+
+Ccl12, IL18, Pf4, Gas6 and TNF a as compared to CD206 - Mac and CD206 - Prog (Fig. 1B). This 252 
+
+analysis further revealed that CD206 ⁻ Mac more closely resemble myeloid progenitors than 253 
+
+terminally differentiated macrophages with respect to pro-inflammatory cytokine production (Fig. 254 
+
+1B), suggesting that they may represent a differentiation intermediate between CD206 ⁻ Prog 255 
+
+and CD206 ⁺ macrophages, rather than a distinct AGM macrophage subset. To test our 256 
+
+hypothesis, AGM CD206 - and CD206 + Mac were sorted according to the refined strategy shown 257 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+in Fig. 1A, and plated on OP9 stromal cells 38 for seven days. CD45 +F4/80 - cells were 258 
+
+subsequently sorted and plated in methylcellulose to assess progenitor potential (Fig 1C). 259 
+
+Notably, 62.7 ±35% of cells recovered from wells containing CD206 - Mac were not mature 260 
+
+macrophages (CD45 +F4/80 -) (Fig. 1D), and retained the capacity to generate multiple types of 261 
+
+progenitor colonies in methylcellulose (Fig. 1E). As a control, the CD206 + subset did not give 262 
+
+rise non-macrophage cells and failed to generate CFU-Cs (Fig. 1D-E), consistent with previous 263 
+
+findings 28 . Together, these results show that CD206 expression defines mature macrophages in 264 
+
+the mouse AGM, while CD206 - myeloid cells retain progenitor potential even when expressing 265 
+
+CD11b and F4/80 and in the absence of cKit. 266 
+
+267 
+
+F4/80 expression on AGM macrophages regulates the frequency and the colony forming 268 
+
+potential of hematopoietic progenitors 269 
+
+To identify the key features of HSPC-supporting mature AGM macrophages, bulk RNA 270 
+
+sequencing (RNAseq) was performed on CD206 ⁺ Mac and CD206 ⁻ Mac isolated from E10.5 271 
+
+MacGreen embryos according to the refined sorting strategy shown in Figure 1A 272 
+
+(Supplementary Fig. 1A). Principal component analysis revealed marked differences between 273 
+
+CD206 ⁺ Mac and CD206 ⁻ cells, with one CD206 ⁺ biological replicate behaving as an outlier 274 
+
+(Supplementary Fig. 1B). A total of 667 genes were found to be differentially expressed between 275 
+
+the two cell subsets (Supplementary Table 3), with CD206 ⁺ Mac preferentially expressing genes 276 
+
+associated with chemotaxis, migration, and endocytosis, as shown by gene ontology analysis 277 
+
+(Supplementary Fig. 1C). Notably, RNAseq data also revealed increased Adgre1 expression 278 
+
+(encoding F4/80) in CD206 ⁺ Mac (Supplementary Fig. 1D). This was confirmed by flow 279 
+
+cytometry, which showed higher mean fluorescence intensity for F4/80 in the CD206 ⁺ Mac 280 
+
+subset (Fig. 2A–B). F4/80 is an adhesion molecule used as a pan-macrophage marker in mice, 281 
+
+but its role during embryonic development remains poorly understood 39 . To determine whether 282 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+F4/80 mediates the HSPC-supporting functions of CD206 ⁺ Mac in the mouse AGM, we 283 
+
+characterized the effect of its absence on the endothelial and hematopoietic compartments of 284 
+
+the AGM in E10.5 F4/80 knockout (KO) embryos 30 , compared to C57BL/6J wild-type (WT) 285 
+
+controls, by flow cytometry. To avoid confounding effects from progenitor and endothelial cell 286 
+
+populations that might express F4/80, analysis was restricted to F4/80 ⁻ cells (Supplementary 287 
+
+Fig. 2A–B). The frequency of endothelial cells, defined as CD31 ⁺cKit ⁻CD41 ⁻CD43 ⁻CD45 ⁻, was 288 
+
+lower in F4/80 KO embryos compared to WT controls (Fig. 2C and Supplementary Fig. 2A), 289 
+
+suggesting a role for F4/80 in the generation and/or maintenance of AGM endothelial cells. 290 
+
+Conversely, the frequency of cKit ⁺CD31 ⁻ HSPCs was higher in F4/80 KO embryos (Fig. 2D and 291 
+
+Supplementary Fig. 2A), whereas no differences were observed in the frequency of cKit ⁺CD31 ⁺292 
+
+cluster cells, cKit ⁺CD31 ⁺CD41ˡᵒ cells, or cKit ⁺CD31 ⁺CD45 ⁺ cells (Fig. 2E). Furthermore, while 293 
+
+the frequency of the CD31 ⁻cKit ⁺/⁻CD41ˡᵒ population was unchanged in F4/80 KO embryos (Fig. 294 
+
+2F and Supplementary Fig. 2B), the more differentiated CD31 ⁻cKit ⁺/⁻CD41ˡᵒCD43 ⁺ and 295 
+
+CD31 ⁻cKit ⁺/⁻CD41ˡᵒCD43 ⁺CD45 ⁺ progenitor populations were increased compared to WT 296 
+
+controls (Fig. 2G and Supplementary Fig. 2B). To confirm that the observed changes in 297 
+
+progenitor population frequency were attributable to the absence of F4/80 rather than 298 
+
+differences in cell viability or CD206 expression, we measured the percentage of live cells and 299 
+
+the frequency and mean fluorescence intensity of CD206 in CD45 ⁺CD11b ⁺ cells isolated from 300 
+
+the AGM of C57BL/6 and F4/80 KO embryos. No differences were observed in live cell 301 
+
+frequency or CD206 expression compared to C57BL/6 controls (Supplementary Fig. 2C–F). 302 
+
+To determine whether the higher hematopoietic progenitor frequency in F4/80 KO embryos 303 
+
+reflects a difference in progenitor potential, a CFU-C assay was performed on cells isolated 304 
+
+from the AGM of E10.5 F4/80 KO and C57BL/6 embryos. Colonies were counted and scored 305 
+
+after ten days; a significant increase in total colony number was observed in F4/80 KO embryos, 306 
+
+with no differences in the relative representation of individual colony types (Fig. 2H). Taken 307 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+together, these data suggest that F4/80 expression on AGM macrophages suppresses the 308 
+
+frequency and colony-forming potential of hematopoietic progenitors in the AGM, while 309 
+
+promoting an increase in endothelial cells. Transplantation experiments will be needed to 310 
+
+determine whether the frequency and/or potency of HSCs is also altered in F4/80 KO embryos. 311 
+
+312 
+
+AGM E10.5 CD206 + macrophages and CD206 - cells are yolk sac-derived. 313 
+
+It has been previously reported that macrophages in the mouse embryos are yolk sac (YS)-314 
+
+derived 28, 40 . However, the possibility of de novo macrophage generation in the AGM has never 315 
+
+been formally excluded. To address this, we employed a well-validated pulse-chase approach in 316 
+
+which Cdh5-CreER T2 mice were crossed with Rosa26 LSL-tdTomato mice to generate embryos in 317 
+
+which tdTomato labelling was induced by administering 4-hydroxytamoxifen (4-OHT) to 318 
+
+pregnant dams at E7.5 and E8.5 19, 41, 42 . At these time points, YS progenitors derived from 319 
+
+Cdh5 ⁺ hemogenic endothelium are preferentially labelled. Pulsed embryos were then collected 320 
+
+at E10.5 to assess tdTomato expression in AGM CD206 ⁺ Mac and CD206 ⁻ cells. Between 96– 321 
+
+100% of cells in both populations were tdTomato ⁺ following pulse labelling at E7.5, with more 322 
+
+variable tdTomato expression (36–100%) when pulse-labelled at E8.5 (Supplementary Fig. 3A– 323 
+
+B). Normalization against tdTomato expression in YS erythro-myeloid progenitors (EMPs), used 324 
+
+as a control to account for variability in labelling efficiency across experiments, consistently 325 
+
+showed equivalent labelling levels in AGM CD206 ⁺ macrophages, CD206 ⁻ cells, and YS EMPs 326 
+
+upon pulse labelling at E7.5 (Supplementary Fig. 3C). The ratios were still high but more 327 
+
+variable (between 0.8 to 1) when cells were pulse-labelled at E8.5 (Supplementary Fig. 3C). 328 
+
+These results suggest that both AGM CD206 ⁺ macrophages and CD206 ⁻ cells present at E10.5 329 
+
+derive from early YS EMPs, with no evidence of de novo macrophage generation within the 330 
+
+AGM, up until this developmental stage. Furthermore, the absence of any difference in labelling 331 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+frequencies between CD206 ⁺ macrophages and CD206 ⁻ cells corroborates our hypothesis that 332 
+
+these two cell subsets represent distinct maturation states of the same myeloid population. 333 
+
+334 
+
+CD206 + and CD206 - myeloid cells are present also in the yolk sac at E10.5 in the mouse 335 
+
+embryo. 336 
+
+To determine whether the phenotype and function of YS-derived AGM CD206 ⁺ Mac are 337 
+
+ontogeny-related or niche-specific, we first investigated whether macrophages in the YS have 338 
+
+similar spatial distribution and phenotype to those in the AGM. Immunofluorescence 339 
+
+experiments revealed that F4/80 ⁺ macrophages localize in proximity to cKit ⁺ cells in the YS (Fig. 340 
+
+3A), as previously reported for the AGM 28 . The distribution of CD206 ⁺ and CD206 ⁻ cells within 341 
+
+the CD45 ⁺CD11b ⁺F4/80 ⁺GFP ⁺ compartment of the YS was similar to that observed in the AGM, 342 
+
+but with a higher proportion of immature cKit ⁺ progenitors (7.5 ± 3.2% in the CD206 ⁺ population 343 
+
+and 27.3 ± 7.0% in the CD206 ⁻ population) compared to the AGM (Fig. 3B and Supplementary 344 
+
+Fig. 3D). An increase in F4/80 mean fluorescence intensity was also observed in YS CD206 ⁺345 
+
+cells compared to their CD206 ⁻ counterparts (Fig. 3C). 346 
+
+To determine whether CD206 ⁺ and CD206 ⁻ cells differ in their capacity to generate 347 
+
+hematopoietic colonies, both populations were cultured on stromal cells (experimental 348 
+
+schematic as in Fig. 1C), and the frequency of CD45 ⁺F4/80 ⁻ cells arising after one week was 349 
+
+assessed. Unlike AGM cells, YS CD206 ⁺ Mac were also able to produce CD45 ⁺F4/80 ⁻ cells 350 
+
+(Fig. 3D), suggesting that residual progenitor potential is retained in this population in the YS. 351 
+
+However, no hematopoietic colonies were generated by CD206 ⁺ Mac (Fig. 3E). In contrast, YS 352 
+
+CD206 ⁻ cells produced both CD45 ⁺F4/80 ⁻ cells and a variety of hematopoietic colonies after 353 
+
+one week on OP9 cells (Fig. 3D–E). Notably, unlike CD206 ⁻ cells in the AGM, YS CD206 ⁻ cells 354 
+
+did not give rise to CFU-GEMM (granulocyte, erythroid, megakaryocyte, macrophage) colonies, 355 
+
+suggesting that CD206 ⁻ cells in the YS are less multipotent than their AGM counterparts 356 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+(compare Fig. 1E with Fig. 3E). When assessing pro-inflammatory cytokine expression, YS 357 
+
+CD206 ⁺ Mac were found to express lower levels of Ccl2, Ccl9, Ccl12, Pf4, and Tnf 
+
+a compared 358 
+
+to AGM CD206 ⁺ Mac (Fig. 3F). Notably, while Ccl 2 and Tnf 
+
+a expression was upregulated also in 359 
+
+AGM CD206 ⁻ cells compared to YS CD206 ⁻ cells — albeit to a lesser extent than in CD206 ⁺360 
+
+macrophages — other mediators such as Ccl24, Il18, Pf4, and Gas6 were expressed at lower 361 
+
+levels in AGM CD206 ⁻ cells relative to YS CD206 ⁻ cells (Supplementary Fig. 3E), suggesting 362 
+
+that macrophages maturing in the AGM acquire a more pro-inflammatory phenotype than those 363 
+
+maturing in the YS. 364 
+
+365 
+
+F4/80 expression does not influence the activity of mature CD206 + macrophages in the 366 
+
+yolk sac. 367 
+
+Since, similarly to the AGM, we observed an increase in F4/80 MFI in CD206 ⁺ YS macrophages 368 
+
+compared to CD206 ⁻ cells (Fig. 3C), we assessed whether its absence would affect the 369 
+
+frequencies of endothelial cells and hematopoietic progenitors in the YS, as previously observed 370 
+
+in the AGM. The frequencies of CD31 ⁺cKit ⁻CD41 ⁻CD43 ⁻CD45 ⁻ endothelial cells, cKit ⁺ and 371 
+
+CD41ˡᵒ hematopoietic progenitors were determined by flow cytometry in the YS of F4/80 KO and 372 
+
+C57BL/6J control embryos. No statistically significant differences were observed in any 373 
+
+endothelial or progenitor populations in the YS of F4/80 KO embryos compared to age-matched 374 
+
+controls (Fig. 3G–H). Furthermore, unlike in the AGM, the number of hematopoietic colonies 375 
+
+produced by F4/80 KO YS cells was comparable to that of C57BL/6J controls (Fig. 3I). Taken 376 
+
+together, these data indicate that the effect of F4/80 on endothelial cells and hematopoietic 377 
+
+progenitors is AGM-specific. 378 
+
+379 
+
+The ability of CD206 ⁺ macrophages to promote haemogenic endothelial cell progenitor 380 
+
+potential is AGM-specific. 381 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Having established that the CD45 +CD11b +F4/80 +GFP +cKit -CD206 - population in both E10.5 YS 382 
+
+and AGM is heterogenous and not enriched for macrophages, we proceeded to assess only the 383 
+
+potential of YS and AGM CD206 + Mac to enhance HSPC generation in vitro , in order to 384 
+
+determine whether their functions are ontogeny-related or niche-specific. We previously 385 
+
+established an in vitro co-culture protocol to measure the effect of macrophages on the 386 
+
+progenitor potential of hemogenic endothelial cells 28 . Briefly, CD31 ⁺CD41 ⁻CD45 ⁻ endothelial 387 
+
+cells were sorted from the AGM and YS of E10.5 MacGreen embryos and cultured on OP9 388 
+
+stromal cells in the presence or absence of CD206 ⁺ macrophages sorted from the same tissues 389 
+
+(Fig. 4A). After 7 days, CD45 ⁺F4/80 ⁻ hematopoietic cells were collected as a readout of in vitro 390 
+
+endothelial-to-hematopoietic transition (Fig. 4A). The presence of CD206 ⁺ Mac did not affect the 391 
+
+frequency of CD45 ⁺F4/80 ⁻ cells produced by AGM or YS endothelial cells, with AGM endothelial 392 
+
+cells consistently generating more hematopoietic cells than YS endothelial cells (Fig. 4B). To 393 
+
+assess how the presence of CD206 ⁺ macrophages affects the progenitor potential of 394 
+
+hematopoietic cells produced during co-culture, CD45 ⁺F4/80 ⁻ cells were plated in 395 
+
+methylcellulose for a CFU-C assay (Fig. 4A). Using the refined macrophage gating strategy 396 
+
+(CD45 ⁺CD11b ⁺F4/80 ⁺GFP ⁺cKit ⁻CD206 ⁺), we were able to reproduce previously published data 397 
+
+demonstrating an increase in CFU-Cs in the presence of AGM CD206 ⁺ macrophages (Fig. 4C 398 
+
+left and 28 ). However, no such increase was observed in the number of colonies produced by YS 399 
+
+CD45 ⁺F4/80 ⁻ cells following co-culture with YS CD206 ⁺ macrophages (Fig. 4C, right), 400 
+
+suggesting that the pro-hematopoietic function of CD206 ⁺ macrophages is AGM-specific and not 401 
+
+ontogeny-related. 402 
+
+403 
+
+The functions of AGM CD206 + mac are not cell intrinsic but tissue specific. 404 
+
+To determine whether AGM CD206 ⁺ Mac functions are cell-intrinsic, we tested whether they 405 
+
+could enhance the progenitor potential of YS hemogenic endothelial cells in vitro . Macrophages 406 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+and endothelial cells from the AGM and YS of E10.5 MacGreen embryos were sorted and a 407 
+
+mixed co-culture experiment was performed by culturing YS endothelial cells with AGM CD206 ⁺408 
+
+Mac, with the reciprocal condition used as a control (Fig. 4D). No differences were observed in 409 
+
+the frequency of CD45 ⁺F4/80 ⁻ cells after 7 days of culture on OP9 cells in any of the conditions 410 
+
+tested (Fig. 4E). Furthermore, when colonies were counted and scored after 10 days in 411 
+
+methylcellulose, AGM CD206 ⁺ Mac retained the ability to increase the progenitor potential of 412 
+
+AGM endothelial cells but had no effect on YS endothelial cells (Fig. 4F), suggesting that their 413 
+
+pro-hematopoietic function is not cell-intrinsic but dependent on crosstalk with AGM endothelial 414 
+
+cells. As expected, YS CD206 + Mac had no effect on colony formation in any of the conditions 415 
+
+tested (Fig. 4F, right). 416 
+
+417 
+
+Only eight genes are preferentially upregulated in AGM CD206 + Mac. 418 
+
+To understand which pathways and genes mediate the cross-talk between CD206 ⁺ Mac and 419 
+
+hematopoietic progenitors in the AGM, we first determined the gene signature uniquely 420 
+
+identifying AGM CD206 ⁺ Mac. Bulk RNA-seq was performed on AGM and yolk sac (YS) CD206 ⁺421 
+
+Mac and CD206 ⁻ progenitors. Principal component analysis (PCA) showed AGM and YS 422 
+
+samples clustering separately, with greater variability observed among YS samples (Fig. 5A). To 423 
+
+identify genes preferentially upregulated in AGM CD206 ⁺ Mac, differential expression analysis 424 
+
+was performed comparing AGM CD206 ⁺ Mac against all other cell populations (YS CD206 ⁺425 
+
+Mac, and YS and AGM CD206 ⁻ cells). More than twenty genes were significantly downregulated 426 
+
+in AGM CD206 ⁺ Mac relative to the other populations, whereas only eight genes were 427 
+
+upregulated (Supplementary Fig. 4A and Fig. 5B). Two of these genes are linked to extracellular 428 
+
+matrix remodeling — A Disintegrin-Like and Metalloprotease with Thrombospondin Type 1 429 
+
+Motifs 1 ( Adamts1 ) and Matrix Metalloproteinase-2 ( Mmp2 )43, 44 , two encode chemokines with 430 
+
+known chemoattractant functions ( Ccl2 and Cxcl16 )45, 46 , while the remaining four ( Nrep, Tgm2, 431 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Lpar4 , and Dapk1 ) are involved in diverse biological processes including tissue remodeling, 432 
+
+tissue regeneration, and regulation of autophagy and apoptosis 47-50 . To validate the RNA-seq 433 
+
+results, RT-qPCR was performed on CD206 ⁺ Mac and CD206 ⁻ cells sorted from the AGM and 434 
+
+YS of E10.5 MacGreen embryos. Expression of Lpar4 (lysophosphatidic acid receptor 4), Tgm2 435 
+
+(transglutaminase 2), Adamts1 , and Dapk1 (death-associated protein kinase 1) was not 436 
+
+detected by RT-qPCR in any of the populations tested. In contrast, Nrep (neuronal regeneration-437 
+
+related protein), Ccl2 , Mmp2 , and Cxcl16 were preferentially expressed in AGM CD206 ⁺ Mac, 438 
+
+consistent with the RNA-seq data (Fig. 5C). 439 
+
+440 
+
+Macrophages interact with both endothelial and cluster cells in the mouse AGM. 441 
+
+To determine whether AGM CD206 ⁺ Mac promote HSPC generation in vitro by interacting with 442 
+
+hemogenic endothelial cells (ECs) or with CD31 ⁺cKit ⁺ cluster cells (CCs), we sorted CD206 ⁺443 
+
+Mac, ECs (CD31 ⁺cKit ⁻CD41 ⁻CD45 ⁻), and early CCs (CD31 ⁺cKit ⁺CD41 ⁻CD45 ⁻) from the AGM 444 
+
+of E10.5 MacGreen embryos for co-culture experiments. EC and CC populations were each 445 
+
+plated on stromal cells in the presence or absence of CD206 ⁺ Mac. After one week on OP9 446 
+
+stromal cells, no CD45 ⁺ cells were recovered under any of the conditions tested (data not 447 
+
+shown). These results suggest that the in vitro co-culture system is only productive when ECs 448 
+
+and CCs are sorted together as CD31 ⁺cKit ⁺/⁻CD41 ⁻CD45 ⁻, as performed in previous 449 
+
+experiments (Fig. 4). To circumvent this experimental limitation, ECs and CCs were sorted from 450 
+
+the AGM of E10.5 MacGreen embryos and subjected to bulk RNA-seq, followed by NicheNet 451 
+
+analysis to predict the intercellular interactions between AGM CD206 ⁺ Mac and ECs or CCs. 452 
+
+The top-ranked predicted ligands were shared between ECs and CCs, with the same base 453 
+
+mean expression values (Fig. 5D and 5F). Bioinformatic analysis did not identify differential 454 
+
+predicted interactions between CD206 ⁺ Mac and ECs or CCs, with the sole exception of the CC-455 
+
+specific Clec2i–Klrb1c interaction, that we were unable to validate by real time PCR. The near-456 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+complete concordance of predicted interactions suggests that ECs and CCs share the same 457 
+
+potential of interacting with CD206 + macrophages at E10.5 (Fig. 5E and 5G). Among the 458 
+
+predicted interactions, Ccl2 expressed by CD206 ⁺ Mac showed the strongest predicted 459 
+
+interaction with Ccr2 expressed on both ECs and CCs (Fig. 5E and 5G). To assess whether 460 
+
+Ccr2 surface expression differed between these populations at the protein level, flow cytometry 461 
+
+was performed on E10.5 AGM ECs and CCs (Supplementary Fig. 4B). Both populations 462 
+
+expressed high levels of Ccr2, with a statistically significant increase observed in the CC 463 
+
+population (Fig. 5H). NicheNet analysis did not predict any interactions mediated via Tnfα–TnfR 464 
+
+signaling between CD206 ⁺ Mac and ECs or CCs (Fig. 5E and 5G). However, given that Tnf was 465 
+
+the most highly upregulated cytokine in AGM CD206 + subset compared to YS CD206 ⁺ Mac (Fig. 466 
+
+3F), we assessed the protein expression of TnfR1 and TnfR2 on E10.5 AGM ECs and CCs by 467 
+
+flow cytometry (Supplementary Fig. 4B). Both receptors were expressed at significantly higher 468 
+
+levels on CCs than on ECs (Fig. 5I), suggesting that CD206 ⁺ Mac can interact with both 469 
+
+populations, but with greater receptor-mediated engagement with CCs. 470 
+
+471 
+
+Discussion 472 
+
+In this study, we employed a combination of in vivo and in vitro approaches to identify the 473 
+
+mediators of AGM macrophage functions that facilitate HSPC generation in vitro . We first 474 
+
+established that CD206 expression is a hallmark of terminally differentiated macrophages in the 475 
+
+mouse AGM, defined by the absence of in vitro progenitor potential — a capacity that is retained 476 
+
+by CD45 ⁺CD11b ⁺F4/80 ⁺cKit ⁻CD206 ⁻ cells. CD206 ⁺ Mac (CD45 ⁺CD11b ⁺F4/80 ⁺cKit ⁻CD206 ⁺)477 
+
+enhance HSPC generation when co-cultured with endothelial cells in vitro . CD206, also known 478 
+
+as the mannose receptor, is a carbohydrate-binding endocytic receptor with diverse functions 479 
+
+including clearance of endogenous and exogenous molecules, collagen internalization, 480 
+
+modulation of cellular activation, and promotion of antigen presentation 51 . CD206 is typically 481 
+
+expressed by mature monocytes, macrophages, and certain subsets of vascular and lymphatic 482 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+endothelial cells 52 . Historically, mannose receptor expression has been associated with 483 
+
+alternatively activated macrophages exhibiting predominantly anti-inflammatory and pro-tumoral 484 
+
+functions 53, 54 . However, this association has been recently challenged by studies demonstrating 485 
+
+a role for CD206 ⁺ Mac in recruiting anti-tumoral T cells 55 , pointing to a more nuanced role for 486 
+
+CD206 ⁺ Mac in cancer biology. A similar complexity appears to apply to AGM macrophages, in 487 
+
+which CD206 is expressed on the surface of macrophages that also express pro-inflammatory 488 
+
+cytokines. As previously discussed 28 , in the embryonic AGM — an environment not exposed to 489 
+
+extracellular pathogens — a pro-inflammatory milieu has been reported to be necessary for 490 
+
+correct HSC generation in vertebrates 56, 57 . Although we consider CD206 to be a marker of 491 
+
+macrophage maturity in the AGM rather than a molecule directly involved in HSC generation, 492 
+
+additional experiments are needed to determine whether AGM CD206 ⁺ Mac actively contribute 493 
+
+to extracellular matrix remodeling through collagen internalization. That said, the viability of 494 
+
+CD206 KO mice, with no reported defects in embryonic HSC generation, argues against a direct 495 
+
+functional role for CD206 in embryonic HSPC generation 58, 59 .496 
+
+We also observed that CD206 ⁺ Mac are characterized by high F4/80 expression. F4/80 is one of 497 
+
+the most specific cell-surface markers for murine macrophages 39, 60 . It belongs to the epidermal 498 
+
+growth factor–seven transmembrane receptor family and is thought to mediate cell adhesion; 499 
+
+however, its precise function(s) remain to be fully elucidated 61 . F4/80 knockout mouse models 500 
+
+have not revealed a requirement for F4/80 in normal macrophage development or function 62 .501 
+
+Nevertheless, F4/80 has been shown to be required for the induction of antigen-specific CD8 ⁺502 
+
+regulatory T cells in models of peripheral tolerance in adult mice, a process dependent on direct 503 
+
+cellular interaction between macrophages and NKT cells 30 . This demonstrates that F4/80 can 504 
+
+mediate cell-to-cell interactions in specific tissue contexts. Having previously observed direct 505 
+
+interactions between macrophages and hematopoietic cells in the mouse AGM at E10.5 28 , we 506 
+
+used the F4/80 KO mouse model 30 to investigate whether F4/80 plays a previously 507 
+
+unrecognized role in mediating macrophage–HSPC interactions in the mouse embryo. Notably, 508 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+we found a reduction in the frequency of endothelial cells (CD31 ⁺cKit ⁻CD41 ⁻CD45 ⁻) in F4/80 509 
+
+KO embryos, suggesting that F4/80 may contribute to maintenance of the endothelial cell pool 510 
+
+in the AGM. Since CD31 ⁺F4/80 ⁺ endothelial cells have been reported in both embryos and adult 511 
+
+mice 63, 64 , but our aim is to investigate the effect of the absence of macrophage-expressed 512 
+
+F4/80, flow cytometry analyses were performed on F4/80 ⁻ cells to exclude any confounding 513 
+
+factors. While endothelial cell frequency was reduced in the absence of F4/80, the frequency of 514 
+
+cKit ⁺CD31 ⁻ cells was increased. cKit is a receptor tyrosine kinase whose expression is a 515 
+
+canonical marker of HSPCs 65 . An increased frequency of cKit ⁺ cells in the AGM of F4/80 KO 516 
+
+embryos could indicate a role for F4/80 in HSPC generation or proliferation. However, we 517 
+
+cannot exclude the possibility that other non-hematopoietic cell types within the AGM also 518 
+
+express cKit. The AGM encompasses not only the aorta — the site of HSPC generation — but 519 
+
+also the gonad and mesonephros, which give rise to the gonads and kidneys later in 520 
+
+development. Although no studies have specifically examined cKit expression in the gonad– 521 
+
+mesonephros region of the AGM at E10.5, cKit expression has been documented during 522 
+
+gametogenesis in primordial germ cells, spermatogonia, primordial and growing oocytes, and in 523 
+
+the developing kidney 66, 67 . Therefore, the overall increase in cKit ⁺ cell frequency observed in 524 
+
+F4/80 KO embryos may not be restricted to the hematopoietic compartment. Nevertheless, an 525 
+
+expansion of early hematopoietic progenitors expressing CD41 lo , CD43, and CD45 is evident in 526 
+
+F4/80 KO embryos at E10.5 and it is reflected by increased progenitor output from AGM cells 527 
+
+isolated from these embryos. This may result from defective interactions between macrophages 528 
+
+and HSPCs, leading to an expansion of specific HSPC subsets — suggesting that macrophages 529 
+
+contribute to regulating the number of HSPCs generated in the AGM at E10.5. A similar 530 
+
+regulatory role has been reported in the caudal hematopoietic tissue of zebrafish (the functional 531 
+
+equivalent of the mouse fetal liver), where macrophages influence the number of HSC clones 532 
+
+generated in the embryo that subsequently contribute to adult hematopoiesis 68 . In zebrafish, 533 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+however, fewer HSC clones were observed in the absence of macrophages 68 . It is important to 534 
+
+note that in F4/80 KO embryos, macrophages are still present, and macrophage–HSPC 535 
+
+interactions may be impaired but not entirely abolished. We do not consider F4/80 to be the 536 
+
+primary mediator of the HSPC-promoting functions of AGM macrophages, as its complete 537 
+
+absence would be expected to result in fewer — not more — HSPCs. Interestingly, preliminary 538 
+
+analysis of phenotypic HSC frequency in the fetal liver of E13.5 F4/80 KO embryos revealed a 539 
+
+reduction compared to wild-type controls (unpublished data). Together with the absence of any 540 
+
+hematopoietic defect in the yolk sac, this suggests that the progenitor expansion observed in 541 
+
+the AGM of F4/80 KO embryos is niche-dependent, and that macrophage–HSPC interactions 542 
+
+may yield distinct outcomes in different niches during development. This interpretation is further 543 
+
+supported by the inability of YS macrophages to enhance the progenitor potential of YS 544 
+
+endothelial cells, indicating that the HSPC-promoting activity of AGM macrophages is niche-545 
+
+specific rather than ontogeny-dependent. 546 
+
+We subsequently identified the key genes expressed by AGM CD206 ⁺ macrophages. No 547 
+
+specific pathways or Gene Ontology (GO) terms were enriched, but eight genes with diverse 548 
+
+functions were found to be upregulated specifically in AGM CD206 ⁺ Mac compared to AGM 549 
+
+CD206 ⁻ cells and YS CD206 ⁺ and CD206 ⁻ cells. Upregulation of four of the eight genes 550 
+
+(Dapk1 , Tgm2 , Lpar4 , and Adamts1 ) could not be validated by real time PCR (RT-qPCR), 551 
+
+possibly due to their low expression levels combined with the limited number of CD206 ⁺ and 552 
+
+CD206 ⁻ cells obtainable from the AGM, where CD206 ⁺ Mac represent approximately 0.2% of 553 
+
+total live cells at E10.5. Despite this limitation, upregulation of Nrep (neuronal regeneration-554 
+
+related protein), Mmp2 (matrix metallopeptidase 2), Ccl2 , and Cxcl16 in AGM CD206 ⁺ Mac was 555 
+
+validated by RT-qPCR. Nrep encodes a highly conserved 8 kDa protein associated with the 556 
+
+TGF-β pathway, wound healing, nerve and lung regeneration, and kidney fibrosis 48 . Although no 557 
+
+role has been described for Nrep in the AGM specifically, it plays important roles in nervous 558 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+system development, and a functional cross-talk between the sympathetic nervous system and 559 
+
+HSC generation in the developing embryo has previously been reported 69 . Mmp2 encodes a 560 
+
+metallopeptidase involved in the degradation and remodeling of extracellular matrix 561 
+
+components, including type IV and V collagen, fibronectin, laminin, and elastin 44 . Mmp2 has 562 
+
+been shown to be essential for the endothelial-to-hematopoietic transition in zebrafish, where it 563 
+
+is upregulated in response to inflammation and contributes to HSC emergence and subsequent 564 
+
+egress from the dorsal aorta 70 . Cxcl16 is an atypical CXC chemokine that exists in both 565 
+
+transmembrane and soluble forms, functioning as a chemoattractant and scavenger receptor in 566 
+
+its soluble form and as an adhesion molecule when membrane-bound 71 . Although there is 567 
+
+currently no published evidence for expression of the Cxcl16 receptor ( Cxcr6 ) on endothelial or 568 
+
+hematopoietic cells in the AGM, the Cxcl16–Cxcr6 axis has been shown to promote Tnfα 569 
+
+secretion 72 and may thus contribute to the pro-inflammatory environment in the AGM that is 570 
+
+required for HSC generation. Finally, NicheNet analysis predicted broadly similar interactions 571 
+
+between CD206 ⁺ Mac and both endothelial cells (ECs) and cluster cells (CCs) in the AGM. Flow 572 
+
+cytometry confirmed expression of receptors for Ccl2 and Tnfα on both ECs and CCs, with 573 
+
+significantly higher levels on CCs. This suggests that interactions between macrophages and/or 574 
+
+macrophage-secreted factors and AGM cells may be initiated with ECs and subsequently 575 
+
+amplified with nascent CCs. 576 
+
+Taken together, our data support a multi-functional role for CD206 ⁺ Mac in the AGM at E10.5 577 
+
+and may inform improvements to iPSC differentiation protocols for the in vitro generation of 578 
+
+HSCs, for example through the timed addition of key factors such as Ccl2, Tnfα, and Cxcl16 579 
+
+during differentiation. In addition, our findings suggest a previously unrecognized role for F4/80 580 
+
+during mammalian embryonic development. 581 
+
+582 
+
+Limitations 583 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+While the transcriptomic differences between embryonic macrophage subsets are 584 
+
+representative of the in vivo situation in the mouse embryo, the functional assays were 585 
+
+performed in an in vitro 2D model of endothelial-to-hematopoietic transition. This was 586 
+
+specifically designed to inform iPSC protocols for in vitro HSC/HSPC generation; however, the 587 
+
+results may not fully recapitulate what occurs in vivo . In particular, the compensatory 588 
+
+mechanisms that may operate in a living embryo are absent in our model. We previously 589 
+
+reported a decrease in functional HSCs in the absence of macrophages 28 and here we 590 
+
+confirmed impaired HSPC generation in vitro . However, Perçin et al. recently reported no deficit 591 
+
+in AGM HSC numbers in an in vivo model of embryonic macrophage depletion, suggesting that 592 
+
+compensatory mechanisms operate in vivo that are not recapitulated in our system 74 .593 
+
+A further limitation of this study is the absence of transplantation data. With the current 594 
+
+experimental setup, it is not possible to determine whether the loss of macrophages and/or 595 
+
+F4/80 also impairs the generation of functional HSCs. Future experiments using human iPSCs 596 
+
+will be necessary to evaluate the effects of macrophages on HSC generation and/or maturation, 597 
+
+and to assess the translational relevance of our findings. Human iPSC experiments will also be 598 
+
+critical for determining whether supplementation with macrophage-related factors — such as 599 
+
+CCL2, CXCL16, and TNFα — during differentiation is beneficial for HSC generation, particularly 600 
+
+given previous reports that an in vitro inflammatory environment may favour HSC differentiation 601 
+
+over self-renewal 75 . It should be noted, however, that this effect was observed in fetal bovine 602 
+
+serum-containing cultures 75 , and may therefore not directly apply to defined, serum-free iPSC 603 
+
+differentiation systems. In conclusion, our data reveal a previously unreported role for F4/80 in 604 
+
+regulating HSPC frequency in the E10.5 AGM, and define a gene signature for CD206 ⁺ Mac that 605 
+
+may be used to inform iPSC protocols for in vitro HSC differentiation. Validation in human 606 
+
+cellular models will nonetheless be essential to establish the translational relevance of these 607 
+
+findings. 608 
+
+609 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Author contributions 610 
+
+R.L.B. performed the bioinformatic analyses and contributed to manuscript preparation. M.R. 611 
+
+performed validation experiments and contributed to manuscript preparation. A.P. contributed to 612 
+
+RNA-seq analysis, alignment, and initial bioinformatic processing. A.M., S.K., M.R., H.M., and 613 
+
+E.B. performed immunofluorescence, co-culture, and RT-qPCR experiments. C.B. and E.A. 614 
+
+performed, analyzed, and interpreted lineage-tracing experiments. A.M. provided support for 615 
+
+lineage-tracing mouse work. S.M. and S.G. provided mice and scientific discussion. S.A.M. 616 
+
+conceived the project, designed the study, performed experiments, and wrote the manuscript. 617 
+
+All authors reviewed, edited, and approved the final version of the manuscript 618 
+
+619 
+
+Acknowledgements 620 
+
+R.L..B. and M.R. are supported by Leukaemia UK 2024/FuF/004 and Blood Cancer UK (grant 621 
+
+#25031), respectively. The experiments on F4/80 KO animals were supported by The Carnegie 622 
+
+Trust (RIG012518). 623 
+
+S.A.M.’s research is supported by Leukaemia UK (2021/JGF/004), Medical Research Scotland 624 
+
+(ECG-1797-2022), Wellcome Trust Institutional Translational Partnership Award (WT iTPA 625 
+
+PIII063), the Little Princess Trust through the Children’s Cancer and Leukaemia Group (CCLGA 626 
+
+2023 13 Mariani) and Medical Research Scotland (PHD-50551-2022). E.A. is supported by 627 
+
+Worldwide Cancer Research (Grant ref. 24-0083). E.A. and A.M. are supported by Italian Ministry 628 
+
+of University and Research (Grant n. P20223HEZC). C.B. is supported by Fondazione Umberto 629 
+
+Veronesi. 630 
+
+The authors would like to acknowledge the helpful contributions of the flow cytometry and sorting 631 
+
+facility of the Institute for Regeneration and Repair of the University of Edinburgh, and Sarah 632 
+
+Coupland, Colin Dick and the rest of the staff at the University of Edinburgh Bioresearch & 633 
+
+Veterinary Services (BVS) for their professional animal care, technical assistance, and veterinary 634 
+
+support during this study. 635 
+
+636 
+
+References 637 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+1. Aljagthmi AA, Abdel -Aziz AK. Hematopoietic stem cells: Understanding the 638 
+
+mechanisms to unleash the therapeutic potential of hematopoietic stem cell 639 
+
+transplantation. Stem Cell Res Ther. 2025 Feb 10;16(1):60. 640 
+
+2. Demirci S, Leonard A, Tisdale JF. Hematopoietic stem cells from pluripotent stem 641 
+
+cells: Clinical potential, challenges, and future perspectives. Stem Cells Transl Med. 2020 642 
+
+Dec;9(12):1549 -57. 643 
+
+3. Guilcher GMT, Truong TH, Saraf SL, Joseph JJ, Rondelli D, Hsieh MM. Curative 644 
+
+therapies: Allogeneic hematopoietic cell transplantation from matched related donors 645 
+
+using myeloablative, reduced intensity, and nonmyeloablative conditioning in sickle cell 646 
+
+disease. Semin Hematol. 2018 Apr;55(2):87 -93. 647 
+
+4. Balassa K, Danby R, Rocha V. Haematopoietic stem cell transplants: principles and 648 
+
+indications. Br J Hosp Med (Lond). 2019 Jan 02;80(1):33 -9. 649 
+
+5. Papa L, Djedaini M, Hoeman R. Ex vivo HSC expansion challenges the paradigm of 650 
+
+unidirectional human hematopoiesis. Ann N Y Acad Sci. 2020 Apr;1466(1):39 -50. 651 
+
+6. Meaker GA, Wilkinson AC. Ex vivo hematopoietic stem cell expansion technologies: 652 
+
+recent progress, applications, and open questions. Exp Hematol. 2024 Feb;130:104136. 653 
+
+7. Zambidis ET, Peault B, Park TS, Bunz F, Civin CI. Hematopoietic dieerentiation of 654 
+
+human embryonic stem cells progresses through sequential hematoendothelial, primitive, 655 
+
+and definitive stages resembling human yolk sac development. Blood. 2005 Aug 656 
+
+01;106(3):860 -70. 657 
+
+8. Kaufman DS, Hanson ET, Lewis RL, Auerbach R, Thomson JA. Hematopoietic 658 
+
+colony -forming cells derived from human embryonic stem cells. Proc Natl Acad Sci U S A. 659 
+
+2001 Sep 11;98(19):10716 -21. 660 
+
+9. Ng ES, Sarila G, Li JY, Edirisinghe HS, Saxena R, Sun S, et al. Long -term engrafting 661 
+
+multilineage hematopoietic cells dieerentiated from human induced pluripotent stem 662 
+
+cells. Nat Biotechnol. 2025 Aug;43(8):1274 -87. 663 
+
+10. Dzierzak E, Bigas A. Blood Development: Hematopoietic Stem Cell Dependence 664 
+
+and Independence. Cell Stem Cell. 2018 05 03;22(5):639 -51. 665 
+
+11. Ivanovs A, Rybtsov S, Ng ES, Stanley EG, Elefanty AG, Medvinsky A. Human 666 
+
+haematopoietic stem cell development: from the embryo to the dish. Development. 2017 667 
+
+Jul 01;144(13):2323 -37. 668 
+
+12. Doyle EH, Vaughan HJ, Mariani SA. From drosophila to humans: a journey through 669 
+
+macrophage development. Exp Hematol. 2024 Aug;136:104272. 670 
+
+13. Calvanese V, Mikkola HKA. The genesis of human hematopoietic stem cells. Blood. 671 
+
+2023 Aug 10;142(6):519 -32. 672 
+
+14. Medvinsky A, Dzierzak E. Definitive hematopoiesis is autonomously initiated by the 673 
+
+AGM region. Cell. 1996 Sep 20;86(6):897 -906. 674 
+
+15. Jaeredo T, Gautier R, Eichmann A, Dieterlen -Lièvre F. Intraaortic hemopoietic cells 675 
+
+are derived from endothelial cells during ontogeny. Development. 1998 Nov;125(22):4575 -676 
+
+83. 677 
+
+16. Ottersbach K. Endothelial -to -haematopoietic transition: an update on the process 678 
+
+of making blood. Biochem Soc Trans. 2019 04 30;47(2):591 -601. 679 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+17. Ivanovs A, Rybtsov S, Welch L, Anderson RA, Turner ML, Medvinsky A. Highly potent 680 
+
+human hematopoietic stem cells first emerge in the intraembryonic aorta -gonad -681 
+
+mesonephros region. Journal of Experimental Medicine. 2011 2011/10/31;208(12):2417 -27. 682 
+
+18. McGrath KE, Frame JM, Palis J. Early hematopoiesis and macrophage development. 683 
+
+Semin Immunol. 2015 Dec;27(6):379 -87. 684 
+
+19. Barone C, Quattrini G, Muratore A, Anselmi G, Park Y, Mehmood NT, et al. Fetal -685 
+
+restricted hematopoietic progenitors arise from hemogenic endothelium in vitelline and 686 
+
+umbilical arteries. Nat Cardiovasc Res. 2026 Apr;5(4):308 -27. 687 
+
+20. Palis J, Robertson S, Kennedy M, Wall C, Keller G. Development of erythroid and 688 
+
+myeloid progenitors in the yolk sac and embryo proper of the mouse. Development. 1999 689 
+
+Nov;126(22):5073 -84. 690 
+
+21. Frame JM, McGrath KE, Palis J. Erythro -myeloid progenitors: "definitive" 691 
+
+hematopoiesis in the conceptus prior to the emergence of hematopoietic stem cells. Blood 692 
+
+Cells Mol Dis. 2013 Dec;51(4):220 -5. 693 
+
+22. McGrath Kathleen E, Frame Jenna M, Fegan Katherine H, Bowen James R, Conway 694 
+
+Simon J, Catherman Seana C, et al. Distinct Sources of Hematopoietic Progenitors Emerge 695 
+
+before HSCs and Provide Functional Blood Cells in the Mammalian Embryo. Cell Reports. 696 
+
+2015 2015/06;11(12):1892 -904. 697 
+
+23. Calvanese V, Capellera -Garcia S, Ma F, Fares I, Liebscher S, Ng ES, et al. Mapping 698 
+
+human haematopoietic stem cells from haemogenic endothelium to birth. Nature. 2022 699 
+
+Apr;604(7906):534 -40. 700 
+
+24. Hume DA, Perry VH, Gordon S. Immunohistochemical localization of a 701 
+
+macrophage -specific antigen in developing mouse retina: phagocytosis of dying neurons 702 
+
+and dieerentiation of microglial cells to form a regular array in the plexiform layers. J Cell 703 
+
+Biol. 1983 Jul;97(1):253 -7. 704 
+
+25. Leid J, Carrelha J, Boukarabila H, Epelman S, Jacobsen SE, Lavine KJ. Primitive 705 
+
+Embryonic Macrophages are Required for Coronary Development and Maturation. Circ 706 
+
+Res. 2016 May;118(10):1498 -511. 707 
+
+26. Munro DAD, Wineberg Y, Tarnick J, Vink CS, Li Z, Pridans C, et al. Macrophages 708 
+
+restrict the nephrogenic field and promote endothelial connections during kidney 709 
+
+development. Elife. 2019 Feb 13;8. 710 
+
+27. Travnickova J, Tran Chau V, Julien E, Mateos -Langerak J, Gonzalez C, Lelièvre E, et al. 711 
+
+Primitive macrophages control HSPC mobilization and definitive haematopoiesis. Nat 712 
+
+Commun. 2015 Feb;6:6227. 713 
+
+28. Mariani SA, Li Z, Rice S, Krieg C, Fragkogianni S, Robinson M, et al. Pro -inflammatory 714 
+
+Aorta -Associated Macrophages Are Involved in Embryonic Development of Hematopoietic 715 
+
+Stem Cells. Immunity. 2019 Jun 18;50(6):1439 -52 e5. 716 
+
+29. Sasmono RT, Oceandy D, Pollard JW, Tong W, Pavli P, Wainwright BJ, et al. A 717 
+
+macrophage colony -stimulating factor receptor -green fluorescent protein transgene is 718 
+
+expressed throughout the mononuclear phagocyte system of the mouse. Blood. 2003 719 
+
+Feb;101(3):1155 -63. 720 
+
+30. Lin HH, Faunce DE, Stacey M, Terajewicz A, Nakamura T, Zhang -Hoover J, et al. The 721 
+
+macrophage F4/80 receptor is required for the induction of antigen -specific eeerent 722 
+
+regulatory T cells in peripheral tolerance. J Exp Med. 2005 May 16;201(10):1615 -25. 723 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+31. Dzierzak E, de Bruijn M. Isolation and analysis of hematopoietic stem cells from 724 
+
+mouse embryos. Methods Mol Med. 2002;63:1 -14. 725 
+
+32. Frankish A, Diekhans M, Ferreira AM, Johnson R, Jungreis I, Loveland J, et al. 726 
+
+GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Res. 727 
+
+2019 Jan 08;47(D1):D766 -D73. 728 
+
+33. Liao Y, Smyth GK, Shi W. featureCounts: an eeicient general purpose program for 729 
+
+assigning sequence reads to genomic features. Bioinformatics. 2014 Apr 01;30(7):923 -30. 730 
+
+34. Team RC. R: a language and environment for statistical computing . 2024. 731 
+
+35. Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for 732 
+
+RNA -seq data with DESeq2. Genome Biol. 2014;15(12):550. 733 
+
+36. Wickham H. ggplot2: Elegant graphics for data analysis . Springer -Verlag, New York; 734 
+
+2016. 735 
+
+37. Browaeys R, Saelens W, Saeys Y. NicheNet: modeling intercellular communication 736 
+
+by linking ligands to target genes. Nat Methods. 2020 Feb;17(2):159 -62. 737 
+
+38. Gao J, Yan XL, Li R, Liu Y, He W, Sun S, et al. Characterization of OP9 as authentic 738 
+
+mesenchymal stem cell line. J Genet Genomics. 2010 Jul;37(7):475 -82. 739 
+
+39. Austyn JM, Gordon S. F4/80, a monoclonal antibody directed specifically against the 740 
+
+mouse macrophage. Eur J Immunol. 1981 Oct;11(10):805 -15. 741 
+
+40. Stremmel C, Schuchert R, Wagner F, Thaler R, Weinberger T, Pick R, et al. Yolk sac 742 
+
+macrophage progenitors traeic to the embryo during defined stages of development. Nat 743 
+
+Commun. 2018 01;9(1):75. 744 
+
+41. Wang Y, Nakayama M, Pitulescu ME, Schmidt TS, Bochenek ML, Sakakibara A, et al. 745 
+
+Ephrin -B2 controls VEGF -induced angiogenesis and lymphangiogenesis. Nature. 2010 May 746 
+
+27;465(7297):483 -6. 747 
+
+42. Madisen L, Zwingman TA, Sunkin SM, Oh SW, Zariwala HA, Gu H, et al. A robust and 748 
+
+high -throughput Cre reporting and characterization system for the whole mouse brain. Nat 749 
+
+Neurosci. 2010 Jan;13(1):133 -40. 750 
+
+43. Apte SS. A disintegrin -like and metalloprotease (reprolysin -type) with 751 
+
+thrombospondin type 1 motif (ADAMTS) superfamily: functions and mechanisms. J Biol 752 
+
+Chem. 2009 Nov 13;284(46):31493 -7. 753 
+
+44. Wolosowicz M, Prokopiuk S, Kaminski TW. The Complex Role of Matrix 754 
+
+Metalloproteinase -2 (MMP -2) in Health and Disease. Int J Mol Sci. 2024 Dec 21;25(24). 755 
+
+45. Qian BZ, Li J, Zhang H, Kitamura T, Zhang J, Campion LR, et al. CCL2 recruits 756 
+
+inflammatory monocytes to facilitate breast -tumour metastasis. Nature. 2011 Jun 757 
+
+08;475(7355):222 -5. 758 
+
+46. Korbecki J, Bajdak -Rusinek K, Kupnicka P, Kapczuk P, Simińska D, Chlubek D, et al. 759 
+
+The Role of CXCL16 in the Pathogenesis of Cancer and Other Diseases. Int J Mol Sci. 2021 760 
+
+Mar 28;22(7). 761 
+
+47. Gundemir S, Colak G, Tucholski J, Johnson GV. Transglutaminase 2: a molecular 762 
+
+Swiss army knife. Biochim Biophys Acta. 2012 Feb;1823(2):406 -19. 763 
+
+48. De Jesus DF, Kimura T, Gupta MK, Kulkarni RN. NREP contributes to development of 764 
+
+NAFLD by regulating one -carbon metabolism in primary human hepatocytes. Cell Chem 765 
+
+Biol. 2023 Sep 21;30(9):1144 -55.e4. 766 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+49. Lee JW, Lee CS, Ryu YR, Lee J, Son H, Cho HJ, et al. Lysophosphatidic Acid Receptor 767 
+
+4 Is Transiently Expressed during Cardiac Dieerentiation and Critical for Repair of the 768 
+
+Damaged Heart. Mol Ther. 2021 Mar 03;29(3):1151 -63. 769 
+
+50. Singh P, Ravanan P, Talwar P. Death Associated Protein Kinase 1 (DAPK1): A 770 
+
+Regulator of Apoptosis and Autophagy. Front Mol Neurosci. 2016;9:46. 771 
+
+51. Martinez -Pomares L. The mannose receptor. J Leukoc Biol. 2012 Dec;92(6):1177 -86. 772 
+
+52. Takahashi K, Donovan MJ, Rogers RA, Ezekowitz RA. Distribution of murine mannose 773 
+
+receptor expression from early embryogenesis through to adulthood. Cell Tissue Res. 1998 774 
+
+May;292(2):311 -23. 775 
+
+53. Gordon S, Martinez FO. Alternative activation of macrophages: mechanism and 776 
+
+functions. Immunity. 2010 May 28;32(5):593 -604. 777 
+
+54. Zhang B, Yao G, Zhang Y, Gao J, Yang B, Rao Z. M2 -polarized tumor -associated 778 
+
+macrophages are associated with poor prognoses resulting from accelerated 779 
+
+lymphangiogenesis in lung adenocarcinoma. Clinics (Sao Paulo). 2011;66(11):1879 -86. 780 
+
+55. Ray A, Hu KH, Kersten K, Courau T, Kuhn NF, Zaleta -Linares I, et al. Targeting CD206+ 781 
+
+macrophages disrupts the establishment of a key antitumor immune axis. J Exp Med. 2025 782 
+
+Jan 06;222(1). 783 
+
+56. Sawamiphak S, Kontarakis Z, Stainier DY. Interferon gamma signaling positively 784 
+
+regulates hematopoietic stem cell emergence. Dev Cell. 2014 Dec 08;31(5):640 -53. 785 
+
+57. Espín -Palazón R, Stachura DL, Campbell CA, García -Moreno D, Del Cid N, Kim AD, 786 
+
+et al. Proinflammatory signaling regulates hematopoietic stem cell emergence. Cell. 2014 787 
+
+Nov;159(5):1070 -85. 788 
+
+58. Lee SJ, Evers S, Roeder D, Parlow AF, Risteli J, Risteli L, et al. Mannose receptor -789 
+
+mediated regulation of serum glycoprotein homeostasis. Science. 2002 790 
+
+Mar;295(5561):1898 -901. 791 
+
+59. Andriana P, Fair -Mäkelä R, Liljenbäck H, Kärnä S, Iqbal I, Makrypidi K, et al. 792 
+
+Macrophage mannose receptor CD206 targeting of fluoride -18 labeled mannosylated 793 
+
+dextran: A validation study in mice. Eur J Nucl Med Mol Imaging. 2024 Jul;51(8):2216 -28. 794 
+
+60. Morris L, Graham CF, Gordon S. Macrophages in haemopoietic and other tissues of 795 
+
+the developing mouse detected by the monoclonal antibody F4/80. Development. 1991 796 
+
+Jun;112(2):517 -26. 797 
+
+61. Gordon S, Roberti A, Yona S, Lin HH. F4/80, the plasma membrane antigen of mouse 798 
+
+macrophages, an historic journey. J Leukoc Biol. 2025 Sep 01;117(9). 799 
+
+62. Schaller E, Macfarlane AJ, Rupec RA, Gordon S, McKnight AJ, Pfeeer K. Inactivation 800 
+
+of the F4/80 glycoprotein in the mouse germ line. Mol Cell Biol. 2002 Nov;22(22):8035 -43. 801 
+
+63. Barnett FH, Rosenfeld M, Wood M, Kiosses WB, Usui Y, Marchetti V, et al. 802 
+
+Macrophages form functional vascular mimicry channels in vivo. Sci Rep. 2016 Nov 803 
+
+11;6:36659. 804 
+
+64. Yamamoto S, Muramatsu M, Azuma E, Ikutani M, Nagai Y, Sagara H, et al. A subset of 805 
+
+cerebrovascular pericytes originates from mature macrophages in the very early phase of 806 
+
+vascular development in CNS. Sci Rep. 2017 Jun 20;7(1):3855. 807 
+
+65. Edling CE, Hallberg B. c -Kit --a hematopoietic cell essential receptor tyrosine kinase. 808 
+
+Int J Biochem Cell Biol. 2007;39(11):1995 -8. 809 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+66. Besmer P, Manova K, Duttlinger R, Huang EJ, Packer A, Gyssler C, et al. The kit -ligand 810 
+
+(steel factor) and its receptor c -kit/W: pleiotropic roles in gametogenesis and 811 
+
+melanogenesis. Dev Suppl. 1993:125 -37. 812 
+
+67. Schmidt -Ott KM, Chen X, Paragas N, Levinson RS, Mendelsohn CL, Barasch J. c -kit 813 
+
+delineates a distinct domain of progenitors in the developing kidney. Dev Biol. 2006 Nov 814 
+
+01;299(1):238 -49. 815 
+
+68. Wattrus SJ, Smith ML, Rodrigues CP, Hagedorn EJ, Kim JW, Budnik B, et al. Quality 816 
+
+assurance of hematopoietic stem cells by macrophages determines stem cell clonality. 817 
+
+Science. 2022 09 23;377(6613):1413 -9. 818 
+
+69. Fitch SR, Kimber GM, Wilson NK, Parker A, Mirshekar -Syahkal B, Göttgens B, et al. 819 
+
+Signaling from the sympathetic nervous system regulates hematopoietic stem cell 820 
+
+emergence during embryogenesis. Cell Stem Cell. 2012 Oct;11(4):554 -66. 821 
+
+70. Theodore LN, Hagedorn EJ, Cortes M, Natsuhara K, Liu SY, Perlin JR, et al. Distinct 822 
+
+Roles for Matrix Metalloproteinases 2 and 9 in Embryonic Hematopoietic Stem Cell 823 
+
+Emergence, Migration, and Niche Colonization. Stem Cell Reports. 2017 May 09;8(5):1226 -824 
+
+41. 825 
+
+71. Hojo S, Koizumi K, Tsuneyama K, Arita Y, Cui Z, Shinohara K, et al. High -level 826 
+
+expression of chemokine CXCL16 by tumor cells correlates with a good prognosis and 827 
+
+increased tumor -infiltrating lymphocytes in colorectal cancer. Cancer Res. 2007 May 828 
+
+15;67(10):4725 -31. 829 
+
+72. Li T, Pan J, Chen H, Fang Y, Sun Y. CXCR6 -based immunotherapy in autoimmune, 830 
+
+cancer and inflammatory infliction. Acta Pharm Sin B. 2022 Aug;12(8):3255 -62. 831 
+
+73. Li Y, Esain V, Teng L, Xu J, Kwan W, Frost IM, et al. Inflammatory signaling regulates 832 
+
+embryonic hematopoietic stem and progenitor cell production. Genes Dev. 2014 833 
+
+Dec;28(23):2597 -612. 834 
+
+74. Perçin G, Riege K, Fröbel J, Metz J, Culemann S, Lesche M, et al. Embryonic 835 
+
+macrophages orchestrate niche cell homeostasis for the establishment of the definitive 836 
+
+hematopoietic stem cell pool. Nature Communications. 2025 2025/05/14;16(1). 837 
+
+75. Yao CL, Huang P, Liu TC, Lin YK, Chen CY, Lai YT, et al. CCL2 associated with CD38 838 
+
+expression during. Aging (Albany NY). 2021 Aug 10;13(15):19878 -93. 839 
+
+840 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint SSC-A
+
+Gated on live single cells 
+
+A
+
+F4/80 PECy7 CD11b APCCy7 GFP CD206 APC SSC-A cKit BV421 SSC-A F4/80 PECy7 CD11b cKit BV421 SSC-A SSC-A cKit BV421 
+
+Figure 1 
+
+> % of Cells
+
+CD45 +CD11b +
+
+F4/80 +cKit - (Mac) CD45 +CD11b +/-
+
+F4/80 -cKit + (Prog) CD206 -
+
+> CD206 +
+
+050 100    
+
+> CD206 -Prog CD206 -Mac
+> Relative mRNA expression
+
+BC 
+
+> AGM Sorting
+
+Sorting CD45 +F4/80 -
+
+> E10.5
+
+CD206 - Mac CD206 + Mac 
+
+> 7 days on Op9
+
+CFU-C % CD45 +F4/80 -
+
+> in live CFU-C/2000 CD45 +
+> CD206 +
+> CD206 -
+> CD206 +
+> CD206 -
+> CFU-GEMM CFU-GM CFU-M CFU-G BFU-E
+> CD206 +
+> Mac
+
+050 100 
+
+020 40 60 80 Ccl2 
+
+> CD206 + Mac CD206 - Mac CD206 - Prog
+
+0.8 0.6 0.4 0.2 0.0 Ccl9 
+
+> CD206 + Mac CD206 - Mac CD206 - Prog
+
+0.01 0.02 0.03 0.04 0.05 0Ccl12 Ccl24 
+
+> CD206 + Mac CD206 - Mac CD206 - Prog
+
+0.01 00.02 0.03 CD206 + Mac IL18 
+
+> CD206 - Mac CD206 - Prog
+
+0.008 0.006 0.004 0.002 0Pf4 CD206 + Mac CD206 - Mac CD206 - Prog 0.15 0.10 
+
+0.05 0Gas6 CD206 + Mac CD206 - Mac CD206 - Prog 0.03 0.02 0.01 0TNF a
+
+> CD206 - Prog CD206 + Mac CD206 - Mac CD206 - Prog
+
+0.020 0.015 0.010 0.005 0
+
+> CD206 + Mac CD206 - Mac
+
+0.20 0.15 0.10 0.05 0
+
+D E
+
+Figure 1: 
+
+A) Representative pseudocolor dotplots showing the fluorescent activated cell sorting gating strategy for CD206 +
+
+macrophages, and CD206 - macrophages and progenitors in the Aorta-Gonad-Mesonephros (AGM) of embryonic day (E)10.5 MacGreen embryos. The improved sorting strategy shows how CD206 + and CD206 - populations are resolved according to CD45, F4/80 and cKit expression. Arrows are used to show gate dependency. Bottom right, bar chart of percentage of cells shows proportion of progenitors (CD45 +CD11b +/-F4/80 -cKit +) and macrophages (CD45 +CD11b +
+
+F4/80 +cKit -) in CD206 + or CD206 - AGM populations. B) Real time qPCR analysis of Ccl2 , Ccl9 , Ccl12 , Ccl24 , interleukin 18 (Il18) , platelet factor 4 ( Pf4) , growth arrest-specific 6 ( Gas6) , and tumor necrosis factor a (Tnf 
+
+a) expression in CD206 +
+
+macrophages, CD206 - macrophages, and CD206 - progenitors, normalized over 
+
+bActin expression. N = 3, with each N representing 4-to-6 pulled AGM from E10.5 MacGreen embryos. Statistical test: Ordinary One Way Anova with Tukey’s multiple comparison test. ns= not significant, **=p<0.01, ***=p<0.001. C) Schematic representation of co-culture experiments on OP9 stromal cells. CD206 + (CD45 +cKit -CD11b +F4/80 +CD206 +) and CD206 - (CD45 +cKit -
+
+CD11b +F4/80 +CD206 -) macrophages were sorted from the AGM of E10.5 MacGreen embryos and plated on OP9 cells for seven days. Nascent CD45 +F4/80 - hematopoietic cells were subsequently sorted and plated in methylcellulose for a CFU-C (colony forming unit in culture) assay. D) Bar graph showing the frequency of hematopoietic CD45 +F4/80 - cells produced by AGM CD206 + and CD206 - cells after one week of culture on OP9 stromal cells. Each dot represents an independent biological replicate, with 4-to-7 embryos pulled for each experiment. E) Bar graph showing the number of hematopoietic colonies produced by AGM CD45 +F4/80 - cells retrieved after OP9 culture. N=4, with each N representing 4-to-7 pulled embryos. CFU-GEMM= colony forming unit-granulocyte, erythroid, macrophage, megakaryocyte; CFU-GM= colony forming unit-granulocyte, macrophage; CFU-M= colony forming unit-macrophage; CFU-G= colony forming unit-granulocyte; BFU-E= burst forming unit-erythroid. 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Endothelial cells 
+
+BFFigure 2 A
+
+15000 10000 5000 0CD206 -
+
+> CD206 +
+> F4/80 MFI
+
+C
+
+cKit +CD31 -
+
+01234% of cells in live C57BL/6J F4/80KO  00.1 0.2 0.3 0.4 0.5 C57BL/6J F4/80KO 
+
+0510 15 20 C57BL/6J F4/80KO 
+
+0.05 0.10 0.15 0.20 0C57BL/6J F4/80KO 
+
+cKit +CD31 +CD41 lo 
+
+0.12 0.08 0.04 0C57BL/6J F4/80KO 
+
+cKit +CD31 +CD45 +
+
+G
+
+CD31 -CD41 lo 
+
+0.05 0.10 0.15 0.20 0C57BL/6J F4/80KO % of cells in live % of cells in live % of cells in live % of cells in live % of cells in live 
+
+CD31 -CD41 lo CD43 +
+
+00.005 0.010 0.015 C57BL/6J F4/80KO % of cells in live 
+
+CD31 -CD41 lo 
+
+CD43 +CD45 +
+
+> C57BL/6J
+
+0.008 0.006 0.004 0.002 0F4/80KO % of cells in live  CFU-GEMM CFU-GM CFU-M CFU-G BFU-E 
+
+> CFU-C/AGM
+
+0250 500 
+
+> C57BL/6J F4/80KO
+
+D
+
+cKit +CD31 +
+
+EH
+
+CD206 +
+
+CD206 -
+
+> SSC-A
+
+CD45 AF700 CD11b APC Cy7 CD206 APC SSC-A cKit BV711 CD11b APC Cy7 F4/80 FITC SSC-A cKit BV711 CD11b APC Cy7 F4/80 FITC Count F4/80 FITC 
+
+Gated on live single cells 
+
+Figure 2: 
+
+A) Representative flow cytometry plots showing F4/80 expression in CD45 +GFP +cKit -CD11b +F4/80 +CD206 + macrophages (blue) and CD45 +GFP +cKit -CD11b +F4/80 + CD206 - cells (red) from the Aorta-Gonad-Mesonephros (AGM) of embryonic day 10.5 MacGreen embryos. B) Bar graph showing the quantification of F4/80 mean fluorescent intensity (MFI) in AGM CD45 +cKit -CD11b +F4/80 +CD206 + macrophages and CD45 +cKit -CD11b +F4/80 + CD206 - cells from E10.5 MacGreen 
+
+embryos. Each dot represents one individual embryo. C-G) Bar graphs showing the quantification of the frequency of C) endothelial cells (CD31 +cKit -CD41 -CD43 -CD45 -), D) cKit +CD31 - cells, E) cKit +CD31 + cluster cells, cKit +CD31 +CD41 lo and cKit +CD31 +CD45 + hematopoietic progenitors, F) CD31 -CD41 lo and G) CD31 -CD41 lo CD43 + and CD31 -CD41 lo CD43 +CD45 +
+
+hematopoietic progenitors in the AGM of E10.5 C57BL/6J and F4/80 KO embryos. Each dot represents one individual embryo. H) Bar graph showing the number of hematopoietic colonies produced by AGM cells from E10.5 C57BL/6J and F4/80 KO embryos. N=5. CFU-GEMM= colony forming unit-granulocyte, erythroid, macrophage, megakaryocyte; CFU-GM= colony forming unit-granulocyte, macrophage; CFU-M= colony forming unit-macrophage; CFU-G= colony forming unit-granulocyte; BFU-E= burst forming unit-erythroid. B,D,G,H) Statistical analysis: Student’s t-test. *=p<0.05, **=p<0.01, ****=p<0.0001. Only statistically significant differences are indicated. 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+00.5 1.0 1.5 % of cells in live C57BL/6J F4/80KO 
+
+Figure 3 AB C
+
+> % of Cells CD206 -
+> CD206 +
+
+050 100 
+
+CD45 +CD11b +
+
+F4/80 +cKit - (Mac) CD45 +CD11b +/-
+
+F4/80 -cKit + (Prog) 
+
+15000 10000 5000 0CD206 -
+
+> CD206 +
+
+D
+
+> CD206 -
+> CD206 +
+
+050 100 F4/80 MFI % CD45 +F4/80 -
+
+> CFU-C/2000 CD45 +
+
+0200 600 400 CD206 -
+
+> CD206 +
+
+E
+
+CFU-GEMM CFU-GM CFU-M CFU-G BFU-E 
+
+Endothelial cells CD31 +cKit +
+
+CD41 lo 
+
+cKit + CD31 - cKit +CD41 lo 
+
+CD41 lo CD43 + CD41 lo CD43 +CD45 +
+
+> % of cells in live
+
+0246C57BL/6J F4/80KO  010 20 30 40 C57BL/6J F4/80KO  00.5 1.0 1.5 2.0 2.5 C57BL/6J F4/80KO  00.5 1.0 1.5 2.0 C57BL/6J F4/80KO 
+
+00.02 0.04 0.06 0.08 C57BL/6J F4/80KO % of cells in live 
+
+00.005 0.010 0.015 0.020 C57BL/6J F4/80KO % of cells in live 
+
+FH I
+
+CFU-GEMM CFU-GM CFU-M CFU-G BFU-E 
+
+0400 800 1200 C57BL/6J F4/80KO CFU-C/YS Ccl2 Ccl9 Ccl12 Ccl24 Il18 Pf4 Gas6 Tnf a
+
+> Ifn a
+> Ifn g
+> Il1 b
+> Relative mRNA (FC vs YS CD206 +)
+
+02468
+
+G
+
+cKit-AF647 F4/80-BV421 Merge 
+
+10 
+
+.CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint Figure 3: 
+
+A) Representative immunofluorescence images showing localization of F4/80 + (blue) and cKit + (yellow) cells in the yolk sac (YS) of embryonic day (E)10.5 C57BL/6J embryos. B) bar chart of percentage of cells shows proportion of progenitors (CD45 +CD11b +/-F4/80 -cKit +) and macrophages (CD45 +CD11b +F4/80 +cKit -) in YS CD206 + or CD206 - populations. C) Bar graph showing the quantification of F4/80 mean fluorescent intensity (MFI) in YS CD45 +cKit -CD11b +F4/80 +CD206 +
+
+macrophages and CD45 +cKit -CD11b +F4/80 + CD206 - cells from E10.5 MacGreen embryos. Each dot represents one individual embryo. D) Bar graph showing the frequency of hematopoietic CD45 +F4/80 - cells produced by YS CD45 +cKit -
+
+CD11b +F4/80 +CD206 + macrophages and CD45 +cKit -CD11b +F4/80 + CD206 - after one week of culture on OP9 stromal cells (see experiment schematics in Fig. 2C). Each dot represents an independent biological replicate, with 4-to-7 embryos pulled for each experiment. E) Bar graph showing the number of hematopoietic colonies produced by yolk sac CD45 +F4/80 - cells retrieved after OP9 culture. N=3. CFU-GEMM= colony forming unit-granulocyte, erythroid, macrophage, megakaryocyte; CFU-GM= colony forming unit-granulocyte, macrophage; CFU-M= colony forming unit-macrophage; CFU-G= colony forming unit-granulocyte; BFU-E= burst forming unit-erythroid. F) Real time qPCR analysis of Ccl2 , Ccl9 ,
+
+Ccl12 , Ccl24 , interleukin 18 ( Il18) , platelet factor 4 ( Pf4) , growth arrest-specific 6 ( Gas6) , tumor necrosis factor a (Tnf 
+
+a),interferon a (Ifn 
+
+a), interferon g (Ifn 
+
+g) and interleukin 1 b (Il1 
+
+b) expression in AGM CD206 + macrophages (columns) normalized over 
+
+bActin expression and then plotted as fold change over the expression in YS CD206 + macrophages (horizontal line). Each dot represents an independent biological replicate, with 4-to-6 embryos per replicate. G-H) Bar graphs showing the quantification of the frequency of G) endothelial cells (CD31 +cKit -CD41 -CD43 -CD45 -), cKit +CD31 -
+
+cells, cKit +CD31 + cluster cells, and cKit +CD31 +CD41 lo hematopoietic progenitors, H) CD31 -CD41 lo , CD31 -CD41 lo CD43 +
+
+and CD31 -CD41 lo CD43 +CD45 + hematopoietic progenitors in the YS of E10.5 C57BL/6J and F4/80 KO embryos. Each dot represents one individual embryo. I) Bar graph showing the number of hematopoietic colonies produced by YS cells from E10.5 C57BL/6J and F4/80 KO embryos. CFU-GEMM= colony forming unit-granulocyte, erythroid, macrophage, megakaryocyte; CFU-GM= colony forming unit-granulocyte, macrophage; CFU-M= colony forming unit-macrophage; CFU-G= colony forming unit-granulocyte; BFU-E= burst forming unit-erythroid. C,F) Statistical test: Student’s t-test. *=p<0.05, **=p<0.01. Only statistically significant differences are indicated. 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Figure 4 A
+
+> 7 days on OP9
+
+CD31 +CD41/45 -
+
+CD206 + mac CD31 +CD41/45 -
+
+CD206 + mac 
+
+> +
+> +
+
+AGM sorting YS sorting Sorting CD45 +F4/80 - cells 
+
+CFU-C essay     
+
+> 020 100 AGM ECs AGM CD206 +
+> +++-% of CD45 +F4/80 -
+> 40 60 80
+> 0120 40 80 CFU-C/2000 CD45 +
+> AGM ECs AGM CD206 +
+> +++-
+> 0120 40 80 YS ECs YS CD206 +
+> +++-CFU-C/2000 CD45 +
+> YS ECs YS CD206 +
+> +++-
+> 020 100 % of CD45 +F4/80 -
+> 40 60 80
+
+B C       
+
+> 050 100 150 200 250 CFU-C/2000 CD45 +
+> YS ECs YS CD206 +
+> +++-AGM CD206 +--++-AGM CD206 +
+> 040 80 120 CFU-C/2000 CD45 +
+> AGM ECs +++-YS CD206 +--++-
+
+DE F
+
+> 7 days on OP9
+
+CD31 +CD41/45 -
+
+CD206 + mac CD31 +CD41/45 -
+
+CD206 + mac 
+
+> +
+> +
+
+AGM sorting YS sorting 
+
+> +
+> +
+
+Sorting CD45 +F4/80 - cells CFU-C essay       
+
+> 020 40 60 80 100 AGM ECs AGM CD206 +
+> +++-YS CD206 +--++-% of CD45 +F4/80 -
+> 020 40 60 80 100 YS ECs YS CD206 +
+> +++-AGM CD206 +--++-% of CD45 +F4/80 -
+> CFU-GEMM CFU-GM CFU-M CFU-G BFU-E
+> CFU-GEMM CFU-GM CFU-M CFU-G BFU-E
+
+Figure 4: 
+
+A) Schematic representation of co-culture experiments on OP9 stromal cells. Endothelial cells (CD31 +CD41 -CD45 -) and CD206 + macrophages (CD45 +GFP +cKit -CD11b +F4/80 +CD206 +) were sorted from the aorta-gonad-mesonephros (AGM) and yolk sac (YS) of embryonic day (E)10.5 MacGreen embryos and mixed and plated on OP9 cells for seven days. Nascent CD45 +F4/80 - hematopoietic cells were subsequently sorted and plated in methylcellulose for a CFU-C (colony forming unit in culture) assay. B). Bar graph showing the frequency of hematopoietic CD45 +F4/80 - cells produced by AGM (left) and YS (right) cells after one week of culture on OP9 stromal cells. Each dot represents an independent biological replicate, with 4-to-7 embryos pulled for each experiment C) Bar graph showing the number of hematopoietic colonies produced by AGM (left) and YS (right) CD45 +F4/80 - cells retrieved after OP9 culture. N=4, with each N representing 4-to-7 pulled embryos. CFU-GEMM= colony forming unit-granulocyte, erythroid, macrophage, megakaryocyte; CFU-GM= colony forming unit-granulocyte, macrophage; CFU-M= colony forming unit-macrophage; CFU-G= colony forming unit-granulocyte; BFU-E= burst forming unit-erythroid. D) Schematic representation of co-culture experiments on OP9 stromal cells. Endothelial cells (CD31 +CD41 -CD45 -) and CD206 + macrophages (CD45 +cKit -
+
+CD11b +F4/80 +CD206 +) were sorted from the aorta-gonad-mesonephros (AGM) and yolk sac (YS) of embryonic day (E)10.5 MacGreen embryos and then mixed and plated on OP9 cells for seven days. Nascent CD45 +F4/80 -
+
+hematopoietic cells were subsequently sorted and plated in methylcellulose for a CFU-C (colony forming unit in culture) assay. E) Bar graph showing the frequency of hematopoietic CD45 +F4/80 - cells produced by AGM endothelial (left) and YS enfothelial (right) cells after one week of culture on OP9 stromal cells in the presence of absence of AGM or YS CD206 + macrophages. Each dot represents an independent biological replicate, with 4-to-7 embryos pulled for each experiment. F) Bar graph showing the number of hematopoietic colonies produced by AGM and YS CD45 +F4/80 - cells retrieved after OP9 culture. N=4, with each N representing 4-to-7 pulled embryos. CFU-GEMM= colony forming unit-granulocyte, erythroid, macrophage, megakaryocyte; CFU-GM= colony forming unit-granulocyte, macrophage; CFU-M= colony forming unit-macrophage; CFU-G= colony forming unit-granulocyte; BFU-E= burst forming unit-erythroid. C,F) Statistical test: Student’s t-test. *=p<0.05, **=p<0.01. Only statistically significant differences are indicated. 
+
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+ACDFH I
+
+PC1: 63% variance PC2: 22% variance AGM CD206-AGM CD206+ YS CD206-YS CD206+ -20 0 20 40 -20 -10 010 
+
+Figure 5 EGJ
+
+> Relative mRNA expression YS CD206 -
+> YS CD206 +
+> AGM CD206 +
+
+Nrep 0123
+
+Ccl2 020 40 60 Mmp2 0.0 0.5 1.0 1.5 2.0 2.5 Prioritized AGM CD206+ ligands 
+
+St6gal1 Cxcl16 Anxa2 Ctsd Mmp2 Clec2i Cd38 Ccl2 Lilrb4a Tgm2 Trpv5 Tbxa2r Sdc4 Itgb1 Itga9 Adgrg1 Itga4 Ccr2 Cxcr3 Ccr5 Ccr1 Ackr4 Ackr1 Ackr2 Pecam1 Itgb3 Sdc2 Lrp2 Itgav Fgfr1 Ddr1 F2r Egfr Tlr2 Robo4 Dysf Plat Lair1 Cntfr Fgfr4 Adra2a Mtnr1a App Klrb1f 
+
+Receptors expressed by EC Prior interaction potential 00.9 0.6 0.3 
+
+Anxa2 Ctsd Cxcl16 Clec2i Mmp2 St6gal1 Cd38 Tgm2 Ccl2 Lilrb4a Prioritized AGM CD206+ ligands Trpv5 Tbxa2r Sdc4 Itgb1 Itga9 Adgrg1 Itga4 Ccr2 Cxcr3 Ccr5 Ccr1 Ackr4 Ackr1 Ackr2 Pecam1 Itgb3 Sdc2 Lrp2 Itgav Fgfr1 Ddr1 F2r Egfr Tlr2 Robo4 Dysf Plat Lair1 Cntfr Fgfr4 Adra2a App Klrb1c Klrb1f 
+
+Prior interaction potential Receptors expressed by CC 00.9 0.6 0.3 St6gal1 
+
+Cxcl16 Anxa2 Ctsd Mmp2 Clec2i Cd38 Ccl2 Lilrb4a Tgm2 Log2(FC) Log(base mean) 0 1 210 86
+
+Anxa2 Ctsd Cxcl16 Clec2i Mmp2 St6gal1 Cd38 Tgm2 Ccl2 Lilrb4a Log2(FC) Log(base mean) 0 1 210 86
+
+EC CC Ccr2 % of cells 100 80 60 40 20 0
+
+EC CC Tnf aR1 % of cells 100 80 60 40 20 0
+
+EC CC Tnf aR2 % of cells 100 80 60 40 20 0
+
+Cxcl16 0.0 0.5 1.0 1.5 2.0 2.5 Normalized counts 200 
+
+Nrep 
+
+> 2000
+
+B
+
+Adamts1 
+
+> 200  1000
+
+Tgm2 
+
+> 200  1000
+
+Ccl2 
+
+> 2000 10000
+
+Lpar4 
+
+> 50  200
+> 100 300 AGM CD206 -
+> AGM CD206 +
+
+Dapk1 
+
+> YS CD206 +
+> YS CD206 -
+
+Cxcl16 
+
+> AGM CD206 -
+> AGM CD206 +
+> YS CD206 +
+> YS CD206 -
+> 20  200
+> 200 600
+
+Mmp2 
+
+> YS CD206 -
+> YS CD206 +
+> AGM CD206 +
+> YS CD206 -
+> YS CD206 +
+> AGM CD206 +
+> YS CD206 -
+> YS CD206 +
+> AGM CD206 +
+> .CC-BY 4.0 International license available under a was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint (which this version posted July 3, 2026. ;https://doi.org/10.64898/2026.07.02.736005 doi: bioRxiv preprint
+
+Figure 5. 
+
+A) Principal component (PC) analysis plot indicated by color of aorta-gonad-mesonephros (AGM) CD45 +GFP +cKit -
+
+CD11b +F4/80 +CD206 - (red), AGM CD45 +GFP +cKit -CD11b +F4/80 +CD206 + (green), yolk sac (YS) CD45 +GFP +cKit -
+
+CD11b +F4/80 +CD206 - (blue), and YS CD45 +GFP +cKit -CD11b +F4/80 +CD206 + (purple) cells based on gene expression of 35727 genes. N = 2-3, with each N representing 5-to-7 pulled MacGreen embryos. B) RNA sequencing normalized read count plots for Adamts1 , Ccl2 , Tgm2 , Nrep , Lpar4 , Cxcl16 , Mmp2 , and Dapk1 in AGM CD45 +GFP +cKit -
+
+CD11b +F4/80 +CD206 -, AGM CD45 +GFP +cKit -CD11b +F4/80 +CD206 +, YS CD45 +GFP +cKit -CD11b +F4/80 +CD206 -, and YS CD45 +GFP +cKit -CD11b +F4/80 +CD206 + cells N = 2-3, with each N representing 5-to-7 pulled MacGreen embryos. C) Real time qPCR analysis of Nrep, Ccl2 , Mmp2 , and Cxcl16 in YS CD45 +GFP +cKit -CD11b +F4/80 +CD206 -, YS CD45 +GFP +cKit -CD11b +F4/80 +CD206 +, and AGM CD45 +GFP +cKit -CD11b +F4/80 +CD206 + cells. mRNA expression is relative to YS CD206 - cells. N=1 representing 9 E10.5 MacGreen embryos from 2 different litters. D) RNA sequencing analysis of potential AGM CD45 +GFP +cKit -CD11b +F4/80 +CD206 + ligands colored by the log of the mean base expression (from the lowest as purple to the highest as yellow). Log2(FC) is the log2 of the fold change in AGM CD45 +GFP +cKit -CD11b +F4/80 +CD206 + cells compared to all other macrophages. N = 2-3, with each N representing 5-to-7 pulled MacGreen embryos. E) Matrix showing known interactions of ligands expressed by AGM CD45 +GFP +cKit -
+
+CD11b +F4/80 +CD206 + macrophages and receptors expressed by endothelial cells (EC). The squares are colored according to the prior interaction potential from the lowest as gray to the highest as pink. F) RNA sequencing analysis of potential AGM CD206+ ligands colored by the log of the mean base expression (from the lowest as purple to the highest as yellow). Log2(FC) is the log2 of the fold change in AGM CD206+ cells compared to all other macrophages. N = 2-3, with each N representing 5-to-7 pulled MacGreen embryos. G) Matrix showing known interactions of ligands expressed by AGM CD45 +GFP +cKit -CD11b +F4/80 +CD206 + macrophages and receptors expressed by cluster cells (CC). The squares are colored according to the prior interaction potential from the lowest as gray to the highest as red. H) Flow cytometry analysis of Ccr2 surface expression on endothelial cells (ECs) and cluster cells (CCs). I) Flow cytometry analysis of TnfaR1 surface expression on endothelial cells (ECs) and cluster cells (CCs). J) Flow cytometry analysis of TNfaR2 surface expression on endothelial cells (ECs) and cluster cells (CCs). H-J: Statistical analysis: Student’s t-test. *=p<0.05, **=p<0.01.
