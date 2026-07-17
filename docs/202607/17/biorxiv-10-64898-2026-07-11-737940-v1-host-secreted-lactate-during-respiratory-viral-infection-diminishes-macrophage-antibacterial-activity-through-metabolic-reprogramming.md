@@ -1,0 +1,24 @@
+---
+title: Host-secreted lactate during respiratory viral infection diminishes macrophage antibacterial activity through metabolic reprogramming
+title_zh: 呼吸道病毒感染期间宿主分泌的乳酸通过代谢重编程削弱巨噬细胞的抗菌活性
+authors: "Sultana, S., Walsh, E., Bomberger, J. M."
+date: 2026-07-16
+pdf: "https://www.biorxiv.org/content/10.64898/2026.07.11.737940v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.5
+evidence: 巨噬细胞代谢重编程与抗菌活性
+tldr: 本研究探讨了呼吸道病毒感染如何通过宿主代谢产物影响继发性细菌感染。研究发现，干扰素（IFN）信号诱导气道上皮细胞产生乳酸，这种代谢物通过单羧酸转运蛋白和G蛋白受体作用于巨噬细胞，将其代谢重编程为抗炎状态（增加氧化磷酸化和脂肪酸氧化），从而削弱其杀菌能力。这一发现揭示了跨界相互作用中代谢物作为调节因子的关键作用，为理解病毒-细菌共感染机制提供了新视角。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-001.webp\", \"caption\": \"\", \"page\": 14, \"index\": 1, \"width\": 1580, \"height\": 1085}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-002.webp\", \"caption\": \"\", \"page\": 15, \"index\": 2, \"width\": 1429, \"height\": 621}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-003.webp\", \"caption\": \"\", \"page\": 16, \"index\": 3, \"width\": 1431, \"height\": 554}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-004.webp\", \"caption\": \"\", \"page\": 17, \"index\": 4, \"width\": 1086, \"height\": 1463}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-005.webp\", \"caption\": \"\", \"page\": 19, \"index\": 5, \"width\": 1431, \"height\": 822}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-006.webp\", \"caption\": \"\", \"page\": 20, \"index\": 6, \"width\": 1214, \"height\": 1111}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-007.webp\", \"caption\": \"\", \"page\": 21, \"index\": 7, \"width\": 1559, \"height\": 1175}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-008.webp\", \"caption\": \"\", \"page\": 22, \"index\": 8, \"width\": 1431, \"height\": 769}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-009.webp\", \"caption\": \"\", \"page\": 23, \"index\": 9, \"width\": 526, \"height\": 717}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-11-737940-v1/fig-010.webp\", \"caption\": \"\", \"page\": 24, \"index\": 10, \"width\": 463, \"height\": 629}]"
+motivation: 旨在探究呼吸道病毒感染诱导的宿主代谢产物（如乳酸）如何调节先天免疫细胞活性并导致继发性细菌感染。
+method: 通过体外模拟IFNβ处理的气道上皮细胞分泌环境，观察巨噬细胞在乳酸暴露下的代谢变化及对铜绿假单胞菌的杀伤能力。
+result: 发现乳酸通过重编程巨噬细胞代谢至抗炎状态（增强氧化磷酸化和脂肪酸氧化），显著降低了其抗菌活性。
+conclusion: 宿主分泌的乳酸是调节上皮细胞与巨噬细胞间通讯的关键代谢信号，在病毒感染诱发的继发性细菌感染中起重要作用。
+---
+
+## 摘要
+在多微生物感染中，宿主如何识别并响应病原体，影响着哪些物种会持续存在并导致慢性感染。人类呼吸道是病毒-细菌共感染的常见解剖部位，原发性病毒感染会诱发继发性细菌感染，导致发病率和死亡率增加。此外，共感染在患有慢性肺部疾病（如慢性阻塞性肺疾病和囊性纤维化）的人群中尤为普遍。我们此前曾报道，原发性病毒感染和抗病毒干扰素（IFN）信号传导会刺激气道上皮细胞（AECs）上铜绿假单胞菌（PA）生物膜的形成。IFN 信号传导诱导 AECs 发生有氧糖酵解，并产生乳酸作为细胞副产物。鉴于先天免疫系统在共感染动态中发挥着不可或缺的作用，我们研究了呼吸道共感染期间宿主分泌的代谢物（即乳酸）对先天免疫细胞活性的影响。我们发现，暴露于经 IFNβ 处理的 AECs 的顶端分泌物会显著损害巨噬细胞的抗菌活性，其中可溶性代谢物乳酸发挥了重要作用。巨噬细胞分别利用单羧酸转运蛋白和 G 蛋白受体来转运和/或感知乳酸，这种乳酸暴露以时间依赖的方式削弱了它们的杀菌活性。乳酸暴露通过增加氧化磷酸化和脂肪酸氧化，特异性地将巨噬细胞的细胞代谢重编程为抗炎状态。总之，这些发现为代谢物作为呼吸道共感染期间跨界相互作用以及上皮-巨噬细胞通讯的复杂调节因子提供了见解。
+
+## Abstract
+In polymicrobial infections, how the host recognizes and responds to pathogens influences which species will persist to cause chronic infections. The human respiratory tract is a common anatomical site for viral-bacterial co-infections, where primary viral infections predispose to secondary bacterial infections, leading to increased morbidity and mortality. Additionally, co-infections are disproportionately prevalent in people with chronic lung diseases, such as chronic obstructive pulmonary disease and cystic fibrosis. We previously reported that primary viral infections and antiviral interferon (IFN) signaling stimulate Pseudomonas aeruginosa (PA) biofilm formation on airway epithelial cells (AECs). IFN signaling induces aerobic glycolysis in AECs and generates lactate as a cellular byproduct. Given that innate immune systems play an integral role in co-infection dynamics, we investigated the role of host-secreted metabolites (i.e. lactate) on innate immune cell activity during respiratory co-infections. We found that exposure to the apical secretions from IFN{beta}-treated AECs significantly compromised macrophage antibacterial activity, with the soluble metabolite lactate playing an important role. Macrophages used monocarboxylate transporters and G-protein receptors to transport and/or sense lactate, respectively, and this exposure to lactate diminished their bacterial-killing activity in a time-exposure dependent manner. Lactate exposure particularly reprogrammed macrophage cellular metabolism towards an anti-inflammatory state by increasing oxidative phosphorylation and fatty acid oxidation. Collectively, these findings provide insight into metabolites as complex regulators of trans-kingdom interactions and epithelial-macrophage crosstalk during respiratory co-infections.

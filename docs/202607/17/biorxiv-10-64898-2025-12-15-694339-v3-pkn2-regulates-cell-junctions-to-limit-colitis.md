@@ -1,0 +1,24 @@
+---
+title: PKN2 regulates cell-junctions to limit colitis
+title_zh: PKN2通过调节细胞连接限制结肠炎
+authors: "Henry, J. C., Campbell, A., Huddar, P., Sewell, J., Menezes, S., Passman, A., Smith, K., McGauran, S., Quetier, I., Lin, M.-L., Jansen, M., McDonald, N., Graham, T. A., McDonald, S., Cameron, A. J."
+date: 2026-07-09
+pdf: "https://www.biorxiv.org/content/10.64898/2025.12.15.694339v3.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: PKN2调节细胞连接以限制结肠炎
+tldr: 本研究发现Rho调节激酶PKN2是维持肠道紧密连接完整性的关键因子。通过小鼠模型和类器官实验，研究揭示了PKN2缺失会加剧结肠炎并促进炎症相关结直肠癌的发生。PKN2在人类炎症性肠病中也表现出表达下降与病情加重的相关性，为肠道屏障保护和癌症预防提供了新靶点。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2025-12-15-694339-v3/fig-001.webp\", \"caption\": \"Fig. 2 - Epithelial PKN2 loss aggravates inflammatory bowel injury. (A-C) Epithelial erosion 8 days after AOM/1%DSS treatment in global-iPKN2 KO mice (WT: n=4, HET: n=6, KO: n=8; Dunnett’s test).\", \"page\": 7, \"index\": 1, \"width\": 888, \"height\": 814}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2025-12-15-694339-v3/fig-002.webp\", \"caption\": \"Fig. 3 - Transcriptomic profiling of PKN2 loss reveals inflammatory and junctional pathway\", \"page\": 10, \"index\": 2, \"width\": 888, \"height\": 1058}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2025-12-15-694339-v3/fig-003.webp\", \"caption\": \"Fig. 5 - PKN2 loss sensitises intestinal epithelial tight junctions to inflammatory stimulation. (A) PKN2 localises to early nascent cell-cell contacts in sparse cultures of DLD1 cells. (B-D) ZO-1 positive tight junction formation following overexpression of a kinase-dead PKN2 (B, C) or overexpression of wild-type PKN2 (D). Tight junction integrity was quantified as average length of junctional ZO-1 per\", \"page\": 14, \"index\": 3, \"width\": 888, \"height\": 1036}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2025-12-15-694339-v3/fig-004.webp\", \"caption\": \"Fig. 4 - PKN2 loss sensitises intestinal epithelial tight junctions to inflammatory stimulation. (A) Immunostaining PKN2 and ZO-1 in C57BL6 colonic organoids cultured in 2D. (B-E) Disruption of ZO-1 positive tight junction formation following PKN2 depletion by siRNA (B, D) or CRISPR (C, E). Tight\", \"page\": 12, \"index\": 4, \"width\": 888, \"height\": 950}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2025-12-15-694339-v3/fig-005.webp\", \"caption\": \"Fig. 1 - PKN2 loss sensitises mice to AOM/DSS treatment and promotes colitis-associated colorectal cancer. (A) Schematic of the AOM/1% DSS protocol. (B, C) Average (B) and maximum (C) weight\", \"page\": 5, \"index\": 5, \"width\": 888, \"height\": 1035}]"
+motivation: 旨在探究在炎症压力下维持肠道上皮屏障稳定性的分子机制及其对结直肠癌的影响。
+method: 利用条件性PKN2缺失小鼠模型、类器官实验及人类炎症性肠病转录组数据进行综合分析。
+result: PKN2定位于紧密连接处，其缺失会导致屏障功能受损、结肠炎加重及腺瘤形成显著增加。
+conclusion: PKN2是紧密连接稳定性的核心调节因子，其表达水平直接影响肠道炎症严重程度、治疗反应及癌症风险。
+---
+
+## 摘要
+肠道屏障功能衰竭是炎症性肠病的一个定义性特征，也是炎症相关结直肠癌的关键驱动因素。然而，在炎症应激期间维持屏障稳定性的上皮机制尚未完全明确。在本研究中，我们确定 Rho 调节激酶 PKN2 是紧密连接完整性的非冗余保障，也是结肠炎相关结直肠癌的候选抑癌因子。小鼠中 PKN2 的条件性缺失使结肠对炎症损伤敏感，并在炎症性癌症模型中显著增加了腺瘤的形成，且肿瘤负荷与结肠炎严重程度紧密相关。从机制上讲，PKN2 定位于紧密连接，并且在小鼠和类器官模型中是损伤期间稳定屏障完整性所必需的。PKN2 缺失诱导了在人类炎症性肠病中保守的转录程序，其中 PKN2 表达降低与疾病严重程度增加和治疗反应改变相关。值得注意的是，PKN2 编码于先前在人类和小鼠中均与肠道炎症易感性和肿瘤抑制相关的基因组位点内。我们的研究结果确定 PKN2 是这些表型背后的功能效应因子，并证明即使是杂合性缺失也足以赋予对炎症损伤和肿瘤起始的高度敏感性，从而将 PKN2 定位为紧密连接稳定性的核心调节因子，影响疾病严重程度、治疗反应和癌症风险。
+
+## Abstract
+Intestinal barrier failure is a defining feature of inflammatory bowel disease and a key driver of inflammation-associated colorectal cancer. However, the epithelial mechanisms that preserve barrier stability during inflammatory stress remain incompletely defined. Here, we identify the Rho-regulated kinase PKN2 as a non-redundant safeguard of tight junction integrity and a candidate tumour suppressor in colitis-associated colorectal cancer. Conditional PKN2 deletion in mice sensitised the colon to inflammatory injury and significantly increased adenoma formation in an inflammatory cancer model, with tumour burden tightly correlating with colitis severity. Mechanistically, PKN2 localises to tight junctions and is required to stabilise barrier integrity during injury in mouse and organoid models. PKN2 loss induces transcriptional programs conserved in human inflammatory bowel disease, where reduced PKN2 expression associates with increased disease severity and altered therapeutic response. Notably, PKN2 is encoded within genomic loci previously linked to intestinal inflammation susceptibility and tumour suppression in both humans and mice. Our findings identify PKN2 as a functional effector underlying these phenotypes and demonstrate that even heterozygous loss is sufficient to confer heightened sensitivity to inflammatory injury and tumour initiation, positioning PKN2 as a central regulator of tight junction stability that shapes disease severity, treatment response and cancer risk.
