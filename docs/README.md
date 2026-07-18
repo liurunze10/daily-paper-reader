@@ -6,64 +6,61 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-17
-- 运行时间：2026-07-17 19:57:14 UTC
+- 最新运行日期：2026-07-18
+- 运行时间：2026-07-18 20:44:08 UTC
 - 运行状态：成功
-- 本次总论文数：14
+- 本次总论文数：13
 - 精读区：3
-- 速读区：11
+- 速读区：10
 
 ### 今日简报（AI）
-今日深度解析克罗恩病防御机制与口肠轴免疫关联，涵盖 14 篇高分前沿研究。
-核心结论揭示了 HMGB1 在肠道炎症中的防御价值，并明确了口腔菌群对硬化性胆管炎等并发症的影响。
-建议读者关注肠道微生态的系统性影响，从免疫记忆与菌群平衡角度理解慢性炎症性疾病。
-- 详情：[/202607/17/README](/202607/17/README)
+今日深挖13篇前沿文献，聚焦炎症性肠病（IBD）与多器官轴线的免疫交互机制。
+重点揭示了口-肠轴在IBD与原发性硬化性胆管炎中的关键作用，以及工程化益生菌修复肠-肝-脑轴的潜力。
+建议关注口腔健康对肠道炎症的潜在影响，并从代谢重塑角度理解机体抗感染能力的调节。
+- 详情：[/202607/18/README](/202607/18/README)
 
 ### 精读区论文标签
-1. [A preliminary study of HMGB1 defense in Crohn's disease](/202607/17/biorxiv-10-64898-2026-07-09-737505-v1-a-preliminary-study-of-hmgb1-defense-in-crohns-disease)  
+1. [Oral Gut Microbial Axis in Inflammatory Bowel Disease and Primary Sclerosing Cholangitis](/202607/18/biorxiv-10-64898-2026-07-15-738466-v1-oral-gut-microbial-axis-in-inflammatory-bowel-disease-and-primary-sclerosing-cholangitis)  
    标签：评分：9.0/10、query:ros-mp
-   evidence：克罗恩病与肠道屏障
-2. [Oral Gut Microbial Axis in Inflammatory Bowel Disease and Primary Sclerosing Cholangitis](/202607/17/biorxiv-10-64898-2026-07-15-738466-v1-oral-gut-microbial-axis-in-inflammatory-bowel-disease-and-primary-sclerosing-cholangitis)  
-   标签：评分：8.5/10、query:ros-mp
-   evidence：炎症性肠病中的微生物轴
-3. [Restricted MHC-II trafficking in Mycobacterium tuberculosis-infected M2-like macrophages limits CD4+ T cell activation](/202607/17/biorxiv-10-64898-2026-07-07-736943-v1-restricted-mhc-ii-trafficking-in-mycobacterium-tuberculosis-infected-m2-like-macrophages-limits-cd4-t-cell-activation)  
+   evidence：炎症性肠病中的口肠微生物轴
+2. [A preliminary study of HMGB1 defense in Crohn's disease](/202607/18/biorxiv-10-64898-2026-07-09-737505-v1-a-preliminary-study-of-hmgb1-defense-in-crohns-disease)  
    标签：评分：8.0/10、query:ros-mp
-   evidence：M1/M2巨噬细胞功能差异
+   evidence：克罗恩病和炎症性肠病中的肠屏障失效
+3. [Adaptive Resilience: Agarikon Mycelium Modulates Immune Responses and Provides Oxidative Stress Buffering in Human Immune Cells](/202607/18/biorxiv-10-64898-2026-07-10-737773-v1-adaptive-resilience-agarikon-mycelium-modulates-immune-responses-and-provides-oxidative-stress-buffering-in-human-immune-cells)  
+   标签：评分：8.0/10、query:ros-mp
+   evidence：调节免疫反应并提供氧化应激缓冲
 
 ### 速读区论文标签
-1. [Macrophages tune responses to pathogen dynamics through TLR4 stimulation memory and by licensing susceptibility to IL-10](/202607/17/biorxiv-10-1101-2024-03-28-587272-v3-macrophages-tune-responses-to-pathogen-dynamics-through-tlr4-stimulation-memory-and-by-licensing-susceptibility-to-il-10)  
+1. [A Bioengineered Live Biotherapeutic Exploits Inflammation to Restore Gut Liver Brain Axis Function under Diet-Induced Stress](/202607/18/biorxiv-10-64898-2026-07-10-737804-v1-a-bioengineered-live-biotherapeutic-exploits-inflammation-to-restore-gut-liver-brain-axis-function-under-diet-induced-stress)  
    标签：评分：7.5/10、query:ros-mp
-   evidence：巨噬细胞记忆和细胞因子输出调节
-2. [Coxiella burnetii deubiquitinates host TRAF6 to modulate the macrophage innate immune response](/202607/17/biorxiv-10-1101-2023-03-15-532774-v2-coxiella-burnetii-deubiquitinates-host-traf6-to-modulate-the-macrophage-innate-immune-response)  
+   evidence：治疗急性和慢性结肠炎
+2. [Restricted MHC-II trafficking in Mycobacterium tuberculosis-infected M2-like macrophages limits CD4+ T cell activation](/202607/18/biorxiv-10-64898-2026-07-07-736943-v1-restricted-mhc-ii-trafficking-in-mycobacterium-tuberculosis-infected-m2-like-macrophages-limits-cd4-t-cell-activation)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：调节巨噬细胞先天免疫反应和ROS产生
-3. [Non-canonical TLR signaling restricts cytosolic LPS detection.](/202607/17/biorxiv-10-1101-2025-03-10-642106-v2-non-canonical-tlr-signaling-restricts-cytosolic-lps-detection)  
+   evidence：M2型与M1型巨噬细胞感染结核分枝杆菌的独特机制
+3. [Host-secreted lactate during respiratory viral infection diminishes macrophage antibacterial activity through metabolic reprogramming](/202607/18/biorxiv-10-64898-2026-07-11-737940-v1-host-secreted-lactate-during-respiratory-viral-infection-diminishes-macrophage-antibacterial-activity-through-metabolic-reprogramming)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：NRF2和衣康酸调节巨噬细胞相关传感器和炎症
-4. [PKN2 regulates cell-junctions to limit colitis](/202607/17/biorxiv-10-64898-2025-12-15-694339-v3-pkn2-regulates-cell-junctions-to-limit-colitis)  
+   evidence：代谢重编程与巨噬细胞抗菌活性
+4. [Macrophage calcium signaling dynamics revealed using genetically-encoded sensors](/202607/18/biorxiv-10-64898-2026-07-13-737685-v1-macrophage-calcium-signaling-dynamics-revealed-using-genetically-encoded-sensors)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：PKN2调节细胞连接以限制结肠炎
-5. [Challenges in reconstituting the peroxiredoxin 2:STAT3 transient redox-relay complex in vitro](/202607/17/biorxiv-10-64898-2026-07-03-731362-v1-challenges-in-reconstituting-the-peroxiredoxin-2stat3-transient-redox-relay-complex-in-vitro)  
+   evidence：巨噬细胞钙信号动力学及其核心功能
+5. [Beta-adrenergic receptor activation during stress reduces the abundance of commensal Clostridia in the mouse gut](/202607/18/biorxiv-10-64898-2026-07-14-738460-v1-beta-adrenergic-receptor-activation-during-stress-reduces-the-abundance-of-commensal-clostridia-in-the-mouse-gut)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：Prdx2 介导向 STAT3 的氧化还原信号传导
-6. [VEGFA+ macrophages promote the growth and metastasis of intrahepatic cholangiocarcinoma via OSM and THBS1 signaling](/202607/17/biorxiv-10-1101-2025-10-02-679723-v4-vegfa-macrophages-promote-the-growth-and-metastasis-of-intrahepatic-cholangiocarcinoma-via-osm-and-thbs1-signaling)  
+   evidence：应激相关精神疾病与炎症性肠病具有高度共病性
+6. [A eutherian-specific metaviral gene, RTL6, coordinates microglial inflammatory responsiveness and state regulation](/202607/18/biorxiv-10-64898-2026-07-15-738833-v1-a-eutherian-specific-metaviral-gene-rtl6-coordinates-microglial-inflammatory-responsiveness-and-state-regulation)  
    标签：评分：6.5/10、query:ros-mp
-   evidence：TAM 转录异质性和巨噬细胞亚群
-7. [Distinct macrophage and T cell programs shape pancreatic inflammation during metabolic stress and aging](/202607/17/biorxiv-10-64898-2026-07-08-737054-v1-distinct-macrophage-and-t-cell-programs-shape-pancreatic-inflammation-during-metabolic-stress-and-aging)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：巨噬细胞亚型组成和激活状态
-8. [Host-secreted lactate during respiratory viral infection diminishes macrophage antibacterial activity through metabolic reprogramming](/202607/17/biorxiv-10-64898-2026-07-11-737940-v1-host-secreted-lactate-during-respiratory-viral-infection-diminishes-macrophage-antibacterial-activity-through-metabolic-reprogramming)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：巨噬细胞代谢重编程与抗菌活性
-9. [Phosphoinositide regulation by the CCC complex promotes phagosome maturation and host defense](/202607/17/biorxiv-10-64898-2025-12-15-694371-v2-phosphoinositide-regulation-by-the-ccc-complex-promotes-phagosome-maturation-and-host-defense)  
+   evidence：小胶质细胞炎症反应和状态调节
+7. [Non-canonical TLR signaling restricts cytosolic LPS detection.](/202607/18/biorxiv-10-1101-2025-03-10-642106-v2-non-canonical-tlr-signaling-restricts-cytosolic-lps-detection)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：CCC复合物与巨噬细胞功能相关的机制
-10. [Infection-Induced Dynamin-2 Repurposing Drives Podosome Maturation and Mechanical Immunity](/202607/17/biorxiv-10-64898-2026-07-01-735798-v1-infection-induced-dynamin-2-repurposing-drives-podosome-maturation-and-mechanical-immunity)  
+   evidence：先天免疫中的非经典TLR信号传导和衣康酸-NRF2通路
+8. [VEGFA+ macrophages promote the growth and metastasis of intrahepatic cholangiocarcinoma via OSM and THBS1 signaling](/202607/18/biorxiv-10-1101-2025-10-02-679723-v4-vegfa-macrophages-promote-the-growth-and-metastasis-of-intrahepatic-cholangiocarcinoma-via-osm-and-thbs1-signaling)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：巨噬细胞机械免疫与功能成熟
-11. [DDX3 Regulates the Innate Immune Response to Bone Sarcomas](/202607/17/biorxiv-10-64898-2026-07-01-735844-v1-ddx3-regulates-the-innate-immune-response-to-bone-sarcomas)  
+   evidence：定义肿瘤相关巨噬细胞的转录异质性并绘制其相互作用图谱
+9. [Challenges in reconstituting the peroxiredoxin 2:STAT3 transient redox-relay complex in vitro](/202607/18/biorxiv-10-64898-2026-07-03-731362-v1-challenges-in-reconstituting-the-peroxiredoxin-2stat3-transient-redox-relay-complex-in-vitro)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：DDX3 促进巨噬细胞中炎症细胞因子的表达
+   evidence：Prdx2介导氧化还原信号传递给炎症因子STAT3
+10. [A nitrite-responsive regulatory RNA locus sustains commensal resilience against nitrosative stress](/202607/18/biorxiv-10-64898-2026-07-09-736866-v1-a-nitrite-responsive-regulatory-rna-locus-sustains-commensal-resilience-against-nitrosative-stress)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：肠道炎症与活性氮物种
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,2160 @@
+Title: VEGFA+ macrophages promote the growth and metastasis of intrahepatic cholangiocarcinoma via OSM and THBS1 signaling
+
+URL Source: https://www.biorxiv.org/content/10.1101/2025.10.02.679723v4.full.pdf
+
+Number of Pages: 55
+
+Markdown Content:
+1
+
+VEGFA + macrophages  promote the growth and metastasis of intrahepatic 1
+
+cholangiocarcinoma via OSM and THBS1 signaling 2
+
+3
+
+Tingjie Wang 1,3* , Ruitao Long 2* , Zhongyu Cheng 2, Mi Zhang 2, Bing Wei 1,3 , Cong 4
+
+Lyu 1,3 , Chuanrui Xu 2# 
+
+5
+
+6
+
+> 1
+
+Department of Molecular Pathology, The Affiliated Cancer Hospital of Zhengzhou 7
+
+University, Henan Cancer Hospital, Zhengzhou, Henan, People’s Republic of China. 8
+
+> 2
+
+School of Pharmacy, Tongji Medical College, Huazhong University of Science and 9
+
+Technology, Wuhan, Hubei, People’s Republic of China. 10 
+
+> 3
+
+Henan Key Laboratory of Molecular Pathology, Zhengzhou, Henan, People’s 11 
+
+Republic of China. 12 
+
+13 
+
+14 
+
+Corresponding Author: 15 
+
+Chuanrui Xu 16 
+
+School of Pharmacy, Tongji Medical College, Huazhong University of Science and 17 
+
+Technology 18 
+
+Wuhan, Hubei, People’s Republic of China 19 
+
+Email:  xcr@hust.edu.cn 20 
+
+21 
+
+> *
+
+Tingjie Wang and Ruitao Long contributed equally to this work. 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+2
+
+Keywords:  Intrahepatic cholangiocarcinoma, Spatiotemporal omics,  VEGFA +
+
+22 
+
+macrophage, OSM, THBS1 23 
+
+24 
+
+Conflict of Interest Statement 25 
+
+The authors have declared that no conflict of interest exists. 26 
+
+27 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 3
+
+Abstract 28 
+
+Tumor -associated macrophages (TAMs) are abundant in intrahepatic 29 
+
+cholangiocarcinoma (ICC)  and  correlate with poor prognosis, but their 30 
+
+non -immunosuppressive  roles remain unclear.  This study aimed  to define TAM 31 
+
+transcriptional heterogeneity and map their interactions with ICC cells that promote 32 
+
+malignancy beyond immune suppression.  Single -cell  and spatial transcriptome 33 
+
+analysis with mouse and human ICC tissues revealed a TAM  subpopulation ,34 
+
+designated  Mφ_ VEGFA , that  emerged as the major macrophage population  from the 35 
+
+intermediate  stage of ICC  development onward.  Data from  Gene Expression Omnibus 36 
+
+(GEO) and spatial transcriptome indicate that  Mφ_ VEGFA  was associated with  poor 37 
+
+prognosis and spatially localized to the ICC cells.  Cell co -culture and c ell -cell 38 
+
+communication analyses  revealed  that  Mφ_ VEGFA  promoted  ICC cell proliferation 39 
+
+via  secreted OSM and downstream O SMR –STAT3 –CCND1  axis , and  enhanced  ICC 40 
+
+cell  invasion through THBS1  and downstream  CD47 –mTOR /DBN1  signaling .41 
+
+Critically,  multiplex immunofluorescence with  human  ICC tissue microarray 42 
+
+indicated that  OSM  and  THBS1  were co -elevated in  human  ICC s, and  dual blockade 43 
+
+of both targets inhibit ed  ICC progression  in mouse models.  This study uncovers the 44 
+
+direct and critical roles of  Mφ_ VEGFA  in  driving  ICC progression with paracrine 45 
+
+signaling  and  further  highlight s the potential of  targeting  macrophages  in ICC 46 
+
+treatment .47 
+
+48 
+
+49 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 4
+
+Introduction 50 
+
+The incidence of intrahepatic cholangiocarcinoma (ICC), which arises from the 51 
+
+intrahepatic bile duct epithelium, is experiencing a global rise. Notably, its subtle 52 
+
+early symptoms, aggressive nature, and chemotherapy resistance contribute to a 53 
+
+5-year survival rate of below 10%  (1) . Targeted therapies and immune checkpoint 54 
+
+inhibitors provide benefits in some solid tumors; nevertheless, responses in ICC 55 
+
+remain inconsistent owing to its complex tumor microenvironment (TME)  (2) .56 
+
+Tumor -associated macrophages (TAMs)  are  the most abundant immune cells in the 57 
+
+ICC TME,  and  promote immune suppression, angiogenesis , stromal remodeling,  and 58 
+
+subsequent  progression and metastasis  (2, 3) . Current TAM -targeting strategies, 59 
+
+including depletion, reprogramming, recruitment control, and functional regulation, 60 
+
+exhibit variable efficacy  (4, 5) . Thus, dissecting communication cascades between 61 
+
+ICC cells and TAMs  may help  identify  novel  therapeutic targets  for  ICC  therapy .62 
+
+63 
+
+TAMs are highly heterogenous and d istinct TAM  subpopulation s are  reportedly 64 
+
+associated with ICC progression. MARCO⁺ TAMs correlate with 65 
+
+epithelial -mesenchymal transition (EMT), angiogenesis, and hypoxia  in the ICC 66 
+
+progression  (6) . S100P  and  SPP1 -markers, distinguishing perihilar and peripheral 67 
+
+cholangiocarcinoma, exhibit differential macrophage infiltration tied to prognosis and 68 
+
+grade  (7) . Furthermore, spatial distribution influences TAM functions  (8) , and 69 
+
+spatial -omics studies  further revealed  TAM heterogeneity  (9, 10) . Specifically, TAMs 70 
+
+at invasive fronts mainly express pro -angiogenic factors such as VEGFA, whereas 71 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 5
+
+core TAMs activate immunosuppressive  signaling  (6) . Moreover, TAM plasticity is 72 
+
+shaped by cues such as extracellular matrix (ECM) gradients, lactate accumulation, 73 
+
+and cytokines  (9) . Nonetheless, the spatial dynamics and underlying mechanisms of 74 
+
+TAM to promote ICC development  directly  remain poorly defined. 75 
+
+76 
+
+Here, we integrated temporal -spatial  and  single -cell  transcriptomics to map 77 
+
+transcriptional landscapes , and  identified  a human –mouse conserved TAM population 78 
+
+driving ICC progression. Using cell -cell communication analysis, cell -cell co -culture, 79 
+
+multiplex immunofluorescence, and knockout mouse models, we validated the key 80 
+
+TAM –ICC signaling axes that promote ICC proliferation and migration. These 81 
+
+findings may clarify direct  and  non -immunosuppressive pro -tumoral mechanisms in 82 
+
+TAMs , and support the development of macrophage –targeted immunotherapy for 83 
+
+ICC. 84 
+
+85 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 6
+
+RESULTS 86 
+
+Mφ_ VEGFA is enriched in ICC and  required for ICC progression 87 
+
+To characterize macrophage subsets involved in ICC malignancy, we established an 88 
+
+AKT1/ NICD1 -induced  ICC mouse model via hydrodynamic tail vein injection. 89 
+
+Histological examination of mouse ICC tissues collected at four time points revealed 90 
+
+progressive tumor development  (Supplementary Figure S1A) . Tumor budding was 91 
+
+first observed on day 7, followed by the formation of ductal -like structures by day 15 92 
+
+and the development of more defined nodules with disorganized structures by day 25. 93 
+
+By day 31, ICC tumor nodules with bile -like fluid had spread extensively across the 94 
+
+liver surface, indicating advanced -stage disease  (11) . Therefore, we defined ICC 95 
+
+tissues collected on day 7 as early stage, on day 15 as middle, on day 25 as 96 
+
+middle -advanced , and on day 31 as advanced. 97 
+
+98 
+
+scRNA -seq was performed using tissues collected at all stages , and nine  major  cell 99 
+
+types , including  macrophages,  were identified (Supplementary Figure S1 B–C). 100 
+
+Subsequent r e-clustering analysis identified seven macrophage subtypes: M φ_ Vegfa, 101 
+
+Mφ_ Dnajb1 , Mφ_ S100a4, Mφ_ Chil3,  Mφ_Mki67,  Mφ_ Clec4f , and  Mφ_ Cxcl9 102 
+
+(Figure 1A). In the early and mid dle  stages of ICC progression, M φ_ Cxcl9 and 103 
+
+Mφ_ S100a4 showed dominant infiltration  (Figure 1B).  Mφ_ Cxcl9 express ed  high 104 
+
+levels of  Cxcl9  and  Cxcl10 , whereas  Mφ_ S100a4 express ed  high levels of  S100a4  and 105 
+
+S100a6  (Supplementary Figure S1 D).  In addition, th ese  two macrophage sub types 106 
+
+demonstrated  enriched pathways associated with antitumor immune response 107 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 7
+
+(Supplementary Figure S1 E).  Of note,  Mφ_ Clec4f exhibited high levels of 108 
+
+tissue -resident markers  Vsig4  and  Clec4f , infiltrated highly  at all time points except 109 
+
+day 25 , and  mediated tissue repair and homeostasis, suggesting that  it  represents a 110 
+
+Kupffer -like cell type  (Figure 1 B and  Supplementary Figure S1 D)(12) . In the  middle –111 
+
+to –advanced or advanced stages, Mφ_ Chil3, Mφ_ Dnajb1 , and Mφ_ Vegfa  were 112 
+
+markedly infiltrated (Figure 1B). Specifically, M φ_ Chil3 highly expressed  Chil3 ,113 
+
+S100a4 , S100a6 , and  S100a8 , and were enriched pathways associated with 114 
+
+inflammation  (Figure 1B and  Supplementary Figure S1 D). Mφ_ Dnajb1 highly 115 
+
+expressed  Hspb1 , C1qa  and  Dnajb1 , whereas M φ_ Vegfa  expressed  canonical M2 -like 116 
+
+markers,  including  Vegfa , Gpnmb , Trem2 , Spp1  and  Arg1  (Supplementary  Figure  S1D)117 
+
+(13, 14) . Notably, both M φ_ Dnajb1 and M φ_ Vegfa  showed  enriched  pathwa ys  related 118 
+
+to stress responses and cellular signaling/communication (Supplementary Figure S1 E). 119 
+
+Critically, those m acrophage subtypes except M φ_ Chil3 and M φ_ Dnajb1  identified in 120 
+
+AKT1/NICD1  mouse ICC tissues  were also identified in AKT1/YAP1 mouse ICC 121 
+
+tissues using publicly available scRNA -seq data  (15)  (Supplementary Figure S 2A -B). 122 
+
+123 
+
+To further validate these findings in human ICC, we integrated two human ICC 124 
+
+scRNA -seq datasets , GSE138709  (16)  and GSE189903  (17)  (Supplementary Table 125 
+
+S2), and identified six similar macrophage subtypes (Figure 1 A,  Supplementary 126 
+
+Figure S2 C). Notably, the human macrophage subpopulations M φ_ CXCL9 and 127 
+
+Mφ_ VEGFA displayed highly similar gene expression profiles, enriched pathways ,128 
+
+and tissue -infiltration patterns to the corresponding mouse macrophage 129 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 8
+
+subpopulations M φ_ Cxcl9 and M φ_ Vegfa  (Figure 1B, Supplementary Figure S2 C–D). 130 
+
+Furthermore, Mφ_ DNAJB1 and Mφ_ S100A4 exhibited  similar  gene expression 131 
+
+profiles  and enrich ed  pathways  to Mφ_ Dnajb1 and Mφ_ S100a4, respectively 132 
+
+(Supplementary Figure S2 C–D). However, unlike the patterns observed in mouse ICC 133 
+
+tissues, Mφ_ DNAJB1 was predominantly enriched in  normal  tissues, whereas 134 
+
+Mφ_ S100A4 was enriched in malignant tissues in human  ICC  samples. In contrast, 135 
+
+the distribution of M φ_ CXCL9 and M φ_ VEGFA demonstrated strong concordance 136 
+
+between mouse and human ICC tissues. M φ_ CXCL9 mainly infiltrated into adjacent 137 
+
+tissues,  and  Mφ_ VEGFA was dominant in advanced -stage mouse and human 138 
+
+malignant tissues  (Figure 1B) . Together, we hypothesized that Mφ_ VEGFA  is 139 
+
+associated with ICC progression  among these macrophage subtypes .140 
+
+141 
+
+To test this hypothesis , we  then  analyzed the correlation between different 142 
+
+macrophage subtypes and ICC prognosis.  Using  the  Scissor algorithm  (18) , we found 143 
+
+that Mφ_ VEGFA among the six macrophage subtypes showed the strongest 144 
+
+association with mortality in patients with ICC in the GSE89749  (19)  and GSE107943 145 
+
+(20)  datasets (Figure 1 C,  Supplementary Table S 2). Next, we selected the top 10 146 
+
+signature genes specifically enriched in M φ_ VEGFA and performed survival analyses 147 
+
+(Supplementary Table S 4). Patients with high er  levels  of M φ_ VEGFA -associated 148 
+
+gene signatures had significantly worse outcomes than those with low er  levels  of 149 
+
+signature  gene expression , further confirming the potential roles of M φ_ VEGFA in 150 
+
+the malignant progression of ICC (Figure 1 D). 151 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 9
+
+We then conducted  in vivo  experiments to validate the function of  macrophages  in 152 
+
+ICC development. Mouse ICC allografts were established by injecting BR ICC cells 153 
+
+(isolated from BMI1/NRAS mouse ICC tissues) with or without bone marrow -derived 154 
+
+macrophages (BMDMs). As expected, co -injection of BR cells and BMDMs 155 
+
+significantly accelerated tumor growth compared to injection of BR cells alone 156 
+
+(Figure 1 E, Supplementary  Figure S3 A). Flow cytometry analysis of allografts 157 
+
+isolated on Day 18 after tumor inoculation revealed increased infiltration of 158 
+
+F4/80⁺CD11b⁺ macrophages in BR/BMDM co -injected allografts relative to BR 159 
+
+allografts (Figure 1 E, Supplementary Figure S3 B–D). T hen , macrophage depletion 160 
+
+was  performed by injecting clodronate liposome intraperitoneally every three days 161 
+
+starting on day 14 after hydrodynamic tail -vein injection of AKT1/NICD1 in mice 162 
+
+(Figure 1 F). Macrophage depletion suppressed tumor progression, as evidenced by 163 
+
+reduced ICC tumor burden in clodronate liposome -treated mice. Furthermore, 164 
+
+macrophage infiltration levels (CD11b +F4/80 + within CD45 + and F4/80 + within 165 
+
+CD11b +) positively correlated with the liver -to -body weight ratio  (Figure 1F, 166 
+
+Supplementary Figure S4). Together, these findings indicate that Mφ_ VEGFA 167 
+
+displays M2 -like features and its infiltration is strongly associated with the malignant 168 
+
+progression of ICC. 169 
+
+170 
+
+Mφ_ VEGFA is  localized  adjacent  to ICC cells  and promotes ICC progression 171 
+
+through cytokine secretion 172 
+
+Considering the strong association between M φ_ VEGFA and ICC malignancy, we 173 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 10
+
+then  examined the detailed localization of M φ_ VEGFA in human ICC tissues using 174 
+
+multiplex immunofluorescence (mIF). Notably, a pronounced fluorescence signal of 175 
+
+VEGFA+ CD68 + macrophages indicated their localization or penetration with a176 
+
+proximity to the ICC  cells  majorly around 0 –20 μm in two independent  human  ICC 177 
+
+tissue arrays , indicat ing  close localization between M φ_ VEGFA and ICC cells  (Figure 178 
+
+2A).  Next , using h igh -resolution 10x Visium HD assay and the BANKSY method 179 
+
+(21) , we found  seven  major  cell types in human ICC tissues (Figure 2B). M φ_ VEGFA 180 
+
+showed strong co -occurrence with ICC cells and  could serve as a  predictor  for  CK19 +
+
+181 
+
+ICC cells based on mistyR  (22)  (Figure 2B, Supplementary Figure S5 A).  Using 10x 182 
+
+Visuim data from human ICC tissue  (23) , we segmented the human ICC tissues into 183 
+
+non -malignant, boundary , and malignant regions (Figure 2C). M φ_ VEGFA  cell type 184 
+
+scores exhibited a spatial increase from non -malignant to malignant regions. Pathway 185 
+
+enrichment analysis showed that the cell cycle pathway from the KEGG and 186 
+
+epithelial -to -mesenchymal transition (EMT) pathway from the GO database 187 
+
+(Biological Process, BP) were most enriched in the malignant region  (Figure 2 D). 188 
+
+Importantly, spatial co -occurrence between M φ_ Vegfa  and ICC cells was confirmed 189 
+
+in AKT1/NICD1 mouse ICC tissues using the BMKMANU S1000 ST assay 190 
+
+(Supplementary Figure S5B). Together, these results suggest that M φ_ VEGFA is 191 
+
+highly co -localized with ICC cells and may favor ICC progression. 192 
+
+193 
+
+Next, we investigated the stimulatory roles of  Mφ_VEGFA  on ICC cells using 194 
+
+multiple cell -cell co -culture systems (Supplementary  Fig ure  S6A). Non -contact 195 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 11
+
+Transwell  co -cultures of RAW264.7 cells or BMDMs with QBC939 or BR -derived 196 
+
+tumor -conditioned medium generated TAMs with robust upregulation of  VEGFA  and 197 
+
+M2 markers, including  SPP1 , ARG1 , VEGFA , IL10 , and  CD206  (Fig ure  S6B–F). EdU 198 
+
+incorporation and  Transwell  assays demonstrated that macrophage co -culture 199 
+
+significantly enhanced ICC cell proliferation and migration, respectively  (Fig ure  2E–200 
+
+F). Therefore,  VEGFA+  macrophages may promote ICC cell proliferation and 201 
+
+migration in a contact -independent manner. 202 
+
+203 
+
+Mφ_ VEGFA  promotes ICC proliferation via the OSM -OSMR -STAT3 axis 204 
+
+To explore mechanisms underlying Mφ_ VEGFA -mediated ICC progression, we 205 
+
+re -clustered  epithelial cells  from AKT1/NICD1 mouse ICC tissues  and obtained eight 206 
+
+epithelial cell subpopulations (Fig ure  3A,  Supplementary  Figure  S7A–B). Among 207 
+
+these populations, E_Alb was defined as hepatocytes and E_Fxyd2 as cholangiocytes, 208 
+
+supported by the  lowest CNV scores  consistent with  non -malignancy (Fig ure  3A). 209 
+
+Conversely , E_Jun and E_Cd44  demonstrated  the highest CNV scores and  were 210 
+
+enriched  for  proliferation -associated pathways , including cell cycle, cell proliferation ,211 
+
+and MAPK cascade,  as well as  invasion - and metastasis -related signaling , including 212 
+
+mesenchyme development and cell motility  (Fig ure  3A).  Therefore,  E_Jun and 213 
+
+E_Cd44  represent  ICC cell populations with high proliferative capacity and 214 
+
+malignancy. Next, we integrated three cell –cell communication approaches (CellChat, 215 
+
+CellphoneDB , and  NicheNet) to analyze interactions between M φ_ VEGFA and  the 216 
+
+ICC cell  populations  E_Jun and E_Cd44 in mice (Fig ure  3B). Downstream signaling 217 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 12
+
+pathway analysis  indicated  that M φ_ VEGFA engages ICC cells via OSM and THBS1 218 
+
+ligands (Fig ure  3B). Further analysis  demonstrated  that  Osm  interacts with 219 
+
+E_Cd44/E_Jun cells via  the receptors  Osmr  or  Lifr  (Figure 3C,  Supplementary  Figure 220 
+
+S7C). scRNAseq data from human ICC tissues also confirmed  macrophage –tumor 221 
+
+communication via OSM/OSMR (Fig ure  3D,  Supplementary  Figure  S7D). Spatial 222 
+
+interaction analysis and spatial mapping by  mIF further confirmed co -localization of 223 
+
+OSM⁺ macrophages with OSMR⁺ ICC cells (Fig ure  3E,  Supplementary  Figure  S7E–224 
+
+G). 225 
+
+226 
+
+To identify the downstream signaling of OSM/OSMR and LIFR, we used NicheNet 227 
+
+software to predict target genes for the ligands regulated by OSM for further analysis. 228 
+
+These genes were enriched in proliferation -related pathways , including JAK -STAT, 229 
+
+PI3K -AKT, mTOR , and cell cycle pathways (Fig ure  4A). To test whether  OSMR  and 230 
+
+LIFR  are required for ICC proliferation, we generated  Osmr - or  Lifr - liver conditional 231 
+
+knockout mice Osmr fl/fl ; Alb -Cre and Lifr fl/fl ; Alb -Cre, and hydrodynamically injected 232 
+
+them with AKT1/NICD1 or AKT1/YAP1 to induce ICC (Fig ure  4B). Compared with 233 
+
+Lifr fl/fl  mice, Lifr fl/fl ; Alb -Cre mice demonstrated no significant difference in 234 
+
+liver -to -body weight ratio upon AKT1/NICD1 injection (Fig ure  4C). Nevertheless, 235 
+
+Osmr fl/fl ; Alb -Cre mice exhibited a marked reduction of liver -to -body weight ratio 236 
+
+after AKT1/NICD1 or AKT1/YAP1 injection compared with that in Osmr fl/fl  mice 237 
+
+(Fig ure  4C,  Supplementary  Figure  S8A). These results indicate that OSMR, but not 238 
+
+LIFR, mediates communication between M φ_ VEGFA and ICC cells. 239 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 13
+
+240 
+
+Recombinant OSM  treatment  or  co -culture with BMDMs  increased OSMR levels  in 241 
+
+ICC cells  and promoted ICC cell growth (Fig ure  4D –E, Supplementary Figure  S7 B). 242 
+
+Similarly, RAW264.7 and QBC939 co -cultures increased  OSM  mRNA levels  in 243 
+
+macrophage s and increased  OSMR  mRNA levels in QBC939 cells (Fig ure  4F, 244 
+
+Supplementary Figure  S7C). OSMR knockdown with siRNA suppressed ICC cell 245 
+
+viability ( Supplementary  Figure  S8D–E). Likewise, knockout of  OSMR  with sgRNA 246 
+
+significantly decreased ICC cell proliferation, viability , and clonogenicity (Fig ure 247 
+
+4G –I,  Supplementary Figure  S7F). 248 
+
+249 
+
+We then analyzed downstream targets using scRNAseq  analyses , and  85  genes  were 250 
+
+obtained  by  overlapping the OSM target genes from NicheNet with  genes 251 
+
+significantly highly expressed in ICC cells (Fig ure  5A).  Among these 85 gene s,252 
+
+pathways related to response to cytokine, MAPK cascade, epithelial cell development ,253 
+
+and cell proliferation were enriched  (Fig ure  5B).  Enrichment results of differentially 254 
+
+phosphorylated proteins further validated the enrichment of  MAPK  and cell cycle 255 
+
+pathways in exogenous OSM -treated QBC939 cells  (Figure 5C) . Subsequent protein 256 
+
+interaction analysis  revealed  that Osmr interacted with Stat3, and Stat3 interacted with 257 
+
+Ccnd1  (Fig ure  5D).  IHC results revealed that the expression levels of p -STAT3  and 258 
+
+CCND1 were significantly decreased in Osmr -knockout mouse ICC tissues (Figure 259 
+
+5E). Similarly, Western blotting results indicated Osmr knockout decreased CCND1, 260 
+
+BCL2, and p -STAT3  protein levels  (Figure 5F).  Therefore,  OSM  appears to promote 261 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 14
+
+ICC growth via OSMR and downstream CCND1, BCL2 , and p -STAT3 signaling. 262 
+
+263 
+
+Mφ_ VEGFA promotes ICC invasion via THBS1 –CD47 –mTOR /DBN1 axis 264 
+
+Next, we  investigated  the  roles  of  THBS1  in ICC progression and found that THBS1 265 
+
+interacts  with ICC  cells  via CD47 (Fig ure  6A,  Supplementary Figure  S9A–B). Using 266 
+
+NicheNet, we  identified  PI3K –AKT  and EMT -related genes  as  potential  THBS1 267 
+
+downstream signaling in ICC cells (Fig ure  6A). Critically, recombinant THBS1 268 
+
+treatment  marginally  favored ICC cell growth ( Supplementary  Fig ure  S9C–D), but 269 
+
+markedly enhanced  ICC cell  migration (Fig ure  6B –C). Correspondingly, silencing 270 
+
+CD47 significantly impaired the stimulatory effects of THBS1  on  ICC cell migration 271 
+
+(Fig ure  6D). Co -culture with BMDMs  increased  BR  migratory  ability, whereas  Cd47 272 
+
+knockdown blocked this effect (Fig ure  6E –F,  Supplementary Figure  S9E).  Cd47 273 
+
+silencing inhibited subcutaneous allograft progression in mice (Fig ure  6G, 274 
+
+Supplementary  S9F–G).  Moreover, C D47 knockdown markedly suppressed ICC 275 
+
+dissemination in a peritoneal metastasis mouse model, as evidenced by reduced 276 
+
+metastatic nodule formation and decreased ascites accumulation (Fig ure  6H, 277 
+
+Supplementary Figure  S9H). Consistently, CD47 silencing attenuated ICC growth and 278 
+
+local invasion into the surrounding hepatic parenchyma in  the orthotopic allograft 279 
+
+ICC  mouse model (Fig ure  6I).  These results together indicate that THBS1 promotes 280 
+
+ICC cell migration via its receptor CD47. 281 
+
+282 
+
+To further elucidate the downstream molecules of  THBS1 /CD47  in promoting ICC 283 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 15
+
+migration, we treated HuCCT1 cells with THBS1 and collected cells at different time 284 
+
+points. Western blotting demonstrated that  treatment with  THBS1 induced rapid 285 
+
+induction of EMT -related proteins  N-Cadherin and Vimentin around  2 hour s (Fig ure 286 
+
+7A,  Supplementary Figure  S10 A). Phosphoproteomics analysis of HuCCT1 cells 287 
+
+treated with recombinant THBS1 at 0 and  2 h revealed elevated phosphorylation of 288 
+
+PI3K –AKT and EMT -related proteins at 2 h (Fig ure  7B).  Treatment  of ICC  with 289 
+
+THBS1  showed  that p -mTORC1  and p -RPS6  were significantly increased (Fig ure  7C,290 
+
+Supplementary Figure  S10A ). mTORC1 inhibition by rapamycin substantially 291 
+
+suppressed the pro -migratory  effect of BMDM  co -culture  on ICC cells and 292 
+
+completely abrogated the THBS1 -induced  ICC cell  migration (Fig ure  7D–E), 293 
+
+indicating that THBS1 promotes ICC cell migration via mTORC1 activation. 294 
+
+295 
+
+In addition to m -TORC1,  DBN1  was  identified  as  the first  phosphorylated  protein  by 296 
+
+fold change  in  cytoskeletal remodeling and EMT -related signaling pathways  via 297 
+
+phosphoproteinomics , and  Ser142 as the most strongly upregulated phosphorylation 298 
+
+site  (Fig ure  7F). Likewise, DBN1 inhibition with its inhibitor BTP2 significantly 299 
+
+blocked ICC cell migration (Fig ure  7G). Notably, BTP2 decreased phosphorylation at 300 
+
+Ser142 of DBN1 (Fig ure  7G). Collectively, these results demonstrate the critical roles 301 
+
+of p-mTORC1 and p-DBN1(Ser142) in  favoring  THBS1 -mediated ICC cell 302 
+
+migration. 303 
+
+304 
+
+Finally, we examined the role of THBS1 in  the  sgP19/KRAS -induced metastatic ICC 305 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 16
+
+mouse model with Thbs1 fl/fl ; Lyz -Cre mice (Fig ure  7G). Myeloid -specific knockout of 306 
+
+Thbs1  significantly suppressed peripheral metastasis of ICC to multiple distant organs, 307 
+
+including the  livers,  lungs,  spleens,  kidneys, diaphragm , and intestines  (Fig ure  7H–I). 308 
+
+H&E and IHC staining confirmed the metastasis of ICC in those organs  (Fig ure  7J).309 
+
+Furthermore,  Western blotting of ICC tissues revealed that metastasis -related CD47, 310 
+
+DBN1, p-DBN1 (Ser142), p-mTORC1 , and Vimentin levels were significantly 311 
+
+downregulated after  Thbs1  deletion (Fig ure  7K). Therefore, THBS1 appears to 312 
+
+promote ICC metastasis via PI3K -AKT -mTOR activation and DBN1 313 
+
+phosphorylation. 314 
+
+315 
+
+Blockade of OSM and  knockout of  THBS1 synergistically  inhibit  ICC 316 
+
+progression 317 
+
+As  OSM  promotes ICC cell proliferation and  THBS1  enhances  invasiveness, we  were 318 
+
+curious  whether dual inhibition could synergistically suppress ICC  development . To 319 
+
+this end, w e first  analyzed  synergistic  expression  of  THBS1  and  OSM  in  827  human 320 
+
+ICC tissues across nine ICC/cholangiocarcinoma cohorts  by  calculat ing  mean 321 
+
+expression levels of  THBS1  and  OSM  in each cohort  (Supplementary  Table S2). An 322 
+
+ICC sample was defined as double -positive if both genes had expression levels above 323 
+
+the mean  of  the  whole  cohort. Across the nine datasets, the proportion of ICC samples 324 
+
+co -expressing  THBS1  and  OSM  ranged from 13.33% to 29.53%, and those in five 325 
+
+datasets exceeded 20% (Fig ure  8A). Prognostic analyses across three datasets 326 
+
+demonstrated that patients with high expression of both  OSM  and  THBS1  had 327 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 17
+
+significantly shorter overall survival (Fig ure  8B). mIF  staining indicate that 328 
+
+OSM +THBS1 +CD68 +VEGFA + cells were spatially adjacent to CK19 + cells (Fig ure 329 
+
+8C), and OSM +THBS1 + were co -expressed in CD68 + cells (Fig ure  8D). 330 
+
+Correspondingly, patients  of ICC  with high ly  co -expression  of  OSM +THBS1 +
+
+331 
+
+exhibited significantly worse survival , indicating that dual expression of  OSM  and 332 
+
+THBS1 , widely present in ICC , was closely related to the outcome of patients with 333 
+
+ICC  (Fig ure  8E). 334 
+
+335 
+
+Therefore , we genetically ablated macrophage -derived  THBS1  using Thbs1 fl/fl ;336 
+
+Lyz -cre mice and pharmacologically inhibited OSM -OSMR interaction via 337 
+
+intraperitoneal administration of OSMR inhibitor  OSM -SMI -10B  to examine their 338 
+
+synergistic effect  (24) . Intriguingly,  Thbs1  deletion or  Osmr  inhibition alone 339 
+
+suppressed ICC progression moderately, while combined blockade attenuated ICC 340 
+
+development more robustly, as evidenced by further reduced tumor burden and 341 
+
+decreased liver -to -body weight ratio (Fig ure  8F–G). Therefore, macrophage -derived 342 
+
+OSM and THBS1 may represent promising therapeutic targets , and  combined 343 
+
+blockade of OSM and THBS1 may yield synergistic therapeutic effects in a344 
+
+substantial subset of patients with ICC. 345 
+
+346 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 18
+
+Discussion 347 
+
+TAMs in ICC have been associated with poor prognosis through tumor growth and 348 
+
+invasiveness promotion (25, 26) . Recent single -cell omics research has revealed the 349 
+
+molecular diversity and functions of TAMs in cancer  (27) . Nonetheless,  the specific 350 
+
+subgroups driving ICC malignancy and its interactions with tumor cells remain 351 
+
+unclear. Using a time -resolved ICC mouse model with integrated multi -omics, we 352 
+
+identified Mφ_ VEGFA as a poor -prognosis TAM subset in ICC. Notably, the 353 
+
+prognostic significance of Mφ_ VEGFA was also observed in hepatocellular 354 
+
+carcinoma  (13) , underscoring its prevalence across liver cancers  (28) .355 
+
+356 
+
+Moreover, our study uncovers the mechanism underlying  Mφ_ VEGFA  to promote 357 
+
+ICC progression or metastasis instead of suppressing the tumor immune 358 
+
+microenvironment. Specifically, M φ_ VEGFA promotes ICC cell proliferation through 359 
+
+OSM -OSMR and downstream p -STAT3 and CCND1, corroborating  the findings that 360 
+
+OSM promotes cancer cell proliferation in  glioblastoma  (29)  and pancreatic ductal 361 
+
+adenocarcinoma  (30) . Conversely,  Mφ_VEGFA exerts  its pro -invasive role through 362 
+
+secreted THBS1 to activate CD47 signaling in ICC cells. Notably,  THBS1 has been 363 
+
+reported to be released from tumor -infiltrating monocyte -like cells and to induce an 364 
+
+immunosuppressive TME to boost metastasis  (31) . Conversely, we demonstrate that 365 
+
+CD47  activates mTOR and DBN1 in ICC cells but not IL6/STAT3, causing EMT and 366 
+
+cell skeleton remodeling  (32) .367 
+
+368 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 19
+
+Finally,  our findings offer a new therapeutic strategy for ICC treatment by targeting 369 
+
+molecules derived from M φ_ VEGFA, which  secrete  OSM and THBS1 to accelerate 370 
+
+ICC growth and metastasis via OSMR and CD47, respectively.  Combined blockades 371 
+
+of OSM –OSMR and THBS1 –CD47 signaling retarded growth and restrained 372 
+
+metastasis in primary ICC mouse models, while single inhibition generated modest 373 
+
+efficacy. Consistently, a clinical trial demonstrated that targeting OSM -OSMR 374 
+
+signaling alone led to poor outcomes or drug resistance  (33) . Additionally, OSM and 375 
+
+THBS1 were concurrently upregulated in 13 –29% of patients with ICC . Thus, 376 
+
+targeting dual modulators of Mφ_ VEGFA provides a potentially more robust 377 
+
+therapeutic option for those patients with ICC. 378 
+
+379 
+
+Nonetheless, this  study also has some limitations. First, the role of  Mφ_ VEGFA  in 380 
+
+promoting ICC migration and invasion was not fully illustrated using  matched early 381 
+
+and late -stage  clinical  samples.  As ICC is usually diagnosed at advanced stages and 382 
+
+progresses rapidly, it is difficult to obtain paired pre - and post -metastatic ICC tissues 383 
+
+from the same patients. Therefore, it is challenging for us to determine the prevalence 384 
+
+of M φ_ VEGFA  in metastatic ICC. Second, we were unable to explore the possibility 385 
+
+of specific M φ_ VEGFA  subpopulation depletion to confirm its unique role in favoring 386 
+
+ICC progression. Clearly, this caveat is caused by a technical limitation, as no reliable 387 
+
+technique is available to delete a specific macrophage subpopulation to date. Finally, 388 
+
+the therapeutic value of targeting  OSM  or THBS1 was not fully demonstrated in this 389 
+
+study. In this regard, organoid or patient -derived xenograft mouse models are more 390 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+20 
+
+suitable models for assessing the therapeutic significance of specific targets. However, 391 
+
+these models are not yet well established in our laboratory. Therefore, future studies 392 
+
+should consider using these models to overcome these limitations and further evaluate 393 
+
+the feasibility of targeting  OSM /THBS1 for ICC treatment. 394 
+
+395 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 21
+
+Methods 396 
+
+Sex as a biological variable 397 
+
+Only female  mice  were used in this study , and  sex was not considered a biological 398 
+
+variable  for study design and data analysis .399 
+
+400 
+
+Animals 401 
+
+Wild -type FVB and C57BL/6 mice were purchased from Beijing Vital River 402 
+
+Laboratory Animal Technology Co., Ltd. (Beijing, China). Genetically modified mice 403 
+
+were provided by Shulaibao Biotechnology Co., Ltd. (Wuhan, China). All mice were 404 
+
+maintained in a specific pathogen -free environment. Detailed information regarding 405 
+
+the animals used in this study is provided in Supplementary Table S 1.406 
+
+407 
+
+Cell source 408 
+
+The human cholangiocarcinoma cell lines HuCCT1, RBE, and QBC939, as well as 409 
+
+the mouse fibroblast cell line L929 and macrophage cell line RAW 264.7, were used 410 
+
+in this study. HuCCT1 was obtained from the Japanese Collection of Research 411 
+
+Bioresources Cell Bank (JCRB, Osaka, Japan; accession number JCRB0425). RBE 412 
+
+was acquired from the China Center for Type Culture Collection (Wuhan, China; 413 
+
+accession number GDC0765). QBC939 was purchased from Shanghai Jinyuan 414 
+
+Biological Technology Co., Ltd. (Shanghai, China; product code JY -Y1457). The 415 
+
+mouse cell lines L929 (ATCC® CCL -1™) and RAW 264.7 (ATCC® TIB -71 ™) were 416 
+
+purchased directly from the American Type Culture Collection (ATCC, Manassas, VA, 417 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 22
+
+USA). All cells were cultured according to the providers' recommendations and were 418 
+
+routinely tested for mycoplasma contamination. 419 
+
+420 
+
+BR cells, isolated from BMI1/NRAS –driven primary ICC tissues in FVB mice, were 421 
+
+maintained in RPMI -1640 complete medium supplemented with 10% fetal bovine 422 
+
+serum and 1% penicillin -streptomycin at 37°C with 5% CO₂ in an incubator. These 423 
+
+cells displayed consistent  in vitro  growth characteristics and were capable of forming 424 
+
+tumors in both subcutaneous and orthotopic liver implantation models in wild -type 425 
+
+FVB mice. IHC and histopathological analysis confirmed the presence of ICC 426 
+
+features. 427 
+
+428 
+
+Establishment of ICC Mouse Models 429 
+
+Primary ICC mouse models were established in 6 –8-week -old mice via hydrodynamic 430 
+
+tail vein injection. For the AKT1/NICD1 ICC model (NICD1, Notch1 intracellular 431 
+
+domain), a plasmid mixture containing 15  μg pT3 -EF1aH -myr -AKT, 15  μg432 
+
+pT3 -EF1a -NICD1, and 1.5  μg pCMV -SB, was diluted in 2 mL of sterile saline and 433 
+
+filtered through a 0.22  μm membrane to remove impurities. For the highly metastatic 434 
+
+sgP19/KRAS ICC model  (34) , a mixture of plasmids, including 10  μg435 
+
+CRISPR -Cas9 -sgP19, 25  μg pT3 -EF1 α-KRAS, and 5.0  μg pCMV -SB, was diluted in 436 
+
+2 mL of sterile saline. For a 20 g mouse, the injection volume was 2 mL and was 437 
+
+adjusted according to body weight. Mice were restrained using a tail vein 438 
+
+visualization platform, and the injection was completed within 5 –7 s. Mice were 439 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 23
+
+euthanized and dissected either at the end of the experiment or  when  moribund. 440 
+
+441 
+
+Public  single -cell  and spatial transcriptomics data collection 442 
+
+In addition to in -house single -cell and spatial transcriptomics data, we also curated a 443 
+
+an AKT1/YAP1 -driven ICC mouse model (15) , two human ICC cohorts single cell 444 
+
+transcriptomic data ( GSE138709 (16)  and GSE189903 (17) ), and a human spatial 445 
+
+transcriptome data  using 10x  Visium  platform  (23)  to  validate  our finding in the 446 
+
+AKT1/NICD1 mouse ICC tissues (Supplementary Table S2). 447 
+
+448 
+
+Single -cell transcriptome data processing and cell type definition 449 
+
+For in -house AKT1/NICD1, public AKT1/YAP1 , and human ICC single cell 450 
+
+transcriptome data, gene expression matrices were preprocessed using the Seurat R 451 
+
+package (V 4.4.0) (35) . Quality control measures were employed to remove 452 
+
+low -quality cells and genes based on the following criteria: 1) remove ribosomal 453 
+
+genes. 2) nCount_RNA > 1000, nCount_RNA < 40000, nFeature_RNA < 6000, 454 
+
+nFeature_RNA > 500, percent.mt < 20%, min.cells=50. DoubletFinder (36)  (V 2.0.6, 455 
+
+default parameters) to remove doublet cells. Then, the global -scaling method 456 
+
+“LogNormalize” normalized the gene expression measurements for each cell by the 457 
+
+total expression. The ScaleData function, “vars.to.regress” option percent 458 
+
+mitochondrial content was used to regress out unwanted sources of variation. Top 459 
+
+highly variable genes (HVGs, vst, top 2000) were calculated using the Seurat function 460 
+
+FindVariableGenes. Principal component analysis (PCA) for dimensionality reduction 461 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 24
+
+was performed using the top 30 components. Clusters were computed using the 462 
+
+FindClusters function using the top 30 PCAs and then visualized using the uniform 463 
+
+manifold approximation and projection (UMAP) implemented in Seurat. Differential 464 
+
+expression analysis between clusters was performed using  the  Wilcoxon rank sum test 465 
+
+(RunPrestoAll in the presto  R software ) at a family -wise error rate of 5%. 466 
+
+467 
+
+Using canonical marker genes (Supplementary Table S 3), SciBet (V1.0)  (37)  and 468 
+
+differentially expressed genes (DEGs) and the associated pathway function to define 469 
+
+the major cell types (Fibroblasts, Endothelial, Macrophage, DC, Neutrophile, T&NK, 470 
+
+B, Cholangiocarcinoma, and Hepatocyte). Sub -cell types were re -clustered with a 471 
+
+resolution parameter set at 0.2 –0.5, without filtering cells or genes, and the data were 472 
+
+processed using the standard workflow to identify the subclusters and their associated 473 
+
+differential genes (HVGs, vst,1000 for human macrophage and epithelial cells, 500 474 
+
+for AKT1/NICD1 epithelial cells, 300 for AKT1/NICD1 and AKT1/YAP1 mouse 475 
+
+macrophage). 476 
+
+477 
+
+In each subtype, if the main cell type marker genes from the first step are 478 
+
+simultaneously expressed at a high proportion (>30% of cells) and with high 479 
+
+specificity in a cell subpopulation, then that subpopulation is removed. Meanwhile, 480 
+
+we used SciBet to remove mixed cells to ensure the accuracy of the final identified 481 
+
+cell types. Scibet references downloads from website 482 
+
+http://scibet.cancer -pku.cn/scibet_references.html  (human:30 major human cell types, 483 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 25
+
+mouse: Single -cell transcriptomics of 20 mouse organs creates a Tabula Muris). 484 
+
+Finally, based on the functions of the differentially expressed genes and the cell type 485 
+
+marker genes, subgroups with similar functions were merged, and the cell types were 486 
+
+defined. 487 
+
+488 
+
+For human ICC single cell transcriptome data from  GSE138709  and  GSE189903 , we 489 
+
+employed the same quality control, normalization , and dim reduction as 490 
+
+AKT1/NICD1 and AKT1/YAP1. Additionally, we  merged  the two cohorts and  used 491 
+
+Harmony  (38)  (V1.1.0) to eliminate batch effects caused by different platforms and 492 
+
+sequencing protocols. Cell type definition was the same as  in the  AKT1/NICD1 and 493 
+
+AKT1/YAP1  data .494 
+
+495 
+
+Enrichment score of each cell type 496 
+
+To assess the relative enrichment of cell subpopulations across different stages of ICC 497 
+
+progression, we calculated the ratio of observed to expected cell numbers (Ro/e) for 498 
+
+each cell subse t (39) . The expected number of cells for each subset was determined 499 
+
+using  χ²  tests. Ro/e > 1 indicated enrichment of a given cell subset at a particular stage 500 
+
+of ICC progression, suggesting a potential association with that disease stage. 501 
+
+502 
+
+Macrophage subtype -associated clinical prognostic integrative analysis 503 
+
+To predict the association between macrophage subtypes and survival phenotypes of 504 
+
+ICC patients, we utilized the R package Scissor (v2.0.0)  (18)  to link single -cell data 505 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 26
+
+with patient phenotypes from bulk sequencing datasets GSE89749  (19)  and 506 
+
+GSE107943  (20) . In detail, we analyzed the correlation between macrophage subtypes 507 
+
+and the prognostic data of ICC patients via Scissor tutorial, employed Cox -regression, 508 
+
+and selected overall survival as the dependent variable. For each macrophage cell type, 509 
+
+we set parameter alpha 0.2 and calculated the fractions of Scissor+ cells (positively 510 
+
+correlated with worse survival), Scissor – cells (positively correlated with favorable 511 
+
+survival), and neutral cells (uncorrelated with survival). 512 
+
+513 
+
+Meanwhile, we validated the M φ_ VEGFA  expression signature in GSE89749 and 514 
+
+GSE107943 cohorts. The top 10 differentially upregulated marker genes of 515 
+
+Mφ_ VEGFA  (ranked by Log2FC) were selected (Supplementary Table S4). A516 
+
+Mφ_ VEGFA  score was calculated as the mean expression of these genes per patient. 517 
+
+Patients were stratified into M φ_ VEGFA -High and M φ_ VEGFA -Low groups based 518 
+
+on the median score. The association between the M φ_ VEGFA  score and overall 519 
+
+survival  (OS ) was then evaluated. Statistical significance was determined using the 520 
+
+log -rank test (Mantel -Cox), with P values < 0.05 considered statistically significant. 521 
+
+522 
+
+Cell type communication analysis 523 
+
+We conducted a comprehensive computational analysis of cell -cell communication to 524 
+
+decipher the ligand -receptor interactions between macrophage and tumor subtypes, 525 
+
+utilizing the bioinformatics tools CellphoneDB  (40) , CellChat  (41) , and  NicheNet 526 
+
+(42) . By integrating the results from these three methods, we systematically identified 527 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 27
+
+key communication components, downstream signaling pathways, and target genes 528 
+
+involved in the interactions between macrophages and tumor cells. 529 
+
+530 
+
+We utilized CellChat to analyze the ligand -receptor gene pairs and signaling pathways 531 
+
+involved in communication between macrophage and tumor cell subgroups. Cell 532 
+
+communication pairs with significant p -values ( P < 0.05 and prob > 0.01) were 533 
+
+identified as candidate gene pairs.  In the CellPhoneDB package (V3), we selected 534 
+
+receptors and ligands expressed in over 10% of cells in the specific cluster for 535 
+
+subsequent analysis. In mouse single -cell data, we obtained the corresponding human 536 
+
+orthologs using the convert_mouse_to_human_symbols function in the nichenetr R 537 
+
+package (V2.1.0). We selected the interactive pairs with interaction mean scores > 1.0 538 
+
+and  p < 0.05. 539 
+
+540 
+
+Furthermore, we used NicheNet  to analyze interactions between macrophage and 541 
+
+tumor cell subgroups, as well as the potential downstream target genes regulated by 542 
+
+ligand genes. In this pipeline, we selected genes expressed in at least 10% of the cells 543 
+
+as the background gene set, selected differential expression genes in macrophage and 544 
+
+tumor subtypes ( log2FC > 0.3 and p.adj < 0.05 ) as the gene set of interest. NicheNet's 545 
+
+ligand -receptor network and ligand -target matrix were used to predict active 546 
+
+ligand -receptor pairs and rank ligands by their regulatory potential for macrophage 547 
+
+and tumor subtypes. We obtained active ligand –receptor gene pairs using the 548 
+
+predict_ligand_activities function. Parametric Pearson correlation analysis was 549 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 28
+
+performed to assess the correlation between each ligand and its downstream pathway 550 
+
+target genes, and ligands with a Pearson correlation coefficient above the lower 551 
+
+quartile were retained as active ligands. Ligand -associated downstream target genes 552 
+
+were subsequently extracted from the built -in NicheNet database. 553 
+
+554 
+
+The final selection of candidate ligands was based on those identified by all three 555 
+
+software tools, with an additional requirement that their expression levels in human 556 
+
+and mouse M φ_ VEGFA  subtype were significantly high (Log 2FC > 0. 3). 557 
+
+558 
+
+CNV analysis 559 
+
+CNV (copy number variation) scores were estimated in every single cell based on 560 
+
+averaged expression profiles across chromosomal intervals using infercnv  (43)  R561 
+
+package (V1.0.4 ).  The CNV score was calculated as the quadratic sum of the CNV 562 
+
+region  (44) .563 
+
+564 
+
+Spatial transcriptomics analysis 565 
+
+Data processing 566 
+
+For ICC AKT1/NICD1 Day 31 mouse spatial transcriptomics data, we performed cell 567 
+
+segmentation and obtained spatial gene expression matrices via BSTMatrix (v2.3 ,568 
+
+combined spot level=7) using  the  GRCm39  genome reference .569 
+
+570 
+
+Next, for human ICC tissue  using  10x Visium  and  AKT1/NICD1  mouse  ICC spatial 571 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 29
+
+transcriptome  data, we  processed the expression matrix via Seurat (V4.4.0) , and 572 
+
+retained  spots with over 200 genes, mitochondrial content below 20% , and haemocyte 573 
+
+below 5% . Then, we  normalized  the  count matrices  by  sctransform  method. Next, we 574 
+
+applied the top 30 PCAs  and obtained spatial clusters.  Subsequently, we identified 575 
+
+DEGs  by  the  FindAllMarkers function and performed functional enrichment analysis 576 
+
+with clusterProfiler  (45)  (V4.10). 577 
+
+578 
+
+For in -house human ICC spatial transcriptomic data generated on the 10x Visium HD 579 
+
+platform, the raw expression matrix was obtained from square_016um bins. Data 580 
+
+processing was performed using the sketch -based workflow in Seurat (v5.3.1). Spots 581 
+
+with fewer than 20 detected genes, mitochondrial content above 20%, or haemocyte 582 
+
+content above 5% were excluded. The top 50 principal components were used for 583 
+
+clustering. Differentially expressed genes for each cluster were identified using  the 584 
+
+FindAllMarkers  function in  the  Seurat R package .585 
+
+586 
+
+Cell type defined 587 
+
+For high -resolution spatial data using BMKMANU S1000 AKT1/NICD1 and 10x HD 588 
+
+platform, we employed spacexr  (46)  (V2.2.1) to integrate scRNAseq data to define 589 
+
+the cell types of each cluster. For BMKMANU S1000 AKT1/NICD1 spatial data, we 590 
+
+integrated scRNAseq data from Day 31 AKT1/NICD1 mouse tissues using the “full” 591 
+
+model in spacexr. For in -house 10x Visium HD spatial transcriptomic data from four 592 
+
+human ICC tumor tissues, scRNA -seq references were compiled by merging 593 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 30
+
+GSE138709 and GSE189903, retaining only cell types enriched in tumor tissues. 594 
+
+Neutrophils were excluded from downstream integration analysis, as they were 595 
+
+present at very low abundance in the FFPE ICC samples. Cell type deconvolution 596 
+
+across spatial spots was then performed by integrating the spatial data with the 597 
+
+scRNA -seq reference using the doublet model in spacexr. 598 
+
+599 
+
+Cell type scores 600 
+
+Cell type scores for individual Mφ_ VEGFA  and epithelial subtypes in spatial 601 
+
+transcript data  were  evaluated via Seurat’s  AddModuleScore function (ctrl = 5) using 602 
+
+the cell type feature genes listed in the Supplementary Table S4. The resulting 603 
+
+enrichment scores were subsequently visualized utilizing the standard FeaturePlot and 604 
+
+VlnPlot functions. 605 
+
+606 
+
+Spatial segment 607 
+
+Spatial spots were first classified as  “Tumor ” or  “Normal ” by inferring somatic 608 
+
+CNVs using InferCNV . Spots designated as normal epithelial or stromal references 609 
+
+were used to define the baseline CNV state. Clusters exhibiting large -scale 610 
+
+chromosomal gains or losses relative to the reference were annotated as  “Tumor ”,611 
+
+while clusters with flat CNV profiles were annotated as  “Normal ”. Clusters that could 612 
+
+not be confidently assigned to either category were excluded from subsequent 613 
+
+boundary analysis. 614 
+
+615 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 31
+
+To delineate the tumor  – normal boundary, boundary -proximal spots were first 616 
+
+identified using k -nearest neighbor (KNN) analysis (k = 30) on pixel coordinates: a 617 
+
+spot was designated as a boundary spot if it belonged to one category while at least 618 
+
+one of its k neighbors belonged to the opposing category. 619 
+
+620 
+
+A continuous probability field was then estimated across the tissue section. For each 621 
+
+point on a 500  × 500 grid spanning the full coordinate space, KNN regression (k = 622 
+
+30) was applied with binary Tumor/Normal labels (1/0) as the response variable. The 623 
+
+resulting probability surface was smoothed with a Gaussian kernel via the isoblur 624 
+
+function from the imager package. Grid regions farther than 300 pixels from any 625 
+
+sequenced spot were masked to restrict the boundary to tissue -covered areas. The 626 
+
+tumor boundary was extracted  as the 0.5 -probability isoline using contourLines, 627 
+
+retaining only contour segments with  ≥ 150 vertices; the longest valid contour was 628 
+
+selected as the final boundary polyline. 629 
+
+630 
+
+Each spot was assigned a perpendicular distance to the boundary polyline via 631 
+
+point -to -segment projection. To account for the spatial resolution of each platform, 632 
+
+multiple concentric bands were defined on both sides of the boundary: 500  μm for 633 
+
+human ICC tissue profiled on the 10x Visium platform, and 100  μm for AKT1/NICD1 634 
+
+mouse ICC tissue profiled on the BMKMANU S1000 platform. Spots falling within 635 
+
+these bands were collectively designated as the “Tumor Boundary” zone, while spots 636 
+
+outside this region retained their original Tumor or Normal annotation, yielding three 637 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 32
+
+tissue segments —Tumor, Tumor Boundary, and Normal — for downstream analysis. 638 
+
+639 
+
+BANKSY analysis 640 
+
+For 10x HD spatial transcription data, we conducted spatial -domain analysis using 641 
+
+BANKSY  (21)  in the Seurat 5.3.1 package. Specifically, we utilized the expression 642 
+
+matrix of each sample, post -preprocessing, along with the spatial coordinate 643 
+
+information of the spots as input. BANKSY was then applied with default resolution 644 
+
+parameters to assign each spot to spatially informed clusters across all samples. 645 
+
+646 
+
+MistyR analysis 647 
+
+After cell type definition, we employed mistyR  (22)  to estimate the importance of the 648 
+
+abundance of each cell type in explaining the abundance of other cell types by 649 
+
+extracting relationships from spatial transcriptome data through multiple views 650 
+
+focusing on different spatial or functional contexts. We defined an intraview, local 651 
+
+niche view (juxtaview), where the radius is the mean distance to the nearest neighbor 652 
+
+plus one standard deviation, and a broader tissue view (paraview ), where the radius is 653 
+
+the mean distance to the 7th nearest neighbor plus one standard deviation, to capture 654 
+
+the distribution of cell type proportions within the neighboring tissue. To identify cell 655 
+
+type communities, we processed the "importances. aggregated" output from mistyR, 656 
+
+which consists of aggregated, view -specific predictor -target importance tables. We 657 
+
+then filtered the  Paraview  "importances.aggregated" using a threshold of 0.5, setting 658 
+
+values below this threshold or NA values to zero. 659 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 33
+
+Statistics 660 
+
+All experiments were conducted with rigorous reproducibility, including at least three 661 
+
+independent biological replicates per group (n ≥ 3) to ensure result stability and 662 
+
+reliability. Technical replicates were performed for each sample to minimize 663 
+
+experimental error. For animal studies, each group included no fewer than three 664 
+
+animals (n ≥ 3), all treated and sampled under identical conditions. 665 
+
+666 
+
+Statistical analyses were performed using GraphPad Prism . Comparisons between two 667 
+
+groups were conducted using two -tailed unpaired Student’s t -tests. For statistical 668 
+
+comparison of more than two groups, one -way ANOVA with the Tukey post hoc test 669 
+
+was used. Significance levels are indicated as follows: *P < 0.05, ** P < 0.01, 670 
+
+*** P < 0.001, **** P < 0.0001, and ns: not significant. All data are representative of 671 
+
+three biologically independent experiments, unless otherwise indicated. 672 
+
+673 
+
+Study approval 674 
+
+This study was conducted in accordance with the Declaration of Helsinki and the 675 
+
+Declaration of Istanbul. All procedures involving animals were approved by the 676 
+
+Animal Experiments Ethics Committee of Huazhong University of Science and 677 
+
+Technology (approval No. 20230312). Tissue array was purchased from Shanghai 678 
+
+Outdo Biotech (Shanghai, China) with ethical approval No. SHYJS -BC -2111001 -06 679 
+
+(GZ). Tissue array for THBS1 + clinical analysis was purchased from the Shanghai 680 
+
+LiaoDing  Biotechnology (Shanghai, China) with ethical approval No. 2020 -035 -01. 681 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 34
+
+All patients provided written informed consent  before  sample collection. 682 
+
+683 
+
+Data Availability 684 
+
+The scRNA -seq data generated in this study are publicly available in the GEO 685 
+
+database under accession code GSE308574.  The remaining data are available within 686 
+
+the manuscript, supplementary information, or from the corresponding author upon 687 
+
+reasonable request. 688 
+
+689 
+
+Other  Methods 690 
+
+Methodological details for single -cell RNA -seq, single -cell ATAC -seq, spatial 691 
+
+transcriptomics, proteomics, and phosphoproteomics, as well as all in vivo and in 692 
+
+vitro experiments, are provided in the Supplementary Materials and Methods. 693 
+
+694 
+
+Authors’ Contributions 695 
+
+C.X.  and  T.W. designed the study. T.W. analyzed the multi -omics data. R.L. 696 
+
+performed the experiments. T.W.  and  R.L. wrote the manuscript. C.X.  revised the 697 
+
+manuscript.  Z.C. and M.Z. prepared the samples. B.W. and  C.L.  managed data 698 
+
+collection and organization.  All authors have read and approved the manuscript. 699 
+
+700 
+
+Funding support 701 
+
+This research was supported by grants from the National Natural Science Foundation 702 
+
+of China (82472988, 82273059, and 82573814), the Henan Province and Ministry of 703 
+
+Health of Medical Science and Technology Program (SBGJ202302028 for T.W. and 704 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+35 
+
+SBGJ202402032 for C.L.),  and the  Fundamental Research Funds for the Central 705 
+
+Universities (2025JYCXJJ067 for M.Z.). 706 
+
+707 
+
+Acknowledgments 708 
+
+This work was financially supported by the National Natural Science Foundation of 709 
+
+China (Grant  Nos.  82472988, 82273059 , and 82573814). 710 
+
+711 
+
+Supplemental material 712 
+
+To access the supplementary material accompanying this article, visit the online 713 
+
+version. 714 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 36
+
+References 715 
+
+1.  Moris D et al. Advances in the treatment of intrahepatic cholangiocarcinoma: an 716 
+
+overview of the current and future therapeutic landscape for clinicians.  CA Cancer 717 
+
+J Clin . 2023;73(2):198 –222. doi: 10.3322/caac.21759. 718 
+
+2.  Greten TF et al. Immunology and immunotherapy of cholangiocarcinoma.  Nat 719 
+
+Rev Gastroenterol Hepatol . 2023;20(6):349 –365. doi: 720 
+
+10.1038/s41575 -022 -00741 -4. 721 
+
+3.  Zhou M et al. Tumor -associated macrophages in cholangiocarcinoma: complex 722 
+
+interplay and potential therapeutic target.  EBiomedicine . 2021;67:103375. doi: 723 
+
+10.1016/j.ebiom.2021.103375. 724 
+
+4.  Guan F et al. Tissue macrophages: origin, heterogenity, biological functions, 725 
+
+diseases and therapeutic targets.  Signal Transduct Target Ther . 2025;10(1):93. doi :726 
+
+10.1038/s41392 -025 -02124 -y. 727 
+
+5.  Chen S et al. Macrophages in immunoregulation and therapeutics.  Signal 728 
+
+Transduct Target Ther . 2023;8(1):207. doi: 10.1038/s41392 -023 -01452 -1. 729 
+
+6.  Fan G et al. The co -location of MARCO+ tumor -associated macrophages and 730 
+
+CTSE+ tumor cells determined the poor prognosis in intrahepatic 731 
+
+cholangiocarcinoma.  Hepatology . 2025;82(1):25 –41. doi: 732 
+
+10.1097/HEP.0000000000001138. 733 
+
+7.  Song G et al. Single -cell transcriptomic analysis suggests two molecularly distinct 734 
+
+subtypes of intrahepatic cholangiocarcinoma.  Nat Commun . 2022;13(1):1642. doi: 735 
+
+10.1038/s41467 -022 -29164 -0. 736 
+
+8.  Zuyin L et al. Single -cell and spatial transcriptomics delineate the microstructure 737 
+
+and immune landscape of intrahepatic cholangiocarcinoma in the leading -edge 738 
+
+area.  Adv Sci . 2024;12(7):e2412740. doi: 10.1002/advs.202412740. 739 
+
+9.  Yan J et al. Spatial -temporal heterogeneities of liver cancer and the discovery of 740 
+
+the invasive zone.  Clin Transl Med . 2025;15(2):e70224. doi: 10.1002/ctm2.70224. 741 
+
+10.  Dong LQ et al. Spatial and temporal clonal evolution of intrahepatic 742 
+
+cholangiocarcinoma.  J Hepatol . 2018;69(1):89 –98. doi: 743 
+
+10.1016/j.jhep.2018.02.029. 744 
+
+11.  Wang T et al. Cellular heterogeneity and transcriptomic profiles during 745 
+
+intrahepatic cholangiocarcinoma initiation and progression.  Hepatology .746 
+
+2022;76(5):1302 –1317. doi: 10.1002/hep.32483. 747 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 37
+
+12.  De Ponti FF et al. Spatially restricted and ontogenically distinct hepatic 748 
+
+macrophages are required for tissue repair.  Immunity . 2025;58(2):362 –380.e10. 749 
+
+doi: 10.1016/j.immuni.2025.01.002. 750 
+
+13.  Zhang Q et al. Landscape and dynamics of single immune cells in hepatocellular 751 
+
+carcinoma.  Cell . 2019;179(4):829 –845.e20. doi: 10.1016/j.cell.2019.10.003. 752 
+
+14.  Su X et al. Deciphering tumor microenvironment: CXCL9 and SPP1 as crucial 753 
+
+determinants of tumor -associated macrophage polarity and prognostic indicators. 754 
+
+Mol Cancer . 2024;23(1):13. doi: 10.1186/s12943 -023 -01931 -7. 755 
+
+15.  Golino JL et al. Single -cell RNA sequencing reveals cancer stem -like cells and 756 
+
+dynamics in tumor microenvironment during cholangiocarcinoma progression. 757 
+
+Front Cell Dev Biol . 2023;11:1250215. doi: 10.3389/fcell.2023.1250215. 758 
+
+16.  Zhang M et al. Single -cell transcriptomic architecture and intercellular crosstalk 759 
+
+of human intrahepatic cholangiocarcinoma.  J Hepatol . 2020;73(5):1118 –1130. doi: 760 
+
+10.1016/j.jhep.2020.05.039. 761 
+
+17.  Ma L et al. Multiregional single -cell dissection of tumor and immune cells reveals 762 
+
+stable lock -and -key features in liver cancer.  Nat Commun . 2022;13(1):7533. doi: 763 
+
+10.1038/s41467 -022 -35291 -5. 764 
+
+18.  Sun D et al. Identifying phenotype -associated subpopulations by integrating bulk 765 
+
+and single -cell sequencing data.  Nat Biotechnol . 2021;40(4):527 –538. doi: 766 
+
+10.1038/s41587 -021 -01091 -3. 767 
+
+19.  Jusakul A et al. Whole -genome and epigenomic landscapes of etiologically 768 
+
+distinct subtypes of cholangiocarcinoma.  Cancer Discov . 2017;7(10):1116 –1135. 769 
+
+doi: 10.1158/2159 -8290.CD -17 -0368. 770 
+
+20.  Ahn KS et al. Prognostic subclass of intrahepatic cholangiocarcinoma by 771 
+
+integrative molecular -clinical analysis and potential targeted approach.  Hepatol 772 
+
+Int . 2019;13(4):490 –500. doi: 10.1007/s12072 -019 -09954 -3. 773 
+
+21.  Singhal V et al. BANKSY unifies cell typing and tissue domain segmentation for 774 
+
+scalable spatial omics data analysis.  Nat Genet . 2024;56(3):431 –441. doi: 775 
+
+10.1038/s41588 -024 -01664 -3. 776 
+
+22.  Tanevski J et al. Explainable multiview  framework for dissecting spatial 777 
+
+relationships from highly multiplexed data.  Genome Biol . 2022;23(1):97. doi: 778 
+
+10.1186/s13059 -022 -02663 -5. 779 
+
+23.  Wu R et al. Comprehensive analysis of spatial architecture in primary liver cancer. 780 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 38
+
+Sci Adv . 2021;7(51):eabg3750. doi: 10.1126/sciadv.abg3750. 781 
+
+24.  Wolf CL et al. Development of the first small -molecule inhibitor targeting 782 
+
+Oncostatin M for treatment of breast cancer.  J Med Chem . 2025;68(15):15422 –783 
+
+15445. doi: 10.1021/acs.jmedchem.4c03233. 784 
+
+25.  Hasita H et al. Significance of alternatively activated macrophages in patients with 785 
+
+intrahepatic cholangiocarcinoma.  Cancer Sci . 2010;101(8):1913 –1919. doi: 786 
+
+10.1111/j.1349 -7006.2010.01614.x. 787 
+
+26.  Yuan H et al. Intrahepatic cholangiocarcinoma induced M2 -polarized 788 
+
+tumor -associated macrophages facilitate tumor growth and invasiveness.  Cancer 789 
+
+Cell Int . 2020;20(1):586. doi: 10.1186/s12935 -020 -01687 -w. 790 
+
+27.  Ma RY et al. Macrophage diversity in cancer revisited in the era of single -cell 791 
+
+omics.  Trends Immunol . 2022;43(7):546 –563. doi: 10.1016/j.it.2022.04.008. 792 
+
+28.  Okikawa S et al. Inhibition of the VEGF signaling pathway attenuates tumor 793 
+
+associated macrophage activity in liver cancer.  Oncol Rep . 2022;47(4):75. doi: 794 
+
+10.3892/or.2022.8282. 795 
+
+29.  Chen M et al. Exploring the oncostatin M (OSM) feed -forward signaling of 796 
+
+glioblastoma via STAT3 in pan -cancer analysis.  Cancer Cell Int . 2021;21(1):565. 797 
+
+doi: 10.1186/s12935 -021 -02260 -9. 798 
+
+30.  Polak KL et al. Oncostatin -M and OSM -receptor feed -forward activation of 799 
+
+MAPK induces separable stem -like and mesenchymal programs.  Mol Cancer Res .800 
+
+2023;21(9):975 –990. doi: 10.1158/1541 -7786.MCR -22 -0715. 801 
+
+31.  Omatsu M et al. THBS1 -producing tumor -infiltrating monocyte -like cells 802 
+
+contribute to immunosuppression and metastasis in colorectal cancer.  Nat 803 
+
+Commun . 2023;14(1):5534. doi: 10.1038/s41467 -023 -41095 -y. 804 
+
+32.  You Y et al. M1 -like tumor -associated macrophages cascade a805 
+
+mesenchymal/stem -like phenotype of oral squamous cell carcinoma via the 806 
+
+IL6/Stat3/THBS1 feedback loop.  J Exp Clin Cancer Res . 2022;41(1):10. doi: 807 
+
+10.1186/s13046 -021 -02222 -z. 808 
+
+33.  Wolf CL et al. The clinical relevance of OSM in inflammatory diseases: a 809 
+
+comprehensive review.  Front Immunol . 2023;14:1239732. doi: 810 
+
+10.3389/fimmu.2023.1239732. 811 
+
+34.  Wang J et al. Uncoupling metastasis and epithelial -to -mesenchymal transition in 812 
+
+sgP19/kRAS -driven spontaneous metastatic liver tumor model.  Adv Sci .813 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 39
+
+2025;13:e14198. doi: 10.1002/advs.202414198 .814 
+
+35.  Hao Y et al. Integrated analysis of multimodal single -cell data.  Cell .815 
+
+2021;184(13):3573 –3587.e29. doi: 10.1016/j.cell.2021.04.048. 816 
+
+36.  McGinnis CS et al. DoubletFinder: doublet detection in single -cell RNA 817 
+
+sequencing data using artificial nearest neighbors.  Cell Syst . 2019;8(4):329 –818 
+
+337.e4. doi: 10.1016/j.cels.2019.03.003. 819 
+
+37.  Li C et al. SciBet as a portable and fast single cell type identifier.  Nat Commun .820 
+
+2020;11(1):1818. doi: 10.1038/s41467 -020 -15523 -2. 821 
+
+38.  Korsunsky I et al. Fast, sensitive and accurate integration of single -cell data with 822 
+
+Harmony.  Nat Methods . 2019;16(12):1289 –1296. doi: 823 
+
+10.1038/s41592 -019 -0619 -0. 824 
+
+39.  Zhang L et al. Lineage tracking reveals dynamic relationships of T cells in 825 
+
+colorectal cancer.  Nature . 2018;564(7735):268 –272. doi: 826 
+
+10.1038/s41586 -018 -0694 -x. 827 
+
+40.  Garcia -Alonso L et al. Mapping the temporal and spatial dynamics of the human 828 
+
+endometrium in vivo and in vitro.  Nat Genet . 2021;53(12):1698 –1711. doi: 829 
+
+10.1038/s41588 -021 -00972 -2. 830 
+
+41.  Jin S et al. Inference and analysis of cell -cell communication using CellChat.  Nat 831 
+
+Commun . 2021;12(1):1088. doi: 10.1038/s41467 -021 -21246 -9. 832 
+
+42.  Browaeys R et al. NicheNet: modeling intercellular communication by linking 833 
+
+ligands to target genes.  Nat Methods . 2020;17(2):159 –162. doi: 834 
+
+10.1038/s41592 -019 -0667 -5. 835 
+
+43.  Puram SV et al. Single -cell transcriptomic analysis of primary and metastatic 836 
+
+tumor ecosystems in head and neck cancer.  Cell . 2017;171(7):1611 –1624.e24. doi: 837 
+
+10.1016/j.cell.2017.10.044. 838 
+
+44.  Peng J et al. Single -cell RNA -seq highlights intra -tumoral heterogeneity and 839 
+
+malignant progression in pancreatic ductal adenocarcinoma.  Cell  Res .840 
+
+2019;29(9):725 –738. doi: 10.1038/s41422 -019 -0195 -y. 841 
+
+45.  Yu G et al. clusterProfiler: an R package for comparing biological themes among 842 
+
+gene clusters.  OMICS . 2012;16(5):284 –287. doi: 10.1089/omi.2011.0118. 843 
+
+46.  Cable DM et al. Robust decomposition of cell type mixtures in spatial 844 
+
+transcriptomics.  Nat  Biotechnol . 2021;40(4):517 –526. doi: 845 
+
+10.1038/s41587 -021 -00830 -w. 846 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+40 
+
+Figure legends 847 
+
+848 
+
+Figure 1: M φ_ VEGFA is enriched in ICC and  promotes ICC progression in mice. 849 
+
+(A)  Macrophage distribution in  AKT1/NICD1 mouse and human tissues.  The  UMAP 850 
+
+plot visualizes macrophage cell types.  (B)  Temporal distribution of macrophage 851 
+
+subtypes in AKT1/NICD1 -induced mouse ICC . (C)  Scatter -pie and plots illustrate 852 
+
+prognostic associations of distinct macrophage subtypes calculated by Scissor. The 853 
+
+pie chart illustrates the association between patient prognosis outcomes and each 854 
+
+macrophage subtype. Blue, survival; red, death; grey, no significant association . (D) 855 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 41
+
+Prognosis of M φ_ VEGFA - high and M φ_ VEGFA - low patients with ICC in two bulk 856 
+
+RNA data sets (GSE89749 and GSE107943). Statistical significance was calculated 857 
+
+using the log -rank test.  (E)  Allografts established by co -injection of bone 858 
+
+marrow -derived macrophages (BMDMs) and mouse ICC cells (BR cells) in  a 1:1 859 
+
+ratio in mice. From left to right: schematic illustration of allograft model, 860 
+
+quantification of tumor -infiltrating macrophages (F4/80⁺CD11b⁺ cells)  (n = 4 mice 861 
+
+per group),  representative  images of allografts, tumor volume  growth curve  (n = 6 862 
+
+mice per group) , and tumor weights  (n = 6 mice per group). Data are presented as 863 
+
+mean ± SD; Significance was determined by a two -tailed unpaired Student t -test.  **  P864 
+
+< 0.01, and n = 4 mice.  (F)  Macrophage depletion in the AKT1/NICD1 ICC mouse 865 
+
+model. The control group mice received blank liposomes. Macrophage infiltration 866 
+
+levels (R1, CD11b⁺F4/80⁺ cells within CD45⁺ population; R2, F4/80⁺ cells within 867 
+
+CD11b⁺ population) were analyzed via flow cytometry. Correlation with liver -to -body 868 
+
+weight ratio was analyzed using Spearman's rank correlation test. Abbreviations: ICC, 869 
+
+intrahepatic cholangiocarcinoma; NICD1, NOTCH1 intracellular domain; BR cells, 870 
+
+cells from BMI1/NRAS -driven primary ICC tissues in FVB mice; R1, R2, correlation 871 
+
+coefficient. 872 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+42 
+
+873 
+
+Figure 2: M φ_ VEGFA is spatially proximal to ICC cells and promotes ICC 874 
+
+malignant progression. (A)  Multiplex immunofluorescence  (mIF)  showing the 875 
+
+spatial distribution of  VEGFA +CD68 + macrophages  and ICC cells ( CK19 +) and 876 
+
+quantification of the proportion of  VEGFA +CD68 + macrophages  according to their 877 
+
+distance to ICC cells . (B)  Spatial domains defined by BANKSY in  human  ICC 878 
+
+samples  using the 10x HD platform ( upper ) and significance  of cell type abundance in 879 
+
+predicting the abundance of other cell types in  the  local niche ( lower ).  (C)  H&E 880 
+
+staining of  the  calculated  spatial distribution of M φ_ VEGFA cells  in  human ICC 881 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+43 
+
+tissues.  (D)  Violin plots showing the distribution of malignant cells according to 882 
+
+proliferation and epithelial -mesenchymal transition scores.  (E)  EdU incorporation 883 
+
+assays in QBC939 and HuCCT1 cells cultured alone or with BMDMs in a Transwell 884 
+
+system. Scale bar = 50  μm.  (F) Transwell  migration assays for BR and HuCCT1 cells 885 
+
+cultured alone or co -cultured with BMDMs. Abbreviations: H&E, Hematoxylin and 886 
+
+Eosin staining. Data are presented as mean ± SD. Significance was determined by a 887 
+
+two -tailed unpaired Student t -test ( *** P < 0.001,  ****  P < 0.0001, and n = 4). 888 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+44 
+
+889 
+
+Figure 3. M φ_ VEGFA interacts with ICC cells via OSM -OSMR. (A)  UMAP (left) 890 
+
+and box plot s (middle)  illustrate the CNV scores of epithelial subtypes in 891 
+
+AKT1/NICD1. Bubble chart visualizing pathway enrichment results for the subtypes 892 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 45 
+
+E_Jun and E_Cd44 with the highest CNV scores (right).  (B)  Venn diagram 893 
+
+demonstrating  enriched  ligands significantly upregulated in  both  Mφ_ Vegfa  (mouse, 894 
+
+Mouse_TAM_diff) and M φ_ VEGFA (human, Human_TAM_Diff)  identified by three 895 
+
+cell communication methods (CellphoneDB, CellChat, and NicheNet).  (C)  Heat  map 896 
+
+showing the interaction intensity  of  OSM  signaling between macrophage and ICC 897 
+
+cells in AKT1/NICD1  mouse  ICC tissues.  (D)  Violin plots show  Osm  in macrophage 898 
+
+and its receptor  Osmr  expression in epithelial subtypes in mouse  ICC  tissues (left). 899 
+
+Scatter plots show the OSM -OSMR gene pair in human ICC single -cell and spatial 900 
+
+RNA -seq data (right).  (E)  mIF showing spatial co -localization between CD68⁺OSM⁺ 901 
+
+TAMs and OSMR⁺KRT19⁺ ICC cells in  human  ICC  tissues . Scale bar, 200  μm. 902 
+
+903 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+46 
+
+904 
+
+Figure 4. M φ_ VEGFA promotes  the  proliferation  of  ICC  tissue and  cells via 905 
+
+OSM -OSMR. (A)  Bar plot showing the top KEGG pathways of Osm target genes 906 
+
+obtained by NicheNet.  (B  and C ) Schematic illustration of experimental procedure 907 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 47 
+
+and r epresentative images of livers from Lifr fl/fl ; Alb -Cre , Osmr fl/fl ; Alb -Cre , and 908 
+
+corresponding control  mice injected with AKT1/NICD1. Scale bar, 200  μm.  (D and E )909 
+
+Western blot  and CCK -8 assay  for cell viability measurements of HuCCT1 and 910 
+
+QBC939 cells treated with 2.5 ng/mL or 5.0 ng/mL OSM for 5 days.  (F)  Relative 911 
+
+mRNA  levels  of VEGF, IL10,  and  OSM in RAW264.7 or OSMR in QBC939 cells 912 
+
+upon  co -culture.  (G)  EdU incorporation assay in QBC939 cells trans fect ed with  two 913 
+
+OSMR  sgRNAs. Scale bar,  20  μm.  (H)  CCK -8 assay  measuring the growth  of 914 
+
+HuCCT1 and QBC939 cells  with  sgOSMR -1 transfection  at days 1, 3 , and 5 after 915 
+
+seeding.  (I)  Colony formation assay of HuCCT1 and QBC939 cells trans fect ed with 916 
+
+sgOSMR -1. Statistical significance was analyzed using one -way ANOVA ( P < 0.05), 917 
+
+followed by Dunnett’s  t-test (ns, not significant, **  P < 0.01, ***  P < 0.001; ****  P <918 
+
+0.0001). 919 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+48 
+
+920 
+
+Figure 5. M φ_ VEGFA promotes  the p roliferation  of  ICC cells by  activating 921 
+
+p-STAT3 and CCND1/MYC  signaling via OSM -OSMR.  (A)  A Venn plot displays 922 
+
+the candidate target genes of Osm.  (B) Enriched pathway analysis of the candidate 923 
+
+target genes.  (C)  Protein network demonstrating the candidate  downstream  signaling 924 
+
+of Osm -Osmr.  (D)  Immunohistochemical staining of  p-STAT3  in paraffin -embedded 925 
+
+liver sections from Osmr fl/fl  and Osmr fl/fl ; Alb -Cre mice injected with AKT1/NICD1. 926 
+
+Scale bars represent 50  μm . (E)  Immunohistochemical staining of CCND1 and 927 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+49 
+
+p-STAT3 in liver tissues from  Osmr fl/fl  and Osmr fl/fl ; Alb -Cre mice injected with 928 
+
+AKT1/NICD1 . Scale bars, 200  μm.  (F) Western blot analysis of OSMR, CCND1, 929 
+
+BCL2, phosphorylated STAT3 (p -STAT3), and OSM protein levels  in Osmr fl/fl  and 930 
+
+Osmr fl/fl ; Alb -Cre mice injected with AKT1/NICD1. 931 
+
+932 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 50 
+
+933 
+
+Figure 6. M φ_ VEGFA promotes ICC invasion via  THBS1 –CD47  signaling.  (A) 934 
+
+Heatmap of interactions between M φ_ Vegfa  and  normal and malignant epithelial 935 
+
+subtypes  via  THBS1 signaling (left) , and b ar plot demonstrating the hallmark target 936 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 51 
+
+gene sets of  Thbs1  obtained by NicheNet (right).  (B)  Wound  healing assay  of 937 
+
+HuCCT1 and RBE cells  treated  with or without 10 ng/mL THBS1. HuCCT1  cells 938 
+
+collected  at 0, 12, and 24 h; RBE  cells collected  at 0, 36, and 72 h. Scale bar, 150  μm. 939 
+
+(C)  Transwell migration  assay  of BR  (mouse)  and HuCCT1  (human)  cells treated 940 
+
+with 10 ng/mL THBS1. Scale bar, 150  μm.  (D)  Transwell  migration assay of HuCCT1 941 
+
+cells transfected with siCD47 -2 and  treated with or without 20 ng/mL THBS1 for 48 h .942 
+
+(E)  Western blot of CD47 in BR cells infected with LV3 -shNC or LV3 -shCD47 943 
+
+lentivirus.  (F)  Transwell migration images of BR cells infected with LV3 -shNC or 944 
+
+LV3 -shCd47 lentivirus and co -cultured with BMDMs for 24 h. Scale bar, 150  μm.  (G) 945 
+
+Images of subcutaneous allografts and allograft growth curves of BR cells infected 946 
+
+with LV3 -shNC or LV3 -shCd47 lentivirus.  (H)  Representative  gross images  of mice 947 
+
+with  intraperitoneal injection of LV3 -shNC (n = 3 mice) or LV3 -shCd47 infected BR 948 
+
+cells (n = 5 mice).  (I)  Representative images of mouse abdominal  ICC nodules a t the 949 
+
+end  of  the  experiment  after intraperitoneal injection of BR cells  infect ed with 950 
+
+LV3 -shNC or LV3 -shCd47. Tumor  nodules  were  indicated by white arrows.  Data are 951 
+
+presented as mean ± SD. Significance was determined by the two -tailed unpaired 952 
+
+Student t -test for two groups or by one -way ANOVA followed by Dunnett’s t -test for 953 
+
+multiple groups. * * P < 0.0 1, ***  P < 0.001, and ****  P < 0.0001. 954 
+
+955 
+
+956 
+
+957 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+52 
+
+958 
+
+Figure 7. M φ_ VEGFA  derived THBS1  promotes ICC invasion via activated 959 
+
+mTOR  and  phosphorylated DBN1.  (A)  Western blot analysis of N -cadherin and 960 
+
+Vimentin expression in HuCCT1 cells treated with 20 ng/mL THBS1 at the indicated 961 
+
+time points. GAPDH served as a loading control.  (B)  Bar plot displaying pathway 962 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 53
+
+enrichment analysis for HuCCT1 at 2 h following addition of exogenous THBS1.  (C) 963 
+
+Western blot of  p-RPS6 and  p-mTOR  in BR cells cultured alone or co -cultured with 964 
+
+BMDMs at the indicated time points. GAPDH served as a loading control.  (D)965 
+
+Transwell migration assays of HuCCT1 and BR cells co -cultured with BMDMs  and 966 
+
+with or without rapamycin treatment. N = 5. Scale bar, 200  μm.  (E) Transwell 967 
+
+migration assays of HuCCT1 and BR cells treated with RPMI -1640, rapamycin, 968 
+
+THBS1 , or  THBS1 + rapamycin. Scale bar, 200  μm.  (F) Venn plot showing  the 969 
+
+enriched phosphorylated proteins involved in  the  EMT process.  (G)  Transwell 970 
+
+migration assays for HuCCT1 and BR cells treated with  RPMI -1640 , 25, or 125  μM971 
+
+BTP. Scale bar, 200  μm. Western blot analysis of p -DBN1 (Ser142) and Vimentin in 972 
+
+HuCCT1 and RBE cells treated with 50  μM BTP2 for 24 h. GAPDH was used as a 973 
+
+loading control.  (H)  Representative images of metastatic ICC lesions from  the 974 
+
+indicated  organs in Thbs1 fl/fl ; Lyz -Cre and Thbs1 fl/fl  mice injected with sgP19/KRAS. 975 
+
+(I)  Metastatic nodule numbers in the sgP19/KRAS ICC metastasis model. Data are 976 
+
+presented as mean ± SD. Significance was determined by a two -tailed unpaired 977 
+
+Student ’s t-test (* P < 0.0 5).  (J) H&E, CK19 , and Ki67 staining of metastatic tumor 978 
+
+nests in sections from different organs in Thbs1 fl/fl  mice  and  Thbs1 fl/fl ; Lyz -Cre  mice 979 
+
+injected with sgP19/KRAS. This lymph node is the largest adjacent to the spleen. 980 
+
+(K) Western blot analysis of THBS1, CD47, DBN1, p-DBN1(Ser142), 981 
+
+p-mTORC1(Ser2448) and Vimentin protein  levels  in  ICC  tissues from Thbs1 fl/fl ;982 
+
+Lyz -Cre and Thbs1 fl/fl  mice injected with sgP19/KRAS. GAPDH served as a loading 983 
+
+control. 984 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint 54
+
+985 
+
+Figure 8. Combined intervention with OSM inhibitor and THBS1 knockout 986 
+
+delays ICC progression. (A)  Stacked bar plot illustrating the prevalence of 987 
+
+OSM⁺THBS1⁺ dual -positive  ICC  within distinct cohorts.  (B)  Survival curve of 988 
+
+patients with ICC with h igh  or  low OSM and THBS1, respectively.  (C) mIF shows 989 
+
+OSM +THBS1 +CD68 +VEGFA + macrophages around CK19 + cells. S cale bar, 50  μm.990 
+
+(D) Spearman correlation between OSM +THBS1 + and CD68 + intensity.  (E)  Patients 991 
+
+were  stratified by OSM + and THBS1 + intensity (red = OSM +THBS1 + high, green = 992 
+
+OSM +THBS1 + low); survival  was  compared using  the  log‑rank test . (F)993 
+
+Representative liver images from  mice with  THBS1  knockout,  OSM  inhibition , or 994 
+
+combination blockade  as indicated . Statistical analysis of liver -to -body weight ratio 995 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 5, 2026. ;https://doi.org/10.1101/2025.10.02.679723 doi: bioRxiv preprint
+
+55 
+
+across different treatment groups in the  THBS1/OSM  combination blockade 996 
+
+experiment , n = 4 mice . Data are presented as mean ± SD. Statistical significance was 997 
+
+analyzed using one -way ANOVA ( p < 0.05), followed by Dunnett’s  t-test ( *P < 0.05, 998 
+
+**  P < 0.01,  ***  P < 0.001;  ***  P < 0.0001).  (G) H&E , Ki67 , and C K19 staining of 999 
+
+liver sections from  the same mice as stated in panel F . Scale bar, 200  μm. 1000 
+
+1001
