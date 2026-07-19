@@ -1,0 +1,26 @@
+---
+title: Tricuspid valve regurgitation accelerates heart failure via a cardio-intestinal innate immune circuit
+title_zh: 三尖瓣反流通过心-肠先天免疫回路加速心力衰竭
+authors: "Sicklinger, F., Thiemann, T., Rupprecht, S., Quadt, L., Amrute, J. M., Zuchgan, J., Voran, J. C., Markousis-Mavrogenis, G., Isasi Nalvarte, A., Wienecke, L. M., Hartmann, N., Erbe, S., Hoerbrand, I. A., Kraus, M. J., Gruber, M., Bibernell, R., Martini, S., Kilian, L. S., Hund, H., Boeckel, J.-N., Mack, M., Voors, A. A., van der Meer, P., Frank, D., Frey, N., Lavine, K., Konstandin, M., Leuschner, F."
+date: 2026-07-11
+pdf: "https://www.biorxiv.org/content/10.64898/2026.07.07.736969v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.0
+evidence: 心肠先天免疫轴与肠道屏障完整性
+tldr: 本研究揭示了三尖瓣反流（TR）通过“心-肠”先天免疫轴加速心力衰竭的机制。研究发现TR引起的体循环淤血会破坏肠道屏障，诱导单核细胞扩张并释放IL-6，进而导致心肌炎症和纤维化。通过单细胞测序和临床验证，证实了阻断IL-6可改善心功能，为TR患者提供了新的免疫治疗方向。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-07-736969-v1/fig-001.webp\", \"caption\": \"Fig. 3. Expansion of IL-6–producing monocytes and systemic IL-6 elevation in TR. (A) Frequency of Ly6C-high monocytes (% of CD45+ cells) in peripheral blood at 1 and 4 weeks post-TR or sham induction (n = 8-12, two-way ANOVA with Sidak’s multiple comparison, mean\", \"page\": 25, \"index\": 1, \"width\": 987, \"height\": 912}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-07-736969-v1/fig-002.webp\", \"caption\": \"Fig. 1. TR is associated with adverse left ventricular remodeling and systemic monocyte activation in patients. (A) Schematic of the retrospective matched cohort study design. Patients with severe TR (n=92) were matched 1:4 to controls by age, sex, and LV EF within a HF cohort (EF <50%; n=1,299). (B)\", \"page\": 21, \"index\": 2, \"width\": 1059, \"height\": 983}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-07-736969-v1/fig-003.webp\", \"caption\": \"Fig. 5. IL-6 blockade improves TR-associated biventricular remodeling and cardiac dysfunction. (A) Schematic experimental design. Mice underwent IR injury at day −10, followed by TR induction at day 0. Anti-IL-6 antibody or control treatment was administered continuously from\", \"page\": 29, \"index\": 3, \"width\": 1027, \"height\": 1033}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-07-736969-v1/fig-004.webp\", \"caption\": \"Fig. 2. TR in mice induces right ventricular remodeling and accelerates left ventricular failure in chronic ischemic cardiomyopathy. (A) Schematic and experimental timeline for echocardiography-guided TR induction via trans-LV microsurgical tricuspid valve severing in mice. (B) Representative Color Doppler\", \"page\": 23, \"index\": 4, \"width\": 1054, \"height\": 1223}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-07-736969-v1/fig-005.webp\", \"caption\": \"Fig. 4. TR-induced cardiac remodeling is monocyte-dependent and driven by gut-derived endotoxemia. (A) Monocytes isolated from TR or sham donor mice (red) at d28 were adoptively transferred into recipient mice (blue) with IR-induced left-sided HF every other day from d0 through d28. (B) Pre-\", \"page\": 27, \"index\": 5, \"width\": 1043, \"height\": 1067}]"
+motivation: 旨在探究三尖瓣反流如何通过免疫系统影响心力衰竭的进展及其背后的分子机制。
+method: 结合人类和动物模型，利用单细胞及单核转录组测序技术分析TR对肠道屏障和循环免疫细胞的影响。
+result: 发现TR导致肠道屏障受损并诱发单核细胞产生IL-6，这种炎症因子是驱动心肌纤维化和左心室功能障碍的关键。
+conclusion: 研究确立了心-肠先天免疫轴在血流动力学改变与心脏重塑之间的桥梁作用，并提出IL-6是治疗TR相关心衰的潜在靶点。
+---
+
+## 摘要
+免疫系统的激活影响心力衰竭（HF）的进展，但其潜在机制尚不完全清楚。在此，我们确定了一个心-肠先天免疫轴，它将体静脉淤血与心肌炎症、纤维化和功能下降联系起来。通过对三尖瓣反流（TR）患者和小鼠进行单细胞和单细胞核转录组分析，我们证明 TR 破坏了肠道屏障的完整性，并诱导循环单核细胞扩增，进而协调右心与左心之间的病理性相互作用。单核细胞来源的白细胞介素-6（IL-6）被确定为 TR 驱动的心肌纤维化和功能障碍的关键介质。阻断 IL-6 可减轻心脏纤维化并改善心脏功能。在患者中，基于导管的 TR 修复导致 IL-6 水平降低。总之，这些发现确立了心-肠先天免疫是将血流动力学改变与左心室重构联系起来的一种机制，并建议将 TR 患者作为心力衰竭中 IL-6 靶向治疗的选择性目标人群。单句总结：这项工作从机制上解析了三尖瓣反流中的心-肠轴，以及由白细胞介素-6 介导的其对心力衰竭进展的影响。
+
+## Abstract
+Activation of the immune system impacts the progression of heart failure (HF), but the underlying mechanisms remain incompletely understood. Here, we identify a cardio-intestinal innate immune axis that links systemic venous congestion to myocardial inflammation, fibrosis, and functional decline. Using single-cell and single-nucleus transcriptomic profiling in patients and mice with tricuspid regurgitation (TR), we demonstrate that TR disrupts intestinal barrier integrity and elicits expansion of circulating monocytes which in turn orchestrate pathological crosstalk between the right and left heart. Monocyte-derived Interleukin-6 (IL-6) emerged as a key mediator of TR-driven myocardial fibrosis and dysfunction. Blockade of IL-6 attenuated cardiac fibrosis and improved cardiac function. In patients, catheter-based repair of TR resulted in reduced IL-6 levels. Together, these findings establish cardio-intestinal innate immunity as a mechanism linking altered hemodynamics to left ventricular remodeling and nominate TR patients as a selective target population for IL-6-directed therapy in HF.
+
+One Sentence SummaryThis work mechanistically resolves the heart-gut axis in tricuspid valve regurgitation, and its impact on heart failure progression as mediated by Interleukin-6.

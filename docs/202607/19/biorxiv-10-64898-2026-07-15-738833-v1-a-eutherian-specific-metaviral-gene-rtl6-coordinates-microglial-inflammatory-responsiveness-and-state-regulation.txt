@@ -1,0 +1,1241 @@
+Title: A eutherian-specific metaviral gene, RTL6, coordinates microglial inflammatory responsiveness and state regulation
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.15.738833v1.full.pdf
+
+Number of Pages: 38
+
+Markdown Content:
+A eutherian-specific metaviral gene, RTL6 , coordinates microglial inflammatory responsiveness and state regulation 
+
+Fumitoshi Ishino 1, # , Masahito Irie 1,2, & , Hirosuke Shiura 3, Takashi Kohda 3 and Tomoko Kaneko-Ishino 2.
+
+> 1
+
+Department of Epigenetics, Medical Research Institute (MRI), Tokyo Medical and Dental University (TMDU), Tokyo 113-8510, Japan. 2Faculty of Nursing, Tokai University School of Medicine, Kanagawa 259-1193, Japan . 3Faculty of Life and Environmental Sciences, University of Yamanashi, Yamanashi 400-8510, Japan. 
+
+Present address: 
+
+> #
+
+Research Infrastructure Management Organization, Institute of Science Tokyo, Tokyo 113-8510, Japan. 
+
+> &
+
+Nonprofit Organization Gene Information Bank, Fukuoka 810-0041, Japan. 
+
+*Correspondence to: Fumitoshi Ishino (fishino.epgn@mri.tmd.ac.jp) and Tomko Kaneko-Ishino (tkanekoi@tokai.ac.jp). 
+
+Abstract 
+
+RTL6 (also known as SIRH3 ) is a eutherian-specific metavirus-derived gene highly conserved among placental mammals. We previously demonstrated that RTL6 is expressed in microglia and secreted into the brain extracellular space, where it mediates the trapping and clearance of bacterial lipopolysaccharide (LPS). However, its role in microglial TLR4 signaling remained unclear. To investigate the earliest LPS response, we performed RNA-seq analysis of wild-type and Rtl6 -deficient primary microglia following 10 min of LPS stimulation. Rtl6 -deficient microglia exhibited compensatory upregulation of residual transcripts derived from the untranslated region of Rtl6 ,suggesting feedback regulation of Rtl6 expression. Loss of RTL6 attenuated the induction of immediate-early response genes, including Fos, Jun, Nr4a1, Nr4a2, Egr2, 
+
+and Egr3 , together with broad suppression of interferon-responsive and inflammatory transcriptional programs. Altered neuronal and oligodendrocyte/myelin interaction pathways indicated remodeling of microglial communication networks. Strikingly, genes involved in cell-cycle progression, DNA replication, chromatin assembly, DNA 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+repair, and genome maintenance were coordinately upregulated, including multiple disease-associated microglia (DAM)-related genes. Collectively, these findings indicate that RTL6 couples extracellular LPS sensing to inflammatory transcriptional responses while regulating microglial functional state transitions. Our results identify RTL6 as a previously unrecognized component of the regulatory network governing microglial functional states in placental mammals. 
+
+1. Introduction 
+
+In recent years, increasing attention has been directed toward virus-derived genes that have been co-opted during mammalian evolution (Kaneko-Ishino and Ishino, 2012, 2015; Wang and Han, 2021, 2022; Henriques et al. , 2024; Shiura et al. , 2026). Eutherian genomes contain numerous endogenous retroviral elements, including lineage-specific envelope ( ENV )-derived genes such as syncytins (Mi et al. , 2000; Lavialle et al. , 2013). In addition to these, mammals also harbor a set of conserved genes derived from metavirus-like elements. These include the Sushi-ichi retrotransposon homologues (SIRH)/Retrotransposon Gag-like (RTL) gene family, which encodes proteins homologous to retroviral GAG (and in some cases POL) proteins, as well as Paraneoplastic Ma antigen (PNMA) genes, both derived from Ty3/gypsy-related retrotransposons (hereafter collectively referred to as metavirus-derived genes) (Kaneko-Ishino and Ishino, 2012, 2015; Henriques et al. , 2024, Shiura et al. , 2026). Notably, most of these genes are conserved across eutherians, and increasing evidence suggests that some have acquired important roles in mammalian development. Among them, Paternally expressed 10 ( PEG10 ) is unique in being shared between eutherians and marsupials (Ono et al. , 2001; Suzuki et al. , 2007), whereas most other members are specific to eutherians, with a few found in marsupials (Charlier et al. ,2001; Edwards et al ., 2008; Kaneko-Ishino and Ishino, 2012, Wang and Han, 2021, Henriques et al ., 2024, Shiura et al. , 2026). Genetic studies using knockout (KO) mouse models have demonstrated that several of these genes, including PEG10 , RTL1 
+
+(PEG11 ), and LDOC1 (RTL7/SIRH7 ), play essential roles in placental development (Ono et al. , 2006; Sekita et al. , 2008; Naruse et al. , 2014; Kitazawa et al. , 2017; Shiura 
+
+et al. , 2021, 2025). In contrast, other members, such as RTL4 (SIRH11/ZCCHC16 ), 
+
+RTL5 (SIRH8/RGAG4 ), RTL6 (SIRH3/LDOC1L ), and RTL9 (SIRH10/RGAG1 ), have been implicated in brain function, particularly in microglia, as revealed by a series of analyses of knock-in (KI) mice that produce a fusion protein with a fluorescent protein. These KI mouse studies have linked Rtl4 to stress-related behavioral responses (Irie et al. , 2015; Ishino et al. , 2024), whereas Rtl5 , Rtl6, and Rtl9 have been implicated in host 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+defense against viral, bacterial, and fungal components, respectively, possibly through the recognition and clearance of pathogen-associated molecular patterns (PAMPs) (Irie 
+
+et al. , 2022; Ishino et al. , 2023). Microglia are a conserved population of central nervous system (CNS)-resident macrophages that originate from yolk sac–derived progenitors and colonize the brain early in development (Ginhoux et al., 2010; Ginhoux and Prinz, 2015). This ontogenetic program is broadly conserved across vertebrates, suggesting that microglia likely emerged with the establishment of the vertebrate CNS (Shimizu and Prinz, 2025). In mammals, certain lineage-specific biological innovations, such as soft skin and placentas, are associated with the co-option of virus-derived genes (Ono et al. 2006; Sekita et al., 2008; Matsui et al., 2011). Consistent with this concept, several eutherian-specific metavirus-derived genes, including RTL4, RTL5 , RTL6 , and RTL9 , are selectively expressed in microglia, suggesting that they may contribute to the regulatory programs underlying microglial functions and state transitions. Among them, RTL6 is an exceptionally well-conserved gene among eutherian mammals (Irie et al. , 2022). Its dN/dS value (< 0.05) is substantially lower than the reported average value for typical housekeeping genes (0.093) (Zhang and Li, 2004), suggesting that RTL6 has been maintained under strong purifying selection throughout eutherian evolution. Therefore, it is of particular interest to dissect the roles of RTL6 in microglia. In the present study, we investigated the role of RTL6 in the earliest response to lipopolysaccharide (LPS) administration in microglia. Because we previously observed that although RTL6 reacts to LPS soon after its administration, Tnfa and Il6 expression are largely comparable between WT and Rtl6 KO microglia in 1 hr of LPS administration (Irie et al. , 2022). Our RNA-seq results demonstrated that the loss of 
+
+Rtl6 is characterized by reduced TLR4-induced inflammatory responsiveness and increased expression of genes related to proliferation, as well as altered tissue remodeling in the presence of LPS. This implies that RTL6 contributes to the coordination of microglial state transitions and inflammatory responsiveness in addition to the recognition and clearance of LPS. 
+
+2. Results Evidence for feedback regulation of Rtl6 expression in KO microglia 
+
+To investigate the earliest transcriptional response to LPS, we compared RNA-seq profiles of WT and Rtl6 KO microglia with or without 10 min of LPS treatment. 
+
+Rtl6 KO mice were generated by deleting the entire RTL6 open reading frame (ORF) while leaving the 5′ and 3′ untranslated regions (UTRs) intact (Irie et al., 2022). RNA-
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+seq read coverage confirmed the complete absence of ORF-derived transcripts in KO microglia. In contrast, residual transcripts corresponding to the 5′ and 3′ UTRs were expressed at approximately threefold higher levels than in WT microglia regardless of LPS treatment (Figure 1A). These findings suggest feedback regulation of Rtl6 
+
+transcription, implying that Rtl6 expression is necessary for maintaining a normal state of microglia. Unexpectedly, analysis of all samples revealed a marked difference in the extent of gene upregulation between the two untreated KO samples (KO1 and KO2), whereas widespread downregulation was consistently observed across all KO samples (Supplementary Fig. 1). These observations indicate substantial inter-sample variability among KO microglia under unstimulated conditions (see Discussion). We therefore focused subsequent analyses on LPS-induced transcriptional responses and compared the effects of LPS treatment between WT and KO microglia. 
+
+Attenuation of immediate-early and interferon-responsive transcriptional programs 
+
+Rtl6 KO microglia exhibited marked attenuation of immediate-early, inflammatory, and interferon-associated transcriptional programs. Comparison of gene expression profiles between WT and KO microglia following 10 min of LPS stimulation (WT3 and WT4 versus KO3 and KO4) identified 3,540 significantly differentially expressed genes (adjusted p-value < 0.05; Figure 1B; Table S1). To examine transcriptional changes under LPS-stimulated conditions in more detail, all differentially expressed genes, including 1,480 downregulated and 2,060 upregulated genes, were initially classified into 25 functional groups (Groups A–Y, Tables S2 and S3) and subsequently reorganized into five integrated functional modules (Modules 1–5, Table 1A and 1B) according to their biological relationships. These integrated modules capture the major transcriptional programs associated with RTL6 deficiency following LPS stimulation. We first examined genes associated with the canonical LPS response (Modules 1 and 2). Module 1 was designed to represent the functional progression of the early inflammatory response. It begins with immediate-early transcription factor activation (M1-1), followed by inflammatory effector output (M1-2), then regulatory feedback and adaptive mechanisms that fine-tune signal intensity and duration (M1-3), and finally culminates in innate immune sensing and effector programs characteristic of activated microglia (M1-4). No significant change was detected in the expression of Tlr4 , the major receptor for LPS (Kawai and Akira, 2010) (Figure 1C). However, the canonical 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+immediate-early transcriptional network was markedly suppressed , with particularly large reductions in Fos, Fosb, Jun, Junb, Nr4a1, Nr4a2, Egr2, and Egr3 (M1-1; Table 1A; Figures 1C-1E). In addition, several NF-κB-dependent feedback regulators, including Nfkbid and Nfkbiz , were also reduced (Fujioka et al. , 2004; Tullai et al. , 2011) (M1-3A; Figures 1C and 1E). Consistent with attenuation of these early transcriptional programs, expression of inflammatory effector genes, including Il6, Il1b, and Il1a , was significantly decreased (M1-2; Figures 1C and 1E). Within this framework, AP-1, composed of JUN and FOS family proteins, functions as a key convergence node integrating inputs from multiple MAPK branches, including ERK- and JNK-mediated pathways (Shaulian and Karin, 2002). ERK signaling primarily promotes the transcriptional induction of FOS, whereas JNK signaling enhances the activity of JUN through phosphorylation, and the combined activity of these components determines the magnitude of AP-1–dependent transcriptional output (Murphy et al. , 2002; Weston and Davis, 2007). A distinct set of stress-adaptive transcriptional regulators, including Bhlhe40, Atf4, Atf6, Xbp1, Creld2, Hyou1 , and Manf , was upregulated (M1-3B). The numbers of up- and down-regulated genes are comparable in Module 1 (Table 1A). These findings indicate that RTL6 deficiency selectively attenuates the canonical immediate-early inflammatory transcriptional cascade while simultaneously promoting a stress-adaptive transcriptional program characterized by activation of the unfolded protein response (UPR) and extensive remodeling of innate immune signaling networks. Consistent with this model, differential regulation of DUSP family members further supports a selective alteration of downstream MAPK transcriptional output rather than upstream signaling itself. Immediate-early phosphatases such as Dusp1 and Dusp2 , along with additional MAPK-associated phosphatases including Dusp7 and Dusp15 , are reduced (M1-3A), consistent with impaired AP-1/IEG-dependent induction, whereas ERK-associated feedback regulators including Dusp3 , Dusp4 , Dusp6 , and Dusp16 are upregulated (M1-3A), consistent with preserved basal ERK signaling and compensatory feedback regulation (Caunt et al. , 2008; Ham et al. , 2015; Lake et al ., 2016) (Supplementary Fig. 2). This divergence highlights a decoupling between stimulus-induced MAPK transcriptional responses and homeostatic MAPK feedback regulation. In the present study, although upstream MAPK signaling appears to be at least partially preserved—as suggested by relatively maintained ERK-associated signaling, including preserved Egr1 
+
+expression (Duclot and Kabbaj, 2017)—the knockout condition impairs this convergence at the level of AP-1. This is evidenced by reduced Jun and Fos expression, 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+accompanied by a marked attenuation of secondary immediate-early genes, including 
+
+Egr2 and Egr3 (Figure 1C-1E). Module 2 represents the sequential organization of the interferon-dependent antiviral response, encompassing interferon signaling (M2-1), antiviral effector induction (M2-2), intracellular nucleic acid sensing (M2-3), regulatory feedback (M2-4), and the endolysosomal antiviral effector system responsible for pathogen degradation and antigen processing (M2-5). Module 2 revealed coordinated suppression of the interferon-dependent antiviral response across all functional layers. Genes involved in interferon signaling, antiviral effector mechanisms, including Ifit1–3, Mx1, Rsad2, and Gbp2–9 (M2-2A), pathogen-recognition and phagocytic receptors, including 
+
+Cd209f, Cd209g, Marco, Scarf1, Clec4a1, Clec4a2, Fpr1, and Fcgrt (M2-5A), phagosome maturation, including Rab3c, Rab6b, Rab30, and Atp9a (M2-5B), lysosomal degradation and antigen processing, including Engase, Ifi47, and Tapbp (M2-5C), lysosomal degradation and antigen processing, including Arsg, Aoah, Lyz1 and Lyz2 
+
+(M2-5D), together with immune phagolysosome regulators, including Ms4a4a, Nod1, Card6, Entpd1, and Cd80 (M2-5E), were broadly downregulated, indicating that RTL6 deficiency attenuates the antiviral defense network as an integrated functional program rather than affecting a single signaling pathway. In contrast, pathogen and tissue sensing underwent extensive remodeling rather than being uniformly suppressed. As described above, several scavenger and phagocytic receptors, including Marco, Scarf1, Cd209 family members, and Fcgrt , were broadly downregulated (M2-5A), other environmental sensing receptors, including Tlr13 (M2-3) , Clec5a, Clec12a , members of the Cd300 family, Lilrb4a, Lilrb4b , and Msr1 , were maintained or induced (M2-5A). Thus, although the repertoire of pathogen-sensing receptors was substantially reorganized, the capacity for environmental surveillance was retained. Consistent with this pattern, immune regulatory molecules associated with tissue surveillance, including Il18rap, Il1rl1 (ST2), Cd69, Cd72, Gpr84, Spint1, and 
+
+Cxcl14 , were selectively upregulated (M2-5E). Totally, the number of downregulated genes is much larger than that of upregulated genes (Table 1A). Together, these findings indicate that RTL6 deficiency does not abolish innate immune sensing but instead functionally uncouples pathogen recognition from downstream antiviral effector functions, thereby shifting microglia toward an immune surveillance state characterized by selective environmental sensing and attenuated antimicrobial effector activity. 
+
+Reduction of interaction between microglia and neuronal and other glial cells 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Modules 3 and 4 revealed an additional layer of transcriptional rewiring involving microglial interactions with neighboring cells and the extracellular environment. Total number of downregulated genes is much larger than that of upregulated genes in Modules 3 and 4, like Module 2 (Table 1A). Module 3 represents functional interactions between microglia and neural tissue, including communication with neurons, oligodendrocytes, astrocytes, vascular cells, and other glial populations. Within Module 3 , numerous genes associated with oligodendrocyte and myelin interactions, including Mog, Mobp, Mag, Plp1, Mbp, Opalin, and Ermn , were markedly downregulated (M3-1). Genes involved in synaptic signaling and neuronal function (M3-2), including Gria2, Gria3, Synpr, Syt1, Syt4, Syt6, Kcna1, Kcnq2, Kcnh7, Cacna1b, Cacna1c, Snap91 , and Rab3c , together with genes associated with neuronal guidance and circuit remodeling (M3-3), including Ephb1, Ephb4, Robo1, Robo2, Slit1, Sema3d, Sema5a, Pcdh7, Pcdh8, Pcdh9, Lrrtm3, and Ncam1 , were also broadly downregulated. Similarly, genes involved in the neuro–immune interface (M3-4), including Cxcr4, Cd4, Cd28, and Fcgr2b , showed reduced expression. These changes are consistent with the marked suppression of neuronal activity-dependent immediate-early genes, including Fos, Fosb, Jun, Junb, Nr4a1, Nr4a2, Egr2, and Egr3 (Module 1 and Group D-7 in Table S2), indicating reduced responsiveness to neuronal activity (Schafer et al ., 2012; Tyssowski et al. , 2018; Safaivan et al. , 2021). 
+
+In contrast, RTL6-deficient microglia upregulated a distinct set of genes associated with structural interactions and tissue adaptation. These included neuron–glia and interglial adhesion molecules (M3-1), such as Cadm1, Nrcam, and Itgb3 ; genes involved in synaptic organization and cytoskeletal remodeling (M3-2), including Synj2, Flna, Tuba1b, Tuba1c, Tubb4b, Tubb5, Tubb6, Syne1, Syne3 , and Pkp2 ; neuronal guidance and structural remodeling genes (M3-3), including Nes, Sox9, Vim, and Nav2 ;and neuro–immune interface genes (M3-4), including Myo10 and Ptk2b . Together, these findings indicate that RTL6 deficiency is associated with extensive remodeling of neuro–glial communication rather than a simple loss of neural interactions. While transcriptional programs linked to neuronal activity, synaptic communication, myelin interactions, and neuroimmune signaling were broadly attenuated, genes involved in structural adhesion, cytoskeletal organization, and trophic interactions were selectively induced, suggesting a transition from activity-responsive communication toward structural adaptation within the neural tissue niche. 
+
+Remodeling of interactions between microglia and the extracellular matrix 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Module 4 represents ECM remodeling, cell adhesion, and tissue adaptation pathways associated with changes in the local microenvironment. Numerous genes encoding core ECM components (M4-1), including Col4a1, Col4a2, Vcan, Dcn, Lama3, Lama4, Fbn1, Fbn2, Efemp1, Smoc1, Smoc2, Adamts2, Adamts4, Adamts7, Itga1, Mmp9, Mmp16, Ltbp4, Thbd, and Sned1 , were markedly downregulated. Genes involved in cell adhesion and the vascular interface (M4-2), including Pecam1, Cdh5, Tek, Egfl7, Cav1, and Cavin2 , were likewise reduced. In addition, remodeling regulators (M4-3), including Rhou, Sema7a, Dcx, and Sox11 , together with transcriptional 
+
+regulators involved in developmental remodeling (M4-4), including Foxp2, Bcl11a and 
+
+Bcl11b , were also downregulated. In contrast, RTL6-deficient microglia selectively upregulated genes associated with ECM remodeling, cell–matrix adhesion, and tissue adaptation , including Fn1, Col14a1, and Col4a6 (M4-1); Plaur, Itga5, and Tmem119 
+
+(M4-2); and Adam8, Pla2g4a, and Mgat5 (M4-3). Together, these findings indicate that RTL6 deficiency is associated with coordinated remodeling of the extracellular matrix rather than generalized ECM activation. The simultaneous downregulation of mature basement membrane and vascular ECM components together with selective induction of fibronectin-associated matrix components and adhesion molecules suggests a transition toward a provisional, tissue-remodeling extracellular environment. 
+
+Coordinated activation of metabolic adaptation and genome maintenance programs 
+
+Module 5 revealed a highly coordinated transcriptional program coupling metabolic remodeling with cell-cycle progression, DNA replication, and genome maintenance (Table 1B). In contrast to Modules 2–4, upregulated genes greatly outnumbered downregulated genes. Moreover, genes involved in metabolism, intracellular signaling, membrane trafficking, and proteostasis (Modules 5-1 to 5-3) were generally induced with modest fold changes, whereas genes involved in DNA replication, chromosome segregation, and chromatin organization (Module 5-4) exhibited substantially stronger induction. This pattern indicates coordinated remodeling of cellular physiology accompanied by activation of a proliferative transcriptional program. Because this module encompasses extensive metabolic and proliferative gene programs, detailed gene classifications and representative genes for each submodule are presented in the Supplementary Result 1. 
+
+Genes involved in oxidative phosphorylation (Complexes I–V), the tricarboxylic acid cycle, and mitochondrial bioenergetic and biogenesis pathways were 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+broadly upregulated (M5-1A), indicating coordinated enhancement of mitochondrial bioenergetic capacity. These changes were accompanied by coordinated induction of glycolytic and pentose phosphate pathway enzymes (M5-1B), together with genes supporting glucose utilization and glutamine metabolism. Lipid metabolism was also extensively remodeled, with increased expression of genes involved in fatty acid activation, phospholipid synthesis, cholesterol biosynthesis, and membrane lipid production (M5-1C), including Acsl4, Acot9, Agpat5, Acaca, Acat1, Agps, Far1, Fabp4, Fabp5 , and Tmem97 , whereas genes associated with lipid storage and cholesterol efflux, such as Apoe, Abca1, Abcg1, Lpin1, Lpin2, and Rxra, were reduced, consistent with a shift from lipid homeostasis toward membrane biosynthesis. Components of the MAPK-, PI3K-, small GTPase-, and calcium-dependent signaling pathways were coordinately induced together with multiple signaling modulators (M5-2A), such as Map2k1, Mapk6, and Mapkapk2 . In contrast, Map3k8 
+
+(Tpl2 ) (M5-2A2), the onlycanonical upstream MAPKKK of the TLR4–TPL2–ERK– AP-1 signaling axis, was significantly downregulated, accompanied by coordinated downregulation of multiple AP-1- and ERK-responsive immediate-early genes (e.g., 
+
+Jun/Junb/Jund, Fos/Fosb, Egr2/Egr3, Nr4a1/Nr4a2, and Dusp1 ) as discussed in Module 1-1 (Dumitru et al., 2000; Ganke et al., 2012; Auther and Ley, 2013). The IGF– PI3K/AKT–FOXO signaling axis was also attenuated, as indicated by reduced expression of Igf1, Igf1r, Igf2, (M5-2A1), Rasa1, Rasa4, Rasal2 (M5-2A3) , Foxo3 
+
+(M5-2A4) , and several stress-responsive genes. The IGF–PI3K/AKT–FOXO signaling axis, including Igf1, Igf1r, Igf2 (M5-2A1), Rasa1, Rasa4, Rasal2, (M5-2A3) and Foxo3 
+
+(M5-2A4), and several stress-responsive genes were also downregulated (Webb and Brunet, 2014; Manning and Toker, 2017). M5-2B represents a coordinated signaling module linking cell adhesion to actin cytoskeletal remodeling. The concerted induction of integrin-mediated actin cytoskeletal remodeling genes suggests enhanced capacity for cell adhesion, migration, morphological remodeling, and phagocytosis in macrophages and microglia. Membrane trafficking pathways (M5-2C) were also broadly activated, including Rab- and Arf-family GTPases, sorting nexins, COPII-mediated ER-to-Golgi transport, retromer components, and vesicle transport machinery, indicating enhanced intracellular membrane dynamics. 
+
+Proteostasis pathways were similarly activated (M5-3). ER protein-folding machinery, molecular chaperones, protein disulfide isomerases, ER quality-control systems, redox defense pathways, and ubiquitin–proteasome components were coordinately induced. Lysosomal pathways were likewise activated, whereas several canonical autophagy regulators were reduced, suggesting a shift toward lysosome-
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+centered proteostatic adaptation with selective suppression of canonical autophagy. 
+
+Collectively, Modules 5-1 to 5-3 indicate extensive remodeling of metabolism, intracellular signaling, membrane trafficking, and proteostasis, establishing a cellular state associated with activation of the proliferative genome-maintenance program described below. Module 5-4 defined an integrated transcriptional program encompassing cell-cycle progression, DNA replication, genome maintenance, and chromatin remodeling. Genes regulating G1/S transition, G2/M transition, and general cell-cycle progression were broadly induced (M5-4A1). Notably, all major E2F transcription factors ( E2f1, E2f2, E2f6, E2f7, and E2f8 ) were induced by more than twofold, indicating coordinated activation of the E2F transcriptional program controlling S-phase entry and DNA replication. Consistent with this, Cdkn1a was downregulated. Genes required for DNA replication licensing, replication fork progression, DNA precursor synthesis, chromosome segregation, DNA repair, genome surveillance, and replication-coupled chromatin assembly were coordinately upregulated. Particularly prominent induction was observed for replication-coupled histone deposition factors, ATP-dependent chromatin remodelers, epigenetic regulators, chromatin organization factors, and nuclear architecture proteins, indicating activation of a comprehensive program coupling DNA replication with chromatin duplication and genome maintenance. 
+
+Together, these coordinated transcriptional changes demonstrate activation of an integrated genome-duplication program encompassing cell-cycle progression, DNA replication, chromosome segregation, DNA repair, genome surveillance, and replication-coupled chromatin assembly. Rather than reflecting independent pathway-specific responses, these coordinated transcriptional changes define a comprehensive molecular program supporting faithful genome duplication during cell proliferation (see more details in Supplementary Result 1). 
+
+Disease-associated microglia (DAM)- and apoptosis-related genes 
+
+Interestingly, the transcriptional changes induced by RTL6 deficiency resemble the DAM program. For example, several genes associated with the Spp1/Gpnmb/Fabp5 
+
+tissue-remodeling module were upregulated (Figure 2A), whereas components of the canonical Trem2–Tyrobp–Apoe signaling axis (Figure 2B), together with Il10ra , were downregulated (Group A1b, Tables S2 and S3) (Keren-Shaul et al. , 2017; Krasemann et al. , 2017 ；Prinz et al. , 2019). The DAM-associated receptor Axl was also decreased, whereas the homeostatic microglial marker Tmem119 was modestly increased. In 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+addition, no significant changes were detected in two other characteristic DAM markers, Cst7 and Ctsz . These findings indicate that RTL6-deficient microglia exhibit a non-canonical DAM-like transcriptional profile characterized by selective activation of tissue-remodeling pathways without coordinated induction of the core Trem2 -dependent signaling network (Figure 2A and 2B). We further examined genes associated with apoptosis and cell survival. Anti-apoptotic genes, including Bcl2, Bcl2l1, and Bcl2a1d , were upregulated together with the pro-apoptotic factors Bak1 , whereas the BH3-only gene Bcl2l11 was downregulated (Figure 2C and 2D, I1and I2, Tables S2 and S3). These coordinated changes indicate extensive remodeling of apoptosis- and survival-related pathways rather than activation of a canonical apoptotic program (Pihán et al. , 2017; Youle and Strasser, 2008). Such reprogramming is consistent with a broader decoupling between stimulus-induced transcriptional responses and intrinsic cellular homeostasis (Wendeln et al. , 2018). 
+
+3. Discussion 
+
+A major finding of the present study is that RTL6 deficiency attenuated the earliest transcriptional response to LPS and was accompanied by widespread reorganization of microglial transcriptional programs, rather than disruption of a single signaling pathway. Our previous studies demonstrated that the RTL6 protein is secreted into the brain extracellular space, where it directly binds bacterial LPS and contributes to LPS clearance in vivo . However, despite impaired LPS handling in Rtl6 KO mice, cultured KO microglia exhibited largely normal induction of Tnfa and Il6 one hour of LPS stimulation, leaving unresolved how RTL6 influences TLR4-mediated signaling (Irie et al., 2022). To address this question, we focused on the earliest phase of the LPS response and analyzed transcriptomic changes only 10 min of LPS stimulation. Notably, the induction of immediate-early transcription factors, including Egr2 , Egr3 , Nr4a1 ,
+
+Nr4a2 , Fos and Fosb , together with multiple inflammatory effector genes, were markedly attenuated in KO microglia (Figure 1C–1E). These findings indicate that RTL6 contributes to efficient initiation of the TLR4-dependent transcriptional program and suggest a broader role for RTL6 in regulating microglial activation than previously recognized. One possibility is that internalization of the RTL6–LPS complex facilitates optimal intracellular signaling following ligand recognition. Alternatively, RTL6 may possess additional functions independent of direct LPS binding, potentially through currently unidentified interacting proteins that influence transcriptional regulation. Although these mechanisms remain speculative, they are consistent with the 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+approximately threefold increase in residual Rtl6 untranslated-region transcripts observed in KO microglia, suggesting feedback regulation of Rtl6 transcription itself (Figure 1A). Such feedback further implies that precise control of RTL6 expression is important for maintaining microglial homeostasis and regulating transitions between functional states. From an evolutionary perspective, these findings may help explain the exceptional conservation of RTL6 throughout eutherian mammals despite its origin as a metavirus-derived gene. Unexpectedly, our transcriptomic analyses revealed large-scale but highly coordinated activation of proliferative, metabolic, and tissue-remodeling programs together with altered inflammatory responsiveness. However, it remains unclear whether these changes represent direct consequences of RTL6 deficiency or secondary adaptations that accumulated during long-term maintenance of the knockout line. The 
+
+Rtl6 KO mice used in this study have been maintained for many generations (Irie et al., 2022), raising the possibility that compensatory transcriptional reprogramming contributed to the observed phenotype. In contrast, attenuation of the immediate-early response immediately following LPS stimulation is more likely to reflect a primary defect in signaling responsiveness. Future studies employing inducible knockout, acute knockdown, and rescue experiments will therefore be important for distinguishing primary functions of RTL6 from long-term adaptive changes. Several experimental limitations should also be considered. First, the transcriptomic analyses were performed using primary cultured microglia rather than microglia directly isolated from the brain. Although these cultures preserve many intrinsic characteristics of microglia, they lack the complex cellular interactions normally provided by neurons, oligodendrocytes, vascular cells, and the intact extracellular environment. Given that microglial states are highly shaped by local cellular and extracellular cues (Butovsky et al. , 2014; De Biase et al. , 2017; Gosselin et al. , 2017), the transcriptional changes observed here may be influenced by in vitro 
+
+conditions and may not fully recapitulate in vivo conditions. Moreover, the KO microglia were maintained on Rtl6 -deficient astrocyte feeder cells . Although RTL6 expression was not detected in astrocytes (Irie et al., 2022), the use of KO feeder cells raises the possibility that indirect alterations in the feeder-cell environment contributed to part of the observed transcriptional phenotype. It will therefore be important to determine whether similar phenotypes are observed when KO microglia are cultured on wild-type astrocyte feeders or examined directly in vivo . Future studies using acute brain isolation or single-cell transcriptomics will help clarify the contribution of the native brain microenvironment to the RTL6 -dependent phenotype. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Another limitation is the restricted temporal scope of the present study. Transcriptomic analyses were performed only 10 min of LPS stimulation in order to capture the immediate-early response. However, our previous study showed that Il6 
+
+induction in KO microglia was largely comparable to WT levels 1 h after stimulation (Irie et al., 2022), suggesting that that the early transcriptional differences observed here may reflect altered response kinetics rather than complete loss of signaling capacity. 
+
+Whether the extensive transcriptional reprogramming identified in the present study follows a similar temporal trajectory remains to be determined. Future time-course transcriptomic analyses will therefore be important for defining the temporal progression of RTL6-dependent microglial state transitions. An additional consideration is the unexpectedly large transcriptional difference observed between the two untreated KO samples. Owing to this variability, we were unable to define a precise basal transcriptional signature associated with RTL6 deficiency. Interestingly, one untreated KO sample exhibited widespread transcriptional activation resembling an LPS-responsive state while maintaining reduced expression of canonical immediate-early genes, arguing against inadvertent LPS contamination. Instead, this pattern may reflect spontaneous entry into a partially activated state driven by culture-associated stress or stochastic variation in microglial activation. These observations raise the possibility that RTL6 deficiency increases transcriptional instability under basal conditions, with LPS stimulation subsequently amplifying this latent variability. Additional biological replicates and detailed time-course analyses will be required to clarify the relationship between basal-state instability and stimulus-induced responses. Despite these experimental limitations, loss of RTL6 was consistently associated with a substantial shift in microglial state following LPS stimulation compared to WT (Table 1A and 1B; Figures 1–2), indicating that RTL6 functions as a regulator of microglial state rather than merely facilitating extracellular LPS clearance. Microglia are a conserved population of CNS-resident macrophages across vertebrates, originating from yolk sac-derived progenitors (or functionally analogous hematopoietic tissues in fish) that colonize the CNS during early development (Ginhoux and Prinz, 2015; Shimizu and Prinz, 2025). Core identity genes, including P2RY12, TMEM119, HEXB , and SALL1 , are broadly conserved from zebrafish to humans (Bennett et al., 2016; Masuda et al., 2020). Microglia exhibit intrinsic plasticity, transitioning between transcriptional states in response to environmental cues. In mammals, such states have been characterized as DAM (Keren-Shaul et al., 2017; Masuda et al., 2020); however, the capacity for state transitions itself represents a conserved vertebrate feature, whereas 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+the underlying molecular programs and the organization of the microglial state likely diverge across species. Likewise, microglial contributions to neural circuit formation, including synaptic pruning, are broadly conserved across vertebrates, although the extent and underlying molecular mechanisms vary among species (Paolicelli et al. ,2011; Schafer et al. , 2012). One of the most notable findings of the present study is that the transcriptional changes induced by RTL6 deficiency were not randomly distributed but instead formed a highly coordinated series of functional programs spanning inflammatory signaling, tissue adaptation, and cellular homeostasis. Module 1 revealed that RTL6 deficiency attenuates the canonical immediate-early inflammatory cascade while simultaneously inducing stress-adaptive transcriptional regulators associated with the unfolded protein response (UPR), indicating a redirection of the earliest inflammatory response rather than simple suppression. Module 2 further revealed broad suppression of interferon-dependent antiviral execution pathways while preserving, or even enhancing receptors involved in environmental sensing and immune surveillance. These observations suggest that Rtl6 -deficient microglia retain the capacity to detect changes in the tissue environment but exhibit reduced commitment to full antimicrobial effector functions. Modules 3 and 4 indicate that this altered immune state is accompanied by extensive remodeling of interactions with the neural microenvironment. Reduced expression of genes associated with neuronal activity, oligodendrocytes, and myelin was accompanied by increased expression of trophic factors, cell-adhesion molecules, and extracellular matrix remodeling genes, suggesting a transition from inflammatory activation toward structural adaptation within the neural niche. These findings suggest that RTL6 deficiency shifts microglia from an inflammatory effector state toward a tissue-remodeling phenotype specialized for communication with the neural microenvironment. The most unexpected observation was the robust activation of Module 5. The coordinated M5-1–M5-3 responses suggest that RTL6 deficiency induces a systems-level metabolic and physiological remodeling rather than isolated changes in inflammatory signaling. Enhanced mitochondrial metabolism, glycolysis, lipid biosynthesis, intracellular membrane trafficking, and proteostasis collectively indicate that KO microglia adopt a metabolically active state capable of supporting increased biosynthetic and proliferative demands. At the same time, suppression of homeostatic lipid metabolism, IGF signaling, and canonical autophagy suggests departure from the resting microglial phenotype toward a stress-adapted cellular state. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+A particularly striking observation was that these metabolic and adaptive changes closely parallel the extensive activation of DNA replication, chromatin assembly, and genome maintenance pathways observed in M5-4. Rtl6 -deficient microglia coordinately induced genes involved in DNA replication licensing, replication fork progression, chromosome segregation, histone synthesis, chromatin assembly, DNA repair, and genome maintenance. Such coordinated activation is unlikely to reflect cell-cycle entry alone. Instead, it suggests that proliferation is coupled to active reinforcement of genome integrity during cellular state transitions. Similar coordination between proliferative programs and genome maintenance has been described in activated immune cells and regenerating tissues, where extensive transcriptional remodeling requires simultaneous protection of genome stability (Ramirez-Carrozzi et al., 2006; Keren-Shaul et al., 2017; Jackson and Bartek, 2009; Ciccia and Elledge, 2010; Prinz et al., 2019; Masuda et al., 2020). Collectively, these observations indicate that RTL6 deficiency induces a fundamental reorganization of microglial physiology that extends far beyond attenuation of inflammatory signaling, encompassing coordinated metabolic adaptation, tissue remodeling, and genome maintenance. Taken together, these coordinated transcriptional programs support the idea that RTL6 functions as a key regulator of microglial state transitions, coupling inflammatory responsiveness with maintenance of neuroimmune homeostasis. Our findings suggest that RTL6 deficiency promotes a DAM-like transcriptional state in mice (Keren-Shaul et al., 2017; Masuda et al. , 2020), although this state remains distinct from canonical DAM states described in mouse and human studies, particularly in its retention of certain homeostatic features and lack of full induction of key DAM markers (Figure 2A and 2B). These observations raise the possibility that RTL6 contributes to eutherian-specific tuning of microglial state regulation, a hypothesis that will require validation in human microglial systems. In mammals, microglia are established as a largely self-maintaining lineage, with minimal dependence on peripheral monocyte input, sustained by local proliferation within a CNS environment tightly constrained by the blood–brain barrier (Ginhoux et al., 2010; Shimizu and Prinz, 2025). Thus, mammalian microglia represent a system in which conserved microglial properties are more tightly integrated, reflecting adaptation to a relatively insulated CNS niche. In this context, RTL6 appears to contribute to the integration of inflammatory responsiveness, microglial state transitions, tissue adaptation, proliferative adaptation, and genome maintenance within mammalian microglia. These findings identify RTL6 as a previously unrecognized component of the regulatory network that shapes microglial functional states in placental mammals. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Collectively, our results suggest that RTL6 has evolved beyond its extracellular LPS-binding activity to function as an integrative regulator of microglial state transitions. By coordinating early inflammatory signaling with antiviral defense, tissue adaptation, proliferative adaptation, and genome maintenance, RTL6 appears to couple innate immune activation to the establishment of distinct microglial functional states. As a eutherian-specific metavirus-derived gene, RTL6 therefore represents a previously unrecognized evolutionary innovation that contributes to the diversification of microglial regulatory networks in placental mammals. 
+
+Materials and Methods 4.1. Animals 
+
+All of the animal experiments were reviewed and approved by the Institutional Animal Care and Use Committee of Tokai University (Isehara-234011) and Institute of Science Tokyo (IST) (A2022-057A) and were performed in accordance with the Guideline for the Care and Use of Laboratory Animals of Tokai University. Mice were maintained under specific pathogen-free conditions on a 12:12 h light–dark cycle and were provided free access to a standard chow diet and water. 
+
+4.2 Microglia isolation and primary culture 
+
+Primary mixed glial cultures were prepared according to the protocol of Lian et al. with modifications (Lian et al. , 2016). Briefly, P0–P2 brains were homogenized in phosphate-buffered saline (PBS) supplemented with trypsin and DNase (final concentration: 0.05% and 0.1 mg/mL, respectively) by repeated pipetting 10 times and incubated in a 37◦C water bath for 5 min, and this process was repeated 3 times. After the addition of Dulbecco’s modified Eagle medium (DMEM) (Thermo Fisher Science, GibcoTM Catalog No. 11995065, Waltham, MA, USA) along with 10% fetal bovine serum (FBS) (Thermo Fisher Science, Catalog No.10437028), the debris was removed through a cell strainer (EASYstrainer, mesh size: 100 μm, Greiner, Cat. No. 542000, Kremsmunster, Austria). After centrifugation (400×g, at 4◦C) for 5 min, the supernatants were aspirated and the pellet was resuspended with 5 mL of warmed culture medium. After determining the cell density, the mixed glial cells were plated into 35 mm glass-base dishes (IWAKI, Code No. 3910-035, Osaka, Japan) or 25 cm2 flasks (Canted Neck, Corning, Cat. No. 430639, New York, NY, USA) and incubated in a CO2 incubator with 5% CO2 and 100% humidity at 37◦C. Media were changed the next day and every 3–4 days thereafter. Ten minutes after administration of LPS (final 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+concentration 10 ng/ml), microglia cells were collected by tapping the culture flasks vigorously for 2 min and the suspension were centrifugated (400×g, at 4◦C) for 5 min. 
+
+RNAseq 
+
+For RNA isolation and quality control, the integrity and quantity of the total RNA was measured using an Agilent Technologies 2200 TapeStation (Agilent Technologies Inc., Santa Clara, CA). For library preparation and sequencing, total RNA obtained from each sample was subjected to a sequencing library construction using the TruSeq Stranded mRNA Library Prep Kit (Illumina Inc., San Diego, CA) according to the manufacturer’s protocols. Sample libraries were sequenced using NovaSeq 6000 (Illumina Inc., San Diego, CA) in 100 base pair (bp) paired-end reads. For data analysis, raw sequencing reads were processed using the nf-core/rnaseq pipeline (v3.2.0; Patel et al., 2022). Reads were aligned to the mouse reference genome (GRCm39, Ensembl release 113) using STAR, and gene-level counts were quantified with RSEM. Expected counts were imported into R (v4.5.1) and analyzed with DESeq2 (v1.48.2; Love et al. ,2014). Differentially expressed genes (3,540 genes) were initially classified into 25 functional categories (Groups A–Y; Tables S2 and S3) and subsequently reorganized into five integrated functional modules (Modules 1-5; Table 1A and 1B) based on biological function. Functional annotation, iterative organization of gene categories, and refinement of the classification scheme were performed by the authors with assistance from ChatGPT (OpenAI, GPT-5.5). 
+
+Ethics 
+
+All of the animal experiments were reviewed and approved by the Institutional Animal Care and Use Committee of Tokai University (Isehara-234011) and Institute of Science Tokyo (IST) (A2022-057A) and were performed in accordance with the Guideline for the Care and Use of Laboratory Animals of Tokai University. This work did not require ethical approval from a human subject. 
+
+Data accessibility 
+
+We have deposited the results of RNAseq data on WT and Rtl6 KO microglia with and without LPS. Accession to cite for these SRA data: PRJNA1472295 Electronic supplementary material is available online. 
+
+Declaration of AI use 
+
+We have used AI-assisted technologies in English editing this article. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Author contributions 
+
+Conceptualization: F.I., T.K.-I.; Methodology: F.I., M.I., H.S., T.K.; Validation: F.I., M.I, T.K.-I.; Formal analysis: F.I., M.I, H.S., T.K., T.K.-I; Investigation: M.I, F.I., T.K.-I.; Data curation: M.I, F.I., T.K.-I.; Writing - original draft: F.I., T.K.-I.; Writing -review & editing: F.I., I.M., H. S., T.K.-I.; Visualization: F.I., M.I.; Supervision: F.I., T.K.-I. All authors gave final approval for publication and agreed to be held accountable for the work performed therein. 
+
+Funding: This research was funded by Japan Society for the Promotion of Sciences (JSPS), grant number 25K09594 to FI. 
+
+Acknowledgements 
+
+The authors would like to thank Ms Naoko Takayasu (Tokai university) for technical assistance in preparing mRNA from brains and performing RT-PCR experiments, Mr Akinori Takase and Ms Keiko Yokoyama, Life Science Support center, Tokai University, for analysis of RNAseq data. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+References 
+
+Arthur, J.S., and Ley, S.C. 2013. “Mitogen-activated protein kinases in innate immunity.” Nature Review Immunology, 13, 679–692. doi: 10.1038/nri3495. Bennett, M.L., Bennett, F.C., Liddelow, S.A., et al. 2016. “ Proceedings of National Academy of Sciences U S A ., 113 : E1738–1746. doi: 10.1073/pnas.1525528113. Butovsky, O., Jedrychowski, M.P., Moore, C.S., et al. 2014. “Identification of a unique TGF-β-dependent molecular and functional signature in microglia.” Nature Neuroscience , 17 , 131–143. doi: 10.1038/nn.3599. Caunt, C.J., Armstrong, S.P., Rivers, C.A., Norman, M.R., and McArdle, C.A. 2008. “Spatiotemporal regulation of ERK2 by dual specificity phosphatases.” Journal of Biological Chemistry, 283 , 26612–26623. doi: 10.1074/jbc.M801500200 
+
+Charlier, C., Segers, K., Wagenaar, D., et al. 2001. “Human-ovine comparative sequencing of a 250-kb imprinted domain encompassing the callipyge (clpg) locus and identification of six imprinted transcripts: DLK1 , DAT , GTL2 ,
+
+PEG11 , antiPEG11 , and MEG8 .” Genome Research, 11 , 850–862. doi: 10.1101/gr.172701 
+
+Ciccia, A., and Elledge, S.J. 2010. The DNA damage response: making it safe to play with knives. Molecular Cell , 40 , 179–204. doi: 10.1016/j.molcel.2010.09.019 
+
+De Biase, L.M., Schuebel, K.E., Fusfeld, Z.H., et al. 2017. “Local Cues Establish and Maintain Region-Specific Phenotypes of Basal Ganglia Microglia.” Neuron , 95 ,341–356.e6. doi: 10.1016/j.neuron.2017.06.020 Duclot, F., and Kabbaj, M. 2017. “The Role of Early Growth Response 1 (EGR1) in Brain Plasticity and Neuropsychiatric Disorders.” Frontiers in Behavioral Neuroscience, 11 , 35. doi: 10.3389/fnbeh.2017.00035. Dumitru, C.D., Ceci, J.D., Tsatsanis, C., et al. 2000. “TNF-alpha induction by LPS is regulated posttranscriptionally via a Tpl2/ERK-dependent pathway.” Cell , 103 ,1071–1083. doi: 10.1016/s0092-8674(00)00210-5. Edwards, C.A., Mungall, A.J., Matthews, L. et al. 2008. “The evolution of the DLK1-DIO3 imprinted domain in mammals.” PLoS Biology , 6, e135. doi: 10.1371/journal.pbio.0060135 Fujioka, S., Niu, J., Schmidt, C., et al. 2004. “NF-kappaB and AP-1 connection: mechanism of NF-kappaB-dependent regulation of AP-1 activity.” Molecular and Cellular Biology, 24 , 7806–7819. doi: 10.1128/MCB.24.17.7806-7819.2004. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Gantke, T., Sriskantharajah, S., Sadowski, M., and Ley, S.C. 2012. “IκB kinase regulation of the TPL-2/ERK MAPK pathway.” Immunological Review , 246 ,168–182. doi: 10.1111/j.1600-065X.2012.01104.x. Ginhoux, F., Greter, M., Leboeuf, M., et al. 2010. “Fate mapping analysis reveals that adult microglia derive from primitive macrophages.” Science , 330 , 841–845. doi: 10.1126/science.1194637. Ginhoux, F., and Prinz, M. 2015. “Origin of microglia: current concepts and past controversies. Cold Spring Harbor Perspectives in Biology, 7, a020537. doi: 10.1101/cshperspect.a020537. Gosselin, D., Skola, D., Coufal, N.G., et al. 2017. “An environment-dependent transcriptional network specifies human microglia identity.” Science 356 ,eaal3222. doi: 10.1126/science.aal3222 Ham, J.E., Oh, E.K., Kim, D.H., and Choi, S.H. 2015. “Differential expression profiles and roles of inducible DUSPs and ERK1/2-specific constitutive DUSP6 and DUSP7 in microglia.” Biochemisty and Biophysics Research Communications ,
+
+467 , 254–260. doi: 10.1016/j.bbrc.2015.09.180 Hammond, T.R., Dufort, C., Dissing-Olesen, L. et al. 2019, “Single-Cell RNA Sequencing of Microglia throughout the Mouse Lifespan and in the Injured Brain Reveals Complex Cell-State Changes.” Immunity , 50, 253–271.e6. doi: 10.1016/j.immuni.2018.11.004 Henriques, W.S., Young, J.M., Nemudryi, A., Nemudraia, A., Wiedenheft, B., and Malik, H.S. 2024, “The Diverse Evolutionary Histories of Domesticated Metaviral Capsid Genes in Mammals.” Molecular Biology and Evolution, 41 ,msae061. doi: 10.1093/molbev/msae061. Hetz, C. 2012. “The unfolded protein response: controlling cell fate decisions under ER stress and beyond.” Nature Reviews Molecular Cell Biology , 13 , 89–102. doi: 10.1038/nrm3270. Irie, M., Yoshikawa, M., Ono, R., et al. 2015, “Cognitive function related to the 
+
+Sirh11/Zcchc16 gene acquired from an LTR retrotransposon in eutherians.” 
+
+PLoS Genetics, 11 , e1005521. doi: 10.1371/journal.pgen.1005521. Irie, M., Itoh, J., Matsuzawa, A., et al. 2022, “Retrovirus-derived acquired genes, RTL5 
+
+and RTL6 , are novel constituents of the innate immune system in the eutherian brain.” Development , 149, dev200976. doi: 10.1371/journal.pgen.1005521. Ishino, F., Itoh, J., Irie, M., et al. 2023. “Retrovirus-Derived RTL9 Plays an Important Role in Innate Antifungal Immunity in the Eutherian Brain.” International Journal of Molecular Sciences, 24 ,14884. doi: 10.3390/ijms241914884. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Ishino, F., Itoh, J., Matsuzawa, A., et al. 2024. “ RTL4 , a Retrovirus-Derived Gene Implicated in Autism Spectrum Disorder, Is a Microglial Gene That Responds to Noradrenaline in the Postnatal Brain.” International Jouranal of Molecular Sciemces, 25 , 13738. doi: 10.3390/ijms252413738. Jackson, S.P., and Bartek, J. The DNA-damage response in human biology and disease. 
+
+Nature , 2009, 461 , 1071–1078. doi: 10.1038/nature08467. Kaneko-Ishino, T., and Ishino, F. 2012. “The role of genes domesticated from LTR retrotransposons and retroviruses in mammals.” Frontiers of Microbiology, 3,262. doi: 10.3389/fmicb.2012.00262. Kaneko-Ishino, T., and Ishino, F. 2015. “Mammalian-specific genomic functions: newly acquired traits generated by genomic imprinting and LTR retrotransposon-derived genes in mammals.” Proceedings of the Japan Academy. Series B, Physical and Biological Sciences, 91 , 511–538. doi: 10.2183/pjab.91.511. Kawai, T., and Akira, S. 2010. “The role of pattern-recognition receptors in innate immunity: update on Toll-like receptors.” Nature Immunology, 11 , 373–384 (2010). https://doi.org/10.1038/ni.1863. Keren-Shaul, H., Spinrad, A., Weiner, A., et al. 2017. “Unique Microglia Type Associated with Restricting Development of Alzheimer's Disease.” Cell , 169 ,1276–1290.e17. doi: 10.1016/j.cell.2017.05.018. Kitazawa, M., Tamura, M., Kaneko-Ishino, T., and Ishino, F. 2017. “Severe damage to the placental fetal capillary network causes mid- to late fetal lethality and reduction in placental size in Peg11/Rtl1 KO mice. Genes to Cells , 22 , 174– 188. doi:10.1111/gtc.12465. Krasemann, S., Madore, C., Cialic, R., et al. 2016. “The TREM2-APOE Pathway Drives the Transcriptional Phenotype of Dysfunctional Microglia in Neurodegenerative Diseases.” Immunity , 47 , 566–581.e9. doi: 10.1016/j.immuni.2017.08.008. Lake, D., Corrêa, S.A.L., and Müller, J. 2016. “Negative feedback regulation of the ERK1/2 MAPK pathway.” Cellular and Molecular Life Sciences , 73 , 4397– 4413. doi:10.1007/s00018-016-2297-8. Lavialle, C., Cornelis, G., Dupressoir, A., et al. 2013. “Paleovirology of ‘syncytins’, retroviral env genes exapted for a role in placentation.” Philosophical Transactions of Royal Society B, 368 , 20120507. doi: 10.1098/rstb.2012.0507. Lian, H., Roy, E., and Zheng, H. 2016. “Protocol for Primary Microglial Culture Preparation.” Bio- Protocol , 6, e1989. doi: 10.21769/BioProtoc.1989. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Love, M.I., Huber, W., and Anders, S. 2014. “Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2.” Genome Biology, 15, 550. doi: 10.1186/s13059-014-0550-8. Manning, B.D., and Toker, A. 2017. “AKT/PKB Signaling: Navigating the Network.” 
+
+Cell, 69 , 381–405. doi: 10.1016/j.cell.2017.04.001. Masuda, T., Sankowski, R., Staszewski, O., and Prinz, M. 2020. “Microglia Heterogeneity in the Single-Cell Era.” Cell Reports , 30 , 1271–1281. doi: 10.1016/j.celrep.2020.01.010. Mi, S., Lee, X., Li, X.-P., et al. 2000. “Syncytin is a captive retroviral envelope protein involved in human placental morphogenesis.” Nature, 403 , 785–789. doi: 10.1038/35001608. Murphy, L.O., Smith, S., Chen, R.H., Fingar, D.C., and Blenis, J. 2002. “Molecular interpretation of ERK signal duration by immediate early gene products.” 
+
+Nature Cell Biology , 4, 556–564. doi: 10.1038/ncb822. Naruse, M., Ono, R., Irie, M., et al. 2014. “ Sirh7/Ldoc1 knockout mice exhibit placental P4 overproduction and delayed parturition.” Development , 141 , 4763–4771. doi:10.1242/dev.114520. Ono, R., Kobayashi, S., Wagatsuma, H., et al. 2001. “A retrotransposon-derived gene, 
+
+PEG10 , is a novel imprinted gene located on human chromosome 7q21. 
+
+Genomics , 73 , 232–237. doi: 10.1006/geno.2001.6494. Ono, R., Nakamura, K., Inoue, K., et al. 2006. “Deletion of Peg10 , an imprinted gene acquired from a retrotransposon, causes early embryonic lethality.” Nature Genetics, 38 , 101–106. doi: 10.1038/ng1699. Paolicelli, R.C., Bolasco, G., Pagani, F., et al. 2011. “Synaptic pruning by microglia is necessary for normal brain development. Science , 333 , 1456–1458. doi: 10.1126/science.1202529. Patel, H., Manning, J., Ewels, P., et al. 2025. nf-core/rnaseq: nf-core/rnaseq v3.20.0 -Iridium Impala (3.20.0). Zenodo. Doi: 10.5281/zenodo.16892755. Pihán, P., Carreras-Sureda, A., and Hetz, C. 2017. “BCL-2 family: integrating stress responses at the ER to control cell demise.” Cell Death & Differentiation , 24 ,1478–1487. doi: 10.1038/cdd.2017.82. Pfeffer, S.R. 1994. “Rab GTPases: master regulators of membrane trafficking.” Current Opinion in Cell Biology, 6, 522–526. doi: 10.1016/0955-0674(94)90071-x Prinz, M., Jung, S., and Priller, J. 2019. “Microglia Biology: One Century of Evolving Concepts.” Cell , 179 , 292–311. doi: 10.1016/j.cell.2019.08.053. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Ron, D., and Walter, P. 2007. “Signal integration in the endoplasmic reticulum unfolded protein response.” Nature Reviews Molecular Cell Biology 8, 519–529. doi: 10.1038/nrm2199. Ramirez-Carrozzi, V.R., Nazarian, A.A., Li, C.C., et al. 2006. “Selective and antagonistic functions of SWI/SNF and Mi-2beta nucleosome remodeling complexes during an inflammatory response.” Genes & Development , 20 , 282– 296. doi: 10.1101/gad.1383206. Safaiyan, S., Besson-Girard, S., Kaya, T., et al. 2021. “White matter aging drives microglial diversity.” Neuron , 109 , 1100–1117.e10. doi: 10.1016/j.neuron.2021.01.027. Schafer, D.P., Lehrman, E.K., Kautzman, A.G., et al. 2012. “Microglia sculpt postnatal neural circuits in an activity and complement-dependent manner.” Neuron , 74 ,691–705. doi: 10.1016/j.neuron. Sekita, Y., Wagatsuma, H., Nakamura, K., et al. 2008. “Role of retrotransposon-derived imprinted gene, Rtl1 , in the feto-maternal interface of mouse placenta.” Nature Genetics, 40 , 243–248. doi:10.1038/ng.2007.51. Shan, J., Dudenhausen, E., and Kilberg, M.S. 2019. “Induction of early growth response gene 1 (EGR1) by endoplasmic reticulum stress is mediated by the extracellular regulated kinase (ERK) arm of the MAPK pathways.” Biochimica et Biophysica Acta Molecular Cell Research, 1866 , 371–381. doi: 10.1016/j.bbamcr.2018.09.009. Shaulian, E., and Karin, M. 2002. “AP-1 as a regulator of cell life and death.” Nature Cell Biology , 4, E131–136. doi: 10.1038/ncb0502-e131. Shimizu, T., and Prinz, M. 2025. “Microglia across evolution: from conserved origins to functional divergence.” Cellular & Molecular Immunology , 22 , 1533–1548. doi: 10.1038/s41423-025-01368-6 Shiura, H., Ono, R., Tachibana, S., Kohda, T., Kaneko-Ishino, T., and Ishino, F. 2021. “PEG10 viral aspartic protease domain is essential for the maintenance of fetal capillary structure in the mouse placenta.” Development , 148 , dev199564. doi: 10.1242/dev.199564 Shiura, H.; Fujii, M.; Ooga, M., et al. 2025. “PEG10-ORF1 programs trophoblast progenitor development for placental labyrinth formation.” 
+
+bioRxiv .10.08.681076. doi: 10.1101/2025.10.08.681076. Shiura, H., Kitazawa, M., Kaneko-Ishino, T., and Ishino, F. 2026. “Placenta-Driven Evolution: Viral Gene Acquisition and PEG10 's Essential Roles in Eutherian Placenta.” Biomolecules , 16 , 161. doi: 10.3390/biom16010161 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Suzuki, S., Ono, R., Narita, T., et al. 2007. “Retrotransposon Silencing by DNA Methylation Can Drive Mammalian Genomic Imprinting.” PLoS Genetics, 3,e55. doi: 10.1371/journal.pgen.0030055. Tyssowski, K.M., DeStefino, N.R., Cho, J.H., et al. 2018. “Different Neuronal Activity Patterns Induce Different Gene Expression Programs.” Neuron, 8, 530– 546.e11. doi: 10.1016/j.neuron.2018.04.001 Tullai, J.W., Tacheva, S., Owens, L.J., Graham, J.R., and Cooper, G.M. 2011. “AP-1 is a component of the transcriptional network regulated by GSK-3 in quiescent cells.” PLoS One , 6, e20150. doi: 10.1371/journal.pone.0020150. Wang, J., and Han, G.Z. 2020. “Frequent Retroviral Gene Co-option during the Evolution of Vertebrates.” Molecular Biology and Evolution, 37 , 3232–3242. doi: 10.1093/molbev/msaa180. Wang, J., and Han, G.Z. 2021. “Unearthing LTR Retrotransposon gag Genes Co-opted in the Deep Evolution of Eukaryotes.” Molecular Biology and Evolution , 38 ,3267–3278. doi: 10.1093/molbev/msab101 Webb, A.E., and Brunet, A. 2014. “FOXO transcription factors: key regulators of cellular quality control.” Trends in Biochemical Sciences, 39, 159–169. doi: 10.1016/j.tibs.2014.02.003 
+
+Weston, C.R., and Davis, R.J. 2007. “The JNK signal transduction pathway.” Current Opinion in Cell Biology , 19 , 142–149. doi: 10.1016/j.ceb.2007.02.001. Wendeln, A.C., Degenhardt, K., Kaurani, L., et al. 2018. Innate immune memory in the brain shapes neurological disease hallmarks. Nature , 56 , 332–338. doi: 10.1038/s41586-018-0023-4. Youle, R.J., and Strasser, A. 2008. “The BCL-2 protein family: opposing activities that mediate cell death.” Nature Reviews Molecular Cell Biology , 9, 47–59. doi: 10.1038/nrm2308. Zhang, L., and Li, W.-H. 2004. “Mammalian housekeeping genes evolve more slowly than tissue-specific genes.” Molecular Biology and Evolution, 21 , 236–239. doi:10.1093/molbev/msh010. Zeman, M.K., and Cimprich, K.A. 2014. “Causes and consequences of replication stress.” Nature Cell Biology , 16 , 2–9. doi: 10.1038/ncb2897. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Table and Figure legends Table 1. Five integrated functional modules characteristic of Rtl6 -deficient microglia. (A) Modules 1–4 and (B) Module 5. Differentially expressed genes were classified into five integrated biological modules. The classification criteria differ slightly between Modules 1–4 and Module 5. Whereas Modules 1–4 are organized primarily according to biological processes, Module 5 is organized according to homeostatic programs associated with cellular adaptation. Some genes appear in more than one module because the classification is based on complementary biological perspectives (functional role versus regulatory program), rather than on mutually exclusive gene assignment. Genes shown in red and blue were upregulated or downregulated by more than twofold, respectively. Bold gene names indicate those discussed in the main text. 
+
+Figure 1. Transcriptional changes in Rtl6 -deficient microglia. 
+
+(A) Read coverage across the Rtl6 locus. Rtl6 is located on chromosome 15qE2 and is indicated by the red bar in the top track. In Rtl6 KO mice, reads corresponding to the ORF were absent, whereas reads mapping to the remaining 5′ and 3′ untranslated regions (UTRs) were increased relative to WT controls (3.07-fold). WT1, WT2, KO1, and KO2: without LPS. WT3, WT4, KO3, and KO4: with LPS. 
+
+(B) Heatmap of WT and Rtl6 KO microglia following 10 min of LPS stimulation. Among the 3,540 significantly differentially expressed genes (Padj < 0.05), 2,060 were upregulated and 1,480 were downregulated. 
+
+(C) Impaired MAPK–AP-1-mediated inflammatory responses in Rtl6 KO microglia. *Il6 expression was largely comparable between WT and KO microglia 1 h after LPS stimulation (Irie et al., 2022). **The preserved induction of Egr1 in KO microglia may reflect its regulation by multiple upstream signaling pathways, including NF-κB, ERK– Elk1/SRF, calcium signaling, and general stress-response pathways, distinguishing it from the more AP-1-dependent regulation of Egr2 and Egr3 (Duclot and Kabbaj, 2017; Shan et al., 2019). 
+
+(D, E) Changes in the LPS–TLR4 signaling pathway. (D) Upstream signaling components. (E) Downstream signaling components, including AP-1 family genes. Blue, WT; red, Rtl6 KO. Adjusted P values (Padj) are shown for each gene. AP-1 component genes were significantly downregulated, whereas Tlr4 (Padj = 0.376), Nfkb1 
+
+(Padj = 0.662), and Rela (Padj = 0.735) showed no significant changes. Because Nr4a2 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+and Il6 were expressed at relatively low levels, they are additionally shown on an expanded scale (gray dashed box, upper right). 
+
+Figure 2 Transcriptional changes in DAM-related and apoptosis-related genes 
+
+A and B. Damage-associated microglia (DAM)-related genes. Several DAM-related genes were upregulated in Rtl6 KO, however, typical DAM genes, such as Cts7 and Ctsz exhibited no significant changes (A). Especially, Trem2–Tyrobp–Apoe signaling axis was downregulated (B), suggesting the observed change differs from the canonical DAM responses. Expression of Ch25h, Clec4e and Cst7, is small, therefore, they are also shown in the expanded scale (gray dashed box on the top right). C and D. Bcl2-
+
+related apoptosis genes. Their expression patterns suggest altered regulation of stress-responsive apoptotic pathways in Rtl6 -deficient microglia. 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint
+
+Table 1A 
+
+Module 1. Immediate-early response / transcriptional adaptation Upregulated genes Downregulated genes Biological interpretation 
+
+M1-1 Core immediate-early TF Myc, Etv4, Klf2, Nab2 Fos, Fosb, Fosl2, Jun, Junb, Jund, Nr4a1, Nr4a2, Egr2, 
+
+Egr3 , Ier2, Ier3, Rel 
+
+M1-2 Inflammatory output Il18rap, Il1rl1, Cxcl14, Ccl12, Pdgfb, Plaur, Plau, Fgf2 Il1a, Il1b, Il6, Tnfsf10, Ccl5, Ccl7, Ccl8, Ptgs2 
+
+M1-3 Regulatory feedback/adaptation* 
+
+M1-3A Negative regulatory feedback Dusp3, Dusp4, Dusp6, Dusp16 , Dok2, Ptpn7, Morrbid 
+
+Nfkbid, Nfkbiz, Dusp1, Dusp2, Dusp7, Dusp15 , Zfp36, 
+
+Zfp36l1 , Zfp36l2, Tnip1, Rnf145, Pias1, Trafd1, Btg1, Btg2, 
+
+Tgif1, Sik1 
+
+M1-3B Stress adaptation / Unfold Protein Respnces (UPR) Bhlhe40, Atf4, Atf6, Xbp1, Creld2, Hyou1, Manf , Dnajb9, 
+
+Herpud1 
+
+M1-4 Innate immune sensing and activation 
+
+M1-4A Pattern recognition receptors Clec4e, Clec5a, Clec7a, Clec12a , Tlr13, C5ar1 Nod1, Marco, Scarf1, Clec10a, Clec4a1, Clec4a2, Clec4n, 
+
+Cd209f, Cd209g, Fpr1 
+
+M1-4B Adaptor/signaling Card9, Plcg2, Tollip, Card19, Sh3bp2 Card6, Peli2, Traf4, Src, Vav2, Dock5, Gab1, Ralgds, 
+
+Tagap, Cyria 
+
+M1-4C Inflammasome Pycard, Casp1 
+
+M1-4D Microglial activation markers Tmem119, Gpnmb, Cnr2, Gpr183, Myo1g Cd80, Cd163, Folr2, Wfdc17, Ms4a4a, Apoc1, Apoe, Lyz1, 
+
+Lyz2, Aoah, Ebi3 
+
+M1-4E Phagocyte identity Itgam, Itgb2, Ptprc, Cd68, Colec12a, Ifi30, Ctss, Lgmn, Hexb, 
+
+Hck, Lyn, Fermt3, Arhgdib, Selplg Fcgrt, Fcna, Stab2, Cd93, Hpse**, Entpd1 
+
+*This category includes genes that attenuate, reshape, or fine-tune inflammatory signaling through diverse mechanisms, including phosphatase-mediated signal termination, mRNA destabilization, ubiquitin/SUMO-dependent regulation, and transcriptional adaptation. 
+
+Module 2. Interferon / antiviral response Upregulated genes Downregulated genes Biological interpretation 
+
+M2-1 Core IFN signaling axis Stat1, Stat2, Irf1, Irf7, Irf8, Jak1, Ifnar2, Ifngr1, Tyk2 
+
+M2-2 ISGs （effector ）
+
+M2-2A Classical antiviral effectors 
+
+Ifit1, Ifit2, Ifit3, Ifit3b, Ifit1bl1, Mx1, Rsad2 , Ifitm1, Ifitm2, 
+
+Ifitm3, Gbp2, Gbp3, Gbp5, Gbp6, Gbp7, Gbp8, Gbp9, Iigp1, 
+
+ligp1c 
+
+M2-2B OAS–RNase L axis Oas2, Oas3, Oasl2, Rnasel 
+
+M2-2C DNA/RNA restriction / genome defense Samhd1, Trex1, Ifi203, Ifi204, Ifi206, Ifi208, Ifi209 
+
+M2-3 Sensors Tlr13 Dhx58, Dhx57, Ifih1, Zbp1, Tlr8 
+
+M2-4 Signal reset / feedback regulators Tnip1, Rnf145, Dusp7, Pias1, Trafd1 
+
+M2-5 Endolysosomal antiviral effector system 
+
+M2-5A Phagosome receptors Msr1, Clec5a, Clec12a, Cd300lb, Cd300ld, Cd300lf, 
+
+Lilrb4a, Lilrb4b 
+
+Cd163, Cd209f, Cd209g, Marco, Scarf1, 
+
+Clec10a, Clec4a1 , Clec4a2 . Clec4n, Fpr1 , Fcgr t, Cd300a, 
+
+Stab2, Mertk, Cd14, Fcgr2b, Fcgr3, P2rx7, P2rx4, Trem2, 
+
+Cd33, Siglec1, Stab1 
+
+M2-5B Phagosome maturation 
+
+Rab3c , Rab5b, Rab6b , Rab30 , Atp9a , Calcoco1, Pink1, 
+
+Ulk1, Rnf167, Rubcn, Rubcnl, Atg14, Atg2a, Wipi2, 
+
+Map1lc3a, Map1lc3b, Vps39, Vps41, Lamp1, Npc2, 
+
+Tmem175, Tpcn1, Pld1 
+
+M2-5C Antigen processing 
+
+Engase , Ifi47 ,Tapbp1, H2-T24, Ctsb, Ctsc, Ctsh, Ctsf, Hexa, 
+
+Hexd, Idua, Sgsh, Man2b1, Man2b2, Glb1, Galc, Gm2a, 
+
+Acp2, Psap, 
+
+M2-5D Lysosomal degradation during antigen presentation Arsg , Aoah , Lyz1 , Lyz2, Hpse, Cpq, H2-D1, H2-K1, H2-
+
+T23, Tapbp, B2m, Scarb2 
+
+M2-5E Immune phagolysosome regulators Il18rap, Il1rl1, Cd69, Cd72, Gpr84, Spint1, Cxcl14 
+
+Ms4a4a, Nod1, Card6, Entpd1, Cd80 , Tyro3,Ccrl2, 
+
+Slc40a1, Apoe, Apoc1 , Peli2, Il10ra, Ptafr, Il6ra, Abca1, 
+
+Abcg1, Abcg3, Grn, Cst3, Gns, Tpp1, Tmem106b, Lpin2, 
+
+Prcp, Csf1r, Lst1, C1qa, C1qb, C1qc, Tyrobp 
+
+Module 3. Neuro–glial interaction / niche adaptation Upregulated genes Downregulated genes Biological interpretation 
+
+M3-1 Synapse / neuronal interaction suppression Nrcam, Cadm1,Itgb3 
+
+Mog, Mobp, Mag, Plp1, Mbp, Opalin, Ermn, Ugt8a, Cldn11, 
+
+Mal, Tspan2, Gpr37, Ptgds, Mpzl2, S1pr5, Myrf, Olig1, 
+
+Olig2, Sox8, Sox11 
+
+M3-2 Synaptic signaling / neuronal function Synj2, Flna,Tuba1b, Tuba1c, Tuba4a, Tubb2a, Tubb4b, 
+
+Tubb5, Tubb6, Syne1, Syne3, Pkp2 , Actn4, Actg1, 
+
+Gria2, Gria3 , Grik2, Grik3, Grm8, Synpr, Syt1, Syt4, Syt6, 
+
+Kcna1, Kcnq2, Kcnh7, Cacna1b, Cacna1c, Snap91, 
+
+Rab3c , Rims1, Nrxn2, Nrxn3, Ptprd, Dscam, Gad1, Gad2, 
+
+Adarb2, 
+
+M3-3 guidance / circuit remodeling Nes, Sox9, Vim, Nav2 
+
+Ephb1, Ephb4, Robo1, Robo2, Slit1, Sema3d, Sema5a, 
+
+Sema6a, Sema7a, Pcdh7, Pcdh8, Pcdh9, Pcdh11x, 
+
+Pcdh15, Pcdh17, Pcdh19, Pcdhhac1, Celsr3, Tenm4, 
+
+Lrrtm3, Ncam1 
+
+M3-4 Neuro–immune interface Myo10, Ptk2b Cxcr4, Cd4, Cd28, Fcgr2b , Fcgr3, Axl, Mertk, P2rx4, P2rx7 
+
+Module 4. ECM remodeling / tissue adaptation Upregulated genes Downregulated genes Biological interpretation 
+
+M4-1 ECM core Fn1, Col14a1, Col4a6, Emilin2, Tgfbi 
+
+Col4a1, Col4a2, Col5a2, Col6a1, Col6a2, Col11a1, 
+
+Col11a2, Col23a1, Vcan, Dcn, Lama3, Lama4 , Lamb1, 
+
+Fbn1, Fbn2, Efemp1, Smoc1, Smoc2, Adamts2, Adamts4, 
+
+Adamts7, Adamts10, Adamts12, Adamts15, Itga1, Mmp2, 
+
+Mmp9, Mmp16, Ltbp4, Thbd, Nid1, Sned1 
+
+M4-2 adhesion / vascular interface Plaur, Itga5, Tmem119 Pecam1, Cdh5, Tek, Egfl7, Cav1, Cavin2, Itga4 
+
+M4-3 remodeling regulators Adam8, Pla2g4a, Mgat5 Rhou , Sema7a, Dcx, Sox11, Timp2, Hpse, Plxnd1 
+
+M4-4 developmental / transcriptional remodeling axis Foxp2, Bcl11a, Bcl11b, Sox5, Sox8, Sox11 
+
+RTL6 deficiency increases the molecular machinery required 
+
+for innate immune recognition and phagocytosis, while 
+
+simultaneously suppressing the immediate-early 
+
+inflammatory transcriptional program induced by LPS. 
+
+Antiviral effector mechanisms are broadly attenuated, while 
+
+microglia retain — and in some aspects reinforce — their 
+
+capacity to monitor changes in the tissue microenvironment 
+
+and respond to local inflammatory cues. 
+
+Transition from mature neuro–glial functions toward 
+
+structural remodeling and microglial adaptation to the neural 
+
+niche. 
+
+A coordinated transition from a mature extracellular matrix 
+
+toward a provisional repair-associated matrix. 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint Table 1B 
+
+Module 5. Metabolic and Cellular adaptation Upregulated genes Downregulated genes Biological interpretation 
+
+M5-1 Metabolism shift 
+
+M5-1A Energy metabolism / Oxidative phosphorylation 
+
+Atp5f1a, Atp5f1b, Atp5mc1, Atp5mc3, Atp5mf, Atp5pb, Atp5po, Ndufa4, 
+
+Ndufa9, Ndufa12, Ndufb6, Ndufb7, Ndufb8, Ndufs1, Ndufs4, Ndufs6, 
+
+Ndufs8, Ndufv2, Uqcrb, Uqcrc1, Uqcrc2, Uqcrq, Cox5b, Cox6a1, Cox7a2, 
+
+Cox7b, Sdhb, Cs, Suclg1, Mdh1, Mdh2, Me2, Dld, Etfa, Gpd2, Gpd1l, 
+
+Pdk1, Oxct1, Got1, Ak2, Ampd2, Adss2, Gmpr, Pnp, Atad3a, Vdac1, 
+
+Vdac3, Tspo, Slc25a5, Slc25a44, Fastkd2, Fastkd3, Tufm, Gfm1, Trmt10c, 
+
+Mtch2, Immt, Chchd1, Chchd3, Samm50, Pmpca, Timm13, Tomm5, 
+
+Tomm22, Tomm70a, Opa3, Pgam5, Sfxn1, mt-Nd1, mt-Nd3 
+
+Aldh2, Aldh6a1, Cox7a2l, Ndufa6, Sord, Glul, Mthfr 
+
+M5-1B Glycolysis / Pentose phosphate pathway Gpi1, Gpd1l, Gpd2, Pfkp, Pfkl, Pgd2, Pgm1, Tkt, Taldo1, Ugp2, Isyna1, Gls Pgm2l1 
+
+M5-1C Lipid metabolism 
+
+Acsl4, Acot9, Agpat5, Acaca, Acat1, Agps, Far1, Fabp4, Fabp5, 
+
+Tmem97, Plin2, Elovl5, Hmgcr, Hmgcs1, Msmo1, Insig1, Cers2, Cers5, 
+
+Cers6, Sptssa, Gpat4, Peds1, Hsd17b12, Abhd5, Degs1, Acer3, Nceh1, 
+
+B4galt7, C1galt1, St3gal5, Galnt6, Slc35a3, Slc35c2, Slc35f6, Uap1l1 
+
+Apoe , Abca1, Abca6, Abca9 , Abcg1, Abcg3, Lpin1, Lpin2, Rxra, Tafazzin, 
+
+Pnpla2, Pnpla7, Pnpla8, Hmgcs2, 
+
+M5-2 Growth / survival signaling 
+
+M5-2A MAPK / PI3K / Growth signaling 
+
+M5-2A1 Gwoth factor signaling Errfi1, Btbd10 Igf1, Igf2, Igf1r 
+
+M5-2A2 MAPK / PI3 signaling molecules Map2k1, Mapk6, Mapkapk2, Rps6ka3, Hras, Nras, Rap2a, Rapgef5, 
+
+Sgk1, Camk1, Camk2g, Ptk2b Map3k8 
+
+M5-2A3 Signal modulators Spred1,Ptpn6, Ptpn7, Ptpn12, Ptpre, Ptpra, Acp1,Trim27, Tnfaip1 Rasa1, Rasa4, Rasal2 
+
+M5-2A4 signal-responsive regulators Klf2 , Klf6, Klf10, Mlx, Rbpj, Trim27, Tnfaip1 Foxo3, Sox4, Klf9, 
+
+M5-2B Integrin / Cytoskeleton remodeling 
+
+Itgam, Itgb1, Itgb2, Itgb3, Itgb5, Itgav, Lims1, Actn1, Actb, Ezr, Cfl1, Cap1, 
+
+Capza1, Arpc1b, Arpc3, Arpc4, Arpc5, Actr2, Actr3, Msn, Pfn1, Diaph1, 
+
+Diaph3, Iqgap1, Iqgap3, Coro1a, Coro2a, Coro1c, Wdr1, Lcp1, Myo1c, 
+
+Myo1g, Myo10, Fmn1, Crybg3, Lasp1, Actn1, Tln1, Vav1, Rhoa, Cdc42, 
+
+Arf6, Arhgdia, Arhgdib, Arhgap11a, Arhgap25, Arhgap30, Dock10, Rasa2, 
+
+Rasgrp3, Lpxn, Parvg, Plekha2, Plekha8, Plekho1, Plekho2, Cotl1, Cyrib, 
+
+Fermt3, Flii, Hcls1, Sh3bp2, Sh3pxd2b, Macir 
+
+M5-2C Membrane trafficking / Vesicle dynamics 
+
+Rab1a, Rab5c, Rab7, Rab7b, Rab8a, Rab11a, Rab32, Rabggtb, Arf1, 
+
+Arf6, Snx1, Snx2, Snx10, Snx24, Rufy1, Vps26a, Vps29, Vps35, Vps36, 
+
+Ykt6, Sec11c, Sec13, Sec23b, Sec24d, Sec61a, Sec61b, Uso1, Ap1s1, 
+
+Ap3m1, Ap3s1, Cltb, Pacsin2, Lman1, Kdelr2, Surf4, Golt1b, Ergic2, Rpn2, 
+
+Ddost, Tmed2, Tmed5, Tmed8, Tmed9, Tmed10, Tmed2b , Tm9sf3, 
+
+Tmem50b, Tmem109, Tmem120a, Tmem123, Tmem167, Tmem183a, 
+
+Tmem209, Tmem273 
+
+M5-3 Autophagy / stress adaptation 
+
+M5-3A ER stress / UPR （Unfolded Protein Response ）
+
+Atf4, Atf6, Xbp1, Dnajc2, Dnajc3, Dnajc9, Dnajc10, Dnajc21, Dnaja1, 
+
+Dnaja2, Hspa4, Hspa4l, Hspa5, Hspa9, Hspa13, Hspa14, Bag1, Stip1, 
+
+Ahsa1, Fkbp3, Fkbp4, Hspe1, Hyou1 , P4hb, Erp44, Txndc5, Txndc9, 
+
+Txndc11, Tmx1, Tmx4, Erp29, Ero1a, Ero1b, Canx, Calu, Mlec, Uggt1, 
+
+Edem3, Selenos, Niban1, Ermp1, Lnpk, Ssr1, Ssr2, Ssr3, 
+
+M5-3B Redox / Oxidative stress 
+
+Srxn1, Hmox1, Nqo2, Park7, Pon2, Gpx1, Prdx1, Prdx2, Prdx4, 
+
+Msrb1,Txnl1, Glrx3, Blvra, Nmral1, Sephs1, Sephs2, Cybrd1, Cyb5b, 
+
+Cyb5r4, Akr1b1, Akr1c14 
+
+Txnip, Sesn1, Cat, Mgst1, Selenbp1 
+
+M5-3C Protein quality control / Proteostasis 
+
+Vcp, Sem1, Pomp, Psma1, Psma2, Psma3, Psma4, Psma5, Psma6, 
+
+Psma7, Psmb1, Psmb2, Psmb3, Psmb4, Psmb6, Psmb7, Psmd8, Psmc1, 
+
+Psmc2, Psmc3, Psmc5, Psmd1, Psmd2, Psmd4, Psmd5, Psmd6, Psmd8, 
+
+Psmd11, Psmd13, Psmd14, Psme1, Psme2, Psme3, Usp1, Usp4, Usp5, 
+
+Usp7, Usp10, Usp14, Usp15, Usp31, Usp36, Usp46, Otud4, Otud6b, 
+
+Ube2i, Ube2l3, Ube2m, Ube2n, Ube2v2, Uba2, Uba3, Ube6, Dcun1d5, 
+
+Sumo2, Rfwd3, Trim28, Denr, Fbxl14, Nploc4 
+
+M5-3D Autophagy / Lysosome 
+
+Hexb, Manba,Gba1, Lgmn, Ctss, Ifi30, Hgsnat, M6pr, Vac14, Tollip, Abca7, 
+
+C9orf72, Cln5, Vma21, Tmem41b, Retreg1, Emc1, Emc2, Dnase2a, 
+
+Hgsnat, Nceh1, Atg3, Ostm1, 
+
+Ulk1, Ulk2, Atg2a, Map1lc3b, Pink1, Bnip3, Rubcn, Rubcnl, Trp53inp1 , Ndrg1 ,
+
+Ndrg3, Bcl2l11, 
+
+M5-4 cell cycle / chromatin / genome stability 
+
+M5-4A Cell cycle / DNA replication 
+
+M5-4A1 Cell cycle regulators 
+
+G1/S transition Ccnd1, Ccne1,Ccne2, Cdk2, Cdk4, Cdk6, Cdc25b, Cdc25c, Skp2, Cks1b, 
+
+Gmnn, E2f1, E2f2, E2f6, E2f7, E2f8, Tfdp1 Rbl1, Cdkn1a, Ccnd 
+
+G2/M transition Cdk1 , Wee1, Pkmyt1, Mastl, Cdc20, Ccnb1, Ccnb2, Plk1, Aurka, Aurkb, 
+
+Bub1, Bub1b, Mad2l1, Zwilch, Knl1, Incenp, Birc5, Cks2 
+
+General cell-cycle regulators Cdk18, Cdk2ap1, Cdkn2c, Cdkn3, Cdca3, Cdca4, Ccnh, Anapc5, Cdc27, 
+
+Cdc34, G2e3, Pin1, Lin54, Mybl2, Foxm1 
+
+M5-4A2 DNA replication licensing 
+
+MCM complex Mcm2, Mcm3, Mcm4, Mcm5, Mcm6, Mcm7, Mcm8, Mcm10 
+
+ORC complex Orc1, Orc2, Orc6 
+
+Licensing factors Cdc6, Cdc7, Cdt1 
+
+M5-4A3 DNA replication machinery 
+
+RFC complex Rfc1, Rfc2, Rfc3, Rfc4, Rfc5 
+
+GINS complex Gins1, Gins2 
+
+DNA polymerases α–primase Pola1, Pola2, Prim1, Prim2 
+
+Replicative DNA polymerases Pold1, Pold2, Pole, Pole2, Pole3, Pole4, Polh, Polq 
+
+Replication fork / Replisome Pcna, Fen1, Lig1, Cdc45, Dscc1, Clspn, Timeless,Tipin,Ticrr, Wdhd1, 
+
+Chtf18 
+
+M5-4A4 DNA precursor synthesis Rrm1, Rrm2, Tk1, Tyms, Dhfr, Dtymk, Dut 
+
+M5-4A5 Chromosome segregation 
+
+CENP family Cenpe, Cenpf, Cenph, Cenpi, Cenpk, Cenpl, Cenpn, Cenpp, Cenpq, 
+
+Cenps, Cenpt, Cenpu, Cenpw 
+
+NDC 80 complex Ndc80, Nuf2, Spc24, Spc25 
+
+SKA complex Ska1, Ska2, Ska3 
+
+BUB checkpoint Bub1, Bub1b, Bub3, Mad1l1, Zwint 
+
+Aurora kinase Aurka, Aurkb 
+
+PLK family Plk1, Plk4 
+
+Kinesin family (KIF) Kif2c, Kif4, Kif5b, Kif11, Kif14, Kif15, Kif18a, Kif18b, Kif20a, Kif20b, Kif22, 
+
+Kif23, Kif24, Kifc1 
+
+HAUS Haus3, Haus4, Haus5, Haus6, Haus8 
+
+Centrosome / Mitotic spindle Cep83, Cep128, Cep152, Cep192, Cep250, Cep295, Tubgcp2, 
+
+Mzt1,Cntrl, Cdk5rap2, Cep55, Ckap2, CKap2l, Ckap5, Odf2 Ankle2 
+
+SMC complex Smc1a, Smc2, Smc4, Smc5, Smc6 
+
+Chromosome cohesion / Passenger complex Cdca2, Cdca5, Cdca8 
+
+M5-4A6 Histone / nucleosome assembly 
+
+Histone H1 H1f1, H1f3, H1f4. H1f5 
+
+Histone H2A H2ax, H2az1, H2ac4, H2ac6, H2ac7, H2ac8, H2ac10, H2ac11, H2ac12, 
+
+H2ac13, H2ac15, H2ac18, H2ac19, H2ac20, H2ac22, H2ac23, H2ac24 
+
+Histone H2B H2bc3, H2bc4, H2bc6, H2bc7, H2bc8, H2bc9, H2bc11, H2bc12, H2bc13, 
+
+H2bc14, H2bc15, H2bc18, H2bc22 
+
+Histone H3 H3c1,H3c2, H3c3, H3c4, H3c6, H3c7, H3c8, H3c10, H3c11, H3c13, 
+
+H3c15 
+
+Histone H4 H4c1, H4c2, H4c3, H4c4, H4c6, H4c8, H4c11, H4c12, H4c14, H4c16, 
+
+H4c18 
+
+M5-4B DNA repair 
+
+M5-4B1 DNA damage sensing / checkpoint Parp1, Parpbp, Atm, Chek1, Chek2, Mcph1, Rnf168, Casp8ap2, Psme3, 
+
+M5-4B2 Replication fork protection / restart Hrob, Tonsl, Mms22l, Firrm, Atad5, Radx, Traip 
+
+The coordinated changes in EE1–EE3 indicate a global 
+
+remodeling of cellular physiology in KO microglia. 
+
+Upregulation of metabolic reprogramming, growth signaling, 
+
+and stress adaptation pathways, together with suppression of 
+
+homeostatic lipid metabolism and autophagy-related genes, 
+
+suggests a transition from a mature homeostatic state toward 
+
+an activated and adaptive cellular state. 
+
+In contrast, EE4 represents a distinct transcriptional program 
+
+associated with genome duplication and maintenance. 
+
+Coordinated induction of DNA replication, chromosome 
+
+segregation, DNA repair, genome stability, and histone 
+
+assembly genes indicates activation of a comprehensive 
+
+proliferative program that preserves genome integrity during 
+
+DNA synthesis and cell division. 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint M5-4B3 Homologous recombination (HR) 
+
+RAD51 core Rad51, Rad51ap1, Rad51b, Rad51c, Rad54b, Rad54l, Rad18, Rad9a, 
+
+Nbn, Rbbp8, Rfwd3, Rmi1, Spidr, Swi5 
+
+HR processing factors Gen1, Dna2, Blm, Recql4, Zgrf1 
+
+FANC network Fanca, Fancb, Fancd2, Fanci, Fancm, Ube2t 
+
+BRCA network Brca1, Brca2, Bard1, Brip1, Bccip 
+
+5RAD51 core Msh3, Ercc6, Ercc6l, Tdg, Commd4, Polh, Polq 
+
+M5-4C Genome stability 
+
+M5-4C1 Telomere maintenance Tinf2 
+
+M5-4C2 Genome integrity Pin1, Erh, Ciao2a Rnf213, Nipbl 
+
+M5-4D Chromatin remodeling / Epigenetics 
+
+M5-4D1 ATP-dependent chromatin remodelers Smarca5, Smarcb1, Smarcc1, Ino80, Baz1a, Baz1b Chd3, Chd6, Chd9 
+
+M5-4D2 Chromatin regulation / Epigenetics Hdac1,Trim28, Suz12, Eed, Mbd2, Mbd3, Morf4l2, Gatad2a, Dpy30, Wdr5, 
+
+Hmgb1, Hmgb2, Hmgb3, Hmgn1, Hmgn2, Psip1, Eaf1, Cdca7, Cdca7l Bcor, Ezh1, Kdm5a, Kdm6a, Kdm7a, Ogt 
+
+M5-4D3 Histone / nucleosome assembly factors Nap1l1, Nap1l4, Ssrp1, Rbbp4, Chaf1a, Chaf1b, Asf1b, Hat1, Hirip3, Slbp 
+
+M5-4D4 Chromatin organization Hells, Atad2 
+
+M5-4D5 Nuclear architecture Lmnb1, Lmnb2, Tmpo 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 16, 2026. ;https://doi.org/10.64898/2026.07.15.738833 doi: bioRxiv preprint Figure 1A              
+
+> qA1 qA2 qB1 qB2 qB3.1 qB3.2 qC qD1 qD2 qD3 qE1 qE2 qE3 qF1 qF2
+
+84,554,000 bp 84,555,000 bp 84,556,000 bp 84,557,000 bp 
+
+Chr15q 
+
+KO 1 KO 2 KO 4 KO 3 WT 1 WT 2 WT 3 WT 4 
+
+Rtl6 
+
+Rtl6 ORF 
+
+Chr15:84,552,911-84,558,246 (5,337 bp) 
+
+84,558,000 bp 
+
+logFC=1.476 (3.07-fold up in KO) Figure 1B 
+
+Row Z-Score Row Z −Score 
+
+−2
+
+−1012
+
+> WT3 WT4 KO3 KO4 Row Z
+
+WT 3 WT 4 KO 4 KO 3 +LPS +LPS 
+
+Downregulated Genes (1480) Upregulated Genes (2060) LPS/TLR4 MAPK AP-1 IEG Secondary regulators Cytokines 
+
+## Erk Jnk 
+
+## ↓ Egr1** Egr2 Egr3 
+
+## ↓↓
+
+## Nr4a1 Nfkbid Nfkbiz 
+
+## ↓↓↓
+
+## Il1a Il1b Il6 
+
+## ↓↓↓ early 
+
+## Fos Jun ↓
+
+# deficient microglia 
+
+## Il6* delayed recovery 
+
+## AP-1–independent pathway ? 
+
+# NF-kB 
+
+> Figure 1C
+
+02000 4000 6000 8000 10000 12000 14000 Tlr4 Nfkb1 Rela Jun Fos Junb Jund Fosb Egr1* Egr2 Egr3 WT KO 
+
+Tlr4 Jun Fos Rela Junb Jund Nfkb1 Fosb 
+
+> Numbers of count (cpm)
+
+4000 6000 8000 010000 12000 2000 padj = 0.00587 padj = 3,03 X 10 -31 
+
+padj = 8.82 X 10 -5 
+
+padj = 0.00228 padj = 1.15 X 10 -41 
+
+n.s. n.s. n.s. 
+
+Figure 1D 0
+
+## 1000 
+
+## 2000 
+
+## 3000 
+
+## 4000 
+
+## 5000 
+
+## 6000 
+
+## 7000 
+
+## Egr1* Egr2 Egr3 Nr4a1 Nr4a2 Nfkbid Nfkbiz Il6 Il1b Il1a Il10 
+
+## WT KO 
+
+Nfkbid Nfkbiz Il6 Il1b Il1a Il10 Egr3 Egr2 Egr1* Nr4a1 Nr4a2 
+
+4000 
+
+6000 
+
+2000 
+
+0  
+
+> Numbers of  count ( cpm )
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> Nr4a2 Il6
+> WT KO
+
+Il6 Nr4a2 
+
+0
+
+100 
+
+200 
+
+b v
+
+2.37 X 10 -53 
+
+1.31 X 10 -42 
+
+1.58 X 10 -16 
+
+8.77 X 10 -8
+
+9.12 X 10 -4
+
+9.47 X 10 -6
+
+0.000678 
+
+4.8 X 10 -7
+
+0.00188 
+
+0.0161 
+
+Figure 1E 0
+
+5000 
+
+10000 
+
+15000 
+
+20000 
+
+25000 
+
+30000 
+
+35000 
+
+40000 
+
+45000 
+
+50000 
+
+Ch25h Cd9 Spp1 Lgals3 Tmem119* Lilrb4a Clec4e Clec7a Lpl Axl Cst7 Ctsz 
+
+WT (LPS) KO (LPS)    
+
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> 600
+> 700
+> 800
+> 900
+> 1000
+> Ch25h Clec4e Cst7
+> WT (LPS) KO (LPS)
+
+4000 
+
+5000 
+
+2000 
+
+0
+
+> Numbers of count( cpm )
+
+3000 
+
+1000 
+
+0
+
+200 
+
+1000 
+
+400 
+
+600 
+
+800 
+
+n.s .
+
+n.s .
+
+padj =
+
+2.1x10 -6
+
+padj =
+
+2.74x10 -29 
+
+padj =
+
+4.21x10 -37 
+
+padj =
+
+4.15x10 -39 padj =
+
+1.24x10 -4
+
+padj =
+
+4.05x10 -12 
+
+padj =
+
+2.57x10 -7
+
+n.s .
+
+Cd9 Ch25h 
+
+Ch25h 
+
+Spp1 Lilrb4a Tmem119 Ligals3 Clec4e Clec7a 
+
+Clec4e 
+
+Lpl * Axl Cst7 Ctsz 
+
+b b b
+
+padj =
+
+4.21x10 -11 
+
+padj =
+
+0.0158 
+
+Figure 2A 
+
+Cst7 0
+
+2000 
+
+4000 
+
+6000 
+
+8000 
+
+10000 
+
+12000 
+
+14000 
+
+Trem2* Tyrobp Il10ra 
+
+WT (LPS) KO (LPS) 
+
+0
+
+100000 
+
+200000 
+
+300000 
+
+400000 
+
+500000 
+
+600000 
+
+Apoe 
+
+> Numbers of count ( cpm )
+
+400000 
+
+200000 
+
+500000 
+
+300000 
+
+0
+
+100000 
+
+600000 
+
+8000 
+
+0
+
+4000 
+
+12000 
+
+Apoe Trem2 Tyrobp Il10ra 
+
+padj =
+
+6.46x10 -7
+
+padj =
+
+0.00535 
+
+padj =
+
+0.0145 
+
+padj =
+
+1.77x10 -23 
+
+Figure 2B Stress -adaptive 
+
+# survival program 
+
+## Bcl2 
+
+## Bcl2l1 
+
+## Bcl2l11 
+
+## Bak1 
+
+> ↓
+> ↓
+
+## ↓↓
+
+> ↓
+
+# LPS/ TLR4 MAPK AP -1 IEG Cytokines 
+
+# Secondary 
+
+# regulators 
+
+# deficient microglia 
+
+> Figure 2C
+
+## Bcl2al1d 
+
+## Bax *
+
+## Bok* ↓
+
+> ↓
+
+0
+
+200 
+
+400 
+
+600 
+
+800 
+
+1000 
+
+1200 
+
+1400 
+
+1600 
+
+1800 
+
+2000 
+
+Bcl2 Bcl2l1 Bcl2a1d Bcl2l11 Bak1 Bax Bok 
+
+WT (LPS) KO (LPS) 
+
+padj =
+
+3.26x10 -7
+
+padj =
+
+0.0250 
+
+padj =
+
+1.21x10 -7
+
+n.s .
+
+padj =
+
+8.46x10 -7
+
+n.s .
+
+Bcl2a1d Bcl2l1 Bcl2 Bax Bak1 Bcl2l11 Bok 
+
+Figure 2D 
+
+padj =
+
+4.38x10 -23 
+
+> Numbers of count ( cpm )
+
+1200 
+
+400 
+
+1600 
+
+800 
+
+0

@@ -1,0 +1,30 @@
+---
+title: Paired Tumor Biopsies Reveal Spatiotemporal Myeloid Remodeling After Local Chemotherapy in Glioblastoma
+title_zh: 配对肿瘤活检揭示胶质母细胞瘤局部化疗后的时空髓系重塑
+authors: "Tang, A. J., Warren, M. R., Chabot, P. J., Teasley, D. E., Dadario, N. B., Mela, A., Amini, M., Rolfe, N. W., Argenziano, M. G., Sperring, C. P., Chen, A. X., Ifediora, N., Viswanathan, A., Kristt, M., Dovas, A., Pereira, B., Brand, A., Kahle, A., Humala, N., Stucke, C., Furnari, J., Kotidis, C., Zhao, W., Liu, Z., Wang, S., Haile, H., Khoury, N., Adapa, A. R., Winans, N. J., Yoh, N., Neira, J. A., Swanson, K. R., Gill, B. J. A., Sims, P., Al Dalahmah, O., Grinband, J., Lei, L., Canoll, P., Bruce, J. N."
+date: 2026-07-15
+pdf: "https://www.biorxiv.org/content/10.64898/2026.05.13.725006v2.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.0
+evidence: 髓系细胞重塑和炎症状态转变
+tldr: 本研究探讨了胶质母细胞瘤在局部化疗（拓扑替康）后的早期细胞反应。通过分析人类配对活检样本、小鼠模型及体外培养系统，研究发现化疗诱导了空间受限的骨髓细胞重塑。化疗不仅抑制肿瘤增殖，还引发了骨髓细胞的基因毒性压力，使其从早期炎症激活转向后期的间质和组织重塑状态。这一发现揭示了化疗诱导的炎症微环境演变过程，为理解肿瘤复发提供了新视角。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-05-13-725006-v2/fig-001.webp\", \"caption\": \"\", \"page\": 34, \"index\": 1, \"width\": 2030, \"height\": 2874}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-05-13-725006-v2/fig-002.webp\", \"caption\": \"\", \"page\": 36, \"index\": 2, \"width\": 2096, \"height\": 2968}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-05-13-725006-v2/fig-003.webp\", \"caption\": \"\", \"page\": 38, \"index\": 3, \"width\": 2042, \"height\": 2891}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-05-13-725006-v2/fig-004.webp\", \"caption\": \"\", \"page\": 40, \"index\": 4, \"width\": 2010, \"height\": 2846}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-05-13-725006-v2/fig-005.webp\", \"caption\": \"\", \"page\": 42, \"index\": 5, \"width\": 2160, \"height\": 3059}]"
+motivation: 旨在探究胶质母细胞瘤在化疗后早期炎症重塑的机制，特别是骨髓细胞如何响应化疗诱导的基因毒性压力。
+method: 结合人类配对活检样本的转录组测序、小鼠模型的单细胞测序以及体外细胞培养实验，多维度分析化疗后的细胞反应。
+result: 局部化疗在抑制肿瘤生长的同时，诱导了骨髓细胞从早期的DNA损伤和炎症反应向后期的间质及组织重塑表型转变。
+conclusion: 化疗引起的肿瘤和骨髓细胞损伤共同驱动了治疗后炎症微环境的动态演变，可能影响疾病的长期预后。
+---
+
+## 摘要
+背景：胶质母细胞瘤的标准治疗化疗会诱导炎症，这可能导致疾病复发。尽管复发肿瘤中富含髓系细胞，但对化疗的早期细胞反应以及启动这种炎症重塑的机制仍知之甚少。特别是，目前尚不清楚肿瘤细胞和肿瘤相关髓系群体在治疗后的即刻反应，以及肿瘤相关髓系细胞是否直接经历化疗诱导的基因毒性压力，从而促进炎症状态的转变。方法：我们利用多种互补的模型系统和时间点，对拓扑替康暴露后的肿瘤和免疫群体进行了基于测序的分析。首先，我们利用细胞类型反卷积的大块RNA测序（bulk-RNA-sequencing）和免疫荧光技术，分析了来自一项为期28天的拓扑替康对流增强递送（CED）首次人体试验（n=5）中经MRI定位的配对治疗前和治疗后活检样本。随后，我们使用CED-拓扑替康体内模型治疗了同基因小鼠胶质瘤，并通过单细胞RNA测序测量了治疗后3天和7天的急性反应。此外，我们还对拓扑替康处理24小时后的患者来源切片培养物以及体外人小胶质细胞和胶质瘤细胞系进行了测序分析。结果：在配对的人类活检样本中，CED-拓扑替康在输注区域内诱导了空间受限的转录重塑，其特征是增殖性肿瘤程序的抑制以及炎症、干扰素、缺氧和间充质特征的富集。细胞类型反卷积和免疫荧光将这一反应与髓系重塑联系起来，包括单核细胞衍生的肿瘤相关巨噬细胞状态的富集、MARCO阳性髓系群体的增加，以及Iba1阳性髓系细胞内pH2AX阳性的基因毒性压力。在小鼠CED模型中，拓扑替康延长了生存期并降低了肿瘤细胞密度，同时在肿瘤相关巨噬细胞中诱导了炎症和DNA损伤程序，这些程序在7天内向缺氧、血管生成、TGF-β信号传导以及间充质/组织重塑程序演变。人类切片培养和体外小胶质细胞系统证实了人类髓系细胞中存在压力耦合的炎症和DNA损伤反应。结论：化疗暴露诱导了空间结构化的炎症髓系反应，其特征是早期的基因毒性压力和炎症激活，随后出现间充质和组织重塑巨噬细胞程序。跨模型系统的分析支持这样一种模型，即肿瘤细胞和髓系细胞中与化疗相关的损伤共同促进了治疗后不断演变的炎症微环境。
+
+## Abstract
+BackgroundStandard-of-care chemotherapy for glioblastoma induces inflammation that may contribute to disease recurrence. Although recurrent tumors are enriched with myeloid cells, the early cellular response to chemotherapy and the mechanisms that initiate this inflammatory remodeling remain poorly understood. In particular, it is unknown how neoplastic and tumor-associated myeloid populations respond during the immediate post-treatment period, and whether tumor-associated myeloid cells directly experience chemotherapy-induced genotoxic stress that contributes to inflammatory state transitions.
+
+MethodsWe performed sequencing-based analysis of neoplastic and immune populations following topotecan exposure using multiple complementary model systems and time points. We first analyzed MRI-localized, paired pre- and post-treatment biopsies from a first-in-human trial of 28-day convection enhanced delivery (CED) of topotecan (n=5) using cell-type-deconvolved bulk-RNA-sequencing and immunofluorescence. We then treated syngeneic murine gliomas using an in vivo model of CED-topotecan and measured acute 3-day and 7-day treatment responses by single cell RNA-sequencing. We additionally conducted sequencing analysis of patient-derived slice cultures and in vitro human microglial and glioma cell lines following 24-hour topotecan treatment.
+
+ResultsIn paired human biopsies, CED-topotecan induced spatially restricted transcriptional remodeling within the infusion zone, characterized by suppression of proliferative tumor programs and enrichment of inflammatory, interferon, hypoxia, and mesenchymal signatures. Cell-type deconvolution and immunofluorescence linked this response to myeloid remodeling, including enrichment of monocyte-derived tumor-associated macrophage states, increased MARCO-positive myeloid populations, and pH2AX-positive genotoxic stress within Iba1-positive myeloid cells. In the murine CED model, topotecan prolonged survival and reduced tumor cellularity, while also inducing inflammatory and DNA-damage programs in tumor-associated macrophages that evolved by 7-days toward hypoxia, angiogenesis, TGF-{beta} signaling, and mesenchymal/tissue-remodeling programs. Human slice culture and in vitro microglial systems confirmed stress-coupled inflammatory and DNA-damage responses in human myeloid cells.
+
+ConclusionsChemotherapy exposure induces a spatially structured inflammatory myeloid response characterized by early genotoxic stress and inflammatory activation, with later emergence of mesenchymal and tissue-remodeling macrophage programs. Across model systems, our analysis supports a model in which chemotherapy-associated damage in both tumor and myeloid cells contributes to an evolving inflammatory microenvironment after treatment.
