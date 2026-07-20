@@ -1,0 +1,28 @@
+---
+title: PLCγ2 deficiency compromises systemic immune tolerance and erodes myelin homeostasis while enhancing oxidative metabolism in the mouse brain
+authors: "Gutierrez-Kuri, E., Garcia-Rogers, J. L. M., Perez, J., Smith, S., Kenwood, M. R., Archuleta, K. S., Xiao, Y., Campos, G., Barannikov, S., Wang, H., Pardo, S., Romsdahl, T. B., Miller, H., Stowe, A. M., William, R., Goldberg, M., Han, X., Bieniek, K. F., Weintraub, S. T., Griffith, A. V., Hopp, S. C., Palavicini, J. P."
+date: 2026-07-14
+pdf: "https://www.biorxiv.org/content/10.64898/2026.07.13.738356v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 7.0
+evidence: 增强氧化代谢和小胶质细胞稳态
+tldr: 本研究探讨了PLCγ2缺失对小鼠大脑及全身免疫系统的影响。通过对Plcg2敲除小鼠进行多组学分析，发现其缺失会导致全身免疫耐受受损、大脑髓磷脂稳态破坏以及氧化代谢增强。研究揭示了PLCγ2在维持白质完整性和免疫调节中的关键作用，为理解PLCG2基因变异如何通过影响神经免疫和代谢过程来增加阿尔茨海默病风险提供了重要的机械论框架。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-001.webp\", \"caption\": \"\", \"page\": 65, \"index\": 1, \"width\": 1770, \"height\": 3242}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-002.webp\", \"caption\": \"\", \"page\": 66, \"index\": 2, \"width\": 2503, \"height\": 3445}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-003.webp\", \"caption\": \"\", \"page\": 67, \"index\": 3, \"width\": 2987, \"height\": 3772}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-004.webp\", \"caption\": \"\", \"page\": 68, \"index\": 4, \"width\": 3258, \"height\": 2482}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-005.webp\", \"caption\": \"\", \"page\": 69, \"index\": 5, \"width\": 2578, \"height\": 2428}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-006.webp\", \"caption\": \"\", \"page\": 70, \"index\": 6, \"width\": 2887, \"height\": 4939}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-007.webp\", \"caption\": \"\", \"page\": 71, \"index\": 7, \"width\": 3741, \"height\": 2873}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-008.webp\", \"caption\": \"\", \"page\": 72, \"index\": 8, \"width\": 3024, \"height\": 2385}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-738356-v1/fig-009.webp\", \"caption\": \"\", \"page\": 73, \"index\": 9, \"width\": 2248, \"height\": 4917}]"
+motivation: 旨在探究与阿尔茨海默病风险相关的PLCγ2功能缺失如何影响大脑稳态、髓磷脂完整性及全身免疫系统。
+method: 采用脂质组学、代谢组学、蛋白质组学和转录组学等多组学技术，结合流式细胞术对Plcg2敲除小鼠进行系统分析。
+result: PLCγ2缺失导致外周免疫失衡、大脑髓磷脂相关脂质与蛋白质减少，并引发大脑氧化代谢重编程及酰基肉碱水平升高。
+conclusion: PLCγ2是维持全身免疫耐受和大脑髓磷脂稳态的关键因子，其功能受损可能通过多重途径增加神经退行性疾病的易感性。
+---
+
+## Abstract
+BackgroundPhospholipase C gamma-2 (PLC{gamma}2) catalyzes the hydrolysis of the membrane phosphatidylinositol-4,5-bisphosphate (PIP2) to form diacylglycerol (DAG) and inositol trisphosphate (IP3), feeding into diverse downstream signaling pathways. PLCG2 polymorphisms have been associated with reduced and/or increased risk of Alzheimers disease (AD) and related dementias, longevity, autoinflammation, and immune disorders. In the brain, PLC{gamma}2 is expressed in microglia, and other neuroimmune and vascular interface populations, yet its role in brain homeostasis remains incompletely defined.
+
+MethodsWe analyzed the brains of three-month-old Plcg2 wild-type (WT), heterozygous (Het KO) and homozygous knockout (Homo KO) littermate mice modeling human PLCG2 loss-of-function risk alleles linked to AD risk using a multiomic approach that included lipidomics, metabolomics, proteomics, and transcriptomics, together with immunofluorescence, as well as flow-cytometric profiling of peripheral and brain-draining immune compartments.
+
+ResultsPlcg2 deficiency substantially impaired early survival and produced splenomegaly without increasing total spleen cellularity, instead shifting spleen composition toward myeloid/innate-enriched cells and away from B cells, with expansion of age-associated B-cell (ABC-like) subsets and parallel reductions in CD4 and CD8 regulatory T cells in spleen and cervical lymph nodes. Brain lipidomics revealed selective depletion of PIP2, despite very low bulk PLC{gamma}2 protein abundance relative to other PLC family members. PLC{gamma}2 loss led to significant reductions in myelin-enriched lipid classes and myelin/paranode-associated proteins, accompanied by compensatory upregulation of oligodendrocyte/myelin genes, and modest shifts in microglial, lysosomal, complement, and oxidative metabolism pathways by NanoString and DIA-MS. Targeted acylcarnitine profiling demonstrated reprogramming of brain oxidative metabolism, with increased short-, medium-, and long-chain acylcarnitines and enrichment of mitochondrial matrix fatty-acid and amino-acid catabolic enzymes in Homo KO brains.
+
+ConclusionsLoss of PLC{gamma}2 installs a coordinated program that compromises systemic immune tolerance and subtly erodes central myelin and phosphoinositide homeostasis while enhancing brain oxidative metabolism, effects that extend beyond microglial phagocytic signaling and may underlie increased vulnerability to AD pathology and aging, providing a mechanistic framework for how PLCG2 variation may link systemic immune regulation, white-matter integrity, and neurodegenerative risk.
+
+LimitationsBecause constitutive Plcg2 Homo KO mice display high early mortality and intestinal vascular abnormalities, observed phenotypes may reflect developmental compensation and may not fully recapitulate protective human PLCG2 variants.

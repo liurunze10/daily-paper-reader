@@ -1,0 +1,2300 @@
+Title: Single-cell gene networks nominate IKZF1 as an Alzheimer’s microglial regulator
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.14.738463v1.full.pdf
+
+Number of Pages: 42
+
+Markdown Content:
+1
+
+Single -cell gene networks nominate IKZF1 as an Alzheimer's microglial regulator 1
+
+Çağrı Özkurt 1*2
+
+> 1
+
+Department of Pharmacology, Faculty of Pharmacy, Hacettepe University, 06230 3
+
+Ankara, Turkey 4
+
+> *
+
+Corresponding author:  cagriozkurt@hacettepe.edu.tr 5
+
+Abstract 6
+
+Background: Microglia drive neuroinflammation in Alzheimer's disease (AD), yet no 7
+
+approved therapy targets this compartment. Human genome -wide association studies 8
+
+consistently implicate innate immune loci in AD risk, establishing microglial 9
+
+transcriptional programs as therapeutically relevant but pharmacologically 10 
+
+underexploited targets. 11 
+
+Objective: We sought to identify transcription factors (TFs) governing microglial state 12 
+
+transitions computationally and to nominate structurally tractable drug repurposing 13 
+
+candidates. 14 
+
+Methods: We applied trajectory inference (PAGA), pseudobulk DESeq2, pySCENIC 15 
+
+gene regulatory network (GRN) inference, CellChat, and virtual screening of 1,962 16 
+
+approved compounds to 236,002 microglial nuclei from 84 donors (SEA -AD atlas). 17 
+
+Results: IKZF1 was the sole target TF retained under cisTarget v10 motif constraints, 18 
+
+with peak regulon activity in LateAD -DAM (pseudotime ρ = +0.309) and replication in an 19 
+
+independent bulk cohort (GSE95587; adjusted P value = .004). CellChat identified 20 
+
+SLIT2→ROBO2 from multiple neuron subtypes (predominantly inhibitory interneurons) 21 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+2
+
+as the top predicted pathway to microglia. Tafamidis (→IRF8) and diflunisal (→PPARG) 22 
+
+were top virtual screening hits; all evaluated compounds failed the pre -specified 23 
+
+selectivity threshold. 24 
+
+Conclusions: IKZF1 is prioritised as a candidate late -disease microglial TF, supported 25 
+
+by six convergent evidence dimensions including independent bulk replication. 26 
+
+Tafamidis and diflunisal are low -confidence repurposing hypotheses requiring 27 
+
+experimental validation. 28 
+
+Keywords: Alzheimer’s disease; disease -associated microglia; IKZF1 ; pySCENIC; 29 
+
+virtual screening; drug repurposing 30 
+
+Introduction 31 
+
+Alzheimer’s disease (AD) is the leading cause of dementia, affecting tens of millions of 32 
+
+people worldwide with prevalence expected to increase substantially as global 33 
+
+populations age. Despite approval of amyloid -targeting immunotherapies, disease -34 
+
+modifying options remain limited and do not engage the neuroinflammatory component 35 
+
+of disease [1] . Human genome -wide association studies have consistently implicated 36 
+
+innate immune loci — including TREM2 , CLU , BIN1 , and INPP5D — in AD risk [2,3] ,37 
+
+establishing the microglial compartment as a therapeutically relevant but 38 
+
+pharmacologically underexploited target. 39 
+
+Microglia, the brain’s resident immune sentinels, undergo complex state transitions in 40 
+
+Alzheimer’s disease. They shift from homeostatic surveillance to a spectrum of disease -41 
+
+associated states, including interferon -responsive (IRM), disease -associated (DAM), 42 
+
+lipid -associated (LAM), and terminal late -disease phenotypes [2,4] . Identifying the 43 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+3
+
+transcription factors (TFs) governing these transitions is critical for understanding —44 
+
+and potentially reversing — pathological microglial activation. 45 
+
+Due to significant species -specific divergence in microglial signatures [3] , we focus 46 
+
+exclusively on human -derived single -nucleus data. Master regulators like SPI1 /PU.1 ,47 
+
+IRF8 , and PPARG have been implicated in various microglial states [3,5] , but prioritizing 48 
+
+these candidates for pharmacological intervention remains a significant challenge. 49 
+
+These TFs possess structurally defined DNA -binding domains that are in principle 50 
+
+targetable by small molecules [6,7] .51 
+
+Gene regulatory network (GRN) inference offers a principled route to TF prioritisation by 52 
+
+identifying TFs that are causally active rather than merely differentially expressed [8] .53 
+
+Combined with structural druggability assessment and virtual screening, GRN analysis 54 
+
+can narrow the hypothesis space from hundreds of candidate regulators to a handful of 55 
+
+mechanistically credible, structurally tractable targets [9] .56 
+
+Here we apply the DAM -DRUG framework to the SEA -AD multi -regional atlas [10] , the 57 
+
+largest publicly available single -nucleus microglial dataset. The novelty of this work lies 58 
+
+in the multi -modality convergence logic that links established tools —pySCENIC, 59 
+
+CellChat, AutoDock Vina, and CellOracle —into a ranked evidence hierarchy. This 60 
+
+framework requires a candidate TF to be supported across trajectory, regulon, 61 
+
+chromatin, bulk replication, and perturbation evidence before advancing to structural 62 
+
+screening. 63 
+
+Methods 64 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+4
+
+All analyses were executed in Apptainer containers on the TRUBA ARF HPC cluster 65 
+
+(TÜBİTAK ULAKBİM) or a local macOS workstation. Container images, exact software 66 
+
+version pins, and step -by -step execution instructions are documented in the GitHub 67 
+
+repository README. 68 
+
+Dataset acquisition and preprocessing 69 
+
+Single -nucleus RNA -seq data were obtained from the SEA -AD multi -regional microglial 70 
+
+release ( [10] ; AWS S3 bucket s3://sea -ad -single -cell -profiling; 236,002 nuclei, 84 71 
+
+donors, 10 regions). MTG paired multiome RNA and ATAC objects were downloaded 72 
+
+from the same portal. Pre -annotated Supertype labels were mapped to six functional 73 
+
+substates by direct lookup ( Supplementary Table S 1). Per -dataset QC and batch 74 
+
+correction were not repeated (Allen Institute harmonised pipeline; Scrublet + scVI ). 75 
+
+Disease group classification uses Cognitive Status (Dementia/No dementia) for cohort 76 
+
+description, Overall ADNC for neuropathological severity, and Severely Affected Donor 77 
+
+(High ADNC + severe neurodegeneration) for ATAC DA analysis . The cohort includes 78 
+
+donors of both sexes (female: 27/42 Dementia, 24/42 No dementia; p = 0.503); sex was 79 
+
+retained as a covariate (sex_bin) in all differential expression and ATAC models. Donor 80 
+
+inclusion criteria per analysis are in Supplementary Table S 2.81 
+
+Trajectory inference 82 
+
+PAGA [11] was applied to the 10 -dimensional scVI embedding. Diffusion pseudotime 83 
+
+was rooted at the Homeostatic nucleus with maximal P2RY12 expression, utilizing its 84 
+
+established role as the canonical marker for the ramified, surveillant state [12,13] . This 85 
+
+selection aligns with histological evidence in AD showing that microglial P2RY12 86 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+5
+
+expression is high in homeostatic environments and progressively lost during 87 
+
+pathological activation and plaque association [14,15] .88 
+
+Differential gene expression 89 
+
+Pseudobulk DESeq2 (pydeseq2) contrasted DAM, IRM, and LAM vs Homeostatic using 90 
+
+design ~group + sex_bin + age_z; pseudobulk samples summed raw UMI counts per 91 
+
+donor across all brain regions. LateAD -DAM was excluded (median 4 cells/donor). 92 
+
+DAM -IRM was excluded as a primary contrast due to its hybrid co -expression profile. 93 
+
+Minimum 10 cells/donor per state required for inclusion. Bulk replication: GSE95587 94 
+
+(fusiform gyrus; n=117; design: ~condition + sex_bin + age_z + rin_z); acceptance 95 
+
+criterion adjusted P value < .05, log ₂FC > 0.5. 96 
+
+Gene regulatory network inference 97 
+
+pySCENIC v0.12.1 (5 GRNBoost2 seeds; consensus edges in ≥3/5 runs; 1,45 8,113 98 
+
+edges; 100,000 -cell random subsample from 236,002; RcisTarget against cisTarget 99 
+
+v10/HOCOMOCO v11; 80% gene -mapping threshold; AUCell top 5% per cell). 46 100 
+
+regulons passed pruning. Regulon -pseudotime Spearman correlations BH -corrected 101 
+
+across 46 tests. BHLHE40/41 rescue: pseudobulk Spearman co -expression across 84 102 
+
+donors; top 200 co -expressed genes tested by Fisher’s exact vs all expressed genes. 103 
+
+ATAC chromatin accessibility validation 104 
+
+Microglia isolated from MTG ATACseq h5ad; pseudobulked per donor ( 84 of 86 donors 105 
+
+(2 excluded: no Severely Affected label) ); Severely Affected (n=11) vs non -Severely -106 
+
+Affected (n=73). Mann -Whitney U (two -sided) per peak across 218,882 peaks; BH FDR 107 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+6
+
+correction; DAPs: FDR < 0.05, |log ₂FC | > 1 (1,191 total; 56 AD -upregulated). FIMO 108 
+
+(MEME suite; HOCOMOCO v11 motifs; P value < 1×10 ⁻⁴) on 56 AD -upregulated vs 109 
+
+5,000 FDR > 0.2 background peaks; enrichment = hit -rate ratio ( hit -rate ratio 110 
+
+descriptive). 111 
+
+Cell –cell communication analysis 112 
+
+CellChat v2 [16] ; R 4.3; 45,000 MTG nuclei ( up to 5,000 per cell type; 15 types); 113 
+
+Secreted Signaling subset ( 1,280 L-R pairs); computeCommunProb with triMean; 114 
+
+interactions ranked by cumulative probability (no multiple -testing correction). 115 
+
+Protein structure preparation, druggability, and virtual screening 116 
+
+Protein structures were obtained from the AlphaFold Protein Structure Database [17] ,117 
+
+utilizing the human proteome v6 release generated by the AlphaFold2 algorithm [18] .118 
+
+Structures were trimmed to functional domains using a confidence threshold of pLDDT 119 
+
+≥ 50 to exclude highly disordered regions. Models were prepared using PDBFixer [19] 120 
+
+to add missing atoms and determine terminal ionization states at pH 7.4. Structures 121 
+
+underwent implicit -solvent (GBn2) energy minimization (200 steps) using OpenMM 8.1 122 
+
+[20] with the AMBER14 force field. fpocket 4.0 was employed to identify potential 123 
+
+binding sites, with druggability scores parsed per -pocket. Ligand libraries assembled 124 
+
+from ChEMBL v34: Tier -1 (285 CNS -approved, ATC -N, Ro5); Tier -2 (1,677; Ro5 + CNS 125 
+
+MPO proxy ≥ 3 [21] ; IRF8/IKZF1 only). 3D conformers via Open Babel 3.1 ( --gen3d -p126 
+
+7.4); PDBQT via Meeko 0.5 [22] . AutoDock Vina 1.2 ( --exhaustiveness 32 --127 
+
+num_modes 10); GNINA 1.0 CNN rescoring (crossdock_default2018; top 30 poses). 128 
+
+Consensus score S = 0.4×(|Vina|/10) + 0.6×CNN. MM -GBSA: gmx_MMPBSA 1.6.4 [23] 129 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+7
+
+(GROMACS 2024.1; AMBER99SB -ILDN + GAFF2; 1 ns NPT; igb=2; 250 frames). 130 
+
+Selectivity: SI = |ΔG_on -target|/|ΔG_off -target| vs DRD2/6CM4, HTR2A/6A94, 131 
+
+hERG/7CN1 [24] ; advancement criterion SI > 2.0 (none met). 100 ns MD stability: 132 
+
+AMBER99SB -ILDN + GAFF2 + TIP3P; Ewald PME; 2 fs timestep; core RMSD on 10% 133 
+
+lowest -RMSF residues. Grid box coordinates and pocket parameters are in 134 
+
+Supplementary Table S 3; pre -specified thresholds and consensus scoring metrics are 135 
+
+in Supplementary Table S 4.136 
+
+CellOracle in -silico TF perturbation 137 
+
+In -silico transcription factor (TF) knockouts (KO) were performed using CellOracle v0.12 138 
+
+[25] ; on a 20,000 -cell stratified subsample of the microglial atlas. The base gene 139 
+
+regulatory network (GRN) was constructed from the 5 -seed pySCENIC consensus 140 
+
+adjacency, restricted to the top 500 targets per TF based on importance scores. 141 
+
+Simulated KO was executed by setting the expression of the target TF to zero, with 142 
+
+signal propagation depth set to n propagation =3. 143 
+
+The magnitude of the resulting state transition was quantified as the magnitude of the 144 
+
+mean displacement vector per substate in the UMAP embedding (mean |ΔUMAP|). It is 145 
+
+important to note that because UMAP is a non -linear manifold learning technique that 146 
+
+prioritizes local connectivity over global distance preservation [26] , distances in this 147 
+
+embedding space are often distorted and do not faithfully represent biological distances 148 
+
+[27] . Consequently, these perturbation metrics are utilized exclusively for the ordinal 149 
+
+ranking of TF candidates within specific substates rather than as linear quantitative 150 
+
+measurements of biological effect size. 151 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+8
+
+Statistical software 152 
+
+Python 3.10; scanpy 1.11.5, pydeseq2 0.5.4, pyscenic 0.12.1, CellChat 2.2.0 via R 4.3.3. 153 
+
+All stochastic steps used fixed seeds ( Supplementary Table S5 ). 154 
+
+Results 155 
+
+Single -nucleus atlas and microglial substate annotation 156 
+
+We obtained 236,002 microglial nuclei from 84 postmortem donors spanning Braak 157 
+
+stages 0 –VI (42 Dementia, 42 No dementia; age and PMI balanced between groups; 158 
+
+Table 1 ). Pre -annotated SEA -AD Supertype labels were mapped to six functional 159 
+
+substates [10] (Supplementary Table S 1): Homeostatic (HM; n=7,909), Disease -160 
+
+associated microglia (DAM; n=141,248) [2] , DAM -IRM (n=53,815), Interferon -161 
+
+responsive microglia (IRM; n=29,805), LateAD -DAM (n=1,458), and Lipid -associated 162 
+
+microglia (LAM; n=1,767). DAM -IRM, a hybrid state co -expressing DAM ( TREM2 ,163 
+
+APOE ) and IRM ( IFIT1 , MX1 ) markers, was retained in AUCell, pseudotime, and 164 
+
+CellOracle analyses but excluded from primary DGE contrasts. LateAD -DAM and LAM 165 
+
+were present in 66/84 and 68/84 donors respectively (median 4 and 5 cells/donor), 166 
+
+constraining donor -level pseudobulk analyses. LDAM module scores [28] confirmed 167 
+
+substate identity (LAM = 1.13 >> IRM = 0.59 > DAM = 0.08 > HM = −0.11; Figure 1A -B; 168 
+
+Supplementary Fig . S1). Substate cell counts by region are in Supplementary Table 169 
+
+S6.170 
+
+Table 1 Demographic and Sample Distribution of the SEA -AD Microglial Dataset. 171 
+
+Summary of microglial nuclei (n = 236,002) obtained from 84 postmortem donors across 172 
+
+the Alzheimer’s disease (AD) neuropathological continuum. Donors are stratified by 173 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+9
+
+clinical Cognitive Status (42 "Dementia" cases vs. 42 "No dementia" controls). Cell 174 
+
+counts are provided for the six functional substates defined by mapping SEA -AD 175 
+
+Supertypes: Homeostatic (HM), Disease -associated microglia (DAM), DAM -IRM, 176 
+
+Interferon -responsive microglia (IRM), Late -stage DAM (LateAD -DAM), and Lipid -177 
+
+associated microglia (LAM). While all 84 donors contributed cells to the primary states 178 
+
+(HM, DAM, IRM), the terminal states (LAM and LateAD -DAM) exhibit characteristic 179 
+
+sparsity across the cohort. Full regional distributions and donor -level metadata are 180 
+
+provided in Supplementary Data. 181 
+
+State  n Donors 
+
+Mean 
+
+Cells  Median Cells  Min Cells  Max Cells 
+
+Homeostatic  84  94.15  63.0  12  389 
+
+DAM  84  1,681.52  1,503.0  119  4,981 
+
+DAM -IRM  84  640.65  388.5  71  2,394 
+
+IRM  84  354.82  272.5  48  1,366 
+
+LateAD -DAM  84  17.36  4.0  0 221 
+
+LAM  84  21.04  5.0  0 608 
+
+182 
+
+Trajectory inference defines a linear disease -progression axis 183 
+
+PAGA and diffusion pseudotime (DPT) defined the ordering HM → IRM → DAM -IRM ≈ 184 
+
+DAM → LAM → LateAD -DAM (DPT = 0.119 –0.218), with the largest pseudotime gap at 185 
+
+the LAM→LateAD -DAM transition (Δ = 0.076), confirming LateAD -DAM as the terminal 186 
+
+state (Figure 1C -E). PAGA connectivity analysis revealed LAM as the central 187 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+10 
+
+transcriptional hub of the microglial state graph, with maximum connectivity scores to 188 
+
+both HM (1.00) and IRM (1.00), reflecting substantial transcriptional overlap between 189 
+
+these states. DAM was connected to the graph primarily through DAM -IRM (connectivity 190 
+
+= 0.49), which itself bridged IRM (0.43) and LateAD -DAM (0.65), consistent with DAM -191 
+
+IRM occupying an intermediate position between the IRM and disease -terminal lineages. 192 
+
+Because PAGA encodes undirected transcriptional proximity rather than directed state 193 
+
+transitions, the disease -progression axis is defined by DPT ordering rather than PAGA 194 
+
+topology. 195 
+
+196 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+11 
+
+Figure 1. Single -nucleus microglial atlas and substate annotation. (A) UMAP of 197 
+
+236,002 microglial nuclei (84 donors, SEA -AD atlas) coloured by substate. (B) Dot 198 
+
+plot of canonical marker gene expression; dot size = % cells expressing; colour = 199 
+
+mean scaled expression. (C) PAGA connectivity graph; edge weight proportional 200 
+
+to substate connectivity. (D) Diffusion pseudotime (DPT) overlaid on UMAP; 201 
+
+LateAD -DAM occupies the highest values (median = 0.218), confirming it as the 202 
+
+terminal state. (E) Violin plots of DPT per substate (ordering: 203 
+
+HM→IRM→DAM≈DAM -IRM→LAM→LateAD -DAM). (F) Substate composition (%) 204 
+
+across Braak stages 0 –VI. 205 
+
+206 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+12 
+
+Pseudobulk differential expression defines state -specific TF signatures 207 
+
+Pseudobulk DESeq2 analysis (DAM, IRM, and LAM vs Homeostatic; 84 donors as 208 
+
+replicates; LateAD -DAM excluded due to sparse per -donor counts; DAM -IRM excluded 209 
+
+as a primary contrast owing to its hybrid profile) identified state -specific TF signatures 210 
+
+(top markers in Table 2 ). Among the nine target TFs: BHLHE41 showed the strongest 211 
+
+pan -disease signal (DAM log ₂FC = +2.55, adjusted P value = 6.9 × 10 -195 ; IRM +1.89; 212 
+
+LAM +2.44); IRF8 was upregulated in all three states (DAM +1.70, adjusted P value =213 
+
+8.5 × 10 -94 ); PPARG showed a non -monotonic pattern (DAM −0.82; LAM +1.15), its 214 
+
+established repression during acute neuroinflammation and its critical re -activation 215 
+
+during the induction of lipid -processing and immunometabolic reprogramming in the 216 
+
+LAM state [28,29] ; IKZF1 was DAM/IRM -specific (DAM +0.75, adjusted P value = 6.9 × 217 
+
+10 -51 ; IRM +0.61; absent from LAM), consistent across all 84 donors. 218 
+
+Table 2 Top differentially expressed genes and prioritized transcription factors 219 
+
+across microglial substates. The table summarizes the results of pseudobulk DESeq2 220 
+
+analysis for the three primary disease -state contrasts (DAM, IRM, and LAM) versus the 221 
+
+Homeostatic reference. Genes are ranked by log 2 fold -change (log 2FC) within each 222 
+
+contrast. All reported genes reached statistical significance at p adj <0.05. Differential 223 
+
+expression was calculated across 84 donors (for DAM and IRM) and 27 donors (for 224 
+
+LAM), treating each donor as a biological replicate to account for inter -individual 225 
+
+variability. Functional annotations highlight the shift from homeostatic surveillance to 226 
+
+states characterized by extracellular matrix remodeling (ADAMTSL2), synaptic 227 
+
+modulation (SYNDIG1), and lipid -associated inflammation (CCL3L1). Notably, the 228 
+
+human -specific upregulation of CX3CR1 is observed in the DAM state, diverging from 229 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+13 
+
+mouse models where it is typically downregulated during disease progression. LateAD -230 
+
+DAM was excluded from the pseudobulk contrast due to high sparsity across the donor 231 
+
+cohort. Only protein -coding genes are shown; lncRNAs and pseudogenes are excluded. 232 
+
+Full results (6,712 / 3,956 / 2,985 upregulated significant genes for DAM / IRM / LAM 233 
+
+contrasts respectively) are available at Zenodo (https://zenodo.org/records/19559648 ).234 
+
+Design formula: `~group + sex_bin + age_z`; BH FDR correction applied genome -wide 235 
+
+per contrast. 236 
+
+Contrast  Gene  log ₂FC  padj  Function 
+
+DAM  ADAMTS 
+
+L2 
+
++4.37  6.6 × 
+
+10 ⁻¹⁴⁶ 
+
+Extracellular matrix 
+
+glycoprotein; TGFβ signalling 
+
+modulator 
+
+DAM  SYNDIG1  +4.33  2.3 × 
+
+10 ⁻²⁵⁵ 
+
+Synapse development; 
+
+transmembrane protein 
+
+DAM  CX3CR1  +4.20  5.9 × 
+
+10 ⁻¹⁸² 
+
+Fractalkine receptor; human 
+
+DAM activation marker 
+
+DAM  MMRN1  +4.16  6.2 × 10 ⁻⁷⁰  Multimerin -1; extracellular 
+
+matrix/platelet protein 
+
+DAM  KCNIP1  +4.13  2.8 × 
+
+10 ⁻²¹⁷ 
+
+Potassium channel interacting 
+
+protein; Kv4 channel regulator 
+
+IRM  SYNDIG1  +3.75  7.5 × 
+
+10 ⁻¹⁴⁹ 
+
+Synapse development; 
+
+transmembrane protein 
+
+IRM  ADAMTS  +3.72  3.8 × 10 ⁻⁹⁴  Extracellular matrix glycoprotein 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+14 
+
+Contrast  Gene  log ₂FC  padj  Function 
+
+L2 
+
+IRM  CLEC19A  +3.67  2.2 × 10 ⁻⁴⁴  C-type lectin domain family 
+
+member; immune receptor 
+
+IRM  CYP19A1  +3.66  2.5 × 10 ⁻⁴²  Aromatase; oestrogen 
+
+biosynthesis enzyme 
+
+IRM  MORC1  +3.65  9.1 × 10 ⁻⁶⁷  GHKL ATPase; 
+
+germline/epigenetic regulator 
+
+LAM  RGCC  +5.00  1.5 × 10 ⁻⁵⁶  Regulator of cell cycle; 
+
+apoptosis modulator 
+
+LAM  CCL3L1  +4.82  1.5 × 10 ⁻¹⁶  CC chemokine; CCR1/CCR5 
+
+ligand; pro -inflammatory 
+
+LAM  EGR3  +4.74  4.9 × 10 ⁻²⁹  Early growth response TF; 
+
+lymphocyte development 
+
+LAM  FLT1  +4.67  3.3 × 10 ⁻³⁵  VEGF receptor 1; 
+
+angiogenesis/inflammatory 
+
+signalling 
+
+LAM  CCL4L2  +4.66  4.9 × 10 ⁻¹¹  CC chemokine; CCR5 ligand; 
+
+macrophage inflammatory 
+
+protein 
+
+237 
+
+238 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+15 
+
+Gene regulatory network inference identifies IKZF1 as the primary disease regulon 239 
+
+pySCENIC (5 -seed GRNBoost2 consensus; 1.46 M co -expression edges; RcisTarget 240 
+
+against cisTarget v10/HOCOMOCO v11; Supplementary Methods SM1 ) identified 46 241 
+
+regulons above the 80% gene -mapping threshold. Of the nine target TFs, only IKZF1 242 
+
+was retained; the remaining eight failed motif -database coverage —a bottleneck of 243 
+
+cisTarget v10 annotation, not GRNBoost2 stochasticity (confirmed across 5 seeds; 244 
+
+Supplementary Methods SM2 ; Supplementary Table S 7). IKZF1 prioritisation is 245 
+
+therefore conditional on this database and does not imply other TFs lack regulatory 246 
+
+roles. A motif -agnostic pseudobulk co -expression rescue analysis for BHLHE40 /41 247 
+
+found no enrichment of DAM/LAM markers in either TF’s top co -expressed genes 248 
+
+(Fisher’s exact OR = 0.00, P value = 1.0), consistent with these TFs acting within cell -249 
+
+state transitions rather than as donor -level axes ( Supplementary Figs . S2, S 3). The 250 
+
+IKZF1 (+) regulon peaked in LateAD -DAM (AUC = 0.153) and showed the only positive 251 
+
+pseudotime correlation among the 46 retained regulons (Spearman ρ = +0.309; anti -252 
+
+conservative CI due to within -donor clustering; Figure 2; Supplementary Fi g. S4). 253 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+16 
+
+254 
+
+Figure 2. Multi -modality transcription factor prioritisation across microglial 255 
+
+substates. (A) Pseudobulk DESeq2 results for nine target TFs (DAM, IRM, LAM 256 
+
+vs Homeostatic); dot size = −log10(adjusted P value), colour = log ₂FC. (B) AUCell 257 
+
+regulon activity heatmap for 46 pySCENIC regulons across six substates. (C) 258 
+
+Spearman correlation of regulon AUCell scores with DPT (BH -corrected); IKZF1(+) 259 
+
+is the only target TF regulon with a significant positive correlation (ρ = +0.309). 260 
+
+Multi -evidence prioritisation of IKZF1 261 
+
+Six analyses converge on IKZF1 (Figure 3D; Supplementary Fi g. S5), classified 262 
+
+explicitly by epistemic status. Four internal SEA -AD RNA analyses (exploratory; non -263 
+
+independent; same 84 donors): pseudobulk DGE upregulation in DAM and IRM; 264 
+
+IKZF1 (+) regulon peaking in LateAD -DAM; monotonic pseudotime correlation (ρ = 265 
+
++0.309); and CellOracle KO producing the largest LateAD -DAM UMAP displacement 266 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+17 
+
+among three TFs tested (|ΔUMAP| = 0.047 vs IRF8 = 0.026 vs SPI1 = 0.013; ordinal 267 
+
+ranking only). Orthogonal corroboration from SEA -AD ATAC (same donors, different 268 
+
+assay): IKZF1 motif 3.90× enriched in AD -upregulated open chromatin peaks 269 
+
+(descriptive; no GC -matched background; Supplementary Methods SM3 ). The only 270 
+
+external replication: bulk RNA -seq upregulation in AD fusiform gyrus (GSE95587; 271 
+
+n=117 independent donors; log ₂FC = +0.638, adjusted P value = .004 ). Literature 272 
+
+triangulation: IKZF1 protein elevation in AD hippocampus confirmed by western blot [30] .273 
+
+Analyses 1 –5 are non -independent; item 6 is the sole external replication. IRF8 , SPI1 ,274 
+
+and BHLHE41 also reached significance in the independent bulk cohort, confirming the 275 
+
+broader TF programme. 276 
+
+277 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+18 
+
+Figure 3. Multi -evidence prioritisation of IKZF1 as a late -disease microglial 278 
+
+transcription -factor candidate. (A) Forest plot of log ₂FC (AD vs control) for 279 
+
+target TFs in GSE95587 (n = 117); IKZF1 ranks highest among significant TFs 280 
+
+(log ₂FC = +0.638, adjusted P value = .004). (B) CellOracle in -silico KO: mean 281 
+
+UMAP displacement per substate for IKZF1 , IRF8 , and SPI1 KO; IKZF1 KO 282 
+
+produces the largest LateAD -DAM displacement (|ΔUMAP| = 0.047). (C) ATAC 283 
+
+motif enrichment: fold enrichment of TF motif hits in 56 AD -upregulated open 284 
+
+chromatin peaks; IKZF1 enriched 3.9×. (D) IKZF1 multi -evidence summary table: 285 
+
+six evidence dimensions with modality, source, method, effect size, and 286 
+
+significance. 287 
+
+Cell –cell communication identifies a neuron→microglia signalling axis not prominently 288 
+
+described in prior AD literature 289 
+
+CellChat analysis (45,000 MTG nuclei; 15 cell types; 1, 280 L-R pairs) identified 3,718 290 
+
+supported interactions; 129 involved Microglia as receiver. The top pathway, 291 
+
+SLIT2→ROBO2 (sum_prob = 0.318), was sent by multiple neuron subtypes (Pvalb, 292 
+
+Lamp5 Lhx6, Chandelier, Sst , Lamp5, and ExcNeuron ) and has not been prominently 293 
+
+described in prior AD microglia literature; it is an MTG -specific computational prediction 294 
+
+requiring cross -dataset and experimental validation before any novelty claim can be 295 
+
+made [31] (Figure 4; Supplementary Fig . S6; see Supplementary Methods SM4 for 296 
+
+PDF rendering notes on the chord diagram ). These preliminary L -R networks often lack 297 
+
+protein -level corroboration and are considered hypothesis -generating until validated by 298 
+
+biophysical or functional assays [32,33] . GAS6 -MERTK (sum_prob = 0.229) linked 299 
+
+Chandelier and Pvalb interneurons to microglial efferocytosis, consistent with MERTK 300 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+19 
+
+regulation by IRF8 [34] . Additional top pathways included SPP1 autocrine /paracrine 301 
+
+integrin loop (sum_prob = 0.176 ; Microglia and Oligodendrocyte→Microglia ), TGFb 302 
+
+astrocyte /autocrine →microglia brake (0.169) —a critical checkpoint for maintaining 303 
+
+homeostatic quiescence [35] and promoting neuronal stability [36] , and COMPLEMENT 304 
+
+autocrine (0.082). 305 
+
+306 
+
+Figure 4. CellChat analysis identifies SLIT2 →ROBO2 as the top -ranked predicted 307 
+
+interneuron –microglia signalling pathway in the SEA -AD MTG. (A) Chord 308 
+
+diagram of cell –cell interactions across 15 MTG cell types; Microglia highlighted 309 
+
+as receiver. (B) Top 20 L -R pairs with Microglia as receiver, ranked by interaction 310 
+
+probability; sender cell type colour -coded and shape -coded. (C) Top 10 signalling 311 
+
+pathways to Microglia ranked by cumulative interaction probability; SLIT ranks first 312 
+
+(0.318). 313 
+
+314 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+20 
+
+Structure -based virtual screening generates low -confidence computational hypotheses 315 
+
+for tafamidis and diflunisal as repurposing candidates 316 
+
+This section is included as a methodological demonstration only; no compound meets 317 
+
+criteria for translational advancement without experimental confirmation. Druggability 318 
+
+assessment (fpocket) ranked PPARG (drug_score = 0.996), IRF8 AF2 DBD (0.659), 319 
+
+and MAF bZIP (0.432) as druggable; IKZF1 ZF1 –4 domain (drug_score = 0.001 ; ZF2 320 
+
+degron targeted by thalidomide analogs ) was redirected to the CRBN molecular glue 321 
+
+track ( Supplementary Fig . S7), utilizing the established mechanism where thalidomide 322 
+
+analogs reprogram the CRL4 -CRBN E3 ligase to recruit neo -substrates like IKZF1 323 
+
+[37,38] . This interaction is mediated by the binding of specific C2H2 zinc finger degrons 324 
+
+to the drug -CRBN interface [39] . Of 1,962 screened compounds (285 CNS -approved 325 
+
+Tier -1; 1,677 Ro5/CNS -MPO -filtered Tier -2), 26 passed the dual filter ( Table 3 ; Figure 326 
+
+5A ). Tafamidis (CHEMBL2103837) → IRF8 was the top MM -GBSA hit (ΔG = −9.5 327 
+
+kcal/mol; Vina = −6.71; CNN = 0.741) but showed ligand egress in 100 ns MD (RMSD = 328 
+
+25.17 ± 3.56 Å last 20 ns); diflunisal (CHEMBL898) → PPARG (ΔG = −2.8 kcal/mol) 329 
+
+showed complete egress (RMSD = 83.42 ± 2.89 Å, Supplementary Fig . S8). Both are 330 
+
+transthyretin stabilisers —a post -hoc coincidence from n=2 of 1,962; no pharmacophore 331 
+
+inference is warranted. BHLHE41 (drug_score = 0.003) and RUNX1 (all ΔG ≈ 0) are 332 
+
+deprioritised. All six Tier -2 CRBN hits evaluated against off -target receptors (DRD2, 333 
+
+HTR2A, hERG) failed the pre -specified selectivity threshold (SI > 2.0 ; observed SI < 1.0 334 
+
+for all six ); selectivity profiling of the remaining shortlisted compounds was not 335 
+
+performed. SPR/TSA and cell -based selectivity profiling are required before any 336 
+
+translational inference. 337 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+21 
+
+Table 3 Virtual screening shortlist . 26 compounds across five targets passing dual -338 
+
+filter criteria (Vina + CNN composite ≥ 0.65; Tier -2 threshold relaxed to Vina ≤ −5.5 339 
+
+kcal/mol for shallow -pocket targets RUNX1 and BHLHE41). MM -GBSA ΔG values near 340 
+
+0 kcal/mol indicate unfavourable or negligible computed binding free energy and are 341 
+
+reported as -is. No selectivity data are shown here; selectivity profiling against DRD2, 342 
+
+HTR2A, HERG, and DAT was performed for the six Tier -2 IRF8/IKZF1 compounds only 343 
+
+(see Zenodo  https://zenodo.org/records/19559648 ). 344 
+
+#
+
+Targe 
+
+t Drug 
+
+ChEMBL 
+
+ID 
+
+Vina 
+
+(kcal/mo 
+
+l) 
+
+CN 
+
+N
+
+Compo 
+
+site 
+
+MM -
+
+GBSA 
+
+ΔG ± 
+
+SEM 
+
+(kcal/mo 
+
+l)  Notes 
+
+1 PPAR 
+
+G
+
+Diflunisal  CHEMBL8 
+
+98 
+
+−8.77  0.95 
+
+5
+
+0.924  −2.8 ± 
+
+0.21 
+
+2 PPAR 
+
+G
+
+Benztropin 
+
+e
+
+CHEMBL1 
+
+201203 
+
+−8.73  0.94 
+
+5
+
+0.916  −0.0 ± 
+
+0.09 
+
+3 PPAR 
+
+G
+
+Nialamide  CHEMBL1 
+
+256841 
+
+−8.66  0.94 
+
+5
+
+0.913  0.1 ± 
+
+0.32 
+
+4 PPAR 
+
+G
+
+Capsaicin  CHEMBL2 
+
+94199 
+
+−8.18  0.94 
+
+5
+
+0.894  0.0 ± 
+
+0.15 
+
+5 PPAR  Methaqual  CHEMBL2  −9.12  0.86  0.882  0.0 ± 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+22 
+
+#
+
+Targe 
+
+t Drug 
+
+ChEMBL 
+
+ID 
+
+Vina 
+
+(kcal/mo 
+
+l) 
+
+CN 
+
+N
+
+Compo 
+
+site 
+
+MM -
+
+GBSA 
+
+ΔG ± 
+
+SEM 
+
+(kcal/mo 
+
+l)  Notes 
+
+G one  82052  3 0.07 
+
+6 PPAR 
+
+G
+
+Vilazodone  CHEMBL4 
+
+39849 
+
+−8.68  0.88 
+
+8
+
+0.880  −0.0 ± 
+
+0.09 
+
+7 PPAR 
+
+G
+
+Paroxetine  CHEMBL4 
+
+90 
+
+−9.82  0.77 
+
+5
+
+0.858  −0.0 ± 
+
+0.09 
+
+8 PPAR 
+
+G
+
+Ezogabine  CHEMBL4 
+
+1355 
+
+−8.25  0.87 
+
+3
+
+0.853  0.4 ± 
+
+0.16 
+
+9 PPAR 
+
+G
+
+Carbamaz 
+
+epine 
+
+CHEMBL1 
+
+08 
+
+−8.21  0.87 
+
+0
+
+0.851  −0.0 ± 
+
+0.09 
+
+1
+
+0
+
+PPAR 
+
+G
+
+Apomorphi 
+
+ne 
+
+CHEMBL5 
+
+3
+
+−8.06  0.82 
+
+4
+
+0.817  −0.9 ± 
+
+0.10 
+
+1 IRF8  Ganaxolon 
+
+e
+
+CHEMBL1 
+
+568698 
+
+−6.59  0.77 
+
+2
+
+0.727  −0.2 ± 
+
+0.08 
+
+2 IRF8  Paroxetine  CHEMBL4 
+
+90 
+
+−6.68  0.74 
+
+8
+
+0.716  −7.1 ± 
+
+0.32 
+
+3 IRF8  Tafamidis  CHEMBL2  −6.71  0.74  0.713  −9.5 ± 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+23 
+
+#
+
+Targe 
+
+t Drug 
+
+ChEMBL 
+
+ID 
+
+Vina 
+
+(kcal/mo 
+
+l) 
+
+CN 
+
+N
+
+Compo 
+
+site 
+
+MM -
+
+GBSA 
+
+ΔG ± 
+
+SEM 
+
+(kcal/mo 
+
+l)  Notes 
+
+103837  1 0.05 
+
+4 IRF8  Clozapine  CHEMBL4 
+
+2
+
+−6.70  0.74 
+
+0
+
+0.712  −6.9 ± 
+
+0.14 
+
+Exclude 
+
+d: MD 
+
+protein 
+
+unfoldin 
+
+g
+
+5 IRF8  Triazolam  CHEMBL6 
+
+46 
+
+−6.54  0.74 
+
+0
+
+0.706  −5.4 ± 
+
+0.14 
+
+1 MAF  Nalmefene  CHEMBL9 
+
+82 
+
+−4.78  0.75 
+
+7
+
+0.645  0.0 ± 
+
+0.30 
+
+2 MAF  Nialamide  CHEMBL1 
+
+256841 
+
+−4.54  0.77 
+
+3
+
+0.645  −0.0 ± 
+
+0.22 
+
+1 RUN 
+
+X1 
+
+Diflunisal  CHEMBL8 
+
+98 
+
+−5.72  0.81 
+
+1
+
+0.716  −0.0 ± 
+
+0.15 
+
+Tier 2 
+
+2 RUN 
+
+X1 
+
+Safinamide  CHEMBL3 
+
+96778 
+
+−5.55  0.78 
+
+5
+
+0.693  0.0 ± 
+
+0.16 
+
+Tier 2 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+24 
+
+#
+
+Targe 
+
+t Drug 
+
+ChEMBL 
+
+ID 
+
+Vina 
+
+(kcal/mo 
+
+l) 
+
+CN 
+
+N
+
+Compo 
+
+site 
+
+MM -
+
+GBSA 
+
+ΔG ± 
+
+SEM 
+
+(kcal/mo 
+
+l)  Notes 
+
+3 RUN 
+
+X1 
+
+Phenytoin  CHEMBL1 
+
+6
+
+−5.66  0.76 
+
+1
+
+0.683  0.0 ± 
+
+0.07 
+
+Tier 2 
+
+4 RUN 
+
+X1 
+
+Apomorphi 
+
+ne 
+
+CHEMBL5 
+
+3
+
+−5.83  0.73 
+
+6
+
+0.674  −0.0 ± 
+
+0.17 
+
+Tier 2 
+
+5 RUN 
+
+X1 
+
+Opicapone  CHEMBL1 
+
+089318 
+
+−5.79  0.74 
+
+4
+
+0.678  −0.0 ± 
+
+0.19 
+
+Tier 2 
+
+1 BHLH 
+
+E41 
+
+Dibucaine  CHEMBL1 
+
+086 
+
+−6.00  0.80 
+
+5
+
+0.723  −21.9 ± 
+
+0.06 
+
+Tier 2; 
+
+MM -
+
+GBSA 
+
+likely 
+
+artefact 
+
+2 BHLH 
+
+E41 
+
+Isocarboxa 
+
+zid 
+
+CHEMBL1 
+
+201168 
+
+−6.14  0.76 
+
+6
+
+0.706  −6.2 ± 
+
+0.16 
+
+Tier 2 
+
+3 BHLH 
+
+E41 
+
+Estazolam  CHEMBL2 
+
+85674 
+
+−5.95  0.73 
+
+3
+
+0.678  −13.5 ± 
+
+0.06 
+
+Tier 2 
+
+4 BHLH  Nalmefene  CHEMBL9  −6.04  0.71  0.671  −11.5 ±  Tier 2 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+25 
+
+#
+
+Targe 
+
+t Drug 
+
+ChEMBL 
+
+ID 
+
+Vina 
+
+(kcal/mo 
+
+l) 
+
+CN 
+
+N
+
+Compo 
+
+site 
+
+MM -
+
+GBSA 
+
+ΔG ± 
+
+SEM 
+
+(kcal/mo 
+
+l)  Notes 
+
+E41  82  5 0.18 
+
+345 
+
+A Tier -2 screen against the CRBN -ZF2 interface (PDB 8RQC) identified six hits —346 
+
+celecoxib, teriflunomide, a mle xanox, capmatinib, lasmiditan, and risdiplam (MM -GBSA 347 
+
+ΔG −6.5 to −30.5 kcal/mol; Figure 5B–D)—all failing selectivity and classified as low -348 
+
+confidence hypotheses requiring CRBN -displacement or TR -FRET validation. 349 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+26 
+
+350 
+
+Figure 5. Structure -based virtual screening: consensus scoring and selectivity. 351 
+
+Two screening tracks: Track 1 (Panel A) — orthosteric screen of 1,962 352 
+
+compounds against five targets (PPARG, IRF8, MAF, RUNX1, BHLHE41); Track 353 
+
+2 (Panels B –D) — CRBN molecular glue screen against IKZF1/IRF8 (PDB 8RQC). 354 
+
+All compounds failed the pre -specified selectivity threshold (SI > 2.0; observed SI 355 
+
+< 1.0 for all compounds evaluated). (A) MM -GBSA ΔG bind (±SEM) for the top 15 356 
+
+Tier -1 hits; tafamidis (→IRF8) and diflunisal (→PPARG) are top -ranked. (B) MM -357 
+
+GBSA ΔG for the six Tier -2 CRBN -track hits. (C) Selectivity index vs DRD2, 358 
+
+HTR2A, and hERG for the six Tier -2 compounds. (D) Scorecard: drug name, 359 
+
+target, MM -GBSA ΔG bind , Min SI, and notes for Tier -2 hits. 360 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+27 
+
+Discussion 361 
+
+The central finding —that IKZF1 is a computationally prioritised stage -specific candidate 362 
+
+in the terminal LateAD -DAM microglial state —extends prior work by Ballasch et al. [30] ,363 
+
+who demonstrated microglial -specific IKZF1 expression in mice, a DAM -like profile in 364 
+
+IKZF1 -deficient microglia, and IKZF1 protein elevation in human AD hippocampus. The 365 
+
+present study adds: (1) stage -specific association within a human single -nucleus 366 
+
+trajectory across 236,002 cells and 84 donors; (2) multi -modality convergence ranking 367 
+
+of IKZF1 relative to eight other candidate TFs; and (3) nomination of the CRBN -ZF2 368 
+
+interface as a structural entry point via virtual screening. The SEA -AD atlas identification 369 
+
+of IKZF1 as an early GRN driver [10] is also prior; our contribution is the stage -resolved 370 
+
+trajectory context and multi -modality framework applied here. 371 
+
+IKZF1 encodes Ikaros, a zinc -finger transcription factor best characterised as a master 372 
+
+regulator of lymphoid development in haematopoiesis [40,41] , where it serves as a 373 
+
+critical tumor suppressor in B -cell malignancies [42] . Its expression in tissue -resident 374 
+
+macrophages and microglia is less studied, but emerging evidence positions IKZF1 as a 375 
+
+regulator of innate immune quiescence: IKZF1 -deficient microglia adopt a DAM -like 376 
+
+transcriptional profile with increased TREM2 and reduced P2RY12 [30] , the trajectory -377 
+
+resolved transition from Homeostatic to DAM states observed in our human single -378 
+
+nucleus analysis . Furthermore, the protein -level elevation of IKZF1 in late -stage 5xFAD 379 
+
+mice and human AD hippocampi reported by Ballasch et al. provides biological 380 
+
+validation for our finding that IKZF1 regulon activity peaks in the terminal LateAD -DAM 381 
+
+state [30] . The multi -modality convergence framework applied in this study — requiring 382 
+
+support across GRN regulon activity, pseudotime trajectory, chromatin accessibility, 383 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+28 
+
+independent bulk replication, and in -silico perturbation — compensates for the inherent 384 
+
+noise of any single computational modality (SCENIC+ regulon precision ≈ 0.17 –0.18 385 
+
+against ChIP -seq ground truth [43] ) while maintaining explicit epistemic transparency 386 
+
+about the non -independence of internal analyses. 387 
+
+Tafamidis (→IRF8) and diflunisal (→PPARG) are low -confidence computational 388 
+
+hypotheses only. Both showed ligand egress in 100 ns MD; formal off -target selectivity 389 
+
+profiling (SI > 2.0 pre -specified threshold) was not completed for these two compounds 390 
+
+and remains a required experimental step; the MM -GBSA estimates should be treated 391 
+
+as relative ranking scores rather than binding affinities. Both are also transthyretin 392 
+
+stabilisers —a post -hoc coincidence from n=2 of 1,962 screened, not a biological signal. 393 
+
+SPR or TSA with recombinant IRF8 DBD is the required experimental next step; no 394 
+
+translational inference is warranted without experimental triage. 395 
+
+Separately, the cereblon (CRBN) molecular glue track identified in our virtual screen is 396 
+
+noteworthy: approved CELMoDs (cereblon -E3 ligase modulators) including 397 
+
+lenalidomide and pomalidomide already achieve IKZF1 protein degradation in 398 
+
+haematopoietic malignancies. Whether this drug class could selectively modulate IKZF1 399 
+
+activity in microglia without systemic immunosuppression is an open question, 400 
+
+particularly given the immunocompromised state already associated with advanced AD. 401 
+
+The six CRBN -track hits identified here — celecoxib, teriflunomide, amlexanox ,402 
+
+capmatinib, lasmiditan, and risdiplam — are structurally distinct from classical 403 
+
+CELMoDs and require CRBN -displacement or TR -FRET assays to confirm cereblon 404 
+
+engagement before further characterisation. 405 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+29 
+
+The SLIT2→ROBO2 signal from CellChat adds an intercellular dimension absent from 406 
+
+most computational target -identification studies. It is an MTG -specific prediction that 407 
+
+requires cross -dataset and experimental validation (e.g., co -culture or optogenetic 408 
+
+perturbation) before any novelty claim; SLIT -ROBO signalling has been shown to 409 
+
+regulate microglial process extension [44] , making the prediction biologically plausible 410 
+
+but unconfirmed. The SLIT -ROBO axis is best characterised in neuronal axon guidance 411 
+
+during development; ROBO2 expression on microglia may mediate process extension 412 
+
+and chemotactic responses toward sites of neuronal injury. In AD cortex, the 413 
+
+predominant SLIT2 -expressing populations identified here — primarily inhibitory 414 
+
+interneuron subtypes (Pvalb, Lamp5 Lhx6, Chandelier, Sst, Lamp5) with minor 415 
+
+excitatory neuron contribution (ExcNeuron ) — include cell types that are selectively 416 
+
+vulnerable and progressively depleted with disease stage [10,45] . While functional 417 
+
+evidence for SLIT -ROBO signaling in microglial process extension is currently limited to 418 
+
+murine models [44] , pathway -level analyses of human AD transcriptomes consistently 419 
+
+nominate 'axon guidance' as a critical neuro -immune axis [46] . Furthermore, the 420 
+
+reported downregulation of guidance cues during disease progression [47] mirrors the 421 
+
+depletion of SLIT2 -expressing interneurons observed here, suggesting that a loss of 422 
+
+inhibitory guidance signaling may contribute to microglial dysfunction in the LateAD -423 
+
+DAM state. This loss, particularly within somatostatin -positive subpopulations, has been 424 
+
+validated across independent cohorts using both single -nucleus transcriptomics and 425 
+
+quantitative histology [48,49] . Declining SLIT2 from dying interneurons could plausibly 426 
+
+alter microglial process dynamics or phagocytic capacity, representing a mechanism by 427 
+
+which neuronal loss propagates microglial dysfunction; this remains speculative. 428 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+30 
+
+Limitations 429 
+
+All virtual screening hits, CellChat predictions, and CellOracle perturbation results are 430 
+
+exploratory computational predictions. Internal analyses 1 –5 for IKZF1 are non -431 
+
+independent (same SEA -AD RNA data; not pre -registered); analysis 6 (GSE95587) is 432 
+
+the sole external replication, in a single cohort and brain region. The absence of region -433 
+
+stratified pseudobulk modelling means some transcriptional differences may reflect 434 
+
+regional composition rather than disease -state transitions. GRN inference is limited by 435 
+
+motif database coverage: BHLHE40 /41 could not be evaluated because HOCOMOCO 436 
+
+v11 lacks their atypical E -box motifs, and the IKZF1 finding is therefore conditional on 437 
+
+the cisTarget v10/HOCOMOCO v11 combination. The SLIT2 →ROBO2 pathway derives 438 
+
+from a single brain region (MTG) and has not been replicated across the other nine 439 
+
+SEA -AD regions. Virtual screening with implicit -solvent MM -GBSA provides relative 440 
+
+compound rankings, not binding affinities; ligand egress in MD simulations for both top 441 
+
+compounds underscores the necessity of biophysical triage. The SEA -AD cohort 442 
+
+includes sex and age as covariates in differential expression models, but ancestry 443 
+
+composition was not formally characterised; generalisability of the IKZF1 trajectory 444 
+
+association across ethnically diverse populations remains to be established. Sex was 445 
+
+controlled as a covariate throughout but was not analysed as a primary biological 446 
+
+variable; sex -stratified substate composition, sex -specific 447 
+
+regulon dynamics, and potential sex -by -disease interactions in microglial state 448 
+
+transitions were not examined. Given emerging evidence for sex -dimorphic microglial 449 
+
+responses in AD, this represents a limitation and a priority for future stratified analyses. 450 
+
+Generalizable prioritisation framework 451 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+31 
+
+The DAM -DRUG pipeline is transferable to any disease -relevant cell type with atlas -452 
+
+level single -nucleus data and at least one independent bulk cohort. The six -step 453 
+
+decision logic (cell -state trajectory → TF candidate set → GRN inference → multi -454 
+
+modality convergence scoring → structural druggability/virtual screening → cell -cell 455 
+
+communication context) and advancement criteria (≥4/6 evidence dimensions) are 456 
+
+documented with substitution guidance in the GitHub repository README. 457 
+
+Immediate experimental priorities for validating the computational findings reported here 458 
+
+include: (a) surface plasmon resonance (SPR) or thermal shift assay (TSA) to confirm 459 
+
+tafamidis binding to recombinant IRF8 DBD; (b) CRISPR -mediated knockout of IKZF1 in 460 
+
+iPSC -derived or primary human microglia followed by transcriptomic profiling to 461 
+
+determine whether IKZF1 loss reproduces or accelerates the LateAD -DAM signature; (c) 462 
+
+cross -dataset replication of the SLIT2→ROBO2 pathway in an independent snRNA -seq 463 
+
+dataset with paired interneuron and microglia populations; and (d) region -stratified 464 
+
+pseudobulk modelling across the ten SEA -AD brain regions to determine whether the 465 
+
+IKZF1 trajectory association is cortex -wide or region -specific. 466 
+
+Conclusion 467 
+
+Applying a six -step multi -modality convergence framework to 236,002 microglial nuclei 468 
+
+from 84 postmortem AD donors, we nominate IKZF1 as the primary computationally 469 
+
+prioritised transcription factor in the terminal LateAD -DAM state. This nomination rests 470 
+
+on concordant evidence across pseudobulk differential expression, GRN regulon activity, 471 
+
+diffusion pseudotime trajectory, chromatin accessibility motif enrichment, independent 472 
+
+bulk RNA -seq replication (GSE95587), and in -silico perturbation — with external 473 
+
+replication in a single independent cohort representing the sole non -SEA -AD evidence 474 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+32 
+
+line. CellChat analysis identifies SLIT2→ROBO2, predominantly from inhibitory 475 
+
+interneuron subtypes, as the top predicted neuron -to -microglia signalling pathway in the 476 
+
+middle temporal gyrus, a hypothesis requiring cross -dataset and experimental validation. 477 
+
+Structure -based virtual screening nominates tafamidis (→IRF8) and diflunisal 478 
+
+(→PPARG) as low -confidence repurposing hypotheses; ligand egress in MD 479 
+
+simulations and incomplete selectivity profiling preclude any translational inference 480 
+
+without biophysical triage. Together, these findings establish a transferable 481 
+
+computational prioritisation framework for druggable TF candidates in disease -relevant 482 
+
+human microglial states. 483 
+
+Acknowledgements 484 
+
+Computational analyses were performed on the TRUBA ARF cluster (TÜBİTAK 485 
+
+ULAKBİM). SEA -AD data were generated by the Allen Institute for Brain Science. 486 
+
+Author Contributions 487 
+
+Ç.Ö.: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, 488 
+
+Project administration, Software, Validation, Visualization, Writing – original draft, 489 
+
+Writing – review and editing. 490 
+
+Statements and Declarations 491 
+
+Ethical considerations : This study is a secondary computational analysis of publicly 492 
+
+available, de -identified postmortem brain data (SEA -AD atlas; GSE95587); no primary 493 
+
+human samples were collected. No IRB approval was required, consistent with standard 494 
+
+practice for analyses of pre -existing, de -identified datasets and in accordance with the 495 
+
+Declaration of Helsinki. 496 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+33 
+
+Consent to participate : Not applicable. 497 
+
+Consent for publication : Not applicable. 498 
+
+Declaration of conflicting interest : The author declared no potential conflicts of interest 499 
+
+with respect to the research, authorship, and/or publication of this article. 500 
+
+Funding statement : This research did not receive any specific grant from funding 501 
+
+agencies in the public, commercial, or not -for -profit sectors. 502 
+
+Data availability : All analysis scripts are available at https://github.com/cagriozkurt/DAM -503 
+
+DRUG. Supplementary data files are deposited at Zenodo 504 
+
+(https://zenodo.org/records/19559648). The SEA -AD microglial dataset is freely 505 
+
+available from the AWS open data registry (s3://sea -ad -single -cell -profiling; 506 
+
+https://registry.opendata.aws/allen -sea -ad -atlas). GSE95587 is available from NCBI 507 
+
+GEO. Compound structures were obtained from ChEMBL (max_phase = 4). AlphaFold2 508 
+
+structures were obtained from the EBI AlphaFold Database (v6). Experimental PDB 509 
+
+structures are available from the RCSB Protein Data Bank. 510 
+
+References 511 
+
+[1] Frisoni GB, Aho E, Brayne C, Ciccarelli O, Dubois B, Fox NC, Frederiksen KS, 512 
+
+Gabay C, Garibotto V, Hofmarcher T, Jack CR, Kivipelto M, Petersen RC, Ribaldi 513 
+
+F, Rowe CC, Walsh S, Zetterberg H, Hansson O (2025) Alzheimer’s disease 514 
+
+outlook: controversies and future directions. The Lancet 406 , 1424 –1442. 515 
+
+[2] Keren -Shaul H, Spinrad A, Weiner A, Matcovitch -Natan O, Dvir -Szternfeld R, 516 
+
+Ulland TK, David E, Baruch K, Lara -Astaiso D, Toth B, Itzkovitz S, Colonna M, 517 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+34 
+
+Schwartz M, Amit I (2017) A Unique Microglia Type Associated with Restricting 518 
+
+Development of Alzheimer’s Disease. Cell 169 , 1276 -1290.e17. 519 
+
+[3] Sun N, Victor MB, Park YP, Xiong X, Scannail AN, Leary N, Prosper S, 520 
+
+Viswanathan S, Luna X, Boix CA, James BT, Tanigawa Y, Galani K, Mathys H, 521 
+
+Jiang X, Ng AP, Bennett DA, Tsai L -H, Kellis M (2023) Human microglial state 522 
+
+dynamics in Alzheimer’s disease progression. Cell 186 , 4386 -4403.e29. 523 
+
+[4] Mathys H, Davila -Velderrain J, Peng Z, Gao F, Mohammadi S, Young JZ, Menon M, 524 
+
+He L, Abdurrob F, Jiang X, Martorell AJ, Ransohoff RM, Hafler BP, Bennett DA, 525 
+
+Kellis M, Tsai L -H (2019) Single -cell transcriptomic analysis of Alzheimer’s 526 
+
+disease. Nature 570 , 332 –337. 527 
+
+[5] Masuda T, Tsuda M, Yoshinaga R, Tozaki -Saitoh H, Ozato K, Tamura T, Inoue K 528 
+
+(2012) IRF8 is a critical transcription factor for transforming microglia into a 529 
+
+reactive phenotype. Cell Rep 1, 334 –340. 530 
+
+[6] Henley MJ, Koehler AN (2021) Advances in targeting ‘undruggable’ transcription 531 
+
+factors with small molecules. Nat Rev Drug Discov 20 , 669 –688. 532 
+
+[7] Tsafou K, Tiwari PB, Forman -Kay JD, Metallo SJ, Toretsky JA (2018) Targeting 533 
+
+Intrinsically Disordered Transcription Factors: Changing the Paradigm. Journal of 534 
+
+Molecular Biology 430 , 2321 –2341. 535 
+
+[8] Aibar S, González -Blas CB, Moerman T, Huynh -Thu VA, Imrichova H, Hulselmans 536 
+
+G, Rambow F, Marine J -C, Geurts P, Aerts J, Van Den Oord J, Atak ZK, Wouters 537 
+
+J, Aerts S (2017) SCENIC: single -cell regulatory network inference and clustering. 538 
+
+Nat Methods 14 , 1083 –1086. 539 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+35 
+
+[9] Madhamshettiwar PB, Maetschke SR, Davis MJ, Reverter A, Ragan MA (2012) 540 
+
+Gene regulatory network inference: evaluation and application to ovarian cancer 541 
+
+allows the prioritization of drug targets. Genome Med 4, 41. 542 
+
+[10] Gabitto MI, Travaglini KJ, Rachleff VM, Kaplan ES, Long B, Ariza J, Ding Y, 543 
+
+Mahoney JT, Dee N, Goldy J, Melief EJ, Agrawal A, Kana O, Zhen X, Barlow ST, 544 
+
+Brouner K, Campos J, Campos J, Carr AJ, Casper T, Chakrabarty R, Clark M, 545 
+
+Cool J, Dalley R, Darvas M, Ding S -L, Dolbeare T, Egdorf T, Esposito L, Ferrer R, 546 
+
+Fleckenstein LE, Gala R, Gary A, Gelfand E, Gloe J, Guilford N, Guzman J, 547 
+
+Hirschstein D, Ho W, Hupp M, Jarsky T, Johansen N, Kalmbach BE, Keene LM, 548 
+
+Khawand S, Kilgore MD, Kirkland A, Kunst M, Lee BR, Leytze M, Mac Donald CL, 549 
+
+Malone J, Maltzer Z, Martin N, McCue R, McMillen D, Mena G, Meyerdierks E, 550 
+
+Meyers KP, Mollenkopf T, Montine M, Nolan AL, Nyhus JK, Olsen PA, Pacleb M, 551 
+
+Pagan CM, Peña N, Pham T, Pom CA, Postupna N, Rimorin C, Ruiz A, Saldi GA, 552 
+
+Schantz AM, Shapovalova NV, Sorensen SA, Staats B, Sullivan M, Sunkin SM, 553 
+
+Thompson C, Tieu M, Ting JT, Torkelson A, Tran T, Valera Cuevas NJ, Walling -554 
+
+Bell S, Wang M -Q, Waters J, Wilson AM, Xiao M, Haynor D, Gatto NM, Jayadev S, 555 
+
+Mufti S, Ng L, Mukherjee S, Crane PK, Latimer CS, Levi BP, Smith KA, Close JL, 556 
+
+Miller JA, Hodge RD, Larson EB, Grabowski TJ, Hawrylycz M, Keene CD, Lein 557 
+
+ES (2024) Integrated multimodal cell atlas of Alzheimer’s disease. Nat Neurosci 558 
+
+27 , 2366 –2383. 559 
+
+[11] Wolf FA, Hamey FK, Plass M, Solana J, Dahlin JS, Göttgens B, Rajewsky N, 560 
+
+Simon L, Theis FJ (2019) PAGA: graph abstraction reconciles clustering with 561 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+36 
+
+trajectory inference through a topology preserving map of single cells. Genome 562 
+
+Biol 20 , 59. 563 
+
+[12] Butovsky O, Jedrychowski MP, Moore CS, Cialic R, Lanser AJ, Gabriely G, 564 
+
+Koeglsperger T, Dake B, Wu PM, Doykan CE, Fanek Z, Liu L, Chen Z, Rothstein 565 
+
+JD, Ransohoff RM, Gygi SP, Antel JP, Weiner HL (2014) Identification of a unique 566 
+
+TGF -β-dependent molecular and functional signature in microglia. Nat Neurosci 567 
+
+17 , 131 –143. 568 
+
+[13] Haynes SE, Hollopeter G, Yang G, Kurpius D, Dailey ME, Gan W -B, Julius D (2006) 569 
+
+The P2Y12 receptor regulates microglial activation by extracellular nucleotides. 570 
+
+Nat Neurosci 9, 1512 –1519. 571 
+
+[14] Lopez -Ortiz AO, Doceti M, Thomas J, Duffy A, Coburn M, K Okojie A, Lee A, Sou 572 
+
+EA, Gaultier A, Eyo UB (2025) Transcriptional Regulation of Microglial Metabolic 573 
+
+and Activation States by P2RY12. Glia 73 , 2464 –2482. 574 
+
+[15] Kenkhuis B, Somarakis A, Kleindouwel LRT, van Roon -Mom WMC, Höllt T, van der 575 
+
+Weerd L (2022) Co -expression patterns of microglia markers Iba1, TMEM119 and 576 
+
+P2RY12 in Alzheimer’s disease. Neurobiol Dis 167 , 105684. 577 
+
+[16] Jin S, Guerrero -Juarez CF, Zhang L, Chang I, Ramos R, Kuan C -H, Myung P, 578 
+
+Plikus MV, Nie Q (2021) Inference and analysis of cell -cell communication using 579 
+
+CellChat. Nat Commun 12 , 1088. 580 
+
+[17] Varadi M, Bertoni D, Magana P, Paramval U, Pidruchna I, Radhakrishnan M, 581 
+
+Tsenkov M, Nair S, Mirdita M, Yeo J, Kovalevskiy O, Tunyasuvunakool K, Laydon 582 
+
+A, Žídek A, Tomlinson H, Hariharan D, Abrahamson J, Green T, Jumper J, Birney 583 
+
+E, Steinegger M, Hassabis D, Velankar S (2024) AlphaFold Protein Structure 584 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+37 
+
+Database in 2024: providing structure coverage for over 214 million protein 585 
+
+sequences. Nucleic Acids Res 52 , D368 –D375. 586 
+
+[18] Jumper J, Evans R, Pritzel A, Green T, Figurnov M, Ronneberger O, 587 
+
+Tunyasuvunakool K, Bates R, Žídek A, Potapenko A, Bridgland A, Meyer C, Kohl 588 
+
+SAA, Ballard AJ, Cowie A, Romera -Paredes B, Nikolov S, Jain R, Adler J, Back T, 589 
+
+Petersen S, Reiman D, Clancy E, Zielinski M, Steinegger M, Pacholska M, 590 
+
+Berghammer T, Bodenstein S, Silver D, Vinyals O, Senior AW, Kavukcuoglu K, 591 
+
+Kohli P, Hassabis D (2021) Highly accurate protein structure prediction with 592 
+
+AlphaFold. Nature 596 , 583 –589. 593 
+
+[19] Eastman P, Swails J, Chodera JD, McGibbon RT, Zhao Y, Beauchamp KA, Wang 594 
+
+L-P, Simmonett AC, Harrigan MP, Stern CD, Wiewiora RP, Brooks BR, Pande VS 595 
+
+(2017) OpenMM 7: Rapid development of high performance algorithms for 596 
+
+molecular dynamics. PLoS Comput Biol 13 , e1005659. 597 
+
+[20] Eastman P, Galvelis R, Peláez RP, Abreu CRA, Farr SE, Gallicchio E, Gorenko A, 598 
+
+Henry MM, Hu F, Huang J, Krämer A, Michel J, Mitchell JA, Pande VS, Rodrigues 599 
+
+JP, Rodriguez -Guerra J, Simmonett AC, Singh S, Swails J, Turner P, Wang Y, 600 
+
+Zhang I, Chodera JD, De Fabritiis G, Markland TE (2024) OpenMM 8: Molecular 601 
+
+Dynamics Simulation with Machine Learning Potentials. J Phys Chem B 128 ,602 
+
+109 –116. 603 
+
+[21] Wager TT, Hou X, Verhoest PR, Villalobos A (2010) Moving beyond rules: the 604 
+
+development of a central nervous system multiparameter optimization (CNS MPO) 605 
+
+approach to enable alignment of druglike properties. ACS Chem Neurosci 1, 435 –606 
+
+449. 607 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+38 
+
+[22] Santos -Martins D, He Y, Eberhardt J, Sharma P, Bruciaferri N, Holcomb M, Llanos 608 
+
+MA, Hansel -Harris A, Barkdull AP, Tillack AF, Bianco G, Paulsen M -L, Mato J, 609 
+
+Taneja I, Forli S (2025) Meeko: Molecule Parametrization and Software 610 
+
+Interoperability for Docking and Beyond. J Chem Inf Model 65 , 13045 –13050. 611 
+
+[23] Valdés -Tresanco MS, Valdés -Tresanco ME, Valiente PA, Moreno E (2021) 612 
+
+gmx_MMPBSA: A New Tool to Perform End -State Free Energy Calculations with 613 
+
+GROMACS. J Chem Theory Comput 17 , 6281 –6291. 614 
+
+[24] Bowes J, Brown AJ, Hamon J, Jarolimek W, Sridhar A, Waldron G, Whitebread S 615 
+
+(2012) Reducing safety -related drug attrition: the use of in vitro pharmacological 616 
+
+profiling. Nat Rev Drug Discov 11 , 909 –922. 617 
+
+[25] Kamimoto K, Stringa B, Hoffmann CM, Jindal K, Solnica -Krezel L, Morris SA (2023) 618 
+
+Dissecting cell identity via network inference and in silico gene perturbation. 619 
+
+Nature 614 , 742 –751. 620 
+
+[26] McInnes L, Healy J, Melville J (2018) UMAP: Uniform Manifold Approximation and 621 
+
+Projection for Dimension Reduction. 622 
+
+[27] Chari T, Pachter L (2023) The specious art of single -cell genomics. PLoS Comput 623 
+
+Biol 19 , e1011288. 624 
+
+[28] Haney MS, Pálovics R, Munson CN, Long C, Johansson PK, Yip O, Dong W, 625 
+
+Rawat E, West E, Schlachetzki JCM, Tsai A, Guldner IH, Lamichhane BS, Smith 626 
+
+A, Schaum N, Calcuttawala K, Shin A, Wang Y -H, Wang C, Koutsodendris N, 627 
+
+Serrano GE, Beach TG, Reiman EM, Glass CK, Abu -Remaileh M, Enejder A, 628 
+
+Huang Y, Wyss -Coray T (2024) APOE4/4 is linked to damaging lipid droplets in 629 
+
+Alzheimer’s disease microglia. Nature 628 , 154 –161. 630 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+39 
+
+[29] Jung ES, Choi H, Mook -Jung I (2025) Decoding microglial immunometabolism: a 631 
+
+new frontier in Alzheimer’s disease research. Mol Neurodegener 20 , 37. 632 
+
+[30] Ballasch I, García -García E, Vila C, Pérez -González A, Sancho -Balsells A, 633 
+
+Fernández J, Soto D, Puigdellívol M, Gasull X, Alberch J, Rodríguez MJ, Canals 634 
+
+JM, Giralt A (2023) Ikzf1 as a novel regulator of microglial homeostasis in 635 
+
+inflammation and neurodegeneration. Brain, Behavior, and Immunity 109 , 144 –636 
+
+161. 637 
+
+[31] Lee S -Y, Lee Y -H, Kim T -M, Ha U -S (2025) TGF -β signaling and tumor 638 
+
+microenvironment dynamics in bladder cancer progression post -BCG therapy: a 639 
+
+longitudinal single -nucleus RNA -seq study. BMC Cancer 25 , 1735. 640 
+
+[32] McCoy MA, Spicer D, Wells N, Hoogewijs K, Fiedler M, Baud MGJ (2022) 641 
+
+Biophysical Survey of Small -Molecule β -Catenin Inhibitors: A Cautionary Tale. J642 
+
+Med Chem 65 , 7246 –7261. 643 
+
+[33] Wei Y, Pan H, Lu F, Deng X, Wang J (2025) Single -cell RNA sequencing reveals 644 
+
+immune cell dysfunction and rewired interaction networks in the peripheral blood 645 
+
+of active tuberculosis patients. BMC Immunol 26 , 96. 646 
+
+[34] Huang Y, Deng Z, Zhou Z, Fu K, Liu F, Zhang H, Chen J, Yang J, Cao Y (2026) 647 
+
+MerTK -triggered TGFβ1 autocrine signal regulates microglial response to 648 
+
+neurodegeneration. Nat Commun 17 , 2312. 649 
+
+[35] Zhu K, Liu Y, Min J -H, Joshua V, Lin J, Li Y, Kreutzmann JC, Guo Y, Xia W, 650 
+
+Mohammadi E, Pieber M, Suerth V, Xia Y, Andrusivova Z, Hugnot J -P, Kanatani S, 651 
+
+Uhlén P, Lundeberg J, Li X, Fancy SPJ, Sarlus H, Harris RA, Lund H (2026) 652 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+40 
+
+TGFβ signaling mediates microglial resilience to spatiotemporally restricted myelin 653 
+
+degeneration. Nat Neurosci 29 , 617 –631. 654 
+
+[36] Bhandare AM, Mohammed S, Pilowsky PM, Farnham MMJ (2015) Antagonism of 655 
+
+PACAP or microglia function worsens the cardiovascular consequences of kainic -656 
+
+acid -induced seizures in rats. J Neurosci 35 , 2191 –2199. 657 
+
+[37] Lu G, Middleton RE, Sun H, Naniong M, Ott CJ, Mitsiades CS, Wong K -K, Bradner 658 
+
+JE, Kaelin WG (2014) The myeloma drug lenalidomide promotes the cereblon -659 
+
+dependent destruction of Ikaros proteins. Science 343 , 305 –309. 660 
+
+[38] Krönke J, Udeshi ND, Narla A, Grauman P, Hurst SN, McConkey M, Svinkina T, 661 
+
+Heckl D, Comer E, Li X, Ciarlo C, Hartman E, Munshi N, Schenone M, Schreiber 662 
+
+SL, Carr SA, Ebert BL (2014) Lenalidomide causes selective degradation of 663 
+
+IKZF1 and IKZF3 in multiple myeloma cells. Science 343 , 301 –305. 664 
+
+[39] Sievers QL, Petzold G, Bunker RD, Renneville A, Słabicki M, Liddicoat BJ, 665 
+
+Abdulrahman W, Mikkelsen T, Ebert BL, Thomä NH (2018) Defining the human 666 
+
+C2H2 zinc finger degrome targeted by thalidomide analogs through CRBN. 667 
+
+Science 362 , eaat0572. 668 
+
+[40] Liu S -L, Gao F -H (2017) [Role and Significance of Ikaros Family in the 669 
+
+Development of Hematopoietic System -Review]. Zhongguo Shi Yan Xue Ye Xue 670 
+
+Za Zhi 25 , 1227 –1231. 671 
+
+[41] Feng L, Zhang H, Liu T (2024) Multifaceted roles of IKZF1 gene, perspectives from 672 
+
+bench to bedside. Front Oncol 14 , 1383419. 673 
+
+[42] Vairy S, Tran TH (2020) IKZF1 alterations in acute lymphoblastic leukemia: The 674 
+
+good, the bad and the ugly. Blood Rev 44 , 100677. 675 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+41 
+
+[43] Bravo González -Blas C, De Winter S, Hulselmans G, Hecker N, Matetovici I, 676 
+
+Christiaens V, Poovathingal S, Wouters J, Aibar S, Aerts S (2023) SCENIC+: 677 
+
+single -cell multiomic inference of enhancers and gene regulatory networks. Nat 678 
+
+Methods 20 , 1355 –1367. 679 
+
+[44] Geraldo LH, Xu Y, Jacob L, Pibouin -Fragner L, Rao R, Maissa N, Verreault M, 680 
+
+Lemaire N, Knosp C, Lesaffre C, Daubon T, Dejaegher J, Solie L, Rudewicz J, 681 
+
+Viel T, Tavitian B, De Vleeschouwer S, Sanson M, Bikfalvi A, Idbaih A, Lu QR, 682 
+
+Lima FRS, Thomas J -L, Eichmann A, Mathivet T (2021) SLIT2/ROBO signaling in 683 
+
+tumor -associated microglia and macrophages drives glioblastoma 684 
+
+immunosuppression and vascular dysmorphia. Journal of Clinical Investigation 685 
+
+131 , e141083. 686 
+
+[45] Sanchez -Mejias E, Nuñez -Diaz C, Sanchez -Varo R, Gomez -Arboledas A, Garcia -687 
+
+Leon JA, Fernandez -Valenzuela JJ, Mejias -Ortega M, Trujillo -Estrada L, 688 
+
+Baglietto -Vargas D, Moreno -Gonzalez I, Davila JC, Vitorica J, Gutierrez A (2020) 689 
+
+Distinct disease -sensitive GABAergic neurons in the perirhinal cortex of 690 
+
+Alzheimer’s mice and patients. Brain Pathol 30 , 345 –363. 691 
+
+[46] Unger MS, Li E, Scharnagl L, Poupardin R, Altendorfer B, Mrowetz H, Hutter -Paier 692 
+
+B, Weiger TM, Heneka MT, Attems J, Aigner L (2020) CD8+ T -cells infiltrate 693 
+
+Alzheimer’s disease brains and regulate neuronal - and synapse -related gene 694 
+
+expression in APP -PS1 transgenic mice. Brain Behav Immun 89 , 67 –86. 695 
+
+[47] Janssen L, Dubbelaar ML, Holtman IR, de Boer -Bergsma J, Eggen BJL, Boddeke 696 
+
+HWGM, De Deyn PP, Van Dam D (2017) Aging, microglia and cytoskeletal 697 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.14.738463 doi: bioRxiv preprint
+
+42 
+
+regulation are key factors in the pathological evolution of the APP23 mouse model 698 
+
+for Alzheimer’s disease. Biochim Biophys Acta Mol Basis Dis 1863 , 395 –405. 699 
+
+[48] Castanho I, Yeganeh PN, Boix CA, Morgan SL, Mathys H, Prokopenko D, White B, 700 
+
+Soto LM, Pegoraro G, Shah S, Ploumakis A, Kalavros N, Bennett DA, Lange C, 701 
+
+Kim DY, Bertram L, Tsai L -H, Kellis M, Tanzi RE, Hide W (2025) Molecular 702 
+
+hallmarks of excitatory and inhibitory neuronal resilience and resistance to 703 
+
+Alzheimer’s disease. bioRxiv 2025.01.13.632801. 704 
+
+[49] Elhabbari K, Sireci S, Rothermel M, Brunert D (2024) Olfactory deficits in aging and 705 
+
+Alzheimer’s -spotlight on inhibitory interneurons. Front Neurosci 18 , 1503069. 706 
+
+707
