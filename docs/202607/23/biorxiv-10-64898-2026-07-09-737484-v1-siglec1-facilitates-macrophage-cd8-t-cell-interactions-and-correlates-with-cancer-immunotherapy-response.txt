@@ -1,0 +1,1364 @@
+Title: SIGLEC1 FACILITATES MACROPHAGE-CD8+ T CELL INTERACTIONS AND CORRELATES WITH CANCER IMMUNOTHERAPY RESPONSE
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.09.737484v1.full.pdf
+
+Number of Pages: 29
+
+Markdown Content:
+1
+
+SIGLEC1 FACILITATES MACROPHAGE -CD8 + T CELL INTERACTION S1
+
+AND CORRELATES WITH CANCER IMMUNOTHERAPY RESPONSE 2
+
+3
+
+Sofía Ibáñez -Molero 1,2,3 , Magali Coccimiglio 1,2,3 , Babet  Olivia  Springer 1,2,3 #, Megan  Bowien  de 4
+
+Ruiter 1,2,3 #, Georgia Clayton 1,2,3 , Steven Wijnen 4, Christian Blank 4, Mariette Labots 2, Tanja de 5
+
+Gruijl 1,2,3 , Yvette van Kooyk 1,2,3 *6
+
+* Corresponding author (y.vankooyk@amsterdamumc.nl) 7
+
+# These authors contributed equally 8
+
+9
+
+1. Department of Molecular Biology and Immunology, Amsterdam University Medical 10 
+
+Center, The Netherlands. 11 
+
+2.  Cancer Center Amsterdam, The Netherlands 12 
+
+3.  Amsterdam institute for Immunology and Infectious diseases , The Netherlands 13 
+
+4.  Netherlands Cancer Institute, Amsterdam, The Netherlands 14 
+
+15 
+
+16 
+
+17 
+
+ABSTRACT (149/150 words) 18 
+
+Antigen -presenting cell (APC) interactions with cytotoxic T cells are critical for anti -tumour 19 
+
+immunity and response to immune checkpoint blockade (ICB), yet context -specific regulators 20 
+
+in the tumour microenvironment remain not fully defined. Here we identify the lectin receptor 21 
+
+SIGLEC1 as a key mediator of macrophage –T cell interactions in human melanoma. In a well -22 
+
+characterized patient cohort, SIGLEC1 was selectively upregulated in inflammatory 23 
+
+macrophages physically associated with activate d/ exhausted CD8 ⁺ T cells. Imaging and 24 
+
+functional analyses revealed that SIGLEC1 accumulates at the macrophage –T cell interface 25 
+
+and promotes cell clustering. SIGLEC1 ligands were enriched on activated T cells, and their 26 
+
+blockade reduced cytotoxic cytokine production ex vivo . Single -cell (spatial ) transcriptomics 27 
+
+across independent ICB -treated melanoma cohorts showed that SIGLEC1 ⁺ macrophages 28 
+
+localize near CD8 ⁺ T cells and are enriched in responders, where they also associate with T 29 
+
+cells expressing activatio n/ exhaustion markers. These findings define a SIGLEC1 -dependent 30 
+
+macrophage –T cell niche linked to effective immunotherapy. 31 
+
+32 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+2
+
+INTRODUCTION 33 
+
+Immunotherapies, such as immune checkpoint blockade (ICB), have notably improved the 34 
+
+clinical outcome of melanoma , y et, a subset of patients still do es not show benefit 1. Effective 35 
+
+immunotherapy requires the infiltration of tumour s by effec tor immune cells, including cytotoxic 36 
+
+T cells and antigen presenting cells (APCs). Priming of T cells by APCs is essential for the 37 
+
+acquisition of cytotoxic function , enabling their migration into the tumour microenvironment 38 
+
+(TME) where they can recognize cognate cancer antigens and promote tumour cell killing . The 39 
+
+abundance of APC s and T cell s in tumour s is a well -established predictive and prognostic 40 
+
+marker s of ICB response 2–7. However , infiltration alone is insufficient; the phenotypic state, 41 
+
+activation status and spatial distribution of immune cells within the TME are also critical 42 
+
+determinants of therapy efficacy 8,9 .43 
+
+44 
+
+APCs are a heterogeneous group of immune cells comprising macrophages, dendritic cells 45 
+
+(DCs) and B cells, which process and present antige ns to T cells , leading to their activation ,46 
+
+often linked to effective ICB treatments . However, APCs can also act as suppressors of 47 
+
+cytotoxic T cell activity. For example, CXCL9/10 -producing inflammatory macrophages are 48 
+
+associated with positive ICB responses 10 , whereas SPP1+ immunosuppressive macrophages 49 
+
+correlate with poor clinical prognosis 11,12 . Thus, macrophage populations modulate anti tumour 50 
+
+immunity through direct stimulatory or inhibitory interactions with T cells. Prognostically, the 51 
+
+abundance and activation state of infiltrating T cells is as important as APC infiltration 8. Certain 52 
+
+T cell exhausted or dysfunctional states have been linked to improved anti tumour responses, 53 
+
+whereas T cells in these states can also display reduced cytotoxic capacity 8,13,14 . T cell 54 
+
+phenotype s and functionalities are shaped by interactions with neighboring cells , and thereby 55 
+
+highly dependent on their spatial organization within the TME. 56 
+
+57 
+
+Recent advances in spatial transcriptomics have reve aled that cell -cell proximity in tumour s is 58 
+
+a strong predictive marker for immunotherapy. For instance, inflammatory macrophages in 59 
+
+close proximity to T cells correlate with positive ICB response 13 , whereas T cell s near SPP1+ 60 
+
+immunosuppressive macrophages are link ed to unfavorable outcomes in multiple cancer 61 
+
+types 7,12,15 . Furthermore, the se immunosuppressive macrophages can sequester T cells at the 62 
+
+tumour margin, restricting their access to cancer cells 16,17 . These observations underscore the 63 
+
+importance of understanding not only the abundance of APC and T cells , but also how and 64 
+
+where they communicate within the TME. 65 
+
+66 
+
+To better understand these interactions, we previously developed an approach to isolate and 67 
+
+analyze physically interacting cell clusters from melanoma tumours 18 . Unlike earlier studies 68 
+
+that inferred interactions from cell –cell proximity in two -dimensional histological sections, this 69 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+3
+
+method captures physically engaged cells from entire three -dimensional tumour biopsies. 70 
+
+Single -cell RNA sequencing (scRNA -seq) revealed T cells in clusters with multiple APC 71 
+
+subsets, including a population of inflammatory macrophages. Notably, when T cells derived 72 
+
+from these macrophage –T-cell clusters were expanded using a rapid expansion protocol 73 
+
+(REP), which disrupts macrophage contact, they displayed enhanced anti -tumour activity both 74 
+
+ex vivo and in vivo . Here, we aim ed to identify cell -surface receptors that distinguish 75 
+
+macrophages that engage T cells from those that do not . This led to the identification of 76 
+
+SIGLEC1, for which we subsequently assessed its functional role in macrophage -T-cell 77 
+
+interactions, T cell activation as well as its spatial distribution in me lanoma tissues .78 
+
+79 
+
+RESULTS 80 
+
+SIGLEC1 is higher expressed in inflammatory macrophages that are interacting with 81 
+
+CD8+ T cells in tumour s from melanoma patients 82 
+
+To investigate transcriptional differences between interacting and non -interacting APCs and 83 
+
+CD8 ⁺T cells, we previously performed scRNA -seq of monocytes/macrophages (Mo/Mac) and 84 
+
+CD8 ⁺ T cells isolated either as clusters or singlets from melanoma patients (n = 5) ( Fig. 1a )18 .85 
+
+Here, we perform ed differential expression analysis that reveal ed multiple genes upregulated 86 
+
+in Mo/Macs in cluster s with CD8 ⁺ T cells compared to non -interacting Mo/Macs (log2FC>0.5) .87 
+
+Among th ese genes , we focused on cell surface receptors as they are potential mediators of 88 
+
+th ese Mo/Macs -T cell interactions. We identified SIGLEC1 as  the only upregulated protein in 89 
+
+the interacting Mo/Macs that was also a cell surface receptor  (Fig. 1b ), which was particularly 90 
+
+higher expressed in inflammatory macrophages (previously defined as C1q hi inflammatory 91 
+
+macrophages, defined by high expression of CXCL9 -10 18 ) (Fig. 1c ). 92 
+
+93 
+
+To validate these mRNA -based findings at the protein level and to assess SIGLEC1 94 
+
+expression across additional APC subsets, we analyzed a second cohort of melanoma 95 
+
+patients (n = 5) using imaging flow cytometry and a newly developed spectral flow cytometry 96 
+
+panel incorporating T cell and APC markers (Fig. 1 d). This approach enabled identification of 97 
+
+multiple APC populations, including DCs , B cells, and macrophages, present either as singlets 98 
+
+or in physical association with T cells ( Fig. 1e , Supp Fig. 1a ). SIGLEC1 protein expression 99 
+
+was significantly elevated in macrophages clustered with CD8 ⁺ T cells —whereas no 100 
+
+significant differences were observed in other APC subsets ( Fig. 1f, Extended Data Fig. 1b). 101 
+
+In parallel, as control, we evaluated two additional S IGLEC family members, SIGLEC7 and 102 
+
+SIGLEC9, neither of which showed comparable enrichment in macrophages (Extended Data 103 
+
+Fig . 1c ). Together, these data demonstrate that SIGLEC1 is upregulated at both the mRNA 104 
+
+and protein levels in macrophages physically interacting with CD8 ⁺ T cells in human 105 
+
+melanoma tumour s. 106 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+4
+
+107 
+
+SIGLEC1 re -localizes to the immune interface between inflammatory macrophages and 108 
+
+CD8+ T cells and facilitates their cluster formation 109 
+
+SIGLEC1 ( also known as CD169) is an immunoglobulin -like lectin receptor expressed on 110 
+
+inflammatory macrophages that binds sialylated cell surface glycans 19,20 . Upon antigen 111 
+
+recognition, APCs and T cells form an immunological synapse, defined by re -localization of 112 
+
+membrane receptors and reduced T cell motility 21 –25 . Given the enrichment of SIGLEC1 in 113 
+
+macrophages engaged with CD8 ⁺ T cells, we examined whether it similarly re -localized to the 114 
+
+synapse to stabilize these interactions. 115 
+
+116 
+
+Monocytes isolated from healthy donor peripheral blood mononuclear cells ( PBMCs ) were 117 
+
+polarized into inflammatory and suppress ive macrophages, or non -polarized; and 118 
+
+subsequently co -cultured with autologous CD8 ⁺ T cells for 1 h our (Fig. 2a ). Localization of 119 
+
+SIGLEC1 was assessed by imaging flow cytometry ( Fig. 2b , Extended Data Fig . 2a , b ). 120 
+
+Consistent with our patient -derived data, inflammatory macrophages exhibited higher baseline 121 
+
+SIGLEC1 expression ( Fig. 2c ). Upon co -culture with CD8 ⁺ T cells, SIGLEC1 in inflammatory 122 
+
+macrophages re -localized to the intercellular interface, whereas no such re -localization was 123 
+
+observed in suppressor or non -polarized macrophages (Fig. 2 d). These findings indicate that 124 
+
+SIGLEC1 is recruited to the immune synapse between inflammatory macrophages and CD8 ⁺125 
+
+T cells, suggesting a potential role in synapse formation and/or maintenance. 126 
+
+127 
+
+Next, we assessed whether SIGLEC1 contributed to maintaining macrophage -T cell 128 
+
+interaction. Macrophage –T cell co -cultures were treated with SIGLEC1 -blocking antibody, and 129 
+
+cluster formation was quantified as a measure of cell –cell interaction. Inflammatory 130 
+
+macrophages formed the highest proportion of clusters, confirming our patient -derived 131 
+
+observations (Fig. 2e, f ). Upon SIGLEC1 blocking, macrophage -T cell clusters were reduced 132 
+
+for inflammatory macrophages , but no significan t difference s were detected in suppressor or 133 
+
+non -polarized macrophages, likely due to their low baseline interaction frequencies (Fig. 2e, 134 
+
+f). These results indicate that SIGLEC1 promotes stable contacts between inflammatory 135 
+
+macrophages and CD8 ⁺ T cells .136 
+
+137 
+
+SIGLEC1 ligands are higher expressed in activated T cells and their blockade ex vivo 138 
+
+reduces T cell cytokine production 139 
+
+In our previous work we showed that CD8 ⁺ T cells within Mo/Mac –T cell clusters predominantly 140 
+
+exhibited activated or exhausted transcriptional states ( Fig. 3a ). Thus, we hypothesized that 141 
+
+activated CD8 ⁺T cells should be more capable of engaging Mo/Mac via increased expression 142 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+5
+
+of SIGLEC1 ligands. We examined the expression of SIGLEC1 ligands on CD8 ⁺T cells ex vivo 143 
+
+in single -cell –dissociated melanoma tumour s and its association with CD8 ⁺T cell activation, 144 
+
+as evaluated by CD137 and PD -1 expression. We showed that CD8 ⁺ T cells expressing 145 
+
+SIGLEC1 ligands displayed higher levels of activation markers (Fig. 3b ). Because 146 
+
+macrophages also express SIGLEC1 ligands, we could not selectively assess ligand 147 
+
+expression on CD8 ⁺T cells within clusters versus singlets. Nonetheless, these data indicate 148 
+
+that SIGLEC1 ligand expression correlates with higher T cell activation. 149 
+
+150 
+
+To assess the functional role of SIGLEC1 in CD8 ⁺ T cell activation, we treated ex -vivo single -151 
+
+cell –dissociated melanoma tumour s with a blocking antibod y against SIGLEC1, and SIGLEC1 152 
+
+recombinant protein that blocks SIGLEC1 ligands, or both in combination, which is expected 153 
+
+to neutralize their reciprocal interaction ( Fig. 3c , Extended Data Fig. 3c, d ). Blockade of 154 
+
+SIGLEC1 ligands resulted in reduced TNF and IFNγ production by CD8 ⁺ T cells, whereas 155 
+
+SIGLEC1 blockade alone had no significant effect, suggesting additional functions of 156 
+
+SIGLEC1 -ligands axes within the TME (Fig. 3d ). No significant changes were observed in T 157 
+
+cell surface activation markers ( Extended Data Fig. 3a). Together, these results indicate that 158 
+
+SIGLEC1 ligand expression correlates with T cell activation and that ligand blockade 159 
+
+modulates CD8 ⁺ T cell cytotoxic cytokine production. 160 
+
+161 
+
+SIGLEC1 expression in macrophage s and their proximity to T cells predict ICB 162 
+
+response 163 
+
+Spatial context is critical, as the proximity of immune subsets influences possible cell –cell 164 
+
+communication and therapeutic response , therefore we examined SIGLEC1 expression and 165 
+
+the spatial distribution of macrophages and T cells in situ . We performed scRNA -seq and 166 
+
+spatial transcriptomics on two independent melanoma cohorts treated with ICB , for which we 167 
+
+analyzed paired pre - and post -treatment biopsies when available ( Fig. 4a, Coccimiglio, 168 
+
+Ibáñez -Molero et al. under revision ). SIGLEC1 expression was primarily restricted to 169 
+
+macrophages and DC s, consistent with its established role in myeloid populations ( Fig. 4b). 170 
+
+In the first cohort, d ifferential expression analysis on macrophages revealed SIGLEC1 as one 171 
+
+of the most significantly enriched genes in macrophages from responders compared to non -172 
+
+responders ( Fig. 4c). We could validate this finding also in our second cohort (Fig. 4d).173 
+
+174 
+
+Leveraging the spatially resolved dataset, we next assessed SIGLEC1 expression relative to 175 
+
+macrophage proximity to CD8 ⁺ T cells. Macrophages located near CD8 ⁺ T cells displayed 176 
+
+markedly higher SIGLEC1 levels than those positioned farther away , both before and after 177 
+
+ICB treatment (Fig. 4e). Additionally, given that SIGLEC1 was also expressed in DCs, we 178 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+6
+
+evaluate d the correlation of SIGLEC1 expression on DCs with their distance to T cells, 179 
+
+showing an opposite trend to macrophages ( Extended Data Fig. 3b ). The distance between 180 
+
+SIGLEC1 ⁺ macrophages and CD8 ⁺ T cells was smaller in responders compared to non -181 
+
+responders. Upon ICB treatment, this distance was decreased in both, responders and non -182 
+
+responders ( Fig. 4f, g). Together, these findings indicate that elevated SIGLEC1 expression 183 
+
+in macrophages and their close spatial association with CD8 ⁺ T cells define immune niches 184 
+
+associated with favorable ICB outcome. 185 
+
+186 
+
+SIGLEC1 expression on macrophages correlates with T cell activation and exhaustion 187 
+
+signatures that differentiate ICB outcomes 188 
+
+We initially identified SIGLEC1 as a gene enriched in macrophages interacting with exhausted 189 
+
+or activated T cells ( Fig. 1 , Fig. 3a and described in Ibáñez -Molero, Veldman et al. ). Therefore, 190 
+
+we investigate d whether the presence of exhausted/activated T cells correlate d with 191 
+
+SIGLEC1 ⁺ macrophages in the TME in our melanoma cohort. We assessed the expression of 192 
+
+canonical activation and exhaustion markers ( LAG3, PRF1, GZMH, GZMA, GZMB, TOX, 193 
+
+GZMK, TNF and PDCD1) alongside SIGLEC1 levels in macrophages. SIGLEC1 expression 194 
+
+in macrophages strongly correlated with T cell activation and exhaustion signatures, 195 
+
+specifically with TOX, GZMK, TNF and PDCD1 expression on  CD8 ⁺ T cells  (Fig. 5a, b). Both 196 
+
+SIGLEC1 and T cell activation markers were elevated in responders compared to non -197 
+
+responders before treatment and most were further increased after ICB treatment (Fig. 5b).198 
+
+Alt hough we focus ed our analysis on  CD8 ⁺ T cells , the trends observed were also extended 199 
+
+to other cytotoxic cells such as NK and CD4 ⁺ T cells (Extended Data Fig. 3c ). Additionally, 200 
+
+SIGLEC1 expression on DCs, also correlated with ICB response, suggesting a broader role 201 
+
+(Extended Data Fig. 3c ). Collectively, these data link SIGLEC1 expression on macrophages 202 
+
+with the activation state of CD8 ⁺ T cells in the TME and highlight its potential as a determinant 203 
+
+of effective anti tumour immunity and response to ICB. 204 
+
+205 
+
+DISCUSSION 206 
+
+Effective ICB response depends not only on immune cell infiltration into tumour s but also on 207 
+
+the ir functional state, spatial organization, and quality of interactions between immune 208 
+
+populations within the TME . By isolating physically engaged immune cell clusters from intact 209 
+
+tumour biopsies, we foudn that SIGLEC1 is selectively upregulated in inflammatory 210 
+
+macrophages interacting with CD8 ⁺ T cells . Mechanistically, we show that SIGLEC1 211 
+
+redistributes to the immune interface between inflammatory macrophages and CD8 ⁺ T cells, 212 
+
+consistent with features of an immunological synapse . Blockade of SIGLEC1 reduced 213 
+
+macrophage –T cell cluster formation, supporting a role for SIGLEC1 in stabilizing cell –cell 214 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+7
+
+contact. In patients, SIGLEC1 ligands are preferentially expressed on activated /exhausted T215 
+
+cells, and the spatial proximity of SIGLEC1 ⁺ macrophages to T cells predicts clinical response 216 
+
+to ICB. 217 
+
+218 
+
+SIGLEC1 has been primarily studied for its role in antigen capture and presentation, 219 
+
+particularly in lymphoid tissues, and has been leveraged for antigen -targeting vaccine 220 
+
+strategies 26,27 . However, its function in mediating direct APC –T cell interactions within tumour s221 
+
+has remained poorly defined. Given its extended extracellular domain and affinity for sialylated 222 
+
+glycans, SIGLEC1 is well suited to mediate glycan -dependent adhesion, potentially prolonging 223 
+
+cell interactions 28,29 .224 
+
+225 
+
+We found that SIGLEC1 ligand expression was associated with T cell activation /exhaustion ,226 
+
+defined by cell surface markers including CD137 and PD -1. T hese data suggest that sialylation 227 
+
+patterns on activated T cells may promote engagement with SIGLEC1 ⁺ macrophages, 228 
+
+reinforcing physical interactions within immune niches. Such interactions may facilitate 229 
+
+sustained antigen presentation but could also contribute to chronic stimulation and the 230 
+
+emergence of exhausted T cell states. This is in line with recent findings that show that the 231 
+
+sialylation profile of T cells can determine their phenotype and functions 30 .232 
+
+233 
+
+Functional perturbation experiments further highlight the complexity of the SIGLEC1 –ligand 234 
+
+axis. Blockade of SIGLEC1 ligands, but not SIGLEC1 itself, reduced TNF and IFNγ production 235 
+
+by CD8 ⁺ T cells ex vivo . One interpretation is that SIGLEC1 ligands exert functions beyond 236 
+
+binding SIGLEC1, potentially engaging additional glycan -binding receptors and influencing 237 
+
+anti -tumour T cell functions 31 . Alternatively, SIGLEC1 blockade may interfere with other 238 
+
+functions such as antigen uptake by macrophages, indirectly dampening T cell effector 239 
+
+function 32,33 . Of note, we experimentally blocked a specific glycosylated motif by the use of a 240 
+
+recombinant SIGLEC1 protein, but it is still not fully described which molecules carry this motif. 241 
+
+The specific identity of the SIGLEC1 ligands remains unknown, and defining these ligands will 242 
+
+be critical for understanding how glycan -mediated interactions regulate T cell responses in 243 
+
+tumour s. 244 
+
+245 
+
+Our s ingle -cell (spatial ) transcriptomic analyze s across two independent melanoma cohorts 246 
+
+underscore the clinical relevance of SIGLEC1. SIGLEC1 expression in macrophages was 247 
+
+enriched in patients responding to ICB , consistent with prior reports linking SIGLEC1 ⁺248 
+
+macrophages to favorable outcomes in other malignancies, including endometrial and 249 
+
+colorectal carcinomas 34,35 . Spatial analyze s further revealed that SIGLEC1 -expressing 250 
+
+macrophages preferentially localized in close proximity to CD8 ⁺ T cells and were correlated 251 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+8
+
+with T cells with activation and exhaustion gene signatures. Together, these findings support 252 
+
+a model in which SIGLEC1 –ligand interactions delineate immune niches characterized by 253 
+
+sustained antigen engagement and active anti -tumour immunity. 254 
+
+255 
+
+Although our analyze s focused on macrophages, SIGLEC1 expression on other APC subsets, 256 
+
+including DC s, also correlated with cytotoxic immune activation and ICB response, indicating 257 
+
+that SIGLEC1 –ligand interactions may broadly influence APC –lymphocyte communication 36 .258 
+
+However, SIGLEC1 expression on DCs anti -correlated with their distance to CD8 + T cells, an 259 
+
+opposite finding than macrophages. Additionally, SIGLEC1 ligands were detected on 260 
+
+macrophages themselves, raising the possibility of autologous or APC –APC interactions that 261 
+
+could regulate antigen uptake, retention, or spatial organization within the TME. Dissecting 262 
+
+these autologous roles will be important for understanding the full spectrum of SIGLEC1 263 
+
+function in tumour s. 264 
+
+265 
+
+In summary, our study identifies the SIGLEC1 –ligand axis as a regulator of macrophage –T266 
+
+cell interactions that coordinates spatial immune organization, T cell activation and exhaustion, 267 
+
+and clinical response to ICB . By integrating single -cell, spatial, and functional analyze s, we 268 
+
+reveal how glycan -mediated interactions contribute to the formation of immune niches that 269 
+
+support anti tumour immunity while we may still need checkpoint -mediated reinvigoration. 270 
+
+These findings highlight SIGLEC1 and its ligands as potential biomarkers and modulators of 271 
+
+immunotherapy responsiveness in cancer , which merit further investigation .272 
+
+273 
+
+MATERIAL AND METHODS 274 
+
+Patient samples 275 
+
+Patients were enrolled under written informed consent in an institutional review board -276 
+
+approved clinical study of autologous whole -cell vaccination at the Amsterdam UMC, location 277 
+
+VUmc (Amsterdam, The Netherlands) 37 . Resected tumour material (metastatic melanoma) 278 
+
+was collected from melanoma patients undergoing surgery. All patients provided prior 279 
+
+informed consent to research usage of material not required for diagnostics. 280 
+
+281 
+
+T cells and monocyte isolation from PBMCs 282 
+
+PBMCs were isolated by density gradient with Fi coll -Paque PLUS (GE Healthcare , GE17 -283 
+
+1440 -02 ) from healthy donor buffy coats. CD14+ monocytes were isolated using CD14 284 
+
+Microbeads (Miltenyi , CAT 130 -097 -052 ) and T cells were isolated using CD8+ untouched 285 
+
+beads isolation kit ( Miltenyi , CAT 130 -096 -495 ). Monocytes were cultured in complete 286 
+
+medium: RPMI1640 (Gibco) containing 10% Fetal Calf Serum (F CS, Biowest ), 2mM L -287 
+
+Glutamine (Gibco) and 1000U per ml Penicillin -Streptomycin (Gibco). T cells were frozen after 288 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+9
+
+isolation. After thawing, T cells were cultured in RPMI1640 (Gibco) containing 10% Fetal 289 
+
+Bovine Serum (FBS , Biowest ), 2mM L -Glutamine (Gibco) and 1000U per ml Penicillin -290 
+
+Streptomycin (Gibco) and IL2 ( 10IU ). 291 
+
+292 
+
+Monocyte -derived macrophages differentiation and polarization 293 
+
+After isolation, CD14+ monocytes were differentiated into monocyte -derived macrophages 294 
+
+(moMacs) for 6 days adding 50ng/ml M -CSF ( Miltenyi , CAT 130 -096 -492 ) to complete 295 
+
+monocyte medium (see above). Four days after isolation, moMacs are polarized into 296 
+
+inflammatory or suppressor moMacs. For inflammatory macrophages IFNy (25ng/ml ,297 
+
+Immunotools , CAT 11343536 ) and LPS (10ng/ml , Invivogen, tlrl -eblps ) were added to the 298 
+
+differentiation medium. For suppressor macrophages IL -4 (25ng/ml , Immunotools , CAT 299 
+
+11340047 ) and IL -6 (25ng/ml , R&D systems , CAT 206 -IL -010 ) were added to the 300 
+
+differentiation medium. Experiments are performed after two or three days of polarization. 301 
+
+302 
+
+In vitro T cell: macrophage co -cultures 303 
+
+MoMac were harvested incubating them with TrypLE ( Thermofisher , CAT 12604021 ) for 304 
+
+20min and T cells were thawed. Cells were added at a 1:1 ratio (100k T cells :100K moMacs) 305 
+
+in non -adherent 96 -well plates and incubated for 1h. For SIGLEC -1 blocking experiments, T 306 
+
+cells were pre -stained with CTV ( Invitrogen , CAT: C34557 ) for 20min at 37C. MoMacs were 307 
+
+pre -treated with anti -SIGLEC1 (produced in house) or isotype antibodies ( Ultra -LEAF ™308 
+
+Purified Mouse IgG1, κ Isotype Ctrl Antibody , Biolegend , CAT 400166 ) at 10ug/ml for at least 309 
+
+30min . After co -culture incubation, cells were resuspended and prepared for (imaging) -flow 310 
+
+cytometry analysis. 311 
+
+312 
+
+Flow cytometry analysis 313 
+
+Cells were washed with 0.1% bovine serum albumin ( BSA ) in phosphate -buffered saline 314 
+
+(PBS ). For surface staining, cells were stain ed with the indicated antibodies dilute d in 0.1% 315 
+
+BSA in PBS for 30 min on ice in the dark. After staining, cells were washed twice with 0.1% 316 
+
+BSA in PBS and measured on a BD Fortessa flow cytometer. Data was analyzed using 317 
+
+FACSDiva during acquisition and Flowjo for post -analysis. 318 
+
+For analysis of the patient validation cohort, cells suspensions were thawed and stained 319 
+
+following the standard procedure above. Samples were then measured on an Aurora spectral 320 
+
+flow cytometer. 321 
+
+322 
+
+Ima ging -flow cytometry analysis 323 
+
+Cells were stained following a standard flow cytometry protocol described in the previous 324 
+
+section . In the final step, cells were resuspended at 10x10 6 cells/ml in 0.1% BSA in PBS for 325 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+10 
+
+measurement in CytPix or Imagestream® flow cytometers . For CytPix experiments ( Fig. 1 )326 
+
+cells were analyzed using Attune Cytometry Software. For Imagestream experiments ( Fig. 2 )327 
+
+data was analyzed using Image Stream® Mark II with INSPIRE acquisitions software during 328 
+
+measurement and IDEAS® software for post -analysis. Immune synapse re -localization 329 
+
+analysis was performed as described previously 18 .330 
+
+331 
+
+Patient samples ex vivo experiments 332 
+
+Tumor material was digested and frozen after resection. After thawing, melanoma cells were 333 
+
+cultured at 500K in a 48 flat bottom wells -plate (Greiner Bio -One, CAT 677 -180) in complete 334 
+
+RPMI160 medium (see above) supplemented with IL2 (10IU). For a baseline readout 0.75 335 
+
+million melanoma cells were stained with flow panel 1 (described below). Simultaneously, 336 
+
+melanoma cells were treated for four days at 37C with anti -SIGLEC1, isotype antibody 337 
+
+(10μG/ML), Siglec1fc (1.8 μg/ml , produced in house ) or a combination of anti -SIGLEC1 and 338 
+
+Siglec1fc. After four days of incubation, cells were incubated with Brefeldin (InvivoGen, CAT 339 
+
+inh -bfa) for 3 hours at 4C. Subsequently, melanoma cells were harvested by incubating them 340 
+
+with TrypLE for 20min at 37C and resuspended and divided in two 96 v -bottom well plates 341 
+
+(Sarstedt, CAT 82 -1583) for flow cytometry. All cells were washed with 0.1% BSA in PBS. For 342 
+
+intracellular staining, melanoma cells were stained with the indicated antibodies diluted in 343 
+
+0.1% BSA in PBS for 30 min on ice in the dark. The following antibodies were used for flow 344 
+
+panel 1: LDnearIR -FVD780, FC -block, True monocyte stain, CD163 -BV785, CD8 -PE, 345 
+
+NGFR/CD146 -APC, CD137 -PECy7, PD1 -BV605 and Siglec -1-BV421 (see Table 1). The 346 
+
+following antibodies were used for flow panel 2: LDnearIR -FVD780, FC -block, True monocyte 347 
+
+stain, CD8 -BV421, CD163 -BV785, and Siglec -1-AF647 (produced in house) (see table). After 348 
+
+staining cells were washed once with 0.1% BSA in PBS and once with 0.5% BSA in Hanks 349 
+
+Balanced Salt Solution (HBSS). Subsequently, melanoma cells of both panels were stained 350 
+
+with Siglec -1-FC and Siglec -1-Fc -AF488 (see Table 1) in 0.5% BSA in HBSS for 30 min on 351 
+
+ice in the dark. After staining, cells were washed once with 0.5% BSA in HBSS and once with 352 
+
+0.1% BSA in PBS. Cells from flow panel 1 were measured in BD Fortessa flow cytometer. 353 
+
+After washing, cells from panel 2 were fixed with 2% Paraformaldehyde (PFA) for 15 min on 354 
+
+ice in the dark, followed by two washes of 0.5% saponin in 0.5% BSA in PBS. For intracellular 355 
+
+staining, the cells were stained with the indicated antibodies dilute in 0.5% saponin in 0.5% 356 
+
+BSA in PBS for 30 min on ice in the dark. The following antibodies were used: IFNg -PE and 357 
+
+TNF -PerCP (see Table 1). After staining, the cells were washed once with 0.5% saponin in 358 
+
+0.5% BSA in PBS and once with 0.5% BSA in PBS. After washing, the cells were measured 359 
+
+in BD Fortessa flow cytometer. Data of both panels was further analyzed using FACSDiva 360 
+
+during acquisition and Flowjo for post -analysis. 361 
+
+362 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+11 
+
+Antibody  Manufacturer  Catalog number  Dilution 
+
+LDnearIR -FVD780  Thermo Fisher Scientific  65 -0864 -14  1:1000 
+
+CD163 -BV785  Biolegend  333631  1:100 
+
+CD8 -PE  Biolegend  344706  1:100 
+
+NGFR -APC  Biolegend  345107  1:100 
+
+CD146 -APC  Biolegend  361015  1:100 
+
+CD137 -PECy7  Biolegend  309818  1:100 
+
+PD1 -BV605  Biolegend  329924  1:100 
+
+Siglec -1-BV421  Biolegend  346018  1:100 
+
+CD8 -BV421  BD Biosciences  562428  1:100 
+
+Siglec -1-Fc -AF488  Invitrogen  A11013  1:133 
+
+IFNg -PE  BD Pharmingem  554701  1:100 
+
+TNF -PerCP  Biolegend  502924  1:100 
+
+Table 1 : Antibodies used for flow cytometry analysis 363 
+
+Spatial transcriptomic analysis 364 
+
+We performed spatial transcriptomic analysis as described earlier ( Coccimiglio, Ibáñez -Molero 365 
+
+et al., in revisions ). Briefly , we analyzed single -cell spatial transcriptomics data from archived 366 
+
+FFPE tumour tissues of four patients with stage III melanoma treated with neoadjuvant 367 
+
+immune checkpoint blockade at Amsterdam UMC. Two responders (with major pathological 368 
+
+response) and two non -responders were selected. Tissue sections were processed using the 369 
+
+Xenium platform (10x Genomics), including RNA extraction, probe hybridization, imaging, and 370 
+
+signal decoding to generate spatial gene expression data. Data were analyzed in R using 371 
+
+Seurat, with quality filtering, integration, clustering, and manual cell -type annotation based on 372 
+
+lineage markers. Low -quality and mixed clusters were excluded, and spatial re -clustering was 373 
+
+performed where necessary. 374 
+
+375 
+
+Statistical analysis 376 
+
+The statistical tests used are stated in each figure. GraphPad and R were used for the 377 
+
+analysis. 378 
+
+379 
+
+Acknowledgements 380 
+
+We thank our colleagues in the department of Molecular Biology and Immunology (MCBI) for 381 
+
+fruitful discussions and input. In particular, we thank Alsya Affandi and Joke de Haan for their 382 
+
+input on SIGLEC1 blocking antibody. We also like to acknowledge the Flow Cytometry Facility 383 
+
+at MCBI and Pathology Facility at Amsterdam Medical Center (AMC) for their technical support 384 
+
+in the study , in particular Sara Rohani, Juan García -Vallejo and Sara García -García . We thank 385 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+12 
+
+our financial support from KWF 2024 -3 EXPL / 16684 , SPINOZA NWO SPI -93 -538 , European 386 
+
+Union Horizon 2020, Marie Skłodowska -Curie Actions Grant agreement No. 956758, 387 
+
+GLYTUNES Consortium , Amsterdam Institute for Immunology and Infectious Diseases and 388 
+
+Oncode Accelerator, a Dutch National Growth Fund project under grant number NGFOP2201 .389 
+
+390 
+
+Author contributions 391 
+
+S.I.M., Y.v.K conceived the study and designed the experiments. S.I.M. , M.C., B. O. S., M. B. 392 
+
+R., performed the experiments. S.I.M. performed bioinformatics analysis. S. W. and C.B .393 
+
+collected and analyzed single -cell RNA sequencing data from ICB -treated melanoma cohort. 394 
+
+S.I.M., G.C., M.L., T.d.G., and Y.v.K. designed and analyzed the melanoma cohort for spatial 395 
+
+transcriptomics. S.I.M. and Y.v.K. wrote the manuscript. All authors read and approved the 396 
+
+manuscript. The project was supervised by Y.v.K .397 
+
+398 
+
+Declaration of interests 399 
+
+S.I.M., is named inventor on patent P097110NL related to this work . T.D.G has served as 400 
+
+advisor to Mendus and Vivaldi Therapeutics . The rest of the authors declare no interest related 401 
+
+to this work. 402 
+
+403 
+
+Data availability statement 404 
+
+Processed spatial transcriptomics data are available upon request to authors and they will be 405 
+
+deposited in a public data repository. All other raw data are available upon request. 406 
+
+407 
+
+Code availability statement 408 
+
+Code is available upon request to authors and it will be deposited in github. 409 
+
+410 
+
+References 411 
+
+1. Blank, C. U. et al.  Neoadjuvant Nivolumab and Ipilimumab in Resectable Stage III 412 
+
+Melanoma. N. Engl. J. Med. 391 , 1696 –1708 (2024). 413 
+
+2. Ladányi, A. et al. Density of DC -LAMP+ mature dendritic cells in combination with 414 
+
+activated T lymphocytes infiltrating primary cutaneous melanoma is a strong independent 415 
+
+prognostic factor. Cancer Immunol. Immunother. 56 , 1459 –1469 (2007). 416 
+
+3. Yan, C. et al. Spatial distribution of tumor -infiltrating T cells indicated immune response 417 
+
+status under chemoradiotherapy plus PD -1 blockade in esophageal cancer. Front. 418 
+
+Immunol. 14 , 1138054 (2023). 419 
+
+4. Elomaa, H. et al. Spatially resolved multimarker evaluation of CD274 (PD -L1)/PDCD1 420 
+
+(PD -1) immune checkpoint expression and macrophage polarisation in colorectal cancer. 421 
+
+Br. J. Cancer 128 , 2104 –2115 (2023). 422 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+13 
+
+5. Homicsko, K. et al. PD -1-expressing macrophages and CD8 T cells are independent 423 
+
+predictors of clinical benefit from PD -1 inhibition in advanced mesothelioma. J. 424 
+
+Immunother. Cancer 11 , e007585 (2023). 425 
+
+6. Wang, J. et al. Multiplexed immunofluorescence identifies high stromal CD68+PD -L1+ 426 
+
+macrophages as a predictor of improved survival in triple negative breast cancer. Sci. Rep. 427 
+
+11 , 21608 (2021). 428 
+
+7. Kersten, K. et al. Spatiotemporal co -dependency between macrophages and exhausted 429 
+
+CD8+ T cells in cancer. Cancer Cell 40 , 624 -638.e9 (2022). 430 
+
+8. Van Der Leun, A. M., Thommen, D. S. & Schumacher, T. N. CD8+ T cell states in human 431 
+
+cancer: insights from single -cell analysis. Nat. Rev. Cancer 20 , 218 –232 (2020). 432 
+
+9. Komohara, Y., Jinushi, M. & Takeya, M. Clinical significance of macrophage heterogeneity 433 
+
+in human malignant tumors. Cancer Sci. 105 , 1 –8 (2014). 434 
+
+10. Marcovecchio, P. M., Thomas, G. & Salek -Ardakani, S. CXCL9 -expressing tumor -435 
+
+associated macrophages: new players in the fight against cancer. J. Immunother. Cancer 436 
+
+9, e002045 (2021). 437 
+
+11. Cheng, S. et al. A pan -cancer single -cell transcriptional atlas of tumor infiltrating myeloid 438 
+
+cells. Cell 184 , 792 -809.e23 (2021). 439 
+
+12. De Logu, F. et al. Spatial Proximity and Relative Distribution of Tumor -Infiltrating 440 
+
+Lymphocytes and Macrophages Predict Survival in Melanoma. Lab. Invest. 103 , 100259 441 
+
+(2023). 442 
+
+13. Chen, J. H. et al. Spatial Analysis of Human Lung Cancer Reveals Organized Immune 443 
+
+Hubs Enriched for Stem -like CD8 T Cells and Associated with Immunotherapy Response .444 
+
+http://biorxiv.org/lookup/doi/10.1101/2023.04.04.535379 (2023) 445 
+
+doi:10.1101/2023.04.04.535379. 446 
+
+14.  Scott, A. C.  et al.  TOX is a critical regulator of tumour -specific T cell differentiation. Nature 447 
+
+571 , 270 –274 (2019). 448 
+
+15. Kubota, K. et al. CD163+CD204+ tumor -associated macrophages contribute to T cell 449 
+
+regulation via interleukin -10 and PD -L1 production in oral squamous cell carcinoma. Sci. 450 
+
+Rep. 7, 1755 (2017). 451 
+
+16. Boissonnas, A. et al. CD8+ Tumor -Infiltrating T Cells Are Trapped in the Tumor -Dendritic 452 
+
+Cell Network. Neoplasia 15 , 85 -IN26 (2013). 453 
+
+17. Peranzoni, E. et al. Macrophages impede CD8 T cells from reaching tumor cells and limit 454 
+
+the efficacy of anti –PD -1 treatment. Proc. Natl. Acad. Sci. 115 , (2018). 455 
+
+18. Ibáñez -Molero, S. et al. Tumour -reactive heterotypic CD8 T cell clusters from clinical 456 
+
+samples. Nature 649 , 467 –476 (2026). 457 
+
+19. Prenzler, S. et al. The role of sialic acid -binding immunoglobulin -like -lectin -1 (siglec -1) in 458 
+
+immunology and infectious disease. Int. Rev. Immunol. 42 , 113 –138 (2023). 459 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+14 
+
+20. Klaas, M., Dubock, S., Ferguson, D. J. P. & Crocker, P. R. Sialoadhesin (CD169/Siglec -460 
+
+1) is an extended molecule that escapes inhibitory cis -interactions and synergizes with 461 
+
+other macrophage receptors to promote phagocytosis. Glycoconj. J. 40 , 213 –223 (2023). 462 
+
+21. Miller, M. J., Wei, S. H., Parker, I. & Cahalan, M. D. Two -Photon Imaging of Lymphocyte 463 
+
+Motility and Antigen Response in Intact Lymph Node. Science 296 , 1869 –1873 (2002). 464 
+
+22. Monks, C. R. F., Freiberg, B. A., Kupfer, H., Sciaky, N. & Kupfer, A. Three -dimensional 465 
+
+segregation of supramolecular activation clusters in T cells. Nature 395 , 82 –86 (1998). 466 
+
+23. Dustin, M. L., Chakraborty, A. K. & Shaw, A. S. Understanding the Structure and Function 467 
+
+of the Immunological Synapse. Cold Spring Harb. Perspect. Biol. 2, a002311 –a002311 468 
+
+(2010). 469 
+
+24. Depoil, D. et al. Immunological Synapses Are Versatile Structures Enabling Selective T 470 
+
+Cell Polarization. Immunity 22 , 185 –194 (2005). 471 
+
+25. Dekkers, J. F. et al. Uncovering the mode of action of engineered T cells in patient cancer 472 
+
+organoids. Nat. Biotechnol. 41 , 60 –69 (2023). 473 
+
+26. Affandi, A. J. et al.  Selective tumor antigen vaccine delivery to human CD169 + antigen -474 
+
+presenting cells using ganglioside -liposomes. Proc. Natl. Acad. Sci. 117 , 27528 –27539 475 
+
+(2020). 476 
+
+27. Van Dinther, D. et al. Comparison of Protein and Peptide Targeting for the Development 477 
+
+of a CD169 -Based Vaccination Strategy Against Melanoma. Front. Immunol. 9, 1997 478 
+
+(2018). 479 
+
+28. Prenzler, S. et al. The role of sialic acid -binding immunoglobulin -like -lectin -1 (siglec -1) in 480 
+
+immunology and infectious disease.  Int. Rev. Immunol.  42 , 113 –138 (2023). 481 
+
+29.  Van Den Berg, T. K.  et al.  Sialoadhesin on macrophages: its identification as a lymphocyte 482 
+
+adhesion molecule. J. Exp. Med. 176 , 647 –655 (1992). 483 
+
+30. Azevedo, C. M. et al. Reprogramming CD8+ T -cell Branched N- Glycosylation Limits 484 
+
+Exhaustion, Enhancing Cytotoxicity and Tumor Killing. Cancer Immunol. Res. 13 , 1655 –485 
+
+1673 (2025). 486 
+
+31. Büll, C. et al. Sialic Acid Blockade Suppresses Tumor Growth by Enhancing T -cell –487 
+
+Mediated Tumor Immunity. Cancer Res. 78 , 3574 –3588 (2018). 488 
+
+32. Affandi, A. J. et al. CD169 Defines Activated CD14+ Monocytes With Enhanced CD8+ T 489 
+
+Cell Activation Capacity. Front. Immunol. 12 , 697840 (2021). 490 
+
+33. Asano, K. et al. CD169 -Positive Macrophages Dominate Antitumor Immunity by 491 
+
+Crosspresenting Dead Cell -Associated Antigens. Immunity 34 , 85 –95 (2011). 492 
+
+34. Ohnishi, K. et al. CD 169 ‐positive macrophages in regional lymph nodes are associated 493 
+
+with a favorable prognosis in patients with colorectal carcinoma. Cancer Sci. 104 , 1237 –494 
+
+1244 (2013). 495 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+15 
+
+35. Ohnishi, K. et al. Prognostic significance of CD 169 ‐positive lymph node sinus 496 
+
+macrophages in patients with endometrial carcinoma. Cancer Sci. 107 , 846 –852 (2016). 497 
+
+36. Izquierdo -Useros, N. et al. Siglec -1 Is a Novel Dendritic Cell Receptor That Mediates HIV -498 
+
+1 Trans -Infection Through Recognition of Viral Membrane Gangliosides. PLoS Biol. 10 ,499 
+
+e1001448 (2012). 500 
+
+37. Baars, A. et al. Skin tests predict survival after autologous tumor cell vaccination in 501 
+
+metastatic melanoma: Experience in 81 patients. Ann. Oncol. 11 , 965 –970 (2000). 502 
+
+503 
+
+504 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+16 
+
+FIGURE S AND FIGURE LEGENDS 505 
+
+506 
+
+Figure 1 Single -cell differential gene expression analysis reveals higher expression of 507 
+
+SIGLEC1 in inflammatory macrophages that are in cluster with CD8+ T cells 508 
+
+a) Schematic representation of discovery patient cohort analysis. b) Differential gene 509 
+
+expression analysis in Mo/Mac clusters versus singlets. Significant genes are indicated as red 510 
+
+dots. Top genes are outlined. c) SIGLEC1 mRNA expression in Mo/Mac inflammatory and 511 
+
+non -inflammatory defined in Ibáñez -Molero , Veldman et al. 18  Wilcox test used for statistical 512 
+
+analysis d) Schematic representation of validation patient cohort analysis. e) tSNE analysis 513 
+
+and representative pictures of singlets and clusters found in a representative melanoma 514 
+
+patient. Four additional patients shown in Extended Data Fig. 1a. f) SIGLEC1 expression in 515 
+
+different APC subtypes as singlets or clusters with CD8+ T cells. 2way ANOVA test used for 516 
+
+statistical analysis. 517 
+
+518 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+17 
+
+519 
+
+Figure 2 SIGLEC1 re -localizes to the immune interface between inflammatory 520 
+
+macrophages and CD8+ T cells and facilitates their cluster formation 521 
+
+a) Schematic representation of monocyte -derived macrophage -T cell in vitro co -culture model. 522 
+
+b) Imagestream analysis of co -cultures from (a) after 1h incubation. Three types of 523 
+
+macrophages are used: non -polarized, inflammatory and suppressive. Markers used are 524 
+
+indicated in colors: blue (CD8), yellow (CD68) and red (SIGLEC1). Arrows indicate interface 525 
+
+between two cells with SIGLEC1 re -localization. c) Median fluorescence intensity (MFI) of 526 
+
+SIGLEC1 in macrophages from (b). Ordinary one -way ANOVA used for statistical test. d) 527 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+18 
+
+Interface re -localization analysis performed on the three macrophages subtypes from (b). 528 
+
+Lines indicate individual cells expression at their interface or not -interface. Paired t -test used 529 
+
+for statistical analysis. e) Representative flow cytometry plots of macrophage -T cell co -530 
+
+cultures , gate d on double positive event s as indicate d (i.e. clusters ). Number on the gate 531 
+
+indicate the frequency of clusters from alive cells f) Cluster formation quantification from (e) 532 
+
+with anti -SIGLEC1 (+) or isotype ( -) treatments. 2way ANOVA test used for statistical analysis. 533 
+
+534 
+
+535 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+19 
+
+536 
+
+Figure 3 SIGLEC1 ligands are higher expressed in activated T cells and their blockade 537 
+
+ex vivo reduces their cytokine production 538 
+
+a) Frequencies of exhausted/activated and non -exhausted CD8 +T cells singlets and clusters 539 
+
+from scRNA -seq cohort from Ibáñez -Molero , Veldman et al. b) Frequency of T cell s positive 540 
+
+for activation markers (PD1 and CD137) in populations negative (neg) and positive (pos) for 541 
+
+SIGLEC1 ligand expression, measured with mouse recombinant SIGLEC1 -fc construct. Ratio 542 
+
+paired t test used for statistical analysis. c) Schematic representation of ex vivo melanoma 543 
+
+patient sample experiment, treated with anti -SIGLEC1 blocking antibody or anti -SIGLEC1 544 
+
+ligands blocking, or combination (combo) for four days. d) Quantification of frequency of TNF 545 
+
+and IFNG positive CD8 + T cells from (c). Lognormal RM one -way ANOVA test used for 546 
+
+statistical analysis. 547 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+20 
+
+548 
+
+Figure 4 SIGLEC1 expression on macrophages and their proximity to CD8+ T cells 549 
+
+predict ICB response 550 
+
+a) Sche matic representation of spatial transcriptomics ICB -treated melanoma patient cohort s551 
+
+(n=4 , n=4 ). In the first cohort four pre -ICB melanoma samples were included (two responders 552 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+21 
+
+and two non -responders) and analyzed by scRNA -seq. In the second cohort three matched 553 
+
+ICB -treated melanoma patient samples pre - and post -ICB, and one patient only pre - ICB were 554 
+
+included and analyzed for spatial transcriptomics (Xenium), a total of seven tumour tissue 555 
+
+slides , as described in Coccimiglio, Ibáñez -Molero et al . (under revision) . b) SIGLEC1 mRNA 556 
+
+expression in all cell types annotated in the second cohort. c) Differential gene expression 557 
+
+analysis between responders and non -responders, performed on macrophage cells from the 558 
+
+first cohort. Dotted lines indicate P<0.05 and log2 (fold change)>0.5. d) SIGLEC1 mRNA 559 
+
+expression in macrophage cells from second cohort in responders and non -responders, pre -560 
+
+and post -ICB treatment on the second cohort. Wilcox with Bon ferr oni correction test used for 561 
+
+statistical analysis. e) Mean SIGLEC1 expression in macrophage cells relative to distance 562 
+
+groups from the closest target cell. “Near” corresponds to the first tercile, “Intermediate” to the 563 
+
+second tercile, and “Far” to the third tercile of all distances calculated. Bar plots show the 564 
+
+average SIGLEC1 expression per group with standard deviation. Wilcoxon test with Bonferroni 565 
+
+correction used for statistical analysis. Analysis performed on pre -ICB samples (left) and post -566 
+
+ICB samples (right). f) Distance of SIGLEC1+ macrophage cells to CD8+ T cells in responders 567 
+
+and non -responders pre - and post -ICB treatment. Wilcox test used for statistical analysis. g) 568 
+
+Example pictures of responder and non -responders, pre - and post -ICB patient samples Dots 569 
+
+depict expression of genes: SIGLEC1 (orange), CD8 (blue, T cell marker) .570 
+
+571 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+22 
+
+572 
+
+Figure 5 SIGLEC1 expression on macrophages correlates with T cell activation and 573 
+
+exhaustion signatures that differentiate ICB response 574 
+
+a) Example pictures of responder and non -responders. Icons depict expression of genes: 575 
+
+SIGLEC1 (orange), CD8 (blue, T cell marker) , CD163 (purple, macrophage marker), LAG3 576 
+
+(yellow, ICB), PDCD1 (yellow, ICB). b) Heatmap showing gene expression of the indicated 577 
+
+gene in the indicated cell type (eg. SIGLEC1 gene expression in macrophage cells). 578 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+23 
+
+Unsupervised row clustered . Blue indicate s higher relative expression, rede indicate s relative 579 
+
+lower expression. 580 
+
+581 
+
+582 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint 24 
+
+EXTENDED DATA FIGURE AND FIGURE LEGENDS 583 
+
+584 
+
+585 
+
+586 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint 25 
+
+Extended Data Figure 1 587 
+
+a) tSNE singlets and clusters found in four melanoma patients. b) SIGLEC1 expression in 588 
+
+singlets or cluster ed CD8+ T cells. 2way ANOVA test used for statistical analysis. c) SIGLEC 7589 
+
+and SIGLEC9 expression in different APC subtypes as singlets or clusters with CD8+ T cells. 590 
+
+2way ANOVA test used for statistical analysis. 591 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+26 
+
+592 
+
+Extended Data Figure 2593 
+
+a) Imaging flow cytometry gating strategy of experiment in Fig. 2b -d. b) Median fluorescence 594 
+
+intensity of m acrophage phenotype markers (CD206, CD86, PDL -1) from experiment in Fig. 595 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint 27 
+
+2b-f. c) Flow cytometry gating strategy of experiment in Fig. 3b -c. d) Frequencies of CD8 + T596 
+
+cells and macrophages from alive cells, and SIGLEC1+ macrophages from macrophage 597 
+
+population. 598 
+
+599 
+
+600 
+
+(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint 28 
+
+601 
+
+Extended Data Figure 3 602 
+
+a) Quantification of frequency of PD1 and CD137 positive CD8+ T cells from Fig. 3b .603 
+
+Lognormal RM one -way ANOVA test used for statistical analysis. b) Mean SIGLEC1 604 
+
+expression in DC s relative to distance groups from the closest target cell. “Near” corresponds 605 
+
+> (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission. The copyright holder for this preprint this version posted July 15, 2026. ;https://doi.org/10.64898/2026.07.09.737484 doi: bioRxiv preprint
+
+29 
+
+to the first tercile, “Intermediate” to the second tercile, and “Far” to the third tercile of all 606 
+
+distances calculated. Bar plots show the average SIGLEC1 expression per group with 607 
+
+standard deviation. Wilcoxon test with Bonferroni correction used for statistical analysis. 608 
+
+Analysis performed on pre -ICB samples (left) and post -ICB samples . c) Heatmap showing 609 
+
+gene expression of the indicated gene in the indicated cell type (eg. SIGLEC1 gene expression 610 
+
+in macrophage cells). Unsupervised row clustered . Blue indicates higher expression, rede 611 
+
+indicates lower expression. 612 
+
+613
