@@ -1,0 +1,24 @@
+---
+title: Macrophage calcium signaling dynamics revealed using genetically-encoded sensors
+title_zh: 利用基因编码传感器揭示巨噬细胞钙信号动力学
+authors: "Chalmers, S. B., Stewart, T. A., Hughes, K., Kurumlian, A., Folacci, M., Gieniec, K. A., Stevenson, A. J., Teakle, N., Sehgal, A., Paydari, E., Thomsen, J. S., Irvine, K. M., Pandzic, E., Poole, K., Hume, D. A., Davis, F. M."
+date: 2026-07-17
+pdf: "https://www.biorxiv.org/content/10.64898/2026.07.13.737685v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.0
+evidence: 巨噬细胞钙信号动态及对组织特异性信号的响应
+tldr: 巨噬细胞在组织稳态和免疫防御中起关键作用，钙离子是其核心信号分子。本研究利用表达遗传编码生物传感器的模型，首次可视化了巨噬细胞中钙信号的动态变化与异质性。研究揭示了巨噬细胞显著的机械敏感性，并深入探讨了Piezo1通道在生理过程中的作用，为理解巨噬细胞如何整合环境信号提供了重要见解。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-001.webp\", \"caption\": \"\", \"page\": 6, \"index\": 1, \"width\": 2497, \"height\": 2292}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-002.webp\", \"caption\": \"\", \"page\": 7, \"index\": 2, \"width\": 2172, \"height\": 1865}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-003.webp\", \"caption\": \"\", \"page\": 10, \"index\": 3, \"width\": 2493, \"height\": 3091}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-004.webp\", \"caption\": \"\", \"page\": 12, \"index\": 4, \"width\": 1223, \"height\": 2316}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-005.webp\", \"caption\": \"\", \"page\": 15, \"index\": 5, \"width\": 1538, \"height\": 2034}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-006.webp\", \"caption\": \"\", \"page\": 17, \"index\": 6, \"width\": 991, \"height\": 1897}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-007.webp\", \"caption\": \"\", \"page\": 18, \"index\": 7, \"width\": 826, \"height\": 1751}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-008.webp\", \"caption\": \"\", \"page\": 20, \"index\": 8, \"width\": 2488, \"height\": 2151}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-009.webp\", \"caption\": \"\", \"page\": 21, \"index\": 9, \"width\": 1543, \"height\": 1742}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-010.webp\", \"caption\": \"\", \"page\": 22, \"index\": 10, \"width\": 2018, \"height\": 968}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-011.webp\", \"caption\": \"\", \"page\": 23, \"index\": 11, \"width\": 1443, \"height\": 471}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-012.webp\", \"caption\": \"\", \"page\": 25, \"index\": 12, \"width\": 2489, \"height\": 1708}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-013.webp\", \"caption\": \"\", \"page\": 26, \"index\": 13, \"width\": 2489, \"height\": 558}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-13-737685-v1/fig-014.webp\", \"caption\": \"\", \"page\": 27, \"index\": 14, \"width\": 2414, \"height\": 1140}]"
+motivation: 尽管钙离子对巨噬细胞功能至关重要，但其在生理环境下的时空动态特征仍不明确。
+method: 采用表达遗传编码生物传感器和荧光标记通道的小鼠模型，结合Piezo1基因敲除技术进行跨生命周期的分析。
+result: 成功可视化了巨噬细胞钙信号的动态异质性，并发现该细胞具有极高的机械敏感性。
+conclusion: 研究阐明了Piezo1通道在巨噬细胞钙信号传导中的关键作用，对巨噬细胞生物学及相关组织支持研究具有广泛意义。
+---
+
+## 摘要
+巨噬细胞（MΦs）存在于所有哺乳动物器官中，能够适应并影响其所在的组织。这些多功能细胞能迅速响应组织特异性信号，清除碎片，并作为抵御病原体的第一道防线。它们快速行动的能力与其在组织中的丰度、特定排列，以及它们所拥有的检测、处理和整合突发信号的系统有关。Ca2+ 是一种快速的第二信使，与巨噬细胞的许多核心功能相关。然而，巨噬细胞中具有生理相关性的 Ca2+ 信号的时空特征在很大程度上仍未被表征。利用表达基因生物传感器和荧光标记通道的小鼠模型，我们可视化了巨噬细胞 Ca2+ 信号的动力学和异质性，揭示了这些细胞中显著的机械敏感性，并通过对全生命周期敲除模型的分析，表征了 Piezo1 通道基因消融的生理后果。我们对巨噬细胞 Ca2+ 信号动力学的深入研究，对于巨噬细胞生物学领域及其所支持的组织具有广泛的意义。
+
+## Abstract
+Macrophages (M{Phi}s) inhabit all mammalian organs, adapting to and influencing the tissues in which they reside. These versatile cells rapidly respond to tissue-specific signals, clean up debris and serve as the first line of defense against pathogens. Their ability to act quickly relates to their abundance and specific arrangement in tissues, as well as the systems they possess for detecting, processing and integrating emergent signals. Ca2+ is a fast second messenger that has been linked to many of the core functions of M{Phi}s. However, spatiotemporal features of physiologically-relevant Ca2+ signals in M{Phi}s remain largely uncharacterized. Using mouse models expressing genetic biosensors and fluorescently tagged channels, we visualize M{Phi} Ca2+ signal dynamics and heterogeneity, uncover a remarkable degree of mechanosensitivity in these cells, and characterize the physiological consequences of genetic ablation of Piezo1 channels via analysis of knockout models across their lifetime. Our in-depth investigation of M{Phi} Ca2+ signaling dynamics has broad relevance for the field of M{Phi} biology and the tissues that these cells support.

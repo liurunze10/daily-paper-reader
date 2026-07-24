@@ -1,0 +1,2578 @@
+Title: 2026.07.13.737685v1.full.pdf
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.07.13.737685v1.full.pdf
+
+Number of Pages: 53
+
+Markdown Content:
+Macrophage calcium signaling dynamics revealed using genetically-encoded sensors 1
+
+2
+
+Silke B. Chalmers 1,§ , Teneale A. Stewart 2,§ , Katherine Hughes 3 , Anie Kurumlian 4 , Mathilde Folacci 1 ,3
+
+Krystyna A. Gieniec 4 , Alexander J. Stevenson 2 , Ngari Teakle 2 , Anuj Sehgal 2 , Emma Paydari 1 , Jesper 4
+
+S. Thomsen 1 , Katharine M. Irvine 2 , Elvis Pandzic 5 , Kate Poole 4 , David A. Hume 2, *, Felicity M. 5
+
+Davis 1,6,7 *6
+
+7
+
+8 
+
+> 1
+
+Department of Biomedicine, Aarhus University, Aarhus, Denmark 9 
+
+> 2
+
+Mater Research Institute-The University of Queensland, The University of Queensland, Brisbane, 10 
+
+Queensland, Australia 11  
+
+> 3
+
+Department of Veterinary Medicine, University of Cambridge, Cambridge, United Kingdom 12  
+
+> 4
+
+School of Biomedical Sciences, University of New South Wales, Sydney, Australia 13  
+
+> 5
+
+Katharina Gaus Light Microscopy Facility, University of New South Wales, Sydney, Australia 14  
+
+> 6
+
+School of Pharmacy, The University of Queensland, Brisbane, Australia 15  
+
+> 7
+
+Danish Research Institute of Translational Neuroscience, Aarhus University, Aarhus, Denmark 16  
+
+> §
+
+Equal contribution 17 
+
+18 
+
+*Correspondence to: David A. Hume ( david.hume@uq.edu.au ) and Felicity M. Davis 19 
+
+(felicity@biomed.au.dk )20 
+
+21 
+
+22 
+
+23 
+
+24 
+
+Keywords: Calcium signaling, GCaMP6f, macrophage, PIEZO1, mechanosignaling, purinergic, ATP. 25 
+
+26 
+
+27 
+
+28 
+
+29 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Summary 30 
+
+Macrophages (M Φs) inhabit all mammalian organs, adapting to and influencing the tissues in which 31 
+
+they reside. These versatile cells rapidly respond to tissue-specific signals, clean up debris and serve 32 
+
+as the first line of defense against pathogens. Their ability to act quickly relates to their abundance and 33 
+
+specific arrangement in tissues, as well as the systems they possess for detecting, processing and 34 
+
+integrating emergent signals. Ca 2+ is a fast second messenger that has been linked to many of the core 35 
+
+functions of M Φs. However, spatiotemporal features of physiologically-relevant Ca 2+ signals in M Φs36 
+
+remain largely uncharacterized. Using mouse models expressing genetic biosensors and fluorescently 37 
+
+tagged channels, we visualize M Φ Ca 2+ signal dynamics and heterogeneity, uncover a remarkable 38 
+
+degree of mechanosensitivity in these cells, and characterize the physiological consequences of genetic 39 
+
+ablation of Piezo1 channels via analysis of knockout models across their lifetime. Our in-depth 40 
+
+investigation of M Φ Ca 2+ signaling dynamics has broad relevance for the field of M Φ biology and the 41 
+
+tissues that these cells support. 42 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Introduction 43 
+
+MΦs are an abundant resident cell population in every organ in the body  (1). They are uniformly and 44 
+
+regularly distributed and are associated with basement membranes of epithelia and endothelia, the 45 
+
+surfaces of bone, muscle and connective tissue fibers, and the capsules of all major organs  (1, 2). Their 46 
+
+survival, proliferation and differentiation are controlled by signals from the M Φ colony-stimulating 47 
+
+factor receptor (CSF1R), a tyrosine kinase receptor expressed exclusively in the M Φ lineage  (3).48 
+
+Transgenic reporter genes based upon regulatory elements of the Csf1r gene have enabled visualization 49 
+
+of M Φs in many different tissue types  (4–9). Resident M Φs are traditionally viewed as sentinels, 50 
+
+providing the first line of defense against pathogens, but there is increasing evidence of their 51 
+
+importance in homeostasis and sensing of tissue injury  (10 , 11 ).52 
+
+53 
+
+Regulated flux of Ca 2+ across the plasma membrane and from intracellular Ca 2+ storing organelles are 54 
+
+important signal transduction pathways in nearly all mammalian cells  (12 ). The emergence of cell-55 
+
+permeant, Ca 2+ -sensitive dyes in the 1980s  (13 –15 ) permitted visualization of global intracellular Ca 2+ 
+
+56 
+
+responses in immune cells and a subsequent eruption of studies describing ligand-mediated signal 57 
+
+transduction events. One limitation to the use of these probes for the study of M Φ biology became 58 
+
+evident very early, namely the relatively rapid extrusion of dyes from the cell by organic acid 59 
+
+transporters  (16 ). There have also been concerns that Ca 2+ -reporters dampen intracellular Ca 2+ 
+
+60 
+
+responses  (17 ), and/or have off-target effects, potentially modifying or prolonging the response being 61 
+
+measured  (18 ). Notwithstanding these concerns, global changes in intracellular Ca 2+ have been 62 
+
+measured in M Φ and M Φ-like cell lines from mice and humans in response to a wide range of stimuli, 63 
+
+including adhesion, migration, phagocytosis, and activation of purinergic and other plasma membrane 64 
+
+receptors (reviewed in Ref  (19 )). 65 
+
+66 
+
+The ability of intracellular Ca 2+ to regulate and coordinate diverse cellular processes throughout the 67 
+
+body is attributable to the properties of this signal in space, time and magnitude  (20 ). Ca 2+ signals may 68 
+
+arise due to release of Ca 2+ from intracellular stores [e.g., by opening of inositol-1,4,5-trisphosphate 69 
+
+receptors (InsP 3 Rs) on the endoplasmic reticulum (ER)] or by Ca 2+ entry across the plasma membrane 70 
+
+(e.g., via Ca 2+ release-activated Ca 2+ channels or ionotropic purinergic receptors). Store-operated Ca 2+ 
+
+71 
+
+entry (SOCE), involving ORAI channels and their classical activators, the ER Ca 2+ sensors STIM1/2, 72 
+
+has been detected in M Φs in response to a range of stimuli, including activation of endocytic and 73 
+
+chemotactic receptors. However, knockout of STIM1/2 (producing complete inhibition of SOCE) 74 
+
+demonstrate that this pathway is redundant in these cells  (21 ). Ca 2+ oscillations involving SOCE have 75 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+also been implicated in the differentiation of osteoclasts  (22 –24 ). Regulated Ca 2+ flux in M Φs is 76 
+
+induced by numerous stimuli, including activation of purinergic receptors (e.g., P2RX7 and P2RX4) 77 
+
+(25 , 26 ), C5AR1  (27 ), transient receptor potential vanilloid (TRPV) receptors 2 and 4  (28 , 29 ), and the 78 
+
+channel-kinase TRPM7  (30 , 31 ), and is key to activation of the NLRP3 inflammasome  (32 , 33 ). More 79 
+
+recently, the mechanosensitive, non-selective cation channel PIEZO1 was added to the set of Ca 2+ -80 
+
+permeable regulatory proteins in M Φs during various pathologies  (34 , 35 ).81 
+
+82 
+
+An alternative to the use of Ca 2+ -sensitive dyes for the visualization of intracellular Ca 2+ came with 83 
+
+the introduction of genetically-encoded Ca 2+ indicators, e.g., GCaMP and its derivatives, which are 84 
+
+based upon fusions of calmodulin, the calmodulin binding M13 peptide and green fluorescent protein 85 
+
+(36 –38 ). The GCaMP scaffold has since been modified by numerous groups, to optimize speed, 86 
+
+sensitivity and brightness  (39 ). GCaMP6f emerged to enable ultrasensitive imaging of rapid Ca 2+ 
+
+87 
+
+transients associated with neuronal activity  (40 ). The majority of studies utilizing GCaMP6f to date 88 
+
+have focused on Ca 2+ signals associated with neuronal activity in vitro and in vivo . However, important 89 
+
+studies in astrocytes, cardiomyocytes, and epithelial cells have illustrated its potential for imaging sub-90 
+
+cellular Ca 2+ events, as well as fast Ca 2+ transients and large intercellular responses, across a range of 91 
+
+cell and tissue types  (41 –44 ). We reasoned that expression of GCaMP6f in M Φs could offer a valuable 92 
+
+platform for visualization and analysis of regulated Ca 2+ flux in vivo and in vitro. For this purpose, we 93 
+
+took advantage of a Cre-dependent GCaMP6f line  (45 ) and a Csf1r -cre line  (46 ) that was anticipated 94 
+
+to drive reporter expression in cells of the M Φ lineage. This model enabled us to visualize Ca 2+ events 95 
+
+from the scale of sub-cellular dynamics to the level of tissue-wide organization. 96 
+
+97 
+
+Results 98 
+
+Spatiotemporal dynamics of Ca 2+ responses in tissue M Φs99 
+
+The Csf1r promoter and enhancer have been used extensively to drive reporter genes  (4, 47 ) as well 100 
+
+as a tamoxifen-inducible cre transgene  (48 ). We wished to avoid the use of tamoxifen, which can have 101 
+
+direct effects on M Φ function  (3, 49 ). The specificity of expression of cre in the Csf1r-icre line  (50 )102 
+
+was originally determined by crossing to a conditional Rosa26-YFP reporter line. Yellow fluorescent 103 
+
+protein (YFP) was detected in various tissues including liver,  spleen , intestine, heart, kidney, and 104 
+
+muscle. Based upon localization of YFP in a subset of these tissues, the signal was inferred to be M Φ-105 
+
+associated. We generated mice expressing Csf1r-cre in combination with a Cre-dependent Ca 2+ sensor 106 
+
+GCaMP6f and Ca 2+ -independent red fluorescent protein tdTomato (tdT ) at the Rosa26 locus (herein 107 
+
+referred to as GCaMP6f + ;tdT +;Csf1r-cre cre/+ mice) ( Fig 1A-B and S1A ). We observed idiosyncratic 108 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+expression of tdT-positive cells in some tissues ( Fig S1B ), most notably the pancreas and peri 109 
+
+pancreatic fat, which had a visibly pink hue ( Fig 1B-C ). This finding raises questions regarding the 110 
+
+interpretation of an earlier study investigating the role of STAT3 in tumorigenesis  (50 ) and a 111 
+
+subsequent study that used Csf1r-icre to claim that Csf1r can be expressed in neurons  (51 ).112 
+
+Nevertheless, the expression of tdT in regularly spaced stellate cells in the skin, salivary gland and 113 
+
+mammary gland ( Fig 1B ) resembled the location of Csf1r reporter transgenes, including using a knock-114 
+
+in CSF1R-FusionRed transgene that reports protein expression  (52 ).115 
+
+116 
+
+GCaMP6 has been used in microglia to visualize intracellular Ca 2+ responses to acute neuronal 117 
+
+activation in vivo and purinergic stimulation in brain slices  (53 , 54 ). We first determined whether the 118 
+
+reporter was sufficiently sensitive to detect Ca 2+ responses in other whole tissue preparations. 119 
+
+Spontaneous Ca 2+ activity was observed in GCaMP6f expressing cells in lymph nodes ( Fig 1D and 120 
+
+Movie S1 ). To mimic a mechanical stimulus, we lightly touched different tissue types with the tip of 121 
+
+a needle. In both skin and adipose tissue, we observed fast Ca 2+ signals in GCaMP6f-positive cells, 122 
+
+notably in epidermal Langerhans cells, where stimuli of this intensity would not be uncommon ( Fig 123 
+
+1E-F and Movies S2-3 ). Ca 2+ signals ramified away from the point of contact and were transient in 124 
+
+nature, suggesting a sensitive response to a minimally-invasive force, likely involving biochemical 125 
+
+and mechanical aspects. 126 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+127 
+
+Fig 1: GCaMP6f + ;tdT +;Csf1r-cre cre/+ model development and characterization . A, The strategy for 128 
+
+generating GCaMP6f +;tdT +;Csf1r-cre cre/+ mice (see also Fig S1). B, A comparison of 129 
+
+GCaMP6f +;tdT +;Csf1r-cre cre/+ and Csf1r-EGFP (MacGreen) models. Images are maximum intensity 130 
+
+projections of individual optical slices showing tdT + cells (top panel) or EGFP + cells (bottom panel) 131 
+
+in the skin, salivary gland, pubertal mammary gland and pancreas (see also Fig S1). C, Image showing 132 
+
+the abnormal pinkish hue of pancreas, and peri pancreatic fat, from GCaMP6f +;tdT +;Csf1r-cre cre/+ 
+
+133 
+
+mice. Live imaging of spontaneous intracellular Ca 2+ activity in lymph nodes ( D) and mechanically-134 
+
+induced intracellular Ca 2+ recordings in ear skin ( E) and adipose tissue ( F). Arrows in D highlight 135 
+
+spontaneously active cells. Asterisk in E and F shows point of mechanical stimulation; [min:sec]; n =136 
+
+3–4. 137 
+
+138 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+139 
+
+Fig S1 : A, GCaMP6f +;tdT +;Csf1r-cre cre/+ mice were generated by crossing GCaMP6f-flox , tdTomato-140 
+
+flox and Csf1r-cre mice (Fig 1) or by using Salsa6f-flox mice (containing tdT linked to GCaMP6f by 141 
+
+a V5 epitope tag). B, Additional panel of organs imaged from GCaMP6f +;tdT +;Csf1r-cre cre/+ vs 142 
+
+Macgreen mice (related to Fig 1); n = 3. 143 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint MΦ single cell Ca 2+ responses 144 
+
+We next isolated peritoneal M Φs from GCaMP6f +;tdT +;Csf1r-cre cre/+ mice and generated bone 145 
+
+marrow-derived macrophages (BMDM Φs) from femoral bone marrow. Expression of tdT and 146 
+
+GCaMP6f fluorescent proteins were confirmed in F4/80-positive BMDM Φs using endogenous tdT 147 
+
+fluorescence ( Fig 2A ) and an anti-GFP antibody recognizing GCaMP6f  (55 ) (Fig S2A ). Phagocytosis 148 
+
+by immune cells is believed to be associated with local elevations in intracellular Ca 2+  (56 ). However, 149 
+
+to our knowledge, this has never been confirmed in tissue M Φs with Ca 2+ imaging with subcellular 150 
+
+resolution. GCaMP6f was sufficiently sensitive to detect localized Ca 2+ events associated with particle 151 
+
+uptake in M Φs ( Fig 2B , blue box) but limitations on temporal resolution under these imaging 152 
+
+conditions precluded a detailed characterization of the nature of wave propagation from the phagocytic 153 
+
+cup. Nevertheless, we observed that peritoneal M Φs exposed to fluorescent zymosan exhibited large 154 
+
+cytosolic Ca 2+ oscillations as they interacted with and ultimately engulfed fluorescent particles ( Fig 155 
+
+2B and Movie S4 ). Ca 2+ oscillations continued for approximately 40 s and resumed when M Φs156 
+
+engulfed subsequent units. 157 
+
+158 
+
+We next explored M Φ responses to agents that have previously been linked to Ca 2+ signaling in 159 
+
+primary M Φs and/or cell lines. C5a, a central effector produced through complement activation, binds 160 
+
+to the G-protein coupled receptors, C5aR1 and 2. Consistent with previous findings in fura2-loaded 161 
+
+MΦs (57 ), C5a (100 nM) caused a large transient increase in intracellular Ca 2+ in nearly all GCaMP6f-162 
+
+expressing BMDM Φs ( Fig 2C, S2B-C, Movie S5-6 ). The Ca 2+ response was similar in nature (peak, 163 
+
+% responding) to the Ca 2+ response caused by the Ca 2+ ionophore ionomycin, which was sustained 164 
+
+(Fig 2C , S2B-C and Movie S7 ). By comparison, relatively high concentrations of the purinergic 165 
+
+receptor agonist adenosine triphosphate (ATP), known to activate ionotropic P2X and metabotropic 166 
+
+P2Y receptors in M Φs (58 ), produced Ca 2+ responses in only ~50% of cells bathed in Ca 2+ -containing 167 
+
+buffer ( Fig 2D-F , Movie S8 ), suggestive of intriguing heterogeneity in purinergic receptor expression, 168 
+
+modulation and/or localization amongst neighboring BMDM Φs. The ATP-induced Ca 2+ signal 169 
+
+propagated through these cells as a slow (6–8 s) intracellular wave ( Fig 2D ). 170 
+
+171 
+
+The ion channel PIEZO1, identified by Coste et al. in 2010  (59 ), has since been linked to numerous 172 
+
+processes involved in the M Φ response to infection or injury, including bactericidal activity  (60 ),173 
+
+polarization  (35 ), efferocytosis  (61 ) and phagocytosis  (62 ). This mechanosensitive Ca 2+ -permeable ion 174 
+
+channel is activated by the synthetic small molecule Yoda-1. Consistent with this, GCaMP6f-175 
+
+expressing BMDM Φs showed large, measurable cytosolic responses to 5 and 10 μM (but not 0.3 μM) 176 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Yoda-1 ( Fig 2G-I ). Robust Yoda-1 responses were also observed in tissue resident peritoneal M Φs177 
+
+(Fig S2D ). Intracellular Ca 2+ levels remained elevated for several minutes after Yoda-1 stimulation 178 
+
+and exhibited decaying oscillations ( Fig 2H and Movie S9 ). Piezo1 , but not Piezo2 , mRNA was 179 
+
+detectable in BMDM Φs, as were other Ca 2+ -permeable channels widely studied in this cell type ( Fig 180 
+
+2J ). This prompted us to further explore the signaling and function of PIEZO1 in primary M Φs and 181 
+
+its potential regulation of M Φ function in vivo under physiological conditions. 182 
+
+183 
+
+MΦ Ca 2+ responses to fluid shear stress 184 
+
+PIEZO1 is involved in the sensing of shear stress in endothelial cells and shear stress-mediated 185 
+
+elevations in cytosolic Ca 2+  (63 , 64 ), which are phenomena important for normal vascular development 186 
+
+and homeostasis  (65 , 66 ). To better understand the mechanisms by which M Φs sense shear stress, we 187 
+
+took the simple qualitative approach of vigorously flushing an adherent monolayer of M Φs with 188 
+
+physiological salt solution and recorded resulting intracellular Ca 2+ responses ( Fig 2K, Fig S2E and 189 
+
+Movie S10 ). Using this approach, we detected robust intracellular Ca 2+ responses to fluid shear stress 190 
+
+in adherent BMDM Φs ( Fig 2K-L ). To assess whether shear stress also increases in Ca 2+ in M Φs in 191 
+
+suspension, we investigated whether a similar response could be detected using flow cytometry. 192 
+
+Indeed, GCaMP6f-expressing M Φs produced a fluorescent signal that was dependent on flow rate ( Fig 193 
+
+2M ). 194 
+
+195 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+196 
+
+Fig 2: Single cell Ca 2+ signaling in M Φs. A, tdT + (green) bone marrow derived M Φs immunostained 197 
+
+with anti-F4/80 antibody (magenta); nuclei are stained with DAPI (cyan). B, Intracellular Ca 2+ 
+
+198 
+
+responses in peritoneal M Φs exposed to fluorescent zymosan (magenta). Intracellular Ca 2+ responses 199 
+
+in BMDM Φs stimulated with ( C) buffer only control, C5a (100 nM) and ionomycin (iono, 10 μM) 200 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+and ( D) ATP (100 μM ± extracellular Ca 2+ ). Single cell Ca 2+ traces (average in black) in response to 201 
+
+ATP (100 μM ± extracellular Ca 2+ ) ( E) and quantification showing peak Ca 2+ response and percent 202 
+
+responding cells ( F). G, Intracellular Ca 2+ responses in BMDM Φs stimulated with Yoda-1 (0.3 and 10 203 
+
+μM), quantified in H-I . J, BMDM Φ mRNA levels ( −∆ C T ) of ion channels implicated in M Φ biology. 204 
+
+ND, not detected. K, Intracellular Ca 2+ responses in BMDM Φs following repeated flushing with 205 
+
+physiological salt solution. L Population average Ca 2+ responses to fluid flow pulses shown in K. M, 206 
+
+GCaMPP6f signal was measured during flow cytometry acquisition of ethanol fixed BMDM Φs (first 207 
+
+panel) or live cells (second panel). Live BMDM Φs were treated with Yoda-1 at 200 s acquisition, and 208 
+
+the flow rate was increased from 10 μL/minute to 60 μL/min at 300 s. Bar graphs show mean ± s.e.m, 209 
+
+n = 3 independent experiments; [min:sec]. Significance was assessed via ordinary one-way ANOVA 210 
+
+with Tukey’s multiple comparison test, * p < 0.05. 211 
+
+212 
+
+213 
+
+214 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+215 
+
+Fig S2 : A, Bone marrow derived M Φs immunostained with anti-GFP/GCaMP6f (yellow) and anti-216 
+
+F4/80 (magenta) antibodies; nuclei are stained with DAPI (cyan). B, Intracellular Ca 2+ responses to 217 
+
+buffer only control, C5a (100 nM) and ionomycin (10 μM), quantified in C. Graphs show mean ± 218 
+
+s.e.m., n = 3 independent experiments. Significance was assessed via ordinary one-way ANOVA with 219 
+
+Tukey’s multiple comparison test, * p < 0.05 D Ca 2+ responses in peritoneal M Φs treated with 10 μM 220 
+
+Yoda1, representative of n = 2 independent experiments. E Intracellular Ca 2+ responses of BMDM Φs221 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+monolayers flushed with inert buffer with high or moderate (mod) agitation force. Traces depict 222 
+
+population Ca 2+ responses. [min:sec]. 223 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint Large PIEZO1-mediated currents in isolated M Φs224 
+
+Ionic currents can be mechanically evoked in cells in vivo in response to a range of physiological 225 
+
+stimuli, including shear stress, stretch and compression, as well as by cell-generated forces, which can 226 
+
+be modelled and studied in various assays  (67 )). Previous studies have demonstrated that small, high 227 
+
+threshold PIEZO1-mediated currents can be evoked by the application of membrane stretch to 228 
+
+BMDM Φs (68 ). Here, we evoked stretch-activated currents with a similar kinetic profile and 229 
+
+appearance to these reports ( Fig 3A ). However, the kinetics and sensitivity of these currents were 230 
+
+distinct from those reported for PIEZO1 activation in many other cells and tissues, potentially relating 231 
+
+to differences in PIEZO1 interacting partners among these different cell types and subtypes  (59 , 69 ,232 
+
+70 ) (Fig 3B-C ). When stimuli were applied by displacing substrate elements subadjacent to the cell 233 
+
+(71 , 72 ), however, sensitive currents were evoked ( Fig 3D-E ). As may be expected of this cell type, 234 
+
+BMDM Φs plated on these arrays would occasionally try to phagocytose individual pili, and caution 235 
+
+had to be exercised (using the tdT signal) to avoid compressing these regions. Further, when the 236 
+
+stimulus produced a current that did not return to baseline or evoked a current with stimuli adjacent to 237 
+
+the pilus (in the absence of pilar movement), the stimulation point was discarded (9 out of 23 cells). 238 
+
+In all remaining cells (14 of 14), currents were evoked by substrate deflections. Current kinetics 239 
+
+(latency, activation time constant, inactivation time constant) were consistent with previous 240 
+
+measurements of PIEZO1 activity using pillar arrays ( Fig S3 ) (70 , 72 , 73 ), and the latency and 241 
+
+activation time constant were suggestive of a direct coupling between mechanical input and channel 242 
+
+activation. The median threshold of activation (calculated as the smallest applied stimulus that evoked 243 
+
+a current) for these currents was measured at 24.8 nm (mean ± s.e.m. = 31 ± 8 nm). 244 
+
+245 
+
+These data confirm that mechanically evoked currents, activated within the cell-substrate interface in 246 
+
+BMDM Φs, exhibit the hallmarks of direct activation by mechanical input and are characterized by a 247 
+
+low threshold for activation ( Fig S4 ) (35 ). Such exquisite sensitivity of mechanically evoked currents 248 
+
+has previously been measured in low threshold somatosensory neurons  (72 ), in additional systems 249 
+
+where PIEZO1 is expressed alongside accessory molecules that sensitize the channel (i.e. STOML3) 250 
+
+(72 ) and when heterologously expressed in cells with high prestress  (73 ).251 
+
+252 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+253 
+
+Fig 3: Mechanically-evoked currents in BMDM Φs. A, Representative traces of mechanically-254 
+
+evoked currents in BMDM Φs from an outside-out patch in response to increased positive pressure 255 
+
+from 25 to 95 mmHg, example trace expanded in insert (pink box). B, Stimulus-response plot for 256 
+
+BMDM Φs cultured on pillar arrays recorded in outside-out patches using high speed pressure clamp 257 
+
+(HSPC) ( n = 6 cells, data is presented as mean ± s.e.m). C, Latency of currents evoked using HSPC ( n258 
+
+= 23 currents, median = 137.3 ms). D, Representative image of BMDM Φs grown on elastomeric pillar 259 
+
+array and fixed and stained with DAPI (nucleus) and F4/80 (BMDM Φs). E, Representative traces of 260 
+
+mechanically evoked currents in BMDM Φs cultured on pillar arrays in response to serial deflections. 261 
+
+F, Latency of currents evoked by pillar deflections ( n = 37 currents, median =1.090 ms). G, Stimulus-262 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+response curve for BMDM Φs cultured on pillar arrays in response to pillar deflections ( n = 14 cells, 263 
+
+data is presented as mean ± s.e.m). H, Activation threshold of deflection evoked currents ( n = 14 cells, 264 
+
+median = 24.80 nm). I, Maximum current amplitude in each cell in response to mechanical stimulus. 265 
+
+(purple circles = pillar deflection, n = 14 cells, median = −662.1 pA; pink squares = HSPC, n = 5 cells, 266 
+
+median= −38.80 pA). 267 
+
+268 
+
+269 
+
+270 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+271 
+
+Fig S3 : Activation and inactivation time constants for HSPC ( A) and pillar deflection ( B). 272 
+
+273 
+
+274 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint 275 
+
+Fig S4 : Pillar array and HSPC stimulation on a single cell. A M Φ, in whole-cell patch clamp mode, 276 
+
+was initially stimulated by pillar deflection ( A) which evoked a robust, sensitive current. An outside-277 
+
+out patch was then formed from the same cell and membrane stretch applied using HSPC ( B). 278 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint Histopathological assessment of young and aged mice with Piezo1 knocked out in CSF1R + MΦs279 
+
+The expression of Piezo1 in BMDM Φs, the sensitivity of these cells and tissue resident M Φs to Yoda-280 
+
+1, and the remarkable mechanical activation of BMDM Φs at the cell-substrate interface, prompted us 281 
+
+to investigate in vivo roles for this channel in tissue M Φs under non-perturbed (physiological) 282 
+
+conditions. We generated mice with conditional knockdown of Piezo1 in Csf1r -expressing cells 283 
+
+(Piezo1 fl/fl ;Csf1rCre Cre/+ or “cKO” mice) and confirmed knockdown at the mRNA level ( Fig 4A ). No 284 
+
+changes were detected in mRNA levels of other M Φs enriched targets ( Trpv4 and Trpv2 ), Piezo2 285 
+
+(which remained undetected) or other Ca 2+ channels and binding proteins that were assessed. We 286 
+
+stimulated BMDM Φs from control and cKO mice with Yoda-1 (10 μM), confirming knockdown of 287 
+
+functional PIEZO1 channels in this model ( Fig 4B-D ). 288 
+
+289 
+
+No marked difference in the outward appearance ( Fig 4E ), body length ( Fig 4F ), or femoral length 290 
+
+(Fig S5A-B ) were observed in cKO mice compared to control. A small but significant difference was 291 
+
+observed in the body weight of adult female, but not male, cKO mice ( Fig 4G ) as well as in pups with 292 
+
+normal Piezo1 expression that were nursed by cKO female mice ( Fig 4H-I ). CSF1R-dependent M Φs293 
+
+are required for normal mammary development and maturation  (74 ). However, the reduced weight of 294 
+
+post-pubertal female mice did not correspond with a change in mammary histology or wholemounts 295 
+
+during lactation ( Fig 4J ) or in milk Ca 2+ levels ( Fig 4K ). While PIEZO1 signaling has been implicated 296 
+
+in the regulation of osteoclast differentiation  (75 ) and bone formation  (76 ), and female mice of this 297 
+
+background have been shown to develop early onset osteoporosis  (77 ), our microtomographical bone 298 
+
+measurements from post-lactational females revealed no meaningful impact of Piezo1 deletion ( Fig 299 
+
+S5A, C-G ). 300 
+
+301 
+
+A comprehensive, blinded histological analysis of tissue from young and aged mice, performed by a 302 
+
+veterinary pathologist, revealed no marked changes in >20 organs assessed ( Fig 4L ), and examination 303 
+
+of selected tissues with IBA1 immunostaining showed no difference in M Φs distribution ( Fig S6 ). 304 
+
+Finally, we observed no statistical differences in the early or late uptake of zymosan particles in 305 
+
+peritoneal M Φs (percent positive or particle number, Fig S7 ). Thus, zymosan-evoked [Ca 2+ ]i responses 306 
+
+in M Φs are not caused by Ca 2+ release-activated channels (shown by Vaeth et al., in Ref  (21 )) or by 307 
+
+PIEZO channels ( Fig S7 ). Collectively, these data suggest that PIEZO1 function in M Φs is dispensible 308 
+
+for trophic or homeostatic functions in vivo .309 
+
+310 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+311 
+
+Fig 4: Characterization of Piezo1 fl/fl ;Csf1r-cre Cre/+ model under non-stressed conditions. A ,312 
+
+BMDM Φ mRNA levels of Piezo1 and other Ca 2+ signaling associated proteins in cKO and control 313 
+
+animals. B, Intracellular Ca 2+ responses to 10 μM Yoda-1 and subsequent 10 μM ionomycin addition 314 
+
+in BMDM Φs isolated from control and cKO animals, quantified in C–D . E, Representative visual 315 
+
+comparison of control and cKO animals, with body length and weight measurements compared in F316 
+
+and G. H, Representative comparison of pups (without Piezo1 deletion in M Φs) nursed by control or 317 
+
+cKO dams, with pup weight quantified in I. J, Mammary gland wholemount and histology from 318 
+
+lactating control and cKO dams. K, Comparison of milk Ca 2+ concentration in samples obtained from 319 
+
+control or cKO nursing dams. L, Summary of tissue histology assessed by veterinary pathologist from 320 
+
+young (12–14 weeks) or aged (52 weeks) control and cKO animals. Grey circles indicates organs that 321 
+
+were assessed and determined to have no major differences. Graphs are mean ± s.e.m, n = 3 ( A–D ), 4 322 
+
+(F), 5 ( J, K, L ), or 6 ( I) independent experiments. Significance was assessed via unpaired t-test ( D, F, 323 
+
+G, K ), or two-way ANOVA with Bonferroni post-test ( I), * p < 0.05. [min:sec]. 324 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+325 
+
+Fig S5 : A, Schematic of bone regions scanned via microtomography, with example of scanned sample. 326 
+
+Comparison of bone characteristics including femoral length ( B), bone volume (BV)/total volume 327 
+
+(TV) ( C), bone mineral density (BMD), ( D), tissue mineral density (TMD), ( E), trabecular separation 328 
+
+(Tb.Sp), ( F), and trabecular thickness (Tb.Th), ( G). Animals were post-lactational dams. Bars are 329 
+
+mean ± s.e.m, n = 3 animals per cohort. Significance was assessed via unpaired t-test, * p < 0.05. 330 
+
+331 
+
+332 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+333 
+
+Fig S6 : Immunohistochemical staining for smooth muscle actin (SMA, blue) and ionized Ca 2+ -binding 334 
+
+adaptor molecule 1 (Iba1, magenta) in salivary gland ( A) and lacrimal gland ( C) isolated from cKO 335 
+
+and control mice, with quantification of number of Iba1 positive cells in three randomly selected 336 
+
+regions of each gland in B and D. Bars are ± s.e.m, individual data points are average value per animal. 337 
+
+Data was analysed via unpaired t-test. 338 
+
+339 
+
+340 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+341 
+
+Fig S7 : Comparison of zymosan uptake over time by peritoneal M Φs isolated from control and cKO 342 
+
+animals. Bars are ± s.e.m, significance assessed via two-way ANOVA with Bonferroni post-test. 343 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint Dynamic properties of PIEZO1 channels in wounded MΦs344 
+
+MΦs are an abundant cell type in all tissues and are recruited during injury and infection  (1, 2). Our 345 
+
+electrophysiological recordings support roles for PIEZO1 at the M Φ cell-substrate interface, leading 346 
+
+us to investigate whether PIEZO1 regulates M Φ movements during injury-mediated recruitment. Our 347 
+
+investigations in scratch-wounded BMDM Φs revealed three key findings. Firstly, we observed a 348 
+
+robust increase in intracellular Ca 2+ in cells on the wound edge in response to first and subsequent 349 
+
+injuries ( Fig 5A and Movie S11 ). The amplitude and temporal profile of the response was shaped by 350 
+
+the presence of extracellular Ca 2+ (Fig 5B and Movie S12 ). However, Ca 2+ events were still observed 351 
+
+in cells bathed in Ca 2+ -free buffer ( Fig S8 ), suggesting a role for Ca 2+ mobilization from intracellular 352 
+
+stores. While locally released ATP is a likely candidate in this damage response  (78 ), through both 353 
+
+ionotropic and metabotropic purinergic receptors, all cells on the wound edge respond with an increase 354 
+
+in Ca 2+ , in contrast with Ca 2+ recordings in ATP-stimulated BMDM Φs ( Fig 2D ), implying additional 355 
+
+mechanisms of activation. Secondly, we made the interesting observation that after BMDM Φs enter 356 
+
+the denuded area, these cells often oriented themselves in a “patrol line” along the wound edge ( Fig 357 
+
+5C and Movie S13 ). By examining channel movements in patrolling BMDM Φs isolated from Piezo1-358 
+
+tdT mice (expressing tdT fused to the C-terminus of PIEZO1  (65 )), we observed PIEZO1 channels to 359 
+
+transiently coalesce at sites where BMDM Φs meet ( Fig 5D and Movie S14 ). We occasionally 360 
+
+observed PIEZO1 channels in the trailing edge of migrating BMDM Φs ( Fig S9A and Movie S15 ), 361 
+
+similar to that observed in migrating keratinocytes  (79 ), but we rarely observed PIEZO1 channels to 362 
+
+accumulate along inert surfaces, such as silicone dish inserts ( Fig S9B and Movie S16 ). These results 363 
+
+demonstrate that, in adherent motile M Φs, PIEZO1 channels rapidly and transiently assemble at sites 364 
+
+of dynamic cellular encounters. 365 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+366 
+
+Fig 5: BMDM Φ dynamics in wounding and cell contacts. A , Ca 2+ responses at the wound edge of 367 
+
+BMDM Φ monolayers bathed in 1.8 mM extracellular Ca 2+ , quantified in ( B) ± Ca 2+ . C, BMDM Φ368 
+
+migratory behavior along monolayer wounds. D, PIEZO1 channels coalesce at sites of BMDM Φ cell-369 
+
+cell contacts. Bars are mean ± s.e.m., n = 3 independent experiments. Significance assessed via 370 
+
+unpaired t-test, * p < 0.05. [h:min:sec]. 371 
+
+372 
+
+373 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+374 
+
+Fig S8 : Ca 2+ responses in BMDM Φ monolayers wounded under extracellular Ca 2+ conditions. n = 3 375 
+
+independent experiments. [min:sec]. 376 
+
+377 
+
+378 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint 379 
+
+Figure S9 : A, PIEZO1 channels coalesce at the trailing edge of some migrating cells, but rarely 380 
+
+coalesce at contact sites with inert material (biocompatible silicone dish dividers), ( B). [min:sec] 381 
+
+382 
+
+.CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint Discussion 383 
+
+Our generation of transgenic mice expressing the sensitive genetically-encoded Ca 2+ indicator 384 
+
+GCaMP6f in M Φs has provided an opportunity to study chemically- and mechanically-evoked Ca 2+ 
+
+385 
+
+signaling events in these cells at high spatial and temporal resolution in vitro and in situ . A previous 386 
+
+study has used the Cx3cr1-Cre driver to express GCaMP6s or a membrane tethered version of 387 
+
+GCaMP6f in microglia  (54 ). These authors detected spontaneous, localized Ca 2+ transients and 388 
+
+increased signaling in response to changes in neuronal activity. We used Csf1r-Cre to express a fast 389 
+
+Ca 2+ reporter for visualization of M Φs in the periphery. The Csf1r-Cre proved less lineage-specific 390 
+
+than expected  (46 ). Nevertheless, using this model in select cells and tissues, we were able to detect 391 
+
+spontaneous Ca 2+ events in ex vivo preparations and elicit a propagated response to mechanical 392 
+
+stimulation. Our findings suggest that mechanosensing is a common property of tissue resident M Φs393 
+
+and pave the way for future studies using serial intravital imaging to observe and monitor acute- and 394 
+
+long-term M Φ responses to a range of physiological and pathological stimuli. These experiments 395 
+
+necessitate careful implantation of imaging windows to maintain tissue sterility and avoid M Φ396 
+
+activation prior to imaging  (78 ), and may benefit from the use of flexible or openable window 397 
+
+technologies for chemical and/or mechanical stimulation  (80 , 81 ).398 
+
+399 
+
+Our in vitro investigations demonstrated that the GCaMP6f reporter was sufficiently sensitive to detect 400 
+
+intracellular Ca 2+ waves within individual M Φs. We were able to localize Ca 2+ transients to the vicinity 401 
+
+of the phagocytic cup associated with particle uptake in peritoneal M Φs and observe decaying 402 
+
+oscillations following stimulation with the PIEZO1 agonist Yoda1 in BMDM Φs. Interestingly, we 403 
+
+detected Ca 2+ responses arising from experimental manipulations that are routinely carried out in the 404 
+
+study of M Φ biology – flushing of cells on the culture plate and flow cytometry. However, it is not yet 405 
+
+clear whether such manipulations lead to temporary or sustained alterations in cellular function nor is 406 
+
+it clear what the consequences of these perturbations are on downstream cellular readouts. In addition, 407 
+
+we observed propagating intracellular Ca 2+ signals in response to supraphysiological concentrations 408 
+
+of extracellular ATP. We uncovered that not all cells utilize intracellular Ca 2+ to respond to ATP, 409 
+
+demonstrating an intriguing degree of signaling heterogeneity that may be a cause or consequence of 410 
+
+MΦ functional diversity  (82 ). Notably, robust Ca 2+ signals were consistently observed in cells adjacent 411 
+
+to the wounded edge of cell monolayers, where ATP is released locally in response to cell damage  (83 ,412 
+
+84 ). However, in this case, all cells in the immediate vicinity exhibited large intracellular Ca 2+ 
+
+413 
+
+responses, suggesting that additional (purinergic receptor-independent) factors are involved in the 414 
+
+MΦs response to wounding. 415 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+416 
+
+We focused on mechanically evoked ion fluxes and the basic biology of PIEZO1 in M Φs. In contrast 417 
+
+to the currents produced by stretching BMDM Φs at the apical surface, we observed exceptional 418 
+
+sensitivity of mechanically evoked currents at the cell-substrate interface. Such striking sensitivity to 419 
+
+mechanical inputs is typically only seen in low threshold somatosensory neurons or in systems where 420 
+
+PIEZO1 is expressed alongside accessory molecules that sensitize the channel  (72 , 85 ). Whilst our 421 
+
+study focused on PIEZO1 channels in M Φs, these cells also express TRPV4, and signaling at the cell-422 
+
+substrate interface may reflect the combined activity of these two channels, as previously reported in 423 
+
+primary chondrocytes  (70 ). Nevertheless, taken together, our results suggest that BMDM Φs have the 424 
+
+capacity to distinguish between distinct types of physiologically-relevant mechanical stimuli, which 425 
+
+may be relevant as these highly motile cells infiltrate diverse tissue environments. 426 
+
+427 
+
+One study published in 2024, which also examined PIEZO1 activation in BMDM Φs, reported that the 428 
+
+Yoda1-mediated intracellular Ca 2+ signals observed in these cells were not present in tissue resident 429 
+
+(cardiac) M Φs (28 ). Based on this observation, the authors concluded that BMDM Φs fundamentally 430 
+
+differ from tissue resident M Φs, suggesting that the differences observed between these two cell types 431 
+
+could be an artifact of the in vitro differentiation process. In contrast, we observed robust Yoda1 432 
+
+responses in both BMDM Φs and freshly isolated peritoneal M Φs, suggesting that tissue M Φs can 433 
+
+indeed exhibit cellular responses to Yoda1. We suggest that the differences observed between 434 
+
+BMDM Φs and cardiac M Φs (isolated by enzymatic digestion and purified by flow cytometry) may 435 
+
+reflect the chemical and mechanical stress imposed by these processes, or alternatively the markedly 436 
+
+different cellular environments experienced by distinct tissue resident M Φs populations. 437 
+
+438 
+
+Recently, PIEZO1 has been shown to have numerous roles in the M Φ mediated defense against disease 439 
+
+or infection  (34 , 60 , 61 ). However, to our knowledge, no study has comprehensively characterized 440 
+
+potential roles for this channel in these cells during tissue development and homeostasis. M Φs offer a 441 
+
+fascinating and relevant system to study PIEZO1 function, as they are highly motile cells exposed to 442 
+
+a range of tissue properties, and exhibit diverse phenotypes and distribution patterns  (1). To determine 443 
+
+the homeostatic function of PIEZO1 in tissue M Φs, we generated conditional knockout mice and 444 
+
+studied them across their lifetime. Effective loss of function was demonstrated by the complete loss of 445 
+
+response to Yoda1, complementing our gene expression analysis. However, we were not able to detect 446 
+
+biologically relevant changes in M Φ distribution or function in the absence of PIEZO1, including in 447 
+
+bone, where one may anticipate an important role in osteoclasts  (86 ). Moreover, intracellular Ca 2+ 
+
+448 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+responses were detected in tissue resident peritoneal M Φs derived from control and cKO mice and no 449 
+
+change in fluorescent particle uptake was observed in our study. This is contrast to a modest reduction 450 
+
+in particle uptake by BMDM Φs isolated from loss-of-function Peizo1 mice reported by others  (68 ).451 
+
+452 
+
+Our studies using reporter mice that express endogenous PIEZO1 tagged with the red fluorescent 453 
+
+protein tdT revealed that these channels transiently converge at sites where motile M Φs encounter one 454 
+
+another. PIEZO1 channels were not observed to coalesce at sites where M Φs interacted with inert, 455 
+
+stationary objects. Based on these findings, it is tempting to speculate that PIEZO1 channels may help 456 
+
+to choreograph the regular distribution patterns observed in tissue resident M Φs in almost all tissues 457 
+
+(2). Loss of PIEZO1, however, did not affect M Φ distribution in any of the tissues examined, 458 
+
+suggesting that other factors are involved in homotypic cell sensing and the mutual repulsion of 459 
+
+adjacent M Φs. Collectively, our data suggest that PIEZO1 has non-essential or redundant roles in M Φs460 
+
+under normal physiological conditions, distinct from its reported roles in non-physiological or diseased 461 
+
+conditions  (34 , 60 , 61 ).462 
+
+463 
+
+Acknowledgements 464 
+
+Piezo1-tdTomato mice were a kind gift from Prof Shaun Jackson (Heart Research Institute, University 465 
+
+of Sydney). Csf1r-Cre mice were provided by Prof Edwin Hawkins (Walter and Eliza Hall Institute). 466 
+
+TdTomato-flox mice were from Prof Ian Frazer (University of Queensland). We thank Dr Vaishnavi 467 
+
+Ananthanarayanan (University of New South Wales) for kindly providing her expertise with imaging 468 
+
+cells isolated from Piezo1-tdTomato mice on the Zeiss Elyra 7. We thank animal technicians at 469 
+
+Australian BioResources, the University of New South Wales Animal Facility and the Laboratory 470 
+
+Animal Core Facility at the Department of Biomedicine (Aarhus University). We acknowledge the 471 
+
+expertise and input from staff at the Katharina Gaus Light Microscopy Facility (University of New 472 
+
+South Wales) and the Bioimaging Core Facility at Aarhus University. Histology was provided by 473 
+
+histologists at the Biotech Research Innovation Centre (BRIC, University of Copenhagen), 474 
+
+Department of Dentistry (Aarhus University) and the Histology Core Facility at Biomedicine (Aarhus 475 
+
+University). BioRender icons were utilized for figures in this manuscript. This work was funded by 476 
+
+the National Health and Medical Research Council of Australia (1141008, 1138214, 2003832 to FMD 477 
+
+and 1185021 to KP), the Novo Nordisk Foundation (NNF20OC0059705), The Carlsberg Foundation 478 
+
+and the National Stem Cell Foundation of Australia. The  μCT scanner was kindly donated by the 479 
+
+VELUM foundation.  DAH and KMI are grateful for funding support from the  Mater  Foundation. 480 
+
+481 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Movie legends 482 
+
+483 
+
+Movie S1 : Spontaneous Ca 2+ activity in lymph node from GCaMP6f +;tdTomato +;Csf1r-cre cre mice. 484 
+
+Recording shows 15 minutes, 232.96 μm  × 232.96 μm. Representative of 3 independent experiments. 485 
+
+486 
+
+Movie S2 : Mechanically invoked Ca 2+ responses in ear skin from GCaMP6f +;tdTomato +;Csf1r-cre cre 
+
+487 
+
+mice. Recording shows 14 min, 808.59 μm  × 808.59 μm. Representative of 4 independent 488 
+
+experiments. 489 
+
+490 
+
+Movie S3 : Mechanically invoked Ca 2+ responses in adipose tissue from GCaMP6f +;tdTomato +;Csf1r-491 
+
+cre cre mice. Recording shows 20 min 30 s, 931.82 μm  × 931.82 μm. Representative of 4 independent 492 
+
+experiments. 493 
+
+494 
+
+Movie S4 : Ca 2+ -induced responses in peritoneal  MΦs in response to zymosan particles. Recording 495 
+
+shows 10 min 36 s, 212.13 μm  × 212.13 μm. Representative of 4 independent experiments. 496 
+
+497 
+
+Movie S5 : Ca 2+ recording in response to physiological salt solution (PSS, control) in BMD MΦs. Text 498 
+
+indicates time point of PSS addition, recording shows 9 min 30 s, 424.26 μm  × 424.26 μm. 499 
+
+Representative of 3 independent experiments. 500 
+
+501 
+
+Movie S6 : Ca 2+ responses to C5a (100 nM) in BMD MΦs. Text indicates time point of agonist addition, 502 
+
+recording shows 10 min 3 s, 424.26 μm  × 424.26 μm. Representative of 3 independent experiments. 503 
+
+504 
+
+Movie S7 : Ca 2+ responses to ionomycin (10 μM) in BMD MΦs. Text indicates time point of agonist 505 
+
+addition, recording shows 8 min 3 s, 424.26 μm  × 424.26 μm. Representative of 3 independent 506 
+
+experiments. 507 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+508 
+
+Movie S8 : Ca 2+ responses to ATP (100 μM) in BMD MΦs, in the absence (left) or presence (right) of 509 
+
+extracellular Ca 2+ (1.8 mM). Text indicates time point of agonist addition, recording shows 10 min 3 510 
+
+s, 848.53 μm  × 424.26 μm per side. Representative of 3 independent experiments. 511 
+
+512 
+
+Movie S9 : Ca 2+ responses to Yoda-1 (10 μM) in BMD MΦs. Text indicates time point of agonist 513 
+
+addition, recording shows 14 min 15 s, 424.26 μm  × 424.26 μm. Representative of 3 independent 514 
+
+experiments. 515 
+
+516 
+
+Movie S10 : Ca 2+ responses to repeated pulses of fluid shear stress in BMD MΦs monolayer. Recording 517 
+
+shows 4 min 50 s, 1272.79 μm × 1272.79 μm. Representative of 4 independent experiments; 1 with 518 
+
+repeated flushing. 519 
+
+520 
+
+Movie S11 : Ca 2+ responses to mechanical wounding in BMD MΦs monolayer in the presence of 521 
+
+extracellular Ca 2+ (1.8 mM). Recording shows 5 min 19 s, 1272.79 μm × 1272.79 μm.  Representative 522 
+
+of 4 independent experiments. 523 
+
+524 
+
+Movie S12 : Ca 2+ responses to mechanical wounding in BMD MΦs monolayers with nominal 525 
+
+extracellular Ca 2+ present. Recording shows 5 min 19 s, 1272.79 μm × 1272.79 μm.  Representative of 526 
+
+4 independent experiments. 527 
+
+528 
+
+Movie S13 : BMD MΦ migratory behavior along a wound edge. Recording shows 17 h, 499.07 μm × 529 
+
+499.07 μm. Representative of 2 independent experiments. 530 
+
+531 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Movie S14 : PIEZO1 channels coalesce at sites of cell-cell contacts in patrolling  BMD MΦs. Recording 532 
+
+show 2 h 33 min 16 s, 78.39 μm × 78.39 μm. Representative of 4 independent experiments. 533 
+
+Movie S15 : PIEZO1 channels coalesce at the trailing edge of  BMD MΦs. Recording show 44 min 38 534 
+
+s, 123.88 μm × 123.88 μm. Representative of 4 independent experiments. 535 
+
+536 
+
+Movie S16 : PIEZO1 channels in  BMD MΦs rarely coalesce at inert dish divider edges. Recording 537 
+
+show 46 min 12 s, 123.88 μm × 123.88 μm. Representative of 3 independent experiments. 538 
+
+539 
+
+References 540 
+
+1. D. Hume, K. Irvine, C. Pridans, The Mononuclear Phagocyte System: The Relationship between 541 
+
+Monocytes and Macrophages. Trends in Immunology 40 , 98–112 (2019). 542 
+
+2. E. Mass, F. Nimmerjahn, K. Kierdorf, A. Schlitzer, Tissue-specific macrophages: how they 543 
+
+develop and choreograph tissue biology. Nat Rev Immunol 23 , 563–579 (2023). 544 
+
+3. S. J. Jenkins, D. A. Hume, Homeostasis in the mononuclear phagocyte system. Trends Immunol 545 
+
+35 , 358–367 (2014). 546 
+
+4. R. T. Sasmono, D. Oceandy, J. W. Pollard, W. Tong, P. Pavli, B. J. Wainwright, M. C. Ostrowski, 547 
+
+S. R. Himes, D. A. Hume, A macrophage colony-stimulating factor receptor-green fluorescent 548 
+
+protein transgene is expressed throughout the mononuclear phagocyte system of the mouse. 549 
+
+Blood 101 , 1155–63 (2003). 550 
+
+5. D. A. Ovchinnikov, W. J. M. van Zuylen, C. E. E. DeBats, K. A. Alexander, S. Kellie, D. A. 551 
+
+Hume, Expression of Gal4-dependent transgenes in cells of the mononuclear phagocyte system 552 
+
+labeled with enhanced cyan fluorescent protein using Csf1r-Gal4VP16/UAS-ECFP double-553 
+
+transgenic mice. J Leukoc Biol 83 , 430–433 (2008). 554 
+
+6. T. A. Stewart, K. Hughes, D. A. Hume, F. M. Davis, Developmental Stage-Specific Distribution 555 
+
+of Macrophages in Mouse Mammary Gland. Frontiers in Cell and Developmental Biology 7556 
+
+(2019). 557 
+
+7. F. Rae, K. Woods, T. Sasmono, N. Campanale, D. Taylor, D. A. Ovchinnikov, S. M. Grimmond, 558 
+
+D. A. Hume, S. D. Ricardo, M. H. Little, Characterisation and trophic functions of murine 559 
+
+embryonic macrophages based upon the use of a Csf1r-EGFP transgene reporter. Dev Biol 308 ,560 
+
+232–246 (2007). 561 
+
+8. E. S. Nakasone, H. A. Askautrud, T. Kees, J. H. Park, V. Plaks, A. J. Ewald, M. Fein, M. G. 562 
+
+Rasch, Y. X. Tan, J. Qiu, J. Park, P. Sinha, M. J. Bissell, E. Frengen, Z. Werb, M. Egeblad, 563 
+
+Imaging tumor-stroma interactions during chemotherapy reveals contributions of the 564 
+
+microenvironment to resistance. Cancer Cell 21 , 488–503 (2012). 565 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+9. A. Sehgal, D. S. Donaldson, C. Pridans, K. A. Sauter, D. A. Hume, N. A. Mabbott, The role of 566 
+
+CSF1R-dependent macrophages in control of the intestinal stem-cell niche. Nature 567 
+
+Communications , doi: 10.1038/s41467-018-03638-6 (2018). 568 
+
+10. E. Mass, I. Ballesteros, M. Farlik, F. Halbritter, P. Günther, L. Crozet, C. E. Jacome-Galarza, 569 
+
+K. Händler, J. Klughammer, Y. Kobayashi, E. Gomez-Perdiguero, J. L. Schultze, M. Beyer, C. 570 
+
+Bock, F. Geissmann, Specification of tissue-resident macrophages during organogenesis. 571 
+
+Science 353 , aaf4238 (2016). 572 
+
+11. S. J. Jenkins, J. E. Allen, The expanding world of tissue-resident macrophages. Eur J Immunol 573 
+
+51 , 1882–1896 (2021). 574 
+
+12. M. J. Berridge, P. Lipp, M. D. Bootman, The versatility and universality of calcium signalling. 575 
+
+Nature reviews. Molecular cell biology 1, 11–21 (2000). 576 
+
+13. R. Y. Tsien, New calcium indicators and buffers with high selectivity against magnesium and 577 
+
+protons: design, synthesis, and properties of prototype structures. Biochemistry 19 , 2396–2404 578 
+
+(1980). 579 
+
+14. R. Y. Tsien, T. J. Rink, M. Poenie, Measurement of cytosolic free Ca2+ in individual small 580 
+
+cells using fluorescence microscopy with dual excitation wavelengths. Cell Calcium 6, 145–157 581 
+
+(1985). 582 
+
+15. G. Grynkiewicz, M. Poenie, R. Y. Tsien, A new generation of Ca2+ indicators with greatly 583 
+
+improved fluorescence properties. J Biol Chem 260 , 3440–3450 (1985). 584 
+
+16. T. H. Steinberg, A. S. Newman, J. A. Swanson, S. C. Silverstein, Macrophages possess 585 
+
+probenecid-inhibitable organic anion transporters that remove fluorescent dyes from the 586 
+
+cytoplasmic matrix. J Cell Biol 105 , 2695–2702 (1987). 587 
+
+17. S. M. McMahon, M. B. Jackson, An Inconvenient Truth: Calcium Sensors Are Calcium 588 
+
+Buffers. Trends Neurosci 41 , 880–884 (2018). 589 
+
+18. M. D. Bootman, S. Allman, K. Rietdorf, G. Bultynck, Deleterious effects of calcium indicators 590 
+
+within cells; an inconvenient truth. Cell Calcium 73 , 82–87 (2018). 591 
+
+19. X. Li, Y.-X. Du, C.-L. Yu, N. Niu, Ion channels in macrophages: Implications for disease 592 
+
+progression. Int Immunopharmacol 144 , 113628 (2025). 593 
+
+20. T. A. Stewart, F. M. Davis, An element for development: Calcium signaling in mammalian 594 
+
+reproduction and development. Biochimica et Biophysica Acta - Molecular Cell Research 1866 595 
+
+(2019). 596 
+
+21. M. Vaeth, I. Zee, A. R. Concepcion, M. Maus, P. Shaw, C. Portal-Celhay, A. Zahra, L. 597 
+
+Kozhaya, C. Weidinger, J. Philips, D. Unutmaz, S. Feske, Ca2+ Signaling but Not Store-598 
+
+Operated Ca2+ Entry Is Required for the Function of Macrophages and Dendritic Cells. J599 
+
+Immunol 195 , 1202–1217 (2015). 600 
+
+22. P. Li, X. Bian, C. Liu, S. Wang, M. Guo, Y. Tao, B. Huo, STIM1 and TRPV4 regulate fluid 601 
+
+flow-induced calcium oscillation at early and late stages of osteoclast differentiation. Cell 602 
+
+Calcium 71 , 45–52 (2018). 603 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+23. H. Kajiya, F. Okamoto, T. Nemoto, K. Kimachi, K. Toh-Goto, S. Nakayana, K. Okabe, 604 
+
+RANKL-induced TRPV2 expression regulates osteoclastogenesis via calcium oscillations. Cell 605 
+
+Calcium 48 , 260–269 (2010). 606 
+
+24. S.-Y. Hwang, J. W. Putney, Orai1-mediated calcium entry plays a critical role in osteoclast 607 
+
+differentiation and function by regulating activation of the transcription factor NFATc1. FASEB 608 
+
+J 26 , 1484–1492 (2012). 609 
+
+25. B. Csóka, Z. H. Németh, I. Szabó, D. L. Davies, Z. V. Varga, J. Pálóczi, S. Falzoni, F. Di 610 
+
+Virgilio, R. Muramatsu, T. Yamashita, P. Pacher, G. Haskó, Macrophage P2X4 receptors 611 
+
+augment bacterial killing and protect against sepsis. JCI Insight 3, e99431, 99431 (2018). 612 
+
+26. B. N. Desai, N. Leitinger, Purinergic and calcium signaling in macrophage function and 613 
+
+plasticity. Front Immunol 5, 580 (2014). 614 
+
+27. D. M. Gorman, X. X. Li, J. D. Lee, J. N. Fung, C. S. Cui, H. S. Lee, B. E. Rolfe, T. M. 615 
+
+Woodruff, R. J. Clark, Development of Potent and Selective Agonists for Complement C5a 616 
+
+Receptor 1 with In Vivo Activity. J Med Chem 64 , 16598–16608 (2021). 617 
+
+28. A. Simon-Chica, A. Klesen, R. Emig, A. Chan, J. Greiner, D. Grün, A. Lother, I. Hilgendorf, E. 618 
+
+A. Rog-Zielinska, U. Ravens, P. Kohl, F. Schneider-Warme, R. Peyronnet, Piezo1 stretch-619 
+
+activated channel activity differs between murine bone marrow-derived and cardiac tissue-620 
+
+resident macrophages. J Physiol 602 , 4437–4456 (2024). 621 
+
+29. T. M. Link, U. Park, B. M. Vonakis, D. M. Raben, M. J. Soloski, M. J. Caterina, TRPV2 has a 622 
+
+pivotal role in macrophage particle binding and phagocytosis. Nat Immunol 11 , 232–239 623 
+
+(2010). 624 
+
+30. M. S. Schappe, K. Szteyn, M. E. Stremska, S. K. Mendu, T. K. Downs, P. V. Seegren, M. A. 625 
+
+Mahoney, S. Dixit, J. K. Krupa, E. J. Stipes, J. S. Rogers, S. E. Adamson, N. Leitinger, B. N. 626 
+
+Desai, Chanzyme TRPM7 Mediates the Ca2+ Influx Essential for Lipopolysaccharide-Induced 627 
+
+Toll-Like Receptor 4 Endocytosis and Macrophage Activation. Immunity 48 , 59-74.e5 (2018). 628 
+
+31. M. S. Schappe, M. E. Stremska, G. W. Busey, T. K. Downs, P. V. Seegren, S. K. Mendu, Z. 629 
+
+Flegal, C. A. Doyle, E. J. Stipes, B. N. Desai, Efferocytosis requires periphagosomal Ca2+-630 
+
+signaling and TRPM7-mediated electrical activity. Nat Commun 13 , 3230 (2022). 631 
+
+32. T. Murakami, J. Ockinger, J. Yu, V. Byles, A. McColl, A. M. Hofer, T. Horng, Critical role for 632 
+
+calcium mobilization in activation of the NLRP3 inflammasome. Proc Natl Acad Sci U S A 633 
+
+109 , 11282–11287 (2012). 634 
+
+33. M. Rossol, M. Pierer, N. Raulien, D. Quandt, U. Meusch, K. Rothe, K. Schubert, T. 635 
+
+Schöneberg, M. Schaefer, U. Krügel, S. Smajilovic, H. Bräuner-Osborne, C. Baerwald, U. 636 
+
+Wagner, Extracellular Ca2+ is a danger signal activating the NLRP3 inflammasome through G 637 
+
+protein-coupled calcium sensing receptors. Nat Commun 3, 1329 (2012). 638 
+
+34. A. G. Solis, P. Bielecki, H. R. Steach, L. Sharma, C. C. D. Harman, S. Yun, N. W. Palm, M. R. 639 
+
+de Zoete, J. N. Warnock, S. D. F. To, A. G. York, M. Mack, M. A. Schwartz, Charles. S. D. 640 
+
+Cruz, R. Jackson, R. A. Flavell, Mechanosensation of Cyclical Force by PIEZO1 is Essential 641 
+
+for Innate Immunity. Nature 573 , 69–74 (2019). 642 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+35. H. Atcha, A. Jairaman, J. R. Holt, V. S. Meli, R. R. Nagalla, P. K. Veerasubramanian, K. T. 643 
+
+Brumm, H. E. Lim, S. Othy, M. D. Cahalan, M. M. Pathak, W. F. Liu, Mechanically activated 644 
+
+ion channel Piezo1 modulates macrophage polarization and stiffness sensing. Nat Commun 12 ,645 
+
+3256 (2021). 646 
+
+36. G. S. Baird, D. A. Zacharias, R. Y. Tsien, Circular permutation and receptor insertion within 647 
+
+green fluorescent proteins. Proc Natl Acad Sci U S A 96 , 11241–11246 (1999). 648 
+
+37. J. Nakai, M. Ohkura, K. Imoto, A high signal-to-noise Ca(2+) probe composed of a single 649 
+
+green fluorescent protein. Nat Biotechnol 19 , 137–141 (2001). 650 
+
+38. A. Miyawaki, J. Llopis, R. Heim, J. M. McCaffery, J. A. Adams, M. Ikura, R. Y. Tsien, 651 
+
+Fluorescent indicators for Ca2+ based on green fluorescent proteins and calmodulin. Nature 652 
+
+388 , 882–887 (1997). 653 
+
+39. X. R. Sun, A. Badura, D. A. Pacheco, L. A. Lynch, E. R. Schneider, M. P. Taylor, I. B. Hogue, 654 
+
+L. W. Enquist, M. Murthy, S. S.-H. Wang, Fast GCaMPs for improved tracking of neuronal 655 
+
+activity. Nat Commun 4, 2170 (2013). 656 
+
+40. T.-W. Chen, T. J. Wardill, Y. Sun, S. R. Pulver, S. L. Renninger, A. Baohan, E. R. Schreiter, R. 657 
+
+A. Kerr, M. B. Orger, V. Jayaraman, L. L. Looger, K. Svoboda, D. S. Kim, Ultrasensitive 658 
+
+fluorescent proteins for imaging neuronal activity. Nature 499 , 295–300 (2013). 659 
+
+41. M. Eilert-Olsen, J. B. Hjukse, A. E. Thoren, W. Tang, R. Enger, V. Jensen, K. H. Pettersen, E. 660 
+
+A. Nagelhus, Astroglial endfeet exhibit distinct Ca2+ signals during hypoosmotic conditions. 661 
+
+Glia 67 , 2399–2409 (2019). 662 
+
+42. E. Shigetomi, Y. J. Hirayama, K. Ikenaka, K. F. Tanaka, S. Koizumi, Role of Purinergic 663 
+
+Receptor P2Y1 in Spatiotemporal Ca2+ Dynamics in Astrocytes. J Neurosci 38 , 1383–1395 664 
+
+(2018). 665 
+
+43. A. J. Stevenson, G. Vanwalleghem, T. A. Stewart, N. D. Condon, B. Lloyd-Lewis, N. Marino, 666 
+
+J. W. Putney, E. K. Scott, A. D. Ewing, F. M. Davis, Multiscale imaging of basal cell dynamics 667 
+
+in the functionally mature mammary gland. Proceedings of the National Academy of Sciences 668 
+
+of the United States of America 117 , 26822–26832 (2020). 669 
+
+44. K. M. Márquez-Nogueras, E. Bovo, J. E. Neczypor, Q. Cao, A. V. Zima, I. Y. Kuo, Utilization 670 
+
+of the genetically encoded calcium indicator Salsa6F in cardiac applications. Cell Calcium 119 ,671 
+
+102873 (2024). 672 
+
+45. L. Madisen, A. R. Garner, D. Shimaoka, A. S. Chuong, N. C. Klapoetke, L. Li, A. van der 673 
+
+Bourg, Y. Niino, L. Egolf, C. Monetti, H. Gu, M. Mills, A. Cheng, B. Tasic, T. N. Nguyen, S. 674 
+
+M. Sunkin, A. Benucci, A. Nagy, A. Miyawaki, F. Helmchen, R. M. Empson, T. Knöpfel, E. S. 675 
+
+Boyden, R. C. Reid, M. Carandini, H. Zeng, Transgenic mice for intersectional targeting of 676 
+
+neural sensors and effectors with high specificity and performance. Neuron , doi: 677 
+
+10.1016/j.neuron.2015.02.022 (2015). 678 
+
+46. J. Loschko, G. J. Rieke, H. A. Schreiber, M. M. Meredith, K.-H. Yao, P. Guermonprez, M. C. 679 
+
+Nussenzweig, Inducible targeting of cDCs and their subsets in vivo. J Immunol Methods 434 ,680 
+
+32–38 (2016). 681 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+47. C. A. Hawley, R. Rojo, A. Raper, K. A. Sauter, Z. M. Lisowski, K. Grabert, C. C. Bain, G. M. 682 
+
+Davis, P. A. Louwe, M. C. Ostrowski, D. A. Hume, C. Pridans, S. J. Jenkins, Csf1r-mApple 683 
+
+Transgene Expression and Ligand Binding In Vivo Reveal Dynamics of CSF1R Expression 684 
+
+within the Mononuclear Phagocyte System. J Immunol 200 , 2209–2223 (2018). 685 
+
+48. B.-Z. Qian, J. Li, H. Zhang, T. Kitamura, J. Zhang, L. R. Campion, E. A. Kaiser, L. A. Snyder, 686 
+
+J. W. Pollard, CCL2 recruits inflammatory monocytes to facilitate breast-tumour metastasis. 687 
+
+Nature 475 , 222–225 (2011). 688 
+
+49. R. Rojo, K. A. Sauter, L. Lefevre, D. A. Hume, C. Pridans, Maternal tamoxifen treatment 689 
+
+expands the macrophage population of early mouse embryos. bioRxiv [Preprint] (2018). 690 
+
+https://doi.org/10.1101/296749. 691 
+
+50. L. Deng, J.-F. Zhou, R. S. Sellers, J.-F. Li, A. V. Nguyen, Y. Wang, A. Orlofsky, Q. Liu, D. A. 692 
+
+Hume, J. W. Pollard, L. Augenlicht, E. Y. Lin, A novel mouse model of inflammatory bowel 693 
+
+disease links mammalian target of rapamycin-dependent hyperproliferation of colonic 694 
+
+epithelium to inflammation-associated tumorigenesis. Am J Pathol 176 , 952–967 (2010). 695 
+
+51. J. Luo, F. Elwood, M. Britschgi, S. Villeda, H. Zhang, Z. Ding, L. Zhu, H. Alabsi, R. 696 
+
+Getachew, R. Narasimhan, R. Wabl, N. Fainberg, M. L. James, G. Wong, J. Relton, S. S. 697 
+
+Gambhir, J. W. Pollard, T. Wyss-Coray, Colony-stimulating factor 1 receptor (CSF1R) 698 
+
+signaling in injured neurons facilitates protection and survival. J Exp Med 210 , 157–172 699 
+
+(2013). 700 
+
+52. K. Grabert, A. Sehgal, K. M. Irvine, E. Wollscheid-Lengeling, D. D. Ozdemir, J. Stables, G. A. 701 
+
+Luke, M. D. Ryan, A. Adamson, N. E. Humphreys, C. J. Sandrock, R. Rojo, V. A. Verkasalo, 702 
+
+W. Mueller, P. Hohenstein, A. R. Pettit, C. Pridans, D. A. Hume, A Transgenic Line That 703 
+
+Reports CSF1R Protein Expression Provides a Definitive Marker for the Mouse Mononuclear 704 
+
+Phagocyte System. J Immunol 205 , 3154–3166 (2020). 705 
+
+53. A. D. Umpierre, B. Li, K. Ayasoufi, W. L. Simon, S. Zhao, M. Xie, G. Thyen, B. Hur, J. 706 
+
+Zheng, Y. Liang, D. B. Bosco, M. A. Maynes, Z. Wu, X. Yu, J. Sung, A. J. Johnson, Y. Li, L.-707 
+
+J. Wu, Microglial P2Y6 calcium signaling promotes phagocytosis and shapes neuroimmune 708 
+
+responses in epileptogenesis. Neuron 112 , 1959-1977.e10 (2024). 709 
+
+54. A. D. Umpierre, L. L. Bystrom, Y. Ying, Y. U. Liu, G. Worrell, L.-J. Wu, Microglial calcium 710 
+
+signaling is attuned to neuronal activity in awake mice. Elife 9, e56502 (2020). 711 
+
+55. T. A. Stewart, F. M. Davis, A primary cell and organoid platform for evaluating 712 
+
+pharmacological responses in mammary epithelial cells. ACS Pharmacology and Translational 713 
+
+Science 3, 63–75 (2019). 714 
+
+56. P. Nunes, N. Demaurex, The role of calcium signaling in phagocytosis. J Leukoc Biol 88 , 57– 715 
+
+68 (2010). 716 
+
+57. L. P. Shutov, C. A. Warwick, X. Shi, A. Gnanasekaran, A. J. Shepherd, D. P. Mohapatra, T. M. 717 
+
+Woodruff, J. D. Clark, Y. M. Usachev, The Complement System Component C5a Produces 718 
+
+Thermal Hyperalgesia via Macrophage-to-Nociceptor Signaling That Requires NGF and 719 
+
+TRPV1. J Neurosci 36 , 5055–5070 (2016). 720 
+
+58. J. Merz, A. Nettesheim, S. von Garlen, P. Albrecht, B. S. Saller, J. Engelmann, L. Hertle, I. 721 
+
+Schäfer, D. Dimanski, S. König, L. Karnbrock, K. Bulatova, A. Peikert, N. Hoppe, I. 722 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Hilgendorf, C. von Zur Mühlen, D. Wolf, O. Groß, C. Bode, A. Zirlik, P. Stachon, Pro- and 723 
+
+anti-inflammatory macrophages express a sub-type specific purinergic receptor profile. 724 
+
+Purinergic Signal 17 , 481–492 (2021). 725 
+
+59. B. Coste, J. Mathur, M. Schmidt, T. J. Earley, S. Ranade, M. J. Petrus, A. E. Dubin, A. 726 
+
+Patapoutian, Piezo1 and Piezo2 are essential components of distinct mechanically activated 727 
+
+cation channels. Science 330 , 55–60 (2010). 728 
+
+60. J. Geng, Y. Shi, J. Zhang, B. Yang, P. Wang, W. Yuan, H. Zhao, J. Li, F. Qin, L. Hong, C. Xie, 729 
+
+X. Deng, Y. Sun, C. Wu, L. Chen, D. Zhou, TLR4 signalling via Piezo1 engages and enhances 730 
+
+the macrophage mediated host response during bacterial infection. Nat Commun 12 , 3519 731 
+
+(2021). 732 
+
+61. Y. Wang, J. Wang, J. Zhang, Y. Wang, Y. Wang, H. Kang, W. Zhao, W. Bai, N. Miao, J. 733 
+
+Wang, Stiffness sensing via Piezo1 enhances macrophage efferocytosis and promotes the 734 
+
+resolution of liver fibrosis. Sci Adv 10 , eadj3289 (2024). 735 
+
+62. S. Pourteymour, J. Fan, R. K. Majhi, S. Guo, X. Sun, Z. Huang, Y. Liu, H. Winter, A. 736 
+
+Bäcklund, N.-T. Skenteris, E. Chernogubova, O. Werngren, Z. Li, J. Skogsberg, Y. Li, L. 737 
+
+Matic, U. Hedin, L. Maegdefessel, E. Ehrenborg, Y. Tian, H. Jin, PIEZO1 targeting in 738 
+
+macrophages boosts phagocytic activity and foam cell apoptosis in atherosclerosis. Cell Mol 739 
+
+Life Sci 81 , 331 (2024). 740 
+
+63. S. M. Swain, R. A. Liddle, Piezo1 acts upstream of TRPV4 to induce pathological changes in 741 
+
+endothelial cells due to shear stress. J Biol Chem 296 , 100171 (2021). 742 
+
+64. A. J. Hyman, S. Tumova, D. J. Beech, Piezo1 Channels in Vascular Development and the 743 
+
+Sensing of Shear Stress. Current Topics in Membranes , doi: 10.1016/bs.ctm.2016.11.001 744 
+
+(2017). 745 
+
+65. S. S. Ranade, Z. Qiu, S.-H. S. H. Woo, S. S. Hur, S. E. Murthy, S. M. Cahalan, J. Xu, J. 746 
+
+Mathur, M. Bandell, B. Coste, Y. S. J. Y.-S. J. Li, S. Chien, A. Patapoutian, Piezo1, a 747 
+
+mechanically activated ion channel, is required for vascular development in mice. 111 , 10347– 748 
+
+10352 (2014). 749 
+
+66. J. Li, B. Hou, S. Tumova, K. Muraki, A. Bruns, M. J. Ludlow, A. Sedo, A. J. Hyman, L. 750 
+
+McKeown, R. S. Young, N. Y. Yuldasheva, Y. Majeed, L. A. Wilson, B. Rode, M. A. Bailey, 751 
+
+H. R. Kim, Z. Fu, D. A. L. Carter, J. Bilton, H. Imrie, P. Ajuh, T. N. Dear, R. M. Cubbon, M. T. 752 
+
+Kearney, K. R. Prasad, P. C. Evans, J. F. X. Ainscough, D. J. Beech, Piezo1 integration of 753 
+
+vascular architecture with physiological force. Nature 515 , 279–282 (2014). 754 
+
+67. J. Richardson, A. Kotevski, K. Poole, From stretch to deflection: the importance of context in 755 
+
+the activation of mammalian, mechanically activated ion channels. FEBS J 289 , 4447–4469 756 
+
+(2022). 757 
+
+68. S. Ma, A. E. Dubin, Y. Zhang, S. A. R. Mousavi, Y. Wang, A. M. Coombs, M. Loud, I. 758 
+
+Andolfo, A. Patapoutian, A role of PIEZO1 in iron metabolism in mice and humans. Cell 184 ,759 
+
+969-982.e13 (2021). 760 
+
+69. Z. Zhou, X. Ma, Y. Lin, D. Cheng, N. Bavi, G. A. Secker, J. V. Li, V. Janbandhu, D. L. Sutton, 761 
+
+H. S. Scott, M. Yao, R. P. Harvey, N. L. Harvey, B. Corry, Y. Zhang, C. D. Cox, MyoD-family 762 
+
+inhibitor proteins act as auxiliary subunits of Piezo channels. Science 381 , 799–804 (2023). 763 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+70. M. R. Servin-Vences, M. Moroni, G. R. Lewin, K. Poole, Direct measurement of TRPV4 and 764 
+
+PIEZO1 activity reveals multiple mechanotransduction pathways in chondrocytes. eLife 6,765 
+
+e21074 (2017). 766 
+
+71. S. Shrestha, J. Richardson, K. Poole, Analysing Mechanically Evoked Currents at Cell-767 
+
+Substrate Junctions. Methods Mol Biol 2600 , 155–167 (2023). 768 
+
+72. K. Poole, R. Herget, L. Lapatsina, H.-D. Ngo, G. R. Lewin, Tuning Piezo ion channels to detect 769 
+
+molecular-scale movements relevant for fine touch. Nat Commun 5, 3520 (2014). 770 
+
+73. N. Bavi, J. Richardson, C. Heu, B. Martinac, K. Poole, PIEZO1-Mediated Currents Are 771 
+
+Modulated by Substrate Mechanics. ACS Nano 13 , 13545–13559 (2019). 772 
+
+74. J. W. Pollard, L. Hennighausen, Colony stimulating factor 1 is required for mammary gland 773 
+
+development during pregnancy. Proceedings of the National Academy of Sciences 91 , 9312– 774 
+
+9316 (1994). 775 
+
+75. S. Shindo, S. Nakamura, M. Rawas-Qalaji, A. Heidari, M. R. Pastore, M. Okamoto, M. Suzuki, 776 
+
+M. Salinas, D. Minond, A. Bontempo, M. Cayabyab, Y. Yang, J. L. Crane, M. Hernandez, S. 777 
+
+Vardar, P. Hardigan, X. Han, S. Kaltman, T. Kawai, Mechanosensing by Piezo1 regulates 778 
+
+osteoclast differentiation via PP2A-Akt axis in periodontitis. bioRxiv [Preprint] (2024). 779 
+
+https://doi.org/10.1101/2024.09.04.611049. 780 
+
+76. W. Sun, S. Chi, Y. Li, S. Ling, Y. Tan, Y. Xu, F. Jiang, J. Li, C. Liu, G. Zhong, D. Cao, X. Jin, 781 
+
+D. Zhao, X. Gao, Z. Liu, B. Xiao, Y. Li, The mechanosensitive Piezo1 channel is required for 782 
+
+bone formation. Elife 8, e47454 (2019). 783 
+
+77. K. A. Sauter, C. Pridans, A. Sehgal, Y. T. Tsai, B. M. Bradford, S. Raza, L. Moffat, D. J. Gow, 784 
+
+P. M. Beard, N. A. Mabbott, L. B. Smith, D. A. Hume, Pleiotropic effects of extended blockade 785 
+
+of CSF1R signaling in adult mice. J Leukoc Biol 96 , 265–274 (2014). 786 
+
+78. S. Uderhardt, A. J. Martins, J. S. Tsang, T. Lämmermann, R. N. Germain, Resident 787 
+
+Macrophages Cloak Tissue Microlesions to Prevent Neutrophil-Driven Inflammatory Damage. 788 
+
+Cell 177 , 541-555.e17 (2019). 789 
+
+79. J. R. Holt, W.-Z. Zeng, E. L. Evans, S.-H. Woo, S. Ma, H. Abuwarda, M. Loud, A. Patapoutian, 790 
+
+M. M. Pathak, Spatiotemporal dynamics of PIEZO1 localization controls keratinocyte 791 
+
+migration during wound healing. Elife 10 , e65415 (2021). 792 
+
+80. G. Jacquemin, M. Benavente-Diaz, S. Djaber, A. Bore, V. Dangles-Marie, D. Surdez, S. 793 
+
+Tajbakhsh, S. Fre, B. Lloyd-Lewis, Longitudinal high-resolution imaging through a flexible 794 
+
+intravital imaging window. Science Advances 7, eabg7763 (2021). 795 
+
+81. L. Mourao, M. Ciwinska, J. van Rheenen, C. L. G. J. Scheele, Longitudinal Intravital 796 
+
+Microscopy Using a Mammary Imaging Window with Replaceable Lid. J Vis Exp , doi: 797 
+
+10.3791/63326 (2022). 798 
+
+82. D. A. Hume, The many alternative faces of macrophage activation. Frontiers in Immunology 6799 
+
+(2015). 800 
+
+83. F. M. Davis, I. Azimi, R. A. Faville, A. A. Peters, K. Jalink, J. W. Putney, G. J. Goodhill, E. W. 801 
+
+Thompson, S. J. Roberts-Thomson, G. R. Monteith, Induction of epithelial-mesenchymal 802 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+transition (EMT) in breast cancer cells is calcium signal dependent. Oncogene 33 , 2307–2316 803 
+
+(2014). 804 
+
+84. T. B.-D. McEwan, R. A. Sophocleous, P. Cuthbertson, K. J. Mansfield, M. L. Sanderson-Smith, 805 
+
+R. Sluyter, Autocrine regulation of wound healing by ATP release and P2Y2 receptor 806 
+
+activation. Life Sci 283 , 119850 (2021). 807 
+
+85. C. Wetzel, S. Pifferi, C. Picci, C. Gök, D. Hoffmann, K. K. Bali, A. Lampe, L. Lapatsina, R. 808 
+
+Fleischer, E. S. J. Smith, V. Bégay, M. Moroni, L. Estebanez, J. Kühnemund, J. Walcher, E. 809 
+
+Specker, M. Neuenschwander, J. P. von Kries, V. Haucke, R. Kuner, J. F. A. Poulet, J. 810 
+
+Schmoranzer, K. Poole, G. R. Lewin, Small-molecule inhibition of STOML3 oligomerization 811 
+
+reverses pathological mechanical hypersensitivity. Nat Neurosci 20 , 209–218 (2017). 812 
+
+86. L. Wang, X. You, S. Lotinun, L. Zhang, N. Wu, W. Zou, Mechanical sensing protein PIEZO1 813 
+
+regulates bone homeostasis via osteoblast-osteoclast crosstalk. Nat Commun 11 , 282 (2020). 814 
+
+87. J. Schindelin, I. Arganda-Carreras, E. Frise, V. Kaynig, M. Longair, T. Pietzsch, S. Preibisch, 815 
+
+C. Rueden, S. Saalfeld, B. Schmid, J.-Y. J.-Y. Tinevez, D. J. White, V. Hartenstein, K. Eliceiri, 816 
+
+P. Tomancak, A. Cardona, K. Liceiri, P. Tomancak, C. A., Fiji: an open source platform for 817 
+
+biological image analysis. Nature Methods 9, 676–682 (2012). 818 
+
+88. C. Stringer, M. Pachitariu, Cellpose3: one-click image restoration for improved cellular 819 
+
+segmentation. Nat Methods 22 , 592–599 (2025). 820 
+
+89. T. A. Stewart, F. M. Davis, Got milk? Identifying and characterizing lactation defects in 821 
+
+genetically-engineered mouse models. Journal of Mammary Gland Biology and Neoplasia 822 
+
+(2020). 823 
+
+90. B. Lloyd-Lewis, F. M. Davis, O. B. Harris, J. R. Hitchcock, F. C. Lourenco, M. Pasche, C. J. 824 
+
+Watson, Imaging the mammary gland and mammary tumours in 3D: Optical tissue clearing and 825 
+
+immunofluorescence methods. Breast Cancer Research 18 (2016). 826 
+
+91. M.-T. Ke, S. Fujimoto, T. Imai, SeeDB: a simple and morphology-preserving optical clearing 827 
+
+agent for neuronal circuit reconstruction. Nature neuroscience 16 , 1154–61 (2013). 828 
+
+92. M. Linkert, C. T. Rueden, C. Allan, J. M. Burel, W. Moore, A. Patterson, B. Loranger, J. 829 
+
+Moore, C. Neves, D. MacDonald, A. Tarkowska, C. Sticco, E. Hill, M. Rossner, K. W. Eliceiri, 830 
+
+J. R. Swedlow, Metadata matters: access to image data in the real world. Journal of Cell 831 
+
+Biology 189 , 777–782 (2010). 832 
+
+93. K.-U. Wagner, C. a Boulanger, M. D. Henry, M. Sgagias, L. Hennighausen, G. H. Smith, An 833 
+
+adjunct mammary epithelial cell population in parous females: its role in functional adaptation 834 
+
+and tissue renewal. Development (Cambridge, England) 129 , 1377–86 (2002). 835 
+
+94. T. A. Stewart, K. Hughes, A. J. Stevenson, N. Marino, A. L. Ju, M. Morehead, F. M. Davis, 836 
+
+Mammary mechanobiology - investigating roles for mechanically activated ion channels in 837 
+
+lactation and involution. Journal of cell science 134 (2021). 838 
+
+95. E. A. Susaki, K. Tainaka, D. Perrin, H. Yukinaga, A. Kuno, H. R. Ueda, Advanced CUBIC 839 
+
+protocols for whole-brain and whole-body clearing and imaging. Nat Protoc 10 , 1709–1727 840 
+
+(2015). 841 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+96. K. M. Suchanek, F. J. May, J. A. Robinson, W. J. Lee, N. A. Holman, G. R. Monteith, S. J. 842 
+
+Roberts-Thomson, Peroxisome proliferator-activated receptor alpha in the human breast cancer 843 
+
+cell lines MCF-7 and MDA-MB-231. Molecular carcinogenesis 34 , 165–171 (2002). 844 
+
+97. M. Folacci, S. B. Chalmers, F. M. Davis, “Methods for Imaging Intracellular Calcium Signals 845 
+
+in the Mouse Mammary Epithelium in Two and Three Dimensions” in Calcium Signaling: 846 
+
+Methods and Protocols , C. M. Gorvin, Ed. (Springer US, New York, NY, 2025; 847 
+
+https://doi.org/10.1007/978-1-0716-4164-4_15), pp. 195–212. 848 
+
+98. F. M. Davis, A. Janoshazi, K. S. Janardhan, N. Steinckwich, D. M. D’Agostin, J. G. Petranka, 849 
+
+P. N. Desai, S. J. Roberts-Thomson, G. S. Bird, D. K. Tucker, S. E. Fenton, S. Feske, G. R. 850 
+
+Monteith, J. W. Putney, Essential role of Orai1 store-operated calcium channels in lactation. 851 
+
+Proceedings of the National Academy of Sciences 112 , 5827–5832 (2015). 852 
+
+99. S. Sianati, A. Kurumlian, E. Bailey, K. Poole, Analysis of Mechanically Activated Ion 853 
+
+Channels at the Cell-Substrate Interface: Combining Pillar Arrays and Whole-Cell Patch-854 
+
+Clamp. Front Bioeng Biotechnol 7, 47 (2019). 855 
+
+100. M. B. Brent, J. S. Thomsen, A. Brüel, Short-term glucocorticoid excess blunts abaloparatide-856 
+
+induced increase in femoral bone mass and strength in mice. Sci Rep 11 , 12258 (2021). 857 
+
+858 
+
+859 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Methods 860 
+
+Key Resource Table 861 
+
+Reagent or Resource  Source  Identifier 
+
+Antibodies 
+
+Anti-Red Fluorescent Protein (RFP) Polyclonal Rabbit Antibody, CF568 Conjugated 
+
+Biotium  Cat# 20477, RRID: AB_3665324 
+
+Anti-Green Fluorescent Protein (GFP) chicken polyclonal antibody 
+
+Abcam  Cat# ab13970, RRID: AB_300798 
+
+Anti-Iba1 rabbit monoclonal antibody [EPR16588] 
+
+Abcam  Cat# ab178846, RRID: AB_2636859 
+
+Anti-Smooth Muscle Actin (SMA), Clone 1A4, Concentrate. Monoclonal Mouse 
+
+Agilent  Cat# M085101-2, RRID: AB_2223500 
+
+Anti-F4/80 Monoclonal Antibody (BM8), Alexa Fluor 647 
+
+ThermoFisher  Cat# MF48021, 
+
+RRID: AB_10375289 
+
+Goat anti-Chicken IgY (H+L) Secondary Antibody, Alexa Fluor-488 
+
+ThermoFisher  Cat# A-11039, RRID: AB_2534096 
+
+F(ab')2-Goat anti-Rabbit IgG (H+L) Cross-Adsorbed Secondary Antibody, Alexa Fluor Plus 647 
+
+ThermoFisher  Cat# A48285TR, RRID: AB_2896350 
+
+F(ab')2-Goat anti-Mouse IgG (H+L) Cross-Adsorbed Secondary Antibody, Alexa Fluor Plus 488 
+
+ThermoFisher  Cat# A48286TR, RRID: AB_2896352 
+
+Chemicals, peptides and recombinant proteins 
+
+RPMI 1640 Medium  Gibco  21870076 
+
+Foetal Bovine Serum (FBS), qualified, Australia 
+
+Gibco  10099141 
+
+Penicillin-Streptomycin  Gibco  15140122 
+
+L-Glutamine  Gibco  25030081 
+
+Recombinant Human M-CSF  PeproTech  300-25 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Dimethyl sulfoxide (DMSO)  Sigma -Aldrich  D4540 
+
+Phosphate -buffered saline (PBS)  Gibco  11510546 
+
+Formalin solution, neutral buffered, 
+
+10% (NBF) 
+
+Sigma-Aldrich  HT501128 
+
+Paraformaldehyde (PFA), 16% w/v aq. soln., methanol free 
+
+ThermoFisher Scientific  043368.9M 
+
+Triton X-100  Merck  X100-1L 
+
+Bovine Serum Albumin (BSA)  Merck  A7906 
+
+4',6-Diamidino-2-Phenylindole (DAPI) dilactate 
+
+ThermoFisher Scientific  D3571 
+
+D(-)-Fructose  Fisher Scientific  10579760 
+
+α-Thioglycerol  Merck  M6145 
+
+Normal goat serum (NGS)  Invitrogen  10000C 
+
+Methyl Green  Sigma-Aldrich  M8884 
+
+Urea  Fisher Scientific  10578260 
+
+N,N,N’,N’-tetrakis (2-hydroxypropyl) ethylenediamine 
+
+Sigma-Aldrich  122262 
+
+Sucrose  Fisher Scientific  11497417 
+
+Triethanolamine  Sigma-Aldrich  90279 
+
+Hydrochloric acid (HCl), 1 M  Honeywell Chemicals  35328 
+
+Sodium Chloride (NaCl)  Fisher Scientific  10316943 
+
+HEPES  Sigma-Aldrich  H4034 
+
+Potassium Chloride (KCl)  Sigma-Aldrich  P5405 
+
+Magnesium chloride (MgCl 2 ), 1M  Fisher Scientific  15414799 
+
+Sodium phosphate monobasic (NaH 2 PO 4 )
+
+Sigma-Aldrich  S5011 
+
+Sodium bicarbonate (NaHCO 3 ) Sigma-Aldrich  S5761 
+
+D-(+)-Glucose  Sigma-Aldrich  G7021 
+
+Calcium chloride dihydrate (CaCl 2 ) Sigma-Aldrich  C7902 
+
+Yoda1  Tocris  5586 
+
+Recombinant Mouse C5a protein  Abcam  ab151847 
+
+Adenosine 5′ -triphosphate disodium salt hydrate (ATP) 
+
+Sigma-Aldrich  A6419 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Ionomycin (free acid)  Enzo Life Sciences  ALX -450 -006 -M001 
+
+BAPTA, Tetrasodium Salt, cell 
+
+impermeant 
+
+ThermoFisher Scientific  B1214 
+
+DMEM/F-12, HEPES  Gibco  11574546 
+
+Tris(hydroxymethyl)aminomethane (Tris base) 
+
+Sigma-Aldrich  252859 
+
+Critical commercial assays 
+
+RNeasy Plus Mini Kit  Qiagen  74104 
+
+QuantiTect Reverse Transcription Kit 
+
+Qiagen  205311 
+
+Zymosan A (S. cerevisiae) BioParticles™, Alexa Fluor™ 594 conjugate 
+
+ThermoFisher Scientific  Z23374 
+
+TaqMan™ Fast Universal PCR Master Mix (2X), no AmpErase™ UNG 
+
+ThermoFisher Scientific  4366072 
+
+TaqMan™ Gene Expression Assays  ThermoFisher Scientific  4448892 
+
+QuantiChrom™ Calcium Assay Kit  Bioassay Systems  DICA-500 
+
+Experimental models: organisms/strains 
+
+C57BL/6 mice  Jackson Laboratory  Strain #:000664 
+
+C57BL/6 mice  Ozgene/Animal Resources Centre 
+
+C57BL/6JOzarc 
+
+Csf1r -Cre mice  Kind gift from Prof. Edwin Hawkins (Walter and Elia Hall Institute) 
+
+Original Jax strain #: 029213 
+
+Salsa -flox mice  Jackson Laboratory  Strain #031968 
+
+Piezo1 -flox mice  Jackson Laboratory  Strain #029213 
+
+tdTomato -flox mice  Kind gift from Prof. Ian Frazer (University of Queensland, Australia) 
+
+Original Jax strain #: 007909 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+GCaMP6f -flox mice  Kind gift from Dr. James W. 
+
+Putney (National Institute of 
+
+Environmental Health 
+
+Sciences/NIH). 
+
+Original Jax strain #:028865 
+
+Piezo1 -tdTomato mice  Kind gift from Prof Shaun Jackson, University of Sydney 
+
+Original Jax strain #: 029214 
+
+MacGreen mice  Developed by DA Hume Lab 
+
+(4)
+
+Jax strain #:018549 
+
+Software and algorithms 
+
+Fiji (ImageJ)  Schindelin et al.  (87 ) https://imagej.net/software/f 
+
+iji/ 
+
+Prism 10  GraphPad  www.graphpad.com 
+
+pClamp 10 software  Molecular Devices  https://support.molecularde 
+
+vices.com/s/article/Axon-
+
+pCLAMP-10-
+
+Electrophysiology-Data-
+
+Acquisition-Analysis-
+
+Software-Download-Page 
+
+Clampfit software  Molecular Devices  https://www.moleculardevi 
+
+ces.com/products/axon-
+
+patch-clamp-
+
+system/acquisition-and-
+
+analysis-software/pclamp-
+
+software-suite 
+
+Igor  Wavemetrics  www.wavemetrics.com/ 
+
+Cellpose  Stringer and Pachitariu  (88 ) www.cellpose.org/ 
+
+MATLAB  Mathworks  https://se.mathworks.com/ 
+
+Other 
+
+Sterilin™ 100mm Square Petri Dishes 
+
+ThermoFisher Scientific  109-17 
+
+μ-Dish 35 mm, high Glass Bottom imaging dish 
+
+Ibidi  81158 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+FluoroDish, Glass Bottom, Clear 
+
+Wall, 35 mm imaging dish 
+
+FluoroDish  FD35-100 
+
+Two-well culture insert in μ-dish 35 mm, high 
+
+Ibidi  81176 
+
+862 
+
+Experimental model and subject details 863 
+
+Mice 864 
+
+Experiments were conducted in accordance with the Australian Code for the Care and Use of Animals 865 
+
+for Scientific Purposes, the Queensland Animal Care and Protection Act (2001), the NSW Animal 866 
+
+Research Act (1985), and the European Union Directive 86/609 with pre-approval from the Danish 867 
+
+Animal Inspectorate (permit: 2022-15-0201-01196), with local animal ethics committee approvals. All 868 
+
+strains were maintained on a C57BL6/J background. Animals were housed in specific pathogen free 869 
+
+facilities, in individually ventilated cages with 12:12 h light-dark cycles, and ad libitum food and water. 870 
+
+For histological comparisons, young mice were harvested between 10–14 weeks old, aged mice were 871 
+
+ex-breeding females that were separated from breeding trios at 40 weeks and aged to 52 weeks prior 872 
+
+to harvests. For lactation and involution studies, adult females were bred with C57BL6/J sires, allowed 873 
+
+to litter naturally, and had litters standardised to 6–7 pups. Lactation tissue was collected during peak 874 
+
+lactation (days 10–12 of lactation). For forced involution tissue, pups were weaned during peak 875 
+
+lactation and tissue was harvested 168 h later  (89 ).876 
+
+877 
+
+Method details 878 
+
+Cell culture 879 
+
+To generate BMDM Φs, mouse femurs were isolated and flushed twice with 5 mL cold PBS to extract 880 
+
+bone marrow. Marrow was centrifuged for 5 min at 400 × g prior to resuspension in either freezing 881 
+
+media (90% FBS and 10% DMSO) or M Φ cell culture media (10% heat-inactivated FBS, 2 mM L-882 
+
+glutamine, 100 U/mL Penicillin 100 μg/mL Streptomycin, 100 ng/mL Human M-CSF in RPMI 1640 883 
+
+medium). Cells were plated on Sterilin square petri dishes and maintained in a humidified cell culture 884 
+
+incubator at 37°C, 5% CO 2 for at least 7 days prior to use in experiments. Media was replenished after 885 
+
+3–4 days, if required. To replate BMDM Φs, monolayers were lifted from plasticware by flushing with 886 
+
+an 18G needle. Peritoneal M Φs were isolated by injecting and removing 5 mL PBS in the peritoneal 887 
+
+cavity. Recovered cell suspensions were centrifuged for 5 min at 400 × g, resuspended in M Φ cell 888 
+
+culture media and plated onto imaging dishes. Dishes were incubated in a humidified cell culture 889 
+
+incubator at 37°C, 5% CO 2 for at least 2 h to allow attachment prior to use in experiments. 890 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+891 
+
+Tissue clearing 892 
+
+Tissues were fixed in 10% NBF for up to 6 hours, prior to storage in PBS at 4°C until sample 893 
+
+processing. Tissues were cleared using the see deep brain (seeDB) protocol, as previously described 894 
+
+(90 , 91 ). Briefly, tissue pieces were blocked and permeabilised in seeDB blocking buffer (1% w/v 895 
+
+triton X-100 10% w/v BSA in PBS) at 4°C overnight. Samples were incubated in primary antibody 896 
+
+dilutions at 4°C for 4 days, washed 3 x 1 h in PBS, then incubated in secondary antibody dilutions for 897 
+
+a further 2 days prior to washing and nuclear DAPI staining. Following staining, samples were serially 898 
+
+incubated in solutions of 20%, 40%, 60%, and 80% w/v fructose in distilled water (8–16 h incubation) 899 
+
+prior to being submerged in 100% and 115% w/v fructose solutions (24 h incubation). All fructose 900 
+
+solutions contained 0.5% v/v α-thioglycerol. Antibodies and DAPI dilutions were as follows: Anti-901 
+
+RFP-CF568 conjugated 1:300, Anti-GFP 1:1000, Anti-chicken-AF488 1:500, DAPI 10.9 μM. 902 
+
+Cleared, immunostained tissue was imaged on an Olympus FV3000 laser scanning confocal 903 
+
+microscope with UPLSAPO 10×/0.40, UPLSAPO 20×/0.75, UPLSAPO 30×/1.05 and UPLFLN 904 
+
+40×/0.75 objective lenses. Visualization and image processing was performed in ImageJ (v1.52e, 905 
+
+National Institutes of Health)  (87 , 92 ). Denoising of three-dimensional images was performed as 906 
+
+described previously  (93 ).907 
+
+908 
+
+Immunofluorescence staining 909 
+
+Samples were stained as previously described  (55 ), with minor adjustments. Briefly, cells were fixed 910 
+
+for 15 min in 4% PFA prior to washing in PBS, and permeabilisation for 5 min in PBS with 0.1% 911 
+
+Triton X-100. Samples were blocked for 1 h in blocking buffer (5% NGS, 0.05% Triton X-100 in 912 
+
+PBS), prior to overnight incubation at 4°C with primary antibodies diluted in blocking buffer. Samples 913 
+
+were then washed 3 × 10 min, then incubated with secondary antibodies diluted in blocking buffer for 914 
+
+1 h at room temperature. Following 3 × 10 min washes, samples were stained for 10 min with DAPI, 915 
+
+washed a 2 × 10 min in PBS and then imaged. Antibodies and DAPI dilutions were as follows: Anti-916 
+
+RFP-CF568 conjugated 1:500, Anti-F4/80-AF647 conjugated 1:150, Anti-GFP chicken 1:1000, Anti-917 
+
+chicken-AF488 1:500, DAPI 2.18 μM. Samples were imaged on an Olympus FV3000 laser scanning 918 
+
+confocal microscope as described above, or via a Leica SP8 confocal microscope with a 40× 1.3 HC 919 
+
+PL APO CS2 Oil objective lens. Image visualization and processing was conducted as described 920 
+
+above. 921 
+
+922 
+
+Histology and immunohistochemistry 923 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Tissues were fixed, processed, and paraffin embedded as previously described  (89 , 94 ). Formalin-fixed 924 
+
+paraffin-embedded slides were sectioned to 4 –5 μm, deparaffinized by immersion in xylene (3 × 5 min 925 
+
+immersions) and rehydrated via a reducing ethanol series. Sections were permeabilised for 5 min in 926 
+
+0.5% Triton X-100 in PBS. Antigen retrieval was performed in a Decloaking Chamber NxGen digital 927 
+
+pressure system (Biocare Medical) at 110°C for 11 min, in a sodium citrate buffer (0.01 M, pH 6). 928 
+
+Samples were blocked for 1 h in a humidified chamber at room temperature in blocking buffer (10% 929 
+
+NGS, 0.05% Triton X-100 in PBS). Primary antibodies were diluted in antibody dilution buffer (5% 930 
+
+NGS, 0.025% Triton X-100 in PBS) and incubated on sections at 4°C in a humidified chamber 931 
+
+overnight. Following washing (3 × 5 min), sections were incubated in secondary antibodies diluted in 932 
+
+antibody dilution buffer for 1 h in a humidified chamber at room temperature. Sections were washed 933 
+
+3 × 5 min, stained with DAPI for 10 min, washed a further 3 × 5 min, mounted in 50:50 glycerol:PBS, 934 
+
+and imaged within 48 h. Antibodies and DAPI dilutions were as follows: Anti-IBA1 rabbit 1:600, 935 
+
+Anti-SMA mouse 1:600, Anti-rabbit-AF647 1:500, Anti-mouse AF488 1:500, DAPI 1.36 μM. 936 
+
+Samples were imaged via a Leica STELLARIS 8 with a HC PL APO 40×/1.25 glycerol motorised 937 
+
+correction collar CS2 objective. Three regions were imaged per tissue per animal; regions were chosen 938 
+
+via DAPI channel only. Number of M Φs per tissue were manually counted by a blinded analyst. 939 
+
+940 
+
+Wholemount histology 941 
+
+Inguinal mammary glands were dissected, spread on Tetra-Pak card and fixed in 10% NBF overnight 942 
+
+in room temperature as previously described  (89 , 90 ). Post fixing, samples were immersed in CUBIC 943 
+
+reagent 1 (25% w/w urea, 25% w/w N,N,N’,N’-tetrakis (2-hydroxypropyl) ethylenediamine, 15% w/w 944 
+
+Triton X-100 in distilled H2O) for 3 days at 37°C, in a humidified chamber, with once daily reagent 945 
+
+refreshment and sample inversion  (90 , 95 ). Glands were stained in 0.5% methyl green solution for 1.5 946 
+
+h at room temperature, with gentle rocking, washed 3 times in water and then destained for 20 min in 947 
+
+50% ethanol with 25 mM HCl. Samples were incubated in modified CUBIC reagent 2 (sucrose 50% 948 
+
+w/w, urea 25% w/w, triethanolamine 10% w/v, Triton X-100 0.1% w/v, 25 mM NaCl in distilled 949 
+
+water) at 37°C in a humidified chamber overnight before imaging. Samples were imaged on a Leica 950 
+
+M205FCA stereo microscope with a planapo 1.0× M series objective. 951 
+
+952 
+
+Real-time reverse transcription PCR 953 
+
+RNA was isolated from BMDM Φs via Qiagen Buffer RLT Plus, prior to purification with a RNeasy 954 
+
+Plus Mini Kit. Reverse transcription was conducted with using the Quantitect Reverse Transcription 955 
+
+Kit and resulting cDNA was amplified on a StepOne Plus Real Time PCR system, using Taqman Fast 956 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Universal PCR Master Mix and Taqman Gene Expression assays. Relative quantitation was calculated 957 
+
+with reference to Hprt RNA and analysed using the comparative C T method  (96 ). C T values above 35 958 
+
+were set to 35 were considered undetected. values The following assays were used in this study: Hprt 959 
+
+Mm03024075_m1 , Trpv4 Mm00499025_m1 , Piezo1 Mm01241549_m1 , Piezo2 Mm01265861_m1 ,960 
+
+Trpv2 Mm00449223_m1 , Trpm7 Mm00457998_m1 , P2rx4 Mm00501787_m1 , P2rx7 961 
+
+Mm01199500_m1 , Orai1 Mm00774349_m1 , Stim1 Mm01158413_m1. 962 
+
+963 
+
+Live cell Ca 2+ imaging 964 
+
+All live cell Ca 2+ imaging was conducted at room temperature in physiological salt solution (PSS: 10 965 
+
+mM HEPES, 5.9 mM KCl, 1.4 mM MgCl 2 , 1.2 mM NaH 2 PO 4 , 5 mM NaHCO 3 , 140 mM NaCl, 11.5 966 
+
+mM glucose and 1.8 mM CaCl 2 ; pH 7.3 –7.4). Extracellular Ca 2+ free experiments were conducted in 967 
+
+PSS without the addition of 1.8 mM CaCl 2 and the presence of 500 μM BAPTA. For studies assessing 968 
+
+responses to pharmacological stimuli, cells were bathed in PSS and received either buffer control 969 
+
+(PSS), or agonists at concentrations indicated in figure legends. Zymosan uptake experiments were 970 
+
+conducted using particles at a concentration of 0.2 mg/mL. Live cell imaging was conducted on either 971 
+
+an Olympus FV3000 laser scanning confocal microscope with UPLSAPO 10×/0.40, UPLSAPO or 972 
+
+UPLSAPO 30×/1.05 objective lenses, or on a Leica STELLARIS 8 with a HC FLUOTAR L 25×/0.95 973 
+
+W VISIR objective. 974 
+
+975 
+
+Ca 2+ responses in live tissue 976 
+
+Ear and adipose tissues were harvested, cut into 3 –5 mm 2 pieces and incubated in DMEM/F12 977 
+
+containing 10% FBS in a 37°C humidified cell culture incubator with 5% CO 2 until ready for imaging 978 
+
+as previously described  (97 , 98 ). Inguinal lymph nodes were removed from surrounding tissue and 979 
+
+stored in DMEM/F12 at 37°C until ready for imaging. Immediately prior to imaging, tissue pieces 980 
+
+were placed on an imaging dish and bathed in PSS. Mechanically induced Ca 2+ recordings in ear and 981 
+
+adipose tissue were created by manually prodding tissue pieces with an 18G microlance needle. 982 
+
+Imaging was conducted either on a Leica M205FCA stereo microscope with a planapo 1.0× M series 983 
+
+objective (Figure 1E) or on a Leica STELLARIS 8 with a HC PL APO 10×/0.40 CS2 objective (Figure 984 
+
+1D&F). 985 
+
+986 
+
+Live cell imaging of wounded BMDM Φ monolayers 987 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Wild-type BMDM Φ monolayers were prepared as described above, plated in a 96-well plate and 988 
+
+wounded via manual scratching via a 200 μL pipette tip. Wounded monolayers were imaged at 37°C 989 
+
+overnight in a PhaseFocus Livecyte live cell imaging system. 990 
+
+991 
+
+Flow cytometry 992 
+
+GCaMPP6f signal in BMDM Φs was assessed during flow cytometry using a Beckman Coulter 993 
+
+CytoFLEX-S. Briefly, cells were suspended in either ethanol or a flow cytometry buffer (PBS/2% 994 
+
+FBS). During sorting, BMDM Φs in buffer were treated with 10 μM Yoda1 after 200 sec, and the flow 995 
+
+rate was subsequently increased from 10 μL/minute to 60 μL/minute after 300 sec. 996 
+
+997 
+
+998 
+
+Piezo1-tdTomato live cell imaging 999 
+
+Prior to imaging, Piezo1 tdT BMDM Φs were isolated, differentiated, and replated as described above. 1000 
+
+Following replating, monolayers were maintained in M Φ media without penicillin/streptomycin. Prior 1001 
+
+to imaging, cell monolayers were scratched with a 10 μL pipette tip. Cells were imaged at 37°C at a 1002 
+
+TIRF angle of 63.5, using a Zeiss ELYRA 7 microscope with a 63× Plan Apochromat oil immersion 1003 
+
+objective with 1.46 N.A. 1004 
+
+1005 
+
+Image analysis 1006 
+
+Supplementary movies were prepared in FIJI. Calcium channel LUT was set as either mpl-inferno 1007 
+
+(Movies S1-3) or Green Fire Blue (Movies S4-12). 1008 
+
+1009 
+
+For monolayer Ca 2+ agonist response data, the first 10 images of the tdT channel were summed in FIJI 1010 
+
+and resulting image had individual cells segmented via Cellpose (v3.1.1.2). Resulting masks were 1011 
+
+transferred to GCaMP6f channel in FIJI for parameter measurement over time. Recorded values were 1012 
+
+analysed in MATLAB (R2021b). Fluorescence values over time were normalised to the mean 1013 
+
+fluorescence value for the first 10 images for each individual cell (F/F baseline ). Average peak Ca 2+ levels 1014 
+
+were determined by averaging maximum F/F baseline values for all individual cell responses per dish, 1015 
+
+statistics were performed on dish averages. Cell activation was defined as the F/F baseline value of a cell 1016 
+
+exceeding a threshold fluorescence level during imaging time ( ≥2 F/F baseline for responses recorded on 1017 
+
+Olympus FV3000 and ≥3 F/F baseline for responses recorded on Leica STELLARIS8). Individual traces 1018 
+
+for plots were randomly selected. For fluid flow monolayer Ca 2+ response data, individual cell 1019 
+
+segmentation was not conducted due to frequent dish movements during imaging periods, instead 1020 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+whole dish fluorescence was recorded and analysed using the methods described above. For monolayer 1021 
+
+scratch analysis, 10 images post wounding were summed in FIJI in the tdT channel were and the 1022 
+
+resulting image had individual cells segmented via Cellpose. Resulting masks were transferred to 1023 
+
+GCaMP6F channel in FIJI and measured as described above. Scratch wounds were segmented by hand 1024 
+
+in Cellpose, and resulting masks was transferred to FIJI to permit measurement of perimeter points. 1025 
+
+Cell fluorescence values were analyzed in MATLAB as described above. The Euclidean distance 1026 
+
+between cell centroids and each perimeter point of scratch wounds was calculated to determine the 1027 
+
+shortest distance between each cell and wound edges. Cells within 90 μm of wound edges were 1028 
+
+classified as ‘wound edge’ cells, cells further than 90 μm from any wound edge were classified as 1029 
+
+‘monolayer’ cells. 1030 
+
+1031 
+
+Combined mechanical stimulation and electrophysiological recordings 1032 
+
+Two distinct methods were utilised to apply mechanical stimuli to delimited regions of the membrane, 1033 
+
+a pillar array assay to apply mechanical inputs directly at cell-substrate contact points and high speed 1034 
+
+pressure clamp (HSPC) to stretch a region of membrane within an outside-out patch. Pipettes for 1035 
+
+whole-cell patch clamp and outside-out patch clamp analyses were prepared using a pipette puller 1036 
+
+fitted with a box filament (P-1000, Sutter Instruments, USA) from thick-walled filamented glass 1037 
+
+(Harvard Apparatus, USA). Before use, a homemade micro-forge was utilised to heat-polish the glass, 1038 
+
+resulting in a final resistance of 3– 6 MΩ. For measurements, the internal solution contained 110 mM 1039 
+
+KCl, 10 mM NaCl, 1 mM MgCl2, 1 mM EGTA and 10 mM HEPES (pH 7.3) and the extracellular 1040 
+
+solution 140 mM NaCl, 4 mM KCl, 2 mM CaCl2, 1 mM MgCl2, 4 mM glucose and 10 mM HEPES 1041 
+
+(pH 7.4). Data were obtained using a Nikon Ti-E inverted microscope and an Axopatch 200B with 1042 
+
+pClamp 10 software (Molecular Devices, USA). Pipette and membrane capacitance were compensated 1043 
+
+and to minimise voltage errors, series resistance was compensated by at least 60%. Mechanically-1044 
+
+activated currents were recorded at a holding potential of −60 mV. Patch clamp data were subsequently 1045 
+
+analysed using Clampfit software (Molecular Devices, USA). 1046 
+
+1047 
+
+Two distinct methods were utilised to apply mechanical stimuli to delimited regions of the membrane. 1048 
+
+A pillar array assay was used to apply mechanical stimuli at connections between the M Φs and the 1049 
+
+substrate, as previously described  (72 , 99 ). Cells were cultured on uncoated pillar arrays, activated 1050 
+
+using oxygen plasma (Diener GmbH, Germany), before exchange of media for extracellular buffer. 1051 
+
+After establishing whole-cell patch clamp configuration, mechanically activated currents were 1052 
+
+recorded in voltage clamp mode while stimuli were applied by serially deflecting an individual pilus 1053 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+subjacent to the cell. The pillar deflection was achieved using a blunt, heat-polished pipette (tip 1054 
+
+diameter approx. 2 μm) driven by a MM3A-LS nanomanipulator (Kleindiek Nanotechnik, Germany) 1055 
+
+and positioned adjacent a pilus. Multiple stimuli ranging between 1 nm–1 μm were applied with a 1056 
+
+delay between each stimulus of at least 10 s. Give the propensity of M Φs to engulf the pillar structures 1057 
+
+subjacent to the cell, the tdT channel was used to select stimulation sites where the cell membrane was 1058 
+
+covering but not engulfing the subjacent pilus. In addition, small stimuli adjacent, but not in contact 1059 
+
+with, the pilus were applied and data were discarded if currents were mechanically evoked in the 1060 
+
+absence of pillar movement. Data were also discarded if the current trace did not return to baseline 1061 
+
+after the end of the pillar deflection. To quantify the stimulus, bright-field images of the deflected pilus 1062 
+
+were taken before and during each stimulation using a 40× objective (NA 0.6). The centre of each 1063 
+
+pilus was calculated in a post-hoc analysis by applying a 2D-gaussian fit of intensity values in the 1064 
+
+bright field visualisation of each pilus (Igor, Wavemetrics, USA) and the magnitude of pillar deflection 1065 
+
+calculated from successive images by comparing the difference in the calculated centre point. 1066 
+
+1067 
+
+Membrane stretch stimuli were applied to outside-out patches of membrane using high speed pressure 1068 
+
+clamp (HSPC). After formation of a high resistance seal and establishing whole-cell mode, an outside-1069 
+
+out patch was formed from extraction of a region of membrane. Both positive and negative pressure 1070 
+
+stimuli were then applied, with at least 10 s intervals between each stimulus, while currents traces were 1071 
+
+recorded in voltage clamp mode, at a holding potential of −60 mV. 1072 
+
+1073 
+
+Milk collection and analysis 1074 
+
+Milk samples were collected from lactating dams as previously described  (89 ). Briefly, pups were 1075 
+
+removed from dams for up to 2 hours prior to milking. Dams were administered 2 IU of oxytocin via 1076 
+
+intraperitoneal injection, then lightly anesthetized via 2% isoflurane. Milking was conducted on 1077 
+
+inguinal mammary glands of both the left and right side through manual manipulation of the glands. 1078 
+
+Expressed milk was collected from the nipple tip by pipette. Collected samples were stored at −20°C 1079 
+
+until analysis. Free milk Ca 2+ concentrations were measured using a phenolsulphonephthalein reaction 1080 
+
+with a QuantiChrom Calcium Assay Kit as per manufacturer’s instructions. 1081 
+
+1082 
+
+Bone sample analysis 1083 
+
+Femura and L4 vertebrae were harvested and stored at −20°C in Ringer’s solution (2.5 mM Tris base, 1084 
+
+154 mM NaCl, 1.63 mM CaCl 2 , 5.63 mM KCl, pH 7.4) until analysis. The microarchitectural bone 1085 
+
+parameters were determined using a desktop μCT scanner (Scanco μCT 35,  Scanco Medical AG, 1086 
+
+> .CC-BY-NC-ND 4.0 International license made available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is The copyright holder for this preprint this version posted July 17, 2026. ;https://doi.org/10.64898/2026.07.13.737685 doi: bioRxiv preprint
+
+Brüttiselen, Switzerland)  as previously described  (100 ). In brief: Scans were performed with 1000 1087 
+
+projections/180°, isotropic resolution of 3.5 μm, X-ray tube voltage of 55 kV and current of 114 μA, 1088 
+
+and an integration time of 800 ms. Subsequently, the microstructural parameters were determined 1089 
+
+using IPL (v 5.11, Scanco Medical AG,  Brüttiselen, Switzerland ). Femoral bone length was 1090 
+
+determined using a digital sliding caliper, measured from the top of the femoral head. 1091 
+
+1092 
+
+Statistical analysis 1093 
+
+Statistical analysis was performed using GraphPad Prism (v10.1.0). Statistical tests are outlined in 1094 
+
+figure legends. All analyses were conducted on average values for independent repeats, where n = 3 1095 
+
+to 6 animals, as indicated. 1096 
+
+1097
