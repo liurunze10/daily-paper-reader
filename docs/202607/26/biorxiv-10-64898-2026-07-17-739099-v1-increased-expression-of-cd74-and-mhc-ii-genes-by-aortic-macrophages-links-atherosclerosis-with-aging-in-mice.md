@@ -1,0 +1,24 @@
+---
+title: Increased expression of Cd74 and MHC II genes by aortic macrophages links atherosclerosis with aging in mice
+title_zh: 主动脉巨噬细胞Cd74和MHC II基因表达增加将小鼠动脉粥样硬化与衰老联系起来
+authors: "Mishra, A., Dhami, I. S., Kumari, S., Borah, S., Goud, K., Sahadevan, S., Ramesh, B., Huby, T., Goodridge, H. S., Barman, P. K."
+date: 2026-07-21
+pdf: "https://www.biorxiv.org/content/10.64898/2026.07.17.739099v1.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.0
+evidence: 慢性炎症条件下的功能多样化巨噬细胞群体
+tldr: 本研究旨在探讨衰老增加动脉粥样硬化风险的机制。通过整合单细胞RNA测序数据，研究人员发现衰老小鼠的主动脉和骨髓中，特定单核及巨噬细胞子集显著富集，且Cd74和MHC II类基因表达上调。实验证实，衰老单核细胞对内皮细胞的粘附性增强，且ox-LDL刺激可诱导CD74表达。该研究揭示了Cd74和MHC II介导的免疫反应是连接衰老与动脉粥样硬化的关键环节。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-17-739099-v1/fig-001.webp\", \"caption\": \"Figure 6. Monocytes from aged mice show increased adhesion to aortic endothelial cells. (A, B) Co-cultures were developed by using aortic endothelial cell monolayer and M-CSF differentiated bone marrow monocytes from young and aged mice. The co-cultures were left untreated or stimulated with ox-LDL (10μg/ml) + MIF (500ng/ml) for 8 hours. Flow cytometry plots (A) and bar graph (B) show difference in the percentage and number of adhered CD11b+CD115+ cells respectively in the co-cultures. The endothelial cells and monocytes were derived from the cultures of total cells pooled from 4 mice in each group.\", \"page\": 25, \"index\": 1, \"width\": 889, \"height\": 910}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-17-739099-v1/fig-002.webp\", \"caption\": \"Table 1. Mouse scRNA-seq datasets used in the study\", \"page\": 19, \"index\": 2, \"width\": 1064, \"height\": 1127}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-07-17-739099-v1/fig-003.webp\", \"caption\": \"Figure 5. Aging increases CD74 surface expression on aortic macrophages and bone marrow monocytes in mice. (A) Representative flow cytometry plots, percentage and number of CD11b+F4/80+ macrophages in the aorta of young (3-month old) and aged (26-month old) mice. (B) Representative flow cytometry plots for CD11b+F4/80+VLA4+ macrophages and histogram overlay for CD74 expression and mean fluorescence intensity (MFI) of CD74 on CD11b+F4/80+ VLA4+ macrophages. (C, D) Representative flow cytometry plots (C), and percentage of VLA-4+CD74+ and VLA-4+CD74- (D) in bone marrow monocytes form young and aged mice. Data are presented as mean plus standard deviation of 4 mice in each group (A, B),\", \"page\": 24, \"index\": 3, \"width\": 976, \"height\": 935}]"
+motivation: 探究衰老导致动脉粥样硬化风险增加的潜在分子机制。
+method: 通过整合单细胞RNA测序数据分析及体外细胞实验，研究衰老主动脉和动脉粥样硬化斑块中单核与巨噬细胞的基因表达差异。
+result: 发现Cd74和MHC II基因在衰老及病变组织的巨噬细胞中显著上调，且衰老单核细胞对内皮细胞的粘附能力增强。
+conclusion: Cd74和MHC II基因表达增加促进了单核细胞粘附，使衰老主动脉处于前动脉粥样硬化状态，揭示了衰老与该病关联的新机制。
+---
+
+## 摘要
+动脉粥样硬化是一种动脉慢性炎症性疾病，可导致心肌梗死、缺血性卒中和外周动脉疾病。阻塞血流的动脉粥样硬化斑块包含功能多样的巨噬细胞群体，包括促动脉粥样硬化和抗动脉粥样硬化的亚群。衰老是动脉粥样硬化的主要风险因素，但衰老相关动脉粥样硬化风险的潜在机制尚不清楚。在此，通过整合单细胞RNA测序数据分析，我们证明了特定的单核细胞和巨噬细胞亚群在小鼠动脉粥样硬化斑块和衰老主动脉中富集。我们还发现，Cd74和MHCII基因（如H2-Aa、H2-Ab1、H2-Eb1和H2-DMb1）在动脉粥样硬化斑块、衰老主动脉以及衰老骨髓的单核细胞和巨噬细胞中持续上调。我们的实验数据还显示，老年小鼠的主动脉巨噬细胞和骨髓单核细胞中CD74表面蛋白的表达增加。此外，我们发现在体外ox-LDL刺激后，RAW264.7小鼠巨噬细胞和THP1人单核细胞的CD74表达增加。最后，我们证明了来自老年小鼠的单核细胞在共培养中更容易粘附于主动脉内皮细胞。因此，单核细胞对内皮细胞粘附的增加可能解释了衰老主动脉中特定单核细胞和巨噬细胞亚群比例升高的原因，从而诱导了前动脉粥样硬化状态。
+
+## Abstract
+Atherosclerosis is a chronic inflammatory condition of the arteries leading to myocardial infarction, ischemic stroke and peripheral arterial diseases. Atherosclerotic plaques, which obstruct blood flow contain functionally diverse macrophage populations including pro-atherogenic and atheroprotective subsets. Aging is a major risk factor of atherosclerosis, but the mechanism underlying aging associated risk of atherosclerosis is unclear. Here, using integrated single-cell RNA sequencing data analysis, we demonstrate that specific monocyte and macrophage subsets are enriched in atherosclerotic plaques and the aging aorta of mice. We also show that Cd74 and MHCII genes such as H2-Aa, H2-Ab1, H2-Eb1, and H2-DMb1 are consistently upregulated in the monocytes and macrophages from atherosclerotic plaques, the aging aorta, and the aging bone marrow of mice. Our experimental data also show increased expression of CD74 surface protein by aortic macrophages and bone marrow monocytes from aged mice. In addition, we show increased CD74 expression by RAW264.7 mouse macrophages and THP1 human monocytes following ox-LDL stimulation in vitro. Finally, we demonstrate that monocytes from aged mice adhere more to aortic endothelial cells in co-cultures. Thus, increased monocyte adhesion to endothelial cells may explain the enhanced proportion of specific monocyte and macrophage subsets in the aging aorta, inducing a pre-atherosclerotic condition.
