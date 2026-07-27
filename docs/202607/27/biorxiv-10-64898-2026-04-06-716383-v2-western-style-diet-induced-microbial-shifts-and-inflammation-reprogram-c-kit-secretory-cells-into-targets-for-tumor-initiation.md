@@ -1,0 +1,24 @@
+---
+title: Western-style diet-induced microbial shifts and inflammation reprogram c-Kit⁺ secretory cells into targets for tumor initiation
+title_zh: 西式饮食诱导的微生物群转变和炎症将 c-Kit⁺ 分泌细胞重编程为肿瘤发生的靶点
+authors: "Silva, S., Procopio, P., Zinina, V., Turss, S., Segura Munoz, R. R., Segbefia, S., Bae, S., Lobel, L., Nardella, L., Sacchetti, A., Joosten, R., Linn, C., Plugge, S., Verhagen, M. P., Aktuna, F., Pauck, K., Loewer, N., Sourjik, V., Garn, H., Blumberg, R. S., Puschhof, J., Garrett, W. S., Fodde, R., Schmitt, M."
+date: 2026-07-19
+pdf: "https://www.biorxiv.org/content/10.64898/2026.04.06.716383v2.full.pdf"
+tags: ["query:ros-mp"]
+score: 6.0
+evidence: 饮食诱导的肠道炎症和微生物变化
+tldr: 本研究探讨了西方饮食（WSD）如何通过改变肠道微生物群诱发结直肠癌。研究发现，WSD会抑制传统的Lgr5+干细胞，转而激活具有多能性的c-Kit+分泌细胞，使其成为肿瘤起始的目标。这种转变由脆弱拟杆菌（ETBF）及其毒素通过Wnt和YAP信号通路驱动。研究强调了饮食干预在逆转这种病理过程中的潜力，为预防饮食相关的结直肠癌提供了新靶点。
+source: biorxiv
+selection_source: fresh_fetch
+figures_json: "[{\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-001.webp\", \"caption\": \"\", \"page\": 53, \"index\": 1, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-002.webp\", \"caption\": \"\", \"page\": 54, \"index\": 2, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-003.webp\", \"caption\": \"\", \"page\": 55, \"index\": 3, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-004.webp\", \"caption\": \"\", \"page\": 56, \"index\": 4, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-005.webp\", \"caption\": \"\", \"page\": 57, \"index\": 5, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-006.webp\", \"caption\": \"\", \"page\": 58, \"index\": 6, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-007.webp\", \"caption\": \"\", \"page\": 59, \"index\": 7, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-008.webp\", \"caption\": \"\", \"page\": 60, \"index\": 8, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-009.webp\", \"caption\": \"\", \"page\": 61, \"index\": 9, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-010.webp\", \"caption\": \"\", \"page\": 62, \"index\": 10, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-011.webp\", \"caption\": \"\", \"page\": 63, \"index\": 11, \"width\": 2480, \"height\": 3582}, {\"url\": \"assets/figures/biorxiv/biorxiv-10-64898-2026-04-06-716383-v2/fig-012.webp\", \"caption\": \"\", \"page\": 64, \"index\": 12, \"width\": 2480, \"height\": 3582}]"
+motivation: 旨在揭示西方饮食如何通过影响肠道干细胞稳态和微生物群来促进结直肠癌的发生。
+method: 通过西方饮食喂养模型，结合微生物群分析和细胞信号通路检测，研究肠道上皮细胞的重编程过程。
+result: 发现西方饮食诱导的脆弱拟杆菌扩张通过Wnt和YAP信号将c-Kit+分泌细胞重编程为具有致癌潜力的兼性干细胞。
+conclusion: 饮食诱导的微生物变化是驱动肠道上皮干细胞重编程的关键，且该过程可通过饮食干预逆转。
+---
+
+## 摘要
+尽管结直肠癌 (CRC) 被认为主要起源于常驻干细胞，但饮食会严重影响肠道干细胞的稳态和疾病的发作。在本研究中，我们证明了西式饮食 (WSD) 通过将经典的干性与肿瘤发生解耦，从而改变了肠道稳态。WSD 暴露抑制了经典的 Lgr5 干细胞，同时激活了另一群兼性 c-Kit 分泌细胞。尽管这些重编程的类干细胞表现出基因毒性应激，但在长期饮食暴露下它们仍保持增殖能力，这表明它们对肿瘤起始突变的易感性增加。我们确定饮食诱导的微生物群转变和产肠毒素脆弱拟杆菌 (ETBF) 的扩张是上游驱动因素。ETBF 及其毒素 fragilysin 通过 Wnt/β-catenin 和 YAP 信号通路自主触发 c-Kit+ 细胞的多能性。重要的是，这些改变在饮食干预后是完全可逆的。总之，我们的研究结果强调了一个可靶向的饮食-微生物轴，它塑造了上皮细胞的干性，并强调了兼性干细胞在饮食诱导的 CRC 发病中的作用。
+
+## Abstract
+While colorectal cancer (CRC) is thought to originate primarily from resident stem cells, diet heavily influences intestinal stem cell homeostasis and disease onset. In this study, we demonstrate that a Western-style diet (WSD) alters intestinal homeostasis by uncoupling canonical stemness from tumorigenesis. WSD exposure suppresses canonical Lgr5 stem cells while activating an alternative pool of facultative c-Kit secretory cells. Although these reprogrammed stem-like cells exhibit genotoxic stress, they remain proliferative under prolonged dietary exposure, suggesting increased susceptibility to tumor-initiating mutations. We identify diet-induced microbial shifts and the expansion of enterotoxigenic Bacteroides fragilis (ETBF) as the upstream driver. ETBF and its toxin fragilysin autonomously trigger multipotency in c-Kit+ cells through Wnt/{beta}-catenin and YAP signaling. Importantly, these alterations are fully reversible upon dietary intervention. Together, our results highlight a targetable dietary-microbial axis that shapes epithelial stemness and underscores the role of facultative stem cells in diet-induced CRC onset.

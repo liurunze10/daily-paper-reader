@@ -1,0 +1,5515 @@
+ 
+ 
+The brain-meningeal interface functions as a reservoir and entry site for brain parenchymal 
+1 
+macrophages 
+2 
+ 
+3 
+Deniz Kaymak1*, Philip T. Williams1, Sabrina Hogan1, Marie-Françoise Ritz1, Giulia Di Bartolomei1,   
+4 
+Sihan Zhu3, Siling Du4, Hassan Melhem5, Ana C. Delgado6, Tala Shekarian1, Marta McDaid1,  
+5 
+Alexandra Gerber1, Igor Smirnov4, Patrice Zeis1, Timo Schenker1, Fiona Gerster1, Valerio Sabatino1, 
+6 
+Zora Baumann7, Alexandar Tzankov8, Raphael Guzman2, Luigi Mariani1,2,  
+7 
+Fiona Doetsch6, Jonathan Kipnis4, Rainer Glass3, Gregor Hutter1,2**  
+8 
+ 
+9 
+1Brain Tumor Immunotherapy and Biology Lab, Department of Biomedicine, University of Basel, 
+10 
+University Hospital Basel, Switzerland. 
+11 
+2Department of Neurosurgery, University Hospital Basel, Switzerland. 
+12 
+3Department of Neurosurgery, Neurosurgical Research, Ludwig-Maximilians-Universität Munich, 
+13 
+Munich, Germany  
+14 
+4Brain Immunology and Glia (BIG) Center, Department of Pathology and Immunology, Washington 
+15 
+University, St. Louis, MO, USA 
+16 
+5Gastroenterology Lab, Department of Biomedicine, University of Basel, University Hospital Basel, 
+17 
+Switzerland 
+18 
+6Biocenter, University of Basel, Switzerland 
+19 
+7Tumor Heterogeneity and Resistance Lab, Department of Biomedicine, University of Basel, 
+20 
+Switzerland 
+21 
+8Institute of Medical Genetics and Pathology, University Hospital Basel, Switzerland 
+22 
+  
+23 
+*Correspondence: deniz.kaymak@unibas.ch  
+24 
+**Correspondence: gregor.hutter@usb.ch  
+25 
+ 
+ 
+26 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+SUMMARY 
+27 
+Microglia are regarded as self-maintaining brain parenchymal macrophages without contribution 
+28 
+from adult hematopoiesis. Nevertheless, peripheral macrophage engraftment into the brain has 
+29 
+been reported, but the biological variables governing central nervous system (CNS) macrophage 
+30 
+niche access remain unclear. We show that CNS macrophage engraftment is determined by the 
+31 
+balance between tissue-resident macrophage (TRM) self-renewal and the temporal alignment of 
+32 
+niche opening with the availability of engraftment-competent cells and proximity to the vacated 
+33 
+niche, rather than prolonged niche vacancy. Fate mapping revealed that monocytes entering the 
+34 
+subdural space undergo border-associated macrophage (BAM)-like differentiation, clonal 
+35 
+expansion, and transpial migration into the parenchyma, whereas mature BAMs directly 
+36 
+repopulate selectively vacated parenchymal niches. We further identify a parenchymal 
+37 
+macrophage population with a peripheral BAM-like transcriptional program in aged and 
+38 
+neurodegenerative human brains, challenging the dogma of MG-exclusivity. Together, these 
+39 
+findings establish a predictive framework for interpreting macrophage maintenance and 
+40 
+replacement and for developing macrophage-based therapies. 
+41 
+KEYWORDS 
+42 
+Microglia replacement, CNS macrophages, border-associated macrophages, monocyte-derived 
+43 
+macrophages, macrophage repopulation, CSF1R, brain-engrafting monocytes, microglial niche, 
+44 
+CNS borders, macrophage ontogeny 
+ 
+45 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+INTRODUCTION 
+46 
+The CNS contains anatomically distinct macrophage niches populated by TRMs1–4. Among these, 
+47 
+microglia (MG) represent the sole macrophage population within the brain parenchyma, whereas 
+48 
+BAMs reside at CNS interfaces, including the leptomeninges (LM), perivascular (PV) spaces 
+49 
+(subsummarized as subdural BAMs; sdBAMs), the dura mater (duBAMs), and the choroid plexus 
+50 
+(CP; cpBAMs). One of the tenets of CNS immune privilege is the restricted accessibility of the 
+51 
+brain parenchyma to peripheral immune cells. Hence, MG and sdBAMs are maintained 
+52 
+predominantly through local self-renewal5,6 without contribution from circulating monocytes under 
+53 
+homeostasis7. While all CNS macrophage compartments are initially seeded by yolk sac–derived 
+54 
+progenitors2,8–10, only MG and sdBAMs maintain a predominantly embryonic ontogeny throughout 
+55 
+adulthood, whereas cpBAMs and duBAMs undergo partial replacement by bone marrow (BM) 
+56 
+derived monocytes, resulting in a mixed ontogeny2,9,11–13.  
+57 
+Macrophage depletion and repopulation paradigms have become central tools to interrogate 
+58 
+macrophage function and maintenance. However, distinct pharmacological and genetic depletion 
+59 
+strategies produce divergent repopulation outcomes, ranging from complete restoration through 
+60 
+residual MG self-renewal to extensive peripheral macrophage engraftment1,7,14–18. A unifying 
+61 
+framework defining the biological principles that govern peripheral macrophage access and CNS 
+62 
+niche population, and defines capable cellular sources is currently lacking. Addressing these 
+63 
+questions has become important as macrophage replacement therapy is transitioning from 
+64 
+preclinical proof-of-concept studies to clinical application19. Recent therapeutic success in patients 
+65 
+with CSF1R-associated leukoencephalopathy (ALSP) demonstrated that MG replacement could 
+66 
+alter disease progression in humans. However, these approaches rely on irradiation- and 
+67 
+chemotherapy-based conditioning to create permissive niches for donor-cell engraftment 14,20. As 
+68 
+the field reaches this translational inflection point, a mechanistic understanding of how CNS 
+69 
+macrophage niches are maintained, accessed, and reconstituted will be critical for the 
+70 
+development of safer and more effective replacement strategies.  
+71 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Here, using complementary pharmacological and genetic macrophage depletion models in mice, 
+72 
+we systematically dissected the determinants governing CNS macrophage reconstitution and 
+73 
+defined physiological principles controlling peripheral macrophage engraftment into the CNS. We 
+74 
+identified the coincidence of niche opening and availability of engraftment-competent cells as 
+75 
+principal determinants governing competitive occupation of CNS macrophage niches and 
+76 
+identified BAMs as spatially privileged reservoirs capable of directly colonizing the MG niche 
+77 
+through transpial migration across CNS border interfaces. Finally, we provide evidence that these 
+78 
+principles extend to humans by identifying CD163+ brain-engrafting peripheral-like macrophages in 
+79 
+the aged and neurodegenerating human brain. 
+80 
+ 
+81 
+ 
+ 
+82 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+RESULTS 
+83 
+Monocyte contribution to BAMs is subset-specific at steady state and broadens after niche 
+84 
+clearance. 
+85 
+To define CNS macrophage identities using a robust and objective framework, we re-analyzed a 
+86 
+publicly available single-cell RNA sequencing (scRNA-seq) dataset1 originating from adult 
+87 
+C57BL/6 mice comprising macrophages isolated from the dura, LM and PV, CP, and brain 
+88 
+parenchyma. Unsupervised clustering identified two monocyte populations and six macrophage 
+89 
+clusters, each defined by distinct transcriptional programs (Fig. 1A), with classical monocytes 
+90 
+(CM) expressing high levels of Ccr2, Ly6c2, and S100a8, and non-classical monocytes (NCM) 
+91 
+characterized by Itgal, Ace, and Ear2 (Fig. 1A-B). 
+92 
+MG formed a discrete cluster, defined by canonical markers including P2ry12, Tmem119, Siglech, 
+93 
+and Sall1, confirming their distinct identity relative to all other macrophage populations (Fig. 1A-
+94 
+B).  
+95 
+In contrast, BAMs segregated into MHCIIlow and MHCIIhigh populations, distinguished by reciprocal 
+96 
+expression of canonical tissue-resident markers (Mrc1, Lyve1, Folr2, Pf4, Cd163) and antigen-
+97 
+presentation genes (H2-Aa, H2-Ab1, Cd74) (Fig. 1A-B)1,3,9,21. We additionally identified an 
+98 
+intermediate BAM (intBAMs) population co-expressing MHC class II genes together with markers 
+99 
+characteristic of MHCIIlow BAMs, suggesting a continuum of transcriptional states rather than 
+00 
+strictly discrete populations (Fig. 1A-B, Fig. S1A). 
+01 
+Consistent with established macrophage life-cycle programs9, TLF (including Timd4, Lyve1, 
+02 
+Folr2)-associated signatures were enriched in MHCIIlow/intBAMs, indicating a long-lived, self-
+03 
+renewing population, whereas CCR2-associated signatures predominated in MHCIIhigh BAMs and 
+04 
+monocytes, suggesting ongoing replenishment from CM (Fig. S1B-C) 
+05 
+Next, we used cluster-specific signatures to design a high-dimensional flow cytometry (HDFC) 
+06 
+panel to identify defined CNS macrophage subsets and guide the selection of subset-specific Cre 
+07 
+driver mouse lines for targeted genetic manipulation of these populations in vivo (Fig. 1B). We 
+08 
+confirmed the suitability of these markers for HDFC and histological characterization of CNS 
+09 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+macrophage subsets. Specifically, we anatomically dissected cranial dura, CP of the fourth and 
+10 
+lateral ventricles as well as brain tissue of MG-specific (Sall1GFP) reporter mice (Fig. 1C). 
+11 
+Clustering analysis of macrophages (CD45+CD11b+Ly6C-CD64+F480+ pre-gated cells) resolved 
+12 
+four BAM subsets and one brain-enriched MG population. Projection of cluster identities onto 
+13 
+FOLR2/MHCII bivariate plots aligned with the macrophage subsets previously identified by 
+14 
+scRNAseq, including MHCIIhigh BAMs, MHCIIhighFOLR2high (= intBAMs), FOLR2highMHCIIlow BAMs 
+15 
+(= MHCIIlow BAMs), and double-negative BAMs. (Fig. 1C). IntBAMs were most prominent in the 
+16 
+dura mater (Fig. S1D). Consistent with scRNAseq, FOLR2high BAMs co-expressed CD38 and 
+17 
+CD206 (Fig. S1E) so that FOLR2 and CD38 were used interchangeably throughout the study. 
+18 
+CCR2 was detectable in MHCIIhigh and intBAMs (Fig. S1E). Sall1-GFP expression was 
+19 
+predominantly confined to the MG/MG-like cluster across tissues, with only low-level expression 
+20 
+observed in double-negative BAMs, reflecting gating or clustering ambiguity resulting from the lack 
+21 
+of MHCII and FOLR2 expression (Fig. S1F). Complementary histological analyses in Cx3cr1GFP/wt 
+22 
+reporter mice using CD206 and MHCII staining across brain border compartments further 
+23 
+supported the anatomical distribution of the identified CNS macrophage populations (Fig. S1G). 
+24 
+ 
+25 
+Monocytes contribute to BAMs across all CNS borders at steady state and after depletion. 
+26 
+ScRNA-seq identified S100a8 as a highly specific marker for CM. To assess the contribution of 
+27 
+hematopoietic stem cell (HSC)-derived monocytes to CNS macrophages, we employed adult 
+28 
+Mrp8(S100a8)Cre/wt:R26TdTomato mice to HDFC. Cre-mediated recombination labeled neutrophils 
+29 
+(~100%) and ~25% of circulating CMs, whereas MG remained unlabeled (<0.04%), confirming the 
+30 
+model’s specificity (Fig. 1D-E). We detected low but measurable TdTomato recombination across 
+31 
+BAM populations (0–10% depending on the subset) with the most consistent monocyte 
+32 
+contribution to intBAMs in brain and dura (Fig. 1E).  
+33 
+ 
+34 
+Colony-stimulating factor 1 receptor (CSF1R) signaling is required for the survival and 
+35 
+maintenance of macrophages22, and its pharmacological inhibition induces their rapid 
+36 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+depletion1,23,24. To examine CSF1R-dependency and the niche recovery of CNS macrophages 
+37 
+following pharmacological depletion, we treated adult mice with the CSF1R inhibitor (CSF1Ri) 
+38 
+BLZ945 for 7d, followed by immediate HDFC analysis or a 7d recovery period after treatment 
+39 
+withdrawal (Fig. 1F-G, Fig. S1H). CSF1R inhibition resulted in efficient depletion of all CNS 
+40 
+macrophage populations across CNS compartments. Upon treatment discontinuation, MG and 
+41 
+BAMs in the brain fully repopulated within 7d comparable to vehicle-treated controls. In contrast, 
+42 
+cpBAM and duBAMs trended towards incomplete repopulation, suggesting a lower intrinsic self-
+43 
+renewal capacity than MG (Fig. 1G). 
+44 
+To assess the monocyte dependency of CNS macrophage niche replenishment, we compared 
+45 
+repopulation following CSF1Ri in Ccr2wt and Ccr2ko mice, as CCR2 is required for egress of CM 
+46 
+from the BM and their tissue recruitment25 (Fig. 1H-I). Eight days after CSF1Ri withdrawal, we 
+47 
+observed an increased fraction of CCR2-expressing BAMs across all border compartments in 
+48 
+CCR2wt mice (Fig. 1H, see Fig. S1I for CCR2-thresholds, Fig. S1J for UMAP and Fig. S1K for 
+49 
+CCR2-KO confirmation), suggesting recruitment of CCR2+ monocyte-derived macrophages 
+50 
+(MDMs) into the recovering niche. In contrast, MG showed no CCR2 expression or differential 
+51 
+abundance between genotypes (Fig. 1H-I). MHCIIhigh BAMs (including intBAMs) across brain and 
+52 
+dura trended towards reduced cell numbers at baseline (vehicle) in CCR2ko mice. However, only 
+53 
+BAMs in the brain displayed a significant decrease in repopulation across all (except double-
+54 
+negative cells) subsets (Fig. 1I). These findings indicate that BAM repopulation, including MHCIIlow 
+55 
+subsets, involved CCR2+ macrophages derived from CM. While cpBAMs and duBAMs 
+56 
+repopulated independently of CCR2, access to the subdural compartment depended on CCR2.  
+57 
+To determine whether monocytes enter the niche-depleted brain parenchyma, we combined 
+58 
+CSF1Ri with MG-specific fate-mapping Sall1CreERT2/wt:R26TdTomato reporter mice. Sall1 is an 
+59 
+embryonically restricted MG marker not expressed by BAMs nor MDMs18,26,27. Animals were 
+60 
+pretreated with tamoxifen for 5d to induce TdTomato expression in MG, followed by 7d of BLZ945 
+61 
+administration and a 3-week repopulation period (Fig. 1J). Repopulating macrophage analysis 
+62 
+revealed uniform retention of TdTomato labeling, demonstrating their origin from pre-existing MG 
+63 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+(Fig. 
+1K).  
+64 
+ 
+65 
+Together, these data established that MG self-renew following pharmacological CSF1R-mediated 
+66 
+niche depletion without contribution from CM. In contrast, BAMs across all extra-parenchymal 
+67 
+CNS compartments, exhibited constitutive engraftment by MDMs, which was further enhanced 
+68 
+after niche depletion. While du- and cpBAMs repopulated in a CCR2-independent manner, sdBAM 
+69 
+renewal depended on CCR2. However, the brain parenchyma remained refractory to MDM 
+70 
+engraftment, reflecting a combination of restricted niche access and the robust self-renewal of 
+71 
+MG. 
+72 
+ 
+73 
+ 
+ 
+74 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+CSF1R and PU.1 control differentiation of Ly6Chigh blood monocytes into downstream 
+75 
+subsets while being dispensable for their maintenance. 
+76 
+The failure of CM to engraft the MG-depleted brain following CSF1Ri prompted us to investigate 
+77 
+whether CSF1R signaling regulates monocyte maintenance or differentiation competence. Given 
+78 
+conflicting reports regarding monocyte CSF1R dependency28–37, we combined pharmacological 
+79 
+and genetic approaches to systematically dissect its role.  
+80 
+ 
+81 
+Murine monocytes encompass classical (CM; Ly6ChighCCR2highCD43low) and non-classical (NCM; 
+82 
+Ly6C-CD43high) subsets38–40, with CMs progressively differentiating into NCMs through an 
+83 
+intermediate monocyte state (IM; Ly6CintCD43int)40,41, all of which express CSF1R42.  
+84 
+We performed a time-resolved analysis of monocyte subsets during CSF1R inhibition and 
+85 
+recovery (Fig. 2A). Blood was collected during the depletion (d5 and 7) and recovery phase (d9 
+86 
+and 11). CSF1Ri rapidly depleted IMs and NCMs, whereas CM numbers remained stable (Fig. 
+87 
+2B-C). Following CSF1Ri withdrawal, IMs rebounded within 2d and transiently exceeded control 
+88 
+levels. NCM recovery lagged behind the IM response and followed the transient IM peak, reaching 
+89 
+levels above controls by d11 (Fig. 2C). These kinetics are consistent with sequential CM-to-IM-to-
+90 
+NCM reconstitution and rapid recovery of differentiation-competent monocytes after CSF1Ri 
+91 
+withdrawal.  
+92 
+To determine whether apparent preservation of CM reflected reduced CSF1R dependency or 
+93 
+continuous BM replenishment, we analyzed monocyte subsets (d5 in Fig. 1H) in CSF1Ri-treated 
+94 
+Ccr2⁻/⁻ mice, in which BM egress of Ly6Chigh monocytes is impaired25. As expected, Ccr2-/- 
+95 
+monocytes lacked CCR2 expression (Fig. S2A-B, see UMAP in Fig. S2A for cluster identity) 
+96 
+resulting in a marked reduction of CM in vehicle treated mice (Fig. S2C-D). Notably, BLZ945 
+97 
+treatment did not result in further depletion of CM in Ccr2-/- animals. In contrast, IM and NCM were 
+98 
+robustly depleted in both genotypes (Fig. S2E). Furthermore, among CM-subsets (defined by the 
+99 
+expression of CD319 and CD17743), no preferential depletion was observed in BLZ945 treated 
+00 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Ccr2-/- mice (Fig. S2F-G). These findings argue against compensatory replenishment as an 
+01 
+explanation for CMs persistence. 
+02 
+To overcome the constraints of off-target kinase inhibition elicited by BLZ94544, we next employed 
+03 
+a Cx3cr1-driven inducible genetic mouse model. Having confirmed Cx3cr1 expression and 
+04 
+efficient recombination across BM and all monocyte subsets in Cx3cr1CreERT2/wt:R26TdTomato and 
+05 
+Cx3cr1GFP mice (Fig. S2H-J), we generated Cx3cr1CreERT2/wt:Csf1rfl/fl animals to enable conditional 
+06 
+deletion of Csf1r. Following tamoxifen-induced deletion (Fig. 2D), blood HDFC analysis revealed a 
+07 
+loss of CSF1R-expressing monocyte subsets. NCMs appeared nearly absent, and IMs were 
+08 
+strongly reduced. Concurrently, we observed distinct Csf1r- Ly6Chigh and Ly6Cint populations, 
+09 
+indicating that loss of CSF1R expression might not coincide with loss of the underlying cells (Fig. 
+10 
+S2K). 
+11 
+To resolve monocyte identities independently of CSF1R expression, we performed CSF1R-
+12 
+independent unsupervised clustering (Fig. 2D) and marker-based annotation (Fig. S2L).  
+13 
+Csf1r- cells (Fig. S2M) clustered together with their respective counterparts in control mice, 
+14 
+confirming preservation of monocyte identity (Fig. 2D). Projection of cluster identity onto 
+15 
+conventional bivariate plots demonstrated that CSF1Rr-Ly6Chigh cells corresponded to bona fide 
+16 
+CMs that have lost surface CSF1R. Similar CSF1R- cells were observed across IMs and NCMs 
+17 
+clusters (Fig. 2E). Differential abundance analysis showed near-complete depletion of NCMs, 
+18 
+whereas IMs and CMs were increased (Fig. 2F).  
+19 
+To 
+validate 
+the 
+monocyte 
+identity 
+of 
+CSF1R-deficient 
+cells, 
+we 
+used 
+20 
+Cx3cr1CreERT2/wt:Csf1rfl/fl:R26TdTomato reporter mice (Fig. 2G). Following 5d of tamoxifen treatment, 
+21 
+CSF1R- cells uniformly expressed TdTomato across all monocyte subsets (Fig. 2H-I) confirming 
+22 
+their monocyte identity.  
+23 
+To determine whether loss of CSF1R expression resulted in monocyte cell death or persistence, 
+24 
+we next assessed their survival dependency. Specifically, we employed a competitive BM chimera 
+25 
+approach 
+to probe 
+monocyte blood niche occupancy 
+and 
+replenishment 
+dynamics. 
+26 
+Cx3cr1CreERT2/wt:Csf1rfl/fl recipient mice were head-shield irradiated and reconstituted with 
+27 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+TdTomato+ BM cells (Fig. 2J) from either CSF1R-WT (Cx3cr1CreERT2/wt:Csf1rwt/wt:R26TdTomato) or 
+28 
+CSF1R-KO (Cx3cr1CreERT2/wt:Csf1rfl/fl:R26TdTomato) mice. CSF1R-independent survival was inferred 
+29 
+from stable donor chimerism, whereas depletion was indicated by preferential replacement with 
+30 
+WT donor cells. In this setting, NCMs were efficiently depleted (Fig. S2N-O) and failed to recover 
+31 
+in CSF1R-KO donor chimeras, whereas they were efficiently replenished by CSF1R-WT donor 
+32 
+cells (Fig. 2K-M). IMs showed a similar but less pronounced pattern. In contrast, although CMs 
+33 
+numbers increased (Fig. S2P), they did not show differential donor contribution between CSF1R-
+34 
+WT and -KO conditions, indicating that no replenishable niche was generated in the blood (Fig. 
+35 
+2K-M). 
+36 
+To determine whether this subset-specific dependency reflects a broader requirement for myeloid 
+37 
+differentiation programs, we performed analogous experiments targeting the transcription factor 
+38 
+Pu.1 (Fig. 2N). Consistent with the CSF1R model, PU.1-KO donor cells failed to replenish the 
+39 
+NCM population, whereas PU.1-WT donor cells efficiently restored it (Fig. 2O-Q) and CMs 
+40 
+remained unaffected (Fig. S2P-Q). 
+41 
+Collectively, CSF1R defined a differentiation checkpoint within the monocyte trajectory. Loss of 
+42 
+CSF1R signaling led to IM and NCM depletion while preserving CMs, indicating a block in subset 
+43 
+progression rather than uniform depletion. Despite the rapid restoration of differentiation 
+44 
+competence after CSF1Ri, CM failed to outcompete the rapid MG-mediated brain repopulation. 
+45 
+46 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Impaired self-renewal of TRMs enables monocytes to replace all CNS macrophages, 
+47 
+including microglia and subdural BAMs. 
+48 
+Building on the observations that both MG competitive dominance and the intrinsic properties of 
+49 
+monocytes shape the ability of CMs to differentiate and engraft the CNS, we next examined 
+50 
+whether reducing MG competitiveness was sufficient to shift this balance and permitted monocyte 
+51 
+access to CNS macrophage niches. 
+52 
+By inducing a permanent genetic ablation of Csf1r in Cx3cr1CreERT2/wt:Csf1rfl/fl mice, we reduced the 
+53 
+pool of proliferative MG capable of replenishing the parenchymal niche. Following a 7d tamoxifen-
+54 
+mediated depletion phase and a subsequent 25d replenishment period, we observed robust 
+55 
+engraftment of CLEC12A⁺F4/80high cells consistent with previously reported peripheral 
+56 
+macrophage signatures18 (Fig. S3A).  
+57 
+To determine their origin and distribution, we generated head-shield chimeras by transplanting 
+58 
+TdTomato-labeled 
+BM 
+(Cx3cr1CreERT2/wt:R26TdTomato) 
+into 
+Cx3cr1CreERT2/wt:Csf1rfl/fl 
+and 
+59 
+Cx3cr1CreERT2/wt:Csf1rwt/wt control mice, enabling selective tracing of MDMs (Fig. 3A). Head 
+60 
+shielding was employed to avoid irradiation-induced conditioning of the CNS, which can promote 
+61 
+inflammatory monocyte recruitment and engraftment7,45–47. Dosimetric assessment of the head-
+62 
+shielding device confirmed 95-99% head radioprotection, while allowing body irradiation (Fig. 
+63 
+S3B). In the absence of niche depletion, donor-derived cells were restricted to CNS border 
+64 
+compartments, including sdBAMs (Fig. 3B-C and Fig. S3C). In contrast, following genetic niche 
+65 
+depletion and repopulation for 25d, TdTomato⁺ MDMs replaced all CNS macrophages in the dura, 
+66 
+CP, subdural compartment, and the brain parenchyma (Fig. 3B-C). 
+67 
+Histological analysis confirmed the parenchymal localization of TdTomato⁺ repopulating 
+68 
+macrophages (Fig. 3D), which retained a peripheral macrophage phenotype marked by F4/80, 
+69 
+CLEC12A, MHCII, and AXL expression (Fig. 3E and Fig. S3D). Together, these data indicated 
+70 
+that MDMs contributed continuously to BAM turnover, with increased replacement following 
+71 
+depletion. However, access to the parenchymal microglial niche required sustained disruption of 
+72 
+TRM occupancy. 
+73 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Exhaustion of MG self-renewal enables MDM brain engraftment. 
+74 
+Repeated cycles of pharmacological MG depletion have been reported to delay niche refilling48, 
+75 
+suggesting that the MG proliferative capacity may become limited over time. In a further study49, 
+76 
+employing a similar iterative depletion paradigm, repopulating macrophages were analyzed by 
+77 
+scRNAseq and interpreted as “aged” MG based on the expression of P2yr12 and Tmem11948,49. 
+78 
+We hypothesized that the delayed repopulation following iterative CSF1R-mediated depletion 
+79 
+would create a permissive window for brain engraftment by MDMs.  
+80 
+Reanalysis of the published scRNAseq dataset49 (Fig. 3F-G, Fig. S3E for experimental outline) 
+81 
+revealed elevated expression of Clec12a, Adgre1 (F4/80), Itga4 (CD49d), and Ms4a7, with a 
+82 
+reduced expression of core MG genes including P2ry12 and Tmem119, as well as complete 
+83 
+absence of Sall1 expression in repopulating macrophages (Fig. 3G). Importantly, comparing these 
+84 
+results with data obtained from our head-shield chimera model (Fig. 3A-E), we found that 
+85 
+TdTomato+ brain-engrafting MDMs similarly upregulated canonical MG markers such as P2Y12 
+86 
+and TMEM119 upon brain parenchyma entry (Fig. 3H), demonstrating that marker expression 
+87 
+alone is insufficient to define cellular origin. This suggests that the repopulating cells observed in 
+88 
+iterative depletion models reflect MDMs rather than aged MG. To test this, we combined iterative 
+89 
+CSF1Ri (one and three times depletion/repopulation = 1xDR and 3xDR) with monocyte fate 
+90 
+mapping using Flt3Cre/wt:R26TdTomato mice, which label monocyte-derived cells with TdTomato (Fig. 
+91 
+3I; monocyte recombination shown in Fig. S3E). While 1xDR failed to increase brain influx of 
+92 
+TdTomato⁺ MDMs compared to the vehicle-treated group, 3xDR led to a marked increase in brain-
+93 
+engrafting MDMs within the fully repopulated brain (Fig. 3I, gating shown in Fig. S3G).  
+94 
+Notably, monocyte differentiation was not impaired by repeated depletion, as we observed no 
+95 
+decrease in numbers of CM and their downstream subsets across depletion conditions (Fig. S3H-
+96 
+J). Thus, while monocyte availability and differentiation capacity were preserved, engraftment was 
+97 
+only observed under conditions in which MG self-renewal was progressively impaired.  
+98 
+ScRNAseq analysis49 identified multiple MDM transcriptional states, including MHCIIhigh (H2-Ab1, 
+99 
+Cd74, Ciita, Mgl2), disease-associated macrophage-like (DAM-like; Spp1, Gpnmb, Fabp5, Cd68, 
+00 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Lgals3), and interferon-response (IFN repop. Mac; Stat1, Stat2, Ifnar1) populations (Fig. 3F,J, see 
+01 
+Fig. S3K). Despite this heterogeneity, all clusters shared a core transcriptional signature (Ms4a7, 
+02 
+Itga4, Axl, Clec12a, Itgal, Mrc1, Fxyd5, Pf4, H2-Aa) distinct from MG and consistent with MDM 
+03 
+origin (Fig. 3J). 
+04 
+ 
+ 
+05 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+The presence of engraftment competent cells during niche opening overrides the 
+06 
+requirement for prolonged niche vacancy. 
+07 
+While both CSF1Ri and Cx3cr1-driven Csf1r deletion simultaneously perturbed TRMs and the 
+08 
+recruitable monocyte pool, we sought to experimentally decouple niche opening from the 
+09 
+availability of engraftment-competent cells. We generated head-shield chimeras in which 
+10 
+Cx3cr1CreERT2/wt:Csf1rfl/fl 
+recipient 
+mice 
+were 
+reconstituted 
+with 
+either 
+CSF1R-WT 
+11 
+(Cx3cr1CreERT2/wt:Csf1rwt/wt:R26TdTomato) 
+or 
+CSF1R-KO 
+(Cx3cr1CreERT2/wt:Csf1rfl/fl:R26TdTomato) 
+12 
+TdTomato-labeled BM cells (Fig. 4A). At 1d after tamoxifen treatment, TdTomato⁺ macrophages in 
+13 
+CSF1R-WT chimeras rapidly repopulated the dura, CP, and brain parenchyma, whereas CSF1R-
+14 
+KO monocytes contributed minimally to macrophage repopulation in these compartments (Fig. 
+15 
+4A–B). Confocal imaging of the dorsal brain surface demonstrated robust engraftment of MDMs 
+16 
+within the LM of CSF1R-WT chimeras but not CSF1R-KO chimeras (Fig. 4B–C). Moreover, 
+17 
+CSF1R-WT-derived MDMs exhibited morphological features consistent with monocyte-to-
+18 
+macrophage transition, including increased cell area and perimeter together with reduced 
+19 
+circularity, compared with the rare CSF1R-KO cells (Fig. 4D). Moreover, MDMs in CSF1R-WT 
+20 
+conditions displayed an absolute enrichment of both MHCIIhigh and MHCIIlow MDMs, while CSF1R-
+21 
+KO MDMs appeared arrested in the MHCIIhigh state, with nearly no MHCIIlow MDMs detected (Fig. 
+22 
+4E), consistent with the differentiation block observed in (Fig. 2J-Q) and previously described 
+23 
+monocyte differentiation trajectories40,50. 
+24 
+Importantly, the number of TdTomato+ CMs in the blood was even increased in CSF1R-KO 
+25 
+recipient mice (Fig. S4A).  
+26 
+To further validate the role of engraftment competence independently of CSF1R signaling, we 
+27 
+employed an orthogonal genetic approach targeting the transcription factor PU.1, a master 
+28 
+regulator of myeloid differentiation. Head-shielded Cx3cr1CreERT2/wt:Csf1rfl/fl recipient mice were 
+29 
+reconstituted 
+with 
+either 
+PU.1-KO 
+(Cx3cr1CreERT2/wt:PU.1fl/fl:R26TdTomato) 
+or 
+PU.1-WT 
+30 
+(Cx3cr1CreERT2/wt:PU.1wt/wt:R26TdTomato) TdTomato-labeled BM cells. Following tamoxifen-induced 
+31 
+depletion for 7d and 10d recovery, CNS compartments were analyzed at 17d (Fig. 4F). 
+32 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Consistent with our previous findings, circulating CMs number were comparable between 
+33 
+conditions 
+(Fig. 
+S4B). PU.1-WT 
+donor monocytes 
+robustly repopulated 
+macrophage 
+34 
+compartments across the dura, LM, and brain parenchyma (see gating strategy and morphological 
+35 
+changes in Fig. S4C-D), whereas PU.1-KO CMs showed reduced contributions (Fig. 4F-H).  
+36 
+In parallel, we sought to employ a MG-specific depletion strategy to preserve CMs. Sall1 is neither 
+37 
+expressed in CM (Fig. S4E-F) or BAMs (Fig. S1F) nor induced upon CNS entry and differentiation 
+38 
+of brain-engrafting MDMs (Fig. 3G). Consequently, Sall1CreERT2/wt:Csf1rfl/fl mice enable selective 
+39 
+MG depletion (model differences illustrated in Fig. 4I). While CSF1Ri treatment and Cx3cr1-driven 
+40 
+CSF1R deletion induced widespread depletion of CNS macrophages, Sall1-driven depletion did 
+41 
+not reduce BAM numbers across CNS compartments but resulted in a significantly increased 
+42 
+abundance of MHCIIhigh sdBAMs (Fig. 4J). We then directly compared the pharmacological and 
+43 
+both genetic depletion models side by side using an identical 5d depletion paradigm. Following a 
+44 
+2d repopulation period, Sall1CreERT2/wt:Csf1rfl/fl mice exhibited an increased accumulation of 
+45 
+CLEC12A+F4/80+ macrophages in the brain compared to Cx3cr1CreERT2/wt:Csf1rfl/fl and the control 
+46 
+condition (Fig. 4K).  
+47 
+Altogether, these findings demonstrated that transient niche opening was sufficient for CNS 
+48 
+engraftment when CMs are preserved, indicating that the requirement for prolonged niche 
+49 
+availability is model-dependent and reflects the concomitant impairment of CM.  
+50 
+ 
+ 
+51 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+MDMs repopulate CNS niches via clonal expansion, a transient BAM state and direct 
+52 
+transpial entry. 
+53 
+We next investigated how monocytes access and repopulate CNS compartments. In depleted 
+54 
+head-shield chimeras, repopulating macrophages formed discrete TdTomato⁺ clusters in both the 
+55 
+brain parenchyma and LM (Fig. 3D, 4C, H). Early repopulation stages revealed isolated seeding 
+56 
+events in the LM that subsequently expanded into larger clusters, while columnar arrangements of 
+57 
+labeled cells extending from the leptomeningeal surface into the cortex suggested directional 
+58 
+infiltration from CNS interfaces (Fig. 3D, 4C, H). To directly assess clonal expansion, we 
+59 
+generated dual-reporter head-shield chimeras using mixed TdTomato- and GFP-labeled donor 
+60 
+BM. This approach enables the assessment of clonal proliferation by distinguishing three distinct 
+61 
+MDM sources: donor 1 (TdTomato+GFP-), donor 2 (TdTomato-GFP+), and recipient-derived 
+62 
+(TdTomato-GFP-) macrophages (Fig. 5A). Following repopulation, MDMs in the LM and 
+63 
+parenchyma formed discrete, minimally intermixed donor-derived clusters, demonstrating 
+64 
+significant clonal proliferation by Monte Carlo analysis (Fig. 5A–D). In contrast, the dura and CP 
+65 
+showed substantially greater intermixing and weaker spatial segregation (Fig. S4G–H). 
+66 
+We consistently observed that regions enriched for leptomeningeal TdTomato⁺ macrophages 
+67 
+spatially aligned with cortical areas containing parenchymal TdTomato⁺ cells. To visualize this 
+68 
+relationship, we performed light-sheet imaging of a repopulated brain hemisphere at d17 (see Fig. 
+69 
+4H), which revealed a concordant distribution of leptomeningeal and parenchymal TdTomato⁺ 
+70 
+macrophages across large tissue volumes (Video S1). 
+71 
+We reasoned that brain-engrafting monocytes would transiently acquire a BAM-like intermediate 
+72 
+state during their sequential transition from the blood through the LM and into the brain 
+73 
+parenchyma. To identify markers/reporter mice suitable for tracing such a BAM-intermediate state, 
+74 
+we leveraged the scRNAseq dataset from the 3xDR model49. We specifically searched for markers 
+75 
+that were (i) expressed in mature BAMs, (ii) absent from circulating monocytes, and (iii) induced in 
+76 
+repopulating leptomeningeal MDMs. We identified Mrc1 (CD206) and Pf4 as candidate markers 
+77 
+(Fig. 5E-G). Another prototypical BAM marker, CD163, was excluded because it was neither 
+78 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+transcriptionally expressed in monocyte-derived repopulating BAMs (Fig. 5G and Fig. S4I) nor 
+79 
+detected in TdTomato⁺ repopulating leptomeningeal BAMs at d7 or d17 of repopulation in 
+80 
+Cx3cr1CreERT2/wt:Csf1rfl/fl head-shield chimeras (Fig. S4J, experimental detail in Fig. 4A, F). A 
+81 
+prerequisite for tracing BAM-intermediate states is the absence of reporter activation in CM. 
+82 
+Accordingly, we assessed TdTomato expression following 5d tamoxifen treatment and detected no 
+83 
+recombination in Mrc1CreERT2/wt:R26TdTomato and Lyve1CreERT2/wt:R26TdTomato and only minimal (<1.5 
+84 
+%) recombination in Pf4Cre/wt:R26TdTomato mice (Fig. S4K). 
+85 
+Next, 
+we 
+performed 
+state-mapping 
+using 
+Pf4Cre/wt:R26TdTomato 
+BM 
+transplanted 
+into 
+86 
+Cx3cr1CreERT2/wt:Csf1rfl/fl recipients. Following depletion and repopulation, Pf4-TdTomato⁺ 
+87 
+macrophages, were detected across all CNS compartments, including the LM (Fig. S4L), CP, 
+88 
+dura, and brain parenchyma whereas monocytes in the respective tissues remained TdTomato⁻ 
+89 
+(Fig. 5H-I, see gating strategy in Fig. S4M). These findings indicate that Pf4 expression is induced 
+90 
+by monocytes after tissue entry and during their differentiation into BAMs.  
+91 
+Mrc1 is reported to be rapidly downregulated by brain-engrafting progenitors during the embryonic 
+92 
+brain colonization10,51. To capture the transient nature of the BAM-state during LM transition, we 
+93 
+next generated head-shield chimeras using Mrc1CreERT2/wt:R26TdTomato BM cells (mixed 1:1 with 
+94 
+Cx3cr1GFP/wt) transplanted into Cx3cr1CreERT2/wt:Csf1rfl/fl recipients (Fig. 5J). Under this model, 
+95 
+monocytes adopting a BAM-like state at the CNS borders would be identified as 
+96 
+TdTomato⁺CD206⁺ cells, whereas cells subsequently entering the parenchyma would be expected 
+97 
+to downregulate CD206 while retaining permanent TdTomato labeling. Thus, the presence of 
+98 
+TdTomato⁺CD206⁻ parenchymal macrophages would indicate that brain-engrafting monocytes 
+99 
+transiently passed through a BAM-like state at the LM interface before entering the CNS 
+00 
+parenchyma. HDFC analysis revealed that a substantial fraction of macrophages in the dura and 
+01 
+CP was TdTomato⁺, whereas recombination was markedly lower in peripheral macrophages in the 
+02 
+brain parenchyma (Fig. 5J-K). Importantly, within the TdTomato⁺ populations, CD206 protein 
+03 
+expression was retained in border compartments but almost completely absent in the brain 
+04 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+consistent with local niche imprinting driving CD206 induction and repression, respectively (Fig. 
+05 
+5K). 
+06 
+Histological analysis confirmed the presence of CD206⁺TdTomato⁺ leptomeningeal macrophages, 
+07 
+whereas brain-engrafting TdTomato⁺ MDMs downregulated CD206 expression (Fig. 5L). 
+08 
+Collectively, these findings demonstrated that monocytes enter at CNS interfaces, transiently 
+09 
+acquire a BAM state and subsequently seed the underlying parenchyma via transpial migration. 
+10 
+ 
+ 
+11 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+BAMs are a local reservoir for brain parenchymal macrophages. 
+12 
+In consequence, we investigated whether MHCIIlow BAMs themselves, when spared from 
+13 
+depletion, could serve as a local source of parenchymal repopulation. 
+14 
+To test this hypothesis, we employed the Sall1CreERT2/wt:Csf1rfl/fl model, which enables selective 
+15 
+ablation of MG while preserving CM and BAM populations (Fig. 4I-J and Fig. S4E-F). We focused 
+16 
+on early repopulation (d7) to capture transitional states prior to phenotypic adaptation to the brain-
+17 
+specific environment51. HDFC revealed a marked accumulation of CLEC12A+F4/80+ peripheral 
+18 
+macrophages within the brain (Fig.6A and Fig. S5A). Within this population, we observed an 
+19 
+enrichment of BAM-associated features, including the expansion of MHCIIhigh, double negative as 
+20 
+well as FOLR2intCD206low macrophages, consistent with a transitional differentiation state of BAMs 
+21 
+downregulating CD206 (Fig. 6B). 
+22 
+However, determining whether BAM-like cells arise from resident BAMs or represent newly 
+23 
+recruited monocytes transitioning through a BAM intermediate state remains challenging. To 
+24 
+resolve this, we incorporated a tumor-bearing hemisphere as an internal reference, providing a 
+25 
+well-defined inflammatory environment that promotes robust monocyte recruitment. Transgenic 
+26 
+mice were intracranially injected with syngeneic glioblastoma CT2A tumor cells and, following 
+27 
+confirmation of tumor engraftment at d7, treated with tamoxifen for five consecutive days. Tumor-
+28 
+bearing and contralateral tumor-free hemispheres were then collected 7d after depletion onset and 
+29 
+processed for scRNAseq (Fig. S5B). 
+30 
+Clustering and UMAP embeddings displayed a loss of homeostatic MG (Microglia 1) in Cre+ mice 
+31 
+with simultaneous appearance of a repopulating macrophages cluster projecting between tumor-
+32 
+associated macrophages and MG (Fig. S5C). Subsequent analyses were restricted to the non-
+33 
+tumor-bearing hemisphere to minimize confounding effects driven by inflammation. 
+34 
+Differential gene expression analysis comparing repopulating macrophages to homeostatic MG 
+35 
+revealed a strong enrichment of BAM genes, including Pf4, Msr1, Mrc1, Cd36, Ms4a7, Clec12a, 
+36 
+and Axl, accompanied by reduced expression of canonical MG markers such as P2ry12, Sall1, 
+37 
+Sparc and Hexb in repopulating macrophages (Fig 6C). 
+38 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+To further characterize repopulating macrophages, we reclustered this population and identified 
+39 
+three principal populations. The major population exhibited a BAM-like transcriptional profile, 
+40 
+defined by high expression of Pf4, Mrc1, Clec12a, Cxcl16, and Ccr1 genes. A second, smaller 
+41 
+cluster displayed features of disease-inflammatory macrophages (DIM-like; Nfkbiz, Ccl4, Cd14, 
+42 
+Il1b, Cd83, Tnfa), while a third population exhibited a MG-like phenotype, expressing genes such 
+43 
+as Sparc, Hexb, Siglech, and Olfml3. In addition, each cluster contained a proliferating 
+44 
+subpopulation, indicating active self-renewal and expansion during repopulation (Fig. S5D). 
+45 
+We validated our BAM-like annotation by projecting the gene signature onto the Macrophage-
+46 
+Verse6, a murine reference atlas for CNS macrophages across developmental and adult stages, 
+47 
+where the signature exhibited maximal enrichment within annotated BAM populations (Fig. S5E). 
+48 
+ 
+49 
+Repopulating macrophages do not derive from microglia. 
+50 
+To exclude dedifferentiated microglia as a source of the peripheral macrophages, we performed 
+51 
+lineage 
+tracing 
+using 
+Sall1CreERT2/wt:Csf1rfl/fl:R26TdTomato 
+mice 
+(Fig. 
+S5F). 
+Repopulating 
+52 
+macrophages at d7 were largely TdTomato⁻, with only a minor fraction displaying low-level 
+53 
+TdTomato-signal consistent with phagocytic uptake of fluorescent material from dying MG (Fig. 
+54 
+S5G). These data demonstrated that repopulating macrophages arose independently of mature 
+55 
+Sall1+ MG. We identified Pf4 among the most upregulated genes in repopulating macrophages 
+56 
+(Fig.6C). While Pf4 is a prototypical BAM marker it is also expressed in yolk sac progenitors and 
+57 
+primitive macrophages during early CNS colonization52,53. To exclude a potential CNS endogenous 
+58 
+MG progenitor origin of Pf4⁺ cells that could preferentially repopulate the brain, we first assessed 
+59 
+the specificity of Pf4 expression using Pf4Cre/wt:R26TdTomato reporter mice. In this model, 
+60 
+recombination robustly labeled BAM populations across CNS interfaces. However, a non-
+61 
+negligible fraction of TdTomato⁺ cells was also detected within P2Y12⁺ MG (Fig. S5H). To resolve 
+62 
+the identity of these cells, we performed FLASHseq of TdTomato⁺ cells isolated from brain and 
+63 
+dura. This analysis revealed two transcriptionally distinct populations (Fig. S5I): a BAM cluster, 
+64 
+predominantly derived from the dura, expressing Pf4, Mrc1, and Cd163, and a brain-derived MG 
+65 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+cluster expressing canonical MG genes, including Sall1 and P2ry12 while lacking Pf4 expression. 
+66 
+Pf4-TdTomato+ MG were further dependent on CSF1R signaling, as demonstrated by their 
+67 
+depletion following CSF1R inhibition (Fig. S5J). Moreover, in dual Sall1GFP/wt:Pf4Cre/wt:R26TdTomato 
+68 
+reporter mice, P2y12⁺Pf4-TdTomato⁺ parenchymal cells show active Sall1 expression by HDFC 
+69 
+and immunofluorescence, confirming their identity as bona fide MG rather than an endogenous 
+70 
+progenitor population (Fig. S5K).  
+71 
+ 
+72 
+Repopulating macrophages do not derive from circulating or skull-derived monocytes. 
+73 
+Having excluded a MG origin, we next tested whether repopulating macrophages could derive 
+74 
+from CM. We generated head-shield chimeras by transplanting UBCGFP/GFP donors in 
+75 
+Sall1CreERT2/wt:Csf1rfl/fl  and Sall1wt/wt:Csf1rfl/fl control mice (Fig. 6D), achieving a ~20–40% 
+76 
+chimerism in CM (Fig. S6A). On d7 after depletion start, GFP+ cells were detected within subdural 
+77 
+and dural/CP BAM populations across both conditions but did not show increased contribution 
+78 
+upon depletion, consistent with baseline monocyte turnover of sdBAMs (Fig. 6E-F, see Fig. S6B 
+79 
+for cluster identity projected on conventional plot (left) and GFP density plot per subset (right) and 
+80 
+conventional gating/analysis in Fig. S6C-D). 
+81 
+Histological analysis identified only rare GFP⁺F4/80⁺ MDMs with the majority of repopulating 
+82 
+parenchymal F4/80⁺ macrophages remaining GFP⁻, while frequently expressing CD206 (Fig. 6G, 
+83 
+see Fig. S6E for GFP channel). Importantly, no differential increase in GFP+ macrophage 
+84 
+abundance was observed across conditions (Fig. S6F). 
+85 
+To further corroborate our findings, we performed parabiosis experiments by surgically conjoining 
+86 
+UBCGFP/GFP reporter mice with either Sall1CreERT2/wt:Csf1rfl/fl or Sall1wt/wt:Csf1rfl/fl control mice. After 
+87 
+6–7 weeks, stable blood chimerism of approximately 25% was established (Fig. S6G), 
+88 
+comparable to head-shield chimeras. Mice were then treated with tamoxifen and analyzed 7d after 
+89 
+treatment (Fig. 6H). HDFC revealed no enrichment of GFP+ cells within the F4/80highCLEC12A+ 
+90 
+repopulating macrophages or within MG across groups (Fig. 6I). In line with our head-shield 
+91 
+chimeras, GFP+ cells were detectable within the peripheral macrophage/BAM gate in non-depleted 
+92 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+controls, indicating that they reflect baseline monocyte contribution to sdBAMs rather than 
+93 
+depletion-induced recruitment of monocytes into the parenchymal niche (Fig. 6H-I). 
+94 
+Overall, parenchymal F480high macrophages were predominantly GFP-, with only rare 
+95 
+GFP+F4/80high parenchymal cells observed, largely restricted to the olfactory bulb or periventricular 
+96 
+regions with no significant difference of GFP+ cells among F480high macrophages (Fig. 6J-K).  
+97 
+Although skull-derived monocytes can engraft a chronically microglia-deficient niche as recently 
+98 
+reported54, UBCGFP/GFP calvarial bone-flap transplantation onto Sall1CreERT2/wt:Csf1rfl/fl mice revealed 
+99 
+no detectable contribution of skull-derived macrophages to the repopulating parenchymal 
+00 
+macrophage pool following transient microglia-selective depletion, as assessed by HDFC and 
+01 
+immunofluorescence (Fig. S6J). 
+02 
+ 
+03 
+CD163 identifies BAM-derived macrophages and is not re-induced in MDMs. 
+04 
+Next, we sought to identify lineage-restricted markers distinguishing embryonic BAMs from 
+05 
+monocyte-derived MHCIIhigh BAMs. For this, we leveraged the 3xDR model (Fig. 5G and Fig. S4I), 
+06 
+in which iterative CSF1Ri progressively exhausted the self-renewal capacity of MG and promoted 
+07 
+their replacement by MDMs.  
+08 
+Differential gene expression analysis revealed that Cd163 was selectively expressed in embryonic 
+09 
+BAMs (in control condition) but not re-induced in repopulating BAMs. In contrast, other MHCIIlow 
+10 
+BAM-associated markers, including FOLR2, CD38, and Lyve126, were re-expressed in 
+11 
+repopulating BAMs, indicating that these markers reflect tissue adaptation rather than lineage 
+12 
+origin (Fig. 5F-G). 
+13 
+To validate these findings, we analyzed BAMs in the repetitive depletion/repopulation model 
+14 
+(Fig.3I). CD163⁺ BAMs progressively declined with each successive depletion round, most 
+15 
+prominently within the subdural and CP niches, while the overall fraction of TdTomato⁺ BAMs 
+16 
+increased, consistent with gradual replacement by CD163⁻ MDMs (Fig. 6L-N). Taken together, 
+17 
+these data demonstrate that CD163 is not induced upon tissue entry, within the examined time 
+18 
+frame, establishing it as a lineage-restricted marker of bona-fide mature BAMs. 
+19 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+We stained brains of Sall1CreERT2/wt:Csf1rfl/fl head-shield chimeras (Fig. 6D) for CD163 and LYVE1 
+20 
+to determine whether BAMs could be detected within the repopulated brain parenchyma. Indeed, 
+21 
+IBA1⁺CD163⁺GFP⁻ and IBA1⁺LYVE1⁺GFP⁻ macrophages were readily observed within the 
+22 
+parenchyma (Fig. 6O). Given the short time they resided in this compartment, the presence of 
+23 
+CD163⁺/Lyve1+ macrophages strongly supports retention of a pre-existing lineage identity rather 
+24 
+than de novo induction. Together, these data show that BAMs can be a local reservoir for brain 
+25 
+parenchymal macrophages. 
+26 
+ 
+27 
+Peripheral macrophages are detectable in the aged human brain independent of 
+28 
+Alzheimer’s pathology 
+29 
+Given that chronic proliferative stress may progressively exhaust long-term MG self-renewal, we 
+30 
+asked whether peripheral macrophages can be detected within the aging human CNS 
+31 
+parenchyma when MG are no longer able to sustain local niche demand under physiological or 
+32 
+neurodegenerative conditions. We leveraged a scRNAseq brain atlas of aged human individuals 
+33 
+with and without Alzheimer’s disease (AD) from the Religious Orders Study and Memory and 
+34 
+Aging Project (ROSMAP)55. The dataset comprises samples from six brain regions: the entorhinal 
+35 
+cortex (EC), hippocampus (HC), anterior thalamus (TH), angular gyrus (AG), middle temporal 
+36 
+cortex 
+(MT), 
+and 
+prefrontal 
+cortex 
+(PFC). 
+37 
+Within the human brain macrophage landscape, we identified two clusters (C6 and C12) strongly 
+38 
+enriched for the core murine MDM signature (Fig. 7B). Both clusters expressed CD163; while a 
+39 
+further cluster C10 was enriched for a published human BAM signature56, consistent with a bona 
+40 
+fide BAM identity (Fig. 7C). In contrast, C6 was further characterized by elevated expression of 
+41 
+peripheral macrophage markers (ITGA4, LGALS3, CXCR4, FXYD5, C5AR1), together with 
+42 
+disease-associated microglia (DAM)-related genes (GPNMB, ITGAX, TREM2 and CD9) and BAM-
+43 
+associated genes (CD163, SIGLEC1, F13A1, and MSR1) (Fig. 7D). C6 and C12 were reciprocally 
+44 
+enriched in AD and non-AD brains respectively (Fig. 7A) while being consistently detected across 
+45 
+all brain regions (Fig. 7E). To localize these cells within the human brain parenchyma, we 
+46 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+performed immunofluorescence staining on postmortem human brain sections obtained from AD 
+47 
+patients (n=2, including one individual with trisomy 21-associated AD pathology) as well as one 
+48 
+age-matched non-AD (99 years old) control (Fig. 7A). Analyses were conducted across multiple 
+49 
+anatomical brain regions. We focused on CD163 as a lineage-associated peripheral macrophage 
+50 
+marker, in combination with IBA1 to identify CNS-resident macrophages. Consistent with recent 
+51 
+reports that CD163 marks human MDMs26,56,57, we detected ramified CD163⁺IBA1⁺ cells within the 
+52 
+brain parenchyma across multiple anatomical regions in both control and disease samples. 
+53 
+Notably, CD163⁺IBA1⁺ parenchymal cells were detected in relatively AD-spared regions such as 
+54 
+the substantia nigra of AD patients as well as in multiple regions of an aged non-AD individual, 
+55 
+including the calcarine sulcus and medulla oblongata (Fig. 7I). Their presence across multiple 
+56 
+brain regions and conditions suggests that peripheral macrophages colonize the human CNS 
+57 
+parenchyma under physiological and pathological states. 
+58 
+ 
+59 
+Together, these findings suggest that the aging human brain macrophage landscape contains a 
+60 
+previously underappreciated fraction of non-MG peripheral macrophages.  
+61 
+ 
+62 
+ 
+ 
+63 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Discussion 
+64 
+The principles that determine when and how monocytes or peripheral macrophages gain access 
+65 
+to CNS compartments remain incompletely understood. Experimental macrophage depletion 
+66 
+paradigms have become important tools to investigate CNS macrophage maintenance and 
+67 
+function. However, apparently conflicting repopulation outcomes across macrophage depletion 
+68 
+strategies7,15–17 have complicated interpretation of these studies and contributed to the view that 
+69 
+prolonged 
+niche 
+availability 
+dictates 
+peripheral 
+engraftment26. 
+Here, 
+we 
+integrated 
+70 
+pharmacological and genetic macrophage depletion models to identify shared physiological 
+71 
+variables that govern repopulation outcomes across major CNS macrophage niches. We show 
+72 
+that these models are not contradictory; rather, they represent distinct perturbations of a common 
+73 
+biological framework centered on two key parameters and their temporal alignment: presence of 
+74 
+engraftment-competent cells and TRM self-renewal capacity. 
+75 
+Broad pharmacological CSF1Ri efficiently depletes MG but also transiently impairs CM 
+76 
+differentiation and engraftment, despite preserving their abundance. Rapidly self-renewing MG re-
+77 
+establish niche dominance and limit peripheral engraftment. In contrast, persistent impairment of 
+78 
+TRM self-renewal, through either irreversible genetic disruption of CSF1R signaling or iterative 
+79 
+depletion-repopulation cycles, exhausted yolk sac-derived TRMs (including MG, sd- and cpBAMs) 
+80 
+and shifted the competitive balance toward peripheral engraftment. Importantly, selective TRM 
+81 
+depletion demonstrated that MDM engraftment does not require prolonged niche vacancy if 
+82 
+engraftment-competent cells are preserved during transient niche opening. Despite partial 
+83 
+acquisition of canonical MG genes (P2y12, Tmem119), brain-engrafting monocytes failed to fully 
+84 
+adopt a bona fide MG identity (Sall127,58), potentially reflecting ontogenetically imprinted epigenetic 
+85 
+constraints26,54 or insufficient time within the CNS niche59. We show that brain-engrafting MDMs 
+86 
+are transcriptionally heterogeneous yet share a conserved core MDM transcriptional program, 
+87 
+which, consistent with recent reports54,60, includes acquisition of a BAM-like transcriptional profile. 
+88 
+We extended these findings by mapping the spatiotemporal acquisition of the BAM state by CNS-
+89 
+infiltrating monocytes, demonstrating that monocytes progressively differentiate through a BAM 
+90 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+identity as they propagate from blood to the LM and, under permissive conditions, into the 
+91 
+adjacent brain parenchyma. Consistent with the transpial seeding of the macrophage-devoid 
+92 
+embryonic brain54 and the postnatal colonization of the perivascular space by leptomeningeal 
+93 
+BAMs61, we show that a re-opened parenchymal niche in adult mice is again accessible directly 
+94 
+through 
+the 
+pial 
+surface 
+to 
+monocyte-derived 
+MHCIIhigh 
+and 
+embryonic 
+MHCIIlow 
+95 
+CD206+/Lyve1+/CD163+ BAMs. Together, these findings suggest that the LM serve not solely as a 
+96 
+barrier, but as a macrophage-brain entry interface. 
+97 
+ 
+98 
+We found that the subdural compartment and the brain parenchyma constitute a restrictive niche 
+99 
+in which monocyte entry is limited and dependent on Ccr2. In contrast, the dura and CP support 
+00 
+continuous monocyte influx and undergo replenishment independently of Ccr2, consistent with 
+01 
+recent studies11,13,26,62 and closely mirroring replacement dynamics observed in human HSC-
+02 
+transplanted patients56. Importantly, these accessibility gradients dictate distinct modes of niche 
+03 
+reconstitution. In restricted compartments repopulation is dominated by local clonal expansion 
+04 
+following sporadic seeding events, as limited influx provides newly engrafted cells with a 
+05 
+prolonged window for local proliferation before encountering competing cells. 
+06 
+ 
+07 
+Peripheral macrophage engraftment into the brain parenchyma has been documented in aging 
+08 
+mice59, in neurodegeneration in both mice63,64 and humans26,65, as well as in HSC-transplanted 
+09 
+leukemia patients56. Although definitive lineage tracing of brain-engrafting MDMs remains largely 
+10 
+restricted to mice, converging human evidence supports their presence in the parenchyma. Sex-
+11 
+mismatched HSC transplantation studies identified Y-chromosome-positive donor-derived 
+12 
+macrophages and, by single-nucleus RNA sequencing, an enrichment of CD163-expressing 
+13 
+macrophages in transplanted brains56, while xenotransplantation studies independently supported 
+14 
+CD163 as a marker of brain-engrafting human MDMs26,57. Together with reports of CD163+ 
+15 
+macrophage accumulation in perivascular and subpial regions during neurodegeneration65, these 
+16 
+findings suggest that peripheral macrophages can access the human parenchyma through routes 
+17 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+consistent with transpial entry. Our data broaden the evidence for CD163⁺IBA1⁺ parenchymal 
+18 
+macrophages by demonstrating their presence across multiple brain regions in both aged and 
+19 
+neurodegenerative human brains, including individuals without overt neuropathology. 
+20 
+This interpretation is further supported by a recent spatial proteomic analysis of human AD and 
+21 
+aged control brains, which similarly identified a BAM-like MG population co-expressing CD163 and 
+22 
+TMEM11966, likely reflecting a population analogous to the population observed in our study. 
+23 
+Notably, both detrimental and beneficial effects of brain-engrafting monocytes have been reported 
+24 
+in mouse49,54,57,59 and human67,68, indicating that their functional impact is not uniform. It therefore 
+25 
+remains to be determined which mechanisms govern these divergent outcomes, potentially 
+26 
+including origin, route of engraftment and pre-conditioning prior to CNS entry, as well as the local 
+27 
+niche context that shapes their functional integration. 
+28 
+ 
+29 
+The ability to predictably repopulate even the highly restrictive microglial niche suggests that 
+30 
+similar principles govern macrophage niche occupation across tissues beyond the CNS. 
+31 
+We provide a new conceptual framework for the design of macrophage replacement strategies, 
+32 
+which have historically been complicated by the adverse effects associated with irradiation- or 
+33 
+chemotherapy-based conditioning69. In this context, irradiation- and chemo-free approaches based 
+34 
+on iterative TRM exhaustion already represent a significant advance as recently suggested54.  
+35 
+We show that coupling controlled niche opening with the preservation of engraftment-competent 
+36 
+cells or, alternatively, with the introduction of shielded exogenous cells enables rapid, directed, and 
+37 
+controlled repopulation. This strategy minimizes the duration of niche vulnerability while improving 
+38 
+temporal control and cellular composition of niche reconstitution.  
+39 
+Our findings further reveal that CNS border compartments are not impenetrable barriers, but 
+40 
+conditionally permissive interfaces through which macrophages can transition across anatomically 
+41 
+connected niches. In this framework, the LM emerge as an immunologically active reservoir and 
+42 
+conditional gateway for macrophage entry into the brain parenchyma. 
+43 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Limitations of the study 
+44 
+While we demonstrate that monocyte-derived MHCIIhigh BAMs undergo transpial entry into the 
+45 
+brain parenchyma, selective genetic fate-mapping strategies for embryonic MHCIIlow BAMs are 
+46 
+currently unavailable. Consequently, because of the remarkable plasticity and rapid phenotypic 
+47 
+convergence of macrophages during niche adaptation, the exact relative contribution of MHCIIhigh 
+48 
+and MHCIIlow BAMs to microglial replacement cannot yet be definitively quantified. Furthermore, 
+49 
+whether similar permissive niche conditions and transpial recruitment of BAMs occur during 
+50 
+physiological aging or distinct pathological conditions, rather than acute experimental niche 
+51 
+perturbation, remains to be determined. 
+52 
+Finally, although our transcriptomic and histological analyses support the presence of peripheral 
+53 
+macrophages within the human brain, definitive lineage relationships cannot currently be 
+54 
+established in humans. Future studies integrating naturally occurring somatic lineage markers, 
+55 
+including mitochondrial DNA variants and clonal hematopoiesis associated mutations, with single-
+56 
+cell multiomic and spatial analyses may enable direct reconstruction of macrophage ontogeny and 
+57 
+replacement dynamics in humans. 
+58 
+ 
+ 
+59 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Figure legend 
+60 
+Figure 1: Monocyte contribution to BAMs is subset-specific at steady state and broadens 
+61 
+after niche clearance. 
+62 
+(A) UMAP of re-analyzed scRNAseq dataset1 displaying CNS macrophages. 
+63 
+(B) Heatmap with mean expression of curated BAM−signature marker genes across annotated 
+64 
+clusters shown in (A).  
+65 
+(C) UMAPs and bivariate plots of HDFC analysis of Sall1GFP/wt mice (n=4 Sall1GFP/wt, n=5 Sall1wt/wt).  
+66 
+(D) Schematic of Mrp8Cre/wtR26TdTomato mice.  
+67 
+(E) TdTomato recombination in blood and CNS macrophages.  
+68 
+(F) Top, experimental outline of depletion/repopulation experiment. Bottom, UMAP of BAMs from 
+69 
+brain, CP and dura pre-gated as CD45+CD11b+Ly6C-CD64+CD206+/Clec12a+ macrophages.  
+70 
+(G) Quantification of clusters in (F) and MG (gated as CD45+CD11b+Ly6C-CD64+CD206-Clec12a-
+71 
+P2y12+CD49d-).  
+72 
+(H-I) CNS macrophage repopulation in Ccr2wt and CCR2ko mice 8d after BLZ945 treatment. (H) 
+73 
+Top, experimental scheme.  
+74 
+(H) Fraction of CCR2-positive macrophages in CCR2wt mice under vehicle and BLZ945 conditions, 
+75 
+quantified using the CCR2ko-derived thresholds shown in Fig. S1I. See Fig. S1J-K for cluster 
+76 
+identity/phenotypes.  
+77 
+(I) Absolute macrophage counts in Ccr2wt and Ccr2ko mice  
+78 
+(J) Left, experimental schematic of MG lineage-tracing using Sall1CreERT2/wt:R26TdTomato mice.  
+79 
+(K) Left, representative bivariate plot of brain macrophages. Right, quantification of TdTomato+ 
+80 
+brain macrophages. 
+81 
+ 
+82 
+Statistical tests: (E, K) Two-sided Welch’s t-tests (G) Pairwise unpaired Wilcoxon rank-sum tests 
+83 
+between groups within each tissue and macrophage subset. (H) Linear model per tissue and per 
+84 
+BAM subset (CCR2_pos_fraction ~ treatment) with BH correction. (I) Unpaired two-sided Welch’s 
+85 
+t-tests with BH correction. 
+86 
+ 
+ 
+87 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+ 
+88 
+Figure 2: CSF1R and PU.1 control differentiation of Ly6Chigh monocytes into downstream 
+89 
+subsets while being dispensable for their maintenance. 
+90 
+(A) Top, experimental scheme: Flt3Cre/wt:R26TdTomato mice (n = 4 mice/group). Bottom, UMAP and 
+91 
+cluster-identity projected onto bivariate plot  
+92 
+(B) UMAP-based density plot of monocyte subsets.  
+93 
+(C) Longitudinal quantification of absolute monocyte counts.  
+94 
+(D) Left, experimental scheme of Cx3cr1CreERT2/wt:Csf1rfl/fl (n=22) vs Cx3cr1wt/wt:Csf1rfl/fl (n=15). 
+95 
+Right, UMAP of CD11b+/singlets/live/NK1.1-Ly6G-Siglec-F- cells.  
+96 
+(E) Projection of cluster identities in (D) onto bivariate plot.  
+97 
+(F) Absolute counts of monocytes.  
+98 
+(G) Schematic of Cx3cr1CreERT2/wt:Csf1rfl/fl:R26TdTomato mice (n=4).  
+99 
+(H) TdTomato expression in CSF1R  monocytes with  
+00 
+(I) quantification of the TdTomato  fraction among CSF1R  and CSF1R  populations.  
+01 
+(J-M) Head-shielded BM chimeras with reconstitution of Cx3cr1CreERT2/wt:Csf1rfl/fl recipients with 
+02 
+either TdTomato+ CSF1R-WT or CSF1R-KO BM. (J) Experimental scheme. (K) Representative FC 
+03 
+plots of blood monocytes. (L) FC plots with cluster-based annotation (see Fig. S2N) of monocyte 
+04 
+subsets showing gating of TdTomato  monocytes. (M) Fraction of TdTomato  monocytes per 
+05 
+condition (n=9 CSF1R-WT, n=9 CSF1R-KO).  
+06 
+(N–Q) As in (J–M), but using TdTomato⁺ PU.1-WT or PU.1-KO donor BM (n=8 PU.1-WT, n=8 
+07 
+PU.1-KO). See Fig. S2P for clustering.   
+08 
+ 
+09 
+Statistical tests: (C) Two-sided unpaired t-tests with BH correction (F) Linear mixed-effects model 
+10 
+followed by estimated marginal means pairwise comparisons with BH correction. (I) Two-sided 
+11 
+paired t-tests. (M, Q) Two-sided unpaired t-tests. 
+12 
+ 
+13 
+ 
+ 
+14 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Figure 3: Impaired self-renewal of TRMs enables monocytes to replace all CNS 
+15 
+macrophages, 
+including 
+microglia 
+and 
+subdural 
+BAMs.  
+16 
+(A) 
+Experimental 
+scheme 
+of 
+head-shield 
+chimeras. 
+Cx3cr1CreERT2/wt:Csf1rfl/fl 
+or 
+17 
+Cx3cr1CreERT2/wt:Csf1rwt/wt mice were reconstituted with Cx3cr1CreERT2/wt:R26TdTomato BM, followed by 
+18 
+tamoxifen-induced recombination and 4-week repopulation. TdTomato recombination was re-
+19 
+induced 2 days before tissue collection. 
+20 
+(B) Representative gating strategy for CNS macrophages in CP, dura, and brain. Ridge plots show 
+21 
+TdTomato expression of gated populations used for quantification  
+22 
+(C) Percentage of TdTomato+ macrophages as gated in (B) (n=5 depletion, n=5 control, one 
+23 
+experiment.  
+24 
+(D) Representative sections of mouse brains from mice in (A-C), stained for Iba1. Scale bars, 
+25 
+1mm, 100 µm.  
+26 
+(E) Heatmap of Z-score scaled median fluorescence intensity in peripheral macrophages from 
+27 
+depletion mice and MG from control mice as defined in (B). 
+28 
+(F) UMAP of the re-analyzed published 3xDR paradigm by49 (n=3 control, n=2 3xDR). See Fig. 
+29 
+S3E  
+30 
+(G) Violin plots highlighting key differentially expressed genes between circled clusters in (F).  
+31 
+(H) Representative brain sections of head-shield chimera mice from experiment in (A-E) stained 
+32 
+for P2Y12 and TMEM119. Scale bar, 10 µm.  
+33 
+(I) Experimental scheme of repetitive (1xDR, 3xDR and controls) CSF1Ri experiment using 
+34 
+Flt3Cre/wtR26TdTomato mice. Middle, representative gating of peripheral macrophages (pre-gating in 
+35 
+Fig. S3G) used for quantification of percentages TdTomato+ macrophages in brains (right). n=4 
+36 
+1xVehicle, n=4 1xDR, n=5 3xVehicle and n=5 for 3xDR, one experiment.  
+37 
+(J) Venn diagram of shared and uniquely expressed genes among repopulating macrophages. 
+38 
+Statistical tests: (C, I) Unpaired two-sided Welch’s t-test. (E) Unpaired two-sided t-tests with BH 
+39 
+correction. 
+40 
+Figure 4: The presence of engraftment competent cells during niche opening overrides the 
+41 
+requirement 
+for 
+prolonged 
+niche 
+vacancy.  
+42 
+(A) Experimental design of head-shielded BM chimeras reconstituted with CSF1R-WT or CSF1R-
+43 
+KO donor BM. Bottom, representative gating of TdTomato⁺ macrophages. 
+44 
+(B) Absolute count of TdTomato+ macrophages by HDFC for brain, CP and dura. Leptomeningeal 
+45 
+count was determined by confocal imaging shown in (C).  n=9 CSF1R-WT and n=9 CSF1R-KO, 
+46 
+one experiment.  
+47 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+(C) Representative en face confocal imaging of the dorsal brain surface (Scale bar, 1mm, 100 µm) 
+48 
+with (D) quantification of cell area, perimeter, and circularity across conditions.  
+49 
+(E) Left, representative FC plot of MHCII expression among TdTomato+ repopulating 
+50 
+macrophages in brains in (A). Middle, fractional composition of MHCII+ and MHCII- cells with 
+51 
+absolute counts displayed (right).  
+52 
+(F-H) As in (A-C), but using TdTomato⁺ PU.1-WT or PU.1-KO donor BM (n=8 PU.1-WT, n=8 PU.1-
+53 
+KO), 7d tamoxifen treatment and tissue harvest on d17  
+54 
+(I) Schematic overview on depletion model differences, cross=depleted, stop sign=differentiation 
+55 
+block.  
+56 
+(J) Side-by-side comparison of macrophage depletion across non-selective and microglia-
+57 
+selective depletion models in brain, CP, and dura. Depletion is shown as fraction of the model-
+58 
+specific control mean (= dashed red line), normalized to 100% (vehicle-treated mice for BLZ945; 
+59 
+CreERT2wt/wt tamoxifen-treated mice for depletion models). Analysis after 7d BLZ945 treatment or 
+60 
+5d following tamoxifen-induced CSF1R deletion in genetic models.  
+61 
+(K) Left, experimental scheme comparing early repopulation across models, n=4/group. Mice 
+62 
+received tamoxifen (T) from d0-4, alternatively BLZ945 (B) or vehicle (V). Analysis 2d after 
+63 
+treatment. 
+Middle, 
+Representative 
+gating 
+of 
+CD45+CD11b+Ly6C-Ly6G-NK1.1-
+64 
+CD64+F480highClec12ahigh peripheral macrophages and (right) absolute counts. 
+65 
+Statistical tests: (B, D, E, G) Unpaired two-sided Welch’s t-test. (J) Two-sided unpaired Wilcoxon 
+66 
+rank-sum tests with BH correction using absolute counts. (K) Pairwise unpaired two-sided Welch’s 
+67 
+t-tests. 
+68 
+Figure 5: MDMs repopulate CNS niches via clonal expansion, a transient BAM state and 
+69 
+direct transpial entry.  
+70 
+(A) Experimental design and representative en face confocal image of the dorsal brain surface 
+71 
+used for spatial analysis. Scale bar: 1mm.  
+72 
+(B) Left, representative spatial dot plot derived from dorsal en face confocal imaging of the LM. 
+73 
+Monte Carlo spatial permutation analysis comparing observed MDM distributions with distributions 
+74 
+expected from random permutation of cell identities. Shaded regions indicate the simulation 
+75 
+envelope. n=8 (4 Mrc1, 4 Cx3cr1)  
+76 
+(C) Representative image of spatial distribution of GFP+ or TdTomato+ Iba1+ repopulating MDMs 
+77 
+in brain sections from (A). Scale bar: 100µm  
+78 
+(D) Left, representative dot plot of a sagittal brain section depicting the spatial distribution of 
+79 
+tdTomato , GFP , and reporter- recipient-derived macrophages. Right, as in (B) but with 
+80 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+additional class for Iba1+GFP-TdTom-. n=10 mice (6 Mrc1, 4 Cx3cr1), performed across the brain 
+81 
+parenchyma, with an additional class for Iba1+GFP-TdTom-.  
+82 
+(E) UMAP visualization of published 3xDR scRNA-seq data49 highlighting contrasts.  
+83 
+(F) Differentially expressed genes of control and repopulating BAMs. The upper right quadrant 
+84 
+highlights BAM-associated genes re-induced in repopulating BAMs. Log2FC > 0, adj. P.Value > 
+85 
+0.05, pct.1 > 0.25.  
+86 
+(G) Violin plots of canonical BAM genes in clusters in (E).  
+87 
+(H) Experimental design and quantification of Pf4-TdTomato⁺ monocytes and MDMs across 
+88 
+tissues. See Fig. S4M for gating strategy. n=5 mice per group; one experiment.  
+89 
+(I) Representative brain sections from (H) showing TdTomato IBA1  parenchymal macrophages 
+90 
+lacking CD163 and CD206 expression. Scale bar: 100µm. See Fig. S4L for TdTomato+ 
+91 
+leptomeningeal repopulating BAMs.  
+92 
+(J) Experimental design and representative gating of TdTomato⁺ repopulating macrophages and 
+93 
+CD206 expression across tissues.  
+94 
+(K) Frequency of TdTomato⁺ peripheral macrophages and CD206⁺ cells among TdTomato⁺ 
+95 
+peripheral macrophages.  
+96 
+(L) Representative brain section showing CD206⁺TdTomato⁺ leptomeningeal macrophages and 
+97 
+CD206⁻TdTomato⁺ repopulating parenchymal macrophages. Scale bar, 10μm. 
+98 
+Statistical tests: (F): Wilcoxon rank-sum test (logfc.threshold = 0, min.pct = 0.1, p.adj < 0.05, 
+99 
+genes with pct.1 > 0.25 were displayed). (H, K) Unpaired two-sided Welch’s t-test.  
+00 
+Figure 6: BAMs are a local reservoir for brain parenchymal macrophages.  
+01 
+(A) Top, experimental scheme and representative FC plots of pre-gated (CD45+CD11b+Ly6C-
+02 
+CD64+) macrophages used for cluster analysis in Fig. S5A.  
+03 
+(B) Left, FC plot of Clec12a+ macrophages from (A). Right, absolute counts of macrophage 
+04 
+subsets from (B)  
+05 
+(C) Volcano plot of differentially expressed genes between Microglia_01 and Repopulating 
+06 
+macrophages (see S5C for clusters) from scRNAseq experiment in Fig. S5B in tumor-free 
+07 
+hemispheres.  
+08 
+(D) Experimental scheme and representative FC plot showing CD45+CD11b+Ly6C-CD64+ pre-
+09 
+gated macrophages used for clustering analysis  
+10 
+(E) Annotated UMAP and GFP expression overlay of CNS macrophages (Ly6C+CCR2+ CM were 
+11 
+also included into the analysis) from mice in (D).  
+12 
+(F) Percentage of GFP+ cells in clusters shown in (E) n=4 Cre-, n=3 Cre+, one experiment.  
+13 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+(G) Representative brain sections from (D) showing GFP-CD206+F480+, intraparenchymal 
+14 
+macrophages in Sall1CreERT2/wtCsf1rfl/fl repopulated mice (for absence of GFP see Fig. S6E. Scale 
+15 
+bar: 20 µm.  
+16 
+(H) Top, experimental outline of parabiosis of Sall1CreERT2:Csf1rfl/fl and Sall1wt/wt:Csf1rfl/fl mice with 
+17 
+UBCGFP/GFP mice (n=3 control, n=4 depletion, from one experiment). Blood chimerism in Fig. S6G. 
+18 
+Bottom, representative FC plot showing pre-gated (CD45+CD11b+Ly6C-CD64+) macrophages and 
+19 
+GFP+ cells among Clec12a+F480high peripheral macrophages used for quantification.  
+20 
+(I) Percentage GFP+ cells from (H).  
+21 
+(J) Representative brain sections from two different mice from (H) showing rare clusters of 
+22 
+GFP+Iba1+F480+ as well as more abundant GFP-Iba1+F480+ intraparenchymal macrophages. 
+23 
+Scale bar: 1mm, 100µm.  
+24 
+(K) Percentage of GFP+ cells among F4/80+ macrophages quantified by immunofluorescence from 
+25 
+(J).  
+26 
+(L-N) FC analysis of BAMs in brain, CP and dura from experiment outlined in Fig. 3I of repetitive 
+27 
+(1xDR, 3xDR and controls) depletion/repopulation using Flt3Cre/wt:R26TdTomato monocyte-reporter 
+28 
+mice. (L) Representative FC plots of BAMs (pre-gated on F480highCD206+ macrophages) gating 
+29 
+for CD163+ BAMs. (M) Absolute counts of CD163+ BAMs as in (L). (N) Percentage of TdTomato+ 
+30 
+BAMs.  
+31 
+(O) Representative brain sections from (D) showing GFP-negative CD163+Iba1+ and Lyve1+Iba1+ 
+32 
+intraparenchymal macrophages in Sall1CreERT2/wt:Csf1rfl/fl repopulated mice. For absence of GFP 
+33 
+see Fig. S6H-I. Scale bar: 10 µm and 20 µm. 
+34 
+Statistical tests: (C, F, I, K, M, N) Unpaired two-sided Welch’s t-test. 
+35 
+Figure 7: Peripheral macrophages are detectable in the aged human brain independent of 
+36 
+Alzheimer’s pathology 
+37 
+(A) UMAP of scRNAseq human brain macrophages (ROSMAP55).  
+38 
+(B) Enrichment analysis of murine core MDM signature onto human CNS macrophages.  
+39 
+(C) Feature plot of CD163 and AddModuleScoring of published56 human BAM signature.  
+40 
+(D) Differentially expressed genes between C12 and MG. 
+41 
+(E) Regional composition of C6/C12. 
+42 
+(F) Overview of human postmortem brain samples analyzed by immunofluorescence imaging.  
+43 
+(G-I) Representative brain sections of (G) trisomy 21, (H) AD patient and (I) aged control. Scale 
+44 
+bar : 100 µm, 10 µm. 
+45 
+ 
+ 
+46 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Supplementary Figure legend 
+47 
+ 
+48 
+Figure S1 :  
+49 
+(A) Volcano plot of differentially expressed genes between MHCIIhighand intBAMs per tissue shown 
+50 
+in Fig.1A. Fractional composition of clusters in Fig.1A across tissue.  
+51 
+(B) Heatmap of Z−scored mean expression of macrophage modules from9 in CNS macrophages 
+52 
+from Fig. 1A.  
+53 
+(C) AddModuleScore of genes shown in (B).  
+54 
+(D) Fractional composition of CNS macrophages in mice shown in Fig.1C.  
+55 
+(E) Left, density plots of FOLR2, CD38, CD206 and CCR2 expression in BAMs across tissues in 
+56 
+Sall1GFP/wt mice shown in Fig. 1C. Right, classification of BAM subsets based on MHCII and 
+57 
+FOLR2/CD38 used throughout study.  
+58 
+(F) UMAPs and fraction of GFP+ cells across tissues in Sall1GFP/wt mice shown in Fig. 1C.  
+59 
+(G) Representative images of brain sections, LM, CP and dura whole mounts in Cx3cr1GFP/wt mice 
+60 
+stained for CD206 and MHCII. Scale bar: 20 µm.  
+61 
+(H) Projection of cluster identity onto bivariate plot of Fig. 1F.  
+62 
+(I) CCR2 density plots in CCR2wt and CCR2ko mice. Grey curves represent CCR2ko cells and 
+63 
+colored curves represent CCR2wt BAM subsets. Dashed vertical lines indicate subset-specific 
+64 
+CCR2 positivity thresholds defined from the 99th percentile of CCR2 expression in CCR2ko controls 
+65 
+for each tissue and BAM subset; shaded areas indicate CCR2-positive events.  
+66 
+(J) UMAPs of BAMs and projection of cluster identity onto bivariate plot from mice shown in Fig. 
+67 
+1H-I.  
+68 
+(K) Density plot of CCR2, CD163, and CD9 expression of BAMs in CP and dura from mice in Fig. 
+69 
+1H-I. 
+70 
+ 
+71 
+Statistical tests: (A) Wilcoxon rank-sum test with Bonferroni correction; adj.p value < 0.05 and 
+72 
+log2FC |> 0.5. (F) two-sided Welch’s t-tests with BH correction. 
+73 
+ 
+74 
+Figure S2:  
+75 
+(A-G) HDFC analysis of blood collected on d5 following BLZ945 or vehicle treatment in CCR2wt 
+76 
+and CCR2ko mice (experiment shown in Fig. 1H). (A) Left, UMAP and projection of cluster identity 
+77 
+for peripheral blood monocytes (pregated on CD11b⁺/ singlets/live/Ly6G⁻/Siglec-F⁻/NK1.1⁻). Right, 
+78 
+Expression of CD11c, MHCII, CD319, and CD177 overlayed on UMAP (FMO-corrected prior to 
+79 
+visualization for CD319 and CD177) used to identify and exclude monocyte-derived dendritic cells. 
+80 
+Color indicates arcsinh-transformed expression, clipped to the 1st–99th percentile for visualization. 
+81 
+(B) Bivariate FC plot showing lack of CCR2 expression in CCR2ko/ko compared to CCR2wt/wt mice 
+82 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+in vehicle treated groups. (C) UMAP displaying monocytes across treatments and genotypes. (D) 
+83 
+Baseline comparison of absolute monocyte subset counts in vehicle-treated CCR2wt and CCR2ko 
+84 
+mice. (E) Relative changes in monocyte subset abundance following BLZ945 treatment in 
+85 
+CCR2wt/wt and CCR2ko/ko mice. Absolute cell counts were compared within each genotype and 
+86 
+subset to the mean of vehicle-treated controls (set to 100%) to account for baseline differences 
+87 
+between genotypes. n=5–6 mice per genotype and treatment group. (F) Left, Bivariate FC plot of 
+88 
+CD319 versus CD177 (FMO-corrected) expression in CM subsetted from (C) illustrating CM 
+89 
+subset definition. Middle, feature plots show FMO-corrected CD319 and CD177 expression (color 
+90 
+intensity indicates arcsinh-transformed expression, clipped to the 1st–99th percentile). Right, 
+91 
+projection of CD319/CD177-defined subset identities onto UMAP embeddings of CM. (G) Relative 
+92 
+changes in CD319/CD177-defined CM subsets following BLZ945 treatment quantified as in (E).  
+93 
+(H-I) Gating strategy and quantification of TdTomato-recombined monocytes in (H) BM and (I) 
+94 
+peripheral blood monocytes in tamoxifen- and no-tamoxifen-treated (tamoxifen on days 0-4, read 
+95 
+out on d5) Cx3cr1CreERT2/wt :R26TdTomato mice (n = 3 mice per group).  
+96 
+(J) Cx3cr1-GFP expression in peripheral blood monocytes in Cx3cr1GFP/wt (n= 18) (normalized to 
+97 
+Cx3cr1wt/wt controls).  
+98 
+(K) Representative FC plot of blood pre-gated on CD11b+/singlets/live/NK1.1-Ly6G-Siglec-F- cells 
+99 
+from mice in Fig. 2D-F.  
+00 
+(L) Heatmap showing median marker expression per cluster scaled per marker across all clusters 
+01 
+from mice in Fig. 2D-F.  
+02 
+(M) CSF1R expression across all clusters from mice in Fig. 2D-F.  
+03 
+(N) Left, annotated UMAP and projection of cluster identity onto FC plots from mice in Fig. 2J-M. 
+04 
+Right, ridge-plots of marker expression across monocyte subsets used for quantification shown in 
+05 
+Fig. 2M.  
+06 
+(O) Absolute counts of monocyte subsets across donor conditions in mice shown in Fig. 2J.  
+07 
+(P) Left, annotated UMAP and projection of cluster identity onto FC plots from mice in Fig. 2N-Q. 
+08 
+Right, ridge-plots of marker expression across monocyte subsets used for quantification shown in 
+09 
+Fig. 2Q.  
+10 
+(Q) Absolute counts of monocyte subsets across donor conditions in mice shown in Fig. 2N. 
+11 
+ 
+12 
+Statistical tests : (H) Linear model comparing CCR2ko/ko versus CCR2wt/wt within each subset, 
+13 
+followed by BH correction. (E, G) Linear model comparing absolute counts in BLZ945 versus 
+14 
+vehicle within each genotype and subset with BH correction across genotypes within each subset. 
+15 
+(H, I, M, O, Q) Two-sided unpaired Welch’s t-test.  
+16 
+ 
+17 
+ 
+ 
+18 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Figure S3 : 
+19 
+(A) Top, experimental scheme of tamoxifen-induced Csf1r deletion in Cx3cr1CreERT2/wt:Csf1rfl/fl mice 
+20 
+followed 
+by 
+4-week 
+recovery. 
+Bottom 
+left, 
+Representative 
+gate 
+(pre-gated 
+on 
+21 
+CD45+/singlets/live/CD11b+Ly6C-CD64+) of macrophages across conditions. Bottom right, 
+22 
+quantification of peripheral macrophages among brain macrophages.  
+23 
+(B) Left, image of head-shield chamber. Right, quantification of shielding efficiency. Points 
+24 
+represent dosimeter per mouse at indicated location. Two independent experiments.  
+25 
+(C–D) Representative brain sections from the experiment outlined in Figure 3A. (C) Control mice 
+26 
+showing TdTomato+ macrophages in the LM and perivascular space.  
+27 
+(D) Repopulated mice showing MHCII, AXL, and F4/80 expression in TdTomato+ MDMs. Scale 
+28 
+bars: 100 µm.  
+29 
+(E) Experimental scheme of the published repetitive depletion–repopulation (3xDR) paradigm by49 
+30 
+(GSE207948) reanalyzed in this study. Two-month-old mice underwent three cycles of 2 week 
+31 
+PLX5622-mediated depletion and repopulation prior to scRNA-seq analysis at day 130 (n=3 
+32 
+Control, n=2 3xDR). FC plot displaying TdTomato+ blood monocytes in Flt3Cre/wtR26TdTomato mice 
+33 
+with quantification shown on the right.  
+34 
+(F) Gating strategy of brain macrophages shown in Fig. 3I.  
+35 
+(H-I) Peripheral blood monocyte comparison across 1xDR and 3xDR depletion groups. Blood was 
+36 
+collected on days 5, 7, 9 and 11 of last depletion cycle shown in Fig. 3I. (H) Annotated UMAP with 
+37 
+cluster identity projected onto FC plot. (I) UMAP-based density plot across depletion and 
+38 
+repopulation. (J) Line plots of absolute monocyte count across time and conditions.  
+39 
+(K) Left, AddModuleScores onto 3xDR scRNAseq data from Fig. 3F with corresponding dot plot of 
+40 
+marker expression profiles. 
+41 
+ 
+42 
+Statistical tests: (A, B) Two-sided unpaired Welch’s t-test. (J) Linear mixed-effects models 
+43 
+(cell_count_norm ~ cycle × Day + (1 | mouse_id)) with estimated marginal means pairwise 
+44 
+comparisons between 1X and 3X cycles within BLZ945-treated mice at each time point with BH 
+45 
+correction. 
+46 
+ 
+47 
+ 
+ 
+48 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Figure S4:  
+49 
+(A) Absolute count of TdTomato+ monocytes at day 5 of tamoxifen treatment from experiments in 
+50 
+Fig. 4A.  
+51 
+(B) Absolute count of TdTomato+ monocytes at day 5 of tamoxifen treatment from experiments in 
+52 
+Fig. 4F.  
+53 
+(C) Gating strategy for brain macrophages (gate 7) of experiment shown Fig. 4F.  
+54 
+(D) Quantification of area, perimeter and circularity of TdTomato+ cells detected in pia whole 
+55 
+mount images in Fig. 4H.  
+56 
+(E-F) TdTomato recombination in monocytes from (E) BM and (F) peripheral blood in 
+57 
+Cx3cr1CreERT2/wtR26TdTomato and Sall1CreERT2/wtR26TdTomato after 5d of tamoxifen treatment, compared 
+58 
+with non-tamoxifen injected controls.  
+59 
+(G) Analysis of CP and dural macrophages from the same clonal proliferation experiment and 
+60 
+mice shown in Figure 5A–D. Left, images of whole mounts of CP (G) and dura mater (H) stained 
+61 
+for F480 (G) and Iba1 (H). Scale bar: 100 µm. Top right, representative dot plot depicting spatial 
+62 
+distribution of donor-derived repopulating macrophages. Bottom right, monte carlo simulation 
+63 
+performed identically to Fig. 5B/D. CP, n=5 (1 Mrc1, 4 Cx3cr1); dura, n=5 (1 Mrc1, 4 Cx3cr1)  
+64 
+(I) Differential expression of control BAMs and repopulating BAMs indicated in Figure 5E. Log2FC 
+65 
+>0.5, p.adj. >0.05  
+66 
+(J) 
+Representative 
+confocal 
+images 
+of 
+leptomeningeal 
+whole 
+mounts 
+from 
+67 
+Cx3cr1CreERT2/wt:R26TdTomato head-shield transplanted Cx3cr1CreERT2/wt Csf1rfl/fl recipient mice shown 
+68 
+in Fig. 4A/F, stained for TdTomato, IBA1 and CD163 showing TdTomato+IBA1+CD163- 
+69 
+repopulating macrophages at day 7 and day 17 of repopulation (1 day and 10 days after tamoxifen 
+70 
+withdrawal respectively). Scale bar : 100µm.  
+71 
+(K) Percentage of TdTomato+ cells among peripheral blood monocyte subsets from 
+72 
+Flt3Cre/wt:R26TdTomato, Cx3cr1CreERT2/wt:R26TdTomato, Pf4Cre/wt:R26TdTomato, Mrc1CreERT2/wt:R26TdTomato, 
+73 
+Lyve1CreERT2/wt:R26TdTomato and Sall1CreERT2/wt:R26TdTomato mice. For CreERT2 mouse lines, 
+74 
+tamoxifen was administered for five consecutive days and peripheral blood was collected 1 day 
+75 
+after tamoxifen withdrawal.  
+76 
+(L) Representative confocal whole mount imaging of leptomeningeal Pf4-TdTomato+ repopulating 
+77 
+MDMs from mice in Fig. 5H. 
+78 
+(M) FC gating strategy for monocytes (gate A) and peripheral macrophages (gate 4) analyzed in 
+79 
+Fig. 5H across brain, CP, and dura. 
+80 
+Statistical tests: (D, E, F, K) Unpaired two-sided Welch’s t-test. 
+81 
+ 
+82 
+83 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Figure S5:  
+84 
+(A) Left, annotated UMAP of brain macrophages from mice in Fig. 6A. Right, Clec12a density plot 
+85 
+of UMAP clusters used for bivariate plot in Fig. 6B.  
+86 
+(B) Experimental scheme of scRNAseq experiment for plots shown in Fig. 6C and Fig. S5C-E. 1.5 
+87 
+x 105 CT2A-Luc2-TdTomato cells were orthotopically injected into Sall1CreERT2:Csf1rfl/fl and 
+88 
+Sall1wt/wt:Csf1rfl/fl mice. Seven days after tumor injection mice received tamoxifen from day 0-4 and 
+89 
+tumor-free and tumor-bearing hemisphere were processed for scRNAseq (n = 2 Control, n = 3 
+90 
+Depletion, two hemispheres per mouse).  
+91 
+(C) TSNE representation of tumor-bearing and tumor-free hemispheres across conditions from 
+92 
+(B). Dashed circles indicate clusters used for contrast in volcano plot from Fig. 6C.  
+93 
+(D) Heatmap of reclustered repopulating macrophages (including Microglia_1 cluster in (C) for 
+94 
+reference) displaying subcluster-specific gene signatures (top markers, mean.AUC > 0.65, max. 
+95 
+20 markers per cell type).  
+96 
+(E) AddModuleScore of BAM-like cluster signature on M-Verse63.  
+97 
+(F) Left, experimental scheme of MG lineage-tracing. Sall1CreERT2/wt:Csf1rfl/fl:R26TdTomato mice were 
+98 
+treated with tamoxifen on days 0-5 and analyzed by HDFC on d7. Right, representative FC plot 
+99 
+displaying the gating (pre-gated on CD45+CD11b+CD64+Ly6C-) of periperhal macrophages and 
+00 
+MG.  
+01 
+(G) Left, Representative TdTomato gate of color-coded macrophages as defined in (F). Right, 
+02 
+percentage of TdTomato+ macrophages. n = 5. From one experiment.  
+03 
+(H) Representative confocal image of brain section of Pf4Cre/wt:R26TdTomato mice stained for P2Y12 
+04 
+and CD206 showing Pf4-TdTomato+P2y12+ parenchymal macrophages.  
+05 
+(I) UMAP of TdTomato+ macrophages sorted from dura and brain of a Pf4Cre/wt:R26TdTomato mouse 
+06 
+(n=1). Top, colored by tissue. Bottom, annotated UMAP based on canonical MG/BAM markers 
+07 
+shown in violin plot on the right  
+08 
+(J) Left, experimental scheme: Pf4Cre/wt:R26TdTomato mice were treated with BLZ945/Vehicle from 
+09 
+day 0-4 and brains analyzed by HDFC on day 8 (n = 3 Vehicle, n = 5 BLZ945, from one 
+10 
+experiment). Middle, representative gating of Pf4-TdTomato+ BAMs and MG used for 
+11 
+quantification. Right, absolute count of TdTomato+ macrophages as gated in the middle.  
+12 
+(K) Representative confocal image of brain sections of Sall1GFP/wt:Pf4Cre/wt:R26TdTomato mice 
+13 
+showing Sall1-GFP+Pf4-TdTomato+P2y12+ MG. Scale bar: 100 µm and 10 µm. (J) Representative 
+14 
+FC plot of CNS macrophages in brain, CP and dura from mice in (J) showing double positive 
+15 
+Sall1-GFP+Pf4-TdTomato+ MG in the brain. 
+16 
+Statistical tests: (G) two-sided paired t-test. (J) two-sided Wilcoxon rank-sum test. 
+17 
+ 
+ 
+18 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Figure S6:  
+19 
+(A) Blood chimerism of head-shield-transplanted Sall1CreERT2:Csf1rfl/fl and Sall1wt/wt:Csf1rfl/fl mice 
+20 
+from Fig. 6D-G/O 4 weeks after transplantation.  
+21 
+(B) Left, projection of cluster identity onto MHCII-FOLR2 bivariate plot and GFP density plot from 
+22 
+Fig. 6E.  
+23 
+(C-D) Conventional analysis of data from (Fig. 6D). (C) Gating strategy of peripheral macrophages 
+24 
+(Clec12a+F480high) and MG (Clec12a-Cx3cr1high). (D) Percentage GFP+ macrophages from gated 
+25 
+macrophages in (C).  
+26 
+(E) Confocal images of displaying GFP channel from CD206+ macrophages in Fig. 6G. Scale bar: 
+27 
+20 µm.  
+28 
+(F) Absolute count of GFP+IBA1+ macrophages from mice in Fig. 6D.  
+29 
+(G) Percentage of GFP-chimerism in parabiotic mice from experiment in Fig. 6H.  
+30 
+(H-I) Confocal images displaying GFP channel from GFP- (H) CD163+ and (I) Lyve1+ 
+31 
+macrophages in Fig. 6O. Scale bar: 10 µm.  
+32 
+(J) 
+Left, 
+experimental 
+scheme 
+for 
+skull 
+transplantation 
+of 
+UBC-GFP 
+donors 
+into 
+33 
+Sall1CreERT2/wtCsf1rfl/fl mice analyzed either 4 days (by HDFC; n = 10 depletion, n = 4 controls; 
+34 
+whole brains processed) or 3 weeks (by immunofluorescence; n = 5 depletion; twenty sagittal 
+35 
+brains sections underneath transplant site were investigated per mouse) after last tamoxifen 
+36 
+treatment. 
+Top, 
+representative 
+gate 
+of 
+GFP+ 
+macrophages 
+(pre-gated 
+on 
+37 
+CD45+CD11b+CD64+F480+ cells). Bottom, representative confocal image of repopulated brain 
+38 
+section stained with anti-IBA1 and anti-GFP antibodies. Scale bar, 1mm and 200 µm. 
+39 
+Statistical tests: (A, D, F, G, K) Unpaired two-sided Welch’s t-test.  
+40 
+Video S1: Light sheet microscopy of a repopulated brain hemisphere from experiment in Fig. 4F. 
+41 
+Cx3cr1CreERT2/wt;Csf1rfl/fl head-shield chimera were reconstituted with Cx3cr1CreERT2/wt:R26TdTomato 
+42 
+(PU.1-WT). Four weeks later, mice received tamoxifen for 7d and were sacrificed 10d after last 
+43 
+tamoxifen administration. Green represents TdTomato+ brain-engrafting MDMs. 
+44 
+ 
+ 
+45 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+RESOURCE AVAILABILITY 
+46 
+Lead contact 
+47 
+• 
+Requests for further information and resources should be directed to and will be fulfilled by the lead contact, 
+48 
+Gregor Hutter (29,30). 
+49 
+ 
+50 
+Materials availability 
+51 
+This study did not generate new unique reagents. 
+52 
+Data and code availability 
+53 
+All single-cell RNA-seq datasets generated in this study will be deposited in the Gene Expression Omnibus (GEO) and 
+54 
+made publicly accessible under the corresponding GEO accession code upon publication. Additional processed data 
+55 
+and code required to reproduce the analyses is available from the lead contact upon request. 
+56 
+SnRNA-seq profiling data are available from Synapse in coordination with the ROSMAP project. Data are accessible 
+57 
+under accession codes syn52293442 (as part of the MIT ROSMAP Single-Nucleus Multiomics Study; Synapse: 
+58 
+syn52293417). The data are available under controlled use conditions set by human privacy regulations. To access 
+59 
+the data, a data use agreement is needed. This registration is in place solely to ensure anonymity of the ROSMAP 
+60 
+study participants. A data use agreement can be agreed with either Rush University Medical Center (RUMC) or with 
+61 
+SAGE, who maintains Synapse, and can be downloaded from their websites (https://www.radc.rush.edu/; 
+62 
+https://adknowledgeportal.synapse.org/). 
+63 
+ 
+64 
+ACKNOWLEDGMENTS 
+65 
+Calculations were performed at sciCORE (http://scicore.unibas.ch/) scientific computing center at the University of 
+66 
+Basel. This work was supported by a Swiss National Science Foundation Research MD-PhD Grant (323630-214538) 
+67 
+to D.K.; Swiss National Science Foundation Professorial Fellowship (PP00P3_176974); Swiss National Science 
+68 
+Foundation Project grant (3200-0-239894) to G.H. the ProPatient Forschungsstiftung, University Hospital Basel 
+69 
+(Annemarie Karrasch Award 2019); Swiss Cancer Research Grant (KFS- 4382-02-2018) to G.H.; the Department of 
+70 
+Surgery, University Hospital Basel, to G.H. and D.K.; We thank Prof. Alfred Zippelius, Prof. Jan Niess and Prof. 
+71 
+Ryuichi Nishinakamura for providing genetic mouse lines;  the genomics, proteomics, flow cytometry histology, 
+72 
+microscopy and animal core facilities of the University of Basel, Switzerland for technical and logistical support. We 
+73 
+thank Alexandar Tzankov for providing human brain tissue samples. We thank Diego Calabrese and the members of 
+74 
+the DBM Histology Core Facility for their support and staining service. We thank the microscopy facilities at the 
+75 
+Department of Biomedicine (DBM), particularly Michael Abanto, and the Imaging Core Facility (IMCF, Biozentrum), 
+76 
+especially Kai Schleicher, for their technical support with microscopy and imaging workflows. We also thank Marc 
+77 
+Thommen for advice and support regarding tissue clearing protocols. We are extremely grateful to Paul Jordi from 
+78 
+Jordi Strahlentechnik (Münchenstein, Basel) for the design and construction of the head-shielding chamber. We 
+79 
+further thank Roman Menz (University Hospital Basel) and Thibaut Klein (Department of Biomedicine, Basel) for their 
+80 
+support in planning the irradiation experiments. We thank the study participants and staff of the Rush Alzheimer’s 
+81 
+Disease Center, the data contributors, and the investigators of the original study. The dataset was originally generated 
+82 
+and described by Mathys, H., Boix, C.A., Akay, L.A. et al. Single-cell multiregion dissection of Alzheimer’s disease. 
+83 
+Nature 632, 858–868 (2024). https://doi.org/10.1038/s41586-024-07606-7.  
+84 
+ 
+ 
+85 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+ 
+86 
+AUTHOR CONTRIBUTIONS 
+87 
+Conceptualization, D.K, R.Gl., G.H.; methodology, D.K, G.H, P.T.W.; investigation, D.K., P.T.W., S.H., G.D.B, S.D., 
+88 
+S.Z., M.F.R., T.S., H.M., Z.B., V.S., F.G.,  ; formal analysis, D.K, P.T.W, S.H., P.Z., ; writing-original draft, D.K; writing-
+89 
+review & editing, D.K., P.T.W., G.D.B., A.C.D., M.F.R.,  and G.H.; funding acquisition, D.K. and G.H.; supervision, G.H; 
+90 
+data curation, D.K, M.F.R, G.D.B., S.Z., R.G., S.D., A.G., M.M.; project administration, M.F.R., G.D.B. ; Resources, 
+91 
+G.H., M.F.R., A.G., M.D., A.Z., R.G., L.M., J.K., R.Guz.  
+92 
+DECLARATION OF INTERESTS 
+93 
+G.H. has equity in, and is a co-founder of Incephalo Inc., G.H. is a co-founder of GlioCART GmbH, G.H. has received 
+94 
+consultancy honoraria from Servier Inc., Novartis and BB Braun Aeskulap.   
+95 
+  
+96 
+DECLARATION OF GENERATIVE AI AND AI-ASSISTED TECHNOLOGIES 
+97 
+During preparation of this work, the authors used GPT-5.5 for language, structure, clarity, and readability of the 
+98 
+manuscript. The authors reviewed and edited all AI-assisted output as needed and take full responsibility for the 
+99 
+accuracy, integrity, and content of the published work. 
+00 
+ 
+01 
+SUPPLEMENTAL INFORMATION 
+02 
+Figures S1-S6 
+03 
+S1 Video, related to Fig. 4F./Fig. 5. 
+04 
+Primer List 
+05 
+Supplementary_Table_sample_metadata_ROSMAP 
+06 
+Supplementary_Table_HumanSamples_IF 
+07 
+ 
+08 
+ 
+09 
+REFERENCES 
+10 
+1. Van Hove, H. et al. A single-cell atlas of mouse brain macrophages reveals unique transcriptional 
+11 
+identities shaped by ontogeny and tissue environment. Nat. Neurosci. 22, 1021–1035 (2019). 
+12 
+2. Goldmann, T. et al. Origin, fate and dynamics of macrophages at central nervous system interfaces. Nat. 
+13 
+Immunol. 17, 797–805 (2016). 
+14 
+3. Mrdjen, D. et al. High-Dimensional Single-Cell Mapping of Central Nervous System Immune Cells Reveals 
+15 
+Distinct Myeloid Subsets in Health, Aging, and Disease. Immunity 48, 380-395.e6 (2018). 
+16 
+4. Kierdorf, K., Masuda, T., Jordão, M. J. C. & Prinz, M. Macrophages at CNS interfaces: ontogeny and 
+17 
+function in health and disease. Nat. Rev. Neurosci. 20, 547–562 (2019). 
+18 
+5. Tay, T. L. et al. A new fate mapping system reveals context-dependent random or clonal expansion of 
+19 
+microglia. Nat. Neurosci. 20, 793–803 (2017). 
+20 
+6. Füger, P. et al. Microglia turnover with aging and in an Alzheimer’s model via long-term in vivo single-cell 
+21 
+imaging. Nat. Neurosci. 20, 1371–1376 (2017). 
+22 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+7. Ajami, B., Bennett, J. L., Krieger, C., Tetzlaff, W. & Rossi, F. M. V. Local self-renewal can sustain CNS 
+23 
+microglia maintenance and function throughout adult life. Nat. Neurosci. 10, 1538–1543 (2007). 
+24 
+8. Ginhoux, F. et al. Fate Mapping Analysis Reveals That Adult Microglia Derive from Primitive 
+25 
+Macrophages. Science 330, 841–845 (2010). 
+26 
+9. Dick, S. A. et al. Three tissue resident macrophage subsets coexist across organs with conserved origins 
+27 
+and life cycles. Sci. Immunol. 7, eabf7777 (2022). 
+28 
+10. 
+Utz, S. G. et al. Early Fate Defines Microglia and Non-parenchymal Brain Macrophage Development. 
+29 
+Cell 181, 557-573.e18 (2020). 
+30 
+11. 
+Du, S. et al. Diversity and immune dynamics of choroid plexus macrophages are shaped by distinct 
+31 
+developmental origins. Nat. Neurosci. 29, 717–731 (2026). 
+32 
+12. 
+Cugurra, A. et al. Skull and vertebral bone marrow are myeloid cell reservoirs for the meninges and 
+33 
+CNS parenchyma. Science 373, eabf7844 (2021). 
+34 
+13. 
+Amann, L. et al. Extrasinusoidal macrophages are a distinct subset of immunologically active dural 
+35 
+macrophages. Sci. Immunol. 9, eadh1129 (2024). 
+36 
+14. 
+Xu, Z. et al. Efficient Strategies for Microglia Replacement in the Central Nervous System. Cell Rep. 
+37 
+32, 108041 (2020). 
+38 
+15. 
+Huang, Y. et al. Repopulated microglia are solely derived from the proliferation of residual microglia 
+39 
+after acute depletion. Nat. Neurosci. 21, 530–540 (2018). 
+40 
+16. 
+Lund, H. et al. Competitive repopulation of an empty microglial niche yields functionally distinct 
+41 
+subsets of microglia-like cells. Nat. Commun. 9, 4845 (2018). 
+42 
+17. 
+Cronk, J. C. et al. Peripherally derived macrophages can engraft the brain independent of irradiation 
+43 
+and maintain an identity distinct from microglia. J. Exp. Med. 215, 1627–1647 (2018). 
+44 
+18. 
+Bennett, F. C. et al. A Combination of Ontogeny and CNS Environment Establishes Microglial Identity. 
+45 
+Neuron 98, 1170-1183.e8 (2018). 
+46 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+19. 
+Rao, Y., Bai, Y., Li, X., Du, B. & Peng, B. The evolution of microglia replacement: A new paradigm for 
+47 
+CNS disease therapy. Cell Stem Cell 32, 1807–1832 (2025). 
+48 
+20. 
+Wu, J. et al. Microglia replacement halts the progression of microgliopathy in mice and humans. 
+49 
+Science 389, eadr1015 (2025). 
+50 
+21. 
+Brioschi, S. et al. A Cre-deleter specific for embryo-derived brain macrophages reveals distinct 
+51 
+features of microglia and border macrophages. Immunity 56, 1027-1045.e8 (2023). 
+52 
+22. 
+Erblich, B., Zhu, L., Etgen, A. M., Dobrenis, K. & Pollard, J. W. Absence of Colony Stimulation Factor-1 
+53 
+Receptor Results in Loss of Microglia, Disrupted Brain Development and Olfactory Deficits. PLOS ONE 6, 
+54 
+e26317 (2011). 
+55 
+23. 
+Elmore, M. R. P. et al. Colony-Stimulating Factor 1 Receptor Signaling Is Necessary for Microglia 
+56 
+Viability, Unmasking a Microglia Progenitor Cell in the Adult Brain. Neuron 82, 380–397 (2014). 
+57 
+24. 
+Pyonteck, S. M. et al. CSF-1R inhibition alters macrophage polarization and blocks glioma 
+58 
+progression. Nat. Med. 19, 1264–1272 (2013). 
+59 
+25. 
+Serbina, N. V. & Pamer, E. G. Monocyte emigration from bone marrow during bacterial infection 
+60 
+requires signals mediated by chemokine receptor CCR2. Nat. Immunol. 7, 311–317 (2006). 
+61 
+26. 
+Bastos, J. et al. Monocytes can efficiently replace all brain macrophages and fetal liver monocytes 
+62 
+can generate bona fide SALL1+ microglia. Immunity 58, 1269-1288.e12 (2025). 
+63 
+27. 
+Buttgereit, A. et al. Sall1 is a transcriptional regulator defining microglia identity and function. Nat. 
+64 
+Immunol. 17, 1397–1406 (2016). 
+65 
+28. 
+Bosch, A. J. T. et al. CSF1R inhibition with PLX5622 affects multiple immune cell compartments and 
+66 
+induces tissue-specific metabolic effects in lean mice. Diabetologia 66, 2292–2306 (2023). 
+67 
+29. 
+Martin, M. D. et al. CD115+ monocytes protect microbially experienced mice against E. coli-induced 
+68 
+sepsis. Cell Rep. 42, 113345 (2023). 
+69 
+30. 
+Hashimoto, D. et al. Pretransplant CSF-1 therapy expands recipient macrophages and ameliorates 
+70 
+GVHD after allogeneic hematopoietic cell transplantation. J. Exp. Med. 208, 1069–1082 (2011). 
+71 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+31. 
+Lenzo, J. C. et al. Control of macrophage lineage populations by CSF-1 receptor and GM-CSF in 
+72 
+homeostasis and inflammation. Immunol. Cell Biol. 90, 429–440 (2012). 
+73 
+32. 
+Louis, C. et al. Specific Contributions of CSF-1 and GM-CSF to the Dynamics of the Mononuclear 
+74 
+Phagocyte System. J. Immunol. 195, 134–144 (2015). 
+75 
+33. 
+Thierry, G. R. et al. Non-classical monocytes scavenge the growth factor CSF1 from endothelial cells 
+76 
+in the peripheral vascular tree to ensure survival and homeostasis. Immunity 57, 2108-2121.e6 (2024). 
+77 
+34. 
+MacDonald, K. P. A. et al. An antibody against the colony-stimulating factor 1 receptor depletes the 
+78 
+resident subset of monocytes and tissue- and tumor-associated macrophages but does not inhibit 
+79 
+inflammation. Blood 116, 3955–3963 (2010). 
+80 
+35. 
+Rojo, R. et al. Deletion of a Csf1r enhancer selectively impacts CSF1R expression and development 
+81 
+of tissue macrophage populations. Nat. Commun. 10, 3215 (2019). 
+82 
+36. 
+Spiteri, A. G. et al. PLX5622 Reduces Disease Severity in Lethal CNS Infection by Off-Target Inhibition 
+83 
+of Peripheral Inflammatory Monocyte Production. Front. Immunol. 13, (2022). 
+84 
+37. 
+Emoto, T. et al. Colony stimulating factor-1 producing endothelial cells and mesenchymal stromal 
+85 
+cells maintain monocytes within a perivascular bone marrow niche. Immunity 55, 862-878.e8 (2022). 
+86 
+38. 
+Passlick, B., Flieger, D. & Ziegler-Heitbrock, H. Identification and characterization of a novel 
+87 
+monocyte subpopulation in human peripheral blood. Blood 74, 2527–2534 (1989). 
+88 
+39. 
+Geissmann, F., Jung, S. & Littman, D. R. Blood Monocytes Consist of Two Principal Subsets with 
+89 
+Distinct Migratory Properties. Immunity 19, 71–82 (2003). 
+90 
+40. 
+Mildner, A. et al. Genomic Characterization of Murine Monocytes Reveals C/EBPβ Transcription 
+91 
+Factor Dependence of Ly6C− Cells. Immunity 46, 849-862.e7 (2017). 
+92 
+41. 
+Yona, S. et al. Fate Mapping Reveals Origins and Dynamics of Monocytes and Tissue Macrophages 
+93 
+under Homeostasis. Immunity 38, 79–91 (2013). 
+94 
+42. 
+Grabert, K. et al. A Transgenic Line That Reports CSF1R Protein Expression Provides a Definitive 
+95 
+Marker for the Mouse Mononuclear Phagocyte System. J. Immunol. 205, 3154–3166 (2020). 
+96 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+43. 
+Trzebanski, S. et al. Classical monocyte ontogeny dictates their functions and fates as tissue 
+97 
+macrophages. Immunity 57, 1225-1242.e6 (2024). 
+98 
+44. 
+Chadarevian, J. P. et al. CSF1R inhibitor-resistant model for CNS-wide microglia replacement 
+99 
+strategies. Mol. Ther. 34, 832–849 (2026). 
+00 
+45. 
+Xu, Z. et al. Efficient Strategies for Microglia Replacement in the Central Nervous System. Cell Rep. 
+01 
+32, 108041 (2020). 
+02 
+46. 
+Mildner, A. et al. Microglia in the adult brain arise from Ly-6ChiCCR2+ monocytes only under 
+03 
+defined host conditions. Nat. Neurosci. 10, 1544–1553 (2007). 
+04 
+47. 
+Capotondo, A. et al. Brain conditioning is instrumental for successful microglia reconstitution 
+05 
+following hematopoietic stem cell transplantation. Proc. Natl. Acad. Sci. 109, 15018–15023 (2012). 
+06 
+48. 
+Najafi, A. R. et al. A limited capacity for microglial repopulation in the adult brain. Glia 66, 2385–
+07 
+2396 (2018). 
+08 
+49. 
+Li, X. et al. Transcriptional and epigenetic decoding of the microglial aging process. Nat. Aging 3, 
+09 
+1288–1311 (2023). 
+10 
+50. 
+Amorim, A. et al. IFNγ and GM-CSF control complementary differentiation programs in the 
+11 
+monocyte-to-phagocyte transition during neuroinflammation. Nat. Immunol. 23, 217–228 (2022). 
+12 
+51. 
+Hattori, Y. et al. CD206+ macrophages transventricularly infiltrate the early embryonic cerebral wall 
+13 
+to differentiate into microglia. Cell Rep. 42, 112092 (2023). 
+14 
+52. 
+Matcovitch-Natan, O. et al. Microglia development follows a stepwise program to regulate brain 
+15 
+homeostasis. Science 353, aad8670 (2016). 
+16 
+53. 
+Hammond, T. R. et al. Single-Cell RNA Sequencing of Microglia throughout the Mouse Lifespan and 
+17 
+in the Injured Brain Reveals Complex Cell-State Changes. Immunity 50, 253-271.e6 (2019). 
+18 
+54. 
+Du, S. et al. Brain-engrafted monocyte-derived macrophages from blood and skull-bone marrow 
+19 
+exhibit distinct properties. Neuron 0, (2026). 
+20 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+55. 
+Mathys, H. et al. Single-cell multiregion dissection of Alzheimer’s disease. Nature 632, 858–868 
+21 
+(2024). 
+22 
+56. 
+Sankowski, R. et al. Multiomic spatial landscape of innate immune cells at human central nervous 
+23 
+system borders. Nat. Med. 30, 186–198 (2024). 
+24 
+57. 
+Blurton-Jones, M. et al. Brain wide engraftment of human monocytes induces neurodegeneration 
+25 
+and cognitive dysfunction. Preprint at https://doi.org/10.21203/rs.3.rs-7762816/v1 (2025). 
+26 
+58. 
+Fixsen, B. R. et al. SALL1 enforces microglia-specific DNA binding and function of SMADs to establish 
+27 
+microglia identity. Nat. Immunol. 24, 1188–1199 (2023). 
+28 
+59. 
+Kim, J.-S. et al. Clonal hematopoiesis-associated motoric deficits caused by monocyte-derived 
+29 
+microglia accumulating in aging mice. Cell Rep. 44, (2025). 
+30 
+60. 
+Colella, P. et al. CNS-wide repopulation by hematopoietic-derived microglia-like cells corrects 
+31 
+progranulin deficiency in mice. Nat. Commun. 15, 5654 (2024). 
+32 
+61. 
+Masuda, T. et al. Specification of CNS macrophage subsets occurs postnatally in defined niches. 
+33 
+Nature 604, 740–748 (2022). 
+34 
+62. 
+Fliegauf, M. et al. Distinct origins and niches determine the cellular responsiveness of CNS 
+35 
+macrophages after repopulation. Nat. Immunol. 1–14 (2026) doi:10.1038/s41590-026-02457-y. 
+36 
+63. 
+Silvin, A. et al. Dual ontogeny of disease-associated microglia and disease inflammatory 
+37 
+macrophages in aging and neurodegeneration. Immunity 55, 1448-1465.e6 (2022). 
+38 
+64. 
+Yan, P. et al. Peripheral monocyte–derived cells counter amyloid plaque pathogenesis in a mouse 
+39 
+model of Alzheimer’s disease. J. Clin. Invest. 132, e152565 (2022). 
+40 
+65. 
+Muñoz-Castro, C. et al. Monocyte-derived cells invade brain parenchyma and amyloid plaques in 
+41 
+human Alzheimer’s disease hippocampus. Acta Neuropathol. Commun. 11, 31 (2023). 
+42 
+66. 
+Sanchez-Molina, P. et al. Spatial proteomic analysis in human Alzheimer’s disease brains enables 
+43 
+identification of microenvironment-dependent microglial cell states. Nat. Neurosci. 1–16 (2026) 
+44 
+doi:10.1038/s41593-026-02267-3. 
+45 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+67. 
+Bouzid, H. et al. Clonal hematopoiesis is associated with protection from Alzheimer’s disease. Nat. 
+46 
+Med. 29, 1662–1670 (2023). 
+47 
+68. 
+Keogh, M. J. et al. High prevalence of focal and multi-focal somatic genetic variants in the human 
+48 
+brain. Nat. Commun. 9, 4257 (2018). 
+49 
+69. 
+Sailor, K. A. et al. Hematopoietic stem cell transplantation chemotherapy causes microglia 
+50 
+senescence and peripheral macrophage engraftment in the brain. Nat. Med. 28, 517–527 (2022). 
+51 
+70. 
+Schmassmann, P. et al. Targeting the Siglec–sialic acid axis promotes antitumor immune responses 
+52 
+in preclinical models of glioblastoma. Sci. Transl. Med. 15, eadf5302 (2023). 
+53 
+ 
+54 
+ 
+ 
+55 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+STAR METHODS 
+56 
+KEY RESOURCES TABLE 
+57 
+REAGENT or RESOURCE 
+SOURCE 
+IDENTIFIER 
+Antibodies 
+Goat monoclonal anti Iba1 
+Novus Biologicals 
+Cat#NB100-1028; 
+RRID: AB_521594 
+Goat polyclonal anti Iba1 
+Abcam 
+Cat#ab5076; 
+RRID:AB_2224402 
+Rat monoclonal anti MHC II 
+Invitrogen 
+Cat#14-5231-82; 
+RRID: AB_467561 
+Rat monoclonal anti CD206 
+Thermo Scientific 
+Cat#MA5-16871; 
+RRID: AB_2538349 
+Rabbit polyclonal anti Iba1 
+Fujifilm Wako 
+Cat#019-19741; 
+RRID: AB_839504 
+Rabbit monoclonal anti CD206 
+Cell Signaling 
+Technology 
+Cat#24595; RRID: 
+AB_2892682 
+Rabbit monoclonal anti TMEM119 
+Abcam 
+Cat#ab209064; 
+RRID: AB_2800343 
+Rabbit monoclonal anti P2Y12 
+AnaSpec 
+Cat#55043A; RRID: 
+AB_2298886 
+Rat monoclonal anti Lyve1 
+Invitrogen 
+Cat#14-0443-80; 
+RRID: AB_1633414 
+Rat monoclonal anti F4/80 
+Invitrogen 
+Cat#14-4801-82; 
+RRID: AB_467558 
+Rabbit monoclonal anti Ki67 
+Cell Signaling 
+Technology 
+CAT#12202S; RRID: 
+AB_2620142 
+Goat polyclonal anti Axl 
+R&D Systems 
+CAT#AF854; RRID: 
+AB_355663 
+Chicken polyclonal anti GFP 
+Aves 
+CAT#GFP-1010; 
+RRID: AB_2307313 
+Rabbit monoclonal anti CD163 
+Abcam 
+CAT#ab182422; 
+RRID: AB_2753196 
+Rat monoclonal anti CD163 
+BioLegend 
+CAT#155302; RRID: 
+AB_2734239 
+Donkey anti goat AF488 
+Jackson 
+Cat#705-545-147; 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+ImmunoResearch 
+RRID: AB_2336933 
+Donkey anti rabbit AF555 
+Jackson 
+ImmunoResearch 
+Cat#711-565-152; 
+RRID: AB_3095471 
+Donkey anti chicken AF555 
+Jackson 
+ImmunoResearch 
+Cat#703-165-155; 
+RRID: AB_2340363 
+Donkey anti chicken AF488 
+Invitrogen 
+Cat#A-11039; RRID: 
+AB_2534096 
+Donkey anti goat AF647 
+Jackson 
+ImmunoResearch 
+Cat#705-605-147; 
+RRID: AB_2340437 
+Donkey anti rabbit AF647 
+Jackson 
+ImmunoResearch 
+Cat#711-605-152; 
+RRID: AB_2492288 
+Donkey anti goat AF750 
+Abcam 
+Cat#ab175745; 
+RRID: AB_2924800 
+Donkey anti rat AF647 
+Jackson 
+ImmunoResearch 
+Cat#712-605-153; 
+RRID: AB_2340694 
+Donkey anti rat AF488 
+Jackson 
+ImmunoResearch 
+Cat#712-545-150; 
+RRID: AB_2340683 
+Donkey anti rabbit AF488 
+Jackson 
+ImmunoResearch 
+Cat#711-545-152; 
+RRID: AB_2313584 
+Donkey anti goat CY3 
+Jackson 
+ImmunoResearch 
+Cat#705-166-147; 
+RRID: AB_2340413 
+Donkey anti-goat AF546 
+Jackson 
+ImmunoResearch 
+Cat#705-165-147; 
+RRID:AB_2307351 
+AF488 anti CD31 
+BioLegend 
+Cat#102514; RRID: 
+AB_2161031 
+PE anti Lyve1 
+Thermo Fisher 
+Scientific 
+Cat#12-0443-80; 
+RRID: AB_2802178 
+RB780 anti CD301b 
+BD Biosciences 
+Cat#569476, RRID: 
+AB_3685091 
+APC anti CD11a 
+BioLegend 
+Cat#101119; RRID: 
+AB_2562778 
+BV421 anti CD13 
+BD Biosciences 
+Cat#752980; RRID: 
+AB_2917935 
+RB670 anti CD13 
+BD Biosciences 
+Cat#770477; RRID: 
+AB_3692347 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+AF488 anti Axl 
+R and D Systems 
+Cat#FAB8541G; 
+RRID: AB_3653411 
+PE/Cy7 anti CD31 
+BioLegend 
+Cat#102523; RRID: 
+AB_2572181 
+AF647 anti CD31 
+BioLegend 
+Cat#102516; RRID: 
+AB_2161029 
+AF647 anti Tim-4 
+BioLegend 
+Cat#130007; RRID: 
+AB_2201842 
+PE anti I-A/I-E 
+BioLegend 
+Cat#107607; RRID: 
+AB_313322 
+AF647 anti CD192 
+BD Biosciences 
+Cat#568347; RRID: 
+AB_3684201 
+AF647 anti F4/80 
+BD Biosciences 
+Cat#565854; RRID: 
+AB_2744474 
+FITC anti CX3CR1 
+BioLegend 
+Cat#149020; RRID: 
+AB_2565703 
+BV605 anti CD45 
+BioLegend 
+Cat#103140; RRID: 
+AB_2562342 
+APC anti CD9 
+BioLegend 
+Cat#124812; RRID: 
+AB_2783071 
+AF488 anti I-A/I-E 
+BioLegend 
+Cat#107616; RRID: 
+AB_493523 
+RB613 anti CD11c 
+BD Biosciences 
+Cat#758187; RRID: 
+AB_3690336 
+BUV395 anti CD11b 
+BD Biosciences 
+Cat#563553; RRID: 
+AB_2738276 
+PE-CF594 anti CD192 
+BD Biosciences 
+Cat#568804; RRID: 
+AB_3684560 
+APC/Fire 810 anti P2RY12 
+BioLegend 
+Cat#848014; RRID: 
+AB_2904450 
+PE/Cy5 anti CD64 
+BioLegend 
+Cat#139331; RRID: 
+AB_2922467 
+BUV805 anti F4/80 
+BD Biosciences 
+Cat#749282; RRID: 
+AB_2873657 
+BUV563 anti CD49d 
+BD Biosciences 
+Cat#741243; RRID: 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+AB_2870794 
+AF700 anti CD11c 
+BioLegend 
+Cat#117320; RRID: 
+AB_528736 
+PE/Cy7 anti CD3ε  
+BioLegend 
+Cat#100320; RRID: 
+AB_312685 
+BUV563 anti Ly-6G 
+BD Biosciences 
+Cat#612921; RRID: 
+AB_2870206 
+PE/Fire700 anti NK-1.1 
+BioLegend 
+Cat#156527; RRID: 
+AB_2910320 
+APC/Cy7 anti CD19 
+BioLegend 
+Cat#115529; RRID: 
+AB_830706 
+FITC anti CD9 
+BioLegend 
+Cat# 124807; RRID: 
+AB_1279324 
+BUV737 anti CD45 
+BD Biosciences 
+Cat#568344; RRID: 
+AB_3684199 
+PE anti CX3CR1 
+BioLegend 
+Cat#149005; RRID: 
+AB_2564314 
+APC/Cy7 anti CD86 
+BioLegend 
+Cat#105030; RRID: 
+AB_2244452 
+BV605 anti CX3CR1 
+BioLegend 
+Cat#149027; RRID: 
+AB_2565937 
+PE anti CD319 
+BioLegend 
+Cat#152006; RRID: 
+AB_2632677 
+AF700 anti CD43 
+BioLegend 
+Cat#143214; RRID: 
+AB_2800661 
+APC anti CD319 
+BioLegend 
+Cat#152003; RRID: 
+AB_2632674 
+APC/Fire 810 anti CX3CR1 
+BioLegend 
+Cat#149053; RRID: 
+AB_2910300 
+PE/Cy7 anti CD62L 
+BioLegend 
+Cat#104417; RRID: 
+AB_313102 
+RB780 anti CD115 
+BD Biosciences 
+Cat#755874; RRID: 
+AB_3688171 
+AF488 anti I-A/I-E 
+BioLegend 
+Cat#107615; RRID: 
+AB_493524 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+AF700 anti CD206 
+BioLegend  
+Cat#141734; RRID: 
+AB_2629637 
+APC anti CD371 
+BioLegend  
+Cat#143405; RRID: 
+AB_2564264 
+TruStain FcX 
+BioLegend  
+Cat#101320; RRID: 
+AB_1574975 
+RB613 anti Folate Receptor β 
+BD Biosciences  
+Cat#759707; RRID: 
+AB_3691779 
+APC/Fire 810 anti CD163 
+BioLegend  
+Cat#155321; RRID: 
+AB_2904294 
+BV785 anti Ly6C 
+BioLegend  
+Cat#128041; RRID: 
+AB_2565852 
+PE/Cy7 anti CD38 
+BioLegend 
+Cat#102718; RRID: 
+AB_2275531 
+FITC anti CD64 
+BioLegend  
+Cat#139316; RRID: 
+AB_2566556 
+BB700 anti I-A/I-E 
+BD Biosciences  
+Cat#746197; RRID: 
+AB_2743544 
+BV421 anti CD38 
+BioLegend  
+Cat#102732; RRID: 
+AB_2734153 
+PE anti 371 
+BioLegend  
+Cat#143403; RRID: 
+AB_11126747 
+Spark Blue 574 anti CD8a 
+BioLegend  
+Cat#100793; RRID: 
+AB_2922450 
+BUV496 anti CD4 
+BD Biosciences  
+Cat#612952; RRID: 
+AB_2813886 
+BV650 anti CD8a 
+BioLegend  
+Cat#100742; RRID: 
+AB_2563056 
+PE/Cy7 anti CD45.2 
+BioLegend  
+Cat#109829; RRID: 
+AB_1186103 
+FITC anti CD8a 
+BioLegend  
+Cat#100706; RRID: 
+AB_312745 
+APC/Cy7 anti CD3ε 
+BioLegend  
+Cat#100330; RRID: 
+AB_1877170 
+PE anti CD115 
+BD Biosciences  
+Cat#566839; RRID: 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+AB_2869896 
+APC anti Folate Receptor β 
+BioLegend  
+Cat#153305; RRID: 
+AB_2721312 
+FITC anti CD9 
+BioLegend  
+Cat#124807; RRID: 
+AB_1279324 
+APC/Cy7 anti CD19 
+BioLegend  
+Cat#115529; RRID: 
+AB_830706 
+PE/Fire 700 anti NK1.1 
+BioLegend  
+Cat#156527; RRID: 
+AB_2910320 
+BUV563 anti Ly-6G 
+BD Biosciences  
+Cat#612921; RRID: 
+AB_2870206 
+PE/Cy7 anti CD3ε 
+BioLegend  
+Cat#100320; RRID: 
+AB_312685 
+AF700 anti CD11c 
+BioLegend  
+Cat#117320; RRID: 
+AB_528736 
+BUV563 anti CD49d 
+BD Biosciences  
+Cat#741243; RRID: 
+AB_2870794 
+BUV805 anti F4/80 
+BD Biosciences  
+Cat#749282; RRID: 
+AB_2873657 
+PE/Cy5 anti CD64 
+BioLegend  
+Cat#139331; RRID: 
+AB_2922467 
+APC/Fire 810 anti P2RY12 
+BioLegend  
+Cat# 848014; RRID: 
+AB_2904450 
+PE-CF594 anti CD192 
+BD Biosciences  
+Cat#568804; RRID: 
+AB_3684560 
+BUV395 anti CD11b 
+BD Biosciences  
+Cat#563553; RRID: 
+AB_2738276 
+RB613 anti CD11c 
+BD Biosciences  
+Cat#758187; RRID: 
+AB_3690336 
+AF488 anti I-A/I-E 
+BioLegend  
+Cat#107616; RRID: 
+AB_493523 
+APC anti CD9 
+BioLegend  
+Cat#124812; RRID: 
+AB_2783071 
+BV605 anti CD45 
+BioLegend  
+Cat#103140; RRID: 
+AB_2562342 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+FITC anti CX3CR1 
+BioLegend  
+Cat#149020; RRID: 
+AB_2565703 
+AF647 anti CD192 
+BD Biosciences  
+Cat#568347; RRID: 
+AB_3684201 
+PE anti I-A/I-E 
+BioLegend  
+Cat#107607; RRID: 
+AB_313322 
+AF647 anti Tim-4 
+BioLegend  
+Cat#130007; RRID: 
+AB_2201842 
+AF647 anti CD31 
+BioLegend  
+Cat#102516; RRID: 
+AB_2161029 
+PE/Cy7 anti CD31 
+BioLegend  
+Cat#102523; RRID: 
+AB_2572181 
+AF488 anti Axl 
+R and D Systems  
+Cat#FAB8541G; 
+RRID: AB_3653411 
+RB670 anti CD13 
+BD Biosciences  
+Cat#770477; RRID: 
+AB_3692347 
+BV421 anti CD13 
+BD Biosciences  
+Cat#752980; RRID: 
+AB_2917935 
+APC anti CD11a 
+BioLegend  
+Cat#101119; RRID: 
+AB_2562778 
+RB780 anti CD301b 
+BD Biosciences  
+Cat#569476; RRID: 
+AB_3685091 
+PE anti Lyve1 
+Thermo Fisher 
+Scientific  
+Cat#12-0443-80; 
+RRID: AB_2802178 
+AF488 anti CD31 
+BioLegend  
+Cat#102514; RRID: 
+AB_2161031 
+Bacterial and virus strains  
+Biological samples 
+  
+  
+Chemicals, peptides, and recombinant proteins 
+DAPI 
+BD Pharmingen 
+CAT#564907 
+PE anti Streptavidin 
+BioLegend 
+CAT#405203 
+Tamoxifen 
+MedChem Express 
+CAT#HY-13757A 
+Corn oil 
+Merck 
+CAT#C8627 
+Brilliant stain buffer 
+Thermo Scientific 
+CAT#00-4409-75 
+Collagenase, Type 4 
+Worthington 
+CAT#LS004188 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Biochemical 
+Debris Removal Solution 
+Miltenyi Biotec 
+CAT#120-109-398 
+Collagenase, Type 1 
+Worthington 
+Biochemical 
+CAT#LS004196 
+DNase I 
+Millipore Sigma 
+CAT#10104159001 
+Cyto-Fast Fix/Perm Buffer Set 
+BioLegend 
+CAT#426803 
+RedSafe Nucleic Acid Staining Solution 
+INtRON Biotechnology 
+Inc 
+CAT#21141 
+Monocyte Isolation Kit (BM), mouse 
+Miltenyi Biotec 
+CAT#130-100-629 
+True-Stain Monocyte Blocker 
+BioLegend 
+CAT#426102 
+AutoMACS Running Buffer 
+Miltenyi Biotec 
+CAT#130-091-221 
+Paraformaldehyde 32% Solution, EM Grade 
+ Electron Microscopy 
+Sciences 
+ 15714-S 
+BLZ945 
+Novartis 
+NA 
+BLZ945 (Sotuletinib) 
+MedchemExpress 
+HY-12768 
+Eye spears 
+BVI Weck-Cel 
+0008685 
+Zinc Phosphate Cement Liquid 
+Hoffmann’s 
+8001300 
+Zinc Phosphate Cement Powder 
+Hoffmann’s 
+80012-(*) 
+Critical commercial assays 
+Deposited data 
+ GEO 
+  
+  
+Experimental models: Cell lines 
+ CT2A-Luc2-TdTomato 
+  
+  
+Experimental models: Organisms/strains 
+B6.Cg-Gt(ROSA)26Sortm9(CAG-tdTomato)Hze/J 
+ Jackson stock no. 
+ JAX: 007909 
+ B6.Cg-Gt(ROSA)26Sortm14(CAG-tdTomato)Hze/J 
+ Jackson stock no. 
+ JAX: 007914 
+ C57BL/6-Mrc1em1(cre/ERT2)Jkpns/J 
+ Jackson stock no. 
+ JAX: 040118 
+C57BL/6-Lyve1em1(cre/ERT2)Jkpns/J 
+Jackson stock no. 
+JAX: 040119 
+C57BL/6-Tg(Pf4-icre)Q3Rsko/J 
+Jackson stock no. 
+JAX: 008535 
+B6.Cg-Csf1rtm1.2Jwp/J 
+Jackson stock no. 
+JAX: 021212 
+C57BL/6-Tg(UBC-GFP)30Scha/J 
+Jackson stock no. 
+JAX: 004353 
+B6.129P-Cx3cr1<tm1Litt>/J 
+Jackson stock no. 
+JAX: 005582 
+B6.129S4-Ccr2tm1Ifc/J 
+Jackson stock no. 
+JAX: 004999 
+B6.129P2(Cg)-Cx3cr1tm2.1(cre/ERT2)Litt/WganJ 
+Jackson stock no. 
+JAX: 021160 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+B6;129-Sall1<tm5(cre/ERT2)Ryn 
+ Prof. Nishinakamura 
+(Kumamoto 
+University) 
+  
+B6;129-Sall1<tm4.1Ryn 
+ Prof. Nishinakamura 
+(Kumamoto 
+University) 
+  
+B6.Cg-Spi1tm2Dgt/J 
+Jackson stock no. 
+JAX: 006922 
+B6.129-Tg(Flt3-cre)#Ccb/Ieg 
+Timm Schroeder, D-
+BSSE Basel 
+ 
+B6.129S4-Ccr2tm1Ifc/J 
+Jackson stock no. 
+JAX: 04999 
+B6.Cg-Tg(S100A8-cre,-EGFP)1Ilw/J 
+Jackson stock no. 
+JAX: 021614 
+CBA.Cg-Csf1rem1Prdns/J 
+Jackson stock no. 
+JAX: 032783 
+Oligonucleotides 
+Software and algorithms 
+FlowJo v10.10 
+ 
+ 
+ QuPath 
+ Bankhead et al. 
+  
+ R 
+ R Core Team, 2024 
+  
+ OMERO 
+ Allan et al. 
+  
+ NEWTON v7 
+ Vilber, France 
+  
+Other 
+Gammacell® 40 Exactor irradiator  
+ 
+Best Theratronics Ltd., 
+Canada 
+  
+ 
+58 
+ 
+ 
+59 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+EXPERIMENTAL MODEL AND STUDY PARTICIPANT DETAILS 
+60 
+ 
+61 
+METHOD DETAILS 
+62 
+ 
+63 
+Animals 
+64 
+All animal handling, surveillance, and experimentation were performed according to the guidelines 
+65 
+and legislation of the Swiss Federal Veterinary Office (SFVO) and the Cantonal Veterinary Office, 
+66 
+Basel-Stadt, Switzerland, under license # 2929. Parabiosis experiments were performed at 
+67 
+Washington University, St. Louis USA (J. Kipnis Lab). Csf1rfl/fl mice (B6.Cg-Csf1rtm1.2Jwp/J) were 
+68 
+crossed to Sall1CreERT2 kindly provided by Prof. Nishinakamura (Kumamoto University) or to 
+69 
+Cx3cr1CreERT2 mice, received from Prof. Niess (University of Basel) generating tamoxifen-inducible 
+70 
+Csf1r knockout mice. TdTomato reporter mice (B6.Cg-Gt(ROSA)26Sortm9(CAG-tdTomato)Hze/J) 
+71 
+were generated by crossing with the respective Cre-line, including Sall1CreERT2, Cx3cr1CreERT2, 
+72 
+Flt3Cre (kindly provided by Timm Schroeder, D-BSSE Basel), Pf4Cre/wt (kindly provided by Prof. 
+73 
+Skoda, University of Basel), Mrc1CreERT2 (kindly provided by J. Kipnis). Sall1GFP/wt were kindly 
+74 
+received from Prof. Nishinakamura (Kumamoto University). Dual microglia and BAM reporter 
+75 
+(Sall1GFP/wt 
+and 
+Pf4Cre/wt;R26TdTomato) 
+were 
+generated 
+by 
+crossing 
+Sall1GFP/wt 
+and 
+76 
+Pf4Cre/wt;R26TdTomato mice. 
+77 
+Lyve1CreERT2/wt;R26TdTomato (Ai9) were kindly provided by J. Kipnis (Washington University, St. 
+78 
+Louis). Cx3cr1CreERT2/wt;PU.1fl/fl;R26TdTomato and Cx3cr1CreERT2/wt;PU.1wt/wt;R26TdTomato controls were 
+79 
+kindly provided by Prof. Glass (LMU, München Germany). CCR2-/- mice were kindly provided by 
+80 
+Dr. Cavelti-Weder (University of Basel). 
+81 
+ 
+82 
+Tamoxifen administration 
+83 
+Tamoxifen was dissolved in corn oil at a concentration of 20 mg/mL by shaking overnight at room 
+84 
+temperature (RT) in light-protected tubes. Mice received tamoxifen at a dose of approximately 75 
+85 
+mg/kg body weight by intraperitoneal injection once every 24 h for five consecutive d. For adult 
+86 
+mice, a standard injection volume of 100 µL tamoxifen solution per animal was used. 
+87 
+ 
+88 
+BLZ945 (CSF1Ri) Treatment 
+89 
+BLZ945 (Novartis) was dissolved in 20% Captisol prepared in PBS and freshly prepared 
+90 
+immediately prior to treatment. Mice were treated by oral gavage at the indicated frequency in 
+91 
+each experiment with BLZ945 at either 200 mg/kg body weight (BW) for the dihydrochloride (HCl) 
+92 
+form or 169 mg/kg BW for the free base form, according to the manufacturer’s recommendation 
+93 
+(Novartis). For a single depletion–repopulation cycle, mice received daily oral gavage of BLZ945 
+94 
+or vehicle control for 7 consecutive d, followed by a 7d repopulation phase unless otherwise 
+95 
+indicated. For repetitive depletion–repopulation paradigms, each 7d depletion cycle was followed 
+96 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+by either a 1-week or 3-week repopulation period, with mice sacrificed 4 weeks after completion of 
+97 
+the final cycle. 
+98 
+For CSF1Ri in Pf4Cre/wt:R26TdTomato mice, BLZ945 (Sotuletinib, MedChemExpress) was used. 
+99 
+BLZ945 was dissolved by repeated vortexing and sonication in a 37 °C water bath until fully 
+00 
+resuspended. Mice were treated with BLZ945 at a dose of 200 mg/kg body weight. 
+01 
+ 
+02 
+Irradiation Experiment 
+03 
+All irradiations were performed using a Gammacell® 40 Exactor irradiator (Best Theratronics Ltd., 
+04 
+Canada). 
+05 
+The head-protection chamber was designed (by Paul Jordi, Jordi Strahlentechnik, Münchenstein, 
+06 
+Basel) with staggered lead wall offsets to reduce scatter and edge-associated radiation leakage. 
+07 
+All chamber walls (side, roof, and bottom) consisted of 3 cm lead shielding. Because irradiation 
+08 
+was delivered from both top and bottom sources, the roof and floor were reinforced with an 
+09 
+additional 1.5 cm lead layer, resulting in a total shielding thickness of 4.5 cm in these regions. 
+10 
+Validation of the 
+head-shielding 
+efficiency 
+was measured using individually packed 
+11 
+thermoluminescent dosimeters (TLDs; detection range 0.1–10 Gy). TLDs were positioned on the 
+12 
+exposed back and beneath the lead-protected head within the irradiation chamber to quantify 
+13 
+radiation exposure under head-protected conditions relative to total body irradiation. An additional 
+14 
+non-irradiated TLD was included as a baseline control. A total irradiation dose of 6.11 Gy was 
+15 
+applied.  
+16 
+ 
+17 
+Bone marrow chimeras 
+18 
+Bone marrow chimeras were generated using a head-protected irradiation protocol. Recipient 
+19 
+mice were anesthetized with ketamine/xylazine and placed into the irradiation chamber with the 
+20 
+head shielded using a custom 3–4.5 cm lead barrier, as illustrated in Fig. S3B. Mice received two 
+21 
+doses of 6 Gy total body irradiation separated by an interval of at least 4 h. 
+22 
+During the interval between irradiation cycles, bone marrow cells were isolated from donor mice 
+23 
+under sterile conditions. Femurs and tibiae were collected and flushed with RPMI medium. Cell 
+24 
+suspensions were filtered through a 70 µm filter and subjected to 1min ACK lysis. Cells were 
+25 
+subsequently washed, resuspended in sterile PBS, and counted prior to transplantation. Recipient 
+26 
+mice received 2 × 106 sex-matched whole bone marrow cells by intravenous tail vein injection 
+27 
+immediately following the second irradiation cycle.  
+28 
+For the assessment of clonal proliferation, we transplanted mixtures (1:1 ratio) of either 
+29 
+Cx3cr1CreERT2/wt:R26TdTomato and Cx3cr1GFP/wt or Mrc1CreERT2:R26TdTomato and Cx3cr1GFP/wt BM into 
+30 
+head-shielded Cx3cr1CreERT2/wt:Csf1rfl/fl recipient mice. 
+31 
+ 
+32 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Parabiosis 
+33 
+Parabiosis experiments were performed between UBCGFP mice and age- and sex-matched 
+34 
+(female) Sall1CreERT2/wt:Csf1rfl/fl or Sall1wt/wt:Csf1rfl/fl mice as previously described54. Briefly, mice 
+35 
+were anesthetized with a ketamine/xylazine (100mg/kg, 10 mg/kg) mixture and the corresponding 
+36 
+lateral sides were shaved and disinfected using alternating betadine and alcohol washes. A skin 
+37 
+incision extending from the olecranon to the knee joint was generated, and subcutaneous fascia 
+38 
+was carefully separated to create a free skin margin. Corresponding knee and elbow joints of 
+39 
+parabiont pairs were connected using absorbable 5-0 Vicryl sutures, followed by approximation 
+40 
+and closure of the dermis while excluding epidermal layers at the junction site. Animals received 
+41 
+postoperative analgesia with buprenorphine (Buprenorphine SR; 1.0 mg/kg) and antibiotic 
+42 
+supplementation in the drinking water. 
+43 
+ 
+44 
+Calvarium bone-flap transplantation 
+45 
+Sall1Cret/wt:Csf1rfl/fl 
+46 
+7–10-week-old mice were anesthetized with a ketamine/xylazine mixture (80 mg/kg ketamine, 16 
+47 
+mg/kg Xylazine) and maintained at 37°C on a heating pad throughout the surgical procedure. Hair 
+48 
+over the head was removed using depilatory cream, and the surgical site was thoroughly 
+49 
+disinfected with Betadine. A midline skin incision was made to expose the parietal and interparietal 
+50 
+bones. A cranial window of approximately 4 × 6 mm was generated using an electric drill. During 
+51 
+drilling, the surgical area was carefully monitored and kept moist as needed. The cranial flap was 
+52 
+then gently removed by carefully detaching the underlying dura from the bone, while preserving 
+53 
+the integrity of the dura mater, brain parenchyma, and sinus structures. 
+54 
+Following craniotomy, a sex- and age-mismatched fluorescent donor mouse, typically UBC-GFP, 
+55 
+was euthanized. A donor calvarial flap of comparable size and from the corresponding skull region 
+56 
+was prepared. The donor dura was removed from the bone flap, and the flap was trimmed as 
+57 
+needed to match the recipient craniotomy site. The donor bone flap was then positioned over the 
+58 
+cranial window and fixed in place using dental cement. Care was taken to prevent cement leakage 
+59 
+between the fracture margins to allow proper bone apposition and healing. After the cement had 
+60 
+hardened and the transplanted flap was stably immobilized, the skin was re-approximated and 
+61 
+sutured. 
+62 
+Postoperative care included analgesic treatment 
+without antibiotic administration. No 
+63 
+postoperative infections were observed. Following surgery, mice were housed individually during 
+64 
+the recovery period. 
+65 
+For GFP+ cell detection by HDFC, whole brains were processed and acquired. For 
+66 
+immunofluorescence analysis, at least twenty 40-µm-thick sagittal brain sections within the 
+67 
+transplantation area were analyzed per mouse. 
+68 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+ 
+69 
+Tumor cell injection for scRNAseq  
+70 
+7–15-week-old mice were anesthetized and maintained under anesthesia using isoflurane 
+71 
+throughout the surgical procedure. Animals were mounted onto a stereotactic frame (Neurostar, 
+72 
+Germany), and the scalp was disinfected using povidone-iodide solution prior to a midline incision. 
+73 
+A burr hole was manually drilled 2 mm lateral to the cranial midline and 1 mm posterior to the 
+74 
+bregma suture. Intracranial injections were performed using the StereoDrive v1 software 
+75 
+(Neurostar, Germany) and a 10 µL Hamilton syringe (#80300, Hamilton, USA). The syringe was 
+76 
+lowered to a depth of 3.0 mm below the dura surface and subsequently retracted by 0.5 mm to 
+77 
+create a small reservoir. A total of 1.5 x 105 CT2A-Luc2-TdTomato tumor cells suspended in 4 µL 
+78 
+were injected at a rate of 1 µL/min. Following injection, the needle was left in place for at least 
+79 
+2 min and then slowly retracted in 50 µm incremental steps. The incision was subsequently 
+80 
+sutured. 
+81 
+Tumor engraftment was confirmed on day 7 following intracranial implantation by bioluminescence 
+82 
+imaging. Mice received an intraperitoneal injection of D-luciferin (150 mg/kg-1), and imaging was 
+83 
+performed 10 min after injection using the NEWTON 7.0 instrument (Vilber, France) and 
+84 
+bioluminescence counts measured using NEWTON v7 Software (Vilber, France) imaging system 
+85 
+and software (Vilber, France). 
+86 
+ 
+87 
+Mouse tissue collection and processing 
+88 
+CNS tissue 
+89 
+For all mouse cohorts, animals were deeply anesthetized by intraperitoneal injection of 
+90 
+ketamine/xylazine (80 mg/kg ketamine [Ketanarkon, Streuli Tiergesundheit, Switzerland] and 
+91 
+16 mg/kg xylazine [Rompun, Elanco, USA]) and transcardially perfused with PBS prior to tissue 
+92 
+collection. Following perfusion, the dura mater was carefully peeled from the cranium, the fourth 
+93 
+ventricle was removed, and brains were immediately processed for downstream applications. 
+94 
+Brain 
+hemispheres 
+were 
+separated, 
+with 
+one 
+hemisphere 
+immersion-fixed 
+in 
+4% 
+95 
+paraformaldehyde (PFA) for histological and immunofluorescence analyses, while the contralateral 
+96 
+hemisphere was used for flow cytometric analyses following dissection of the lateral ventricle 
+97 
+choroid plexus. Brain tissue was subsequently minced and maintained in ice-cold PBS until 
+98 
+processing. 
+99 
+ 
+00 
+All tissues were enzymatically digested at 37 °C for 30 min using 1 mg/mL collagenase type IV 
+01 
+(#LS004188, 
+Worthington 
+Biochemical 
+Corporation, 
+USA) 
+and 
+250 U/mL 
+DNase 
+I 
+02 
+(#10104159001, Roche, Switzerland) in digestion buffer consisting of HBSS with Ca2+/Mg2+ 
+03 
+(#14205-050, Gibco, USA), 1% MEM non-essential amino acids (NEAA), 1 mM sodium pyruvate, 
+04 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+44 mM sodium bicarbonate (#25080-060, Gibco, USA), 25 mM HEPES (#H0887, Gibco, USA), 
+05 
+1% GlutaMAX-I, and 1% antibiotic-antimycotic (#15240062, Gibco, USA). Following digestion, 
+06 
+tissues were mechanically dissociated by repeated trituration using a 1000 µL pipette tip. Brain-
+07 
+derived cell suspensions were subsequently filtered through a 70 μm cell strainer and subjected 
+08 
+to myelin and debris removal using debris removal solution (#130-109-398, Miltenyi Biotec, 
+09 
+Germany) according to the manufacturer’s instructions. Cells were washed with PBS and 
+10 
+maintained on ice until further downstream applications. 
+11 
+ 
+12 
+Dura and choroid plexus samples were processed using the identical enzymatic digestion 
+13 
+protocol; however, no myelin/debris removal step was performed. Following enzymatic 
+14 
+dissociation, cell suspensions were filtered through a 35 μm mesh cell strainer cap (Falcon®, 
+15 
+#352235) prior to downstream flow cytometric analyses. 
+16 
+ 
+17 
+Blood 
+18 
+Mice were gently restrained and tail disinfected with 70% ethanol. Peripheral blood was collected 
+19 
+from the lateral tail vein by puncture and immediate collection of 2 × 10 µL blood into a 96-well 
+20 
+plate containing 100 µL PBS supplemented with 1 mM EDTA and 1:100 mouse FcBlock 
+21 
+(TruStain FcX (#101320, BioLegend, USA)). 
+22 
+ 
+23 
+Spectral flow cytometry and FACS 
+24 
+ 
+25 
+Staining and acquisition 
+26 
+All samples were acquired on a Cytek Aurora 5-Laser Spectral Analyzer (Cytek Biosciences, USA) 
+27 
+using standard daily quality-controlled Cytek-Assay-Settings unless otherwise stated. 
+28 
+ 
+29 
+CNS tissues 
+30 
+Single cell suspensions were resuspended at equal volumes in PBS and distributed in 96-well 
+31 
+plate (round bottom). All centrifugation and incubation steps were performed at 300 × g at 4 °C, 
+32 
+protected from light, unless otherwise stated. Viability staining was performed by incubating cells 
+33 
+with a Zombie Viability dye (Zombie Aqua or NIR Viability kit) for 15 min. Subsequently, Fc-block 
+34 
+was performed by incubating cells in a 1:50 dilution of mouse TruStain FcX (#101320, BioLegend, 
+35 
+USA) for 15 min. Antibody mastermixes (full-stains and FMOs) were freshly prepared on the day 
+36 
+of staining in Brilliant Stain Buffer (#00-4409-75, ThermoFisher Scientific, USA). Cell surface 
+37 
+markers were stained with surface antibody mastermixes for 20 min and then washed three times 
+38 
+in autoMACS Running Buffer. Fixation/permeabilization step was performed by incubating the cells 
+39 
+for 20 min at RT using a Cyto-Fast Fix/Perm Buffer set (#426803, BioLegend, USA). Finally, the 
+40 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+samples were washed twice, resuspended in a final volume of 200 µL of autoMACS Running 
+41 
+Buffer, and acquired. Absolute counts were quantified by normalizing cell count by acquisition 
+42 
+volume.   
+43 
+ 
+44 
+Blood 
+45 
+All centrifugation and incubation steps were performed at 400 × g at 4 °C, protected from light, 
+46 
+unless otherwise stated. For longitudinal studies of blood over multiple days, reagents (antibody 
+47 
+mastermixes, FMO mastermixes, viability dyes and FcBlock-EDTA mix) was prepared in advance. 
+48 
+To correct for potential batch effects, blood of a C57BL/6 mouse was collected transcardially into 
+49 
+1mM EDTA supplemented with 1:100 FcBlock and frozen at -80 °C prior to experiment start. For 
+50 
+each timepoint, 1 vial of blood was thawed and stained side by side with other samples and used 
+51 
+to assess whether batch normalization is required. After blood collection as described in “Mouse 
+52 
+tissue collection and processing”, blood was centrifuged and resuspended in Zombie Viability dye 
+53 
+(Zombie Aqua or NIR Viability kit) for 15 min. Subsequently, cell surface markers were stained with 
+54 
+surface antibody mastermixes for 20 min and washed three times in autoMACS Running Buffer. 
+55 
+Then, blood was fixed/lysed by adding 150 µL of BD FACS Lysing Solution (BD Biosciences, 
+56 
+#349202) for 10 min at RT. Cells were centrifuged at 600 × g at 4 °C, washed twice and 
+57 
+resuspended in 200 µL autoMACS running buffer (20 µL initial whole blood resuspended in 200 µL 
+58 
+acquisition volume) and subsequently acquired on a Cytek Aurora 5-Laser Spectral Analyzer 
+59 
+(Cytek Biosciences, USA). Absolute counts were quantified by normalizing cell count by 
+60 
+acquisition volume.   
+61 
+ 
+62 
+Flow cytometry analysis 
+63 
+For conventional flow cytometry analysis, frequencies/counts, acquisition volume/sample and 
+64 
+median fluorescence intensities (MFI) of gated populations were exported along corresponding 
+65 
+metadata and analyzed in R.  
+66 
+ 
+67 
+FlowSOM analysis 
+68 
+Data was unmixed using the SpectroFlo software (Cytek) and then manually pre-gated on 
+69 
+CD45+/CD11b+, live, single cells and then cells of interest (i.e CD45+CD11b+Ly6C-CD64+ 
+70 
+macrophages) using FlowJo v10 Software. The analysis was subsequently performed in R v4.3.2. 
+71 
+Data was transformed by arc-sinh transformation using variance stabilizing cofactors for each 
+72 
+channel (estParamFlowVS and transFlowVS functions from the FlowVS package). Manual 
+73 
+corrections of cofactors were applied when necessary. Clustering was performed using FlowSOM 
+74 
+and ConsensusClusterPlus using the wrapper function cluster from the CATALYST package. The 
+75 
+resulting clusters were manually annotated and merged based on marker expression. Clustering 
+76 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+identity was compared to conventional gating by projection of cluster identity onto bivariate plots. 
+77 
+For visualization and statistical quantification, single cell object was transformed into a dataframe 
+78 
+and analysed as indicated in respective figure legends.  
+79 
+ 
+80 
+ 
+ 
+81 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Fluorescence-activated cell sorting 
+82 
+FLASHseq of TdTomato+ macrophages 
+83 
+Samples and collection plates were maintained at 4 °C throughout the tissue preparation sorting 
+84 
+procedure, and PBS was used as the sorting and sample preparation buffer in all steps. Tissue 
+85 
+was prepared as described in “Mouse tissue collection and processing”. Viability staining was 
+86 
+performed using Zombie NIR at 1:1000 dilution in PBS for 20 min. No FcBlock was perfomed as 
+87 
+no surface staining was required.  
+88 
+Pf4-TdTomato+ live singlet cells from brain and dura preparations were single-cell sorted on a BD 
+89 
+FACSDiscover S8 Cell Sorter using a 100 µm nozzle into lysis buffer-prefilled Eppendorf 
+90 
+twin.tec® 384-well PCR plates (Cat. No. 0030128508, Eppendorf) mounted on a cooled plate 
+91 
+holder, with one cell deposited per well. Plate was immediately sealed and centrifuged at 700 
+92 
+ × g at 4 °C and transferred into -80 °C. scRNA-sequencing libraries were generated 
+93 
+according to the FLASH-seq protocol (v4). 
+94 
+ 
+95 
+10X scRNAseq of tumor engrafted mice 
+96 
+Samples and collection tubes were maintained at 4 °C throughout the tissue preparation, sorting 
+97 
+procedure, and PBS was used as the sorting and sample preparation buffer in all steps 
+98 
+Mice were deeply anesthetized and perfused as described in “Mouse tissue collection and 
+99 
+processing”. Brain was split into tumor-bearing and tumor-free hemisphere by mid-sagittal cut and 
+00 
+processed as described in “Mouse tissue collection and processing”. ACK lysis was performed 
+01 
+once for 5 min. Cells were Fc-blocked and stained with anti-CD45 and anti-CD11b for 30 min at 
+02 
+4 °C. Cells were washed and Hashtag-antibodies added followed by 20 min incubation. Samples 
+03 
+were washed and then pooled before the final wash and subsequent resuspension in PBS and 
+04 
+0.02% BSA. DAPI was added for dead cell exclusion.  
+05 
+ 
+06 
+Immunofluorescence 
+07 
+ 
+08 
+Mouse samples 
+09 
+Mice were transcardially perfused with PBS. Brains were subsequently dissected and post-fixed 
+10 
+overnight in 4% paraformaldehyde (PFA) at 4 °C, followed by thorough washing in PBS. Dura 
+11 
+mater and choroid plexus samples were fixed in 4% PFA for 10 min at room temperature prior to 
+12 
+washing in PBS. Brain tissue was sectioned using a vibratome (40 µm sagittal sections and 27 µm 
+13 
+coronal sections) and processed as free-floating sections. Choroid plexus and isolated pia 
+14 
+preparations were similarly stained free-floating. Dura samples were carefully dissected under a 
+15 
+stereomicroscope and stained on glass slides. All samples were blocked and permeabilized in 
+16 
+PBS containing 3% bovine serum albumin (BSA) and 0.5% Triton X-100, followed by incubation 
+17 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+with primary antibodies overnight at 4 °C. After washing, appropriate fluorescent secondary 
+18 
+antibodies were applied for 1 h at room temperature, followed by additional washing steps prior to 
+19 
+mounting. 
+20 
+Human samples 
+21 
+Human tissue samples obtained from healthy and Alzheimer donors were formalin-fixed and 
+22 
+paraffin-embedded (FFPE). Tissue blocks were sectioned at 5 µm using a Microm HM 355S 
+23 
+microtome (Thermo scientific) and mounted onto glass slides (Epredia). Immunofluorescence was 
+24 
+performed with the Ventana Discovery Ultra (Roche Diagnostics Suisse SA) automated stainer. In 
+25 
+brief, tissue sections were deparaffinized and rehydrated. Antigens were retrieved by heat in Cell 
+26 
+Conditioning buffer 1 (CC1, ref. 950-124, Ventana) at 98°C for 40 minutes. Primary antibody 
+27 
+against IBA1 (goat monoclonal, 1:500; Novus Biologicals) and CD163 (rabbit monoclonal, 1:150; 
+28 
+Abcam) was manually applied and incubated for 1 hour at 37°C. After washing, secondary 
+29 
+antibodies donkey anti-goat Cy3 (Jackson ImmunoResearch) and donkey anti-rabbit Alexa Fluor 
+30 
+647 (Jackson ImmunoResearch) were applied and incubated for 1 hour at 37°C. Nuclear 
+31 
+counterstaining was performed using DAPI, incubated at RT for 30 min. All the secondary 
+32 
+antibodies were used at a concentration of 1:1000. After staining, slides were washed three times 
+33 
+with 1×PBS and mounted using ProLong™ Gold Antifade Mountant (Thermo Fisher Scientific).  
+34 
+ 
+35 
+Microscopy 
+36 
+Stained slides 
+37 
+Fluorescence imaging was performed using inverted spinning-disk confocal microscopy systems 
+38 
+(Nikon Eclipse Ti and Nikon Ti2; Nikon). High-resolution imaging was acquired using a 40× air 
+39 
+objective, while lower magnifications (4×, 10×, and 20×) were used for overview and large-area 
+40 
+imaging. 
+41 
+Images were acquired using standard filter sets appropriate for the respective fluorophores. Z-
+42 
+stacks and tiled acquisitions were performed where indicated. 
+43 
+For quantitative analyses, imaging settings (including laser power, exposure time, and detector 
+44 
+gain) were kept constant within each experiment for samples stained and imaged under identical 
+45 
+conditions. 
+46 
+ 
+ 
+47 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Whole leptomeninges microscopy 
+48 
+Whole-pia imaging was performed on intact brains using spinning-disk confocal microscopy (Nikon 
+49 
+Ti2) with a 4× objective. Z-stack tile scans were acquired across the entire pial surface of the 
+50 
+dorsal cortex in ice-cold PBS prior to downstream processing. 
+51 
+Due to the autofluorescence of the leptomeninges, signal detection was effectively restricted to the 
+52 
+surface, with minimal contribution from underlying cortical tissue, as verified by three-dimensional 
+53 
+reconstructions. 
+54 
+Equivalent acquisitions were performed on fixed hemispheres or whole brains for structural 
+55 
+comparison. 
+56 
+Tissue clearing and lightsheet microscopy 
+57 
+Brains were cleared using EZ Clear with refractive index matching prior to imaging. Cleared brain 
+58 
+hemispheres were immersed in oil and imaged using a benchtop mesoSPIM system equipped 
+59 
+with a motorized XY stage and controlled via mesoSPIM-control software. Imaging was performed 
+60 
+using a 5×/0.14 NA air objective (working distance 3.4 mm) and a Photometrics IRIS 14 camera. 
+61 
+tdTomato fluorescence was excited at 561 nm and detected using a 595/50 bandpass emission 
+62 
+filter. Dual-sided illumination was used to reduce shadowing artifacts and improve signal 
+63 
+uniformity. 
+64 
+Tile scans and z-stacks were acquired to cover entire hemispheres. Image stitching was 
+65 
+performed in Fiji, and three-dimensional visualization was carried out using Imaris. 
+66 
+ 
+67 
+ScRNAseq data analysis 
+68 
+BAM-Atlas 
+69 
+Raw count matrices for four wild-type samples from Van Hove et al. (GSM3687213–GSM3687216; 
+70 
+dura mater, choroid plexus, enriched subduralmeninges, and whole brain) were obtained from 
+71 
+NCBI GEO. Cells were filtered by MAD-based outlier detection (nmads = 4) on detected gene 
+72 
+count, total UMI count, and mitochondrial read fraction, followed by PCA based outlier removal on 
+73 
+QC metrics (scater). Genes with average count < 10 ³ were excluded. Non-myeloid populations 
+74 
+(dendritic cell subsets, B cells, T cells, NK cells, ILC, neutrophils, and doublets) identified at 
+75 
+Louvain resolution 0.6 were removed, retaining microglia, macrophages, and monocytes. 
+76 
+ The myeloid subset was normalised using SCTransform, regressing out dissociation stress score, 
+77 
+cell cycle scores (S and G2/M phase), and ribosomal RNA fraction. Datasets were integrated 
+78 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+across tissues using Seurat canonical correlation analysis (CCA; SelectIntegrationFeatures, 
+79 
+nfeatures = 3,000; PrepSCTIntegration; FindIntegrationAnchors; IntegrateData). PCA was run on 
+80 
+the integrated assay; UMAP (dims = 1:15, n.neighbors = 20) and tSNE (dims = 1:15) were 
+81 
+computed on the integrated space. Louvain clustering was performed at resolutions 0.1–1.2; 
+82 
+resolution 0.8 was used for annotation. Clusters were manually assigned to cell types based on 
+83 
+canonical marker expression, and contaminating populations (B cells, mast cells, endothelial, 
+84 
+stromal, CD45 , and unassigned cells) were removed to produce the final annotated object. 
+85 
+Differentially expressed genes between BAM subpopulations were identified using FindMarkers 
+86 
+(Seurat, SCT assay, min.pct = 0.25, logfc.threshold = 0.4). 
+87 
+ 
+88 
+Tumor-bearing and tumor-free hemisphere 10X scRNAseq 
+89 
+CD45  cells were sorted from CT-2A glioma-bearing mouse brains across four sample groups 
+90 
+(Csf1r-Cre   × tumour contralateral hemisphere) and sequenced on a NovaSeq SP lane (800M 
+91 
+reads). Reads were aligned to mm10Ensembl 102 using STARsolo. Cells were filtered, 600 UMIs 
+92 
+and 450 detected genes; doublets were removed in two steps using HTO classification and 
+93 
+scDblFinder. Batch effects across sample groups were corrected using FastMNN (batchelor; k = 
+94 
+20, d = 50). Louvain clustering was performed on the MNN-corrected space at k = 10; all 
+95 
+visualisations use UMAP.MNN (n_neighbors = 15) and TSNE.MNN embeddings. Cell-type 
+96 
+annotation combined SingleR (ImmGenData; Philip Schmassmann dataset 70) with manual 
+97 
+marker-based assignment. Cluster 1 (MG-like cells) was re-clustered independently; subclusters 
+98 
+were characterised using scoreMarkers (scran), and gene sets defined by markers with mean 
+99 
+AUC >0.65 were projected onto the M-Verse multi-dataset integration using AddModuleScore 
+00 
+(Seurat). For Figure 6D, pseudobulk differential expression was computed in MG-like and 
+01 
+Microglia_1 clusters using limma on aggregated counts (≥ 20 cells per pseudobulk), with the 
+02 
+contrast tumor-free hemisphere Cre+ versus tumor-free hemisphere Cre-.  
+03 
+ 
+04 
+FLASHseq 
+05 
+Cells sorted from the brain and dura mater of Pf4Cre/wt;R26tdTomato wild-type mice, and from the 
+06 
+brains of Cx3cr1GFP/wt and Cx3cr1CreERT2/wt;R26tdTomato mice, as described above, were 
+07 
+processed using the FLASHseq protocol (768 single-cell libraries). FLASH-seq libraries were 
+08 
+sequenced on an Illumina NextSeq 500/550 platform to generate 36-bp single-end reads. A 
+09 
+custom reference genome was assembled from mm39 supplemented with eGFP, eYFP, CreERT2, 
+10 
+and TdTomato transgene sequences and indexed with Ensembl 110 annotation. Reads were 
+11 
+aligned using STAR and gene-level counts were quantified with featureCounts within Snakemake 
+12 
+workflows, executed on the SciCore HPC cluster. The resulting count matrix was imported into 
+13 
+Seurat (min.cells = 3, min.features = 300) and filtered (detected features > 300 and < 7,500, UMI 
+14 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+count > 300, mitochondrial fraction < 8%). Data were log-normalised (scale factor = 10,000), highly 
+15 
+variable features identified (vst, nfeatures = 2,000), and UMAP computed on the first 25 PCs. Cells 
+16 
+were classified as BAMs (UMAP_2 > 8) or microglia (UMAP_2 ≤ 8) based on UMAP coordinate 
+17 
+position. Differential marker genes between BAMs and microglia were identified using 
+18 
+scoreMarkers (scran), performed on the Pf4-Cre × Ai14 wild-type subset. 
+19 
+ 
+20 
+3xDR 
+21 
+Raw count matrices for five samples (GSM7070553–GSM7070557; three control, two 3xDR) were 
+22 
+obtained from NCBI GEO (GSE226286). Cells were filtered (detected features ≥ 200 and ≤ 4,000; 
+23 
+mitochondrial fraction ≤ 5%) and doublets removed using scDblFinder (per-sample, with cluster-
+24 
+guided detection). After doublet exclusion, dimensionality reduction was recomputed on singlets 
+25 
+(11 PCs, n.neighbors = 26). Macrophage clusters were identified at Louvain resolution 0.6, 
+26 
+extracted, and independently re-clustered (12 PCs, n.neighbors = 9). Final cell-type annotations 
+27 
+were assigned at resolution 0.4. Differential expression was performed using a pseudobulk 
+28 
+strategy: counts were aggregated per mouse (make_pseudobulk()), and edgeR quasi-likelihood F-
+29 
+tests (filterByExpr, calcNormFactors, estimateDisp, glmQLFit, glmQLFTest) were applied. 
+30 
+Significant genes were defined at FDR < 0.05 and |log FC\| > 0.5. The primary comparisons 
+31 
+shown in the figures were: BAMs 3xDR versus BAMs Control (Figure 5 volcano), and each 
+32 
+repopulating subtype individually versus MG Control (IFN repop. Mac, MHCIIhigh repop. Mac, 
+33 
+DAMlike repop. Mac; Venn, top 200 upregulated genes per subtype). To assess BAM identity re-
+34 
+expression, BAMs (Control) and repop_BAMs (3xDR) were each compared against the same 
+35 
+background comprising all remaining non-BAM cell populations using Wilcoxon rank-sum tests 
+36 
+(FindMarkers, logfc.threshold = 0, min.pct = 0.1); genes were classified as shared upregulated, 
+37 
+shared downregulated, BAM-specific, or repop_BAM-specific based on adjusted p-value < 0.05 
+38 
+and log FC directionality, and restricted to genes detected in > 25% of repop_BAM cells. Module 
+39 
+scores for MHCII-high, DAM, and homeostatic MG signatures were computed using 
+40 
+AddModuleScore (Seurat) and visualised as feature plots and dotplots. 
+41 
+ 
+42 
+ROSMAP 
+43 
+Single-nucleus RNA-sequencing data from the Religious Orders Study and Memory and Aging 
+44 
+Project (ROSMAP) multiregion cohort were obtained from the Synapse data repository 
+45 
+(syn52383412). Gene expression matrices were downloaded for six brain regions: angular gyrus 
+46 
+(AG; syn52408594), entorhinal cortex (EC; syn52408588), hippocampus (HC; syn52408592), 
+47 
+midtemporal cortex (MT; syn52408595), prefrontal cortex (PFC; syn52408599), and thalamus (TH; 
+48 
+syn52408586). Cell type annotations were derived from the original study (Mathys, Boix et al., 
+49 
+Nature 2024). From each regional dataset, nuclei annotated as CNS-associated macrophages 
+50 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+(CAMs) or microglia (Mic; including P2RY12+, MKI67+, DUSP1+, and TPT1+ subtypes) were 
+51 
+extracted using Seurat v5, yielding a combined dataset of 104,181 nuclei (CAMs: 4,194; Mic: 
+52 
+99,987) across all six regions. 
+53 
+The six regional subsets were merged into a single Seurat object with region-specific cell barcode 
+54 
+prefixes. Highly variable features were identified using FindVariableFeatures (nfeatures = 2,000), 
+55 
+followed by data scaling and principal component analysis (PCA) on the variable feature set. 
+56 
+UMAP dimensionality reduction and shared nearest-neighbour (SNN) graph construction were 
+57 
+performed on the top 20 principal components with 15 neighbours (RunUMAP: dims = 1:20, 
+58 
+n.neighbors = 15; FindNeighbors: dims = 1:20). Unsupervised Louvain clustering was applied 
+59 
+across a resolution range of 0.1–0.9 in steps of 0.1, and cluster stability was evaluated using 
+60 
+clustree v0.5. Resolution 0.6 was selected as it provided biologically coherent clusters without 
+61 
+over-fragmentation. Neuropathological Alzheimer's disease status was derived from the pathAD 
+62 
+metadata field, dichotomised as AD or non-AD. 
+63 
+To quantify enrichment of our murine peripheral macrophage gene signature (n = 96 genes; 
+64 
+intersection of three independent murine repopulating-macrophage gene sets; see analysis in 
+65 
+3xDR above, converted to human orthologues) across clusters, we applied fast gene set 
+66 
+enrichment analysis (fgsea v1.32.4). The gene signature comprised the intersection of three 
+67 
+independent peripheral macrophage repopulation gene sets (top 200 genes each), retained only if 
+68 
+present in the expression matrix. For each cluster, all expressed genes were ranked by their mean 
+69 
+expression z-score (computed gene-wise from AverageExpression across clusters), such that 
+70 
+genes most specifically expressed in a given cluster rank highest. fgsea was run with scoreType = 
+71 
+"pos" to test exclusively for positive enrichment with nPermSimple = 10,000 permutations and a 
+72 
+random seed of 42 for reproducibility. Normalised Enrichment Scores (NES) and nominal p-values 
+73 
+were computed per cluster; multiple testing correction was applied globally across all cluster tests 
+74 
+using the Benjamini-Hochberg (BH) procedure. Clusters with adjusted p-value < 0.05 were 
+75 
+considered significantly enriched. Results are presented as a lollipop plot (NES on x-axis, point 
+76 
+size proportional to −log10(padj), line style indicating significance). 
+77 
+To identify human BAMs, we curated a BAM gene signature from the study by56. Specifically, 
+78 
+marker genes reported for BAM clusters 19 and 26 in Supplementary Table 3 were combined into 
+79 
+a single non-redundant gene set. This curated signature was used to compute per-cell module 
+80 
+scores using Seurat’s AddModuleScore function. 
+81 
+To identify transcriptional features specific to candidate clusters, pairwise differential expression 
+82 
+was performed between each candidate cluster and a MG background using the Wilcoxon rank-
+83 
+sum test (FindMarkers, Seurat v5; min.pct = 0.10, log₂FC threshold = 0.25, Benjamini-Hochberg 
+84 
+correction). C6 was compared against all clusters excluding C10 and C12, and C12 against all 
+85 
+clusters excluding C6 and C10. Results are displayed as volcano plots with genes significant at 
+86 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+p_adj < 0.05 and |log₂FC| ≥ 0.5. Top 10 up- and downregulated genes and a custom set of 
+87 
+differentially expressed genes is displayed. 
+88 
+For clusters C6 and C12, the proportion of nuclei contributed by each brain region was calculated 
+89 
+separately in AD and non-AD donors, with all cells in the cluster per diagnostic group as the 
+90 
+denominator, and displayed as stacked proportional bar charts. 
+91 
+ 
+92 
+All analyses were performed in R (version 4.5.1). Key packages used include: Seurat (≥ 5.0), 
+93 
+SingleCellExperiment, scran, scater, scDblFinder, edgeR, limma, batchelor (FastMNN), 
+94 
+ComplexHeatmap, and the tidyverse suite. Snakemake pipelines were executed  
+95 
+on the SciCore HPC cluster at the University of Basel  
+96 
+ 
+97 
+Histology 
+98 
+Quantification of cells 
+99 
+Cell detection and quantification were performed in QuPath using custom Groovy scripts. Cells 
+00 
+were identified using the built-in watershed-based detection algorithm on the relevant marker 
+01 
+channel (e.g., Iba1). Detected cells were classified into marker-defined populations based on 
+02 
+fluorescence intensity thresholds in additional channels. Classification thresholds were defined 
+03 
+empirically and kept constant within each dataset. Detection parameters were adjusted where 
+04 
+necessary to account for differences in cell morphology between depleted and non-depleted 
+05 
+conditions. For selected analyses, fluorescence intensity and morphological features were 
+06 
+extracted. 
+07 
+Separation of leptomeninges and parenchymal/perivascular 
+08 
+Leptomeningeal and parenchymal/perivascular cells were distinguished based on spatial proximity 
+09 
+to the tissue boundary. The tissue surface was defined from autofluorescence signal, and the 
+10 
+distance of each detected cell to this boundary was calculated. Cells located within 5 µm of the 
+11 
+surface 
+were 
+classified 
+as 
+leptomeningeal, 
+while 
+all 
+others 
+were 
+assigned 
+to 
+12 
+parenchymal/perivascular compartments. 
+13 
+ 
+14 
+Monte Carlo spatial analysis 
+15 
+Spatial organisation of labelled cells was analysed in R using a Monte Carlo label-permutation 
+16 
+approach based on QuPath-derived centroid coordinates. Analyses were performed separately for 
+17 
+leptomeninges, dura, choroid plexus, and brain regions. For each region, neighbour densities for 
+18 
+same-class cell pairs were calculated in concentric annuli up to 250 µm using 5 µm radial bins. 
+19 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+To generate the null distribution, cell-class labels were randomly permuted within each region 
+20 
+while keeping cell coordinates fixed, thereby preserving tissue geometry and overall cell density. 
+21 
+This was repeated 1,000 times. Observed neighbour-density curves were then compared with the 
+22 
+permutation-derived null distribution using global simulation envelopes. Spatial deviations between 
+23 
+observed and randomised distributions were additionally summarized over the 20–80 µm range. 
+24 
+ 
+25 
+Dot maps 
+26 
+Spatial distributions of labelled cells were visualized as dot maps based on centroid coordinates 
+27 
+extracted from QuPath. Cells were plotted by class for individual regions, with coordinates 
+28 
+displayed in a two-dimensional plane and axes scaled equally. Representative regions or all 
+29 
+regions were visualized depending on the analysis. 
+30 
+ 
+31 
+Cell lines 
+32 
+The murine malignant astrocytoma cell line CT-2A was kindly provided by Prof. Thomas Seyfried 
+33 
+(Boston College). CT-2A cells were cultured as adherent monolayers in high-glucose DMEM 
+34 
+without glutamine (Gibco) supplemented with 10% fetal bovine serum (PAN-Biotech), 1% 
+35 
+GlutaMAX (Gibco), and 1% penicillin–streptomycin (Sigma-Aldrich). Cells were maintained at 
+36 
+37 °C and 5% CO_2_ and passaged at ~80% confluency. All cell lines were routinely tested and 
+37 
+confirmed negative for mycoplasma contamination using a MycoAlert detection kit (#LT07-318, 
+38 
+Lonza). CT-2A Luc2-tdTomato was produced by lentiviral transduction to express luciferase 2 
+39 
+(Luc2) and the tdTomato reporter protein as previously reported70.  
+40 
+Mouse genotyping 
+41 
+Genotyping primer list can be found in the table “Primer List” in the supplementary information. 
+42 
+QUANTIFICATION AND STATISTICAL ANALYSIS 
+43 
+Data are presented as mean ± standard error of the mean (SEM) unless otherwise indicated. The 
+44 
+exact number of biological replicates (n = mice), number of independent experiments and 
+45 
+statistical tests used are specified in the corresponding figure legends. Statistical significance was 
+46 
+defined as p < 0.05 (*p < 0.05, p < 0.01, ***p < 0.001, ****p < 0.0001; ns, not significant). All 
+47 
+statistical analyses were performed using R software (v4.3.2). Given the typical sample sizes used 
+48 
+in experimental biology studies, formal assessment of normality was not systematically performed. 
+49 
+Parametric or rank-based non-parametric statistical tests were selected as appropriate for the 
+50 
+experimental design and data distribution. Comparisons between two groups were performed 
+51 
+using two-tailed unpaired or paired t tests, or rank-based non-parametric tests where appropriate. 
+52 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+Multiple testing correction was applied where appropriate. All graphical illustrations were created 
+53 
+with 
+BioRender.com
+54 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+ 
+ 
+ 
+55 
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+
+
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprint
+this version posted July 20, 2026. 
+; 
+https://doi.org/10.64898/2026.07.15.738664
+doi: 
+bioRxiv preprint 
+
+
+.
+CC-BY-NC-ND 4.0 International license
+available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 

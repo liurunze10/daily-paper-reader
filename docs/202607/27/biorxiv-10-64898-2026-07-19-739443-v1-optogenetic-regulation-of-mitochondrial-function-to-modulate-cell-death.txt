@@ -1,0 +1,1390 @@
+ 
+1
+Optogenetic Regulation of Mitochondrial Function to Modulate Cell Death 
+Run-Zhou Yang1,2, Dian-Dian Wang2,3,4, Sen-Miao Li2,3,4, Dan-Hua Liu2,3.4, Pei-Pei Liu2, Shu-
+Ang Li2, Jian-Sheng Kang2 
+ 
+Affiliations: 
+5 
+1. The Brown Foundation Institute of Molecular Medicine, University of Texas Health Science 
+Center at Houston, Houston, TX, 77030, USA. 
+2. Clinical Systems Biology Laboratories, The First Affiliated Hospital of Zhengzhou University, 
+Zhengzhou, 450052, China. 
+3. Department of Neurology, The First Affiliated Hospital of Zhengzhou University, Zhengzhou 
+10 
+450052, Henan, China. 
+4. The Academy of Medical Sciences, Zhengzhou University, Zhengzhou 450052, Henan, China.  
+ 
+* Correspondence should be addressed to Run-Zhou Yang (runzhou.yang@uth.tmc,edu, ORCID ID: 
+0009-0008-2038-6568), and Jian-Sheng Kang (kjs@zzu.edu.cn, ORCID ID: 0000-0002-2603-
+15 
+9718). 
+ 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+2
+ABSTRACT 
+Cell death is a critical process involved in physiological and pathological conditions, including 
+neurodegenerative diseases and cancer. This study explores the use of optogenetic techniques to 
+induce cell death by employing light sensitive proteins. By manipulating mitochondrial function 
+with light-sensitive proteins, we investigated three distinct strategies: 1) inhibiting oxidative 
+5 
+phosphorylation through Gloeobacter rhodopsin-mediated alkalization, 2) inducing mitochondrial 
+depolarization with reverse proton-pumping rhodopsins (RPPR) and anion-conducting 
+channelrhodopsins, and 3) generating reactive oxygen species (ROS) using mitochondria-targeted 
+miniSOG. Our findings highlight the potential of optogenetic approaches to induce cell death, 
+offering promising avenues for therapeutic interventions in diseases characterized by aberrant cell 
+10 
+survival. 
+ 
+Keywords: cell death, optogenetics, light-sensitive proteins, mitochondrial depolarization, reactive 
+oxygen species, oxidative phosphorylation, apoptosis 
+ 
+15 
+Introduction 
+Cell death is the irreversible loss of cellular function, which can be caused by external factors like 
+physical or chemical stimuli, hypoxia, trauma, viral infection, or spontaneous processes such as 
+embryonic development and nervous system maturation1. Cell death modulation is crucial for 
+physiological and pathological processes. Excessive cell death is associated with neurodegenerative 
+20 
+diseases like Alzheimer's and Parkinson's2,3, while cancer cells evade apoptosis to maintain 
+uncontrolled proliferation 4. Cell death can be triggered by various physiological factors, including 
+abnormal pH5, deceased mitochondrial membrane potential6 and excessive reactive oxygen species7.  
+The regulation of intracellular pH is essential for many cellular processes, including enzymatic 
+reactions and signal transduction 8. Acidification of the cytoplasm during ischemia can lead to cell 
+25 
+swelling and necrosis 9. Conversely, alkalization of the cytoplasm could trigger the opening of 
+mitochondrial permeability transition pore (MPTP)10, which exhibits pH-dependent opening above 
+pH 7.3-7.5 and closure below pH 7, ultimately resulting in calcium overload and subsequent cell 
+death11,12. Proton pumping rhodopsins (PPR), such as bacteriorhodopsin (BR), archaerhodopsin 
+(Arch), and Gloeobacter rhodopsin (GR), actively transport protons from the intracellular 
+30 
+environment to the extracellular space, resulting in a significant increase in cytosolic pH13. In 
+contrast, reverse proton-pumping rhodopsins (RPPR) transport protons from the extracellular 
+environment into the cell. The first RPPR was engineered from a non-ion conducting sensory 
+rhodopsin, ASR, through a single site mutation, D217E14. Besides ASR(D217E), reverse proton 
+pumps also exist in nature, including PoXeR15, NsXeR16, and AntR17.  
+35 
+Mitochondrial membrane potential (Δψm) depolarization is associated with apoptosis 
+induction18 and selective removal of damaged mitochondria through mitophagy19. Natural chloride 
+ion channels have been identified in mitochondria, where they play a role in apoptosis induction20. 
+Anion-conducting channelrhodopsins, such as iChloC21, iC1C222, GtACR123 and GtACR224 are 
+cation-conducting light-gated channels. Our previous work discovered that GtACR1 can be targeted 
+40 
+to the mitochondria in astrocytes and induced dopaminergic neuronal death25. The targeting of 
+GtACR1 to mitochondria for inducing cell death has not yet been reported.   
+Reactive oxygen species (ROS), which generated as byproducts of oxidative phosphorylation 
+during the electron transport chain26, could act as signaling molecules under normal conditions27 but 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+3
+cause cell damage and apoptosis when accumulated excessively28. ROS generation can be resulted 
+from both mitochondrial depolarization and hyperpolarization29,30. Chromophore molecules that 
+generate ROS can also be used to induce cell death31,32. MiniSOG, a small flavoprotein from 
+Arabidopsis thaliana, generates singlet oxygen when illuminated by blue light 33.  
+In this paper, we discuss various strategies of manipulating mitochondrial function for inducing 
+5 
+cell death utilizing light-sensitive proteins. These include the inhibition of oxidative 
+phosphorylation through GR-induced alkalization, mitochondrial depolarization through mt-
+ASR(D217E) and mt-ACR1, and generation of free radicals via mt-miniSOG. 
+ 
+Results 
+10 
+Since intracellular pH is tightly linked to energy metabolism and cell fate, we asked whether an 
+optogenetically imposed alkalinization would be sufficient to compromise ATP production and 
+trigger cell death. To explore the influence of light induced intracellular pH changes on cell survival, 
+a proton pumping rhodopsin derived from Gloeobacter (GR) was expressed on the plasma 
+membrane of HeLa cells (Figure 1). Cells transfected with pHluorin-tagged GR exhibited an 
+15 
+increase in intracellular pH upon light stimulation, as evidenced by the fluorescence increasing of 
+pHluorin after light exposure (Figure 1A, Figure S1A). In contrast, cells transfected with pHluorin-
+tagged non-pumping mutant GR(D121N) demonstrated no obvious change of fluorescence. These 
+results were consistent with those obtained using SNARF-1-AM, a cell-permeable ratiometric pH-
+sensitive dye (Figure 1A, second row and Figure 1B, Supplementary Movie 1). Whole-cell patch 
+20 
+clamping recordings revealed that GR generated an outward current upon green laser stimulation 
+(Figure 1C). Upon light exposure, E. coli expressing GR significantly lowered the pH of unbuffered 
+suspensions, confirming GR's role as a light-activated proton pump (Figure S1B). Intriguingly, by 
+fusing the C terminal of GR with a ATP sensor, AT1.0334, a decrease in intracellular ATP upon light 
+stimulation was observed (Figure 1E, dark vs. light: p < 0.0001, t-test, Supplementary Movie 2). In 
+25 
+contrast, cells expressing the non-pumping mutant GR(D121N) exhibited no ATP alterations (Figure 
+1D, dark vs. light: p > 0.05, t-test). Consistent with these observations, chemiluminescence-based 
+ATP measurement showed reduced ATP levels in GR-expressing cells compared to GR(D121N)-
+expressing cells after light exposure (Figure 1F; GR: light vs. dark, p < 0.0001; GR(D121N), light 
+vs. dark, p > 0.05). The ATP decreased is contributed to the alkalization effect of light-driven proton 
+30 
+pumping, as another PPR, bacteriorhodopsin (BR) could also cause the decrease of intracellular ATP 
+accompanied by an outward current and intracellular pH increasement upon light stimulation 
+(Figure S2). Since ATP in mammalian cells is generated through glycolysis and oxidative 
+phosphorylation, the pH-induced decrease in ATP could potentially inhibit one or both metabolic 
+pathways. By blocking energy supply using glycolysis inhibitor 2DG and the oxidative 
+35 
+phosphorylation inhibitor oligomycin, the light-induced ATP change was examined. When both 
+inhibitors were used in combination, the pH-induced ATP decrease was blocked, whereas ATP levels 
+declined under the individual application of either 2DG or oligomycin (Figure 1G; ATP decrease in 
+each group, Δ mean ratio ± standard deviation (SD): control, -0.1114 ± 0.029; 2DG, -0.1527 ± 
+0.054; oligomycin, -0.2938 ± 0.072; 2DG + oligomycin, 0.0019 ± 0.031; control and 2DG + 
+40 
+oligomycin, t-test, p = 0.0004; 2DG and 2DG + oligomycin, t-test, p = 0.0003; oligomycin and 2DG 
++ oligomycin, t-test, p < 0.0001). This suggested that light exposure can suppress ATP production 
+via glycolysis and oxidative phosphorylation pathways. Moreover, the oxygen consumption rate 
+(OCR) decreased under light illumination in GR stably transfected HEK293t cells (Figure 1H). In 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+4
+contrast, control cells demonstrated no significant alterations in OCR upon light illumination 
+(Figure 1H). This suggested that light can inhibit oxidative phosphorylation in GR stably transfected 
+HEK293t cells. As ATP is crucial for cell survival, light-induced ATP decrease by GR could 
+potentially induce cell death. As a test of this proposal, GR was expressed on the plasma membrane 
+of primary cultured cardiomyocytes. Propidium Iodide (PI) is a fluorescent dye that assesses cell 
+5 
+viability by penetrating compromised membranes of dead or late-stage apoptotic cells, binding to 
+nucleic acids, and fluorescing red. Prolonged light stimulation caused morphological changes of the 
+cell (Figure 1I, second row). The PI staining results demonstrated that light could trigger cell death 
+in GR expressing cardiomyocytes (Figure 1I and 1J; n = 9 cells, t-test, p < 0.0001, Supplementary 
+Movie 3). Moreover, cardiomyocytes without GR expression subjected to the same light stimulation 
+10 
+protocol demonstrated no cell death, ruling out the possibility of light toxicity (n = 5 cells, t-test, p > 
+0.05). 
+Mitochondrial membrane potential (MMP) plays a critical role in the regulation of cell death 
+pathways. The loss of MMP can be a signal of bioenergetic stress, potentially resulting in the release 
+of apoptotic factors that trigger cell death35. Uncoupling proteins (UCPs), located in the inner 
+15 
+mitochondrial membrane, modulate the mitochondrial membrane potential (MMP) by allowing 
+protons to bypass ATP synthase and thereby uncouple electron transport from ATP production, 
+resulting in elevated heat generation36. Reverse proton-pumping rhodopsins (RPPR) pump proton 
+from extracellular space into cell. By transferring RPPR to mitochondria, RPPR could function like 
+uncoupling proteins. To target RPPR to mitochondria, a signal sequence derived from the 1-135 aa 
+20 
+of ABCB1037, or a four-time repeated signal sequence of cytochrome c oxidase (4cox8) were fused 
+with the N-terminal of three RPPRs, including ASR(D217E), PoXeR and NsXeR. The C-terminal 
+of these RPPRs were fused to EGFP for monitoring their localizations. The efficiency of 
+mitochondrial targeting was assessed by calculating the Pearson's correlation coefficient between 
+the mitochondria-targeted RPPRs and that of a mitochondrial marker, TMRM (Figure 2A). The 
+25 
+results are as follows: ASR(D217E) showed a high correlation coefficient of 0.93 ± 0.03, indicating 
+strong mitochondrial localization. PoXeR had a moderate correlation coefficient of 0.75 ± 0.17, 
+suggesting partial mitochondrial targeting (Figure 2B, second row). In contrast, NsXeR exhibited a 
+low correlation coefficient of 0.24 ± 0.52, which suggests a weak mitochondrial localization (Figure 
+S3, first row). It is noteworthy that the targeting efficiency of the mt-fused NsXeR and PoXeR 
+30 
+revealed two distinct patterns: one group with strong mitochondrial localization and another with 
+non-mitochondrial localization. These two groups can be distinguished from the violin plot in Figure 
+2A. As depicted in Figure 2B and Figure S4, ASR(D217E) demonstrated successful mitochondrial 
+localization in different types of cells, including HeLa, COS7 and HepG2. Therefore, ASR(D217E) 
+was selected for further evaluations.  
+35 
+The reverse proton pumping activity of ASR(D217E) was confirmed by expressing it in E. coli. 
+Illumination of suspension of ASR(D217E)-expressing E. coli in non-buffering solution led to an 
+increase in extracellular pH (Figure 2C, red curve). In contrast, no increase was observed in E. coli 
+expressing ASR(D217N), a non-pumping mutant (Figure 2C, grey curve). A light induced inward 
+current was recorded in ASR(D217E)-expressed HEK293t cells using patch clamping (Figure 2D). 
+40 
+This inward current could also be observed in PoXeR-expressed HEK293t cells (Figure S5). 
+Utilizing the pH sensitive dye, SNARF-1-AM, a decrease in intracellular pH was observed upon 
+light stimulation in ASR(D217E)-expressing HeLa cells, but not in ASR(D121N)-expressing cells 
+(Figure 2E-F; ASR(D217E): light vs. dark, p < 0.0001, t-test). Further characterization of 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+5
+ASR(D217E) in HEK293t revealed its action spectrum and I-V curve (Figure 2G-H). The maximum 
+photocurrent was generated under 510 nm, and the photocurrent was found to be voltage sensitive, 
+with enhanced response at lower voltage. The photocurrent of ASR(D217E) demonstrated a light 
+intensity dependent manner, with a saturation photocurrent reached at more than 100 mW/cm2 
+(Figure S6A). Furthermore, ASR(D217E) could be used as an optogenetic activator to evoke action 
+5 
+potentials through light stimulation in neurons (Figure 2I, Figure S6B). In contrast to ASR(D217E), 
+mitochondrial targeted mt-ASR(D217E) failed to trigger action potentials, indicating no leaky 
+expression on the plasma membrane of mt-ASR(D217E)-expressed cells (Figure 2J). Given that 
+ASR(D217E) is voltage sensitive, the depolarization effect of ASR(D217E) on the mitochondrial 
+membrane potential (-180 mV) should be greater than on the plasma membrane. This effect makes 
+10 
+mt-ASR(D217E) a potential light activated MMP dissipation inducer. This was confirmed by a 
+significant decrease in mitochondrial membrane potential, as measured with rhodamine 800, an 
+MMP sensitive dye, upon light stimulation in mt-ASR(D217E) expressed HeLa cells (Figure 2K-L; 
+mt-ASR(D217E): light vs. dark, p < 0.0001, paired t-test). In contrast, control cells demonstrated 
+no change in MMP upon light stimulation (Figure 2L; control: light vs dark, p = 0.0672, paired t-
+15 
+test). Moreover, the morphology of mitochondria was altered after light stimulation, with more 
+fragmented and granule-like structures observed (Figure 2K, second row). 
+Mitochondrial chloride conducting channels like CLC420 and CLC538 involved in the induction 
+of cell death. To mimic the effects of these mitochondrial chloride conducting channels, light-gated 
+anion-conducting channelrhodopsins were engineered to target to mitochondria, with a four-time 
+20 
+repeated signal sequence of cytochrome c oxidase (4cox8) fused to the N-terminus of light-gated 
+chloride channels. Their C- terminus were fused to EGFP for monitoring of targeting. Three light-
+gated chloride channels (ChloC), including iC1C2, ACR1, and ACR2 were investigated. The 
+efficiency of mitochondrial targeting was assessed by calculating the Pearson's correlation 
+coefficient between the fluorescence of mitochondria-targeted light-gated chloride channels and that 
+25 
+of a mitochondrial marker, TMRM (Figure 3A). The Pearson's correlation coefficients are as follows: 
+ACR1, 0.87 ± 0.079; ACR2, 0.50 ± 0.16; iC1C2, 0.16 ± 0.22. As shown in Figure 3A-B and Figure 
+S7A, ACR1 exhibited successful mitochondrial localization, while ACR2 and iC1C2 failed to target 
+to mitochondria. The localization of mt-ACR1 was further confirmed in various cell types, including 
+HeLa cells, cardiomyocytes, and neurons (Figure 3B). To determine the optimal wavelength for 
+30 
+light stimulation, action spectra were recorded by patch clamping in HEK293t cells. The peak of 
+ACR1 photocurrent was achieved at around 510 nm, while ACR2 and iC1C2 were blue shifted, with 
+peaks at 370 nm and 450 nm, respectively (Figure 3C). To explore the voltage sensitivity of light-
+gated chloride channels, I-V curves were recorded in HEK293t cells. The relationships between 
+photocurrent and voltage appeared to be exponential in ACR1 and ACR2, and linear in iC1C2 
+35 
+(Figure S7B).  
+A sustained light illumination using ACR1 inhibited neuron firing (Figure S7C), while 
+mtACR1 could not (Figure 3D), indicating a low level of membrane leaky expression of mt-ACR1. 
+Interestingly, a slight shift of resting potential of neurons expressing mt-ACR1 was observed under 
+light (Figure 3D). Light illumination also induced an elevation in calcium level and a decrease of 
+40 
+mitochondrial membrane potential, as indicated by Fluo-4 and rhodamine 800, respectively (Figure 
+3E-F). Similar to neurons, mtACR1 did not inhibit cardiomyocyte beatings, but it caused a shift of 
+resting potential (Figure 3G, Figure S7D). In mtACR1-expressed cardiomyocytes, prolonged light 
+stimulation led to the arrest of cardiomyocytes’ beatings and calcium overload, as indicated by the 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+6
+calcium indicator, Fura2-AM (Figure 3I). The calcium signals were subjected to short fast Fourier 
+transformation (SFFT)39 to demonstrate the frequency change upon light stimulation (Figure 3J). 
+The result indicated that prolonged light stimulation could lead to the cessation of beating in 
+cardiomyocytes. Additionally, light illumination caused a significant depolarization of mitochondria 
+membrane potential as indicated by rhodamine 800 (Figure 3J-K; light vs. dark, p= 0.0009, t-test). 
+5 
+Furthermore, cell death is also increased upon light stimulation as indicated by PI staining in mt-
+ACR1 stably transfected HeLa cells (Figure S8). 
+MiniSOG is a genetically encoded fluorescent protein derived from the phototropin 2 of 
+Arabidopsis thaliana. When illuminated with blue light, MiniSOG efficiently generates singlet 
+oxygen (1O2)33. The fluorescence of MiniSOG and its capability of 1O2 generation can be harnessed 
+10 
+for correlated light and electron microscopy (CLEM) imaging, allowing for the localization of 
+genetically tagged proteins in cells, tissues, and even in multicellular organisms such as intact 
+nematodes and mice40,41. To explore the ROS generation effect of miniSOG on the survival of cells, 
+miniSOG is synthesized according to the mammalian codon usage and expressed in mammalian 
+cells. MiniSOG was targeted to mitochondria by fusing its N-terminal with a mitochondrial signal 
+15 
+peptide (4cox8). Both cytosolic and mitochondrial miniSOG-expressing cells were stained with the 
+mitochondrial potential indicator, TMRM, and then illuminated with blue light for 5 minutes to 
+generate ROS (Figure 4). Interestingly, cells transfected with mitochondrial miniSOG lost their 
+MMP upon light stimulation, while cells with cytosolic miniSOG expression maintained their MMP 
+(Figure 4A-B; mt-miniSOG, light vs. dark, p < 0.0001, t-test; miniSOG, light vs. dark, p = 0.5223, 
+20 
+t-test). Parkin, an E3 ubiquitin ligase, plays a pivotal role in the cellular process of mitophagy. The 
+translocation of Parkin to mitochondria is a critical step in the initiation of mitophagy42. We further 
+investigated the downstream effects of mitochondrial depolarization induced by mt-miniSOG and 
+observed that parkin was translocated to mitochondria, which is a signal for mitophagy induction 
+(Figure 4C). The Pearson's correlation coefficient between the mitochondria and the fluorescence 
+25 
+of Parkin was used to quantify the extent of parkin translocation to mitochondria, the results showed 
+a significant portion of Parkin were translocated to mitochondria upon light stimulation (Figure 4D, 
+pre light vs. post light, p = 0.0001, t-test).  
+ 
+Discussion 
+30 
+The maintenance of normal cell function is significantly influenced by intracellular pH (pHi). 
+Intracellular acidification has been observed in response to various apoptotic stimuli, such as UV 
+irradiation, arsenic, growth factor deprivation and somatostatin, typically resulting a drop of 0.3–
+0.4 pH units43. A limited number of studies have described an intracellular alkalinization that is 
+associated with apoptosis. However, accumulating studies reveals that intracellular alkalization is 
+35 
+an initial step in the apoptotic pathway that takes place before caspase activation and DNA 
+fragmentation44. Previous studies show that mild alkalization can enhance the activity of hexokinase , 
+which is sufficient to acutely trigger cancer cell glycolysis45. However, increasing the cellular pH 
+using bicarbonate reduced the pH gradient, membrane potential, and proton motive force across the 
+inner membrane of mitochondria, which results in an increase of AMP and mitochondrial damage46. 
+40 
+Archaerhodopsin (ArchT), which is a light-activated proton pump, increases the intracellular pH 
+(pHi)  and  increases membrane dynamics, including more protrusion and retraction events47. In this 
+study, GR, which acts as a light-driven proton pump, was used to study the effects of light-induced 
+intracellular pH changes on cell metabolism and survival. Light stimulation of GR-expressing cells 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+7
+led to an increase in intracellular pH and a decrease in intracellular ATP levels. Our findings indicate 
+that light can inhibit ATP generation via glycolysis and oxidative phosphorylation pathways. 
+Moreover, light triggered cell death in cardiomyocytes expressing GR. As MPTP is opened upon 
+alkalinization10,46, elevated pH in GR-expressed cells may activate MPTP and induces cell death.  
+Mitochondrial membrane potential (Δψm) plays a crucial role in cell death. Loss of Δψm can 
+5 
+occur either as an early event during apoptosis or as a consequence of the apoptotic signaling 
+pathway, depending on the type of apoptotic stimuli18. Furthermore, decreased MMP initiates 
+pathways to eliminate damaged mitochondria via mitophagy48. Previous studies demonstrated that  
+introducing channelrhodopsin to mitochondria enables light to control MMP and influence 
+spontaneous beats in cardiac myocytes, as well as glucose-dependent ATP increase in pancreatic β-
+10 
+cells49. Mitochondrial targeted channelrhodopsin was also used to mediate cell death in HeLa cells50. 
+However, the function of chloride channels, as well as reverse proton pump on mitochondria have 
+not been investigated. Under physiological conditions, mitochondrial chloride ion channels, such as 
+the inner membrane targeted CLC538 and the outer membrane targeted CLC420, are involved in 
+modulating mitochondrial ROS generation and  induction of cell death51, respectively. Once chloride 
+15 
+channels are opened, the membrane potential will shift towards the reverse potential of chloride, 
+which depends on the concentration of Cl- ions on either side of the membrane, as described by the 
+Nernst equation. The intracellular chloride concentration varies among different cell types and can 
+be influenced by various factors, while the extracellular chloride concentration remains around 100 
+to 120 mM. In hepatocytes, for instance, the intracellular chloride concentration is about 105.2 ± 
+20 
+62.4 mM and the chloride concentration in mitochondria was found to be 4.2 ± 3.8 mM52. Given 
+that extracellular chloride is 100 mM, the chloride reverse potential on plasma membrane and inner 
+mitochondria membrane is about 1.35 mV and -86 mV, respectively. Considering the mitochondrial 
+membrane potential, which ranges between -180 mV and -220 mV, opening chloride channels on 
+mitochondria can lead to the depolarization of mitochondria. Based on this calculation, it is 
+25 
+speculated that a mitochondrial targeted light-gated chloride channel could cause mitochondrial 
+depolarization upon light stimulation. This speculation was validated with our mt-ACR1, which 
+depolarized mitochondria and caused calcium overload in cardiomyocytes. Consequently, 
+mitochondria depolarization caused by mt-ACR1 might open the MPTP, resulting in calcium influx 
+and subsequent cell death. In contrast to channelrhodopsin, which is a cation channel, mainly Na+, 
+30 
+the sodium reverse potential on mitochondria is around 7.6 mV, considering the concentrations of 
+sodium in mitochondria and cytosol are 6 mM and 8 mM, respectively53. While mitochondrial 
+channelrhdopsin leads to a complete loss of MMP54, the mitochondrial ACR induces a mild 
+depolarization and  depends on the cell types. 
+The mitochondrial proton gradient is a crucial player in energy production in eukaryotic cells, 
+35 
+where pumping of H+ ions across the inner mitochondrial membrane creates an electrochemical 
+gradient to drive ATP synthesis through oxidative phosphorylation, generating vast amounts of 
+energy for cellular activities. Depletion of this proton gradient leads to reduced ATP production, 
+increased heat production, and ROS production. Mitochondrial uncoupling proteins, which create a 
+channel for protons to bypass the ATP synthase and dissipate as heat, can increase energy 
+40 
+expenditure and promote weight loss. Genetic manipulations that induce an increase in UCP1 
+expression can lead to a reduction in obesity and an improvement in insulin sensitivity55. 
+mtASR(D217E), similar to UCPs, may provide potential treatment for obesity. In contrast to proton 
+pumping rhodopsins, reverse proton pump acidifies the cytosol when it is expressed on plasma 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+8
+membrane, which also makes it a potential tool for light-induced acidification. Mild acidification is 
+known to induce the expression of heat shock proteins56, protecting cells from various forms of 
+stress. Mild acidosis also protects neurons during oxygen and glucose deprivation by attenuating 
+the loss of mitochondrial respiration57. Additionally, mild acidification promotes autophagy58, a 
+cellular process that eliminates damaged or dysfunctional cellular components and promotes cell 
+5 
+survival. 
+Reactive oxygen species (ROS) are a group of highly reactive molecules derived from 
+molecular oxygen capable of causing oxidative damage to biomolecules. Depending on their type, 
+source, location, concentration, and duration, ROS can have both protective and detrimental effects 
+on cells 59. When miniSOG is in mitochondria, it induces mitochondrial depolarization, while having 
+10 
+limited effects on MMP when it is in the cytosol. This was in line with a previous study of miniSOG 
+in C.elegans which demonstrated that mitochondrial outer membrane targeted miniSOG could lead 
+to highly efficient cell killing, whereas the free form of miniSOG could not 60. Mitophagy selectively 
+removes damaged mitochondria. ROS generation, induced by mt-miniSOG, could activate 
+mitophagy through Parkin recruitment. Targeting ROS-mediated signaling pathways or modulating 
+15 
+ROS levels may hold therapeutic potential for cancer prevention and treatment 61. 
+Overall, this paper discussed the strategies manipulating mitochondrial function for inducing 
+cell death utilizing light-sensitive proteins. These approaches encompass several strategies, such as 
+the inhibition of oxidative phosphorylation through GR-induced alkalization, mitochondrial 
+depolarization via mt-ASR(D217E) and mt-ACR1, and ROS generation with mt-miniSOG. While 
+20 
+optogenetic methods offer higher specificity than traditional drugs, it is still challenging to target 
+only cancer cells without affecting healthy cells. Another challenge is to overcome several 
+physiological barriers, such as tissue penetration and delivery, to reach tumor cells. Developing 
+more efficient delivery methods, such as using nanoparticles62, could improve the efficacy of these 
+methods. In conclusion, while optogenetic methods offer promising avenues for inducing cell death 
+25 
+in cancer cells, there are still several challenges that need to be addressed. Improving the specificity, 
+efficiency, and delivery of light-activated proteins could lead to more effective and targeted potential 
+applications, such as cancer therapies. 
+ 
+Material and Methods 
+30 
+Plasmid construct 
+The genes GR (NCBI Accession ID: WP_011140202), BR (NCBI Accession ID: P02945), ASR 
+(Anabaena (Nostoc) sp. PCC7120, ID: 3984), PoXeR (NCBI Accession ID: WP_051881467) and 
+NsXeR (NCBI Accession ID: EGQ43296) and miniSOG (NCBI Accession ID: AGE44112) were 
+synthesized according to human-codon usage. iC1C2, GtACR1 and GtACR2 were obtained from 
+35 
+Addgene (plasmid IDs: 55630, 67795 and 67877). AT1.03 was received as a gift from Hiromi 
+Imamura, while super ecliptic pHluorin was gifted by Gero Miesenböck. To perform light-induced 
+pH measurements, super ecliptic pHluorin was fused with the C-terminal of GR. For light-induced 
+ATP measurement, AT1.03 was fused with the C-terminal of GR. Furthermore, to achieve 
+mitochondrial targeting, a four-time repeated signal sequence of cytochrome c oxidase (cox8, 
+40 
+NP_004065, 1-29aa) was constructed using PCR and linking methods. The corresponding DNA 
+sequence of 1-135aa mouse ABCB10 (Gene ID: 56199) was cloned from an mRNA library. Site-
+directed mutagenesis was conducted via a two-step megaprimer PCR method, as previously 
+described. For expression in E. coli, ASR(D217E) or ASR(D217N) were cloned into the pet28c(+) 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+9
+vector. For current recording of ASR(D217E), super ecliptic pHluorin or AT1.03 was fused to the 
+C-terminal of super ecliptic pHluorin to monitor expression. To express in cardiomyocytes, the cTnT 
+promotor (-1 - -589) was amplified from the mouse genome. Furthermore, the hSyn promoter was 
+amplified from plasmid (Addgene ID 50465) for expression in neurons. Genes were cloned into 
+pAAV-MCS vectors for AAV virus packaging and GR-EGFP was cloned into a pCDH-CMV-
+5 
+puromycin vector using the restriction sites Nhe I and Not I for lentivirus packaging. 
+ 
+Cell culture and transfection 
+HEK293t, COS7, and HeLa cells were grown in Dulbecco's modified Eagle (DMEM, Gibco) culture 
+medium with 10% fetal bovine serum. These cells were transfected using the calcium phosphate 
+10 
+precipitation method and maintained at a temperature of 37°C under an atmosphere of 5% CO2/95% 
+air. 
+ 
+Living cell imaging  
+Cells were visualized using either a fluorescence laser scanning confocal microscope (FV1000, 
+15 
+Olympus) or a fluorescence microscope (Olympus IX83, Japan). For pH imaging, cells were loaded 
+with SNARF-1-AM (Invitrogen) to a final concentration of 20 μM in Tyrode’s solution for 20 min 
+at 37℃. SNARF-1AM was excited by 559 nm and emission was collected at 580-600 nm and 640-
+700 nm. The pH was determined by calculating the ratio of the two emission channels. For ATP 
+imaging, AT1.03 was excited by 440 nm and emission was collected at 460-490 nm and 520-550 
+20 
+nm. The ATP was determined by calculating the ratio of the two emission channels. Inhibition of 
+glycolysis was achieved through treatment with 2DG (10 mM), while oligomycin (100 ng/mL) 
+inhibited oxidative phosphorylation. To visualize cell death, PI was loaded to a final concentration 
+of 1 μM in Tyrode’s buffer and imaged during exposure to PI solution. PI was excited by 559 nm 
+and emission was collected at 580-630 nm. For light induced mitochondrial membrane potential 
+25 
+imaging, cells were loaded rhodamine 800 (50 nM) or TMRM (20 mM) in Tyrode’s solution for 20 
+min at 37℃. Rhodamine 800 was excited by 633 nm and emission was collected at 650-750 nm. 
+TMRM was excited by 559 nm and emission was collected at 580-630 nm. Fluo-4 (Invitrogen) was 
+added to neurons to achieve calcium imaging, with a final concentration of 5 μM in Tyrode’s buffer 
+for 15 minutes at 37℃. Fluo-4 was excited by 488 nm and emission was collected at 490-540 nm. 
+30 
+For calcium imaging in cardiomyocytes, cells were loaded with Fura-2 (Invitrogen) to a final 
+concentration of 5 μM with 0.04% F127 (Sigma-Aldrich) in Tyrode’s buffer for 15 min at 37℃. 
+Fura2 was excited by 340 nm and 380 nm, and emission was collected at 520 ± 20 nm. The [Ca2+] 
+was determined by calculating the 340 nm/380 nm ratio of the fluorescence channels.  
+ 
+35 
+Light stimulation 
+To achieve region-specific light stimulation, a fluorescence laser scanning confocal microscopy 
+(FV1000, Olympus) was utilized, while wide-field light stimulation was performed using a 
+fluorescence microscope (Olympus IX83, Japan). For measuring light-induced pH changes with 
+SNARF, a region of interest (ROI) containing a single cell was selected on the confocal image. The 
+40 
+selected cell was then illuminated with confocal 515 nm laser. Similarly, for light-induced ATP 
+change measurement, a ROI containing a single cell was selected on the confocal image and 
+illuminated with confocal 559 nm laser by bleaching mode. Mitochondrial membrane potential 
+imaging was also achieved via selection of a ROI containing a single cell on the confocal image, 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+10
+with subsequent illumination through confocal 515 nm laser. In contrast, miniSOG was used to 
+induce ROS generation through wide-field light stimulation, in which cells were exposed to 488 nm 
+light through a 30x objective for 5 minutes. 
+ 
+ATP assay 
+5 
+HeLa cells transfected with GR-AT1.03 or GR(D121N)-AT1.03 were grown in 10% FBS DMEM 
+until confluency reached 70%-80%. The cells were then transferred to Tyrode’s solution and 
+exposed to green light (532nm, 37.18 mW) at room temperature (25°C) for two hours. ATP contents 
+were determined using the ATP Assay Kit (Beyotime, China), following the manufacturer's 
+instructions. The experiments were performed four times and the results were presented as a box 
+10 
+and scatter plot. 
+ 
+Virus preparation and transduction 
+To transfect cultured cardiomyocytes, we employed the AAV DJ serotype virus. Producing this virus 
+involved co-transfecting gene plasmids, capsid (pAAV-DJ), and helper plasmids (pHelper) into 293t 
+15 
+cells using the calcium phosphate precipitation method. After 48 hours of incubation, viruses were 
+collected via four cycles of frozen-thaw methods from cell pellets. Lentiviruses, on the other hand, 
+were generated from 293t cells that were transfected with gene plasmids, capsid (pMD2.G), and 
+helper plasmids (psPAX) via the same calcium phosphate precipitation method. These viruses were 
+then harvested from the cell medium and concentrated by utilizing a 100 K ultrafiltration membrane 
+20 
+(millipore, USA). Finally, the virus titer was determined through real-time PCR. 
+ 
+Stable transfection cell line construction 
+Stable transfected cell lines were established through lentivirus transduction and subsequent 
+screening. The virus was added to the culture medium, and cells were cultured for three days to 
+25 
+allow for virus infection and expression. To maintain stable expression of the target gene during 
+screening, Puromycin (20 μg/mL) was added to the medium. To confirm that plasmid sequences 
+were present within the stable transfected cell lines, genomic DNA was extracted and subjected to 
+PCR and sequencing analysis performed by Genewiz. 
+ 
+30 
+OCR recording  
+An O2K system (OROBOROS) is used to measure oxidative consumption. HEK293t cells that were 
+stable-transfected with GR-EGFP were grown in Dulbecco's modified Eagle (DMEM, Gibco) 
+culture medium containing 10% fetal bovine serum and harvested through centrifugation at 400g. 
+Non-transfected HEK293t cells were used as a control. The cell pellets were then resuspended in 
+35 
+Tyrode’s solution. Subsequently, the cells were transferred to the O2K chamber and recording began 
+until the system was balanced. For light stimulation, a customized LED illumination device 
+controlled by Arduino was utilized. 
+ 
+Primary cardiomyocyte and neuron culture 
+40 
+Postnatal day 0 (P0) C57BL mice were used for either heart or hippocampi dissection. The tissues 
+were chopped into small pieces and washed with HBSS. For heart tissues, trypsin (Sigma-Aldrich) 
+was applied for 5 minutes followed by collagenase II (Sigma-Aldrich) for an additional 30 minutes. 
+The cells were then dissociated further using fire-polished pipettes before being plated onto 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+11
+coverslips (Glasswarenfabrik Karl Hecht, Germany, 12mm) coated with matrix gel (Corning). 
+Cardiomyocytes were cultured in plating medium and regularly fed twice a week. After 24 hours, 
+the cardiomyocytes began to beat spontaneously. For hippocampal tissues, trypsin was used to digest 
+the cells for five minutes, after which single cells were produced through further dissociation via 
+fire-polished pipettes. The cells were then harvested by centrifugation and plated onto matrix gel 
+5 
+coated coverslips. They were also cultured in plating medium and fed twice a week.  
+ 
+Electrophysiology 
+A customized opto-electro system was used to perform whole-cell patch clamp recordings at room 
+temperature. The system consisted of an amplifier (Axopatch 700B, Molecular Devices), a digitizer 
+10 
+(Digidata 1440A, Molecular Devices), a signal generator (Master 9), a laser system with 470 nm, 
+532 nm and 633 nm lasers, a monochromator (Optoscan, Cairn Research Ltd., UK) with a Xenon 
+bulb, and an imaging system (Olympus). Micro-Manager was used for device control, and data were 
+acquired at a sampling rate of 10 kHz. Micropipettes with a tip resistance of 4-7 MΩ were pulled 
+from filamented glass capillaries (Sutter Instrument, BF150-86-10) using a micropipette puller 
+15 
+(Sutter Instrument, P1000) filled with intracellular buffer (potassium gluconate 120 mM, KCl 3 mM, 
+HEPES 10 mM, NaCl 8 mM, CaCl2 0.5 mM EGTA 5 mM, ATP-Mg 2 mM, GTP 0.3 mM, pH 7.2) 
+and positioned using a micromanipulator (Sutter, MP285). For light-activated photocurrent 
+recording, HEK 293t cells were recorded at voltage clamp mode, and photocurrents were evoked 
+by 532 nm laser illumination through a 40x objective (Olympus). Action spectrum recording was 
+20 
+performed by triggering the monochromator to generate 300 ms pulses of light with a 20 nm 
+bandwidth and wavelength stepping from 350 nm to 750 nm, with light originating from the Xenon 
+bulb. For recording I-V curve, a protocol was set to hold the cells at a membrane potential from 40 
+mV to -80 mV with a -20 mV voltage step, accompanied by a digital signal to trigger the 532 nm 
+laser for generating green light pulses (130 mW mm-2, interval: 1 s, duration: 1s). Action potential 
+25 
+recording was performed in primary neurons and cardiomyocytes. Cultured neurons were 
+transfected by calcium phosphate precipitation method at days in vitro (DIV) 4-5 and recorded at 
+DIV 8-12. Neurons were voltage clamped at -70 mV and recorded at current clamp mode. For action 
+potential recording in primary cardiomyocytes, cultured cardiomyocytes were transfected by AAV 
+virus at DIV 2-3 and recorded at DIV 7-10. Light pulses and current pulses were generated using 
+30 
+customized protocols. 
+ 
+Colocalization analysis 
+Fluorescence laser scanning confocal microscopy (FV1000, Olympus or LSM980, Zeiss) was used 
+to capture images. To assess mitochondrial colocalization, we cropped the confocal images in Image 
+35 
+J (NIH) to a small area containing only one cell. Colocalization analysis was performed using the 
+Plugin Colocalization Indices, and the effectiveness of mitochondrial targeting was scored using 
+Pearson's correlation coefficients. 
+ 
+Heterologous expression in E.coli 
+40 
+ASR(D217E) and ASR(D217N) were cloned into pet28c(+) vectors for expression. Clones of 
+Escherichia coli (strain BL21, DE3) transformed with expression plasmids are inoculated and 
+grown in 2 ml (small scale) or 100 ml (large scale) of Luria-Bertani (LB) medium supplemented 
+with 30 μg/ml kanamycin at 180 rpm, 37 °C. Growth was monitored using optical density 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+12
+measurements at 600 nm until the cells reached an OD600 of 0.8. Subsequently, 10 μM of all-trans 
+retinal and 1 mM of IPTG were added, and the cells were allowed to grow for an additional 18 h at 
+28°C while being shaken at 180 rpm. The cells were eventually harvested through centrifugation, 
+and their color changes were observed to confirm successful expression of the microbial 
+rhodopsins. 
+5 
+ 
+pH recording in E.coli suspension 
+E. coli cells expressing ASR(D217E) and ASR(D217N) were harvested by centrifugation at 8000 g 
+for 10 min at room temperature, and then resuspended in a solution containing 150 mM NaCl and 
+50 mM MgSO4, to a concentration of 0.1 g/ml. The E. coli suspension was subjected to illumination 
+10 
+with a 532 nm laser, while pH changes were monitored using a Micro-Combination pH Needle 
+Electrode (Microelectodes) connected to an A/D converter, Digidata 1440 A. Temperature signals 
+were recorded using a temperature sensor that was connected to a temperature controller (Warner). 
+Data acquisition was carried out using AxoScope 10.4 software (Axon Instruments) at a sampling 
+rate of 1000 Hz. The pH signals were calibrated for temperature using the following equation: 
+15 
+𝑝𝐻=
+𝑉𝑟𝑒𝑓−𝑉𝑝𝐻
+2.303𝑅(𝑇+ 273.15) 𝐹
+⁄ 
+where Vref is the standard electrode potential when pH is 7.0, VpH is the voltage measured with the 
+pH electrode, R is the gas constant, T is the recorded temperature in Celsius, and F is the Faraday 
+constant. 
+The E. coli suspension was exposed to three green pulses (532 nm, 37.18 mW cm-2, pulse 
+20 
+duration: 2 min, pulse interval: 2 min) during recording. 
+ 
+Video-based cardiomyocytes beating analysis 
+Based on the Nyquist sampling theorem, the sampling frequency for imaging must be no less than 
+twice the beating frequency of cardiomyocytes. In this experiment, bright field images were 
+25 
+captured via an EMCCD camera (Photometric Evolve) at a sampling rate of 8 Hz, then analyzed 
+using ImageJ (NIH). Firstly, the video was converted to 8-bit, then a line covering cell movement 
+was drawn on it to generate a kymograph by Multiple Kymograph plugin. A plot of grayscale-value 
+versus time was obtained by drawing a straight line on the time-axis of the kymograph with the 
+"Plot Profile" command. The grayscale-value data was saved and used for spectrogram analysis. 
+30 
+ 
+Parkin translocation assay 
+Parkin-mcherry stable-transfected cells were subjected to lentivirus transduction for mt-miniSOG 
+expression. Following this, the cells were illuminated with light for 30 min and cultured in dark for 
+additional 1 h. Then, cells were imaged to assess puncta accumulation. The colocalization of mt-
+35 
+miniSOG and parkin was analyzed before and after light illumination. 
+ 
+Data and statistical analysis 
+All electrophysiology data were analyzed using pClampfit (Molecular Devices) in combination with 
+customized Perl scripts. Statistical analysis was performed using unpaired two-tailed Student’s t 
+40 
+tests being used for comparison of two samples.  
+ 
+Declaration of interests  
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+13
+The authors declare that they have no known competing financial interests or personal relationships 
+that could have appeared to influence the work reported in this paper. 
+ 
+Author Contribution 
+Conceptualization: R.Z.Y, J.S.K; Data curation: R.Z.Y; Formal analysis: R.Z.Y; Funding acquisition: 
+5 
+P.P.L, S.A.L, J.S.K; Investigation: R.Z.Y; Methodology: R.Z.Y, D.D.W, S.M.L, D.H.L; Project 
+administration: J.S.K;  Resources: P.P.L, S.A.L; Software: R.Z.Y;  Supervision: J.S.K; Validation: R.Z.Y; 
+Visualization: R.Z.Y; Writing – original draft: R.Z.Y; Writing – review & editing: R.Z.Y, J.S.K. 
+ 
+Sources of Funding 
+10 
+This work was supported by National Natural Science Foundation (NSF) of China grant 92054103, 
+32071137 (JSK) and Funding for Scientific Research and Innovation Team of The First Affiliated 
+Hospital of Zhengzhou University grant ZYCXTD2023014 (JSK); China NSF grant 32000855 
+(SAL) and 32000522 (PPL); Joint Construction Program for Medical Science and Technology 
+Development of Henan Province of China grant  LHGJ20190239 (SAL); Joint Construction 
+15 
+Program for Medical Science and Technology Development of Henan Province of China grant 
+2018020088 (PPL); Natural Science Foundation of Henan Province of China grant 202300410420 
+(PPL). 
+ 
+References 
+20 
+1.  
+Deshmukh M, Johnson EMJ. Programmed cell death in neurons: focus on the pathway of 
+nerve growth factor deprivation-induced death of sympathetic neurons. Mol Pharmacol. 
+1997;51:897–906.  
+2.  
+Moujalled D, Strasser A, Liddell JR. Molecular mechanisms of cell death in neurological 
+diseases. Cell Death & Differentiation. 2021;28:2029–2044.  
+25 
+3.  
+Yuan J, Yankner BA. Apoptosis in the nervous system. Nature. 2000;407:802–809.  
+4.  
+Igney FH, Krammer PH. Death and anti-death: tumour resistance to apoptosis. Nature Reviews 
+Cancer. 2002;2:277–288.  
+5.  
+Lagadic-Gossmann D, Huc L, Lecureur V. Alterations of intracellular pH homeostasis in 
+apoptosis: origins and roles. Cell Death Differ. 2004;11:953–961.  
+30 
+6.  
+Kroemer G, Galluzzi L, Brenner C. Mitochondrial membrane permeabilization in cell death. 
+Physiol Rev. 2007;87:99–163.  
+7.  
+An X, Yu W, Liu J, Tang D, Yang L, Chen X. Oxidative cell death in cancer: mechanisms and 
+therapeutic opportunities. Cell Death Dis. 2024;15:556.  
+8.  
+Casey JR, Grinstein S, Orlowski J. Sensors and regulators of intracellular pH. Nat Rev Mol 
+35 
+Cell Biol. 2010;11:50–61.  
+9.  
+Milliken AS, Ciesla JH, Nadtochiy SM, Brookes PS. Distinct effects of intracellular vs. 
+extracellular acidic pH on the cardiac metabolome during ischemia and reperfusion. Journal 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+14
+of Molecular and Cellular Cardiology. 2023;174:101–114.  
+10.  Wacquier B, Combettes L, Dupont G. Dual dynamics of mitochondrial permeability transition 
+pore opening. Scientific Reports. 2020;10:3924.  
+11.  Kroemer G, Dallaporta B, Resche-Rigon M. The mitochondrial death/life regulator in 
+apoptosis and necrosis. Annu Rev Physiol. 1998;60:619–642.  
+5 
+12.  Bernardi P. The mitochondrial permeability transition pore: a mystery solved? Front Physiol. 
+2013;4:95.  
+13.  Zabelskii D, Dmitrieva N, Volkov O, Shevchenko V, Kovalev K, Balandin T, Soloviov D, 
+Astashkin R, Zinovev E, Alekseev A, et al. Structure-based insights into evolution of 
+rhodopsins. Communications Biology. 2021;4:821.  
+10 
+14.  Kawanabe A, Furutani Y, Jung K-H, Kandori H. Engineering an Inward Proton Transport from 
+a Bacterial Sensor Rhodopsin. J. Am. Chem. Soc. 2009;131:16439–16444.  
+15.  Inoue K, Ito S, Kato Y, Nomura Y, Shibata M, Uchihashi T, Tsunoda SP, Kandori H. A natural 
+light-driven inward proton pump. Nature Communications. 2016;7:13415.  
+16.  Shevchenko V, Mager T, Kovalev K, Polovinkin V, Alekseev A, Juettner J, Chizhov I, Bamann 
+15 
+C, Vavourakis C, Ghai R, et al. Inward H(+) pump xenorhodopsin: Mechanism and alternative 
+optogenetic approach. Sci Adv. 2017;3:e1603187.  
+17.  Harris A, Lazaratos M, Siemers M, Watt E, Hoang A, Tomida S, Schubert L, Saita M, Heberle 
+J, Furutani Y, et al. Mechanism of Inward Proton Transport in an Antarctic Microbial 
+Rhodopsin. J Phys Chem B. 2020;124:4851–4872.  
+20 
+18.  Ly JD, Grubb DR, Lawen A. The mitochondrial membrane potential (Δψm) in apoptosis; an 
+update. Apoptosis. 2003;8:115–128.  
+19.  Jin SM, Youle RJ. PINK1- and Parkin-mediated mitophagy at a glance. J Cell Sci. 
+2012;125:795–799.  
+20.  Gururaja Rao S, Patel NJ, Singh H. Intracellular Chloride Channels: Novel Biomarkers in 
+25 
+Diseases. Front Physiol. 2020;11:96.  
+21.  Wietek J, Beltramo R, Scanziani M, Hegemann P, Oertner TG, Wiegert JS. An improved 
+chloride-conducting channelrhodopsin for light-induced inhibition of neuronal activity in vivo. 
+Sci Rep. 2015;5:14807.  
+22.  Berndt A, Lee SY, Ramakrishnan C, Deisseroth K. Structure-guided transformation of 
+30 
+channelrhodopsin into a light-activated chloride channel. Science. 2014;344:420–424.  
+23.  Mahn M, Gibor L, Patil P, Cohen-Kashi Malina K, Oring S, Printz Y, Levy R, Lampl I, Yizhar 
+O. 
+High-efficiency 
+optogenetic 
+silencing 
+with 
+soma-targeted 
+anion-conducting 
+channelrhodopsins. Nature Communications. 2018;9:4125.  
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+15
+24.  Govorunova EG, Sineshchekov OA, Janz R, Liu X, Spudich JL. NEUROSCIENCE. Natural 
+light-gated anion channels: A family of microbial rhodopsins for advanced optogenetics. 
+Science. 2015;349:647–650.  
+25.  Li S-M, Wang D-D, Liu D-H, Meng X-Y, Wang Z, Guo X, Liu Q, Liu P-P, Li S-A, Wang S, 
+et al. Neurotransmitter accumulation and Parkinson’s disease-like phenotype caused by anion 
+5 
+channelrhodopsin opto-controlled astrocytic mitochondrial depolarization in  substantia nigra 
+pars compacta. MedComm (2020). 2024;5:e568.  
+26.  Nolfi-Donegan D, Braganza A, Shiva S. Mitochondrial electron transport chain: Oxidative 
+phosphorylation, oxidant production, and methods of measurement. Redox Biology. 
+2020;37:101674.  
+10 
+27.  Sies H, Jones DP. Reactive oxygen species (ROS) as pleiotropic physiological signalling 
+agents. Nature Reviews Molecular Cell Biology. 2020;21:363–383.  
+28.  Simon HU, Haj-Yehia A, Levi-Schaffer F. Role of reactive oxygen species (ROS) in apoptosis 
+induction. Apoptosis. 2000;5:415–418.  
+29.  Suski JM, Lebiedzinska M, Bonora M, Pinton P, Duszynski J, Wieckowski MR. Relation 
+15 
+between mitochondrial membrane potential and ROS formation. Methods Mol Biol. 
+2012;810:183–205.  
+30.  Zorov DB, Juhaszova M, Sollott SJ. Mitochondrial ROS-induced ROS release: An update and 
+review. Biochimica et Biophysica Acta (BBA) - Bioenergetics. 2006;1757:509–517.  
+31.  Bulina ME, Lukyanov KA, Britanova OV, Onichtchouk D, Lukyanov S, Chudakov DM. 
+20 
+Chromophore-assisted light inactivation (CALI) using the phototoxic fluorescent protein 
+KillerRed. Nature Protocols. 2006;1:947–953.  
+32.  Tour O, Meijer RM, Zacharias DA, Adams SR, Tsien RY. Genetically targeted chromophore-
+assisted light inactivation. Nature Biotechnology. 2003;21:1505–1508.  
+33.  Torra J, Lafaye C, Signor L, Aumonier S, Flors C, Shu X, Nonell S, Gotthard G, Royant A. 
+25 
+Tailing miniSOG: structural bases of the complex photophysics of a flavin-binding singlet 
+oxygen photosensitizing protein. Scientific Reports. 2019;9:2428.  
+34.  Imamura H, Nhat KPH, Togawa H, Saito K, Iino R, Kato-Yamada Y, Nagai T, Noji H. 
+Visualization of ATP levels inside single living cells with fluorescence resonance energy 
+transfer-based genetically encoded indicators. Proc Natl Acad Sci U S A. 2009;106:15651–
+30 
+15656.  
+35.  Kroemer G, Galluzzi L, Brenner C. Mitochondrial membrane permeabilization in cell death. 
+Physiol Rev. 2007;87:99–163.  
+36.  Ledesma A, de Lacoba MG, Rial E. The mitochondrial uncoupling proteins. Genome Biology. 
+2002;3:reviews3015.1.  
+35 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+16
+37.  Miyazaki E, Kida Y, Mihara K, Sakaguchi M. Switching the sorting mode of membrane 
+proteins from cotranslational endoplasmic reticulum targeting to posttranslational 
+mitochondrial import. Mol Biol Cell. 2005;16:1788–1799.  
+38.  Ponnalagu D, Gururaja Rao S, Farber J, Xin W, Hussain AT, Shah K, Tanda S, Berryman M, 
+Edwards JC, Singh H. Molecular identity of cardiac mitochondrial chloride intracellular 
+5 
+channel proteins. Mitochondrion. 2016;27:6–14.  
+39.  Akan A, Karabiber Cura O. Time–frequency signal processing: Today and future. Digital 
+Signal Processing. 2021;119:103216.  
+40.  Xu S, Chisholm AD. Highly efficient optogenetic cell ablation in C. elegans using membrane-
+targeted miniSOG. Sci Rep. 2016;6:21271.  
+10 
+41.  Shu X, Lev-Ram V, Deerinck TJ, Qi Y, Ramko EB, Davidson MW, Jin Y, Ellisman MH, Tsien 
+RY. A genetically encoded tag for correlated light and electron microscopy of intact cells, 
+tissues, and organisms. PLoS Biol. 2011;9:e1001041.  
+42.  Narendra DP, Youle RJ. The role of PINK1-Parkin in mitochondrial quality control. Nat Cell 
+Biol. 2024;26:1639–1651.  
+15 
+43.  Matsuyama S, Reed JC. Mitochondria-dependent apoptosis and cellular pH regulation. Cell 
+Death & Differentiation. 2000;7:1155–1165.  
+44.  Lagadic-Gossmann D, Huc L, Lecureur V. Alterations of intracellular pH homeostasis in 
+apoptosis: origins and roles. Cell Death & Differentiation. 2004;11:953–961.  
+45.  Quach CHT, Jung K-H, Lee JH, Park JW, Moon SH, Cho YS, Choe YS, Lee K-H. Mild 
+20 
+Alkalization Acutely Triggers the Warburg Effect by Enhancing Hexokinase Activity via 
+Voltage-Dependent Anion Channel Binding. PLoS One. 2016;11:e0159529.  
+46.  Ying C, Jin C, Zeng S, Chao M, Hu X. Alkalization of cellular pH leads to cancer cell death 
+by disrupting autophagy and mitochondrial function. Oncogene. 2022;41:3886–3897.  
+47.  Donahue CET, Siroky MD, White KA. An Optogenetic Tool to Raise Intracellular pH in 
+25 
+Single Cells and Drive Localized Membrane Dynamics. J. Am. Chem. Soc. 2021;143:18877–
+18887.  
+48.  Jin SM, Lazarou M, Wang C, Kane LA, Narendra DP, Youle RJ. Mitochondrial membrane 
+potential regulates PINK1 import and proteolytic destabilization by PARL. J Cell Biol. 
+2010;191:933–942.  
+30 
+49.  Tkatch T, Greotti E, Baranauskas G, Pendin D, Roy S, Nita LI, Wettmarshausen J, Prigge M, 
+Yizhar O, Shirihai OS, et al. Optogenetic control of mitochondrial metabolism and Ca(2+) 
+signaling by mitochondria-targeted opsins. Proc Natl Acad Sci U S A. 2017;114:E5167–E5176.  
+50.  Ernst P, Xu N, Qu J, Chen H, Goldberg MS, Darley-Usmar V, Zhang JJ, O’Rourke B, Liu X, 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+17
+Zhou L. Precisely Control Mitochondria with Light to Manipulate Cell Fate Decision. 
+Biophysical Journal. 2019;117:631–645.  
+51.  Fernández-Salas E, Suh KS, Speransky VV, Bowers WL, Levy JM, Adams T, Pathak KR, 
+Edwards LE, Hayes DD, Cheng C, et al. mtCLIC/CLIC4, an organellular chloride channel 
+protein, is increased by DNA damage and participates in the apoptotic response to p53. Mol 
+5 
+Cell Biol. 2002;22:3610–3620.  
+52.  Jahn SC, Rowland-Faux L, Stacpoole PW, James MO. Chloride concentrations in human 
+hepatic cytosol and mitochondria are a function of age. Biochem Biophys Res Commun. 
+2015;459:463–468.  
+53.  Murphy E, Eisner DA. Regulation of Intracellular and Mitochondrial Sodium in Health and 
+10 
+Disease. Circulation Research. 2009;104:292–303.  
+54.  Tkatch T, Greotti E, Baranauskas G, Pendin D, Roy S, Nita LI, Wettmarshausen J, Prigge M, 
+Yizhar O, Shirihai OS, et al. Optogenetic control of mitochondrial metabolism and Ca(2+) 
+signaling by mitochondria-targeted opsins. Proc Natl Acad Sci U S A. 2017;114:E5167–E5176.  
+55.  Kozak LP, Anunciado-Koza R. UCP1: its involvement and utility in obesity. International 
+15 
+Journal of Obesity. 2008;32:S32–S38.  
+56.  Triandafillou CG, Katanski CD, Dinner AR, Drummond DA. Transient intracellular 
+acidification regulates the core transcriptional heat shock response. Elife. 2020;9.  
+57.  Zhu M-Y, Zhang D-L, Zhou C, Chai Z. Mild Acidosis Protects Neurons during Oxygen-
+Glucose Deprivation by Reducing Loss of Mitochondrial Respiration. ACS Chem. Neurosci. 
+20 
+2019;10:2489–2497.  
+58.  Komilova NR, Angelova PR, Berezhnov AV, Stelmashchuk OA, Mirkhodjaev UZ, Houlden 
+H, Gourine AV, Esteras N, Abramov AY. Metabolically induced intracellular pH changes 
+activate mitophagy, autophagy, and cell protection in familial forms of Parkinson’s disease. 
+The FEBS Journal. 2022;289:699–711.  
+25 
+59.  Sies H, Belousov VV, Chandel NS, Davies MJ, Jones DP, Mann GE, Murphy MP, Yamamoto 
+M, Winterbourn C. Defining roles of specific reactive oxygen species (ROS) in cell biology 
+and physiology. Nature Reviews Molecular Cell Biology. 2022;23:499–515.  
+60.  Xu S, Chisholm AD. Highly efficient optogenetic cell ablation in C. elegans using membrane-
+targeted miniSOG. Scientific Reports. 2016;6:21271.  
+30 
+61.  Kumari S, Badana AK, G MM, G S, Malla R. Reactive Oxygen Species: A Key Constituent 
+in Cancer Survival. Biomark Insights. 2018;13:1177271918755391.  
+62.  Chen S, Weitemier AZ, Zeng X, He L, Wang X, Tao Y, Huang AJY, Hashimotodani Y, Kano 
+M, Iwasaki H, et al. Near-infrared deep brain stimulation via upconversion nanoparticle-
+mediated optogenetics. Science. 2018;359:679–684.  
+35 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+18
+ 
+ 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+19
+Figure Legend 
+Figure 1 Light exposure induces alkalization, ATP decrease, and cell death in cells expressing 
+membrane-targeted GR. (A) Light induces intracellular alkalization in GR expressing cells. HeLa 
+cells transfected with GR-pHluorin or GR(D217N)-pHluorin were stained by SNARF-1 AM dye 
+and subjected to light stimulation. The upper row indicated the pHluorin fluorescence and the lower 
+5 
+row indicated the SNARF ratio. The images were represented as pseudo-color. The dashed white 
+circle indicates the area with light stimulation (515 nm, 20 seconds). Scale bar, 5 μm. (B) 
+Quantification of the SNARF ratio in (A). There was a significant difference between illuminated 
+and non-illuminated GR expressing cells (n = 5 cells, t-test, p < 0.0001). (C) Patch clamping 
+recording of photocurrent of HeLa cells expressing GR. (D) Light induced ATP decrease in cells 
+10 
+expressing GR. HeLa cells expressing the fusion protein GR-AT01.03 or GR(D217N)-AT01.03 
+were subjected to light stimulation. The dashed white circle indicates the area with light stimulation 
+(559 nm, 1.2 min). The intracellular ATP level was indicated by the ratio of AT1.03. The images 
+were represented as pseudo-color. Scale bar, 5 μm. (E) Quantification of the AT1.03 ratio in (D). 
+There was a significant decrease of AT1.03 ratio in GR-expressing cells, while GR(D121N)-
+15 
+expressing cells showed no significant change upon light stimulation (t-test, GR, n = 36 cells, p < 
+0.0001; GR(D217N), n = 29 cells, p > 0.05). (F) ATP assay measured by chemiluminescence in cells 
+expressing GR and GR(D121N) before and after light exposure. Consistent with AT1.03 result, there 
+was a significant decrease in ATP level in GR but not in GR(D121N) expressing cells (t-test, GR, n 
+= 4 experiments, p < 0.0001; GR(D217N), n = 4 experiments, p > 0.05). (G) Amplitude of light-
+20 
+induced ATP decreases in GR-expressing cells pre-treated with inhibitors. In GR-expressing HeLa 
+cells pretreated with oligomycin, the extent of light-induced ATP decrease was more pronounced 
+than that under normal conditions (t-test, p < 0.005). In GR-expressing cells pre-treated with 2DG 
+and oligomycin, light stimulation no longer caused a decrease in ATP (Normal, n = 5 cells; 2DG, n 
+= 6 cells; Oligomycin, n = 6 cells; 2DG + Oligomycin, n = 5 cells). (H) Oxygen consumption rate 
+25 
+(OCR) in GR-expressing and control cells upon light stimulation. The OCR curves of GR-
+expressing and control cells were represented as red and black, respectively. The green bars indicate 
+light stimulation. (I-J) Light induces cell death in primary cardiomyocytes expressing GR. (I) 
+Images of GR-expressing cardiomyocytes stained with PI before and after light stimulation. Scale 
+bar, 5 μm. (J) Quantification of PI fluorescence in (I). There was a significant difference in cell 
+30 
+death between illuminated and non-illuminated cells (n = 9 cells, t-test, p < 0.0001). In control cells 
+exposed to light, there was no significant difference compared to cells kept in the dark (n = 5 cells, 
+t-test, p > 0.05). 
+ 
+ 
+35 
+ 
+Figure 2. Screening and characterization mitochondrial-targeted reverse proton pumps. (A) 
+Screening of mitochondrial-targetable reverse proton pumps. The N-termini of three reverse proton 
+pumping rhodopsin (RPPR), including ASR(D217E), PoXeR and NsXeR were fused to 
+mitochondrial targeting sequences (MTS), while their C-termini were fused to EGFP to enable 
+40 
+visualization of their cellular localization. The mitochondrial localization of reverse proton pumps 
+was assessed by Pearson correlation coefficients between fluorescent proteins and mitochondrial 
+markers. (B) Confocal images of MTS fused ASR(D217E) and PoXeR expressed in HeLa cells. 
+TMRM was used as a mitochondrial marker. Scale bar, 5 μm. (C) Light-induced pH change of E.coli 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+20
+suspension expressing ASR(D217E) or ASR(D217N). The curves of ASR(D217E) and ASR(D217N) 
+are shown in red and gray, respectively. Green bars indicate light stimulation. (D) Patch-clamp 
+recording of photocurrents in HEK293t cells expressing ASR(D217E). Green bar indicates light 
+stimulation. (E) Confocal images of HeLa cells expressing ASR(D217E) or ASR(D217N) stained 
+with SNARF before and after light stimulation. The white dotted circle indicates light stimulation 
+5 
+area. The images were represented as pseudo-color. Scale bar, 5 μm. (F) Quantification of SNARF 
+ratios in (E). ASR(D217E)-expressing cells exhibited significant decrease in SNARF ratios after 
+light stimulation (n = 26 cells, paired t-test, p < 0.0001), while ASR(D217N)-expressing cells and 
+control cells did not exhibit significant changes in SNARF ratios after light illumination 
+(ASR(D217N), n = 3 cells, control, n = 5, paired t-test, p > 0.05). (G) Photocurrent spectrum of 
+10 
+HEK293t cells expressing ASR(D217E).  The peak of photocurrent was reached at 510 nm (n = 20 
+cells). (H) Normalized photocurrent of HEK293t cells expressing ASR(D217E) at different holding 
+voltages (n = 7 cells). (I) Light induced action potential firing in primary neurons expressing 
+ASR(D217E). The green bars indicate light stimulation. (J) Mitochondrial-targeted ASR(D217E) 
+exhibits no plasma membrane leaky targeting. Light stimulation could not trigger action potential 
+15 
+firing of neurons expressing mt-ASR(D217E). The blue curve indicates the injected current, and the 
+green bars indicate light stimulation. (K) Confocal images of HeLa cells expressing mt-ASR(D217E) 
+stained with rhodamine 800 before and after light stimulation. The rhodamine 800 fluorescence was 
+represented as pseudo-color. Scale bar, 5 μm. (L) Quantification of rhodamine 800 fluorescence 
+before and after light stimulation in mt-ASR(D217E)-expressing cells or control cells. There was a 
+20 
+significant decrease of rhodamine 800 fluorescence in mt-ASR(D217E)-expressing cells upon light 
+stimulation. In contrast, no significant difference in rhodamine 800 fluorescence was observed in 
+control cells before and after light illumination (mt-ASR(D217E), paired t-test, n = 5 cells, p < 
+0.0001; control, paired t-test, n = 5 cells, p > 0.05). 
+ 
+25 
+ 
+ 
+Figure 3. Characterization of mitochondrial-targeted chloride ion channels. (A) Screening of 
+mitochondrial-targetable chloride ion channels. The N-termini of three chloride channels (ChloC), 
+including ACR1, ACR2 and iC1C2 were fused to mitochondrial targeting sequences (MTS), while 
+30 
+their C-termini were fused to EGFP to enable visualization of their cellular localization. The 
+mitochondrial localization of chloride channels was assessed by Pearson correlation coefficients 
+between fluorescent proteins and mitochondrial markers. (B) Confocal images of MTS fused ACR1 
+in different types of cells. The targeting in HeLa cells (first row), primary cardiomyocytes (second 
+row), and primary neurons (third row) were demonstrated. TMRM or TagRFP-mito were used as 
+35 
+mitochondrial markers. Scale bar, 5 μm. (C) Photocurrent spectra of chloride ion channels under 
+light with different wavelengths (ACR1, n = 5 cells; ACR2, n = 3 cells; iC1C2, n = 24 cells). (D) 
+mt-ACR1 exhibits minimal plasma membrane leaky targeting in primary cultured neurons. Light 
+stimulation failed to inhibit action potential evoked by current injection. The green bar indicates 
+light stimulation. (E) Fluorescence images of mt-ACR1 transfected primary cultured neurons 
+40 
+stained with Fluo-4 and rhodamine 800 before and after light stimulation.  The fluorescence of fluo-
+4 and rhodamine 800 were represented as pseudo-color. Scale bar, 5 μm. (F) Quantification of 
+fluorescence changes of Fluo-4 and rhodamine 800 after light stimulation in primary cultured 
+neurons expressing mt-ACR1 and control neurons. There was a significant increase in intracellular 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+21
+Ca2+ levels and a decrease in mitochondrial membrane potential (MMP) in mt-ACR1-expressing 
+neurons compared to control neurons upon light stimulation. (mt-ACR1, n = 7 cells; control, n = 6 
+cells, Ca2+: t-test, p = 0.0041; MMP: t-test, p = 0.0004). (G) mt-ACR1 exhibits minimal plasma 
+membrane leaky targeting in primary cultured cardiomyocytes. Light stimulation failed to inhibit 
+spontaneous action potential. (H) Fluorescence images of mt-ACR1 transfected primary 
+5 
+cardiomyocytes stained with Fura-2 before and after light stimulation. The calcium images were 
+represented as pseudo-color. Scale bar, 5 μm. (I) Spectrogram of cardiomyocytes expressing mt-
+ACR1 upon light stimulation. The green bar indicated light stimulation. Continuous light 
+stimulation can induce the cessation of beating.  (J) Confocal images of mt-ACR1 transfected 
+primary cardiomyocytes stained with rhodamine 800 before and after light stimulation. The images 
+10 
+of rhodamine 800 fluorescence were represented as pseudo-color. Scale bar, 5 μm. (K) 
+Quantification of rhodamine 800 fluorescence changes after light stimulation in primary 
+cardiomyocytes expressing mt-ACR1 and control cells.  Light stimulation led to a significant 
+decrease of MMP in mt-ACR1 cells relative to control (n = 6 cells, t-test, p < 0.0001). 
+ 
+15 
+ 
+ 
+Figure 4. Mitochondria-targeted ROS generator induced mitochondrial depolarization and 
+parkin translocation. (A) Fluorescence images of HeLa cells expressing mitochondria-targeted 
+miniSOG and cytosolic miniSOG stained with rhodamine 800 before and after light stimulation. 
+20 
+The fluorescence of miniSOG was represented as green, and the fluorescence of rhodamine 800 was 
+represented as pseudo-color.  The time period for light stimulation is 5 min. Scale bar, 5 μm. (B) 
+Comparison of TMRM fluorescence intensity changes after stimulation in HeLa cells expressing 
+cytosolic and mitochondrial miniSOG. Mitochondrial miniSOG caused a significant drop in MMP 
+compared to control (mt-miniSOG, n = 37 cells; control, n = 38 cells, t-test, p < 0.0001), while 
+25 
+cytosolic miniSOG showed no significant changes in MMP compared to control (cyto-miniSOG, n 
+= 17 cells; control, n = 14 cells, t-test, p > 0.05). (C) Fluorescence images of Parkin-mCherry stably 
+expressed HeLa cells transfected with mitochondrial miniSOG before and after light stimulation. 
+Light stimulation in HeLa cells expressing mitochondrial miniSOG resulted in parkin translocation 
+to mitochondria. Scale bar, 5 μm. (D) Pearson's co-localization coefficient of parkin with mt-
+30 
+miniSOG before and after illumination in HeLa cells expressing mitochondria-targeted miniSOG. 
+After illumination, the co-localization coefficient between parkin and mitochondria significantly 
+increases (t-test, p = 0.0001, pre light, n = 20 cells; post light, n = 18 cells).                                                                         
+ 
+ 
+35 
+ 
+ 
+ 
+ 
+ 
+40 
+ 
+ 
+ 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+22
+ 
+Figure 1 
+ 
+ 
+ 
+5 
+ 
+ 
+ 
+ 
+ 
+10 
+ 
+ 
+ 
+ 
+ 
+15 
+ 
+ 
+ 
+ 
+ 
+20 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+23
+ 
+Figure 2 
+ 
+ 
+ 
+5 
+ 
+ 
+ 
+ 
+ 
+10 
+ 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+24
+Figure 3 
+ 
+ 
+ 
+ 
+5 
+ 
+ 
+ 
+ 
+ 
+10 
+ 
+ 
+ 
+ 
+ 
+15 
+ 
+ 
+ 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
+
+
+ 
+25
+ 
+Figure 4 
+ 
+.
+CC-BY-NC-ND 4.0 International license
+made available under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is 
+The copyright holder for this preprint
+this version posted July 21, 2026. 
+; 
+https://doi.org/10.64898/2026.07.19.739443
+doi: 
+bioRxiv preprint 
