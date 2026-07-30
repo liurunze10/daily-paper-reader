@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-30",
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T21:41:41",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/30/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature",
+      "section": "quick",
+      "title_en": "DAGForge: Auditable Causal DAG Authoring with Biomedical Literature",
+      "authors": "Yi-han Sheu, Michael R. Steigman, Yu Zhou, Bo Wang, Fan-Yu Yen, Jordan W. Smoller",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.21859v1",
+      "score": "6.0",
+      "evidence": "利用生物医学文献构建因果有向无环图进行因果分析",
+      "tldr": "DAGForge是一个基于浏览器的系统，旨在简化生物医学因果有向无环图（DAG）的构建过程。它通过LLM从文献中提取证据并生成结构化的因果判断，解决了传统手动构建耗时且缺乏可审计性的问题。该系统支持证据溯源、冲突检查及自动计算调整集，显著提高了DAG构建的效率和透明度。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Constructing causal directed acyclic graphs (DAGs) is a core step in biomedical causal analysis, yet it remains a largely manual process. Analysts must connect study variables to prior literature, evaluate uncertain causal claims, and preserve sufficient provenance for expert review. We present DAGForge, a browser-based system for authoring causal DAGs as auditable, evidence-linked artifacts. Given free-text descriptions of study concepts, DAGForge creates a reproducible literature snapshot, uses an LLM-based reasoning module to generate structured pairwise causal judgments grounded in verbatim evidence excerpts, and assembles those judgments into a constraint-checked graph. Each proposed edge includes confidence estimates, provenance, and a reviewable rationale. The interface supports study specification, progress monitoring, evidence review, graph comparison, adjustment-set computation, and export. In evaluations against both compact benchmark DAGs and reference DAGs derived from published literature, DAGForge achieves high edge recall on the literature-based cohort while retaining verifiable evidence trails absent from LLM-only baselines. DAGForge thus reduces the burden of causal DAG curation while making the resulting assumptions auditable, supporting the design, analysis, and interpretation of biomedical studies.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-30 <!--dpr-date:20260730-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/30/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature" data-sidebar-item="{&quot;title&quot;: &quot;DAGForge: Auditable Causal DAG Authoring with Biomedical Literature&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;利用生物医学文献构建因果有向无环图进行因果分析&quot;}">DAGForge: Auditable Causal DAG Authoring with Biomedical Literature</a>
   * 2026-07-29 <!--dpr-date:20260729-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/29/biorxiv-10-64898-2026-07-15-738781-v1-tumor-derived-stearic-acid-induces-macrophage-egr2-signaling-to-suppress-anti-tumor-immunity-in-breast-cancer" data-sidebar-item="{&quot;title&quot;: &quot;Tumor-derived stearic acid induces macrophage Egr2 signaling to suppress anti-tumor immunity in breast cancer&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/biorxiv-10-64898-2026-07-15-738781-v1-tumor-derived-stearic-acid-induces-macrophage-egr2-signaling-to-suppress-anti-tumor-immunity-in-breast-cancer&quot;, &quot;score&quot;: &quot;8.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;极化M2样巨噬细胞中的Egr2信号传导&quot;}">Tumor-derived stearic acid induces macrophage Egr2 signaling to suppress anti-tumor immunity in breast cancer</a>
