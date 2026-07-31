@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-31",
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T21:28:18",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/31/2607.21190v1-physics-informed-deep-learning-model-for-cross-modality-super-resolution-in-fluorescence-microscopy",
+      "section": "quick",
+      "title_en": "Physics-Informed Deep Learning Model for Cross-Modality Super-Resolution in Fluorescence Microscopy",
+      "authors": "Mohammad Soltaninezhad, Elena Corbetta, Francisco Paez Larios, Paul M. Jordan, Oliver Werz, Christian Eggeling, Thomas Bocklitz",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.21190v1",
+      "score": "7.0",
+      "evidence": "人类原代M2巨噬细胞线粒体数据集",
+      "tldr": "本研究针对荧光显微成像中纯数据驱动模型易产生不符合光学成像原理结果的问题，提出了一种物理增强的生成对抗网络（GAN），用于将低分辨率共聚焦图像转换为高分辨率STED图像。通过在训练目标中引入显微镜特定的点扩散函数（PSF）信息，该模型在人类巨噬细胞线粒体数据集上表现优异。研究证明，结合光学先验知识能显著提升跨模态超分辨率成像的结构保真度和物理合理性。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Cross-modality image translation offers a route to super-resolution fluorescence microscopy from low-resolution images while reducing phototoxicity and instrumentation demands. However, purely data-driven models can produce visually plausible outputs that are inconsistent with optical image formation. Here, we propose a physics-informed generative adversarial network for confocal-to-STED image translation that incorporates microscope-specific point spread function information into the training objective. Simulated and experimentally measured PSFs were evaluated using a limited paired confocal-STED dataset of TOM20-labeled mitochondria in human primary M2 macrophages acquired across different experimental days. Performance was assessed using reference-based and non-reference-based image-quality metrics, together with complementary frequency- and distribution-sensitive analyses. The no-reference metrics probed physics-relevant image properties, including spatial-frequency content, contrast, and signal-to-noise behavior. PSF-guided models improved structural fidelity, reduced local deviations, and achieved closer agreement with STED references than non-PSF baselines, particularly in frequency-domain analyses. These results demonstrate that optical priors can improve the structural fidelity and physical plausibility of generative microscopy models for cross-modality super-resolution imaging.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

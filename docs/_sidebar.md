@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-31 <!--dpr-date:20260731-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/31/2607.21190v1-physics-informed-deep-learning-model-for-cross-modality-super-resolution-in-fluorescence-microscopy" data-sidebar-item="{&quot;title&quot;: &quot;Physics-Informed Deep Learning Model for Cross-Modality Super-Resolution in Fluorescence Microscopy&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.21190v1-physics-informed-deep-learning-model-for-cross-modality-super-resolution-in-fluorescence-microscopy&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;人类原代M2巨噬细胞线粒体数据集&quot;}">Physics-Informed Deep Learning Model for Cross-Modality Super-Resolution in Fluorescence Microscopy</a>
   * 2026-07-30 <!--dpr-date:20260730-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/30/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature" data-sidebar-item="{&quot;title&quot;: &quot;DAGForge: Auditable Causal DAG Authoring with Biomedical Literature&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;利用生物医学文献构建因果有向无环图进行因果分析&quot;}">DAGForge: Auditable Causal DAG Authoring with Biomedical Literature</a>
