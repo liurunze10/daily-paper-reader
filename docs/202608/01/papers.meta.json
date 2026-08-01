@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-01",
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T21:14:27",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/01/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature",
+      "section": "quick",
+      "title_en": "DAGForge: Auditable Causal DAG Authoring with Biomedical Literature",
+      "authors": "Yi-han Sheu, Michael R. Steigman, Yu Zhou, Bo Wang, Fan-Yu Yen, Jordan W. Smoller",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.21859v1",
+      "score": "6.5",
+      "evidence": "从生物医学文献中构建因果有向无环图的工具",
+      "tldr": "DAGForge是一个基于浏览器的系统，旨在简化生物医学因果有向无环图（DAG）的构建过程。它通过LLM从文献中提取证据并生成结构化的因果判断，解决了传统手动构建耗时且缺乏审计追踪的问题。该系统支持证据审查、自动计算调整集及导出，在保持高召回率的同时提供了可验证的证据链，显著提升了因果分析的透明度和效率。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Constructing causal directed acyclic graphs (DAGs) is a core step in biomedical causal analysis, yet it remains a largely manual process. Analysts must connect study variables to prior literature, evaluate uncertain causal claims, and preserve sufficient provenance for expert review. We present DAGForge, a browser-based system for authoring causal DAGs as auditable, evidence-linked artifacts. Given free-text descriptions of study concepts, DAGForge creates a reproducible literature snapshot, uses an LLM-based reasoning module to generate structured pairwise causal judgments grounded in verbatim evidence excerpts, and assembles those judgments into a constraint-checked graph. Each proposed edge includes confidence estimates, provenance, and a reviewable rationale. The interface supports study specification, progress monitoring, evidence review, graph comparison, adjustment-set computation, and export. In evaluations against both compact benchmark DAGs and reference DAGs derived from published literature, DAGForge achieves high edge recall on the literature-based cohort while retaining verifiable evidence trails absent from LLM-only baselines. DAGForge thus reduces the burden of causal DAG curation while making the resulting assumptions auditable, supporting the design, analysis, and interpretation of biomedical studies.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/01/2607.28466v1-a-report-grounded-vision-language-foundation-model-for-colonoscopy-from-280000-routine-reports",
+      "section": "quick",
+      "title_en": "A report-grounded vision-language foundation model for colonoscopy from 280000 routine reports",
+      "authors": "Jia Yu, Yan Zhu, Yili He, Zilong Wang, Xinyang Jiang, Peiyao Fu, Ruijie Yang, Tianyi Chen, Siyuan Li, Zhihua Wang, Fei Wu, Quanlin Li, Xian Yang, Pinghong Zhou, Shuo Wang",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.28466v1",
+      "score": "6.5",
+      "evidence": "结肠镜检查的视觉语言模型",
+      "tldr": "针对结肠镜检查中常规报告与图像关联性弱的问题，本研究开发了视觉语言基础模型EndoCLIP。通过从28万余份常规报告中恢复出12.5万个病灶级图文对进行训练，该模型在图像检索、报告生成及多中心临床分类任务中表现优异。在良恶性分类上，其性能接近专家水平，证明了利用常规临床文档进行大规模监督学习的可行性，为结肠镜AI提供了强大的基础模型。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Vision-language models remain underused in colonoscopy despite the rich expert descriptions recorded in routine reports. These reports document lesion appearance, size and location but summarise entire procedures rather than caption individual frames, leaving clinical findings only weakly linked to the corresponding images. Here we develop EndoCLIP, a colonoscopy vision-language foundation model trained on 125,756 lesion-level image-text pairs progressively recovered from 280,476 routine colonoscopy records. Across lesion-level image-text retrieval, structured report generation and six multi-centre clinical classification tasks, EndoCLIP outperforms general-purpose and biomedical vision-language encoders in both zero-shot and linear-probe settings. On benign-versus-malignant classification, its linear probe approaches the performance of expert readers in a blinded study involving 12 endoscopists. These results suggest that recovering finding-to-frame correspondence can transform routine documentation into scalable supervision, enabling clinical targets to be specified in language rather than separately annotated for each task.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/01/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses",
+      "section": "quick",
+      "title_en": "PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses",
+      "authors": "Panpan Cui, Yiqi Liu, Wenhao Sun",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.28090v1",
+      "score": "6.0",
+      "evidence": "跨背景转移单细胞扰动响应",
+      "tldr": "单细胞扰动图谱常面临跨细胞背景数据缺失的问题。本文提出PerturbMap，一种旨在将已知背景下的扰动响应迁移至缺失背景的方法。它通过结合受体局部低秩基准与基于岭回归专家的源到受体传输方案，利用验证锚点评估路径可靠性并加权融合。在黑色素瘤数据集上的实验证明，该方法在预测准确性和特异性上均优于现有基准，为跨背景扰动预测提供了有效工具。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Single-cell perturbation atlases rarely measure every intervention in every cellular context: a query perturbation is often observed in one or more source contexts but missing in the recipient context where its effect is needed. Ignoring those measured responses discards query-specific experimental evidence, whereas copying or weakly calibrating them across contexts risks transferring the wrong signal. We propose PerturbMap, which predicts a missing recipient-context effect by combining a recipient-local low-rank base with accepted proposals that transport the same perturbation's measured source responses through source-to-recipient ridge experts fit on paired training perturbations, with proposal weights determined by route reliability estimated on validation anchors. On the Perturb-CITE-seq melanoma cohort, PerturbMap improves full-effect MSE by 4.1\\% over a recipient-local low-rank base and achieves lower MSE than FedAvg, zero-response, raw-copy, calibrated-copy, and identity-shuffled affine controls. It remains within $2.82\\times10^{-6}$ MSE of our centralized token-matched pooled reference, which uses a stronger training interface. A condition-mean specificity diagnostic shows the same direction: same-recipient top-10 counterpart retrieval by cosine increases from 74.5\\% for the low-rank base to 80.5\\% for PerturbMap.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

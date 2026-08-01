@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-001.webp",
+      "caption": "Fig. 3: Lesion-level image–text retrieval. a, Global and intra-case protocols. b,c, Image-to-text (b) and text-to-image (c) retrieval, each showing Recall@K curves, rank statistics, mean reciprocal rank (MRR) and intra-case Recall@1. d, Per-case intra-case Recall@1 across all multi-lesion cases. e, Performance across successive EndoCLIP training stages.",
+      "page": 6,
+      "index": 1,
+      "width": 775,
+      "height": 402
+    },
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-002.webp",
+      "caption": "Fig. 5: Clinical organisation of the embedding space. Rows show t-SNE projections of frozen image embeddings for pathology, Paris morphology, villous surface, lobulated surface and congestion; columns compare four encoders. Points are coloured by ground-truth class, and panels report kNN leave-one-out accuracy. The morphology and surface tasks use EndoVL; pathology is in-house.",
+      "page": 10,
+      "index": 2,
+      "width": 737,
+      "height": 973
+    },
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-003.webp",
+      "caption": "Fig. 1: Weak report–image alignment and analysis of the pretraining dataset. a, Routine reports correspond to multi-frame, often multi-lesion cases. b, Dataset curation funnel, from 280.5k de-identified reports to 123.8k polyp-positive reports and a curated training set of 104.5k cases (37.3%) yielding 125.8k image–text pairs. c, Anatomical-site coverage across the 123.8k polyp reports. d, Frequency of morphology and surface descriptors. e, Lesion-size distribution. f, Report and findingsentence length in words. g, Frames per case (n = 123.8k cases, 8.54M frames; median 65, mean 69). In e–g, bars mark distribution percentiles (P25–P99).",
+      "page": 3,
+      "index": 3,
+      "width": 773,
+      "height": 650
+    },
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-004.webp",
+      "caption": "Fig. 4: Multi-centre zero-shot and label-efficient clinical classification. Five tasks are shown: four EndoVL morphology and surface tasks [25] and pathology from Zhongshan Hospital; polyp size is reported in Table 1. a, Prompt-based zero-shot performance, with colour encoding fold change over the random baseline. b,c, AUCROC, F1 and accuracy across five training-data fractions under linear probing and end-to-end training. Lines and shaded bands show the mean and s.d. over three seeds.",
+      "page": 8,
+      "index": 4,
+      "width": 769,
+      "height": 960
+    },
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-005.webp",
+      "caption": "Fig. 2: Overview of EndoCLIP. Routine reports describe multi-frame, sometimes multi-lesion procedures rather than individual images. EndoCLIP derives lesion-level image–text pairs from this case-level signal through case-level evidence localisation, single-lesion anchor selection and multi-lesion disambiguation. The resulting encoder is evaluated on retrieval, classification and structured report generation.",
+      "page": 4,
+      "index": 5,
+      "width": 764,
+      "height": 895
+    },
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-006.webp",
+      "caption": "Fig. 6: Structured report generation from frozen features. a, A frozen vision encoder is connected by a trainable multilayer projector to a frozen Qwen3-14B decoder. b, Summary radar over descriptor-set agreement, Paris typing and size tolerance. Each spoke is scaled to the best-performing encoder and labelled with that best native value; only EndoCLIP is shaded. c, Per-class Paris typing accuracy. d, Per-descriptor F1 for eight findings. e, Report text-quality scores (ROUGE-L and CIDEr). f, Fraction of size estimates within increasing relative-error tolerances. g, Row-normalised EndoCLIP confusion matrix for Paris typing; rows are ground truth and the diagonal reproduces the per-class accuracies in c. h, Lesion-size mean absolute error (MAE, cm) and mean absolute percentage error (MAPE). The vision encoder and decoder are frozen; a separate projector with the same architecture and training protocol is fitted for each encoder. Held-out EndoVL test set, n = 394.",
+      "page": 12,
+      "index": 6,
+      "width": 764,
+      "height": 660
+    },
+    {
+      "url": "assets/figures/arxiv/2607.28466v1/fig-007.webp",
+      "caption": "Table 1: Label-efficient polyp-size classification on the multi-centre EndoVL benchmark. Polyps are dichotomised at the clinically established 10 mm (1 cm) threshold that separates small from large lesions [29]. The biomedical comparators are BiomedCLIP [30] and PMC-CLIP [26]. (a) Zero-shot prediction from clinical prompts. (b) Label-efficient transfer at five training-data fractions under two regimes: a linear probe on the frozen image encoder and end-to-end training with all weights updated; accuracy and AUC-ROC are reported as the mean±s.d. over three seeds. End-to-end training comprises full fine-tuning of EndoCLIP and pretrained ViT-L/14 and training ViT-L/14 from scratch. Within each regime the best entry per column is shown in bold and the second best is underlined.",
+      "page": 9,
+      "index": 7,
+      "width": 783,
+      "height": 499
+    }
+  ]
+}
