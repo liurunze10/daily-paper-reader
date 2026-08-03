@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-03 <!--dpr-date:20260803-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/03/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses" data-sidebar-item="{&quot;title&quot;: &quot;PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;预测单细胞扰动响应中缺失的受体背景效应&quot;}">PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses</a>
   * 2026-08-01 <!--dpr-date:20260801-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/01/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature" data-sidebar-item="{&quot;title&quot;: &quot;DAGForge: Auditable Causal DAG Authoring with Biomedical Literature&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.21859v1-dagforge-auditable-causal-dag-authoring-with-biomedical-literature&quot;, &quot;score&quot;: &quot;6.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;从生物医学文献中构建因果有向无环图的工具&quot;}">DAGForge: Auditable Causal DAG Authoring with Biomedical Literature</a>

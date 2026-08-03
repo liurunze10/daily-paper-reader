@@ -1,0 +1,54 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-03T20:25:19.858852+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.28090v1",
+      "source": "arxiv",
+      "title": "PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses",
+      "abstract": "Single-cell perturbation atlases rarely measure every intervention in every cellular context: a query perturbation is often observed in one or more source contexts but missing in the recipient context where its effect is needed. Ignoring those measured responses discards query-specific experimental evidence, whereas copying or weakly calibrating them across contexts risks transferring the wrong signal. We propose PerturbMap, which predicts a missing recipient-context effect by combining a recipient-local low-rank base with accepted proposals that transport the same perturbation's measured source responses through source-to-recipient ridge experts fit on paired training perturbations, with proposal weights determined by route reliability estimated on validation anchors. On the Perturb-CITE-seq melanoma cohort, PerturbMap improves full-effect MSE by 4.1\\% over a recipient-local low-rank base and achieves lower MSE than FedAvg, zero-response, raw-copy, calibrated-copy, and identity-shuffled affine controls. It remains within $2.82\\times10^{-6}$ MSE of our centralized token-matched pooled reference, which uses a stronger training interface. A condition-mean specificity diagnostic shows the same direction: same-recipient top-10 counterpart retrieval by cosine increases from 74.5\\% for the low-rank base to 80.5\\% for PerturbMap.",
+      "authors": [
+        "Panpan Cui",
+        "Yiqi Liu",
+        "Wenhao Sun"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-30T11:58:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.28090v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "predicts missing recipient-context effect for single-cell perturbation responses",
+      "llm_evidence_cn": "预测单细胞扰动响应中缺失的受体背景效应",
+      "llm_evidence": "预测单细胞扰动响应中缺失的受体背景效应",
+      "canonical_evidence": "预测单细胞扰动响应中缺失的受体背景效应",
+      "llm_tldr_en": "PerturbMap predicts single-cell perturbation responses across different cellular contexts.",
+      "llm_tldr_cn": "PerturbMap 预测不同细胞背景下的单细胞扰动响应。",
+      "llm_tldr": "PerturbMap 预测不同细胞背景下的单细胞扰动响应。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-03",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T20:27:01",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/03/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses",
+      "section": "quick",
+      "title_en": "PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses",
+      "authors": "Panpan Cui, Yiqi Liu, Wenhao Sun",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.28090v1",
+      "score": "6.0",
+      "evidence": "预测单细胞扰动响应中缺失的受体背景效应",
+      "tldr": "本研究提出PerturbMap框架，旨在解决单细胞扰动图谱中跨细胞背景数据缺失的挑战。该方法结合受体局部低秩基准与跨背景岭回归专家模型，通过验证锚点动态加权迁移源背景的扰动响应。在黑色素瘤数据集上的实验表明，其预测精度优于现有基准，有效实现了跨背景的扰动效应迁移。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Single-cell perturbation atlases rarely measure every intervention in every cellular context: a query perturbation is often observed in one or more source contexts but missing in the recipient context where its effect is needed. Ignoring those measured responses discards query-specific experimental evidence, whereas copying or weakly calibrating them across contexts risks transferring the wrong signal. We propose PerturbMap, which predicts a missing recipient-context effect by combining a recipient-local low-rank base with accepted proposals that transport the same perturbation's measured source responses through source-to-recipient ridge experts fit on paired training perturbations, with proposal weights determined by route reliability estimated on validation anchors. On the Perturb-CITE-seq melanoma cohort, PerturbMap improves full-effect MSE by 4.1\\% over a recipient-local low-rank base and achieves lower MSE than FedAvg, zero-response, raw-copy, calibrated-copy, and identity-shuffled affine controls. It remains within $2.82\\times10^{-6}$ MSE of our centralized token-matched pooled reference, which uses a stronger training interface. A condition-mean specificity diagnostic shows the same direction: same-recipient top-10 counterpart retrieval by cosine increases from 74.5\\% for the low-rank base to 80.5\\% for PerturbMap.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
