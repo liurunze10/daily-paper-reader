@@ -6,26 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-03
-- 运行时间：2026-08-03 20:26:35 UTC
+- 最新运行日期：2026-08-04
+- 运行时间：2026-08-04 21:47:40 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：0
 - 速读区：1
 
 ### 今日简报（AI）
-今日聚焦单细胞扰动响应的跨背景迁移，重点速读了评分 6.0 的 PerturbMap 研究。
-该工具实现了单细胞扰动数据在不同生物背景间的迁移学习，为跨环境细胞反应预测提供新方案。
-建议对单细胞组学及计算生物学感兴趣的读者关注其在数据复用与跨背景分析中的应用。
-- 详情：[/202608/03/README](/202608/03/README)
+今日聚焦利用多智能体工作流解决跨研究的 T 细胞群体对齐难题。
+TCellAlign 通过命名法引导的多智能体协作，实现了不同实验数据间 T 细胞分类的高效统一。
+建议关注单细胞测序的读者参考此自动化对齐方案，以提升跨数据集细胞标注的准确性。
+- 详情：[/202608/04/README](/202608/04/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses](/202608/03/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses)  
+1. [TCellAlign: Cross-study T-cell Populations Alignment with Nomenclature-Guided Multi-Agent Workflow](/202608/04/2607.24093v1-tcellalign-cross-study-t-cell-populations-alignment-with-nomenclature-guided-multi-agent-workflow)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：预测单细胞扰动响应中缺失的受体背景效应
+   evidence：跨研究细胞类型比对和标准化的方法学桥梁
 
 
 <div class="dpr-home-promo-card">

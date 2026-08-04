@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-04 <!--dpr-date:20260804-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/04/2607.24093v1-tcellalign-cross-study-t-cell-populations-alignment-with-nomenclature-guided-multi-agent-workflow" data-sidebar-item="{&quot;title&quot;: &quot;TCellAlign: Cross-study T-cell Populations Alignment with Nomenclature-Guided Multi-Agent Workflow&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.24093v1-tcellalign-cross-study-t-cell-populations-alignment-with-nomenclature-guided-multi-agent-workflow&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;跨研究细胞类型比对和标准化的方法学桥梁&quot;}">TCellAlign: Cross-study T-cell Populations Alignment with Nomenclature-Guided Multi-Agent Workflow</a>
   * 2026-08-03 <!--dpr-date:20260803-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/03/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses" data-sidebar-item="{&quot;title&quot;: &quot;PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.28090v1-perturbmap-cross-context-transfer-of-single-cell-perturbation-responses&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;预测单细胞扰动响应中缺失的受体背景效应&quot;}">PerturbMap: Cross-Context Transfer of Single-Cell Perturbation Responses</a>
