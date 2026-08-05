@@ -6,26 +6,22 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-04
-- 运行时间：2026-08-04 21:47:40 UTC
+- 最新运行日期：2026-08-05
+- 运行时间：2026-08-05 21:49:20 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：0
 - 精读区：0
-- 速读区：1
+- 速读区：0
 
 ### 今日简报（AI）
-今日聚焦利用多智能体工作流解决跨研究的 T 细胞群体对齐难题。
-TCellAlign 通过命名法引导的多智能体协作，实现了不同实验数据间 T 细胞分类的高效统一。
-建议关注单细胞测序的读者参考此自动化对齐方案，以提升跨数据集细胞标注的准确性。
-- 详情：[/202608/04/README](/202608/04/README)
+> 今日无新推荐，系统未产出可展示论文。
+- 详情：[/202608/05/README](/202608/05/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [TCellAlign: Cross-study T-cell Populations Alignment with Nomenclature-Guided Multi-Agent Workflow](/202608/04/2607.24093v1-tcellalign-cross-study-t-cell-populations-alignment-with-nomenclature-guided-multi-agent-workflow)  
-   标签：评分：6.0/10、query:ros-mp
-   evidence：跨研究细胞类型比对和标准化的方法学桥梁
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
