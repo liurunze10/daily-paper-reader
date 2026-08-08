@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-08 <!--dpr-date:20260808-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/08/2608.05345v1-il-10-rs1800896-polymorphism-predicts-biochemical-remission-in-ibd-patients-undergoing-biologic-therapy" data-sidebar-item="{&quot;title&quot;: &quot;IL-10 rs1800896 polymorphism predicts biochemical remission in IBD patients undergoing biologic therapy&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.05345v1-il-10-rs1800896-polymorphism-predicts-biochemical-remission-in-ibd-patients-undergoing-biologic-therapy&quot;, &quot;score&quot;: &quot;9.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;IBD患者中IL-10多态性与生化缓解的关系&quot;}">IL-10 rs1800896 polymorphism predicts biochemical remission in IBD patients undergoing biologic therapy</a>
   * 2026-08-07 <!--dpr-date:20260807-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/07/2608.05345v1-il-10-rs1800896-polymorphism-predicts-biochemical-remission-in-ibd-patients-undergoing-biologic-therapy" data-sidebar-item="{&quot;title&quot;: &quot;IL-10 rs1800896 polymorphism predicts biochemical remission in IBD patients undergoing biologic therapy&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.05345v1-il-10-rs1800896-polymorphism-predicts-biochemical-remission-in-ibd-patients-undergoing-biologic-therapy&quot;, &quot;score&quot;: &quot;9.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;关于IBD患者遗传因素和治疗反应的研究&quot;}">IL-10 rs1800896 polymorphism predicts biochemical remission in IBD patients undergoing biologic therapy</a>
