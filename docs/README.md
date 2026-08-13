@@ -6,28 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-12
-- 运行时间：2026-08-12 20:42:37 UTC
+- 最新运行日期：2026-08-13
+- 运行时间：2026-08-13 21:26:48 UTC
 - 运行状态：成功
-- 本次总论文数：2
+- 本次总论文数：1
 - 精读区：1
-- 速读区：1
+- 速读区：0
 
 ### 今日简报（AI）
-今日聚焦免疫系统精准医疗，通过基因多态性与细胞数据解析治疗反馈。
-重点发现 IL-10 rs1800896 基因位点能有效预测 IBD 患者生物制剂治疗后的生化缓解情况。
-建议关注基因检测在炎症性肠病精准用药中的临床应用潜力。
-- 详情：[/202608/12/README](/202608/12/README)
+今日聚焦 IBD 生物制剂疗效预测，深度解析 IL-10 基因多态性的关键预后作用。
+研究证实 IL-10 rs1800896 位点能有效预测患者的生化缓解，为精准治疗提供重要遗传学证据。
+建议关注基因检测在肠病个体化用药中的应用，通过识别遗传标志物提升生物制剂的临床治疗成功率。
+- 详情：[/202608/13/README](/202608/13/README)
 
 ### 精读区论文标签
-1. [IL-10 rs1800896 polymorphism predicts biochemical remission in IBD patients undergoing biologic therapy](/202608/12/2608.05345v1-il-10-rs1800896-polymorphism-predicts-biochemical-remission-in-ibd-patients-undergoing-biologic-therapy)  
+1. [IL-10 rs1800896 polymorphism predicts biochemical remission in IBD patients undergoing biologic therapy](/202608/13/2608.05345v1-il-10-rs1800896-polymorphism-predicts-biochemical-remission-in-ibd-patients-undergoing-biologic-therapy)  
    标签：评分：9.5/10、query:ros-mp
-   evidence：研究IBD患者的遗传多态性及其对生物治疗的反应。
+   evidence：研究接受生物治疗的炎症性肠病（IBD）患者的基因多态性
 
 ### 速读区论文标签
-1. [Topology Inference for Immune System Networks by Using Cell Amount Data](/202608/12/2608.07403v1-topology-inference-for-immune-system-networks-by-using-cell-amount-data)  
-   标签：评分：6.0/10、query:ros-mp
-   evidence：推断免疫细胞相互作用网络的拓扑结构
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
