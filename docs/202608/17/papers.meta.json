@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-17",
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T20:14:09",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/17/2608.09722v1-decoding-gene-regulatory-networks-from-single-cell-rna-velocity",
+      "section": "quick",
+      "title_en": "Decoding Gene Regulatory Networks from Single-Cell RNA Velocity",
+      "authors": "Lingqi Meng, Shiruo Wang",
+      "date": "2026-08-10",
+      "pdf": "https://arxiv.org/pdf/2608.09722v1",
+      "score": "6.0",
+      "evidence": "基于RNA速率数据重建调控网络的数学框架",
+      "tldr": "本研究探讨了从单细胞RNA速率数据中重建基因调控网络（GRN）的可能性。作者建立了一个基于转录-剪接动力学的稀疏动力学反问题数学框架，指出仅靠被动快照观测无法唯一识别调控关系。通过引入受控扰动，研究证明了可恢复性并提出了避免数值微分的积分重建方法。该工作为理解单细胞观测数据解码GRN提供了数学基础，并建立了扰动设计与预测建模之间的联系。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Single-cell RNA sequencing provides snapshots of cellular states, while RNA velocity offers directional information about their temporal evolution. A fundamental question is whether hidden gene regulatory networks governing cellular dynamics can be recovered from such incomplete observations. In this work, we develop a mathematical framework for regulatory network reconstruction from RNA velocity data by formulating the problem as a sparse dynamical inverse problem arising from coupled transcription-splicing dynamics. We show that passive snapshot observations are generally insufficient to uniquely identify regulatory interactions, revealing an intrinsic limitation of unperturbed measurements. We then prove that controlled perturbations restore identifiability by generating informative regulatory trajectories and characterize conditions for unique recovery. To address noisy and imperfect observations, we introduce an integral reconstruction approach that avoids numerical differentiation and establish finite-sample guarantees for sparse network recovery. Our results provide a mathematical foundation for understanding when and how gene regulatory networks can be decoded from single-cell observations, linking perturbation design, inverse problem theory, and predictive modeling of cellular responses.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/17/2608.09798v1-flowgrn-scalable-and-dropout-robust-gene-regulatory-network-inference-via-flow-matching-based-trajectory-reconstruction-technical-report",
+      "section": "quick",
+      "title_en": "FlowGRN: Scalable and Dropout-Robust Gene Regulatory Network Inference via Flow Matching-Based Trajectory Reconstruction (Technical Report)",
+      "authors": "Tsz Pan Tong, Jun Pang",
+      "date": "2026-08-10",
+      "pdf": "https://arxiv.org/pdf/2608.09798v1",
+      "score": "6.0",
+      "evidence": "从单细胞RNA测序数据推断基因调控网络以理解细胞行为",
+      "tldr": "FlowGRN是一个针对单细胞RNA测序数据的基因调控网络推理框架。它结合条件流匹配和得分匹配技术重建细胞轨迹，并利用dynGENIE3进行可扩展推理。该方法引入了抗丢包噪声的细胞相似性度量，有效解决了数据中缺乏时间信息和高噪声的问题，在多个基准测试中达到了领先水平。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Inferring gene regulatory networks (GRNs) from single-cell RNA sequencing (scRNA-seq) data offers insights into cellular behavior, but is complicated by the lack of temporal information and the prevalence of dropout noise. To address these challenges, we present FlowGRN, a method that integrates conditional flow matching and score matching for robust trajectory reconstruction with dynGENIE3 for scalable GRN inference. FlowGRN incorporates a novel cell similarity measure that is resilient to dropout effects in high-dimensional scRNA-seq data. Evaluation on the BEELINE benchmark demonstrates that FlowGRN achieves state-of-the-art performance on both synthetic and experimental datasets. Ablation studies validate the importance of both the dropout-robust similarity measure and the trajectory reconstruction step, highlighting FlowGRN's ability to accurately model dynamic regulatory relationships.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
