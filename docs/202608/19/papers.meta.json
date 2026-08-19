@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-19",
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T20:39:56",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/19/2608.14414v1-cytobert-a-foundation-model-for-cytometry-data",
+      "section": "quick",
+      "title_en": "CytoBERT: A Foundation Model for Cytometry Data",
+      "authors": "Syed Abdul Haseeb Qadri, Bjarne C. Hiller, Felix Blanke, Vanja Sophie Cangalovic, Kutalmış Coşkun, Amin Mirzaei, Tom Siegl, Sebastian Bader, Thomas Kirste, Martin Becker",
+      "date": "2026-08-14",
+      "pdf": "https://arxiv.org/pdf/2608.14414v1",
+      "score": "6.0",
+      "evidence": "免疫细胞单细胞细胞术数据的基座模型",
+      "tldr": "流式细胞术数据具有高度异质性和非标准化特征，限制了机器学习的应用。本文提出 CytoBERT，这是一个针对单细胞流式数据的开源基础模型。通过在包含 15 个数据集、超过 5000 万个细胞的大规模语料库上进行自监督预训练，CytoBERT 学习了跨标记的细胞内关系。实验证明，该模型在样本级分类任务中表现优异，实现了跨异质数据集的迁移学习，为可扩展的通用流式细胞分析奠定了基础。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Cytometry measures the complex characteristics of single cells (e.g., counts and protein expression of immune cells) and is widely used across immunological research and clinical settings. However, cytometry data is highly heterogeneous and unstandardized due to experimental protocols and the choice of measured features. While machine learning methods hold the potential to gain deeper insights into cell biology, these challenges make them difficult to apply and transfer across studies. Recent advances in foundation models can alleviate these issues, but corresponding approaches are still scarce in this field. To address this, we provide CytoBERT, a publicly available, open-source, open-weight foundation model for single-cell cytometry data with variable marker panels. CytoBERT is pretrained in a self-supervised manner on a large-scale cytometry corpus (15 human datasets with heterogeneous marker panels and more than 50 million cells) curated through marker standardization, enabling it to learn transferable inter-marker relationships within cells. Fine-tuning CytoBERT for sample-level classification demonstrates that transfer learning across heterogeneous cytometry datasets is feasible, providing a starting point for scalable, generalizable cytometry analysis. Code is available at GitHub.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

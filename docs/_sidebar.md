@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-19 <!--dpr-date:20260819-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/19/2608.14414v1-cytobert-a-foundation-model-for-cytometry-data" data-sidebar-item="{&quot;title&quot;: &quot;CytoBERT: A Foundation Model for Cytometry Data&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.14414v1-cytobert-a-foundation-model-for-cytometry-data&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;免疫细胞单细胞细胞术数据的基座模型&quot;}">CytoBERT: A Foundation Model for Cytometry Data</a>
   * 2026-08-17 <!--dpr-date:20260817-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/17/2608.09722v1-decoding-gene-regulatory-networks-from-single-cell-rna-velocity" data-sidebar-item="{&quot;title&quot;: &quot;Decoding Gene Regulatory Networks from Single-Cell RNA Velocity&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.09722v1-decoding-gene-regulatory-networks-from-single-cell-rna-velocity&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;基于RNA速率数据重建调控网络的数学框架&quot;}">Decoding Gene Regulatory Networks from Single-Cell RNA Velocity</a>
