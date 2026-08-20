@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-001.webp",
+      "caption": "Figure 4: Perturbation-condition prediction from cellular transitions. (a) Task schematic. In contrast to forward perturbation-response prediction, the reverse task provides source and target cells, summarizes their transition as up- and downregulated DEGs, and asks the model to rank candidate perturbation conditions. (b) Top-1 accuracy, Top-5 accuracy, and F1 score on the Schmidt primary T-cell dataset, comparing CellNavi, PertMind, SFT, Base, DEG, GEARS, and Random. Error bars denote standard deviation over five independent runs. (c) Per-perturbation Top-1 accuracy on the Schmidt dataset, with perturbations ordered by CellNavi accuracy. Bars show the expression shift log2(expressiontrain/expressiontest); positive values indicate higher expression in the training state. (d) Joint rankings of the two ground-truth perturbations in the Norman double-perturbation dataset. Lower ranks are better; marginal histograms show the rank distributions.",
+      "page": 11,
+      "index": 1,
+      "width": 826,
+      "height": 671
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-002.webp",
+      "caption": "Figure 8: Hierarchical construction of PertMind-derived representations. (a) PertMind generates a functional profile for each gene; text-embedding-ada-002 encodes the profile, and a taskspecific linear projection adapts the raw 1,536-dimensional text vector to the required 512- or 2,048- dimensional downstream interface. Dimensionality labels in the schematic denote the illustrated 2,048-dimensional post-projection branch. (b) Expression-weighted aggregation composes projected gene embeddings into cell embeddings. (c) Attention-based multi-instance learning aggregates cells from one donor into a donor embedding and predicts the donor label.",
+      "page": 26,
+      "index": 2,
+      "width": 826,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-003.webp",
+      "caption": "Figure 7: Prompt and reward interface schema for PertMind trajectory generation. The left panel shows model-visible input, the upper-right panel shows the generated output schema, and the lowerright panel shows direct reward-side scoring. Condition-level pathway quantities are preprocessing intermediates, not direct response-scoring inputs, and are therefore omitted.",
+      "page": 21,
+      "index": 3,
+      "width": 821,
+      "height": 523
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-004.webp",
+      "caption": "Figure 12: Literature-audited free-form natural-language Vemurafenib–C32–MKI67 case. The left side expands the mechanism audit and maps highlighted claims to the references shown in the figure; the right side shows the user prompt and PertMind response. Public literature support for highlighted claims does not establish that the generated reasoning process was faithful.",
+      "page": 30,
+      "index": 4,
+      "width": 829,
+      "height": 839
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-005.webp",
+      "caption": "Figure 11: Per-subject general-capability evaluation. (a) MMLU accuracy by subject under 0-shot and 5-shot evaluation for Base, SFT, and PertMind. (b) CMMLU accuracy by subject under the same 0-shot and 5-shot settings. Error bars denote standard deviation over five independent runs.",
+      "page": 29,
+      "index": 5,
+      "width": 826,
+      "height": 756
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-006.webp",
+      "caption": "Figure 3: Perturbation-response prediction, component ablation, and general-capability evaluation. (a) VCWorld benchmark accuracy and Macro-F1 for differential-expression detection (DE) and direction prediction (DIR) on the five unseen cell lines, comparing Random, GAT, CPA, scVI, STATE, VCWorld (Gemini-2.5-Flash), and PertMind. (b) Ablation across Base, SFT, shuffled-pathway sanity, gene-only outcome RL, prompt-only pathway context, and the complete PertMind pipeline, shown per cell line for each of the DE and DIR Accuracy and Macro-F1 combinations; this panel does not display run-level error bars. (c) Overall MMLU and CMMLU accuracy under 0-shot and 5-shot evaluation for Base, SFT, and PertMind. Error bars in panels (a) and (c) denote standard deviation over five independent runs.",
+      "page": 10,
+      "index": 6,
+      "width": 829,
+      "height": 636
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-007.webp",
+      "caption": "Figure 6: Evaluation of PertMind-derived representations across biological scales. (a) Molecularlevel reference mapping on four gene-property tasks. GenePT, scGPT, scProtoTransformer, and PertMind gene embeddings are evaluated with logistic-regression (LR) and random-forest (RF) classifiers; bars report area under the receiver operating characteristic curve (AUC). (b) Cellular-level perturbation-response prediction on HepG2, K562, and RPE1 cells. Cell representations from scProtoTransformer, STATE-SE, STATE-SM, and PertMind are coupled to a STATE-based expression decoder and evaluated using differential-expression similarity (DES), perturbation-discrimination score (PDS), and mean absolute error (MAE). Higher DES and PDS and lower MAE are better. Error bars denote s.d. over five independent runs. (c) Donor-level tumor-state reference mapping at 50%, 75%, and 100% of the available reference-training donors. Curves report accuracy, AUC, and F1 score; error bars denote s.d. over seven independent runs.",
+      "page": 14,
+      "index": 7,
+      "width": 829,
+      "height": 621
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-008.webp",
+      "caption": "Figure 1: Schematic scope of the capabilities enabled by PertMind. Reasoning-based applications use natural-language inference for perturbation-response prediction, perturbation prioritization, mechanism reasoning, and proposal planning. Embedding-based applications encode PertMindgenerated biological profiles into reusable molecular, cellular, and donor representations for reference mapping, cellular perturbation-response prediction, and donor-level tumor-state reference mapping. The figure summarizes the intended capability space, not benchmark performance. Within this space, the quantitatively evaluated subset in the Results comprises forward perturbation-response prediction, reverse perturbation-condition inference, phenotypic-screen hit prioritization, biologicalprocess naming, and molecular, cellular, and donor-level reference mapping.",
+      "page": 3,
+      "index": 8,
+      "width": 826,
+      "height": 194
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-009.webp",
+      "caption": "Figure 10: Genome-wide UMAP visualization of gene embeddings from scGPT, GenePT, scProtoTransformer, and PertMind. Points denote genes and colors denote annotated gene biotypes. The PertMind map retains distinct biotype-enriched regions, providing a qualitative view of molecular organization complementary to the reference-mapping results in Figure 6a. UMAP geometry is sensitive to preprocessing and visualization hyperparameters and is not used as a quantitative performance metric.",
+      "page": 28,
+      "index": 9,
+      "width": 829,
+      "height": 533
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-010.webp",
+      "caption": "Figure 5: Cross-task biological knowledge transfer with PertMind. (a) Biology Knowledge Injection (BKI) ablation on a stratified 36-screen subset of the AssayBench test set. Qwen3.5-397B-A17B ranks genes from the screen protocol alone or with a format control, generic note, mismatched PertMind brief, or matched PertMind brief. Cells report raw values; color denotes within-column normalization, while arrows indicate the preferred metric direction. (b) AnDCG@100 on the complete AssayBench year-fold0 test set (n = 334), stratified by five coarse phenotype classes. GPT-5.4, Gemini 3 Pro, and Qwen3.5-397B-A17B (abbreviated as Qwen3.5-397B in the panel) are evaluated with the protocol alone and with a screen-specific PertMind brief. (c) ROUGE-L, ROUGE-1, and ROUGE-2 agreement between generated and ground-truth process names for 1,000 Gene Ontology, 50 NeST, and 56 MSigDB gene sets. Error bars denote s.d. estimated from nine batch-sampling replicates, using batch sizes of 200 for Gene Ontology and 20 for NeST and MSigDB. (d) Density of MedCPT semantic-similarity percentile ranks between generated and ground-truth process names against 12,320 annotated background terms. Only the top decile is shown; shading marks the ≥ 98th-percentile region, and inset values give the number of gene sets in this region.",
+      "page": 13,
+      "index": 10,
+      "width": 826,
+      "height": 661
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-011.webp",
+      "caption": "Figure 2: Overview of PertMind. (a) Task and data construction. From each Tahoe-100M pseudobulk differential-expression record (Zhang et al., 2025) we assemble a gene-centered query x = (c, d, g) with an Up, Down, or No label, retrieved biological context K(x), and, when informative, outcome-independently selected candidate pathways with transcriptional pathway-response proxies. The uncertain pathway outcome is a reward-side abstention state rather than a fourth model target, and receives no pathway reward. (b) Training. Knowledge-augmented prompts drive onpolicy sampling from Qwen3-4B; trajectories that pass the trusted-trajectory filters seed one epoch of supervised fine-tuning (SFT); the resulting SFT policy is then optimized by pathway-supervised Group Relative Policy Optimization (GRPO) (Guo et al., 2025) under the composite gene, pathway, and format reward. The current query’s target-gene label and all pathway proxy labels are reward-side information: they score sampled responses and are never placed in the model’s prompt at training or inference time.",
+      "page": 4,
+      "index": 11,
+      "width": 826,
+      "height": 519
+    },
+    {
+      "url": "assets/figures/arxiv/2608.16419v1/fig-012.webp",
+      "caption": "Figure 9: Pre-RL sampling analysis of Qwen3-4B Base on the forward perturbation task. (a) Oracle best@N , majority-vote accuracy, greedy decoding, and one-third chance accuracy as the number of sampled rollouts increases. (b) Incremental improvement in best@N from each additional rollout. (c) Mean parse rate and the probability that at least one of N responses contains a valid terminal No, Up, or Down label. (d) Class-conditional best@N for the three gold labels. Best@N is an oracle diagnostic of support in the sampling distribution and is not an inference-time selection method.",
+      "page": 27,
+      "index": 12,
+      "width": 829,
+      "height": 644
+    }
+  ]
+}
