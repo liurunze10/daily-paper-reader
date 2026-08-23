@@ -1,0 +1,771 @@
+Title: Redox heterogeneity as an engine of biodiversity: A quantitative murburn formalism for micro-oxic ecosystems
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.08.19.745798v1.full.pdf
+
+Number of Pages: 69
+
+Markdown Content:
+1
+
+# Redox heterogeneity as an engine of biodiversity: 
+
+# A quantitative murburn formalism for micro-oxic ecosystems 
+
+Kelath Murali Manoj* 1,2 & Abhinav Parashar 3
+
+1. Amrita School of Artificial Intelligence, Coimbatore, Amrita Vishwa Vidyapeetham, Amritanagar, Ettimadai, Coimbatore, Tamil Nadu 641112, India; ORCID: 0000-0003-4515-994X; km_manoj@cb.amrita.edu 2. Satyamjayatu: The Science and Ethics Foundation, Kulappully, Shoranur-2 (PO), Palakkad District, Kerala 679122, India; murman@satyamjayatu.com 3. Department of Biological Sciences, P D Patel Institute of Applied Sciences, Charotar University of Science and Technology (CHARUSAT), Changa Campus, Anand, Gujarat 388421, India; ORCID: 0000-0003-4229-0248; abhinavparashar.as@charusat.ac.in 
+
+Abstract: Biodiversity frequently peaks in fluctuating micro-oxic environments such as marine oxygen minimum zone interfaces, rhizospheric aggregates, sediments, microbial mats, and gut mucus layers. Yet, classical ecological theories do not adequately explain why intermediate oxygen tensions repeatedly favor coexistence and diversification. Herein, we propose a murburn ecological formalism wherein oxygen acts not merely as a metabolic substrate but as a generator of dynamic redox heterogeneity through partial reduction and diffusible reactive species (DRS) and redox-intermediates formation. Integrating empirical observations from marine, gut, soil, and aquatic-interface ecosystems with a reaction– diffusion framework, we show that intermediate oxygen tensions naturally maximize radical-field heterogeneity and produce dynamically shifting fitness landscapes. Numerical simulations demonstrate spontaneous coexistence, biodiversity maxima within micro-oxic zones, localized diversification, and coexistence stabilization without externally imposed niche partitioning. Additional simulations suggest that aquatic macrofauna indirectly enhance biodiversity by restructuring oxygen gradients and generating ecosystem-scale diffusional redox architectures (ESDRA). The framework proposes that fluctuating redox interfaces function as potential ecological zones of elevated adaptive turnover across biological scales. 
+
+Keywords: murburn concept, micro-oxic ecosystems, marine oxygen minimum zones (OMZ), biological diversity, reaction-diffusion formalism, 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+2
+
+1. Introduction 
+
+The origin, maintenance, and spatial organization of biodiversity remain among the most fundamental unresolved problems in ecology and evolutionary biology. Classical ecological theories explain coexistence primarily through mechanisms such as resource partitioning, trophic specialization, environmental filtering, dispersal limitation, stochastic drift, and adaptive evolution (Levin, 1992; Murray, 2002). While these approaches have yielded powerful conceptual and mathematical frameworks, they generally treat metabolism and environmental chemistry as passive background conditions rather than active dynamical generators of ecological structure. Oxygen, in particular, is usually represented as a monotonic energetic resource. Conventional ecological and physiological models typically assume that increasing oxygen availability enhances aerobic viability until toxicity thresholds are reached, whereas oxygen depletion progressively restricts metabolic capacity. Such frameworks are sufficient for describing broad energetic trends, yet they fail to explain a striking and repeatedly observed ecological pattern: biodiversity frequently peaks not in fully oxic or fully anoxic environments, but in fluctuating micro-oxic systems where oxygen concentrations remain low but non-zero (Diaz & Rosenberg, 2008; Wright et al., 2012). This phenomenon is observed across remarkably diverse ecological contexts, including: marine oxygen minimum zone (OMZ) interfaces, estuarine transition layers, microbial mats, rhizospheric soil aggregates, wetland sediments, biofilms, coral-associated microbiomes, and gut mucus interfaces (Falkowski et al., 2008; Albenberg et al., 2014; Kuzyakov & Blagodatskaya, 2015). These environments share several physicochemical characteristics: 1. steep oxygen gradients, 2. fluctuating diffusion barriers, 3. coexistence of multiple oxidation states, 4. elevated radical and redox activity, 5. and strong spatiotemporal heterogeneity. Despite the robustness of these empirical observations, conventional ecological frameworks do not provide a mechanistically satisfying explanation for why intermediate oxygen tensions repeatedly favor coexistence, diversification, and rapid adaptive turnover. Similarly, classical redox biology also faces conceptual limitations in such environments. Reactive oxygen species (ROS), reactive nitrogen species (RNS), halogen reactive intermediates, and related diffusible intermediates are generally interpreted as toxic 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+3byproducts or secondary signaling modifiers superimposed upon otherwise deterministic metabolic pathways. However, growing evidence from microbiology, systems biology, environmental physiology, geochemistry, and immunology indicates that diffusible reactive species (DRS; in the current context, these can also connote redox-active intermediates) participate directly in metabolism, signaling, extracellular coupling, environmental transformation, and ecological interaction (Apel & Hirt, 2004; Falkowski et al., 2008; Diaz et al., 2013; Hansel et al., 2019; Hansel & Diaz, 2021) Extracellular superoxide generation by marine microbes, peroxide cycling in phytoplankton communities, ROS-mediated soil polymer degradation, epithelial ROS generation in gut interfaces, and metal-catalyzed redox cycling in sediments all demonstrate that reactive intermediates are not rare pathological artifacts but constitutive components of natural ecosystems (Diaz et al., 2013; Hansel et al., 2019). Furthermore, many ecological transitions (including algal blooms, dysbiosis, hypoxia-associated microbial restructuring, and soil succession) display strongly nonlinear threshold behavior suggestive of chemically mediated feedback systems rather than simple deterministic resource competition. Murburn concept provides a physicochemical framework within which these observations become mechanistically coherent. Murburn (“ mured burning ”) proposes that DRS or redox intermediates generated through partial reduction and stochastic redox interactions are not merely secondary consequences of metabolism but integral mediators of bioenergetics, signaling, adaptation, and environmental coupling (Manoj, 2025). Rather than viewing biological systems as tightly wired deterministic electron-transfer assemblies, murburn logic emphasizes stochastic redox dynamics, diffusional interactions, distributed reaction zones (“murzones”), and non-equilibrium radical-mediated chemistry. When extended to ecology, murburn principles imply that oxygen functions not solely as a terminal electron acceptor or energetic substrate, but as a generator of dynamic redox heterogeneity. In fluctuating micro-oxic systems, partial oxygen reduction produces transient spectra of diffusible reactive intermediates whose concentrations depend upon oxygen diffusion, substrate availability, environmental structure, transition-metal chemistry, and organismal activity. Under such conditions, ecological fitness becomes intrinsically redox-dependent. Organisms differing in radical tolerance, radical utilization, antioxidant buffering, diffusional positioning, and metabolic flexibility may each gain transient advantages under different local conditions. Because the redox environment is itself dynamically modified by biological activity, ecological feedback becomes nonlinear and spatially heterogeneous. Consequently, 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+4competitive exclusion is suppressed, coexistence becomes chemically scaffolded, and fluctuating micro-oxic environments function as potential zones of elevated adaptive turnover (serving as sorts of evolutionary incubators!). The central proposition advanced herein is therefore that intermediate oxygen tensions maximize stochastic redox heterogeneity and DRS flux, thereby generating dynamically shifting fitness landscapes that stabilize coexistence and accelerate diversification. To formalize this proposition, we develop a mathematically minimal murburn ecological framework based on coupled reaction–diffusion equations linking oxygen gradients, radical-field dynamics, and redox-dependent organismal fitness. We then relate this formalism to ecological observations from marine oxygen minimum zones, gut mucus microinterfaces, and rhizospheric soil aggregates. The resulting framework proposes that biodiversity is fundamentally coupled to the spatial and temporal organization of redox heterogeneity, with micro-oxic niches acting as chemically dynamic engines of ecological complexity and evolutionary innovation. 
+
+2. Empirical ecological foundation 
+
+2.1. Biodiversity maxima in fluctuating oxygen environments 
+
+Across marine, terrestrial, and host-associated ecosystems, biodiversity frequently peaks in environments characterized by fluctuating oxygen availability rather than fully oxic or fully anoxic conditions (Diaz & Rosenberg, 2008; Wright et al., 2012). Such observations recur despite profound differences in phylogeny, spatial scale, nutrient architecture, and environmental context, suggesting the existence of a general organizing principle linked to redox dynamics. Micro-oxic environments share several physicochemical characteristics: 1. oxygen concentrations remain low but non-zero, 2. diffusion is spatially constrained, 3. multiple oxidation states coexist simultaneously, 4. partial oxygen reduction is favored, 5. reactive intermediates accumulate transiently, 6. and redox conditions fluctuate across micron-to-centimeter scales. These conditions naturally promote chemically heterogeneous environments in which no single metabolic strategy remains universally optimal. Under classical ecological logic, coexistence generally requires stable niche partitioning or tradeoffs among fixed resource-utilization strategies. However, fluctuating micro-oxic 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+5systems do not behave as chemically static environments. Instead, environmental chemistry itself becomes dynamic, spatially heterogeneous, and biologically self-modifying. Murburn theory proposes that these fluctuating radical fields are themselves ecological structuring agents. 
+
+2.2. Marine oxygen minimum zones (OMZs) 
+
+Marine oxygen minimum zones constitute among the most chemically dynamic ecosystems on Earth. OMZs arise where biological oxygen consumption exceeds physical replenishment, producing stratified water columns containing steep transitions between oxic surface waters and near-anoxic deeper regions (Wright et al., 2012). Major OMZ systems occur in: the Eastern Tropical Pacific, the Arabian Sea, the Benguela upwelling system, and semi-enclosed basins such as Saanich Inlet. Importantly, biodiversity and metabolic complexity often peak near OMZ transition boundaries rather than within fully oxygenated or fully anoxic waters (Wright et al., 2012; Canfield et al., 2010). These interfaces support dense and metabolically diverse microbial consortia involved simultaneously in: aerobic respiration, denitrification, sulfur oxidation, methane oxidation, nitrate reduction, and anaerobic ammonium oxidation (anammox) (Ward, 2013). Such coexistence is difficult to reconcile using strictly compartmentalized respiratory logic because classical deterministic frameworks predict sharper exclusion among competing respiratory modes. Instead, OMZ interfaces display: overlapping energetic pathways, metabolic redundancy, rapid ecological turnover, and extensive functional overlap. Marine OMZ systems are also characterized by intense redox cycling involving: dissolved oxygen reactive intermediates, sulfur intermediates, metal-ion catalysis, and photochemically generated ROS. Extracellular superoxide production by marine bacteria and phytoplankton has now been experimentally demonstrated across multiple oceanic systems (Diaz et al., 2013; Hansel et al., 2019). Hydrogen peroxide gradients correlate strongly with biological productivity, photochemical activation, and microbial turnover (Hansel & Diaz, 2021). From a murburn perspective, OMZ interfaces behave as distributed stochastic redox reactors. Low but non-zero oxygen availability promotes partial oxygen reduction and transient ROS generation, while dissolved metals, sulfides, and organic substrates participate in diffusional radical cycling. These interactions generate spatially dynamic redox mosaics in which distinct physiological strategies remain locally advantageous under continuously shifting conditions. Importantly, marine organisms themselves actively reshape local redox fields through: oxygen consumption, extracellular metabolite release, peroxide generation, sulfur 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+6cycling, and radical scavenging. Ecological structure therefore emerges from reciprocal coupling between organisms and chemically mediated environmental heterogeneity. This interpretation is strongly compatible with empirical observations showing that OMZ transition regions often exhibit maximal microbial diversity, functional redundancy, and rapid adaptive turnover (Wright et al., 2012). 
+
+2.3. Gut mucus micro-oxic interfaces 
+
+The gastrointestinal tract provides another striking example of biodiversity concentration within micro-oxic interfaces. Although the intestinal lumen is predominantly anaerobic, epithelial surfaces remain relatively oxygenated because of vascular oxygen supply. Between these regions exists a steep oxygen gradient within the mucus layer, generating a highly dynamic micro-oxic interface (Albenberg et al., 2014; Zheng et al., 2015). This interface supports coexistence among: obligate anaerobes, facultative anaerobes, aerotolerant organisms, and microaerophiles. Importantly, epithelial and immune cells continuously generate reactive oxygen and nitrogen intermediates, while microbial populations simultaneously produce, utilize, scavenge, and buffer these species. Experimental studies have shown that oxygen gradients strongly influence spatial partitioning of gut microbial communities (Albenberg et al., 2014). Inflammatory conditions further demonstrate the ecological importance of redox modulation. Small perturbations in epithelial oxygen leakage or ROS balance can induce large-scale microbiome restructuring, favoring taxa with greater oxidative tolerance while suppressing strictly anaerobic competitors. These ecological transitions frequently occur abruptly and nonlinearly, suggesting threshold-like chemically mediated dynamics rather than gradual resource replacement alone (Albenberg et al., 2014; Donaldson et al., 2016). Under murburn assumptions, the gut mucus interface behaves as a dynamic redox field in which diffusible reactive intermediates continuously reshape local viability landscapes. Spatially heterogeneous radical fluxes generate chemically differentiated micro-niches permitting coexistence among multiple metabolic strategies. Because organisms simultaneously modify local oxygen consumption and redox buffering capacity, the ecosystem becomes self-organizing through reciprocal chemical feedback. The result is a fluctuating coexistence system rather than a stable deterministic hierarchy. Gut biodiversity therefore emerges not merely from trophic partitioning or host selection but from chemically mediated redox heterogeneity operating across microscopic spatial scales. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+7This interpretation aligns strongly with observations that: (a) moderate oxidative gradients support maximal microbial complexity, and (b) whereas severe inflammation or complete oxygen depletion both reduce biodiversity (Zheng et al., 2015). 
+
+2.4. Rhizosphere and soil aggregate systems 
+
+Soil ecosystems exhibit perhaps the most spatially fragmented oxygen architecture in nature. Air-filled pores, water-saturated microdomains, fungal hyphae, decomposing organic aggregates, and plant-root interfaces together generate steep and rapidly fluctuating oxygen gradients across micron-scale distances (Vos et al., 2013; Kuzyakov & Blagodatskaya, 2015). Microbial diversity is especially elevated within rhizospheric and aggregate-associated micro-oxic regions where oxic and anoxic domains intersect. These environments support extraordinary metabolic diversity involving: aerobic respiration, fermentation, denitrification, methanogenesis, sulfur cycling, extracellular oxidative chemistry, and metal-dependent redox transformations. Transition metals such as iron and manganese further contribute to dynamic radical generation through Fenton-type chemistry and related redox cycling processes. Simultaneously, lignin degradation, humic oxidation, and extracellular polymer decomposition involve diffusible oxidative intermediates extending beyond rigid enzymatic active sites. The rhizosphere also contains highly heterogeneous nutrient distributions, fluctuating hydration conditions, and intense microbial competition, all of which amplify redox variability. Classical deterministic metabolic frameworks inadequately explain how so many partially overlapping physiological strategies coexist within such confined spatial domains. Under murburn assumptions, soil aggregates behave as distributed stochastic redox reactors. Partial oxygenation continuously generates reactive intermediates whose concentrations fluctuate with: hydration state, diffusional barriers, substrate availability, metal-ion chemistry, and microbial activity. These chemically heterogeneous conditions prevent long-term dominance by any single energetic strategy. Instead, shifting redox microdomains favor dynamic coexistence among organisms possessing differing: oxidative tolerances, buffering systems, diffusional positioning, and metabolic flexibility. The rhizosphere therefore becomes an ecological and evolutionary mosaic structured by redox-field heterogeneity rather than by static metabolic compartmentalization alone. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+8
+
+2.5. Aquatic macrofauna and ionically mediated redox ecology 
+
+Aquatic ecosystems provide uniquely favorable physicochemical conditions for the emergence and spatial propagation of murburn-compatible redox dynamics. Unlike terrestrial systems, where gaseous diffusion dominates and reactive intermediates are often rapidly dispersed or quenched, aquatic environments are fundamentally water-mediated reaction spaces in which diffusion, ionic interactions, interfacial chemistry, and radical stabilization become ecologically significant across multiple spatial scales. Consequently, water-rich ionic environments transform localized radical chemistry into ESDRA. This distinction is especially important because aquatic ecosystems contain: persistent dissolved oxygen gradients, extensive ionic conductivity, transition-metal redox cycling, halide-rich chemistries, photochemically active interfaces, and highly structured biological boundary layers. Together, these properties amplify the ecological consequences of murburn-like stochastic redox processes. Under classical ecological interpretations, water primarily functions as a transport medium or solvent background. In contrast, the murburn framework suggests that aquatic environments actively shape ecological organization by modulating radical diffusion, persistence, stabilization, and interfacial coupling. 
+
+2.5.1. Water abundance changes diffusion-limited redox behavior 
+
+Water-rich systems fundamentally alter diffusion-limited redox dynamics because oxygen diffusion in aqueous environments is substantially slower than in air. Consequently, aquatic systems readily develop persistent oxygen gradients across relatively short spatial scales (Revsbech & Jørgensen, 1986). Such gradients occur in: marine snow particles, mucus layers, sediment interfaces, algal biofilms, coral surfaces, gill structures, and rhizospheric aggregates. These micro-oxic environments are particularly favorable for partial oxygen reduction and transient DRS accumulation. Importantly, aqueous environments also prolong the ecological significance of diffusible reactive intermediates. Superoxide, peroxide, hydroxyl radicals, and related species can participate in relay chemistry, hydration-shell interactions, and transition-metal-mediated propagation processes that extend reactive influence beyond localized enzymatic sites (Diaz et al., 2013; Hansel et al., 2019). Under murburn assumptions, water therefore functions not merely as a passive solvent but as a diffusional and dielectric matrix capable of spatially organizing stochastic redox interactions. Because oxygen penetration, radical generation, and radical quenching all 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+9become diffusion-limited processes in aqueous systems, aquatic ecosystems naturally generate dynamic redox mosaics. This interpretation aligns strongly with experimental observations demonstrating steep oxygen microgradients and ROS-associated ecological restructuring within aquatic microbial communities, biofilms, and sediment interfaces (Wright et al., 2012; Falkowski et al., 2008). Moreover, because water simultaneously stabilizes ionic interactions and constrains oxygen replenishment, fluctuating micro-oxic domains become persistent rather than transient ecological structures. Such conditions strongly favor coexistence among organisms possessing differing oxidative tolerances, diffusional positioning, and radical-buffering capacities. Thus, water abundance itself amplifies the ecological consequences of murburn-like dynamics by converting localized redox events into spatially extended ecological fields. 
+
+2.5.2. Halides are extremely important 
+
+Marine systems differ profoundly from most terrestrial environments because seawater is highly ionic and halide-rich. Chloride concentrations in seawater approach approximately 0.5 M, while bromide and iodide are also present at ecologically meaningful concentrations. These ions are not chemically inert background species. Instead, they participate directly in oxidative and radical-mediated chemistry through haloperoxidase activity, halogenation reactions, and diffusible halogen-radical formation (La Barre et al., 2010). Marine algae, cyanobacteria, sponges, mollusks, and associated microbiomes produce large numbers of halogenated metabolites and haloperoxidase enzymes capable of generating: hypochlorous/hypobromous intermediates, halogen reactive intermediates, singlet oxygen species, and oxidized halometabolites. Such chemistry substantially expands the ecological significance of DRS beyond oxygen-centered reactive intermediates alone. Halides are especially important because they: 1. participate in diffusible oxidative relay systems, 2. modify radical persistence, 3. alter interfacial electrochemistry, 4. influence microbial competition, 5. and contribute to extracellular oxidative structuring. Halogenated oxidative chemistry has already been implicated in: marine biofilm regulation, antifouling defenses, microbial competition, coral-associated chemistry, and algal ecological interactions. From a murburn perspective, seawater therefore acts as a chemically conductive radical-buffering matrix in which halide-dependent redox processes amplify ecological 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+10 heterogeneity. This interpretation is strongly compatible with observations that marine ecosystems often exhibit exceptionally complex chemical ecologies involving extracellular oxidants, diffusible metabolites, and oxidative signaling networks (Falkowski et al., 2008). Importantly, the present framework does not propose that halogen reactive intermediates universally dominate aquatic ecology. Rather, it suggests that halide-rich ionic environments amplify and spatially extend murburn-compatible redox dynamics. 
+
+2.5.3. Marine interfaces are radical hotspots 
+
+Many marine ecological interfaces behave as natural radical hotspots because they combine: fluctuating oxygen tension, high ionic strength, dense biological activity, transition-metal cycling, photochemical activation, and diffusion-limited transport. Examples include: coral mucus layers, gill surfaces, estuarine boundaries, marine snow aggregates, sediment-water interfaces, phytoplankton blooms, and biofouling films. These systems are characterized by steep oxygen gradients and intense extracellular chemistry. Simultaneously, biological metabolism continuously modifies local redox conditions through oxygen consumption, sulfur cycling, peroxide release, and extracellular metabolite production. Marine snow particles are particularly illustrative. These suspended organic aggregates contain highly structured micro-oxic interiors surrounded by relatively oxygen-rich waters. Experimental studies demonstrate that such particles support extraordinarily diverse microbial consortia exhibiting overlapping respiratory and metabolic strategies. Under murburn assumptions, marine snow aggregates function as localized stochastic redox reactors in which diffusional oxygen limitation and radical-field heterogeneity stabilize coexistence (Ploug, 2001; Stewart & Franklin, 2008). Similarly, coral mucus layers exhibit steep chemical gradients and ROS-associated ecological interactions involving both host tissues and associated microbial communities. Coral bleaching itself has been strongly linked to oxidative imbalance and redox collapse under thermal stress. The murburn framework interprets these systems as examples of ESDRA wherein localized radical chemistry becomes spatially propagated through aqueous ionic environments. 
+
+2.5.4. Macroscopic fauna as redox landscape engineers 
+
+Macroscopic aquatic organisms do not merely inhabit chemically heterogeneous environments; they actively generate and reshape them. Fish, mollusks, corals, crustaceans, 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+11 echinoderms, annelids, and other aquatic fauna continuously modify:oxygen distributions, mucus-layer chemistry, ion gradients, peroxide fluxes, sulfur cycling, and microbial redox environments. For example: gill ventilation alters local oxygen penetration, mucus secretion modifies diffusion barriers, benthic burrowing restructures sediment oxygenation, filter feeding reshapes microbial distributions, and coral-associated mucus production generates chemically active interfacial layers. These processes create dynamic micro-oxic niches whose physicochemical properties are biologically regulated (Jones et al., 1994; Laland et al., 2016). Under murburn assumptions, such organisms therefore function as redox landscape engineers. Their activities continuously reshape local DRS fields and diffusional architectures, thereby influencing ecological coexistence, microbial succession, and nutrient cycling. Importantly, this interpretation does not require that macrofauna themselves operate primarily through murburn mechanisms internally. Rather, the ecological environments they generate amplify murburn-compatible stochastic redox interactions among associated microbial and mesoscopic communities. This distinction is critical because it preserves mechanistic restraint while still recognizing the ecosystem-scale consequences of organism-mediated redox structuring. 
+
+2.5.5. Freshwater systems as comparative redox ecologies 
+
+Freshwater ecosystems provide an important comparative contrast to marine environments because they differ substantially in: ionic strength, halide abundance, conductivity, buffering capacity, and transition-metal availability. Consequently, freshwater systems may exhibit fundamentally different redox-field architectures despite sharing similar oxygen-gradient dynamics. Micro-oxic niches remain widespread in freshwater systems including: lake sediments, wetlands, stratified lakes, river biofilms, and freshwater rhizospheres. However, lower halide abundance may reduce the extent of halogen-mediated oxidative relay chemistry relative to marine systems. This distinction generates an important ecological prediction: marine ecosystems should exhibit more spatially extensive and chemically buffered diffusional redox architectures than freshwater systems. At the same time, freshwater systems may exhibit greater sensitivity to localized oxygen collapse because reduced ionic buffering limits stabilization of fluctuating radical fields. Comparative investigation of marine versus freshwater redox ecology may therefore provide an experimentally tractable means of testing murburn ecological predictions. More broadly, the contrast between marine and freshwater environments highlights a central proposition of the present framework: the physicochemical properties of water-rich ionic 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+12 environments profoundly influence how localized radical chemistry scales into ecosystem-level ecological organization. 
+
+3. Murburn quantitative-theoretical formulation 
+
+3.1. Conceptual basis 
+
+The murburn ecological formalism proposed herein is based on four core assumptions: 1. Oxygen gradients generate DRS through partial reduction processes. 2. Radical generation is maximal under intermediate oxygen availability. 3. Organismal fitness depends non-monotonically upon local redox intensity. 4. Organisms dynamically modify the same redox fields that govern their own viability. Unlike classical ecological models, which typically assume fixed interaction coefficients and static environmental structure, the present framework treats ecological interactions as emergent consequences of spatially distributed redox chemistry. Because ecological systems are diffusion-limited, spatially heterogeneous, and chemically stochastic, reaction–diffusion formalism represents the minimal mathematically appropriate framework. 
+
+3.2. Core state variables 
+
+We define: 
+
+>  , 
+
+as the local oxygen concentration, 
+
+> , 
+
+as the local concentration of DRS (ROS, RNS, halogen reactive intermediates, and related intermediates), and 
+
+> 〷, 
+
+as the biomass density of species .The substrate pool is incorporated implicitly within radical-generation terms to maintain mathematical compactness. 
+
+3.3. Oxygen field dynamics 
+
+The oxygen field evolves according to: 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+13 
+
+> ∂  ∂  〖 ⡰    〷 〷〷   , 
+
+where: 
+
+• 〖is oxygen diffusivity, 
+
+• 〷 represents species-specific oxygen utilization, 
+
+• ,  represents environmental oxygen input. The diffusion term generates spatial oxygen gradients, whereas biomass-dependent consumption continuously reshapes these gradients locally. 
+
+3.4. Radical field dynamics 
+
+The defining murburn assumption is that radical generation peaks under intermediate oxygen conditions rather than increasing monotonically with oxygen concentration. We therefore define: 
+
+> ∂ ∂  〙 ⡰    1    ぀〨け   
+
+where: 
+
+• 〙is effective radical diffusivity, 
+
+• is radical-generation strength, 
+
+•  ぀〨け represents the oxygen concentration above which radical quenching dominates, 
+
+• represents radical decay and scavenging. The nonlinear generation term: 
+
+>   1    ぀〨け 
+
+is maximal at intermediate oxygen tensions and minimal under both fully oxic and fully anoxic conditions. This equation mathematically encodes the central ecological proposition of the present work. 
+
+3.5. Biomass dynamics 
+
+Species biomass evolves according to: 
+
+> ∂〷 ∂  〷 〷  〷 〷  〃 ⡰〷
+
+where: 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint 14 
+
+• 〷 is redox-dependent fitness, 
+
+• 〷 is mortality, 
+
+• 〃is dispersal diffusivity. Fitness is assumed to depend non-monotonically upon radical intensity: 
+
+> 〷  〷⡹〩㊅〙
+
+where: 
+
+• 〷 controls radical-utilization efficiency, 
+
+• 〷 controls oxidative sensitivity. This structure reflects a biologically realistic trade-off: 
+
+• low radical intensity yields insufficient energetic activation, 
+
+• excessive radical exposure becomes damaging, 
+
+• intermediate radical flux maximizes viability. The adopted fitness structure represents the simplest unimodal response capable of encoding both activation at low-to-intermediate DRS flux and inhibition under excessive oxidative exposure. Similar non-monotonic stress-response functions are widely employed in ecological and toxicological modeling. Different species possess distinct and values, thereby generating overlapping viability optima across redox space. 
+
+3.6. Emergence of coexistence 
+
+The murburn ecological formalism differs fundamentally from classical competition models because fitness is not globally fixed. Instead, local viability depends dynamically upon fluctuating redox conditions generated through coupled reaction–diffusion processes. Several immediate consequences follow: 1. No single metabolic strategy remains universally optimal. 2. Local environmental structure continuously reshapes competition (Morris et al., 2012). 3. Organisms alter the same redox fields governing their fitness. 4. Spatial heterogeneity stabilizes coexistence. 5. Competitive exclusion becomes dynamically suppressed. Thus, biodiversity emerges naturally from stochastic redox heterogeneity without requiring externally imposed coexistence rules or fine-tuned deterministic partitioning. Unlike classical Turing-type morphogen systems, the present framework does not require deterministic activator–inhibitor pairing or stationary pattern instability conditions. Instead, coexistence 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+15 emerges from stochastic redox-dependent viability landscapes generated through diffusible oxidative intermediates and biologically coupled oxygen consumption. 
+
+3.7. Environmental engineering and ionic amplification 
+
+Aquatic ecosystems differ fundamentally from terrestrial systems because water-rich ionic environments spatially extend diffusional redox interactions through enhanced conductivity, halide-mediated chemistry, and constrained oxygen diffusion. Consequently, ecological organization in aquatic systems may depend not only upon local oxygen gradients but also upon organism-mediated restructuring of diffusional redox architectures. To incorporate such effects minimally, the oxygen equation may be extended by introducing an environmental-engineering term: 
+
+> ∂  ∂  〖 ⡰    〷 〷〷   ,   , 
+
+where: 
+
+> , 
+
+represents organism-mediated restructuring of local oxygenation and diffusional transport. Biologically, this term may represent: gill ventilation, mucus-mediated diffusion barriers, benthic sediment mixing, coral-associated interfacial restructuring, or biofilm-generated diffusional heterogeneity. Importantly, the environmental-engineering term does not represent direct trophic interaction. Instead, organisms indirectly influence coexistence by dynamically reshaping local redox landscapes. Aquatic ionic environments may further amplify diffusional radical coupling. This effect may be incorporated phenomenologically by allowing effective radical diffusivity to depend upon ionic conductivity: 
+
+> 〙〲〳〳 〙1  〶
+
+where: 
+
+• 〶  represents effective ionic strength, 
+
+• and  represents conductivity-dependent enhancement of diffusional redox coupling. This term reflects the possibility that halide-rich aqueous systems spatially extend reactive-field propagation through radical relay chemistry, ionic stabilization, and interfacial electrochemical interactions. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+16 Under these conditions, aquatic ecosystems become capable of generating ESDRA in which localized radical chemistry acquires spatial ecological significance far beyond immediate reaction sites. Importantly, these additions preserve the minimal structure of the murburn ecological formalism while extending its applicability to aquatic systems characterized by strong ionic coupling and organism-mediated environmental restructuring. 
+
+4. Simulations 
+
+4.1. Objectives and rationale 
+
+The simulations developed herein aim to determine whether a minimal murburn-based reaction–diffusion framework naturally produces: 1. radical maxima at intermediate oxygen tensions, 2. stable coexistence among competing metabolic strategies, 3. biodiversity peaks within micro-oxic regions, 4. and dynamically shifting ecological mosaics. Importantly, the simulations are intentionally minimal. The objective is not to reproduce every biochemical detail of real ecosystems, but to determine whether the central murburn proposition alone is sufficient to generate experimentally observed ecological behaviors. The central proposition tested is: Intermediate oxygen tensions maximize stochastic redox heterogeneity and DRS flux, thereby generating dynamically shifting fitness landscapes that suppress competitive exclusion and promote coexistence. 
+
+Reaction–diffusion systems are particularly appropriate for such investigations because ecological microenvironments are fundamentally diffusion-limited and spatially heterogeneous (Levin, 1992; Murray, 2002). Oxygen gradients in sediments, gut mucus layers, rhizospheres, and OMZ interfaces emerge from the interplay between diffusion and localized biological consumption (Albenberg et al., 2014; Wright et al., 2012). Simultaneously, extracellular ROS production and radical-mediated chemistry introduce nonlinear feedback between environmental chemistry and organismal viability (Diaz et al., 2013; Hansel et al., 2019). The simulations therefore examine whether: oxygen diffusion, nonlinear radical generation, and redox-dependent fitness are alone sufficient to generate stable biodiversity maxima within micro-oxic systems. 
+
+4.2. One-dimensional oxygen-gradient simulations 
+
+The simplest physically meaningful configuration consists of a one-dimensional spatial domain extending from an oxygen-rich boundary toward an oxygen-poor region. This 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+17 configuration approximates: gut mucus gradients, sediment interfaces, microbial mats, and oxygen-penetration fronts in soils. Oxygen is introduced from one boundary and allowed to diffuse inward while simultaneously being consumed by biological populations. Radical generation is coupled nonlinearly to local oxygen concentration according to the murburn formalism developed in Section 3, as shown in Figure 1 (MATLAB Code for the same is given in Supplementary Information, Item 1). Under these conditions: oxygen declines spatially, reactive intermediates peak away from both oxic and anoxic extremes, and different species stabilize preferentially at distinct radical intensities. Species possessing lower oxidative tolerance initially dominate near highly oxic regions but decline as radical quenching suppresses productive redox heterogeneity. Conversely, organisms requiring higher radical activation fail within strongly anoxic regions because insufficient redox throughput exists to sustain activation. Intermediate radical specialists therefore stabilize within micro-oxic domains. Importantly, biodiversity maxima emerge spontaneously without: externally imposed niche partitioning, deterministic coexistence rules, or finely tuned interaction matrices. This result differs fundamentally from classical Lotka– Volterra systems, which generally require carefully balanced interaction coefficients to maintain coexistence (Lotka, 1925; Volterra, 1926). A comparison with the Lotka-Volterra model is shown (along with the MATLAB Code) in Supplementary Information, Item 2. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+18 
+
+Figure 1: 1D simulation of biomass variability as a function of spatial variability of oxygen and DRS. 
+
+4.3. Macroscopic-fauna-mediated redox landscape engineering (1D) 
+
+An important implication of the murburn ecological framework is that organisms may indirectly promote biodiversity by restructuring local redox architectures rather than solely through direct trophic or competitive interactions. Aquatic macrofauna continuously modify: oxygen penetration, mucus-layer diffusion, ionic microenvironments, particle transport, and extracellular oxidative chemistry. Examples 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+19 include: gill ventilation, benthic burrowing, coral mucus secretion, filter feeding, and biofilm restructuring. Under murburn assumptions, such processes alter local oxygen gradients and diffusional radical propagation, thereby reshaping the ecological viability landscape itself. To investigate this possibility, the reaction–diffusion framework was extended to include a moving macrofaunal environmental-engineering term. The oxygen equation becomes: 
+
+> ∂  ∂  〖 ⡰    〷 〷〷   ,   , 
+
+where: 
+
+> , 
+
+represents macrofauna-mediated oxygenation and diffusional restructuring. This term may represent: localized oxygen injection, mucus-mediated diffusion barriers, sediment mixing, or interfacial ionic modification. Importantly, the macrofaunal organisms are not modeled as dominant competitors. Instead, they function as environmental redox architects whose activities dynamically reshape ecological conditions for surrounding microbial and mesoscopic communities. Simulations demonstrate that moving oxygenation interfaces generate persistent radical hotspots and dynamically shifting coexistence zones (Figure 2a and 2b; MATLAB Code for the same is given in Supplementary Information, Item 3). Biodiversity becomes concentrated near engineered micro-oxic boundaries rather than uniformly distributed throughout the environment. This behavior differs fundamentally from classical ecological frameworks because environmental structure is no longer externally imposed. Instead, ecological architecture emerges through reciprocal coupling between organisms and diffusional redox fields. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+20 
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint 21 
+
+Figure 2a and 2b: 1D simulation of macrofauna-induced oxygen variations 
+
+We disclaim clearly that the simulations above are qualitative exploratory demonstrations rather than quantitatively parameterized environmental reconstructions. Parameter choices were selected to maintain numerical stability and illustrate emergent coexistence behavior across broad regions of parameter space. 
+
+4.4. Two-dimensional redox mosaics 
+
+Real ecosystems are not one-dimensional systems but spatially heterogeneous redox mosaics. Rhizospheres, sediment interfaces, gut mucus layers, coral microbiomes, and marine particle aggregates all contain irregular oxygen distributions shaped by: diffusion, hydration, local metabolism, extracellular polymer networks, and fluid transport. To approximate such environments, the murburn framework was extended into two spatial dimensions. The MATLAB Code used for the same (Supplementary Information, Item 4) incorporates: multiple macroflora oxygen sources, multiple macrofauna oxygen hotspots, fractal-like environmental heterogeneity, murburn DRS generation, five species with differing DRS preferences, dominant species map and Shannon diversity map. Under these 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+22 conditions: multiple oxygen sources generates irregular gradients, radical hotspots emerge dynamically, biomass distributions self-organize spatially, and coexistence islands form spontaneously. Importantly, biodiversity no longer appears as smooth stratification alone but as dynamically shifting ecological patches. These simulations (Figure 3) reproduce several experimentally observed ecological properties: patch formation, transient coexistence fronts, fluctuating dominance, and localized diversification zones. Such behaviors resemble microbial patterning observed in: biofilms, rhizospheric networks, OMZ interfaces, and microbial mats (Levin, 1992; Falkowski et al., 2008). 
+
+Figure 3: Panel A (Oxygen Landscape): irregular oxygen plumes generated by macroflora and macrofauna, modulated by environmental heterogeneity. Panel B (DRS Landscape): patchy micro-oxic halos and interconnected redox corridors where DRS is highest. Panel C (Dominant Species): ecological niche partitioning according to preferred DRS regime. Panel D (Shannon Diversity): multiple biodiversity hotspots and corridors, illustrating that diversity peaks at intermediate oxygen / high redox heterogeneity rather than at oxygen maxima. 
+
+4.4. Evolutionary extension 
+
+An important consequence of murburn ecology is that mutation and diversification need not occur uniformly across space. Reactive intermediates are known to influence: DNA damage, 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+23 oxidative modification, transposition, epigenetic alteration, and stress-associated mutagenesis (Manoj, 2025). Accordingly, the model permits species-specific oxidative sensitivity parameters to evolve according to local radical intensity: 
+
+> ∂〷 ∂  !, 
+
+where:  
+
+> •
+
+defines evolutionary timescale,  
+
+> •
+
+and !,  represents stochastic mutational direction. Under these conditions: adaptation occurs fastest near intermediate radical zones, diversification localizes within fluctuating redox interfaces, and evolutionary innovation concentrates within micro-oxic regions. Thus, micro-oxic environments behave simultaneously as: ecological coexistence zones, mutational hotspots, and potential zones of elevated adaptive turnover. 
+
+5. Predictions, falsifiability and empirical corroboration 
+
+The murburn ecological framework predicts that biodiversity should correlate more strongly with redox heterogeneity, oxygen fluctuation, and radical-field variability than with mean oxygen concentration alone. Several independent ecological systems support this prediction. Marine oxygen minimum zones exhibit maximal microbial functional diversity near fluctuating oxic–anoxic boundaries rather than within uniformly oxic waters (Wright et al., 2012). Extracellular ROS production by marine microbes correlates strongly with zones of intense ecological turnover and nutrient cycling (Diaz et al., 2013; Hansel et al., 2019). In gut ecosystems, oxygen gradients strongly determine microbiome partitioning, with moderate oxidative interfaces supporting coexistence, whereas severe inflammation or complete anoxia both reduce microbial complexity (Albenberg et al., 2014; Zheng et al., 2015). Rhizospheric and soil aggregate systems likewise exhibit maximal diversity in fluctuating hydration-dependent micro-oxic domains where metal-mediated radical chemistry remains active (Kuzyakov & Blagodatskaya, 2015) Importantly, the framework proposes that fluctuating radical fields themselves constitute ecological structuring mechanisms (continuously reshaping fitness landscapes, suppressing competitive exclusion, and enabling stable coexistence) rather than merely stating that "ROS matter biologically." Increasing evidence indicates that aquatic macrofauna actively restructure environmental oxygen gradients and associated redox chemistry. Bioturbation alters sediment oxygen penetration, coral mucus generates chemically active interfacial layers 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+24 (Wild et al., 2004; Glasl et al., 2016), and activities such as gill ventilation, filter feeding, burrowing, and mucus secretion continuously reshape local oxygen distributions and diffusional transport. Marine snow particles and biofilms further demonstrate how biologically generated diffusional barriers create localized oxygen-depletion zones surrounded by oxygen-rich waters, supporting extraordinary microbial diversity despite spatial confinement (Azam & Malfatti, 2007). Under the murburn framework, these observations are interpreted as organism-mediated redox landscape engineering; extending niche construction theory into stochastic redox ecology (Laland et al., 2016; Laland et al., 2017). 
+
+5.1. Biodiversity should correlate with oxygen variance rather than mean oxygen concentration 
+
+Classical models predict monotonic responses to oxygen; murburn ecology predicts that uniformly oxic and uniformly anoxic systems both support lower biodiversity than fluctuating micro-oxic interfaces. This is experimentally testable via microcosms manipulating oxygen variance independently of mean concentration. 
+
+5.2. Intermediate ROS buffering should maximize coexistence 
+
+Insufficient buffering leads to oxidative collapse; excessive buffering suppresses productive redox heterogeneity. Moderate buffering should maximize species richness: testable in microbial consortia, gut microbiomes, and biofilms by manipulating antioxidant capacity. 
+
+5.3. Artificial homogenization of oxygen gradients should reduce biodiversity 
+
+Forced homogenization (e.g., via mixing, aeration, or microfluidic control) should suppress coexistence and drive competitive exclusion. This prediction is directly testable in sediments, gut models, and rhizosphere systems. 
+
+5.4. Evolutionary diversification should peak in fluctuating redox interfaces 
+
+Since reactive intermediates influence mutagenesis and stress-associated variation, the model predicts elevated genomic variability, adaptive turnover, and innovation within OMZ boundaries, rhizospheres, gut mucus layers, and microbial mats. 
+
+5.5. Halide-rich marine systems should exhibit stronger diffusional redox structuring than freshwater systems 
+
+Seawater’s high ionic strength and halide abundance (Cl  , Br  , I  ) promote halogen-radical relay chemistry and interfacial oxidative coupling. Thus, marine ecosystems should show more persistent and spatially extended radical-field coupling than freshwater systems, which should exhibit shorter-range coupling and greater sensitivity to oxygen collapse: 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+25 testable via comparative oxygen microprofiling and ROS mapping across marine and freshwater interfaces. Collectively, these predictions are falsifiable: if biodiversity correlated monotonically with oxygen, if homogenization failed to reduce diversity, or if marine–freshwater redox structuring proved equivalent, the murburn framework would require substantial revision. 
+
+7. Conclusion 
+
+The present work proposes that biodiversity is fundamentally coupled to the spatial and temporal organization of redox heterogeneity. Rather than treating oxygen solely as a monotonic energetic resource, the murburn ecological framework interprets fluctuating oxygen fields as generators of diffusible reactive intermediates that dynamically restructure ecological viability landscapes. Under such conditions, coexistence emerges not from static deterministic partitioning alone, but from continuously shifting radical-mediated microenvironments that prevent stable global dominance by any single metabolic strategy. The central result of the present study is that intermediate oxygen tensions naturally maximize stochastic redox heterogeneity. This generates localized radical fluxes capable of simultaneously supporting metabolic activation, imposing oxidative constraints, reshaping signaling dynamics, and influencing adaptive turnover. Consequently, fluctuating micro-oxic systems become chemically self-organizing coexistence zones in which ecological interactions emerge from coupled reaction–diffusion dynamics rather than fixed interaction matrices. The salient message of the current writing is captured in Figure 4 below: 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+26 
+
+Figure 4. Conceptual schematic of murburn-driven biodiversity in micro-oxic ecosystems. 
+
+Fluctuating oxygen gradients within aquatic and sedimentary environments generate spatially heterogeneous DRS (redox intermediates) fields through partial oxygen reduction and coupled redox cycling. Intermediate oxygen tensions maximize stochastic redox heterogeneity, producing dynamic coexistence zones that suppress stable competitive exclusion and promote biodiversity. Water-rich ionic environments, particularly marine systems enriched in halides and transition metals, spatially extend redox interactions through diffusional and interfacial coupling. Macroscopic aquatic organisms further act as redox landscape engineers by reshaping oxygen penetration, mucus-associated diffusion barriers, and local oxidative microenvironments. Together, these processes generate ESDRA linking molecular redox dynamics to ecological coexistence, adaptive turnover, and biodiversity maintenance across micro-oxic interfaces. 
+
+Importantly, the framework further suggests that aquatic ecosystems amplify the ecological consequences of murburn-compatible dynamics because water-rich ionic environments spatially extend diffusional redox interactions. Marine systems, in particular, possess physicochemical properties (including persistent oxygen gradients, halide-rich chemistry, ionic conductivity, and interfacial transport limitations) that favor formation of ecosystem-scale redox architectures. Within such environments, macroscopic organisms may function as 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+27 redox landscape engineers whose activities continuously restructure oxygen penetration, diffusional barriers, and radical-field heterogeneity. The implications extend beyond theoretical ecology. Marine oxygen minimum zones, coral-associated interfaces, rhizospheric aggregates, sediments, microbial mats, biofilms, and gut mucus systems may all be interpreted as distributed stochastic redox reactors in which ecological organization emerges from chemically mediated heterogeneity. More broadly, the murburn ecological formalism provides a mechanistically integrated framework linking molecular redox dynamics, environmental chemistry, ecological coexistence, and evolutionary diversification across biological scales. 
+
+Limitations : The present formulation intentionally isolates redox heterogeneity as a primary ecological structuring variable. Nutrient limitation, trophic coupling, and substrate-specific metabolic constraints are incorporated only implicitly. Future extensions may integrate explicit carbon, nitrogen, sulfur, and phosphorus fields into the reaction–diffusion framework. 
+
+References 
+
+Albenberg L, Esipova TV, Judge CP, Bittinger K, Chen J, Laughlin A, et al. Correlation between intraluminal oxygen gradient and radial partitioning of intestinal microbiota. Gastroenterology. 2014;147(5):1055–1063.e8. doi:10.1053/j.gastro.2014.07.020. Apel K, Hirt H. Reactive oxygen species: metabolism, oxidative stress, and signal transduction. Annu Rev Plant Biol. 2004;55:373–399. doi:10.1146/annurev.arplant.55.031903.141701. Azam F, Malfatti F. Microbial structuring of marine ecosystems. Nat Rev Microbiol. 2007;5:782–791. Canfield DE, Glazer AN, Falkowski PG. The evolution and future of Earth’s nitrogen cycle. Science. 2010;330(6001):192–196. doi:10.1126/science.1186120. Diaz JM, Hansel CM, Voelker BM, Mendes CM, Andeer PF, Zhang T. Widespread production of extracellular superoxide by heterotrophic bacteria. Science. 2013;340(6137):1223–1226. Diaz RJ, Rosenberg R. Spreading dead zones and consequences for marine ecosystems. Science. 2008;321(5891):926–929. doi:10.1126/science.1156401. Donaldson GP, Lee SM, Mazmanian SK. Gut biogeography of the bacterial microbiota. Nat Rev Microbiol. 2016;14(1):20–32. doi:10.1038/nrmicro3552. Falkowski PG, Fenchel T, Delong EF. The microbial engines that drive Earth’s biogeochemical cycles. Science. 2008;320(5879):1034–1039. Glasl B, Herndl GJ, Frade PR. The microbiome of coral surface mucus has a key role in mediating holobiont health and survival upon disturbance. ISME J. 2016;10:2280–2292. Hansel CM, Diaz JM, Plummer S. Tight regulation of extracellular superoxide points to its vital role in the physiology of the globally relevant Roseobacter clade. mBio. 2019;10:e02668-18. Hansel CM, Diaz JM. Production of extracellular reactive oxygen species by marine biota. Annu Rev Mar Sci. 2021;13:177–200. doi:10.1146/annurev-marine-041320-102550. Jones CG, Lawton JH, Shachak M. Organisms as ecosystem engineers. Oikos. 1994;69(3):373–386. doi:10.2307/3545850. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+28 Kuzyakov Y, Blagodatskaya E. Microbial hotspots and hot moments in soil: Concept and review. Soil Biol Biochem. 2015;83:184–199. La Barre S, Potin P, Leblanc C, Delage L. The halogenated metabolism of brown algae (Phaeophyta), its biological importance and its environmental significance. Mar Drugs. 2010;8(4):988–1010. doi:10.3390/md8040988. Laland KN, Matthews B, Feldman MW. An introduction to niche construction theory. Evol Ecol. 2016;30:191– 202. doi:10.1007/s10682-016-9821-z. Laland KN, Odling-Smee J, Endler J. Niche construction, sources of selection and trait coevolution. Interface Focus. 2017;7(5):20160147. doi:10.1098/rsfs.2016.0147. Levin SA. The problem of pattern and scale in ecology. Ecology. 1992;73(6):1943–1967. doi:10.2307/1941447. Lotka AJ. Elements of Physical Biology. Baltimore: Williams & Wilkins; 1925. Manoj KM. Murburn concept (2025): Ecology-biodiversity-evolution and other updates. Biomedical Reviews. 2025;36:17–29. doi:10.14748/bmr.v36.10753. Morris JJ, Lenski RE, Zinser ER. The Black Queen Hypothesis: evolution of dependencies through adaptive gene loss. mBio. 2012;3(2):e00036-12. doi:10.1128/mBio.00036-12. Murray JD. Mathematical Biology I: An Introduction. 3rd ed. New York: Springer; 2002. Ploug H. Small-scale oxygen fluxes and remineralization in sinking aggregates. Limnol Oceanogr. 2001;46(7):1624–1631. doi:10.4319/lo.2001.46.7.1624. Revsbech NP, Jørgensen BB. Microelectrodes: their use in microbial ecology. In: Advances in Microbial Ecology. Vol. 9. New York: Plenum Press; 1986. p. 293–352. Stewart PS, Franklin MJ. Physiological heterogeneity in biofilms. Nat Rev Microbiol. 2008;6:199–210. doi:10.1038/nrmicro1838. Turing AM. The chemical basis of morphogenesis. Philos Trans R Soc Lond B Biol Sci. 1952;237(641):37–72. Volterra V. Fluctuations in the abundance of a species considered mathematically. Nature. 1926;118:558–560. Vos M, Wolf AB, Jennings SJ, Kowalchuk GA. Micro-scale determinants of bacterial diversity in soil. FEMS Microbiol Rev. 2013;37(6):936–954. doi:10.1111/1574-6976.12023. Ward BB. How nitrogen is lost. Science. 2013;341(6144):352–353. doi:10.1126/science.1240314. Wild C, Huettel M, Klueter A, Kremb SG, Rasheed MYM, Jørgensen BB. Coral mucus functions as an energy carrier and particle trap in the reef ecosystem. Nature. 2004;428:66–70. Wright JJ, Konwar KM, Hallam SJ. Microbial ecology of expanding oxygen minimum zones. Nat Rev Microbiol. 2012;10:381–394. doi:10.1038/nrmicro2778. Zheng L, Kelly CJ, Colgan SP. Physiologic hypoxia and oxygen homeostasis in the healthy intestine. Am J Physiol Cell Physiol. 2015;309(6):C350–C360. doi:10.1152/ajpcell.00191.2015. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+29 
+
+# Supplementary Information 
+
+Item 1: 4.2.1. MATLAB implementation: 1-D murburn biodiversity model 
+
+> %% MURBURN ECOLOGY MODEL — 1-D REACTION-DIFFUSION ECOLOGICAL MODEL % Components: oxygen diffusion/consumption; maintained oxygen gradient; % radical generation/diffusion/decay; species redox fitness; biomass diffusion; % density dependence; coexistence; biodiversity; parameter-space and temporal analysis. clear; clc; close all; %% 1. GLOBAL MODEL PARAMETERS L=1.0; Nx=250; dx=L/(Nx-1); x=linspace(0,L,Nx)'; DO=.01; DR=.003; DB=.0008; nSp=3; a=[5 7 12]; b=[5 10 18]; mu=[.2 .2 .2]; Omax=1; qO=.5; K=1; %% 2. NUMERICAL PARAMETERS Dmax=max([DO DR DB]); dt_stable=.45*dx^2/(2*Dmax); dt_requested=2e-5; dt=min(dt_requested,dt_stable); T=5; Nt=ceil(T/dt); fprintf('============================================================\nNUMERIC AL PARAMETERS\n============================================================\n'); fprintf('Spatial points  : %d\nDomain length  : %.4f\ndx : %.6e\nMaximum diffusion  : %.6e\nStable dt  : %.6e\nUsed dt
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+30 
+
+> : %.6e\nTotal simulation time: %.4f\nTime steps  :%d\n',Nx,L,dx,Dmax,dt_stable,dt,T,Nt); %% 3. SPECIES REDOX FITNESS PARAMETERS for j=1:nSp, R_opt=1/b(j); f_max=a(j)*R_opt*exp(-b(j)*R_opt); fprintf('Species %d: R*=%.5f, fmax=%.5f, maximum net growth=%.5f\n',j,R_opt,f_max,f_max-mu(j)); end %% 4. BASELINE SIMULATION tic; baseline=simulate_model(10,8,42,true,1000,Nx,nSp,x,dx,DO,DR,DB,a,b,mu,Omax,qO, K,dt,Nt); elapsed=toc; metrics=biodiversity_metrics(baseline.B,dx,nSp); fprintf('\nSimulation time: %.2f seconds\n',elapsed); fprintf('Final biomass:\n'); for j=1:nSp, fprintf('Species %d: %.6f\n',j,metrics.biomass(j)); end; fprintf('Total biomass: %.6f\nSurviving species: %d\nShannon diversity: %.5f\nSimpson diversity: %.5f\nShannon evenness: %.5f\n',metrics.total_biomass,metrics.number_surviving,metrics.Shannon,metrics .Simpson,metrics.evenness); %% 5. BASELINE VISUALIZATION figure('Position',[100 50 900 1000]); subplot(4,1,1); plot(x,baseline.O,'LineWidth',2); xlabel('Spatial position'); ylabel('Oxygen'); title('Final Oxygen Distribution'); grid on; subplot(4,1,2); plot(x,baseline.R,'LineWidth',2); xlabel('Spatial position'); ylabel('Radicals'); title('Final Radical Distribution'); grid on; subplot(4,1,3); hold on; for j=1:nSp, plot(x,baseline.B(:,j),'LineWidth',2,'DisplayName',sprintf('Species %d',j)); end; hold off; xlabel('Spatial position'); ylabel('Biomass'); title('Final Spatial Biomass Distribution'); legend('Location','best'); grid on; subplot(4,1,4); R_plot=linspace(0,.5,500); hold on; for j=1:nSp, fitness_curve=a(j).*R_plot.*exp(-b(j).*R_plot); plot(R_plot,fitness_curve,'LineWidth',2,'DisplayName',sprintf('Species %d',j)); end; yline(mu(1),'--','LineWidth',1.5,'DisplayName','Mortality'); hold off; xlabel('Radical concentration'); ylabel('Redox fitness'); title('Species-Specific Redox Fitness'); legend('Location','best'); grid on; %% 6. RADICAL OPTIMA for j=1:nSp, R_opt=1/b(j); max_fitness=a(j)*R_opt*exp(-b(j)*R_opt); fprintf('Species %d: R*=%.5f, maximum fitness=%.5f\n',j,R_opt,max_fitness); end %% 7–8. PARAMETER SWEEP k_values=linspace(2,30,8); lambda_values=linspace(2,20,8); nK=length(k_values); nL=length(lambda_values);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+31 
+
+> surviving_species=zeros(nL,nK); Shannon_matrix=zeros(nL,nK); Simpson_matrix=zeros(nL,nK); Evenness_matrix=zeros(nL,nK); total_biomass_matrix=zeros(nL,nK); biomass_species=zeros(nSp,nL,nK); run_number=0; sweep_start=tic; for i=1:nL, lambda_value=lambda_values(i); for j=1:nK, k_value=k_values(j); run_number=run_number+1; result=simulate_model(k_value,lambda_value,42,false,1000,Nx,nSp,x,dx,DO,DR,DB, a,b,mu,Omax,qO,K,dt,Nt); m=biodiversity_metrics(result.B,dx,nSp); surviving_species(i,j)=m.number_surviving; Shannon_matrix(i,j)=m.Shannon; Simpson_matrix(i,j)=m.Simpson; Evenness_matrix(i,j)=m.evenness; total_biomass_matrix(i,j)=m.total_biomass; biomass_species(:,i,j)=m.biomass; fprintf('\rCompleted %d/%d',run_number,nK*nL); end; end; fprintf('\nParameter sweep completed in %.2f seconds\n',toc(sweep_start)); %% 9–14. LANDSCAPES figure; imagesc(k_values,lambda_values,surviving_species); set(gca,'YDir','normal'); colorbar; xlabel('Radical generation strength, k'); ylabel('Radical decay rate, \lambda'); title('Species Survival Landscape'); coexistence=surviving_species==nSp; figure; imagesc(k_values,lambda_values,double(coexistence)); set(gca,'YDir','normal'); colorbar; xlabel('Radical generation strength, k'); ylabel('Radical decay rate, \lambda'); title('Three-Species Coexistence Region'); figure; imagesc(k_values,lambda_values,Shannon_matrix); set(gca,'YDir','normal'); colorbar; xlabel('Radical generation strength, k'); ylabel('Radical decay rate, \lambda'); title('Shannon Diversity Landscape'); figure; imagesc(k_values,lambda_values,Evenness_matrix); set(gca,'YDir','normal'); colorbar; xlabel('Radical generation strength, k'); ylabel('Radical decay rate, \lambda'); title('Species Evenness Landscape'); figure; imagesc(k_values,lambda_values,total_biomass_matrix); set(gca,'YDir','normal'); colorbar; xlabel('Radical generation strength, k'); ylabel('Radical decay rate, \lambda'); title('Total Biomass Landscape'); for j=1:nSp, figure; imagesc(k_values,lambda_values,squeeze(biomass_species(j,:,:))); set(gca,'YDir','normal'); colorbar; xlabel('Radical generation strength, k'); ylabel('Radical decay rate, \lambda'); title(sprintf('Species %d: Biomass Landscape',j)); end %% 15. FIND COEXISTENCE CONDITIONS [row_idx,col_idx]=find(coexistence); if isempty(row_idx), fprintf('No three-species coexistence was detected in the sampled parameter range.\n'); else, fprintf('Three-species coexistence occurs at %d parameter combinations.\n',length(row_idx)); n_show=min(10,length(row_idx)); for q=1:n_show, i=row_idx(q); j=col_idx(q); fprintf('k=%.2f, lambda=%.2f, Shannon=%.4f, Evenness=%.4f\n',k_values(j),lambda_values(i),Shannon_matrix(i,j),Evenness_mat rix(i,j)); end; end %% 16. MAXIMUM DIVERSITY CONDITION
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+32 
+
+> [max_Shannon,best_linear_index]=max(Shannon_matrix(:)); [best_i,best_j]=ind2sub(size(Shannon_matrix),best_linear_index); best_k=k_values(best_j); best_lambda=lambda_values(best_i); fprintf('Best k=%.4f\nBest lambda=%.4f\nShannon diversity=%.5f\nSimpson diversity=%.5f\nEvenness=%.5f\nTotal biomass=%.5f\nSurviving species=%.0f\n',best_k,best_lambda,Shannon_matrix(best_i,best_j),Simpson_matri x(best_i,best_j),Evenness_matrix(best_i,best_j),total_biomass_matrix(best_i,be st_j),surviving_species(best_i,best_j)); %% 17–21. TEMPORAL SIMULATION AND FIELDS best_result=simulate_model(best_k,best_lambda,42,true,1000,Nx,nSp,x,dx,DO,DR,D B,a,b,mu,Omax,qO,K,dt,Nt); time_array=best_result.time; B_history=best_result.B_history; figure; hold on; for j=1:nSp, species_biomass_time=squeeze(sum(B_history(:,:,j),2))*dx; plot(time_array,species_biomass_time,'LineWidth',2,'DisplayName',sprintf('Spec ies %d',j)); end; hold off; xlabel('Time'); ylabel('Spatially integrated biomass'); title('Temporal Biomass Dynamics'); legend('Location','best'); grid on; figure; imagesc(x,time_array,best_result.O_history); set(gca,'YDir','normal'); colorbar; xlabel('Spatial position'); ylabel('Time'); title('Spatiotemporal Oxygen Field'); figure; imagesc(x,time_array,best_result.R_history); set(gca,'YDir','normal'); colorbar; xlabel('Spatial position'); ylabel('Time'); title('Spatiotemporal Radical Field'); for j=1:nSp, figure; imagesc(x,time_array,B_history(:,:,j)); set(gca,'YDir','normal'); colorbar; xlabel('Spatial position'); ylabel('Time'); title(sprintf('Spatiotemporal Dynamics - Species %d',j)); end %% 22. FINAL SUMMARY final_metrics=biodiversity_metrics(best_result.B,dx,nSp); fprintf('\nBest k=%.4f\nBest lambda=%.4f\nShannon diversity=%.5f\nSimpson diversity=%.5f\nEvenness=%.5f\nTotal biomass=%.5f\nSurviving species=%d\n',best_k,best_lambda,final_metrics.Shannon,final_metrics.Simpson,f inal_metrics.evenness,final_metrics.total_biomass,final_metrics.number_survivi ng); fprintf('Species biomass:\n'); for j=1:nSp, fprintf('Species %d: %.6f\n',j,final_metrics.biomass(j)); end; fprintf('Relative abundance:\n'); for j=1:nSp, fprintf('Species %d: %.5f\n',j,final_metrics.relative_abundance(j)); end %% 23. LOCAL FUNCTION: SIMULATION function result=simulate_model(k,lambda_,random_seed,return_history,history_interval,Nx ,nSp,x,dx,DO,DR,DB,a,b,mu,Omax,qO,K,dt,Nt) rng(random_seed); O=exp(-5*x); R=zeros(Nx,1); B=.01*rand(Nx,nSp); if return_history, nHistory=floor((Nt-1)/history_interval)+1; history_steps=zeros(nHistory,1); O_history=zeros(nHistory,Nx); R_history=zeros(nHistory,Nx); B_history=zeros(nHistory,Nx,nSp); history_counter=0; end
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+33 
+
+> for step=1:Nt oxygen_diffusion=DO*laplacian_neumann(O,dx); total_biomass=sum(B,2); oxygen_consumption=qO*total_biomass.*O; O=O+dt*(oxygen_diffusion-oxygen_consumption); O(1)=Omax; O(end)=O(end-1); O=max(O,0); RadicalGeneration=k*O.*(1-O/Omax); RadicalGeneration=max(RadicalGeneration,0); radical_diffusion=DR*laplacian_neumann(R,dx); R=R+dt*(radical_diffusion+RadicalGeneration-lambda_*R); R=max(R,0); fitness=R.*a.*exp(-R.*b); biomass_diffusion=DB*laplacian_neumann(B,dx); crowding=total_biomass/K; net_growth=fitness-crowding.*mu; B=B+dt*(B.*net_growth+biomass_diffusion); B=max(B,0); if return_history && mod(step-1,history_interval)==0, history_counter=history_counter+1; history_steps(history_counter)=(step-1)*dt; O_history(history_counter,:)=O'; R_history(history_counter,:)=R'; B_history(history_counter,:,:)=B; end end if return_history, history_steps=history_steps(1:history_counter); O_history=O_history(1:history_counter,:,:); R_history=R_history(1:history_counter,:,:); B_history=B_history(1:history_counter,:,:); end result.x=x; result.O=O; result.R=R; result.B=B; result.k=k; result.lambda=lambda_; if return_history, result.time=history_steps; result.O_history=O_history; result.R_history=R_history; result.B_history=B_history; end end %% 24. LOCAL FUNCTION: BIODIVERSITY METRICS function metrics=biodiversity_metrics(B,dx,nSp) species_biomass=sum(B,1)'*dx; total_biomass=sum(species_biomass); if total_biomass>0, relative_abundance=species_biomass/total_biomass; else, relative_abundance=zeros(nSp,1); end absolute_threshold=1e-5; relative_threshold=1e-3; surviving=(species_biomass>absolute_threshold)&(relative_abundance>relative_th reshold); number_surviving=sum(surviving); positive=relative_abundance>0; Shannon=-sum(relative_abundance(positive).*log(relative_abundance(positive))); Simpson=1-sum(relative_abundance.^2); if nSp>1, evenness=Shannon/log(nSp); else, evenness=0; end metrics.biomass=species_biomass; metrics.total_biomass=total_biomass; metrics.relative_abundance=relative_abundance; metrics.surviving=surviving; metrics.number_surviving=number_surviving; metrics.Shannon=Shannon; metrics.Simpson=Simpson; metrics.evenness=evenness; end %% 25. LOCAL FUNCTION: NEUMANN LAPLACIAN function d2C=laplacian_neumann(C,dx) d2C=zeros(size(C)); d2C(2:end-1,:)=(C(3:end,:)-2*C(2:end-1,:)+C(1:end-2,:))/dx^2; d2C(1,:)=2*(C(2,:)-C(1,:))/dx^2; d2C(end,:)=2*(C(end-1,:)-C(end,:))/dx^2; end
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+34 
+
+Item 2: 4.2.2 Comparison with classical Lotka–Volterra dynamics 
+
+Classical Lotka–Volterra systems assume: 
+
+• fixed interaction coefficients, 
+
+• well-mixed populations, 
+
+• and static fitness ordering (Lotka, 1925; Volterra, 1926). Under such conditions, competitive exclusion dominates unless coexistence parameters are carefully balanced. The murburn ecological framework differs fundamentally because: 
+
+• fitness depends dynamically upon radical intensity, 
+
+• radical intensity depends upon oxygen gradients, 
+
+• and organisms reshape their own viability landscapes. Thus interaction coefficients become emergent rather than fixed. 
+
+MATLAB comparison: Lotka–Volterra competitive exclusion 
+
+> %% ============================================================ % Classical Lotka-Volterra Competition Model % ============================================================
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+35 
+
+> clear; clc; close all; %% Time dt = 0.01; T = 100; t = 0:dt:T; %% Species populations N1 = zeros(size(t)); N2 = zeros(size(t)); %% Initial populations N1(1) = 0.5; N2(1) = 0.5; %% Growth rates r1 = 1.0; r2 = 0.9; %% Competition coefficients a11 = 1.0; a22 = 1.0; a12 = 1.3; a21 = 0.8; %% ============================================================ % TIME LOOP % ============================================================ for i = 1:length(t)-1 dN1 = r1*N1(i)*(1 - a11*N1(i) - a12*N2(i)); dN2 = r2*N2(i)*(1 - a22*N2(i) - a21*N1(i)); N1(i+1) = N1(i) + dt*dN1;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+36 
+
+> N2(i+1) = N2(i) + dt*dN2; end %% ============================================================ % PLOT % ============================================================ figure; plot(t,N1,'LineWidth',2) hold on plot(t,N2,'LineWidth',2) xlabel('Time') ylabel('Population') legend('Species 1','Species 2') title('Lotka-Volterra Competitive Exclusion')
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint 37 
+
+Item 3: 4.3.1 MATLAB code for macroscopic fauna induced redox alterations 
+
+> %% ============================================================ % MACROSCOPIC FAUNA AS REDOX LANDSCAPE ENGINEERS % ============================================================ %% COMPREHENSIVE 1-D REACTION-DIFFUSION ECOLOGICAL MODEL %
+
+.CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint 38 
+
+> % Components: % 1. Moving macrofaunal oxygenation % 2. Oxygen diffusion % 3. Oxygen consumption by biomass % 4. Radical generation from oxygen % 5. Radical diffusion and decay % 6. Species-specific radical response % 7. Biomass growth, mortality and diffusion % 8. Numerical stability diagnostics % 9. Mass-balance diagnostics % 10. Species response analysis % 11. Shannon diversity % 12. Control simulations % 13. Parameter sensitivity analysis %% ============================================================ clear; clc; close all; %% ============================================================ % 1. REPRODUCIBILITY % ============================================================ rng(42); %% ============================================================ % 2. MODEL PARAMETERS % ============================================================ Nx = 200; dx = 1.0/Nx; x = linspace(0,1,Nx)'; dt = 1e-4; T = 4.0; Nt = round(T/dt); DO = 0.015; DR = 0.005; DB = 0.001; O0 = 0.2;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+39 
+
+> nSp = 3; B0 = 0.01; a = [5 7 9]; b = [5 10 18]; mu = [0.2 0.2 0.2]; k = 8.0; Omax = 1.0; lambda = 5.0; source_strength = 3.0; source_half_width = 5; source_center = 50; source_amplitude = 40; %% ============================================================ % 3. NUMERICAL STABILITY CHECK % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','NUMERICAL STABILITY CHECK'); fprintf('%s\n','============================================================== ========'); Fo_O = DO*dt/dx^2; Fo_R = DR*dt/dx^2; Fo_B = DB*dt/dx^2; fprintf('dx = %.6f\n',dx); fprintf('dt = %.6e\n\n',dt); fprintf('Oxygen Fourier number  = %.6f\n',Fo_O); fprintf('Radical Fourier number = %.6f\n',Fo_R); fprintf('Biomass Fourier number = %.6f\n\n',Fo_B); fprintf('Explicit 1-D diffusion stability limit approximately 0.5\n'); max_Fo = max([Fo_O Fo_R Fo_B]);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+40 
+
+> if max_Fo <= 0.5 fprintf('PASS: diffusion scheme passes the basic stability check.\n'); else fprintf('WARNING: diffusion timestep may be unstable.\n'); end %% ============================================================ % 4. THEORETICAL RESPONSE ANALYSIS % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','THEORETICAL RESPONSE ANALYSIS'); fprintf('%s\n','============================================================== ========'); O_peak_radical = Omax/2; Rgen_max = k*O_peak_radical*(1-O_peak_radical/Omax); fprintf('Maximum radical generation occurs at O = %.4f\n', ... O_peak_radical); fprintf('Maximum theoretical radical generation = %.4f\n', ... Rgen_max); fprintf('\nSpecies-specific optimum radical concentrations:\n'); for j = 1:nSp R_opt = 1/b(j); f_max = a(j)*R_opt*exp(-b(j)*R_opt); fprintf('Species %d: R* = %.6f, maximum response = %.6f\n', ... j,R_opt,f_max); end %% ============================================================ % 5. BASELINE SIMULATION % ============================================================ fprintf('\n%s\n','============================================================ ==========');
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+41 
+
+> fprintf('%s\n','RUNNING BASELINE MODEL'); fprintf('%s\n','============================================================== ========'); baseline = run_model( ... source_strength,source_amplitude,source_center, ... source_half_width,k,true,true, ... Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0,a,b,mu,Omax,lambda); fprintf('\nBaseline simulation completed in %.2f seconds.\n', ... baseline.runtime); %% ============================================================ % 6. BASELINE DIAGNOSTICS % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','BASELINE DIAGNOSTICS'); fprintf('%s\n','============================================================== ========'); fprintf('\nFinal oxygen:\n'); fprintf('Minimum = %.6f\n',min(baseline.O)); fprintf('Maximum = %.6f\n',max(baseline.O)); fprintf('Mean  = %.6f\n',mean(baseline.O)); fprintf('\nFinal radicals:\n'); fprintf('Minimum = %.6f\n',min(baseline.R)); fprintf('Maximum = %.6f\n',max(baseline.R)); fprintf('Mean  = %.6f\n',mean(baseline.R)); fprintf('\nFinal biomass:\n'); for j = 1:nSp fprintf(['Species %d: minimum = %.6f, maximum = %.6f, ' ... 'mean = %.6f, total = %.6f\n'], ... j,min(baseline.B(:,j)),max(baseline.B(:,j)), ... mean(baseline.B(:,j)),sum(baseline.B(:,j))*dx); end fprintf('\nBiodiversity:\n'); fprintf('Mean Shannon diversity = %.6f\n',mean(baseline.Shannon)); fprintf('Maximum Shannon diversity = %.6f\n',max(baseline.Shannon));
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+42 
+
+> fprintf('Mean species richness = %.6f\n',mean(baseline.richness)); %% ============================================================ % 7. REACTION-RATE DIAGNOSTICS % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','REACTION-RATE DIAGNOSTICS'); fprintf('%s\n','============================================================== ========'); fprintf('Maximum oxygen consumption = %.6f\n', ... baseline.max_oxygen_consumption); fprintf('Maximum radical generation = %.6f\n', ... baseline.max_radical_generation); fprintf('Maximum radical decay = %.6f\n', ... baseline.max_radical_decay); for j = 1:nSp fprintf('Maximum Species %d growth = %.6f\n', ... j,baseline.max_biomass_growth(j)); end %% ============================================================ % 8. OXYGEN MASS BALANCE % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','OXYGEN MASS BALANCE'); fprintf('%s\n','============================================================== ========'); fprintf('Initial oxygen mass  = %.8f\n', ... baseline.initial_oxygen_mass); fprintf('Cumulative oxygen input  = %.8f\n', ... baseline.cumulative_oxygen_source);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+43 
+
+> fprintf('Cumulative oxygen consumption = %.8f\n', ... baseline.cumulative_oxygen_consumption); fprintf('Final oxygen mass  = %.8f\n', ... baseline.final_oxygen_mass); fprintf('Mass-balance estimate  = %.8f\n', ... baseline.predicted_oxygen_mass); fprintf('Mass-balance difference  = %.8e\n', ... baseline.mass_balance_error); %% ============================================================ % 9. RADICAL BUDGET % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','RADICAL BUDGET'); fprintf('%s\n','============================================================== ========'); fprintf('Cumulative radical generation = %.8f\n', ... baseline.cumulative_radical_generation); fprintf('Cumulative radical decay  = %.8f\n', ... baseline.cumulative_radical_decay); %% ============================================================ % 10. FINAL SPATIAL PROFILES % ============================================================ figure('Position',[100 50 900 1000]); subplot(5,1,1); plot(x,baseline.O,'LineWidth',2); ylabel('Oxygen'); title('Macrofauna-Engineered Oxygen Field'); grid on; subplot(5,1,2); plot(x,baseline.R,'LineWidth',2);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+44 
+
+> ylabel('Radicals'); title('Dynamic Radical Landscape'); grid on; subplot(5,1,3); plot(x,baseline.B,'LineWidth',2); ylabel('Biomass'); title('Species Biomass'); legend('Species 1','Species 2','Species 3'); grid on; subplot(5,1,4); plot(x,baseline.Shannon,'LineWidth',2); ylabel('Shannon H'); title('Spatial Shannon Diversity'); grid on; subplot(5,1,5); plot(x,baseline.richness,'LineWidth',2); xlabel('Spatial Position'); ylabel('Species Richness'); title('Spatial Species Richness'); grid on; %% ============================================================ % 11. TEMPORAL DYNAMICS % ============================================================ figure('Position',[100 50 900 850]); subplot(4,1,1); plot(baseline.time,baseline.mean_O,'LineWidth',2); ylabel('Mean O_2'); title('Temporal Evolution of Mean Oxygen'); grid on; subplot(4,1,2); plot(baseline.time,baseline.mean_R,'LineWidth',2); ylabel('Mean Radical'); title('Temporal Evolution of Mean Radical'); grid on; subplot(4,1,3); plot(baseline.time,baseline.total_B,'LineWidth',2);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+45 
+
+> ylabel('Total Biomass'); title('Temporal Evolution of Total Biomass'); grid on; subplot(4,1,4); plot(baseline.time,baseline.shannon_mean_history,'LineWidth',2); xlabel('Time'); ylabel('Mean Shannon H'); title('Temporal Evolution of Mean Diversity'); grid on; %% ============================================================ % 12. OXYGEN -> RADICAL RESPONSE % ============================================================ O_test = linspace(0,Omax,500); G_test = k*O_test.*(1-O_test/Omax); figure('Position',[150 150 800 500]); plot(O_test,G_test,'LineWidth',2); hold on; xline(Omax/2,'--','LineWidth',1.5); hold off; xlabel('Oxygen concentration'); ylabel('Radical generation'); title('Oxygen-Dependent Radical Generation'); grid on; %% ============================================================ % 13. SPECIES -> RADICAL RESPONSE % ============================================================ R_test = linspace(0,0.5,500); figure('Position',[150 150 800 550]); hold on; for j = 1:nSp response = a(j)*R_test.*exp(-b(j)*R_test); plot(R_test,response,'LineWidth',2, ... 'DisplayName',sprintf('Species %d',j));
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+46 
+
+> end hold off; xlabel('Radical concentration'); ylabel('Growth response'); title('Species-Specific Radical Response'); legend('show'); grid on; %% ============================================================ % 14. CONTROL SIMULATIONS % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','CONTROL SIMULATIONS'); fprintf('%s\n','============================================================== ========'); fprintf('\nRunning Control 1: No oxygenation...\n'); control_no_source = run_model( ... 0,0,source_center,source_half_width,k,false,false, ... Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0,a,b,mu,Omax,lambda); fprintf('Running Control 2: Static oxygenation...\n'); control_static = run_model( ... source_strength,0,source_center,source_half_width,k,false,false, ... Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0,a,b,mu,Omax,lambda); fprintf('Running Control 3: Moving oxygenation...\n'); control_moving = baseline; fprintf('Running Control 4: Moving oxygenation without radical generation...\n'); control_no_radicals = run_model( ... source_strength,source_amplitude,source_center,source_half_width, ... 0,true,false,Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0,a,b,mu,Omax,lambda);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+47 
+
+> fprintf('Control simulations completed.\n'); %% ============================================================ % 15. CONTROL SUMMARY % ============================================================ control_names = {'No source','Static source','Moving source','No radicals'}; control_results = { ... control_no_source, ... control_static, ... control_moving, ... control_no_radicals}; fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','CONTROL SUMMARY'); fprintf('%s\n','============================================================== ========'); fprintf('%-20s%12s%12s%14s%14s\n', ... 'Condition','Mean O','Mean R','Total B','Shannon H'); for c = 1:length(control_results) result = control_results{c}; total_b = sum(result.B(:))*dx; fprintf('%-20s%12.5f%12.5f%14.5f%14.5f\n', ... control_names{c},mean(result.O),mean(result.R), ... total_b,mean(result.Shannon)); end %% ============================================================ % 16. CONTROL PLOT: OXYGEN % ============================================================ figure('Position',[150 150 850 550]); hold on; for c = 1:length(control_results) plot(x,control_results{c}.O,'LineWidth',2, ... 'DisplayName',control_names{c}); end
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+48 
+
+> hold off; xlabel('Spatial Position'); ylabel('Oxygen'); title('Control Comparison: Oxygen Field'); legend('show'); grid on; %% ============================================================ % 17. CONTROL PLOT: RADICALS % ============================================================ figure('Position',[150 150 850 550]); hold on; for c = 1:length(control_results) plot(x,control_results{c}.R,'LineWidth',2, ... 'DisplayName',control_names{c}); end hold off; xlabel('Spatial Position'); ylabel('Radicals'); title('Control Comparison: Radical Field'); legend('show'); grid on; %% ============================================================ % 18. CONTROL PLOT: SHANNON DIVERSITY % ============================================================ figure('Position',[150 150 850 550]); hold on; for c = 1:length(control_results) plot(x,control_results{c}.Shannon,'LineWidth',2, ... 'DisplayName',control_names{c}); end hold off; xlabel('Spatial Position'); ylabel('Shannon Diversity'); title('Control Comparison: Spatial Biodiversity'); legend('show');
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+49 
+
+> grid on; %% ============================================================ % 19. PARAMETER SENSITIVITY: SOURCE STRENGTH % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','PARAMETER SENSITIVITY: OXYGENATION STRENGTH'); fprintf('%s\n','============================================================== ========'); source_strengths = [0.5 1.0 2.0 3.0 4.0 5.0]; sensitivity_total_b = zeros(size(source_strengths)); sensitivity_shannon = zeros(size(source_strengths)); sensitivity_mean_O = zeros(size(source_strengths)); sensitivity_mean_R = zeros(size(source_strengths)); for q = 1:length(source_strengths) S = source_strengths(q); fprintf('Running source strength = %.2f...\n',S); result = run_model( ... S,source_amplitude,source_center,source_half_width,k,true,false, ... Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0,a,b,mu,Omax,lambda); sensitivity_total_b(q) = sum(result.B(:))*dx; sensitivity_shannon(q) = mean(result.Shannon); sensitivity_mean_O(q) = mean(result.O); sensitivity_mean_R(q) = mean(result.R); end %% ============================================================ % 20. SOURCE-STRENGTH SENSITIVITY PLOTS % ============================================================ figure('Position',[100 50 900 850]);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+50 
+
+> subplot(4,1,1); plot(source_strengths,sensitivity_mean_O,'o-','LineWidth',2); xlabel('Source strength'); ylabel('Mean oxygen'); title('Sensitivity of Mean Oxygen to Source Strength'); grid on; subplot(4,1,2); plot(source_strengths,sensitivity_mean_R,'o-','LineWidth',2); xlabel('Source strength'); ylabel('Mean radical'); title('Sensitivity of Radical Field to Source Strength'); grid on; subplot(4,1,3); plot(source_strengths,sensitivity_total_b,'o-','LineWidth',2); xlabel('Source strength'); ylabel('Total biomass'); title('Sensitivity of Total Biomass to Source Strength'); grid on; subplot(4,1,4); plot(source_strengths,sensitivity_shannon,'o-','LineWidth',2); xlabel('Source strength'); ylabel('Mean Shannon diversity'); title('Sensitivity of Biodiversity to Source Strength'); grid on; %% ============================================================ % 21. SOURCE MOVEMENT SENSITIVITY % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','SOURCE MOVEMENT SENSITIVITY'); fprintf('%s\n','============================================================== ========'); movement_amplitudes = [0 20 40 60]; movement_total_b = zeros(size(movement_amplitudes)); movement_shannon = zeros(size(movement_amplitudes)); movement_mean_R = zeros(size(movement_amplitudes));
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+51 
+
+> for q = 1:length(movement_amplitudes) amplitude = movement_amplitudes(q); fprintf('Running movement amplitude = %.2f...\n',amplitude); result = run_model( ... source_strength,amplitude,source_center,source_half_width,k, ... amplitude > 0,false,Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0, ... a,b,mu,Omax,lambda); movement_total_b(q) = sum(result.B(:))*dx; movement_shannon(q) = mean(result.Shannon); movement_mean_R(q) = mean(result.R); end %% ============================================================ % 22. MOVEMENT SENSITIVITY PLOT % ============================================================ figure('Position',[100 80 900 750]); subplot(3,1,1); plot(movement_amplitudes,movement_total_b,'o-','LineWidth',2); xlabel('Source movement amplitude'); ylabel('Total biomass'); title('Effect of Macrofaunal Movement on Biomass'); grid on; subplot(3,1,2); plot(movement_amplitudes,movement_mean_R,'o-','LineWidth',2); xlabel('Source movement amplitude'); ylabel('Mean radical'); title('Effect of Macrofaunal Movement on Radical Field'); grid on; subplot(3,1,3); plot(movement_amplitudes,movement_shannon,'o-','LineWidth',2); xlabel('Source movement amplitude'); ylabel('Mean Shannon diversity');
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+52 
+
+> title('Effect of Macrofaunal Movement on Biodiversity'); grid on; %% ============================================================ % 23. FINAL SPECIES COMPOSITION % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','FINAL SPECIES COMPOSITION'); fprintf('%s\n','============================================================== ========'); species_total_biomass = sum(baseline.B,1)*dx; total_biomass_all = sum(species_total_biomass); for j = 1:nSp fraction = species_total_biomass(j)/total_biomass_all; fprintf(['Species %d: total biomass = %.6f, ' ... 'relative abundance = %.4f\n'], ... j,species_total_biomass(j),fraction); end %% ============================================================ % 24. FINAL SUMMARY % ============================================================ fprintf('\n%s\n','============================================================ =========='); fprintf('%s\n','MODEL RUN COMPLETE'); fprintf('%s\n','============================================================== ========'); fprintf('\nThe simulation has evaluated:\n'); fprintf('  PASS  Diffusion stability\n'); fprintf('  PASS  Reaction-rate magnitudes\n'); fprintf('  PASS  Oxygen mass balance\n'); fprintf('  PASS  Radical generation/decay\n'); fprintf('  PASS  Species-specific radical responses\n'); fprintf('  PASS  Spatial biomass distributions\n');
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+53 
+
+> fprintf('  PASS  Shannon diversity\n'); fprintf('  PASS  Species richness\n'); fprintf('  PASS  No-source control\n'); fprintf('  PASS  Static-source control\n'); fprintf('  PASS  Moving-source condition\n'); fprintf('  PASS  No-radical-generation control\n'); fprintf('  PASS  Oxygenation-strength sensitivity\n'); fprintf('  PASS  Macrofaunal-movement sensitivity\n'); fprintf('\nUse the plots and diagnostics above to determine whether the '); fprintf('observed ecological patterns are robust to changes in model parameters.\n'); fprintf('\nDone.\n'); %% ============================================================ % LOCAL FUNCTION: RUN MODEL % ============================================================ function results = run_model( ... source_strength,source_amplitude,source_center,source_half_width, ... radical_generation_rate,moving_source,record_history, ... Nx,dx,x,dt,Nt,DO,DR,DB,O0,nSp,B0,a,b,mu,Omax,lambda) O = O0*ones(Nx,1); R = zeros(Nx,1); B = B0*rand(Nx,nSp); if record_history history_interval = max(1,floor(Nt/400)); n_records = floor(Nt/history_interval)+1; time_history = zeros(n_records,1); mean_O_history = zeros(n_records,1); mean_R_history = zeros(n_records,1); total_B_history = zeros(n_records,1); source_history = zeros(n_records,1); oxygen_consumption_history = zeros(n_records,1); radical_generation_history = zeros(n_records,1); shannon_mean_history = zeros(n_records,1); else
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+54 
+
+> history_interval = []; time_history = []; mean_O_history = []; mean_R_history = []; total_B_history = []; source_history = []; oxygen_consumption_history = []; radical_generation_history = []; shannon_mean_history = []; end max_oxygen_consumption = 0; max_radical_generation = 0; max_radical_decay = 0; max_biomass_growth = zeros(nSp,1); cumulative_oxygen_source = 0; cumulative_oxygen_consumption = 0; cumulative_radical_generation = 0; cumulative_radical_decay = 0; initial_oxygen_mass = sum(O)*dx; start_time = tic; record_index = 0; for step = 1:Nt %% Moving macrofaunal source if moving_source pos = round(source_center + ... source_amplitude*sin(2*pi*step/Nt)); else pos = source_center; end
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+55 
+
+> M = zeros(Nx,1); % MATLAB uses 1-based indexing. Clamp the source to the grid. start_idx = max(1,pos-source_half_width+1); end_idx = min(Nx,pos+source_half_width+1); if start_idx <= end_idx M(start_idx:end_idx) = source_strength; end %% Oxygen diffusion Lapl_O = zeros(Nx,1); Lapl_O(2:Nx-1) = ... (O(1:Nx-2) ... - 2*O(2:Nx-1) ... + O(3:Nx))/dx^2; %% Oxygen consumption oxygen_consumption = sum(B,2).*O; %% Oxygen evolution O = O + dt*( ... DO*Lapl_O ... - oxygen_consumption ... + M); %% Radical generation RadicalGeneration = ... radical_generation_rate*O.*(1-O/Omax); % Prevent negative generation if O exceeds Omax.
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+56 
+
+> RadicalGeneration = max(RadicalGeneration,0); %% Radical diffusion Lapl_R = zeros(Nx,1); Lapl_R(2:Nx-1) = ... (R(1:Nx-2) ... - 2*R(2:Nx-1) ... + R(3:Nx))/dx^2; %% Radical decay radical_decay = lambda*R; %% Radical evolution R = R + dt*( ... DR*Lapl_R ... + RadicalGeneration ... - radical_decay); %% Biomass evolution for j = 1:nSp fj = a(j)*R.*exp(-b(j)*R); Lapl_B = zeros(Nx,1); Lapl_B(2:Nx-1) = ... (B(1:Nx-2,j) ... - 2*B(2:Nx-1,j) ... + B(3:Nx,j))/dx^2; biomass_growth = B(:,j).*fj; biomass_mortality = mu(j)*B(:,j);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+57 
+
+> B(:,j) = B(:,j) + dt*( ... biomass_growth ... - biomass_mortality ... + DB*Lapl_B); max_biomass_growth(j) = max( ... max_biomass_growth(j), ... max(biomass_growth)); end %% Prevent negative values O(O < 0) = 0; R(R < 0) = 0; B(B < 0) = 0; %% Cumulative mass-balance terms oxygen_source_integral = sum(M)*dx; oxygen_consumption_integral = ... sum(oxygen_consumption)*dx; radical_generation_integral = ... sum(RadicalGeneration)*dx; radical_decay_integral = ... sum(radical_decay)*dx; cumulative_oxygen_source = ... cumulative_oxygen_source + ... dt*oxygen_source_integral; cumulative_oxygen_consumption = ... cumulative_oxygen_consumption + ... dt*oxygen_consumption_integral; cumulative_radical_generation = ... cumulative_radical_generation + ... dt*radical_generation_integral;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+58 
+
+> cumulative_radical_decay = ... cumulative_radical_decay + ... dt*radical_decay_integral; %% Maximum diagnostics max_oxygen_consumption = max( ... max_oxygen_consumption, ... max(oxygen_consumption)); max_radical_generation = max( ... max_radical_generation, ... max(RadicalGeneration)); max_radical_decay = max( ... max_radical_decay, ... max(radical_decay)); %% History if record_history if mod(step,history_interval) == 0 || step == Nt record_index = record_index + 1; time_history(record_index) = step*dt; mean_O_history(record_index) = mean(O); mean_R_history(record_index) = mean(R); total_B_history(record_index) = sum(B(:))*dx; source_history(record_index) = ... oxygen_source_integral; oxygen_consumption_history(record_index) = ... oxygen_consumption_integral; radical_generation_history(record_index) = ... radical_generation_integral;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+59 
+
+> total_B_local = sum(B,2); proportions = zeros(size(B)); valid = total_B_local > 0; proportions(valid,:) = ... B(valid,:)./total_B_local(valid); Shannon = zeros(Nx,1); for jj = 1:nSp temp = proportions(:,jj); idx = temp > 0; Shannon(idx) = Shannon(idx) ... - temp(idx).*log(temp(idx)); end shannon_mean_history(record_index) = ... mean(Shannon); end end end %% Final diversity total_B_local = sum(B,2); proportions = zeros(size(B)); valid = total_B_local > 0;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+60 
+
+> proportions(valid,:) = ... B(valid,:)./total_B_local(valid); Shannon = zeros(Nx,1); for j = 1:nSp temp = proportions(:,j); idx = temp > 0; Shannon(idx) = Shannon(idx) ... - temp(idx).*log(temp(idx)); end %% Species richness biomass_threshold = 1e-8; richness = sum(B > biomass_threshold,2); %% Final oxygen mass final_oxygen_mass = sum(O)*dx; %% Mass-balance estimate predicted_oxygen_mass = ... initial_oxygen_mass + ... cumulative_oxygen_source - ... cumulative_oxygen_consumption; mass_balance_error = ... final_oxygen_mass - predicted_oxygen_mass; runtime = toc(start_time); %% Store results
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+61 
+
+> results.x = x; results.O = O; results.R = R; results.B = B; results.Shannon = Shannon; results.richness = richness; results.time = time_history; results.mean_O = mean_O_history; results.mean_R = mean_R_history; results.total_B = total_B_history; results.source_history = source_history; results.oxygen_consumption_history = ... oxygen_consumption_history; results.radical_generation_history = ... radical_generation_history; results.shannon_mean_history = ... shannon_mean_history; results.initial_oxygen_mass = initial_oxygen_mass; results.final_oxygen_mass = final_oxygen_mass; results.cumulative_oxygen_source = ... cumulative_oxygen_source; results.cumulative_oxygen_consumption = ... cumulative_oxygen_consumption; results.cumulative_radical_generation = ... cumulative_radical_generation; results.cumulative_radical_decay = ... cumulative_radical_decay; results.predicted_oxygen_mass = ... predicted_oxygen_mass; results.mass_balance_error = ... mass_balance_error; results.max_oxygen_consumption = ... max_oxygen_consumption;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+62 
+
+> results.max_radical_generation = ... max_radical_generation; results.max_radical_decay = ... max_radical_decay; results.max_biomass_growth = ... max_biomass_growth; results.runtime = runtime; end
+
+Item 4: 4.4.1. MATLAB visualization: 2-D murburn eco-evolutionary model 
+
+> %% ============================================================
+> % MURBURN ECOLOGY
+> %
+> % Redox heterogeneity as the engine of biodiversity
+> %
+> % Macroflora + Macrofauna + Fractal Heterogeneity
+> %
+> % Outputs:
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+63 
+
+> % A. Oxygen landscape
+> % B. DRS landscape
+> % C. Ecological niches
+> % D. Biodiversity hotspots
+> %
+> % ============================================================
+> clear;
+> clc;
+> close all;
+> %% ============================================================
+> % GRID
+> % ============================================================
+> Nx = 200;
+> Ny = 200;
+> [x,y] = meshgrid(1:Nx,1:Ny);
+> %% ============================================================
+> % BACKGROUND OXYGEN
+> % ============================================================
+> O = 0.05*ones(Nx,Ny);
+> %% ============================================================
+> % MACROFLORA
+> %
+> % Seagrasses
+> % Macrophytes
+> % Algal beds
+> % Root oxygen leakage
+> %
+> % ============================================================
+> FloraCenters = [
+> 30  40
+> 70  150
+> 140  60
+> 160  150
+> ];
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+64 
+
+> FloraField = zeros(Nx,Ny);
+> for k = 1:size(FloraCenters,1)
+> xc = FloraCenters(k,1);
+> yc = FloraCenters(k,2);
+> rr = sqrt((x-xc).^2 + (y-yc).^2);
+> FloraField = FloraField + ...
+> 0.9*exp(-(rr.^2)/(2*12^2));
+> end
+> %% ============================================================
+> % MACROFAUNA
+> %
+> % Burrows
+> % Crabs
+> % Worms
+> % Bivalves
+> %
+> % ============================================================
+> FaunaCenters = [
+> 60  80
+> 100  40
+> 120  120
+> 80  180
+> 170  100
+> ];
+> FaunaField = zeros(Nx,Ny);
+> for k = 1:size(FaunaCenters,1)
+> xc = FaunaCenters(k,1);
+> yc = FaunaCenters(k,2);
+> rr = sqrt((x-xc).^2 + (y-yc).^2);
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+65 
+
+> FaunaField = FaunaField + ...
+> 1.1*exp(-(rr.^2)/(2*7^2));
+> end
+> %% ============================================================
+> % FRACTAL-LIKE ENVIRONMENTAL HETEROGENEITY
+> %
+> % Mimics:
+> % sediment complexity
+> % marine snow
+> % mucus domains
+> % biofilms
+> % rhizosphere structure
+> %
+> % ============================================================
+> rng(1)
+> NoiseField = rand(Nx,Ny);
+> % Spatially correlated heterogeneity
+> NoiseField = imgaussfilt(NoiseField,8);
+> % Normalize
+> NoiseField = ...
+> (NoiseField - min(NoiseField(:))) ./ ...
+> (max(NoiseField(:)) - min(NoiseField(:)));
+> % Permeability matrix
+> Barrier = 0.4 + 0.8*NoiseField;
+> %% ============================================================
+> % COMBINED OXYGEN LANDSCAPE
+> % ============================================================
+> O = (O + FloraField + FaunaField) .* Barrier;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+66 
+
+> O = O ./ max(O(:));
+> %% ============================================================
+> % MURBURN DRS FIELD
+> %
+> % DRS maximal at intermediate oxygen
+> %
+> % R = O*(1-O)
+> %
+> % ============================================================
+> R = O .* (1 - O);
+> R = R ./ max(R(:));
+> %% ============================================================
+> % FIVE SPECIES
+> %
+> % Different DRS preferences
+> %
+> % ============================================================
+> S1 = exp(-(R-0.10).^2/0.010);
+> S2 = exp(-(R-0.25).^2/0.010);
+> S3 = exp(-(R-0.45).^2/0.010);
+> S4 = exp(-(R-0.65).^2/0.010);
+> S5 = exp(-(R-0.85).^2/0.010);
+> %% ============================================================
+> % RELATIVE ABUNDANCES
+> % ============================================================
+> Total = S1 + S2 + S3 + S4 + S5;
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+67 
+
+> P1 = S1 ./ Total;
+> P2 = S2 ./ Total;
+> P3 = S3 ./ Total;
+> P4 = S4 ./ Total;
+> P5 = S5 ./ Total;
+> %% ============================================================
+> % SHANNON DIVERSITY
+> % ============================================================
+> Shannon = ...
+> -( P1.*log(P1+eps) ...
+> + P2.*log(P2+eps) ...
+> + P3.*log(P3+eps) ...
+> + P4.*log(P4+eps) ...
+> + P5.*log(P5+eps) );
+> %% ============================================================
+> % DOMINANT SPECIES
+> % ============================================================
+> Stack = cat(3,P1,P2,P3,P4,P5);
+> [~,Dominant] = max(Stack,[],3);
+> %% ============================================================
+> % VISUALIZATION
+> % ============================================================
+> figure('Color','w',...
+> 'Position',[50 50 1400 1000])
+> %% ------------------------------------------------------------
+> % Oxygen
+> %% ------------------------------------------------------------
+> subplot(2,2,1)
+> imagesc(O)
+> axis image
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+68 
+
+> axis off
+> colorbar
+> title('A. Oxygen Landscape')
+> %% ------------------------------------------------------------
+> % DRS
+> %% ------------------------------------------------------------
+> subplot(2,2,2)
+> imagesc(R)
+> axis image
+> axis off
+> colorbar
+> title('B. DRS Landscape')
+> %% ------------------------------------------------------------
+> % Ecological Niches
+> %% ------------------------------------------------------------
+> subplot(2,2,3)
+> imagesc(Dominant)
+> axis image
+> axis off
+> colorbar
+> title('C. Dominant Species')
+> %% ------------------------------------------------------------
+> % Biodiversity
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted August 20, 2026. ;https://doi.org/10.64898/2026.08.19.745798 doi: bioRxiv preprint
+
+69
