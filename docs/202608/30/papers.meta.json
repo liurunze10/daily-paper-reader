@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-30",
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T22:11:08",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/30/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning",
+      "section": "quick",
+      "title_en": "LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning",
+      "authors": "Alexis Ivan Escamilla-Lopez, Gilberto Ochoa-Ruiz, Salvador Hinojosa, Sharib Ali",
+      "date": "2026-08-24",
+      "pdf": "https://arxiv.org/pdf/2608.23853v1",
+      "score": "7.5",
+      "evidence": "解释溃疡性结肠炎（一种炎症性肠病）的内窥镜图像",
+      "tldr": "针对溃疡性结肠炎内窥镜图像分析中主观性强且局部病理特征易被忽略的问题，本文提出LUX架构。该模型通过Grad-CAM和CBAM构建以病灶为中心的场景图，将局部病理区域及其空间关系编码为图嵌入，并集成至T5解码器中。实验证明LUX在多项指标上优于现有模型，显著提升了生成文本的解释性与临床可靠性。",
+      "tags": "query:ros-mp",
+      "abstract_en": "The interpretation of endoscopic imagery in ulcerative colitis is complex and subjective, with variability in human assessment and subtle mucosal inflammation. Although deep learning has advanced automated analysis, most vision-language models rely on global visual embeddings that overlook the localized and relational nature of pathological evidence, limiting clinical reliability and interpretability.   We introduce LUX (Lesion-aware Unified eXplainable captioning), a graph-conditioned vision-language architecture for explainable endoscopic image captioning. LUX constructs a lesion-centric scene graph from Grad-CAM and CBAM activation maps, representing pathological regions as nodes and encoding their spatial and clinical relationships. These graph embeddings are integrated into the cross-attention layers of a T5 decoder, enabling generated words to attend to specific lesion nodes rather than only to global image features. This provides direct alignment between linguistic content and pathological evidence, supporting token-level interpretability and relational reasoning.   LUX outperforms strong baseline and state-of-the-art medical captioning models across BLEU, METEOR, ROUGE-L, and CIDEr, with particularly strong gains in CIDEr. It also reduces hallucinated clinical findings and improves lesion-level grounding through stronger correspondence between generated tokens and localized pathological regions.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/30/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis",
+      "section": "quick",
+      "title_en": "Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis",
+      "authors": "Olga lanzetta, Luisa Cutillo, Bailey Andrew, Claudia Angelini",
+      "date": "2026-08-24",
+      "pdf": "https://arxiv.org/pdf/2608.22982v1",
+      "score": "6.0",
+      "evidence": "在单细胞RNA测序中解析细胞状态和转录组梯度",
+      "tldr": "针对传统单细胞测序分析依赖手动标记、难以识别细微转录组差异的问题，本研究提出基于高斯多图模型（GmGM）的分析框架。该方法能同时推断细胞间和基因间的依赖结构，通过集成聚类算法在PBMC数据集中识别出传统方法无法区分的功能性亚群，并构建了基因共表达模块，为单细胞分辨率下的细胞聚类与基因网络推理提供了统一且可重复的解决方案。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Conventional annotation of single-cell RNA-sequencing (scRNA-seq) data relies heavily on manual, marker-based thresholding, an approach that can obscure subtle transcriptomic gradients and collapse functionally distinct cell states into broad, heterogeneous populations. Here we apply the Gaussian multi-Graphical Model (GmGM) framework, which jointly infers cell-cell and gene-gene dependency structure from a single scRNA-seq data matrix, to a 10x Genomics PBMC dataset. Ten independent GMGM-Leiden clustering runs were integrated into a robust consensus partition using a soft cluster ensemble approach and benchmarked against reference cell-type annotations. This strategy yielded stable cluster partitions that resolve biologically meaningful sub-populations not distinguished by the reference annotation. In parallel, for each cluster, gene co-expression modules were extracted from the fitted model via consensus Leiden clustering across resolutions, evaluated using standard network metrics, and validated functionally with the Network Enrichment Analysis Test (NEAT), which confirmed non-random enrichment signal. A module-scoring procedure linked network topology to per-cell, per-cluster expression signatures, and a novel extension of GmGM, recovering a shared cell-cell network together with population-specific gene networks in a single model run, was demonstrated in a case study on the CD4+ T-cell population. These results indicate that GmGM provides a unified, reproducible framework for joint cell clustering and gene-network inference, capable of revealing cellular structure beyond that captured by conventional pipelines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

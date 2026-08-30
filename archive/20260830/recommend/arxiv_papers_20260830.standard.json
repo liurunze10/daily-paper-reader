@@ -1,0 +1,94 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-30T22:10:26.698635+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.23853v1",
+      "source": "arxiv",
+      "title": "LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning",
+      "abstract": "The interpretation of endoscopic imagery in ulcerative colitis is complex and subjective, with variability in human assessment and subtle mucosal inflammation. Although deep learning has advanced automated analysis, most vision-language models rely on global visual embeddings that overlook the localized and relational nature of pathological evidence, limiting clinical reliability and interpretability.   We introduce LUX (Lesion-aware Unified eXplainable captioning), a graph-conditioned vision-language architecture for explainable endoscopic image captioning. LUX constructs a lesion-centric scene graph from Grad-CAM and CBAM activation maps, representing pathological regions as nodes and encoding their spatial and clinical relationships. These graph embeddings are integrated into the cross-attention layers of a T5 decoder, enabling generated words to attend to specific lesion nodes rather than only to global image features. This provides direct alignment between linguistic content and pathological evidence, supporting token-level interpretability and relational reasoning.   LUX outperforms strong baseline and state-of-the-art medical captioning models across BLEU, METEOR, ROUGE-L, and CIDEr, with particularly strong gains in CIDEr. It also reduces hallucinated clinical findings and improves lesion-level grounding through stronger correspondence between generated tokens and localized pathological regions.",
+      "authors": [
+        "Alexis Ivan Escamilla-Lopez",
+        "Gilberto Ochoa-Ruiz",
+        "Salvador Hinojosa",
+        "Sharib Ali"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-24T21:51:19+00:00",
+      "link": "https://arxiv.org/pdf/2608.23853v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "Interprets endoscopic imagery in ulcerative colitis, a form of inflammatory bowel disease",
+      "llm_evidence_cn": "解释溃疡性结肠炎（一种炎症性肠病）的内窥镜图像",
+      "llm_evidence": "解释溃疡性结肠炎（一种炎症性肠病）的内窥镜图像",
+      "canonical_evidence": "解释溃疡性结肠炎（一种炎症性肠病）的内窥镜图像",
+      "llm_tldr_en": "A vision-language model for explainable captioning of endoscopic images in ulcerative colitis patients.",
+      "llm_tldr_cn": "一种用于溃疡性结肠炎患者内窥镜图像可解释说明的视觉语言模型。",
+      "llm_tldr": "一种用于溃疡性结肠炎患者内窥镜图像可解释说明的视觉语言模型。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "inflammatory bowel disease",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.22982v1",
+      "source": "arxiv",
+      "title": "Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis",
+      "abstract": "Conventional annotation of single-cell RNA-sequencing (scRNA-seq) data relies heavily on manual, marker-based thresholding, an approach that can obscure subtle transcriptomic gradients and collapse functionally distinct cell states into broad, heterogeneous populations. Here we apply the Gaussian multi-Graphical Model (GmGM) framework, which jointly infers cell-cell and gene-gene dependency structure from a single scRNA-seq data matrix, to a 10x Genomics PBMC dataset. Ten independent GMGM-Leiden clustering runs were integrated into a robust consensus partition using a soft cluster ensemble approach and benchmarked against reference cell-type annotations. This strategy yielded stable cluster partitions that resolve biologically meaningful sub-populations not distinguished by the reference annotation. In parallel, for each cluster, gene co-expression modules were extracted from the fitted model via consensus Leiden clustering across resolutions, evaluated using standard network metrics, and validated functionally with the Network Enrichment Analysis Test (NEAT), which confirmed non-random enrichment signal. A module-scoring procedure linked network topology to per-cell, per-cluster expression signatures, and a novel extension of GmGM, recovering a shared cell-cell network together with population-specific gene networks in a single model run, was demonstrated in a case study on the CD4+ T-cell population. These results indicate that GmGM provides a unified, reproducible framework for joint cell clustering and gene-network inference, capable of revealing cellular structure beyond that captured by conventional pipelines.",
+      "authors": [
+        "Olga lanzetta",
+        "Luisa Cutillo",
+        "Bailey Andrew",
+        "Claudia Angelini"
+      ],
+      "primary_category": "q-bio.MN",
+      "categories": [
+        "q-bio.MN",
+        "stat.AP"
+      ],
+      "published": "2026-08-24T08:44:24+00:00",
+      "link": "https://arxiv.org/pdf/2608.22982v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Resolving cell states and transcriptomic gradients in single-cell RNA-seq",
+      "llm_evidence_cn": "在单细胞RNA测序中解析细胞状态和转录组梯度",
+      "llm_evidence": "在单细胞RNA测序中解析细胞状态和转录组梯度",
+      "canonical_evidence": "在单细胞RNA测序中解析细胞状态和转录组梯度",
+      "llm_tldr_en": "Applies a graphical model to scRNA-seq data to resolve biologically meaningful cell clusters.",
+      "llm_tldr_cn": "将图模型应用于单细胞测序数据，以解析具有生物学意义的细胞群。",
+      "llm_tldr": "将图模型应用于单细胞测序数据，以解析具有生物学意义的细胞群。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -6,34 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-29
-- 运行时间：2026-08-29 22:10:00 UTC
+- 最新运行日期：2026-08-30
+- 运行时间：2026-08-30 22:10:56 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：1
-- 速读区：3
+- 本次总论文数：2
+- 精读区：0
+- 速读区：2
 
 ### 今日简报（AI）
-今日聚焦生物工程与AI前沿，重点解析了AUF1工程化类器官在肠炎修复与黏膜再生中的突破性表现。
-核心结论揭示了AUF1修饰能显著增强肠道屏障修复，同时关注到巨噬细胞线粒体转移在分娩启动中的新机制。
-建议关注再生
-- 详情：[/202608/29/README](/202608/29/README)
+今日聚焦医疗AI与生物信息学前沿，重点攻克内窥镜影像的可解释性与单细胞测序的分辨率难题。
+推荐关注LUX架构，它通过病灶感知图结构实现了更透明、精准的内窥镜自动报告生成。
+建议医疗影像开发者深入研究图调节（Graph-Conditioned）技术，以提升多模态诊断系统的可信度。
+- 详情：[/202608/30/README](/202608/30/README)
 
 ### 精读区论文标签
-1. [AUF1-Engineered Intestinal Organoids Enhance Epithelial Barrier Repair and Mucosal Regeneration in Experimental Colitis](/202608/29/biorxiv-10-64898-2026-08-21-746163-v1-auf1-engineered-intestinal-organoids-enhance-epithelial-barrier-repair-and-mucosal-regeneration-in-experimental-colitis)  
-   标签：评分：9.5/10、query:ros-mp
-   evidence：关注实验性结肠炎和炎症性肠病（IBD）中的黏膜再生。
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning](/202608/29/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning)  
+1. [LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning](/202608/30/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning)  
    标签：评分：7.5/10、query:ros-mp
-   evidence：专注于溃疡性结肠炎（一种炎症性肠病）的内窥镜图像描述
-2. [Macrophage to Myocyte Mitochondrial Transfer in the Myometrium: A Novel Mechanism for the Initiation of Labor](/202608/29/biorxiv-10-64898-2026-08-17-745259-v1-macrophage-to-myocyte-mitochondrial-transfer-in-the-myometrium-a-novel-mechanism-for-the-initiation-of-labor)  
-   标签：评分：7.5/10、query:ros-mp
-   evidence：讨论了子宫组织中巨噬细胞向M1和M2表型的极化
-3. [Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis](/202608/29/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：解析转录组数据中不同细胞状态的方法，适用于巨噬细胞极化研究
+   evidence：解释溃疡性结肠炎（一种炎症性肠病）的内窥镜图像
+2. [Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis](/202608/30/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：在单细胞RNA测序中解析细胞状态和转录组梯度
 
 
 <div class="dpr-home-promo-card">
