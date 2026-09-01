@@ -6,26 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-31
-- 运行时间：2026-09-01 00:12:11 UTC
+- 最新运行日期：2026-09-01
+- 运行时间：2026-09-01 22:44:36 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：0
 - 速读区：1
 
 ### 今日简报（AI）
-今日聚焦内窥镜影像的可解释性生成，探索 LUX 架构如何精准捕捉病灶特征。
-该研究通过图条件视觉语言模型，实现了具备病灶感知能力的内窥镜报告自动生成与逻辑解释。
-关注医疗 AI 可解释性的读者，可深入了解 LUX 如何利用图结构优化视觉描述的准确性。
-- 详情：[/202608/31/README](/202608/31/README)
+今日聚焦单细胞测序分辨率提升，通过无偏网络分析挖掘细胞与基因的深层关联。
+重点探讨了如何利用细胞与基因双重网络分析，在 scRNAseq 数据中实现更高精度的细胞分型。
+建议关注单细胞数据挖掘的读者，深入了解该研究中无偏网络构建的具体算法逻辑。
+- 详情：[/202609/01/README](/202609/01/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning](/202608/31/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning)  
-   标签：评分：7.5/10、query:ros-mp
-   evidence：溃疡性结肠炎的内窥镜图像
+1. [Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis](/202609/01/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis)  
+   标签：评分：6.5/10、query:ros-mp
+   evidence：解析外周血单个核细胞中功能不同的细胞状态和转录组梯度
 
 
 <div class="dpr-home-promo-card">

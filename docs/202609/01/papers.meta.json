@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-01",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T22:44:47",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/01/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis",
+      "section": "quick",
+      "title_en": "Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis",
+      "authors": "Olga lanzetta, Luisa Cutillo, Bailey Andrew, Claudia Angelini",
+      "date": "2026-08-24",
+      "pdf": "https://arxiv.org/pdf/2608.22982v1",
+      "score": "6.5",
+      "evidence": "解析外周血单个核细胞中功能不同的细胞状态和转录组梯度",
+      "tldr": "针对传统单细胞测序分析依赖手动标记、难以识别细微转录组差异的问题，本研究提出基于高斯多图模型（GmGM）的分析框架。该方法能同时推断细胞间和基因间的依赖结构，通过集成聚类算法在PBMC数据集中识别出传统方法无法区分的功能性亚群，并构建了基因共表达模块，为单细胞分辨率下的细胞聚类与基因网络推理提供了统一且可重复的解决方案。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Conventional annotation of single-cell RNA-sequencing (scRNA-seq) data relies heavily on manual, marker-based thresholding, an approach that can obscure subtle transcriptomic gradients and collapse functionally distinct cell states into broad, heterogeneous populations. Here we apply the Gaussian multi-Graphical Model (GmGM) framework, which jointly infers cell-cell and gene-gene dependency structure from a single scRNA-seq data matrix, to a 10x Genomics PBMC dataset. Ten independent GMGM-Leiden clustering runs were integrated into a robust consensus partition using a soft cluster ensemble approach and benchmarked against reference cell-type annotations. This strategy yielded stable cluster partitions that resolve biologically meaningful sub-populations not distinguished by the reference annotation. In parallel, for each cluster, gene co-expression modules were extracted from the fitted model via consensus Leiden clustering across resolutions, evaluated using standard network metrics, and validated functionally with the Network Enrichment Analysis Test (NEAT), which confirmed non-random enrichment signal. A module-scoring procedure linked network topology to per-cell, per-cluster expression signatures, and a novel extension of GmGM, recovering a shared cell-cell network together with population-specific gene networks in a single model run, was demonstrated in a case study on the CD4+ T-cell population. These results indicate that GmGM provides a unified, reproducible framework for joint cell clustering and gene-network inference, capable of revealing cellular structure beyond that captured by conventional pipelines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

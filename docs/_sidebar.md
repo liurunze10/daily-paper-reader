@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-01 <!--dpr-date:20260901-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/01/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis" data-sidebar-item="{&quot;title&quot;: &quot;Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.22982v1-uncovering-cellular-resolution-in-scrnaseq-via-unbiased-cell-and-gene-network-analysis&quot;, &quot;score&quot;: &quot;6.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;解析外周血单个核细胞中功能不同的细胞状态和转录组梯度&quot;}">Uncovering Cellular Resolution in scRNAseq via Unbiased Cell and Gene Network Analysis</a>
   * 2026-08-31 <!--dpr-date:20260831-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/31/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning" data-sidebar-item="{&quot;title&quot;: &quot;LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning&quot;, &quot;score&quot;: &quot;7.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;溃疡性结肠炎的内窥镜图像&quot;}">LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning</a>
