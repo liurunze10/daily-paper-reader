@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-31 <!--dpr-date:20260831-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/31/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning" data-sidebar-item="{&quot;title&quot;: &quot;LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning&quot;, &quot;score&quot;: &quot;7.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;溃疡性结肠炎的内窥镜图像&quot;}">LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning</a>
   * 2026-08-30 <!--dpr-date:20260830-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/30/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning" data-sidebar-item="{&quot;title&quot;: &quot;LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.23853v1-lux-a-lesion-aware-graph-conditioned-visual---language-architecture-for-explainable-endoscopic-captioning&quot;, &quot;score&quot;: &quot;7.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;解释溃疡性结肠炎（一种炎症性肠病）的内窥镜图像&quot;}">LUX: A Lesion-Aware Graph-Conditioned Visual - Language Architecture for Explainable Endoscopic Captioning</a>
