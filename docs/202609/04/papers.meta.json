@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-04",
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T22:27:21",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/04/2609.01357v1-poppert-population-level-joint-distribution-modeling-for-single-cell-perturbation-prediction",
+      "section": "quick",
+      "title_en": "PopPert: Population-level Joint-Distribution Modeling for Single-Cell Perturbation Prediction",
+      "authors": "Handong Wang, Jiaxin Qi, Haochen Feng, Baisheng Lai",
+      "date": "2026-09-01",
+      "pdf": "https://arxiv.org/pdf/2609.01357v1",
+      "score": "6.5",
+      "evidence": "预测特定扰动的转录响应以理解细胞调节机制",
+      "tldr": "预测单细胞扰动响应对药物研发至关重要，但现有方法常错误假设细胞间存在一一对应关系。本文提出PopPert框架，通过参数化群体层面的联合基因表达分布来建模转录状态。PopPert利用低秩高斯Copula捕捉基因共表达模式，预测分布参数的变化而非单细胞层面的对应关系。实验证明，该方法在遗传和化学扰动基准测试中表现优异，为处理非配对单细胞数据提供了新范式。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Predicting transcriptional responses to specific perturbations is critical for understanding cellular regulatory mechanisms and accelerating drug discovery. Single-cell RNA sequencing destroys each measured cell, yielding only unpaired populations of control and perturbed cells. However, existing methods typically model perturbation prediction at the single-cell level and assume cell-to-cell correspondence, which conflicts with the unpaired nature of the observed data. To address this challenge, we propose PopPert, a framework that explicitly parameterizes population-level joint gene expression distributions for collective transcriptional state modeling. Given a control population distribution and a perturbation condition, PopPert predicts perturbation-induced changes in distribution parameters, eliminating the need for cell-level correspondence and reducing sensitivity to single-cell noise. To effectively capture gene co-expression patterns, PopPert leverages a low-rank Gaussian Copula to model cross-gene statistical dependencies and construct the joint gene expression distribution, additionally allowing sampling of synthetic perturbed single-cell profiles. Across multiple single-cell benchmarks spanning both genetic and chemical perturbations, PopPert achieves superior overall performance in differential expression recovery, perturbation effect estimation, and population-level distribution matching. These results establish population-level joint distribution learning as an effective paradigm for predicting transcriptional responses from unpaired single-cell populations. Code for PopPert is publicly available at https://github.com/whd1125/PopPert.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
