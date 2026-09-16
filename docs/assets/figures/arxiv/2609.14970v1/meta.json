@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2609.14970v1/fig-001.webp",
+      "caption": "Fig. 4 | Evaluation of gene context embeddings for genetic perturbation-response prediction. a, Overview of the GEARS-based framework using contextual gene embeddings learned by scKITE for perturbation-response prediction. The pretrained gene embeddings are combined with perturbation information to predict perturbation responses. b, Top-20 DE gene mean squared error (MSE) between predicted and observed expression profiles across the Norman and Replogle datasets. Performance is compared across scKITE, scGPT, scFoundation, GEARS and scKITE (w/o knowledge enhancement). c, Perturbation-response prediction performance under different generalization settings in the Norman dataset. Seen0, Seen1 and Seen2 represent increasing levels of perturbation overlap between training and evaluation, whereas unseen single represents unseen single-gene perturbations. d, Perturbation-level comparison of Top-20 DE gene MSE between scKITE and GEARS across evaluated perturbation conditions in the Replogle dataset. Each point represents one perturbation condition. e, Direction-correct recovery of Top-20 DE genes in the Norman dataset. Each point represents one unique perturbation condition in the Norman test set after removing equivalent condition aliases (𝑛 = 97). Violin plots show DE gene recovery score distributions across perturbations, with boxes indicating the interquartile range and black diamonds indicating the mean. scKITE was compared with scKITE (w/o knowledge enhancement) using a two-sided paired Wilcoxon signed-rank test. f, Comparison of predicted and observed expression-change distributions for Top-20 DE genes under the UBASH3B+PTPN12 combinatorial perturbation. Violin plots show cell-level expression-change distributions, with horizontal lines indicating mean values. g, Recovery of genetic interaction magnitude for held-out double-gene perturbations. Each point represents one doublegene perturbation (𝑛 = 71). Scatter plots compare predicted and ground-truth interaction magnitudes for scKITE and GEARS, with dashed lines indicating perfect agreement (𝑦 = 𝑥). Pearson correlations are shown for each model.",
+      "page": 11,
+      "index": 1,
+      "width": 819,
+      "height": 755
+    },
+    {
+      "url": "assets/figures/arxiv/2609.14970v1/fig-002.webp",
+      "caption": "Fig. 2 | Evaluation of scKITE representations for cell type annotation and biological organization. a, Zero-shot and fine-tuned cell-type annotation performance of scKITE, scKITE (w/o knowledge enhancement), scGPT and Geneformer across five benchmark datasets, including Human Pancreas, Multiple Sclerosis, Tumor-infiltrating Myeloid, Cross-tissue Immune Cell Atlas and Tabula Sapiens. b, UMAP visualization of scKITE cell embeddings from the Tabula Sapiens and Cross-tissue Immune Cell Atlas datasets, colored by reference cell types and zero-shot predicted labels. c, Confusion matrix comparing reference annotations and zero-shot predictions for 20 common cell types in the Tabula Sapiens dataset. d, Hierarchical organization of immune cell types captured by scKITE and scKITE (w/o knowledge enhancement). Dendrograms show clustering of cell-type centroids colored by major immune compartments. e, Pairwise cosine-distance distributions in scKITE and scKITE (w/o knowledge enhancement) embeddings for cells across different immune compartments, within the same compartment, and within the same cell type. f, Crosstissue retrieval accuracy of scKITE representations across nine lymphoid and non-lymphoid tissues in the Cross-tissue Immune Cell Atlas. Heatmaps show directional Top-1 retrieval accuracy between tissue pairs.",
+      "page": 7,
+      "index": 2,
+      "width": 881,
+      "height": 739
+    },
+    {
+      "url": "assets/figures/arxiv/2609.14970v1/fig-003.webp",
+      "caption": "Fig. 5 | Knowledge-guided pretraining encodes cell identity and gene regulatory information in scKITE representations. a, Overview of the cross-attention-based interpretation strategy for scKITE. Decoder cross-attention between the annotation/regulon decoders and the shared encoder representations enables identification of genes associated with cell identity and transcription factor regulatory programs. b, Enrichment of cell-type marker genes in annotation-decoder cross-attention compared with matched background genes across evaluable cell types. c, Crossattention ranking of canonical marker genes in representative NK-cell and neutrophil populations. d, Recovery of canonical marker genes from annotation-decoder cross-attention rankings. e, Enrichment of CollecTRI-supported TF target genes in regulon-decoder cross-attention compared with matched non-target genes. f, TF-level evaluation of regulatory target retrieval. Each point represents an evaluated TF, with target-discrimination performance summarized by TF-target attention enrichment and AUROC. g, Representative TBX21 regulatory program revealed by regulondecoder cross-attention. Genes are ranked according to their TF-associated attention, with externally supported targets highlighted. h, Cell-type-dependent TF-target attention enrichment across different cellular contexts.",
+      "page": 13,
+      "index": 3,
+      "width": 863,
+      "height": 648
+    },
+    {
+      "url": "assets/figures/arxiv/2609.14970v1/fig-004.webp",
+      "caption": "Fig. 1 | Knowledge-enhanced pretraining strategy of scKITE enables biologically informed single-cell representations. a, Effect of pretraining corpus size and biological knowledge enhancement on scKITE performance. Models pretrained using different fractions of the corpus are evaluated across cell-type annotation, batch integration and perturbation-response prediction tasks. b, Construction of complementary biological supervision from the CellWhisperer-processed CELLxGENE corpus. Transcriptomic profiles are paired with natural-language cell annotations and activated regulon programs to generate annotation and regulatory knowledge sequences for Stage 2 knowledge-enhanced pretraining. c, Two-stage pretraining strategy of scKITE. Stage 1 performs transcriptomic self-supervised learning through masked expression modeling. Stage 2 initializes the encoder from Stage 1 and introduces auxiliary annotation and regulon decoders to inject biological knowledge into representation learning. The auxiliary decoders are removed after pretraining, and the knowledge-enhanced encoder is used for downstream tasks. d, Downstream applications of the pretrained scKITE encoder. Cell-level representations support cell-type annotation, batch integration and cell organization analysis, whereas contextual gene representations enable perturbation-response prediction and regulatory interpretation.",
+      "page": 5,
+      "index": 4,
+      "width": 874,
+      "height": 830
+    }
+  ]
+}

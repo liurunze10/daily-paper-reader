@@ -1,0 +1,39 @@
+{
+  "label": "2026-09-16",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T22:20:03",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202609/16/2609.14709v1-an-immune-world-model-for-multiscale-forecasting-and-therapeutic-hypothesis-generation",
+      "section": "quick",
+      "title_en": "An immune world model for multiscale forecasting and therapeutic hypothesis generation",
+      "authors": "Taoyong Cui, Xi Wang, Zonghang Li, Jinchao Ding, Lingsen You, Yuzhi Xu, Wanghan Xu, Fang Wu, Kejun Ying, Wanli Ouyang, Pheng Ann Heng, Ling Yang, Zhenfei Yin, Yingcheng Wu",
+      "date": "2026-09-13",
+      "pdf": "https://arxiv.org/pdf/2609.14709v1",
+      "score": "7.0",
+      "evidence": "用于免疫状态和细胞程序多尺度预测的免疫世界模型",
+      "tldr": "免疫疗法跨越细胞、组织和患者多个尺度，但现有预测器多为单尺度。本研究利用进化AI科学家构建了“免疫世界模型”（IWM），这是一种学习干预如何影响跨尺度免疫状态的动作条件模型。IWM能泛化至未见干预，预测复杂扰动组合，并成功提出IL-36γ与SIRPα抑制结合的治疗新假设，为多尺度免疫模拟和药物研发提供了AI驱动的新框架。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Immune therapies act across cell-intrinsic programs, tissue ecosystems, and patient-specific immune states, yet most predictors address these scales separately. We used a governed evolutionary AI Scientist to construct the Immune World Model, an action-conditioned model that learns how interventions move immune states across cellular, tissue, and individual levels. The Immune World Model--building Scientist searched candidate architectures and workflows, and the resulting world model was frozen before independent confirmation. The frozen model generalized to unseen interventions and biological contexts, recovered intervention-specific cellular programs, integrated cell and tissue information to improve ecosystem and patient-response prediction, and forecast unseen perturbation combinations. Immune World Model--guided analysis then combined measured perturbations with cross-axis inference to nominate IL-36$γ$ plus SIRP$α$ inhibition as a complementary-axis therapeutic hypothesis, whereas a governed self-correction audit rejected every screened cytokine pair. The Immune World Model provides a framework for multiscale immune simulation that connects AI Scientist-driven model construction, intervention forecasting, and the generation of prospectively testable therapeutic hypotheses.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/16/2609.14970v1-towards-a-knowledge-enhanced-single-cell-foundation-model",
+      "section": "quick",
+      "title_en": "Towards a knowledge-enhanced single-cell foundation model",
+      "authors": "Hanqing Zhang, Jie Bao, Mei Ma, Shuai Liu, Jiaying Ma, Jiaguan Liu, Jiaxiao Li, Zhenbo Li, Wenwen Gong, Zhijun Ca",
+      "date": "2026-09-14",
+      "pdf": "https://arxiv.org/pdf/2609.14970v1",
+      "score": "6.5",
+      "evidence": "用于转录组分析和基因调控的单细胞基础模型",
+      "tldr": "本研究针对单细胞基础模型预训练中单纯增加数据量导致边际收益递减的问题，提出了知识增强模型scKITE。该模型通过轻量级辅助解码器将细胞文本注释和基因调控信息整合进Transformer编码器。实验表明，scKITE仅需极少预训练样本即可超越现有强力模型，为生物学驱动的预训练提供了新范式。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Single-cell foundation models (scFMs) increasingly rely on large-scale transcriptomic pretraining, yet expanding pretraining data can yield diminishing gains while substantially increasing computational cost. Our data scaling analyses showed that incorporating biological knowledge, including cell-level text annotation and gene-level regulatory information, provided additional scaling dimension than simply increasing data size. Motivated by this observation, we present scKITE, a simple yet effective scFM that integrates cell-annotation and gene-regulatory supervision into a shared transcriptomic Transformer encoder through lightweight auxiliary decoders. These decoders are used only during pretraining and subsequently discarded, yielding a general-purpose encoder enriched with biological knowledge for downstream applications. With only 179,067 pretraining samples, i.e., less than 0.5\\% of those used by previous strong scFMs, scKITE outperformed these models across diverse downstream tasks, highlighting knowledge-enhanced pretraining as a promising paradigm for biologically grounded scFMs.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

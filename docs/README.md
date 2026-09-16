@@ -6,32 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-15
-- 运行时间：2026-09-15 22:36:50 UTC
+- 最新运行日期：2026-09-16
+- 运行时间：2026-09-16 22:18:11 UTC
 - 运行状态：成功
-- 本次总论文数：3
+- 本次总论文数：2
 - 精读区：0
-- 速读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-今日聚焦免疫系统建模前沿，深入探讨类风湿关节炎的数学刻画与多尺度免疫预测模型。
-重点推荐类风湿关节炎的量化建模研究，以及利用“免疫世界模型”进行治疗假设生成的新范式。
-建议关注数学工具与AI如何拆解巨噬细胞行为及免疫复杂系统，把握精准医疗的数字化趋势。
-- 详情：[/202609/15/README](/202609/15/README)
+今日聚焦 AI 驱动的生物医学建模，重点探索免疫系统世界模型与知识增强的单细胞大模型。
+研究展示了如何通过多尺度预测生成免疫治疗假设，并利用先验知识提升单细胞基础模型的表征精度。
+建议关注 AI 如何结合生物学机理实现从数据驱动到机理发现的跨越，助力精准医疗与药物研发。
+- 详情：[/202609/16/README](/202609/16/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [A mathematical modelling of rheumatoid arthritis](/202609/15/2609.15543v1-a-mathematical-modelling-of-rheumatoid-arthritis)  
-   标签：评分：7.5/10、query:ros-mp
-   evidence：模拟炎症中组织驻留巨噬细胞与单核细胞源性巨噬细胞的相互作用
-2. [Fragmented uptake drives lipid accumulation in macrophage cannibalistic efferocytosis](/202609/15/2609.13974v1-fragmented-uptake-drives-lipid-accumulation-in-macrophage-cannibalistic-efferocytosis)  
+1. [An immune world model for multiscale forecasting and therapeutic hypothesis generation](/202609/16/2609.14709v1-an-immune-world-model-for-multiscale-forecasting-and-therapeutic-hypothesis-generation)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：用于免疫状态和细胞程序多尺度预测的免疫世界模型
+2. [Towards a knowledge-enhanced single-cell foundation model](/202609/16/2609.14970v1-towards-a-knowledge-enhanced-single-cell-foundation-model)  
    标签：评分：6.5/10、query:ros-mp
-   evidence：巨噬细胞胞葬作用与炎症消退
-3. [An immune world model for multiscale forecasting and therapeutic hypothesis generation](/202609/15/2609.14709v1-an-immune-world-model-for-multiscale-forecasting-and-therapeutic-hypothesis-generation)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：免疫状态和干预特异性细胞程序的跨尺度预测
+   evidence：用于转录组分析和基因调控的单细胞基础模型
 
 
 <div class="dpr-home-promo-card">
