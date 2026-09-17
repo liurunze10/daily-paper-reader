@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-17 <!--dpr-date:20260917-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/17/2609.15543v1-a-mathematical-modelling-of-rheumatoid-arthritis" data-sidebar-item="{&quot;title&quot;: &quot;A mathematical modelling of rheumatoid arthritis&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.15543v1-a-mathematical-modelling-of-rheumatoid-arthritis&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;模拟巨噬细胞分化和炎症动力学&quot;}">A mathematical modelling of rheumatoid arthritis</a>
   * 2026-09-16 <!--dpr-date:20260916-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/16/2609.14709v1-an-immune-world-model-for-multiscale-forecasting-and-therapeutic-hypothesis-generation" data-sidebar-item="{&quot;title&quot;: &quot;An immune world model for multiscale forecasting and therapeutic hypothesis generation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.14709v1-an-immune-world-model-for-multiscale-forecasting-and-therapeutic-hypothesis-generation&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;用于免疫状态和细胞程序多尺度预测的免疫世界模型&quot;}">An immune world model for multiscale forecasting and therapeutic hypothesis generation</a>
