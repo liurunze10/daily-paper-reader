@@ -6,26 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-17
-- 运行时间：2026-09-17 22:30:06 UTC
+- 最新运行日期：2026-09-18
+- 运行时间：2026-09-18 21:45:52 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：3
 - 精读区：0
-- 速读区：1
+- 速读区：3
 
 ### 今日简报（AI）
-今日聚焦类风湿性关节炎的数学建模研究，通过量化手段剖析慢性炎症的演化过程。
-该研究尝试利用数学模型模拟病理机制，为理解关节损伤的动态规律提供了理论视角。
-推荐对生物数学跨学科应用或自身免疫性疾病量化分析感兴趣的读者快速浏览。
-- 详情：[/202609/17/README](/202609/17/README)
+今日速读聚焦免疫系统动态演化，涵盖了巨噬细胞同类相食、类风湿关节炎建模及免疫世界模型等前沿进展。
+重点关注巨噬细胞通过碎片化摄取驱动脂质积累的机制，以及利用多尺度模型预测免疫治疗方案的新范式。
+建议关注生物机制与数学建模的交叉应用，探索免疫代谢在慢性炎症疾病中的潜在干预价值。
+- 详情：[/202609/18/README](/202609/18/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [A mathematical modelling of rheumatoid arthritis](/202609/17/2609.15543v1-a-mathematical-modelling-of-rheumatoid-arthritis)  
+1. [Fragmented uptake drives lipid accumulation in macrophage cannibalistic efferocytosis](/202609/18/2609.13974v1-fragmented-uptake-drives-lipid-accumulation-in-macrophage-cannibalistic-efferocytosis)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：巨噬细胞胞葬作用与炎症消退
+2. [A mathematical modelling of rheumatoid arthritis](/202609/18/2609.15543v1-a-mathematical-modelling-of-rheumatoid-arthritis)  
+   标签：评分：7.0/10、query:ros-mp
+   evidence：巨噬细胞分化和炎症动力学的数学建模
+3. [An immune world model for multiscale forecasting and therapeutic hypothesis generation](/202609/18/2609.14709v1-an-immune-world-model-for-multiscale-forecasting-and-therapeutic-hypothesis-generation)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：模拟巨噬细胞分化和炎症动力学
+   evidence：用于预测免疫状态和治疗干预的免疫世界模型
 
 
 <div class="dpr-home-promo-card">
