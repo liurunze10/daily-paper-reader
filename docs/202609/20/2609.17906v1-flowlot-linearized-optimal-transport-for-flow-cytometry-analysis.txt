@@ -1,0 +1,495 @@
+Title: FlowLOT: Linearized Optimal Transport for Flow Cytometry Analysis
+
+URL Source: https://arxiv.org/pdf/2609.17906v1
+
+Published Time: Thu, 17 Sep 2026 00:21:12 GMT
+
+Number of Pages: 26
+
+Markdown Content:
+# FlowLOT: Linearized Optimal Transport for Flow Cytometry Analysis 
+
+Naqib Sad Pathan 1, Mohammad Shifat-E-Rabbi 2, Kristofor E. Pas 3, Ivan Medri 3,Bartek Rajwa 4, and Gustavo K. Rohde 1,3,* 1Department of Electrical & Computer Engineering, University of Virginia, Charlottesville, VA, USA 
+
+> 2
+
+Department of Electrical and Computer Engineering, North South University, Dhaka, Bangladesh 
+
+> 3
+
+Department of Biomedical Engineering, University of Virginia, Charlottesville, VA, USA 
+
+> 4
+
+Bindley Bioscience Center, Purdue University, West Lafayette, IN, USA 
+
+> *
+
+Corresponding author: gustavo.rohde@gmail.com 
+
+Abstract 
+
+Multiparameter flow cytometry generates high-dimensional, unordered single-cell mea-surement data for disease diagnosis and monitoring, yet analysis often remains dependent on manual gating, limiting scalability and reproducibility. Existing machine-learning ap-proaches can reduce annotation burden but frequently require large training cohorts and offer limited interpretability. To address these challenges, we introduce FlowLOT , an optimal-transport-based framework that models the single-cell measurement data of a pa-tient sample as an empirical cellular distribution and maps it directly into a fixed-length feature vector. Within a single transparent architecture, FlowLOT unifies high-dimensional classification, interpretable visualization, and continuous quantitative inference. In few-shot regimes, using as few as 16 patients per class on FlowCAP-II and 8 patients per class on BLAST110, it accurately distinguishes healthy from acute myeloid leukemia (AML) sam-ples, reaching 94 .3 ± 1.9% and 98 .0 ± 1.7% balanced accuracy, respectively. The underlying embedding exposes marker-level variation driving disease-associated population shifts and enables quantitative measurable residual disease (MRD) estimation, achieving a Pearson correlation of 0 .82 on held-out samples and 0 .79 under cross-dataset transfer. Furthermore, at the clinically relevant 0 .1% threshold for leukemia-associated immunophenotype (LAIP) residual disease, FlowLOT detects positivity with 72% sensitivity at 100% specificity. By replacing subjective manual gating and black-box deep learning with a distribution-aware framework, FlowLOT offers a sample-efficient, scalable, and interpretable solution for high-dimensional cytometry under realistic clinical and experimental constraints. 
+
+Keywords: Linearized optimal transport (LOT), High dimensional distribution (HDD), nearest subspace classifier (NSC), flow cytometry (FCM), acute myeloid leukemia (AML), mea-surable residual disease (MRD) 1arXiv:2609.17906v1 [q-bio.QM] 15 Sep 2026 Introduction 
+
+Flow cytometry (FCM) is a single-cell optical analysis technology that measures light-scatter and fluorescence signals from cells in suspension, enabling rapid, multiparametric characteri-zation of large cell populations. In cancer research, FCM has become a foundational tool for high-throughput profiling of tumor heterogeneity, immune responses, and disease-associated cel-lular phenotypes [1–3]. By simultaneously measuring multiple surface and intracellular markers, FCM captures cellular heterogeneity as high-dimensional, population-scale single-cell data. Despite major advances in cytometry instrumentation, downstream analysis remains a cen-tral bottleneck. Cytometry samples are represented as an unordered set of cellular measure-ments, or equivalently as a high-dimensional empirical distribution [4]. Due to the unordered nature of this representation, cytometry data is not compatible with analytical frameworks that require fixed-length vector representations of samples [5]. Consequently, conventional pipelines rely on manual gating (the expert-driven process of sequentially drawing marker-based bound-aries to identify cell populations) which is labor-intensive, and difficult to standardize or scale across cohorts [6]. These challenges are especially significant in clinical applications involving acute myeloid leukemia (AML), including disease classification and measurable residual disease (MRD) mon-itoring. In these settings, clinically meaningful distinctions may depend on shifts in marker-expression distributions, aberrant cell populations, or altered patterns of cellular maturation rather than from large changes in dominant populations. Robust, sensitive, and reproducible analytical methods capable of capturing these distribution-level differences are therefore essen-tial for reliable clinical decision-making [7]. Sample classification tasks, such as distinguishing healthy and pathological patients, com-monly rely on a two-step pipeline [8, 9]. The first step identifies cellular subpopulations within each sample, historically through manual expert gating. Computational methods, including dimensionality reduction and clustering, have been developed to automate this step. However, robust and generalizable performance remains challenging [9–11]. The second step extracts summary features from these subpopulations, such as marker-expression profiles, which are subsequently used for tasks including classification, grading, and prognosis[6, 12–17]. While widely adopted, this pipeline compresses samples into summary features, rather than treating them as empirical distributions. As a result, it may miss continuous phenotypic gradients, co-ordinated marker-expression shifts, and changes in population shape or density that are not captured by abundance-based summaries alone. Gaussian mixture models (GMMs) offer an alternative by modeling each sample as a mixture of Gaussian components in marker space [18, 19], with subpopulations represented by mixture components and classification performed using mixture-derived parameters. To accommodate the asymmetry, multimodality, and heavy tails that are characteristic of fluorescence-based cy-tometry distributions, several extensions of the basic Gaussian formulation have been proposed: 
+
+t-mixtures coupled with a Box–Cox transformation [20], finite mixtures of multivariate skew 
+
+t distributions in the FLAME framework [21], and the Joint Clustering and Matching (JCM) procedure, in which each sample is fit by a mixture of multivariate (skew) t kernels and a class-level template is constructed through random-effects modeling of inter-sample variability [18]. This approach has been evaluated on the FlowCAP-II AML benchmark and shown to be competitive with other template- and clustering-based pipelines for AML classification. A complementary line of work has sought to remove the need for a priori specification of the number of mixture components through Bayesian non-parametric (BNP) constructions. In this direction, Dundar et al. developed ASPIRE, an infinite mixture of infinite Gaussian mix-tures (I 2GMM) with Dirichlet-process priors that jointly clusters cellular events across samples while accommodating sample-specific random effects, and demonstrated near-perfect identifica-tion of anomalous AML phenotypes on the FlowCAP-II data without requiring a representative 2training set of AML cases [14]. The same framework was subsequently extended to the longi-tudinal monitoring of disease progression in AML, in which proportion vectors over recovered non-parametric meta-clusters were used as phenotype features for predicting the direction of change between sequential clinical samples, yielding correct calls in 90% of relapsing cases and 100% of stable or remitting cases on an independent test cohort [22]. Despite these advances, both the parametric-mixture and the BNP formulations retain im-portant limitations when applied to complex immunophenotypes such as those encountered in AML [6]. Finite Gaussian and skew t mixtures remain sensitive to initialization, model-order selection, and component identifiability, and their estimated parameters may be biased when the assumed component family is misspecified. BNP approaches mitigate the model-order problem but still impose a parametric form on each (local) component, and computational cost grows substantially with sample size and dimensionality. More fundamentally, all of these methods compress each sample into a finite-dimensional intermediate representation (either a vector of mixture parameters or a vector of meta-cluster proportions) before classification is performed. Such intermediate representations may fail to capture the full distributional structure of the underlying cytometry data, particularly for rare or transitional populations whose contribution to a global summary is small but diagnostically informative. Existing computational approaches for MRD assessment similarly rely on intermediate clus-tering, heuristic decision rules, reference-based novelty detection, and varying degrees of manual intervention. In one common strategy, patient samples are jointly embedded with disease-free references, and cells absent from, or underrepresented in, the reference distribution are treated as candidate leukemic populations [23, 24]. These candidate populations are then refined through computer-assisted manual inspection or cluster-level heuristics, such as patient-to-control cell ratios [25, 26]. Representative methods include the GMM-based AML-MRD pipeline of Mock-ing et al., which identifies immature blasts using mixture models and applies reference-based novelty detection to estimate computational MRD percentages [7], as well as FlowSOM-derived approaches that use clustering to support MRD quantification [27]. These approaches can re-main dependent on reference distributions, threshold choices, component or cluster definitions, and expert visual review for clinical interpretation. Clustering- and embedding-based approaches can also be sensitive to cluster initialization, local density structure, and the rarity of leukemic cells, and may fail to resolve phenotypically overlapping populations. Dimensionality-reduction techniques such as UMAP may further dis-tort marker relationships, potentially limiting clinical interpretability and reliability [26]. More recent work has explored per-cell anomaly detection with supervised classifiers, en-abling aberrancy quantification without explicit clustering and improving sensitivity to rare leukemic cells. However, these methods introduce dependence on labeled training data and visualization-guided interpretation [28]. Optimal transport-based methods offer a complemen-tary strategy by representing samples as probability distributions and learning low-dimensional embeddings that preserve inter-patient variability relevant to MRD [4]. Yet, in existing OT-based MRD workflows, MRD inference remains indirect because it relies on quantization and post hoc clustering rather than direct estimation from the full empirical distributions. To-gether, these limitations motivate a unified, distribution-level framework that preserves the high-dimensional structure of cytometry data while enabling principled MRD assessment with minimal heuristic or manual intervention. In this work, we introduce FlowLOT, a distribution-level framework for representing, clas-sifying, and interpreting flow cytometry data. Rather than reducing each sample to manually gated populations, cluster-derived features, or mixture-model parameters, FlowLOT models each sample as a high-dimensional empirical probability distribution over single-cell marker measurements. Building on LOT theory, analytical representations of point-cloud data, and recent applications of optimal transport in single-cell analysis, we develop an LOT-based em-bedding tailored to cytometry measurements [4, 29–32]. 3The central motivation is to retain the full distributional structure of cytometry data while making sample-level learning computationally tractable and statistically interpretable. FlowLOT maps cytometry distributions into a linear vector space, enabling closed-form sta-tistical learning for classification, visualization, and MRD inference—tasks that are otherwise complicated by the non-Euclidean geometry of probability distributions. This linearization sup-ports accurate learning from limited labeled samples, a common constraint in clinical cytometry studies. Moreover, because the embedding is invertible, learned differences between groups can be mapped back to the original marker space, providing biologically interpretable descriptions of disease-associated distributional shifts. We validate FlowLOT on simulated and real-world flow cytometry datasets, demonstrating its utility for classification, visualization, and clinically relevant MRD assessment in acute myeloid leukemia. 
+
+# Results 
+
+Overview of the FlowLOT framework 
+
+The proposed FlowLOT framework is structured around four components as depicted in Figure 1 that provide a principled and interpretable approach to the analysis of high-dimensional flow cytometry data. 
+
+Component 1: Representation FlowLOT represents multiparameter flow cytometry sam-ples as discrete empirical probability distributions. Each cell is represented as a point in high-dimensional marker space, where measured parameters define the coordinate dimensions and the observed cells constitute the empirical support of the distribution. This formulation pre-serves within-sample cellular heterogeneity and enables principled comparison across samples using well-defined distributional distances and embeddings. 
+
+Component 2: Analytical class model Many computational approaches to flow cytom-etry analysis are primarily descriptive, relying on empirical summaries, clustering results, or manually defined populations rather than explicit generative models of population-level vari-ability. The proposed FlowLOT framework provides a foundation in which theoretical models of cytometry variation can be formulated and tested. Specifically, we model each phenotypic class as arising from an underlying template distribution subject to smooth, structured deforma-tions. This assumption reflects the biological intuition that meaningful phenotypic variability manifests as coordinated shifts in cellular distributions, rather than as arbitrary, sample-specific noise. 
+
+Component 3: Embedding A central challenge in operationalizing this model is that each sample consists of an unordered, variable-size collection of single-cell measurements, making direct comparison across samples nontrivial. FlowLOT addresses this challenge by introducing an optimal-transport-based embedding that maps these distribution-valued samples into fixed-length vector representations. This embedding preserves distributional geometry while enabling statistical modeling in a linear vector space. 
+
+Component 4: Applications We demonstrate the utility of the FlowLOT embedding in three downstream applications. First, under the proposed generative assumptions, FlowLOT enables accurate classification from relatively few labeled samples. Second, it supports vi-sualization of feature-wise variability between phenotypic classes, allowing disease-associated distributional shifts to be interpreted in marker space. Third, the same representation supports clinically relevant quantification tasks, including estimation of MRD. 4𝛿𝑥𝑗 
+
+> (c) Data Geometry
+
+𝑥𝑖 𝑥𝑗 𝑥𝑘 𝑥 '𝑖 𝑥 '𝑗 𝑥 '𝑘 𝜎 𝛿𝑥𝑖 
+
+> (a) Representation Flow Tube 𝜇 =1𝑁 𝛿 𝑥 𝑖 𝑁 𝑖 =1,𝑥 𝑖 ∈ℝ𝐿
+
+𝛿 𝑥 𝑖 
+
+> Focused Laser (b) Embedding
+> 𝛿𝑥𝑖
+
+# 𝜇 𝛿𝑥𝑘 
+
+> Vector Embedding Apply Order Apply Order Reference (e) Applications
+
+Classification/Diagnostics Regression/Prognostication  
+
+> 𝑀 (𝑘 )
+> 𝑀 (𝑗 )
+
+Visualization/Inversion 
+
+𝑥𝑖 𝑥𝑗 𝑥𝑘 ∈ ℝ 𝑁 ×𝐿 
+
+> 123
+
+# 𝜎 
+
+> (d) Analytical Modeling Embedding Patient-Specific Deformation
+
+𝜑 1
+
+𝜑 2
+
+Class Templates Cytometry Data LOT-Embedded Samples LOT-Embedded Classes Subspace Model Figure 1: System diagram outlining the proposed FlowLOT pipeline. (a) High-dimensional distribution (HDD)-based representation of flow cytometry data as a discrete measurement; (b) LOT-based embedding of HDD data mapping into a common-defined reference system; (c) Example showing of consistency of embedding across multiple patients into common coordinate system; (d) Analytical modeling of different patient classes generated through a deformation within their spatial domain, with embedding into a common coordinate system; (e) Downstream applications. 
+
+Synthetic data demonstration 
+
+To illustrate the geometric interpretability and discriminative power of the proposed framework, we first consider a controlled synthetic example. We generate two high-dimensional data classes, each defined by a template distribution, and construct individual samples within each class by deforming the corresponding template. This setup isolates the class-specific structure and enables direct visualization of how this structure is encoded in the embedding space. 5For ease of visualization, we first consider a single deformation type: translation of the tem-plate along a random axis, as shown in Fig. 2. Each resulting distribution is embedded as a fixed-length vector that encodes its high-dimensional distributional structure. We then project these embeddings into a two-dimensional principal-component space, where each point corre-sponds to one full distribution. Thus, distances and separations in this space reflect differences between distributions, rather than differences between individual cells or measurements. Figure 2 shows that the two classes form distinct linear manifolds in the projected embedding space, yielding strict linear separability in this controlled example. Consequently, a standard linear classifier achieves perfect discrimination. Importantly, this behavior is not restricted to simple translational deformations of the underlying distributions. Under suitable admissibil-ity conditions, broader classes of geometric and structural deformations induce class-specific linear subspaces that remain separable under the proposed embedding. A rigorous mathemat-ical characterization of these deformation models and the corresponding conditions for linear separability is developed in [30, 33, 34]. Class 1  A B C     
+
+> Class 2  A' B' C'
+> PC 1
+> PC 2
+> ABCA' B' C' LOT-embedded space
+> Class 1 Class 2
+> FSC →
+
+Figure 2: Visualization of the LOT embedding geometry using Principal Component Analysis, illustrating how the data geometry changes across different template classes. Selected samples from synthetic class 1 (blue) and class 2 (red) are inverted to demonstrate translational shifts in the underlying distribution/cytometry space. This synthetic proof of concept illustrates how the proposed embedding captures class-specific distributional geometry. We next extend the analysis to real-world flow cytometry data, evaluating the model’s ability to distinguish AML samples from normal samples. 
+
+Acute myeloid leukemia (AML) classification Experimental Setup. To evaluate the effectiveness of the proposed Linearized Optimal Transport (LOT) embedding for flow-cytometry measurements from real patient cohorts, we assessed diagnostic classification performance on two benchmark datasets. For each dataset, 6patient samples were embedded into the LOT space using a dataset-specific reference patient following the framework introduced in [29, 30]. The optimal transport maps required for the embedding were computed using linear programming algorithms implemented in the POT li-brary [35, 36]. Classification was subsequently performed using simple downstream classifiers operating on the resulting LOT representations. We compared the proposed approach against several established methods for set-structured cytometry analysis. These included AttentionMIL [37], an attention-based multiple-instance learning framework that assigns diagnostic relevance weights to individual cells; CytoSet [38], a permutation-invariant architecture derived from DeepSets [39] that aggregates cell-level em-beddings into sample-level representations; PointNet++ [40] and DGCNN [41], two widely used deep-learning architectures for point-cloud classification; CellCNN [42], a convolutional frame-work specifically designed for identifying disease-associated cell populations; and FlowSOM [27], a clustering-based representation baseline that summarizes cellular populations through self-organizing maps. Within the LOT embedding framework, we considered several classical classifiers, including logistic regression (LR), support vector machines (SVM), random forests (RF), extremely randomized trees (ET), and the proposed Nearest Subspace Classifier (NSC). All methods were evaluated on high-dimensional flow-cytometry datasets derived from the BLAST-110 acute myeloid leukemia (AML) study [7] and the FlowCAP-II AML challenge [6]. We formulated binary diagnostic classification tasks in which each patient was represented by multiple diagnostic panels, with each panel containing either 500, 1 ,000, or 5 ,000 randomly sam-pled single-cell measurements. To assess robustness under limited data availability, a common constraint in clinical studies, we constructed few-shot learning settings by varying the number of labeled training samples per class ( k-shots). Performance was evaluated across ten independent stratified train–test splits and reported as the mean and standard deviation across repetitions. 
+
+Balanced Accuracy. Because the diagnostic tasks are not perfectly class-balanced, we report 
+
+balanced accuracy (BA) rather than conventional accuracy. Balanced accuracy is defined as the mean of the per-class recalls, BA := 1
+
+C
+
+> C
+
+X
+
+> c=1
+
+TP c
+
+TP c + FN c
+
+, (1) where C denotes the number of classes and TP c and FN c represent the true positives and false negatives for class c, respectively. For binary classification problems, this reduces to BA = 12 (sensitivity + specificity) .
+
+Unlike raw accuracy, which can be artificially inflated by always predicting the majority class, balanced accuracy assigns equal importance to each class and therefore provides a more reliable measure of discriminative performance under class imbalance. This property is particularly important in clinical applications, where the diagnostically relevant class is often the minority population. Patient-level predictions were obtained through Score Fusion (SF), whereby class proba-bilities from individual panels were averaged prior to final label assignment. This aggregation strategy preserves soft confidence information across panels while producing a unified patient-level prediction. 
+
+Classification Performance. Table 1 summarizes the mean balanced accuracy ( ± standard deviation) across ten independent train–test splits for all methods, cell counts, and few-shot settings. Overall, classifiers operating on LOT embeddings achieved performance comparable to or exceeding substantially more complex deep-learning baselines across both datasets. Im-portantly, strong results were obtained with multiple downstream classifiers, suggesting that a 7Table 1: Multi-Tube Diagnostic Classification Results: Balanced Accuracy (%) across all methods, cell counts ( N ), and few-shot regimes ( k). Performance reported as Mean ± Standard Deviation across 10 independent stratified train/test splits. Within each split, a balanced few-shot training subset samples (k) per class was randomly selected from the training set, while evaluation was performed on the corresponding held-out test set. Multi-tube (score fusion is applied across all diagnostic panels. Bold font denotes the winning classifier for each experimental condition (including ties). 
+
+N Method BLAST110 (Binary AML vs. NBM) FLOWCAP-II (Diagnostic AML vs. Normal) k = 2 k = 4 k = 6 k = 8 k = 4 k = 8 k = 12 k = 16 500 
+
+LOT + NSC 91 .2 ± 7.5 95 .7 ± 3.6 95 .8 ± 3.8 97 .0 ± 1.9 87 .5 ± 5.2 90 .8 ± 4.8 92 .7 ± 2.5 94 .3 ± 1.9
+
+LOT + LR 92 .3 ± 9.0 96 .3 ± 2.9 96 .3 ± 2.9 97 .7 ± 1.6 85 .9 ± 4.8 90 .1 ± 5.5 91 .4 ± 3.2 92 .2 ± 1.8LOT + SVM 61 .0 ± 40 .6 93 .7 ± 4.7 95 .7 ± 3.6 98 .0 ± 1.7 86 .8 ± 5.5 91 .1 ± 4.2 92 .1 ± 2.3 93 .5 ± 1.8LOT + RF 85 .8 ± 9.2 95 .2 ± 2.5 95 .0 ± 2.4 95 .8 ± 3.3 88 .3 ± 4.9 90 .0 ± 5.5 92 .0 ± 1.5 92 .8 ± 1.8LOT + ET 89 .7 ± 6.9 94 .5 ± 3.5 95 .7 ± 2.2 96 .2 ± 3.1 89 .0 ± 4.7 91 .3 ± 2.8 92 .3 ± 1.7 93 .0 ± 1.7DGCNN 90 .7 ± 7.7 93 .8 ± 5.2 96 .4 ± 2.4 97 .0 ± 2.6 88 .8 ± 4.3 90 .9 ± 3.7 92 .1 ± 2.2 92 .8 ± 2.0AttentionMIL 90 .5 ± 8.5 92 .6 ± 5.3 95 .8 ± 3.5 95 .4 ± 3.6 88 .8 ± 4.1 90 .9 ± 4.1 92 .1 ± 2.3 92 .3 ± 1.9CytoSet 89 .4 ± 8.7 92 .0 ± 5.2 95 .2 ± 3.7 96 .2 ± 2.3 89 .7 ± 3.6 90 .7 ± 4.5 91 .4 ± 2.7 92 .3 ± 1.7PointNet++ 83 .4 ± 13 .2 89 .2 ± 7.7 92 .5 ± 5.1 93 .7 ± 4.3 82 .3 ± 8.5 87 .2 ± 6.4 88 .8 ± 4.7 90 .3 ± 4.3CellCNN 77 .3 ± 12 .1 84 .4 ± 7.5 89 .0 ± 5.2 90 .5 ± 5.2 75 .4 ± 8.6 81 .2 ± 6.8 84 .0 ± 5.9 85 .6 ± 4.4FlowSOM 77 .5 ± 12 .4 85 .5 ± 7.2 91 .5 ± 5.1 91 .1 ± 3.8 83 .0 ± 6.8 88 .1 ± 4.9 89 .8 ± 4.1 92 .1 ± 3.0
+
+> 1000
+
+LOT + NSC 89 .8 ± 7.1 91 .5 ± 8.9 94 .2 ± 6.1 96 .2 ± 4.0 87 .5 ± 5.2 90 .8 ± 4.8 92 .7 ± 2.5 94 .3 ± 1.9
+
+LOT + LR 92 .0 ± 6.0 97 .0 ± 2.9 95 .3 ± 4.8 98 .0 ± 1.7 85 .9 ± 4.8 90 .1 ± 5.5 91 .4 ± 3.2 92 .2 ± 1.8LOT + SVM 61 .5 ± 40 .7 96 .2 ± 3.2 96 .5 ± 2.5 98 .0 ± 1.7 86 .8 ± 5.5 91 .1 ± 4.2 92 .1 ± 2.3 93 .5 ± 1.8LOT + RF 88 .3 ± 8.5 94 .7 ± 1.7 95 .7 ± 2.2 95 .5 ± 2.9 88 .3 ± 4.9 90 .0 ± 5.5 92 .0 ± 1.5 92 .8 ± 1.8LOT + ET 91 .0 ± 6.9 95 .2 ± 3.4 95 .8 ± 2.9 95 .8 ± 3.6 89 .0 ± 4.7 91 .3 ± 2.8 92 .3 ± 1.7 93 .0 ± 1.7DGCNN 91 .2 ± 8.0 93 .6 ± 4.8 95 .9 ± 2.8 97 .0 ± 2.2 88 .8 ± 4.3 90 .9 ± 3.7 92 .1 ± 2.2 92 .8 ± 2.0AttentionMIL 90 .8 ± 7.9 92 .5 ± 5.1 95 .5 ± 3.8 95 .4 ± 3.4 88 .8 ± 4.1 90 .9 ± 4.1 92 .1 ± 2.3 92 .3 ± 1.9CytoSet 90 .3 ± 7.6 92 .3 ± 5.2 95 .2 ± 4.3 96 .5 ± 1.9 89 .7 ± 3.6 90 .7 ± 4.5 91 .4 ± 2.7 92 .3 ± 1.7PointNet++ 83 .2 ± 11 .4 88 .5 ± 8.5 92 .4 ± 4.6 93 .3 ± 4.5 82 .3 ± 8.5 87 .2 ± 6.4 88 .8 ± 4.7 90 .3 ± 4.3CellCNN 79 .2 ± 10 .6 85 .3 ± 9.3 89 .5 ± 5.1 91 .9 ± 3.9 75 .4 ± 8.6 81 .2 ± 6.8 84 .0 ± 5.9 85 .6 ± 4.4FlowSOM 77 .0 ± 13 .0 87 .4 ± 7.3 90 .2 ± 4.4 92 .7 ± 3.8 83 .0 ± 6.8 88 .1 ± 4.9 89 .8 ± 4.1 92 .1 ± 3.0
+
+> 5000
+
+LOT + NSC 89 .7 ± 8.1 96 .0 ± 3.7 97 .7 ± 1.6 98 .0 ± 1.7 87 .5 ± 5.2 90 .8 ± 4.8 92 .7 ± 2.5 94 .3 ± 1.9
+
+LOT + LR 90 .0 ± 7.3 96 .7 ± 3.0 97 .0 ± 2.9 98 .0 ± 1.7 85 .9 ± 4.8 90 .1 ± 5.5 91 .4 ± 3.2 92 .2 ± 1.8LOT + SVM 28 .7 ± 24 .6 90 .0 ± 6.1 95 .7 ± 3.2 97 .5 ± 2.6 86 .8 ± 5.5 91 .1 ± 4.2 92 .1 ± 2.3 93 .5 ± 1.8LOT + RR 89 .0 ± 8.6 95 .8 ± 3.1 97 .3 ± 2.1 97 .7 ± 2.2 88 .3 ± 4.9 90 .0 ± 5.5 92 .0 ± 1.5 92 .8 ± 1.8LOT + ET 90 .0 ± 8.9 97 .0 ± 1.9 97 .0 ± 1.9 97 .7 ± 1.6 89 .0 ± 4.7 91 .3 ± 2.8 92 .3 ± 1.7 93 .0 ± 1.7DGCNN 90 .3 ± 7.8 93 .0 ± 5.5 95 .4 ± 3.5 96 .5 ± 2.7 88 .8 ± 4.3 90 .9 ± 3.7 92 .1 ± 2.2 92 .8 ± 2.0AttentionMIL 91 .6 ± 7.7 92 .6 ± 5.6 95 .1 ± 4.3 95 .3 ± 3.5 88 .8 ± 4.1 90 .9 ± 4.1 92 .1 ± 2.3 92 .3 ± 1.9CytoSet 91 .2 ± 7.5 91 .8 ± 5.2 94 .2 ± 4.7 96 .2 ± 2.3 89 .7 ± 3.6 90 .7 ± 4.5 91 .4 ± 2.7 92 .3 ± 1.7PointNet++ 69 .1 ± 15 .0 84 .6 ± 11 .3 89 .7 ± 6.0 90 .5 ± 4.8 82 .3 ± 8.5 87 .2 ± 6.4 88 .8 ± 4.7 90 .3 ± 4.3CellCNN 80 .7 ± 10 .9 86 .9 ± 7.7 90 .8 ± 4.6 92 .2 ± 3.6 75 .4 ± 8.6 81 .2 ± 6.8 84 .0 ± 5.9 85 .6 ± 4.4FlowSOM 81 .9 ± 12 .3 89 .0 ± 6.7 93 .6 ± 3.9 94 .4 ± 3.0 83 .0 ± 6.8 88 .1 ± 4.9 89 .8 ± 4.1 92 .1 ± 3.0
+
+substantial portion of the discriminative power arises from the LOT representation itself rather than from a particular classification model. On the FlowCAP-II benchmark, LOT-based methods consistently achieved competitive per-formance across all few-shot regimes. In particular, LOT+NSC attained balanced accuracies of 92 .7% and 94 .3% for k = 12 and k = 16, respectively. These results were obtained without iterative optimization, architecture-specific design choices, or extensive hyperparameter tuning. Other classifiers operating on LOT embeddings, including logistic regression, support vector machines, random forests, and extremely randomized trees, also demonstrated strong and sta-ble performance, indicating that the LOT representation captures disease-relevant information in a form that can be effectively exploited by a range of learning algorithms. The advantages of LOT embeddings are similarly evident on the BLAST110 dataset. Across most experimental settings, classifiers built on LOT representations rank among the strongest-performing approaches and frequently outperform specialized deep-learning architectures such as AttentionMIL, CytoSet, DGCNN, PointNet++, and CellCNN. The proposed NSC achieves particularly competitive performance in low-shot settings, where limited training data often 8hinder the effectiveness of deep neural networks. More broadly, the consistently strong perfor-mance observed across several classical classifiers suggests that the LOT embedding provides a robust and informative representation of patient-specific cellular distributions. An additional observation is that increasing the number of sampled cells from 500 to 1 ,000 generally improves predictive performance and reduces variance for most methods. However, further increasing the number of cells to 5 ,000 yields only modest gains despite increased compu-tational cost. These results suggest that approximately 1 ,000 cells per panel provide a favorable trade-off between classification accuracy, robustness, and computational efficiency. Interest-ingly, classification performance on the FlowCAP-II benchmark remains relatively stable across cellular subsampling depths, indicating that the key disease-discriminative information can be captured from comparatively small subsets of cells. Beyond predictive accuracy, the LOT-based framework offers several practical advantages. Deep-learning approaches typically require iterative optimization, hyperparameter tuning, and GPU resources, whereas LOT+NSC combines a deterministic embedding stage with a parameter-free geometric classification rule. Once the LOT embedding has been computed, classification reduces to evaluating distances to class-specific subspaces, resulting in negligible training and inference overhead. Consequently, the proposed framework provides a favorable combination of predictive performance, interpretability, reproducibility, and computational efficiency. Taken together, these results demonstrate that LOT embeddings provide a highly informa-tive representation of patient-specific cellular distributions, enabling simple classical classifiers to perform on par with, and often better than, substantially more complex deep-learning mod-els. Among the evaluated approaches, LOT+NSC offers an attractive balance of accuracy, ro-bustness, and efficiency while requiring no architecture-specific tuning. These properties make the proposed framework particularly well suited for clinical flow-cytometry applications, where labeled cohorts are limited and reproducible analytical pipelines are essential. 
+
+Technical variability, normalization challenges, and robustness of the proposed framework 
+
+Flow cytometry data are affected by systematic scaling, translation, and batch-related artifacts that hinder reliable cross-sample and cross-experiment comparisons. Fluorescence intensities often span several orders of magnitude, producing extreme dynamic ranges that complicate visualization and statistical modeling. In addition, fluorescence compensation and background correction can introduce zero or negative values, limiting the suitability of standard logarithmic transformations and motivating specialized transformations such as logicle, biexponential, or Box–Cox-based approaches [43]. Biologically comparable cell populations may also shift across samples because of instrument variability, detector gain, staining efficiency, antibody lot differences, compensation errors, and batch effects, resulting in systematic misalignment of marker intensities [44]. These technical artifacts can propagate to downstream analyses, leading to inconsistent gating, unstable clus-tering or dimensionality reduction, and reduced generalization of machine-learning models in high-dimensional cytometry data [45]. To mitigate these effects, a range of normalization strategies has been proposed, includ-ing nonlinear transformations for variance stabilization (e.g., hyberbolic arcsine, biexponen-tial), bead-based calibration, distribution-based methods such as quantile normalization and landmark alignment, and batch-correction algorithms including ComBat and CytoNorm [46]. However, many approaches rely on strong assumptions of distributional similarity and risk over-correcting data or removing genuine biological variation. In particular, marker-specific behaviors and rare populations remain difficult to normalize consistently across heterogeneous experiments, frequently requiring substantial expert intervention. The proposed optimal transport-based embedding, combined with subspace-based classifi-cation, is designed to mitigate common sources of technical variability in flow cytometry data. 9In particular, the embedding represents each sample through its transport with respect to a fixed reference distribution. Under translation or scaling of the original distribution, the corre-sponding embedded representation changes by a structured transformation, such as an additive constant or global scaling factor, rather than by an arbitrary distortion of the sample geometry. Related properties of optimal transport maps have been discussed in [47]. This structure helps preserve the relative ordering and alignment of cellular measurements with respect to the reference distribution, even when absolute marker intensities shift across experiments. As a result, biologically comparable cell populations remain more consistently aligned in the embedded representation under systematic scaling or translation artifacts. The subspace-based classifier further exploits this structure because classification depends on the geometry of the embedded samples rather than on absolute marker intensities alone. Since subspace-based classification is insensitive to global scaling and constant shifts in the embedded feature space, the combined embedding-classification framework can reduce the impact of these technical artifacts. The framework also remains stable under mild distributional perturbations, such as small deviations from symmetry or modest skewness, provided that these perturbations do not sub-stantially alter the underlying class-specific geometry. Consequently, samples from the same biological class that differ because of technical scaling, translation, or mild distributional dis-tortion can still occupy a coherent region of the embedded space. This preservation of class geometry helps explain why only a small number of training samples may be sufficient to char-acterize each class subspace, supporting strong classification performance even when training data are limited. 
+
+Visualization of class-specific features in AML 
+
+The proposed embedding-based framework enables visualization and quantitative analysis of class-specific marker variation. In the learned embedding space, we compute the class means for the two populations using the training data and define a principal axis as the direction connecting these mean vectors. This axis represents the dominant mode of separation between classes and captures systematic differences in marker-expression patterns. Both training and held-out test samples are projected onto this axis. In both sets, the two classes are well separated, indicating that the embedding generalizes beyond the training data and captures reproducible class-associated differences. Importantly, this one-dimensional axis provides an interpretable coordinate along which continuous variation between normal bone marrow and acute myeloid leukemia (AML) samples can be examined. To characterize how cytometry features change along this axis, we analyze samples at differ-ent locations along the projection. At selected intervals, we visualize pairwise marker distribu-tions (Figure 3) and compare the observed trends with established immunophenotypic patterns of AML blast populations. In this dataset, AML-associated regions show reduced side scatter (SSC), increased forward scatter (FSC), dimmer CD5 expression, and increased expression of markers such as CD34, CD117, and HLA-DR. These findings are broadly consistent with im-mature myeloid phenotypes observed in many AML cases, although AML immunophenotypes are heterogeneous and marker expression can vary across subtypes. Beyond recapitulating established phenotypic patterns, this framework can reveal additional class-associated trends by examining feature evolution along the embedding axis. The approach also supports data-driven hypothesis generation, allowing candidate marker associations to be further evaluated and validated in independent datasets. 10 a) b) Figure 3: Visualization of class-specific feature variation by analyzing trajectories in embedding space and mapping them back to the original feature space.(a) Projec-tion of samples onto the principal discriminative axis, defined as the direction connecting the mean embedding vectors of the two classes computed from the training data. Training samples are shown on the left and held-out test samples on the right. In both sets, the two classes separate clearly along this axis, indicating that the learned embedding captures a robust and generalizable mode of class-specific variation. (b) Feature-distribution changes along the prin-cipal axis. The axis is divided into intervals spanning −1.5σ to +1 .5σ, where σ denotes the standard deviation of the sample projections along the axis. Six pairwise feature-distribution panels are shown, each containing distributions corresponding to different locations along the axis. This representation shows how marker-expression patterns vary systematically along the class-separating direction, supporting validation of known phenotypic trends and identification of candidate class-associated patterns. 
+
+Estimation of Blast Percentage in White Blood Cells for Residual Disease Monitoring 
+
+Measurable residual disease (MRD) in AML refers to residual leukemic cells that persist after therapy below the limit of conventional morphologic detection. In flow-cytometric MRD as-sessment, disease burden is commonly quantified as the proportion of aberrant leukemic blasts among total white blood cells (WBCs). This measurement is an established biomarker as-sociated with relapse risk and clinical outcome in AML. In current clinical practice, MRD is frequently assessed using multiparameter flow cytometry through the identification of leukemia-11 associated immunophenotypes (LAIPs) by expert-driven manual gating. However, this process is labor-intensive, subjective, and sensitive to small gating differences, particularly near the clin-ically relevant MRD positivity threshold of 0 .1%, motivating the development of more objective computational approaches for MRD assessment (cMRD) [7]. 
+
+Figure 4: Partial Least Squares (PLS) regression for leukemic blast and LAIP quan-tification across varying cell subsampling depths. (a–f ) Blast calibration and cross-cohort prediction show improved Pearson correlation ( r) and reduced error (RMSE) as sampled cells increase from 500 to 5000. (g–i) Clinical decision maps at 5000 cells evaluating LAIP diagnostic utility at 0.1%, 1.0%, and 5.0% thresholds for Diagnosis (Dx, n = 20) and Follow-up (FU, n = 15) samples, utilizing an optimal cutoff to balance sensitivity (se) and specificity (sp). 
+
+(j–l) Cell count scaling dynamics indicate that performance metrics improve and stabilize with increase number of cell counts. Direct quantification of disease burden from raw flow-cytometry measurements remains 12 challenging because each sample consists of an unordered collection of thousands of cells in a high-dimensional marker space, with no natural correspondence between cells across patients. Consequently, most computational approaches rely on gating, clustering, or hand-crafted sum-mary features prior to downstream analysis. The LOT framework provides an alternative representation by aligning each sample to a common reference distribution and mapping it into a fixed-length Euclidean vector representation. This transformation enables the application of conventional statistical learning methods directly to sample-level cellular distributions. To investigate whether LOT embeddings capture information relevant to disease burden, we modeled blast abundance as a continuous outcome using partial least squares (PLS) regression applied directly to the LOT embeddings. The regression model was trained to estimate the blast-to-WBC percentage on a log 10 scale, log 10 (Blast /WBC %), from paired flow-cytometry measurements and blast annotations. For this analysis, LOT embeddings were generated using Tube 1 measurements only. This design choice reflects the incomplete availability of additional tubes for several samples in the LAIP29 dataset and provides an initial evaluation of continuous disease quantification within the LOT framework. All predictive evaluations were performed using 5-fold cross-validation with 20 independent randomized repetitions to obtain stable out-of-sample performance estimates. Figure 4 summarizes regression performance across cellular subsampling depths ranging from 
+
+N = 500 to N = 5000 cells. On the BLAST110 cohort ( n = 107), performance improved as the number of sampled cells increased, yielding a Pearson correlation of r = 0 .816 at N = 5000. Similarly, when trained on the BLAST110 cohort and evaluated on the independent LAIP29 dataset ( n = 35), the model achieved a correlation of r = 0 .785 at N = 5000. These results indicate that LOT embeddings preserve population-level information associated with leukemic blast burden and support generalization across independently acquired cohorts. The observed improvement with increasing cellular sampling depth further suggests that richer representations of the underlying cellular distribution may benefit quantitative disease estimation. Beyond continuous blast quantification, we evaluated the clinically relevant task of MRD detection using LAIP thresholds of 0 .1%, 1%, and 5%. The LAIP29 cohort ( n = 35) contains 20 diagnosis (Dx) samples and 15 follow-up (FU) samples. Consistent with clinical expectations, diagnosis samples exhibited substantially higher leukemic burden (median LAIP /WBC = 7 .6%), whereas follow-up samples primarily occupied the low-burden residual-disease regime (median 0.03%). To balance sensitivity and specificity, decision thresholds were selected by maximizing Youden’s index, 
+
+J = sensitivity + specificity − 1.
+
+At the corresponding operating point using N = 5000 cells, the model detected MRD positivity at the clinically important 0 .1% threshold with 72% sensitivity and 100% specificity (J = 0 .72). Balanced performance was similarly observed at the 1% and 5% thresholds, yielding sensitivities of 0 .73 and 0 .86 with corresponding specificities of 0 .85 and 0 .76, respectively. Taken together, these findings demonstrate that LOT embeddings capture biologically mean-ingful variation associated with leukemic blast burden and support quantitative estimation of continuous MRD-related outcomes directly from high-dimensional flow-cytometry distributions. By mapping sample-level cellular measurements into a common vector representation, the pro-posed framework enables computational MRD assessment without explicit gating, predefined leukemia-associated phenotypes, or marker-specific feature engineering. While additional val-idation on larger cohorts will be important, these results suggest that LOT-based regression provides a promising and scalable framework for objective MRD monitoring in AML. 
+
+Limitations and future work 
+
+To reduce the computational cost of optimal transport estimation, our current implementation constructs LOT embeddings using randomly subsampled cellular populations containing N =13 500, 1 ,000, or 5 ,000 cells per sample. While the experimental results demonstrate that accurate and robust classification can be achieved with relatively small subsets of cells, subsampling may not fully capture extremely rare cellular populations or subtle distributional structures present in the complete specimen. Although performance generally improves as the number of sampled cells increases, the gains beyond 1 ,000 cells are modest for most classification tasks. Future advances in scalable optimal transport algorithms may enable the efficient use of substantially larger cellular populations, further improving the fidelity of the resulting embeddings while preserving computational tractability. A second limitation concerns the treatment of multi-tube flow-cytometry measurements. In the current framework, each tube is analyzed independently across patients, and patient-level predictions are obtained by aggregating tube-specific outputs through score fusion. This strategy is necessitated by the availability of labels only at the patient level and has been shown to perform well in practice. However, individual tubes may contain markers with varying relevance to a particular disease phenotype, and treating all tubes independently may limit the ability to exploit complementary information distributed across the full marker panel. Future work will focus on developing unified representations that integrate information across all tubes simultaneously, enabling joint modeling of the complete immunophenotypic profile. Such an approach could improve the detection of disease-associated cellular patterns, enhance prediction accuracy, and provide a more comprehensive characterization of patient-specific immune and leukemic phenotypes. 
+
+# Discussion 
+
+We present FlowLOT , a distribution-level framework for flow cytometry analysis that lever-ages linearized optimal transport to enable principled comparison, classification, and interpre-tation of high-dimensional cellular populations. By representing each cytometry sample as an empirical probability distribution and embedding these distributions into a vector space that preserves their geometric structure, FlowLOT addresses long-standing challenges associated with permutation invariance, high dimensionality, and limited labeled data in cytometry studies. Our results demonstrate that this approach unifies classification, visualization, and measurable residual disease (MRD) inference within a single, mathematically transparent framework. A central conceptual contribution of this work is the shift from cell-level or cluster-centric representations toward population-level geometric modeling. Conventional pipelines rely on intermediate steps such as manual gating, clustering, or parametric mixture modeling, each of which introduces additional assumptions and potential sources of variability. In contrast, 
+
+FlowLOT operates directly on empirical distributions, avoiding explicit cell-to-cluster assign-ments and reducing sensitivity to initialization, model order selection, or heuristic thresholds. This distribution-aware perspective is particularly well suited to clinical contexts such as acute myeloid leukemia, where disease-associated signals often manifest as subtle, coordinated shifts across multiple markers rather than as distinct, well-separated subpopulations. The use of linearized optimal transport is key to achieving both computational tractability and interpretability. While full optimal transport distances are computationally expensive and do not naturally admit linear operations, the linearized embedding employed here enables closed-form, non-iterative classification under a generative deformation model. This property allows 
+
+FlowLOT to perform well even in low-sample regimes, which are common in clinical and translational studies. Importantly, the approximate linear structure induced by the embedding also clarifies why simple linear classifiers can succeed when class-specific variability follows structured geometric patterns, providing insight into the conditions under which the method is expected to generalize. Beyond classification, the invertibility of the transport-based embedding enables direct vi-sualization of differences between phenotypic classes in the original marker space. Unlike di-14 mensionality reduction techniques such as UMAP or t-SNE, which may distort inter-marker relationships and lack a well-defined inverse, FlowLOT supports biologically interpretable visualization of class-associated distributional shifts. This capability facilitates hypothesis gen-eration and may aid domain experts in identifying marker combinations or population-level trends associated with disease progression or treatment response. 
+
+FlowLOT also offers a unified approach to MRD estimation. Existing MRD pipelines typically depend on reference comparisons, clustering heuristics, and manual review, which can be sensitive to rare populations and overlapping phenotypes. By modeling patient samples and controls within the same distributional embedding and quantifying deviations in a continuous, geometry-aware manner, FlowLOT provides a principled alternative that does not require explicit leukemic cluster identification. The strong correlation observed between FlowLOT -derived estimates and clinically assessed MRD underscores the potential of population-level optimal transport metrics for sensitive disease monitoring. Future work will focus on extending the framework in several directions. Incorporating explicit modeling of batch effects and technical variability within the transport formulation may further improve robustness across multicenter studies. Adapting the method to longitudinal data could enable direct modeling of disease trajectories as paths in distribution space. Finally, while this study focuses on flow cytometry, the underlying methodology is broadly applicable to other high-dimensional, point-cloud–like biological data modalities, including mass cytometry and single-cell proteomics. In summary, FlowLOT introduces a mathematically grounded, distribution-level approach to cytometry analysis that complements existing tools while addressing key limitations related to interpretability, sample efficiency, and population-level inference. By bridging optimal transport theory with practical cytometry applications, this framework provides a flexible foundation for future methodological developments in high-dimensional single-cell analysis. 
+
+# Acknowledgements 
+
+This work was funded in part by NIH awards GM130825, CA274499, and ONR award N000142212505. 
+
+# Code availability 
+
+Code is available at https://github.com/naqibUVa/FlowLOT_v1 .
+
+# Data availability 
+
+The flow-cytometry datasets used in this study are publicly available. The BLAST110 and 
+
+LAIP29 datasets can be accessed through the Zenodo repository at https://zenodo.org/records/11046402. The FlowCAP-II AML dataset is available through FlowRepository at http://flowrepository.org/id/FR-FCM-ZZYA. 
+
+# References 
+
+[1] Leonore A Herzenberg, James Tung, Wayne A Moore, Leonard A Herzenberg, and David R Parks. Interpreting flow cytometry data: a guide for the perplexed. Nature immunology , 7 (7):681–685, 2006. [2] Katherine M McKinnon. Flow cytometry: an overview. Current protocols in immunology ,120(1):5–1, 2018. 15 [3] J. Paul Robinson, Grzegorz B. Gmyrek, and Bartek Rajwa. Flow cytometry: Advances, challenges and trends. BioEssays , 48(1):e70091, 2026. doi: https://doi.org/10.1002/bies. 70091. URL https://onlinelibrary.wiley.com/doi/abs/10.1002/bies.70091 .[4] Erell Gachon, J´ er´ emie Bigot, Elsa Cazelles, Audrey Bidet, Jean-Philippe Vial, Pierre-Yves Dumas, and Aguirre Mimoun. Low dimensional representation of multi-patient flow cytometry datasets using optimal transport for measurable residual disease detection in leukemia. Cytometry Part A , 107(2):126–139, 2025. [5] Scott Mahan, Caroline Moosm¨ uller, and Alexander Cloninger. Point cloud classification via deep set linearized optimal transport. arXiv preprint arXiv:2401.01460 , 2024. [6] Nima Aghaeepour, Greg Finak, FlowCAP Consortium, Dream Consortium, Holger Hoos, Tim R Mosmann, Ryan Brinkman, Raphael Gottardo, and Richard H Scheuermann. Crit-ical assessment of automated flow cytometry data analysis techniques. Nature methods , 10 (3):228–238, 2013. [7] Tim R Mocking, Ang` ele Kelder, Tom Reuvekamp, Lok Lam Ngai, Philip Rutten, Patrycja Gradowska, Arjan A van de Loosdrecht, Jacqueline Cloos, and Costa Bachas. Computa-tional assessment of measurable residual disease in acute myeloid leukemia using mixture models. Communications Medicine , 4(1):271, 2024. [8] Zicheng Hu, Sanchita Bhattacharya, and Atul J Butte. Application of machine learning for cytometry data. Frontiers in immunology , 12:787574, 2022. [9] Nicholas C Spies, Alexandra Rangel, Paul English, Muir Morrison, Brendan O’Fallon, and David P Ng. Machine learning methods in clinical flow cytometry. Cancers , 17(3):483, 2025. [10] Thomas A Ujas, Veronica Obregon-Perko, and Ann M Stowe. A guide on analyzing flow cytometry data using clustering methods and nonlinear dimensionality reduction (tsne or umap). In Neural Repair: Methods and Protocols , pages 231–249. Springer, 2023. [11] Lacey Johnson, Pearl Lei, Lauren Waters, Matthew P Padula, and Denese C Marks. Identi-fication of platelet subpopulations in cryopreserved platelet components using multi-colour imaging flow cytometry. Scientific Reports , 13(1):1221, 2023. [12] Kieran O’Neill, Nima Aghaeepour, Jeremy Parker, Donna Hogge, Aly Karsan, Bakul Dalal, and Ryan R Brinkman. Deep profiling of multitube flow cytometry data. Bioinformatics ,31(10):1623–1631, 2015. [13] Iftekhar Naim, Suprakash Datta, Jonathan Rebhahn, James S Cavenaugh, Tim R Mos-mann, and Gaurav Sharma. Swift—scalable clustering for automated identification of rare cell populations in large, high-dimensional flow cytometry datasets, part 1: Algorithm design. Cytometry Part A , 85(5):408–421, 2014. [14] Murat Dundar, Ferit Akova, Halid Z. Yerebakan, and Bartek Rajwa. A non-parametric Bayesian model for joint cell clustering and cluster matching: Identification of anomalous sample phenotypes with random effects. BMC Bioinformatics , 15(1):314, September 2014. ISSN 1471-2105. doi: 10.1186/1471-2105-15-314. [15] Murat Dundar, Halid Ziya Yerebakan, and Bartek Rajwa. Batch discovery of recurring rare classes toward identifying anomalous samples. In Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining , pages 223–232, 2014. 16 [16] Robert V Bruggner, Bernd Bodenmiller, David L Dill, Robert J Tibshirani, and Garry P Nolan. Automated identification of stratifying signatures in cellular subpopulations. Pro-ceedings of the National Academy of Sciences , 111(26):E2770–E2777, 2014. [17] Yongchao Ge and Stuart C Sealfon. flowpeaks: a fast unsupervised clustering for flow cytometry data via k-means and density peak finding. Bioinformatics , 28(15):2052–2058, 2012. [18] Sharon X Lee, Geoffrey J McLachlan, and Saumyadipta Pyne. Modeling of inter-sample variation in flow cytometric data with the joint clustering and matching procedure. Cy-tometry Part A , 89(1):30–43, 2016. [19] Suja A. Alex, K. Roselin Vanadhi, T. Anna Roshini, S. Steny Joy, J. Renees Jenisha, Gabriel Gomes de Oliveira, and Angela Maria Alves. GMM based deep convolutional neural network for leukemia diagnosis. In 2nd International Conference on Computer Vision and Internet of Things (ICCVIoT 2024) , volume 2024, pages 187–192. IEEE, 2024. doi: 10.1049/icp.2024.4422. [20] Kenneth Lo, Ryan Remy Brinkman, and Raphael Gottardo. Automated gating of flow cytometry data via robust model-based clustering. Cytometry Part A , 73A(4):321–332, 2008. doi: https://doi.org/10.1002/cyto.a.20531. URL https://onlinelibrary.wiley. com/doi/abs/10.1002/cyto.a.20531 .[21] Saumyadipta Pyne, Xinli Hu, Kui Wang, Elizabeth Rossin, Tsung-I Lin, Lisa M. Maier, Clare Baecher-Allan, Geoffrey J. McLachlan, Pablo Tamayo, David A. Hafler, Philip L. De Jager, and Jill P. Mesirov. Automated high-dimensional flow cytometric data analysis. 
+
+Proceedings of the National Academy of Sciences , 106(21):8519–8524, 2009. doi: 10.1073/ pnas.0903028106. URL https://www.pnas.org/doi/abs/10.1073/pnas.0903028106 .[22] Bartek Rajwa, Paul K. Wallace, Elizabeth A. Griffiths, and Murat Dundar. Automated assessment of disease progression in acute myeloid leukemia by probabilistic analysis of flow cytometry data. IEEE Transactions on Biomedical Engineering , 64(5):1089–1098, May 2017. ISSN 1558-2531. doi: 10.1109/TBME.2016.2590950. [23] Jean Philippe Vial, Nicolas Lechevalier, Francis Lacombe, Pierre-Yves Dumas, Audrey Bidet, Thibaut Leguay, Fran¸ cois Vergez, Arnaud Pigneux, and Marie C B´ en´ e. Unsupervised flow cytometry analysis allows for an accurate identification of minimal residual disease assessment in acute myeloid leukemia. Cancers , 13(4):629, 2021. [24] Alban Canali, In` es Vergnolle, Sarah Bertoli, Laetitia Largeaud, Marie-Laure Nicolau, Jean-Baptiste Rieu, Suzanne Tavitian, Fran¸ coise Huguet, Muriel Picard, Pierre Bories, et al. Prognostic impact of unsupervised early assessment of bulk and leukemic stem cell measur-able residual disease in acute myeloid leukemia. Clinical Cancer Research , 29(1):134–142, 2023. [25] Hugues Jacqmin, Bernard Chatelain, Quentin Louveaux, Philippe Jacqmin, Jean-Michel Dogn´ e, Carlos Graux, and Fran¸ cois Mullier. Clustering and kernel density estimation for assessment of measurable residual disease by flow cytometry. Diagnostics , 10(5):317, 2020. [26] Lisa Weijler, Florian Kowarsch, Matthias W¨ odlinger, Michael Reiter, Margarita Maurer-Granofszky, Angela Schumich, and Michael N Dworzak. Umap based anomaly detection for minimal residual disease quantification within acute myeloid leukemia. Cancers , 14(4): 898, 2022. 17 [27] Veit B¨ ucklein, Alexandra Stein, Benjamin Tast, Thomas Koehnke, Karsten Spiekermann, Francis Lacombe, and Marion Subklewe. Flowsom: an r-based evaluation strategy for flow cytometry-based measurable residual disease (mrd) diagnostics in acute myeloid leukemia (aml). Blood , 134:4656, 2019. [28] Kevin Shopsowitz, Jack Lofroth, Geoffrey Chan, Jubin Kim, Makhan Rana, Ryan Brinkman, Andrew Weng, Nadia Medvedev, and Xuehai Wang. Magic-dr: an interpretable machine-learning guided approach for acute myeloid leukemia measurable residual disease analysis. Cytometry Part B: Clinical Cytometry , 106(4):239–251, 2024. [29] Wei Wang, Dejan Slepˇ cev, Saurav Basu, John A Ozolek, and Gustavo K Rohde. A lin-ear optimal transportation framework for quantifying and visualizing variations in sets of images. International journal of computer vision , 101(2):254–269, 2013. [30] Mohammad Shifat-E-Rabbi, Naqib Sad Pathan, Shiying Li, Yan Zhuang, Abu Hasnat Mo-hammad Rubaiyat, and Gustavo K Rohde. Linear optimal transport subspaces for point set classification. Journal of Mathematical Imaging and Vision , 67(4):43, 2025. [31] Scott Mahan, Caroline Moosm¨ uller, and Alexander Cloninger. Point cloud classification via deep set linearized optimal transport. arXiv preprint arXiv:2401.01460 , 2024. [32] Charlotte Bunne, Stefan G Stark, Gabriele Gut, Jacobo Sarabia Del Castillo, Mitch Levesque, Kjong-Van Lehmann, Lucas Pelkmans, Andreas Krause, and Gunnar R¨ atsch. Learning single-cell perturbation responses using neural optimal transport. Nature meth-ods , 20(11):1759–1768, 2023. [33] Akram Aldroubi, Shiying Li, and Gustavo K Rohde. Partitioning signal classes using trans-port transforms for data analysis and machine learning. Sampling theory, signal processing, and data analysis , 19(1):6, 2021. [34] Caroline Moosm¨ uller and Alexander Cloninger. Linear optimal transport embedding: prov-able wasserstein classification for certain rigid transformations and perturbations. Infor-mation and Inference: A Journal of the IMA , 12(1):363–389, 2023. [35] R´ emi Flamary, Nicolas Courty, Alexandre Gramfort, Mokhtar Z. Alaya, Aur´ elie Boisbunon, Stanislas Chambon, Laetitia Chapel, Adrien Corenflos, Kilian Fatras, Nemo Fournier, L´ eo Gautheron, Nathalie T.H. Gayraud, Hicham Janati, Alain Rakotomamonjy, Ievgen Redko, Antoine Rolet, Antony Schutz, Vivien Seguy, Danica J. Sutherland, Romain Tavenard, Alexander Tong, and Titouan Vayer. Pot: Python optimal transport. Journal of Machine Learning Research , 22(78):1–8, 2021. URL http://jmlr.org/papers/v22/20-451.html .[36] R´ emi Flamary, C´ edric Vincent-Cuaz, Nicolas Courty, Alexandre Gramfort, Oleksii Kachaiev, Huy Quang Tran, Laur` ene David, Cl´ ement Bonet, Nathan Cassereau, Th´ eo Gnassounou, Eloi Tanguy, Julie Delon, Antoine Collas, Sonia Mazelet, Laetitia Chapel, Tanguy Kerdoncuff, Xizheng Yu, Matthew Feickert, Paul Krzakala, Tianlin Liu, Eduardo Fernandes Montesuma, Nathan Neike, Baptiste Genest, David Coeurjolly, Thibaut Ger-main, Sienna O’Shea, Marco Corneli, and Ferdinand Genans. Pot python optimal trans-port, 7 2026. URL https://github.com/PythonOT/POT .[37] Maximilian Ilse, Jakub Tomczak, and Max Welling. Attention-based deep multiple instance learning. In International Conference on Machine Learning , pages 2127–2136. PMLR, 2018. [38] Haidong Yi and Natalie Stanley. Cytoset: Predicting clinical outcomes via set-modeling of cytometry data. In Proceedings of the 12th ACM International Conference on Bioinfor-matics, Computational Biology, and Health Informatics , pages 1–8, 2021. 18 [39] Manzil Zaheer, Satwik Kottur, Siamak Ravanbakhsh, Barnabas Poczos, Russ R Salakhut-dinov, and Alexander J Smola. Deep sets. Advances in neural information processing systems , 30, 2017. [40] Charles R Qi, Hao Su, Kaichun Mo, and Leonidas J Guibas. Pointnet: Deep learning on point sets for 3d classification and segmentation. In Proceedings of the IEEE conference on computer vision and pattern recognition , pages 652–660, 2017. [41] Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, and Justin M. Solomon. Dynamic graph cnn for learning on point clouds. ACM Transactions on Graphics (TOG) , 2019. [42] Eirini Arvaniti and Manfred Claassen. Sensitive detection of rare disease-associated cell subsets via representation learning. Nature communications , 8(1):14825, 2017. [43] Kenneth Lo, Florian Hahne, Ryan R Brinkman, and Raphael Gottardo. flowclust: abioconductor package for automated gating of flow cytometry data. BMC bioinformatics ,10(1):145, 2009. [44] Greg Finak, Wenxin Jiang, Kevin Krouse, Chungwen Wei, Ignacio Sanz, Deborah Phip-pard, Adam Asare, Stephen C De Rosa, Steve Self, and Raphael Gottardo. High-throughput flow cytometry data normalization for clinical trials. Cytometry Part A , 85 (3):277–286, 2014. [45] Yvan Saeys, Sofie Van Gassen, and Bart N Lambrecht. Computational flow cytometry: helping to make sense of high-dimensional immunology data. Nature Reviews Immunology ,16(7):449–462, 2016. [46] Sofie Van Gassen, Brice Gaudilliere, Martin S Angst, Yvan Saeys, and Nima Aghaeepour. Cytonorm: a normalization algorithm for cytometry data. Cytometry Part A , 97(3):268– 278, 2020. [47] Yan Zhuang, Shiying Li, Mohammad Shifat-E-Rabbi, Xuwang Yin, Abu Hasnat Moham-mad Rubaiyat, and Gustavo K Rohde. Local sliced wasserstein feature sets for illumination invariant face recognition. Pattern Recognition , 162:111381, 2025. [48] David Novo, G´ erald Gr´ egori, and Bartek Rajwa. Generalized unmixing model for mul-tispectral flow cytometry utilizing nonsquare compensation matrices. Cytometry Part A ,83A(5):508–520, May 2013. ISSN 1552-4922, 1552-4930. doi: 10.1002/cyto.a.22272. [49] Bartek Rajwa and Mario Roederer. Lost in translation: Harmonizing terminology and defining mathematical tools for panel optimization. Cytometry Part A , 107(12):793–816, 2025. ISSN 1552-4930. doi: 10.1002/cyto.a.24972. 
+
+# Mathematical Representation of FlowLOT 
+
+In this section, we present the mathematical formulation of the FlowLOT framework. We intro-duce a principled representation of multiparameter flow cytometry measurements, an analytic modeling strategy for class-level variation, and an optimal transport–based embedding designed to address key analytical challenges in this field based on this formulation, we state explicit problem definitions and derive analytical solution approaches for classification, visualization, and quantification tasks in flow cytometry. 19 Component 1: Representation of flow cytometry (FCM) measurements as empirical probability distributions 
+
+In multiparameter FCM, each cell is characterized by fluorescence intensity measurements from antibody-conjugated markers, together with light-scatter parameters such as forward scatter and side scatter. These measurements can be organized into a vector, so that each cell is represented as a point in a high-dimensional feature space, with each dimension corresponding to one measured parameter. A biological sample, consisting of many such cells, can therefore be viewed as a point cloud in this space. The collection of cells from a sample naturally defines an empirical probability distribution over the feature space. Specifically, a sample containing 
+
+N cells measured over L markers can be represented as the discrete probability measure 
+
+μ = 1
+
+N
+
+> N
+
+X
+
+> i=1
+
+δxi , xi ∈ RL,
+
+where xi denotes the multiparameter measurement vector of the i-th cell and δxi is a Dirac measure centered at xi. Here, L denotes the number of measured channels (markers), which is dataset-specific due to variations in cytometry panels; a detailed listing of channels for each dataset is provided in the Materials and Datasets section. 
+
+Component 2: Analytical Modeling Perspective 
+
+To model population-level variability across samples, we represent observed flow cytometry distributions as structured deformations of a representative population. These deformations are formalized using the push-forward operation, denoted by ♯. Intuitively, applying a push-forward means transporting every point in a distribution according to a transformation and examining the resulting distribution after this transformation. In the context of flow cytometry, this provides a way to describe coordinated shifts in marker-expression and light-scatter profiles across a cell population, rather than treating variability as independent cell-level noise. Using this framework, we assume that samples belonging to a phenotypic class k arise from a class-specific template distribution φ(k), where the superscript ( k) denotes the class label. Individual samples within the class are generated by smooth, invertible transformations gj
+
+drawn from a diffeomorphism group G:
+
+S(k) =
+
+n
+
+μ(k) 
+
+> j
+
+μ(k) 
+
+> j
+
+= gj ♯ φ(k), gj ∈ G 
+
+o
+
+. (2) This analytical model provides an effective and compact mathematical description of popu-lation variability, treating biological differences as structured deformations of a common cellular landscape. By explicitly modeling variability in this way, the framework enables systematic, mathematically grounded analysis of flow cytometry data and directly supports downstream tasks such as classification, visualization, and quantitative inference. 
+
+Component 3: Embedding 
+
+A key challenge in population-level flow cytometry analysis is that each sample is represented by an unordered set of single-cell measurements. In the empirical distribution representation 
+
+μ = 1
+
+N
+
+> N
+
+X
+
+> i=1
+
+δxi , xi ∈ RL,
+
+the indexing of cells carries no biological meaning, since the distribution is unchanged under any permutation of {xi}Ni=1 . Thus, each sample is fundamentally an unordered collection of 20 cells. This lack of intrinsic ordering makes direct comparison between samples nontrivial and limits the direct application of standard statistical learning methods, which typically require structured, fixed-length representations. To address this, we introduce an optimal-transport-based embedding that aligns each empirical distribution to a common reference and represents it through the corresponding transport structure, producing a structured, fixed-length vector representation .To achieve this, we compare two samples, a reference distribution σ and a target distribution 
+
+μ, using optimal transport (OT) . OT defines a map 
+
+T : RL → RL
+
+that rearranges the mass of σ to match μ while preserving total mass, expressed as 
+
+T♯σ = μ. 
+
+Among all such rearrangements, OT selects the one that minimizes the total squared displace-ment, 
+
+W 22 (σ, μ ) = min   
+
+> T:T♯σ=μ
+
+Z
+
+> RL
+
+∥x − T (x)∥2 dσ (x).
+
+This formulation provides a biologically meaningful notion of distance, as it identifies the most efficient way to deform one population of cells into another, capturing coordinated shifts in marker expression rather than individual cell identities. In the empirical setting with a finite number of cells, this optimal transport problem reduces to finding an optimal matching between the cells of σ and μ. Although each sample is originally unordered, this matching induces a consistent correspondence: each cell in the reference is paired with exactly one cell in the target. By fixing an arbitrary but consistent ordering of the reference cells, 
+
+σ = {x(σ)1 , . . . , x (σ) 
+
+> N
+
+},
+
+the transport map naturally assigns to each index i a corresponding cell in the target, 
+
+x(σ) 
+
+> i
+
+7 −→ T (x(σ) 
+
+> i
+
+),
+
+thereby introducing a shared coordinate system across samples. Using this alignment, we define the embedding of the sample μ relative to σ as the collection of transported points, 
+
+bμ =  T (x(σ)1 ), T (x(σ)2 ), . . . , T (x(σ) 
+
+> N
+
+),
+
+which can be viewed as an element of RN ×L (or equivalently RN L after vectorization). This con-struction converts each sample into a fixed-length object defined over a common ordered index set, while remaining invariant to the original permutation of cells. In this sense, the embedding transforms an unordered distribution into an ordered vector representation by leveraging the reference-induced alignment. This framework, known as linearized optimal transport (LOT) , represents each sample by the transport required to align a shared reference distribution with that sample. Rather than treating each sample as an unordered collection of cells, LOT describes how fixed support points of the reference distribution are displaced toward the target distribution. For a reference support point x(σ) 
+
+> i
+
+, the transport map assigns a corresponding location T (x(σ) 
+
+> i
+
+) in the target feature space, and the embedding is obtained by collecting these mapped locations across all reference points. In this way, the transformation unordered cells −→ reference-aligned representation −→ fixed-length vector 21 becomes concrete: each coordinate block of the embedding corresponds to a fixed reference index and records the location to which that reference point is transported. Because the same reference distribution is used for all samples, these coordinate blocks have consistent meaning across samples, making the resulting representations directly comparable. Differences between samples therefore reflect how the same reference support points are displaced across populations, capturing structured, population-level changes in marker expression and light-scatter profiles. In the LOT representation, these shifts take a simple and interpretable form. Since each sample is described by the displacement of the same reference cells, transformations in the original space translate into operations on these displacements. For example, a global shift (translation) in marker expression appears as an additive term in the embedding, while a uniform scaling of the population corresponds to a multiplicative effect. More generally, the embedding of the jth sample in class k can be written as 
+
+bμ(k) 
+
+> j
+
+= gj ◦ bφ(k),
+
+where bφ(k) is the embedded template and gj describes how the reference cells are further dis-placed to generate that sample. Expressed in this common coordinate system, even complex nonlinear differences in the original distributions become simpler and are often well approxi-mated by linear operations, leading to low-dimensional, structured variability that is directly amenable to standard statistical analysis. In our experiments, for each tube in both datasets, we selected a fixed reference sample by choosing a single patient (e.g., the first patient) and defining the corresponding empirical distribution as the reference. This reference distribution was constructed using a fixed number ( N ) of cell-level features, randomly sampled without replacement, ensuring a consistent and unbiased representation across all analyses. 
+
+Component 4: Applications 
+
+Materials and Datasets Dataset description. We evaluated the proposed framework on one simulated dataset and two real-world AML-related flow cytometry datasets. The simulated dataset consists of two classes generated from class-specific template distributions via controlled translations along a prescribed direction, following the analytical construction introduced in this work. This setting provides a controlled environment for probing the geometric structure of the embedding. The first real-world dataset was obtained from the FlowCAP-II initiative, a community benchmark for distinguishing acute myeloid leukemia (AML) samples from healthy controls [6]. The cohort includes 359 individuals (316 healthy and 43 AML), with measurements acquired using eight distinct 7-color panels and provided in standard FCS format. We excluded tubes 1 and 8, as they correspond to control panels rather than informative measurement channels. Classification was performed independently on each of the remaining six tubes, and subject-level predictions were obtained by majority voting across tubes, assigning an AML label if at least half of the tubes yielded positive predictions. The dataset is publicly available through FlowRepository (FR-FCM-ZZYA). The second real-world dataset, BLAST110, contains samples from 110 individuals (90 AML and 20 healthy controls) [7]. The AML cohort comprises both diagnostic ( n = 30) and follow-up ( n = 60) samples, spanning a wide range of blast proportions and capturing substantial biological heterogeneity associated with disease progression. For both datasets, we randomly drew N ∈ { 500 , 1000 , 5000 } cells without replacement from each tube. This standardized the representation across samples and controlled for variations in total cell yield. 
+
+Preprocessing strategy. In standard flow cytometry pipelines, extensive preprocessing is routinely applied prior to downstream analysis: compensation for spectral overlap, nonlinear 22 intensity transformations (e.g., logicle or arcsinh), batch-effect correction, cross-sample nor-malization, noise filtering, removal of debris and doublets, and expert-driven gating to define cell populations. Although these steps can improve interpretability, they introduce substantial dependence on manual intervention, domain expertise, and dataset-specific heuristics, which limits reproducibility and scalability. In this study, we deliberately refrain from any preprocessing beyond what the released datasets already provide; in particular, we apply no additional transformation, normalization, filtering, or gating. This design isolates the intrinsic robustness of the proposed framework under minimally processed conditions, while reducing operator bias and reliance on labor-intensive curation. Concretely, the robustness we establish in the Results concerns translation- and scaling-type artifacts: the LOT embedding transforms predictably when each cell’s measurement vector x ∈ RL is mapped as x 7 → Ax + b, where A = diag( a1, . . . , a L) ≻ 0 applies a per-marker (axis-aligned) scaling and b ∈ RL is a per-marker offset. This axis-aligned, commutative family captures many of the per-marker gain and baseline discrepancies that motivate normalization and rescaling steps. Spectral unmixing (and, in conventional cytometry, compensation) is a categorically different operation and should not be conflated with these artifacts. It is not a correction applied within a fixed feature space but a change of representation between spaces [48, 49]. The measurement model is linear: the raw detector intensities relate to the underlying marker abundances through a mixing matrix M whose entries encode each marker’s spectral signature across detectors, and unmixing recovers the abundances by applying M−1 (or its pseudoinverse M†), x 7 → M−1x,thereby carrying the data from intensity space to abundance space. Because M−1 is non-diagonal with substantial off-diagonal structure, this map acts geometrically as a shear combined with rotation and anisotropic rescaling of the data cloud: it mixes coordinates rather than acting on each axis independently, and it generally alters inter-marker correlations, relative population geometry, and the angles between cell clusters. Because our invariance results cover only the axis-aligned family of translations and scalings, they do not extend to this non-axis-aligned change of space. We therefore do not claim that the framework subsumes unmixing; establishing that would require demonstrating stability of the embedding under a general linear map M†, a distinct and strictly stronger property than the scaling and translation invariance shown here. This distinction also clarifies where the analysis is most naturally carried out. In abun-dance space each coordinate corresponds to a single marker, so optimal transport is directly interpretable: Euclidean distances between cells reflect phenotypic dissimilarity in marker ex-pression, the transport coupling matches cells of similar phenotype, and the resulting maps and distances quantify biologically meaningful shifts in expression. In the raw intensity domain, by contrast, each axis is a linear combination of several markers and has no direct biological mean-ing. The method can still be applied there, but its output no longer carries this interpretation, and, without an analogous invariance (or equivariance) result under the unmixing map M†, it should not be treated as equivalent to the abundance-space analysis. More broadly, we hypothesize that many challenges conventionally addressed through pre-processing, particularly those reducible to per-marker scaling and translation, can be handled intrinsically by the proposed methodology, as we demonstrate in the Results. The framework nonetheless remains fully compatible with established pipelines and can be applied directly to data that have undergone standard quality control, unmixing, normalization, and gating, ensuring broad applicability across experimental settings. 
+
+Sample classification in LOT space 
+
+In general, the task of classification is to learn from labeled training samples and assign a label to a previously unseen test sample. In our setting, we are given collections of flow cytometry 23 distributions from multiple phenotypic classes, 
+
+{μ(1) 1 , μ (1) 2 , . . . }, {μ(2) 1 , μ (2) 2 , . . . }, . . . , 
+
+where superscript inside (.) denotes the class label of each sample. The goal is to determine the class membership of an unknown test distribution μtest . After applying the linearized optimal transport (LOT) embedding, each distribution is represented as a fixed-length vector in a common Euclidean space, so the problem reduces to standard vector-based classification. Let {bμ(k) 
+
+> j
+
+}nk 
+
+> j=1
+
+denote the linearized optimal transport (LOT) embeddings of training samples from class k, all computed with respect to a common reference distribution. We first estimate the class mean embedding 
+
+b¯μ(k) = 1
+
+nknkX
+
+> j=1
+
+bμ(k) 
+
+> j
+
+,
+
+and construct the centered data matrix 
+
+M (k) = bμ(k)1 − b¯μ(k), bμ(k)2 − b¯μ(k), . . .  ∈ Rd×nk .
+
+Singular value decomposition (SVD) of M (k),
+
+M (k) = U (k)Σ(k)(V (k))⊤,
+
+yields an orthonormal basis for class-specific variability. The first rk columns, 
+
+U (k) 
+
+> rk
+
+∈ Rd×rk ,
+
+define a low-dimensional subspace that captures the dominant distributional structure of class 
+
+k.For a previously unseen test sample with embedding bμtest , we quantify its consistency with each class by computing the projection residual 
+
+r(k) =
+
+
+
+I − U (k) 
+
+> rk
+
+(U (k) 
+
+> rk
+
+)⊤ bμtest − b¯μ(k),
+
+and using the squared residual norm 
+
+E(k) = ∥r(k)∥22
+
+as a class-specific reconstruction error. The predicted label is obtained by ˆk = arg min  
+
+> k
+
+E(k).
+
+This subspace-based classifier exploits the approximately linear geometry induced by LOT embeddings and enables robust, initialization-free classification without clustering, gating, or explicit dimensionality reduction. More broadly, the same embedded representation supports alternative discriminative analyses—such as regression directions, canonical correlation analysis, or hypothesis-driven contrasts—providing a general mathematical framework for classification, visualization, and discovery that preserves a direct connection to underlying biological variation. 
+
+Discriminative directions and hypothesis testing in LOT space 
+
+We consider subject-level data represented as embedded distributions, 
+
+{( ˆ μi, y i)}ni=1 , ˆμi ∈ Rd,
+
+24 where each embedding ˆ μi summarizes a high-dimensional single-cell distribution, and yi denotes an associated outcome (categorical or continuous). The central objective is to identify low-dimensional directions in the embedding space that capture meaningful biological variation while suppressing nuisance effects such as technical variability or inter-subject noise. For binary labels yi ∈ { 1, 2}, a natural discriminative direction is obtained from the differ-ence between class-conditional mean embeddings, ˆμ(k) = 1
+
+|D k|
+
+X
+
+> i∈D k
+
+ˆμi, k ∈ { 1, 2},
+
+and 
+
+w = ˆμ(2) − ˆμ(1) 
+
+∥ ˆμ(2) − ˆμ(1) ∥2
+
+.
+
+This direction defines the primary axis along which the two populations differ. Projecting each sample onto this axis, 
+
+si = w⊤  ˆμi − ˆμ, ˆμ = 122X
+
+> k=1
+
+ˆμ(k),
+
+yields a one-dimensional summary that quantifies how strongly each sample aligns with the class contrast. From an intuitive perspective, this construction measures how the same reference-centered cell displacements shift between groups along a dominant direction. In the original distribution space, such differences may be complex and nonlinear; however, in LOT space they are captured by a single direction, converting the problem into a tractable geometric comparison. This enables direct statistical testing: for example, hypotheses of the form “the two populations differ” can be evaluated by testing for separation in the projected scores {si} using standard univariate methods. To further interpret this variation, we define a parametric path in the embedding space, ˆμ(t) = ˆ μ + t w,
+
+which traces how the distribution changes along the discriminative axis. Mapping points along this path back to the original measurement space reveals how cellular populations and marker expressions deform between phenotypes, providing a direct link between statistical separation and biological interpretation. While the mean-difference direction provides a simple and effective discriminative axis, the same LOT representation supports more general hypothesis-driven analyses. Alternative di-rections can be defined using regression, partial least squares, or canonical correlation to test specific biological questions. Thus, the embedding serves as a unified mathematical frame-work in which complex distributional differences are reduced to low-dimensional, interpretable structures that support visualization, hypothesis testing, and discovery. 
+
+Distribution-to-scalar regression in LOT space for MRD prediction 
+
+As a third application, we consider the problem of predicting a clinically relevant scalar outcome from distribution-valued single-cell measurements. Given training data 
+
+{(μ1, q 1), (μ2, q 2), . . . , (μn, q n)},
+
+where each μi is an empirical distribution and qi ∈ R is an associated response, the goal is to learn a mapping that predicts the outcome for a new sample. In our setting, qi represents the percentage of blast cells among white blood cells, providing a quantitative measure of 25 measurable residual disease (MRD). This defines a distribution-to-scalar regression problem. To make this problem tractable, each distribution μi is first embedded into a finite-dimensional vector space using the LOT framework, yielding bμi ∈ Rd. This step converts complex population-level variation into structured coordinates that can be directly used in regression. We then model the relationship between embedding and outcome using partial least squares (PLS), which identifies directions in the embedding space that are maximally associated with the response. Specifically, each latent component takes the form 
+
+ti = w⊤ bμi,
+
+where the direction w is chosen to maximize covariance with the MRD values, max 
+
+> ∥w∥2=1
+
+1
+
+n
+
+> n
+
+X
+
+> i=1
+
+(w⊤ bμi) qi
+
+!2
+
+.
+
+Iteratively extracting such components yields a low-dimensional representation that captures the most predictive modes of variation. The final prediction model is given by ˆqi = β0 +
+
+> K
+
+X
+
+> k=1
+
+βk t(k) 
+
+> i
+
+,
+
+with K chosen by cross-validation. From an intuitive perspective, this approach identifies directions in LOT space along which shifts in the embedded cell populations are most strongly associated with disease burden. Be-cause the embedding tracks how the same reference cells are displaced across samples, these predictive directions correspond to structured changes in population composition and marker expression. Thus, the regression model does not simply fit high-dimensional features, but rather isolates biologically meaningful modes of distributional deformation that relate directly to MRD. More broadly, this formulation enables hypothesis-driven analysis, where one can test whether specific directions of population change are predictive of clinical outcomes, providing an inter-pretable link between single-cell dynamics and disease progression. 26
