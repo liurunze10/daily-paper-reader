@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-001.webp",
+      "caption": "Figure 2: Overview of CellRFT. A diffusion model samples G candidate cell populations under the same condition. Biological evaluation compares each prediction with observed and control populations; metric rewards are averaged first within categories and then across categories to obtain R(g). Group normalization produces advantages A(g), each shared across all cells and denoising steps in its candidate population. These advantages guide policy optimization with JCellRFT(θ) (Eq. (7)) to update the model, completing the sampling–evaluation–optimization cycle.",
+      "page": 6,
+      "index": 1,
+      "width": 979,
+      "height": 654
+    },
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-002.webp",
+      "caption": "Figure 3: Cross-metric effects of single-reward fine-tuning. The ablation evaluates how using individual metrics as rewards affects performance across the evaluation suite, reporting gains over the pretrained model (×100). Single-reward variants use the corresponding evaluation metric as the sole reward, while CellRFT uses the hierarchical reward aggregation defined in Eq. (5). All singlereward variants improve their target metrics, but most incur cross-metric degradation; CellRFT achieves a more favorable overall trade-off, improving all 11 metrics with the highest mean gain.",
+      "page": 11,
+      "index": 2,
+      "width": 979,
+      "height": 421
+    },
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-003.webp",
+      "caption": "Figure 1: Training–evaluation objective mismatch. (a) Standard pipelines optimize surrogate objectives, such as reconstruction and denoising, whose improvement need not yield higher biological fidelity. CellRFT instead uses biological evaluation feedback to guide model updates through reinforcement learning. (b) CellRFT fine-tunes PerturbDiff (Scratch) [Yuan et al., 2026] on Replogle. The resulting model (+CellRFT) improves all 13 evaluated metrics, as defined in Table 1.",
+      "page": 2,
+      "index": 3,
+      "width": 960,
+      "height": 391
+    },
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-004.webp",
+      "caption": "Table 2: Perturbation prediction performance on Replogle. Arrows indicate better performance, and bold highlights the best result for each metric within each block.",
+      "page": 10,
+      "index": 4,
+      "width": 978,
+      "height": 922
+    },
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-005.webp",
+      "caption": "Figure 5: Hierarchical structure and complementarity of rewards. (a) Average-linkage clustering of singlereward response profiles using Euclidean distances reveals similarities across prior evaluation categories, with PDCorr and DirAgr forming the closest pair. (b) A directed network of cross-metric gains, colored by the three communities identified from the hierarchy, reveals asymmetric support and trade-offs within and across communities. (c) Withincommunity HITS analysis of positive gains distinguishes influential rewards such as PDS L1 from supported metrics such as PDS cos, while highlighting limited indirect support for DEPrec. (d) Joint fine-tuning with three core rewards improves 10 of 11 metrics over Scratch, showing that a compact subset can yield broad gains, while CellRFT with all 11 rewards provides a superior overall trade-off.",
+      "page": 13,
+      "index": 5,
+      "width": 931,
+      "height": 606
+    },
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-006.webp",
+      "caption": "Figure 4: Cross-metric effects of reward composition and aggregation. The ablation evaluates how reward composition and aggregation affect performance across the evaluation suite, reporting gains over the pretrained model (×100). Category-level variants use all reward metrics from one evaluation category or a pair of categories. Flat mean takes the unweighted arithmetic mean of all 11 rewards, whereas CellRFT averages these rewards first within categories and then across categories (Eq. (5)). Combining complementary reward categories mitigates cross-metric tradeoffs, and CellRFT achieves the highest mean gain while improving all 11 metrics.",
+      "page": 12,
+      "index": 6,
+      "width": 979,
+      "height": 311
+    },
+    {
+      "url": "assets/figures/arxiv/2609.19970v1/fig-007.webp",
+      "caption": "Table 1: Biological evaluation metrics organized by evaluation perspective. Arrows indicate the preferred direction; ranges assume nondegenerate inputs.",
+      "page": 5,
+      "index": 7,
+      "width": 948,
+      "height": 1016
+    }
+  ]
+}
