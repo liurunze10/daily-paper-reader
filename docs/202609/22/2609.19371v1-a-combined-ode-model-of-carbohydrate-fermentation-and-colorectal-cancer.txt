@@ -1,0 +1,1395 @@
+Title: A Combined ODE Model of Carbohydrate Fermentation and Colorectal Cancer
+
+URL Source: https://arxiv.org/pdf/2609.19371v1
+
+Published Time: Fri, 18 Sep 2026 00:20:57 GMT
+
+Number of Pages: 40
+
+Markdown Content:
+# A Combined ODE Model of Carbohydrate Fermentation and Colorectal Cancer 
+
+## A. Lawryshyn, H.J. Eberl, T. Hillen 
+
+Abstract 
+
+We formulate and analyze a system of non-linear ordinary differential equations that describe key metabolic and immunological interactions between butyrate produced by fiber-fermenting gut microbiota, colorectal cancer cells and host cell populations. The model is studied both independently and in conjunction with a pre-existing car-bohydrate fermentation model. The parameter space is explored through sensitivity analyses. Simulation experiments are conducted to illustrate the emergence of varying dynamical behaviour driven by butyrate availability. Our model predicts that butyrate production is driven by fiber consumption and further supported by probiotics in the case of microbial dysbiosis. It also suggests that butyrate may help in suppressing tumour growth. We also show that by adding noise with sufficiently high intensity, cancer elimination occurs almost surely in infinite time and that this threshold level of noise intensity decreases with increasing butyrate concentrations. 
+
+# 1 Introduction 
+
+## 1.1 The Human Colon and Gut Microbiome 
+
+The human colon is host to a diverse population of microorganisms, including bacteria, fungi, and archaea, that are collectively referred to as gut microbiota. These microbiota play an essential role in digestion, metabolism, and immune system support. The gut microbiome has become a popular research topic over the past few decades, with increasing evidence highlighting its connection to a wide range of diseases including inflammatory bowel diseases (IBD), irritable bowel syndrome (IBS), obesity, diabetes and cancer [1, 2]. The specific composition of the gut microbiome is unique to each individual, depending on factors such as genetics, diet, and antibiotic use [1]. Fiber fermenting bacteria, including species from the Bacterioides and Bifidobacterium 
+
+genera in addition to others [3], are responsible for the fermentation of complex carbohy-drates into short-chain fatty acids (SCFAs). Acetate, propionate and butyrate are the most abundant SCFAs in the gut. They are essential to human health, playing a significant role in energy metabolism, gut barrier strength and immune response modulation [4]. 1arXiv:2609.19371v1 [q-bio.TO] 16 Sep 2026 1.1.1 Carbohydrate Fermentation 
+
+The human colon is lined with a two-layer mucus membrane: an inner layer that adheres to the epithelial cells and is devoid of bacteria, and an outer, unattached layer which is colonized by microbiota [5]. The lumen of the colon is also colonized but encompasses a different microbial composition than that of the mucus layer. Glycans (dietary fiber and mucins) are the main energy sources for carbohydrate ferment-ing gut microbiota. The majority of dietary fibers originate from plant cell walls, obtained by the consumption of fruits, vegetables and whole grains [6]. Dietary fiber escapes diges-tion in the upper gastrointestinal (GI) tract and enters the lumen of the colon through the small intestine. Conversely, mucins, which are glycoproteins produced by the host’s epithe-lial tissue, are abundant in the mucus layer. Only certain microbial species are capable of degrading fiber and mucins into simpler sugars. These sugars are further broken down by other species into SCFAs, lactate, and gas. 
+
+## 1.2 The Gut Microbiome and Colorectal Cancer 
+
+Colorectal cancer (CRC) is the third most common type of cancer and the second leading cause of cancer-related deaths worldwide [7]. Growing evidence highlights important con-nections between CRC and the gut microbiome [2, 8, 9, 10]. In particular, it has been shown that butyrate, produced from fiber-fermenters in the gut, has an inhibitory effect on cancer cell growth but promotes that of healthy cells. This conflicting effect of butyrate, known as the “butyrate paradox”, is thought to be related to the contrasting metabolic behaviour of normal versus cancerous cells as well as the supportive role of butyrate on the immune system [11, 12]. 
+
+1.2.1 Metabolic role of butyrate in cancer growth 
+
+Butyrate is present in high concentrations in the human colon, and is utilized by colonocytes as their primary energy source, accounting for approximately 70% of their total energy requirements [11]. Unlike colonocytes, which preferentially metabolize butyrate via beta-oxidation, cancer cells undergo the Warburg effect [13], relying on glucose as an energy source, which favours their fast growth and survival [14]. Butyrate has been shown to inhibit this effect by acting as a histone deacetylase (HDAC) inhibitor, shifting cancer cell metabolism toward respiration and thereby slowing proliferation [11]. 
+
+1.2.2 Butyrate affects immune response to cancer 
+
+The immune system’s response to cancer is highly complex, involving many different bio-chemical pathways. We focus on a high level overview, incorporating three key types of immune cells in our model - cytotoxic T cells, regulatory T cells (Tregs) and dendritic cells. Dendritic cells capture tumour antigens and present them to T cells, causing their activa-tion and recruitment to the tumour microenvironment, initiating an immune response [15]. 2Figure 1: Diagram of primary interactions of butyrate, cancer and normal cells with the immune system. T cells can kill the cancer cells by releasing molecules that induce apoptosis [16]. A high presence of T cells is often associated with better control of cancer progression, although certain tumours can evade destruction by impairing T cell infiltration and function [17]. Tregs are important for preventing autoimmunity but in the presence of cancer, they can directly inhibit T-cells, creating an immunosuppressive environment that allows for cancer growth [18]. Through its role as a HDAC inhibitor, butyrate increases the expression of the protein Foxp3 which is the primary transcription factor required for Treg development and function [19]. Butyrate also boosts T cell function and proliferation [20]. Figure 1 shows a visual depiction of the key stimulatory and inhibitory interactions between butyrate, cancer cells, colonocytes, and immune cells. 
+
+## 1.3 Effect of Probiotic Administration on Butyrate Production and CRC Progression 1.4 Role of Fiber in CRC Immunotherapy 
+
+Immunotherapy is a targeted treatment that helps strengthen the immune system’s response to cancer. It has transformed treatment strategies against many types of cancers but im-munotherapy efficacy against CRC is currently limited [21]. Tumours with high microsatellite 3instability (MSI) are often treated with Programmed Cell Death Protein 1 (PD-1) inhibitors. PD-1 is a protein on T cells that, under normal conditions, help prevent them from attacking other cells in the body. However, only 10%-15% of total CRC cases have high MSI, with the rest being microsatellite stable (MSS) [22]. Microsatellites are short, repetitive sequences of DNA distributed throughout the genome. These regions are particularly susceptible to errors during DNA replication, most of which are corrected by the DNA mismatch repair (MMR) system. However, when the MMR system is impaired, these errors accumulate and can lead to alterations in microsatellite sequences, causing MSI. Butyrate has been shown to improve efficacy of PD-1 inhibitors in both MSI-high and MSS tumours, suggesting that increased fiber intake may be beneficial for CRC patients who are resistant to PD-1 inhibitors [20, 23]. 
+
+## 1.5 Cancer Modelling 
+
+Mathematical oncology has gained traction over the past several decades, providing a the-oretical framework for clinical studies [24]. In-silico experiments are now prevalent in the medical field, as in-vitro and in-vivo experiments are often expensive, time-consuming, or ethically challenging. In this thesis, we construct an ordinary differential equation (ODE) model describing interactions between butyrate produced by gut microbiota and colon can-cer. Several CRC models have been developed that incorporate gut dynamics. The authors in [25] constructed a compartmental model of CRC cell population dynamics in the colonic crypt, describing interactions between stem cells, differentiated cells and transit cells. In [26], a reaction-diffusion model of colitis-associated colon cancer was formulated to study the impact of chronic inflammation of the colon mucosa on tumour suppressing genes. Amodel of CRC initiation in the colonic crypt was introduced in [27] and a reaction-diffusion system of colon cancer cell metabolic reprogramming was studied in [28]. Our model is constructed to focus on cancer-butyrate dynamics, which primarily involves interactions with specific immune cells — T cells, Tregs and dendritic cells, but many cancer models have been developed that include different combinations of immune elements. For example, [29] and [30] formulate normal and cancer growth as competition models, both including immune cells as a single component. The model in [31] includes colon cancer, dendritic, helper T and cytotoxic T cells. Additionally, [32] and [33] constructed detailed models for breast and colon cancer respectively, each incorporating various types of immune cells (including T cells, Tregs and dendritic cells) and cytokines. In [34], a large ODE system was constructed that incorporates interactions between colon cancer cells, immune cells, and various families of gut microbiota. A comprehensive review of cancer-immune cell modelling is presented in [35]. Butyrate was incorporated in an immunological model describing inflammation in the human gut [36], as well as in a model of the gut-bone axis [37]. However, to the best of our knowledge, no existing mathematical models describe the role of butyrate as a cellular metabolite in CRC. 41.6 Incorporating Stochastic Cancer Dynamics 
+
+Mathematical models are powerful tools for studying biological systems, but they necessar-ily involve simplifying assumptions. One way to address this limitation is to incorporate randomness into the equations, transforming a deterministic ODE system into a system of stochastic differential equations (SDEs). This helps to capture some of the uncertainty involved in biological processes such as cancer growth [38]. Several existing cancer models in-corporate SDEs to represent effects such as cell mutation, division, and micro-environmental interactions [39, 40, 41, 42, 43, 44]. We incorporate stochasticity in our model by adding noise to the cancer equation, and study the differences in long term solution behaviour between our ODE and SDE models. 
+
+# 2 Carbohydrate Fermentation Model 
+
+The human colon is host to a diverse population of microorganisms, including bacteria, fungi, and archaea, that are collectively referred to as gut microbiota. These microbiota play an essential role in digestion, metabolism, and immune system support. The gut microbiome has become a popular research topic over the past few decades, with increasing evidence highlighting its connection to a wide range of diseases including inflammatory bowel diseases (IBD), irritable bowel syndrome (IBS), obesity, diabetes and cancer [1, 2]. The specific composition of the gut microbiome is unique to each individual, depending on factors such as genetics, diet, and antibiotic use [1]. Fiber fermenting bacteria, including species from the Bacterioides and Bifidobacterium genera in addition to others [3], are responsible for the fermentation of complex carbohydrates into short-chain fatty acids (SCFAs). Acetate, propionate and butyrate are the most abundant SCFAs in the gut. They are essential to human health, playing a significant role in energy metabolism, gut barrier strength and immune response modulation [4]. The human colon is lined with a two-layer mucus membrane: an inner layer that adheres to the epithelial cells and is devoid of bacteria, and an outer, unattached layer which is colo-nized by microbiota [5]. The lumen of the colon is also colonized but encompasses a different microbial composition than that of the mucus layer. Glycans (dietary fiber and mucins) are the main energy sources for carbohydrate fermenting gut microbiota. The majority of di-etary fibers originate from plant cell walls, obtained by the consumption of fruits, vegetables and whole grains [6]. Dietary fiber escapes digestion in the upper gastrointestinal (GI) tract and enters the lumen of the colon through the small intestine. Conversely, mucins, which are glycoproteins produced by the host’s epithelial tissue, are abundant in the mucus layer. Only certain microbial species are capable of degrading fiber and mucins into simpler sugars. These sugars are further broken down by other species into SCFAs, lactate, and gas. We present a comprehensive model of carbohydrate fermentation in the human colon, which we refer to as the “gut model”. The system we use is a modified version of the models in [45, 46], consisting of 24 ODEs. We briefly describe the biological mechanisms behind the model, introduce the equations and discuss the effect of prebiotic and probiotic 5Figure 2: Diagrams of the gut bioreactor (left) and reactions involved in the fermentation of fiber and mucins into SCFAs (right). This reaction pathway occurs in both the lumen and mucus compartments of the bioreactor. administration on model outputs. 
+
+## 2.1 Model Description 
+
+The colon is modelled by a two-compartment bioreactor — the primary compartment rep-resenting the lumen and the second representing the mucus layer. The equations describe exchange between these compartments as well as the host, and the reaction processes in-volved in the break down of fiber and mucins into SCFAs and byproducts by fiber-fermenting microbiota. Microbiota are categorized into three main functional groups - sugar-degraders (SDs), lactate degraders (LDs) and hydrogen-degrading acetogens (HDAs), which are each present in both the lumen and mucus compartments. Sugar degraders break down fiber, which is supplied at a constant rate into the lumen, as well as mucins, which are produced in the mucus layer, into sugars. Sugars can diffuse between the lumen and mucus and are further broken down into hydrogen, lactate, and SC-FAs by sugar degraders in both compartments. Lactate and hydrogen are also broken down to SCFAs and byproducts (carbon dioxide and water) by lactate degraders and hydrogen degrading acetogens, respectively. Each of these compounds along with the biomass can move between compartments through attachment (lumen to mucus) or sloughing (mucus to lumen). Lactate, SCFAs, water and carbon dioxide in the mucus compartment can be absorbed by the host. Diagrams of the bioreactor setup and main reaction processes are shown in Figure 2. The dependent variables are summarized in Table 1 in units of g/L. Subscripts l and m on variables indicate their lumen and mucus concentrations respectively. Model parameters and their default values are given in Tables 2-5. Default values of initial biomass concentrations in units of g/L are given in Table 6. Initial concentrations of the remaining variables are all zero. Simulations were run with these parameter values unless otherwise stated. 6Table 1: Dependent variables of the gut model where i ∈ { l, m } denotes lumen ( l) or mucus (m). Symbol Variable (g/L) 
+
+Il Fiber (lumen only) 
+
+Im Mucin (mucus only) 
+
+Si Sugar 
+
+Li Lactate 
+
+Hi Hydrogen 
+
+Ai Acetate 
+
+Pi Propionate 
+
+Bi Butyrate 
+
+Ci Carbon dioxide 
+
+Wi Water 
+
+X1,i SD biomass 
+
+X2,i LD biomass 
+
+X3,i HDA biomass The dependent variables are grouped into vectors cl, cm ∈ R12 where 
+
+cl = ( Il, S l, L l, H l, A l, P l, B l, C l, W l, X 1,l , X 2,l , X 3,l )T ,
+
+cm = ( Im, S m, L m, H m, A m, P m, B m, C m, W m, X 1,m , X 2,m , X 3,m )T .
+
+We define the reaction function ρ : R12 → R7 as 
+
+ρ(ci) = ( gI (Ii, X 1,i ), f S (Si, X 1,i ), f L(Li, X 2,i ), f A(Ai, X 3,i ), ϕ 1(X1,i ), ϕ 2(X2,i ), ϕ 3(X3,i )) T
+
+for i ∈ { l, m }. The reaction processes are summarized in Table 7. The Peterson matrix 
+
+M ∈ R7×12 of yield coefficients is defined by 
+
+M =
+
+
+
+−1 YSI 0 0 0 0 0 0 0 0 0 00 −1 YLS YHS YAS YP S YBS YCS YW S YS 0 00 0 −1 YHL YAL YP L YBL YCL YW L 0 YL 00 0 0 −1 YAH 0 0 YCH YW H 0 0 YH
+
+0 0 0 0 0 0 0 0 0 −1 0 00 0 0 0 0 0 0 0 0 0 −1 00 0 0 0 0 0 0 0 0 0 0 −1
+
+
+
+,
+
+where rows correspond to reaction processes and columns to dependent variables. The ex-change matrices Ei ∈ R12 ×12 are diagonal with entries Ei(j, j ) = γi,c j for j = 1 , 2, ..., 12 and 
+
+i = {1, 2, 3, 4} (corresponding to sloughing, attachment, diffusion and absorption, respec-tively). Exchange rates γi,c j not listed in Table 3 are taken to be zero, in which case the dependent variable cj does not undergo the exchange process indexed by i.7Finally, cinf , Λ ∈ R12 are vectors of inflow rates and production rates respectively, each of which has zeros in all entries except the first, since only the equation for fiber ( Il) has an inflow term and only mucins ( Im) have a source: 
+
+cinf = Iinf e1, Λ =
+
+
+
+0 if Im > I max ,
+
+Γ
+
+
+
+1 − Im
+
+> Imax
+
+
+
+e1 otherwise, where 0 and e1 denote the zero vector and the first basis vector of of R12 , respectively. The equations in vector notation are then 
+
+dcl
+
+dt = M T ρ(cl)
+
+| {z }
+
+> reactions
+
++ Vm
+
+Vl
+
+E1cm
+
+| {z }
+
+> sloughing
+
+− E2cl
+
+|{z} 
+
+> attachment
+
+− 1
+
+Vl
+
+E3(cl − cm)
+
+| {z }
+
+> diffusion
+
++q( cinf 
+
+|{z} 
+
+> inflow
+
+− cl
+
+|{z} 
+
+> outflow
+
+), (1) 
+
+dcm
+
+dt = M T ρ(cm)
+
+| {z }
+
+> reactions
+
+− E1cm
+
+| {z } 
+
+> sloughing
+
++ Vl
+
+Vm
+
+E2cl
+
+| {z }
+
+> attachment
+
++ 1
+
+Vm
+
+E3(cl − cm)
+
+| {z }
+
+> diffusion
+
+− E4cm
+
+| {z } 
+
+> absorption
+
++ Λ|{z} 
+
+> source
+
+. (2) Table 2: Yield coefficients taken from [45, 46]. Symbol Yield Coefficient Value 
+
+YSI Sugar from carbohydrate 1.0 gsu /g carb 
+
+YLS Lactate from sugar 0.09010 gla /g su 
+
+YHS Hydrogen from sugar 0.00606 gH2 /g su 
+
+YAS Acetate from sugar 0.18916 gac /g su 
+
+YP S Propionate from sugar 0.09877 gpr /g su 
+
+YBS Butyrate from sugar 0.13215 gbu /g su 
+
+YCS Carbon dioxide from sugar 0.13333 gCO 2 /g su 
+
+YW S Water from sugar 0.12364 gH2O/g su 
+
+YHL Hydrogen from lactate 0.00444 gH2 /g la 
+
+YAL Acetate from lactate 0.06667 gac /g la 
+
+YP L Propionate from lactate 0.16444 gpr /g la 
+
+YBL Butyrate from lactate 0.09778 gbu /g la 
+
+YCL Carbon dioxide from lactate 0.14667 gCO 2 /g la 
+
+YW L Water from lactate 0.2 gH2O/g la 
+
+YAH Acetate from hydrogen 2.14286 gac /g H2
+
+YCH Carbon dioxide from hydrogen -11.0 gCO 2 /g H2
+
+YW H Water from hydrogen 6.42857 gH2O/g H2
+
+YS SD bacteria from sugar 0.3424 gX1 /g su 
+
+YL LD bacteria from lactate 0.37667 gX2 /g la 
+
+YH HDA bacteria from hydrogen 4.035714 gX3 /g H2
+
+8Table 3: Exchange rates taken from [45, 46]. Exchange rates not listed here are taken to be zero. Symbol Parameter Value (d −1)
+
+γ1,I Mucin sloughing rate 0.1 
+
+γ1,X 1 SD sloughing rate 0.4 
+
+γ1,X 2 LD sloughing rate 0.4 
+
+γ1,X 3 HDA sloughing rate 0.4 
+
+γ2,L Lactate attachment rate 0.88 
+
+γ2,A Acetate attachment rate 1.32 
+
+γ2,P Propionate attachment rate 1.07 
+
+γ2,B Butyrate attachment rate 0.9 
+
+γ2,C Carbon dioxide attachment rate 1.0 
+
+γ2,W Water attachment rate 1.0 
+
+γ2,X 1 SD attachment rate 0.1 
+
+γ2,X 2 LD attachment rate 0.1 
+
+γ2,X 3 HDA attachment rate 0.1 
+
+γ3,S Sugar diffusion rate 3.9 
+
+γ4,L Lactate absorption rate 12.6 
+
+γ4,A Acetate absorption rate 18.9 
+
+γ4,P Propionate absorption rate 15.32 
+
+γ4,B Butyrate absorption rate 12.88 
+
+γ4,C Carbon dioxide absorption rate 14.0 
+
+γ4,W Water absorption rate 1.6 Table 4: Reaction parameters taken from [45]. Symbol Parameter Value 
+
+κI Hydrolysis rate 10.62 gI /(gXsu · d)
+
+κS Sugar consumption rate 12.63 gsu /(gXsu · d)
+
+κL Lactate consumption rate 82.11 gla /(gXla · d)
+
+κS Hydrogen consumption rate 1.93 gH2 /(gXH2 · d)
+
+KI Hydrolysis concentration ratio 0.27 gI /g Xsu 
+
+KS Sugar half saturation constant 0.47 gsu /L KL Lactate half saturation constant 0.60 gla /L KH Hydrogen half saturation constant 0.0034 gH2 /L κ1 SD biomass decay 0.01 d−1
+
+κ2 LD biomass decay 0.01 d−1
+
+κ3 HDA biomass decay 0.01 d−1
+
+9Table 5: Physical model parameters taken from [47]. Symbol Parameter Value 
+
+Vl Volume of lumen 0.9 L 
+
+Vm Volume of mucus 0.1 L 
+
+q Average flow rate 1.01 d−1
+
+Iinf Inflow fiber concentration 20 gI /L 
+
+Imax Maximum mucin concentration 500 gI /L Γ Mucin production rate 50 gI /(L ·d) Table 6: Default initial biomass concentrations in units of g/L. Initial condition Value (g/L) 
+
+X1,l (0) 5.5 
+
+X1,m (0) 5.5 
+
+X2,l (0) 2.5 
+
+X2,m (0) 2.5 
+
+X3,l (0) 0.1 
+
+X3,m (0) 0.1 Table 7: Functions describing reaction processes (units of g/(L ·d)). Index Rate Description Function 1 Hydrolysis gI (I, X 1) = κI IKI X1+I X1
+
+2 Glucose utilization fS (S, X 1) = κS SKS +S X1
+
+3 Lactate utilization fL(L, X 2) = κLLKL+L X2
+
+4 Acetogenesis fA(A, X 3) = κAHKA+H X3
+
+5 X1 Decay ϕ1(X1) = κ1X1
+
+6 X2 Decay ϕ2(X2) = κ2X2
+
+7 X3 Decay ϕ3(X3) = κ3X3
+
+10 Figure 3: Solution components to the gut model representing SCFA and biomass concentra-tions over time until steady state in the lumen and mucus compartments. SD, LD and HDA indicate sugar degraders, lactate degraders and hydrogen degrading acetogens, respectively. 
+
+## 2.2 Simulation Results 
+
+Solution components representing SCFA and biomass concentrations in the lumen and mucus are plotted over time in Figure 3. At steady state, acetate is the most abundant SCFA in both compartments, which is consistent with relative SCFA levels typically found in healthy patients [48, 49]. All bacterial functional groups survive, with sugar degraders being the most abundant. The difference in biomass concentrations between the lumen and mucus layers can be attributed to the relative volumes of the two compartments. Since Vl ≫ Vm,the attachment terms appearing in Equations (1) and (2) are generally greater in magnitude than the sloughing terms, resulting in more biomass moving to the mucus compartment over time. Figure 4 shows the effect of the rate of fiber inflow ( Iinf ) on steady state values of total biomass and SCFA concentrations. We see that higher values of Iinf increases each of these concentrations, indicating that in our model, fiber is crucial for gut bacteria and SCFA production, as is known from biological literature [50]. We then looked at the effect of initial biomass values on SCFA production. Figure 5 suggests that the system with the given parameter values is bistable, since as the initial condition of total sugar degraders ( X1,l (0) + X1,m (0)) is varied, it moves from the basin attraction of a washout equilibrium to that of an equilibrium allowing for bacterial per-sistence. Without intervention (solid lines), if the initial concentration of sugar degraders 11 Figure 4: Effect of varying fiber inflow ( Iinf ) between 0 and 100 g/L on steady state values of total (lumen + mucus) biomass and SCFA concentrations. exceeds approximately 0.020 g/L, all three functional groups will persist. Otherwise, they will die out. We also find that SCFAs directly rely on biomass concentrations, with their bifurcation between extinction and persistence occurring at the same point as that for the biomass. The dotted lines show model solutions when a sugar-degrading probiotic is added to the system at a constant dose of 0.035 g/(L ·day). Probiotic administration expands the basin of attraction of the biomass-existing equilibrium, allowing for persistence of biomass at lower initial concentrations of sugar degraders. However, if initial conditions of sugar degraders exceed approximately 0.020 g/L, then probiotics have no observable effect on SCFA production. This suggests that probiotics may be beneficial for patients with a compromised gut microbiome lacking sugar degraders, but have no significant effect for patients with sufficient sugar degrading microbiota. 
+
+# 3 Cancer Model Development 
+
+We now introduce our model describing cancer growth in the presence of immune cells and butyrate produced from gut microbiota. The cancer model is constructed so that it can be studied in isolation, or weakly coupled to the gut model introduced in Section 2. We begin by outlining the biological assumptions that went into building our model, describe the model equations, prove the existence and uniqueness of solutions, and discuss the analysis of steady states. 12 Figure 5: Effect of varying the initial total concentration of sugar degraders ( X1,l (0) + 
+
+X1,m (0)) up to 0.035 g/L on steady states of total biomass (left) and SCFAs (right). Solid lines show model solutions without probiotics whereas dotted lines show the effect of adding probiotics at a constant rate of 0.035 g/(L ·day). 
+
+## 3.1 Model Assumptions 
+
+The model is formulated for the microenvironment of a cancerous colon tumour, located along the mucus layer of the colon. The tumour is exposed to various materials in the gut, most notably products from carbohydrate fermentation such as butyrate and other SCFAs. We model the dynamics of healthy colonocytes or ‘normal’ cells as well as colon cancer cells. Three key types of immune cells are incorporated in our model, namely cytotoxic T-cells, regulatory T-cells and dendritic cells. Additionally, butyrate produced from carbo-hydrate fermentation is included. We assume that the concentrations of model constituents are spatially homogeneous, meaning they change only in time and can be modelled by a system of ODEs. The assumptions that drive the model equations are presented below: 
+
+A1 (Cell growth) Several functions for modelling cancer growth have been proposed, each with their own advantages in different scenarios [35, 41]. We choose to model both cancer and normal cell growth logistically, as done in many other cancer-immune models [29, 30, 31, 32, 33, 51, 52], as this balances simplicity while still capturing key non-linear dynamics. 
+
+A2 (Uptake) Butyrate is the primary energy source for colonocytes [53, 54]. Butyrate is also absorbed by T cells and Tregs, promoting their growth [55, 56, 57, 58]. 
+
+A3 (Competition) Normal colonocytes compete with cancer for nutrients and space. Noncancerous cells undergo contact inhibition, causing a cease in proliferation and growth when they contact each other to avoid overcrowding. This characteristic is 13 lost in cancer cells [59], meaning they are not significantly affected by the presence of normal cells. 
+
+A4 (Inhibition) In contrast to its positive effect on normal host cells, butyrate inhibits cancer cell growth [11]. 
+
+A5 (Immune activity) Cytotoxic T cells attack cancer cells by releasing molecules that induce apoptosis [16]. However, excessive T-cell accumulation causes inflammation so they are monitored and down regulated by Tregs [18]. Additionally, cancer cells can hinder the antitumour properties of dendritic cells by disrupting their transport and preventing maturation [60]. 
+
+A6 (Recruitment) The presence of cancer cells stimulates the recruitment of dendritic cells and Tregs to the tumour microenvironment (TME). Dendritic cells then process and present tumour antigens to the T-cells, promoting their recruitment to the TME [61]. 
+
+A7 (Death) Colonocytes, T-cells, Tregs, and dendritic cells die from natural causes, mod-elled by linear decay as in [30, 31, 51]. The natural death rate of cancer cells is assumed to be negligible in comparison. 
+
+A8 (Diffusion) Butyrate in the mucus layer that is produced during carbohydrate fer-mentation diffuses into the TME [57]. 
+
+## 3.2 Model Equations 
+
+We now formulate our model based on the above biological assumptions. The state variables are all functions of time t ≥ 0, measured in days, and are summarized in Table 8. Table 8: Summary of dependent variables in the cancer model. Symbol Description Units 
+
+N Normal colonocytes cells/mm 3
+
+C Cancer cells cells/mm 3
+
+T Cytotoxic T cells cells/mm 3
+
+R Regulatory T cells (Tregs) cells/mm 3
+
+D Dendritic cells cells/mm 3
+
+B Butyrate mM 14 Normal Cells: 
+
+As per A1, normal cells grow logistically with constant growth rate rN and carrying capacity 
+
+kN . By A2, growth is enhanced by the presence of butyrate, modelled by a monotonically increasing sigmoidal function of B with half saturation constant κB :
+
+g(B) = BB + κB
+
+.
+
+Normal cells decay at a rate proportional to the number of cancer cells as in [29, 30, 31], due to competition for space and other resources (A3). The cells die from natural causes at rate αN (A7). The equation for N is then 
+
+N ′ = rN N
+
+
+
+1 − NkN
+
+| {z }
+
+> A1
+
+g(B)
+
+| {z } 
+
+> A2
+
+− δN N C 
+
+| {z } 
+
+> A3
+
+− αN N
+
+| {z } 
+
+> A7
+
+.
+
+Cancer Cells: 
+
+Cancer cells also grow logistically, by A1, with growth rate rC and carrying capacity kC .As opposed to normal cells, cancer cell growth is inhibited by the presence of butyrate, as per assumption A4. This is modelled by a B-dependent monotonically decreasing sigmoidal function, 
+
+I(B) = κB
+
+B + κB
+
+.
+
+By assumption A5, cancer cells die proportional to T cell density at rate δC , as in [29, 30, 52, 31], giving the equation for C as 
+
+C′ = rC C
+
+
+
+1 − CkC
+
+| {z }
+
+> A1
+
+I(B)
+
+| {z } 
+
+> A4
+
+− δC CT 
+
+| {z } 
+
+> A5
+
+.
+
+T Cells: 
+
+T cell proliferation is modelled linearly in T with rate rT and is enhanced by butyrate (A2). T cell recruitment is directly influenced by the number of dendritic cells in the TME (A6) and, similar to [31], is modelled as an inflow proportional to D at rate φT . By A5, T cells are down-regulated proportional to Treg density at rate δT . T cells die from natural causes at rate αT , by A7, giving their equation as 
+
+T ′ = rT g(B) T
+
+| {z }
+
+> A2
+
++ φT D
+
+| {z } 
+
+> A6
+
+− δT T R 
+
+| {z } 
+
+> A5
+
+− αT T
+
+| {z } 
+
+> A7
+
+.
+
+Regulatory T Cells: 
+
+By assumption A2, Treg proliferation is also enhanced by butyrate and is modelled analo-gously to that of T cells. By A6, Tregs are recruited to the TME at rate φR, proportional to the cancer cell density and die at rate αR (A7): 
+
+R′ = rR g(B) R
+
+| {z }
+
+> A2
+
++ φR C
+
+| {z } 
+
+> A6
+
+− αRR
+
+|{z} 
+
+> A7
+
+.
+
+15 Dendritic Cells: 
+
+Like Tregs, dendritic cells are recruited to the TME by cancer cells (A6) at rate φD but decay proportionally to cancer cell density (A5) at rate δD and die at rate αD (A7). This is similar to the DC equation in [31]: 
+
+D′ = φD C
+
+| {z } 
+
+> A6
+
+− δD DC 
+
+| {z } 
+
+> A5
+
+− αDD
+
+| {z } 
+
+> A7
+
+.
+
+Butyrate: 
+
+The mass transfer of butyrate occurs at rate qB and diffuses into the TME depending on the concentration gradient between the TME and its surroundings (A8). When coupled to the gut model, Binf is the solution component representing butyrate concentration in the mucus layer produced during fermentation ( Binf (t) = Bm(t)). In the uncoupled case, Binf is taken to be constant. Normal, T, and regulatory T cells uptake butyrate from the TME at rates 
+
+uN , uT and uR respectively (A2): 
+
+B′ = qB (Binf − B)
+
+| {z }
+
+> A8
+
+− g(B) ( uN N + uT T + uR R)
+
+| {z }
+
+> A2
+
+.
+
+The full cancer model is then given by 
+
+N ′ = rN N
+
+
+
+1 − NkN
+
+| {z }
+
+> A1: Cell growth
+
+BB + κB
+
+| {z }
+
+> A2: Uptake
+
+− δN N C 
+
+| {z } 
+
+> A3: Competition
+
+− αN N
+
+| {z } 
+
+> A7: Death
+
+, (3) 
+
+C′ = rC C
+
+
+
+1 − CkC
+
+| {z }
+
+> A1: Cell growth
+
+κB
+
+B + κB
+
+| {z }
+
+> A4: Inhibition
+
+− δC CT 
+
+| {z } 
+
+> A5: Immune activity
+
+, (4) 
+
+T ′ = rT
+
+BB + κB
+
+T
+
+| {z }
+
+> A2: Uptake
+
++ φT D
+
+| {z } 
+
+> A6: Recruitment
+
+− δT T R 
+
+| {z } 
+
+> A5: Immune activity
+
+− αT T
+
+| {z } 
+
+> A7: Death
+
+, (5) 
+
+R′ = rR
+
+BB + κB
+
+R
+
+| {z }
+
+> A2: Uptake
+
++ φR C
+
+| {z } 
+
+> A6: Recruitment
+
+− αRR
+
+|{z} 
+
+> A7: Death
+
+, (6) 
+
+D′ = φD C
+
+| {z } 
+
+> A6: Recruitment
+
+− δD DC 
+
+| {z } 
+
+> A5: Immune activity
+
+− αDD
+
+| {z } 
+
+> A7: Death
+
+, (7) 
+
+B′ = qB (Binf − B)
+
+| {z }
+
+> A8: Diffusion
+
+− BB + κB
+
+(uN N + uT T + uR R)
+
+| {z }
+
+> A2: Uptake
+
+. (8) subject to initial data (N (0) , C (0) , T (0) , R (0) , D (0) , B (0)) = ( N0, C 0, T 0, R 0, D 0, B 0) ∈ R6+,0. (9) 16 3.3 Existence and Uniqueness 
+
+Theorem 1. For any T > 0, the initial value problem of (3)–(8) with initial data (9) has a unique solution up to time T that remains in the non-negative cone R6+,0 and depends con-tinuously on initial conditions and model parameters. Furthermore, the solution is bounded above in R6+,0 with constant bounds on N (t), C(t), D(t) and B(t) given by 
+
+N (t) ≤ max {kN , N 0}, C(t) ≤ max {kC , C 0} := MC ,D(t) ≤ max {φD/δ D, D 0}, B(t) ≤ max {Binf , B 0},
+
+and time-dependent bounds on T (t) and R(t) given by 
+
+T (t) ≤
+
+
+
+max 
+
+ φT MD  
+
+> αT−rT
+
+, T 0
+
+
+
+if rT < α T ,φT MD t + T0 if rT = αT ,
+
+T0 + φT MD 
+
+> rT−αT
+
+
+
+e(rT −αT )t if rT > α T ,
+
+and 
+
+R(t) ≤
+
+
+
+max 
+
+ φr kC 
+
+> αR−rR
+
+, R 0
+
+
+
+if rR < α R,φRkC t + R0 if rR = αR,
+
+R0 + φRkC
+
+> rR−αR
+
+
+
+e(rR−αR)t if rR > α R,
+
+where MD = φD MC is a positive constant. Proof. Let x(t) = ( N (t), C (t), T (t), R (t), D (t), B (t)). Given x(0) ∈ R6+,0, x(t) remains in 
+
+R6+,0 for all t > 0. This follows from the non-negativity of x′
+
+> i
+
+(t) along xi(t) = 0 for each 
+
+i ∈ { 1, 2, .., 6}, showing positive invariance of R6+,0 under the flow of the system. The system (3)–(8) satisfies a local Lipschitz condition in the non-negative cone R6+,0 and by the Picard-Lindelof theorem, this proves the local existence and uniqueness of a solution that depends continuously on initial conditions and parameters. To prove the bounds, we show arguments for N and T with the others following similarly. For N , first assume N0 ∈ (0 , k N ) and suppose N (˜ t) > k N for some ˜ t > 0. Then there is some 0 < t ∗ < ˜t such that N (t∗) = kN and N ′(t∗) ≥ 0. But plugging in N (t∗) = kN into (3) gives N ′(t∗) = −δN kN C(t∗) − αN kN < 0, contradicting the supposition. If N0 > k N then for any t > 0 satisfying N (t) > k N , we have N ′(t) < 0. Therefore, N (t) ≤ max {kN , N 0}. The bounds on C, D and B are shown similarly. For T , the rT < α T case follows from similar arguments for N . The remaining cases rely on the ODE comparison principle. If rT = αT then T ′(t) ≤ φT MD so T (t) ≤ φT MD t + T0.If rT > α T then T ′(t) ≤ (rT − αT ) T (t) + φT MD. Let u(t) solve 
+
+u′(t) = ( rT − αT )u(t) + φT MD, u(0) = T0
+
+17 and set v(t) = u(t) + φT MD  
+
+> rT−αT
+
+. Then v(t) > u (t) and 
+
+v′(t) = u′(t) = ( rT − αT )u(t) + φT MD
+
+= ( rT − αT )
+
+
+
+v(t) − φT MD
+
+rT − αT
+
+
+
++ φT MD
+
+= ( rT − αT )v(t)so 
+
+v(t) = v(0) e(rT −αT )t =
+
+
+
+u(0) + φT MD
+
+rT − αT
+
+
+
+e(rT −αT )t
+
+and T (t) ≤ u(t) < v (t) so we have 
+
+T (t) ≤
+
+
+
+T0 + φT MD
+
+rT − αT
+
+
+
+e(rT −αT )t.
+
+The bound on R is shown similarly. Global well posedness then follows from the local result along with boundedness in R6+,0.
+
+## 3.4 Sensitivity Analysis 
+
+Sensitivity analysis is a standard method for exploring the parameter space of ODE models. We perform both local and global sensitivity analyses for the cancer model, to investigate the effect of each parameter on the density of cancer cells at one year. In local sensitivity analysis, sensitivity coefficients describe the effect on model outputs of varying parameters individually by some small amount. We consider the cancer cell density at a fixed time point (one year) as our output and treat the model parameters as inputs. If we let Xi, for i ∈ { 1, 2, ..., 20 }, represent the ith model parameter with default value X∗ 
+
+> i
+
+,then we calculate the (normalized) sensitivity coefficient si for cancer cell density at one year 
+
+C(t∗, X i), where t∗ = 365 days, as 
+
+si = X∗
+
+> i
+
+C(t∗, X ∗ 
+
+> i
+
+) · ∂C (t∗, X i)
+
+∂X i Xi=X∗
+
+> i
+
+.
+
+The sensitivity coefficients for parameters at their default values, calculated via forward finite difference approximations with a step size of (3 × 10 −4) · X∗ 
+
+> i
+
+, are shown in Figure 6 for different default values of Binf .Local sensitivity analysis is only informative for model behaviour near a single parameter set and may not capture interactions between parameters. This motivates our use of global sensitivity analysis, which measures the impact of varying parameters within arbitrarily wide ranges. We use Sobol sensitivity analysis (SSA), which is a variance-based form of global sensitivity analysis. SSA provides sensitivity indices for each model input that measure the 18 Table 9: Default parameter values used in numerical simulations. Parameters without ref-erences are newly introduced. Symbol Description Value Units Reference 
+
+rN Growth rate of colonocytes 0.3 d−1 [62] 
+
+rC Growth rate of cancer cells 0.05 d−1 [31, 63, 64] 
+
+rT Proliferation rate of T cells 0.02 d−1 [64] 
+
+rR Proliferation rate of Tregs 0.02 d−1 -
+
+kN Normal cell carrying capacity 5.0 × 10 4 cells mm −3 -
+
+kC Cancer cell carrying capacity 1.0 × 10 5 cells mm −3 [35, 64] 
+
+κB Butyrate half saturation constant 1.0 mM [65] 
+
+δN Competition coefficient 1.0 × 10 −6 (d cells) −1 mm 3 -
+
+δC Effect of T cells on cancer cells 5.0 × 10 −6 (d cells) −1 mm 3 -
+
+δT Effect of Tregs on T cells 1.0 × 10 −5 (d cells) −1 mm 3 -
+
+δD Cancer cell effect on DCs 1.0 × 10 −6 (d cells) −1 mm 3 [31] 
+
+αN Death rate of colonocytes 0.1 d−1
+
+αT Death rate of T cells 0.03 d−1 [31, 66] 
+
+αR Death rate of Tregs 0.05 d−1 -
+
+αD Death rate of DCs 0.03 d−1 [31] 
+
+ϕT T cell inflow rate 0.8 d−1 -
+
+ϕR Treg inflow rate 1.0 × 10 −3 d−1 -
+
+ϕD Dendritic cell inflow rate 1.0 × 10 −3 d−1 [31] 
+
+qB Butyrate mass transfer coefficient 0.01 d−1 -
+
+Binf Inflow concentration of butyrate [0-50] mM [67] 
+
+uN Colonocyte butyrate uptake rate 5 × 10 −6 mM (d cells) −1 mm 3 [67] 
+
+uT T cell butyrate uptake rate 5 × 10 −6 mM (d cells) −1 mm 3 -
+
+uR Treg butyrate uptake rate 5 × 10 −6 mM (d cells) −1 mm 3 -19 Table 10: Default initial conditions used in numerical simulations. Symbol Description Value Units 
+
+N0 Initial density of normal cells kN cells/mm 3
+
+C0 Initial density of cancer cells 10,000 cells/mm 3
+
+T0 Initial density of T cells 0 cells/mm 3
+
+R0 Initial density of Tregs 0 cells/mm 3
+
+D0 Initial density of dendritic cells 0 cells/mm 3
+
+B0 Initial butyrate concentration 0 mM 
+
+Figure 6: Normalized sensitivity coefficients for model parameters (at their default values) on cancer cell density at one year with Binf = 10 mM (left) and Binf = 30 mM (right). 20 Figure 7: First and total order Sobol indices for model parameters on cancer cell density at one year. Parameters were varied uniformly within ±15% of their default value. Default values of Binf were taken as 10 mM (left) and 30 mM (right). Error bars indicate 95% confidence intervals on indices. 180,224 simulations were run for each plot, each with a different parameter set. effect of changing the input on the variance of the output. First order indices indicate the individual effect of varying a single input, whereas total order indices include interactions with other input parameters. For a given parameter Xi, the corresponding first and total order Sobol indices are given by 
+
+Si = Var( E[Y |Xi]) Var(Y) and STi = 1 − Var( E[Y |X∼i]) Var(Y) ,
+
+respectively, where Y is the density of cancer cells at one year and X∼i indicates the set of all model parameters except for Xi. Model outputs are more sensitive to inputs with higher sensitivity indices. We used the Python package SALib with the Saltelli sampling scheme [68] to conduct SSA, sampling parameters from a range within ±15% of their default values. The first and total order Sobol indices are plotted in Figure 7. We see that the relative sizes of Sobol indices are comparable to the local sensitivity coefficients. This indicates that local and global behaviour are consistent, meaning there are likely no bifurcations in this sampling range that affect parameter sensitivities. Both methods show that for low butyrate levels, cancer density is most sensitive to the intrinsic growth rate ( rC ) and the killing rate of T cells ( δC ). For high butyrate availability, Binf 
+
+itself as well as parameters describing T cell dynamics, namely T cell death rate ( αT ), T cell killing rate ( δC ) and T cell proliferation rate ( rT ) are most influential. Results from the sensitivity analyses motivate simulation experiments carried out in the proceeding section. While rC , rT and αT are inherent properties of cancer and T cell popula-21 tion dynamics and cannot generally be directly modified in a patient, certain treatments can alter Binf and δC . Looking at the effect of these treatments is the aim of the next section. 
+
+# 4 Results 
+
+In this section, we present simulation results obtained from coupling the gut model (1)-(2) and the cancer model (3)-8). 
+
+## 4.1 Increased fiber intake enhances butyrate levels in the TME, helping to support normal cells and suppress cancer cells. 
+
+We first investigate the effect of changing the fiber inflow concentration, Iinf , on cell popula-tions. Figure 8 shows time series for cell populations and butyrate in the TME under low, moderate and high fiber concentrations ( Iinf = 10 , 20 , 30 g/L respectively). We observe that moderate and high values of Iinf help to decrease the deterioration of healthy colonocytes (a) while causing significant reduction in cancer cell density over time (b). Figures (c), (d) and (e) indicate a drop in immune cell densities as Iinf is increased, which is consistent with the biological expectation that immune cell density should decrease in response to a decrease in cancer. As expected, butyrate concentration in the TME increases with Iinf (f). Figure 9 shows the effect of varying Iinf continuously between 0 and 100 g/L on steady states of the cell populations, suggesting that increasing fiber intake can cause cancer sup-pression, leading to a decrease in immune cells as well. 
+
+## 4.2 Probiotic administration can help suppress cancer growth un-der dysbiotic conditions in the gut. 
+
+Probiotics are incorporated in the model by adding a constant source term u (with units of g/(L ·day)) to the equation for sugar degrading biomass in the lumen. When the gut microbiome is well populated with sugar degraders, the addition of probiotics into the sys-tem has no significant effect on the amount of butyrate produced during fiber fermentation and thus little to no effect on normal and cancerous cell densities. However, when the gut microbiome is deficient of sugar degraders, the administration of probiotics is essential for butyrate production, regardless of the amount of fiber present. Figure 10 shows time series of normal and cancerous cell densities and butyrate concentration in the TME in an envi-ronment with low sugar degraders with and without probiotic administration. This result suggests that implementation of probiotics with sufficient fiber intake may be beneficial for boosting butyrate production and slowing cancer growth if the gut microbiome is deprived of sugar degrading biomass. 22 Figure 8: Solution components representing normal cells (a), cancer cells (b), T cells (c), Tregs (d), dendritic cells (e), and butyrate (f) until steady state for Iinf = 10, 20 and 30 g/L. 
+
+Figure 9: Steady states of cell populations while Iinf is varied continuously up to 100 g/L. 23 Figure 10: Solution components to the coupled gut-cancer model representing normal (left) and cancerous (middle) cell density as well as butyrate concentration (right) in the TME with and without probiotic treatment. Treatment with probiotics was implemented into the lumen at a constant rate of u = 0 .1 g/(L ·day). Initial conditions of X1,l (0) = X1,m (0) = 0 .01 g/L were used to simulate a microbiome environment with low concentrations of sugar degraders. 
+
+Iinf was set to 30.0 g/L. 
+
+## 4.3 Increased fiber intake can enhance the efficacy of immunother-apy against CRC. 
+
+Immunotherapy is a targeted treatment that helps strengthen the immune system’s response to cancer. It has transformed treatment strategies against many types of cancers but im-munotherapy efficacy against CRC is currently limited [21]. Tumours with high microsatellite instability (MSI) are often treated with Programmed Cell Death Protein 1 (PD-1) inhibitors. PD-1 is a protein on T cells that, under normal conditions, help prevent them from attacking other cells in the body. However, only 10%-15% of total CRC cases have high MSI, with the rest being microsatellite stable (MSS) [22]. Microsatellites are short, repetitive sequences of DNA distributed throughout the genome. These regions are particularly susceptible to errors during DNA replication, most of which are corrected by the DNA mismatch repair (MMR) system. However, when the MMR system is impaired, these errors accumulate and can lead to alterations in microsatellite sequences, causing MSI. Butyrate has been shown to improve efficacy of PD-1 inhibitors in both MSI-high and MSS tumours, indicating it could be a promising treatment to CRC patients who are resistant to PD-1 inhibitors [20, 23]. We model the administration of a PD-1 inhibitor by increasing δC , which is the model parameter describing T cell response against cancer. Figure 11 shows effects of increasing 
+
+δC beyond its default value of 5 × 10 −6 mm 3/(d ·cell) on steady states, with different values of Binf . Little effect is seen in the long term behaviour of normal cells and butyrate as δC is varied, but a significant drop in the steady states of cancer cell density is observed, which is further amplified by high Binf values. Consequently, steady states of immune cell densities follow a similar pattern. Thus, the model suggests that adding butyrate into the system can significantly improve the efficacy of PD-1 inhibitors, which is consistent with experimental results from [23]. 24 Figure 11: Steady states of dependent variables while δC is varied continuously between 5 × 10 −6 and 5 × 10 −5 mm 3/(day ·cell) for Binf = 0, 10, 20 and 30 mM. 
+
+## 4.4 Virtual Clinical Trials 
+
+The use of virtual clinical trials (VCTs) is a popular in-silico technique where simulation experiments are carried out on a virtual patient cohort obtained by sampling model param-eters from physiologically plausible ranges [69]. This helps to accommodate for biological variability between individuals, making theoretical models valuable tools for enhancing per-sonalized medicine. We use VCTs to explore how different treatment dosages of butyrate and prebiotics affect tumour density. Figure 12 shows results from running VCTs using our combined model to quantify the effect of Iinf on tumour density from a sample of 1000 virtual patients, each represented by a unique parameter set. Parameter sets were generated by sampling uniformly within 
+
+±15% of each default parameter value. Three treatment groups plus a control group were considered for both butyrate and prebiotic administration. The same patients were used for each treatment and were categorized by relative tumour densities one year into treatment compared to densities at the time of treatment initiation. Virtual patients who didn’t receive fiber all had a greater than 50% increase in tumour density after one year. Patients receiving 15 g/L and 30 g/L of fiber were split between all four categories, whereas those receiving 45g/L all experienced tumour decrease. 
+
+# 5 Stochastic Cancer Dynamics 
+
+Cancer growth is influenced by random biological fluctuations such as genetic mutations, changes to the microenvironment, and complex immune system responses, which result in inherent uncertainty. To help account for this variability, a typical approach is to add “noise” to an underlying cancer growth equation, thereby converting the ODE to a stochastic differ-25 Figure 12: Frequency of tumour densities for 1000 generated virtual patients after one year of treatment with different concentrations of fiber intake per day (right). ential equation (SDE). As is standard in modelling cancer dynamics (see [40] for example), we add noise to equation (4) that scales with cancer density, converting the equation into an SDE. Let (Ω , F, {F t}t≥0, P) be a complete probability space with filtration {F t}t≥0 satisfying the usual conditions (i.e. it is increasing, right-continuous, and F0 contains all P-null sets). Adding noise to Equation (4) in the cancer model yields the SDE system 
+
+dX (t) = b(X(t)) dt + σ(X(t)) dW (t), (10) where X(t) = ( N (t), C (t), T (t), R (t), D (t), B (t)) T ∈ R6, b : R6 → R6 with b(X(t)) represent-ing the vector of right hand sides of equations (3)–(8), σ : R6 → R6×6 such that σ(X(t)) = Σ where Σij =
+
+(
+
+σC Xi if i = j = 2 ,
+
+0 otherwise, and σC > 0 (with dimensions t−1/2) is the volatility constant, describing the intensity of the noise. The vector W (t) is a six-dimensional standard Brownian motion but note that only its second component, which we call WC (t), survives the Σ transformation. 
+
+## 5.1 Existence and Uniqueness 
+
+Theorem 2. For any T > 0, the system (10) subject to non-negative constant initial data has a unique solution that remains in R6+,0 up to time T . That is, given X(0) = X0 ∈ R6+,0,
+
+P(X(t) ∈ R6+,0) = 1 for all t ∈ [0 , T ].
+
+26 Proof. We begin by showing that X(t) remains in R6+,0 given X0 ∈ R6+,0. Starting with 
+
+X2 ≡ C, we have 
+
+dC (t) = b2(C(t), B (t), T (t)) dt + σC C(t) dW C (t). (11) where b2 is the second component of b (ie. b2(C(t), B (t), T (t)) is the right hand side of equation (4)). We define the integrating factor U (t) = eV (t) where 
+
+V (t) = 12 σ2 
+
+> C
+
+t − σC WC (t).
+
+Then, V (t) satisfies 
+
+dV (t) = 12 σ2 
+
+> C
+
+dt − σC dW C (t). (12) By Itˆ o’s formula (see [70] for example) applied to f (x) = ex,
+
+d f (V (t)) = dU (t) = eV (t)dV (t) + 12 eV (t)dV (t)2
+
+= σ2 
+
+> C
+
+U (t) dt − σC U (t) dW C (t), (13) where the second inequality comes from plugging in the right hand side of (12) and using that dt 2 = dt · dW (t) = 0 and dW (t)2 = dt 2. Then by Itˆ o’s product rule, 
+
+d(U (t)C(t)) = C(t) dU (t) + U (t) dC (t) + dU (t) dC (t)= U (t) b2(C(t), B (t), T (t)) dt 
+
+where the second equality comes from plugging in the right hand sides of equations (11) and (13) for dC (t) and dU (t), respectively. Then, by setting Y (t) = U (t) C(t), we obtain the ODE 
+
+dY (t) = U (t) b2
+
+Y (t)  
+
+> U(t)
+
+, B (t), T (t)
+
+
+
+dt, 
+
+for which Y (t) is a solution for almost every ω ∈ Ω: 
+
+dY (t)
+
+dt = U (t) b2
+
+Y (t)  
+
+> U(t)
+
+, B (t), T (t)
+
+
+
+= rC Y (t)
+
+
+
+1 − C(t)
+
+> kC
+
+
+
+I(B(t)) − δC Y (t)T (t). (14) This preserves non-negativity of Y (t) given Y (0) = Y0 ≥ 0. Thus, for all t > 0, since 
+
+U (t) > 0, we have C(t) ≥ 0 for almost every ω ∈ Ω. Non-negativity of N (t), T (t), R(t), 
+
+D(t) and B(t) then follows by the argument used for the deterministic system (see the proof of Theorem 1). The coefficients b(x) and σ(x) are locally Lipschitz continuous for x ∈ R6+,0. Therefore, by the standard theorem for local existence and uniqueness for SDEs (see for example [71, 72]), there is a unique solution X(t) to (10) for t ∈ [0 , τ e) where τe is the explosion time. 27 The standard theorem for global existence and uniqueness (see [70] for example) cannot be used in this case, since b and σ do not satisfy the required linear growth condition. Instead, we define a Lyapunov function and use Khasminskii’s theorem for almost sure non-explosion [73]. We define the Lyapunov function V : R6+,0 → R as 
+
+V (x) = 1 + |x|,
+
+where |x| := P6 
+
+> i=1
+
+xi for x ∈ R6. Then clearly V (x) ≥ 0 for x ∈ R6+,0, V (x) ∈ C2(R6), and 
+
+V (x) → ∞ as |x| → ∞ . The generator L (acting on V ) for (10) is defined by 
+
+L V (x) = 
+
+> 6
+
+X
+
+> i=1
+
+bi(x) ∂V (x)
+
+∂x i
+
++ 12
+
+> 6
+
+X
+
+> i,j =1
+
+ai,j (x) ∂2V (x)
+
+∂x i∂x j
+
+,
+
+where a := σσ T . Thus, 
+
+L V (x) = 
+
+> 6
+
+X
+
+> i=1
+
+bi(x) + 12σ2
+
+> C
+
+∂2V∂x 22
+
+=
+
+> 6
+
+X
+
+> i=1
+
+bi(x),
+
+since the second partial derivative of V is zero. Then, 
+
+> 6
+
+X
+
+> i=1
+
+bi(x) ≤ rN x1 + ( rC + φR + φD)x2 + rT x3 + rRx4 + φT x5 + qB Binf ≤ K(|x| + 1) ,
+
+where K = max {rN , r C + φR + φT , r T , r R, φ T , q B Binf }. Therefore, we have 
+
+L V (x) ≤ KV (x).
+
+By Khasminskii’s theorem, P (τe = ∞) = 1 implying that for any initial condition X0 ∈ R6+,0,there is a unique, global solution to (10). 
+
+## 5.2 Noise-Induced Tumour Extinction 
+
+For the deterministic system (3)–(8), we found that with default parameter values, cancer cell density persists over time. However, in the stochastic system, cancer elimination as 
+
+t → ∞ is guaranteed when the noise intensity is large enough. We summarize this result in the following theorem: 
+
+Theorem 3. If σC > √2rC and X0 ∈ R6+,0, then the cancer will eventually almost surely die out. That is, 
+
+P
+
+
+
+lim  
+
+> t→∞
+
+C(t) = 0 
+
+
+
+= 1 . (15) 28 Proof. The proof is adapted from [74] where this result is shown for the stochastic generalized logistic equation. Applying Itˆ o’s formula to f (x) = ln x yields 
+
+d ln C(t) = 
+
+
+
+rC
+
+
+
+1 − C(t)
+
+kC
+
+
+
+I(B(t)) − δC T (t) − σ2
+
+> C
+
+2
+
+
+
+dt + σC dW (t).
+
+Dividing both sides by t > 0 and converting to integral form gives ln C(t)
+
+t = ln C(0) 
+
+t + 1
+
+t
+
+Z t
+
+> 0
+
+
+
+rC
+
+
+
+1 − C(s)
+
+kC
+
+
+
+I(B(s)) − δC T (s) − σ2
+
+> C
+
+2
+
+
+
+ds + σC
+
+t
+
+Z t
+
+> 0
+
+dW (s).
+
+By taking t → ∞ on both sides, we obtain lim sup 
+
+> t→∞
+
+ln C(t)
+
+t = lim sup 
+
+> t→∞
+
+1
+
+t
+
+Z t
+
+> 0
+
+
+
+rC
+
+
+
+1 − C(s)
+
+kC
+
+
+
+I(B(s)) − δC T (s) − σ2
+
+> C
+
+2
+
+
+
+ds 
+
+≤ lim sup 
+
+> t→∞
+
+1
+
+t
+
+Z t
+
+> 0
+
+rC ds − σ2
+
+> C
+
+2 t
+
+
+
+= rC − σ2
+
+> C
+
+2where we used the fact that the stochastic integral evaluates as 1
+
+> t
+
+R t 
+
+> 0
+
+dW (s) = W (t) 
+
+> t
+
+and thus by the strong law of large numbers (see [75] for example), lim 
+
+> t→∞
+
+W (t)
+
+t = 0 a.s. 
+
+We also used the property that C(t), B(t) and T (t) are non-negative and 0 ≤ I(B(t)) ≤ 1for all t > 0. Thus, we have lim sup 
+
+> t→∞
+
+ln( C(t)) 
+
+t ≤ rC − σ2
+
+> C
+
+2 a.s. 
+
+By the definition of the limit superior, for all ε > 0, there is some time τ such that for all 
+
+t > τ ,ln( C(t)) 
+
+t ≤ − α + ε, 
+
+where α := σ2 
+
+> C
+> 2
+
+− rC > 0 assuming σC > √2rC . Setting ε = α 
+
+> 2
+
+then yields 
+
+C(t) ≤ e− α 
+
+> 2t
+
+,
+
+and (15) follows. 29 Figure 13: Mean cancer cell density over time taken from 500 sample paths with σC = 0 .1days −1/2 (left) and σC = 0 .4 days −1/2 (right). Sample solution paths were generated using sdeint , the Python library for numerical integration of Itˆ o and Stratonovich SDEs [76]. Figure 13 shows the mean cancer cell density over time from 500 sample paths for σC < √2rC (left) and σC > √2rC (right), demonstrating the suppressive effect of high noise intensity. Figure 14 shows the effect of continuously varying σC relative to √2rC on the mean normal and cancer cell densities at day 1000 over 100 sample paths for each σC value with different values of Binf . For both low and high 
+
+Binf , we see the mean cancer cell densities dying out, consistent with our theoretical result. Additionally, the plots suggest that higher butyrate levels decrease the critical noise intensity required to suppress the cancer. 
+
+# 6 Discussion 
+
+## 6.1 Summary of Findings 
+
+We constructed a model describing interactions between normal colonocytes, colon cancer cells, immune cells and butyrate in the TME. While many mathematical models have been developed that incorporate interactions between cancer and immune cells, few include the effects of gut microbiota [34], despite growing evidence of their significance in CRC. In partic-ular, butyrate produced from fiber fermenting bacteria has been shown to slow cancer growth through metabolic and immunological mechanisms [11, 12]. We include these dynamics in our model by incorporating butyrate from the gut model, and three key types of immune cells - T cells, regulatory T cells and dendritic cells. In low butyrate concentrations, the general behaviour of cell densities in our model is consistent with established cancer-immune models and biological literature. We find that normal and cancer cells compete with each other - only one of which can persist at high densities as seen in [29]. Similar to findings from models developed in [33] and [31], our model shows that T cells and dendritic cells 30 Figure 14: Mean density of normal and cancer cells at day 1000 taken from 100 sample paths as σC is varied continuously up to 1.0 days −1/2 with Binf = 5 mM (left) and Binf = 20 mM (right). The line σC = √2rC is shown for reference. grow over time with increasing cancer cell density. Additionally, Tregs grow with cancer cell density, as found in [77]. With default parameters and low butyrate availability, our model suggests that immune cells can not eliminate cancer, consistent with [29]. We (weakly) coupled the gut and cancer models to determine the effects of fiber on cell dynamics. Increased fiber inflow results in higher butyrate production during fermentation, leading to decreased cancer cell density and increased normal cell density in our model. When accompanied by sufficient fiber intake, our model showed that probiotic treatment may also be beneficial if SCFA-producing gut bacteria are scarce, which is a common occurrence in CRC patients [78]. This result is consistent with experimental findings discussed in [79], which suggest that fiber can help reduce cancer. Conversely, if there are already sufficient levels of sugar degrading biomass in the gut, our model suggests that probiotics show no additional benefit to butyrate production or cancer inhibition. The modelling work in [80] showed that antibiotics can cause dysbiosis by disrupting the natural microbial composition of the gut. Similarly, the lack of probiotic benefit in a healthy gut environment could be attributed to an overpopulation of certain species, causing microbial imbalance. Finally, we considered a stochastic version of our cancer model to help account for inherent biological variability in the system. In comparison to the deterministic model, the stochastic model can give rise to very different solution behaviour. In particular, we showed that when the noise intensity is sufficiently high relative to the intrinsic cancer growth rate, the cancer will die out in the limit as t → ∞ with probability one. This is consistent with the extinction result proved for the stochastic generalized logistic equation [74]. We also found that higher butyrate concentrations decrease the noise intensity threshold required to guarantee cancer elimination. 31 6.2 Limitations 
+
+Limitations on biological models are inevitable due to the high complexity of the systems they describe. Here, we discuss a non-exhaustive list of the main limitations of our model. Due to the lack of available data, our equations are based on related mathematical models and qualitative findings from the biological literature, but the specific functions could be argued differently. For example, even though the Gompertz growth model tends to fit tumour data more accurately [41], we chose to model cancer growth logistically for the sake of simplicity. Additionally, we used standard sigmoidal saturation functions for butyrate uptake and inhibition ( g(B) and I(B) respectively) to describe the metabolic effects of butyrate on normal versus cancer cells, but in reality, these interactions are much more complicated. We also assumed that immune interactions are linear, which although standard and used in similar models [29, 30, 32, 33], may be an oversimplification of the underlying mechanisms. Furthermore, simulation results are parameter-dependent and thus may only be valid for the parameter values we used. We attempted to mitigate this by performing sensitivity analysis to quantify the influence of parameters on model outputs as well as virtual clinical trials to look at results across a range of parameter sets. However, even these results only capture the dynamics arising from parameter sets that are within a given distance of our default values, which were obtained from various sources in the literature and may not be completely accurate. Throughout our research, we assumed spatial homogeneity, allowing for the use of ODEs rather than partial differential equations (PDEs). For the gut model, this means treating each compartment as a continuously stirred tank reactor (CSTR). Different approaches have been used to model spatial dynamics in the gut. For example, in [46], three reactors are connected in series to represent the proximal, transverse and distal parts of the colon discretely, where each compartment is treated as a CSTR. Alternatively, one-dimensional transport PDEs were used in [45] to model the continuous flow of materials through the colon. Spatial variation was not included in the cancer model either, which could give rise to different results. In [8], the authors review the effects of certain microbial species on the Hallmarks of Cancer. For example, B. thetaiotaomicron (a sugar degrading generalist) has been shown to improve T cell response against cancer although the mechanisms in which this occurs are unknown. There is also evidence suggesting that the microbiome - CRC relationship may be bidirectional, with cancer affecting the microbial composition of the gut [81]. These effects were not included in our model. There are several alternative formulations that we could have used to introduce stochas-ticity into our model. We could have added noise to all the equations, as they also describe biological processes that are inevitably exposed to random fluctuations. However, we make the argument that cancer cell dynamics, which are highly dependent on random mutations, are likely to experience higher variability than host cell dynamics. For the sake of simplicity, we assumed that noise scales linearly with cancer cell density, but we could have considered other relationships. For example, in [42], the stochastic effects scale with the square of the cancer cell density. Alternatively, instead of SDEs, we could have used random differential equations (RDEs), which incorporate randomness via parameters and give rise to solutions 32 with differentiable sample paths, thus not requiring Itˆ o calculus. 
+
+# 7 Conclusions 
+
+Mathematical models are frequently used in biology to help with the qualitative understand-ing of complex systems. The main contribution of this work arises from the development and analysis of a mathematical model linking carbohydrate fermentation and colon cancer dynamics. 
+
+• The behaviour of our model is consistent with established experimental and theoretical findings that are independent of our underlying model assumptions. This indicates that connecting gut models and cell dynamics may be a promising approach for studying CRC. 
+
+• Our model predicts that dietary fiber enhances butyrate production, thus increas-ing healthy and decreasing cancerous cell densities. Dietary fiber may also have a beneficial impact on immunotherapy efficacy for CRC patients. In contrast, probiotic supplementation has little effect on SCFA production in a healthy gut but may provide a supportive benefit under dysbiotic conditions. 
+
+• We find that by adding noise with sufficiently high intensity to cancer cell dynamics, in the limit as t → ∞ , cancer dies out almost surely. We also find that higher bu-tyrate concentrations in the TME decrease this threshold noise intensity, weakening the sufficient conditions for cancer elimination. While primarily theoretical, the findings from our model can be used as a basis for further modelling and experimental work. 33 References 
+
+[1] Sai Manasa Jandhyala et al. “Role of the normal gut microbiota”. World Journal of Gastroenterology: WJG 21.29 (2015), p. 8787. [2] Jaeho Kim and Heung Kyu Lee. “Potential role of the gut microbiome in colorectal cancer progression”. Frontiers in Immunology 12 (2022), p. 807648. [3] Kaitlyn Oliphant and Emma Allen-Vercoe. “Macronutrient metabolism by the human gut microbiome: major fermentation by-products and their impact on host health”. 
+
+Microbiome 7.1 (2019), p. 91. [4] Huiqin Hou et al. “Gut microbiota-derived short-chain fatty acids and colorectal can-cer: Ready for clinical translation?” Cancer Letters 526 (2022), pp. 225–235. [5] Malin EV Johansson, Jessica M Holm´ en Larsson, and Gunnar C Hansson. “The two mucus layers of colon are organized by the MUC2 mucin, whereas the outer layer is a legislator of host–microbial interactions”. Proceedings of the National Academy of Sciences 108.supplement 1 (2011), pp. 4659–4665. [6] Barbara A Williams et al. “Gut fermentation of dietary fibres: physico-chemistry of plant cell walls and implications for health”. International Journal of Molecular Sci-ences 18.10 (2017), p. 2203. [7] World Health Organization. Colorectal cancer . 2023. url : https://www.who.int/ news-room/fact-sheets/detail/colorectal-cancer (visited on 08/16/2025). [8] Laura E Fulbright, Melissa Ellermann, and Janelle C Arthur. “The microbiome and the hallmarks of cancer”. PLoS Pathogens 13.9 (2017), e1006480. [9] Chi Chun Wong and Jun Yu. “Gut microbiota in colorectal cancer development and therapy”. Nature Reviews Clinical Oncology 20.7 (2023), pp. 429–452. [10] Ashley A Hibberd et al. “Intestinal microbiota is altered in patients with colon can-cer and modified by probiotic intervention”. BMJ Open Gastroenterology 4.1 (2017), e000145. [11] Qingran Li et al. “Butyrate suppresses the proliferation of colorectal cancer cells via targeting pyruvate kinase M2 and metabolic reprogramming”. Molecular & Cellular Proteomics 17.8 (2018), pp. 1531–1545. [12] Jinzhe Sun et al. “Butyrate as a promising therapeutic target in cancer: From patho-genesis to clinic”. International Journal of Oncology 64.4 (2024), p. 44. 34 [13] Otto Warburg. “On the origin of cancer cells”. Science 123.3191 (1956), pp. 309–314. [14] Pierre Jacquet and Ang´ elique St´ ephanou. “Searching for the metabolic signature of cancer: a review from Warburg’s time to now”. Biomolecules 12.10 (2022), p. 1412. [15] Ariel E Marciscano and Niroshana Anandasabapathy. “The role of dendritic cells in cancer and anti-tumor immunity”. Seminars in immunology . Vol. 52. Elsevier. 2021, p. 101481. [16] Hossain Ahmed et al. “Role of T cells in cancer immunotherapy: Opportunities and challenges”. Cancer Pathogenesis and Therapy 1.02 (2023), pp. 116–126. [17] Jingjing Pu et al. “T cells in cancer: mechanistic insights and therapeutic advances”. 
+
+Biomarker Research 13.1 (2025), p. 97. [18] Yoshihiro Ohue and Hiroyoshi Nishikawa. “Regulatory T (Treg) cells in cancer: Can Treg cells be a new therapeutic target?” Cancer Science 110.7 (2019), pp. 2080–2089. [19] Meike Kespohl et al. “The microbial metabolite butyrate induces expression of Th1-associated factors in CD4+ T cells”. Frontiers in Immunology 8 (2017), p. 1036. [20] Camille Danne and Harry Sokol. “Butyrate, a new microbiota-dependent player in CD8+ T cells immunity and cancer therapy?” Cell Reports Medicine 2.7 (2021). [21] Julie R Brahmer et al. “Safety and activity of anti–PD-L1 antibody in patients with advanced cancer”. New England Journal of Medicine 366.26 (2012), pp. 2455–2465. [22] C Richard Boland and Ajay Goel. “Microsatellite instability in colorectal cancer”. 
+
+Gastroenterology 138.6 (2010), pp. 2073–2087. [23] Xing Kang et al. “Roseburia intestinalis generated butyrate boosts anti-PD-1 efficacy in colorectal cancer by activating cytotoxic CD8+ T cells”. Gut 72.11 (2023), pp. 2112– 2122. [24] Russell C Rockne and Jacob G Scott. “Introduction to mathematical oncology”. JCO Clinical Cancer Informatics 3 (2019), pp. CCI–19. [25] Matthew D Johnston et al. “Mathematical modeling of cell population dynamics in the colonic crypt and in colorectal cancer”. Proceedings of the National Academy of Sciences 104.10 (2007), pp. 4008–4013. [26] Wing-Cheong Lo et al. “Mathematical model of colitis-associated colon cancer”. Jour-nal of Theoretical Biology 317 (2013), pp. 20–29. 35 [27] Chay Paterson, Hans Clevers, and Ivana Bozic. “Mathematical model of colorectal cancer initiation”. Proceedings of the National Academy of Sciences 117.34 (2020), pp. 20681–20688. [28] Mary Lee et al. “Mathematical modeling links Wnt signaling to emergent patterns of metabolism in colon cancer”. Molecular Systems Biology 13.2 (2017), MSB167386. [29] Sana Abdulkream Alharbi and Azmin Sham Rambely. “A new ODE-based model for tumor cells and immune system competition”. Mathematics 8.8 (2020), p. 1285. [30] Lisette G De Pillis and Ami Radunskaya. “A mathematical tumor model with im-mune resistance and drug therapy: an optimal control approach”. Computational and Mathematical Methods in Medicine 3.2 (2001), pp. 79–100. [31] Elham Raeisi et al. “Mathematical modeling of interactions between colon cancer and immune system with a deep learning algorithm”. The European Physical Journal Plus 
+
+139.4 (2024), pp. 1–16. [32] Navid Mohammad Mirzaei et al. “Investigating key cell types and molecules dynamics in PyMT mice model of breast cancer through a mathematical model”. PLoS Compu-tational Biology 18.3 (2022), e1009953. [33] Arkadz Kirshtein et al. “Data driven mathematical model of colon cancer progression”. 
+
+Journal of Clinical Medicine 9.12 (2020), p. 3947. [34] Andreas G Hadjigeorgiou et al. “Mathematical modeling and association analysis de-cipher the impact of the gut microbiome on cancer immunotherapy”. Cancer Research 
+
+85.16 (2025), pp. 3139–3155. [35] Raluca Eftimie, Jonathan L Bramson, and David JD Earn. “Interactions between the immune system and cancer: a brief review of non-spatial mathematical models”. 
+
+Bulletin of Mathematical Biology 73.1 (2011), pp. 2–32. [36] Gunter Neumann et al. “Qualitative modelling of the interplay of inflammatory status and butyrate in the human gut: a hypotheses about robust bi-stability”. BMC Systems Biology 12.1 (2018), p. 144. [37] Mohammad Aminul Islam et al. “Mathematical modeling of the gut–bone axis and implications of butyrate treatment on osteoimmunology”. Industrial & Engineering Chemistry Research 60.49 (2021), pp. 17814–17825. [38] Linda JS Allen. An introduction to stochastic processes with applications to biology .CRC press, 2010. 36 [39] Xuerong Mao. “Stationary distribution of stochastic population systems”. Systems & Control Letters 60.6 (2011), pp. 398–405. [40] Mahmoud BA Mansour and Asmaa H Abobakr. “Stochastic differential equation mod-els for tumor population growth”. Chaos, Solitons & Fractals 164 (2022), p. 112738. [41] Shabana Tabassum, Norhayati Binti Rosli, and Mazma Sayahidatul Ayuni Binti Maza-lan. “Mathematical modeling of cancer growth process: a review”. Journal of physics: conference series . Vol. 1366. 1. IOP Publishing. 2019, p. 012018. [42] Tahmineh Azizi. “Advancing Cancer Research Through Stochastic Modeling: Insights into Tumor Growth, Evolution, and Treatment Response”. AppliedMath 6.3 (2026), p. 38. [43] Pujan Shrestha, Yijia Fan, and Jason T George. “Coupled SDE-ODE Modeling of Tumor-Immune Dynamics to Infer Biomarker Release”. bioRxiv (2025). [44] Mazma Syahidatul Ayuni Mazlan, Norhayati Rosli, and Nina Suhaity Azmi. “Mod-elling the cancer growth process by stochastic delay differential equations under Ver-hults and Gompertz’s law”. Jurnal Teknologi 78 (2016), pp. 77–82. [45] Arun S Moorthy et al. “A spatially continuous model of carbohydrate digestion and transport processes in the colon”. PloS One 10.12 (2015), e0145309. [46] Rafael Mu˜ noz-Tamayo et al. “Mathematical modelling of carbohydrate degradation by human colonic microbiota”. Journal of Theoretical Biology 266.1 (2010), pp. 189–201. [47] Thulasi Jegatheesan, Arun S Moorthy, and Hermann J Eberl. “A mathematical model of competition between fiber and mucin degraders in the gut provides a possible ex-planation for mucus thinning”. Journal of Theoretical Biology 587 (2024), p. 111824. [48] John H Cummings et al. “Short chain fatty acids in human large intestine, portal, hepatic and venous blood.” Gut 28.10 (1987), pp. 1221–1227. [49] JJDR Fernandes et al. “Adiposity, gut microbiota and faecal short chain fatty acids are linked in adult humans”. Nutrition & Diabetes 4.6 (2014), e121–e121. [50] Thomas M Barber et al. “The health benefits of dietary fibre”. Nutrients 12.10 (2020), p. 3209. [51] Lisette G de Pillis, Ami E Radunskaya, and Charles L Wiseman. “A validated mathe-matical model of cell-mediated immune response to tumor growth”. Cancer Research 
+
+65.17 (2005), pp. 7950–7958. 37 [52] Heidi Dritschel et al. “A mathematical model of cytotoxic and helper T cell interactions in a tumor microenvironment”. Letters in Biomathematics 5.S1 (2018). [53] Dallas R Donohoe et al. “The microbiome and butyrate regulate energy metabolism and autophagy in the mammalian colon”. Cell Metabolism 13.5 (2011), pp. 517–526. [54] Monica Comalada et al. “The effects of short-chain fatty acids on colon epithelial pro-liferation and survival depend on the cellular phenotype”. Journal of Cancer Research and Clinical Oncology 132.8 (2006), pp. 487–497. [55] Maik Luu et al. “Microbial short-chain fatty acids modulate CD8+ T cell responses and improve adoptive immunotherapy for cancer”. Nature Communications 12.1 (2021), p. 4077. [56] Menghan Zhang et al. “Gut microbial metabolite butyrate suppresses hepatocellular carcinoma growth via CXCL11-dependent enhancement of natural killer cell infiltra-tion”. Gut Microbes 17.1 (2025), p. 2519706. [57] Karolina Ka´ zmierczak-Siedlecka et al. “Sodium butyrate in both prevention and sup-portive treatment of colorectal cancer”. Frontiers in Cellular and Infection Microbiol-ogy 12 (2022), p. 1023806. [58] Yukihiro Furusawa et al. “Commensal microbe-derived butyrate induces the differen-tiation of colonic regulatory T cells”. Nature 504.7480 (2013), pp. 446–450. [59] Mariana Pavel et al. “Contact inhibition controls cell survival and proliferation via YAP/TAZ-autophagy axis”. Nature Communications 9.1 (2018), p. 2961. [60] Yibin Lin et al. “New insights on anti-tumor immunity of CD8+ T cells: cancer stem cells, tumor immune microenvironment and immunotherapy”. Journal of Translational Medicine 23.1 (2025), p. 341. [61] Yu Wang et al. “Complex role of regulatory T cells (Tregs) in the tumor microenvi-ronment: their molecular mechanisms and bidirectional effects on cancer progression”. 
+
+International Journal of Molecular Sciences 25.13 (2024), p. 7346. [62] Amy Reynolds et al. “Canonical Wnt signals combined with suppressed TGF β/BMP pathways promote renewal of the native human colonic epithelium”. Gut 63.4 (2014), pp. 610–621. [63] JR Burke et al. “Tumour growth rate of carcinoma of the colon and rectum: retrospec-tive cohort study”. BJS Open 4.6 (2020), pp. 1200–1207. 38 [64] Mehmet Ali Balcı, ¨Omer Akg¨ uller, and Gizem ¸ calıba¸ sı Ko¸ cal. “Quantifying Immune Memory in Colorectal Cancer Using Fractional-Order Differential Equations”. Mathe-matical Biosciences (2026), p. 109687. [65] Anna Han et al. “Butyrate decreases its own oxidation in colorectal cancer cells through inhibition of histone deacetylases”. Oncotarget 9.43 (2018), p. 27280. [66] Yixuan Wang et al. “Mathematical model predicts tumor control patterns induced by fast and slow cytotoxic T lymphocyte killing mechanisms”. Scientific Reports 13.1 (2023), p. 22541. [67] Emilio Lecona et al. “Kinetic analysis of butyrate transport in human colon adenocar-cinoma cells reveals two different carrier-mediated mechanisms”. Biochemical Journal 
+
+409.1 (2008), pp. 311–320. [68] Jon Herman and Will Usher. “SALib: An open-source Python library for Sensitivity Analysis”. Journal of Open Source Software 2.9 (2017), p. 97. doi : 10.21105/joss. 00097 . url : https://doi.org/10.21105/joss.00097 .[69] Morgan Craig et al. “A practical guide for the generation of model-based virtual clinical trials”. Frontiers in Systems Biology 3 (2023), p. 1174647. [70] Bernt Øksendal. “Stochastic differential equations”. Stochastic differential equations: an introduction with applications . Springer, 2003, pp. 38–50. [71] Ludwig Arnold. “Stochastic differential equations”. New York 2.2 (1974). [72] Avner Friedman. “Stochastic differential equations and applications”. Stochastic dif-ferential equations . Springer, 1975, pp. 75–148. [73] Rafail Khasminskii. Stochastic stability of differential equations . Vol. 66. Springer Sci-ence & Business Media, 2011. [74] Lei Liu and Yi Shen. “Sufficient and necessary conditions on the existence of stationary distribution and extinction for stochastic generalized logistic system”. Advances in Difference Equations 2015.1 (2015), p. 10. [75] Xuerong Mao and Chenggui Yuan. Stochastic differential equations with Markovian switching . Imperial college press, 2006. [76] Matthew Aburn and Yoav Ram. sdeint: Numerical integration of Ito or Stratonovich SDEs . url : https://github.com/mattja/sdeint .39 [77] Lisette G de Pillis et al. “Mathematical modeling of the regulatory T cell effects on renal cell carcinoma treatment” (2013). [78] Mark Loftus, Sayf Al-Deen Hassouneh, and Shibu Yooseph. “Bacterial community structure alterations within the colorectal cancer gut microbiome”. BMC Microbiology 
+
+21.1 (2021), p. 98. [79] Anna Shrifteylik et al. “A current review on the role of prebiotics in colorectal cancer”. 
+
+Biologics 3.3 (2023), pp. 209–231. [80] Soapithan Vadivel. “A Mathematical Model Based Evaluation of Probiotic Effects on Antibiotic-Disrupted Gut Microbiota”. MA thesis. The University of Guelph, 2026. [81] D Dutta and SH Lim. Bidirectional interaction between intestinal microbiome and cancer: opportunities for therapeutic interventions. Biomark Res 2020; 8: 31 () .40

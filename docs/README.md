@@ -6,29 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-21
-- 运行时间：2026-09-21 22:16:56 UTC
+- 最新运行日期：2026-09-22
+- 运行时间：2026-09-22 21:45:54 UTC
 - 运行状态：成功
-- 本次总论文数：2
+- 本次总论文数：1
 - 精读区：0
-- 速读区：2
+- 速读区：1
 
 ### 今日简报（AI）
-今日聚焦生物医学建模前沿，涵盖类风湿性关节炎的数学机理分析与单细胞扰动预测的强化学习优化。
-重点关注 CellRFT 如何利用强化微调提升单细胞建模精度，以及数学模型在解析关节炎病理演化中的应用。
-建议关注 AI 强化学习与系统生物学的结合，这正成为精准预测细胞对药物反应的新趋势。
-- 详情：[/202609/21/README](/202609/21/README)
+今日聚焦肠道健康建模，通过常微分方程探索碳水化合物发酵与结直肠癌的内在关联。
+该研究构建了结合代谢过程与癌症演化的数学框架，揭示了饮食发酵产物对肠道病理环境的影响。
+建议关注饮食习惯如何通过改变肠道微环境影响健康，利用科学建模辅助结直肠风险预防。
+- 详情：[/202609/22/README](/202609/22/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [A mathematical modelling of rheumatoid arthritis](/202609/21/2609.15543v1-a-mathematical-modelling-of-rheumatoid-arthritis)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：模拟关节炎中的巨噬细胞分化和炎症动力学
-2. [CellRFT: Reinforcement Fine-Tuning for Single-Cell Perturbation Modeling](/202609/21/2609.19970v1-cellrft-reinforcement-fine-tuning-for-single-cell-perturbation-modeling)  
+1. [A Combined ODE Model of Carbohydrate Fermentation and Colorectal Cancer](/202609/22/2609.19371v1-a-combined-ode-model-of-carbohydrate-fermentation-and-colorectal-cancer)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：预测细胞对扰动和疾病机制的反应
+   evidence：肠道微生物群与宿主细胞之间的代谢和免疫相互作用
 
 
 <div class="dpr-home-promo-card">
