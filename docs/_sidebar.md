@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-28 <!--dpr-date:20260928-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/28/2609.31149v1-crndiff-count-native-diffusion-framework-via-chemical-reaction-networks" data-sidebar-item="{&quot;title&quot;: &quot;CRNDiff: Count-Native Diffusion Framework via Chemical Reaction Networks&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.31149v1-crndiff-count-native-diffusion-framework-via-chemical-reaction-networks&quot;, &quot;score&quot;: &quot;6.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;单细胞RNA测序分析巨噬细胞亚群的方法学桥梁&quot;}">CRNDiff: Count-Native Diffusion Framework via Chemical Reaction Networks</a>
   * 2026-09-22 <!--dpr-date:20260922-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/22/2609.19371v1-a-combined-ode-model-of-carbohydrate-fermentation-and-colorectal-cancer" data-sidebar-item="{&quot;title&quot;: &quot;A Combined ODE Model of Carbohydrate Fermentation and Colorectal Cancer&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.19371v1-a-combined-ode-model-of-carbohydrate-fermentation-and-colorectal-cancer&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;肠道微生物群与宿主细胞之间的代谢和免疫相互作用&quot;}">A Combined ODE Model of Carbohydrate Fermentation and Colorectal Cancer</a>

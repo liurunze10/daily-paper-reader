@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-001.webp",
+      "caption": "Figure 8: Three sampling methods across the three target populations in the fixed atlas PCA basis: (a) marginal tilt, (b) FK steering, and (c) tilted FK steering. Colors follow Figure 6. Each panel shows 2,500 generated cells subsampled from the combined outputs of three sampling runs.",
+      "page": 25,
+      "index": 1,
+      "width": 797,
+      "height": 660
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-002.webp",
+      "caption": "Table 8: Effect of the marginal tilt exponent, using the metrics of Table 2. The main experiments use τ = 0.4 for endothelial cells and τ = 0.2 for myeloid and neuronal cells. Entries are means and standard deviations over three sampling runs on the frozen reference CRNDiff generator.",
+      "page": 26,
+      "index": 2,
+      "width": 564,
+      "height": 330
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-003.webp",
+      "caption": "Table 7: Particle diagnostics on the frozen reference CRNDiff generator. Genealogical diversity (Anc.) is the number of distinct initial ancestors represented in the final output divided by nout. Unique is the fraction of distinct output count vectors. ESSpre /M is the median normalized ESS at intermediate resampling events. Entries are means and standard deviations over three sampling runs.",
+      "page": 26,
+      "index": 3,
+      "width": 698,
+      "height": 267
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-004.webp",
+      "caption": "Figure 9: Number of distinct initial ancestors represented along the reverse chain, normalized by output sample size. On logarithmic y-axes, curves show means and standard-deviation bands over three sampling runs. Dashed lines mark chain-internal resampling events shared across the three sampling runs, excluding the terminal weighted output selection. Final values correspond to Table 7.",
+      "page": 26,
+      "index": 4,
+      "width": 800,
+      "height": 232
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-005.webp",
+      "caption": "Table 3: Generator, sampling, residual-discriminator, and downstream-classifier settings used in the single-cell experiments.",
+      "page": 21,
+      "index": 5,
+      "width": 822,
+      "height": 758
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-006.webp",
+      "caption": "Figure 6: Representative generated cells in the fixed atlas PCA basis, with one column per generative model and one row per target population in decreasing training abundance. Gray points show all test cells, with test cells from the target population highlighted in green; orange points show generated cells. Generated cells are subsampled to 2,500 cells per panel; the PCA basis is applied without refitting.",
+      "page": 22,
+      "index": 6,
+      "width": 797,
+      "height": 499
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-007.webp",
+      "caption": "Figure 3: Two-dimensional count mixture and matched one-dimensional marginals. Components {c1, c5} define the target distribution, and {c3, c7} define an alternative distribution with identical coordinate marginals. The component pairs occupy different regions of the count space.",
+      "page": 18,
+      "index": 7,
+      "width": 806,
+      "height": 303
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-008.webp",
+      "caption": "Figure 7: CRNDiff-generated cells in the fixed atlas UMAP embedding. (a) Test cells (n = 45,145); (b)–(d) 2,500 generated cells for endothelial, myeloid, and neuronal target populations. Mesothelial cells appear only in the test-set panel.",
+      "page": 23,
+      "index": 8,
+      "width": 797,
+      "height": 248
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-009.webp",
+      "caption": "Table 10: Conditioning strategies for the CRNDiff generator, using the metrics of Table 2. Entries are means over three sampling runs. The frozen-generator methods use the reference CRNDiff generator; † denotes its conditionally fine-tuned counterpart. Candidate-pool sizes and guidance strengths do not imply equal computational cost.",
+      "page": 28,
+      "index": 9,
+      "width": 632,
+      "height": 802
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-010.webp",
+      "caption": "Figure 4: Reverse-chain snapshots for marginal tilt, FK steering, and tilted FK steering. Gray markers show training samples; orange markers show generated particles. In the intermediate columns, orange-marker area scales with normalized particle weight. In the output column, one marker per initial ancestor is placed at its last descendant in output-array order, with area proportional to that ancestor’s number of output descendants. Red frames mark resampling events. FK steering also resamples at k = 24, which is not shown, and a final resampling is forced at k = 0 before output sampling.",
+      "page": 19,
+      "index": 10,
+      "width": 827,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-011.webp",
+      "caption": "Figure 5: Unweighted first-coordinate histograms before and after output sampling for FK steering and tilted FK steering, with the exact target marginal as a reference. Before output sampling, histograms use the endpoint particles; Output denotes the final samples drawn using the terminal weights. The comparison measures marginal agreement; the target and alternative component pairs have identical one-dimensional marginals.",
+      "page": 19,
+      "index": 11,
+      "width": 488,
+      "height": 395
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-012.webp",
+      "caption": "Figure 2: Terminal-time illustration. (a) The estimated excess-covariance signal reaches the empirical Poisson resolution floor at TO = 3.09. (b) reconstructed marginals obtained from three terminal times of the forward process are compared with the data distribution in gray.",
+      "page": 17,
+      "index": 12,
+      "width": 703,
+      "height": 268
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-013.webp",
+      "caption": "Table 9: Unconditional generation quality. The library-size source indicates whether total library sizes are drawn from the training data or generated by the model. Fidelity and dispersion metrics use the first 20,000 cells from each generated pool. The final columns report cell-type fractions over the full generated pool, assigned by the fixed external CellTypist heart model used for purity, with the test sample shown as a reference. Entries are means over three sampling runs per generator.",
+      "page": 27,
+      "index": 13,
+      "width": 830,
+      "height": 205
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-014.webp",
+      "caption": "Table 5: Downstream classification with generated cells replacing real training cells for three target classes. F1 scores are means and standard deviations over five evaluation resamplings; macro F1 is the unweighted mean over eleven atlas classes. The real-cell reference trains all classes on real cells. Purity columns reproduce the external CellTypist means from Table 2 for context. All methods use the same genes and log-CP10K preprocessing.",
+      "page": 24,
+      "index": 14,
+      "width": 829,
+      "height": 192
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-015.webp",
+      "caption": "Table 6: Ablation of marginal tilt and residual correction on the frozen reference CRNDiff generator, using the metrics of Table 2. The FK-steering discriminator is fitted against samples from the untilted proposal. Entries are means and standard deviations over three sampling runs.",
+      "page": 24,
+      "index": 15,
+      "width": 702,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2609.31149v1/fig-016.webp",
+      "caption": "Table 2: Conditional fidelity for endothelial, myeloid, and neuronal targets. Distributional metrics use held-out target cells from the test set as the real-data reference; purity uses fixed CellTypist target-label mappings. Boldface indicates the best generative-model mean.",
+      "page": 9,
+      "index": 16,
+      "width": 770,
+      "height": 523
+    }
+  ]
+}

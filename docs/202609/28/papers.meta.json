@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-28",
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T23:47:57",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/28/2609.31149v1-crndiff-count-native-diffusion-framework-via-chemical-reaction-networks",
+      "section": "quick",
+      "title_en": "CRNDiff: Count-Native Diffusion Framework via Chemical Reaction Networks",
+      "authors": "Yuxuan Qiu, Praful Gagrani, Tetsuya J Kobayashi",
+      "date": "2026-09-25",
+      "pdf": "https://arxiv.org/pdf/2609.31149v1",
+      "score": "6.5",
+      "evidence": "单细胞RNA测序分析巨噬细胞亚群的方法学桥梁",
+      "tldr": "本研究针对单细胞RNA测序等非负整数计数数据，提出了基于化学反应网络（CRN）的计数原生扩散框架CRNDiff。该框架利用马尔可夫跳跃过程处理离散计数空间，通过出生-死亡过程实现闭式转移核，并引入倾斜Feynman-Kac引导技术，在无需重新训练的情况下实现对稀有细胞亚群的精准采样。实验证明，CRNDiff在生成细胞分布的保真度和稀有群体识别方面优于现有模型。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Scientific measurements such as single-cell RNA (scRNA) sequencing often take the form of nonnegative integer counts, whereas continuous-state diffusion models approximate this discrete structure using continuous coordinates. Building on stochastic chemical reaction networks (CRNs), a class of count-native Markov jump processes, we introduce CRNDiff, a structured framework that combines count-space diffusion with inference-time conditioning on rare subpopulations. An independent birth--death instantiation yields a closed-form transition kernel for forward noising. This kernel enables reverse sampling via forward-filtering backward-sampling (FFBS) and supports data-driven selection of the terminal noising time, eliminating the need for a validation sweep. This tractability also lets us introduce tilted Feynman--Kac (FK) steering, a method for sampling target subpopulations from a frozen generator without retraining. By tilting posterior marginals before FK particle correction, steering mitigates importance-weight concentration when the target population is rare. Using scRNA-seq data from the human heart cell atlas, we test the ability of CRNDiff to generate cell-type-specific distributions. Across the three evaluated target populations, CRNDiff achieves the highest conditional fidelity among the evaluated generative models, with larger mean purity margins for rarer target populations. Generated cells preserve marker-level differential-expression structure. Replacing real training cells for the target classes with generated cells yields downstream classification performance approaching that of the real-data reference.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
