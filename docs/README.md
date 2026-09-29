@@ -6,26 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-09-28
-- 运行时间：2026-09-28 23:47:42 UTC
+- 最新运行日期：2026-09-29
+- 运行时间：2026-09-29 23:01:04 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：2
 - 精读区：0
-- 速读区：1
+- 速读区：2
 
 ### 今日简报（AI）
-今日聚焦扩散模型与生物化学的跨界融合，探索基于化学反应网络（CRN）的计数原生扩散框架。
-CRNDiff 通过模拟化学反应动力学，为处理离散计数数据的生成建模提供了全新的数学视角与实现路径。
-推荐对生物计算或非连续数据生成感兴趣的读者，关注这种将自然科学规律引入生成式 AI 的跨学科尝试。
-- 详情：[/202609/28/README](/202609/28/README)
+1) 聚焦生物系统建模与单细胞预测，今日深入探讨了神经内分泌炎症模型参数识别及 DRIFT 扰动预测框架。
+2) 研究揭示了实验设计对复杂炎症模型参数准确性的影响，并提出通过解耦响应与不变特征来提升单细胞扰动预测的精度。
+3) 建议关注如何利用解耦表示学习处理高维生物数据，以优化药物反应预测等实际应用。
+- 详情：[/202609/29/README](/202609/29/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [CRNDiff: Count-Native Diffusion Framework via Chemical Reaction Networks](/202609/28/2609.31149v1-crndiff-count-native-diffusion-framework-via-chemical-reaction-networks)  
+1. [Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs](/202609/29/2609.30031v1-parameter-identifiability-of-a-neuroendocrine-inflammatory-model-across-experimental-designs)  
    标签：评分：6.5/10、query:ros-mp
-   evidence：单细胞RNA测序分析巨噬细胞亚群的方法学桥梁
+   evidence：炎症复杂机制的数学建模
+2. [DRIFT: Disentangled Responsive-Invariant Flow Transport for Single-Cell Perturbation Prediction](/202609/29/2609.35106v1-drift-disentangled-responsive-invariant-flow-transport-for-single-cell-perturbation-prediction)  
+   标签：评分：6.5/10、query:ros-mp
+   evidence：预测单细胞生物学中的细胞对扰动的响应
 
 
 <div class="dpr-home-promo-card">

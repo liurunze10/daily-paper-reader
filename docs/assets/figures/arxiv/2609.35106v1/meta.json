@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-001.webp",
+      "caption": "Table 7: Distributional metrics on Norman additive (Appendix A). Baselines are reported by Ruan et al. (2026); DRIFT is the mean and standard deviation over five seeds. Bold: best; underline: second best.",
+      "page": 21,
+      "index": 1,
+      "width": 598,
+      "height": 219
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-002.webp",
+      "caption": "Table 8: Component ablations. Each variant removes only the named component. Rank is the mean rank across five metrics (1 = best), averaged over 5 seeds.",
+      "page": 21,
+      "index": 2,
+      "width": 714,
+      "height": 504
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-003.webp",
+      "caption": "Table 1: Norman additive split. Bold: best; underline: second best.",
+      "page": 7,
+      "index": 3,
+      "width": 830,
+      "height": 385
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-004.webp",
+      "caption": "Table 11: Standard deviation over five seeds, Norman additive split.",
+      "page": 22,
+      "index": 4,
+      "width": 830,
+      "height": 185
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-005.webp",
+      "caption": "Table 10: Component contributions, expressed as a percentage of DRIFT’s margin over the Linear baseline: (DRIFT − without component)/(DRIFT − Linear) for each dataset and metric. Green values indicate improvement; grey values lie within standard error across seeds; red values are negative.",
+      "page": 22,
+      "index": 5,
+      "width": 648,
+      "height": 504
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-006.webp",
+      "caption": "Figure 1: Overview of DRIFT. The two stages share one architecture. Stage 1 trains a variational autoencoder on control and perturbed cells, encoding each into an invariant code znr (driven by the covariates c: cell line, batch, sequencing depth) and a responsive latent zr (driven by the perturbation u). Each block is associated to a learned conditional prior, p(znr | c) and p(zr | u), and znr is optimized to carry no perturbation information, I(znr;u)=0; the concatenation [znr, zr] is decoded to reconstruct the input, control or perturbed. Stage 2 freezes the encoder and decoder and learns the mechanism p(zr | znr, u) as a transport: a conditional flow vθ(zt, t | znr, u) generates only the responsive latent z′r from its control to its perturbed state along the interpolant zt (t: 0 → 1), while znr is copied from the input cell. Decoding [znr, z ′ r] yields the predicted perturbed cell.",
+      "page": 3,
+      "index": 6,
+      "width": 826,
+      "height": 585
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-007.webp",
+      "caption": "Table 5: Configuration of DRIFT, read from the resolved configuration of the checkpoints that produced the tables. A single centered entry means the setting is shared by the three datasets.",
+      "page": 18,
+      "index": 7,
+      "width": 718,
+      "height": 518
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-008.webp",
+      "caption": "Table 3: Replogle RPE1. Bold: best; underline: second best.",
+      "page": 8,
+      "index": 8,
+      "width": 830,
+      "height": 346
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-009.webp",
+      "caption": "Table 2: Norman holdout split. Bold: best; underline: second best.",
+      "page": 8,
+      "index": 9,
+      "width": 829,
+      "height": 742
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-010.webp",
+      "caption": "Table 6: Decoding which perturbation a cell received from each latent block. Classes are balanced, so chance is 1/K. MINE Belghazi et al. (2018) is a mutual-information lower bound in nats.",
+      "page": 19,
+      "index": 10,
+      "width": 718,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-011.webp",
+      "caption": "Figure 3: Norman additive: UMAPs of the responsive block zr and invariant block znr, colored by perturbation.",
+      "page": 19,
+      "index": 11,
+      "width": 806,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2609.35106v1/fig-012.webp",
+      "caption": "Figure 4: The invariant block of Figure 3, colored by the numeric covariates in c.",
+      "page": 20,
+      "index": 12,
+      "width": 807,
+      "height": 331
+    }
+  ]
+}
