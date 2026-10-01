@@ -1,0 +1,685 @@
+Title: Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs
+
+URL Source: https://arxiv.org/pdf/2609.30031v1
+
+Published Time: Fri, 25 Sep 2026 01:29:23 GMT
+
+Number of Pages: 34
+
+Markdown Content:
+# Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs 
+
+## Aubrey Ayres 1,2 and Mitchel Colebank 1
+
+1* Department of Mathematics, University of South Carolina, Columbia, South Carolina, US. 
+
+2Department of Mathematics, North Carolina State University, Raleigh, North Carolina, US. Contributing authors: amayres@ncsu.edu; mjcolebank@sc.edu; 
+
+Abstract 
+
+Mathematical modeling helps us identify and investigate complex mechanisms of function. This is especially useful for understanding inflammation, which is a complex, multiscale process that interacts nonlinearly with other physiological systems. The full potential of these models can only be realized when combined with experimental data through parameter estimation. However, uniquely deter-mining model parameters requires that they are practically identifiable, which can be assessed by multiple, possibly inconsistent, methods. Identifiability can also vary with experimental designs and observation operators. This study inves-tigates this issue by assessing parameter identifiability in a coupled model of the neuroendocrine-inflammatory system. We compare three workflows following a global sensitivity analysis: Fisher-information matrix based identifiability, global optimization with frequentist confidence intervals, and the profile-likelihood. We compare results across six observation operators with and without measurement noise, all of which are experimentally feasible given prior literature. Our results show that Fisher-information-based methods typically lead to larger sets of iden-tifiable parameters while profile-likelihood analyses lead to a smaller number of identifiable parameters. This suggests that, while computationally expensive, the profile-likelihood is necessary for accurately assessing identifiability, and must be recalculated when the experimental design is altered. 
+
+Keywords: Practical Identifiability, Sensitivity Analysis, Experimental Design, HPA-axis, Immune system 
+
+1arXiv:2609.30031v1 [q-bio.QM] 24 Sep 2026 1 Introduction 
+
+The immune response to external pathogens is a complex physiological process that interacts across different systems of the body (Bangsgaard et al. 2017; Chow et al. 2005). When the immune system is challenged, the first line of defense is acute inflammation. Inflammatory challenges, such as the use of endotoxin, also known as Lipopolysaccharide (LPS), can be used in humans to study the innate immune response. LPS causes phagocytic cells at the site of injection to recognize endotoxin and respond by inducing inflammation. While inflammation is acutely a protective process, it can also cause damage to tissues long-term. Therefore, the response must be tightly regulated to produce the desired effect of protecting the body without causing unnec-essary damage. The coordinated release of cytokines initiates the immune response, hence we are interested in cytokines as pro-inflammatory (induces inflammation) or anti-inflammatory (reduces inflammation). Major cytokines include Tumor Necrosis Factor alpha (TNF-α), a pro-inflammatory cytokine, as well as anti-inflammatory cytokines Transforming Growth Factor beta (TGF-β) and Interleukin-10 (IL-10). The Hypothalamic-Pituitary-Adrenal (HPA)-axis is a neuroendocrine pathway involved in the human stress response, ultimately regulating the release of stress hor-mones and glucocorticoids. The main HPA actors are corticotropin-releasing hormone (CRH), adrenocorticotropic hormone (ACTH), and cortisol, the latter of which is the main stress hormone released as a response to both physical and mental stress. It is also consistently produced by and present in the body to maintain basic homeostasis. The HPA and immune systems interact to regulate physiological function. TNF-α,e.g., connects the immune response to the HPA-axis by stimulating CRH release, fol-lowed by increased ACTH and then cortisol release. Cortisol inhibits both CRH and ACTH, forming a closed feedback loop that’s meant to keep all three hormones in bal-ance (Bangsgaard et al. 2017). HPA dynamics are coupled to the circadian rhythm, and also fluctuate on smaller time-scales following ultradian rhythms. The interplay between the immune response and hormonal cycling in the body presents complex oscillatory dynamics that can change with even slight perturbations (Chow et al. 2005). For instance, long-term stress in the form of post traumatic stress disorder (PTSD) leads to chronic overstimulation of the HPA-axis and changes to cortisol sensitivity, leading to dysregulation of inflammation (Somvanshi et al. 2020). Mathematical models and the integration of experimental data provide a synergis-tic tool for describing these complex processes. A variety of models exist for describing the acute inflammatory response and the HPA-axis as separate systems. Reynold’s et al. developed a 4-state model that is governed by anti-inflammatory mediators (Reynolds et al.). Baker et al. considered the concentrations of both pro- and anti-inflammatory cytokines in their model of the inflammatory response in rheumatoid arthritis patients (Baker et al. 2012). Chow et al. developed a comparatively complex model to examine inflammation in varying shock states (Chow et al. 2005). Model-ing the HPA-axis system requires capturing precise circadian and ultradian rhythms, which necessitate more complex model equations. Vinther et. al use a minimal 3-state model to simulate ultradian rhythms in the HPA-axis (Vinther et al. 2011) while Meyer-Hermann et al. developed a reduced view of the immune system in their model for the HPA-axis, including the effect of TNF-α on cortisol levels (Meyer-Hermann 2et al. 2009). Malek et al. consider the bidirectionality of the two-systems to be a focal point, employing delayed equations that take the immune system and HPA-axis into account to produce accurate dynamics (Malek et al. 2015). Relevant to our work, Bangsgaard et al. expand on this model further by using nonlinear ODEs to describe the coupled systems, significantly reducing the dimensionality present in the model by Malek et al. (Bangsgaard et al. 2017). The result is coined the Integrated Inflamma-tory Stress (ITIS) model, which simulates circadian and ultradian rhythms, as well as dynamics over the course of multiple days. To fully realize a model’s potential, the model should be calibrated to data by solv-ing an inverse problem (Cintr´ on-Arias et al. 2009). Parameters that are identifiable given the data will produce unique model outputs for unique inputs (analogous to the notion of an injective function). Identifiability is classifed into two main categories. Structural identifiability is dependent on the mathematical structure of a model, and is a prerequisite for practical identifiability (Simpson and Baker 2026). Practical identi-fiability is concerned with experimental design and measurement error. A system may be structurally identifiable, but insufficient availability or quality of data can cause parameters to become practically non-identifiable. Parameters can be practically non-identifiable for a variety of reasons, including (i) being noninfluential on the model output, or (ii) being involved in interactions with other parameters that lead to con-founding estimates. In the former case, we eliminate the parameter (via setting it to a constant, nominal value) to reduce unnecessary complexity, whereas the latter case requires similar fixing or changing the model’s structure, which can be analytically intensive (Smith 2014). Practical identifiability can be further attributed to data, which can be noisy or not sufficiently available. Noise-free data may present identifiability issues if there is not a sufficient number of data points or if data are not observed in an informative manner (e.g., when dynamics are not sufficiently captured). In either case, the data fails to provide enough information to characterize the output space and infer param-eters accurately. These effects are most often lumped together, yet may be distinct and separately ask whether the experimental design is informative versus whether the technology for measuring data is sufficiently accurate. Derivative based sensitivity methods provide an easy first step in investigating identifiability (Taylor-LaPole et al. 2025; Colunga et al. 2023; Cintr´ on-Arias et al. 2009), but approximate the underlying identifiability up to first-order accuracy at a local point. These methods extend into structural correlation and orthogonal sensitivities methods for testing identifiability (Olsen et al. 2019). Global sensitivity methods capture nonlinear behavior and inter-actions between parameters(Colebank 2025; Taylor-LaPole et al. 2025; Colunga et al. 2023) and can better assess how influential parameters are. However, there is no direct link to identifiability aside from identifying parameters that have no influence on the quantity of interest (Smith 2014). The profile-likelihood has emerged as a gold stan-dard for overcoming issues with sensitivity-based methods (Simpson and Baker 2026; Colebank 2025), as well as the use of multi-start inference to determine how unique parameter estimates are (Colunga et al. 2023). This manuscript investigates some of the independent effects of the causes of prac-tical identifiability across a range of analytical methods. In doing so, we may compare 3the conclusions and interpretations of these analyses in a variety of conditions. Our analysis centers around the ITIS model as a prime example of a biological model that requires rigorous identifiability analysis, due to the possible variations in experimental design that exist in practical application. We select four commonly applied analysis methods varying in their difficulty to implement and cost to compute. 
+
+# 2 Mathematical Model 
+
+The ITIS model is a system of nonlinear ordinary differential equations that couples the inflammatory response to the HPA-axis. The model system is depicted in fig. 1. It has eight states: Endotoxin ( E ), Activated Phagocytic Cells ( P ), TGF-β (G), TNF-α
+
+(N ), IL-10 ( I ), CRH ( C ), ACTH ( A), and Cortisol ( F ). R(t), an external function that simulates the influence of the circadian rhythm of a 24 hour cycle. There are 43 parameters: Parameters di represent the rate at which the body removes the state from the system, kj represent the strength of stimulation or inhibition, hl are half-saturation constants, bm are basal production rates, and the remaining parameters govern the circadian rhythm function R(t). We summarize the relationships between the model states as follows: 
+
+• Endotoxin ( E ) - Introduced to the model via initial conditions, eliminated by phagocytic cells ( P ). 
+
+• Phagocytic Cells ( P) - Activated by the presence of endotoxin ( E ). This state is up-regulated by pro-inflammatory cytokines ( N ) and down-regulated by anti-inflammatory cytokines ( G and I ). 
+
+• TGF-β (G) - Released by phagocytic cells ( P ) and up-regulated by CRH ( C ). 
+
+• TNF-α (N ) - Released by phagocytic cells ( P ) and inhibited by TGF-β (G). It also up-regulates its own expression. 
+
+• IL-10 ( I ) - Produced by phagocytic cells ( P ) and up-regulated by TGF-β (G). The body also produces a basic level of IL-10 ( I ) when no immune challenge is present. 
+
+• CRH ( C ) - Release follows a circadian rhythm governed by R(t). A basal level is present in the body. Release is also stimulated by TNF-α (N ) and inhibited by cortisol ( F ). 
+
+• ACTH ( A) - Release is stimulated by CRH ( C ), and this release is inhibited by cortisol ( F ). ACTH release is also stimulated by TNF-α (N ). 
+
+• Cortisol ( F ) - Release is stimulated by ACTH ( A). This release is inhibited by TGF-β (G). 4C
+
+# E P
+
+# G
+
+# N
+
+# I
+
+# A
+
+# F
+
+Cytokines  HPA-Axis 
+
+Hormones Fig. 1 : Schematic describing the relationships between the immune system cytokines and HPA-axis hormones. Solid arrows represent stimulating interactions, and dashed arrows represent inhibitory interactions These relationships are described mathematically by the ITIS model: 
+
+dE dt = −d1EP (1) 
+
+dP dt = k1
+
+ 
+
+1 + k2
+
+Nh1 + N
+
+
+
+· h2
+
+h2 + G · h3
+
+h3 + I
+
+
+
+E − d2P (2) 
+
+dG dt = k3P + k4
+
+Ch4 + C − d3G (3) 
+
+dN dt = Ph5 + P · h46
+
+h46 + G4
+
+
+
+k5 + k6
+
+Nh7 + B
+
+
+
+− d4N 2 (4) 
+
+dI dt = b1 + k7
+
+P 3
+
+h38 + P 3 + k8
+
+G6
+
+h69 + G6 − d5I h10 
+
+h10 + I (5) 
+
+dC dt = b2 + k9R(t) C
+
+1 + k10 F 2 + k11 N − d6C (6) 
+
+dA dt = k12 
+
+C
+
+1 + k13 F + k14 
+
+N 2
+
+h211 + N 2 − d7A (7) 
+
+dF dt = k15 
+
+A2
+
+1 + k16 G − d8F (8) 
+
+R(t) = Nc
+
+ tkm
+
+tkm + αk · (Tt − tm)l
+
+(Tt − tm)l + βl
+
+
+
+(9) 5To run our simulations, we set E = 0 to simulate homeostasis with no immune challenge or stressor for a 72 hour-period in the model. Then, we set E = 2 .0 (ng/kg) to simulate an injection of endotoxin, which triggers an immune response similar to that used by Bangsgaard et. al (2017). Our focus is solely on the post-injection dynamics and the return to steady state, hence each simulation begins with a 72 hour homeostatic period after which we introduce E to the system and record the output. Nominal parameter values as provided by Bangsgaard et al. can be found in Table 1 (2017). 
+
+Parameter Nominal Value Unit Parameter Nominal Value Unit 
+
+d1 1.35 × 10 −7 (h N-unit) −1 h10 791 .27 pg mL 
+
+k1 4.9956 × 10 7 N-unit ·kg h·pg b2 0.001 pg mL ·min 
+
+k2 12 .94907 – k9 6.8400 × 10 9 pg mL ·min 
+
+h1 1693 .9509 pg mL k10 1.7558 × 10 9
+
+ dL 
+
+> μg
+
+2
+
+h2 0.07212 pg mL k11 0.0667 min −1
+
+h3 147 .68 pg mL d6 0.032 min −1
+
+d2 0.1439 h−1 k12 2.3688 × 10 4 min −1
+
+k3 0.1546 × 10 −8 mL pg ·N-unit ·h k13 1.7778 × 10 5 dL 
+
+> μg
+
+k4 0.5 mL pg ·h k14 112 pg mL ·min 
+
+h4 500 μgdL h11 80 pg mL 
+
+d3 0.031777 h−1 d7 0.016 min −1
+
+h5 550 × 10 4 N-unit k15 5.0746 × 10 −4 μg/dL min(pg /mL) 2
+
+h6 0.1589 pg mL k16 12 pg mL 
+
+k5 25 .5194 pg mL ·h d8 0.0266 min −1
+
+k6 3.5514 × 10 4 pg mL ·h α 300 min 
+
+h7 1.5495 × 10 3 pg mL k 5 –
+
+d4 0.0307 mL pg ·h β 950 min 
+
+b1 1187 .2 pg mL ·h l 6 –
+
+k7 267 , 480 pg mL ·h ϵ 0.01 –
+
+h8 8.0506 × 10 7 N-unit δ 76 .37 min 
+
+k8 43875 pg mL ·h T 1440 min 
+
+h9 .38 pg mL ·h Nc 1.9168 –
+
+d5 98.932 h−1
+
+Table 1 : Parameter values and units assembled from estimates, data, and previous studies by Bangsgaard et al. (2017). These provide the nominal parameters, θ0, for data generation. 
+
+# 3 Data and Experimental Design 
+
+Models focused on the HPA-axis have used ACTH and cortisol measurements to inform their model. It is infeasible to measure CRH, especially on a time series (Spencer and 6Deak). Current methods allow cortisol and ACTH concentrations to be measured to a relative degree of accuracy every half-hour for a period of hours (Spencer and Deak). Beyond this, practical limitations exist for how often measurements may be taken. For this reason, dynamics may be preemptively derived from animal models (Bangsgaard et al. 2017). Limitations exist in this avenue as well, as neuroendocrine data taken from animals can be easily confounded by the stress response induced by data collection (Spencer and Deak). Many cytokines can be measured using ELISA panels (Chiswick et al.). All of these measurements will come with some level of noise, which must be taken into consideration when calibrating models. In models that couple the immune system and HPA-axis, ACTH and cortisol levels are often used in tandem with certain cytokine measures (Baker et al. 2012; Vinther et al. 2011; Chow et al. 2005; Bangsgaard et al. 2017). TNF-α and IL-10 are commonly obtained among many others. We will choose to consider these four states in our model designs, seeing as they are most commonly considered among the selected papers. We use these observations of data availability in similar work as well as technical limits to inform our choice of model designs. We therefore find it both reasonable and valuable to investigate the following designs: 
+
+Dm 
+
+> 1
+
+: F + A, m = 13 , 25 
+
+Dm 
+
+> 2
+
+: F + A + N, m = 13 , 25 
+
+Dm 
+
+> 3
+
+: F + A + N + I, m = 13 , 25 where the superscript m denotes the number of observed time-points in each design. This corresponds to data taken (i) every other hour and (ii) every hour over a period of 24 hours (Bangsgaard et al. 2017), providing 13 and 25 data points, respectively. We examine noise-free and noisy data as discussed later. In the latter, we assume that 
+
+σϵ = 4 across all state variables when data is used. 
+
+# 4 Methods 
+
+Consider the general problem 
+
+yij = H (u(ti; θ)) + ϵij (10) where yij ∈ R is the observation for state j at time point ti. These observations are then linked to the state variables u : T × Θ 7 → U on the time domain T and parameter space Θ, where the observation operator H : U 7 → R maps the specific state variable and time point to the observations available. We assume the measurement errors are corrupted by independent and identically distributed (iid) Gaussian noise, ϵij ∼N (0 , σ 2 
+
+> ϵ
+
+), with measurement error variance σ2 
+
+> ϵ
+
+. Our model is governed by systems of nonlinear ODEs, where u corresponds to the inflammatory and neuroendocrine states defined in eqs. (1)-(8). Our general mathematical question is whether the parameters exhibit practical identifiability . That is, can we uniquely determine a subset of parameters θ∗ ∈ Θ∗ ⊂ Θ given the observation operator H and the measurement error ϵij . Given that our parameters in Table 1 vary in magnitude but are strictly 7positive, we consider the log-transformed parameters ˜θ = ln( θ) and strictly-positive domain ˜Θ = ln ( Θ). We begin by applying a global sensitivity analysis (Morris Screening) to screen for noninfluential parameters. From this, we obtain a subset of parameters that are deemed non-influential on the observed states. We then compare three different methods for assessing identifiability. The first uses an approximation of the Fisher Information Matrix (FIM) to determine whether parameters are locally identifiable. The second uses a global-optimization approach to determine how parameters converge to a single solution. We also compute the FIM in this second approach, but do so to construct asymptotic confidence intervals based on the central limit theorem (Cintr´ on-Arias et al. 2009). Finally, we compute profile-likelihood derived confidence intervals (Cole-bank 2025; Simpson and Baker 2026) as a gold-standard comparison to the prior two methods. We apply these three methods across designs Dm 
+
+> 1
+
+, Dm 
+
+> 2
+
+, and Dm 
+
+> 3
+
+by modifying the observation operator H in each setting. 
+
+## 4.1 Global Sensitivity Analysis 
+
+Global sensitivity analysis determines the influence of parameters on the quantities of interest by sampling θ from its parameter space (Colunga et al. 2023; Smith 2014). This is in contrast to local analyses which assess model sensitivity around a nominal value of θ. We specifically apply Morris screening to filter out noninfluential parameters that in theory are less informative for inference. Morris screening involves the computation of “elementary effects”, the relative change of the model output with respect to a change in parameter value (Smith 2014). The effects of θi on the output quantity are classified as a) negligible overall, b) linear and additive, or c) having nonlinear effects or higher order interactions with other parameters. Prior to this analysis, parameters are mapped from their logarith-mic parameter space ˜Θ to the unit hypercube [0 , 1] Np , where Np denotes number of parameters analyzed. The elementary effect of the jth sample of the ith parameter, 
+
+θji , on the time-dependent quantity of interest f (t; θ) is then computed as 
+
+dji (t; θj ) = f (t; θj + ei∆) − f (t; θj )
+
+∆ . (11) The step size ∆ is chosen from the set ∆ ∈ { 1/(M − 1) , 2/(M − 1) . . . , (M − 2) /(M − 
+
+1) }, where M denotes the number of possible perturbation sizes. To preserve symmetry of the parameter distributions, M should be even (Smith 2014). The elementary effects are computed by sampling the full parameter set K times by drawing each parameter from a uniform distribution and then mapping the parameter back to its original value before evaluating the model. We calculate the 2-norm of the time-dependent elementary effects, ˜dji (θ) = || dji (t; θ)|| 2 for a scalar metric. Note that the calculation of dji is independent of any observational model or available data. 8The elementary effects’ mean and variance are obtained by integrating the outcomes from multiple trajectories. The modified Morris’ indices are calculated as 
+
+μ∗ 
+
+> i
+
+= 1
+
+K
+
+> K
+
+X
+
+> j=1
+
+| ˜dji |, μi = 1
+
+K
+
+> K
+
+X
+
+> j=1
+
+˜dji , σ2 
+
+> i
+
+= 1
+
+K − 1
+
+> K
+
+X
+
+> j=1
+
+ ˜dji − μi
+
+2
+
+, (12) where μ∗ quantifies the magnitude of the individual effect of the input on the output, i.e., the sensitivity of the model with respect to the parameters, while the variance estimate σ2 describes the variability in the model sensitivity due to parameter inter-actions or nonlinearity. The variable μ is only used to calculate the variance estimate. Parameters with a large μ∗ and σ2 have nonlinear or drastic effects on the model out-put. Here, we consider ranking parameters through the combined metric, pμ∗2 + σ2,as proposed in 2016. The randomized Morris algorithm is an efficient algorithm for computing elementary effects and scales the step size ∆ by the parameter magnitude (see Algorithm 2 in Olsen et al. (2019)), which we use here. We assume the parameter space is ±20% around the nominal log-scaled value, θ∗,for each parameter. The parameter bounds are hence non-symmetric around the true nominal values after exponentiation. Morris screening is applied to the post-injection models for all eight states. We combine results for these states depending on the experimental design under consideration. To derive a concise metric for the multiple output states in the design, we employ a combined metric to rank parameters based on which model states, u, are being considered. The metric is normalized based on the maximum ranking metric for each state in the design 
+
+Rui =
+
+q
+
+μ∗ 
+
+> u,i
+> 2
+
++ σ2
+
+> u,i
+
+max 
+
+> iϵ {1: Np}
+
+q 
+
+μ∗ 
+
+> u,i
+> 2
+
++ σ2
+
+> u,i
+
+ . (13) Setting a threshold for R is often problem dependent, given that different outputs or combinations of outputs can signficantly impact the quantitative values used for parameter ranking (Bangsgaard et al. 2017; Colunga et al. 2023; Dadashova et al. 2024). We set R = 1 /4 as out parameter cutoff for “non-influential” parameters, as this would correspond to, at a minimum, the lower 25% of parameters. Note that max R = |Di|, i.e., the sensitivity index can never be larger than the number of state variables, since each sensitivity is normalized to the maximum for a specific state variable. 
+
+## 4.2 Parameter Estimation 
+
+We employ a weighted least squares (WLS) approach to calibrate the model to data provided from the experimental designs. Synethetic data are generated by running the model with the nominal parameter values, denoted θ0, provided in Table 1. Then, the state variables corresponding to the designs Dji are saved at the specified time-points discussed earlier. We add Gaussian, zero-mean iid noise with σϵ = 4 as our standard deviation. Given some subset of parameters ˜θ for inference, our goal is to find the 9minimizer of the weighted sum of squared error, defined as 
+
+ˆ˜θ = argmin  
+
+> ˜θ∈˜Θ
+> s
+
+X
+
+> j=1
+> nj
+
+X
+
+> i=1
+
+
+
+eij ( ˜θ)
+
+2
+
+, eij =
+
+"
+
+yij − fj (ti; ˜θ)¯yj
+
+#
+
+(14) where ¯ yj is the time-series average of the data from state j, and s denotes the number of state variables used in the inference procedure. The variable nj represents the number of sample points available for state j. We call eij the weighted residual. We note that, because the objective function is weighted by the mean of the data, the outputs are nondimensional and closer in magnitude. This is a form of weighted least squares (Smith 2014). We employ the Trust Region Reflective algorithm to minimize cost using the scipy.optimize library. 
+
+## 4.3 Local Sensitivity Analysis 
+
+The local sensitivity of the WLS residual, eij , of state j and time ti with respect to log-scaled parameter ˜θk is 
+
+Sj,k (ti) = dd˜θk
+
+eij ( ˜θ) ≈ eij ( ˜θ + ∆ k) − eij ( ˜θ)∆k
+
+!
+
+θk, k ∈ { 1, 2, . . . , N p}. (15) The latter expression is our finite difference approximation using ∆ k as the step size. Since the parameters are on a log-scale, we naturally get scaling based on the mag-nitude of the parameter (Olsen et al. 2019; Colunga et al. 2023). Carrying out this computation for each parameter θk will result in a sensitivity matrix S ∈ RNp×(Ns·Nt),where Ns is the number of states, Nt is the number of time points, and each row reflects the concatenated vector of residuals across time and state. The sensitivity matrix is then used to approximate the Fisher Information matrix 
+
+F = S⊤S. This matrix contains information about the local concavity of the quantity of interest, and can provide a theoretical lower bound on the covariance matrix of the estimator of the parameters (Cintr´ on-Arias et al. 2009). From a linear algebra per-spective, F provides some limited information about identifiability in terms of linear dependence. The condition number of the matrix, Cond ( F ), can identify whether the eigenvalues of F are vastly different and thus information about whether the param-eters are hard to discern (Smith 2014; Simpson and Baker 2026). Here, we confirm the identifiability of this selection by following an algorithm developed by Dadashova et. al. (2024). Starting with the parameter ranked as most influential, parameters are added back in one at a time. The condition number of F is calculated, and if the addition of any parameter causes the condition number to exceed a threshold, the parameter is deemed non-identifiable and removed from the set. We utilize a thresh-old of 10 6 in this work as this is a reasonable maximum for determining whether 
+
+F is invertible (Colebank and Chesler 2022; Olsen et al. 2019). The local sensitivity analysis is applied to parameters selected in the global analysis, ordered by metric R.10 4.4 Global Optimization with Confidence Intervals 
+
+We consider a second, more global method of assessing identifiability by investigating whether there is a unique, global minimizer for the dataset and parameter subset (Col-unga et al. 2023). For each dataset and parameter subset, we select 20 initializations to then run an optimization routine for each initial guess. The parameters are perturbed according to a relative Gaussian, i.e. ˜θki ∼ N (˜θi, σ 2 
+
+> i
+
+), where ˜θi is the data-generating parameter and σ = 0 .1˜θi. This perturbs parameters away from their nominal value to then assess whether there are multiple, potentially non-unique local-minima in the cost function. For each initialization, the optimization routine described in Sec. 4.2 is run. After the optimization routine, we calculate asymptotic, frequentist confidence intervals for the parameters (Cintr´ on-Arias et al. 2009; Smith 2014). Under the assumption of Gaussian, independent, additive errors, we can derive the confidence intervals for the parameters in log-space as CI 1−a( ˆ˜θi) = 
+
+h ˆ˜θi − t1−aND −Np SE i, ˆ˜θi + t1−aND −Np SE i
+
+i
+
+, SE i =
+
+q
+
+σ2 
+
+> ε
+
+(S⊤S)−1 
+
+> ii
+
+(16) where SE represents the standard error derived from the diagonal of the covariance matrix given by σ2
+
+> ε
+
+ S⊤S−1 and 
+
+σ2 
+
+> ε
+
+= 1
+
+ND − NpsX
+
+> j=1
+> nj
+
+X
+
+> i=1
+
+
+
+eij (ˆ˜θ)
+
+2
+
+, ND =
+
+
+
+> s
+
+X
+
+> j=1
+
+nj
+
+ (17) which is calculated from the optimal parameters found, ˆ˜θ. The scalar term ND repre-sents the degrees of freedom for the problem given s output states and Np parameters. The term t1−aND −p is the score from a t-distribution at a significance level of 1 − a and 
+
+ND − Np degrees of freedom. Then our approach is as follows: given multiple initial parameter guesses, we deduce identifiability issues if parameter confidence intervals derived from eq. (16) do not consistently overlap with the true parameter value while also obtaining a nearly iden-tical objective function value. If parameters have relatively large confidence intervals, this may also indicate identifiability issues since a large variance suggests large uncer-tainty. Tight, bounded confidence intervals localized near the optimum would suggest an identifiable subset. We use a cutoff of 90% to determine if parameters are identi-fiable, i.e., we consider them identifiable if 90% of the confidence intervals generated include the true, data-generating parameter. 
+
+## 4.5 Profile-Likelihood 
+
+Our final approach for assessing identifiability is the gold-standard univariate profile-likelihood (Colebank and Chesler 2022; Colebank 2025; Simpson and Baker 2026; Raue et al. 2009). Similar to the confidence interval approach, the profile-likelihood is used to derive bounds for parameter estimates. However, the profile-likelihood directly 11 assesses these confidence bounds through repeated numerical optimization, rather than depending on the local-sensitivity, first-order approximation of the Fisher-information matrix (Simpson and Baker 2026; Raue et al. 2009). Given the vector of noisy observations Y = {yij } for time-point i in state j and the corresponding vector of model evaluations F ( ˜θ) = 
+
+n
+
+fj (ti; ˜θ)
+
+o
+
+, we define the negative log-likelihood as 
+
+−LL ( ˜θ) ∝
+
+
+
+Y − F ( ˜θ)) 
+
+⊤
+
+Σ−1 
+
+Y − F ( ˜θ)
+
+
+
+. (18) For this study, the weight matrix, Σ, has diagonal entries that represent the mean data for each state j = 1 , . . . , s from the different experimental designs, ¯ yj . This makes it equivalent to the WLS problem in eq. (14). The univariate profile-likelihood for a parameter θi is then defined as 
+
+P L i(˜θi) = min 
+
+> ˜θ∼i
+
+h
+
+−LL 
+
+˜θi, ˜θ∼i|Y
+
+i 
+
+(19) where ˜θi is the parameter being profiled and ˜θ∼i = {˜θ}\ ˜θi is the remaining parameters to be inferred. Univariate confidence intervals can be computed for each parameter by comparing the profile-likelihood to the inverse cumulative distribution function of the chi-square distribution, X
+
+CI 1−a 
+
+> PL
+
+(θi) = θi|2 [ LL (θM LE |y) − P L i(θi)] ≤ χ21,1−a (20) where ˜θM LE is the maximum likelihood estimator (MLE) of the full parameter set corresponding to the maximum likelihood (minimum of the negative log-likelihood). The difference between the profile-likelihood and MLE evaluated log-likelihood are compared to a chi-squared distribution quantile with one-degree of freedom and an 1 − a confidence level. We use a = 0 .05 in all experiments. Constructing the profile-likelihood is algorithmically structured as follows: given some initial parameterization, here being a minimizer found through optimization, proceed with the following: 1. Select parameter ˜θi as your “profiled-parameter,” and then define ˜θ∼i = { ˜θ} \ ˜θi
+
+as the remaining parameters. 2. Select a range of values for ˜θi, e.g. ±50% of its optimal value. Then solve the optimization problem in eq. (19) for each value of ˜θi.3. Repeat this procedure for all parameters in the subset. 4. Plot the profile-likelihood and determine CI 1−a 
+
+> PL
+
+at some significance level 1 − a.Parameters that have confidence intervals that do not have values greater than 
+
+X (a) are non-identifiable . Parameters that cross this threshold are considered identifiable. 12 5 Results 
+
+## 5.1 Global Sensitivity 
+
+We computed the Morris Screening sensitivity measures from 100 samples with a step size of ∆ ≈ 0.508. The sensitivities were computed for each model state and then concatenated based on the experimental designs and ranked using the metric R defined in eq. (13). This is visualized in fig. 2. In descending order, selecting every parameter with R above the defined threshold builds the following sets: 
+
+θD1 : {d7, h 6, d 8, h 11 , T, β, d 4, k 3, k 14 , α, k 4, h 7, h 4, d 6, k 6}
+
+θD2 : {h6, d 7, d 4, k 3, d 8, T, h 7, β, h 11 , k 4, k 14 , k 6, h 4, k 1, k 15 } (21) 
+
+θD3 : {h6, d 7, k 3, d 8, d 4, T, h 7, β, h 11 , k 4, h 4, k 14 , h 9, k 6, d 3, k 15 }
+
+These parameters are further analyzed by the three identifiability methods. 
+
+## 5.2 Local Sensitivity 
+
+Local derivative based sensitivities were computed for the scaled residuals ( eij defined in eq. (14)) and used to calculate the Fisher information matrix F . Across the parame-ter sets θDm 
+
+> 1
+
+, θDm 
+
+> 2
+
+, and θDm 
+
+> 3
+
+, we found that the condition number of F did not exceed the set condition number threshold of 10 6 with all selected parameters in eq. (21) con-sidered. Therefore, the selected sets are not pared down for additional analyses. This effectively implies that our parameters are all “identifiable” from this test. 
+
+## 5.3 Global Optimization 
+
+In our second identifiability assessment, we employed a global optimization routine for both noise-free and noisy data for each experimental design. Each dataset is generated according to the designs Dm 
+
+> 1
+
+, Dm 
+
+> 2
+
+, Dm 
+
+> 3
+
+. Confidence intervals are calculated for all 20 trials. We provide the confidence intervals in figs. 3 to 8 in the subplot (a) position. The optimal parameter estimate and confidence bounds are presented on a relative scale to make it easier to interpret the variability in the parameters. Values closer to zero represent more accurate parameter estimates. Blue and yellow results represent noise-free and noisy datasets. We use the confidence interval widths and the locations of the optimal parameter estimates to assess parameter identifiability. For instance, parameter d7 in design 
+
+D25 1 (Figure 3) appears close to the zero line in the noise-free case, and also has 95% confidence intervals that contain a relative error of 0 across all 20 initializations spanning ≈ 5%. We would interpret this result as suggesting that d7 is identifiable. In contrast, the parameter d4 appears close to the true data generated parameters in 
+
+D25 1 when there is no noise, whereas estimates of d4 and its corresponding confidence intervals lead to insufficient coverage when noise is added in, with errors close to 20%. There are also borderline results: parameter k14 in D25 1 consistently appears close to the true parameter value and has confidence intervals that contain the true parameter in 90% of the initializations. It is unclear whether this parameter is identifiable or not, given the bias away from the true parameter values are around 5%. 13 (a) Morris Ranking Morris Ranking Morris Ranking (b) (c) Fig. 2 : Parameters ranked by bar height of the metric R. Parameters that do not reach the threshold, demarcated by a horizontal dotted line, are considered non-influential a) Ranking for D1 b) Ranking for D2 c) Ranking for D3
+
+We now summarize the results for this assessment, and focus our conclusions on the designs that include measurement noise in the data. We can confidently say the fol-lowing parameters are identifiable based on 90% of their confidence intervals including the true parameter and their biases falling within a ±10% window: 
+
+• For D25 1 : {d7, d 8, T, β, k 14 , α, d 6, k 6}
+
+• For D13 1 : {d7, h 6, d 8, T, β, k 3, k 14 , h 7, h 4, d 6, k 6}
+
+• For D25 2 : {d7, d 8, T, β, h 11 , k 6, k 1}
+
+• For D13 2 : {d7, d 8, T, β, h 11 , k 14 , k 15 }
+
+• For D25 3 : {d7, d 8, T, β, k 14 , d 3}
+
+• For D13 3 : {d7, d 8, T, β, d 3}.14 Relative Error Profile-Likelihood Parameter value Parameter value a) Trial Trial  Trial Trial Parameter value 
+
+> b) Parameter value Fig. 3 : a) Relative error in selected parameter estimates from multi-start inference for  D25 1 . Each of the 20 points across all subgraphs represents a single trial with a new initialization in parameter space. Confidence intervals are represented as vertical lines. The true parameter value is marked by a horizontal dashed line. b) Profile-likelihood curves for each selected parameter, with scaled SSE after optimization plotted against fixed parameter values. Separate curves were calculated for the noise-free and noisy synthetic datasets, and are plotted pair-wise for each parameter. The horizontal dashed lines represent the error bound. The vertical dashed lines represent the respective true parameter value
+
+15 Relative Error Profile-Likelihood Parameter value Parameter value a) Trial Trial  Trial Trial Parameter value b) 
+
+> Parameter value Fig. 4 : a) Relative error in selected parameter estimates from multi-start inference for  D13 1 . Each of the 20 points across all subgraphs represents a single trial with a new initialization in parameter space. Confidence intervals are represented as vertical lines. The true parameter value is marked by a horizontal dashed line. b) Profile-likelihood curves for each selected parameter, with scaled SSE after optimization plotted against fixed parameter values. Separate curves were calculated for the noise-free and noisy synthetic datasets, and are plotted pair-wise for each parameter. The horizontal dashed lines represent the error bound. The vertical dashed lines represent the respective true parameter value
+
+16 Relative Error Profile-Likelihood a) Trial Trial  Trial Trial b) 
+
+> Parameter value Parameter value  Parameter value Parameter value Fig. 5 : a) Relative error in selected parameter estimates from multi-start inference for  D25 2 . Each of the 20 points across all subgraphs represents a single trial with a new initialization in parameter space. Confidence intervals are represented as vertical lines. The true parameter value is marked by a horizontal dashed line. b) Profile-likelihood curves for each selected parameter, with scaled SSE after optimization plotted against fixed parameter values. Separate curves were calculated for the noise-free and noisy synthetic datasets, and are plotted pair-wise for each parameter. The horizontal dashed lines represent the error bound. The vertical dashed lines represent the respective true parameter value
+
+17 Relative Error Profile-Likelihood a) Trial Trial  Trial Trial b) Parameter value Parameter value  Parameter value Parameter value Fig. 6 : a) Relative error in selected parameter estimates from multi-start inference for  D13 2 . Each of the 20 points across all subgraphs represents a single trial with a new initialization in parameter space. Confidence intervals are represented as vertical lines. The true parameter value is marked by a horizontal dashed line. b) Profile-likelihood curves for each selected parameter, with scaled SSE after optimization plotted against fixed parameter values. Separate curves were calculated for the noise-free and noisy synthetic datasets, and are plotted pair-wise for each parameter. The horizontal dashed lines represent the error bound. The vertical dashed lines represent the respective true parameter value 18 Relative Error Profile-Likelihood a) Trial Trial  Trial  Trial b) Parameter value Parameter value  Parameter value  Parameter value Fig. 7 : a) Relative error in selected parameter estimates from multi-start inference for  D25 3 . Each of the 20 points across all subgraphs represents a single trial with a new initialization in parameter space. Confidence intervals are represented as vertical lines. The true parameter value is marked by a horizontal dashed line. b) Profile-likelihood curves for each selected parameter, with scaled SSE after optimization plotted against fixed parameter values. Separate curves were calculated for the noise-free and noisy synthetic datasets, and are plotted pair-wise for each parameter. The horizontal dashed lines represent the error bound. The vertical dashed lines represent the respective true parameter value 19 Relative Error Profile-Likelihood a) Trial Trial  Trial  Trial b) Parameter value Parameter value  Parameter value  Parameter value Fig. 8 : a) Relative error in selected parameter estimates from multi-start inference for  D13 3 . Each of the 20 points across all subgraphs represents a single trial with a new initialization in parameter space. Confidence intervals are represented as vertical lines. The true parameter value is marked by a horizontal dashed line. b) Profile-likelihood curves for each selected parameter, with scaled SSE after optimization plotted against fixed parameter values. Separate curves were calculated for the noise-free and noisy synthetic datasets, and are plotted pair-wise for each parameter. The horizontal dashed lines represent the error bound. The vertical dashed lines represent the respective true parameter value 20 5.4 Profile-Likelihoods 
+
+Profile-likelihood curves were calculated using both noise-free and noisy data for each experimental design. Curves for each parameter are visualized in the right column of figs. 3 to 8. We can now compare the identifiability of parameters using this approach versus the confidence interval approach from the previous section. These results sug-gest the following parameters are identifiable in the case of noisy data for the six designs, with the change in parameters relative to the global optimization approach provided: 
+
+• For D25 1 : {d7, d 8, T, β, α, k 3}, removing parameters d6, k 6, and k14 but adding k3 (we included α since it is identifiable on the side away from the lower bound; we include 
+
+d7 since it is identifiable with a slightly larger interval). 
+
+• For D13 1 : {d8, T, k 3, α }, removing parameters d7, d 6, k 6, k 14 , β, h 4, h 6, and h7 but adding α (we included k3 and α since they are identifiable on the side away from the lower bound). 
+
+• For D25 2 : {d7, d 8, T, β, k 14 }, removing parameters h11 , k 1, and k6 but adding k14 .
+
+• For D13 2 : {T, β }, removing d7, d 8, h 11 , k 14 , and k15 (we included β since it is identifiable with a slightly larger interval). 
+
+• For D25 3 : {d7, d 8, T, β, k 14 , k 3, k 15 }, removing d3 and adding k3 and k15 (we included 
+
+d8 since it is identifiable with a slightly larger interval). 
+
+• For D13 3 : {T, β, k 3, h 11 }, removing parameters d7, d 8, and d3 but adding k3 and h11 
+
+(we included β since it is identifiable with a slightly larger interval). These results offer an alternative interpretation of whether the influential parameters can be determined from the experimental designs. We also note that these results rep-resent the noisy datasets. Identifiability in the noise-free setting are mostly consistent with those described above in the noisy data setting, with some minor exceptions like 
+
+d4 in design D25 3 and D13 3 , where the addition of noise actually makes the parameters identifiable from the left, in contrast to the noise-free case. We can also examine individual parameters more closely by graphing the simulator outputs for each fixed value of the parameter of interest in figs. 9 to 12. We investigate four different parameters and their behavior. We first present solution curves from values of h6 in fig. 9 in the noise-free designs D25 1 and D25 3 . The parameter h6 presents with nearly flat profile-likelihood landscapes, and the solutions from the model in the ACTH (denoted by A in the ITIS system) and Cortisol (denoted by F in the ITIS system) states cluster tightly around the observations in these two states. This by definition leads to non-identifiability of this parameter, even though solutions vary considerably around unobserved states in fig. 9(a). This is expected, as none of the parameters are being informed by these states and therefore we do not apply them in our determination of identifiability. However, as we calculate the profile-likelihood for 
+
+h6 in design D25 3 , we see that the parameter provides nearly identical solutions across all four observed states. This again illustrates why this parameter is non-identifiable: 21 given this range of parameter values for h6, the remaining parameters can compensate to provide equally good predictions to the data. We then investigate k15 , which is a parameter that sits on the threshold of practical identifiability between designs D25 2 and D25 3 . Here we focus on the noise-free setting. When only 3 states are observed in D2, the parameter does not cross our statistical threshold for increasing values of k15 . The predictions in fig. 10(a) show how small values of k15 lead to solutions far from the data, whereas larger values lead to a collection of predictions in ACTH, Cortisol, and TNF-α (states A, F, and T ) that are indistinguishable. Predictions of IL-10 (state I), which is not observed in D25 2 ,are drastically different along this profile-likelihood. Adding observations for IL-10 in D25 3 restores identifiability for the parameter. The solution curves for the original 3 observed states do not change significantly, while the fit to IL-10 becomes much stronger. The solutions around TNF-α and IL-10 (when observed) appear clustered tightly compared to ACTH and cortisol. The parameter k3 presents an interesting property: it is identifiable by the profile-likelihoods for designs D13 1 and D13 3 , but is non-identifiable in D13 2 . The individual solutions in fig. 11 corroborate this conclusion. Optimized solutions vary considerably for D1 and D3 when k3 is identifiable, but cluster together in D2. Note that the range of values tested in D2 is also considerably larger than the other two, suggesting even more uncertainty in parameter estimates with this design. The option to optimize to data for TNF-α impacts the parameter space in a way that allows the optimal solution to be found by changing other parameters, regardless of k3’s value. Introducing observations for IL-10 then reverses this effect. Finally, we present results for a parameter that shows slightly improved identifia-bility when noise is present and when the number of samples are reduced. Results for 
+
+d4 in fig. 12 suggest that the parameter is practically non-identifiable in any model design. However, we find that within D3, the parameter performs best when data is reduced and noise is added. Neither noise-free datasets lead to finite confidence bounds, while the noisy datasets provide bounds on the left. 
+
+# 6 Discussion 
+
+This work provides a detailed comparison of identifiability methods for a system of nonlinear ODEs, which have been used by several authors to investigate the interac-tions between the neuorendocrine and inflammatory system (Bangsgaard et al. 2017; Chow et al. 2005; Dobreva et al. 2021). The goal of this work is to provide a critical comparison of identifiability workflows for different observation operators. Identifia-bility assessment is critical in the biological and medical modeling space, as inferred parameters can be correlated with or compared to actual biomarkers of underlying processes. We compared a common, computationally affordable option (global sensi-tivity analysis followed by a local analysis using the Fisher information matrix) to two more complex assessments that leverage either (a) multistart optimization and asymptotic-derived confidence intervals or (b) the profile-likelihood. 22 TNF-αIL-10 ACTH Cortisol Time (hours) Time (hours) Profile-Likelihood Profile-Likelihood Parameter value Parameter value a) b) c) d) Below PL Threshold Above PL Threshold Fig. 9 : Solution curves where h6 is fixed at a range of different values while the rest of the selected parameters are optimized to noise-free data, as is done for the profile-likelihood procedure. Dark red curves represent solutions where h6 is below the confidence bound, while light blue curves are solutions outside the confidence bounds. The true solution is represented by an opaque black line and data by ‘x’ marks. a) 
+
+D25 1 b) D25 3 c) Profile-likelihood for h6 in D25 2 d) Profile-likelihood for h6 in D25 3
+
+## 6.1 Observation Operator and Global Sensitivity 
+
+From a strictly modeling and inference perspective, we analyze multiple experimental designs for which data may be available. This is driven in part by the fact that differ-ent users of a computational model (e.g., hospital systems or researchers looking into inflammation) may have access to different measurements and hence observation oper-ators may change. For example, the modeling study presented in (Dobreva et al. 2021) uses experimental data from several inflammatory markers at different time intervals during an endotoxin challenge (Janum et al. 2016; Copeland et al. 2005). In contrast, the original ITIS model developed in (Bangsgaard et al. 2017) used a separate dataset during endotoxin challenge that recorded a different set of inflammatory states, but at regular 30 minute intervals (Clodi et al. 2008). This shows that a single model, such 23 TNF-αIL-10 ACTH Cortisol Time (hours) Time (hours) Profile-Likelihood Profile-Likelihood a) b) Below PL Threshold Above PL Threshold Parameter Value c) d) Parameter Value Fig. 10 : Solution curves where k15 is fixed at a range of different values while the rest of the selected parameters are optimized to noise-free data, as is done for the profile-likelihood procedure. Dark red curves represent solutions where k15 is below the confidence bound, while light blue curves are solutions outside the confidence bounds. The true solution is represented by an opaque black line and data by ‘x’ marks. a) 
+
+D25 2 b) D25 3 c) Profile-likelihood for k15 in D25 2 d) Profile-likelihood for k15 in D25 3
+
+as the ITIS model constructed by Bangsgaard et al., might be repurposed in multiple ways depending on the available observations, timing of observations, and noise levels. This serves as a major motivation for our approach. Global sensitivity analysis is a gold standard for assessing which parameters have the largest impact on a system (Smith 2014). These methods include those leveraging statistical moments (e.g., variance-based sensitivity analysis (Colebank 2025)) or those looking at more empirical or moment-independent measures (Smith 2014). Morris screening is more affordable than other global sensitivity methods in part because it is assessing parameter importance at a coarse scale. The method has been successful in many biological applications where the parameter dimensionality is moderate to large (Colebank and Chesler 2022; Olsen et al. 2019; Wentworth et al. 2016). We choose our 24 a)  b)  a) 
+
+> c) d) Time (hours)  Time (hours)  Time (hours) Parameter value  Parameter value  Parameter value
+> e)  f)
+> TNF-αIL-10 ACTH Cortisol Profile-Likelihood Profile-Likelihood Profile-Likelihood Below PL Threshold  Above PL Threshold Fig. 11 : Solution curves where  k3 is fixed at a range of different values while the rest of the selected parameters are optimized to noisy data, as is done for the profile-likelihood procedure. Dark red curves represent solutions where  k3 is below the confidence bound, while light blue curves are solutions outside the confidence bounds. The true solution is represented by an opaque black line and data by ’x’ marks. Three designs are investigated with the solution curves on top and the corresponding profile likelihood curve below a) Solution curves for  D13 1 b) Solution curves for  D13 2 c) Solution curves for  D13 3 d) Profile-likelihood for
+> k3 in  D13 1 e) Profile-likelihood for  k3 in  D13 2 f) Profile-likelihood for  k3 in  D13 3 .
+
+25 a) b) c) d)   
+
+> PL a) PL c) e)
+> PL b) PL d) f) TNF-αIL-10 ACTH Cortisol  TNF-αIL-10 ACTH Cortisol Time (hours) Time (hours) Parameter value Profile-Likelihood Parameter value Profile-Likelihood Below PL Threshold Above PL Threshold
+
+Fig. 12 : Solution curves where d4 is fixed at a range of different values while the rest of the selected parameters are optimized to noisy data, as is done for the profile-likelihood procedure. Dark red curves represent solutions where d4 is below the confidence bound, while light blue curves are solutions outside the confidence bounds. The true solution is represented by an opaque black line and data by ’x’ marks. Results for four designs are plotted: a) D25 3 no noise, b) D13 3 no noise, c) D25 3 noisy, d) D13 3 noisy, e) Profile-likelihood for d4 in D25 3 , and f) Profile likelihood for d4 in D13 3
+
+26 quantity of interest to be the full 24-hour trajectory of each individual state, and then use elementary effects to help identify influential parameters when the experimental design changes. Typically sensitivity analyses are either done for a single state variable or for a specific objective function, such as what we employ in eq. (14) (Colunga et al. 2023; Olsen et al. 2019; Dobreva et al. 2021). We abstained from doing this explicitly since the specifics of the time-point measurements may fluctuate, reflecting a more “general” sensitivity analysis that focuses on observable states, rather the exact experimental design. Our results contrast those of the original ITIS manuscript, which used local sensitivities to determine the most influential parameters. In contrast to these prior studies, we explicitly include the circadian rhythm parameters in our analysis, since these in principal could be different among subjects. We see later in our identifiability analyses that the ranking order of which parameters are most influential does not appear to be an indicator of identifiability. This is expected since sensitivity analyses are best suited for finding non-influential parameters only. We find some parameters with the lowest rankings, such as k6 and d6 in design D1, k1 and k15 
+
+in design D2, and d3 in design D3, are identifiable. In contrast, the most influential parameters, like h11 in D1 and h6 in D2 and D3, are not identifiable. 
+
+## 6.2 Sensitivity Based Identifiability 
+
+Our first methodology for assessing parameter identifiability is local sensitivity anal-ysis and the construction of the Fisher information matrix. This is often the only identifiability analysis used, given its lower computational complexity and relatively close tie to frequentist statistics (Smith 2014). While analyzing the Fisher information alone can help establish identifiability (Dadashova et al. 2024; Cintr´ on-Arias et al. 2009; Wang and Hao 2025), several authors have also transformed the Fisher infor-mation into an approximate covariance and then correlation matrix (Colunga et al. 2023; Dobreva et al. 2021; Olsen et al. 2019). Both these methods provide information about identifiability in the small neighborhood around the parameter. However, these methods can be difficult to interpret when considering what magnitude of the condi-tion number is deemed “computationally singular.” We opted to use a threshold of 10 6
+
+in this work, though other studies have used other thresholds (Colebank and Chesler 2022). Our analyses using these methods suggested that all parameters in the sub-sets were identifiable, which conflicts with the results of the global optimization and profile-likelihood analyses that suggest a substantially smaller subset. A quick retro-spective investigation of the Fisher-information matrix analysis reveals that lowering the threshold for the condition number (e.g., to 10 4) would not substantially change the number of parameters deemed “identifiable.” The global optimization approach is a brute force way of assessing the landscape of the objective function to determine if there are unique cost function values corre-sponding to unique parameter sets. This was used in the prior study by (Colunga et al. 2023) in the context of cardiovascular modeling, where the variability in the param-eter estimates was used to deduce whether parameters were identifiable. The review by Villaverde et al. provides an in depth description of how optimization methods can be used for such analyses (2019). We innovate on this approach by explicitly calculat-ing parameter confidence intervals using the Fisher information matrix and derived 27 covariance (Smith 2014; Cintr´ on-Arias et al. 2009). Expanding the Fisher information matrix to a covariance approximation enables the use of the Cram´ er-Rao lower bound for the parameter confidence intervals (Miao et al. 2011; Simpson and Baker 2026), which in practice is easier to interpret than the condition number of the Fisher infor-mation matrix alone. The results in figs. 3 to 8 are still difficult to fully interpret, but provide a better visual understanding of uncertainty in the parameter estimates. Our findings show a somewhat paradoxical finding: a more complex observation operator and more observed states tends to reduce the number of identifiable parameters. This has been speculated in prior studies (Miao et al. 2011; Smith 2014; Eisenberg and Hayashi 2014), yet this has recieved little attention in mathematical biology. This is especially important when trying to translate models between experimental designs, as results for identifiability appear here to be very problem specific. We do find some consistency across designs, namely that each parameter subset includes the parameters 
+
+d7, d 8, T , and β. We conclude that, while constructing multiple confidence intervals doesn’t make identifiability abundantly clear, it does provide a significant advantage in trying to interpret uncertainty attributed to model parameters. We can consider it as a screening tool: if a parameter is almost always estimated far from it’s true value, with confidence intervals that do not include the true value, and the quality of fit to data is comparable, then there is evidence that a unique parameter value cannot be determined for a given design. However, as was the case for determining the numer-ical threshold for the Fisher information matrix, determining ‘almost always’ in the global optimization screening needs to be defined for each problem. 
+
+## 6.3 Profile-likelihood Analyses 
+
+Our final method for analysis was the profile-likelihood, which explicitly computes the parameter confidence intervals point-by-point using optimization. This methodology is largely considered a gold-standard due to its ability to handle nonlinearities and asym-metric shapes for parameter confidence intervals (Simpson and Baker 2026). Several authors have shown distinct differences between the profile-likelihood and other identi-fiability methods, such as the Fisher information matrix (Colebank and Chesler 2022; Preston et al. 2025; Wieland et al. 2021), which echo our results: the Fisher-information matrix can be overly confident in which parameters are identifiable in comparison to the profile-likelihood. The experimental design that provides the largest set of identifi-able parameters is D25 3 , which only includes seven parameters. The rest of the designs result in smaller parameter subsets. We consistently see that there are more parame-ters when there are 25 time points versus 13 time points. This is in contrast to what we found with the global optimization and confidence interval approach, where designs 
+
+D13 1 and D13 2 provided more identifiable parameters than their 25 time point equiva-lents. Consistent with both the global optimization and profile-likelihood approaches are the observation that more observable states don’t necessarily increase the identifi-ability of the parameters. This suggests that the inherent interactions between model states can have a critical impact on the ability to infer model parameters. For instance, the parameter k3 is identifiable when observations of ACTH and Cortisol (states A
+
+and F ) are available in D1, but no longer identifiable when we add in observations of TNF-α (state N ) in D2. This is then remedied with additional observations of IL-10 28 (state I). This suggests that there is strong interaction between states that can lead to identifiability issues, especially while estimating other parameters in the system. Given that these results are difficult to understand in parameter space, we explored the landscape of the simulated outputs in figs. 9 to 12. We find that h6 (which is in eq. (4)) is non-identifiable in designs D25 1 and D25 3 . Propagating solutions through the ODE system as shown in fig. 9 confirms this: when only ACTH and Cortisol data are available, we get nearly identical solutions for these two states, while the solutions for the non-observed states IL-10 and TNF-α vary. This latter point may suggest that having measurements in these two states would correct this issue; however, we see that observations in D25 3 do not circumvent the identifiability issue. This suggests that there are underlying parameter interactions that can compensate for various values of 
+
+h6, even though it is highly influential, especially for D2 and D3. This again reinforces that influential parameters can be non-identifiable for a given observation operator and experimental design. Our example using the parameter k15 provides a straight-forward case: k15 is nearly identifiable when ACTH, Cortisol, and TNF-α are observed, and predictions vary widely for the former two states (but not TNF-α). Here we see that our identifiability criteria depend on all three states, and even though ACTH and Cortisol dynamics are clearly unique, there are multiple solutions for TNF-α which overlap. The addition of IL-10 in D3 pushes our criteria above the threshold. Our last two investigations provide some of the most interesting findings. In fig. 11, we generate solutions as we profile k3. This parameter is more influential in designs 
+
+D2 and D3 than D1 (see fig. 2). We observe the following: in design D1 (fig. 11(a)) predictions along the profile-likelihood lead to identifiable solutions across all four model states, even though only ACTH and Cortisol are used for inference. When we analyze the model using data in D2, we see a drastic shift: now, k3 is not identi-fiable, and predictions for TNF-α are tight around the measured data, along with ACTH and Cortisol, along the profile-likelihood. In both D1 and D2, we observe that IL-10 has variable predictions. Finally, once we introduce observations for IL-10, we regain identifiability and see that predictions outside the confidence interval are dras-tically different and fall far from the observations. This behavior is not intuitive, but is attributed to the interactions between state variables. Looking at our system of eqs. (1)-(8): k3 plays a role in the dynamics of TGF-β (G), which interacts nonlinearly with IL-10 ( I), TNF-α (T ), and Cortisol ( F ). The state TNF-α is directly linked to CRH ( C) (which causes changes in ACTH) and ACTH ( A). When we only observe ACTH and Cortisol, there is a direct link to Cortisol dynamics, and thus makes iden-tifying this parameter easier. When TNF-α is added, we have nonlinear interactions that are now observed, which may contribute to the non-identifiability we see in D2.We also note that the parameter k1 is influential in D2, yet this parameter scales a majority of the phagocyte ( P ) equation, and k3 interacts with TGF-β (G) through the term k3P . This likely contributes to the identifiability issue in D2. Finally, since the state G is linked directly to IL-10 as well, we get that observations for this additional state provide a constraint that then places our parameter as identifiable. We conclude with some observations about noise-free versus noisy-data and the impact of sub-sampling of time series data, as illustrated in fig. 12. These results all use design D3 and observe four state variables, and we note that parameter d4 is the 29 fifth most influential parameter on this design. If we focus on the case when there is no noise added to the signals (fig. 12(a) and fig. 12(b)) but we move from more temporal information to less temporal information, we get a slightly flatter profile-likelihood. This indicates, as expected, that parameter confidence shrinks when less data are available. In contrast, when we introduce noise in our observations (fig. 12(c) and fig. 12(d)), we find that the profile-likelihood values increases, suggesting that there are better constraints on the optimal solution when noise is added. Moreover, it appears that less frequent observations in D13 3 provide stronger confidence bounds than D25 3 when noise is added. Considering this, we conclude that noise itself is useful in increasing the practical identifiability of a parameter in this case, since it necessarily decreases the possible likelihood values relative to a noise-free dataset. This is not a generalizable statement, though. As observation errors increase, we expect to see flatter likelihoods, as there are minimal differences between the “optimal” solution and those found along the profile-likelihood. Nevertheless, this study provides some evidence that a small or moderate amount of noise, as expected in biological data, can improve the numerical values for practical identifiability calculation. 
+
+## 6.4 Limitations 
+
+There are multiple limitations or points of improvement for our present study. First, we considered a sensitivity-driven parameter subset selection for all of our identifiability analyses. We did this to mimick prior studies in mathematical biology, yet several authors have considered alternative approaches, such as conducting identifiability or uncertainty analyses first (Cogan et al. 2026) or selecting physiologically important parameters prior to conducting sensitivity analyses (Bangsgaard et al. 2017). We only focus here on practical identifiability, given the emphasis on measurement operators, while structural identifiability is not considered. We considered noise-free and Gaussian independent noise models for our experimental designs here. This inherently limits our analysis in part because noise may be multiplicative (Simpson and Baker 2026) or there may be model discrepancy present (Kimpton et al. 2025). This latter point has received little attention, and requires further mathematical analyses. Finally, we opted for relatively simple experimental designs for our observations and observation operators. A more exhuastive set of designs could be examined in depth, and the use of specific information criteria, the expected information gain for example (Liepe et al. 2013), could directly identify the best observation operator. This would require a significant increase in computational costs to screen various designs and within these identify parameters most influential and identifiable. A more detailed subset selection procedure, such as repeated profile-likelihood with iterative subset reduction, would be robust in this setting. This would require substantially more computation time, though. As noted in (Preston et al. 2025) and implemented in (Colebank 2025), surrogate models and emulation can provide a solution to this bottleneck, and should be considered moving forward. 30 Declarations 
+
+Acknowledgements. The authors gratefully acknowledge the computational resources provided by the Theia high performance computing cluster at the University of South Carolina which is supported by National Science Foundation Major Research Instrumentation Grant No. 2320292. We also acknowledge the technical assistance and resources provided by Research Computing at the University of South Carolina (RRID:SCR 027488). 
+
+Funding. This work was funded in part by a South Carolina EPSCoR Grant for Applications in Industry and Networking Program (26-GA01), through the University of South Carolina’s NIAID-funded R25AI164581 (R25) BigDataHealth Science Fellow Program, and through an American Heart Association Career Development Award (26CDA1599801, doi:10.58275/AHA.26CDA1599801.pc.gr.243168). 
+
+Conflicts of Interests. The authors declare that there are no conflicts of interest. 
+
+Availability of Data and Materials. The code and synthetic data used to generate all results is hosted online and openly available in Github https:// github.com/aayres22/ITIS Analysis.git and Zenodo https://doi.org/10.5281/zenodo. 22773537(Ayres and Colebank 2026). 
+
+# References 
+
+Ayres, A., Colebank, M.: ITIS Analysis Repository. Zenodo (2026). https://doi.org/ 10.5281/zenodo.22773537 . https://doi.org/10.5281/zenodo.22773537 Baker, M., Denman-Johnson, S., Brook, B.S., Gaywood, I., Owen, M.R.: Mathematical modelling of cytokine-mediated inflammation in rheuma-toid arthritis. Mathematical Medicine and Biology: A Journal of the IMA 30 (4), 311–337 (2012) https://doi.org/10.1093/imammb/dqs026 https://academic.oup.com/imammb/article-pdf/30/4/311/2131537/dqs026.pdf Bangsgaard, E.O., Hjorth, P.G., Olufsen, M.S., Mehlsen, J., Ottesen, J.T.: Integrated Inflammatory Stress (ITIS) Model. Bulletin of Mathematical Biology 79 (7), 1487– 1509 (2017) https://doi.org/10.1007/s11538-017-0293-2 . Accessed 2026-02-11 Cintr´ on-Arias, A., Banks, H.T., Capaldi, A., Lloyd, A.L.: A sensitivity matrix based methodology for inverse problem formulation. Journal of Inverse and Ill-posed Problems 17 (6) (2009) https://doi.org/10.1515/JIIP.2009.034 . Accessed 2026-01-24 Colebank, M.J., Chesler, N.C.: An in-silico analysis of experimental designs to study ventricular function: A focus on the right ventricle. PLoS computational biology 
+
+18 (9), 1010017 (2022) Chow, C.C., Clermont, G., Kumar, R., Lagoa, C., Tawadrous, Z., Gallo, D., Betten, B., Bartels, J., Constantine, G., Fink, M.P., Billiar, T.R., Vodovotz, Y.: The acute 31 inflammatory response in diverse shock states. Shock (Augusta, Ga.) 24 (1), 74–84 (2005) https://doi.org/10.1097/01.shk.0000168526.97716.f3 Colunga, A.L., Colebank, M.J., REU Program, Olufsen, M.S.: Parameter inference in a computational model of haemodynamics in pulmonary hypertension. Journal of The Royal Society Interface 20 (200), 20220735 (2023) https://doi.org/10.1098/rsif. 2022.0735 . Accessed 2026-07-09 Chiswick, E.L., Duffy, E., Japp, B., Remick, D.: Detection and quantifica-tion of cytokines and other biomarkers 844 , 15–30 https://doi.org/10.1007/ 978-1-61779-527-5 2 . Accessed 2026-03-31 Cogan, N., Nooranidoost, M., Peltier, M., Romero, S.: Order matters: how the sequence of sensitivity analysis, parameter identifiability and uncertainty quantifica-tion shapes model insights. Journal of the Royal Society Interface 23 (238), 20250938 (2026) Colebank, M.J.: Assessing parameter identifiability of a hemodynamics PDE model using spectral surrogates and dimension reduction. PLOS Computational Biology 
+
+21 (10), 1013553 (2025) https://doi.org/10.1371/journal.pcbi.1013553 . Accessed 2026-06-19 Clodi, M., Vila, G., Geyeregger, R., Riedl, M., Stulnig, T.M., Struck, J., Luger, T.A., Luger, A.: Oxytocin alleviates the neuroendocrine and cytokine response to bacterial endotoxin in healthy men. Am J Physiol Endocrinol Metab 295 , 686–691 (2008) https://doi.org/10.1152/ajpendo.90263.2008.-Oxytocin Copeland, S., Warren, H.S., Lowry, S.F., Galvano, S.E., Remick, D.: Acute inflamma-tory response to endotoxin in mice and humans. Clinical and Diagnostic Laboratory Immunology 12 , 60–67 (2005) https://doi.org/10.1128/CDLI.12.1.60-67.2005 Dobreva, A., Brady-Nicholls, R., Larripa, K., Puelz, C., Mehlsen, J., Olufsen, M.S.: A physiological model of the inflammatory-thermal-pain-cardiovascular interactions during an endotoxin challenge. The Journal of physiology 599 (5), 1459–1485 (2021) Dadashova, K., Smith, R.C., Haider, M.A.: Local Identifiability Analysis, Param-eter Subset Selection and Verification for a Minimal Brain PBPK Model. Bulletin of Mathematical Biology 86 (2), 12 (2024) https://doi.org/10.1007/ s11538-023-01234-4 . Accessed 2026-07-09 Eisenberg, M.C., Hayashi, M.A.: Determining identifiable parameter combinations using subset profiling. Mathematical biosciences 256 , 116–126 (2014) Janum, S., Nielsen, S.T., Werner, M.U., Mehlsen, J., Kehlet, H., Møller, K.: Pain perception in healthy volunteers: Effect of repeated exposure to experimental sys-temic inflammation. Innate Immunity 22 , 546–556 (2016) https://doi.org/10.1177/ 1753425916663638 32 Kimpton, L.M., Paun, L.M., Colebank, M.J., Volodina, V.: Challenges and opportuni-ties in uncertainty quantification for healthcare and biological systems. Philosophical transactions. Series A, Mathematical, physical, and engineering sciences 383 (2292), 20240232 (2025) Liepe, J., Filippi, S., Komorowski, M., Stumpf, M.P.: Maximizing the information con-tent of experiments in systems biology. PLoS computational biology 9(1), 1002888 (2013) Malek, H., Ebadzadeh, M., Safabakhsh, R., Razavi, S., Zaringhalam, J.: Dynamics of the hpa axis and inflammatory cytokines: Insights from mathematical model-ing. Computers in biology and medicine 67 , 1–12 (2015) https://doi.org/10.1016/j. compbiomed.2015.09.018 Meyer-Hermann, M., Figge, M.T., Straub, R.H.: Mathematical modeling of the circadian rhythm of key neuroendocrine–immune system play-ers in rheumatoid arthritis: A systems biology approach. Arthritis &Rheumatism 60 (9), 2585–2594 (2009) https://doi.org/10.1002/art.24797 https://onlinelibrary.wiley.com/doi/pdf/10.1002/art.24797 Miao, H., Xia, X., Perelson, A.S., Wu, H.: On identifiability of nonlinear ode models and applications in viral dynamics. SIAM review 53 (1), 3–39 (2011) Olsen, C.H., Ottesen, J.T., Smith, R.C., Olufsen, M.S.: Parameter subset selection techniques for problems in mathematical biology. Biological Cybernetics 113 (1-2), 121–138 (2019) https://doi.org/10.1007/s00422-018-0784-8 Preston, S.P., Wilkinson, R.D., Clayton, R.H., Chappell, M.J., Mirams, G.R.: Think before you fit: Parameter identifiability, sensitivity and uncertainty in systems biol-ogy models. Current Opinion in Systems Biology 42 (2025) https://doi.org/10.1016/ j.coisb.2025.100563 Raue, A., Kreutz, C., Maiwald, T., Bachmann, J., Schilling, M., Klingm¨ uller, U., Timmer, J.: Structural and practical identifiability analysis of partially observed dynamical models by exploiting the profile likelihood. Bioinformatics 25 (15), 1923– 1929 (2009) https://doi.org/10.1093/bioinformatics/btp358 . Accessed 2026-07-13 Reynolds, A., Rubin, J., Clermont, G., Day, J., Vodovotz, Y., Ermentrout, G.B.: A reduced mathematical model of the acute inflammatory response: I. derivation of model and analysis of anti-inflammation 242 (1), 220–236 https://doi.org/10.1016/ j.jtbi.2006.02.016 Simpson, M.J., Baker, R.E.: Parameter Identifiability, Parameter Estimation, and Model Prediction for Differential Equation Models. SIAM Review 68 (1), 153–171 (2026) https://doi.org/10.1137/24M1667968 . Accessed 2026-07-01 Spencer, R.L., Deak, T.: A users guide to HPA axis research 178 , 43–65 https://doi. 33 org/10.1016/j.physbeh.2016.11.014 . Accessed 2026-01-24 Smith, R.C.: Uncertainty Quantification: Theory, Implementation, and Applica-tions. Computational science & engineering. Society for Industrial and Applied Mathematics, Philadelphia (2014) Somvanshi, P.R., Mellon, S.H., Yehuda, R., Flory, J.D., Makotkine, I., Bierer, L., Marmar, C., Jett, M., Doyle, F.J.: Role of enhanced glucocorticoid recep-tor sensitivity in inflammation in PTSD: insights from computational model for circadian-neuroendocrine-immune interactions. American Journal of Physiology-Endocrinology and Metabolism 319 (1), 48–66 (2020) https://doi.org/10.1152/ ajpendo.00398.2019 . Accessed 2026-02-11 Taylor-LaPole, A.M., Paun, L.M., Lior, D., Weigand, J.D., Puelz, C., Olufsen, M.S.: Parameter selection and optimization of a computational network model of blood flow in single-ventricle patients. Journal of the Royal Society Interface 22 (223), 20240663 (2025) https://doi.org/10.1098/rsif.2024.0663 . Accessed 2026-06-19 Vinther, F., Andersen, M., Ottesen, J.T.: The minimal model of the hypothalamic-pituitary-adrenal axis. Journal of Mathematical Biology 63 (4), 663–690 (2011) https://doi.org/10.1007/s00285-010-0384-2 Villaverde, A.F., Fr¨ ohlich, F., Weindl, D., Hasenauer, J., Banga, J.R.: Bench-marking optimization methods for parameter estimation in large kinetic models. Bioinformatics 35 (5), 830–838 (2019) Wang, S., Hao, W.: A Systematic Computational Framework for Practical Identifi-ability Analysis in Mathematical Models Arising from Biology. Advanced Science 
+
+12 (35), 04346 (2025) https://doi.org/10.1002/advs.202504346 . Accessed 2026-08-11 Wieland, F.-G., Hauber, A.L., Rosenblatt, M., T¨ onsing, C., Timmer, J.: On structural and practical identifiability. Current Opinion in Systems Biology 25 , 60–69 (2021) https://doi.org/10.1016/j.coisb.2021.03.005 . Accessed 2026-08-11 Wentworth, M.T., Smith, R.C., Banks, H.T.: Parameter selection and verification tech-niques based on global sensitivity analysis illustrated for an hiv model. SIAM/ASA Journal on Uncertainty Quantification 4(1), 266–297 (2016) https://doi.org/10. 1137/15M1008245 https://doi.org/10.1137/15M1008245 34

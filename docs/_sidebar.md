@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-10-01 <!--dpr-date:20261001-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202610/01/2609.30031v1-parameter-identifiability-of-a-neuroendocrine-inflammatory-model-across-experimental-designs" data-sidebar-item="{&quot;title&quot;: &quot;Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.30031v1-parameter-identifiability-of-a-neuroendocrine-inflammatory-model-across-experimental-designs&quot;, &quot;score&quot;: &quot;6.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;模拟复杂的炎症机制&quot;}">Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs</a>
   * 2026-09-29 <!--dpr-date:20260929-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/29/2609.30031v1-parameter-identifiability-of-a-neuroendocrine-inflammatory-model-across-experimental-designs" data-sidebar-item="{&quot;title&quot;: &quot;Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.30031v1-parameter-identifiability-of-a-neuroendocrine-inflammatory-model-across-experimental-designs&quot;, &quot;score&quot;: &quot;6.5&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;ros-mp&quot;}], &quot;evidence&quot;: &quot;炎症复杂机制的数学建模&quot;}">Parameter identifiability of a neuroendocrine-inflammatory model across experimental designs</a>
