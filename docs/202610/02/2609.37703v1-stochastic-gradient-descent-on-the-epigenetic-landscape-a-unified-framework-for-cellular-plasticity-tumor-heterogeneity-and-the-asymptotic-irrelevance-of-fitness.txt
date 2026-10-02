@@ -1,0 +1,1595 @@
+Title: Stochastic gradient descent on the epigenetic landscape: a unified framework for cellular plasticity, tumor heterogeneity, and the asymptotic irrelevance of fitness
+
+URL Source: https://arxiv.org/pdf/2609.37703v1
+
+Published Time: Wed, 30 Sep 2026 02:02:40 GMT
+
+Number of Pages: 47
+
+Markdown Content:
+# Stochastic gradient descent on the epigenetic landscape: a unified framework for cellular plasticity, tumor heterogeneity, and the asymptotic irrelevance of fitness 
+
+## Artur César Fassoni 1,2,* 
+
+> 1
+
+Instituto de Matemática e Computação, Universidade Federal de Itajubá, Itajubá, Brazil 
+
+> 2
+
+Carl Gustav Carus School of Medicine, Technische Universität Dresden, Dresden, Germany 
+
+> *
+
+fassoni@unifei.edu.br 
+
+Abstract 
+
+Phenotypic plasticity, the ability of cells to switch between states, is central to development, differentiation, and therapy resistance. Although it is modeled at several scales, from compartmental ODEs to phenotype-structured PDEs and single-cell stochastic equations, a framework connecting these descriptions is missing. We present such a framework. Starting from a general n-compartment ODE model encom-passing nonlinear growth and linear transitions between phenotypes, we show, with a new, elementary and generalizable proof of a recent theorem, that under uniform competition, the long-term population distribution is solely governed by transition rates. All phenotypes become selectively neutral at saturation, and the imprint of fitness differences during growth fades at an explicit rate. Restricting transitions to neighboring states transforms the model into a discretization of a phenotype-structured reaction-diffusion-advection PDE. In this continuum model, diffusion and advection are identified from switching rates, and fitness remains asymptotically irrelevant. Interpreting the advection velocity as the negative gradient of an effective epigenetic potential transforms the PDE into a Fokker–Planck equation and converts single-cell trajectories into stochastic gradient descent (SGD) in the Langevin sense on the phenotypic landscape. Non-local transitions, such as mutations, are incorporated via an integro-differential term, yielding a unified model with reaction, gradient flow, diffusion, and jumps. State-dependent noise reshapes the effective landscape without altering the underlying potential. This gives cancer a route to elevated plasticity that static, single-cell snapshots cannot distinguish from a changed landscape. This framework provides a physical interpretation of Waddington’s landscape, where cells perform SGD, and cancer corresponds to a corrupted landscape. Keywords: phenotypic plasticity, epigenetic landscape, cancer heterogeneity, compartmental model, phenotype-structured model, Fokker-Planck equation, Ornstein-Uhlenbeck process. 
+
+1arXiv:2609.37703v1 [q-bio.PE] 29 Sep 2026 1 Introduction 
+
+Cellular plasticity, broadly defined, is the ability of a cell to change its state or phenotype without altering its genome [1, 2]. By state we mean a typically heritable, self-sustaining pattern of gene expression, such as the ones that distinguish a stem cell from a differentiated neuron or a drug-sensitive from a drug-resistant cell; it persists across cell divisions and on the time scale of interest without external maintenance, but is not fixed by the DNA sequence itself. This property is fundamental to multicellular organisms: almost all cells of an individual share essentially the same DNA, yet display a wide range of phenotypes. From fertilization onward, differentiation is regulated by epigenetic changes that channel initially totipotent cells toward specialized fates [3], and these epigenetic barriers are what keep tissue organization stable and prevent uncontrolled de-differentiation. Waddington captured this with his “epigenetic landscape" metaphor [4]: a state corresponds to a valley in this landscape, and plasticity to the topography of slopes, barriers, and routes that favors certain transitions between valleys and blocks others. Widening a valley, lowering a barrier, or opening a new route lets cells reach states that would normally be closed to them. At the molecular level, epigenetic alterations are largely mediated by histone modifications [5, 6, 7], which determine which genes remain accessible for transcription. Stable phenotypes are self-sustaining configurations of this regulatory machinery, into which a cell settles and from which it escapes only through fluctuations. These configurations are not thermodynamic equilibria, since histone marks are written and erased by enzymes that consume energy [8, 9, 10], but their dynamics can be summarized by an effective potential, or quasi-potential [11, 12]. Waddington’s landscape then has a physical counterpart: its valleys are minima of this potential, and transitions between phenotypes are stochastic excursions between them. Cancer disrupts this order [13]. Tumors accumulate genetic and phenotypic alterations [14], and intratumor heterogeneity has traditionally been understood as the product of somatic evolution [15, 16]: reiterated rounds of clonal expansion, genetic diversification and selection shape the clonal architecture of a tumor [17, 18]. Increased cellular plasticity, recently recognized as one of the hallmarks of cancer [19], adds a second, non-genetic source of diversity [20]: malignant cells gain access to alternative phenotypes that are not encoded by new mutations [21, 22]. The clinical relevance of this second source is most evident in therapy resistance. In several tumor types, including breast, prostate, lung, melanoma, and glioblastoma, subpopulations of cells resist chemotherapeutics or targeted therapies without any underlying genetic change [23, 24, 25, 26]. In immunotherapies such as CAR-T cells, a major resistance mechanism is antigen loss, in which tumor cells stop expressing the target antigen through epigenetic or post-transcriptional mechanisms and settle into stable phenotypic states invisible to the therapy [27, 28, 29]. Resistance can therefore arise by two routes: the selection of pre-existing resistant clones, or the emergence of resistance de novo from drug-tolerant persister cells [30]. Heterogeneity itself is, in turn, associated with prognosis [31, 32]. Because genetic and non-genetic changes jointly shape tumor evolution and its response to treatment, it is desirable to describe them within a single framework. The landscape picture introduced above offers one: if we relax the definition of plasticity slightly and conceptualize it as the ability to transition among states in an extended space that includes both phenotypes and genotypes, mutations correspond to discrete jumps in that space. Genetic instability seeds cells carrying driver mutations [33, 34], and the elevated epigenetic plasticity of tumors lets these founder cells reach distant phenotypic states that are normally off-limits to healthy cells [19]. In this picture, the difference between healthy and malignant tissue is one of landscape geometry and noise: in normal tissue, cells rest in deep attractors under low noise, whereas 
+
+2in tumors transcriptional programs are noisier and cells move more readily between attractors [35, 36, 37]. The framework developed here turns this qualitative picture into a quantitative one: selection enters through the vital dynamics (birth and death), plasticity through the transport terms, noise as a diffusivity, and mutation through non-local jumps. It allows us to ask when each of these ingredients shapes the phenotypic composition of a tumor, and on which time scale. Mathematical models of these phenomena roughly follow the arc of increasing complexity we develop below. Compartmental, ordinary differential equation (ODE) models describe each cellular state as a compartment with its own vital dynamics, and plasticity as transition rates between compartments; they have been used for differentiation hierarchies, therapy resistance and immune escape [38, 39, 40, 41, 42, 43, 44, 28, 45, 46]. Driven by single-cell data and dimensionality reduction [47, 48], another perspective holds that phenotypic states form a continuum [49]: between a stem cell and a progenitor, or between drug-sensitive and drug-resistant states, lie intermediate phenotypes. The continuum limit of compartmental models has accordingly grown into a substantial body of work on phenotype-structured partial differential equations (PS-PDEs) [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61]. At the level of individual cells, stochastic differential equations (SDEs), notably Ornstein–Uhlenbeck (OU) processes, describe phenotypic change as a restoring force perturbed by noise [62, 63, 64]. Alongside this arc, a parallel tradition in statistical physics formalizes Waddington’s landscape as a potential, or quasi-potential, of the underlying stochastic dynamics [65, 66, 67, 11, 12, 68]; dynamical-systems and geometric approaches relate fate decisions to bifurcations and low-dimensional landscapes [69, 70, 71, 72, 73]; and more recent work derives effective landscapes from chromatin dynamics, Bayesian decision-making or evolvability [10, 74, 75]. These works describe plasticity in different ways: discrete or continuous, phenomenological or mechanistic, at the level of the population or of single stochastic cells. Yet they are seldom connected explicitly. Population models usually posit transition rates or transport terms phenomenologically, whereas landscape models derive them from an underlying mechanism but tend to leave out selection and mutation. Here we combine results from applied mathematics, statistical physics and quantitative biology into a framework that describes the epigenetic and genetic evolution of cell populations in a continuous state space, with an emphasis on the mechanistic connections between these approaches. The article is both a review and a synthesis : it follows a single line from compartmental ODE models, through PS-PDEs, to SDEs for the trajectories of individual cells. Section 2 develops this construction step by step; each of its subsections ends with a Relation to prior work paragraph that credits the work it builds on and says where our construction differs. The literature is large, and we focus on the work most directly relevant to the mathematical structure developed here; readers looking for broader perspectives can consult the tutorial of Lorenzi et al. [52] on phenotype-structured PDEs, and the works of Alvarez et al. [53] on plasticity and evolution and of de Souza Silva et al. [62] on the Ornstein–Uhlenbeck framework in quantitative genetics. Following this line, our main contributions are: • A new, generalizable proof, under different hypotheses and with explicit estimates, of a recent theorem of Giaimo et al. [76] stating that, in uniformly competitive compartmental models, fitness is asymptotically irrelevant, i.e., the long-time phenotypic composition does not depend on the fitness differences among states. Our version gives an explicit estimate of how fast fitness differences are forgotten and a bound on the total selection that the pheno-typic composition can undergo. We also state the conditions required (connected plasticity, persistent proliferation) and give a counterexample showing that uniform competition cannot be relaxed to weighted competition (Sections 2.1 and 2.2, Appendix A). 
+
+3• An interpretation of compartmental models with local transitions as discretizations of a phenotype-structured reaction–diffusion–advection PDE, with diffusion and advection iden-tified from the switching rates (Section 2.3), and the extension of the asymptotic irrelevance of fitness under uniform competition to this continuum analogue (Section 2.4). • An interpretation of this PDE as the Fokker–Planck equation of single cells performing a stochastic gradient descent on an effective epigenetic potential, with noise as an effective temperature (Sections 2.5 and 2.6), and a unified model of reaction, gradient flow, diffusion, and jumps, whose structure is motivated by the Kramers–Moyal expansion and Pawula’s theorem (Section 2.7). • A derivation of classical phenotypic distributions (uniform, exponential, Gaussian, heavy-tailed) from the potential and the diffusivity, together with the observation that state-dependent noise reshapes the effective landscape independently of the bare potential (Section 2.8). Section 3 discusses the scope of these results and some open problems. 
+
+# 2 From discrete switching between cell states to stochastic gradi-ent descent in the epigenetic landscape 
+
+## 2.1 Compartmental ODE models for cellular states 
+
+We start with the compartmental perspective, in which each cellular state, a differentiation stage, an epigenetic configuration, or a drug-sensitive versus drug-resistant phenotype, is a discrete compartment whose abundance evolves according to an ODE for proliferation, death, and transitions between states. This is the simplest mathematical representation of phenotypic plasticity, and the basis for the more general and mechanistic continuous descriptions that follow (Figure 1a,b). 
+
+A simple two-compartment framework. To fix ideas, consider the following simple model of two interconverting cellular states: 
+
+u′ 
+
+> 1
+
+= −k12 u1 + k21 u2 + r1u1
+
+
+
+1 − u1 + u2
+
+K
+
+
+
+,
+
+u′ 
+
+> 2
+
+= −k21 u2 + k12 u1 + r2u2
+
+
+
+1 − u1 + u2
+
+K
+
+
+
+− d2(t)u2.(1) Here u1(t) and u2(t) denote the numbers of cells in states 1 and 2, respectively; r1, r2 > 0 are intrinsic, net proliferation rates; K is a carrying capacity; and d2(t) ≥ 0 is a time-dependent death rate acting on state 2. Constants k12 and k21 are transition rates between states 1 and 2. These switching terms represent phenotypic plasticity. Model (1), simple as it is, has been used in several biological contexts [44, 42, 41, 28]. For instance, in drug resistance, u1 denotes drug-resistant cells and u2 drug-sensitive cells. The additional mortality d2(t) represents the effect of therapy. Cells can acquire or lose the resistant phenotype via k12 and k21 , and therapy selects the resistant population [42]. In models for chronic myeloid leukemia treatment with TKIs, u1 and u2 represent quiescent and proliferative leukemic stem cells, with r1 = 0 reflecting quiescence and d2(t) capturing TKI-induced death of cycling cells [41]. In CAR-T therapy, u1 represents antigen-negative tumor cells and u2 antigen-positive cells, while the transitions kij reflect epigenetic modulation of antigen expression [28]. 
+
+4a    
+
+> u1u2
+> k12
+> k21
+> r1r2
+> u1u2
+
+· · · un−1 un                   
+
+> r1r2rn−1rn
+> k12
+> k21
+> kn−1, n
+> kn,n−1
+> u′
+> i=ri(t)uigi(u,t) + ki−1, iui−1+ki+1, iui+1−(ki,i−1+ki,i+1)ui
+
+## b       
+
+> u1
+> u2
+> u3
+> u4
+> u5
+> u6
+> r1
+> r2
+> r3
+> r4
+> r5
+> r6
+> kij
+> u′
+> i=ri(t)uigi(u,t) +
+
+∑     
+
+> j̸=i
+> (kji uj−kij ui
+> )
+
+## c                 
+
+> xu(x,t)
+> v(x) = −P′(x)D(x)
+> ∂tu=r(x,t)u g (u,x,t)−∂x
+> (v(x,t)u)+∂x
+> (D(x,t)∂xu)
+
+## d                  
+
+> xK(x,y)
+> ∂tu=r(x,t)u g (U(t)) − ∇ · (v u )+∇ · (D∇u)
+> +ε
+> ∫
+> Ω
+> [K(x,y)u(y,t)−K(y,x)u(x,t)]dy
+
+## e                
+
+> P(x)
+> −P′(Xt)
+> √2D(Xt)dW t
+> dX t=(−P′(Xt) + D′(Xt))dt +√2D(Xt)dW t
+
+## f                  
+
+> P(x)
+> −P′(Xt)
+> √2D(Xt)dW tdJ t
+> dX t=(−P′(Xt) + D′(Xt))dt +√2D(Xt)dW t+dJ t
+
+continuum limit discretization individual cell perspective Fokker–Planck duality 
+
+Local transitions Non-local transitions Compartmental (ODE) Continuum (PDE) Individual cell (SDE) Figure 1: Roadmap of the modeling framework. Rows correspond to the level of description (compartmen-tal ODEs, top; continuum PDEs, middle; individual-cell SDEs, bottom); columns to whether transitions are local (left) or non-local (right). The reaction (vital-dynamics) term is shown in gray to indicate that it becomes asymptotically negligible under uniform competition (Theorems 1 and 2) or vanishes at equilibrium. Horizon-tal double-headed arrows connect the local and non-local versions of the same level of description; vertical arrows connect the continuum limit/discretization (rows 1–2) and the Fokker–Planck/individual-trajectory duality (rows 2–3). (a) Two-compartment model, eq. (1) (top), and its local n-compartment generalization, eq. (8) (bottom). (b) The same construction without the nearest-neighbor restriction, eq. (2). (c) Continuum limit of (a): the advection–diffusion equation (14), with advection velocity interpreted as a negative gradient, 
+
+v(x) = −P′(x). (d) Adding a non-local jump term with kernel K(x, y) yields the unified model (27). (e) 
+
+The single-cell SDE (24): a stochastic gradient descent on the potential P(x), with drift toward the nearest minimum and noise that lets a cell escape shallow ones by crossing the barriers between them. (f) Adding jumps dJ ε
+
+t (eq. (28)) lets a cell relocate directly across the landscape. 
+
+5In all these examples the model has the same two components: vital dynamics (proliferation and competition) and transition dynamics (phenotypic switching). 
+
+A general model with n compartments. We now generalize model (1) to an arbitrary number of states and, later, to a continuous phenotype space. Consider n compartments, where ui(t) is the abundance in state i, governed by 
+
+u′ 
+
+> i
+
+= ri(t) ui gi(u, t) + ∑ 
+
+> j̸=i
+
+ kji uj − kij ui
+
+, i = 1, . . . , n. (2) Here, ri(t) ≥ 0 is the net proliferation rate, possibly time-dependent but uniformly bounded (ri(t) ≤ rmax for some constant rmax > 0); gi(u, t) limits growth (density dependence, competition); its specific forms include logistic, Gompertz, or competitive Lotka–Volterra forms, and will be discussed in Section 2.2; finally, kij ≥ 0 is the transition rate from compartment i to compartment j,encoding phenotypic plasticity. 
+
+Matrix form. It is convenient to rewrite the n-compartment model (2) in matrix notation. Let 
+
+u(t) = 
+
+
+
+u1(t)
+
+...
+
+un(t)
+
+
+
+be the column vector of cell numbers in each state. Define the diagonal matrices 
+
+R(t) = diag  r1(t), . . . , rn(t), diag (u) = diag  u1(t), . . . , un(t),and the vector of growth modulation functions 
+
+g(u, t) = 
+
+
+
+g1(u, t)
+
+...
+
+gn(u, t)
+
+ .The transition rates kij ≥ 0 are collected into the n × n matrix A = [ aij ] defined by 
+
+aij =
+
+
+
+kji , i̸ = j,
+
+− ∑ 
+
+> l̸=i
+
+kil , i = j. (3) Note that the off-diagonal indexes are transposed since the inflow into state i from state j is proportional to the abundance uj. With these notations, system (2) takes the compact form 
+
+u′ = R(t) diag (u) g(u, t) + Au . (4) The first term, R(t) diag (u)g(u, t), corresponds to the nonlinear vital dynamics (proliferation, death, and competition), while the second, Au , corresponds to the linear transition dynamics , describing how cells switch between states. 
+
+Relation to prior work. Two-compartment models of the form (1) are a workhorse of mathematical oncology, developed largely independently across applications. In breast cancer, Gavrilova et al. [44] model switching between HER2-positive and HER2-negative states to inform therapy sequencing. A similar two-compartment structure, simplifying previous approaches [39, 40, 
+
+677], describes quiescent versus cycling leukemic stem cells in chronic myeloid leukemia and, fitted to phase III trial data, predicts that many patients could be safely kept on a reduced tyrosine-kinase-inhibitor dose [41]. In adaptive therapy, Strobl et al. [42] use an analogous drug-sensitive/drug-resistant Lotka–Volterra model, fitted to longitudinal PSA data, to identify when competitive suppression of resistance is achievable; and in CAR-T therapy, Santurio et al. [28] use the same two-state architecture for antigen-positive and antigen-negative relapse. Models with more compartments represent the hierarchy of hematopoiesis [38] and its disruption in chronic myeloid leukemia [39, 40]. Here, we place these examples as a starting point within a common architecture, whose asymptotic and continuum behavior can be studied independently of the biological application. 
+
+## 2.2 Models with uniform competition 
+
+The main structural feature of model (2) is the separation between vital and transition dynamics. As we show next, in a class of models with uniform competition, the long-term composition of the population depends on the latter, and, perhaps surprisingly, not on the former. This result is illustrated by the gray-shaded reaction terms in Figure 1a,b. 
+
+Uniform versus non-uniform competition. In general, the modulation functions gi(u, t) may depend on the full population vector u and differ among compartments. The most prominent example is the competitive Lotka–Volterra model, 
+
+gi(u, t) = 1 − 1
+
+K
+
+> n
+
+# ∑
+
+> j=1
+
+cij uj, (5) where the coefficients cij ≥ 0 quantify the competitive pressure exerted by cells in state j on cells in state i [78]. In such non-uniform competition models, the long-term behavior can depend strongly on the proliferation rates ri and on the interaction matrix (cij ), leading to multiple attractors representing extinction, coexistence, bistability, etc. [78, 79, 80]. For many biological scenarios, however, especially phenotypic plasticity in cancer, it is plausi-ble that all cell types compete for the same limited resources: although the compartments may proliferate at different rates, the brake on proliferation is the same for everyone and depends only on how crowded the tissue is. We call this the uniform competition hypothesis. Under it, the long-term composition of the population does not depend on the proliferation rates ri and is determined by the transition matrix A alone. 
+
+Asymptotic behavior under uniform competition. We consider model (2) under four assump-tions. 
+
+(H1) Common modulation. All compartments feel the same brake on proliferation, which de-pends only on the total population U = ∑i ui: gi(u, t) = g(U) for all i.
+
+(H2) Stable carrying capacity. g is continuously differentiable and has a unique zero U∗ > 0, with g > 0 for 0 < U < U∗ and g < 0 for U > U∗.
+
+(H3) Connected plasticity. Every state can be reached from every other state through a sequence of transitions with positive rates, i.e., the directed graph with an edge i → j whenever kij > 0is strongly connected. 
+
+(H4) Bounded and persistent proliferation. The rates ri(t) are piecewise continuous with 0 ≤
+
+ri(t) ≤ rmax , and, from some time tr ≥ 0 on, at least one state s proliferates persistently: 
+
+rs(t) ≥ rmin > 0 for t ≥ tr.
+
+7Hypotheses (H1)–(H2) cover the logistic, generalized logistic, Gompertz and von Bertalanffy laws, g(U) = 1 − U/K, 1 − (U/K)ν, ln (K/U), aU γ−1 − b, among others [81, 76]; some of these also emerge from microscopic principles as manifestations of local contact inhibition [82]. Hypothesis (H3) expresses reversible plasticity: there are no absorbing states and no isolated groups of states. It holds, for instance, for sensitive/resistant or antigen-positive/antigen-negative switching, but fails for a strict differentiation hierarchy without any de-differentiation. The proof only requires that switching forgets its initial state. Thus, (H3) can be weakened [83]: it is sufficient that there is a single closed class of states reachable from every state and that the persistently proliferating state of (H4) belongs to it. The other states are transient, and the limit vanishes on them. Hypothesis (H4) allows quiescent states ( ri = 0, as for quiescent leukemic stem cells) and time-dependent rates. It only requires that one compartment continue to proliferate from a certain point onward. Both (H3) and (H4) are needed: without switching ( A = 0), u1/u2 =
+
+ u1(0)/u2(0) exp  (r1 − r2) R t 
+
+> 0
+
+g(U) ds  retains the fitness difference and the initial data forever, and if all ri vanish after some time, the total population freezes before reaching U∗.Under (H1)–(H4), the full model (4) reads in matrix form as 
+
+u′ = g(U)R(t)u + Au . (6) Under (H3), the switching dynamics alone, given by 
+
+u′ = Au (7) is the master equation of a continuous-time Markov chain [84] that is irreducible, with transition rate matrix A. The columns of A sum to zero (mass conservation), and zero is a simple eigenvalue with left eigenvector 1 and right eigenvector π, while all other eigenvalues have negative real parts. Thus the linear system has a unique stationary distribution π (Aπ = 0, ∑i πi = 1) with all entries positive. Moreover, it forgets its initial condition exponentially fast: there is a constant 
+
+λ > 0, depending only on the transition rates kij , such that solutions of (7) approach π (up to their total mass) at rate e−λt (Lemma A.1 in Appendix A). Biologically, this means that plasticity erases lineage memory. A cell that starts in phenotype i and switches according to the rates kij 
+
+will, after a time long compared with 1/ λ, be found in state j with probability πj, regardless of i;equivalently, a population with any initial composition relaxes to the composition π. Thus 1/ λ is the mixing time of the plasticity network. It is short when switching is fast and long when some transitions between groups of states are rare. Theorem 1 states that under (H1)–(H4), the full model (6) is asymptotically equivalent to the linear switching dynamics (7). 
+
+Theorem 1. Assume (H1)–(H4) and let u (t) be a solution of (6) with u i(0) ≥ 0 and U (0) > 0. Then: (a) the total population U (t) is monotone and converges to the carrying capacity U ∗;(b) the composition converges to the stationary distribution of the switching dynamics: u (t) → U∗π;(c) consequently, the full system (6) and the purely linear transition system (7) are asymptotically equivalent: |u(t) − u∗(t)| → 0 for every solution u ∗ of (7) with total population U ∗.
+
+Thus, in uniformly competitive models the long-term distribution of cells among compart-ments is governed only by the transition rates kij , i.e., by the plasticity architecture. The pro-liferation rates ri(t), and hence the intrinsic fitness of each phenotype, do not enter the final composition, and g enters only through U∗. Plasticity, and not differences in fitness, sets the long-term heterogeneity of the population. The proof of Theorem 1 is given in Appendix A. 
+
+8Fitness leaves only a transient mark. Theorem 1 rests on two ideas. First, at saturation all phenotypes are selectively neutral: the net growth rate of state i is ri g(U), which vanishes at 
+
+U = U∗ whatever the ri, so the composition is shaped by transitions alone, as in the neutral theory of molecular evolution [85]. Second, selection can act only while the population is away from its carrying capacity, and the mark it leaves is erased by switching. A population near U∗
+
+will be barely affected by fitness differences, while a large expansion, such as the regrowth of a tumor after therapy, can shift the composition toward the fastest-proliferating states. This shift, however, then fades within the mixing time 1/ λ, which depends only on the transition rates kij 
+
+(Appendix A). Therefore, the statement “fitness is irrelevant” is asymptotic. When switching is slow, as discussed in Section 2.6, the transient can be biologically long because the value of λ is small. 
+
+Treatments. The two-compartment model (1) contains a treatment term −d2(t)u2 that acts on one compartment only, which violates (H1): while the drug is present, fitness differences do shape the composition, and this is precisely the regime where therapy is designed to act. Treatments, however, are applied for a finite period. Suppose that all treatment-induced losses di(t) ≥ 0are bounded and vanish for t ≥ tF. From tF on, the system is again of the form (4), with initial condition u(tF ), and Theorem 1 applies to it (hypothesis (H4) concerns large times, so it suffices that it hold from some time after tF). Therefore, u(t) → U∗π, exactly as if there had been no treatment. For this reason, a transient treatment reshapes the transient, and with it the relapse dynamics, but it cannot change the asymptotic composition. Lasting effects require changing the system itself, i.e., the transition rates kij (for instance by epigenetic reprogramming). As above, how long the system takes to return to U∗π is set by the mixing time 1/ λ, which is what matters clinically, and the deeper the reduction, the larger the imprint that fitness differences can leave on the regrowing population. 
+
+How far can uniform competition be relaxed? The proof of Theorem 1 relies on (H1), so it is natural to ask whether the result survives when competition is only weighted . Consider the Lotka– Volterra model (5) with cij = cj, i.e., the competitive pressure is the same for all recipients i, but depends on the phenotype j of the emitter. Setting wj = cj/K and W = ∑j wjuj, all compartments still share a common brake, gi(u, t) = g(W) with g(W) = 1 − W, but it now depends on the weighted population W rather than on the total U. Switching conserves U but not W, because a cell that changes phenotype changes how much it contributes to competition, and the mechanism behind the theorem no longer applies. In fact, in Appendix A we give a counterexample in which the population oscillates indefinitely along a stable limit cycle. Uniform competition therefore cannot be relaxed to weighted competition. 
+
+Relation to prior work. The idea that transitions can dominate over fitness in structured popula-tions is not new. It is present in the neutral theory of molecular evolution [85], whose neutrality appears here at saturation, and in the view of phenotypic switching as a bet-hedging strategy in fluctuating environments [86]. Theorem 1 gives a precise version of this intuition for reversible phenotypic switching, under a uniform modulation of net growth. Fitness returns when this structure is lost. If phenotypes differ in birth rates and share a density-dependent death rate, the equilibrium composition depends on transitions and births [45, 87]. Quasispecies theory belongs to this regime, since mutation is coupled to replication and the equilibrium depends jointly on fitness and mutation [88], as in the “survival of the flattest” of mutationally robust genotypes [89]. Fitness also returns when switching is coupled to division, as when epigenetic changes arise from errors in copying DNA methylation at replication [90, 91], because transition rates then scale with the division rate. Finally, the classical theory of competitive Lotka–Volterra systems, including the 
+
+9carrying simplex [78, 79] and basins of attraction and resilience under bistability [80], describes the fitness-dependent behavior that appears once (H1)–(H4) are relaxed. On the experimental side, Gupta et al. [92] demonstrated phenotypic equilibrium in cancer cell lines and explained it by a Markov model of stochastic state transitions. Subsequent models combined cell-state conversions with proliferation, identifying the equilibrium of a growing population and establishing its stability at the level of averages and of individual trajectories [45, 87], and phenotypic switching has been analyzed as a driver of non-genetic drug resistance [46]. Theorem 1 gives conditions (uniform competition) under which, in contrast, the equilibrium composition of proliferating and competing cells is the stationary distribution of switching alone. The closest mathematical antecedent to Theorem 1 is the work of Giaimo et al. [76], with the same motivation: to explain why linear Markov models of phenotypic switching predict the observed frequencies of cancer cell types despite nonlinear growth. They study the same model and prove asymptotic equivalence with the linear system through Yakubovich’s theorem on perturbed linear systems. Our proof is more elementary, using only the variation-of-constants formula and a basic property of Markov chains, and it extends to the continuum (Theorem 2; [83]). The hypotheses and conclusions also differ. (i) For the growth law, they require an auxiliary function h satisfying a specific differential condition involving g; our proof does not use such a particular assumption. (ii) They require the abundance-weighted mean growth rate to stay above some rmin > 0, a condition on the solution; we ask that one compartment proliferate persistently, a condition on the parameters. (iii) We additionally require connected plasticity (H3), which identifies the limit: without it, asymptotic equivalence still holds, but the shadowing linear solution depends on the ri. (iv) Asymptotic equivalence yields no rate, as Giaimo et al. note; our proof provides estimates that bound the distance to U∗π in terms of the mixing rate λ, so that slow switching means a long memory of fitness differences. Finally, Giaimo et al. remark that it is unclear how Lotka–Volterra-type interactions could be included while preserving asymptotic equivalence; the counterexample of Appendix A shows that, for weighted competition, asymptotic equivalence can indeed fail. 
+
+## 2.3 From discrete compartments to a continuous phenotypic landscape 
+
+We now restrict the general model to transitions between neighboring states and show how the resulting model can be viewed as a finite-difference approximation to a partial differential equation on a continuous phenotypic space (the transition from panel a to panel c of Figure 1). 
+
+Compartmental model with local transitions. The general model (2) allows transitions between any pair of compartments, including jumps between “distant” states. For purely phenotypic or epigenetic changes, however, cells typically change their state gradually (jumps are reintroduced in Section 2.7). We therefore consider a chain of n compartments in which cells can switch only to immediately adjacent states: 
+
+u′ 
+
+> i
+
+= ri(t)ui gi(u, t) + ki−1, iui−1 + ki+1, iui+1 − (ki,i−1 + ki,i+1)ui, (8) with the natural no-flux boundary conditions k0,1 = k1,0 = kn,n+1 = kn+1, n = 0. Since (8) is a particular case of (2), Theorem 1 still applies (a chain with positive rates in both directions satisfies the connectivity hypothesis (H3)): under the uniform competition hypotheses the system is asymptotically equivalent to the linear, transition-only counterpart u′ = Au . The transition matrix A is now tridiagonal , reflecting nearest-neighbor coupling. In probabilistic terms, this linear system is the master equation of a continuous-time random walk on the finite state 
+
+10 space {1, . . . , n} with nearest-neighbor jumps: a cell hops from i to i + 1 at rate ki,i+1 and to i − 1at rate ki,i−1.
+
+Connection to a reaction–diffusion–advection PDE. A natural question is whether the chain (8) approximates a continuous description. We answer it by taking the reverse route: starting from a continuous reaction–diffusion–advection equation, we discretize it and show that the result coincides with (8). This also reveals how the transition rates ki,j relate to the diffusion and advection coefficients. Consider a continuous phenotype coordinate x ∈ R and a population density u(x, t) that evolves according to the reaction–diffusion–advection equation 
+
+∂tu = r(x, t) u g (u, x, t) − ∂x
+
+ v(x, t) u + ∂x
+
+ D(x, t) ∂x u, (9) where v(x, t) is the advection velocity, D(x, t) ≥ 0 the diffusivity, and the reaction term r(x, t) u g (u, x, t)
+
+encodes the vital dynamics. As detailed in Appendix B, discretizing (9) on a uniform grid with step-size ∆x via the method of lines produces an ODE system with exactly the same structure as (8). Equating the coefficients of (8) and the discretization of (9) leads to the following relations between the transition rates ki,j
+
+and diffusion and advection coefficients at the interface points xi+1/2 between xi and xi+1:
+
+D(xi+1/2 ) ≈ ∆x2
+
+2
+
+ ki,i+1 + ki+1, i
+
+, v(xi+1/2 ) ≈ ∆x ki,i+1 − ki+1, i
+
+. (10) These relations have a direct interpretation. At the interface between neighboring states, the diffusion coefficient D is proportional to the average of the forward and backward transition rates. Diffusion thus reflects the unbiased, random component of phenotypic switching; even if cells have no preferred direction, they will spread along the phenotype axis due to stochastic fluctuations. On the other hand, the advection velocity v at the interface is proportional to the 
+
+difference between the forward and backward rates. A nonzero v indicates a directional bias: cells tend to move toward one end of the phenotypic axis more than the other. This bias can be interpreted as a deterministic driving force, such as a differentiation pressure or a gradient of an epigenetic potential, an interpretation that we explore in Section 2.6. 
+
+Boundary conditions. Boundary conditions must be specified for the continuous model. If the phenotype domain is bounded, Ω = [ xmin , xmax ], the natural choice consistent with the no-flux boundary conditions of the discrete model is the zero-flux (Robin-type) condition, 
+
+ vu − D∂x u 
+
+> x=xmin
+
+= 0,  vu − D∂x u 
+
+> x=xmax
+
+= 0, which ensure that no cells enter or leave the system through the boundaries of the phenotype space. For an unbounded domain Ω = R, biologically reasonable solutions should satisfy u(x, t) → 0and ∂x u(x, t) → 0 as |x| → ∞.
+
+Matrix form: symmetric and skew-symmetric parts. The same identification can be read off the transition matrix. The tridiagonal matrix A can be uniquely decomposed into its symmetric and skew-symmetric parts, A = Asym + Askew . Using the identifications (10), we find that the symmetric part carries the diffusion and the skew-symmetric part the advection: their off-diagonal entries are the interface values of D and v. The compartmental system can then be rewritten as (see Appendix B for full details) 
+
+u′ = r(x, t) u g (u, x, t) + 1
+
+∆x2 D u + 12∆x V u, (11) 
+
+11 where D = ∆x2 Asym and V = 2∆x A skew are matrix approximations of the diffusive and advective operators, respectively (when v varies, the diagonal of the symmetric part also contains an advective term; Appendix B gives the precise correspondence). A single matrix of transition rates thus contains two mechanisms: unbiased random motion , in its symmetric (diffusive) part, and 
+
+directed motion , in its skew-symmetric (advective) part. 
+
+Relation to prior work. The passage from discrete compartmental models to continuous reaction– diffusion–advection equations is standard. On the discrete side, nearest-neighbor transitions of the kind in (8) appear directly in models of hierarchically organized tissues, such as the invasion of de-differentiating cancer cells across differentiation levels [43]; but coupling this discrete structure to phenotypic switching, with an explicit identification of the transport coefficients from the microscopic rates, is less common. Lorenzi et al. [52] provide a tutorial on the resulting phenotype-structured PDEs (PS-PDEs), covering their derivation from individual-based models, the analysis of traveling waves and concentration phenomena, and numerical methods including the method-of-lines discretization we also employ; their derivation proceeds from a discrete stochastic model (a branching random walk on a lattice) via a Taylor expansion of the transition probabilities, a route parallel in spirit to the finite-difference identification we carry out in Appendix B, though starting from individual cell rules rather than from a population-level compartmental model. Agostinelli et al. [54] develop an alternative, systematic derivation of continuum limits from discrete structured population models based on matched asymptotic expansions and multiple scales, which handles boundary layers and regions where a continuum description breaks down more rigorously than the direct Taylor-expansion route we use here. In a closely related direction, Alvarez et al. [53] study integro-differential equations for populations endowed with plasticity of traits; they interpret the diffusion term in trait space as “non-genetic instability," a continuous analogue of epigenetic mutations, and derive advection–diffusion equations as local approximations via a Kramers–Moyal expansion, an identification of D(x) and v(x) consistent with the one we obtain here from the symmetric and skew-symmetric parts of the transition matrix (equation (10)). Phenotype-structured integro-differential and PDE models with non-genetic instability (random epimutations) and selection, applied to drug tolerance and relapse, were developed in [55, 56, 57], within the structured-population framework of Perthame [50]; see [58] for a survey of such models of drug resistance. Continuous models of phenotypic dynamics have also been applied directly to specific biological systems, notably hematopoiesis and leukemia: Cho et al. [59] model acute myeloid leukemia as a continuum of differentiation states using diffusion maps constructed from single-cell data and infer the geometry of the phenotypic manifold from data, and Singh et al. [60] show, with a population-dynamics model of hematopoiesis informed by single-cell data, that myeloid bias involves both stem-cell differentiation and progenitor proliferation biases. Integro-differential Lotka–Volterra models with phenotype-dependent reproduction rates have also been analyzed together with optimal-control problems [61]. 
+
+## 2.4 Fitness-independent asymptotic distributions in the continuum 
+
+Since the discrete model is an approximation of the continuous one (Section 2.3), and fitness is asymptotically irrelevant in discrete models under uniform competition (Theorem 1), it is natural to ask whether the same holds in the continuum: is the long-term phenotypic distribution still governed solely by the diffusion and advection terms, with the nonlinear vital dynamics becoming irrelevant? The answer is yes, under the continuum counterparts of (H1)–(H4). 
+
+Continuum hypotheses. Let the phenotype space be a bounded interval Ω = ( xmin , xmax ) with the no-flux boundary conditions of Section 2.3, and let U(t) = R 
+
+> Ω
+
+u(x, t) dx be the total population. 
+
+12 We assume: 
+
+(H1 c) Common modulation. g(u, x, t) = g(U(t)) for all x ∈ Ω.
+
+(H2 c) Stable carrying capacity. g is continuously differentiable and has a unique zero U∗ > 0, with g > 0 for 0 < U < U∗ and g < 0 for U > U∗.
+
+(H3 c) Non-degenerate switching. D is twice and v once continuously differentiable, and D(x) >
+
+0 on [xmin , xmax ].
+
+(H4 c) Bounded and persistent proliferation. 0 ≤ r(x, t) ≤ rmax , and from some time on r(x, t) ≥
+
+rmin > 0 on some sub-interval of phenotypes of positive length. Hypothesis (H3 c) is the continuum counterpart of connected plasticity: diffusion acts everywhere, so every phenotype can be reached from every other. 
+
+Stationary distribution of the switching dynamics. In the discrete model the asymptotic compo-sition is the stationary distribution π of the Markov chain. Its continuum analogue is the steady solution of the purely advective–diffusive equation 
+
+∂tu = −∂x (vu ) + ∂x (D ∂x u). (12) Setting ∂tu = 0 and integrating once gives −vu + D ∂x u = J (constant flux); the no-flux conditions force J = 0, so D ∂x u = v u , and 
+
+ueq (x) = U∗ ψ(x), ψ(x) = 1
+
+Z exp 
+
+Z xx0
+
+v(s)
+
+D(s) ds 
+
+
+
+, (13) where Z normalizes ψ to a probability density. 
+
+Theorem 2 (informal) . Assume (H1 c)–(H4 c). Then, for every nonnegative initial density with U (0) > 0,the total population converges monotonically to U ∗ and the density converges to u eq = U∗ψ in L 1(Ω),whatever the proliferation rates r (x, t); the full model (9) is asymptotically equivalent to the linear equation 
+
+(12) ; and an estimate of the same form as (39) holds, with the rate λ given by the spectral gap of the switching dynamics. 
+
+The proof is beyond the scope of this work and is given in [83]. It generalizes the proof of Theorem 1 in Appendix A step by step. The same reference extends the result to the whole real line, under two natural conditions (the landscape confines the population, and cells cannot escape to infinitely distant phenotypes), which cover the Ornstein–Uhlenbeck, multi-well and heavy-tailed examples of Section 2.8. It also covers bounded phenotype domains in higher dimension, with drifts that need not be gradients, and switching by jumps, alone or combined with drift and diffusion as in the unified model of Section 2.7. Figure 2 illustrates Theorem 2 and isolates the imprint of fitness. Anticipating Section 2.6, we take the velocity to be the negative gradient of a potential, v = −P′, whose wells confine the population; here P is a tilted double well (Figure 2a), and proliferation strongly favors the right well (Figure 2b). The population starts at the stationary composition, u(x, 0 ) = 0.01 ψ(x), so that every deviation from ψ is caused by fitness differences. During the growth phase, the composition is pulled towards the fast-proliferating well; once the population has saturated, switching brings it back to ψ (Figure 2c), and the imprint of fitness decays at the rate λ1 given by the spectral gap of the switching dynamics (Figure 2e). The mixing time 1/ λ1 grows exponentially with the ratio between barrier height and noise intensity (Figure 2f): in this example it ranges from about one to about 900 time units, while growth lasts about five. 
+
+13 0.0 0.2 0.4 0.6 0.8 1.0 phenotype x
+
+> −0.02 0.00 0.02 0.04 0.06
+> P(x)
+
+a epigenetic landscape (tilted double well) 0.0 0.2 0.4 0.6 0.8 1.0 phenotype x
+
+> 0.0 0.5 1.0 1.5 2.0
+> r(x)
+
+b proliferation rate (favors the right well)       
+
+> 0.0 0.2 0.4 0.6 0.8 1.0 phenotype x
+> 010 20 30 40 50 time  t
+
+c phenotypic composition u=U : pulled to the right well during growth, then back to Ã      
+
+> 012345
+> u(x; t )=U (t)
+> 0510 15 20 time t
+> 0.0 0.2 0.4 0.6 0.8 1.0
+> U(t)
+> U¤
+
+d total population 0 25 50 75 100 time t  
+
+> 10 −3
+> 10 −2
+> 10 −1
+> 10 0
+> ku=U  ¡ ÃkL 1 /e¡¸1t
+
+e imprint of fitness 0 50 100   
+
+> 1=D
+> 10 0
+> 10 1
+> 10 2
+> 10 3
+> memory time  1=¸ 1 /e¢P=D
+> a–e
+
+f memory time (Kramers) Figure 2: Illustration of Theorem 2: uniform competition erases the imprint of fitness. The full reaction– advection–diffusion equation (9) with g(U) = 1 − U and v = −P′ on (0, 1 ), with zero-flux boundaries and constant diffusivity D = 0.02. (a) The potential, a tilted double well, P(x) = 0.03 cos (4πx) + 0.03 x;the stationary density ψ ∝ e−P/D places 68% of the population in the left well. (b) The proliferation rate, 
+
+r(x) = 0.1 + 1.9/  1 + e−(x−1/2 )/0.02 , which strongly favors the right well. (c) Kymograph of the composition 
+
+u/U (color scale nonlinear, power law with exponent 0.6; time increases downward). The population starts at the stationary composition, u(x, 0 ) = 0.01 ψ(x); during growth it is pulled towards the right well, and afterwards switching brings it back to ψ. (d) Total population U(t), which reaches the carrying capacity 
+
+U∗ = 1 by t ≈ 5. (e) L1 distance of the composition to ψ: it peaks at 1.26 during growth and then decays at the spectral gap λ1 ≈ 0.066 of the switching dynamics (dotted: slope −λ1). (f) Memory time 1/ λ1 as a function of 1/ D, for the same potential: it grows like e∆P/D (dotted), where ∆P ≈ 0.053 is the barrier seen from the shallower well (the Kramers regime); the circle marks D = 0.02, used in (a)–(e). Finite-volume discretization with N = 400 cells whose fluxes preserve ψ exactly, integrated in time with a stiff (BDF) solver. 
+
+14 The biological message is the one of Section 2.2: under uniform competition, the long-term phenotypic distribution is independent of the proliferation rates r (x, t) and is determined by the ratio v /Dalone . A phenotype with high fitness but strong outward transitions does not dominate, and a low-fitness phenotype can persist if inward fluxes are large enough. The same qualifications also carry over: the statement is asymptotic, and the relevant time scale is the inverse spectral gap of the switching dynamics, which, for a landscape with deep wells separated by high barriers, can be exponentially long in the barrier height (the Kramers regime; Figure 2f). The shape of the stationary distribution (uniform, exponential, Gaussian, or heavy-tailed) emerges from the balance between deterministic drift and random diffusion, as we explore in Section 2.8, and a second numerical illustration of Theorem 2, on the multi-well landscape of Figure 1e,f, is given in Section 2.6 (Figure 3). 
+
+Relation to prior work. Theorem 2 connects the continuum limit of Section 2.3 with the asymptotic equivalence result of Section 2.2, and so links the compartmental and the PS-PDE literatures. The general framework of Lorenzi et al. [52] and the integro-differential formulations of [53, 55, 57] retain the nonlinear reaction term throughout, and we have not found the question of its asymptotic negligibility formulated there. One reason may be that many phenotype-structured models of adaptive dynamics use an additive form of competition, r(x) − κU, rather than the multiplicative form r(x) g(U) [50]. With additive competition, selection acts at full strength for all times, the asymptotic phenotypic distribution depends on r(x), and fitness is not forgotten, as illustrated numerically in [83]. In the limit of small phenotypic changes, such populations concentrate on the fittest traits [50, 51], and the balance between epimutations and selection has been analyzed in fluctuating environments [56]. Which form of density dependence applies to a given tumor therefore matters: it decides whether the long-term phenotypic distribution is set by plasticity alone or by plasticity and fitness jointly. 
+
+## 2.5 The individual cell perspective: Fokker–Planck equation and connection to stochastic processes 
+
+The linear advection–diffusion equation (12) that governs the asymptotic population density under uniform competition, 
+
+∂tu = −∂x
+
+ v(x)u + ∂x
+
+ D(x)∂x u, (14) has a well-known probabilistic interpretation. It is also the Fokker–Planck equation (also called the forward Kolmogorov equation) for a continuous-time stochastic process describing the trajectory of a single cell in the phenotype space (Figure 1e) [93]. We now make this connection explicit. 
+
+Langevin and Fokker–Planck equations. Consider a stochastic differential equation, or Langevin equation ,
+
+dX t = a(Xt) dt + b(Xt) dW t, (15) for the position Xt of a particle driven by a drift a(x) and by a standard Brownian motion Wt
+
+with noise amplitude b(x); we interpret it, and every SDE in this paper, in the Itô sense [94]. The probability density p(x, t) of Xt, or, equivalently, the density of a cloud of independent particles each following (15), obeys the associated Fokker–Planck equation 
+
+∂t p = −∂x
+
+a p  + 12 ∂2
+
+> x
+
+b2 p, (16) 
+
+15 which, written as a conservation law with explicit advective and diffusive fluxes, reads 
+
+∂t p = −∂x
+
+h a − 12 (b2)′ p
+
+i
+
++ ∂x
+
+h 12 b2 ∂x p
+
+i
+
+. (17) 
+
+From population density to individual trajectories. Reading the advection–diffusion equation (14) as a Fokker–Planck equation in the form (17), matching the diffusive fluxes gives b(x) = 
+
+p2D(x), and matching the advective fluxes gives the drift a(x) = v(x) + D′(x). Therefore, the macroscopic description, itself the continuum version of the compartmental model, is also the Fokker–Planck description of the following Langevin equation, in Itô form, describing the individual cell trajectory Xt along the phenotype space: 
+
+dX t =  v(Xt) + D′(Xt) dt +
+
+q
+
+2D(Xt) dW t. (18) The macroscopic distribution of the population is thus the probability density of an ensemble of identical, independently moving cells, a duality between the population-level PDE and the individual-level SDE that is central to the mechanistic interpretation of the model. The extra term 
+
+D′, which vanishes when D is constant, is required by the Itô convention for the Fokker–Planck equation of (18) to be the flux-form equation (14); its effect is discussed in Section 2.6. For the same Fokker–Planck equation, the drift would be v + D′/2 in the Stratonovich convention and v
+
+in the anti-Itô (Hänggi–Klimontovich) convention; the convention only determines how the SDE is written, once the Fokker–Planck equation is fixed [95]. 
+
+The Ornstein–Uhlenbeck process: return to the mean with noise. An important special case arises when the diffusivity is constant, D(x) ≡ D, and the velocity is linear and restoring, 
+
+v(x) = −θ(x − μ), (19) with θ > 0 and a reference phenotype μ. The SDE (18) then becomes 
+
+dX t = −θ(Xt − μ) dt + √2D dW t, (20) which is the classical Ornstein–Uhlenbeck (OU) process. The drift term −θ(Xt − μ) represents a restoring force that pulls the phenotype back toward a target phenotype μ, a valley of the Waddington landscape: the farther Xt is from μ, the stronger the drift. The constant noise intensity 
+
+√2D adds persistent random fluctuations. Its stationary distribution is the Gaussian discussed in Section 2.8 (Case 3). 
+
+Relation to prior work. The use of the Ornstein–Uhlenbeck (OU) process to model phenotypic evolution has a long history in quantitative genetics and biophysics. De Souza Silva et al. [62] analyze phenotypic evolution as an OU process under environmental variation and phenotypic plasticity: under a fixed optimum the stationary distribution is Gaussian, as in Case 3 of Section 2.8, but a moving optimum combined with plasticity deforms the effective potential into skewed, non-Gaussian distributions, with an upper bound on the rate of environmental change beyond which the population cannot persist. In the cancer context, Kessler and Levine [63] model a “chance to persist" (CTP) phenotype with two coupled variables: a mutation–selection equation for the population-level CTP density, whose steady state is an Airy function rather than a Gaussian (from a reflecting boundary near the origin), and a genuine OU process with an absorbing boundary for an individual-level survival trait, from which they derive a closed-form persistence probability under therapy. A recent extension couples this picture to a drug-concentration-dependent reaction– diffusion–advection equation over a two-dimensional epigenetic–phenotypic space and predicts 
+
+16 an optimal drug concentration and drug-holiday schedule [64], the kind of concrete, testable prediction a mechanistic account of D(x) and v(x) should also be able to generate. In contrast to these phenomenological OU constructions, here the drift and diffusion coefficients are expressed through microscopic switching rates (Eq. (10)) rather than posited directly, and the OU process appears as one member of a broader family of potentials (Section 2.8). 
+
+## 2.6 The velocity field as a gradient: effective potentials and stochastic gradient descent on the phenotypic landscape 
+
+So far, the advection velocity v(x) has been identified with the net difference between the transition rates connecting neighboring compartments. From the perspective of the PDE itself, however, 
+
+v(x) is a phenomenological input: it is postulated a priori as a velocity field that drives the motion, but, unlike diffusion, which emerges naturally from random switching between states, it is not derived from an underlying mechanism. We now argue that this velocity field admits a mechanistic reading, grounded in the tendency of cells to settle into stable configurations: v(x)
+
+can be interpreted as the downhill direction of an epigenetic potential whose valleys are the stable phenotypes. 
+
+Stability and effective potentials in epigenetic regulation. Among the molecular mechanisms that drive epigenetic change, histone modification is one of the best studied [3, 6, 7]. Histones are the proteins around which DNA is wrapped, and their configuration determines which genes are accessible for transcription in a given cell. This configuration is, in turn, shaped by molecular forces that fold histones into stable conformations; chemical modifications such as acetylation and methylation alter these forces, driving histones toward new stable conformations and thereby changing which regions of DNA are exposed or occluded. At the level of single molecules and assemblies, stable conformations are minima of a free energy, as in the folding of proteins [96] and the assembly of nuclear compartments [97]. At the level of gene-expression programs, however, the relevant dynamics is driven out of equilibrium: histone marks are written and erased by enzymes that consume energy, and a stable chromatin state is a self-sustaining steady state of these reactions, maintained by the recruitment of modifying enzymes by existing marks, rather than a minimum of a thermodynamic free energy [8, 9]. What survives at this level is the landscape in the sense of an effective potential, or quasi-potential, of the stochastic dynamics [11, 12]: its local minima are metastable gene-expression programs, separated by barriers set by the cost of rewriting the histone code [10]. A cell type thus corresponds to a local minimum of this effective potential, and transitions between phenotypes are barrier-crossing events, driven by molecular noise and enzymatic activity. This is the sense in which we give Waddington’s epigenetic landscape a physical reading. 
+
+From landscapes to velocity fields and stationary distributions. This landscape can be expressed in mathematical form as a function of the phenotype coordinate x if we assume that the deter-ministic force v(x) that drives a cell toward stable states is the negative gradient of an epigenetic potential P(x),
+
+v(x) = −P′(x). (21) Mathematically, any smooth velocity field can be written this way in one dimension ( P(x) = 
+
+− R xx0 v(s)ds ), but the physical hypothesis is that P(x) describes a biologically meaningful epige-netic landscape (Figure 1c,e). Inserting v = −P′ into the continuous model (9) yields, under uniform competition (Theo-
+
+17 rem 2) and in a tissue in homeostasis ( U = U∗ and g = 0), the asymptotic equation 
+
+∂tu = ∂x
+
+ P′(x) u + ∂x
+
+ D(x) ∂x u. (22) Its stationary solution follows directly from (13): 
+
+ueq (x) = C exp 
+
+
+
+− 
+
+> Zxx0
+
+P′(s)
+
+D(s) ds 
+
+
+
+. (23) For constant diffusivity D(x) ≡ D, this simplifies to the Boltzmann distribution 
+
+ueq (x) = C exp  −P(x)/D,where D plays the role of an effective temperature: high noise flattens the distribution and facilitates transitions between minima. When D(x) varies, the stationary distribution can still be written in a Boltzmann form 
+
+ueq (x) = C exp  −Φ(x),where the effective potential Φ(x) satisfies Φ′(x) = P′(x)/D(x). With state-dependent noise, the model can describe, for instance, faster exploration of the noisier regions of the landscape (Section 2.8). In more than one dimension, the gradient form (21) is a genuine restriction: nonequilibrium drifts generically include a rotational part that breaks detailed balance and sustains circulating probability fluxes [11], and the stationary density is then no longer determined by P alone. The irrelevance of fitness does not depend on this assumption, since Theorem 1 holds for any irreducible transition matrix, reversible or not, and its continuum counterpart holds on bounded phenotype domains in any dimension, with drifts that need not be gradients [83]: the limit is then the stationary density of the switching dynamics, which is not of Boltzmann form and carries a circulating probability flux. Only the Boltzmann-type form of the limit depends on the gradient assumption. Landscape models of the epithelial–mesenchymal transition, in which epithelial, mesenchymal and hybrid states appear as attractors of a core regulatory circuit, are the most developed application of this kind in cancer [98, 99]. 
+
+A numerical illustration. Figure 3 illustrates Theorem 2 on the multi-well landscape sketched in Figure 1e,f. It shows the numerical solution of the full nonlinear reaction–advection–diffusion equation (9), obtained with the method of lines. Cells are seeded, via a narrow Gaussian, at the left end of the domain, and proliferate at a rate r(x) = r0 − mx that is highest where the population starts, favoring states near the initial, shallow minimum; reflecting (zero-flux) boundaries are imposed at both ends. The population grows rapidly to carrying capacity while beginning to redistribute across the landscape (Figure 3c), and its profile converges to the Boltzmann-type stationary density (23) of the purely linear equation, with no visible trace of the fitness gradient that shaped the transient (Figure 3e). Here the barriers are moderate, so the imprint of fitness fades quickly once the population has saturated; with higher barriers the same convergence would take much longer, as discussed in Section 2.4. Because the population is seeded where proliferation is fastest, this simulation shows convergence from a distant initial condition rather than isolating the imprint of fitness, which is the purpose of Figure 2; the landscape is the one of Figure 1e,f, and it allows a direct comparison with the single-cell simulation of Figure 4e. 
+
+Stochastic gradient descent on the epigenetic landscape. Under uniform competition, the long-term behavior of the cell density is governed by the linear PDE (22) (Theorem 2), the Fokker– 
+
+18 −3 −2 −1 0 1 2 3phenotype x
+
+> 012
+> P(x)
+
+a epigenetic landscape (multi-well)        
+
+> −3−2−10123phenotype x
+> 0.75 1.00 1.25
+> r(x)
+
+b          
+
+> r(x) = r0¡mx
+> proliferation rate (highest at the left edge)
+> −3−2−10123phenotype x
+> 010 20 30 40 50 time  t
+
+c population density u(x; t ), seeded at the left edge       
+
+> 0.0 0.2 0.4 0.6 0.8 1.0 1.2
+> u(x; t )
+> 020 40 60 80 100 time t
+> 0.25 0.50 0.75 1.00
+> U(t) =
+> Z
+> u(x; t ) dx
+> K
+
+d total population        
+
+> −3−2−10123phenotype x
+> 0.0 0.5 1.0
+> u(x; T )=U (T)
+
+e final profile vs. stationary density   
+
+> predicted s.s. PDE simulated, t= 100
+
+Figure 3: Illustration of Theorem 2: the full nonlinear PDE converges to the stationary density of the switching dynamics despite a spatially decreasing fitness. The full reaction–advection–diffusion equation (9) is solved directly by the method of lines. Space is discretized into N = 150 compartments, using the same finite-difference identification of D and v from local transition rates as in Section 2.3; this turns the PDE into exactly the type of large compartmental ODE system covered by Theorem 1, which is then integrated in time with a stiff ODE solver. (a) The potential P(x), the same multi-well landscape as Figure 1e,f (a cubic spline through fixed control points; see Data availability), with constant diffusivity D = 0.35. (b) The proliferation rate r(x) = r0 − mx (r0 = 1, m = 0.15), decreasing across phenotype space; biologically, this represents a population in which the least differentiated phenotype (left edge) is also the most proliferative, as for stem and progenitor cells relative to their post-mitotic descendants. (c) Kymograph of u(x, t) (color scale nonlinear, power-law with γ = 0.45, to make the shallow right-hand well visible; time increases downward, as in Figure 4). The population is seeded, at t = 0, as a narrow Gaussian at the left boundary ( x0 = −3, 
+
+σ = 0.25), with total initial mass U(0) = 0.05, and reflecting (zero-flux) boundaries are imposed at x = ±3. 
+
+(d) Total population U(t), growing rapidly to the carrying capacity K = 1 under the logistic modulation 
+
+g(U) = 1 − U/K; note that essentially all growth, and hence all activity of the reaction term r(x)u g (U),occurs within the first t ≈ 10 time units. (e) The simulated profile at t = 100, normalized to a probability density, against the stationary density ueq (x) ∝ exp (−P(x)/D) predicted by the purely linear equation (22) (no reaction term): the two are visually indistinguishable ( L1 distance 2.6 × 10 −3), with no trace of the fitness advantage that favored the starting region throughout the transient. 
+
+19 Planck equation of the single-cell SDE (18). We now read this SDE under the gradient hypothesis 
+
+v(x) = −P′(x). With this substitution, the SDE for the individual cell trajectory, equation (18), becomes 
+
+dX t =  −P′(Xt) + D′(Xt) dt +
+
+q
+
+2D(Xt) dW t. (24) This SDE can be read as a stochastic gradient descent (SGD) on the epigenetic landscape: the drift derives from the minimization of the potential P, while the noise stems from diffusion, i.e., from the random motion of cells between neighboring compartments. Each cell is driven in the direction of the negative gradient of P, corrected by the term D′ when noise is not uniform (see below), seeking a stable configuration; without noise, it would deterministically roll downhill to the nearest minimum, corresponding to a stable phenotype. Intrinsic noise and variability perturb this motion, however, so that convergence to an exact minimum is no longer guaranteed: fluctuations can carry a cell over the barriers separating minima, allowing it to explore the landscape and transition between basins of attraction. The expression stochastic gradient descent is borrowed from optimization and machine learning [100, 101]. We use it in the Langevin sense, gradient descent with an explicit noise term, and not as a claim of equivalence with the training algorithms of machine learning, whose randomness comes from subsampling the data; we return to this connection in the Conclusion. 
+
+State-dependent noise and the effective potential. The drift in (24), written in the Itô convention, is not the bare −P′: it contains the term D′(Xt), whose effect depends on whether noise is uniform across the landscape. When D(x) ≡ D is constant, D′(Xt) vanishes identically, and noise acts purely as an effective temperature that agitates trajectories without biasing them; the resulting stationary density is then a simple rescaling of the underlying potential itself, the Boltzmann form 
+
+ueq (x) = C exp (−P(x)/D) derived above. When D(x) varies in phenotype space, the term D′
+
+pushes cells toward regions of higher noise intensity. Its net effect is captured by the effective potential Φ(x), with Φ′ = P′/D, whose Boltzmann density e−Φ is flatter where D is large: at equal slope of P, barriers in noisier regions are effectively lower and cells explore them more freely. This is the sense in which noise reshapes the effective landscape (Section 2.8). The gradient and the noise thus play opposite roles: the first keeps cells in their phenotypes, the second lets them change. 
+
+Inferring the landscape from data. The gradient hypothesis also suggests measuring the land-scape rather than postulating v and D. Single-cell technologies (scRNA-seq, ATAC-seq, ChIP-seq) provide snapshots of the distribution of cells across a phenotypic manifold and, if the population is near steady state, (23) can be inverted: P′/D = −∂x ln ueq , that is, P = −D ln ueq up to a constant when D is constant. The steady-state assumption matters: out of saturation, or under non-uniform competition, a snapshot mixes proliferation with transport [102], whereas in a saturated popula-tion under uniform competition it approaches the stationary density of the switching dynamics alone after a time of order 1/ λ (Theorems 1 and 2). Even then, a static snapshot determines only the effective potential Φ, not P and D separately; separating them requires dynamic information, such as RNA velocity [103], lineage tracing or time-resolved data [102, 104]. Methods that learn a potential-driven drift from time series of single-cell snapshots [105, 106], together with results on when such processes can be recovered from their temporal marginals [107], are suited to this task. We return to this identifiability problem, and to its consequences for cancer, in Section 2.8. 
+
+Relation to prior work. Waddington’s metaphor has been formalized in many ways. In the physics literature, cell fates were identified with high-dimensional attractor states of gene-regulatory networks [65], and cancer with abnormal attractors of the same networks [35]; fate decisions were related to bifurcations of the landscape [69] and to transition states between its valleys [70], 
+
+20 and low-dimensional geometric landscapes were fitted to developmental data [71, 72, 73]; the existence of a global potential for stochastic systems lacking detailed balance was established [66]; landscapes were constructed from steady-state distributions [67], extended to multi-step differentiation [108] and to high-dimensional multi-stable systems [109, 110], and compared with the Freidlin–Wentzell quasi-potential of large-deviation theory [12] (see [11] for a review of the landscape and flux theory). Other works derive effective landscapes from the competition between chromatin-modifying enzymes [10], or from Bayesian decision-making by cells, with regimes corresponding to homeostatic, bistable and cancerous states [74]. These approaches work within a postulated SDE/Fokker–Planck formalism, in which potential and noise are posited or inferred phenomenologically; within it, Coomer et al. [68] show that very different combinations of drift and noise can produce the same steady-state distribution, the identifiability problem that appears here as the dependence of Φ on the ratio P′/D. Our construction is compatible with this tradition, 
+
+P acting as an effective quasi-potential, and adds the link to compartmental models: P and D
+
+are expressed through the switching rates kij (Eq. (10)), via the chain kij → (D, v) → v = −P′. A related picture is the “explore-then-settle” dynamic of Jiménez-Sánchez et al. [75], in which high evolvability drives rapid exploration of the landscape before cells settle at fitness peaks; they treat evolvability as an evolving trait and focus on how exploration and selection interact, whereas we obtain the SGD structure from the gradient reading of the switching velocity and connect it to the population-level Fokker–Planck equation. 
+
+## 2.7 Non-local transitions and a unified multi-scale model 
+
+The previous sections assumed that cells move through phenotype space by local exploration resulting from the combination of deterministic drift and random diffusion. The original discrete model (2), however, allows jumps between any two compartments. Biologically, such non-local transitions are rare but important: cells may make large jumps in extended phenotype space, for instance, through genetic mutations that drastically alter gene expression programs [16], through heritable epigenetic changes that silence or activate entire loci [111], or through rare but consequential events such as polyploidization [112]. We now extend the continuous framework to include these jumps, which leads to a single equation containing all the mechanisms discussed so far (Figure 1d,f). 
+
+From discrete non-local transitions to integro-differential equations. When the number of compartments tends to infinity, the discrete transition rates kij become a continuous kernel 
+
+K(x, y) ≥ 0, quantifying the rate at which cells at phenotype y jump to phenotype x. The linear transition term in (2) then becomes an integral, and the full continuous model with non-local transitions and uniform competition therefore reads 
+
+∂tu(x, t) = r(x, t) u(x, t) g(U(t)) + 
+
+> Z
+> Ω
+
+K(x, y)u(y, t) − K(y, x)u(x, t) dy . (25) 
+
+Kramers–Moyal expansion and Pawula’s theorem. This type of integro-differential equation is common in theoretical biology, and is closely related to the advection–diffusion PDE derived earlier. Suppose that transitions are localized in phenotype space, meaning that K(x, y) is sharply peaked around x ≈ y. More precisely, assume K(x, y) can be written as a function of the jump size ∆ = x − y and the starting point y, i.e., K(x, y) = W(y, ∆) with W(y, ·) concentrated near 
+
+∆ = 0. In this case, we can expand the integral term in a Taylor series in the jump size. This is the 
+
+21 Kramers–Moyal expansion ,
+
+> Z
+> Ω
+
+K(x, y)u(y) − K(y, x)u(x) dy =
+
+> ∞
+
+# ∑
+
+> n=1
+
+(−1)n
+
+n! ∂nx
+
+Mn(x) u(x), (26) where Mn(x) = R ∞ 
+
+> −∞
+
+∆n W(x, ∆) d∆ is the n-th moment of the jumps that start at x. Truncating at second order gives 
+
+−∂x
+
+ M1u + 12 ∂2
+
+> x
+
+ M2u = −∂x
+
+ vu  + ∂x
+
+ D ∂x u,with D(x) = 12 M2(x) and v(x) = M1(x) − D′(x), which is exactly the advection–diffusion operator of (9), or its Fokker–Planck interpretation. The diffusivity is half the second moment of the jump kernel, while the first moment, M1 = v + D′, is the Itô drift of (18); it coincides with the flux-form velocity v only when D is constant. Truncating the expansion at a higher order does not, however, give a legitimate model. 
+
+Pawula’s theorem [113] states that, for a nonnegative transition probability, the Kramers–Moyal expansion either stops at n = 2 or contains infinitely many terms: a finite truncation of order 
+
+n > 2 cannot be the exact generator of an evolution that preserves positivity, although it may still serve as an approximation [93]. In our modeling context, this rules out any exact intermediate description built from higher-order spatial derivatives (third- or fourth-order terms, say): an exact local, differential description of switching stops at drift and diffusion, and the transitions that it does not capture, the large jumps, must be kept as an integral operator. Pawula’s theorem does not imply that a given switching dynamics must be either purely local or purely non-local; local exploration and jumps can coexist, as they do in the model below. 
+
+Unified macroscopic model. We therefore keep local exploration and large jumps as two separate ingredients, each with its own coefficients: a local part, with velocity v and diffusivity D as in (9), for the small, continual changes of phenotype, and a non-local part, with jump kernel K, for the rare, large-effect events. We weight the jump part by a parameter ε ≥ 0 that sets the rate of jumps relative to local exploration: ε = 0 means jumps are absent, and larger ε means they occur more frequently. This gives a single equation for the population density u(x, t) on a phenotype domain Ω ⊆ Rd (we write the multi-dimensional generalization, though our analysis has focused on d = 1): 
+
+∂tu(x, t) = r(x, t)u(x, t) g(U(t)) 
+
+| {z }
+
+> reaction (vital dynamics)
+
+− ∇ ·  v(x, t)u(x, t)| {z }
+
+> advection (gradient flow)
+
++ ∇ ·  D(x, t)∇u(x, t)| {z }
+
+> diffusion (random noise)
+
++ ε
+
+> Z
+> Ω
+
+K(x, y)u(y, t) − K(y, x)u(x, t) dy 
+
+| {z }
+
+> non-local jumps (mutations, large epigenetic shifts)
+
+. (27) Equation (27) is a general macroscopic description of cell populations with phenotypic plasticity. It contains, as special cases: • The discrete compartment model (2) (when x is discretized: the local terms give the nearest-neighbor rates of Section 2.3, and K(x, y) the long-range ones); • The reaction–diffusion–advection PDE (9) ( ε = 0); • The Fokker–Planck equation of stochastic gradient descent (22) ( v = −∇ P, ε = 0); • The pure jump integro-differential equation (25) ( v ≡ 0, D ≡ 0, ε = 1). 
+
+22 Each term encodes a distinct biological process: proliferation and competition (reaction); directed motion toward stable phenotypes (advection); stochastic fluctuations that explore the landscape (diffusion); and abrupt, large-effect events that instantly relocate a cell to a distant region of phenotype space (jumps). 
+
+The single-cell perspective. Through the same duality between Fokker–Planck equations and SDEs discussed in Section 2.5, the unified model (27) translates into an individual-level description (Figure 1f). The phenotype Xt of a single cell follows 
+
+dX t =  −∇ P(Xt) + ∇D(Xt) dt 
+
+| {z }
+
+> gradient flow
+
++
+
+q
+
+2D(Xt) dW t
+
+| {z }
+
+> random fluctuations
+
++ dJ ε
+
+> t
+
+|{z} 
+
+> non-local jumps
+
+, (28) where Jε 
+
+> t
+
+is a pure-jump process. Formally, Jε 
+
+> t
+
+is constructed from a Poisson random measure with state-dependent intensity εK(y, Xt− ) dy dt [114]. Equation (28) generalizes the Ornstein–Uhlenbeck process to arbitrary landscapes with jumps. It combines three ingredients: order (the potential P), noise (the diffusion D), and chance (the jumps 
+
+Jε 
+
+> t
+
+). The population-level model (27) is recovered as the forward Kolmogorov equation for the density of Xt, augmented by a reaction term for proliferation and competition. A cell therefore performs a stochastic gradient descent with replication and mutation on the epigenetic landscape. 
+
+Relation to prior work. Alvarez et al. [53] and Lorenzi et al. [52] study integro-differential equations for structured populations, including non-local terms that represent mutations or long-range dispersal. Our unified model (27) is closely related to these formulations; here the local part is written in terms of a potential and the non-local part is weighted by a parameter ε. The connection between jump processes and diffusion equations via the Kramers–Moyal expansion is a classical result in stochastic processes [115]. That drift, diffusion and jumps exhaust the possibilities follows from Courrège’s theorem: under mild regularity conditions, the generator of a Markov process whose evolution preserves positivity (in the sense of the positive maximum principle) consists of a drift, a diffusion and a jump part [116, 117], a state-dependent extension of the Lévy–Khintchine formula [118], and the unified model has exactly this form. The irrelevance of fitness under uniform competition also holds for purely non-local switching ( v ≡ 0, D ≡ 0 in (27)), provided the jump kernel connects every phenotype to a common region within a finite number of jumps (the analogue of (H3)), and for the unified model (27) itself, in which jumps are combined with drift and diffusion; the limit is then the stationary density of the full switching dynamics [83]. Finally, jumps need not be rare. Proteins are often produced in bursts, and the classical model of Friedman, Cai and Xie [119], with linear degradation and exponentially distributed bursts, is an instance of (27) with a linear drift v(x) = −γx, no diffusion ( D ≡ 0) and a one-sided jump kernel, 
+
+K(x, y) = k b −1e−(x−y)/b for x > y (bursts at rate k with mean size b); its stationary density is a gamma distribution, a shape commonly observed for protein abundances [120]. Bursts are thus frequent jumps in expression space, whereas mutations are rare jumps in an extended phenotype space. 
+
+## 2.8 Examples: phenotypic distributions emerging from the landscape 
+
+We now show with simulations (Figure 4) how deterministic drift and random motion together shape the phenotypic distribution, as sketched for single cells in Figure 1e,f, and produce several well-known probability laws. Throughout this section we assume that the population has reached the equilibrium U∗, so that the distribution is governed solely by the transport terms. Recall that the stationary density 
+
+23 ueq (x) satisfies (13), which, using v(x) = −P′(x), becomes 
+
+ueq (x) = C exp 
+
+
+
+− 
+
+> Zxx0
+
+P′(s)
+
+D(s) ds 
+
+
+
+, (29) with C a normalization constant. 
+
+Case 1: Flat landscape – uniform distribution. When the epigenetic landscape is flat, P(x) ≡
+
+const, the velocity vanishes ( v ≡ 0). Cells move purely by random fluctuations, and (29) yields 
+
+ueq (x) = C, a uniform distribution on the domain Ω. All phenotypes are equally probable; micro-scopically, the SDE reduces to a pure Brownian motion dX t = √2D dW t, and the cell wanders without directional bias (Figure 4a). 
+
+Case 2: Linear potential – exponential distribution. Consider a linear potential P(x) = ax with 
+
+a > 0, giving a constant negative velocity v(x) = −a that drives cells toward smaller x. With constant diffusivity D on Ω = [ 0, ∞) and a reflecting boundary at x = 0, the stationary solution becomes 
+
+ueq (x) = aD e−(a/D)x. (30) This is an exponential distribution with rate a/D, i.e., mean D/a. The drift concentrates the population near the origin, while diffusion allows occasional escapes to larger x. Biologically, this describes cells pushed toward a boundary phenotype (e.g., a fully differentiated state) by a potential of constant slope, with noise providing the observed tail of less-differentiated cells. At the single-cell level, dX t = −a dt + √2D dW t: the cell experiences a constant downward drift perturbed by random fluctuations (Figure 4b). 
+
+Case 3: Harmonic potential – Gaussian distribution. An important case is the harmonic potential 
+
+P(x) = θ
+
+2 (x − μ)2, (31) for which v(x) = −P′(x) = −θ(x − μ), with θ > 0 and a reference phenotype μ. This is the velocity field of the Ornstein–Uhlenbeck process (20). With constant diffusivity D, equation (29) gives the Gaussian stationary distribution 
+
+ueq (x) = 1
+
+√2πσ 2 exp 
+
+
+
+− (x − μ)2
+
+2σ2
+
+
+
+, σ2 = D
+
+θ . (32) The mean phenotype μ is the minimum of the potential, i.e., the “center of attraction”, θ controls the steepness of the valley, and D is the noise intensity. The variance σ2 = D/θ expresses the balance between noise and order: a steep valley (large θ) produces a tightly concentrated population; strong noise (large D) produces a broad distribution (Figure 4c). 
+
+Universality of the Gaussian. The Gaussian is, in a precise sense, the generic local approximation near any stable equilibrium. If P(x) has a non-degenerate minimum at x = μ, then P′(μ) = 0 and 
+
+P′′ (μ) > 0. Expanding to second order yields P(x) ≈ P(μ) + 12 P′′ (μ)( x − μ)2, which is precisely the harmonic potential with θ = P′′ (μ) capturing the curvature of the landscape around x = μ,with the Ornstein–Uhlenbeck velocity field v(x) = −P′(x) ≈ − P′′ (μ)( x − μ). To leading order the diffusivity is constant, D(x) ≈ D(μ), and the stationary distribution is Gaussian with variance 
+
+D(μ)/P′′ (μ). Higher-order terms in the expansion of P(x) introduce polynomial corrections to the exponent, deforming the tails. In this sense, the Ornstein–Uhlenbeck process of Section 2.5 is the local linearization of the general stochastic gradient descent (24) around any stable phenotype: every minimum of the epigenetic landscape looks, up close, like a quadratic well with OU 
+
+24 0.0 2.5 5.0 7.5 10.0 12.5 15.0 time  t
+
+a      
+
+> 0246810 phenotype x
+> 0.0 0.1
+> ——  ueq (x)
+> 0246810 time  t
+
+b         
+
+> 012345678phenotype x
+> 0.0 0.5 1.0
+> ——  ueq (x)
+> 0246810 12 time  t
+> ¹
+
+c        
+
+> −4−20246810 phenotype x
+> 0.0 0.2
+> ——  ueq (x)
+> 0246810 12 time  t
+> 0
+
+d       
+
+> −15 −10 −50510 15 phenotype x
+> 0.0 0.2 0.4
+> ——  ueq (x)
+> 0510 15 20 25 time  t
+
+e           
+
+> population, D= 0 :35
+> one cell, D= 0 :7
+> −3−2−10123phenotype x
+> 0.0 0.5 1.0
+> ——  ueq (x)
+> −0.05 0.00 0.05 - - - P(x)
+> 05- - - P(x)
+> 0510 - - - P(x)
+> 050 - - - P(x)
+> 012- - - P(x)
+
+Figure 4: Known distributions emerging from SGD on different potential landscapes. Direct simulation of the single-cell SDE (18). In each panel, the top plot shows N individual trajectories (Euler–Maruyama, phenotype on the horizontal axis, time on the vertical axis plotted downward so that its bottom edge aligns with the final-time histogram below); the bottom plot shows the histogram of final positions, the analytic stationary density (solid black, left axis), and the potential P(x) (dashed gray, right axis). (a) Case 1: flat landscape, uniform distribution on [0, 10 ] with reflecting boundaries, D = 1, N = 1000. (b) Case 2: linear potential P(x) = ax , exponential distribution (30) with a = D = 1 and a reflecting boundary at x = 0, 
+
+N = 1000. (c) Case 3: harmonic potential (31), Gaussian distribution (32) with θ = 0.4, μ = 3, D = 1, 
+
+N = 1000. (d) Case 4: state-dependent noise D(x) = D0(1 + x2) with D0 = 0.3, θ = 0.65, giving the heavy-tailed distribution (33), plotted on a wider horizontal scale than (c), N = 1000. (e) The general Boltzmann-form distribution (34) for the rugged, multi-well landscape sketched schematically in Figure 1e,f (D = 0.35, constant); all N = 1500 trajectories start at the left edge ( x = −3), explore the landscape through noise-driven barrier crossings, and settle partially in the first well, predominantly in the deepest one, and rarely in the shallow well on the far right; at t = 25 the population is still in transit, with the left well overpopulated relative to ueq . Compare with the continuous counterpart, Figure 3c. The colored line is one cell with twice the noise ( D = 0.7), a more plastic cell, drawn until it reaches the far well at t ≈ 4.5; it is a fast realization chosen for illustration (typical first-passage times are given in the text). Euler–Maruyama time step ∆t = 0.01 (0.02 in (c), 0.004 in (d)); reflecting boundaries are implemented by mirror reflection, and in (e) the drift is extended as a constant outside [−3, 3 ].
+
+25 dynamics. A rugged epigenetic landscape with multiple minima can thus be approximated locally by a mixture of Gaussians, each centered at a stable phenotypic state with variance inversely proportional to the local curvature of the potential (Figure 4e). Measured distributions of protein abundance are nevertheless often skewed, closer to gamma or log-normal than to Gaussian [120]: the harmonic approximation describes weak fluctuations around a stable phenotype, not every source of variability, and bursty production, a form of frequent jumps, produces gamma distributions (Section 2.7). 
+
+Case 4: State-dependent noise – heavy tails and effective potentials. When the diffusivity D(x)
+
+is not constant, the stationary distribution can be far from Gaussian. A biologically motivated example is D(x) = D0(1 + x2) with x ∈ (−∞, +∞), representing increasing phenotypic instability away from the origin (e.g., higher epigenetic noise in less-differentiated states). With a harmonic potential P(x) = θ 
+
+> 2
+
+x2, the stationary solution, which would be a Gaussian centered at x = 0 in case of constant diffusivity, becomes 
+
+ueq (x) = C (1 + x2)−θ/(2D0). (33) This is a Student’s t-like distribution with power-law tails that decay far more slowly than a Gaussian (and is normalizable provided θ > D0). The population maintains a non-negligible fraction of cells far from the mean phenotype even under a restoring force. Where rare, distant subpopulations of this kind are observed, this example shows that state-dependent noise, and not only a deformed potential, can produce them. Compared with Case 3, the same restoring force gives a sharper central peak and much longer tails, only because the noise intensity grows with distance from the optimum (Figure 4d, plotted on a wider horizontal scale than panel c to accommodate the tails). 
+
+The effective potential: a general Boltzmann form. This example is a special case of a general formula. For arbitrary D(x), the stationary distribution can be written in the Boltzmann form ueq (x) = C exp  −Φ(x), (34) where the effective potential Φ(x) satisfies Φ′(x) = P′(x)/D(x). For a rugged, multi-well landscape and constant D, this is simply the familiar exp (−P(x)/D), and simulating it directly (Figure 4e) shows a population initialized far from equilibrium exploring the landscape by repeated noise-driven barrier crossings and settling, in the long run, into each well in proportion to its Boltzmann weight R 
+
+> well
+
+e−P/D dx . At the final time shown, t = 25, the population is still in transit: the left well is overpopulated relative to ueq , and the far, shallow well is reached only on the time scale of the first-passage times discussed below. This is the single-cell counterpart of Figure 3, where the population density converged to the same stationary distribution on the same landscape. 
+
+Noise versus landscape. When D(x) varies, the landscape P(x) is reshaped by the local intensity of phenotypic noise into the effective potential Φ(x). Where D(x) is elevated, reflecting for instance a relaxation of the biochemical constraints that normally restrict fluctuations, Φ is flattened relative to P and the barriers between phenotypic states are effectively lowered. This is an alternative, and perhaps underappreciated, route to increased plasticity: rather than altering the landscape 
+
+P(x) itself, a cell population may simply become “noisier” in specific regions of phenotype space. The effect on single cells can be large: on the multi-well landscape of Figure 4e, doubling the noise shortens the typical time needed to reach the distant, shallow well roughly tenfold, from 
+
+≈ 250 to ≈ 22 time units (median first-passage times over 10 3 cells), because barrier crossing is exponentially sensitive to the ratio of barrier height to noise (the Kramers effect). The converse 
+
+26 is an identifiability problem. Two populations with the same potential P(x), that is, the same stable states and barriers, but different noise profiles D(x) have different stationary distributions, and a population with elevated noise in some region looks, in a static snapshot, as if its barriers there had been lowered; inferring P from ueq therefore requires knowing D (Section 2.6). This is particularly relevant in cancer, where the fidelity of epigenetic maintenance is compromised and increased stochastic variability of DNA methylation has been documented across tumor types [37, 121, 122]: what appears as a flattened landscape in single-cell data may reflect increased noise rather than a reshaping of P(x).
+
+Mobility, temperature, and the choice of convention. A physical parametrization makes precise what a snapshot can and cannot reveal. For a Brownian particle, the diffusivity is the product of a mobility μ, which measures how fast the particle responds to a force, and a temperature T,which measures the intensity of the thermal fluctuations: D = μT (the Einstein relation [123]). By analogy, write D = μT and v = −μE′, with a mobility μ(x), an effective temperature T(x) and an energy landscape E(x), so that P′ = μE′ [95]. In the flux form, ueq ∝ exp  − R E′/T: the mobility cancels, and the effective potential is Φ′ = E′/T. Case 4 is then a temperature that varies across phenotype space at fixed mobility, which is legitimate for a system out of equilibrium. Elevated plasticity accordingly has two sub-routes. A population can become hotter , which flattens ueq and, in a snapshot, is confounded with a change of the landscape; or it can become more mobile , with T
+
+and E unchanged, which leaves ueq unchanged and is invisible in any snapshot, but speeds up all transitions. Since the mixing time 1/ λ cannot increase when μ increases, a more mobile tumor also forgets past selection faster (Section 2.2). 
+
+Relation to prior work. The Boltzmann-form stationary distribution (34) underlying every case in this section is the same object constructed, from the opposite direction, by the landscape-flux literature discussed in Section 2.6: Wang et al. [67] build the potential directly from the steady-state distribution of a postulated gene-regulatory SDE, whereas here ueq (x) is a consequence of a potential and diffusivity that are themselves derived from microscopic switching rates. Case 3 and the argument on the universality of the Gaussian recover, as a special case, the classical result that stabilizing selection around a fixed optimum yields a Gaussian phenotypic distribution, as in the Ornstein–Uhlenbeck models of de Souza Silva et al. [62] discussed in Section 2.5. Case 4 can be compared with other routes to non-Gaussian phenotypic distributions in the literature reviewed here, which rest on different mechanisms: de Souza Silva et al. [62] obtain skewed distributions from a moving fitness optimum combined with phenotypic plasticity; Kessler and Levine [63] obtain a non-Gaussian (Airy-function) steady state from a nonlinear, replicator-mutator-type reaction term combined with a reflecting boundary. Here, the potential P(x) and the restoring dynamics remain exactly as in the Gaussian case, and non-Gaussianity may be generated purely by a state-dependent diffusivity D(x). These three mechanisms are not mutually exclusive, and a full account of a given biological system may require more than one of them; distinguishing between them requires dynamic information. 
+
+## 2.9 Summary 
+
+This section went from simple two-compartment models of quiescent vs. proliferating cells to a unified framework. Under uniform competition, and on time scales long compared with the mixing time of switching, long-term heterogeneity is governed by transitions and not by fitness. Local transitions correspond to a finite-difference discretization of a reaction–diffusion–advection PDE, with diffusion and advection carried by the symmetric and skew-symmetric parts of the transition matrix. The advection velocity can be interpreted as the negative gradient of an effective 
+
+27 epigenetic potential. The resulting model, translated to the individual-cell trajectory, is a stochastic gradient descent on an effective potential landscape. Including occasional jumps, the full model (27)-(28) connects the discrete and continuous descriptions, and the single-cell and population levels. Taken individually, several components of our framework have antecedents in the literature. What is new here is their assembly into a single chain of arguments, from discrete switching rates to a continuous landscape and to stochastic gradient descent, summarized in Figure 1. Some steps of this chain rest on assumptions that are stated explicitly above, notably uniform competition, the gradient form of the velocity, and the choice of stochastic convention for state-dependent noise. 
+
+# 3 Conclusion and outlook 
+
+We first qualify the main statement about fitness and then summarize the arguments above in a few principles. 
+
+How general is the irrelevance of fitness? Theorems 1 and 2 make two statements: uniform, multiplicative competition makes all phenotypes selectively neutral at saturation, and the selec-tion that acts during growth leaves a transient imprint which switching erases. Fitness returns whenever one of these ingredients fails: under other forms of density dependence, such as ad-ditive competition, and when switching is coupled to division (Sections 2.2 and 2.4). Under non-uniform competition, convergence itself can fail (Remark 2 in Appendix A). The statement is also asymptotic: it holds on time scales long compared with the mixing time 1/ λ of the switching dynamics, which can be very long in landscapes with high barriers, and it is on this time scale that relapse unfolds after a treatment has ended. We therefore regard the “primacy of plasticity” as a property of uniformly competitive models in their long-time limit, not as a general biological law; which regime applies to a given tumor is an empirical question. 
+
+Connection with machine learning. In principle, the expression “stochastic gradient descent” here plays a different role than in machine learning. In machine learning, the randomness of stochastic gradient descent comes from estimating the gradient on random subsets of the data, whereas here, in equation (24), it is an explicit noise that lets cells cross the barriers between minima. The two are nevertheless related: a line of work has shown that, under suitable assumptions, gradient-based learning algorithms with noise, whether added explicitly or arising from subsampling, behave approximately as discretizations of Langevin equations of the type (24) [124, 125, 126, 127], although the correspondence is only approximate [128]. The same equation nevertheless offers a common language for stochastic optimization and for phenotype dynamics on a landscape: in both, noise helps escape local minima, the landscape can be reshaped by external signals, and occasional large jumps give access to distant regions of the space. These parallels are heuristic. Mathematics and biology have long borrowed from each other [129], and artificial neural networks were themselves inspired by biological neurons; the similarity with the epigenetic dynamics of a cell should be read as an analogy, not as evidence of a shared mechanism. 
+
+Three rules for complexity: life as a stochastic gradient descent with occasional jumps. In this light, the single-cell trajectory (28) can be read as a stochastic gradient descent, in the Langevin sense, with noise that lets the cell escape local minima and occasional jumps that relocate it across the landscape. Evolution, development, and disease are then stochastic search processes on a landscape, with replication amplifying the cells that find favorable regions. Three elementary ingredients govern these dynamics: 
+
+28 1. Minimize energy. Biological entities, from folding proteins to gene-regulatory networks, relax toward stable configurations: minima of a free energy for passive systems, and of an effective potential for driven, nonequilibrium ones. In the phenotypic realm, this is the drift 
+
+v = −∇ P toward stable expression programs; alone, it would leave each cell trapped in the nearest valley, with no diversity and no adaptation. 2. Allow randomness. Stochastic fluctuations (thermal noise, transcriptional bursting [130], unequal partitioning at division) provide the diffusion that lets cells explore the landscape; they contribute to the diversification of cell types during development, alongside determin-istic mechanisms such as bifurcations, morphogen gradients and asymmetric divisions, and maintain the heterogeneity that keeps populations resilient. Without the drift, noise alone would spread cells over the whole phenotype space, with no stable cell types. 3. Permit rare jumps. Mutations, large-scale epigenetic reprogramming, and other non-local events give access to regions of the landscape that local exploration would reach only after astronomically long times, if at all. They are a source of evolutionary novelty, and also of malignant transformation. This triad, gradient flow, diffusion, and jumps , corresponds to the three transport terms of the unified model (27), and it is not an ad hoc collection of mechanisms: by Courrège’s theorem, under mild regularity conditions, the generator of a Markovian switching dynamics consists of a drift, a diffusion and a jump part (Section 2.7) [116, 117], and, by Pawula’s theorem, the jump part cannot be replaced exactly by higher-order local terms. 
+
+Cancer as the corruption of the landscape. In this picture, cancer can disturb each of the three rules, and the framework separates the corresponding routes. Mutations in epigenetic regulators (writers, erasers, remodelers) reshape the landscape P(x), creating pathological minima that correspond to proliferative or resistant states, in line with the view of cancer states and drug resistance as attractors of the underlying networks [35, 25, 26]. Elevated plasticity can instead correspond to a larger diffusivity D(x) with the landscape intact, consistent with the increased epigenetic variability of tumors [121, 122]: either a higher effective temperature, which lowers the barriers effectively and flattens the stationary density, or a higher mobility, which leaves the stationary density unchanged and speeds up transitions (Section 2.8); this route requires no mutation in chromatin modifiers and may be invisible to genomic sequencing, yet detectable, with dynamic data, in single-cell distributions (Section 2.6). If the extra variability arises from errors made at replication, however, switching is coupled to division, and fitness regains its influence on the long-term composition (Section 2.2). Driver mutations, finally, act as non-local jumps that seed cells in distant regions of the landscape (Section 2.7). Which of these routes dominates in a given tumor, and on which time scale selection or plasticity shapes the resulting heterogeneity (Sections 2.2 and 2.4), are empirical questions that the framework helps to formulate. 
+
+Future directions. Several directions remain open: • Inference from data: Single-cell multi-omics data (scRNA-seq, scATAC-seq, single-cell methylation) can be used to reconstruct P(x), D(x) and K(x, y), and the diversity indices used to quantify intratumor heterogeneity [31] become functionals of the stationary density 
+
+ψ: a noisier population has a flatter ψ and a higher Shannon diversity. Separating P from D
+
+requires dynamic data (Section 2.8), and identifiability analyses indicate which experimental designs suffice [131, 132]. • Control: If the landscape can be inferred, one can ask how to manipulate it. For example, by designing epigenetic therapies that reshape P(x) to eliminate resistant minima, or by 
+
+29 timing treatments to exploit the stochastic dynamics of persistence. • Multi-dimensional extensions: Real phenotypic landscapes are high-dimensional. Extend-ing the analysis to d > 1, where non-gradient drifts arise (Section 2.6), and connecting it to manifold-learning techniques such as diffusion maps is a natural next step; moment-closure reductions of phenotype-structured PDEs to low-dimensional ODE systems [133] may keep such extensions computationally tractable. • Beyond the present theorems: Theorems 1 and 2 assume time-independent switching and smooth coefficients; in the continuum, the result covers one-dimensional phenotypes and bounded phenotype domains in higher dimension [83]. Extending them to rough coefficients, to unbounded higher-dimensional phenotype spaces, and to switching rates that change in time (for instance under treatment) is open. So is the question, raised by the counterexample of Appendix A, of which forms of non-uniform competition still lead to convergence, and how close to π the composition remains when competition is nearly uniform. • Spatial aspects and non-uniform competition: In solid tumors, spatial heterogeneity and local competition for resources may violate the uniform competition hypothesis. Extending the framework to physical space and non-uniform competition would show how local selection and long-range transport interact; in this setting, fitness differences may re-enter the asymptotic dynamics alongside the transport terms. • Non-Markovian dynamics and memory effects: Transition rates may depend on a cell’s history, as in the “hypoxic memory” of cells that retain an invasive, slow-cycling phenotype after reoxygenation, recently incorporated into a phenotype-structured PDE [134]. Allowing 
+
+P or D to depend on past states would connect the framework to generalized Langevin dynamics, at the cost of the direct Fokker–Planck correspondence used here. Under the assumptions stated along the way, Waddington’s landscape can thus be given a concrete mathematical form, in which each cell performs a stochastic gradient descent, with occasional jumps, on a landscape of phenotypic states. 
+
+# Appendix 
+
+## A. Proof of Theorem 1 
+
+The proof uses two elementary tools: the variation-of-constants formula for linear ODEs, and the fact that an irreducible Markov chain forgets its initial condition. The latter is classical (see, e.g., [135]); we include a short proof to keep the argument self-contained. Throughout, |v|1 = ∑i|vi|,
+
+1 = ( 1, . . . , 1 )⊤, and a vector is zero-sum if ∑i vi = 0. 
+
+A preliminary fact. Every column of A sums to zero: ∑i Aij = 0 for each j, because every cell that leaves compartment j enters some other compartment, so what compartment j loses is exactly gained by the others. In vector notation, 1⊤ A = 0. Differentiating 1⊤ P(t) = 1⊤etA in t,
+
+ddt 
+
+ 1⊤ P(t) = 1⊤ A P (t) = 0, and at t = 0, 1⊤ P(0) = 1⊤ I = 1⊤. Hence 1⊤ P(t) = 1⊤ for every t ≥ 0: every column of 
+
+P(t) = etA sums to 1 and, together with positivity (proved below), is a probability vector. 
+
+30 Lemma A.1 (Switching forgets the initial state) . Assume (H3) and let P (t) = etA be the solution operator of u ′ = Au. (i) P (t) maps nonnegative vectors to nonnegative vectors and preserves the total, ∑i(P(t)v)i = ∑i vi.In particular |P(t)v|1 ≤ | v|1 for every v. (ii) For every τ > 0 all entries of P (τ) are positive. (iii) There are C ≥ 1, λ > 0 such that |P(t)w|1 ≤ Ce −λt|w|1 for all zero-sum w and t ≥ 0.(iv) There is a unique vector π with A π = 0 and ∑i πi = 1, and all its entries are positive. Proof. (i) Positivity and mass conservation. Let c = max i ∑l̸ =i kil , the largest total exit rate over all compartments, and B = A + cI . Every off-diagonal entry of B equals that of A, hence is ≥ 0, and every diagonal entry is Aii + c = c − ∑l̸ =i kil ≥ 0 by the choice of c; so B ≥ 0 entrywise. Then 
+
+P(t) = etA = e−ct etB = e−ct ∑
+
+> k≥0
+
+tk Bk
+
+k!is a (convergent) sum of nonnegative matrices scaled by e−ct > 0, hence P(t) ≥ 0 entrywise. Mass conservation is the preliminary fact above, 1⊤ P(t) = 1⊤, i.e. ∑i(P(t)v)i = ∑i vi for every vector v.For the contraction bound, write (P(t)v)i = ∑j P(t)ij vj; by the triangle inequality and P(t)ij ≥ 0, 
+
+|P(t)v|1 = ∑
+
+> i
+
+# ∑
+
+> j
+
+P(t)ij vj ≤ ∑
+
+> i
+
+# ∑
+
+> j
+
+P(t)ij |vj| = ∑
+
+> j
+
+|vj| ∑
+
+> i
+
+P(t)ij 
+
+| {z } 
+
+> =1 by mass conservation
+
+= |v|1.
+
+(ii) Strict positivity of P (τ). With B as above, the entry (Bk)ij is a sum of products Bi l 1 Bl1l2 · · · Blk−1 j
+
+over paths of length k from j to i, and it is positive as soon as one such path uses only positive rates klm > 0 (recall Blm = Alm = kml for l̸ = m). By (H3) every compartment i can be reached from every compartment j through such a path, of some length k = k(i, j); and (B0)ii = 1 > 0covers i = j. Hence every entry of eτB = ∑k τk Bk/k! is positive (each term is ≥ 0 and at least one term is strictly positive at each entry), and so is every entry of P(τ) = e−cτ eτB.
+
+(iii) Exponential mixing on zero-sum vectors. Let δ := min i,j P(1)ij > 0, positive by (ii). Since each column of P(1) sums to 1 and has all n entries ≥ δ, we have nδ ≤ 1; if nδ = 1 replace δ by δ/2, so that from now on nδ < 1 (this can only weaken the bound obtained below). Let w be zero-sum and split it into its positive and negative parts, w = w+ − w−, with w± ≥ 0. Since ∑i wi = 0, the two parts carry the same total mass: 
+
+# ∑
+
+> i
+
+w+ 
+
+> i
+
+= ∑
+
+> i
+
+w− 
+
+> i
+
+= 12 |w|1.Because every entry of P(1) is at least δ and w+ 
+
+> j
+
+≥ 0, 
+
+ P(1)w+ 
+
+> i
+
+= ∑
+
+> j
+
+P(1)ij w+ 
+
+> j
+
+≥ δ ∑
+
+> j
+
+w+ 
+
+> j
+
+= δ 
+
+> 2
+
+|w|1 for every compartment i,and likewise for w−. So both vectors 
+
+A♯ := P(1)w+ − δ 
+
+> 2
+
+|w|1 1, B♯ := P(1)w− − δ 
+
+> 2
+
+|w|1 1
+
+31 have all entries ≥ 0. By mass conservation applied to w+ and w− separately, their totals are 
+
+# ∑
+
+> i
+
+A♯ 
+
+> i
+
+= ∑
+
+> i
+
+B♯ 
+
+> i
+
+= 12 |w|1 − n · δ 
+
+> 2
+
+|w|1 = 12 |w|1(1 − nδ),and, since A♯, B♯ ≥ 0, this total is their ℓ1 norm. Since P(1)w = A♯ − B♯, the triangle inequality gives 
+
+|P(1)w|1 ≤ | A♯|1 + |B♯|1 = ( 1 − nδ)|w|1.Moreover P(1)w is again zero-sum, by mass conservation, so the bound can be iterated: 
+
+|P(1)mw|1 ≤ (1 − nδ)m|w|1 for every integer m ≥ 0. For general t ≥ 0 write t = m + s with m = ⌊t⌋ and 0 ≤ s < 1. By the semigroup property 
+
+P(t) = P(s)P(1)m and part (i) (which needs no zero-sum condition), 
+
+|P(t)w|1 ≤ | P(1)mw|1 ≤ (1 − nδ)m|w|1 ≤ (1 − nδ)t−1|w|1,using m ≥ t − 1 and 0 < 1 − nδ < 1. This is (iii), with C = ( 1 − nδ)−1 and λ = − ln (1 − nδ) > 0. 
+
+(iv) Existence, uniqueness and positivity of π. Let q be any probability vector. For t, s ≥ 0, the semigroup property gives P(t + s)q − P(t)q = P(t) P(s)q − q. The vector P(s)q − q is zero-sum (both terms are probability vectors) and |P(s)q − q|1 ≤ 2 by part (i). Applying (iii), 
+
+|P(t + s)q − P(t)q|1 ≤ 2Ce −λt for every s ≥ 0. This is the Cauchy criterion for the curve t 7 → P(t)q in Rn, so P(t)q converges to some limit 
+
+π as t → ∞; being a limit of probability vectors, π ≥ 0 and ∑i πi = 1. Taking t → ∞ in 
+
+P(t + s)q = P(s)P(t)q gives π = P(s)π for every s ≥ 0, and differentiating at s = 0 gives 
+
+Aπ = 0. Positivity follows from π = P(1)π and (ii): πi = ∑j P(1)ij πj ≥ δ > 0. Finally, if π′ is another stationary probability vector, then π′ − π is zero-sum and fixed by every P(t), so by (iii) 
+
+|π′ − π|1 ≤ Ce −λt|π′ − π|1 → 0, i.e. π′ = π.
+
+Proof of Theorem 1. Step 1: the total population is monotone. Solutions of (4) stay nonnegative, because a compartment that reaches zero can only receive cells: if ui = 0 and all other uj ≥ 0, then 
+
+u′ 
+
+> i
+
+= ∑j̸ =i kji uj ≥ 0 (see, e.g., [136]). Summing the equations, the transition terms cancel and 
+
+U′ = ρ(t) g(U), ρ(t) = ∑
+
+> i
+
+ri(t) ui(t) ≥ 0. (35) Regard ρ as a given function of time; it is only piecewise continuous when the ri are, and (35) is then understood in the sense of Carathéodory. The constant U∗ is a solution of (35) (since 
+
+g(U∗) = 0), and, since g is locally Lipschitz, solutions of (35) are unique, so that two of them cannot cross. Hence U(t) − U∗ never changes sign, so neither does g(U(t)) , nor U′. Thus U is monotone and lies between U(0) and U∗; in particular U(t) ≥ m := min {U(0), U∗} > 0, the solution exists for all times, U(t) converges to a limit U∞, and  
+
+> Z∞
+> 0
+
+|U′(s)| ds = |U∞ − U(0)| < ∞. (36) 
+
+Step 2: the reaction term has one sign. Let F = g(U)R(t)u be the reaction term, so that u′ =
+
+Au + F. Together with Step 1, where it gives the scalar equation (35), this is where (H1) is used: since ri ≥ 0, ui ≥ 0, and all compartments share the same factor g(U), every component Fi has the 
+
+32 sign of g(U). Therefore 
+
+# ∑
+
+> i
+
+Fi = g(U)ρ = U′, |F|1 = |g(U)|ρ = |U′|. (37) The total size of the reaction term is the growth rate of the total population, and by (36) it is integrable over [0, ∞). No information on how fast g(U(t)) tends to zero is needed. 
+
+Step 3: variation of constants. Let d(t) = u(t) − U(t)π be the deviation of the true solution from the stationary composition, scaled by the current total population; since ∑i ui = U and ∑i πi = 1, 
+
+d(t) is zero-sum for every t. Because U(t) is a scalar and Aπ = 0, A U(t)π = 0, so 
+
+d′ = u′ − U′π =  Au + F − U′π = Ad +  F − U′π,a linear, non-homogeneous equation for d with forcing ϕ := F − U′π. By the variation-of-constants formula, 
+
+d(t) = etA d(0) +  
+
+> Zt
+> 0
+
+e(t−s)Aϕ(s) ds . (38) Two facts about ϕ let us invoke Lemma A.1(iii), which applies only to zero-sum vectors: • ϕ(s) is zero-sum: by (37), ∑i Fi(s) = U′(s), and ∑i πi = 1, so ∑i ϕi(s) = 0; • its size is controlled by |U′|: by the triangle inequality, |π|1 = 1 and (37), 
+
+|ϕ(s)|1 ≤ | F(s)|1 + |U′(s)| | π|1 = 2|U′(s)|.Taking ℓ1 norms in (38) and applying Lemma A.1(iii) to etA d(0) and to each e(t−s)Aϕ(s), we obtain 
+
+|u(t) − U(t)π|1 ≤ Ce −λt|u(0) − U(0)π|1 + 2C 
+
+> Zt
+> 0
+
+e−λ(t−s)|U′(s)| ds . (39) 
+
+Step 4: the deviation vanishes. The first term tends to zero. For the second, we split the integral at the midpoint: 
+
+I1(t) := 
+
+> Zt/2 0
+
+e−λ(t−s)|U′(s)| ds , I2(t) := 
+
+> Ztt/2
+
+e−λ(t−s)|U′(s)| ds .For I1: when s ∈ [0, t/2 ] we have t − s ≥ t/2, so e−λ(t−s) ≤ e−λt/2 , and by (36) 
+
+I1(t) ≤ e−λt/2  
+
+> Z∞
+> 0
+
+|U′(s)| ds = e−λt/2 |U∞ − U(0)| −−→  
+
+> t→∞
+
+0. For I2: e−λ(t−s) ≤ 1, so 
+
+I2(t) ≤ 
+
+> Z∞
+> t/2
+
+|U′(s)| ds −−→  
+
+> t→∞
+
+0, because this is the tail of the convergent integral (36). Hence |d(t)|1 → 0. At this point we do not yet know that U∞ = U∗.
+
+Step 5: the total population reaches U ∗. If U(0) = U∗, then U ≡ U∗. Suppose U(0) < U∗ (the case U(0) > U∗ is symmetric) and, for contradiction , U∞ < U∗.(A) If U∞ < U∗, then R ∞ 
+
+> 0
+
+ρ dt < ∞. On [U(0), U∞] ⊂ (0, U∗), g is continuous and strictly positive by (H2), hence bounded below by some gmin > 0. Since U(t) stays in this interval, (35) gives ρ ≤ U′/gmin , and Z ∞
+
+> 0
+
+ρ(t) dt ≤ U∞ − U(0)
+
+gmin 
+
+< ∞.
+
+33 (B) Regardless of where U converges, R ∞ 
+
+> 0
+
+ρ dt = ∞. This uses (H3)–(H4) and Step 4. Indeed, since ρ is a sum of nonnegative terms, keeping only the persistently proliferating compartment s
+
+of (H4), for t ≥ tr,
+
+ρ(t) ≥ rs(t) us(t) ≥ rmin us(t). (∗)Since u = d + Uπ, us(t) = ds(t) + U(t)πs ≥ m πs − | d(t)|1. By Step 4, |d(t)|1 → 0, so there is 
+
+T ≥ tr with |d(t)|1 ≤ 12 mπs for all t ≥ T (recall πs > 0 by Lemma A.1(iv)). Then us(t) ≥ 12 mπs
+
+and, by (∗),
+
+ρ(t) ≥ rmin 12 mπs =: c0 > 0 for all t ≥ T,so R ∞ 
+
+> 0
+
+ρ dt ≥ R ∞ 
+
+> T
+
+c0 dt = ∞.(A) and (B) cannot both hold, so U∞ = U∗, which proves (a). In words, connected plasticity keeps the share of the proliferating compartment s close to πs > 0, which keeps total proliferation from stopping before U reaches U∗.
+
+Step 6: conclusion. By Steps 4 and 5, |u(t) − U∗π|1 ≤ | d(t)|1 + |U(t) − U∗| → 0, which proves (b). If u∗ solves u′ = Au with total U∗, then u∗(t) − U∗π = etA  u∗(0) − U∗π, with zero-sum initial datum, which tends to zero by Lemma A.1(iii). Hence |u(t) − u∗(t)|1 → 0, which proves (c). 
+
+Remark 1 (Phenotypic frequencies) . Dividing d(t) by U(t) ≥ m gives the same estimate for the frequencies p = u/U: |p(t) − π|1 ≤ m−1|d(t)|1. Equivalently, p obeys p′ = Ap + g(U) R − ¯rp
+
+with ¯ r = ∑i ri pi: the switching dynamics perturbed by a replicator-type term with zero sum, whose size is at most |g(U)| ∑i(ri + ¯r)pi = 2|g(U)|¯r = 2|(ln U)′|. Since U is monotone, the total selection that the frequencies undergo is limited, at most R ∞ 
+
+> 0
+
+2|(ln U)′| dt = 2|ln (U∗/U(0)) |.
+
+Remark 2 (Sustained oscillations under weighted competition) . The following counterexample shows that assumption (H1) is necessary for the asymptotic equivalence in Theorem 1. Take three states with cyclic switching 1 → 2 → 3 → 1 at rate 0.2 and weak reverse switching at rate 0.001, proliferation rates r = ( 30, 0.01, 0.01 ), pressures w = ( 0.001, 0.001, 1 ) and g(W) = 
+
+1 − W. All hypotheses (H2)–(H4) hold, and π = ( 13 , 13 , 13 ). The only positive equilibrium is 
+
+ueq = 500 501 (1, 1, 1 ), at which W = 1, the zero of g, while U = 1500/501 ≈ 3. The Jacobian matrix at ueq is A − (Ru eq ) w⊤, whose characteristic polynomial μ3 + a1μ2 + a2μ + a3 has, in exact arithmetic, 
+
+a1 = 80527 125250 ≈ 0.643, a2 = 29155041 167000000 ≈ 0.175, a3 = 60341701 50000000 ≈ 1.207. All coefficients are positive but a1a2 − a3 ≈ − 1.09 < 0, so by the Routh–Hurwitz criterion [137] two eigenvalues have positive real part (numerically 0.310 ± 0.928 i; the third is −1.262). The equilibrium is therefore unstable. Solutions cannot approach 0 either, since for small populations 
+
+W < 1 and the population grows. Consequently, solutions starting near ueq (off a single curve of initial conditions) never settle. Numerically, they approach a stable periodic orbit of period ≈ 15.5 along which the total population oscillates between ≈ 1.5 and ≈ 43 (Figure 5). The mechanism is a delayed negative feedback . State 1 proliferates fast but exerts almost no competitive pressure, while state 3, which proliferates slowly, exerts almost all of it. New cells produced in state 1 raise the pressure only after they have crossed the chain 1 → 2 → 3, which takes about 10 time units, comparable to the period. Delayed negative feedback is a classical source of oscillations in physiological control systems, in particular in regulated hematopoiesis [138, 139]. Two heterogeneities are needed at the same time: if all compartments proliferate at the same rate, the composition obeys p′ = Ap exactly and converges to π; if all pressures are equal, we are back in Theorem 1. In the language of the proof, what is lost is conservation: switching 
+
+34 conserves the number of cells U, but it does not conserve the regulating quantity W, because a cell that switches phenotype also changes its competitive weight. In simulations with fast, well-connected switching we always observed convergence to ueq ; whether this holds in general is open. −1.5 0.0 1.5  
+
+> log 10 u1
+> −0.4 0.0 0.4 0.8
+> log 10  u2
+> 0.00 0.15 0.30
+> log 10  u3
+
+a from near ueq (spirals out) from outside the cycle (spirals in) attracting limit cycle unstable equilibrium ueq           
+
+> 010 20 30 40 50 60 time t¡t0
+> 10 0
+> 10 1
+> 10 2
+> population (log scale)
+> zero of g
+
+b            
+
+> U=u1+u2+u3(conserved by switching)
+> W=w>u(enters competition)
+
+Figure 5: Weighted competition can destroy convergence (counterexample of Appendix A). (a) Phase space (log 10 u1, log 10 u2, log 10 u3): a trajectory starting close to the unstable equilibrium ueq (star) spirals outwards, a trajectory starting outside spirals inwards, and both approach the same attracting limit cycle (thick line), of period ≈ 15.5. (b) Along the cycle, the weighted population W = ∑j wjuj, which regulates growth, oscillates indefinitely across 1, the zero of g, while the total population U, which is conserved by switching, oscillates between ≈ 1.5 and ≈ 43 (its equilibrium value is 1500/501 ≈ 3); four periods are shown. 
+
+## B. Method of lines and discretization of the advection–diffusion PDE 
+
+We show that the compartmental model with local transitions (8) is precisely a finite-difference discretization of the continuous reaction–diffusion–advection equation 
+
+∂tu = f (u, x, t) − ∂x (vu ) + ∂x (D ∂x u), (40) and we derive the identification formulas 
+
+D(xi+1/2 ) ≈ ∆x2
+
+2
+
+ ki,i+1 + ki+1, i
+
+, v(xi+1/2 ) ≈ ∆x  ki,i+1 − ki+1, i
+
+,and comment on the consistency of the scheme. 
+
+Grid and notation. Consider a bounded one-dimensional domain Ω = [ 0, L]. Partition it into n
+
+cells of equal width ∆x = L/n, with centers 
+
+xi =  i − 12
+
+∆x, i = 1, . . . , n,and interfaces 
+
+xi+1/2 = i ∆x, i = 0, . . . , n,so that the outer interfaces x1/2 = 0 and xn+1/2 = L are the boundaries of the domain. We denote 
+
+ui(t) ≈ u(xi, t), vi ≈ v(xi), Di+1/2 ≈ D(xi+1/2 ), and fi(u) := f (u, xi, t).
+
+35 A conservative (finite-volume) formulation. Integrate the PDE (40) exactly over the control volume [xi−1/2 , xi+1/2 ] surrounding node xi. Writing the total flux as J(x, t) := v(x, t)u(x, t) −
+
+D(x, t)∂x u(x, t), so that (40) reads ∂tu = f − ∂x J, the fundamental theorem of calculus gives, 
+
+ddt 
+
+Z xi+1/2 
+
+> xi−1/2
+
+u(x, t) dx =
+
+Z xi+1/2 
+
+> xi−1/2
+
+f (u, x, t) dx − J(xi+1/2 , t) − J(xi−1/2 , t). (41) This is the defining property of a conservative discretization: whatever leaves cell i through an interface enters the neighboring cell, so that, summing over all cells, only the fluxes through the domain boundaries survive, as in the PDE itself. Approximating the cell average by the nodal value, 1
+
+> ∆x
+
+R xi+1/2  
+
+> xi−1/2
+
+u dx ≈ ui(t), (41) becomes, per unit length, 
+
+du i
+
+dt = fi(u) − J(xi+1/2 , t) − J(xi−1/2 , t)
+
+∆x . (42) It remains to approximate the advective and diffusive parts of the flux at the interfaces. 
+
+Advective flux at the interface. We approximate Jadv (x, t) = v(x, t)u(x, t) at xi+1/2 by evaluating 
+
+v exactly there and averaging u between its two neighboring nodes, 
+
+Jadv (xi+1/2 , t) ≈ vi+1/2 
+
+ui + ui+1
+
+2 . (43) Substituting (43) (and its analogue at xi−1/2 ) into the advective part of (42) gives 
+
+− Jadv (xi+1/2 ) − Jadv (xi−1/2 )
+
+∆x ≈ vi−1/2 
+
+2∆x ui−1 + vi−1/2 − vi+1/2 
+
+2∆x ui − vi+1/2 
+
+2∆x ui+1. (44) 
+
+Diffusive flux at the interface. We approximate Jdiff (x, t) = −D(x, t)∂x u(x, t) at xi+1/2 by evalu-ating D exactly there and the derivative by a centered difference, 
+
+Jdiff (xi+1/2 , t) ≈ − Di+1/2 
+
+ui+1 − ui
+
+∆x . (45) Substituting (45) (and its analogue at xi−1/2 ) into the diffusive part of (42) gives 
+
+− Jdiff (xi+1/2 ) − Jdiff (xi−1/2 )
+
+∆x = Di−1/2 
+
+∆x2 ui−1 − Di−1/2 + Di+1/2 
+
+∆x2 ui + Di+1/2 
+
+∆x2 ui+1, (46) the standard three-point stencil for the Laplacian with variable coefficients. 
+
+Assembling the semi-discrete system. Adding (44) and (46) to (42), the PDE (40) at interior grid points becomes the ODE system 
+
+du i
+
+dt = fi(u) + 
+
+ Di−1/2 
+
+∆x2 + vi−1/2 
+
+2∆x
+
+
+
+ui−1 +
+
+ Di+1/2 
+
+∆x2 − vi+1/2 
+
+2∆x
+
+
+
+ui+1
+
+−
+
+ Di−1/2 + Di+1/2 
+
+∆x2 + vi+1/2 − vi−1/2 
+
+2∆x
+
+
+
+ui. (47) 
+
+Connection with the compartmental model. The local-transition model (8) for an interior com-partment i is 
+
+u′ 
+
+> i
+
+= ri(t)ui gi(u, t) + ki−1, iui−1 + ki+1, iui+1 − (ki,i−1 + ki,i+1)ui. (48) Assuming fi(u) = ri(t)ui gi(u, t), we identify (47) and (48) term by term. Matching the ui−1
+
+36 coefficient, which involves only the left interface xi−1/2 , gives 
+
+ki−1, i = Di−1/2 
+
+∆x2 + vi−1/2 
+
+2∆x ; (49) matching the ui+1 coefficient, which involves only the right interface xi+1/2 , gives 
+
+ki+1, i = Di+1/2 
+
+∆x2 − vi+1/2 
+
+2∆x . (50) Since xi+1/2 is also the left interface of compartment i + 1, relabeling i → i + 1 in (49) gives the complementary (outward) rate at that same interface, 
+
+ki,i+1 = Di+1/2 
+
+∆x2 + vi+1/2 
+
+2∆x ; (51) similarly, relabeling i → i − 1 in (50) gives ki,i−1 = Di−1/2 /∆x2 − vi−1/2 /(2∆x), and −(ki,i−1 +
+
+ki,i+1) then reproduces the coefficient of ui in (47): the interface values (Di±1/2 , vi±1/2 ) determine all three coefficients. The rates ki,i+1 (forward) and ki+1, i (backward) in (51) and (50) both live at the same interface 
+
+xi+1/2 , so they invert for Di+1/2 and vi+1/2 . Adding them eliminates v:
+
+Di+1/2 = ∆x2
+
+2
+
+ ki,i+1 + ki+1, i
+
+; (52) subtracting them eliminates D:
+
+vi+1/2 = ∆x ki,i+1 − ki+1, i
+
+. (53) These are exactly the relations (10) quoted in the main text. 
+
+The symmetric and skew-symmetric parts, D and V. The tridiagonal matrix A has entries 
+
+Ai,i−1 = ki−1, i, Ai,i+1 = ki+1, i, Aii = −(ki,i−1 + ki,i+1). Write A = Asym + Askew with Asym =(A + A⊤)/2, Askew = ( A − A⊤)/2, and define D := ∆x2 Asym , V := 2∆xA skew , so that A =
+
+∆x−2D + ( 2∆x)−1V, as in (11). Using (49)–(51) and its i → i − 1 shift, a direct computation gives, for the off-diagonal entries, 
+
+(D)i,i∓1 = ∆x2
+
+2 (ki∓1, i + ki,i∓1) = Di∓1/2 , (V )i,i∓1 = ∆x (ki∓1, i − ki,i∓1) = ± vi∓1/2 :the off-diagonal entries of D and V are, exactly, the interface values of D and v, confirming that the symmetric part carries diffusion and the skew-symmetric part carries advection. The diagonal, however, does not split so cleanly. Since V is antisymmetric by construction, (V )ii ≡ 0 identically, for any D (x) and v(x); correspondingly, the entire diagonal of A, and hence of D, must fall on the symmetric side: 
+
+(D)ii = −(Di−1/2 + Di+1/2 ) − ∆x
+
+2
+
+ vi+1/2 − vi−1/2 
+
+.The first term is the familiar three-point Laplacian stencil, (D)ii → − 2D(xi) as ∆x → 0. The second term has nothing to do with diffusion, and, although it is of order ∆x2 relative to the first, it does not vanish in the limit: after division by ∆x2 in (11) it contributes −(vi+1/2 − vi−1/2 )ui/(2∆x) →− 12 v′(xi)ui. It is half of the compressibility term of the advective flux, −∂x (vu ) = −v ∂x u − v′u;the other half is carried by the skew-symmetric part, which approximates −v ∂x u − 12 v′u. The symmetric/skew-symmetric split therefore separates diffusion and advection exactly when v is uniform; in general, the symmetric part carries diffusion plus the local term − 12 v′u.
+
+37 Two readings of the identification. Relations (52)–(53) can be read in two directions. Given smooth functions D(x) > 0 and v(x), they define , for each grid spacing ∆x, a compartmental model that is a consistent discretization of (40); this is the direction used in the simulation of Figure 3. Conversely, a compartmental model with many nearest-neighbour states approximates a continuous dynamics only if its rates scale appropriately: ki,i+1 and ki+1, i must diverge as O(∆x−2),with a difference of order O(∆x−1), the familiar scaling of a biased random walk converging to a drift–diffusion process; rates held fixed as ∆x → 0 collapse both D and v to zero. 
+
+Boundary conditions. The no-flux boundary conditions at x = 0 and x = L are discretized in the same conservative spirit, by setting the flux through the two boundary interfaces to zero rather than approximating it from interior values: J(x1/2 , t) = J(xn+1/2 , t) = 0. For the first cell, (42) then reads 
+
+du 1
+
+dt = f1(u) − J(x3/2 , t)
+
+∆x ≈ f1(u) + 
+
+ D3/2 
+
+∆x2 − v3/2 
+
+2∆x
+
+
+
+u2 −
+
+ D3/2 
+
+∆x2 + v3/2 
+
+2∆x
+
+
+
+u1,which is the compartmental equation for u1, with the rates (50) and (51) at the interface x3/2 
+
+and no transitions through x1/2 , i.e., k0,1 = k1,0 = 0. The same holds for the last cell, with 
+
+kn,n+1 = kn+1, n = 0. Hence the compartmental model with no transitions out of u1 and un is a faithful discretization of the PDE with zero-flux boundary conditions. 
+
+Consistency and positivity. Both flux approximations, (43) and (45), are centered at the interfaces, so, for smooth u, D and v, Taylor expansion shows that (47) approximates the right-hand side of (40) at xi with a local truncation error O(∆x2); together with the stability of centered finite-volume discretizations of parabolic equations [140], the scheme converges to (40) as ∆x → 0 while the solution stays smooth. For the identification to define a legitimate compartmental (Markov chain) model, the rates (50)–(51) must be nonnegative, which holds if ∆x ≤ 2Di+1/2 /|vi+1/2 |, a mesh (cell) Péclet-number condition; otherwise an upwind treatment of the advective flux restores positivity, at the cost of first-order accuracy. 
+
+## Acknowledgements 
+
+The author thanks Prof. Ingmar Glauche for suggestions on an early draft of this manuscript. Funding: This work was supported by CAPES and CNPq (Brazil), the Alexander von Humboldt Foundation (Germany), and partially by FAPEMIG (Brazil). 
+
+## Declaration of competing interest 
+
+The author declares no competing interests. 
+
+## Data availability 
+
+This is a theoretical study; no new data were generated or analyzed. The Python code that generates the figures, including the control points of the multi-well landscape, is available at 
+
+https://github.com/arturfassoni/sgd-epigenetic-landscape-review .
+
+## Declaration of generative AI and AI-assisted technologies in the manuscript preparation process 
+
+During the preparation of this work the author used Claude (Anthropic) in order to search and verify parts of the scientific literature, and to assist with translation and language editing. After 
+
+38 using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article. 
+
+# References 
+
+[1] Thomas Graf and Tariq Enver. Forcing cells to change lineages. Nature , 462(7273):587–594, 2009. [2] Allison J. Merrell and Ben Z. Stanger. Adult cell plasticity in vivo: De-differentiation and transdifferentiation are back in style. Nature Reviews Molecular Cell Biology , 17(7):413–425, 2016. [3] Adrian Bird. Perceptions of epigenetics. Nature , 447(7143):396–398, 2007. [4] C. H. Waddington. The Strategy of the Genes: A Discussion of Some Aspects of Theoretical Biology .Allen & Unwin, London, 1957. [5] Thomas Jenuwein and C. David Allis. Translating the histone code. Science , 293(5532):1074– 1080, 2001. [6] Tony Kouzarides. Chromatin modifications and their function. Cell , 128(4):693–705, 2007. [7] C. David Allis and Thomas Jenuwein. The molecular hallmarks of epigenetic control. Nature Reviews Genetics , 17(8):487–500, 2016. [8] Ian B. Dodd, Mille A. Micheelsen, Kim Sneppen, and Geneviève Thon. Theoretical analysis of epigenetic cell memory by nucleosome modification. Cell , 129(4):813–822, 2007. [9] Davide Michieletto, Enzo Orlandini, and Davide Marenduzzo. Polymer model with epige-netic recoloring reveals a pathway for the de novo establishment and 3D organization of chromatin domains. Physical Review X , 6:041047, 2016. [10] Tomás Alarcón, Josep Sardanyés, and Javier A. Menéndez. Characterising epigenetic tipping points using a spectral dimension reduction approach. Bulletin of Mathematical Biology , 88:57, 2026. [11] Jin Wang. Landscape and flux theory of non-equilibrium dynamical systems with applica-tion to biology. Advances in Physics , 64(1):1–137, 2015. [12] Peijie Zhou and Tiejun Li. Construction of the landscape for multi-stable systems: Potential landscape, quasi-potential, a-type integral and beyond. The Journal of Chemical Physics ,144(9):094109, 2016. [13] Alex Cagan. How somatic evolution affects health. Nature Ecology & Evolution , 10:392–394, 2026. [14] Yinchun Lv, Chenjia He, Qibing Xie, Feiwu Long, and Chuanwen Fan. Understanding tumor heterogeneity: Implications for precision oncology and therapeutic strategies. Biochimica et Biophysica Acta (BBA) - Reviews on Cancer , 1881(4):189617, 2026. [15] Andriy Marusyk and Kornelia Polyak. Tumor heterogeneity: Causes and consequences. 
+
+Biochimica et Biophysica Acta (BBA) – Reviews on Cancer , 1805(1):105–117, 2010. [16] Mel Greaves and Carlo C. Maley. Clonal evolution in cancer. Nature , 481(7381):306–313, 2012. 
+
+39 [17] Roberto Vendramin, Kevin Litchfield, and Charles Swanton. Cancer evolution: Darwin and beyond. The EMBO Journal , 40(18):e108389, 2021. [18] Marco Gerlinger, Andrew J. Rowan, Stuart Horswell, James Larkin, David Endesfelder, Eva Gronroos, et al. Intratumor heterogeneity and branched evolution revealed by multiregion sequencing. New England Journal of Medicine , 366(10):883–892, 2012. [19] Douglas Hanahan. Hallmarks of cancer: New dimensions. Cancer Discovery , 12(1):31–46, 2022. [20] Corbin E. Meacham and Sean J. Morrison. Tumour heterogeneity and cancer cell plasticity. 
+
+Nature , 501(7467):328–337, 2013. [21] Salina Yuan, Robert J. Norgard, and Ben Z. Stanger. Cellular plasticity in cancer. Cancer Discovery , 9(7):837–851, 2019. [22] William A. Flavahan, Elizabeth Gaskell, and Bradley E. Bernstein. Epigenetic plasticity and the hallmarks of cancer. Science , 357(6348):eaal2380, 2017. [23] Sreenath V. Sharma, Diana Y. Lee, Bihua Li, Margaret P. Quinlan, Fumiyuki Takahashi, Shyamala Maheswaran, Ultan McDermott, Nancy Azizian, Lee Zou, Michael A. Fischbach, Kwok-Kin Wong, Kathleyn Brandstetter, Ben Wittner, Sridhar Ramaswamy, Marie Classon, and Jeff Settleman. A chromatin-mediated reversible drug-tolerant state in cancer cell subpopulations. Cell , 141(1):69–80, 2010. [24] Jean-Christophe Marine, Sarah-Jane Dawson, and Mark A. Dawson. Non-genetic mecha-nisms of therapeutic resistance in cancer. Nature Reviews Cancer , 20(12):743–756, 2020. [25] Angela Oliveira Pisco, Amy Brock, Joseph Zhou, Andreas Moor, Mitra Mojtahedi, Dean Jack-son, and Sui Huang. Non-Darwinian dynamics in therapy-induced cancer drug resistance. 
+
+Nature Communications , 4:2467, 2013. [26] A. O. Pisco and S. Huang. Non-genetic cancer cell plasticity and therapy-induced stem-ness in tumour relapse: ‘What does not kill me strengthens me’. British Journal of Cancer ,112(11):1725–1732, 2015. [27] Nirali N. Shah and Terry J. Fry. Mechanisms of resistance to car t cell therapy. Nature Reviews Clinical Oncology , 16(6):372–385, 2019. [28] Daniela S. Santurio, Emanuelle A. Paixão, Luciana R.C. Barros, Regina C. Almeida, and Artur C. Fassoni. Mechanisms of resistance to car-t cell immunotherapy: Insights from a mathematical model. Applied Mathematical Modelling , 125:1–15, 2024. [29] Robbie G. Majzner and Crystal L. Mackall. Tumor antigen escape from car t-cell therapy. 
+
+Cancer Discovery , 8(10):1219–1226, 2018. [30] Ibiayi Dagogo-Jack and Alice T. Shaw. Tumour heterogeneity and resistance to cancer therapies. Nature Reviews Clinical Oncology , 15(2):81–94, 2018. [31] Meghan C. Ferrall-Fairbanks, Markus Ball, Eric Padron, and Philipp M. Altrock. Leveraging single-cell RNA sequencing experiments to model intratumor heterogeneity. JCO Clinical Cancer Informatics , 3:1–10, 2019. [32] Luc G. T. Morris, Nadeem Riaz, Alexis Desrichard, Yasin ¸ Senbabao ˘ glu, A. Ari Hakimi, Vladimir Makarov, Jorge S. Reis-Filho, and Timothy A. Chan. Pan-cancer analysis of intratumor heterogeneity as a prognostic determinant of survival. Oncotarget , 7(9):10051– 10063, 2016. 
+
+40 [33] Peter C. Nowell. The clonal evolution of tumor cell populations. Science , 194(4260):23–28, 1976. [34] Douglas Hanahan and Robert A. Weinberg. Hallmarks of cancer: The next generation. Cell ,144(5):646–674, 2011. [35] Sui Huang, Ingemar Ernberg, and Stuart Kauffman. Cancer attractors: A systems view of tumors from a gene network dynamics and developmental perspective. Seminars in Cell and Developmental Biology , 20(7):869–876, 2009. [36] Andriy Marusyk, Vanessa Almendro, and Kornelia Polyak. Intra-tumour heterogeneity: A looking glass for cancer? Nature Reviews Cancer , 12(5):323–334, 2012. [37] Andrew P. Feinberg and Rafael A. Irizarry. Stochastic epigenetic variation as a driving force of development, evolutionary adaptation, and disease. Proceedings of the National Academy of Sciences , 107(suppl. 1):1757–1764, 2010. [38] Anna Marciniak-Czochra, Thomas Stiehl, Anthony D. Ho, Willi Jäger, and Wolfgang Wagner. Modeling of asymmetric cell division in hematopoietic stem cells: Regulation of self-renewal is essential for efficient repopulation. Stem Cells and Development , 18(3):377–386, 2009. [39] Franziska Michor, Timothy P. Hughes, Yoh Iwasa, Susan Branford, Neil P. Shah, Charles L. Sawyers, and Martin A. Nowak. Dynamics of chronic myeloid leukaemia. Nature ,435(7046):1267–1270, 2005. [40] Ingo Roeder, Matthias Horn, Ingmar Glauche, Andreas Hochhaus, Martin C. Mueller, and Markus Loeffler. Dynamic modeling of imatinib-treated chronic myeloid leukemia: Functional insights and clinical implications. Nature Medicine , 12(10):1181–1184, 2006. [41] Artur C. Fassoni, Christoph Baldow, Ingo Roeder, and Ingmar Glauche. Reduced tyrosine kinase inhibitor dose is predicted to be as effective as standard dose in chronic myeloid leukemia: A simulation study based on phase iii trial data. Haematologica , 103(11):1825–1834, 2018. [42] Maximilian A.R. Strobl, Jeffrey West, Yannick Viossat, Mehdi Damaghi, Mark Robertson-Tessi, Joel S. Brown, Robert A. Gatenby, Philip K. Maini, and Alexander R.A. Anderson. Turnover modulates the need for a cost of resistance in adaptive therapy. Cancer Research ,81(4):1135–1147, 2021. [43] Da Zhou, Yue Luo, David Dingli, and Arne Traulsen. The invasion of de-differentiating cancer cells into hierarchical tissues. PLOS Computational Biology , 15(7):e1007167, 2019. [44] Aleksandra Gavrilova, Trachette L. Jackson, and Nizhum Rahman. Phenotypic plasticity and competition shape therapy sequencing in her2+/her2- breast cancer: A mathematical framework. Journal of Theoretical Biology , page 112533, 2026. [45] Da Zhou, Dingming Wu, Zhe Li, Minping Qian, and Michael Q. Zhang. Population dynamics of cancer cells with cell state conversions. Quantitative Biology , 1(3):201–208, 2013. [46] Einar Bjarki Gunnarsson, Subhajyoti De, Kevin Leder, and Jasmine Foo. Understanding the role of phenotypic switching in cancer drug resistance. Journal of Theoretical Biology ,490:110162, 2020. [47] Ronald R. Coifman and Stéphane Lafon. Diffusion maps. Applied and Computational Harmonic Analysis , 21(1):5–30, 2006. 
+
+41 [48] Laleh Haghverdi, Maren Büttner, F. Alexander Wolf, Florian Buettner, and Fabian J. Theis. Diffusion pseudotime robustly reconstructs lineage branching. Nature Methods , 13(10):845– 848, 2016. [49] Cole Trapnell, Davide Cacchiarelli, Jonna Grimsby, Prapti Pokharel, Shuqiang Li, Michael Morse, Niall J. Lennon, Kenneth J. Livak, Tarjei S. Mikkelsen, and John L. Rinn. The dynamics and regulators of cell fate decisions are revealed by pseudotemporal ordering of single cells. Nature Biotechnology , 32(4):381–386, 2014. [50] Benoît Perthame. Transport Equations in Biology . Frontiers in Mathematics. Birkhäuser, Basel, 2007. [51] Alexander Lorz, Sepideh Mirrahimi, and Benoît Perthame. Dirac mass dynamics in multi-dimensional nonlocal parabolic equations. Communications in Partial Differential Equations ,36(6):1071–1098, 2011. [52] Tommaso Lorenzi, Kevin J. Painter, and Chiara Villa. Phenotype structuring in collective cell migration: a tutorial of mathematical models and methods. Journal of Mathematical Biology , 90:61, 2025. [53] Frank Ernesto Alvarez, José Antonio Carrillo, and Jean Clairambault. Evolution of a structured cell population endowed with plasticity of traits under constraints on and between the traits. Journal of Mathematical Biology , 85:64, 2022. [54] Eleonora Agostinelli, Keith L. Chambers, Helen M. Byrne, and Mohit P. Dalwadi. Amultiscale discrete-to-continuum framework for structured population models. arXiv preprint arXiv:2603.15217 , 2026. [55] Rebecca H. Chisholm, Tommaso Lorenzi, Alexander Lorz, Annette K. Larsen, Luís Neves de Almeida, Alexandre Escargueil, and Jean Clairambault. Emergence of drug tolerance in cancer cell populations: An evolutionary outcome of selection, nongenetic instability, and stress-induced adaptation. Cancer Research , 75(6):930–939, 2015. [56] Tommaso Lorenzi, Rebecca H. Chisholm, Laurent Desvillettes, and Barry D. Hughes. Dis-secting the dynamics of epigenetic changes in phenotype-structured populations exposed to fluctuating environments. Journal of Theoretical Biology , 386:166–176, 2015. [57] Tommaso Lorenzi, Rebecca H. Chisholm, and Jean Clairambault. Tracking the evolution of cancer cell populations through the mathematical lens of phenotype-structured equations. 
+
+Biology Direct , 11:43, 2016. [58] Jean Clairambault and Camille Pouchol. A survey of adaptive cell population dynamics models of emergence of drug resistance in cancer, and open questions about evolution and cancer. BIOMATH , 8(1):1905147, 2019. [59] Hyun Cho, Kelsey Ayers, Lisette DePillis, Yao-Hsiang Kuo, Jiah Park, Ami Radunskaya, and Russell Rockne. Modeling acute myeloid leukemia in a continuum of differentiation states. Letters in Biomathematics , 5(Suppl. 1):S69–S98, 2018. [60] Apeksha Singh, Jennifer J Chia, Dinesh S Rao, and Alexander Hoffmann. Population dy-namics modeling reveals that myeloid bias involves both hsc differentiation and progenitor proliferation biases. Blood , 145(12):1293–1308, 2025. [61] Anderson LA de Araujo, Artur C Fassoni, Kamila FL Madalena, and Luís F Salvino. Analysis and simulation of an integro-differential lotka–volterra model with variable reproduction 
+
+42 rates and optimal control. Communications in Nonlinear Science and Numerical Simulation ,134:108000, 2024. [62] Clécio C. de Souza Silva, Diego Cirne, Osmar Freitas, and Paulo R. A. Campos. Phenotypic evolution as an Ornstein–Uhlenbeck process: the effect of environmental variation and phenotypic plasticity. Physical Review E , 107:024417, 2023. [63] David A. Kessler and Herbert Levine. Phenomenological approach to cancer cell persistence. 
+
+Physical Review Letters , 129(10):108101, 2022. [64] Ji Tae Park and Herbert Levine. Modeling a continuum of drug-induced persistence during targeted cancer therapy. bioRxiv preprint , 2025. [65] Sui Huang, Gabriel Eichler, Yaneer Bar-Yam, and Donald E. Ingber. Cell fates as high-dimensional attractor states of a complex gene regulatory network. Physical Review Letters ,94(12):128701, 2005. [66] Ping Ao, Chulan Kwon, and Hong Qian. On the existence of potential landscape in the evolution of complex systems. Complexity , 12(4):19–27, 2007. [67] Jin Wang, Kun Zhang, Li Xu, and Erkang Wang. Quantifying the waddington landscape and biological paths for development and differentiation. Proceedings of the National Academy of Sciences , 108(20):8257–8262, 2011. [68] Megan A. Coomer, Lucy Ham, and Michael P. H. Stumpf. Noise distorts the epigenetic landscape and shapes cell-fate decisions. Cell Systems , 13(1):83–102.e6, 2022. [69] James E. Ferrell. Bistability, bifurcations, and Waddington’s epigenetic landscape. Current Biology , 22(11):R458–R466, 2012. [70] Naomi Moris, Cristina Pina, and Alfonso Martinez Arias. Transition states and cell fate decisions in epigenetic landscapes. Nature Reviews Genetics , 17:693–703, 2016. [71] Francis Corson and Eric D. Siggia. Geometry, epistasis, and developmental patterning. 
+
+Proceedings of the National Academy of Sciences , 109(15):5568–5575, 2012. [72] David A. Rand, Archishman Raju, Meritxell Sáez, Francis Corson, and Eric D. Siggia. Geometry of gene regulatory dynamics. Proceedings of the National Academy of Sciences ,118(38):e2109729118, 2021. [73] Meritxell Sáez, Robert Blassberg, Elena Camacho-Aguilar, Eric D. Siggia, David A. Rand, and James Briscoe. Statistically derived geometrical landscapes capture principles of decision-making dynamics during cell fate transitions. Cell Systems , 13(1):12–28.e3, 2022. [74] Arnab Barua and Haralampos Hatzikirou. Bayesian decision-making shapes phenotypic landscapes from differentiation to cancer. Entropy , 28(3):312, 2026. [75] Juan Jiménez-Sánchez, Carmen Ortega-Sabater, Philip K. Maini, Víctor M. Pérez-García, and Tommaso Lorenzi. First explore, then settle: A theoretical analysis of evolvability as a driver of adaptation. Bulletin of Mathematical Biology , 88:21, 2026. [76] Stefano Giaimo, Saumil Shah, Michael Raatz, and Arne Traulsen. Negligible long-term impact of nonlinear growth dynamics on heterogeneity in models of cancer cell populations. 
+
+Bulletin of Mathematical Biology , 87:18, 2025. [77] Philipp Getto, Anna Marciniak-Czochra, Yukihiko Nakata, and Maria dM. Vivanco. Global dynamics of two-compartment models for cell production systems with regulatory mecha-nisms. Mathematical Biosciences , 245(2):258–268, 2013. 
+
+43 [78] Mary Lou Zeeman. Hopf bifurcations in competitive three-dimensional lotka–volterra systems. Dynamics and Stability of Systems , 8(3):189–216, 1993. [79] Mary Lou Zeeman and Pauline van den Driessche. Three-dimensional competitive lotka– volterra systems with no periodic orbits. SIAM Journal on Applied Mathematics , 58(1):227–234, 1998. [80] Artur César Fassoni and Denis de Carvalho Braga. Resilience analysis for competing populations. Bulletin of Mathematical Biology , 81(10):3864–3888, 2019. [81] Sébastien Benzekry, Clare Lamont, Afshin Beheshti, Andrzej Tracz, John M. L. Ebos, Lynn Hlatky, and Philip Hahnfeldt. Classical mathematical models for description and prediction of experimental tumor growth. PLoS Computational Biology , 10(8):e1003800, 2014. [82] Gregory J Kimmel, Sadegh Marzban, Mehdi Damaghi, Arne Traulsen, Alexander RA Anderson, Jeffrey West, and Philipp M Altrock. Universal principles of cell population growth follow from local contact inhibition. iScience , 29(6):115953, 2026. [83] Artur C. Fassoni. Fitness is asymptotically irrelevant under uniform competition in phenotype-structured populations. Preprint (arXiv number to be added), 2026. [84] Ralph L. Disney and A. Bruce Clarke. Probability and Random Processes: A First Course with Applications . Wiley, 2nd edition, 1985. [85] Motoo Kimura. The Neutral Theory of Molecular Evolution . Cambridge University Press, Cambridge, 1983. [86] Edo Kussell and Stanislas Leibler. Phenotypic diversity, population growth, and information in fluctuating environments. Science , 309(5743):2075–2078, 2005. [87] Yuanling Niu, Yue Wang, and Da Zhou. The phenotypic equilibrium of cancer cells: From average-level stability to path-wise convergence. Journal of Theoretical Biology , 386:7–17, 2015. [88] Manfred Eigen. Selforganization of matter and the evolution of biological macromolecules. 
+
+Naturwissenschaften , 58:465–523, 1971. [89] Claus O. Wilke, Jia Lan Wang, Charles Ofria, Richard E. Lenski, and Christoph Adami. Evolution of digital organisms at high mutation rates leads to survival of the flattest. Nature ,412:331–333, 2001. [90] Toshikazu Ushijima, Naoko Watanabe, Eriko Okochi, Atsushi Kaneda, Takashi Sugimura, and Kazuaki Miyamoto. Fidelity of the methylation pattern and its variation in the genome. 
+
+Genome Research , 13(5):868–874, 2003. [91] Zhen Yang, Andrew Wong, Diana Kuh, Dirk S. Paul, Vardhman K. Rakyan, R. David Leslie, Shijie C. Zheng, Martin Widschwendter, Stephan Beck, and Andrew E. Teschendorff. Correlation of an epigenetic mitotic clock with cancer risk. Genome Biology , 17:205, 2016. [92] Piyush B. Gupta, Christine M. Fillmore, Guozhi Jiang, Sagi D. Shapira, Kai Tao, Char-lotte Kuperwasser, and Eric S. Lander. Stochastic state transitions give rise to phenotypic equilibrium in populations of cancer cells. Cell , 146(4):633–644, 2011. [93] Hannes Risken. The Fokker-Planck Equation: Methods of Solution and Applications , volume 18 of Springer Series in Synergetics . Springer, Berlin, 2nd edition, 1989. [94] Bernt Øksendal. Stochastic Differential Equations: An Introduction with Applications . Springer, 6th edition, 2003. 
+
+44 [95] A. W. C. Lau and T. C. Lubensky. State-dependent diffusion: Thermodynamic consistency and its path integral formulation. Physical Review E , 76:011123, 2007. [96] Ken A. Dill and Hue Sun Chan. From Levinthal to pathways to funnels. Nature Structural Biology , 4(1):10–19, 1997. [97] Salman F. Banani, Hyun O. Lee, Anthony A. Hyman, and Michael K. Rosen. Biomolecular condensates: Organizers of cellular biochemistry. Nature Reviews Molecular Cell Biology ,18(5):285–298, 2017. [98] Mingyang Lu, Mohit Kumar Jolly, Herbert Levine, José N. Onuchic, and Eshel Ben-Jacob. MicroRNA-based regulation of epithelial–hybrid–mesenchymal fate determination. Proceed-ings of the National Academy of Sciences , 110(45):18144–18149, 2013. [99] Chunhe Li, Tian Hong, and Qing Nie. Quantifying the landscape and kinetic paths for epithelial–mesenchymal transition from a core circuit. Physical Chemistry Chemical Physics ,18(27):17949–17956, 2016. [100] Herbert Robbins and Sutton Monro. A stochastic approximation method. Annals of Mathe-matical Statistics , 22(3):400–407, 1951. [101] Léon Bottou, Frank E. Curtis, and Jorge Nocedal. Optimization methods for large-scale machine learning. SIAM Review , 60(2):223–311, 2018. [102] Caleb Weinreb, Samuel Wolock, Betsabeh K. Tusi, Merav Socolovsky, and Allon M. Klein. Fundamental limits on dynamic inference from single-cell snapshots. Proceedings of the National Academy of Sciences , 115(10):E2467–E2476, 2018. [103] Gioele La Manno, Ruslan Soldatov, Amit Zeisel, et al. RNA velocity of single cells. Nature ,560:494–498, 2018. [104] Geoffrey Schiebinger, Jian Shu, Marcin Tabaka, Brian Cleary, Vidya Subramanian, Aryeh Solomon, Joshua Gould, Siyan Liu, Stacie Lin, Peter Berube, Lia Lee, Jenny Chen, Justin Brumbaugh, Philippe Rigollet, Konrad Hochedlinger, Rudolf Jaenisch, Aviv Regev, and Eric S. Lander. Optimal-transport analysis of single-cell gene expression identifies develop-mental trajectories in reprogramming. Cell , 176(4):928–943.e22, 2019. [105] Tatsunori B. Hashimoto, David K. Gifford, and Tommi S. Jaakkola. Learning population-level diffusions with generative RNNs. In Proceedings of the 33rd International Conference on Machine Learning , volume 48 of Proceedings of Machine Learning Research , pages 2417–2426, 2016. [106] Grace Hui Ting Yeo, Sachit D. Saksena, and David K. Gifford. Generative modeling of single-cell time series with PRESCIENT enables prediction of cell trajectories with interventions. 
+
+Nature Communications , 12:3222, 2021. [107] Hugo Lavenant, Stephen Zhang, Young-Heon Kim, and Geoffrey Schiebinger. Toward a mathematical theory of trajectory inference. The Annals of Applied Probability , 34(1A):428–500, 2024. [108] Xiaojie Qiu, Shanshan Ding, and Tieliu Shi. From understanding the development landscape of the canonical fate-switch pair to constructing a dynamic landscape for two-step neural differentiation. PLoS ONE , 7(12):e49271, 2012. [109] Ying Tang, Ruoshi Yuan, Gaowei Wang, Xiaomei Zhu, and Ping Ao. Potential landscape of high dimensional nonlinear stochastic dynamics with large noise. Scientific Reports , 7:15762, 2017. 
+
+45 [110] Song Xu, Shuyun Jiao, Pengyao Jiang, and Ping Ao. Two-timescale evolution on a singular landscape. Physical Review E , 89:012724, 2014. [111] Andrew P. Feinberg, Michael A. Koldobskiy, and Anita Göndör. Epigenetic modulators, modifiers and mediators in cancer aetiology and progression. Nature Reviews Genetics ,17(5):284–299, 2016. [112] Teresa Davoli and Titia de Lange. The causes and consequences of polyploidy in normal development and cancer. Annual Review of Cell and Developmental Biology , 27:585–610, 2011. [113] R. F. Pawula. Approximation of the linear Boltzmann equation by the Fokker–Planck equation. Physical Review , 162(1):186–188, 1967. [114] Bernt Øksendal and Agnès Sulem. Applied Stochastic Control of Jump Diffusions . Springer, Berlin, 2nd edition, 2007. [115] N. G. van Kampen. Stochastic Processes in Physics and Chemistry . Elsevier, Amsterdam, 1992. [116] Philippe Courrège. Sur la forme intégro-différentielle des opérateurs de C∞ 
+
+> k
+
+dans C sat-isfaisant au principe du maximum. Séminaire Brelot–Choquet–Deny. Théorie du potentiel ,10(1):1–38, 1965–1966. Exposé no. 2. [117] Björn Böttcher, René Schilling, and Jian Wang. Lévy Matters III: Lévy-Type Processes: Construc-tion, Approximation and Sample Path Properties , volume 2099 of Lecture Notes in Mathematics .Springer, Cham, 2013. [118] David Applebaum. Lévy Processes and Stochastic Calculus , volume 116 of Cambridge Studies in Advanced Mathematics . Cambridge University Press, Cambridge, 2 edition, 2009. [119] Nir Friedman, Long Cai, and X. Sunney Xie. Linking stochastic dynamics to population distribution: An analytical framework of gene expression. Physical Review Letters , 97:168302, 2006. [120] Yuichi Taniguchi, Paul J. Choi, Gene-Wei Li, Huiyi Chen, Mohan Babu, Jeremy Hearn, Andrew Emili, and X. Sunney Xie. Quantifying E. coli proteome and transcriptome with single-molecule sensitivity in single cells. Science , 329(5991):533–538, 2010. [121] Kasper Daniel Hansen, Winston Timp, Héctor Corrada Bravo, et al. Increased methylation variation in epigenetic domains across cancer types. Nature Genetics , 43:768–775, 2011. [122] Dan A. Landau, Kendell Clement, Michael J. Ziller, et al. Locally disordered methylation forms the basis of intratumor methylome variation in chronic lymphocytic leukemia. Cancer Cell , 26(6):813–825, 2014. [123] Albert Einstein. Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen. Annalen der Physik ,17:549–560, 1905. [124] Max Welling and Yee Whye Teh. Bayesian learning via stochastic gradient langevin dynam-ics. In Proceedings of the 28th International Conference on Machine Learning (ICML-11) , pages 681–688, 2011. [125] Stephan Mandt, Matthew D. Hoffman, and David M. Blei. Stochastic gradient descent as approximate bayesian inference. Journal of Machine Learning Research , 18(134):1–35, 2017. [126] Samuel L. Smith and Quoc V. Le. A Bayesian perspective on generalization and stochastic gradient descent. In International Conference on Learning Representations (ICLR) , 2018. 
+
+46 [127] Sadhika Malladi, Kaifeng Lyu, Abhishek Panigrahi, and Sanjeev Arora. On the SDEs and scaling rules for adaptive gradient algorithms. In Advances in Neural Information Processing Systems , volume 35, 2022. [128] Pratik Chaudhari and Stefano Soatto. Stochastic gradient descent performs variational inference, converges to limit cycles for deep networks. In International Conference on Learning Representations (ICLR) , 2018. arXiv:1710.11029. [129] Joel E Cohen. Mathematics is biology’s next microscope, only better; biology is mathematics’ next physics, only better. PLoS biology , 2(12):e439, 2004. [130] Michael B. Elowitz, Arnold J. Levine, Eric D. Siggia, and Peter S. Swain. Stochastic gene expression in a single cell. Science , 297(5584):1183–1186, 2002. [131] Alexander P. Browning, Parvathi Haridas, and Matthew J. Simpson. A bayesian sequential learning framework to parameterise continuum models of melanoma invasion into human skin. Bulletin of Mathematical Biology , 81:676–698, 2019. [132] Alexander P. Browning, Rebecca M. Crossley, Chiara Villa, Philip K. Maini, Adrianne L. Jenner, Tyler Cassidy, and Sara Hamis. Identifiability of heterogeneous phenotype adapta-tion from low-cell-count experiments and a stochastic model. PLOS Computational Biology ,21(6):e1013202, 2025. [133] Chiara Villa, Philip K. Maini, Alexander P. Browning, Adrianne L. Jenner, Sara Hamis, and Tyler Cassidy. Reducing phenotype-structured partial differential equations models of cancer evolution to systems of ordinary differential equations: A generalised moment dynamics approach. Journal of Mathematical Biology , 91(2):22, 2025. [134] Gopinath Sadhu, Paras Jain, Jason Thomas George, and Mohit Kumar Jolly. A phenotype-structured pde framework for investigating the role of hypoxic memory on tumor invasion under cyclic hypoxia. Bulletin of Mathematical Biology , 88(2), 2026. [135] J. R. Norris. Markov Chains . Cambridge University Press, 1997. [136] Hal L. Smith. Monotone Dynamical Systems: An Introduction to the Theory of Competitive and Cooperative Systems , volume 41 of Mathematical Surveys and Monographs . American Mathematical Society, Providence, 1995. [137] F. R. Gantmacher. The Theory of Matrices , volume 2. Chelsea, New York, 1959. [138] Michael C. Mackey and Leon Glass. Oscillation and chaos in physiological control systems. 
+
+Science , 197:287–289, 1977. [139] Michael C. Mackey. Unified hypothesis for the origin of aplastic anemia and periodic hematopoiesis. Blood , 51:941–956, 1978. [140] Randall J. LeVeque. Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems . SIAM, Philadelphia, PA, 2007. 
+
+47

@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2609.37703v1/fig-001.webp",
+      "caption": "Figure 4: Known distributions emerging from SGD on different potential landscapes. Direct simulation of the single-cell SDE (18). In each panel, the top plot shows N individual trajectories (Euler–Maruyama, phenotype on the horizontal axis, time on the vertical axis plotted downward so that its bottom edge aligns with the final-time histogram below); the bottom plot shows the histogram of final positions, the analytic stationary density (solid black, left axis), and the potential P(x) (dashed gray, right axis). (a) Case 1: flat landscape, uniform distribution on [0, 10] with reflecting boundaries, D = 1, N = 1000. (b) Case 2: linear potential P(x) = ax, exponential distribution (30) with a = D = 1 and a reflecting boundary at x = 0, N = 1000. (c) Case 3: harmonic potential (31), Gaussian distribution (32) with θ = 0.4, µ = 3, D = 1, N = 1000. (d) Case 4: state-dependent noise D(x) = D0(1 + x2) with D0 = 0.3, θ = 0.65, giving the heavy-tailed distribution (33), plotted on a wider horizontal scale than (c), N = 1000. (e) The general Boltzmann-form distribution (34) for the rugged, multi-well landscape sketched schematically in Figure 1e,f (D = 0.35, constant); all N = 1500 trajectories start at the left edge (x = −3), explore the landscape through noise-driven barrier crossings, and settle partially in the first well, predominantly in the deepest one, and rarely in the shallow well on the far right; at t = 25 the population is still in transit, with the left well overpopulated relative to ueq. Compare with the continuous counterpart, Figure 3c. The colored line is one cell with twice the noise (D = 0.7), a more plastic cell, drawn until it reaches the far well at t ≈ 4.5; it is a fast realization chosen for illustration (typical first-passage times are given in the text). Euler–Maruyama time step ∆t = 0.01 (0.02 in (c), 0.004 in (d)); reflecting boundaries are implemented by mirror reflection, and in (e) the drift is extended as a constant outside [−3, 3].",
+      "page": 25,
+      "index": 1,
+      "width": 819,
+      "height": 938
+    },
+    {
+      "url": "assets/figures/arxiv/2609.37703v1/fig-002.webp",
+      "caption": "Figure 2: Illustration of Theorem 2: uniform competition erases the imprint of fitness. The full reaction– advection–diffusion equation (9) with g(U) = 1 − U and v = −P′ on (0, 1), with zero-flux boundaries and constant diffusivity D = 0.02. (a) The potential, a tilted double well, P(x) = 0.03 cos(4πx) + 0.03 x; the stationary density ψ ∝ e−P/D places 68% of the population in the left well. (b) The proliferation rate, r(x) = 0.1+ 1.9/ ( 1+ e−(x−1/2)/0.02), which strongly favors the right well. (c) Kymograph of the composition u/U (color scale nonlinear, power law with exponent 0.6; time increases downward). The population starts at the stationary composition, u(x, 0) = 0.01 ψ(x); during growth it is pulled towards the right well, and afterwards switching brings it back to ψ. (d) Total population U(t), which reaches the carrying capacity U∗ = 1 by t ≈ 5. (e) L1 distance of the composition to ψ: it peaks at 1.26 during growth and then decays at the spectral gap λ1 ≈ 0.066 of the switching dynamics (dotted: slope −λ1). (f) Memory time 1/λ1 as a function of 1/D, for the same potential: it grows like e∆P/D (dotted), where ∆P ≈ 0.053 is the barrier seen from the shallower well (the Kramers regime); the circle marks D = 0.02, used in (a)–(e). Finite-volume discretization with N = 400 cells whose fluxes preserve ψ exactly, integrated in time with a stiff (BDF) solver.",
+      "page": 14,
+      "index": 2,
+      "width": 842,
+      "height": 867
+    },
+    {
+      "url": "assets/figures/arxiv/2609.37703v1/fig-003.webp",
+      "caption": "Figure 5: Weighted competition can destroy convergence (counterexample of Appendix A). (a) Phase space (log10 u1, log10 u2, log10 u3): a trajectory starting close to the unstable equilibrium ueq (star) spirals outwards, a trajectory starting outside spirals inwards, and both approach the same attracting limit cycle (thick line), of period ≈ 15.5. (b) Along the cycle, the weighted population W = ∑j wjuj, which regulates growth, oscillates indefinitely across 1, the zero of g, while the total population U, which is conserved by switching, oscillates between ≈ 1.5 and ≈ 43 (its equilibrium value is 1500/501 ≈ 3); four periods are shown.",
+      "page": 35,
+      "index": 3,
+      "width": 845,
+      "height": 433
+    },
+    {
+      "url": "assets/figures/arxiv/2609.37703v1/fig-004.webp",
+      "caption": "Figure 3: Illustration of Theorem 2: the full nonlinear PDE converges to the stationary density of the switching dynamics despite a spatially decreasing fitness. The full reaction–advection–diffusion equation (9) is solved directly by the method of lines. Space is discretized into N = 150 compartments, using the same finite-difference identification of D and v from local transition rates as in Section 2.3; this turns the PDE into exactly the type of large compartmental ODE system covered by Theorem 1, which is then integrated in time with a stiff ODE solver. (a) The potential P(x), the same multi-well landscape as Figure 1e,f (a cubic spline through fixed control points; see Data availability), with constant diffusivity D = 0.35. (b) The proliferation rate r(x) = r0 − mx (r0 = 1, m = 0.15), decreasing across phenotype space; biologically, this represents a population in which the least differentiated phenotype (left edge) is also the most proliferative, as for stem and progenitor cells relative to their post-mitotic descendants. (c) Kymograph of u(x, t) (color scale nonlinear, power-law with γ = 0.45, to make the shallow right-hand well visible; time increases downward, as in Figure 4). The population is seeded, at t = 0, as a narrow Gaussian at the left boundary (x0 = −3, σ = 0.25), with total initial mass U(0) = 0.05, and reflecting (zero-flux) boundaries are imposed at x = ±3. (d) Total population U(t), growing rapidly to the carrying capacity K = 1 under the logistic modulation g(U) = 1 − U/K; note that essentially all growth, and hence all activity of the reaction term r(x)u g(U), occurs within the first t ≈ 10 time units. (e) The simulated profile at t = 100, normalized to a probability density, against the stationary density ueq(x) ∝ exp(−P(x)/D) predicted by the purely linear equation (22) (no reaction term): the two are visually indistinguishable (L1 distance 2.6 × 10−3), with no trace of the fitness advantage that favored the starting region throughout the transient.",
+      "page": 19,
+      "index": 4,
+      "width": 846,
+      "height": 802
+    },
+    {
+      "url": "assets/figures/arxiv/2609.37703v1/fig-005.webp",
+      "caption": "Figure 1: Roadmap of the modeling framework. Rows correspond to the level of description (compartmental ODEs, top; continuum PDEs, middle; individual-cell SDEs, bottom); columns to whether transitions are local (left) or non-local (right). The reaction (vital-dynamics) term is shown in gray to indicate that it becomes asymptotically negligible under uniform competition (Theorems 1 and 2) or vanishes at equilibrium. Horizontal double-headed arrows connect the local and non-local versions of the same level of description; vertical arrows connect the continuum limit/discretization (rows 1–2) and the Fokker–Planck/individual-trajectory duality (rows 2–3). (a) Two-compartment model, eq. (1) (top), and its local n-compartment generalization, eq. (8) (bottom). (b) The same construction without the nearest-neighbor restriction, eq. (2). (c) Continuum limit of (a): the advection–diffusion equation (14), with advection velocity interpreted as a negative gradient, v(x) = −P′(x). (d) Adding a non-local jump term with kernel K(x, y) yields the unified model (27). (e) The single-cell SDE (24): a stochastic gradient descent on the potential P(x), with drift toward the nearest minimum and noise that lets a cell escape shallow ones by crossing the barriers between them. (f) Adding jumps dJε t (eq. (28)) lets a cell relocate directly across the landscape.",
+      "page": 5,
+      "index": 5,
+      "width": 797,
+      "height": 1061
+    }
+  ]
+}
