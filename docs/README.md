@@ -6,26 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-10-02
-- 运行时间：2026-10-02 22:59:38 UTC
+- 最新运行日期：2026-10-03
+- 运行时间：2026-10-03 22:01:29 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：3
 - 精读区：0
-- 速读区：1
+- 速读区：3
 
 ### 今日简报（AI）
-今日聚焦随机梯度下降在表观遗传景观中的应用，探索细胞可塑性与肿瘤异质性的统一框架。
-研究通过 SGD 模拟细胞状态演化，揭示了肿瘤异质性的形成机制及适应度在渐近过程中的“无关性”。
-推荐关注生物物理与机器学习交叉领域的读者了解这一数学模型对癌症演化研究的新视角。
-- 详情：[/202610/02/README](/202610/02/README)
+今日聚焦单细胞扰动预测的前沿算法，深入探讨细胞在干预下的状态演变与多组学网络关联。
+重点推荐 DRIFT 框架，其通过解耦响应与不变特征的流传输技术，显著提升了单细胞水平的响应预测精度。
+建议关注如何结合跨视图去噪与网络传播协议，以破解非配对数据中的复杂分子响应机制。
+- 详情：[/202610/03/README](/202610/03/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Stochastic gradient descent on the epigenetic landscape: a unified framework for cellular plasticity, tumor heterogeneity, and the asymptotic irrelevance of fitness](/202610/02/2609.37703v1-stochastic-gradient-descent-on-the-epigenetic-landscape-a-unified-framework-for-cellular-plasticity-tumor-heterogeneity-and-the-asymptotic-irrelevance-of-fitness)  
+1. [DRIFT: Disentangled Responsive-Invariant Flow Transport for Single-Cell Perturbation Prediction](/202610/03/2609.35106v1-drift-disentangled-responsive-invariant-flow-transport-for-single-cell-perturbation-prediction)  
+   标签：评分：6.5/10、query:ros-mp
+   evidence：预测细胞对扰动的反应，适用于巨噬细胞极化研究。
+2. [P2P: Cross-View Population Denoising for Unpaired Single-Cell Perturbation Response Prediction](/202610/03/2609.34391v1-p2p-cross-view-population-denoising-for-unpaired-single-cell-perturbation-response-prediction)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：细胞可塑性和表型转换的框架
+   evidence：预测细胞行为和对遗传扰动的转录反应。
+3. [Protocol for Discovering Convergent Molecular Networks across Multi-Omics Datasets Using Network Propagation](/202610/03/2610.01142v1-protocol-for-discovering-convergent-molecular-networks-across-multi-omics-datasets-using-network-propagation)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：整合多组学以揭示共享的分子网络和生物机制。
 
 
 <div class="dpr-home-promo-card">

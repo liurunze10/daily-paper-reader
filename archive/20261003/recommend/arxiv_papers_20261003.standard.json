@@ -1,0 +1,138 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-10-03T22:00:55.338703+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.35106v1",
+      "source": "arxiv",
+      "title": "DRIFT: Disentangled Responsive-Invariant Flow Transport for Single-Cell Perturbation Prediction",
+      "abstract": "Predicting cellular responses to perturbations is a central problem in cellular biology, with broad applications in systems biology and drug discovery. This task is challenging because cellular responses can be complex and cell-state dependent, intrinsic cell-to-cell variability can be confounded with perturbation effects, and destructive single-cell RNA sequencing precludes paired measurements of the same cell before and after treatment. Flow matching transports control cells to perturbed states flexibly, but acting on the full cell state can confound perturbation effects with pre-existing cell-to-cell variability. Disentangled approaches separate responsive from invariant components, but model perturbations through prescribed mechanisms, such as latent shifts or graph edits, limiting their flexibility. We address both limitations in a unified framework. A variational encoder disentangles each cell into an invariant block, capturing state unaffected by the perturbation, and a responsive block, capturing state it changes, through conditional priors and an information-theoretic invariance constraint. Conditional flow matching transports only the responsive block, conditioned on the perturbation and invariant state, yielding a flexible, data-driven model of perturbation effects without confounding pre-existing variability. Across several benchmarks, our method outperforms the strongest published method in settings involving combinatorial and unseen perturbation prediction.",
+      "authors": [
+        "Mustapha Bounoua",
+        "Giulio Franzese",
+        "Pietro Michiardi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-28T13:12:33+00:00",
+      "link": "https://arxiv.org/pdf/2609.35106v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "Predicts cellular responses to perturbations, applicable to macrophage polarization studies.",
+      "llm_evidence_cn": "预测细胞对扰动的反应，适用于巨噬细胞极化研究。",
+      "llm_evidence": "预测细胞对扰动的反应，适用于巨噬细胞极化研究。",
+      "canonical_evidence": "预测细胞对扰动的反应，适用于巨噬细胞极化研究。",
+      "llm_tldr_en": "A flow transport method for predicting single-cell responses to perturbations by disentangling components.",
+      "llm_tldr_cn": "一种通过解耦成分来预测单细胞对扰动反应的流传输方法。",
+      "llm_tldr": "一种通过解耦成分来预测单细胞对扰动反应的流传输方法。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.34391v1",
+      "source": "arxiv",
+      "title": "P2P: Cross-View Population Denoising for Unpaired Single-Cell Perturbation Response Prediction",
+      "abstract": "AIVC (AI Virtual Cell) is a learned simulator of cellular behavior across conditions. Predicting how a cell population responds transcriptionally to a genetic perturbation is a core task. Perturb-seq records that response by destructive sequencing, so a control cell and a perturbed cell are never observed as a pair, and cells under one condition remain heterogeneous and noisy. Regression on individual cells absorbs sampling variation into the estimated effect, whereas interpretation requires the reproducible population effect. P2P (Perturbation-to-Perturbation) takes a stochastic cell-set view as its supervision unit. Two views drawn from the same condition share a reproducible population effect and differ by view-specific variation. A permutation-invariant set encoder summarizes the control population, a structured encoder represents perturbation tokens, cellular context, dose, and combination interactions, and a gate blends empirical condition-effect memory with a neural residual. A heteroscedastic head predicts the population mean and gene-wise response variance. Under one protocol and five seeds, P2P attains the lowest expression RMSE and the highest Effect Pearson, DEG F1, and DEG average precision on each of Adamson, Norman, Replogle K562, and Replogle RPE1 relative to GenePert, LinearPert, SLIM, Scouter, and scPILOT. On Replogle K562, Effect Pearson rises from 0.643 to 0.702 and DEG F1 rises from 0.067 to 0.178 relative to Scouter, the strongest baseline on both metrics.",
+      "authors": [
+        "Haojie Yang",
+        "Ran Su"
+      ],
+      "primary_category": "cs.ET",
+      "categories": [
+        "cs.ET",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-28T06:06:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.34391v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Predicting cellular behavior and transcriptional response to genetic perturbations.",
+      "llm_evidence_cn": "预测细胞行为和对遗传扰动的转录反应。",
+      "llm_evidence": "预测细胞行为和对遗传扰动的转录反应。",
+      "canonical_evidence": "预测细胞行为和对遗传扰动的转录反应。",
+      "llm_tldr_en": "A simulator for predicting single-cell perturbation responses, useful for studying macrophage plasticity.",
+      "llm_tldr_cn": "一种预测单细胞扰动反应的模拟器，可用于研究巨噬细胞可塑性。",
+      "llm_tldr": "一种预测单细胞扰动反应的模拟器，可用于研究巨噬细胞可塑性。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2610.01142v1",
+      "source": "arxiv",
+      "title": "Protocol for Discovering Convergent Molecular Networks across Multi-Omics Datasets Using Network Propagation",
+      "abstract": "Phenotypic outcomes arise from coordinated changes across molecular layers. Although multi-omics data capture complementary molecular signals, integrating them into coherent biological mechanisms remains challenging due to limited overlap at the gene level. Network propagation maps significant gene hits from each dataset onto a prior knowledge molecular interaction network and diffuses their signals to neighboring genes. Mathematical integration of propagated networks, followed by clustering and pathway enrichment, reveals shared molecular networks, pinpointing the core biology captured across orthogonal molecular layers.",
+      "authors": [
+        "Charles O. Olwal",
+        "Declan M. Winters",
+        "Immy A. Ashley",
+        "Valerie Vandersall",
+        "Amberin Rahman",
+        "Alexandra Lindsey Djomkam Zune",
+        "Kyla F. Dangerfield",
+        "Yennifer Delgado",
+        "Sara K. Makanani",
+        "Sophie F. Blanc",
+        "Shipra Sharma",
+        "Mehdi Bouhaddou"
+      ],
+      "primary_category": "q-bio.MN",
+      "categories": [
+        "q-bio.MN"
+      ],
+      "published": "2026-10-01T06:23:09+00:00",
+      "link": "https://arxiv.org/pdf/2610.01142v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Integrates multi-omics to reveal shared molecular networks and biological mechanisms.",
+      "llm_evidence_cn": "整合多组学以揭示共享的分子网络和生物机制。",
+      "llm_evidence": "整合多组学以揭示共享的分子网络和生物机制。",
+      "canonical_evidence": "整合多组学以揭示共享的分子网络和生物机制。",
+      "llm_tldr_en": "A protocol using network propagation to discover convergent molecular networks across multi-omics datasets.",
+      "llm_tldr_cn": "一种利用网络传播在多组学数据集中发现收敛分子协议的方法。",
+      "llm_tldr": "一种利用网络传播在多组学数据集中发现收敛分子协议的方法。",
+      "llm_tags": [
+        "query:ros-mp:composite"
+      ],
+      "matched_query_tag": "query:ros-mp:composite",
+      "matched_query_text": "Papers central to ROS与巨噬细胞极化相关研究论文检索, especially work that connects or combines: Macrophage polarization mechanisms; inflammatory bowel disease; Reactive oxygen species; Oxidative stress and macrophage phenotype; The role of reactive oxygen species in regulating macrophage polarization and functional plasticity; How ROS signaling modulates macrophage polarization status and plasticity during intestinal inflammation; The role of reactive oxygen species in regulating macrophage M1/M2 polarization in inflammatory bowel disease; Role of reactive oxygen species in macrophage M1/M2 polarization.",
+      "matched_requirement_id": "req-composite-ros-mp",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
