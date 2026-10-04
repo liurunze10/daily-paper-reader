@@ -1,0 +1,94 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-10-04T22:14:22.819245+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.37703v1",
+      "source": "arxiv",
+      "title": "Stochastic gradient descent on the epigenetic landscape: a unified framework for cellular plasticity, tumor heterogeneity, and the asymptotic irrelevance of fitness",
+      "abstract": "Phenotypic plasticity, the ability of cells to switch between states, is central to development, differentiation, and therapy resistance. Although it is modeled at several scales, from compartmental ODEs to phenotype-structured PDEs and single-cell stochastic equations, a framework connecting these descriptions is missing. We present such a framework. Starting from a general $n$-compartment ODE model encompassing nonlinear growth and linear transitions between phenotypes, we show, with a new, elementary and generalizable proof of a recent theorem, that under uniform competition, the long-term population distribution is solely governed by transition rates. All phenotypes become selectively neutral at saturation, and the imprint of fitness differences during growth fades at an explicit rate. Restricting transitions to neighboring states transforms the model into a discretization of a phenotype-structured reaction-diffusion-advection PDE. In this continuum model, diffusion and advection are identified from switching rates, and fitness remains asymptotically irrelevant. Interpreting the advection velocity as the negative gradient of an effective epigenetic potential transforms the PDE into a Fokker--Planck equation and converts single-cell trajectories into stochastic gradient descent (SGD) in the Langevin sense on the phenotypic landscape. Non-local transitions, such as mutations, are incorporated via an integro-differential term, yielding a unified model with reaction, gradient flow, diffusion, and jumps. State-dependent noise reshapes the effective landscape without altering the underlying potential. This gives cancer a route to elevated plasticity that static, single-cell snapshots cannot distinguish from a changed landscape. This framework provides a physical interpretation of Waddington's landscape, where cells perform SGD, and cancer corresponds to a corrupted landscape.",
+      "authors": [
+        "Artur C. Fassoni"
+      ],
+      "primary_category": "q-bio.PE",
+      "categories": [
+        "q-bio.PE",
+        "physics.bio-ph",
+        "q-bio.CB"
+      ],
+      "published": "2026-09-29T14:39:00+00:00",
+      "link": "https://arxiv.org/pdf/2609.37703v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "unified framework for cellular plasticity and transitions between phenotypes",
+      "llm_evidence_cn": "细胞可塑性和表型转换的统一框架",
+      "llm_evidence": "细胞可塑性和表型转换的统一框架",
+      "canonical_evidence": "细胞可塑性和表型转换的统一框架",
+      "llm_tldr_en": "A mathematical framework for cellular plasticity that could model macrophage M1/M2 polarization dynamics.",
+      "llm_tldr_cn": "一种细胞可塑性数学框架，可用于模拟巨噬细胞M1/M2极化动力学。",
+      "llm_tldr": "一种细胞可塑性数学框架，可用于模拟巨噬细胞M1/M2极化动力学。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.38908v1",
+      "source": "arxiv",
+      "title": "CellMSA: Context Modeling for Single-Cell Representation Learning",
+      "abstract": "Single-cell transcriptomics enables profiling of cellular states at unprecedented resolution, but its high dimensionality, sparsity, and technical batch effects pose significant challenges for representation learning. Existing single-cell foundation models typically encode each cell independently or only model cells from the same batch for denoising, thereby underutilizing the rich relational information across batches and cell types to model gene expression patterns. We argue that single-cell models can benefit from more informative cell-context modeling. By comparing consistency and variation across cells, models can capture fine-grained gene-gene dependencies associated with cell states, which are essential for learning high-quality representations. Inspired by the use of multiple sequence alignment (MSA) context in protein modeling, we propose CellMSA, a single-cell representation learning framework that introduces an MSA-inspired inductive bias into transcriptomic modeling. For each target cell, CellMSA retrieves relevant cells from different batches and biologically related cell types as context, and summarizes cross-cell patterns into a context-dependent gene-pair representation. This representation is then injected into a pair-aware target-cell encoder for fine-grained representation learning. We pretrain CellMSA on a large-scale human single-cell corpus of approximately 109 million cell observations, including 65.6 million primary observations. Experiments show that our framework consistently outperforms existing methods across multiple benchmarks. Code is available at the following repository: https://github.com/PharMolix/CellMSA.",
+      "authors": [
+        "Suyuan Zhao",
+        "Minghao Liu",
+        "Yizhen Luo",
+        "Zaiqing Nie"
+      ],
+      "primary_category": "q-bio.GN",
+      "categories": [
+        "q-bio.GN",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-30T03:55:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.38908v1",
+      "tags": [
+        "keyword:ROS MP",
+        "query:ROS MP"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Single-cell transcriptomics for profiling cellular states and gene expression patterns",
+      "llm_evidence_cn": "用于分析细胞状态和基因表达模式的单细胞转录组学",
+      "llm_evidence": "用于分析细胞状态和基因表达模式的单细胞转录组学",
+      "canonical_evidence": "用于分析细胞状态和基因表达模式的单细胞转录组学",
+      "llm_tldr_en": "CellMSA improves single-cell representation learning, useful for studying complex cellular states like polarization.",
+      "llm_tldr_cn": "CellMSA改进了单细胞表示学习，可用于研究极化等复杂的细胞状态。",
+      "llm_tldr": "CellMSA改进了单细胞表示学习，可用于研究极化等复杂的细胞状态。",
+      "llm_tags": [
+        "query:ros-mp"
+      ],
+      "matched_query_tag": "query:ros-mp",
+      "matched_query_text": "Macrophage polarization mechanisms",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
