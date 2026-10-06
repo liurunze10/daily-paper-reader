@@ -1,9 +1,39 @@
 {
   "label": "2026-10-06",
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T00:49:04",
-  "count": 2,
+  "generated_at": "2026-10-06T23:47:03",
+  "count": 4,
   "papers": [
+    {
+      "paper_id": "202610/06/2610.04777v1-arise-adaptive-agentic-reasoning-with-image-grounded-self-evaluation-for-interpretable-ibd-assessment",
+      "section": "deep",
+      "title_en": "ARISE: Adaptive Agentic Reasoning with Image-grounded Self-Evaluation for Interpretable IBD Assessment",
+      "authors": "Pronoma Banerjee, Anuva Shah, Jason Wu, Md. Masudur Rahman, Sanjay Mohanty, Satya Kurada, Juan P. Wachs",
+      "date": "2026-10-03",
+      "pdf": "https://arxiv.org/pdf/2610.04777v1",
+      "score": "9.5",
+      "evidence": "该论文介绍了ARISE框架，用于通过医学影像进行可解释的炎症性肠病（IBD）评估。",
+      "tldr": "针对炎症性肠病（IBD）影像诊断高度依赖专家且视觉语言模型（VLM）存在幻觉和解释性差的问题，本文提出ARISE框架。该框架通过五阶段自主智能体工作流（假设生成、证据总结、修正、验证及诊断），在胶囊内镜和超声影像上实现了更精准且可解释的诊断，显著提升了临床决策支持能力。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Inflammatory bowel disease (IBD) requires frequent imaging-based assessment, yet interpretation of modalities such as wireless capsule endoscopy (WCE) and intestinal ultrasound remains heavily dependent on specialist expertise. Vision-Language Models (VLMs) demonstrate significant potential in multimodal medical image analysis, but their clinical adoption is hindered by their insufficient domain-specific reasoning, susceptibility to hallucination, scarcity of high quality training data in fine-grained diagnostics and limited interpretability. We introduce ARISE (Adaptive Agentic Reasoning with Image-grounded Self-Evaluation), an autonomous planning framework that models few-shot medical image understanding as a sequential agentic workflow. ARISE structures agent execution into a transparent 5-stage workflow: hypothesis generation, image-grounded evidence summarization, evidence-conditioned refinement, symbolic verification, and final diagnosis. We apply ARISE to IBD assessment across two independent patient cohorts: wireless capsule endoscopy (WCE) images for Crohn's disease and B-mode ultrasound data for ulcerative colitis. ARISE consistently improves diagnostic performance over baseline VLMs while exposing where reasoning succeeds or fails, providing a more interpretable basis for clinical decision support and realistic deployment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202610/06/2610.04242v1-data-driven-modeling-and-predictive-control-of-chronic-diseases-an-ulcerative-colitis-application",
+      "section": "quick",
+      "title_en": "Data-Driven Modeling and Predictive Control of Chronic Diseases: An Ulcerative Colitis Application",
+      "authors": "Fionna B. Kopp, Ann-Kathrin Schalkamp, Shadera Azzam, Vivek Rudrapatna, Francesco Borrelli",
+      "date": "2026-10-03",
+      "pdf": "https://arxiv.org/pdf/2610.04242v1",
+      "score": "7.0",
+      "evidence": "应用于溃疡性结肠炎的数据驱动建模与预测控制",
+      "tldr": "本研究提出一种数据驱动的慢性病建模与预测控制框架，将其视为事件驱动的受控随机系统。通过3000多名溃疡性结肠炎患者的电子健康档案数据，利用连续时间马尔可夫链模拟疾病演变，并采用模型预测控制（MPC）优化治疗方案。仿真结果显示，该方法在维持疾病缓解方面表现优异，与临床指南一致且部分优于实际临床路径。",
+      "tags": "query:ros-mp",
+      "abstract_en": "The clinical management of chronic disease is naturally structured as a feedback control problem. Physicians observe the disease state at clinic visits and make decisions based on the patient's history and current state. We propose a framework that models the dynamics of chronic disease in response to therapy as an event-based controlled stochastic system, in which treatment decisions are made at discrete, irregularly spaced events while the disease evolves between events as a continuous-time Markov chain (CTMC) with state and input dependent transition rates. We demonstrate this framework in the setting of ulcerative colitis, where we identify the model from real-world clinical data in the electronic health record (EHR) of more than 3,000 patients with ulcerative colitis. Using the learned model, we formulate therapy selection as a model predictive control problem (MPC) that maximizes the expected time spent in inactive disease states, and we evaluate the resulting policy. In closed-loop simulation on 10 patients, the MPC achieves a cost at or below the observed clinical course in the majority of its realizations for 4 of the 10 patients, and its outcomes in all cases are comparable to observed care and within clinical guidelines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
     {
       "paper_id": "202610/06/2609.37703v1-stochastic-gradient-descent-on-the-epigenetic-landscape-a-unified-framework-for-cellular-plasticity-tumor-heterogeneity-and-the-asymptotic-irrelevance-of-fitness",
       "section": "quick",

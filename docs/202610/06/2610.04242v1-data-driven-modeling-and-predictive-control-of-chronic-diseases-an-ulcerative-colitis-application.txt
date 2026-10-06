@@ -1,0 +1,465 @@
+Title: Data-Driven Modeling and Predictive Control of Chronic Diseases: An Ulcerative Colitis Application
+
+URL Source: https://arxiv.org/pdf/2610.04242v1
+
+Published Time: Tue, 06 Oct 2026 00:33:10 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+# Data-Driven Modeling and Predictive Control of Chronic Diseases: An Ulcerative Colitis Application 
+
+Fionna B. Kopp, Ann-Kathrin Schalkamp, Shadera Azzam, Vivek Rudrapatna, Francesco Borrelli 
+
+Abstract — The clinical management of chronic disease is naturally structured as a feedback control problem. Physicians observe the disease state at clinic visits and make decisions based on the patient’s history and current state. We propose a framework that models the dynamics of chronic disease in response to therapy as an event-based controlled stochastic system, in which treatment decisions are made at discrete, irregularly spaced events while the disease evolves between events as a continuous-time Markov chain (CTMC) with state and input dependent transition rates. We demonstrate this framework in the setting of ulcerative colitis, where we identify the model from real-world clinical data in the electronic health record (EHR) of more than 3,000 patients with ulcerative colitis. Using the learned model, we formulate therapy selection as a model predictive control problem (MPC) that maximizes the expected time spent in inactive disease states, and we evaluate the resulting policy. In closed-loop simulation on 10 patients, the MPC achieves a cost at or below the observed clinical course in the majority of its realizations for 4 of the 10 patients, and its outcomes in all cases are comparable to observed care and within clinical guidelines. 
+
+I. I NTRODUCTION 
+
+Chronic diseases are managed over years through a se-quence of longitudinal clinical decisions. At each clinical encounter, a physician assesses the patient’s current disease state, considers how the patient has responded to previous therapies, and decides the next step in therapy. This naturally fits the framework of feedback control where the patient is the plant, the therapy is the input, clinical measurements of disease state are the output and the physician acts as the controller. Between encounters, the disease evolves stochas-tically and continuously, but is only observed at intermittent encounters. 
+
+> Fionna B. Kopp and Francesco Borrelli are with the Department of Mechanical Engineering, University of California, Berkeley. Fionna B. Kopp, Ann-Kathrin Schalkamp, Shadera Azzam, and Vivek Rudrapatna are with the Bakar Computational Health Sciences Institute, University of California, San Francisco. This material is based upon work supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE 2146752. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. Research reported in this publication was supported by the National Library of Medicine of the National Institutes of Health under award number R00LM014099, as well as the National Center for Advancing Translational Sciences, National Institutes of Health, through UCSF-CTSI Grant Number UL1 TR001872. Federal sources contributed approximately 10% of the support for this study, with the remaining effort supported by non-federal sources. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. This study was also supported by the Kenneth Rainin Foundation, and the department of medicine at University of California, San Francisco.
+
+Ulcerative colitis, a chronic, relapsing-remitting inflamma-tory disease of the colon, managed with long-term mainte-nance therapy, is a representative example [1]. Clinical guide-lines recommend a treat-to-target strategy, in which therapy is adjusted until a defined disease target is reached and then maintained [2]. This is explicitly a feedback strategy. While the set of available therapies has grown substantially, stan-dard clinical decision-making is based on general guidelines and randomized controlled trials (RCTs) [1], which offer limited direction on how to sequence therapies over time. This is in part because RCTs that compare therapies head-to-head are limited and RCTs generally do not evaluate multi-step treatment sequences [1], [3]. Clinical response in ulcerative colitis is marked by significant heterogeneity across patients and depends on past treatment history, most notably prior anti-TNF exposure [3]–[5]. The EHR offers an opportunity to learn treatment response dynamics from at a scale and diversity that trials cannot match. However, EHR data is not collected for the purpose of modeling and several challenges arise from its inherent structure. The disease state is recorded only at clinical encounters, so the exact transition times between disease states are unknown and the trajectories are interval-censored panel data [6]. Encounters are irregularly spaced, making models that assume a fixed sampling interval are not directly applicable. In addition, information about a single quantity is often fragmented across several sources. Medication expo-sure, for example, appears in structured medication orders, in medication administration records, and in unstructured clinical notes, none of which is complete on its own. Model-based control and sequential decision-making have been applied in many medical settings, including closed-loop glucose regulation [7], drug dosing and anesthesia [8], and Markov decision process and reinforcement learning approaches for treatment selection learned from clinical records [9], [10]. Separately, continuous-time multistate Markov models are well established in biostatistics for de-scribing disease progression from panel data [6]. Data-driven decision-making approaches typically discretize time into fixed steps, which is mismatched to irregularly timed visits, while multistate models are typically used for description and inference rather than for control. We model chronic disease response to therapy as an event-based controlled stochastic system. Between events, a dis-crete disease state evolves as a CTMC whose transition rate matrix depends on a mode determined by the current therapy, the patient’s treatment history, and the time since the therapy was initiated. This mode structure captures the clinically arXiv:2610.04242v1 [eess.SY] 3 Oct 2026 known distinction between an induction phase, during which response to a new therapy is expected, and a maintenance phase. Because the model is defined in continuous time, transition probabilities over any interval follow from the matrix exponential, so irregular visit spacing is handled exactly. We identify the model from a large single-center cohort of patients with ulcerative colitis. To construct reli-able state-input trajectories, we reconcile medication orders, medication administration records, and medication mentions extracted from clinical notes with a large language model (LLM) into a single medication timeline per patient. We then use the identified model in an MPC that, at each clinical visit, selects a therapy sequence that maximizes the expected time spent in inactive disease over a prediction horizon, subject to clinically relevant constraints. The primary contributions of this paper are: 1) We propose a general framework to model the dynam-ics of chronic disease response to therapy as an event-based controlled stochastic system, in which treatment decisions are made at discrete, irregular events while the disease evolves as a continuous-time Markov pro-cess with state and input dependent dynamics. 2) We learn the model from state-input trajectory data extracted from the EHR by estimating the state and input dependent transition rate matrices for the continuous-time Markov process using the expectation-maximization algorithm. 3) Using the data-driven model, we formulate therapy selection as an event-based MPC problem. 4) We demonstrate the framework in the context of clin-ical management of ulcerative colitis. The remainder of the paper is organized as follows. In Sec. II, we introduce the event-based stochastic system framework and describe the specifics for our application in ulcerative colitis. Section III describes the EHR data and model identification procedure. In Sec. IV, we formulate therapy selection as an event-based MPC problem. Section V presents the identified model and results in the context of the clinical management of ulcerative colitis. II. P ROBLEM STATEMENT 
+
+We consider an event-based stochastic system with dy-namics 
+
+xk+1 ∼ P (·| xk, u k, ∆tk), ∆tk = tk+1 − tk (1) where xk ∈ Rnc × { 0, 1}nd is the state at event k, uk ∈ U 
+
+is the input at event k, where U is a finite set, and ∆tk
+
+is the relative time between event k + 1 and event k. The corresponding system output at event k is 
+
+yk = g(xk) (2) where yk ∈ Rpc × { 0, 1}pd .We assume the system satisfies the Markov property. The transition kernel P (·| xk, u k, ∆tk) specifies the conditional distribution of the state at the next event given the current state and input and the relative time between the events. We consider the case where transition kernel P is unknown and is learned from state-input trajectories (Section III). We use the form specified by Eqs. (1) and (2) to model the response of a chronic disease to therapy, where the state 
+
+xk captures characteristics of the patient’s disease at event k,the input uk is the therapy applied from [tk, t k+1 ), and the transition kernel P (·| xk, u k, ∆tk) describes the stochastic evolution of the disease state in response to therapy. This framework applies to disease-management settings charac-terized by decisions made at discrete and irregularly-spaced events with stochastic disease progression and intermittently observed outcomes. In this paper, we apply this framework specifically to model response to therapy in the clinical management of ulcerative colitis. In Sec. II-A and Sec. II-B we specify the state, input, output, and model for this application. In Section III we describe a data-driven approach to learn the unknown transition kernel P (·| xk, u k, ∆tk) from state-input trajectories across a cohort of patients extracted from the electronic health record (EHR). Using the learned model, we design a model predictive controller (MPC) that selects the sequence of inputs uk to drive the output yk
+
+toward positive health outcomes. We present the data-driven model and the resulting control policy in Sec. V. 
+
+A. Modeling Ulcerative Colitis: Events, States, and Inputs 
+
+The structure of the model we have introduced (Eqs. (1) and (2)) is a general framework compatible for modeling chronic disease response to therapy and for subsequent use in a model-based controller to learn control (treatment) policies. The framework can be specialized with clinical and domain expertise for application. In this section, we describe our modeling choices for the application of the clinical man-agement of ulcerative colitis, a chronic autoimmune disease affecting the gastrointestinal system. In the context of managing ulcerative colitis, events k are gastroenterology clinic visits at time tk where therapeutic decisions uk can be made including starting or stopping medications or continuing on the same regimen. The input at event k denoted by uk ∈ U is the therapy regimen where U is the finite set of the modeled therapy regimens. For the application of modeling response to therapy in ulcerative colitis, we define the state at event k as 
+
+xk = τk, a k, s k, z k, h k
+
+⊤ (3) where τk ∈ R≥0 is the time since the current therapy regimen was initiated, 
+
+τk =
+
+(
+
+0, uk̸ = uk−1
+
+τk−1 + ∆ tk−1, uk = uk−1, (4) where we initialize τ0 = τinit (Remark 1). Activity ak ∈{0, 1} encodes the current disease as inactive or active and is derived from clinical measures recorded in the EHR. Severity 
+
+sk ∈ { 1, 2, 3} denotes the historical disease severity, which is monotonically non-decreasing and indicates the maximal severity (1 - mild / 2 - moderate / 3 - severe) to date as a proxy for difficult-to-treat or refractory disease. Severity is also derived from clinical measures in the EHR. The medication history hk ∈ { 0, 1}nmed encodes prior exposure to the nmed maintenance medications and zk ∈ { 0, 1} indicates whether the patient has been exposed to anti-TNF therapy prior to the current therapy regimen. To define hk and zk, let mk ∈ { 0, 1}nmed encode the main-tenance medications at event k where mk,i = 1 indicates that the medication represented by the i-th element is active. The encoding mk is constructed from information recorded in the EHR, and the medication specific encoding mk
+
+contains more information than therapy regimen uk where the mapping from mk to uk is defined as uk = ϕu(mk). We then define prior medication history hk as follows 
+
+hk = hk−1 ∨ (mk−1 ∧ ¬ mk) (5) where ∨, ∧, and ¬ denote the element-wise logical OR, AND, and NOT operations respectively, and we initialize with h0 = hinit (Remark 1). Since anti-TNF agents are a subset of the medications encoded in medication history, zk is a projection of hk,
+
+zk = _
+
+> i∈Z
+
+hk,i (6) where hk,i is the i-th element of hk and Z is the set of indices corresponding to anti-TNF agents. 
+
+Remark 1: The time since starting the current therapy regimen is initialized as τ0 = τinit and the medication history is initialized as h0 = hinit where hinit encodes medication exposure prior to event 0. In this paper we use a single-center patient cohort, so τinit and hinit represent time on the active therapy regimen at the index visit and medication history prior to the index visit at the study center respectively. Generally the information needed to determine τinit and hinit 
+
+is documented in clinical notes, and we extract it into usable data with a large language model (LLM). 
+
+Remark 2: Although zk is a function of hk, we explicitly include both zk and hk in the state xk. It is well-established that prior anti-TNF exposure reduces response rates to sub-sequent therapies, hence zk is used to determine the relevant transition probabilities in the Markov model [1], [3]–[5]. The full medication history hk is used in the control architecture (Section IV) to construct state-dependent input constraints, reflecting the common clinical practice of not returning to a previous therapy unless reused in combination therapy [1]. The output of our system at event k is a function of the state, defined as yk = g(xk) = 0 1 0 0 0 xk = ak.Next, we introduce the Markov model structure that we assume for system (1). 
+
+B. Markov Model Assumption 1 (Markov property): For the chosen state and input parameterization, the state at the next event de-pends only on the current state, input, and the time between events 
+
+P (xk+1 |xk, u k, ∆tk, x k−1, u k−1, . . . , x 0, u 0)= P (xk+1 |xk, u k, ∆tk).
+
+We partition the state xk = [ ξ⊤ 
+
+> k
+
+, η ⊤ 
+
+> k
+
+]⊤ into the stochas-tically evolving component ξk and the deterministically evolving component ηk. In the context of modeling therapy response in ulcerative colitis, ξk = [ ak, s k]⊤ ∈ Ξ, where Ξ
+
+is the finite and discrete activity-severity space, and ηk =[τk, z ⊤ 
+
+> k
+
+, h ⊤ 
+
+> k
+
+]⊤. The transition kernel P from (1) factors into the deterministic part: ηk+1 = fη (·) (Sec. II-A), while the stochastic component evolves according to the dynamics of the CTMC. The propagation of ξk over the interval ∆tk is governed by a transition rate matrix Qck ∈ R|Ξ|×| Ξ|, where mode ck = ϕc(xk, u k) is a deterministic function of the current state and input. The transition probabilities over the interval ∆tk are then given by 
+
+Pξ (ξk+1 |xk, u k, ∆tk) = [exp( Qck ∆tk)] ξk ,ξ k+1 (7) where [·]ξk ,ξ k+1 denotes the entry of the matrix indexed by the current activity-severity state ξk and the next activity-severity state ξk+1 . That is, Equation 7 extracts the proba-bility of transitioning from ξk to ξk+1 over interval ∆tk in mode ck = ϕc(xk, u k).
+
+Assumption 2: Within a given mode ck, the transition rate matrix Qck is constant. Since the severity component of the state is defined to be the maximal disease severity (1 - mild / 2 - moderate / 3 -severe) to date, the severity is monotonically non-decreasing for a given patient over time. This imposes structure on the transition rate matrices. Specifically, let qij denote the elements of a transition rate matrix Q, where qij is the transition rate from state i to state j. Then for any state 
+
+j with corresponding severity strictly less than the severity corresponding to state i, qij = 0 by definition. Next, we describe the state and input dependent mode 
+
+ck = ϕc(xk, u k) in more detail. In the context of ulcer-ative colitis, the mode ck is defined by the time since the current therapy regimen was initiated, prior anti-TNF agent exposure, and the current input (therapy regimen): 
+
+ck = ( τk, z k, u k). The named three components correspond to the axes along which the dynamics of clinical response are heterogeneous. The dependence on time since the current therapy regimen was initiated τk represents that the clinical response is not constant over time. In therapeutic manage-ment of ulcerative colitis, medications are considered to have induction phases (typically on the order of 6-12 weeks) followed by maintenance. If a positive clinical response is going to occur as a result of therapy, the clinical response is generally observed during the induction period and then the goal of continued treatment is to durably maintain that response through long-term maintenance [1], [2]. To reflect these temporally dependent dynamics, we partition the mode along the time since the current therapy was initiated into an induction and maintenance phase. The mode-dependence on prior anti-TNF exposure zk and current input uk reflects that prior anti-TNF exposure alters response rates and that therapeutic regimens have different efficacies [1], [3]–[5]. 
+
+Remark 3: The mode ck and its dependence on the state and input through ϕc(·, ·) are specified from domain exper-tise and clinical knowledge. We specified our choices for ulcerative colitis, but the framework is adaptable to other disease and therapy models with state and input definitions relevant to the clinical setting. We learn a separate transition rate matrix Qck for each mode c from the transitions observed under that mode in the observational data set pulled from the EHR. In Section III we describe the data set and how we learn the transition rate matrices. We consider the Markov model as a controlled process where input uk is chosen at each event k. By choosing input 
+
+uk the dynamic mode is determined through ck = ϕc(xk, u k)
+
+which governs the stochastic propagation of the activity-severity component ξk over the interval ∆tk. The control objective is to select the input sequence uk, u k+1 , . . . to maximize the probability that the activity-severity state ξk
+
+reaches and remains in the inactive disease subset Ξinactive ⊂
+
+Ξ. We formulate this as a model predictive control (MPC) problem in Section IV. III. M ODEL IDENTIFICATION 
+
+We learn the transition rate matrix Qck in (7) for each mode c from observed data recorded in the EHR. In this section, we describe the information from the EHR that we use and how we apply the EM algorithm to learn the transition rate matrices. 
+
+A. Electronic Health Record Data 
+
+The clinical history and activity of ulcerative colitis can be assessed from a number of markers recorded in the EHR. Current and prior medication use is ascertained through the (a) record of medication orders, (b) administration events, and (c) extracting mentions of medications from clinic notes via an LLM [11]. By reconciling these three sources a cohesive medication timeline for each patient is constructed. At each event k, the state xk is constructed from the EHR: the activity severity component ξk = [ak, s k]⊤ is derived from clinical observations and is fully determined at every event. The remaining components of the state, 
+
+τk, z k, and hk along with the input uk are derived from the medication encoding mk, where mk is constructed by evaluating the reconciled medication timeline at time tk. By evaluating the state xk and input uk at each event time tk,we obtain a sequence of states and inputs for each patient 
+
+m ∈ { 1, . . . , M }
+
+xm = [ xm 
+
+> 0
+
+, x m 
+
+> 1
+
+. . . , x mk , . . . , x mnm ]
+
+um = [ um 
+
+> 0
+
+, u m 
+
+> 1
+
+. . . , u mk , . . . , u mnm−1]. (8) Due to the discrete and irregularly-spaced state observations, the observed trajectories are interval-censored observations of the underlying continuous time Markov process. We estimate the dynamics of the CTMC from the interval-censored trajectories (8) from M patients; we describe this process in Sec. ?? .
+
+Remark 4: For model identification, events k at times tk
+
+are clinical encounters and medication starts or stops. This set of events consists of when state measurements occurred and when inputs changed. For the control framework (Sec-tion IV), events are the clinical encounters alone, allowing input changes to be made at encounters only. 
+
+B. Induction Period Identification 
+
+The transition rate matrix Qck for the CTMC model is piecewise-constant along the time since initiating therapy axis τk with two-regimes: an induction phase and a main-tenance phase. The mode ck is switched along three axes, 
+
+τk being one of them. By modeling the induction period dynamics, we determine where to set the mode-switch along the temporal axis. Although the CTMC model represents all disease state dynamics, we define the temporal switch based on induction response as it is the expected dominant source of time-varying dynamics. Medications used to treat ulcerative colitis are considered to have an induction period , often on the order of 6-12 weeks, particularly for advanced therapies [2]. Clinical trials often reflect this in their design by defining one of the primary endpoints at the end of the induction period. During this period the response from an initial active disease state to an inactive disease state is high. As time since initiating therapy τk increases, the patients remaining in an active disease state are increasingly likely to be non-responders to the medication, so the transition rate falls in the observed active disease state population. We estimate these response dynamics as a first-order system where the transition rate decays toward a plateau as 
+
+τk increases. Let q(τ ) denote the active-to-inactive transition rate as a function of time since initiating therapy. We model the decaying transition rate as 
+
+q(τ ) = q∞ + ( q0 − q∞) exp 
+
+ −ττind. 
+
+
+
+(9) where q0 is the initial transition rate, q∞ is the maintenance conversion rate, and τind. is the time constant corresponding to the induction period. Induction response rates are specific to the active-to-inactive transition, so we restrict the data used to fit Eq. (9) to state-input trajectories following τk = 0 (new therapy initiation) when ak = 1 (active disease state at new therapy initiation). We consider the sequence of intervals follow-ing therapy initiation in an active disease state up to and including the first active-to-inactive transition. Subsequent intervals are not included as the induction response has already been observed, and subsequent dynamics including loss of response act at longer time scales. We refer to the set of considered intervals as the induction intervals .We pool the fit across all therapies considered, reflecting a shared pharmacodynamic first-order response. Therapy dependent response rates are captured separately through mode ck, which also switches along the input uk (therapy) axis. EHR data is naturally panel-data, meaning that the state is observed only at discrete events k and the exact time of an active-to-inactive state transition is unknown [6]. To fit Eq. (9), we write the likelihood function over the induction intervals by calculating the probability of each observed interval outcome, conditioned on its initial state. The integral of the instantaneous rate of transition q(τ ) is the cumulative hazard: 
+
+H(τ ) = 
+
+Z τ
+
+> 0
+
+q(t)dt 
+
+= q∞τ + ( q0 − q∞)τind. 
+
+
+
+1 − exp 
+
+ −ττind. 
+
+ 
+
+.
+
+(10) TABLE I. First-order Induction Dynamics Fit (Patient-Level Bootstrap, 1000 Replicates)            
+
+> Parameter Estimate 95% CI
+> q0[yr −1]1.02 [0.76, 2.12]
+> q∞[yr −1]0.38 [0.32, 0.43]
+> τind. [days] 47.75 [12.60, 118.54]
+
+This admits survival function S(τ ) = exp( −H(τ )) which gives the probability of remaining in an active disease state through therapy time τ given starting in an initial active disease state at τ = 0 [12]. For an observed interval from event k with therapy time τk and activity ak = 1 , to event 
+
+k + 1 with therapy time τk+1 , the probability of the disease state remaining active at τk+1 , conditional on ak = 1 is 
+
+P (ak+1 = 1 | ak = 1 , τ k, τ k+1 ) = S(τk+1 )
+
+S(τk) , (11) and the probability of having transitioned to an inactive disease state at τk+1 is then P (ak+1 = 0 | ak = 1) = 1 − S(τk+1 )  
+
+> S(τk)
+
+.Let i denote the interval index and let δi ∈ { 0, 1} indicate interval i is a transition from active to inactive when δi = 1 ,otherwise δi = 0 for remaining active. Under the assumption that intervals are independent, then log-likelihood over the induction intervals is 
+
+ℓ(q0, q ∞, τ ind. ) = X
+
+> i
+
+
+
+δi log 
+
+
+
+1 − S(τi+1 )
+
+S(τi)
+
+
+
++(1 − δi) log 
+
+ S(τi+1 )
+
+S(τi)
+
+ (12) which we maximize over (q0, q ∞, τ ind. ) [12]. 
+
+Assumption 3: Over the induction intervals, we assume that intervals with active endpoints ak = 1 and ak+1 = 1 
+
+do not contain unobserved active-to-inactive-to-active transi-tions. That is, we assume the disease remained in an active state throughout. This is reasonable for the set of induction intervals, which are early in therapy time where clinic follow-up tends to be more frequent, making interval durations shorter. We fit the first-order decaying transition rate of induction dynamics (9) from 13 ,661 induction intervals from 2,109 
+
+patients pooled across 6 modeled therapies. The identified parameters are in Table I. The initial transition rate q0 is about 2.7 times the steady state rate q∞ with a time constant estimate of τind. = 48 days, consistent with reported 6-12 week induction periods. To confirm that the first-order induction model is war-ranted over a constant transition rate model, we perform a likelihood-ratio test against the constant-rate model, which is nested in the decaying rate model (9) by setting q0 = q∞.The test statistic is 
+
+λLR = 2( ℓdecay − ℓconstant ) = 59 .2, (13) indicating a preference to the first-order decaying-rate model over a constant rate model. While the decaying-rate model is preferred, the confidence interval on τind. is wide and on the order of the observation cadence, making estimating a continuously varying rate difficult at this timescale. We use the results of the first-order model fitting to locate the induction period, and approximate the dynamics with a piecewise constant CTMC (7) switched at τswitch = 2 months. 
+
+C. EM Algorithm 
+
+We estimate the mode-dependent transition rate matrices 
+
+Qc for all considered modes from state-input trajectories (8) observed in the EHR. The deterministic components of the state: τk, z k, and hk evolve as established in Sec. II-A. Mode 
+
+ck is a function of the deterministic components of the state as well as input uk. The stochastically evolving component of the state ξk has dynamics governed by the mode ck and its corresponding transition rate matrix (7). We use the expectation-maximization (EM) algorithm to estimate the transition rate matrices from panel observa-tions (8) where the stochastic component of the state ξk
+
+(activity-severity in the context of ulcerative colitis model-ing) is only measured at discrete events and the full trajectory between events is unobserved [13]. Given observed endpoints of an interval ξk and ξk+1 , the probability of transition to ξk+1 from ξk over the interval period ∆tk in mode 
+
+ck(xk, u k) is given by (7). Under Assumptions 1 and 2, and assuming that the M patients in the cohort are independent, the log-likelihood is 
+
+ℓ({Qc}) = 
+
+> M
+
+X
+
+> m=1
+> nm−1
+
+X
+
+> k=0
+
+log  [exp( Qck ∆tmk )] ξk ,ξ k+1 
+
+ (14) where {Qc} denotes the set of all transition rate matrices. 
+
+Remark 5: Note that an interval can be governed by multiple modes if τk ≤ τswitch and τk+1 > τswitch , but the (uk, z k) pair corresponding to the modes is constant throughout the interval. This allows us to decompose the log-likelihood by the (uk, z k) components of the mode and fit the induction and maintenance periods across (uk, z k) jointly, where intervals spanning τswitch inform both the induction and maintenance dynamics. We maximize the log-likelihood (14) using the EM algo-rithm. We describe the EM iteration for a single (uk, z k),jointly fitting across τswitch , and the same process is applied to each pair (uk, z k) present in the set of considered modes. For brevity, let Q denote the transition rate matrix being estimated. The EM algorithm alternates between computing the expected sufficient statistics under the currently estimated 
+
+Q and updating Q from the expected sufficient statistics until convergence [13]. We describe the approach briefly here, but defer to [13] for full detail. 
+
+a) Sufficient statistics: Were the full activity-severity trajectory observed, the transition rate matrix would follow from the number of transitions from state j to state l denoted 
+
+Njl and the total amount of time spent in state j, denoted 
+
+Rj . Then 
+
+qjl = Njl 
+
+Rj
+
+, j̸ = lqjj = − X 
+
+> l̸=j
+
+qjl 
+
+(15) where qjl is the element of Q in the j-th row and l-th column. However, the full trajectory is not observed in (8), making 
+
+Njl and Rj unknown. Instead, the E-step calculates the expected values of the sufficient statistics given the observed intervals and current estimate of Q.
+
+b) E-step: Given an interval with observed endpoints 
+
+ξk and ξk+1 with duration ∆tk and currently estimated transition rate matrix Q the expected number of transitions from state j to state l during the interval and the expected time in each state j conditioned on the observed endpoints are 
+
+E [Njl |ξk, ξ k+1 , ∆tk] = qjl Ijl 
+
+[exp( Q∆tk)] ξk ,ξ k+1 
+
+(16) and 
+
+E [Rj |ξk, ξ k+1 , ∆tk] = Ijj 
+
+[exp( Q∆tk)] ξk ,ξ k+1 
+
+(17) where 
+
+Ijl =
+
+Z ∆tk
+
+> 0
+
+[exp( Qσ )] ξk ,j [exp( Q(∆ tk − σ))] l,ξ k+1 dσ. 
+
+We refer the reader to [13] for derivation. 
+
+c) M-step: Let I denote the set of all observed intervals across patients occurring under a given (u, z ) pair for which 
+
+Q is being learned. Each interval i ∈ I has endpoints ξi and 
+
+ξ′ 
+
+> i
+
+with duration ∆ti.The M-step sums the sufficient statistics over the observed intervals i ∈ I and updates the transition rate matrix as follows 
+
+qjl =
+
+P 
+
+> i∈I
+
+E [Njl |ξi, ξ ′
+
+> i
+
+, ∆ti]
+
+P 
+
+> i∈I
+
+E [Rj |ξi, ξ ′
+
+> i
+
+, ∆ti] , j̸ = lqjj = − X 
+
+> l̸=j
+
+qjl . (18) 
+
+d) Empirical Initialization: We initialize the algorithm with the empirical transition counts and times in state, by treating the observed endpoints as if they were the direct transitions, ignoring any unobserved jumps. The E-step and M-step are then alternated until convergence. For our application in modeling ulcerative colitis, the severity component of the state is defined to be monoton-ically non-decreasing. The observed data (8) reflects the monotonically non-decreasing severity by definition. The transitions from a higher to lower severity state are fixed at zero at initialization, so they contribute no expected transitions in the E-step and are not updated in the M-step, forcing these transition rates to remain fixed at zero through the EM iterations. We present the fitted models and their bootstrapped con-fidence intervals for our application in Sec. V. IV. MPC Using the learned CTMC dynamics, we formulate therapy selection as a event-based MPC problem. In a clinical setting, therapy decisions are made at events k (clinical visits) with the goal being to optimize health outcomes over a horizon. At the next event, a new observation of the disease state is made and therapy adjusted as needed to optimize outcomes. This naturally fits the framework of MPC. In this section, we formalize this where the MPC is subject to the learned dynamics III. At each event k, the controller selects optimal inputs (ther-apy) to optimize expected disease outcomes over a prediction horizon of N events. The learned CTMC dynamics are used to predict the evolution of the stochastic activity-severity state component over the horizon. At event k the following finite-horizon problem is solved: 
+
+JMPC  
+
+> k→k+N
+
+= min  
+
+> uk
+> k+N−1
+
+X
+
+> n=k
+
+E r(yn|k) ∆tn
+
++ E r(yk+N |k) ∆tterm 
+
++ rswitch  
+
+> k+N−1
+
+X
+
+> n=k
+
+(1 − u⊤
+
+> n|k
+
+un−1|k) (19a) s.t. ξn+1 |k ∼ Pξ (· | xn|k, u n|k, ∆tn) (19b) 
+
+ηn+1 |k = fη (ηn|k, u n|k, u n+1 |k, ∆tn) (19c) 
+
+cn|k = ϕc(xn|k, u n|k), (19d) 
+
+∀n ∈ { k, . . . , k + N − 1}
+
+xn|k =
+
+h
+
+ξ⊤
+
+> n|k
+
+, η ⊤
+
+> n|k
+
+i⊤
+
+(19e) 
+
+yn|k = g(xn|k) (19f) 
+
+un|k ∈ U (xn|k) ⊆ U (19g) 
+
+∀n ∈ { k, . . . , k + N }
+
+xk|k = xk, (19h) 
+
+uk−1|k = uk−1 (19i) where uk = uk|k, . . . , u k+N −1|k
+
+. The cost function (19a) sums the expected cost of output over the horizon weighted by its interval duration, a terminal cost term on the expected cost of the output N events into the future weighted by 
+
+∆tterm , and a penalty on switching inputs weighted by constant rswitch . Equations (19b) and (19c) propagate the state (19e) over the horizon. Equation (19d) defines the state and input dependent mode, which drives the transition rate matrix governing the stochastic dynamics in (19b). The output (19f) is a function of the state, which makes the output a distribution over which we take the expectation to formulate the cost. State-dependent input constraints are enforced through Eq. (19g). Initial conditions on the state and input are set in (19h) and (19i). Let u∗ 
+
+> k
+
+denote the optimal input sequence to (19) at event 
+
+k. At event k, the first element of u∗ 
+
+> k
+
+is applied to system (1): 
+
+uk = u∗
+
+> k|k
+
+. The FTOCP (19) is repeated at event k + 1 , with new state measurement xk+1 in a receding horizon manner. Note that problem (19) is a mixed-integer due to the switched (mode-dependent) dynamics. 
+
+Remark 6: In the observed data (8), patients are fre-quently on multiple medications (concomitant medications) simultaneously, all encoded in mk. For the purposes of defining the model and model identification from observed data, the medication history hk is computed from the encod-ing mk of the reconciled medication timeline (Sec. II-A). In the setting of the MPC, hk updates from the selected therapy sequence uk which does not encode concomitant medications. Hence, we can write the deterministic dynamics in the MPC (19c) in terms of u.V. R ESULTS 
+
+We applied the proposed framework to the pharmaco-logical management of ulcerative colitis. In the following subsections we describe the identification of the CTMC dynamics from EHR data (Sec. V-A) and we evaluate the MPC (19) in closed-loop on patients sampled from the cohort with the learned dynamics defining both the prediction model of the controller and the dynamics of the simulated system. 
+
+A. Model Identification 
+
+We identify the model (7) from a single-center cohort of adult patients with ulcerative colitis comprising of state-input trajectory data (8) from the EHR. The EHR was adopted in 2012, so all data is from 2012 and after. For each mode c, we estimate the transition rate matrix 
+
+Qc from the observed intervals governed by that mode. We considered all approved treatments for ulcerative colitis observed in the cohort and retained those with sufficient data to identify the CTMC model. Model identifiability was assessed by a patient-level bootstrap for each of the models with 500 replicates. The models under siz therapies were sufficiently identified: infliximab, mesalamine, vedolizumab, ustekinumab, adalimumab, and tofacitinib. With the 2 tem-poral periods, τ ≤ τswitch and τ > τ switch , and 2 prior anti-TNF exposure states z ∈ { 0, 1}, this results in 24 identified transition rate matrices Qc ∈ R6×6 over the activity-severity space, each with patient-level bootstrap confidence intervals. The set of 24 identified transition rate matrices were learned from trajectories of 3,318 patients covering 33 ,706 intervals. The bootstrap confidence intervals were used only to deter-mine identifiability of the modes; while all results below use the nominal estimate in the MPC and simulated dynamics. We report more detail on the learned models and confidence intervals in []. 
+
+B. Closed-Loop MPC for Ulcerative Colitis 
+
+We implement the MPC (19) with the input set U as the set of six identified therapies and a prediction horizon of 
+
+N = 4 events. The output-dependent component of the cost function is r(yn) = −1[an = 0] where 1 is the indicator function. We use a terminal weight ∆tterm = 3 months and each change in therapy is penalized by rswitch = 0 .15 .In the context of ulcerative colitis, the state-dependent input constraint U(xn) in Eq. (19g) encodes that a therapy in the medication history hn cannot be started again. To evaluate the performance of our MPC in closed-loop, we applied the MPC in closed loop to 10 patients from the cohort (in simulation) and compared the simulated outcomes under the MPC policy to their observed trajectories recorded in the EHR. Under this comparison, our baseline reflects the treatment that the patients received at the IBD center. Next we describe how we implemented this comparions. We sampled 10 patients from the cohort and an initial state for each patient was defined from their visits at which their current therpy was one of the six modeled therapies with known start date, and at least two follow-up visits occurred within the following 24 months over which they were on 
+
+Fig. 1: The observed closed loop cost Jobs for each patient is denoted by an orange dot. The blue dots denote the 10 closed-loop MPC costs ( JMPC ), and the light gray bar spans their range for each patient. The green diamonds denote the median closed-loop MPC cost for each patient. modeled therapies. Given these conditions, we construct a set of 10 initial states x0 = [ τ0, a 0, s 0, z ⊤ 
+
+> 0
+
+, h ⊤ 
+
+> 0
+
+]⊤ (one for each sampled patient). The initial state is fully determined by the information in the EHR. For each patient we also pull the corresponding sequence of follow-up intervals (at minimum two) for at most the next 24 months. Since events are irregularly space across intervals, the event spacing for each sampled patient is unique. For each patient we evaluate the following: 1) Observed course: We evaluate the cost (19a) associ-ated with the observed states and the input sequence actually given as recorded in the EHR with the event-spacing defined by the recorded follow-up visits. We denote the resulting cost Jobs .2) Closed-loop MPC: At each event time pulled for the sequence of follow-ups (starting at the initial condi-tion), we solve the MPC (19) and apply the first input, simulate the state forward to the next observed event time through the learned CTMC. At the next event time, the updated state measurement is drawn from the propagated distribution. For each patient we simulated their closed-loop MPC trajectory 10 times, giving a distribution of the closed-loop costs. For each of the sampled patients, Fig. 1 compares the cost of the real observed course with the costs fo the 10 closed-loop MPC trajectories in simulation. The cost Jobs of the observed course fell above or within the range of the closed-loop MPC costs for all 10 sampled patients. For four of the 10 patients, more than half of the simulated MPC closed-loop costs achieved a cost at or below the observed cost Jobs (Fig. 1). The closed loop MPC achieves comparable outcomes to the observed clinical course. In Fig. 2 we show trajectories of two of the sampled Fig. 2: Observed course versus the closed-loop MPC sim-ulations for two sampled patients. The top panel in each illustrates the remission at each event and the bottom panel shows the input sequence over time. The abbreviations in the figure are as follows: vedolizumab (VDZ), ustekinumab (UST), tofacitinib (TOF), and infliximab (IFX). patients, including their observed state-input trajectory as well as the input sequence from the 10 closed-loop MPC simulations. In both cases, the patient was active at the initial state and the MPC recommended an alternative therapy. In both situations the recommended alternative therapy is within clinical guidelines; the MPC switched patients on advanced therapies to alternative advanced therapies rather than a medication from a lower drug class. VI. C ONCLUSION 
+
+We proposed a general framework that models the re-sponse of chronic disease to therapy as an event-based controlled stochastic system, with dynamics learned from state-input trajectories in the EHR. Using the learned model, we frame therapy selection as an event-based MPC problem while accounting for clinical constraints. We demonstrated the approach in the context of ulcerative colitis, where we identified the transition dynamics for six therapies from a single-center cohort of over 3,000 patients. Evaluated in closed-loop, the MPC achieved outcomes comparable to the observed clinical courses and within clinical guidelines. Future work will use the bootstrap estimates of model uncertainty to construct a robust formulation and advance the development of data-driven clinical decision-support tools. REFERENCES [1] S. Singh, E. Loftus, B. Limketkai, J. Haydek, M. Agrawal, F. Scott, and A. A.N., “Aga living clinical practice guideline on pharmacological management of moderate-to-severe ulcerative colitis,” Gastroenterol-ogy , vol. 167, pp. 1307–1343, December 2024. [2] D. Turner, A. Ricciuto, A. Lewis, F. D’Amico, J. Dhaliwal, A. M. Griffiths, D. Bettenworth, W. J. Sandborn, B. E. Sands, W. Reinisch, J. Sch¨ olmerich, W. Bemelman, S. Danese, J. Y. Mary, D. Rubin, J.-F. Colombel, L. Peyrin-Biroulet, I. Dotan, M. T. Abreu, and A. Dignass, “Stride-ii: An update on the selecting therapeutic targets in inflamma-tory bowel disease (stride) initiative of the international organization for the study of ibd (ioibd): Determining therapeutic goals for treat-to-target strategies in ibd,” Gastroenterology , vol. 160, pp. 1570–1583, April 2021. [3] B. Sands, L. Peyrin-Biroulet, E. Loftus, S. Danese, J.-F. Colombel, M. T¨ or¨ uner, L. Jonaitis, B. Abhyankar, J. Chen, R. Rogers, R. Lirio, J. Bornstein, and S. Schreiber, “Vedolizumab versus adalimumab for moderate-to-severe ulcerative colitis,” The New England Journal of Medicine , vol. 381, September 2019. [4] B. Feagan, D. Rubin, S. Danese, S. Vermeire, B. Abhyankar, S. Sankoh, A. James, and M. Smyth, “Efficacy of vedolizumab induction and maintenance therapy in patients with ulcerative colitis, regardless of prior exposure to tumor necrosis factor antagonists,” 
+
+Clinical Gastroenterology and Hepatology , vol. 15, pp. 229–239, February 2017. [5] R. Atreya and M. Neurath, “Il-23 blockade in anti-tnf refractory ibd: From mechanisms to clinical reality,” Journal of Crohn’s and Colitis ,vol. 16, May 2022. [6] J. D. Kalbfleisch and J. F. Lawless, “The analysis of panel data under a markov assumption,” Journal of the American Statistical Association ,vol. 80, no. 392, pp. 863–871, 1985. [7] A. J. L. Sanz, F. J. DoyleIII, and E. Dassau, “An enhanced model predictive control for the artificial pancreas using a confidence index based on residual analysis of past predictions,” Journal of Diabetes Science and Technology , vol. 11, no. 3, pp. 537–544, 2017. [8] M. Milanesi, L. Consolini, G. D. Credico, N. Latronico, M. Laurini, M. Paltenghi, M. Schiavo, and A. Visioli, “Patient-specific mpc for improved robustness in anesthesia,” Communications in Nonlinear Science and Numerical Simulation , vol. 162, p. 110210, 2026. [9] A. J. Schaefer, M. D. Bailey, S. M. Shechter, and M. S. Roberts, Mod-eling Medical Treatment Using Markov Decision Processes , pp. 593– 612. Springer US, 2004. [10] M. Komorowski, L. Celi, O. Badawi, A. Gordon, and A. Faisal, “The artificial intelligence clinician learns optimal treatment strategies for sepsis in intensive care,” Nature Medicine , vol. 24, pp. 1716–1720, November 2018. [11] B. Y. Miao, M. Binvignat, A. Garcia-Agundez, M. Bravo, C. Y. Williams, C. Q. Miao, A. Alaa, V. Rudrapatna, A. J. Butte, G. Schma-juk, and J. Yazdany, “Extracting tnfi switching reasons and trajectories from real-world data using large language models,” JAMIA Open ,vol. 8, no. 6, 2025. [12] J. D. Kalbfleisch and R. L. Prentice, The Statistical Analysis of Failure Time Data . John Wiley & Sons, Inc., 2002. [13] M. Bladt and M. Sørensen, “Statistical inference for discretely ob-served markov jump processes,” Journal of the Royal Statistical Society: Series B (Statistical Methodology) , vol. 67, no. 3, pp. 395– 410, 2005.
