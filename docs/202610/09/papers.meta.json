@@ -1,0 +1,54 @@
+{
+  "label": "2026-10-09",
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T00:21:41",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202610/09/2610.04777v1-arise-adaptive-agentic-reasoning-with-image-grounded-self-evaluation-for-interpretable-ibd-assessment",
+      "section": "quick",
+      "title_en": "ARISE: Adaptive Agentic Reasoning with Image-grounded Self-Evaluation for Interpretable IBD Assessment",
+      "authors": "Pronoma Banerjee, Anuva Shah, Jason Wu, Md. Masudur Rahman, Sanjay Mohanty, Satya Kurada, Juan P. Wachs",
+      "date": "2026-10-03",
+      "pdf": "https://arxiv.org/pdf/2610.04777v1",
+      "score": "7.0",
+      "evidence": "使用视觉语言模型进行可解释的炎症性肠病评估",
+      "tldr": "针对炎症性肠病（IBD）诊断高度依赖专家经验且现有视觉语言模型（VLM）存在幻觉和解释性不足的问题，本文提出ARISE框架。该框架通过五阶段自主代理工作流（假设生成、证据总结、条件细化、符号验证和最终诊断）实现少样本医学图像理解。在克罗恩病和溃疡性结肠炎数据集上的实验证明，ARISE显著提升了诊断准确性与透明度，为临床决策提供了可靠支持。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Inflammatory bowel disease (IBD) requires frequent imaging-based assessment, yet interpretation of modalities such as wireless capsule endoscopy (WCE) and intestinal ultrasound remains heavily dependent on specialist expertise. Vision-Language Models (VLMs) demonstrate significant potential in multimodal medical image analysis, but their clinical adoption is hindered by their insufficient domain-specific reasoning, susceptibility to hallucination, scarcity of high quality training data in fine-grained diagnostics and limited interpretability. We introduce ARISE (Adaptive Agentic Reasoning with Image-grounded Self-Evaluation), an autonomous planning framework that models few-shot medical image understanding as a sequential agentic workflow. ARISE structures agent execution into a transparent 5-stage workflow: hypothesis generation, image-grounded evidence summarization, evidence-conditioned refinement, symbolic verification, and final diagnosis. We apply ARISE to IBD assessment across two independent patient cohorts: wireless capsule endoscopy (WCE) images for Crohn's disease and B-mode ultrasound data for ulcerative colitis. ARISE consistently improves diagnostic performance over baseline VLMs while exposing where reasoning succeeds or fails, providing a more interpretable basis for clinical decision support and realistic deployment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202610/09/2610.00414v1-from-image-latent-space-to-fuzzy-rules-interpretable-analysis-of-gastrointestinal-foundation-model",
+      "section": "quick",
+      "title_en": "From Image Latent Space to Fuzzy Rules: Interpretable Analysis of Gastrointestinal Foundation Model",
+      "authors": "Michael D. Vasilakakis, Dimitris K. Iakovidis",
+      "date": "2026-09-30",
+      "pdf": "https://arxiv.org/pdf/2610.00414v1",
+      "score": "6.0",
+      "evidence": "胃肠道基础模型的可解释性分析",
+      "tldr": "本研究针对医疗基础模型黑盒化问题，提出一种基于原型的模糊规则框架，旨在不微调模型的前提下解释其潜在特征空间。通过将ViT骨干网络的补丁特征聚类为类特定原型，并利用可读的模糊IF-THEN规则进行分类，该方法在胃肠道影像任务中达到了与黑盒分类器相当的精度，并能有效评估合成医学图像的真实性。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Foundation models pretrained on large-scale datasets demonstrate strong transferability to medical imaging tasks. However, understanding how their latent representations encode clinically relevant information remains an open challenge in safety-critical domains. This study proposes a prototype-based fuzzy-rule framework that interprets the patch-level features produced by the inner layers of pretrained foundation models, without any fine-tuning. Class-specific prototypes are learned by clustering in the feature space, yielding compact visual patterns. Patch features are then expressed as prototype similarities and classified by fuzzy rules with linguistic IF-THEN conditions that are human readable. The framework is applied across the final two blocks of ViT-S/16 backbones pretrained on ImageNet-1K and GastroNet-5M, and benchmarked against k-nearest neighbours, kernel SVM, and linear probing under identical frozen features, on wireless capsule endoscopy classification, gastrointestinal endoscopy classification, and colonic polyp segmentation. The experimental analysis shows that the proposed method, without backbone fine-tuning, reaches accuracy comparable to these black-box classifiers, and that domain-specific pretraining yields features that are both discriminative and symbolically compressible. Because the resulting rules are extracted from real data and expressed in interpretable terms, they are further used as an instrument to investigate synthetic medical images, providing a human-readable account of which real prototypes and rules a generator reproduces or fails to reproduce, localising where a synthetic image departs from real tissue rather than summarising it with a single score. The framework thus offers a transparent, depth-resolved view of how foundation models organise clinically relevant structure, together with a practical downstream use of the extracted rules.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202610/09/2610.04945v1-tempobridge-source-conditioned-flow-matching-with-optimal-transport-couplings-for-single-cell-population-transitions",
+      "section": "quick",
+      "title_en": "TempoBridge: Source-Conditioned Flow Matching with Optimal Transport Couplings for Single-Cell Population Transitions",
+      "authors": "Bowen Han, Lingbei Meng, Shihuan Luo, Yupeng Zang, Wenlin LI, Peize He, Yaodi Luo, Lian Zhang, Jianqing Zhu, Jinchao Xu",
+      "date": "2026-10-04",
+      "pdf": "https://arxiv.org/pdf/2610.04945v1",
+      "score": "6.0",
+      "evidence": "模拟跨条件的单细胞群体转变",
+      "tldr": "针对单细胞测序中样本不匹配及局部信息不足的问题，本文提出TempoBridge框架。该方法采用源条件流匹配技术，结合最优传输耦合来建模时间、遗传和化学诱导的群体转换。通过将源群体摘要引入速度场，模型能精准预测细胞演化。实验证明其在跨供体、基因扰动和药物反应预测任务中均优于现有模型，显著提升了单细胞动力学预测的准确性。",
+      "tags": "query:ros-mp",
+      "abstract_en": "Destructive single-cell measurements provide unpaired population snapshots rather than observations of the same cells across conditions. Local cell states and transition requests may also be insufficient to distinguish responses across source populations. We introduce TempoBridge, a common source-conditioned transport formulation for temporal, genetic, and chemical population transitions. Source cells initialize latent transport and provide a fixed empirical population summary. The velocity field receives this summary alongside the evolving cell state, flow time, and a structured transition descriptor. Minibatch optimal transport (OT) supplies couplings only for conditional flow-matching training paths; inference requires neither target expression nor OT computation. On held-out donors, TempoBridge achieves an Energy distance of 0.129 versus 0.144 for scGen. Genetic mean-expression $L_2$ error is 2.261 versus 3.156 for scGPT-scratch under Seen 2/2. On held-out compounds, condition-averaged drug-effect correlation is 0.598 versus 0.561 for the CellFlow adapter. Temporal ablations show higher mean distributional error after removing source context, replacing optimal transport with random pairing, or replacing flow matching with static residual regression. Together, these results demonstrate the predictive utility of a common source-conditioned transport formulation across held-out donors, gene combinations, and compounds.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

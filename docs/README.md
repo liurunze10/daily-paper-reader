@@ -6,34 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-10-06
-- 运行时间：2026-10-06 23:46:50 UTC
+- 最新运行日期：2026-10-09
+- 运行时间：2026-10-09 00:21:30 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：1
+- 本次总论文数：3
+- 精读区：0
 - 速读区：3
 
 ### 今日简报（AI）
-今日深度攻克炎症性肠病（IBD）的智能评估难题，重点解析了具备自评能力的 AI 智能体如何提升医学影像诊断的解释性。
-核心突破在于 ARISE 框架实现的图像定位推理，以及针对溃疡性结肠炎的数据驱动预测控制模型。
-建议关注 AI 智能体在复杂慢性病管理中的闭环应用，以及多组学网络传播技术在精准医疗中的最新实验方案。
-- 详情：[/202610/06/README](/202610/06/README)
+今日聚焦医疗影像的可解释性评估与单细胞群体演化的精准建模。
+重点关注通过自评估推理提升炎症性肠病诊断的透明度，以及利用最优传输流匹配技术刻画细胞状态转换。
+建议关注大模型在消化道诊疗中的可解释性突破，探索 AI 如何辅助精准医疗决策。
+- 详情：[/202610/09/README](/202610/09/README)
 
 ### 精读区论文标签
-1. [ARISE: Adaptive Agentic Reasoning with Image-grounded Self-Evaluation for Interpretable IBD Assessment](/202610/06/2610.04777v1-arise-adaptive-agentic-reasoning-with-image-grounded-self-evaluation-for-interpretable-ibd-assessment)  
-   标签：评分：9.5/10、query:ros-mp
-   evidence：该论文介绍了ARISE框架，用于通过医学影像进行可解释的炎症性肠病（IBD）评估。
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Data-Driven Modeling and Predictive Control of Chronic Diseases: An Ulcerative Colitis Application](/202610/06/2610.04242v1-data-driven-modeling-and-predictive-control-of-chronic-diseases-an-ulcerative-colitis-application)  
+1. [ARISE: Adaptive Agentic Reasoning with Image-grounded Self-Evaluation for Interpretable IBD Assessment](/202610/09/2610.04777v1-arise-adaptive-agentic-reasoning-with-image-grounded-self-evaluation-for-interpretable-ibd-assessment)  
    标签：评分：7.0/10、query:ros-mp
-   evidence：应用于溃疡性结肠炎的数据驱动建模与预测控制
-2. [Stochastic gradient descent on the epigenetic landscape: a unified framework for cellular plasticity, tumor heterogeneity, and the asymptotic irrelevance of fitness](/202610/06/2609.37703v1-stochastic-gradient-descent-on-the-epigenetic-landscape-a-unified-framework-for-cellular-plasticity-tumor-heterogeneity-and-the-asymptotic-irrelevance-of-fitness)  
-   标签：评分：6.5/10、query:ros-mp
-   evidence：细胞表型塑性和状态切换的数学框架
-3. [Protocol for Discovering Convergent Molecular Networks across Multi-Omics Datasets Using Network Propagation](/202610/06/2610.01142v1-protocol-for-discovering-convergent-molecular-networks-across-multi-omics-datasets-using-network-propagation)  
+   evidence：使用视觉语言模型进行可解释的炎症性肠病评估
+2. [From Image Latent Space to Fuzzy Rules: Interpretable Analysis of Gastrointestinal Foundation Model](/202610/09/2610.00414v1-from-image-latent-space-to-fuzzy-rules-interpretable-analysis-of-gastrointestinal-foundation-model)  
    标签：评分：6.0/10、query:ros-mp
-   evidence：整合多组学数据以揭示共享的分子网络和生物学机制
+   evidence：胃肠道基础模型的可解释性分析
+3. [TempoBridge: Source-Conditioned Flow Matching with Optimal Transport Couplings for Single-Cell Population Transitions](/202610/09/2610.04945v1-tempobridge-source-conditioned-flow-matching-with-optimal-transport-couplings-for-single-cell-population-transitions)  
+   标签：评分：6.0/10、query:ros-mp
+   evidence：模拟跨条件的单细胞群体转变
 
 
 <div class="dpr-home-promo-card">
